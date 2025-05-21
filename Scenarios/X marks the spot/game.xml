@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="X (normal)"
+			author="Haemimont Games"
+			description="A large X-shaped island is the scene of battles between the armies, but the map also includes four smaller islands that can be explored."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

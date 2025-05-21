@@ -1,0 +1,14 @@
+	<playerdata
+		id="0"
+		name="Player 1"
+		race="RepublicanRome"
+		AllowedRaces="All"
+		control="Both"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="5507"
+		starty="3996"
+		color="31744"
+		allied="0"
+		bonus="-1"
+		relations="00000035000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

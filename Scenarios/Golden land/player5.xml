@@ -1,0 +1,14 @@
+	<playerdata
+		id="5"
+		name="Player 6"
+		race="Mutable"
+		AllowedRaces="All"
+		control="Disabled"
+		AI=""
+		difficulty="3"
+		startx="1917"
+		starty="1243"
+		color="23440"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000003500000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

@@ -1,0 +1,14 @@
+	<playerdata
+		id="6"
+		name="Player 7"
+		race="Egypt"
+		AllowedRaces="All"
+		control="Disabled"
+		AI=""
+		difficulty="0"
+		startx="0"
+		starty="0"
+		color="21504"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000035000000000000000000000000000000000000000000000000000000000000000000000000"/>

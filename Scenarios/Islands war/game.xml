@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Island battle (normal)"
+			author="Haemimont Games"
+			description="Map of islands with strongholds to the east and west. In the center, various Teuton tents will benefit the player who manages to take them. Recommended for two teams of three players."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold=""
+			single_only="0"
+			start_player="1"
+			season="spring"
+			user_interface="0"/>
+	</game>

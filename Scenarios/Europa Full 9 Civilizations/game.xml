@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Europe Full - 8 Civilizations"
+			author="Il Mietitore (edited by Paolo L.)"
+			description="Rome, Gaul, Iberia, Carthage, Britain, Egypt, Germany and Greece compete for the creation of an empire in the Mediterranean."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold=""
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

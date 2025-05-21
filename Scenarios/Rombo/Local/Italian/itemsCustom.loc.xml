@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry text="Fur gloves of health" result="Guanti della salute"/>
+<translationtableentry text="Guantes de la salud" result="Guanti della salute"/>
+<translationtableentry text="They add 1200 health.\nIf used, they restore the health of a nearby ally by taking it from the owner" result="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore"/>
+<translationtableentry text="Aumentan la salud en 1200 puntos.\nSi se utilizan, restablecen la salud de un aliado cercano sustrayéndola del poseedor" result="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore"/>
+<translationtableentry text="Concentration stone" result="Pietra di fuoco"/>
+<translationtableentry text="Piedra de fuego" result="Pietra di fuoco"/>
+<translationtableentry text="Adds 60 damage.\nIf used, it restores the health of the owner by taking it from an ally of choice" result="Aumenta l'attacco di 60 punti.\nSe si utilizza, ripristina la salute del possessore sottraendola a un alleato a scelta"/>
+<translationtableentry text="Aumenta el ataque en 60 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un aliado a elección" result="Aumenta l'attacco di 60 punti.\nSe si utilizza, ripristina la salute del possessore sottraendola a un alleato a scelta"/>
+<translationtableentry text="Ring of power" result="Anello del potere"/>
+<translationtableentry text="Anillo del poder" result="Anello del potere"/>
+<translationtableentry text="Adds 20 damage.\nIt stores up to 600 charges to restore the health of the owner by 20 every second" result="Aumenta l'attacco di 20 punti.\nImmagazzina fino a 600 cariche per ripristinare la salute del possessore di 20 punti ogni secondo"/>
+<translationtableentry text="Aumenta el ataque en 20 puntos.\nAlmacena hasta 600 cargas para restablecer la salud del poseedor en 20 puntos cada segundo" result="Aumenta l'attacco di 20 punti.\nImmagazzina fino a 600 cariche per ripristinare la salute del possessore di 20 punti ogni secondo"/>
+</translationtable>

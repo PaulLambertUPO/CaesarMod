@@ -1,0 +1,1 @@
+Hero_Item.obj.AsHero().SetAutocast(true);

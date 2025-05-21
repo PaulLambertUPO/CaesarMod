@@ -1,0 +1,14 @@
+	<playerdata
+		id="3"
+		name="Player 4"
+		race="Mutable"
+		AllowedRaces="All"
+		control="Both"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="15055"
+		starty="1846"
+		color="2658"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000035000000150000001500000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

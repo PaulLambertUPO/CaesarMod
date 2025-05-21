@@ -1,0 +1,14 @@
+	<playerdata
+		id="5"
+		name="Player 6"
+		race="Egypt"
+		AllowedRaces="All"
+		control="Both"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="31775"
+		starty="19176"
+		color="22197"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000003500000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

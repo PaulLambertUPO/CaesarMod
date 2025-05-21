@@ -1,0 +1,7 @@
+	<sequences>
+		<sequence
+			name="Hero_Item_Autocast"
+			wizard=""
+			script="CurrentMap/sequences/seq0.vs">
+		</sequence>
+	</sequences>

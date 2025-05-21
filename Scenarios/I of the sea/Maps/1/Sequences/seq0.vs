@@ -1,0 +1,1 @@
+G_Patrol.SetCommandOffset("patrol" , AreaCenter("A_SpecialArea"));

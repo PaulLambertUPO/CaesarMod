@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Four kingdoms (normal)"
+			author="Haemimont Games"
+			description="A Roman stronghold dominates the center of the map. Surrounded by mountains, it can only be reached by following narrow paths. Whoever controls it will subdue his rivals."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

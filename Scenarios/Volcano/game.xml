@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Volcano (small)"
+			author="Haemimont Games"
+			description="Four strongholds are located in a barren land around a volcano. Because of this, there are no neutral enemies and all trees are dead."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold="0"
+			single_only="0"
+			start_player="1"
+			season="spring"
+			user_interface="0"/>
+	</game>

@@ -1,0 +1,14 @@
+	<playerdata
+		id="7"
+		name="Player 8"
+		race="Gaul"
+		AllowedRaces="All"
+		control="Disabled"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="0"
+		starty="0"
+		color="32356"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000000000000350000000000000000000000000000000000000000000000000000000000000000"/>

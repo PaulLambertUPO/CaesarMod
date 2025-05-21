@@ -1,0 +1,14 @@
+	<playerdata
+		id="3"
+		name="Player 4"
+		race="Carthage"
+		AllowedRaces="All"
+		control="Both"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="1991"
+		starty="9913"
+		color="2658"
+		allied="0"
+		bonus="-1"
+		relations="00000015000000150000001500000035000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="The mountain wall (normal)"
+			author="Haemimont Games"
+			description="Two teams of three players are separated by a large mountain chain..."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

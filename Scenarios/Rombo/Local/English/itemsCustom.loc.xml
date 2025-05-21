@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry text="Guanti della salute" result="Fur gloves of health"/>
+<translationtableentry text="Guantes de la salud" result="Fur gloves of health"/>
+<translationtableentry text="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore" result="They add 1200 health.\nIf used, they restore the health of a nearby ally by taking it from the owner"/>
+<translationtableentry text="Aumentan la salud en 1200 puntos.\nSi se utilizan, restablecen la salud de un aliado cercano sustrayéndola del poseedor" result="They add 1200 health.\nIf used, they restore the health of a nearby ally by taking it from the owner"/>
+<translationtableentry text="Pietra di fuoco" result="Concentration stone"/>
+<translationtableentry text="Piedra de fuego" result="Concentration stone"/>
+<translationtableentry text="Aumenta l'attacco di 60 punti.\nSe si utilizza, ripristina la salute del possessore sottraendola a un alleato a scelta" result="Adds 60 damage.\nIf used, it restores the health of the owner by taking it from an ally of choice"/>
+<translationtableentry text="Aumenta el ataque en 60 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un aliado a elección" result="Adds 60 damage.\nIf used, it restores the health of the owner by taking it from an ally of choice"/>
+<translationtableentry text="Anello del potere" result="Ring of power"/>
+<translationtableentry text="Anillo del poder" result="Ring of power"/>
+<translationtableentry text="Aumenta l'attacco di 20 punti.\nImmagazzina fino a 600 cariche per ripristinare la salute del possessore di 20 punti ogni secondo" result="Adds 20 damage.\nIt stores up to 600 charges to restore the health of the owner by 20 every second"/>
+<translationtableentry text="Aumenta el ataque en 20 puntos.\nAlmacena hasta 600 cargas para restablecer la salud del poseedor en 20 puntos cada segundo" result="Adds 20 damage.\nIt stores up to 600 charges to restore the health of the owner by 20 every second"/>
+</translationtable>

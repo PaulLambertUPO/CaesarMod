@@ -1,0 +1,17 @@
+	<map
+		name="New Map"
+		displayname=""
+		descr=""
+		persist_state="1">
+		<size
+			x="16384"
+			y="16384"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="0"/>
+		<start_pt
+			x="1232"
+			y="10343"/>
+	</map>

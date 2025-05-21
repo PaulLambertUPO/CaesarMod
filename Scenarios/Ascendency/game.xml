@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Ascendancy (normal)"
+			author="Haemimont Games"
+			description="The region has four areas and a large number of neutral outposts. Once captured, an outpost will train random units. Will you be able to defeat your enemies and claim control of the area?"
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold=""
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

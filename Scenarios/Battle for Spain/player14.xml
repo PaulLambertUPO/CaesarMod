@@ -1,0 +1,14 @@
+	<playerdata
+		id="14"
+		name="Player 15"
+		race="Random"
+		AllowedRaces="All"
+		control="Computer"
+		AI=""
+		difficulty="3"
+		startx="24298"
+		starty="12598"
+		color="4"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003500000000"/>

@@ -1,0 +1,14 @@
+	<playerdata
+		id="5"
+		name="Player 6"
+		race="Gaul"
+		AllowedRaces="All"
+		control="Both"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="27615"
+		starty="18595"
+		color="23440"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000003500000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

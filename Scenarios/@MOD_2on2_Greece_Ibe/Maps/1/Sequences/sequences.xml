@@ -1,0 +1,7 @@
+	<sequences>
+		<sequence
+			name="Spectators"
+			wizard=""
+			script="CurrentMap/sequences/seq0.vs">
+		</sequence>
+	</sequences>

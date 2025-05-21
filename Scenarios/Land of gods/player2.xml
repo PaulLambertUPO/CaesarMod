@@ -1,0 +1,14 @@
+	<playerdata
+		id="2"
+		name="Player 3"
+		race="Iberia"
+		AllowedRaces="All"
+		control="Both"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="1339"
+		starty="10486"
+		color="30367"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

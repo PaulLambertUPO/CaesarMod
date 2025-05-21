@@ -1,0 +1,14 @@
+	<playerdata
+		id="3"
+		name="Player 4"
+		race="ImperialRome"
+		AllowedRaces="All"
+		control="Disabled"
+		AI=""
+		difficulty="0"
+		startx="0"
+		starty="0"
+		color="957"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000035000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

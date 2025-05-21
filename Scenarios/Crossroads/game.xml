@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Crossroads"
+			author="Haemimont Games"
+			description="Each player starts from one point of the map. In front of the stronghold there is a mountain passage that leads to the center of the territory. The first to arrive will be able to conquer 4 trade outposts and will have an advantage over the others."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold=""
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

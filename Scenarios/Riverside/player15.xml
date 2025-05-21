@@ -1,0 +1,14 @@
+	<playerdata
+		id="15"
+		name="Player 16"
+		race="Gaul"
+		AllowedRaces="All"
+		control="Computer"
+		AI=""
+		difficulty="3"
+		startx="0"
+		starty="0"
+		color="24605"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000035"/>

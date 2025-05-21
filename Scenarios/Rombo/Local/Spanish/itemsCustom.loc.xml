@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry text="Fur gloves of health" result="Guantes de la salud"/>
+<translationtableentry text="Guanti della salute" result="Guantes de la salud"/>
+<translationtableentry text="They add 1200 health.\nIf used, they restore the health of a nearby ally by taking it from the owner" result="Aumentan la salud en 1200 puntos.\nSi se utilizan, restablecen la salud de un aliado cercano sustrayéndola del poseedor"/>
+<translationtableentry text="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore" result="Aumentan la salud en 1200 puntos.\nSi se utilizan, restablecen la salud de un aliado cercano sustrayéndola del poseedor"/>
+<translationtableentry text="Concentration stone" result="Piedra de fuego"/>
+<translationtableentry text="Pietra di fuoco" result="Piedra de fuego"/>
+<translationtableentry text="Adds 60 damage.\nIf used, it restores the health of the owner by taking it from an ally of choice" result="Aumenta el ataque en 60 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un aliado a elección"/>
+<translationtableentry text="Aumenta l'attacco di 60 punti.\nSe si utilizza, ripristina la salute del possessore sottraendola a un alleato a scelta" result="Aumenta el ataque en 60 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un aliado a elección"/>
+<translationtableentry text="Ring of power" result="Anillo del poder"/>
+<translationtableentry text="Anello del potere" result="Anillo del poder"/>
+<translationtableentry text="Adds 20 damage.\nIt stores up to 600 charges to restore the health of the owner by 20 every second" result="Aumenta el ataque en 20 puntos.\nAlmacena hasta 600 cargas para restablecer la salud del poseedor en 20 puntos cada segundo"/>
+<translationtableentry text="Aumenta l'attacco di 20 punti.\nImmagazzina fino a 600 cariche per ripristinare la salute del possessore di 20 punti ogni secondo" result="Aumenta el ataque en 20 puntos.\nAlmacena hasta 600 cargas para restablecer la salud del poseedor en 20 puntos cada segundo"/>
+</translationtable>

@@ -1,0 +1,14 @@
+	<playerdata
+		id="9"
+		name="Player 10"
+		race="RepublicanRome"
+		AllowedRaces="All"
+		control="Computer"
+		AI=""
+		difficulty="3"
+		startx="0"
+		starty="0"
+		color="31"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000000000000000000000000000035000000000000000000000000000000000000000000000000"/>

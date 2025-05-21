@@ -1,0 +1,14 @@
+	<playerdata
+		id="7"
+		name="Player 8"
+		race="Mutable"
+		AllowedRaces="All"
+		control="Computer"
+		AI="CHAOTIC"
+		difficulty="2"
+		startx="6183"
+		starty="10586"
+		color="32256"
+		allied="1"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000150000001500000015000000350000000000000000000000000000000000000000000000000000000000000000"/>

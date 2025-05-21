@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="Arena of Sorrow (normal)"
+			author="Haemimont Games"
+			description="Four kingdoms battle for dominance of the region. A mysterious altar stands in the center. He who enters will be cursed, but perhaps he will be able to use the powers of the altar to his advantage."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold=""
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>

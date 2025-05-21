@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="0"
+			name="The battle for survival (normal)"
+			author="Haemimont Games"
+			description="In this map, players must escape the lakes where they are held captive and conquer a stronghold before time runs out.\nOnly human players are allowed."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="1 Elimination"
+			victory_threshold=""
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="0"/>
+	</game>
