@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="We have lost our camp, but we're not defeated.\n\nHere comes Julius Caesar himself!"
+	result="We have lost our camp, but we're not defeated.\n\nHere comes Julius Caesar himself!"
+	sound="1/conversations/cnv7_phrase0.wav"/>
+<translationtableentry
+	text="Under my command, your army will squash the enemy!"
+	result="Under my command, your army will squash the enemy!"
+	sound="1/conversations/cnv7_phrase1.wav"/>
+<translationtableentry
+	text="As a hero, I can learn 5 different special skills. Each skill can be learned up to 10 levels, depending on my experience.\n\nSelect me, press the button &#34;Hero skills&#34; and place the mouse pointer for a few moments on each of the special skill icons in the upper part of the screen to learn more about them."
+	result="As a hero, I can learn 5 different special skills. Each skill can be learned up to 10 levels, depending on my experience.\n\nSelect me, press the button &#34;Hero skills&#34; and place the mouse pointer for a few moments on each of the special skill icons in the upper part of the screen to learn more about them."
+	sound="1/conversations/cnv7_phrase2.wav"/>
+<translationtableentry
+	text="With each level that I obtain, I assign a point to invest in one of my skills.\n\nIf there are skill points still free to distribute, you'll see a flashing '+' sign in the upper part of the screen."
+	result="With each level that I obtain, I assign a point to invest in one of my skills.\n\nIf there are skill points still free to distribute, you'll see a flashing '+' sign in the upper part of the screen."
+	sound="1/conversations/cnv7_phrase4.wav"/>
+<translationtableentry
+	text="Place your praetorians under Caesar's command by selecting them and right-clicking on him."
+	result="Place your praetorians under Caesar's command by selecting them and right-clicking on him."
+	sound="1/conversations/cnv7_phrase5.wav"/>
+</translationtable>

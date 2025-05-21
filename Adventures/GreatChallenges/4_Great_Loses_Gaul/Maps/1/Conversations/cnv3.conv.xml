@@ -1,0 +1,11 @@
+	<conversation
+		name="Victory"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Keltill"/>
+		<phrase
+			actor="NO_Keltill"
+			text="Look at how Caesar runs! He is not invincible as he believes! Gergovia is only the beginning, we shall repel the Romans from Gaul!"
+			followup="first"/>
+	</conversation>

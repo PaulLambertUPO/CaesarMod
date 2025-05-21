@@ -1,0 +1,22 @@
+	<root>
+		<label
+			text="Londinium"
+			x="24640"
+			y="21708"/>
+		<label
+			text="Dumnorium"
+			x="10080"
+			y="25958"/>
+		<label
+			text="Lindum"
+			x="17376"
+			y="4478"/>
+		<label
+			text="Mancunium"
+			x="12512"
+			y="10922"/>
+		<label
+			text="Defensive wall"
+			x="17888"
+			y="13847"/>
+	</root>

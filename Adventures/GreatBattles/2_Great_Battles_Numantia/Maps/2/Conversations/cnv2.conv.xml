@@ -1,0 +1,11 @@
+	<conversation
+		name="Event1"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="R_Scout"/>
+		<phrase
+			actor="R_Scout"
+			text="Sir, Rome has sent reinforcements to this gold outpost!\n\nIf you capture more gold outposts, the Senate will keep sending men. Otherwise, not even a simple hastatus will be sent."
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="We have captured the stronghold! Now Numantia is lacking food!"
+	result="Abbiamo conquistato la fortezza! Numanzia non potrà resistere molto tempo senza viveri!"
+	sound="2/conversations/cnv6_phrase0.wav"/>
+<translationtableentry
+	text="We have also discovered that the guard tower near the western section of Numantia provides archers for the outer walls. Should we capture it, Numantia will be vulnerable."
+	result="Abbiamo anche scoperto che la torre di guardia rifornisce di arcieri le mura esterne. Se riuscissimo a prenderne possesso, Numanzia diventerà vulnerabile."
+	sound="2/conversations/cnv6_phrase1.wav"/>
+</translationtable>

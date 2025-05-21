@@ -1,0 +1,47 @@
+	<notes>
+		<note
+			id="Julius Caesar must survive"
+			title="Julius Caesar must survive"
+			text="Julius Caesar must survive in order for Alesia to fall."
+			icon="gameres/noteicons/survive.bmp"
+			map="Alesia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="CaptureAlesia1"
+			title="Capture Alesia"
+			text="Capture all townhalls in the stronghold of Alesia."
+			icon="gameres/noteicons/attack.bmp"
+			map="Alesia"
+			show_on_minimap="0"
+			locationx="8515"
+			locationy="7154"/>
+		<note
+			id="CaptureAlesia2"
+			title="The final attack"
+			text="The Gaul reinforcements have been destroyed! Now concentrate on Alesia."
+			icon="gameres/noteicons/attack.bmp"
+			map="Alesia"
+			show_on_minimap="0"
+			locationx="8515"
+			locationy="7154"/>
+		<note
+			id="Keep the siege positions"
+			title="Hold the siege"
+			text="You must not allow any of your camps to fall in enemy hands for long."
+			icon="gameres/noteicons/defense.bmp"
+			map="Alesia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Gaul reinforcements"
+			title="Gaul reinforcements"
+			text="Stand your ground until the Gaul reinforcements cease."
+			icon="gameres/noteicons/defense.bmp"
+			map="Alesia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+	</notes>

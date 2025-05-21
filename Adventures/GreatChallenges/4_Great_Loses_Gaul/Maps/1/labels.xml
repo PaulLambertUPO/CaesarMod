@@ -1,0 +1,38 @@
+	<root>
+		<label
+			text="Gergovia"
+			x="14718"
+			y="2128"/>
+		<label
+			text="Meidi pass"
+			x="6838"
+			y="4743"/>
+		<label
+			text="Aedui pass"
+			x="7046"
+			y="2452"/>
+		<label
+			text="Sequani pass"
+			x="7847"
+			y="6340"/>
+		<label
+			text="Boii pass"
+			x="9305"
+			y="971"/>
+		<label
+			text="Nervii pass"
+			x="11787"
+			y="7173"/>
+		<label
+			text="Lingones pass"
+			x="11788"
+			y="10112"/>
+		<label
+			text="Arverni pass"
+			x="13917"
+			y="9418"/>
+		<label
+			text="Tigurini pass"
+			x="15055"
+			y="10806"/>
+	</root>

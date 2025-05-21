@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Ave Scipio! The Senate is pleased with the development of the campaign. My chariots and I are yours to command."
+	result="¡Ave Escipión! El senado está contento con el desarrollo de la campaña. Me ha enviado con mis carros de guerra para ponernos a tus órdenes."
+	sound="2/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="The stronghold north of here oversees the entire region. If we capture it, we will see what happens in the whole area!"
+	result="La fortaleza al norte de aquí domina toda la región. ¡Si conseguimos capturarla, podremos ver lo que ocurre en toda la región!"
+	sound="2/conversations/cnv0_phrase1.wav"/>
+</translationtable>

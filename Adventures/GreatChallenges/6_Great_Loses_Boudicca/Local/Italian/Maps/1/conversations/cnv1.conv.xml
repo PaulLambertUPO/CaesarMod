@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="May Jupiter bless you, Boadicea. Our noble emperor has sent me to announce the increase in taxes that your people must pay to Rome, for the good of civilization..."
+	result="Che Giove ti benedica, Boadicea. Il nostro nobile imperatore mi ha mandato ad annunciare l'aumento dei tributi che il tuo popolo deve pagare a Roma, per il bene della civiltà..."
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="We shall give you nothing more, Roman! The Iceni shall stand for it no longer!"
+	result="Non ti daremo più niente, romano! Gli Iceni non tollereranno oltre questi abusi!"
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="You foolish barbarians! The empire will crush you like ants! May the wrath of Jupiter fall upon you!"
+	result="Stupidi barbari! L'imperatore vi schiaccerà come formiche! Che l'ira di Giove cada su di voi!"
+	sound="1/conversations/cnv1_phrase2.wav"/>
+<translationtableentry
+	text="I fear neither your emperor nor your puny gods! After dealing with you, I will capture Camulodunum and drive all Romans off our island!"
+	result="Non temo né il tuo imperatore né i tuoi deboli dei. Dopo essermi occupata di te, conquisterò Camulodunum e scaccerò tutti i romani dalla nostra isola!"
+	sound="1/conversations/cnv1_phrase3.wav"/>
+</translationtable>

@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Scipio Aemilianus, the Iberians have pushed us to the brink! We have already lost nearly all of our outposts in the area..."
+	result="Ave Scipione l'Emiliano! Mi fa piacere che Roma ti abbia mandato qui! La situazione è disperata e abbiamo perso quasi tutte le fortezze della zona..."
+	sound="2/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="What?! Cornelius Flavius, ready your men! We will head for Numantia and capture every rebel outpost on the way!"
+	result="Come? Cornelio Flavio, prepara i tuoi uomini! Marceremo verso Numanzia e questa volta ci faremo valere! La cosa più importante è che prendiamo possesso di tutti i forti che quei maledetti iberi ci hanno sottratto."
+	sound="2/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="As you command, Scipio!"
+	result="Ai tuoi ordini, Scipione!"
+	sound="2/conversations/cnv1_phrase2.wav"/>
+</translationtable>

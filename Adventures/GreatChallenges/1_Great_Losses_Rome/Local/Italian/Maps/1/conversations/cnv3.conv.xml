@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="The Carthaginians have destroyed one of the gates to Rome! See to it that they have full control over this settlement!"
+	result="I cartaginesi hanno distrutto una delle porte di Roma! D'ora in avanti questa città sarà al servizio di Annibale!"
+	sound="1/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="Yes, sir! At once!"
+	result="Si, signore! Immediatamente!"
+	sound="1/conversations/cnv3_phrase1.wav"/>
+</translationtable>

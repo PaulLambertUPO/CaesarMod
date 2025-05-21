@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Egypt to arms - 58 BC"
+			author="Haemimont Games"
+			description="In Egypt the splendor of the age of the pharaohs is now only a memory.\nRome keeps king Ptolemy XII in government and demands unjust tributes to the Egyptian people.\nDiscontent increases and revolt breaks out: Egypt clashes with Rome..."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="6"/>
+	</game>

@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="The siege of Numantia - 134 BC"
+			author="Haemimont Games"
+			description="The Iberians have rebelled against the Roman authority.\nTo prevent them from succeeding in their efforts to become a breakaway province Rome has sent Scipio Aemilianus to capture their stronghold Numantia and put an end to their uprising.\nThe Roman general besieges the Iberian city..."
+			last_edited_map="2"
+			start_map="2"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>

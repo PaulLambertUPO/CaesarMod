@@ -1,0 +1,33 @@
+	<conversation
+		name="Polymorph"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="DarkGuy"/>
+		<phrase
+			actor="DarkGuy"
+			text="You have freed us, Roman, and a mercenary always pays his debts. Is there anything you wish of us?"
+			followup="choice"
+			followup_phrases="1;2;3"/>
+		<phrase
+			label="1"
+			actor="DarkGuy"
+			text="With pleasure!"
+			choice_text="Give me a Trident Warrior"
+			return="return \'B_Trident\';"
+			followup="end"/>
+		<phrase
+			label="2"
+			actor="DarkGuy"
+			text="At once!"
+			choice_text="Give me a War Elephant"
+			return="return \'B_Elephant\';"
+			followup="end"/>
+		<phrase
+			label="3"
+			actor="DarkGuy"
+			text="Very well!"
+			choice_text="Give me a Valkyrie"
+			return="return \'B_Valkyrie\';"
+			followup="end"/>
+	</conversation>

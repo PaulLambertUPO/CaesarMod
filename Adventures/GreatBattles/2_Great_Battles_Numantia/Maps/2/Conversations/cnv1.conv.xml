@@ -1,0 +1,21 @@
+	<conversation
+		name="Begin"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="R_Cornelius"/>
+		<actor
+			name="R_Scipio"/>
+		<phrase
+			actor="R_Cornelius"
+			text="Scipio Aemilianus, the Iberians have pushed us to the brink! We have already lost nearly all of our outposts in the area..."
+			followup="first"/>
+		<phrase
+			actor="R_Scipio"
+			text="What?! Cornelius Flavius, ready your men! We will head for Numantia and capture every rebel outpost on the way!"
+			followup="first"/>
+		<phrase
+			actor="R_Cornelius"
+			text="As you command, Scipio!"
+			followup="first"/>
+	</conversation>

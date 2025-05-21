@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="Have you already seen the difference between some of the warriors?"
+	result="Hai già notato le differenze tra i vari guerrieri?"
+	sound="1/conversations/cnv22_phrase0.wav"/>
+<translationtableentry
+	text="Each type of warrior has a set attack, defense and health."
+	result="Ogni tipo di guerriero possiede un determinato valore di attacco, di difesa e di salute."
+	sound="1/conversations/cnv22_phrase1.wav"/>
+<translationtableentry
+	text="But it's the special skills of the warriors that really makes them unique.\n\nYou'll find them to the right of their health, in the upper part of the screen, when selecting a unit. If you hold the mouse over a special skill for a few seconds, a text will appear and explain what it consists of."
+	result="Ma sono le caratteristiche speciali dei guerrieri a renderli veramente unici.\n\nLe troverai a destra del loro livello di salute, nella parte superiore dello schermo, quando selezioni un'unità. Se mantieni il cursore del mouse per qualche istante su una caratteristica speciale, apparirà un testo che ti spiegherà in cosa consiste."
+	sound="1/conversations/cnv22_phrase2.wav"/>
+<translationtableentry
+	text="For example, all the praetorians have, amongst others, a skill called &#34;Spike armor&#34;: when an enemy warrior hits a praetorian in melee combat, he receives as much damage as he inflicted."
+	result="Per esempio, una delle abilità comuni a tutti i pretoriani è il &#34;Danno riflesso&#34;: quando un guerriero nemico colpisce un pretoriano durante il combattimento corpo a corpo, riceve un numero di punti di danno corrispondente a quello che ha inflitto."
+	sound="1/conversations/cnv22_phrase3.wav"/>
+<translationtableentry
+	text="When warriors are fighting, you'll be able to see different icons over their heads for a few seconds that show special skills that are in effect."
+	result="Quando i guerrieri combattono, potrai vedere per qualche istante sulle loro teste diverse icone che mostrano le caratteristiche speciali che stanno utilizzando."
+	sound="1/conversations/cnv22_phrase4.wav"/>
+</translationtable>

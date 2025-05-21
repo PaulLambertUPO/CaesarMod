@@ -1,0 +1,27 @@
+<translationtable>
+<translationtableentry
+	text="You have freed us, Roman, and a mercenary always pays his debts. Is there anything you wish of us?"
+	result="Tú me has liberado, romano, y un mercenario siempre paga sus deudas. ¿Deseas que haga algo por ti?"
+	sound="2/conversations/cnv10_phrase0.wav"/>
+<translationtableentry
+	text="Give me a Trident Warrior"
+	result="Dame un guerrero de Fand"/>
+<translationtableentry
+	text="With pleasure!"
+	result="¡Será un placer!"
+	sound="2/conversations/cnv10_phrase1.wav"/>
+<translationtableentry
+	text="Give me a War Elephant"
+	result="Dame un elefante de guerra"/>
+<translationtableentry
+	text="At once!"
+	result="¡Como ordenes!"
+	sound="2/conversations/cnv10_phrase3.wav"/>
+<translationtableentry
+	text="Give me a Valkyrie"
+	result="Dame una valquiria"/>
+<translationtableentry
+	text="Very well!"
+	result="¡De acuerdo!"
+	sound="2/conversations/cnv10_phrase5.wav"/>
+</translationtable>

@@ -1,0 +1,14 @@
+	<playerdata
+		id="4"
+		name="Instructor"
+		race="RepublicanRome"
+		AllowedRaces="All"
+		control="Disabled"
+		AI=""
+		difficulty="0"
+		startx="0"
+		starty="0"
+		color="32736"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000350000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

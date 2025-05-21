@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Well done!\n\nNow the camp and the village are in our power."
+	result="¡Bien hecho!\n\nAhora el campamento y la aldea están en nuestro poder."
+	sound="1/conversations/cnv11_phrase0.wav"/>
+<translationtableentry
+	text="Gather your forces and take control of the training outpost that you'll find to the south.\n\nSome buildings like this outpost are being garrisoned by neutral warriors: if you defeat them, the outpost will be ours!"
+	result="Reúne a tus fuerzas y toma el control del fortín de adiestramiento que encontrarás al sur.\n\nAlgunos edificios como este fortín están guarnecidos por guerreros neutrales: si los derrotas, ¡el fortín será nuestro!"
+	sound="1/conversations/cnv11_phrase1.wav"/>
+<translationtableentry
+	text="This won't be an easy battle.\n\nRemember: Caesar must survive at all costs!"
+	result="Esta no será una batalla fácil.\n\n¡No olvides que César debe sobrevivir a toda costa!"
+	sound="1/conversations/cnv11_phrase2.wav"/>
+<translationtableentry
+	text="Gather your forces and take control of this training outpost by defeating its defenders.\n\nIt's a tough but glorious battle!"
+	result="Reúne a tus fuerzas y toma el control de este fortín de adiestramiento derrotando a sus defensores.\n\n¡Es una batalla dura pero gloriosa!"
+	sound="1/conversations/cnv11_phrase3.wav"/>
+</translationtable>

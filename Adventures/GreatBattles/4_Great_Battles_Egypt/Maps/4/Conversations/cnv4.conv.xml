@@ -1,0 +1,11 @@
+	<conversation
+		name="AugustusSpeech"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="R_Augustus"/>
+		<phrase
+			actor="R_Augustus"
+			text="Victory! The threat of Antony and Cleopatra is no more! Thanks to me Rome is again one! Today I declare the end of the triumvirate and the beginning of a new Rome of which I shall be emperor!"
+			followup="first"/>
+	</conversation>

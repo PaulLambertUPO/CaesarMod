@@ -1,0 +1,31 @@
+<translationtable>
+<translationtableentry
+	text="We've won!\n\nWe must punish the rebels for this assault!"
+	result="Abbiamo vinto!\n\nDobbiamo punire i ribelli per questo assalto!"
+	sound="1/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="Take control of this small army, head east and capture the enemy village that you'll find there."
+	result="Prendi il controllo di questo piccolo esercito, dirigiti ad est e conquista il villaggio nemico che troverai da quelle parti."
+	sound="1/conversations/cnv3_phrase1.wav"/>
+<translationtableentry
+	text="How can I capture the village?"
+	result="Come faccio a conquistare il villaggio?"/>
+<translationtableentry
+	text="To capture and take control of an enemy settlement, select your warriors and right-click on one of the settlement buildings.\n\nWhilst your warriors are trying to capture an enemy settlement, its loyalty decreases. Once its loyalty reaches zero, the settlement becomes yours. The more warriors you use for this task, the faster the capture will be."
+	result="Per assoggettare l'insediamento nemico e farlo tuo, seleziona i tuoi guerrieri e premi con il tasto destro del mouse su uno degli edifici dell'insediamento.\n\nMentre i tuoi guerrieri cercano di conquistare un insediamento nemico, il livello di lealtà dell'edificio diminuisce progressivamente. Quando la lealtà arriva a zero, l'insediamento sarà tuo. Più guerrieri impieghi in questo compito, più in fretta si realizzerà la conquista."
+	sound="1/conversations/cnv3_phrase3.wav"/>
+<translationtableentry
+	text="How can I distinguish allies from enemies?"
+	result="Come faccio a distinguere gli alleati dai nemici?"/>
+<translationtableentry
+	text="All warriors wear the colors of their faction. Similarly, buildings also have the color of who controls them.\n\nIn this map in particular, you're leading the red faction and your Roman allies are the yellow faction. Everyone else is an enemy and must be treated as such."
+	result="Tutti i guerrieri hanno il colore della loro fazione. Anche gli edifici rispecchiano il colore della civiltà a cui appartengono.\n\nConcretamente, in questa mappa, sei al comando della fazione rossa e i tuoi alleati romani sono rappresentati dal colore giallo. Tutti gli altri sono nemici e devono essere trattati come tali."
+	sound="1/conversations/cnv3_phrase5.wav"/>
+<translationtableentry
+	text="Let me teach you!"
+	result="Permettimi di insegnarti!"/>
+<translationtableentry
+	text="Move your small army to the east of the ruins and capture the enemy village you'll find there."
+	result="Sposta il tuo piccolo esercito a est delle rovine e conquista il villaggio nemico che troverai da quelle parti."
+	sound="1/conversations/cnv3_phrase7.wav"/>
+</translationtable>

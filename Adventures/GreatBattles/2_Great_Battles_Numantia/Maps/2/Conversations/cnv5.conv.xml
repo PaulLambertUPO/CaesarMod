@@ -1,0 +1,11 @@
+	<conversation
+		name="LastStand"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="I_LastStandHero"/>
+		<phrase
+			actor="I_LastStandHero"
+			text="You shall never defeat us, Roman! Pray to whatever gods you serve, for you shall die!"
+			followup="first"/>
+	</conversation>

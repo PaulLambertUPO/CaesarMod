@@ -1,0 +1,19 @@
+	<conversation
+		name="7D Siege"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="Caesar"/>
+		<phrase
+			actor="Caesar"
+			text="The enemy gates!\n\nThe only way to storm an enemy stronghold is to destroy its gates."
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="You can do this by commanding your archers to attack the gates. If you don't have archers, you're going to need a siege machine."
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="To build a siege machine, select some of your legionaries (they cannot be heroes) and select the command &#34;Build siege machine&#34; in the lower part of the screen.\n\nSiege machines have greater range than the archers that guard the wall, so place it beyond the reach of the enemy and watch as it destroys the gates."
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,18 @@
+<translationtable>
+	<translationtableentry
+		text="Our camp is under attack!\n\nThere is a powerful hero riding a white horse that is leading the assault!\n\nOur troops don't stand a chance."
+		result="Our camp is under attack!\n\nThere is a powerful hero riding a white horse that is leading the assault!\n\nOur troops don't stand a chance."
+		sound="1/conversations/cnv6_phrase0.wav"/>
+	<translationtableentry
+		text="As you can see, not all warriors are the same. Some have more combat experience, whilst others are simply recruits.\n\nThe level of a warrior indicates his experience. The higher his level, the more effective he will be in combat."
+		result="As you can see, not all warriors are the same. Some have more combat experience, whilst others are simply recruits.\n\nThe level of a warrior indicates his experience. The higher his level, the more effective he will be in combat."
+		sound="1/conversations/cnv6_phrase1.wav"/>
+	<translationtableentry
+		text="Warriors assigned to a hero fight as if part of the hero's experience was theirs.\n\nWhen you select the hero, the assigned warriors have yellow circles around their feet."
+		result="Warriors assigned to a hero fight as if part of the hero's experience was theirs.\n\nWhen you select the hero, the assigned warriors have yellow circles around their feet."
+		sound="1/conversations/cnv6_phrase2.wav"/>
+	<translationtableentry
+		text="What a shame, the battle will be over before we get there.\n\nI'll send a message to Rome asking for reinforcements."
+		result="What a shame, the battle will be over before we get there.\n\nI'll send a message to Rome asking for reinforcements."
+		sound="1/conversations/cnv6_phrase3.wav"/>
+</translationtable>

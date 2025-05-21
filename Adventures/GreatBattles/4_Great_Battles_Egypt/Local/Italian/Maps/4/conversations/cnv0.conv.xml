@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Great Octavian, you have managed to capture one of the enemy towns! If we are to win this war, we must conquer them all!"
+	result="Oh Ottaviano, sei riuscito a conquistare una delle città nemiche! Se vogliamo vincere la guerra, dobbiamo conquistarle tutte!"
+	sound="4/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="If I may suggest, it would be well that we capture some outposts and villages. The outposts on the Nile are quite abundant with gold and can also be used to attract volunteers for our army."
+	result="Se mi permetti un consiglio, penso che sarebbe meglio conquistare qualche forte e qualche villaggio. I forti del Nilo forniscono molto oro, ed è possibile che inoltre, grazie a questi, riusciamo ad attrare qualche volontario alla nostra causa."
+	sound="4/conversations/cnv0_phrase1.wav"/>
+</translationtable>

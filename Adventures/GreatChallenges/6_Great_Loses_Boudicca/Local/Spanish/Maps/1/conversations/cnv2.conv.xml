@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="What have you come to seek here? Do you not see that a curse has been placed over this settlement?"
+	result="¿Qué has venido a buscar aquí? ¿Acaso no ves que pesa una maldición sobre esta ciudad? Ya no la habitan más que espectros."
+	sound="1/conversations/cnv2_phrase0.wav"/>
+<translationtableentry
+	text="Is there no way to break this curse?"
+	result="¿No hay forma de romper ese encantamiento?"
+	sound="1/conversations/cnv2_phrase1.wav"/>
+<translationtableentry
+	text="I do not know. If you seek an answer, go north. I have heard that some sages live among the ruins near the Iceni village. Maybe they know how to break this curse."
+	result="Yo no he encontrado la manera. Si buscas una respuesta, dirígete al norte. He oído que en las ruinas próximas al poblado iceno viven algunos sabios. Quizá ellos sepan cómo acabar con nuestra maldición."
+	sound="1/conversations/cnv2_phrase2.wav"/>
+</translationtable>

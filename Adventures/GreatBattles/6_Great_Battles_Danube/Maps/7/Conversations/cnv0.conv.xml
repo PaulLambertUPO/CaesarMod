@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv0"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Marcus"/>
+		<phrase
+			actor="NO_Marcus"
+			text="Praetorians, we have come here to protect the empire! Let's keep the city of Aquileia safe should anyone breach our forward positions."
+			followup="first"/>
+	</conversation>

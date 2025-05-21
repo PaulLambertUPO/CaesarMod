@@ -1,0 +1,40 @@
+	<conversation
+		name="4C Retake camp"
+		startup="first"
+		startup_phrases="p1;ask"
+		restore_view="1">
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="Excellent! You've learned a lot."
+			condition="return EnvReadInt(\'/First4C\') != 1;"
+			followup="first"/>
+		<phrase
+			label="notes"
+			actor="Instructor"
+			text="Everything that we have taught you and the missions that have been assigned to you have been recorded.\n\nYou can review this information by pressing the &#34;Notes&#34; button in the lower part of the screen, or by pressing 'F8', as long as you are not in the middle of a conversation."
+			choice_text="What if I forget something about what you told me?"
+			followup="first"
+			followup_phrases="ask;help"/>
+		<phrase
+			label="help"
+			actor="Instructor"
+			text="Hold the mouse pointer over any icon or text in the game menus to make a brief description of its utility appear.\n\nIn addition, if at any moment during the game you need more information about certain aspects, elements or units in the game, you can right-click the icons or texts to get further help about them.\n\nPlus, it's always useful to read the manual."
+			choice_text="How can I get more advice?"
+			action="EnvWriteInt(\'/First4C\', 1);"
+			followup="first"/>
+		<phrase
+			label="ask"
+			actor="Instructor"
+			text="You've been ordered to recapture our camp. Don't waste time!\n\nSelect and give orders only to Caesar: he is in charge of the legionaries that have been assigned to him."
+			condition="return EnvReadInt(\'/First4C\') == 1;"
+			followup="choice"
+			followup_phrases="notes;help;ok"/>
+		<phrase
+			label="ok"
+			actor="Instructor"
+			text="Consider it done!"
+			followup="end"/>
+	</conversation>

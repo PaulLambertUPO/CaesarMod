@@ -1,0 +1,21 @@
+	<conversation
+		name="GhoulTalk"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="GhoulDruid"/>
+		<actor
+			name="Natasha"/>
+		<phrase
+			actor="GhoulDruid"
+			text="What have you come to seek here? Do you not see that a curse has been placed over this settlement?"
+			followup="first"/>
+		<phrase
+			actor="Natasha"
+			text="Is there no way to break this curse?"
+			followup="first"/>
+		<phrase
+			actor="GhoulDruid"
+			text="I do not know. If you seek an answer, go north. I have heard that some sages live among the ruins near the Iceni village. Maybe they know how to break this curse."
+			followup="first"/>
+	</conversation>

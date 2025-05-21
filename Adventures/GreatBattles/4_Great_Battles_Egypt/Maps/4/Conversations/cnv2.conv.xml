@@ -1,0 +1,15 @@
+	<conversation
+		name="Shipyards"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="TalkPriest"/>
+		<phrase
+			actor="TalkPriest"
+			text="Oh noble Octavian, I have alarming news! The forces that attacked us came from Alexandria. My scouts have reported that the shipyard there is constantly gathering forces and sending ships against us."
+			followup="first"/>
+		<phrase
+			actor="TalkPriest"
+			text="We can stop this situation by making use of the Pelusio shipyard to neutralize that of Alexandria! That would certainly weaken them and avoid performing such surprise attacks."
+			followup="first"/>
+	</conversation>

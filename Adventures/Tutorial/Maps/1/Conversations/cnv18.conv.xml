@@ -1,0 +1,11 @@
+	<conversation
+		name="7A Attack town"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="Instructor"/>
+		<phrase
+			actor="Instructor"
+			text="Now that you've recruited a considerable force, assign your legionaries to Caesar and place him by one of the gates of Dumnorium.\n\nRemember, remove your legionaries from the townhall, select them and then right-click on Caesar."
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,31 @@
+<translationtable>
+<translationtableentry
+	text="We've won!\n\nWe must punish the rebels for this assault!"
+	result="¡Hemos vencido!\n\n¡Debemos castigar a los rebeldes por este asalto!"
+	sound="1/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="Take control of this small army, head east and capture the enemy village that you'll find there."
+	result="Toma el control de este pequeño ejercito, dirígete al este y captura la aldea enemiga que encontrarás allí."
+	sound="1/conversations/cnv3_phrase1.wav"/>
+<translationtableentry
+	text="How can I capture the village?"
+	result="¿Cómo puedo conquistar la aldea?"/>
+<translationtableentry
+	text="To capture and take control of an enemy settlement, select your warriors and right-click on one of the settlement buildings.\n\nWhilst your warriors are trying to capture an enemy settlement, its loyalty decreases. Once its loyalty reaches zero, the settlement becomes yours. The more warriors you use for this task, the faster the capture will be."
+	result="Para capturar un asentamiento enemigo y hacerlo tuyo, selecciona a tus guerreros y pulsa con el botón derecho del ratón en uno de los edificios del asentamiento.\n\nMientras tus guerreros intentan la captura de un asentamiento enemigo, la lealtad de éste va descendiendo. Cuando su lealtad llega a cero, el asentamiento pasa a ser de tu propiedad. Cuantos más guerreros dediques a esta tarea, más rápidamente se producirá la captura."
+	sound="1/conversations/cnv3_phrase3.wav"/>
+<translationtableentry
+	text="How can I distinguish allies from enemies?"
+	result="¿Cómo puedo distinguir a los aliados de los enemigos?"/>
+<translationtableentry
+	text="All warriors wear the colors of their faction. Similarly, buildings also have the color of who controls them.\n\nIn this map in particular, you're leading the red faction and your Roman allies are the yellow faction. Everyone else is an enemy and must be treated as such."
+	result="Todos los guerreros visten del color de su facción. Igualmente, los edificios tienen el color de quien los posee.\n\nEn este mapa en concreto, tú lideras a la facción roja y tus aliados romanos son la facción amarilla. Todos los demás son enemigos y han de ser tratados en consecuencia."
+	sound="1/conversations/cnv3_phrase5.wav"/>
+<translationtableentry
+	text="Let me teach you!"
+	result="¡Permíteme enseñarte!"/>
+<translationtableentry
+	text="Move your small army to the east of the ruins and capture the enemy village you'll find there."
+	result="Mueve a tu pequeño ejército hacia el este de las ruinas y captura la aldea enemiga que encontrarás allí."
+	sound="1/conversations/cnv3_phrase7.wav"/>
+</translationtable>

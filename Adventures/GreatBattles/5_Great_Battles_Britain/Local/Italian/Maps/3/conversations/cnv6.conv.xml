@@ -1,0 +1,40 @@
+<translationtable>
+<translationtableentry
+	text="I want to help you but currently you don't have enough gold. Please bring at least 2000 gold in the townhall of Londinium before you ask for help."
+	result="Vorrei aiutarti ma ora non possiedi abbastanza oro. Per favore, prima di chiedermi qualcosa raduna almeno 2000 pezzi d'oro e portali nel foro di Londinium."
+	sound="3/conversations/cnv6_phrase0.wav"/>
+<translationtableentry
+	text="What do you need, Agricola?"
+	result="Di cosa hai bisogno, Agricola?"
+	sound="3/conversations/cnv6_phrase1.wav"/>
+<translationtableentry
+	text="Reinforcements to attack Lindum - 4000 gold"
+	result="Rinforzi per attaccare Lindum - 4000 oro"/>
+<translationtableentry
+	text="Reinforcements to attack Dumnorium - 4000 gold"
+	result="Rinforzi per attaccare Dumnorium - 4000 oro"/>
+<translationtableentry
+	text="It shall be done."
+	result="Così sia."
+	sound="3/conversations/cnv6_phrase2.wav"/>
+<translationtableentry
+	text="Additional troops in Londinium - 2000 gold"
+	result="Truppe aggiuntive a Londinium - 2000 oro"/>
+<translationtableentry
+	text="Help will arrive soon!"
+	result="Presto arriverà il rinforzo!"
+	sound="3/conversations/cnv6_phrase3.wav"/>
+<translationtableentry
+	text="A general from a Roman province - 6000 gold"
+	result="Un generale da una provincia romana - 6000 oro"/>
+<translationtableentry
+	text="Your general is waiting in the townhall of Londinium."
+	result="Il tuo generale sta aspettando nel foro di Londinium."
+	sound="3/conversations/cnv6_phrase4.wav"/>
+<translationtableentry
+	text="There is nothing I require"
+	result="Non ho bisogno di niente per ora"/>
+<translationtableentry
+	text="Very well, see you soon."
+	result="Molto bene. A presto."/>
+</translationtable>

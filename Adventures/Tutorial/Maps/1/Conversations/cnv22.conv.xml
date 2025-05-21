@@ -1,0 +1,28 @@
+	<conversation
+		name="7B Unit specials"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Caesar"/>
+		<phrase
+			actor="Caesar"
+			text="Have you already seen the difference between some of the warriors?"
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="Each type of warrior has a set attack, defense and health."
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="But it's the special skills of the warriors that really makes them unique.\n\nYou'll find them to the right of their health, in the upper part of the screen, when selecting a unit. If you hold the mouse over a special skill for a few seconds, a text will appear and explain what it consists of."
+			action="ObjList ol;\nint i;\nol = GetPlayerUnits(1, cRPraetorian);\nol.ClearDead();\nfor (i = 0; i \l ol.count; i += 1) {\n ClearSelection(1);\n ol[i].Select(1);\n break;\n}"
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="For example, all the praetorians have, amongst others, a skill called &#34;Spike armor&#34;: when an enemy warrior hits a praetorian in melee combat, he receives as much damage as he inflicted."
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="When warriors are fighting, you'll be able to see different icons over their heads for a few seconds that show special skills that are in effect."
+			followup="first"/>
+	</conversation>

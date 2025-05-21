@@ -1,0 +1,11 @@
+	<conversation
+		name="Victory"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Caesar"/>
+		<phrase
+			actor="NO_Caesar"
+			text="Even surrounded, even outnumbered, even at a disadvantage, I have proven I could still achieve victory. Let this serve as a lesson for all the Gauls as well as those who wish to oppose me and the might of Rome!"
+			followup="first"/>
+	</conversation>

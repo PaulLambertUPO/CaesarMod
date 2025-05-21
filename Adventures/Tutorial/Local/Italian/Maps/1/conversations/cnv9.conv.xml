@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Look at that mound!\n\nIt's been marked by a circle of pebbles around it!\n\nAn unequivocal sign that it could contain magic objects or amulets!"
+	result="Guarda quel tumulo!\n\nÈ segnalato da un circolo di ciottoli!\n\nÈ un segno inequivocabile: contiene sicuramente oggetti magici o amuleti!"
+	sound="1/conversations/cnv9_phrase0.wav"/>
+<translationtableentry
+	text="Select Caesar and right-click on the rocky mound so that he collects the magic objects or amulets that might be inside.\n\nEach of your men can carry up to four items."
+	result="Seleziona Cesare e clicca con il pulsante destro del mouse sul mucchio di pietre affinché prenda l'oggetto magico o l'amuleto che si trova al suo interno.\n\nOgnuno dei tuoi uomini può portare fino a quattro oggetti."
+	sound="1/conversations/cnv9_phrase1.wav"/>
+</translationtable>

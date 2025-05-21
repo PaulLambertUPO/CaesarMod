@@ -1,0 +1,12 @@
+	<conversation
+		name="Calgacus"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Senator"/>
+		<phrase
+			actor="Senator"
+			text="The enemy has sent a huge army against us! If we do not react, Londinium will be lost!"
+			action="if (!IsNoteActive(\'Calgacus\'))\n	GiveNote(\'Calgacus\');\nif (!IsRunning(\'CalgacusArmy\'))\n RunSequence(\'CalgacusArmy\');"
+			followup="first"/>
+	</conversation>

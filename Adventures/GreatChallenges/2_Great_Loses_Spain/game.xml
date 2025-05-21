@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Viriato dominates Hispania - 146 BC"
+			author="Haemimont Games"
+			description="Viriato is elected chief of the Lusitanians, the most powerful tribe in Hispania.\nThanks to his knowledge of the territory and control of guerrilla tactics, he manages to keep Rome in check for eight years.\nViriato, at the height of his power, controls almost the entire Iberian Peninsula..."
+			last_edited_map="2"
+			start_map="2"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="3"/>
+	</game>

@@ -1,0 +1,56 @@
+	<notes>
+		<note
+			id="Herakleopolis Magna must not fall."
+			title="Herakleopolis Magna must not fall"
+			text="Defend the city of Herakleopolis Magna from the Roman legions."
+			icon="gameres/noteicons/defense.bmp"
+			map="EgyptRebels"
+			show_on_minimap="0"
+			locationx="7711"
+			locationy="12887"/>
+		<note
+			id="Support priests."
+			title="Support priests"
+			text="As longs as your priests remain next to the obelisks near the villages, peasants and food will be sent to Herakleopolis Magna."
+			icon="gameres/noteicons/info.bmp"
+			map="EgyptRebels"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Mercenary fort."
+			title="Mercenary fort"
+			text="If you bring either 10000 food or 5000 gold to the mercenary fort, you will gain a powerful group of war elephants."
+			icon="gameres/noteicons/gold.bmp"
+			map="EgyptRebels"
+			show_on_minimap="1"
+			locationx="7807"
+			locationy="14804"/>
+		<note
+			id="Altar of the gods."
+			title="Altar of the gods"
+			text="The high priest has offered to help you against the Romans. To do so, you have to send 50 peasants to the altar of the gods."
+			icon="gameres/noteicons/map.bmp"
+			map="EgyptRebels"
+			show_on_minimap="1"
+			locationx="15871"
+			locationy="10082"/>
+		<note
+			id="Capture Memphis."
+			title="Capture Memphis"
+			text="Your enemies are tired and have stopped attacking from Memphis. It is time to go on the offensive and capture the city."
+			icon="gameres/noteicons/attack.bmp"
+			map="EgyptRebels"
+			show_on_minimap="1"
+			locationx="14135"
+			locationy="2440"/>
+		<note
+			id="Capture Saqqara."
+			title="Capture Saqqara"
+			text="If you capture Saqqara, the Roman legions will stop coming from the city, allowing you to prepare your army to attack Memphis safely."
+			icon="gameres/noteicons/attack.bmp"
+			map="EgyptRebels"
+			show_on_minimap="1"
+			locationx="1358"
+			locationy="993"/>
+	</notes>

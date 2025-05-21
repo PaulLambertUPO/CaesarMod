@@ -1,0 +1,40 @@
+	<conversation
+		name="2A Navigation"
+		startup="first"
+		startup_phrases="p1;repeat"
+		restore_view="1">
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="Well done!\n\nEach task that I assign you will be recorded: you can check all of these objectives by pressing 'F8' or the &#34;Notes&#34; button located in the lower part of the screen.\n\nNow, let's move on to your next mission..."
+			condition="return EnvReadInt(\'/First2A\') != 1;"
+			action="EnvWriteInt(\'/First2A\', 1);"
+			followup="first"/>
+		<phrase
+			label="repeat"
+			actor="Instructor"
+			text="There is a group of praetorians heading south to scout out some old ruins.\n\nFollow them with your two legionaries."
+			followup="choice"
+			followup_phrases="Scrolling;Map;Ok"/>
+		<phrase
+			label="Ok"
+			actor="Instructor"
+			text="I'm on it."
+			followup="end"/>
+		<phrase
+			label="Scrolling"
+			actor="Instructor"
+			text="You can see the surrounding terrain by moving the mouse pointer to the edges of the screen, although you cannot do this during a conversation."
+			choice_text="I cannot see the ruins..."
+			followup="first"
+			followup_phrases="repeat"/>
+		<phrase
+			label="Map"
+			actor="Instructor"
+			text="The minimap is a scaled-down view of the region where the game is happening. You can open and close it by pressing the spacebar, although you cannot do this during a conversation.\n\nIf you click on an area in the minimap, this will close and take your view to the selected area."
+			choice_text="Can I see a map of the area?"
+			followup="first"
+			followup_phrases="repeat"/>
+	</conversation>

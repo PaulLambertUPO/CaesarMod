@@ -1,0 +1,17 @@
+	<map
+		name="Zama"
+		displayname=""
+		descr=""
+		persist_state="0">
+		<size
+			x="16384"
+			y="16384"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="0"/>
+		<start_pt
+			x="12091"
+			y="10979"/>
+	</map>

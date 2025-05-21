@@ -1,0 +1,1 @@
+PlayMovie(Translate("Movies/ENG/GreatChallenges/5_Intro_Great_L_German.avi"));

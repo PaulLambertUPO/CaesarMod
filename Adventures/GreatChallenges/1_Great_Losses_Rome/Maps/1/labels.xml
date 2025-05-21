@@ -1,0 +1,34 @@
+	<root>
+		<label
+			text="Palatium"
+			x="1681"
+			y="5877"/>
+		<label
+			text="Aventinus"
+			x="2210"
+			y="2360"/>
+		<label
+			text="Capitolium"
+			x="5973"
+			y="2938"/>
+		<label
+			text="Southern gate"
+			x="2610"
+			y="8446"/>
+		<label
+			text="Central gate"
+			x="6838"
+			y="6410"/>
+		<label
+			text="Eastern gate"
+			x="8696"
+			y="2360"/>
+		<label
+			text="Ostia"
+			x="1969"
+			y="14347"/>
+		<label
+			text="Allifae"
+			x="14654"
+			y="4697"/>
+	</root>

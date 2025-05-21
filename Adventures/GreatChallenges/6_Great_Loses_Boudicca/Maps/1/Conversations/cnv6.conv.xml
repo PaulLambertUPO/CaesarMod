@@ -1,0 +1,27 @@
+	<conversation
+		name="RuinTalk4"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="RuinDruid3"/>
+		<phrase
+			actor="RuinDruid3"
+			text="For 4000 gold I can teach you the art of Learning, which will allow your army to gain experience by fighting more experienced enemies."
+			followup="choice"
+			followup_phrases="1;2"/>
+		<phrase
+			label="1"
+			actor="RuinDruid3"
+			text="You have chosen wisely, warrior. That knowledge is now yours."
+			choice_text="The skill Learning!"
+			condition="return GetSettlement(\'S_IceniTown\').gold \g= 4000;"
+			action="Settlement set;\nRemoveNote(\'GiveMoney\');\nset = GetSettlement(\'S_IceniTown\');\nset.SetGold(set.gold - 4000);\nset.GetCentralBuilding().Research(\'Learning\');"
+			return="return \'YES\';"
+			followup="end"/>
+		<phrase
+			label="2"
+			actor="RuinDruid3"
+			text="Very well... I shall be waiting."
+			choice_text="Not now"
+			followup="end"/>
+	</conversation>

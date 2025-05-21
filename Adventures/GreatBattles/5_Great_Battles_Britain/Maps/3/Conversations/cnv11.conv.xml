@@ -1,0 +1,37 @@
+	<conversation
+		name="InfoConv"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="Senator"/>
+		<phrase
+			actor="Senator"
+			text="Agricola, the enemy is using a number of shipyards. Capture them and the barbarians will be severely weakened."
+			condition="return EnvReadInt(\'/Ships\') == 1;"
+			action="EnvWriteInt(\'/Ships\', 0);\n_PlaceEx(\'WatchEye\', 4983, 30126, 1);\n_PlaceEx(\'WatchEye\', 21089, 6432, 1);\n_PlaceEx(\'WatchEye\', 7085, 9202, 1);\nGiveNote(\'Shipyards\');"
+			followup="first"/>
+		<phrase
+			actor="Senator"
+			text="There are many caves throughout the island that will allow you to go behind the enemy undetected. Use them to attack your enemies while they are off guard."
+			condition="return EnvReadInt(\'/Caves\') == 1;"
+			action="EnvWriteInt(\'/Caves\', 0);\n_PlaceEx(\'WatchEye\', 16785, 24051, 1);\n_PlaceEx(\'WatchEye\', 21180, 9493, 1);\nGiveNote(\'Caves\');"
+			followup="first"/>
+		<phrase
+			actor="Senator"
+			text="There is an ancient Stonehenge in enemy territory. I heard that it can be reached through one of the caves I mentioned."
+			condition="return EnvReadInt(\'/GlobalSpells\') == 1;"
+			action="EnvWriteInt(\'/GlobalSpells\', 0);\nGiveNote(\'Stonehenge\');\nGiveNote(\'StonehengeCave\');\n_PlaceEx(\'WatchEye\', 19220, 21703, 1);"
+			followup="first"/>
+		<phrase
+			actor="Senator"
+			text="The wall that splits the island in two, as well as the outposts, is controlled from Mancunium. Capture that city and you will be able to approach the wall without being attacked."
+			condition="return EnvReadInt(\'/ImportantTown\') == 1;"
+			action="EnvWriteInt(\'/ImportantTown\', 0);\nGiveNote(\'Mancunium\');\n_PlaceEx(\'WatchEye\', 13691, 16336, 1);\n_PlaceEx(\'WatchEye\', 15259, 15331, 1);\n_PlaceEx(\'WatchEye\', 16828, 14448, 1);\n_PlaceEx(\'WatchEye\', 18029, 12449, 1);\n_PlaceEx(\'WatchEye\', 20125, 11467, 1);\n_PlaceEx(\'WatchEye\', 21180, 9493, 1);\n_PlaceEx(\'WatchEye\', 17532, 13885, 1);\n_PlaceEx(\'WatchEye\', 17648, 13342, 1);"
+			followup="first"/>
+		<phrase
+			actor="Senator"
+			text="Agricola! I was just told that Calgacus has gathered a massive army in the north and is charging against us! Defeat him!"
+			condition="return EnvReadInt(\'/CalgacusArmy\') == 1;"
+			action="if (!IsNoteActive(\'Calgacus\'))\n GiveNote(\'Calgacus\');\nRemoveNote(\'WinCondition\');\nif (!IsRunning(\'CalgacusArmy\'))\n RunSequence(\'CalgacusArmy\');"
+			followup="first"/>
+	</conversation>

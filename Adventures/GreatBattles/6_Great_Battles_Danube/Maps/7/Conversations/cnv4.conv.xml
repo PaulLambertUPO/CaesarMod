@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv4"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Marcus"/>
+		<phrase
+			actor="NO_Marcus"
+			text="Legionaries of Rome, stand firm! We managed to weaken the enemy! Now let's attack their camp!"
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,17 @@
+	<conversation
+		name="RuinTalk1"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="RuinDruid1"/>
+		<phrase
+			actor="RuinDruid1"
+			text="I am sorry but I cannot help you anymore, warrior."
+			condition="return IsFinished('DungeonTalk');"
+			followup="end"/>
+		<phrase
+			actor="RuinDruid1"
+			text="Head to the west until you reach a mountain. Once you are there, find the entrance of a cave and enter it. Speak to the druid inside and he will give you something that might help you."
+			action="GiveNote(\'Cave\');\nExploreArea(1, \'A_Warning\');"
+			followup="first"/>
+	</conversation>

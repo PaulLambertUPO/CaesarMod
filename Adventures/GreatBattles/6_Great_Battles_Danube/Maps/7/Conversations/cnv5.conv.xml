@@ -1,0 +1,21 @@
+	<conversation
+		name="C_Conv5"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Subquest"/>
+		<actor
+			name="NO_Marcus"/>
+		<phrase
+			actor="NO_Subquest"
+			text="Ave, noble emperor! The Teutons northeast of here keep attacking us and destroying our harvests. Will you help us defeat them?"
+			followup="first"/>
+		<phrase
+			actor="NO_Marcus"
+			text="From now on you are under the protection of the emperor! How many of you will join my army?"
+			followup="first"/>
+		<phrase
+			actor="NO_Subquest"
+			text="Many are willing, my emperor, yet few will do so. As long as the Teutons live, I doubt anyone would dare to leave their villages unprotected."
+			followup="first"/>
+	</conversation>

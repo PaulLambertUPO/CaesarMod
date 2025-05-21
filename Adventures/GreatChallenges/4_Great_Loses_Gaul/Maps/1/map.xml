@@ -1,0 +1,17 @@
+	<map
+		name="Gergovia"
+		displayname=""
+		descr=""
+		persist_state="1">
+		<size
+			x="16384"
+			y="16384"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="1"/>
+		<start_pt
+			x="10735"
+			y="4220"/>
+	</map>

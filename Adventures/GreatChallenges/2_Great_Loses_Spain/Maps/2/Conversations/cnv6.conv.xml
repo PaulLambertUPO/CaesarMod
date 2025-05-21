@@ -1,0 +1,21 @@
+	<conversation
+		name="Peasant"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Peasant"/>
+		<actor
+			name="NO_Viriato"/>
+		<phrase
+			actor="NO_Viriato"
+			text="Excuse me, have any Romans passed through this village?"
+			followup="first"/>
+		<phrase
+			actor="NO_Peasant"
+			text="Yes, a group of them came not too long ago and continued north. They had a druid prisoner with them."
+			followup="first"/>
+		<phrase
+			actor="NO_Viriato"
+			text="Druid prisoner? I shall look into this. The enemy of my enemy can be my friend."
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Greetings, Viriato. I knew I could count on you in these difficult times. We lack resources and we cannot hope to maintain an army against the Roman invaders."
+	result="Ti saluto, Viriato. Sapevo che avrei potuto contare su di te in questi tempi difficili. La mancanza di risorse ci impedisce di mantenere un esercito che possa affrontare gli invasori romani."
+	sound="2/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="We might be lacking gold, but not people! There are several villages under our control. Surely we will find enough men there to form an army."
+	result="Anche se non abbiamo molto oro, sono molti i valorosi disposti a sfidare Roma! Molti villaggi si sono uniti alla nostra causa. Sicuramente lì troveremo uomini sufficienti per poter formare un esercito."
+	sound="2/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="Some simple peasants will not be enough to face the mighty Roman army! My spies have told me that the Romans keep a substantial amount of gold in each of their outposts. Should we manage to claim it, we will be able to equip our men properly."
+	result="Non ci basteranno dei contadini per affrontare il potente esercito romano! Le mie spie mi hanno informato che i romani hanno conservato un'importante quantità d'oro in ognuno dei loro forti per poter pagare i legionari. Se riuscissimo ad appropiarci del loro oro, potremmo equipaggiare come si deve i nostri uomini."
+	sound="2/conversations/cnv0_phrase2.wav"/>
+<translationtableentry
+	text="Then I shall make sure to bring enough gold to train an army. And when I have succeeded, we'll subjugate Saetabis! Once it is ours, the Romans will have no hope of surviving in these lands!"
+	result="Farò in modo di portare l'oro sufficiente per poter addestrare un esercito. E quando ci sarò riuscito, assoggetteremo Saetabis! Quando sarà nostra, non ci sarà più posto per i romani in queste terre!"
+	sound="2/conversations/cnv0_phrase3.wav"/>
+</translationtable>

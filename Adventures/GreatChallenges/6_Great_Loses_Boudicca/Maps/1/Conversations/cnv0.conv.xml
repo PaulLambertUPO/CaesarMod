@@ -1,0 +1,33 @@
+	<conversation
+		name="GetDungeonReward"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Lleldoryn"/>
+		<phrase
+			actor="NO_Lleldoryn"
+			text="Well done, warrior. Only a few survive the trials of the cave and come to me.\nWell, how can I help you?"
+			followup="choice"
+			followup_phrases="1;2;3"/>
+		<phrase
+			label="1"
+			actor="NO_Lleldoryn"
+			text="Perfect, here it is! Take it to the cursed stronghold now and make sure that horrible place regains the peace it should never have lost."
+			choice_text="I want the bloodstone!"
+			action="GetNamedObj('Lel').obj.AsItemHolder().AddItem('Bloodstone');\nGiveNote(\'GetBloodstone\');\nRunSequence(\'DungeonBloodstone\');"
+			followup="end"/>
+		<phrase
+			label="2"
+			actor="NO_Lleldoryn"
+			text="In the name of Kathobodua, it shall be so!"
+			choice_text="I want my army to gain experience faster!"
+			action="GetNamedObj(\'IceniTown\').obj.AsBuilding().Research(\'Battle tactics\');"
+			followup="end"/>
+		<phrase
+			label="3"
+			actor="NO_Lleldoryn"
+			text="In the name of Kathobodua, it shall be so!"
+			choice_text="I want my army to gain experience over time!"
+			action="GetNamedObj(\'IceniTown\').obj.AsBuilding().Research(\'Heroes' Wisdom\');\nGetNamedObj(\'IceniTown\').obj.AsBuilding().Research(\'Warriors' Wisdom\');"
+			followup="end"/>
+	</conversation>

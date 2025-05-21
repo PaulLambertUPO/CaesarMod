@@ -1,0 +1,11 @@
+	<conversation
+		name="8 End"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			actor="Instructor"
+			text="Excellent!\n\nYou've completed your tasks and are now ready to build your own empire!"
+			followup="first"/>
+	</conversation>

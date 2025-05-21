@@ -1,0 +1,17 @@
+	<conversation
+		name="Warning"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="DungeonKeeper1"/>
+		<actor
+			name="DungeonKeeper2"/>
+		<phrase
+			actor="DungeonKeeper1"
+			text="Halt! Only those of pure heart and great strength could hope to survive in this cave. Be warned, warrior, there are many beasts and savage men within. If your strength is not enough, you'd better leave this place!"
+			followup="first"/>
+		<phrase
+			actor="DungeonKeeper2"
+			text="Should you choose to enter, be mindful that the cave itself is such that it will drain your life. Perhaps it might be useful for you to get some healing water from this oak stump in order to survive longer."
+			followup="first"/>
+	</conversation>

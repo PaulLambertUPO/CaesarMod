@@ -1,0 +1,6 @@
+<translationtable>
+<translationtableentry
+	text="Sir, Rome has sent reinforcements to this gold outpost!\n\nIf you capture more gold outposts, the Senate will keep sending men. Otherwise, not even a simple hastatus will be sent."
+	result="Signore, Roma ha mandato rinforzi a quel forte!\n\nSe conquisti altri forti come questo, il Senato continuerà a mandare uomini. In caso contrario, non verrà mandato neanche un semplice legionario."
+	sound="2/conversations/cnv2_phrase0.wav"/>
+</translationtable>

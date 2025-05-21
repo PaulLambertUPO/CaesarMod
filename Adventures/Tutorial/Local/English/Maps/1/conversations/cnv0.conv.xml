@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="Welcome to my training camp!\n\nI'll be instructing you on how to lead armies and defeat your enemy.\n\nLeft-click on this box to continue."
+	result="Welcome to my training camp!\n\nI'll be instructing you on how to lead armies and defeat your enemy.\n\nLeft-click on this box to continue."
+	sound="1/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="Your first task will be to command these legionaries to move to the center of the square."
+	result="Your first task will be to command these legionaries to move to the center of the square."
+	sound="1/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="You can select a single legionary by left-clicking on it, although you cannot do this during a conversation.\n\nIf you want to select multiple legionaries, you can do so by holding down the left mouse button and dragging the mouse pointer to the other side of the group: a rectangle will appear on screen, surrounding all of the units. If you release the mouse button, all of the units within the rectangle will be selected.\n\nYou'll be able to distinguish which legionaries you have selected, as they will have a circle around their feet."
+	result="You can select a single legionary by left-clicking on it, although you cannot do this during a conversation.\n\nIf you want to select multiple legionaries, you can do so by holding down the left mouse button and dragging the mouse pointer to the other side of the group: a rectangle will appear on screen, surrounding all of the units. If you release the mouse button, all of the units within the rectangle will be selected.\n\nYou'll be able to distinguish which legionaries you have selected, as they will have a circle around their feet."
+	sound="1/conversations/cnv0_phrase3.wav"/>
+<translationtableentry
+	text="Right-click on the ground to make your legionaries move towards the indicated place, although you cannot do this during a conversation."
+	result="Right-click on the ground to make your legionaries move towards the indicated place, although you cannot do this during a conversation."
+	sound="1/conversations/cnv0_phrase5.wav"/>
+<translationtableentry
+	text="Your task is to command those legionaries in red to move to the center of the square."
+	result="Your task is to command those legionaries in red to move to the center of the square."
+	sound="1/conversations/cnv0_phrase7.wav"/>
+</translationtable>

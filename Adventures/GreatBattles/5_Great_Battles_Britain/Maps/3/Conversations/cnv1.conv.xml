@@ -1,0 +1,11 @@
+	<conversation
+		name="Caput2"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="actor"/>
+		<phrase
+			actor="actor"
+			text="You have beaten me. All that was mine is yours now."
+			followup="first"/>
+	</conversation>

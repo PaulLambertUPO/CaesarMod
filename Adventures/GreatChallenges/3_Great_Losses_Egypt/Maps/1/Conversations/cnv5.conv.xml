@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv5"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="Reporter"/>
+		<phrase
+			actor="Reporter"
+			text="We finally got our spies to send us reports. Now we will know all their movements."
+			followup="first"/>
+	</conversation>

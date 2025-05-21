@@ -1,0 +1,15 @@
+	<conversation
+		name="DesertTribes"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="TalkPriest"/>
+		<phrase
+			actor="TalkPriest"
+			text="General, I have just learned that there are some wild Sudanese tribes that live in the southern desert. They are fierce warriors, yet unfortunately they fight only for themselves."
+			followup="first"/>
+		<phrase
+			actor="TalkPriest"
+			text="Fortunately I have managed to plant spies within them, so you shall be aware of their actions. Be cautious, for although these tribes aren't allied with our enemies, they are no friends of us either."
+			followup="first"/>
+	</conversation>

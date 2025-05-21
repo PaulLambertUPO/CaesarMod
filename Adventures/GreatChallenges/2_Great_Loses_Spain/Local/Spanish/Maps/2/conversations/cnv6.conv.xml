@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Excuse me, have any Romans passed through this village?"
+	result="Disculpa, ¿han pasado los romanos por esta aldea?"
+	sound="2/conversations/cnv6_phrase0.wav"/>
+<translationtableentry
+	text="Yes, a group of them came not too long ago and continued north. They had a druid prisoner with them."
+	result="Sí, un grupo de romanos pasó por aquí no hace mucho y siguieron en dirección norte. Llevaban prisionero a un druida."
+	sound="2/conversations/cnv6_phrase1.wav"/>
+<translationtableentry
+	text="Druid prisoner? I shall look into this. The enemy of my enemy can be my friend."
+	result="¿Un druida por estas tierras? ¿Y prisionero? Me ocuparé de ello. El enemigo de mi enemigo puede ser un buen amigo."
+	sound="2/conversations/cnv6_phrase2.wav"/>
+</translationtable>

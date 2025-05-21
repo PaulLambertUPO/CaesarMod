@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Greetings, Viriato. I knew I could count on you in these difficult times. We lack resources and we cannot hope to maintain an army against the Roman invaders."
+	result="Saludos, Viriato. Sabía que podía contar contigo en estos tiempos difíciles. La falta de recursos nos impide mantener un ejército que se pueda enfrentar a los invasores romanos."
+	sound="2/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="We might be lacking gold, but not people! There are several villages under our control. Surely we will find enough men there to form an army."
+	result="¡Aunque no tengamos oro, son muchos los valientes que están dispuestos a desafiar a Roma! Hay muchas aldeas que se han unido a nuestra causa. Seguro que allí encontramos suficientes hombres para formar un ejército."
+	sound="2/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="Some simple peasants will not be enough to face the mighty Roman army! My spies have told me that the Romans keep a substantial amount of gold in each of their outposts. Should we manage to claim it, we will be able to equip our men properly."
+	result="¡Necesitaremos algo más que campesinos si vamos a enfrentarnos al poderoso ejército romano! Mis espías me han informado de que los romanos han guardado sumas importantes de oro en cada uno de sus fortines para poder pagar a sus legionarios. Si conseguimos apropiarnos de su oro, podremos equipar convenientemente a nuestros hombres."
+	sound="2/conversations/cnv0_phrase2.wav"/>
+<translationtableentry
+	text="Then I shall make sure to bring enough gold to train an army. And when I have succeeded, we'll subjugate Saetabis! Once it is ours, the Romans will have no hope of surviving in these lands!"
+	result="Me aseguraré de traer bastante oro para entrenar a un ejército. ¡Y en cuanto lo logre, capturaremos Saetabis! ¡Cuando sea nuestra, los romanos no tendrán ya sitio en estas tierras!"
+	sound="2/conversations/cnv0_phrase3.wav"/>
+</translationtable>

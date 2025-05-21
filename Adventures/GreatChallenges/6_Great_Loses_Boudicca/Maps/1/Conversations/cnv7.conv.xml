@@ -1,0 +1,11 @@
+	<conversation
+		name="WinTalk"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Natasha"/>
+		<phrase
+			actor="Natasha"
+			text="We have defeated the Romans! This is a memorable date, for it is the day Britain awoke and broke free from its chains!"
+			followup="first"/>
+	</conversation>

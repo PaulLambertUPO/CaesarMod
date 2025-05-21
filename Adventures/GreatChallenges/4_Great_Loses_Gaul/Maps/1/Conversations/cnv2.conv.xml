@@ -1,0 +1,11 @@
+	<conversation
+		name="Retreat"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Vercingetorix"/>
+		<phrase
+			actor="NO_Vercingetorix"
+			text="Everyone, retreat to Gergovia! The Romans are coming in full force!"
+			followup="first"/>
+	</conversation>

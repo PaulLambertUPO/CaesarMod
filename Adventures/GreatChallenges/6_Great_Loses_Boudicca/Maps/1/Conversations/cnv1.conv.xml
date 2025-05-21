@@ -1,0 +1,25 @@
+	<conversation
+		name="FirstTalk"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Natasha"/>
+		<actor
+			name="TalkPriest"/>
+		<phrase
+			actor="TalkPriest"
+			text="May Jupiter bless you, Boadicea. Our noble emperor has sent me to announce the increase in taxes that your people must pay to Rome, for the good of civilization..."
+			followup="first"/>
+		<phrase
+			actor="Natasha"
+			text="We shall give you nothing more, Roman! The Iceni shall stand for it no longer!"
+			followup="first"/>
+		<phrase
+			actor="TalkPriest"
+			text="You foolish barbarians! The empire will crush you like ants! May the wrath of Jupiter fall upon you!"
+			followup="first"/>
+		<phrase
+			actor="Natasha"
+			text="I fear neither your emperor nor your puny gods! After dealing with you, I will capture Camulodunum and drive all Romans off our island!"
+			followup="first"/>
+	</conversation>

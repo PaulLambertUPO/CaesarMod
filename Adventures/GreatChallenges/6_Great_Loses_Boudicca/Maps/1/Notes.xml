@@ -1,0 +1,83 @@
+	<notes>
+		<note
+			id="CaptureRome"
+			title="Capture Camulodunum"
+			text="In order to defeat the Romans, you must capture the city of Camulodunum."
+			icon="gameres/noteicons/attack.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="1"
+			locationx="3083"
+			locationy="11753"/>
+		<note
+			id="Boudicca"
+			title="Boudicca must survive"
+			text="Boudicca must survive in order for the rebellion to succeed."
+			icon="gameres/noteicons/survive.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="KeepTown"
+			title="Protect the Iceni stronghold"
+			text="You must not allow the Iceni stronghold to fall in enemy hands."
+			icon="gameres/noteicons/defense.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="0"
+			locationx="14135"
+			locationy="4905"/>
+		<note
+			id="Ruins"
+			title="Ancient ruins"
+			text="Three wise druids live among the ancient ruins. Send someone to speak with them because they are likely to know something that can be useful to defeat the Romans."
+			icon="gameres/noteicons/map.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="1"
+			locationx="13619"
+			locationy="1282"/>
+		<note
+			id="GreenTown"
+			title="Trinovantes"
+			text="The only way to subdue the Trinovantes without eliminating them to the last man is to prove your strength by capturing their three outposts."
+			icon="gameres/noteicons/info.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="1"
+			locationx="6295"
+			locationy="1427"/>
+		<note
+			id="GiveMoney"
+			title="Druid's offer"
+			text="One of the druids near the ancient ruins offered to teach your army the Learning special for 4000 gold. To accept his offer, talk to him once you have enough gold in the Iceni stronghold."
+			icon="gameres/noteicons/gold.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="0"
+			locationx="13491"
+			locationy="1733"/>
+		<note
+			id="Cave"
+			title="Wild cave"
+			text="This cave is inhabited by wild beasts and very dangerous savages. However, in it lives a strange druid who could greatly help you in your battle against Rome."
+			icon="gameres/noteicons/map.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="1"
+			locationx="5791"
+			locationy="5274"/>
+		<note
+			id="Bloodstone"
+			title="Cursed stronghold"
+			text="To free the cursed stronghold from the spell, you must find a bloodstone and place it in the tombstone next to the townhall."
+			icon="gameres/noteicons/info.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="1"
+			locationx="13683"
+			locationy="10885"/>
+		<note
+			id="GetBloodstone"
+			title="Bloodstone"
+			text="The bloodstone is in the oak stump behind the druid Lleldoryn."
+			icon="gameres/noteicons/info.bmp"
+			map="Boudicca's revolt"
+			show_on_minimap="1"
+			locationx="3635"
+			locationy="935"/>
+	</notes>

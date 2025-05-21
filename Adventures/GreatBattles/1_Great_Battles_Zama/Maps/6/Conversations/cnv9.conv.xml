@@ -1,0 +1,11 @@
+	<conversation
+		name="HannibalArrives"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Scipio"/>
+		<phrase
+			actor="NO_Scipio"
+			text="Hannibal has finally arrived! Let's go to Zama and defeat him!"
+			followup="first"/>
+	</conversation>

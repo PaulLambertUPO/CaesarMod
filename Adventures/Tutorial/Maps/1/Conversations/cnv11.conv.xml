@@ -1,0 +1,29 @@
+	<conversation
+		name="5A Take outpost"
+		startup="first"
+		startup_phrases="p1;p2"
+		restore_view="1">
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="Well done!\n\nNow the camp and the village are in our power."
+			condition="return EnvReadInt(\'/First5A\') != 1;"
+			action="EnvWriteInt(\'/First5A\', 1);"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Gather your forces and take control of the training outpost that you'll find to the south.\n\nSome buildings like this outpost are being garrisoned by neutral warriors: if you defeat them, the outpost will be ours!"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="This won't be an easy battle.\n\nRemember: Caesar must survive at all costs!"
+			followup="end"/>
+		<phrase
+			label="p2"
+			actor="Instructor"
+			text="Gather your forces and take control of this training outpost by defeating its defenders.\n\nIt's a tough but glorious battle!"
+			condition="return EnvReadInt(\'/First5A\') == 1;"
+			followup="first"/>
+	</conversation>

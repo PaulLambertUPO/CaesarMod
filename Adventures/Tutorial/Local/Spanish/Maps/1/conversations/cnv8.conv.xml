@@ -1,0 +1,27 @@
+<translationtable>
+<translationtableentry
+	text="Excellent! You've learned a lot."
+	result="¡Excelente! Has aprendido mucho."
+	sound="1/conversations/cnv8_phrase0.wav"/>
+<translationtableentry
+	text="What if I forget something about what you told me?"
+	result="¿Y si olvido algo de lo que me has dicho?"/>
+<translationtableentry
+	text="Everything that we have taught you and the missions that have been assigned to you have been recorded.\n\nYou can review this information by pressing the &#34;Notes&#34; button in the lower part of the screen, or by pressing 'F8', as long as you are not in the middle of a conversation."
+	result="Todo aquello que te estamos enseñando y las misiones a tí asignadas quedan grabados.\n\nPuedes revisar esa información pulsando el botón &#34;Objetivos&#34; en la parte inferior de la pantalla, o pulsando la tecla 'F8', siempre que no estés en medio de una conversación."
+	sound="1/conversations/cnv8_phrase1.wav"/>
+<translationtableentry
+	text="How can I get more advice?"
+	result="¿Cómo puedo obtener más consejos?"/>
+<translationtableentry
+	text="Hold the mouse pointer over any icon or text in the game menus to make a brief description of its utility appear.\n\nIn addition, if at any moment during the game you need more information about certain aspects, elements or units in the game, you can right-click the icons or texts to get further help about them.\n\nPlus, it's always useful to read the manual."
+	result="Mantén el puntero del ratón sobre cualquier icono o texto en los menús del juego para que aparezca una breve descripción de su utilidad.\n\nAdemás, si en algún momento durante la partida necesitas información adicional sobre aspectos, elementos o unidades del juego, puedes pulsar con el botón derecho del ratón sobre los iconos o textos para obtener ayuda sobre ellos.\n\nAdemás, siempre es conveniente que leas el manual."
+	sound="1/conversations/cnv8_phrase3.wav"/>
+<translationtableentry
+	text="You've been ordered to recapture our camp. Don't waste time!\n\nSelect and give orders only to Caesar: he is in charge of the legionaries that have been assigned to him."
+	result="Se te ordena reconquistar nuestro campamento. ¡No pierdas el tiempo!\n\nSelecciona e imparte tus órdenes sólo a César: él se hará cargo de los guerreros que tiene asignados."
+	sound="1/conversations/cnv8_phrase5.wav"/>
+<translationtableentry
+	text="Consider it done!"
+	result="¡Dalo por hecho!"/>
+</translationtable>

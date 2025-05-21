@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="My warriors are starving!\n\nThe village we captured earlier should have enough food for us."
+	result="¡Mis guerreros están hambrientos!\n\nEsa aldea que capturamos antes debería tener suficientes víveres para nosotros."
+	sound="1/conversations/cnv12_phrase0.wav"/>
+<translationtableentry
+	text="When warriors don't eat, they lose health; but whilst they eat, they regain it."
+	result="Cuando los guerreros no se alimentan, pierden salud; mientras que cuando comen, la recuperan."
+	sound="1/conversations/cnv12_phrase1.wav"/>
+<translationtableentry
+	text="Each village produces and stores food that can be transported in food supply units. These can be used for both transporting food to other buildings and settlements or to bring them with your troops to keep them supplied."
+	result="Cada aldea produce y almacena víveres que pueden ser transportados en unidades de suministro. Éstas te servirán tanto para transportar víveres a otros edificios y asentamientos como para llevarlos en campaña y mantener abastecidas a tus tropas."
+	sound="1/conversations/cnv12_phrase2.wav"/>
+<translationtableentry
+	text="Select the village you captured before and create a food caravan by clicking on the centre of the village and selecting the &#34;Load a caravan with 1000 food&#34; command that you'll see in the lower part of the screen.\n\nBring the caravan to Caesar."
+	result="Selecciona la aldea que conquistaste antes y crea una unidad de suministro con víveres, pulsando en el centro de la aldea y ejecutando la orden &#34;Cargar unidad de suministro con hasta 1000 víveres&#34; que verás en la parte inferior de la pantalla.\n\nLleva la unidad de suministros hasta César."
+	sound="1/conversations/cnv12_phrase3.wav"/>
+</translationtable>

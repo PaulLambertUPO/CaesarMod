@@ -1,0 +1,11 @@
+	<conversation
+		name="GoToPelusio"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="R_Augustus"/>
+		<phrase
+			actor="R_Augustus"
+			text="The enemy fleet is retreating! Now it is time to finish them off and then take the coast and continue the battle on land! The time has come to capture the shipyard of Pelusio and, after that, the whole of Egypt in the name of Rome!"
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="The death of our Iberian allies will not be in vain. Let's make the Romans pay dearly for their deeds! Assemble the troops for an all out attack!"
+	result="La morte dei nostri guerrieri iberici non sarà vana. I romani pagheranno cara la loro audacia! Riunisci le truppe per un attacco!"
+	sound="6/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="Now that our Iberian allies joined us, the Romans stand no chance! Let's crush them once and for all!"
+	result="Ora che i nostri guerrieri iberici sono arrivati, i romani non hanno nessuna opportunità! Schiacciamo quegli arroganti una volta per tutte!"
+	sound="6/conversations/cnv1_phrase1.wav"/>
+</translationtable>

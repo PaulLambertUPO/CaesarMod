@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Halt! Do not waste time chasing these weaklings; this is their territory and they might set up an ambush. We must plan well if we are to conquer Rome."
+	result="¡Alto! No perdamos tiempo persiguiendo a estos cobardes; este es su territorio y podríamos ser emboscados con facilidad. Deténgamonos y meditemos un plan para conquistar Roma."
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="Yes, great Hannibal! It appears that a Roman settlement up north is willing to aid us against Rome. Maybe you should go there."
+	result="Al parecer, gran Aníbal, hay una ciudad en el norte cuyos ciudadanos estarían dispuestos a ayudarnos a someter a Roma. Quizás deberías visitarles."
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="Besides, to the west, there is the port of Ostia. From there, the Romans receive reinforcements for their army. Should we capture it, we could bring more troops from Carthage."
+	result="Además, al oeste, se encuentra la ciudad de Ostia. Desde su puerto los romanos reciben refuerzos para su ejército. Si conseguimos capturarlo, seríamos nosotros quienes podríamos recibir refuerzos desde Cartago."
+	sound="1/conversations/cnv1_phrase2.wav"/>
+</translationtable>

@@ -1,0 +1,17 @@
+	<map
+		name="Spain"
+		displayname=""
+		descr=""
+		persist_state="1">
+		<size
+			x="16384"
+			y="16384"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="0"/>
+		<start_pt
+			x="3487"
+			y="3993"/>
+	</map>

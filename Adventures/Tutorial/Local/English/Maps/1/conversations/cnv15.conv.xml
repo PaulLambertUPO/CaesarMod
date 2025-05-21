@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="It looks like that you're running out of gold!\n\nTraining an army is expensive."
+	result="It looks like that you're running out of gold!\n\nTraining an army is expensive."
+	sound="1/conversations/cnv15_phrase0.wav"/>
+<translationtableentry
+	text="Some of your commands may require the payment of a certain amount of gold, food or population.\n\nYou can see the cost of a command you want to give by holding the mouse pointer over its button for a few seconds.\n\nThe required resources to fulfill a command are represented by their icons."
+	result="Some of your commands may require the payment of a certain amount of gold, food or population.\n\nYou can see the cost of a command you want to give by holding the mouse pointer over its button for a few seconds.\n\nThe required resources to fulfill a command are represented by their icons."
+	sound="1/conversations/cnv15_phrase1.wav"/>
+<translationtableentry
+	text="Gold is produced by the stronghold's population. The higher the population, the faster your gold reserves will grow."
+	result="Gold is produced by the stronghold's population. The higher the population, the faster your gold reserves will grow."
+	sound="1/conversations/cnv15_phrase2.wav"/>
+<translationtableentry
+	text="There is a command to increase the population of a stronghold that will be useful for when you need more population in your stronghold. This command can be found in the tavern and requires food."
+	result="There is a command to increase the population of a stronghold that will be useful for when you need more population in your stronghold. This command can be found in the tavern and requires food."
+	sound="1/conversations/cnv15_phrase3.wav"/>
+</translationtable>

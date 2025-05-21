@@ -1,0 +1,14 @@
+	<playerdata
+		id="2"
+		name="Trinovantes"
+		race="Britain"
+		AllowedRaces="All"
+		control="Disabled"
+		AI=""
+		difficulty="0"
+		startx="0"
+		starty="0"
+		color="992"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000003500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

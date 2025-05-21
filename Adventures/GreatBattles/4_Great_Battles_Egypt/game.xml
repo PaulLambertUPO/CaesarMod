@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Augustus on the Nile - 31 BC"
+			author="Haemimont Games"
+			description="Supported by Cleopatra, queen of Egypt, Mark Antony aspires to acquire absolute power over Rome.\nHis hopes are dashed when his rival, Octavian Augustus, defeats the Egyptian fleet at the battle of Actium, off the coast of Greece.\nAfter the victory, Octavian's legions prepare to land on the Nile delta and take possession of the land of the pharaohs..."
+			last_edited_map="4"
+			start_map="4"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>

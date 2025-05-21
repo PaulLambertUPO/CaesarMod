@@ -1,0 +1,74 @@
+	<notes>
+		<note
+			id="Meet Masinissa"
+			title="Meet Masinissa"
+			text="Make your way to Masinissa's camp alone and talk to him."
+			icon="gameres/noteicons/map.bmp"
+			map="Zama"
+			show_on_minimap="1"
+			locationx="12815"
+			locationy="14256"/>
+		<note
+			id="Scipio must survive"
+			title="Scipio must survive"
+			text="Scipio must survive in order for Hannibal to be defeated."
+			icon="gameres/noteicons/survive.bmp"
+			map="Zama"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Landing site"
+			title="Landing site"
+			text="The Iberian reinforcements are likely to come ashore here."
+			icon="gameres/noteicons/map.bmp"
+			map="Zama"
+			show_on_minimap="1"
+			locationx="11175"
+			locationy="4372"/>
+		<note
+			id="Iberian reinforcements"
+			title="Iberian reinforcements"
+			text="Intercept the Iberian reinforcements before they reach the Numidian camp."
+			icon="gameres/noteicons/attack.bmp"
+			map="Zama"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Return to Masinissa"
+			title="Return to Masinissa"
+			text="Return to Masinissa and convince him to join you."
+			icon="gameres/noteicons/map.bmp"
+			map="Zama"
+			show_on_minimap="0"
+			locationx="12815"
+			locationy="14256"/>
+		<note
+			id="City of Utica"
+			title="City of Utica"
+			text="You should strengthen your army: the city of Utica, not far away from here, can be a good option. It is said to be impregnable to the enemy attacks... as long as it is supplied with food."
+			icon="gameres/noteicons/info.bmp"
+			map="Zama"
+			show_on_minimap="1"
+			locationx="13251"
+			locationy="10290"/>
+		<note
+			id="Kill Syphax"
+			title="Kill Syphax"
+			text="The Numidian king Syphax has allied with Hannibal. If you kill him, his troops will join yours unless Masinissa is killed."
+			icon="gameres/noteicons/attack.bmp"
+			map="Zama"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Zama"
+			title="Zama"
+			text="Defeat Hannibal and destroy his entire army at Zama."
+			icon="gameres/noteicons/attack.bmp"
+			map="Zama"
+			show_on_minimap="0"
+			locationx="1643"
+			locationy="10035"/>
+	</notes>

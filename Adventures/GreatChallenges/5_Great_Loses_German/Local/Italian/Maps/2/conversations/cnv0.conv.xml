@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Arminius, the Romans are sending their legions scattered in small rows! They will soon fall into our ambushes!"
+	result="Arminio, i romani stanno inviando le loro legioni disperse in piccole file! Cadranno presto nelle nostre imboscate!"
+	sound="2/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="Good! I knew that stupid Varus would fall into my trap. We must make sure there are enough warriors for the ambushes to succeed."
+	result="Bene! Sapevo che quello stupido di Varo sarebbe caduto nella mia trappola. Dobbiamo assicurarci che ci siano abbastanza guerrieri perché le imboscate abbiano successo."
+	sound="2/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="Yes, chieftain!"
+	result="Ai tuoi ordini!"
+	sound="2/conversations/cnv0_phrase2.wav"/>
+</translationtable>

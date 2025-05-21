@@ -1,0 +1,6 @@
+<translationtable>
+<translationtableentry
+	text="The Iberians have been defeated!\n\nNow Syphax will know Masinissa has betrayed him. Let's go to Masinissa camp and demand that he joins us!"
+	result="Gli iberi sono stati sconfitti!\n\nTorniamo ad avvisare Massinissa."
+	sound="6/conversations/cnv6_phrase0.wav"/>
+</translationtable>

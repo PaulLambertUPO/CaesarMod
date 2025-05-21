@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv7"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Pop"/>
+		<phrase
+			actor="NO_Pop"
+			text="Our enemy is weakened. Let's march on Memphis now!"
+			followup="first"/>
+	</conversation>

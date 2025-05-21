@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv5"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Crier"/>
+		<phrase
+			actor="NO_Crier"
+			text="The Carthaginians have captured one of the districts of Rome! Hurry, call for more reinforcements to protect the city!"
+			followup="first"/>
+	</conversation>

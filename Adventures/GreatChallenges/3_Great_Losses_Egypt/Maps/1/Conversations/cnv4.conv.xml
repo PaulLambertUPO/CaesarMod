@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv6"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Pop"/>
+		<phrase
+			actor="NO_Pop"
+			text="The gods have sent their finest warriors to help us!\nBe grateful, mortal."
+			followup="first"/>
+	</conversation>

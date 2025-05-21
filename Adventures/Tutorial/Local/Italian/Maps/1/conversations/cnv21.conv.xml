@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="If you hold down the 'CTRL' button on your keyboard whilst right-clicking on the ground, the selected warriors will go to that point whilst also eliminating any enemy they find on their way."
+	result="Se mantieni premuto il tasto 'CTRL' della tastiera mentre premi con il pulsante destro del mouse sul terreno, i guerrieri selezionati si dirigeranno fino al punto selezionato eliminando tutti i nemici che incontreranno lungo il cammino."
+	sound="1/conversations/cnv21_phrase0.wav"/>
+<translationtableentry
+	text="You can also use other keys to give orders to your army.\n\nTake a look at the help section by pressing 'F1' to find out how."
+	result="Puoi utilizzare altri tasti per dare ordini al tuo esercito.\n\nDai uno sguardo alla guida ('F1') per sapere come farlo."
+	sound="1/conversations/cnv21_phrase1.wav"/>
+</translationtable>

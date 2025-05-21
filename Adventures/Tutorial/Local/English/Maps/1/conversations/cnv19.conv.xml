@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="The enemy gates!\n\nThe only way to storm an enemy stronghold is to destroy its gates."
+	result="The enemy gates!\n\nThe only way to storm an enemy stronghold is to destroy its gates."
+	sound="1/conversations/cnv19_phrase0.wav"/>
+<translationtableentry
+	text="You can do this by commanding your archers to attack the gates. If you don't have archers, you're going to need a siege machine."
+	result="You can do this by commanding your archers to attack the gates. If you don't have archers, you're going to need a siege machine."
+	sound="1/conversations/cnv19_phrase1.wav"/>
+<translationtableentry
+	text="To build a siege machine, select some of your legionaries (they cannot be heroes) and select the command &#34;Build siege machine&#34; in the lower part of the screen.\n\nSiege machines have greater range than the archers that guard the wall, so place it beyond the reach of the enemy and watch as it destroys the gates."
+	result="To build a siege machine, select some of your legionaries (they cannot be heroes) and select the command &#34;Build siege machine&#34; in the lower part of the screen.\n\nSiege machines have greater range than the archers that guard the wall, so place it beyond the reach of the enemy and watch as it destroys the gates."
+	sound="1/conversations/cnv19_phrase2.wav"/>
+</translationtable>

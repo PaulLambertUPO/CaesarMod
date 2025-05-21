@@ -1,0 +1,6 @@
+<translationtable>
+<translationtableentry
+	text="Sir, we have captured a key position and can scout the entire area!\n\nOur spies have also found a town to the northwest which supplies our enemies with food. It would be wise to capture it before attacking Numantia."
+	result="Señor, hemos conquistado una posición clave para explorar toda la zona y hemos descubierto una población al noroeste que abastece de alimentos a nuestros enemigos. Lo mejor sería capturarla antes de atacar Numancia."
+	sound="2/conversations/cnv3_phrase0.wav"/>
+</translationtable>

@@ -1,0 +1,61 @@
+	<conversation
+		name="NeedHelp"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Senator"/>
+		<phrase
+			actor="Senator"
+			text="I'd like to help you but currently you don't have enough gold. Please bring at least 2000 gold in the townhall of Londinium before you ask for help."
+			condition="return GetSettlement(\'S_Sett1\').gold \l 2000;"
+			followup="end"/>
+		<phrase
+			label="beginning"
+			actor="Senator"
+			text="What do you need, Agricola?"
+			condition="return GetSettlement(\'S_Sett1\').gold \g= 2000;"
+			followup="choice"
+			followup_phrases="lindum;dumnorium;defenders;hero;nothing"/>
+		<phrase
+			label="lindum"
+			actor="Senator"
+			text="It shall be done."
+			choice_text="Reinforcements to attack Lindum - 4000 gold"
+			condition="return GetNamedObj(\'NO_29\').obj.IsEnemy(GetNamedObj(\'NO_1\')) \a\a GetSettlement(\'S_Sett1\').gold \g= 4000;"
+			action="GetSettlement(\'S_Sett1\').SetGold(GetSettlement(\'S_Sett1\').gold - 4000);\nSpawnGroup(\'T_S29_\' + (rand(6) + 1));\nSpawnGroup(\'T_S29_\' + (rand(6) + 1));"
+			followup="first"
+			followup_phrases="beginning"/>
+		<phrase
+			label="dumnorium"
+			actor="Senator"
+			text="It shall be done."
+			choice_text="Reinforcements to attack Dumnorium - 4000 gold"
+			condition="return GetNamedObj(\'NO_37\').obj.IsEnemy(GetNamedObj(\'NO_1\')) \a\a GetSettlement(\'S_Sett1\').gold \g= 4000;"
+			action="GetSettlement(\'S_Sett1\').SetGold(GetSettlement(\'S_Sett1\').gold - 4000);\nSpawnGroup(\'T_S37_\' + (rand(6) + 1));\nSpawnGroup(\'T_S37_\' + (rand(6) + 1));"
+			followup="first"
+			followup_phrases="beginning"/>
+		<phrase
+			label="defenders"
+			actor="Senator"
+			text="Help will arrive soon!"
+			choice_text="Additional troops in Londinium - 2000 gold"
+			condition="return GetSettlement(\'S_Sett1\').gold \g= 2000;"
+			action="GetSettlement(\'S_Sett1\').SetGold(GetSettlement(\'S_Sett1\').gold - 2000);\nSpawnGroup(\'T_S1_\' + (rand(6) + 1));"
+			followup="first"
+			followup_phrases="beginning"/>
+		<phrase
+			label="hero"
+			actor="Senator"
+			text="Your general is waiting in the townhall of Londinium."
+			choice_text="A general from a Roman province - 6000 gold"
+			condition="return GetSettlement(\'S_Sett1\').gold \g= 6000;"
+			action="GetSettlement(\'S_Sett1\').SetGold(GetSettlement(\'S_Sett1\').gold - 6000);\nSpawnGroupInHolder(\'T_Mer_Hero\' + (rand(7) + 1), \'S_Sett1\');"
+			followup="first"
+			followup_phrases="beginning"/>
+		<phrase
+			label="nothing"
+			actor="Senator"
+			text="Very well, see you soon."
+			choice_text="There is nothing I require"
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="I am sorry but I cannot help you anymore, warrior."
+	result="Mi dispiace guerriero, non ti posso più aiutare."
+	sound="1/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="Head to the west until you reach a mountain. Once you are there, find the entrance of a cave and enter it. Speak to the druid inside and he will give you something that might help you."
+	result="Dirigiti a ovest fino a imbatterti in una montagna. Lì cerca l'entrata di una grotta ed entra. Parla con il druido che abita all'interno della grotta, forse ti potrà aiutare."
+	sound="1/conversations/cnv3_phrase1.wav"/>
+</translationtable>

@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Oh, noble Seti, our tyrant Ptolemy and his Roman friends fear you. They have sent their legions to stop our rebellion."
+	result="Oh, nobile Seti, il nostro tiranno Tolomeo e i suoi amici romani hanno sentito parlare di te e ti temono. Mandano le loro legioni a soffocare la nostra rivolta."
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="I have sent our best warriors to guard the roads! That will give us enough time to organize our army. Have your priests ensured the loyalty of the nearby villages?"
+	result="Ho mandato i nostri migliori guerrieri a proteggere i sentieri! In questo modo fermeremo i romani per un po' di tempo e potremo organizzare il nostro esercito. I vostri sacerdoti hanno ottenuto la lealtà dei popoli vicini?"
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="As long as there are priests in the villages, food and peasants will be sent to you.\n\nI also heard that the mercenary leader at the fort south of here wishes to speak with you."
+	result="Finché ci saranno sacerdoti nei villaggi, manderanno viveri e contadini ad appoggiare la tua causa.\n\nHo sentito anche che il capo dei mercenari del forte a sud vuole parlare con te."
+	sound="1/conversations/cnv1_phrase2.wav"/>
+<translationtableentry
+	text="Good! All we need is to withstand some attacks. The Roman army in Egypt is not big enough to endure a long war. If we manage to keep the city, the Romans will have no choice but to leave!"
+	result="Molto bene! Tutto quello di cui abbiamo bisogno è resistere ad alcuni attacchi. L'esercito di Roma in Egitto non è abbastanza grande da poter sopportare una lunga guerra. Se riuscissimo a mantenere la città, ai romani non resterà altra scelta che ritirarsi!"
+	sound="1/conversations/cnv1_phrase3.wav"/>
+</translationtable>

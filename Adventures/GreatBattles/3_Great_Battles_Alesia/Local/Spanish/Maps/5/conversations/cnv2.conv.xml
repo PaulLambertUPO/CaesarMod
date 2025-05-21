@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Caesar! Some of the riders have managed to pass through! It is only a matter of time before a massive Gaul army comes to Alesia's aid."
+	result="¡César! ¡Algunos jinetes han conseguido atravesar la línea! En cuestión de horas un enorme ejército galo vendrá en ayuda de Alesia."
+	sound="5/conversations/cnv2_phrase0.wav"/>
+<translationtableentry
+	text="We must make sure they don't breach our lines."
+	result="Debemos asegurarnos de que no atraviesen nuestras filas."
+	sound="5/conversations/cnv2_phrase1.wav"/>
+</translationtable>

@@ -1,0 +1,28 @@
+<translationtable>
+<translationtableentry
+	text="We have lost our camp, but we're not defeated.\n\nHere comes Julius Caesar himself!"
+	result="Nuestro campamento está perdido, pero no estamos derrotados.\n\n¡Llega el mismísimo Julio César!"
+	sound="1/conversations/cnv7_phrase0.wav"/>
+<translationtableentry
+	text="Under my command, your army will squash the enemy!"
+	result="¡Bajo mis órdenes, tu ejército aplastará al enemigo!"
+	sound="1/conversations/cnv7_phrase1.wav"/>
+<translationtableentry
+	text="Caesar, tell me about your skills"
+	result="César, háblame de tus habilidades"/>
+<translationtableentry
+	text="As a hero, I can learn 5 different special skills. Each skill can be learned up to 10 levels, depending on my experience.\n\nSelect me, press the button &#34;Hero skills&#34; and place the mouse pointer for a few moments on each of the special skill icons in the upper part of the screen to learn more about them."
+	result="Como héroe, puedo dominar cinco habilidades especiales distintas. Cada habilidad puede ser aprendida hasta 10 niveles, dependiendo de mi experiencia.\n\nSeleccióname, pulsa el botón &#34;Características especiales del héroe&#34; y sitúa durante unos instantes el puntero del ratón sobre cada uno de los iconos de habilidad especial que hay en la parte superior de la pantalla para aprender sobre él."
+	sound="1/conversations/cnv7_phrase2.wav"/>
+<translationtableentry
+	text="With each level that I obtain, I assign a point to invest in one of my skills.\n\nIf there are skill points still free to distribute, you'll see a flashing '+' sign in the upper part of the screen."
+	result="Con cada nivel que gane, obtengo un punto para invertir en una de mis habilidades especiales.\n\nSi hay puntos de habilidad por distribuir, verás un signo '+' parpadeando en la parte superior de la pantalla."
+	sound="1/conversations/cnv7_phrase4.wav"/>
+<translationtableentry
+	text="Place your praetorians under Caesar's command by selecting them and right-clicking on him."
+	result="Pon a tus pretorianos a las órdenes de César seleccionándolos y pulsando con el botón derecho sobre él."
+	sound="1/conversations/cnv7_phrase5.wav"/>
+<translationtableentry
+	text="I'll have my vengeance!"
+	result="¡Tendré mi venganza!"/>
+</translationtable>

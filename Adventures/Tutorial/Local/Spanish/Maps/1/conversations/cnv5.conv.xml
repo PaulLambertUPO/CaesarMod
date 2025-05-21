@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="A settlement's loyalty defines the speed with which it can be captured.\n\nWhilst your warriors shout in front of the building, the settlement's loyalty will decrease. Once it reaches zero, the settlement will be yours."
+	result="La lealtad de un asentamiento mide la rapidez con la que puede ser capturado.\n\nMientras tus guerreros gritan ante la estructura, la lealtad del asentamiento desciende. Cuando alcance cero, el asentamiento será tuyo."
+	sound="1/conversations/cnv5_phrase0.wav"/>
+<translationtableentry
+	text="The presence of allied warriors nearby increases the loyalty of a settlement, so it might be impossible for you to capture it if there are lots of enemies nearby."
+	result="La presencia de guerreros aliados en las cercanías incrementa la lealtad de un asentamiento, por lo que puede que te sea imposible capturarlo si hay muchos enemigos cerca."
+	sound="1/conversations/cnv5_phrase1.wav"/>
+<translationtableentry
+	text="When you select a building, you can see its icon and name in the information section, in the upper part of the screen.\n\nUnderneath the name, you'll find its current population and the loyalty. Once in control of a settlement, you'll also be able to see the amount of food and gold that it has stored inside."
+	result="Cuando seleccionas una estructura, puedes ver su icono y nombre en la zona de información en la parte superior de la pantalla.\n\nBajo el nombre encontrarás la cantidad de población que aloja y su lealtad. Cuando tengas el control de un asentamiento, también podrás ver la cantidad de comida y oro almacenados en su interior."
+	sound="1/conversations/cnv5_phrase2.wav"/>
+</translationtable>

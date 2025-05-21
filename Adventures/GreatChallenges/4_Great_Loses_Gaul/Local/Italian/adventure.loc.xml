@@ -1,0 +1,41 @@
+<translationtable>
+<translationtableentry text="The battle of Gergovia - 52 BC" result="La battaglia di Gergovia - 52 a.C."/>
+<translationtableentry text="La batalla de Gergovia - 52 a.C." result="La battaglia di Gergovia - 52 a.C."/>
+<translationtableentry text="The noble Vercingetorix succeded in unifying the Gallic tribes by leading the resistance against rome.\nFighting for Freedom, however, requires sacrifice. The Gallic commander burns his villages to the ground to leave the Roman legions without food.\nThe strategy produces results and makes Vercingetorix a very fearsome enemy for Rome. Caesar is left with only one option: attack him at his capital, Gergovia..." result="Il nobile Vercingetorige è riuscito a unificare le tribù galle mettendosi al comando della resistenza contro Roma.\nCombattere per la libertà, però, richiede sacrificio. Il comandante gallo rade al suolo i propri villaggi per lasciare le legioni romane senza viveri.\nLa strategia dà i suoi frutti e rende Vercingetorige un nemico molto temibile per Roma. A Cesare resta solo una possibilità: attaccarlo nella sua capitale, Gergovia..."/>
+<translationtableentry text="El noble Vercingétorix ha conseguido unificar a las tribus galas y ponerse al frente de la resistencia contra Roma.\nPero luchar por la libertad exige sacrificio. El líder galo arrasa sus propias aldeas para dejar sin víveres a las legiones.\nLa estrategia da sus frutos y convierte a Vercingétorix en un enemigo temible. César se ve obligado a atacarle en su capital, Gergovia..." result="Il nobile Vercingetorige è riuscito a unificare le tribù galle mettendosi al comando della resistenza contro Roma.\nCombattere per la libertà, però, richiede sacrificio. Il comandante gallo rade al suolo i propri villaggi per lasciare le legioni romane senza viveri.\nLa strategia dà i suoi frutti e rende Vercingetorige un nemico molto temibile per Roma. A Cesare resta solo una possibilità: attaccarlo nella sua capitale, Gergovia..."/>
+<translationtableentry text="Gauls" result="Galli"/>
+<translationtableentry text="Galos" result="Galli"/>
+<translationtableentry text="Gaul allies" result="Alleati galli"/>
+<translationtableentry text="Aliados galos" result="Alleati galli"/>
+<translationtableentry text="Romans" result="Romani"/>
+<translationtableentry text="Romanos" result="Romani"/>
+<translationtableentry text="Movies/ENG/GreatChallenges/4_Intro_Great_L_Gaul.avi" result="Movies/ITA/GreatChallenges/4_Intro_Great_L_Gaul.avi"/>
+<translationtableentry text="Movies/ENG/GreatChallenges/4_Extro_Great_L_Gaul.avi" result="Movies/ITA/GreatChallenges/4_Extro_Great_L_Gaul.avi"/>
+<translationtableentry text="Meidi pass" result="Passo dei Medei"/>
+<translationtableentry text="Aedui pass" result="Passo degli Edui"/>
+<translationtableentry text="Sequani pass" result="Passo dei Sequani"/>
+<translationtableentry text="Boii pass" result="Passo dei Boi"/>
+<translationtableentry text="Nervii pass" result="Passo dei Nervi"/>
+<translationtableentry text="Lingones pass" result="Passo dei Lingoni"/>
+<translationtableentry text="Arverni pass" result="Passo degli Arverni"/>
+<translationtableentry text="Tigurini pass" result="Passo dei Tigurini"/>
+<translationtableentry text="Vercingetorix" result="Vercingetorige"/>
+<translationtableentry text="Tribe chieftain" result="Capo dei tribali"/>
+<translationtableentry text="Meidi chieftain" result="Capo dei Medei"/>
+<translationtableentry text="Aedui chieftain" result="Capo degli Edui"/>
+<translationtableentry text="Sequani chieftain" result="Capo dei Sequani"/>
+<translationtableentry text="Boii chieftain" result="Capo dei Boi"/>
+<translationtableentry text="Nervii chieftain" result="Capo dei Nervi"/>
+<translationtableentry text="Lingones chieftain" result="Capo dei Lingoni"/>
+<translationtableentry text="Arverni chieftain" result="Capo degli Arverni"/>
+<translationtableentry text="Tigurini chieftain" result="Capo dei Tigurini"/>
+<translationtableentry text="Arverni elder" result="Notabile Arverno"/>
+<translationtableentry text="Tigurini elder" result="Notabile Tigurino"/>
+<translationtableentry text="You have managed to defeat Julius Caesar and defend Gergovia!" result="Sei riuscito a sconfiggere Giulio Cesare e a difendere Gergovia!"/>
+<translationtableentry text="You have failed to protect Gergovia from the Romans." result="Non sei riuscito a difendere Gergovia dai romani."/>
+<translationtableentry text="Vercingetorix has died." result="Vercingetorige è morto."/>
+<translationtableentry text="Remaining Roman armies: %s1" result="Incursioni romane rimanenti: %s1"/>
+<translationtableentry text="The Roman final assault has started" result="È iniziato l'attacco finale dei romani"/>
+<translationtableentry text="Dead chieftains: %s1" result="Capi morti: %s1"/>
+<translationtableentry text="The passes have been seized" result="I passi sono stati conquistati"/>
+</translationtable>

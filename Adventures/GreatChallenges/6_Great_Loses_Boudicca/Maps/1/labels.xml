@@ -1,0 +1,26 @@
+	<root>
+		<label
+			text="Iceni"
+			x="14237"
+			y="6317"/>
+		<label
+			text="Camulodunum"
+			x="2962"
+			y="13121"/>
+		<label
+			text="Trinovantes"
+			x="6566"
+			y="2591"/>
+		<label
+			text="Cursed stronghold"
+			x="13981"
+			y="12565"/>
+		<label
+			text="Ancient ruins"
+			x="13629"
+			y="948"/>
+		<label
+			text="Wild cave"
+			x="5733"
+			y="5739"/>
+	</root>

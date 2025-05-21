@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv6"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Hannibal"/>
+		<phrase
+			actor="NO_Hannibal"
+			text="Rome lays in ruins. This will be a day long remembered: the day when the great Hannibal Barca led the armies of Carthage to victory over their mortal enemy. The Carthaginian empire will rule the world for centuries to come!"
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,27 @@
+<translationtable>
+<translationtableentry
+	text="Well done!\n\nEach task that I assign you will be recorded: you can check all of these objectives by pressing 'F8' or the &#34;Notes&#34; button located in the lower part of the screen.\n\nNow, let's move on to your next mission..."
+	result="Ben fatto!\n\nOgni incarico che ti assegnerò resterà registrato: puoi rivedere tutti gli obiettivi premendo il pulsante 'F8' o il pulsante &#34;Obiettivi&#34; sulla parte inferiore della schermata.\n\nPassiamo adesso alla prossima missione..."
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="There is a group of praetorians heading south to scout out some old ruins.\n\nFollow them with your two legionaries."
+	result="C'è un gruppo di pretoriani che si dirige a sud per dare uno sguardo a delle vecchie rovine.\n\nSeguili insieme ai tuoi due guerrieri."
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="I'm on it."
+	result="D'accordo."/>
+<translationtableentry
+	text="I cannot see the ruins..."
+	result="Non riesco a vedere le rovine..."/>
+<translationtableentry
+	text="You can see the surrounding terrain by moving the mouse pointer to the edges of the screen, although you cannot do this during a conversation."
+	result="Puoi vedere il territorio che ci circonda spostando il cursore del mouse verso i bordi della schermata (non funziona però durante una conversazione)."
+	sound="1/conversations/cnv1_phrase3.wav"/>
+<translationtableentry
+	text="Can I see a map of the area?"
+	result="Esiste una mappa della regione?"/>
+<translationtableentry
+	text="The minimap is a scaled-down view of the region where the game is happening. You can open and close it by pressing the spacebar, although you cannot do this during a conversation.\n\nIf you click on an area in the minimap, this will close and take your view to the selected area."
+	result="La mappa strategica è una visuale in scala della zona in cui si svolge la partita. La puoi aprire e chiudere premendo la barra spaziatrice (non funziona però durante una conversazione).\n\nSe clicchi su una zona qualsiasi della mappa strategica, quest'ultima si chiuderà e la visuale si sposterà fino al punto selezionato."
+	sound="1/conversations/cnv1_phrase5.wav"/>
+</translationtable>

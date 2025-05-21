@@ -1,0 +1,11 @@
+	<conversation
+		name="Event3"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="R_Chariot1"/>
+		<phrase
+			actor="R_Chariot1"
+			text="Sir, we have captured a key position and can scout the entire area!\n\nOur spies have also found a town to the northwest which supplies our enemies with food. It would be wise to capture it before attacking Numantia."
+			followup="first"/>
+	</conversation>

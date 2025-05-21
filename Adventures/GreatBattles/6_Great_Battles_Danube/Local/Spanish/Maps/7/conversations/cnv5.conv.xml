@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Ave, noble emperor! The Teutons northeast of here keep attacking us and destroying our harvests. Will you help us defeat them?"
+	result="¡Ave, noble señor! Los campamentos teutones que se encuentran al nordeste de aquí realizan constantemente incursiones y destruyen nuestras cosechas. ¿Nos ayudarás a derrotarlos? "
+	sound="7/conversations/cnv5_phrase0.wav"/>
+<translationtableentry
+	text="From now on you are under the protection of the emperor! How many of you will join my army?"
+	result="¡Desde este momento estáis bajo la protección del emperador! ¿Cuantos de vosotros se unirían a mi ejército?"
+	sound="7/conversations/cnv5_phrase1.wav"/>
+<translationtableentry
+	text="Many are willing, my emperor, yet few will do so. As long as the Teutons live, I doubt anyone would dare to leave their villages unprotected."
+	result="Son muchos los que te ayudarían, oh mi señor, pero muy pocos podrán hacerlo mientras los teutones sigan amenazándolos, ninguno de ellos se atrevería a dejar su aldea indefensa."
+	sound="7/conversations/cnv5_phrase2.wav"/>
+</translationtable>

@@ -1,0 +1,18 @@
+	<conversation
+		name="C_Conv4"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_mercenary"/>
+		<phrase
+			actor="NO_mercenary"
+			text="Hail, Seti! I heard you're fighting those damned Romans. Rome is powerful and you will need a lot of help.\nShould you wish to hire mercenaries from this fort, bring either 10000 food or 5000 gold inside."
+			condition="return !GetNamedObj(\'GoodHero\').IsEmpty();"
+			action="GiveNote(\'Mercenary fort.\');"
+			followup="end"/>
+		<phrase
+			actor="NO_mercenary"
+			text="Should you wish to hire mercenaries from this fort, bring either 10000 food or 5000 gold inside."
+			action="GiveNote(\'Mercenary fort.\');"
+			followup="first"/>
+	</conversation>

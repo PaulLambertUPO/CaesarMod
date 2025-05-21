@@ -1,0 +1,20 @@
+<translationtable>
+<translationtableentry
+	text="For 4000 gold I can teach you the art of Learning, which will allow your army to gain experience by fighting more experienced enemies."
+	result="Per 4000 pezzi d'oro ti potrò insegnare l'arte di imparare dai tuoi nemici, che permetterà ai guerrieri di aumentare la loro esperienza per ogni colpo che infliggono a nemici con più esperienza."
+	sound="1/conversations/cnv6_phrase0.wav"/>
+<translationtableentry
+	text="The skill Learning!"
+	result="L'abilità Istruzione!"/>
+<translationtableentry
+	text="You have chosen wisely, warrior. That knowledge is now yours."
+	result="Hai fatto una scelta saggia. Ora possiedi questa conoscenza."
+	sound="1/conversations/cnv6_phrase1.wav"/>
+<translationtableentry
+	text="Not now"
+	result="Adesso no"/>
+<translationtableentry
+	text="Very well... I shall be waiting."
+	result="Perfetto... Aspetterò."
+	sound="1/conversations/cnv6_phrase2.wav"/>
+</translationtable>

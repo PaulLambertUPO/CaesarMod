@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Look at that mound!\n\nIt's been marked by a circle of pebbles around it!\n\nAn unequivocal sign that it could contain magic objects or amulets!"
+	result="Look at that mound!\n\nIt's been marked by a circle of pebbles around it!\n\nAn unequivocal sign that it could contain magic objects or amulets!"
+	sound="1/conversations/cnv9_phrase0.wav"/>
+<translationtableentry
+	text="Select Caesar and right-click on the rocky mound so that he collects the magic objects or amulets that might be inside.\n\nEach of your men can carry up to four items."
+	result="Select Caesar and right-click on the rocky mound so that he collects the magic objects or amulets that might be inside.\n\nEach of your men can carry up to four items."
+	sound="1/conversations/cnv9_phrase1.wav"/>
+</translationtable>

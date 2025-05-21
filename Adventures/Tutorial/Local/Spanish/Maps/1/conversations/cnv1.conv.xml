@@ -1,0 +1,27 @@
+<translationtable>
+<translationtableentry
+	text="Well done!\n\nEach task that I assign you will be recorded: you can check all of these objectives by pressing 'F8' or the &#34;Notes&#34; button located in the lower part of the screen.\n\nNow, let's move on to your next mission..."
+	result="¡Bien hecho!\n\nCada tarea que te asigno queda grabada: puedes revisar todos estos objetivos pulsando la tecla 'F8' o el botón &#34;Objetivos&#34; en la parte inferior de la pantalla.\n\nAhora, vamos a por tu siguiente misión..."
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="There is a group of praetorians heading south to scout out some old ruins.\n\nFollow them with your two legionaries."
+	result="Hay un grupo de pretorianos dirigiéndose al sur para echar un vistazo a unas viejas ruinas.\n\nSígueles con tus dos guerreros."
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="I'm on it."
+	result="De acuerdo."/>
+<translationtableentry
+	text="I cannot see the ruins..."
+	result="No puedo ver las ruinas..."/>
+<translationtableentry
+	text="You can see the surrounding terrain by moving the mouse pointer to the edges of the screen, although you cannot do this during a conversation."
+	result="Puedes ver el terreno que nos rodea llevando el puntero del ratón hacia los bordes de la pantalla, aunque esto no puedes hacerlo durante una conversación."
+	sound="1/conversations/cnv1_phrase3.wav"/>
+<translationtableentry
+	text="Can I see a map of the area?"
+	result="¿Existe un mapa de la región?"/>
+<translationtableentry
+	text="The minimap is a scaled-down view of the region where the game is happening. You can open and close it by pressing the spacebar, although you cannot do this during a conversation.\n\nIf you click on an area in the minimap, this will close and take your view to the selected area."
+	result="El mapa estratégico es una vista a escala de la región en la que discurre la partida. Puedes abrirlo y cerrarlo pulsando la barra espaciadora, aunque esto no lo puedes hacer durante una conversación.\n\nSi pulsas en alguna zona del mapa estratégico, éste se cerrará y la vista se desplazará hasta allí."
+	sound="1/conversations/cnv1_phrase5.wav"/>
+</translationtable>

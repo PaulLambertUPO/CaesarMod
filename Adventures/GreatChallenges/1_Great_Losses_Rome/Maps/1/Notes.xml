@@ -1,0 +1,56 @@
+	<notes>
+		<note
+			id="Capture Rome."
+			title="Capture Rome"
+			text="Capture all the districts' townhalls of Rome."
+			icon="gameres/noteicons/attack.bmp"
+			map="The fall of Rome"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Hannibal must survive."
+			title="Hannibal must survive"
+			text="Only Hannibal can lead the Carthaginian army in this decisive battle against Rome. If he dies, there will be no other chance of victory."
+			icon="gameres/noteicons/survive.bmp"
+			map="The fall of Rome"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Capture Ostia."
+			title="Capture Ostia"
+			text="Ostia is the most important port in the Italic peninsula: if you conquer it, not only will the Romans no longer receive reinforcements from the sea, but you will be the one to receive them from Carthage."
+			icon="gameres/noteicons/attack.bmp"
+			map="The fall of Rome"
+			show_on_minimap="1"
+			locationx="1995"
+			locationy="13606"/>
+		<note
+			id="Roman allies."
+			title="Roman allies"
+			text="Reports have arrived that the Romans of Allifae are willing to join Carthage in the battle against Rome. Send Hannibal to talk with their leader, Olivius, to learn the conditions of the alliance."
+			icon="gameres/noteicons/map.bmp"
+			map="The fall of Rome"
+			show_on_minimap="1"
+			locationx="14495"
+			locationy="3339"/>
+		<note
+			id="Destroy one of the gates to Rome."
+			title="Destroy one of the gates to Rome"
+			text="Olivius has requested that you show your strength by destroying one of the gates of Rome. Only then will he allow you to command his settlement."
+			icon="gameres/noteicons/attack.bmp"
+			map="The fall of Rome"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Roman reinforcements."
+			title="Roman reinforcements"
+			text="As long as you control a district of Rome, many of the enemy reinforcements will be redirected towards the city."
+			icon="gameres/noteicons/info.bmp"
+			map="The fall of Rome"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+	</notes>

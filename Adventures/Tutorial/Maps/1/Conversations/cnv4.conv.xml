@@ -1,0 +1,19 @@
+	<conversation
+		name="2B Fog"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			actor="Instructor"
+			text="Have you noticed the dark fog that moves near your units?"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="The areas covered by a semi-transparent fog are currently out of view of your warriors. However, as you've explored the area before, you know what the terrain looks like and what buildings are there. However, as you don't currently have troops or buildings in view, there may be enemies hidden there."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="The black areas of the map are completely uncharted for you. Once you have sent your warriors to explore these areas, you'll obtain information about the terrain characteristics and the presence of settlements in the area."
+			followup="first"/>
+	</conversation>

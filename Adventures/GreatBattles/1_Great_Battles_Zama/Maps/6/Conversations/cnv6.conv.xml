@@ -1,0 +1,11 @@
+	<conversation
+		name="IberiansDestroyed"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Scipio"/>
+		<phrase
+			actor="NO_Scipio"
+			text="The Iberians have been defeated!\n\nNow Syphax will know Masinissa has betrayed him. Let's go to Masinissa camp and demand that he joins us!"
+			followup="first"/>
+	</conversation>

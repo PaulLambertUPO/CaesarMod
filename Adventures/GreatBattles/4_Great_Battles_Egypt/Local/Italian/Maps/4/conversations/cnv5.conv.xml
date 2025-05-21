@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="General, I have just learned that there are some wild Sudanese tribes that live in the southern desert. They are fierce warriors, yet unfortunately they fight only for themselves."
+	result="Signore, mi hanno detto che a sud ci sono movimenti di tribù sudanesi nemiche degli egizi. Sono guerrieri valorosi, ma purtroppo sono barbari e non possiamo attirarli alla nostra causa."
+	sound="4/conversations/cnv5_phrase0.wav"/>
+<translationtableentry
+	text="Fortunately I have managed to plant spies within them, so you shall be aware of their actions. Be cautious, for although these tribes aren't allied with our enemies, they are no friends of us either."
+	result="Per fortuna sono riuscito a infiltrare delle spie tra loro per essere informato sui loro movimenti. Fai attenzione, perché anche se queste tribù non sono alleate dei nostri nemici, non sono neanche nostre amiche."
+	sound="4/conversations/cnv5_phrase1.wav"/>
+</translationtable>

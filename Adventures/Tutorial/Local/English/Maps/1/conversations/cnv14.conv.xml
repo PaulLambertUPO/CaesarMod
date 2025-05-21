@@ -1,0 +1,26 @@
+<translationtable>
+<translationtableentry
+	text="Finally, the training outpost is ours!"
+	result="Finally, the training outpost is ours!"
+	sound="1/conversations/cnv14_phrase0.wav"/>
+<translationtableentry
+	text="Rome requires our immediate presence in the Lindum stronghold.\n\nI wonder what's going on."
+	result="Rome requires our immediate presence in the Lindum stronghold.\n\nI wonder what's going on."
+	sound="1/conversations/cnv14_phrase1.wav"/>
+<translationtableentry
+	text="A Roman stronghold is comprised of a townhall, a barracks, a temple, a colosseum, a blacksmith and a tavern."
+	result="A Roman stronghold is comprised of a townhall, a barracks, a temple, a colosseum, a blacksmith and a tavern."
+	sound="1/conversations/cnv14_phrase2.wav"/>
+<translationtableentry
+	text="It's surrounded by a strong wall guarded by archers and has a few gates that block the entrance of any enemies."
+	result="It's surrounded by a strong wall guarded by archers and has a few gates that block the entrance of any enemies."
+	sound="1/conversations/cnv14_phrase3.wav"/>
+<translationtableentry
+	text="Warriors can be garrisoned in an outpost or the townhall of any stronghold to quickly recover health and energy."
+	result="Warriors can be garrisoned in an outpost or the townhall of any stronghold to quickly recover health and energy."
+	sound="1/conversations/cnv14_phrase4.wav"/>
+<translationtableentry
+	text="Lindum is in the northeast.\n\nTake Caesar to Lindum's townhall by selecting him and right-clicking on Lindum's townhall."
+	result="Lindum is in the northeast.\n\nTake Caesar to Lindum's townhall by selecting him and right-clicking on Lindum's townhall."
+	sound="1/conversations/cnv14_phrase5.wav"/>
+</translationtable>

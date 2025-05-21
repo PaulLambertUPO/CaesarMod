@@ -1,0 +1,17 @@
+	<conversation
+		name="SyphaxDeath"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Scipio"/>
+		<phrase
+			actor="NO_Scipio"
+			text="Halt, men! With Syphax dead, Masinissa will be the new king and the Numidians will become our allies!"
+			condition="return !Group(\'Q_Masinissa\').IsEmpty();"
+			followup="first"/>
+		<phrase
+			actor="NO_Scipio"
+			text="Let's finish off the Iberians together!"
+			condition="return !Group(\'Q_Iberians\').IsEmpty();"
+			followup="first"/>
+	</conversation>

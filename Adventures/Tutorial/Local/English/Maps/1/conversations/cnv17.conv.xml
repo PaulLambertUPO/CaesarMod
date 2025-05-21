@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="There is no food in the stronghold!"
+	result="There is no food in the stronghold!"
+	sound="1/conversations/cnv17_phrase0.wav"/>
+<translationtableentry
+	text="You can establish a supply route from the neighbouring village to supply the stronghold with food.\n\nSelect the village by left-clicking in the centre and right-click on the stronghold's townhall. This can be done from both the normal view or the minimap."
+	result="You can establish a supply route from the neighbouring village to supply the stronghold with food.\n\nSelect the village by left-clicking in the centre and right-click on the stronghold's townhall. This can be done from both the normal view or the minimap."
+	sound="1/conversations/cnv17_phrase1.wav"/>
+<translationtableentry
+	text="You can do the same thing by pressing the &#34;Supply&#34; command that you'll find in all of the outposts and villages. Left-click the command and left-click again on the desired destination.\n\nYou can activate and deactivate the viewing of supply routes on the map by pressing 'ALT'."
+	result="You can do the same thing by pressing the &#34;Supply&#34; command that you'll find in all of the outposts and villages. Left-click the command and left-click again on the desired destination.\n\nYou can activate and deactivate the viewing of supply routes on the map by pressing 'ALT'."
+	sound="1/conversations/cnv17_phrase2.wav"/>
+</translationtable>

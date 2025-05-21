@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="You fight well, young Iberian. A pity that our leader, Larax, is not here. He has been captured by the Romans and deported to an island called &#34;Atlantis&#34;."
+	result="Luchas bien, joven ibero. Es una pena que nuestro jefe, Lárax, no esté aquí. Fue capturado por los romanos y deportado a una isla a la que llaman &#34;Atlántida&#34;."
+	sound="2/conversations/cnv2_phrase0.wav"/>
+<translationtableentry
+	text="Now that I think about it... You could go looking for the mighty Larax! Undoubtedly, he would be of great help in your battle against the Romans!"
+	result="Ahora que lo pienso... ¿Podrías ir a buscar al poderoso Lárax? ¡Sin duda alguna, te sería de gran ayuda en tu lucha contra los romanos!"
+	sound="2/conversations/cnv2_phrase1.wav"/>
+<translationtableentry
+	text="Just capture the shipyard west of here. From there, you can buy a ship and go in search of Larax. Please, do as I say, warrior. Gaul begs you!"
+	result="Captura el puerto que se encuentra al oeste de aquí. Allí, podrás comprar un barco e ir en busca de Lárax. Por favor, haz lo que te digo, guerrero. ¡La Galia te lo implora!"
+	sound="2/conversations/cnv2_phrase2.wav"/>
+</translationtable>

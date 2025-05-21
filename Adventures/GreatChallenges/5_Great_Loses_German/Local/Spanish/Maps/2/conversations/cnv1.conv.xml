@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Chieftain, the Romans have sent a military force from the stronghold of Bingium in search of Varus' legions!"
+	result="¡Señor, los romanos han enviado una fuerza militar desde la fortaleza de Bingium para enlazar con las legiones de Varus!"
+	sound="2/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="They must not find this camp! If they capture it, we will be doomed!"
+	result="¡No deben encontrar este campamento, si lo capturan estaremos perdidos!"
+	sound="2/conversations/cnv1_phrase1.wav"/>
+</translationtable>

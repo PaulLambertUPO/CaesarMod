@@ -1,0 +1,11 @@
+	<conversation
+		name="Caput5"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="actor"/>
+		<phrase
+			actor="actor"
+			text="Defeated I am nothing. My tribe will serve you now."
+			followup="first"/>
+	</conversation>

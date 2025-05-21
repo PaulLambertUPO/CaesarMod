@@ -1,0 +1,26 @@
+	<root>
+		<label
+			text="Nile delta"
+			x="7671"
+			y="7220"/>
+		<label
+			text="Pelusio"
+			x="13933"
+			y="5739"/>
+		<label
+			text="Memphis"
+			x="7879"
+			y="13699"/>
+		<label
+			text="Alexandria"
+			x="2226"
+			y="5901"/>
+		<label
+			text="Pelusio shipyard"
+			x="13020"
+			y="4096"/>
+		<label
+			text="Alexandria shipyard"
+			x="1313"
+			y="4466"/>
+	</root>

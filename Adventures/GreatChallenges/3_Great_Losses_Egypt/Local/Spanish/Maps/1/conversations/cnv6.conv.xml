@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Hail, Seti! I heard you're fighting those damned Romans. Rome is powerful and you will need a lot of help.\nShould you wish to hire mercenaries from this fort, bring either 10000 food or 5000 gold inside."
+	result="¡Saludos, Seti! He oído que luchas contra esos malditos romanos. Roma es poderosa y necesitarás mucha ayuda.\nSi quieres contratar mercenarios trae 10000 unidades de comida o 5000 monedas de oro hasta este fortín."
+	sound="1/conversations/cnv6_phrase0.wav"/>
+<translationtableentry
+	text="Should you wish to hire mercenaries from this fort, bring either 10000 food or 5000 gold inside."
+	result="Si quieres contratar mercenarios trae 10000 unidades de comida o 5000 monedas de oro hasta este fortín."
+	sound="1/conversations/cnv6_phrase1.wav"/>
+</translationtable>

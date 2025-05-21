@@ -1,0 +1,15 @@
+	<conversation
+		name="C_Conv2"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Pop"/>
+		<phrase
+			actor="NO_Pop"
+			text="I see that the Egyptians have finally seen the light and have refused to accept foreign invaders manipulating our governors! A worthy task, a difficult task, but, with my help, not an impossible task."
+			followup="first"/>
+		<phrase
+			actor="NO_Pop"
+			text="Should you wish to use my powers, simply bring 50 peasants here. Do so and I personally shall ask for help from the mighty gods of Egypt!"
+			followup="first"/>
+	</conversation>

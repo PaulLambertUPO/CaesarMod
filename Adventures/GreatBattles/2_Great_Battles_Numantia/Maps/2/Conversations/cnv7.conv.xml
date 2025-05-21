@@ -1,0 +1,11 @@
+	<conversation
+		name="Victory"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="R_Scipio"/>
+		<phrase
+			actor="R_Scipio"
+			text="The rebel nest Numantia has finally fallen. Let it be remembered what fate awaits those who wish to fight against Rome!"
+			followup="first"/>
+	</conversation>

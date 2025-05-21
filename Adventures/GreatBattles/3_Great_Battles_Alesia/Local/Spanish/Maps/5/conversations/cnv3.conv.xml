@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="The Gauls have stopped attacking!"
+	result="¡Los galos han dejado de atacar!"
+	sound="5/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="Good! Now it's our turn! Legionaries of Rome, let's capture Alesia!!!"
+	result="¡Bien! ¡Ahora nos toca a nosotros! ¡¡¡Legionarios de Roma, capturemos Alesia!!!"
+	sound="5/conversations/cnv3_phrase1.wav"/>
+</translationtable>

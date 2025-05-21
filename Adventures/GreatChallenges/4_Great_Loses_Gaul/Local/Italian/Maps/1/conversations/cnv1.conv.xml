@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Vercingetorix, as you ordered me, I have spoken with the other chieftains. All the passes to Gergovia are guarded. We are ready to give the Romans the welcome they deserve!"
+	result="Vercingetorige, come mi hai ordinato, ho parlato con i capi delle tribù. Tutti i passi fino a Gergovia sono protetti. Siamo pronti a dare ai romani l'accoglienza che si meritano!"
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="Make sure you send reinforcements to protect them. Should they be killed I fear their warriors will scatter."
+	result="Assicurati che si mandino rinforzi per proteggere i capi. Se questi cadono, i guerrieri si disperderanno. "
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="Very well, Vercingetorix! I shall go to the city to prepare the defenses there."
+	result="Ai tuoi ordini, Vercingetorige!"
+	sound="1/conversations/cnv1_phrase2.wav"/>
+</translationtable>

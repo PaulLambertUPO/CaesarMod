@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Arminius, rebel general - 9 AD"
+			author="Haemimont Games"
+			description="Rome aspires to expand its dominion beyond the Rhine, a territory made hostile by the presence of Germanic tribes.\nGovernor Publius Quintilius Varus takes on the task of securing a new frontier for Rome on the banks of the Elbe river.\nAmong his troops is Arminius, a general of Germanic origin ready to deny Rome in defense of his people..."
+			last_edited_map="2"
+			start_map="2"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="7"/>
+	</game>

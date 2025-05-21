@@ -1,0 +1,11 @@
+	<conversation
+		name="FreePrisoners"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="Prisoner"/>
+		<phrase
+			actor="Prisoner"
+			text="Sir, we have freed some Roman prisoners! It seems the Iberians keep many of our legionaries in the training outposts. If we free them, our army will grow."
+			followup="first"/>
+	</conversation>

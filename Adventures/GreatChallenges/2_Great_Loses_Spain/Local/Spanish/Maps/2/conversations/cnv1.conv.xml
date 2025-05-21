@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Ah, thank you, my young Iberian friends. I have been locked up in this outpost for so long that I had almost given up all hope..."
+	result="Ah, gracias, mis jóvenes amigos iberos. Llevo tanto tiempo prisionero en este fortín que ya casi había abandonado toda esperanza..."
+	sound="2/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="I was part of a Narbonensis Gaul tribe who was fighting against the Romans. Unfortunately, despite our best efforts, the enemy proved too powerful for us."
+	result="Formaba parte de una tribu de la galia Narbonense que luchaba contra los romanos. Desgraciadamente, a pesar de todos nuestros esfuerzos, el enemigo resultó ser demasiado poderoso."
+	sound="2/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="Maybe we could help each other. Should you go through the eastern passage and kill the Romans in our camp, I am sure all survivors will join you in your battle. I assure you they will be quite an asset. They are brave men."
+	result="Tal vez podríamos ayudarnos mutuamente. Si avanzas por el paso del este y acabas con los romanos que ocupan nuestro campamento, estoy seguro de que mi pueblo luchará a tu lado. Te aseguro que te serán de gran ayuda. Son hombres valientes."
+	sound="2/conversations/cnv1_phrase2.wav"/>
+</translationtable>

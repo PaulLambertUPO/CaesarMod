@@ -1,0 +1,15 @@
+	<conversation
+		name="HoldTowns"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="TalkPriest"/>
+		<phrase
+			actor="TalkPriest"
+			text="Great Octavian, you have managed to capture one of the enemy towns! If we are to win this war, we must conquer them all!"
+			followup="first"/>
+		<phrase
+			actor="TalkPriest"
+			text="If I may suggest, it would be well that we capture some outposts and villages. The outposts on the Nile are quite abundant with gold and can also be used to attract volunteers for our army."
+			followup="first"/>
+	</conversation>

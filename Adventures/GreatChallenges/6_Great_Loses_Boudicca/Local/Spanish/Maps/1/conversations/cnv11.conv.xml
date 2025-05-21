@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Halt! Only those of pure heart and great strength could hope to survive in this cave. Be warned, warrior, there are many beasts and savage men within. If your strength is not enough, you'd better leave this place!"
+	result="¡Alto! Solo los guerreros fuertes y puros de corazón pueden sobrevivir a las pruebas que encontrarás en esta cueva. Dentro viven solamente hombres y bestias salvajes. ¡Si no tienes la suficiente fortaleza, mejor será que abandones este lugar!"
+	sound="1/conversations/cnv11_phrase0.wav"/>
+<translationtableentry
+	text="Should you choose to enter, be mindful that the cave itself is such that it will drain your life. Perhaps it might be useful for you to get some healing water from this oak stump in order to survive longer."
+	result="Si eliges entrar, sé consciente de que la cueva tiene el poder de agotar tu vida poco a poco. Quizá te sea útil tomar un poco de agua curativa de este tocón de roble para sobrevivir durante más tiempo."
+	sound="1/conversations/cnv11_phrase1.wav"/>
+</translationtable>

@@ -1,0 +1,47 @@
+	<conversation
+		name="3A Capture"
+		startup="first"
+		startup_phrases="p1;repeat2"
+		restore_view="1">
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="We've won!\n\nWe must punish the rebels for this assault!"
+			condition="return EnvReadInt(\'/First3A\') != 1;"
+			followup="first"/>
+		<phrase
+			label="repeat"
+			actor="Instructor"
+			text="Take control of this small army, head east and capture the enemy village that you'll find there."
+			followup="choice"
+			followup_phrases="Capturing;Enemy;Ok"/>
+		<phrase
+			label="Capturing"
+			actor="Instructor"
+			text="To capture and take control of an enemy settlement, select your warriors and right-click on one of the settlement buildings.\n\nWhilst your warriors are trying to capture an enemy settlement, its loyalty decreases. Once its loyalty reaches zero, the settlement becomes yours. The more warriors you use for this task, the faster the capture will be."
+			choice_text="How can I capture the village?"
+			followup="first"
+			followup_phrases="repeat2;repeat"/>
+		<phrase
+			label="Enemy"
+			actor="Instructor"
+			text="All warriors wear the colors of their faction. Similarly, buildings also have the color of who controls them.\n\nIn this map in particular, you're leading the red faction and your Roman allies are the yellow faction. Everyone else is an enemy and must be treated as such."
+			choice_text="How can I distinguish allies from enemies?"
+			followup="first"
+			followup_phrases="repeat2;repeat"/>
+		<phrase
+			label="Ok"
+			actor="Instructor"
+			text="Let me teach you!"
+			action="EnvWriteInt(\'/First3A\', 1);"
+			followup="end"/>
+		<phrase
+			label="repeat2"
+			actor="Instructor"
+			text="Move your small army to the east of the ruins and capture the enemy village you'll find there."
+			condition="return EnvReadInt(\'/First3A\') == 1;"
+			followup="choice"
+			followup_phrases="Capturing;Enemy;Ok"/>
+	</conversation>

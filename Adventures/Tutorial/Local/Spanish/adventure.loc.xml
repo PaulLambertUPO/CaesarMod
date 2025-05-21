@@ -1,0 +1,15 @@
+<translationtable>
+<translationtableentry text="Tutorial" result="Aprendizaje"/>
+<translationtableentry text="Apprendistato" result="Aprendizaje"/>
+<translationtableentry text="Learn to play Imperivm: Great Battles of Rome." result="Aprende a jugar Imperivm: Las Grandes Batallas de Roma."/>
+<translationtableentry text="Impara a giocare a Imperivm: Le Grandi Battaglie di Roma." result="Aprende a jugar Imperivm: Las Grandes Batallas de Roma."/>
+<translationtableentry text="Roman allies" result="Aliados romanos"/>
+<translationtableentry text="Alleati romani" result="Aliados romanos"/>
+<translationtableentry text="Instructor" result="Maestro"/>
+<translationtableentry text="Julius Caesar" result="Julio César"/>
+<translationtableentry text="Lindum townhall" result="Foro de Lindum"/>
+<translationtableentry text="Dumnorium townhall" result="Foro de Dumnorium"/>
+<translationtableentry text="You've completed the tutorial!" result="¡Has completado el aprendizaje!"/>
+<translationtableentry text="The great Caesar has died! Please restart!" result="¡El gran César ha muerto! ¡Reinicia la partida!"/>
+<translationtableentry text="The praetorians have died! Please restart!" result="¡Los pretorianos han muerto! ¡Reinicia la partida!"/>
+</translationtable>

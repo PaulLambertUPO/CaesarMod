@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="You cannot keep challenging Rome, Vercingetorix. Surrender now, else we shall destroy Gergovia!"
+	result="No puedes seguir desafiando a Roma, Vercingétorix. ¡Ríndete o destruiremos Gergovia!"
+	sound="1/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="Rome has already oppressed Gaul enough, Roman, prepare to die!\n\nAttack men! For Gaul!"
+	result="Roma ya ha oprimido suficiente a la Galia. ¡Prepárate a morir, romano!\n\n¡Al ataque! ¡Por la Galia!"
+	sound="1/conversations/cnv0_phrase1.wav"/>
+</translationtable>

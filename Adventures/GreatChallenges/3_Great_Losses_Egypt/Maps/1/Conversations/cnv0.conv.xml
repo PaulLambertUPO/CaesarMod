@@ -1,0 +1,15 @@
+	<conversation
+		name="C_Conv3"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_Pop"/>
+		<phrase
+			actor="NO_Pop"
+			text="I see that you have brought me 50 peasants. I shall now use Ra's power to summon an army of sacred warriors that will stop the invader!"
+			followup="first"/>
+		<phrase
+			actor="NO_Pop"
+			text="Oh, mighty Anubis, accept this sacrifice!\nGreat god of Egypt, send your proselytes to defeat our enemies!"
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,11 @@
+	<conversation
+		name="FreshFood"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="Camel"/>
+		<phrase
+			actor="Camel"
+			text="Thank you for freeing me, Roman! These posts used to be full of traders, but the Iberians made them into recruitment outposts.\n\nFor every recruitment outpost you free, a trader will arrive and grant you with food as well as healing water in the chest nearby."
+			followup="first"/>
+	</conversation>

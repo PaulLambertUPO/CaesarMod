@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="My warriors are starving!\n\nThe village we captured earlier should have enough food for us."
+	result="I miei guerrieri sono affamati!\n\nIl villaggio che abbiamo conquistato prima dovrebbe contenere i viveri sufficienti per alimentarci."
+	sound="1/conversations/cnv12_phrase0.wav"/>
+<translationtableentry
+	text="When warriors don't eat, they lose health; but whilst they eat, they regain it."
+	result="Quando i guerrieri non si alimentano, perdono salute; quando mangiano, invece, la recuperano."
+	sound="1/conversations/cnv12_phrase1.wav"/>
+<translationtableentry
+	text="Each village produces and stores food that can be transported in food supply units. These can be used for both transporting food to other buildings and settlements or to bring them with your troops to keep them supplied."
+	result="Ogni villaggio produce e immagazzina viveri che possono venire trasportati dalle unità di rifornimento. Queste ultime ti serviranno sia per trasportare i viveri in altri edifici e insediamenti, che per portarli con te durante la campagna e mantenere le tue truppe rifornite."
+	sound="1/conversations/cnv12_phrase2.wav"/>
+<translationtableentry
+	text="Select the village you captured before and create a food caravan by clicking on the centre of the village and selecting the &#34;Load a caravan with 1000 food&#34; command that you'll see in the lower part of the screen.\n\nBring the caravan to Caesar."
+	result="Seleziona il villaggio che hai conquistato prima e crea un'unità di rifornimento con viveri cliccando sul centro del villaggio ed eseguendo il comando &#34;Carica unità di rifornimento (fino a 1000 unità di viveri)&#34; che vedrai sulla parte inferiore dello schermo.\n\nConduci l'unità di rifornimento fino a Cesare."
+	sound="1/conversations/cnv12_phrase3.wav"/>
+</translationtable>

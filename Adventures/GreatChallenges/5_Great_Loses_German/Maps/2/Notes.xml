@@ -1,0 +1,74 @@
+	<notes>
+		<note
+			id="Intercept the legions."
+			title="Prevent the legions from reaching Bingium"
+			text="You must make sure that not a single Roman reaches Bingium, beyond the woods of Teutoburg."
+			icon="gameres/noteicons/attack.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="1"
+			locationx="15007"
+			locationy="6874"/>
+		<note
+			id="Arminius must survive."
+			title="Arminius must survive"
+			text="Arminius must survive in order for the Roman invasion to be stopped."
+			icon="gameres/noteicons/survive.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="The secret camp must not fall."
+			title="Protect the secret camp"
+			text="The secret camp must not be captured by the Romans."
+			icon="gameres/noteicons/defense.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="0"
+			locationx="7559"
+			locationy="12250"/>
+		<note
+			id="The hidden outposts."
+			title="Hidden outposts"
+			text="To be able to defeat the Romans in an ambush, constantly reinforce the outposts with warriors."
+			icon="gameres/noteicons/info.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Northwood ambush."
+			title="Chauci ambush"
+			text="This is where the warriors from the Chauci tribe will make their ambushes."
+			icon="gameres/noteicons/map.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="1"
+			locationx="5083"
+			locationy="3283"/>
+		<note
+			id="Centerwood ambush."
+			title="Bructeri ambush"
+			text="This is where the warriors from the Bructeri tribe will make their ambushes."
+			icon="gameres/noteicons/map.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="1"
+			locationx="5495"
+			locationy="5006"/>
+		<note
+			id="Southwood ambush."
+			title="Cherusci ambush"
+			text="This is where the warriors from the Cherusci tribe will make their ambushes."
+			icon="gameres/noteicons/map.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="1"
+			locationx="3311"
+			locationy="11255"/>
+		<note
+			id="The great ambush."
+			title="Final battle"
+			text="Publius Quinctilius Varus is leading three Roman legions towards Bingium: the swamps near Teutoburg are the best place to ambush them. If you keep your warriors inside an outpost or in the secret camp, they will participate in the battle, just like in the previous ambushes."
+			icon="gameres/noteicons/attack.bmp"
+			map="Defeat of three Roman legions"
+			show_on_minimap="1"
+			locationx="11763"
+			locationy="5315"/>
+	</notes>

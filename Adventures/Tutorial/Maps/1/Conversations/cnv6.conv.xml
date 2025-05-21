@@ -1,0 +1,23 @@
+	<conversation
+		name="4A Camp attack"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			actor="Instructor"
+			text="Our camp is under attack!\n\nThere is a powerful hero riding a white horse that is leading the assault!\n\nOur troops don't stand a chance."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="As you can see, not all warriors are the same. Some have more combat experience, whilst others are simply recruits.\n\nThe level of a warrior indicates his experience. The higher his level, the more effective he will be in combat."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Warriors assigned to a hero fight as if part of the hero's experience was theirs.\n\nWhen you select the hero, the assigned warriors have yellow circles around their feet."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="What a shame, the battle will be over before we get there.\n\nI'll send a message to Rome asking for reinforcements."
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,19 @@
+	<conversation
+		name="FirstDruid"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="NO_FirstDruid"/>
+		<phrase
+			actor="NO_FirstDruid"
+			text="Ah, thank you, my young Iberian friends. I have been locked up in this outpost for so long that I had almost given up all hope..."
+			followup="first"/>
+		<phrase
+			actor="NO_FirstDruid"
+			text="I was part of a Narbonensis Gaul tribe who was fighting against the Romans. Unfortunately, despite our best efforts, the enemy proved too powerful for us."
+			followup="first"/>
+		<phrase
+			actor="NO_FirstDruid"
+			text="Maybe we could help each other. Should you go through the eastern passage and kill the Romans in our camp, I am sure all survivors will join you in your battle. I assure you they will be quite an asset. They are brave men."
+			followup="first"/>
+	</conversation>

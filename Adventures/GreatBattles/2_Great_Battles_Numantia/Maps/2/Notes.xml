@@ -1,0 +1,101 @@
+	<notes>
+		<note
+			id="WinCondition"
+			title="Numantia"
+			text="Capture the rebel stronghold of Numantia."
+			icon="gameres/noteicons/attack.bmp"
+			map="Numantia"
+			show_on_minimap="1"
+			locationx="15231"
+			locationy="830"/>
+		<note
+			id="LoseCondition"
+			title="Scipio Aemilianus must survive"
+			text="Scipio Aemilianus must survive in order for Numantia to be captured."
+			icon="gameres/noteicons/survive.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="FortsAdvice"
+			title="Gold outposts"
+			text="Capture as many gold outposts as you can.\nThanks to your success, the Senate will send you additional reinforcements."
+			icon="gameres/noteicons/info.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="WatchTower"
+			title="Watch tower"
+			text="The central stronghold oversees the entire area. Capture it and you shall have a bird's eye view of the entire region."
+			icon="gameres/noteicons/attack.bmp"
+			map="Numantia"
+			show_on_minimap="1"
+			locationx="8151"
+			locationy="6440"/>
+		<note
+			id="FoodStorage"
+			title="Food storage"
+			text="Capture the townhall sorrounded by villages west of Numantia. You will prevent food from reaching the enemy stronghold and you will be able to supply your troops."
+			icon="gameres/noteicons/attack.bmp"
+			map="Numantia"
+			show_on_minimap="1"
+			locationx="5011"
+			locationy="3339"/>
+		<note
+			id="GuardTower"
+			title="Guard tower"
+			text="The guard tower near the western section of Numantia provides archers for the walls. Capture it and they will bother you no more."
+			icon="gameres/noteicons/attack.bmp"
+			map="Numantia"
+			show_on_minimap="1"
+			locationx="11115"
+			locationy="928"/>
+		<note
+			id="Reinforcements_S1"
+			title="Reinforcements arrived"
+			text="Reinforcements have arrived in your gold outpost. It would be wise to join them to your army."
+			icon="gameres/noteicons/info.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="15343"
+			locationy="15097"/>
+		<note
+			id="Reinforcements_S5"
+			title="Reinforcements arrived"
+			text="Reinforcements have arrived in your gold outpost. It would be wise to join them to your army."
+			icon="gameres/noteicons/info.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="8527"
+			locationy="14391"/>
+		<note
+			id="Reinforcements_S11"
+			title="Reinforcements arrived"
+			text="Reinforcements have arrived in your gold outpost. It would be wise to join them to your army."
+			icon="gameres/noteicons/info.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="2803"
+			locationy="10956"/>
+		<note
+			id="Reinforcements_S18"
+			title="Reinforcements arrived"
+			text="Reinforcements have arrived in your gold outpost. It would be wise to join them to your army."
+			icon="gameres/noteicons/info.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="9543"
+			locationy="10324"/>
+		<note
+			id="Reinforcements_S21"
+			title="Reinforcements arrived"
+			text="Reinforcements have arrived in your gold outpost. It would be wise to join them to your army."
+			icon="gameres/noteicons/info.bmp"
+			map="Numantia"
+			show_on_minimap="0"
+			locationx="14691"
+			locationy="8577"/>
+	</notes>

@@ -1,0 +1,16 @@
+	<conversation
+		name="Situation"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="TalkDruid"/>
+		<phrase
+			actor="TalkDruid"
+			text="My queen, you might have freed your tribe, but the battle is far from won. The Roman presence in Camulodunum is significant, and we have no allies to rely on."
+			followup="first"/>
+		<phrase
+			actor="TalkDruid"
+			text="Wait! Three wise men live among the ruins north of here. I am sure they will help us in our war against the Romans. We'd better send someone to talk with them."
+			action="GiveNote(\'Ruins\');"
+			followup="first"/>
+	</conversation>

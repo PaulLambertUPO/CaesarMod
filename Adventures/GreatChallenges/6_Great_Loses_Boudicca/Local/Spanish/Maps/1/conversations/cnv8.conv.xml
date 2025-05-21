@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="My queen, you might have freed your tribe, but the battle is far from won. The Roman presence in Camulodunum is significant, and we have no allies to rely on."
+	result="Mi reina, puede que hayas liberado a tu tribu, pero la guerra está lejos de haberse ganado. La presencia de romanos en Camulodunum es significativa, y no contamos con ningún aliado al que pedir ayuda."
+	sound="1/conversations/cnv8_phrase0.wav"/>
+<translationtableentry
+	text="Wait! Three wise men live among the ruins north of here. I am sure they will help us in our war against the Romans. We'd better send someone to talk with them."
+	result="¡Espera! En las ruinas al norte de aquí viven tres sabios druidas. Estoy seguro de que nos ayudarán en nuestra guerra contra los romanos. Creo que sería conveniente enviar a alguien a hablar con ellos."
+	sound="1/conversations/cnv8_phrase1.wav"/>
+</translationtable>

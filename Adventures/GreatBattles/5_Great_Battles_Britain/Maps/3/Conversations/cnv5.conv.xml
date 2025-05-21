@@ -1,0 +1,21 @@
+	<conversation
+		name="HelloAgricola"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Senator"/>
+		<phrase
+			actor="Senator"
+			text="Ave great Agricola! I have been sent by the Senate to help you, but... Rome is in difficult times and needs gold."
+			followup="first"/>
+		<phrase
+			actor="Senator"
+			text="As long as you have enough gold in your townhall, just talk to me and I will help you as much as I can."
+			action="_PlaceEx(\'WatchEye\', 9884, 25282, 1);\n_PlaceEx(\'WatchEye\', 17057, 4351, 1);"
+			followup="first"/>
+		<phrase
+			actor="Senator"
+			text="I shall tell you something. Near this town, there are a few chieftains with a small army each. Destroy their armies and their tribes will join you."
+			action="_PlaceEx(\'WatchEye\', 25328, 18401, 1);\n_PlaceEx(\'WatchEye\', 24636, 18662, 1);\n_PlaceEx(\'WatchEye\', 23728, 19082, 1);\n_PlaceEx(\'WatchEye\', 23455, 19099, 1);\n_PlaceEx(\'WatchEye\', 22813, 19477, 1);\n_PlaceEx(\'WatchEye\', 22566, 20207, 1);\n_PlaceEx(\'WatchEye\', 22303, 20965, 1);\n_PlaceEx(\'WatchEye\', 22215, 21691, 1);\n_PlaceEx(\'WatchEye\', 21978, 22416, 1);\n_PlaceEx(\'WatchEye\', 22471, 23200, 1);\n_PlaceEx(\'WatchEye\', 23501, 23623, 1);\n_PlaceEx(\'WatchEye\', 23958, 23670, 1);\n_PlaceEx(\'WatchEye\', 24648, 23432, 1);\n_PlaceEx(\'WatchEye\', 25351, 23188, 1);\n_PlaceEx(\'WatchEye\', 26206, 22691, 1);\n_PlaceEx(\'WatchEye\', 27020, 22149, 1);\n_PlaceEx(\'WatchEye\', 27750, 21665, 1);\n_PlaceEx(\'WatchEye\', 27439, 20651, 1);"
+			followup="first"/>
+	</conversation>

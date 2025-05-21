@@ -1,0 +1,22 @@
+	<conversation
+		name="9B Nice items"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Caesar"/>
+		<actor
+			name="Instructor2"/>
+		<phrase
+			actor="Caesar"
+			text="Wow!\n\nA finger of death and an elephant tusk!\n\nNot bad at all!"
+			action="ClearSelection(1);\nGetNamedObj(\'Caesar\').obj.Select(1);"
+			followup="first"/>
+		<phrase
+			actor="Instructor2"
+			text="Hold the mouse pointer over the icon of the elephant tusk, located in the upper part of the screen, to see its description.\n\nSome objects are activated automatically and others require you to activate them, like the finger of death for example, by double-clicking on them."
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="Both of these objects will be very useful in the next battle!"
+			followup="first"/>
+	</conversation>

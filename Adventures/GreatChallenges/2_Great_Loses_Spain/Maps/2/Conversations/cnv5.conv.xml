@@ -1,0 +1,11 @@
+	<conversation
+		name="ShipUraa"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Loser"/>
+		<phrase
+			actor="Loser"
+			text="A ship! We are saved! Ahoy there! Come rescue us!"
+			followup="first"/>
+	</conversation>

@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Oh noble Octavian, I have alarming news! The forces that attacked us came from Alexandria. My scouts have reported that the shipyard there is constantly gathering forces and sending ships against us."
+	result="¡Oh noble Augusto, traigo malas noticias! Las fuerzas que nos atacaron provenían de Alejandría. Mis exploradores me informan de que en su puerto no dejan de concentrarse tropas. ¡Y además están enviando continuamente barcos contra los nuestros!"
+	sound="4/conversations/cnv2_phrase0.wav"/>
+<translationtableentry
+	text="We can stop this situation by making use of the Pelusio shipyard to neutralize that of Alexandria! That would certainly weaken them and avoid performing such surprise attacks."
+	result="Podemos poner fin a esta situación utilizando el puerto de Pelusio para construir navíos y neutralizar la amenaza del puerto de Alejandría. Sin duda alguna, eso les debilitará y les impedirá lanzar ataques por sorpresa."
+	sound="4/conversations/cnv2_phrase1.wav"/>
+</translationtable>

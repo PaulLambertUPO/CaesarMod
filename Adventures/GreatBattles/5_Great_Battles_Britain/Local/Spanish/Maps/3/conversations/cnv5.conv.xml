@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Ave great Agricola! I have been sent by the Senate to help you, but... Rome is in difficult times and needs gold."
+	result="¡Ave poderoso Agrícola! He sido enviado por el Senado para ayudarte. Pero Roma está pasando momentos difíciles y necesita oro."
+	sound="3/conversations/cnv5_phrase0.wav"/>
+<translationtableentry
+	text="As long as you have enough gold in your townhall, just talk to me and I will help you as much as I can."
+	result="Si recaudas de esta provincia oro suficiente, habla conmigo y te ayudaré en todo lo que pueda."
+	sound="3/conversations/cnv5_phrase1.wav"/>
+<translationtableentry
+	text="I shall tell you something. Near this town, there are a few chieftains with a small army each. Destroy their armies and their tribes will join you."
+	result="Te diré algo. Cerca de esta ciudad encontrarás a algunos jefes, cada uno de ellos con un pequeño ejército. Acaba con sus ejércitos y sus tribus se unirán a ti."
+	sound="3/conversations/cnv5_phrase2.wav"/>
+</translationtable>

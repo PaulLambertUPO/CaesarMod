@@ -1,0 +1,21 @@
+	<conversation
+		name="Intro2"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Vercingetorix"/>
+		<actor
+			name="NO_IntroChieftain"/>
+		<phrase
+			actor="NO_IntroChieftain"
+			text="Vercingetorix, as you ordered me, I have spoken with the other chieftains. All the passes to Gergovia are guarded. We are ready to give the Romans the welcome they deserve!"
+			followup="first"/>
+		<phrase
+			actor="NO_Vercingetorix"
+			text="Make sure you send reinforcements to protect them. Should they be killed I fear their warriors will scatter."
+			followup="first"/>
+		<phrase
+			actor="NO_IntroChieftain"
+			text="Very well, Vercingetorix! I shall go to the city to prepare the defenses there."
+			followup="first"/>
+	</conversation>

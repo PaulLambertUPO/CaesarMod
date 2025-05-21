@@ -1,0 +1,18 @@
+<translationtable>
+	<translationtableentry
+		text="Our camp is under attack!\n\nThere is a powerful hero riding a white horse that is leading the assault!\n\nOur troops don't stand a chance."
+		result="¡Nuestro campamento está siendo atacado!\n\n¡Hay un poderoso héroe en un caballo blanco liderando el asalto!\n\nNuestras fuerzas no tienen ninguna oportunidad."
+		sound="1/conversations/cnv6_phrase0.wav"/>
+	<translationtableentry
+		text="As you can see, not all warriors are the same. Some have more combat experience, whilst others are simply recruits.\n\nThe level of a warrior indicates his experience. The higher his level, the more effective he will be in combat."
+		result="Ya ves, no todos los guerreros son iguales. Algunos tienen mayor experiencia de combate mientras que otros son simplemente reclutas.\n\nEl nivel de un guerrero indica lo experimentado que es. A mayor nivel, más efectivo será en combate."
+		sound="1/conversations/cnv6_phrase1.wav"/>
+	<translationtableentry
+		text="Warriors assigned to a hero fight as if part of the hero's experience was theirs.\n\nWhen you select the hero, the assigned warriors have yellow circles around their feet."
+		result="Los guerreros asignados a un héroe luchan como si parte de la experiencia del héroe fuese suya.\n\nCuando se selecciona al héroe, los guerreros asignados se muestran con círculos amarillos en su base."
+		sound="1/conversations/cnv6_phrase2.wav"/>
+	<translationtableentry
+		text="What a shame, the battle will be over before we get there.\n\nI'll send a message to Rome asking for reinforcements."
+		result="Qué lástima, la batalla habrá terminado antes de que lleguemos.\n\nEnviaré un mensaje a Roma pidiendo refuerzos."
+		sound="1/conversations/cnv6_phrase3.wav"/>
+</translationtable>

@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Have you noticed the dark fog that moves near your units?"
+	result="¿Te has dado cuenta de la neblina oscura que se mueve cerca de tus unidades?"
+	sound="1/conversations/cnv4_phrase0.wav"/>
+<translationtableentry
+	text="The areas covered by a semi-transparent fog are currently out of view of your warriors. However, as you've explored the area before, you know what the terrain looks like and what buildings are there. However, as you don't currently have troops or buildings in view, there may be enemies hidden there."
+	result="Las zonas cubiertas de una neblina semitransparente están actualmente fuera de la vista de tus guerreros. Sin embargo, al haberlas explorado ya alguna vez, conoces su orografía y los edificios que se alzan en ellas. Sin embargo, como no están actualmente a la vista de tus unidades o edificios, pueden ocultar guerreros enemigos."
+	sound="1/conversations/cnv4_phrase1.wav"/>
+<translationtableentry
+	text="The black areas of the map are completely uncharted for you. Once you have sent your warriors to explore these areas, you'll obtain information about the terrain characteristics and the presence of settlements in the area."
+	result="Las zonas negras del mapa son totalmente desconocidas para ti. Una vez que hayas enviado a tus guerreros a explorar estas zonas, tendrás información acerca de las características del terreno y de la presencia de asentamientos en la zona."
+	sound="1/conversations/cnv4_phrase2.wav"/>
+</translationtable>

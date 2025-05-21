@@ -1,0 +1,15 @@
+	<conversation
+		name="Event4"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="R_Chariot2"/>
+		<phrase
+			actor="R_Chariot2"
+			text="We have captured the stronghold! Now Numantia is lacking food!"
+			followup="first"/>
+		<phrase
+			actor="R_Chariot2"
+			text="We have also discovered that the guard tower near the western section of Numantia provides archers for the outer walls. Should we capture it, Numantia will be vulnerable."
+			followup="first"/>
+	</conversation>

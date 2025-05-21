@@ -1,0 +1,11 @@
+	<conversation
+		name="NavalBattle"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="R_Ship1"/>
+		<phrase
+			actor="R_Ship1"
+			text="The enemy fleets are just ahead! When the battle starts, make sure to attack the ships with the yellow sails first! If we sink Mark Antony's ships first, eliminating the Egyptians will be a pushover!"
+			followup="first"/>
+	</conversation>

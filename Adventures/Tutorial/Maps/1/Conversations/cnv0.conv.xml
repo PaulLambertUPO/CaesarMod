@@ -1,0 +1,45 @@
+	<conversation
+		name="1 Welcome"
+		startup="first"
+		startup_phrases="p1;repeat"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="Welcome to my training camp!\n\nI'll be instructing you on how to lead armies and defeat your enemy.\n\nLeft-click on this box to continue."
+			condition="return EnvReadInt(\'/First1\') != 1;"
+			action="EnvWriteInt(\'/First1\', 1);"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Your first task will be to command these legionaries to move to the center of the square."
+			followup="choice"
+			followup_phrases="Selection;Commands;Done"/>
+		<phrase
+			label="Done"
+			actor="Instructor"
+			text="Right away!"
+			followup="end"/>
+		<phrase
+			label="Selection"
+			actor="Instructor"
+			text="You can select a single legionary by left-clicking on it, although you cannot do this during a conversation.\n\nIf you want to select multiple legionaries, you can do so by holding down the left mouse button and dragging the mouse pointer to the other side of the group: a rectangle will appear on screen, surrounding all of the units. If you release the mouse button, all of the units within the rectangle will be selected.\n\nYou'll be able to distinguish which legionaries you have selected, as they will have a circle around their feet."
+			choice_text="How can I select warriors?"
+			followup="first"
+			followup_phrases="repeat"/>
+		<phrase
+			label="Commands"
+			actor="Instructor"
+			text="Right-click on the ground to make your legionaries move towards the indicated place, although you cannot do this during a conversation."
+			choice_text="How can I command warriors?"
+			followup="first"
+			followup_phrases="repeat"/>
+		<phrase
+			label="repeat"
+			actor="Instructor"
+			text="Your task is to command those legionaries in red to move to the center of the square."
+			followup="choice"
+			followup_phrases="Selection;Commands;Done"/>
+	</conversation>

@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="If you hold down the 'CTRL' button on your keyboard whilst right-clicking on the ground, the selected warriors will go to that point whilst also eliminating any enemy they find on their way."
+	result="If you hold down the 'CTRL' button on your keyboard whilst right-clicking on the ground, the selected warriors will go to that point whilst also eliminating any enemy they find on their way."
+	sound="1/conversations/cnv21_phrase0.wav"/>
+<translationtableentry
+	text="You can also use other keys to give orders to your army.\n\nTake a look at the help section by pressing 'F1' to find out how."
+	result="You can also use other keys to give orders to your army.\n\nTake a look at the help section by pressing 'F1' to find out how."
+	sound="1/conversations/cnv21_phrase1.wav"/>
+</translationtable>

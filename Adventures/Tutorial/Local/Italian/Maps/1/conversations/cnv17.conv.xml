@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="There is no food in the stronghold!"
+	result="Non ci sono viveri nella fortezza!"
+	sound="1/conversations/cnv17_phrase0.wav"/>
+<translationtableentry
+	text="You can establish a supply route from the neighbouring village to supply the stronghold with food.\n\nSelect the village by left-clicking in the centre and right-click on the stronghold's townhall. This can be done from both the normal view or the minimap."
+	result="Puoi stabilire una rotta di rifornimento dal villaggio vicino per approvvigionare la fortezza di viveri.\n\nSeleziona il centro del villaggio con il tasto sinistro e clicca con il tasto destro sul foro della fortezza. Lo puoi fare sia partendo dalla visuale normale che dalla mappa strategica."
+	sound="1/conversations/cnv17_phrase1.wav"/>
+<translationtableentry
+	text="You can do the same thing by pressing the &#34;Supply&#34; command that you'll find in all of the outposts and villages. Left-click the command and left-click again on the desired destination.\n\nYou can activate and deactivate the viewing of supply routes on the map by pressing 'ALT'."
+	result="Puoi ottenere lo stesso risultato cliccando sul comando &#34;Stabilisci rotta di rifornimento&#34; che troverai in tutti i forti e i villaggi. Clicca sul comando con il pusante sinistro del mouse e in seguito con il sinistro sul luogo di destinazione.\n\nPuoi attivare e disattivare la visualizzazione delle rotte di rifornimento nella mappa utilizzando il tasto 'ALT'."
+	sound="1/conversations/cnv17_phrase2.wav"/>
+</translationtable>

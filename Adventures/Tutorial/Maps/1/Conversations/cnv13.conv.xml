@@ -1,0 +1,11 @@
+	<conversation
+		name="5C Fed"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Caesar"/>
+		<phrase
+			actor="Caesar"
+			text="Excellent!\n\nNow that we've eaten, we can continue and capture the outpost to the south."
+			followup="first"/>
+	</conversation>

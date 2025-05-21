@@ -1,0 +1,38 @@
+	<root>
+		<label
+			text="Alesia"
+			x="8392"
+			y="7451"/>
+		<label
+			text="North camp"
+			x="8071"
+			y="2614"/>
+		<label
+			text="Northeast camp"
+			x="11291"
+			y="4003"/>
+		<label
+			text="East camp"
+			x="13244"
+			y="7497"/>
+		<label
+			text="Southeast camp"
+			x="13084"
+			y="9649"/>
+		<label
+			text="South camp"
+			x="9865"
+			y="12218"/>
+		<label
+			text="Southwest camp"
+			x="6662"
+			y="11130"/>
+		<label
+			text="West camp"
+			x="3539"
+			y="7798"/>
+		<label
+			text="Northwest camp"
+			x="4660"
+			y="3633"/>
+	</root>

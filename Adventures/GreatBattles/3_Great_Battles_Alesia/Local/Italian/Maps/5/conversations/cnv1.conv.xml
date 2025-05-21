@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Caesar, the Gauls are launching another attack!"
+	result="Cesare, i galli stanno intraprendendo un nuovo attacco!"
+	sound="5/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="Send word to all generals to hold their positions at any cost. We must not allow the siege to be breached!"
+	result="Manda un messaggio a tutti i generali e ordina di mantenere la posizione a tutti i costi. Non dobbiamo permettere che rompano l'assedio!"
+	sound="5/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="The enemy will attempt to break through our siege and seek reinforcements!"
+	result="Il nemico cercherà di rompere l'assedio e di ottenere rinforzi dall'esterno!"
+	sound="5/conversations/cnv1_phrase2.wav"/>
+<translationtableentry
+	text="Go to your posts and tighten our defenses!"
+	result="Dirigetevi ai vostri posti e rinforzate le difese!"
+	sound="5/conversations/cnv1_phrase3.wav"/>
+</translationtable>

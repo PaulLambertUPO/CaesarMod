@@ -1,0 +1,26 @@
+<translationtable>
+<translationtableentry
+	text="Finally, the training outpost is ours!"
+	result="Finalmente! Il forte di addestramento è nostro!"
+	sound="1/conversations/cnv14_phrase0.wav"/>
+<translationtableentry
+	text="Rome requires our immediate presence in the Lindum stronghold.\n\nI wonder what's going on."
+	result="Roma richiede la nostra immediata presenza nella fortezza di Lindum.\n\nMi chiedo cosa starà succedendo."
+	sound="1/conversations/cnv14_phrase1.wav"/>
+<translationtableentry
+	text="A Roman stronghold is comprised of a townhall, a barracks, a temple, a colosseum, a blacksmith and a tavern."
+	result="Una fortezza romana comprende un foro, un tempio, un colosseo, una fucina e una taverna."
+	sound="1/conversations/cnv14_phrase2.wav"/>
+<translationtableentry
+	text="It's surrounded by a strong wall guarded by archers and has a few gates that block the entrance of any enemies."
+	result="Si trova circondata da potenti mura protette da arcieri, e da alcune porte che impediscono il passaggio ai nemici."
+	sound="1/conversations/cnv14_phrase3.wav"/>
+<translationtableentry
+	text="Warriors can be garrisoned in an outpost or the townhall of any stronghold to quickly recover health and energy."
+	result="I guerrieri si possono alloggiare in un forte o nel foro di una fortezza qualsiasi per recuperare rapidamente la salute e l'energia."
+	sound="1/conversations/cnv14_phrase4.wav"/>
+<translationtableentry
+	text="Lindum is in the northeast.\n\nTake Caesar to Lindum's townhall by selecting him and right-clicking on Lindum's townhall."
+	result="Lindum si trova a nord-est.\n\nConduci Cesare fino al foro di Lindum selezionandolo e cliccando con il tasto destro del mouse sul foro di Lindum."
+	sound="1/conversations/cnv14_phrase5.wav"/>
+</translationtable>

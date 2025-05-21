@@ -1,0 +1,11 @@
+	<conversation
+		name="Victory"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Senator"/>
+		<phrase
+			actor="Senator"
+			text="Excellent! A glorious victory has been achieved! Thanks to you, the conquest of Britain is complete. Well done, Agricola! Your victory shall be added to the pages of history and your name shall be remembered forever!"
+			followup="first"/>
+	</conversation>

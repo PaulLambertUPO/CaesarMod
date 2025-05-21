@@ -1,0 +1,22 @@
+	<root>
+		<label
+			text="Zama"
+			x="1457"
+			y="9117"/>
+		<label
+			text="Utica"
+			x="13276"
+			y="11339"/>
+		<label
+			text="Masinissa's camp"
+			x="12604"
+			y="14046"/>
+		<label
+			text="Numidian camp"
+			x="1377"
+			y="15203"/>
+		<label
+			text="Carthaginian camp"
+			x="3042"
+			y="4350"/>
+	</root>

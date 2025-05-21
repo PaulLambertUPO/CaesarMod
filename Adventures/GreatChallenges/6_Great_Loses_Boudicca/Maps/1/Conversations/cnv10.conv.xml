@@ -1,0 +1,11 @@
+	<conversation
+		name="LiftedCurse"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="GhoulDruid"/>
+		<phrase
+			actor="GhoulDruid"
+			text="You managed to lift the curse! From now on I shall serve you, great queen!"
+			followup="first"/>
+	</conversation>

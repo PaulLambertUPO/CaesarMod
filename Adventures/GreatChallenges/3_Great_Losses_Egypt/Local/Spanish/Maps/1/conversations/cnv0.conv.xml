@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="I see that you have brought me 50 peasants. I shall now use Ra's power to summon an army of sacred warriors that will stop the invader!"
+	result="Veo que me has traído a 50 campesinos. ¡Usaré el poder de Ra para convocar a una multitud de guerreros sagrados que detendrán al invasor!"
+	sound="1/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="Oh, mighty Anubis, accept this sacrifice!\nGreat god of Egypt, send your proselytes to defeat our enemies!"
+	result="¡Oh, poderoso Anubis, acepta este sacrificio!\n¡Gran dios de Egipto, envía a vuestros acólitos para que aplasten a nuestros enemigos!"
+	sound="1/conversations/cnv0_phrase1.wav"/>
+</translationtable>

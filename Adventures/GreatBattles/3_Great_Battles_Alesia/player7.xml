@@ -1,0 +1,14 @@
+	<playerdata
+		id="7"
+		name="Unused"
+		race="Egypt"
+		AllowedRaces="All"
+		control="Computer"
+		AI=""
+		difficulty="3"
+		startx="0"
+		starty="0"
+		color="32356"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000000000000000000000000000000000000000000000000000350000000000000000000000000000000000000000000000000000000000000000"/>

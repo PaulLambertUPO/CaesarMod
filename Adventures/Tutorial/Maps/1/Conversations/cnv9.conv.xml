@@ -1,0 +1,17 @@
+	<conversation
+		name="9A Get items"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Caesar"/>
+		<actor
+			name="Instructor2"/>
+		<phrase
+			actor="Caesar"
+			text="Look at that mound!\n\nIt's been marked by a circle of pebbles around it!\n\nAn unequivocal sign that it could contain magic objects or amulets!"
+			followup="first"/>
+		<phrase
+			actor="Instructor2"
+			text="Select Caesar and right-click on the rocky mound so that he collects the magic objects or amulets that might be inside.\n\nEach of your men can carry up to four items."
+			followup="first"/>
+	</conversation>

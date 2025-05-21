@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="Halt, men! With Syphax dead, Masinissa will be the new king and the Numidians will become our allies!"
+	result="¡Detened el ataque! ¡Con la caída de Syphax, Masinisa será el nuevo rey y los numidas serán nuestros aliados!"
+	sound="6/conversations/cnv8_phrase0.wav"/>
+<translationtableentry
+	text="Let's finish off the Iberians together!"
+	result="¡Juntos acabaremos con esos iberos!"
+	sound="6/conversations/cnv8_phrase1.wav"/>
+</translationtable>

@@ -1,0 +1,11 @@
+	<conversation
+		name="2C Ambush"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			actor="Instructor"
+			text="An ambush! Hmm... Well, luckily these enemies are weak. Watch as your legionaries defeat them."
+			followup="first"/>
+	</conversation>

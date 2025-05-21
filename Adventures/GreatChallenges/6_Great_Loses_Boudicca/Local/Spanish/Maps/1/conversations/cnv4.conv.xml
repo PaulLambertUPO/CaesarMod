@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="I am sorry but I cannot help you anymore, warrior."
+	result="Lo siento, pero ya no puedo ayudarte."
+	sound="1/conversations/cnv4_phrase0.wav"/>
+<translationtableentry
+	text="Beware the Trinovantes to the west. They are vicious and attack anyone on sight. Many have been killed by their savagery, yet there is a way to defeat them."
+	result="Ten cuidado con los Trinovantes que habitan al oeste. Son una tribu depravada que lucha contra todos. Son muchos los hombres asesinados por esta raza salvaje... aunque aún hay una forma de derrotarlos."
+	sound="1/conversations/cnv4_phrase1.wav"/>
+<translationtableentry
+	text="Capture their three outposts and they shall bow to you strength. However, if you try to conquer their settlement, they will fight you to the last man."
+	result="Captura sus tres fortines y se doblegarán ante tu fuerza. Sin embargo, si te enfrentas directamente con ellos e intentas conquistar su poblado, lucharán ferozmente contra ti hasta el último de sus hombres."
+	sound="1/conversations/cnv4_phrase2.wav"/>
+</translationtable>

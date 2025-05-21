@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="You fool! Now that the Iberians joined Syphax he will come after all of us!"
+	result="Mi aspettavo ben altro da un generale romano! Adesso che gli iberi hanno riunito le loro forze con quelle di Syphax, verranno ad attaccarci!"
+	sound="6/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="You've done well, Roman! Now the Numidian king is mad and will order a full-scale assault."
+	result="Ben fatto, romano! Hai reso onore alla tua reputazione. Il re numida è impazzito di rabbia e ordinerà un attacco totale. Il fragore della battaglia sarà l'opportunità unica per eliminarlo."
+	sound="6/conversations/cnv3_phrase1.wav"/>
+<translationtableentry
+	text="Now I see your game... If we kill king Syphax you will inherit the kingdom... A clever plan indeed.\n\nVery well, the price for your kingdom will be the support of the Numidian army when I face Hannibal."
+	result="Ora capisco il tuo gioco... La morte di Syphax ti sarà molto utile per ottenere il trono. È un piano ambizioso, ma intelligente.\n\nBenissimo, ma il prezzo del tuo regno sarà l'aiuto dell'esercito numida quando affronterò Annibale."
+	sound="6/conversations/cnv3_phrase2.wav"/>
+<translationtableentry
+	text="You're asking a high price, yet I have little choice. Just kill the Numidian king and you will have my support."
+	result="Il tuo prezzo è alto, romano. Ma non ho scelta. Porta a termine la tua parte del patto: uccidi il re numida e avrai l'appoggio mio e del mio esercito."
+	sound="6/conversations/cnv3_phrase3.wav"/>
+</translationtable>

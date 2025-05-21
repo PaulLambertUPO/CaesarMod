@@ -1,0 +1,18 @@
+	<root>
+		<label
+			text="Numantia"
+			x="14109"
+			y="2499"/>
+		<label
+			text="Watch tower"
+			x="8344"
+			y="6919"/>
+		<label
+			text="Food storage"
+			x="4980"
+			y="3332"/>
+		<label
+			text="Guard tower"
+			x="11050"
+			y="1666"/>
+	</root>

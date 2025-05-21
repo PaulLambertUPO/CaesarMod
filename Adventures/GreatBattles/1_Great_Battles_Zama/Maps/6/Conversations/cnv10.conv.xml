@@ -1,0 +1,11 @@
+	<conversation
+		name="ForbiddenAreaSpeech"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Scipio"/>
+		<phrase
+			actor="NO_Scipio"
+			text="It would not be wise to approach the enemy at this time."
+			followup="first"/>
+	</conversation>

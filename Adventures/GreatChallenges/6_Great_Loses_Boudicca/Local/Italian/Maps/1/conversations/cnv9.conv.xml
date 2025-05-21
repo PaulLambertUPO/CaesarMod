@@ -1,0 +1,6 @@
+<translationtable>
+<translationtableentry
+	text="I have been defeated for the first time! Your skills are far greater than mine. It seems I have no choice but to become your ally."
+	result="Sono stato sconfitto per la prima volta! Ammetto che il tuo potere è di gran lunga superiore al mio. Credo di non avere altra scelta che mettere il mio popolo al tuo servizio."
+	sound="1/conversations/cnv9_phrase0.wav"/>
+</translationtable>

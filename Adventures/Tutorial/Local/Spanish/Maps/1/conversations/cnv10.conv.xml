@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Wow!\n\nA finger of death and an elephant tusk!\n\nNot bad at all!"
+	result="¡Vaya!\n\n¡Un dedo de la muerte y un colmillo de elefante!\n\n¡No está nada mal!"
+	sound="1/conversations/cnv10_phrase0.wav"/>
+<translationtableentry
+	text="Hold the mouse pointer over the icon of the elephant tusk, located in the upper part of the screen, to see its description.\n\nSome objects are activated automatically and others require you to activate them, like the finger of death for example, by double-clicking on them."
+	result="Mantén el puntero del ratón sobre el icono del colmillo de elefante situado en la parte superior de la pantalla para ver su descripción.\n\nAlgunos objetos actúan por sí mismos, pero es necesario activar otros, como por ejemplo el dedo de la muerte, pulsando rápidamente dos veces con el ratón sobre ellos."
+	sound="1/conversations/cnv10_phrase1.wav"/>
+<translationtableentry
+	text="Both of these objects will be very useful in the next battle!"
+	result="¡Ambos objetos me serán útiles en la próxima batalla!"
+	sound="1/conversations/cnv10_phrase2.wav"/>
+</translationtable>

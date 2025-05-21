@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="The enemy gates!\n\nThe only way to storm an enemy stronghold is to destroy its gates."
+	result="Ecco la porta nemica!\n\nL'unico modo per assaltare la fortezza è distruggere le loro porte."
+	sound="1/conversations/cnv19_phrase0.wav"/>
+<translationtableentry
+	text="You can do this by commanding your archers to attack the gates. If you don't have archers, you're going to need a siege machine."
+	result="Puoi farlo ordinando ai tuoi arcieri di attaccare la porta. Se non hai arcieri, hai bisogno di una macchina di assedio."
+	sound="1/conversations/cnv19_phrase1.wav"/>
+<translationtableentry
+	text="To build a siege machine, select some of your legionaries (they cannot be heroes) and select the command &#34;Build siege machine&#34; in the lower part of the screen.\n\nSiege machines have greater range than the archers that guard the wall, so place it beyond the reach of the enemy and watch as it destroys the gates."
+	result="Per costruire una macchina di assedio, seleziona alcuni dei tuoi guerrieri (non puoi farlo con gli eroi) e seleziona il comando &#34;Costruisci macchina di assedio&#34; nella parte inferiore dello schermo.\n\nLe macchine di assedio hanno una portata maggiore degli arcieri che proteggono le mura. Situala quindi fuori dalla portata del nemico e guarda come distrugge la porta."
+	sound="1/conversations/cnv19_phrase2.wav"/>
+</translationtable>

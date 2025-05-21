@@ -1,0 +1,17 @@
+	<map
+		name="Danube"
+		displayname="Cross the Danube"
+		descr=""
+		persist_state="0">
+		<size
+			x="16384"
+			y="16384"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="0"/>
+		<start_pt
+			x="11187"
+			y="10634"/>
+	</map>

@@ -1,0 +1,26 @@
+	<root>
+		<label
+			text="Herakleopolis Magna"
+			x="7639"
+			y="14370"/>
+		<label
+			text="Memphis"
+			x="13997"
+			y="4327"/>
+		<label
+			text="Saqqara"
+			x="1697"
+			y="2869"/>
+		<label
+			text="Altar of the gods"
+			x="15038"
+			y="10922"/>
+		<label
+			text="Mercenary fort"
+			x="7783"
+			y="15990"/>
+		<label
+			text="Oasis"
+			x="1985"
+			y="6317"/>
+	</root>

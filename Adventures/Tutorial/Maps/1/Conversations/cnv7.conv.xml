@@ -1,0 +1,43 @@
+	<conversation
+		name="4B Caesar arrival"
+		startup="first"
+		startup_phrases="p1;ask"
+		restore_view="1">
+		<actor
+			name="Instructor"/>
+		<actor
+			name="Caesar"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="We have lost our camp, but we're not defeated.\n\nHere comes Julius Caesar himself!"
+			condition="return EnvReadInt(\'/First4B\') != 1;"
+			action="ClearSelection(1);\nGetNamedObj(\'Caesar\').obj.Select(1);\nEnvWriteInt(\'/First4B\', 1);"
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="Under my command, your army will squash the enemy!"
+			followup="first"/>
+		<phrase
+			label="skills"
+			actor="Caesar"
+			text="As a hero, I can learn 5 different special skills. Each skill can be learned up to 10 levels, depending on my experience.\n\nSelect me, press the button &#34;Hero skills&#34; and place the mouse pointer for a few moments on each of the special skill icons in the upper part of the screen to learn more about them."
+			choice_text="Caesar, tell me about your skills"
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="With each level that I obtain, I assign a point to invest in one of my skills.\n\nIf there are skill points still free to distribute, you'll see a flashing '+' sign in the upper part of the screen."
+			action="Hero Caesar;\nCaesar = GetNamedObj(\'Caesar\').obj.AsHero();\nif (Caesar.inherentlevel \l 20)\n Caesar.SetLevel(20);"
+			followup="first"/>
+		<phrase
+			label="ask"
+			actor="Instructor"
+			text="Place your praetorians under Caesar's command by selecting them and right-clicking on him."
+			followup="choice"
+			followup_phrases="skills;ok"/>
+		<phrase
+			label="ok"
+			actor="Caesar"
+			text="I'll have my vengeance!"
+			followup="end"/>
+	</conversation>

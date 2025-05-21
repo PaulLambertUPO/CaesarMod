@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry text="Golden ankh" result="Ankh dorato"/>
+<translationtableentry text="Ankh de oro" result="Ankh dorato"/>
+<translationtableentry text="Adds 500 health and 8 armor.\nIt restores the health of the owner by 10 every second as long as it remains below 25%" result="Aumenta la salute di 500 punti e la difesa di 8 punti.\nRipristina la salute del possessore di 10 punti ogni secondo fintanto che rimane inferiore al 25%"/>
+<translationtableentry text="Aumenta la salud en 500 puntos y la defensa en 8 puntos.\nRestablece la salud del poseedor en 10 puntos cada segundo mientras esté por debajo del 25%" result="Aumenta la salute di 500 punti e la difesa di 8 punti.\nRipristina la salute del possessore di 10 punti ogni secondo fintanto che rimane inferiore al 25%"/>
+<translationtableentry text="Feather amulet" result="Amuleto di piume"/>
+<translationtableentry text="Amuleto de plumas" result="Amuleto di piume"/>
+<translationtableentry text="Adds 600 health" result="Aumenta la salute di 600 punti"/>
+<translationtableentry text="Aumenta la salud en 600 puntos" result="Aumenta la salute di 600 punti"/>
+<translationtableentry text="King's belt" result="Cintura dei re"/>
+<translationtableentry text="Cinturón de reyes" result="Cintura dei re"/>
+<translationtableentry text="Adds 600 health and 10 armor" result="Aumenta la salute di 600 punti e la difesa di 10 punti"/>
+<translationtableentry text="Aumenta la salud en 600 puntos y la defensa en 10 puntos" result="Aumenta la salute di 600 punti e la difesa di 10 punti"/>
+<translationtableentry text="Fur gloves of health" result="Guanti della salute"/>
+<translationtableentry text="Guantes de la salud" result="Guanti della salute"/>
+<translationtableentry text="They add 1200 health.\nIf used, they restore the health of a nearby ally by taking it from the owner" result="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore"/>
+<translationtableentry text="Aumentan la salud en 1200 puntos.\nSi se utilizan, restablecen la salud de un aliado cercano sustrayéndola del poseedor" result="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore"/>
+<translationtableentry text="Amulet of triumph" result="Amuleto del trionfo"/>
+<translationtableentry text="Amuleto del triunfo" result="Amuleto del trionfo"/>
+<translationtableentry text="Restores the health of the owner by 100 upon every kill, with a 50% chance to restore 50 more health" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti"/>
+<translationtableentry text="Restablece la salud del poseedor en 100 puntos con cada asesinato, con una probabilidad del 50% de restablecer 50 puntos adicionales" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti"/>
+</translationtable>

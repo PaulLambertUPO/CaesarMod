@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Hannibal at the gates of Rome - 216 BC"
+			author="Haemimont games"
+			description="Under the command of 50000 soldiers, 9000 horsemen and 37 elephants, Hannibal crosses the Alps and invades the Italian peninsula.\nHe defeats the Roman legions over the Ticino, Trebia and Trasimeno and concludes his feat with a great victory at Cannae.\nThe Carthaginian army is now just a step away from the gates of Rome..."
+			last_edited_map="1"
+			start_map="1"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="2"/>
+	</game>

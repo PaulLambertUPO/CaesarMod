@@ -1,0 +1,101 @@
+	<notes>
+		<note
+			id="WinCondition"
+			title="Conquer Britain"
+			text="Capture as many strongholds as possible to force your enemies to surrender."
+			icon="gameres/noteicons/attack.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="LoseCondition1"
+			title="Agricola must survive"
+			text="Gnaeus Julius Agricola must survive in order for Britain to be conquered."
+			icon="gameres/noteicons/survive.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="LoseCondition2"
+			title="Protect Londinium"
+			text="The town of Londinium must not fall in enemy hands."
+			icon="gameres/noteicons/defense.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="24059"
+			locationy="20950"/>
+		<note
+			id="SenatorArmy"
+			title="Senator Publius"
+			text="Senator Publius is more than eager to help you. His services, however, come at a price. Should you decide to make use of his aid, just select him."
+			icon="gameres/noteicons/info.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="24559"
+			locationy="21288"/>
+		<note
+			id="B_Chieftains"
+			title="British chieftains"
+			text="There are some enemy chieftains that roam near Londinium. Defeat their armies and they will join you along with their tribes."
+			icon="gameres/noteicons/attack.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Shipyards"
+			title="Enemy shipyards"
+			text="The British have some shipyards in their possession. Capture them to stop the constant arrival of enemy reinforcements."
+			icon="gameres/noteicons/attack.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Caves"
+			title="Caves"
+			text="It might be useful to use the caves to travel from one part of the island to another, because they allow you to attack the unsuspecting enemies from behind."
+			icon="gameres/noteicons/info.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Stonehenge"
+			title="Stonehenge"
+			text="If you bring your priests to this ancient Stonehenge, they will be able to perform powerful rituals that have an effect throughout the entire island."
+			icon="gameres/noteicons/map.bmp"
+			map="Britain conquest"
+			show_on_minimap="1"
+			locationx="5123"
+			locationy="18984"/>
+		<note
+			id="StonehengeCave"
+			title="Path to Stonehenge"
+			text="This cave leads to the powerful Stonehenge where ancient rituals were performed. Should you take your priests there, you can make use of its power."
+			icon="gameres/noteicons/map.bmp"
+			map="Britain conquest"
+			show_on_minimap="1"
+			locationx="19243"
+			locationy="21347"/>
+		<note
+			id="Mancunium"
+			title="Mancunium"
+			text="If you capture Mancunium, the archers defending the wall that divides the island in two will stop being a problem, as long as you control the city."
+			icon="gameres/noteicons/attack.bmp"
+			map="Britain conquest"
+			show_on_minimap="1"
+			locationx="12563"
+			locationy="9325"/>
+		<note
+			id="Calgacus"
+			title="The enemy army"
+			text="The barbarian Calgacus has amassed an enormous army and has set forth Londinium. Defeat him along with his army and Britain will be yours to control!"
+			icon="gameres/noteicons/attack.bmp"
+			map="Britain conquest"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+	</notes>

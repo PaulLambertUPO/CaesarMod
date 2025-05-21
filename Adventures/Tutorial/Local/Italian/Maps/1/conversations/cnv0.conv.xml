@@ -1,0 +1,31 @@
+<translationtable>
+<translationtableentry
+	text="Welcome to my training camp!\n\nI'll be instructing you on how to lead armies and defeat your enemy.\n\nLeft-click on this box to continue."
+	result="Benvenuto al mio accampamento di addestramento!\n\nTi insegnerò a comandare eserciti e a sconfiggere il nemico.\n\nPer continuare, clicca con il pulsante sinistro del mouse su questo riquadro."
+	sound="1/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="Your first task will be to command these legionaries to move to the center of the square."
+	result="Il tuo primo incarico sarà di ordinare a quei guerrieri che si spostino fino al centro della piazza."
+	sound="1/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="Right away!"
+	result="Subito!"/>
+<translationtableentry
+	text="How can I select warriors?"
+	result="Come faccio a selezionare i guerrieri?"/>
+<translationtableentry
+	text="You can select a single legionary by left-clicking on it, although you cannot do this during a conversation.\n\nIf you want to select multiple legionaries, you can do so by holding down the left mouse button and dragging the mouse pointer to the other side of the group: a rectangle will appear on screen, surrounding all of the units. If you release the mouse button, all of the units within the rectangle will be selected.\n\nYou'll be able to distinguish which legionaries you have selected, as they will have a circle around their feet."
+	result="Puoi selezionare un solo guerriero cliccandoci sopra con il pulsante sinistro del mouse (non funziona durante una conversazione).\n\nSe invece vuoi selezionare vari guerrieri, puoi farlo mantenendo premuto il pulsante sinistro mentre trascini il mouse fino all'altro lato del gruppo: un rettangolo sulla schermata racchiuderà tutte le unità. Se rilasci il pulsante del mouse, le unità resteranno selezionate.\n\nPotrai riconoscere i guerrieri selezionati dal cerchio che apparirà ai loro piedi."
+	sound="1/conversations/cnv0_phrase3.wav"/>
+<translationtableentry
+	text="How can I command warriors?"
+	result="Come faccio a dare ordini ai guerrieri?"/>
+<translationtableentry
+	text="Right-click on the ground to make your legionaries move towards the indicated place, although you cannot do this during a conversation."
+	result="Clicca sul terreno con il pulsante destro del mouse affinché i tuoi guerrieri si spostino fino al posto indicato (non funziona durante una conversazione)."
+	sound="1/conversations/cnv0_phrase5.wav"/>
+<translationtableentry
+	text="Your task is to command those legionaries in red to move to the center of the square."
+	result="Il tuo compito è ordinare ai guerrieri di colore rosso di muoversi fino al centro della piazza."
+	sound="1/conversations/cnv0_phrase7.wav"/>
+</translationtable>

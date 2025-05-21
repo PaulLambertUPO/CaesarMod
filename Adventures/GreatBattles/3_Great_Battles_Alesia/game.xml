@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="The siege of Alesia - 52 BC"
+			author="Haemimont Games"
+			description="It is a decisive moment for the development of the campaign in Gaul.\nFive Roman legions, commanded by Julius Caesar, erect a fence and besiege the city of Alesia. They also build a second outer wall to defend themselves from the Gallic army that invervenes to help the encircled.\nCaesar tests his military genius by facing an army ten times larger than his..."
+			last_edited_map="5"
+			start_map="5"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>

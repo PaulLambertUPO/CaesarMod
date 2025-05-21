@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="I am sorry but I cannot help you anymore, warrior."
+	result="Mi dispiace guerriero, non ti posso più aiutare."
+	sound="1/conversations/cnv5_phrase0.wav"/>
+<translationtableentry
+	text="To the south there is a town that is now cursed by a powerful spell. The only thing that can break such magic is a bloodstone, yet I do not know where such a rare stone could be found."
+	result="A sud c'è una fortezza che è stata maledetta, a causa di un potente sortilegio. L'unica cosa che può rompere questo incantesimo è una rarissima pietra sanguinaria, anche se non so dove si può trovare."
+	sound="1/conversations/cnv5_phrase1.wav"/>
+<translationtableentry
+	text="But let me ask you... is it true that the Iceni hold a massive amount of gold in their treasury? Should you have 4000 gold, I could give you something that would help you in your war against the Romans."
+	result="Ma permettimi di farti una domanda... è vero che la tribù degli Iceni possiede una grande quantità d'oro? Se avessi 4000 monete d'oro, potrei aiutarti nella tua guerra contro i romani."
+	sound="1/conversations/cnv5_phrase2.wav"/>
+</translationtable>

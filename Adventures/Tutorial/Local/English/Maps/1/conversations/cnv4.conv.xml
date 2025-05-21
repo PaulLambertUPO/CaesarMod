@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Have you noticed the dark fog that moves near your units?"
+	result="Have you noticed the dark fog that moves near your units?"
+	sound="1/conversations/cnv4_phrase0.wav"/>
+<translationtableentry
+	text="The areas covered by a semi-transparent fog are currently out of view of your warriors. However, as you've explored the area before, you know what the terrain looks like and what buildings are there. However, as you don't currently have troops or buildings in view, there may be enemies hidden there."
+	result="The areas covered by a semi-transparent fog are currently out of view of your warriors. However, as you've explored the area before, you know what the terrain looks like and what buildings are there. However, as you don't currently have troops or buildings in view, there may be enemies hidden there."
+	sound="1/conversations/cnv4_phrase1.wav"/>
+<translationtableentry
+	text="The black areas of the map are completely uncharted for you. Once you have sent your warriors to explore these areas, you'll obtain information about the terrain characteristics and the presence of settlements in the area."
+	result="The black areas of the map are completely uncharted for you. Once you have sent your warriors to explore these areas, you'll obtain information about the terrain characteristics and the presence of settlements in the area."
+	sound="1/conversations/cnv4_phrase2.wav"/>
+</translationtable>

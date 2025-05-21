@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="It looks like that you're running out of gold!\n\nTraining an army is expensive."
+	result="Mi sembra che tu abbia usato quasi tutto l'oro!\n\nAddestrare un esercito costa molto."
+	sound="1/conversations/cnv15_phrase0.wav"/>
+<translationtableentry
+	text="Some of your commands may require the payment of a certain amount of gold, food or population.\n\nYou can see the cost of a command you want to give by holding the mouse pointer over its button for a few seconds.\n\nThe required resources to fulfill a command are represented by their icons."
+	result="Alcuni dei tuoi comandi possono richiedere una spesa di una determinata quantità d'oro, di viveri o di abitanti.\n\nPuoi visualizzare il costo del comando che vuoi impartire mantenendo il cursore del mouse per alcuni secondi sul pulsante relativo al comando.\n\nLe risorse necessarie per eseguire un comando sono rappresentate dalle corrispondenti icone."
+	sound="1/conversations/cnv15_phrase1.wav"/>
+<translationtableentry
+	text="Gold is produced by the stronghold's population. The higher the population, the faster your gold reserves will grow."
+	result="L'oro viene prodotto nella fortezza. Più alta è la popolazione, più velocemente cresceranno le tue riserve d'oro."
+	sound="1/conversations/cnv15_phrase2.wav"/>
+<translationtableentry
+	text="There is a command to increase the population of a stronghold that will be useful for when you need more population in your stronghold. This command can be found in the tavern and requires food."
+	result="Per aumentare la popolazione della fortezza esiste un comando che ti sarà utile quando avrai bisogno di più abitanti nella tua fortezza. Questo comando si impartisce nella taverna e richiede un consumo di viveri."
+	sound="1/conversations/cnv15_phrase3.wav"/>
+</translationtable>

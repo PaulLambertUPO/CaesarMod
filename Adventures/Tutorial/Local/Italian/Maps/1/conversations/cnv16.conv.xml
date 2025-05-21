@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="Your performance up until this point has been exemplary!\n\nTo increase Rome's expansion in this region, you've been given complete control of this stronghold."
+	result="Fino a questo momento hai avuto un comportamento esemplare!\n\nPer ampliare l'espansione di Roma in questa regione, ti è stato assegnato il controllo dell'intera fortezza."
+	sound="1/conversations/cnv16_phrase0.wav"/>
+<translationtableentry
+	text="Your mission is to form an army and eliminate all enemy presence in the area."
+	result="La tua missione consiste nell'equipaggiare un esercito ed eliminare interamente la presenza nemica nella zona."
+	sound="1/conversations/cnv16_phrase1.wav"/>
+<translationtableentry
+	text="You can recruit warriors in the barracks near the townhall.\n\nWhen they're ready, new recruits will move to the townhall and wait for your orders."
+	result="Puoi equipaggiare i guerrieri nella caserma situata vicino al foro.\n\nQuando saranno pronte, le nuove reclute si dirigeranno al foro e rimarranno lì in attesa dei tuoi ordini."
+	sound="1/conversations/cnv16_phrase2.wav"/>
+<translationtableentry
+	text="Select the townhall to see, in the upper part of the screen, the icons of the warriors that are currently inside.\n\nTo select a group of warriors, simply click on their icon. To have them leave the townhall, right-click on a nearby point."
+	result="Seleziona il foro per vedere, nella parte superiore dello schermo, le icone dei guerrieri che vi alloggiano.\n\nPer selezionare un gruppo di guerrieri, clicca sull'icona. Per farli uscire dal foro, clicca con il tasto destro del mouse su un punto vicino."
+	sound="1/conversations/cnv16_phrase3.wav"/>
+<translationtableentry
+	text="Recruit an army of 50 men."
+	result="Recluta un esercito di 50 uomini."
+	sound="1/conversations/cnv16_phrase4.wav"/>
+</translationtable>

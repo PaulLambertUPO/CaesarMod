@@ -1,0 +1,24 @@
+	<conversation
+		name="RuinTalk3"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="RuinDruid3"/>
+		<phrase
+			actor="RuinDruid3"
+			text="I am sorry but I cannot help you anymore, warrior."
+			condition="return IsFinished(\'GhoulTown\');"
+			followup="first"
+			followup_phrases="3"/>
+		<phrase
+			actor="RuinDruid3"
+			text="To the south there is a town that is now cursed by a powerful spell. The only thing that can break such magic is a bloodstone, yet I do not know where such a rare stone could be found."
+			action="ExploreArea(1, \'A_Explore13\');\nGiveNote(\'Bloodstone\');\nDiplShareView(1, 2, true);\nDiplShareView(2, 1, true);"
+			followup="first"/>
+		<phrase
+			label="3"
+			actor="RuinDruid3"
+			text="But let me ask you... is it true that the Iceni hold a massive amount of gold in their treasury? Should you have 4000 gold, I could give you something that would help you in your war against the Romans."
+			action="GiveNote(\'GiveMoney\');"
+			followup="first"/>
+	</conversation>

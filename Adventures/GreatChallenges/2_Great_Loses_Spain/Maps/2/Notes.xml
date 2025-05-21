@@ -1,0 +1,65 @@
+	<notes>
+		<note
+			id="CaptureRomans"
+			title="Capture Saetabis"
+			text="Capture Saetabis to stop the Roman invasion in Iberia."
+			icon="gameres/noteicons/attack.bmp"
+			map="Spain"
+			show_on_minimap="1"
+			locationx="10795"
+			locationy="12178"/>
+		<note
+			id="LoseTown"
+			title="Protect Mons Herminus"
+			text="Do not lose Mons Herminus else the peninsula is lost."
+			icon="gameres/noteicons/defense.bmp"
+			map="Spain"
+			show_on_minimap="0"
+			locationx="3407"
+			locationy="3983"/>
+		<note
+			id="LoseViriato"
+			title="Viriato must survive"
+			text="Viriato must survive in order for Rome to be defeated."
+			icon="gameres/noteicons/survive.bmp"
+			map="Spain"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Clue"
+			title="Gaul prisoner"
+			text="You were told that the Romans brought a druid prisoner to this outpost. Freeing him might bring an unexpected advantage."
+			icon="gameres/noteicons/map.bmp"
+			map="Spain"
+			show_on_minimap="1"
+			locationx="8067"
+			locationy="4404"/>
+		<note
+			id="RomanCamp"
+			title="Roman camp"
+			text="You were told that a number of Gauls have been caught prisoners in a Roman camp. Should you defeat the Roman garrison and free them, they might have a lot to offer in the battle against your common enemy."
+			icon="gameres/noteicons/map.bmp"
+			map="Spain"
+			show_on_minimap="1"
+			locationx="11955"
+			locationy="832"/>
+		<note
+			id="CaptureShip"
+			title="Capture the shipyard"
+			text="Gain control of the shipyard and use it to build a ship to search Larax with."
+			icon="gameres/noteicons/attack.bmp"
+			map="Spain"
+			show_on_minimap="1"
+			locationx="10667"
+			locationy="1164"/>
+		<note
+			id="FindLarax"
+			title="Find Larax"
+			text="If Viriato manages to find Larax and convince him to join the Iberians, they will gain a powerful ally in the battle against the Romans."
+			icon="gameres/noteicons/info.bmp"
+			map="Spain"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+	</notes>

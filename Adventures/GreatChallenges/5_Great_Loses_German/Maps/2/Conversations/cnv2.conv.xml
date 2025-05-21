@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv3"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_LegionLeader1"/>
+		<phrase
+			actor="NO_LegionLeader1"
+			text="We are being ambushed! Attention, legionaries! Let's gather in force and fight our way out of this cursed forest! Forward! March!"
+			followup="first"/>
+	</conversation>

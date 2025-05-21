@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Have you noticed the dark fog that moves near your units?"
+	result="Ti sei accorto della nebbia scura che si muove vicino alle tue unità?"
+	sound="1/conversations/cnv4_phrase0.wav"/>
+<translationtableentry
+	text="The areas covered by a semi-transparent fog are currently out of view of your warriors. However, as you've explored the area before, you know what the terrain looks like and what buildings are there. However, as you don't currently have troops or buildings in view, there may be enemies hidden there."
+	result="Le zone coperte da una nebbia semitrasparente sono attualmente fuori dalla visuale dei tuoi guerrieri. Tuttavia, avendole già esplorate una volta, conosci la loro orografia e gli edifici che vi si trovano. Fai attenzione però: dato che non si trovano all'interno del campo visivo delle tue unità o dei tuoi edifici, possono nascondere guerrieri nemici."
+	sound="1/conversations/cnv4_phrase1.wav"/>
+<translationtableentry
+	text="The black areas of the map are completely uncharted for you. Once you have sent your warriors to explore these areas, you'll obtain information about the terrain characteristics and the presence of settlements in the area."
+	result="Le zone nere della mappa sono completamente sconosciute per te. Quando avrai inviato i tuoi guerrieri a esplorare queste zone, otterrai informazioni sulle caratteristiche del territorio e sulla presenza di insediamenti."
+	sound="1/conversations/cnv4_phrase2.wav"/>
+</translationtable>

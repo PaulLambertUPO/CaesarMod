@@ -1,0 +1,11 @@
+	<conversation
+		name="Caput1"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="actor"/>
+		<phrase
+			actor="actor"
+			text="I have been defeated... My village is yours now, Roman."
+			followup="first"/>
+	</conversation>

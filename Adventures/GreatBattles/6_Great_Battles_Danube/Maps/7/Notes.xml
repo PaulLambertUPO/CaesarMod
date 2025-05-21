@@ -1,0 +1,47 @@
+	<notes>
+		<note
+			id="Defend Aquileia"
+			title="Defend Aquileia"
+			text="You must keep Aquileia from falling in enemy hands."
+			icon="gameres/noteicons/defense.bmp"
+			map="Danube"
+			show_on_minimap="0"
+			locationx="11547"
+			locationy="14599"/>
+		<note
+			id="Marcus Aurelius"
+			title="Marcus Aurelius must survive"
+			text="Marcus Aurelius must survive in order for Rome to be safe from the German tribes."
+			icon="gameres/noteicons/survive.bmp"
+			map="Danube"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Final blow"
+			title="Final blow"
+			text="Now that the Germans are no longer attacking as before, cross the Danube and destroy their camp."
+			icon="gameres/noteicons/attack.bmp"
+			map="Danube"
+			show_on_minimap="1"
+			locationx="1815"
+			locationy="3012"/>
+		<note
+			id="Talk with the locals"
+			title="Talk with the locals"
+			text="There is a group of local Roman warriors fighting against the Germans. Tullius, their representative, wishes to speak with Marcus Aurelius."
+			icon="gameres/noteicons/map.bmp"
+			map="Danube"
+			show_on_minimap="1"
+			locationx="11599"
+			locationy="9323"/>
+		<note
+			id="Teuton camp"
+			title="Teuton camp"
+			text="Defeat the Teutons in the east to have the Roman local warriors fight alongside you."
+			icon="gameres/noteicons/attack.bmp"
+			map="Danube"
+			show_on_minimap="1"
+			locationx="15871"
+			locationy="4848"/>
+	</notes>

@@ -1,0 +1,14 @@
+	<playerdata
+		id="1"
+		name="Gauls"
+		race="Gaul"
+		AllowedRaces="All"
+		control="Disabled"
+		AI=""
+		difficulty="0"
+		startx="0"
+		starty="0"
+		color="31"
+		allied="0"
+		bonus="-1"
+		relations="00000000000000350000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>

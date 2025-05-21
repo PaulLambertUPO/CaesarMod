@@ -1,0 +1,38 @@
+	<notes>
+		<note
+			id="Vercingetorix must survive."
+			title="Vercingetorix must survive"
+			text="In order for the Gauls to have a chance against the Roman conquerors, Vercingetorix must stay alive."
+			icon="gameres/noteicons/survive.bmp"
+			map="Gergovia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Protect the chieftains."
+			title="Protect the chieftains"
+			text="The main chieftains have gathered their tribes to protect the way to Gergovia. If they die, their warriors will scatter. Should six or more of them be killed, the Romans will be able to launch a major attack at the city."
+			icon="gameres/noteicons/defense.bmp"
+			map="Gergovia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Final wave."
+			title="Final wave"
+			text="The Romans have started their final attack! Make sure it does not succeed!"
+			icon="gameres/noteicons/defense.bmp"
+			map="Gergovia"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="Save Gergovia."
+			title="Save Gergovia"
+			text="Gergovia must not fall at any cost!"
+			icon="gameres/noteicons/defense.bmp"
+			map="Gergovia"
+			show_on_minimap="0"
+			locationx="15315"
+			locationy="1060"/>
+	</notes>

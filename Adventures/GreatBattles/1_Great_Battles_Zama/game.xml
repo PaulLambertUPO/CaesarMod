@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Landing in Africa - 204 BC"
+			author="Haemimont Games"
+			description="Each victory reaped by Hannibal in the heart of Italy is a further blow to the pride of Rome.\nTo force him to withdraw, the Senate entrusts Scipio with the task of attacking Carthage on its home territory.\nThe Roman general, who defeated the Carthaginians in Hispania, disembarks in North Africa..."
+			last_edited_map="6"
+			start_map="6"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>

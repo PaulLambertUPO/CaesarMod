@@ -1,0 +1,29 @@
+	<conversation
+		name="LaraxTalk"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Larax"/>
+		<actor
+			name="NO_Viriato"/>
+		<phrase
+			actor="NO_Larax"
+			text="Greetings Iberian! I am Larax, the terror of Rome, blessed by the gods and hero of all Gaul!"
+			followup="first"/>
+		<phrase
+			actor="NO_Viriato"
+			text="Praise to the gods! I've finally found you, mighty Larax! I come to ask for your help to fight against Rome."
+			followup="first"/>
+		<phrase
+			actor="NO_Larax"
+			text="It will be a pleassure, Iberian!"
+			followup="first"/>
+		<phrase
+			actor="NO_Viriato"
+			text="My ship is at your complete disposal, Larax; will you help us expel those Roman dogs from our lands?"
+			followup="first"/>
+		<phrase
+			actor="NO_Larax"
+			text="Bring me to the old Hispania, let's go!"
+			followup="first"/>
+	</conversation>

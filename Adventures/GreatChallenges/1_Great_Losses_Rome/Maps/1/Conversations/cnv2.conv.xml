@@ -1,0 +1,11 @@
+	<conversation
+		name="C_Conv3"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="NO_Traitor"/>
+		<phrase
+			actor="NO_Traitor"
+			text="I salute you, great Hannibal! I see the tales about you were not exaggerated. However, you have yet to convince me you are the winning side.\n\nBreak one of the gates leading to Rome and you will get all the help you need from us."
+			followup="first"/>
+	</conversation>

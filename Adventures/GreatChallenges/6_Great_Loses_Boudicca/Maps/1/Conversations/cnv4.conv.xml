@@ -1,0 +1,21 @@
+	<conversation
+		name="RuinTalk2"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="RuinDruid2"/>
+		<phrase
+			actor="RuinDruid2"
+			text="I am sorry but I cannot help you anymore, warrior."
+			condition="return IsFinished(\'GreenTown\');"
+			followup="end"/>
+		<phrase
+			actor="RuinDruid2"
+			text="Beware the Trinovantes to the west. They are vicious and attack anyone on sight. Many have been killed by their savagery, yet there is a way to defeat them."
+			followup="first"/>
+		<phrase
+			actor="RuinDruid2"
+			text="Capture their three outposts and they shall bow to you strength. However, if you try to conquer their settlement, they will fight you to the last man."
+			action="GiveNote(\'GreenTown\');\nExploreArea(1, \'A_Explore12\');"
+			followup="first"/>
+	</conversation>

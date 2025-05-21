@@ -1,0 +1,32 @@
+	<conversation
+		name="6B Build army"
+		startup="first"
+		startup_phrases="p1;goal"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Instructor"
+			text="Your performance up until this point has been exemplary!\n\nTo increase Rome's expansion in this region, you've been given complete control of this stronghold."
+			condition="return EnvReadInt(\'/First6B\') != 1;"
+			action="EnvWriteInt(\'/First6B\', 1);"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Your mission is to form an army and eliminate all enemy presence in the area."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="You can recruit warriors in the barracks near the townhall.\n\nWhen they're ready, new recruits will move to the townhall and wait for your orders."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Select the townhall to see, in the upper part of the screen, the icons of the warriors that are currently inside.\n\nTo select a group of warriors, simply click on their icon. To have them leave the townhall, right-click on a nearby point."
+			followup="first"/>
+		<phrase
+			label="goal"
+			actor="Instructor"
+			text="Recruit an army of 50 men."
+			followup="first"/>
+	</conversation>

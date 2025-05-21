@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="Agricola, the enemy is using a number of shipyards. Capture them and the barbarians will be severely weakened."
+	result="Agricola, il nemico sta utilizzando vari porti. Conquista quei porti e debiliterai enormemente i barbari."
+	sound="3/conversations/cnv11_phrase0.wav"/>
+<translationtableentry
+	text="There are many caves throughout the island that will allow you to go behind the enemy undetected. Use them to attack your enemies while they are off guard."
+	result="Ci sono molte grotte in tutta l'isola che ti permetteranno di situarti alle spalle delle truppe nemiche senza essere visto. Utilizzale per prendere i tuoi nemici alla sprovvista."
+	sound="3/conversations/cnv11_phrase1.wav"/>
+<translationtableentry
+	text="There is an ancient Stonehenge in enemy territory. I heard that it can be reached through one of the caves I mentioned."
+	result="Esiste un posto in territorio nemico chiamato Stonehenge, in cui si possono celebrare potenti rituali. Ho sentito dire che si può arrivare fino lì tramite una delle grotte già menzionate."
+	sound="3/conversations/cnv11_phrase2.wav"/>
+<translationtableentry
+	text="The wall that splits the island in two, as well as the outposts, is controlled from Mancunium. Capture that city and you will be able to approach the wall without being attacked."
+	result="Le mura che dividono in due l'isola si controllano da Mancunium. Conquista quella città e potrai avvicinarti alle mura senza essere attaccato."
+	sound="3/conversations/cnv11_phrase3.wav"/>
+<translationtableentry
+	text="Agricola! I was just told that Calgacus has gathered a massive army in the north and is charging against us! Defeat him!"
+	result="Agricola! Ho appena saputo che è stato riunito un enorme esercito a nord, e che si dirige verso di noi! Dobbiamo eliminarlo!"
+	sound="3/conversations/cnv11_phrase4.wav"/>
+</translationtable>

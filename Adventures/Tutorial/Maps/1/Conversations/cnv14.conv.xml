@@ -1,0 +1,39 @@
+	<conversation
+		name="6A Stronghold"
+		startup="first"
+		startup_phrases="p1;order"
+		restore_view="1">
+		<actor
+			name="Caesar"/>
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="p1"
+			actor="Caesar"
+			text="Finally, the training outpost is ours!"
+			condition="return EnvReadInt(\'/First6A\') != 1;"
+			action="EnvWriteInt(\'/First6A\', 1);"
+			followup="first"/>
+		<phrase
+			actor="Caesar"
+			text="Rome requires our immediate presence in the Lindum stronghold.\n\nI wonder what's going on."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="A Roman stronghold is comprised of a townhall, a barracks, a temple, a colosseum, a blacksmith and a tavern."
+			action="View(GetNamedObj(\'LindumTownhall\').obj.pos, false);"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="It's surrounded by a strong wall guarded by archers and has a few gates that block the entrance of any enemies."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Warriors can be garrisoned in an outpost or the townhall of any stronghold to quickly recover health and energy."
+			followup="first"/>
+		<phrase
+			label="order"
+			actor="Instructor"
+			text="Lindum is in the northeast.\n\nTake Caesar to Lindum's townhall by selecting him and right-clicking on Lindum's townhall."
+			followup="first"/>
+	</conversation>

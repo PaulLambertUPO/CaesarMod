@@ -1,0 +1,15 @@
+	<conversation
+		name="Event2"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="R_Hero"/>
+		<phrase
+			actor="R_Hero"
+			text="Ave Scipio! The Senate is pleased with the development of the campaign. My chariots and I are yours to command."
+			followup="first"/>
+		<phrase
+			actor="R_Hero"
+			text="The stronghold north of here oversees the entire region. If we capture it, we will see what happens in the whole area!"
+			followup="first"/>
+	</conversation>

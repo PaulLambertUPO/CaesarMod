@@ -1,0 +1,15 @@
+	<conversation
+		name="7C Shortcuts"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Instructor"/>
+		<phrase
+			actor="Instructor"
+			text="If you hold down the 'CTRL' button on your keyboard whilst right-clicking on the ground, the selected warriors will go to that point whilst also eliminating any enemy they find on their way."
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="You can also use other keys to give orders to your army.\n\nTake a look at the help section by pressing 'F1' to find out how."
+			followup="first"/>
+	</conversation>

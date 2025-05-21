@@ -1,0 +1,23 @@
+<translationtable>
+<translationtableentry
+	text="Well done, warrior. Only a few survive the trials of the cave and come to me.\nWell, how can I help you?"
+	result="Bien hecho. Pocos son los que sobreviven a las pruebas de la cueva y llegan hasta mí.\nBien, ¿en qué puedo ayudarte?"
+	sound="1/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="I want the bloodstone!"
+	result="¡Quiero la piedra sanguinaria que se encuentra en el tocón a tu espalda!"/>
+<translationtableentry
+	text="Perfect, here it is! Take it to the cursed stronghold now and make sure that horrible place regains the peace it should never have lost."
+	result="Muy bien, aquí está. Llévala ahora a la fortaleza maldita y procura que ese horrible lugar recupere la paz que no debió perder nunca."
+	sound="1/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="I want my army to gain experience faster!"
+	result="¡Quiero que mi ejército gane experiencia más rápido!"/>
+<translationtableentry
+	text="I want my army to gain experience over time!"
+	result="¡Quiero que mi ejército gane experiencia con el tiempo!"/>
+<translationtableentry
+	text="In the name of Kathobodua, it shall be so!"
+	result="¡En nombre de Kathobodua, que así sea!"
+	sound="1/conversations/cnv0_phrase2.wav"/>
+</translationtable>

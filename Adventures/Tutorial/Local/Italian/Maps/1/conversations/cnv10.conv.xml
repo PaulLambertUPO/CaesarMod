@@ -1,0 +1,14 @@
+<translationtable>
+<translationtableentry
+	text="Wow!\n\nA finger of death and an elephant tusk!\n\nNot bad at all!"
+	result="Guarda!\n\nUn dito della morte e una zanna di elefante!\n\nNiente male!"
+	sound="1/conversations/cnv10_phrase0.wav"/>
+<translationtableentry
+	text="Hold the mouse pointer over the icon of the elephant tusk, located in the upper part of the screen, to see its description.\n\nSome objects are activated automatically and others require you to activate them, like the finger of death for example, by double-clicking on them."
+	result="Mantieni il cursore del mouse sull'icona della zanna di elefante situata nella parte superiore della schermata per visualizzare la descrizione dell'oggetto.\n\nAlcuni oggetti agiscono da soli, altri invece devono essere attivati (come il dito della morte) cliccandoci sopra due volte."
+	sound="1/conversations/cnv10_phrase1.wav"/>
+<translationtableentry
+	text="Both of these objects will be very useful in the next battle!"
+	result="Entrambi gli oggetti mi saranno utili durante la prossima battaglia!"
+	sound="1/conversations/cnv10_phrase2.wav"/>
+</translationtable>

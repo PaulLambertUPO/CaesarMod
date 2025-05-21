@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="Marcus Aurelius in Germany - 167 AD"
+			author="Haemimont Games"
+			description="The Germans break the borders of the Empire and sack the city of Aquileia, near the Gulf of Venice.\nEmperor Marcus Aurelius is outraged at such an affront and puts himself at command of the largest known army.\nThe objective: expel the invaders beyond the Danube and put an end once and for all to the barbaric threat..."
+			last_edited_map="7"
+			start_map="7"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>

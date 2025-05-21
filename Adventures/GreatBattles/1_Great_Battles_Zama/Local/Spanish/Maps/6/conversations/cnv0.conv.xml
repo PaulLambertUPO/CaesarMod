@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="Ave, Scipio!"
+	result="¡Ave, Escipión!"
+	sound="6/conversations/cnv0_phrase0.wav"/>
+<translationtableentry
+	text="Why have the Numidians attacked us?! Report!"
+	result="¿Por qué nos han atacado los numidas? ¡Quiero un informe!"
+	sound="6/conversations/cnv0_phrase1.wav"/>
+<translationtableentry
+	text="Carthage has allied with Syphax, the Numidian king, who assembled a great force to oppose us. Now they are waiting for the Iberian reinforcements to arrive to destroy us."
+	result="Cartago se ha aliado con Syphax, rey de los numidas. Éste ha armado un gran ejército para oponerse a nosotros. En estos momentos esperan la llegada de unos refuerzos iberos para destruirnos."
+	sound="6/conversations/cnv0_phrase2.wav"/>
+<translationtableentry
+	text="However, there is a renegade Numidian prince who is keeping them from directing all their attention to us.\n\nHe's called Masinissa and has a camp north of here."
+	result="Sin embargo, contamos con una posibilidad de compensar esta situación. Hay un príncipe numida llamado Masinisa que se opone a Syphax, y que mantiene bastante ocupadas a sus fuerzas. Eso impide que concentren toda su atención en nosotros.\n\nEl campamento de Masinisa está situado al norte de aquí."
+	sound="6/conversations/cnv0_phrase3.wav"/>
+<translationtableentry
+	text="Wait for me here! I shall meet Masinissa alone!\nLet's see if I could make the Numidians join our side."
+	result="Es una buena posibilidad... ¡Esperadme aquí! Me encontraré con Masinisa a solas.\nVeamos si puedo ganarme su confianza y hacer que luche de nuestro lado."
+	sound="6/conversations/cnv0_phrase4.wav"/>
+</translationtable>

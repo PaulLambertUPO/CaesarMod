@@ -1,0 +1,30 @@
+<translationtable>
+<translationtableentry text="The siege of Alesia - 52 BC" result="L'accerchiamento di Alesia - 52 a.C."/>
+<translationtableentry text="El sitio de Alesia - 52 a.C." result="L'accerchiamento di Alesia - 52 a.C."/>
+<translationtableentry text="It is a decisive moment for the development of the campaign in Gaul.\nFive Roman legions, commanded by Julius Caesar, erect a fence and besiege the city of Alesia. They also build a second outer wall to defend themselves from the Gallic army that invervenes to help the encircled.\nCaesar tests his military genius by facing an army ten times larger than his..." result="È un momento decisivo per lo sviluppo della campagna in Gallia.\nCinque legioni romane, comandate da Giulio Cesare, erigono una recinzione ed assediano la città di Alesia. Costruiscono inoltre un secondo muro esterno per difendersi dall'esercito gallo che interviene in aiuto degli accerchiati.\nCesare mette alla prova il suo genio militare affrontando un esercito dieci volte più numeroso del suo..."/>
+<translationtableentry text="La Guerra de las Galias se encuentra en el momento decisivo.\nCinco legiones, lideradas por Julio César, levantan una empalizada y cercan la plaza fuerte de Alesia. Para defenderse del ejército galo que viene en ayuda de los sitiados, construyen un segundo muro exterior.\nEl genio militar de César se mide a un ejército diez veces superior en número..." result="È un momento decisivo per lo sviluppo della campagna in Gallia.\nCinque legioni romane, comandate da Giulio Cesare, erigono una recinzione ed assediano la città di Alesia. Costruiscono inoltre un secondo muro esterno per difendersi dall'esercito gallo che interviene in aiuto degli accerchiati.\nCesare mette alla prova il suo genio militare affrontando un esercito dieci volte più numeroso del suo..."/>
+<translationtableentry text="Romans" result="Romani"/>
+<translationtableentry text="Romanos" result="Romani"/>
+<translationtableentry text="Roman defenders" result="Difensori romani"/>
+<translationtableentry text="Defensores romanos" result="Difensori romani"/>
+<translationtableentry text="Gaul reinforcements" result="Rinforzi galli"/>
+<translationtableentry text="Refuerzos galos" result="Rinforzi galli"/>
+<translationtableentry text="Roman messengers" result="Messaggeri romani"/>
+<translationtableentry text="Mensajeros romanos" result="Messaggeri romani"/>
+<translationtableentry text="Movies/ENG/GreatBattles/3_Intro_Great_B_Alesia.avi" result="Movies/ITA/GreatBattles/3_Intro_Great_B_Alesia.avi"/>
+<translationtableentry text="Movies/ENG/GreatBattles/3_Extro_Great_B_Alesia.avi" result="Movies/ITA/GreatBattles/3_Extro_Great_B_Alesia.avi"/>
+<translationtableentry text="North camp" result="Accampamento Nord"/>
+<translationtableentry text="Northeast camp" result="Accampamento Nord-est"/>
+<translationtableentry text="East camp" result="Accampamento Est"/>
+<translationtableentry text="Southeast camp" result="Accampamento Sud-est"/>
+<translationtableentry text="South camp" result="Accampamento Sud"/>
+<translationtableentry text="Southwest camp" result="Accampamento Sud-ovest"/>
+<translationtableentry text="West camp" result="Accampamento Ovest"/>
+<translationtableentry text="Northwest camp" result="Accampamento Nord-ovest"/>
+<translationtableentry text="Julius Caesar" result="Giulio Cesare"/>
+<translationtableentry text="Vercingetorix" result="Vercingetorige"/>
+<translationtableentry text="Alesia is yours!" result="Alesia è tua!"/>
+<translationtableentry text="The great Caesar has died." result="Il grande Cesare è morto."/>
+<translationtableentry text="The siege is broken." result="L'assedio è spezzato."/>
+<translationtableentry text="Retake the positions in %s1 seconds" result="Recupera le postazioni in %s1 secondi"/>
+</translationtable>

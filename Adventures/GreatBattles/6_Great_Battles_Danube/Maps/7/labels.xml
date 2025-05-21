@@ -1,0 +1,18 @@
+	<root>
+		<label
+			text="Aquileia"
+			x="10746"
+			y="16036"/>
+		<label
+			text="Danube river"
+			x="5733"
+			y="5600"/>
+		<label
+			text="German camp"
+			x="2098"
+			y="4234"/>
+		<label
+			text="Teuton camp"
+			x="14439"
+			y="5507"/>
+	</root>

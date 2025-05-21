@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="1"
+			name="The conquest of Britain - 77 AD"
+			author="Haemimont Games"
+			description="The noble tribune Gnaeus Julius Agricola was appointed governor of Britannia.\nAt the request of the emperor himself, he travels to the island taking up a double post: enforce peace in the southern regions and repel the threat of the northern Caledonians, experts in ambush tactics..."
+			last_edited_map="3"
+			start_map="3"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>

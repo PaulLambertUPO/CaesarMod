@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Excellent! You've learned a lot."
+	result="Excellent! You've learned a lot."
+	sound="1/conversations/cnv8_phrase0.wav"/>
+<translationtableentry
+	text="Everything that we have taught you and the missions that have been assigned to you have been recorded.\n\nYou can review this information by pressing the &#34;Notes&#34; button in the lower part of the screen, or by pressing 'F8', as long as you are not in the middle of a conversation."
+	result="Everything that we have taught you and the missions that have been assigned to you have been recorded.\n\nYou can review this information by pressing the &#34;Notes&#34; button in the lower part of the screen, or by pressing 'F8', as long as you are not in the middle of a conversation."
+	sound="1/conversations/cnv8_phrase1.wav"/>
+<translationtableentry
+	text="Hold the mouse pointer over any icon or text in the game menus to make a brief description of its utility appear.\n\nIn addition, if at any moment during the game you need more information about certain aspects, elements or units in the game, you can right-click the icons or texts to get further help about them.\n\nPlus, it's always useful to read the manual."
+	result="Hold the mouse pointer over any icon or text in the game menus to make a brief description of its utility appear.\n\nIn addition, if at any moment during the game you need more information about certain aspects, elements or units in the game, you can right-click the icons or texts to get further help about them.\n\nPlus, it's always useful to read the manual."
+	sound="1/conversations/cnv8_phrase3.wav"/>
+<translationtableentry
+	text="You've been ordered to recapture our camp. Don't waste time!\n\nSelect and give orders only to Caesar: he is in charge of the legionaries that have been assigned to him."
+	result="You've been ordered to recapture our camp. Don't waste time!\n\nSelect and give orders only to Caesar: he is in charge of the legionaries that have been assigned to him."
+	sound="1/conversations/cnv8_phrase5.wav"/>
+</translationtable>

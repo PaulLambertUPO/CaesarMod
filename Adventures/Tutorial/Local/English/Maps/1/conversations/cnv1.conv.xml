@@ -1,0 +1,18 @@
+<translationtable>
+<translationtableentry
+	text="Well done!\n\nEach task that I assign you will be recorded: you can check all of these objectives by pressing 'F8' or the &#34;Notes&#34; button located in the lower part of the screen.\n\nNow, let's move on to your next mission..."
+	result="Well done!\n\nEach task that I assign you will be recorded: you can check all of these objectives by pressing 'F8' or the &#34;Notes&#34; button located in the lower part of the screen.\n\nNow, let's move on to your next mission..."
+	sound="1/conversations/cnv1_phrase0.wav"/>
+<translationtableentry
+	text="There is a group of praetorians heading south to scout out some old ruins.\n\nFollow them with your two legionaries."
+	result="There is a group of praetorians heading south to scout out some old ruins.\n\nFollow them with your two legionaries."
+	sound="1/conversations/cnv1_phrase1.wav"/>
+<translationtableentry
+	text="You can see the surrounding terrain by moving the mouse pointer to the edges of the screen, although you cannot do this during a conversation."
+	result="You can see the surrounding terrain by moving the mouse pointer to the edges of the screen, although you cannot do this during a conversation."
+	sound="1/conversations/cnv1_phrase3.wav"/>
+<translationtableentry
+	text="The minimap is a scaled-down view of the region where the game is happening. You can open and close it by pressing the spacebar, although you cannot do this during a conversation.\n\nIf you click on an area in the minimap, this will close and take your view to the selected area."
+	result="The minimap is a scaled-down view of the region where the game is happening. You can open and close it by pressing the spacebar, although you cannot do this during a conversation.\n\nIf you click on an area in the minimap, this will close and take your view to the selected area."
+	sound="1/conversations/cnv1_phrase5.wav"/>
+</translationtable>

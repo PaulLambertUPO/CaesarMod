@@ -1,0 +1,17 @@
+	<map
+		name="Britain conquest"
+		displayname="Romans invasion in Briton"
+		descr=""
+		persist_state="0">
+		<size
+			x="32768"
+			y="32768"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="1"/>
+		<start_pt
+			x="24311"
+			y="14792"/>
+	</map>

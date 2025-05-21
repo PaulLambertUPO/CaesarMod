@@ -1,0 +1,26 @@
+<translationtable>
+<translationtableentry
+	text="So it is true the Romans are brave. I can order your capture right away..."
+	result="E così sono vere quelle storie sul coraggio dei romani. Sai che se volessi, potrei ucciderti in questo stesso istante..."
+	sound="6/conversations/cnv2_phrase0.wav"/>
+<translationtableentry
+	text="But you will not do so. You have much to gain from our friendship."
+	result="Ma so che non lo farai. Sei abbastanza prudente da sapere che puoi ottenere maggiori vantaggi dalla mia amicizia."
+	sound="6/conversations/cnv2_phrase1.wav"/>
+<translationtableentry
+	text="Indeed. As a show of good will I'll share my knowledge of the area."
+	result="È vero. Permettimi di dimostrarti la mia buona volontà. Condivideremo con te la nostra conoscenza della zona."
+	sound="6/conversations/cnv2_phrase2.wav"/>
+<translationtableentry
+	text="What would be a good spot for reinforcements to come ashore?"
+	result="Dove ci conviene aspettare lo sbarco dei rinforzi?"
+	sound="6/conversations/cnv2_phrase3.wav"/>
+<translationtableentry
+	text="Ah, you already know about the Iberian reinforcements? I shall order my spies to report the Iberians' actions to you directly."
+	result="Quindi hai saputo dei rinforzi iberici, vedo che voi romani avete buone fonti di informazione! D'accordo, le mie spie ti informeranno direttamente su tutti i movimenti delle truppe iberiche."
+	sound="6/conversations/cnv2_phrase4.wav"/>
+<translationtableentry
+	text="It would be wise to deal with them before they join Syphax.\n\nThere is no time to waste!"
+	result="Dobbiamo intercettare gli iberi prima che uniscano le loro forze a quelle di Syphax.\n\nNon c'è tempo da perdere!"
+	sound="6/conversations/cnv2_phrase5.wav"/>
+</translationtable>

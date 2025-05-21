@@ -1,0 +1,30 @@
+	<root>
+		<label
+			text="Bingium"
+			x="14990"
+			y="8677"/>
+		<label
+			text="Secret camp"
+			x="7623"
+			y="13607"/>
+		<label
+			text="Roman camp"
+			x="928"
+			y="9487"/>
+		<label
+			text="Chauci outpost"
+			x="7559"
+			y="2314"/>
+		<label
+			text="Bructeri outpost"
+			x="6198"
+			y="7058"/>
+		<label
+			text="Cherusci outpost"
+			x="3539"
+			y="14116"/>
+		<label
+			text="Swamps"
+			x="12171"
+			y="5183"/>
+	</root>

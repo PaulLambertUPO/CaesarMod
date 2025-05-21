@@ -1,0 +1,22 @@
+<translationtable>
+<translationtableentry
+	text="Greetings Iberian! I am Larax, the terror of Rome, blessed by the gods and hero of all Gaul!"
+	result="Salute iberico! Sono Larax, il terrore di Roma, benedetto dagli dei e eroe di tutta la Gallia!"
+	sound="2/conversations/cnv3_phrase0.wav"/>
+<translationtableentry
+	text="Praise to the gods! I've finally found you, mighty Larax! I come to ask for your help to fight against Rome."
+	result="Rendiamo lode agli dei! Finalmente ti ho trovato, potente Larax! Vengo a chiedere il tuo aiuto per combattere contro Roma."
+	sound="2/conversations/cnv3_phrase1.wav"/>
+<translationtableentry
+	text="It will be a pleassure, Iberian!"
+	result="Sarà un piacere, iberico!"
+	sound="2/conversations/cnv3_phrase2.wav"/>
+<translationtableentry
+	text="My ship is at your complete disposal, Larax; will you help us expel those Roman dogs from our lands?"
+	result="La mia nave è a tua completa disposizione, Larax; ci aiuterai ad espellere quegli odiosi romani dalle nostre terre?"
+	sound="2/conversations/cnv3_phrase3.wav"/>
+<translationtableentry
+	text="Bring me to the old Hispania, let's go!"
+	result="Portami nella vecchia Hispania, andiamo!"
+	sound="2/conversations/cnv3_phrase4.wav"/>
+</translationtable>

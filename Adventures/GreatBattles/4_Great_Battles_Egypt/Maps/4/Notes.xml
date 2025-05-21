@@ -1,0 +1,74 @@
+	<notes>
+		<note
+			id="WinCondition"
+			title="Egyptian cities"
+			text="Capture all Egyptian cities so that he battle could be won."
+			icon="gameres/noteicons/attack.bmp"
+			map="Egypt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="LoseCondition1"
+			title="Octavian must survive"
+			text="Octavian must survive for the Nile to be conquered."
+			icon="gameres/noteicons/survive.bmp"
+			map="Egypt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="LoseCondition2"
+			title="Protect your cities"
+			text="In order to have any chance of success, it is essential that at least one of the three major Egyptian cities is under your control at all times."
+			icon="gameres/noteicons/defense.bmp"
+			map="Egypt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="NavalBattleAdvice"
+			title="Enemy ships"
+			text="Destroy as many of Mark Antony's ships as possible. You can easily distinguish them by their yellow sails, while Egyptian ships have green sails."
+			icon="gameres/noteicons/attack.bmp"
+			map="Egypt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="PelusioAdvice"
+			title="The weak spot"
+			text="Of all the Egyptian cities, Pelusio is the weakest. It would be best to conquer it, as the others are too heavily defended."
+			icon="gameres/noteicons/info.bmp"
+			map="Egypt"
+			show_on_minimap="1"
+			locationx="14843"
+			locationy="5523"/>
+		<note
+			id="Outposts"
+			title="Nile outposts"
+			text="There are many outposts in the Nile area. Thanks to the trade, they constantly provide gold to their owner. It would be wise to capture as many of them as possible."
+			icon="gameres/noteicons/gold.bmp"
+			map="Egypt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
+			id="AlexandriaShipyard"
+			title="Alexandria shipyard"
+			text="Egyptian troops from Alexandria are using their ships to perform surprise attacks against Pelusio. To stop these attacks, you should use the shipyard of Pelusio and send ships to either capture or damage that of Alexandria."
+			icon="gameres/noteicons/attack.bmp"
+			map="Egypt"
+			show_on_minimap="1"
+			locationx="1159"
+			locationy="3724"/>
+		<note
+			id="DesertTribes"
+			title="Sudanese tribes"
+			text="Sudanese tribes, from the upper Nile, continually try to take the city of Memphis and arrive at the gates of Alexandria. Be careful of them because, although they cause a lot of problems for the Egyptians, they can also be very dangerous for Rome, especially if they manage to capture Memphis."
+			icon="gameres/noteicons/info.bmp"
+			map="Egypt"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+	</notes>

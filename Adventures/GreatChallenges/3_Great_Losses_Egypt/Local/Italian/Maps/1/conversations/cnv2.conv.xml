@@ -1,0 +1,10 @@
+<translationtable>
+<translationtableentry
+	text="I see that the Egyptians have finally seen the light and have refused to accept foreign invaders manipulating our governors! A worthy task, a difficult task, but, with my help, not an impossible task."
+	result="Vedo che il popolo egizio ha capito tutto finalmente, e ha rifiutato di accettare che degli invasori stranieri manipolino i nostri governatori! Un compito dignitoso e difficile, ma non impossibile grazie al mio aiuto."
+	sound="1/conversations/cnv2_phrase0.wav"/>
+<translationtableentry
+	text="Should you wish to use my powers, simply bring 50 peasants here. Do so and I personally shall ask for help from the mighty gods of Egypt!"
+	result="Se vuoi utilizzare i miei poteri, porta qui 50 contadini. Fallo, e chiederò aiuto ai potenti dei d'Egitto!"
+	sound="1/conversations/cnv2_phrase1.wav"/>
+</translationtable>

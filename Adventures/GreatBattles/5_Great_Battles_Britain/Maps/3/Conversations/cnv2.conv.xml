@@ -1,0 +1,11 @@
+	<conversation
+		name="Caput3"
+		startup="first"
+		restore_view="1">
+		<actor
+			name="actor"/>
+		<phrase
+			actor="actor"
+			text="I never stood a chance against Rome. My tribe is yours to command."
+			followup="first"/>
+	</conversation>

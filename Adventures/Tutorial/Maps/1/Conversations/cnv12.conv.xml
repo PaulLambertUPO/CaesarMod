@@ -1,0 +1,31 @@
+	<conversation
+		name="5B Feed"
+		startup="first"
+		restore_view="0">
+		<actor
+			name="Caesar"/>
+		<actor
+			name="Instructor"/>
+		<phrase
+			label="first"
+			actor="Caesar"
+			text="My warriors are starving!\n\nThe village we captured earlier should have enough food for us."
+			followup="first"
+			followup_phrases="descr1;goal"/>
+		<phrase
+			label="descr1"
+			actor="Instructor"
+			text="When warriors don't eat, they lose health; but whilst they eat, they regain it."
+			condition="return EnvReadInt(\'/First5B\') != 1;"
+			action="EnvWriteInt(\'/First5B\', 1);"
+			followup="first"/>
+		<phrase
+			actor="Instructor"
+			text="Each village produces and stores food that can be transported in food supply units. These can be used for both transporting food to other buildings and settlements or to bring them with your troops to keep them supplied."
+			followup="first"/>
+		<phrase
+			label="goal"
+			actor="Instructor"
+			text="Select the village you captured before and create a food caravan by clicking on the centre of the village and selecting the &#34;Load a caravan with 1000 food&#34; command that you'll see in the lower part of the screen.\n\nBring the caravan to Caesar."
+			followup="first"/>
+	</conversation>
