@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+<entity name="WHorse" type="vx/animal" variations="12" pass_file="">
+	<images>
+		<image idx="2" file="Idle" drawmode="player_color" remaping="none" rows="10" columns="12" />
+		<image idx="3" file="Trot" drawmode="player_color" remaping="none" rows="14" columns="12" />
+		<image idx="4" file="Galop" drawmode="player_color" remaping="none" rows="12" columns="12" />
+		<image idx="5" file="Death" drawmode="player_color" remaping="none" rows="16" columns="12" />
+		<image idx="6" file="Transition" drawmode="player_color" remaping="none" rows="13" columns="12" />
+		<image idx="7" file="Transition" drawmode="player_color" remaping="reverse" rows="13" columns="12" />
+		<image idx="9" file="Idle_shadow" drawmode="shadow" remaping="none" rows="10" columns="12" />
+		<image idx="10" file="Trot_shadow" drawmode="shadow" remaping="none" rows="14" columns="12" />
+		<image idx="11" file="Galop_shadow" drawmode="shadow" remaping="none" rows="12" columns="12" />
+		<image idx="12" file="Death_shadow" drawmode="shadow" remaping="none" rows="16" columns="12" />
+		<image idx="13" file="Transition_shadow" drawmode="shadow" remaping="none" rows="13" columns="12" />
+		<image idx="14" file="Transition_shadow" drawmode="shadow" remaping="reverse" rows="13" columns="12" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="unit" image="2" z="1000" offsetx="-72" offsety="-88" sortoffsetx="0" sortoffsety="0" />
+		<layer idx="2" name="shadow" image="9" z="800" offsetx="-72" offsety="-88" sortoffsetx="0" sortoffsety="0" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0" />
+		<state idx="2" name="fight" image_idx="0" image_row="0" offsetx="0" offsety="0" />
+	</states>
+	<anims>
+		<anim idx="1" name="walk" startstate="1" endstate="1" frames="14" duration="12" default_duration="1" action_time="0" step="60">
+			<replace layer="1" image="3" offsetx="-72" offsety="-88" />
+			<replace layer="2" image="10" offsetx="-72" offsety="-88" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="1" />
+			<frame idx="3" duration="1" />
+			<frame idx="4" duration="1" />
+			<frame idx="5" duration="1" />
+			<frame idx="6" duration="1" />
+			<frame idx="7" duration="1" />
+			<frame idx="8" duration="1" />
+			<frame idx="9" duration="1" />
+			<frame idx="10" duration="1" />
+			<frame idx="11" duration="1" />
+			<frame idx="12" duration="1" />
+			<frame idx="13" duration="1" />
+			<frame idx="14" duration="0" />
+		</anim>
+		<anim idx="2" name="galop" startstate="1" endstate="1" frames="13" duration="2200" default_duration="200" action_time="0" step="111">
+			<replace layer="1" image="4" offsetx="-72" offsety="-88" />
+			<replace layer="2" image="11" offsetx="-72" offsety="-88" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="200" />
+			<frame idx="3" duration="200" />
+			<frame idx="4" duration="200" />
+			<frame idx="5" duration="200" />
+			<frame idx="6" duration="200" />
+			<frame idx="7" duration="200" />
+			<frame idx="8" duration="200" />
+			<frame idx="9" duration="200" />
+			<frame idx="10" duration="200" />
+			<frame idx="11" duration="200" />
+			<frame idx="12" duration="200" />
+			<frame idx="13" duration="0" />
+		</anim>
+		<anim idx="9" name="die" startstate="1" endstate="1" frames="18" duration="15360" default_duration="80" action_time="0" step="0">
+			<replace layer="1" image="5" offsetx="-72" offsety="-88" />
+			<replace layer="2" image="12" offsetx="-72" offsety="-88" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="160" />
+			<frame idx="3" duration="160" />
+			<frame idx="4" duration="160" />
+			<frame idx="5" duration="200" />
+			<frame idx="6" duration="200" />
+			<frame idx="7" duration="200" />
+			<frame idx="8" duration="180" />
+			<frame idx="9" duration="200" />
+			<frame idx="10" duration="500" />
+			<frame idx="11" duration="800" />
+			<frame idx="12" duration="1000" />
+			<frame idx="13" duration="1300" />
+			<frame idx="14" duration="2000" />
+			<frame idx="15" duration="2500" />
+			<frame idx="16" duration="2800" />
+			<frame idx="17" duration="3000" />
+			<frame idx="18" duration="0" />
+		</anim>
+		<anim idx="13" name="Idle" startstate="2" endstate="2" frames="10" duration="888" default_duration="111" action_time="0" step="15">
+			<replace layer="1" image="2" offsetx="-72" offsety="-88" />
+			<replace layer="2" image="9" offsetx="-72" offsety="-88" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="111" />
+			<frame idx="3" duration="111" />
+			<frame idx="4" duration="111" />
+			<frame idx="5" duration="111" />
+			<frame idx="6" duration="111" />
+			<frame idx="7" duration="111" />
+			<frame idx="8" duration="111" />
+			<frame idx="9" duration="111" />
+			<frame idx="10" duration="0" />
+		</anim>
+		<anim idx="18" name="ToIdle" startstate="2" endstate="1" frames="13" duration="1221" default_duration="111" action_time="0" step="0">
+			<replace layer="1" image="7" offsetx="-72" offsety="-88" />
+			<replace layer="2" image="14" offsetx="-72" offsety="-88" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="111" />
+			<frame idx="3" duration="111" />
+			<frame idx="4" duration="111" />
+			<frame idx="5" duration="111" />
+			<frame idx="6" duration="111" />
+			<frame idx="7" duration="111" />
+			<frame idx="8" duration="111" />
+			<frame idx="9" duration="111" />
+			<frame idx="10" duration="111" />
+			<frame idx="11" duration="111" />
+			<frame idx="12" duration="111" />
+			<frame idx="13" duration="0" />
+		</anim>
+		<anim idx="19" name="ToAttack" startstate="1" endstate="2" frames="13" duration="1221" default_duration="111" action_time="0" step="0">
+			<replace layer="1" image="6" offsetx="-72" offsety="-88" />
+			<replace layer="2" image="13" offsetx="-72" offsety="-88" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="111" />
+			<frame idx="3" duration="111" />
+			<frame idx="4" duration="111" />
+			<frame idx="5" duration="111" />
+			<frame idx="6" duration="111" />
+			<frame idx="7" duration="111" />
+			<frame idx="8" duration="111" />
+			<frame idx="9" duration="111" />
+			<frame idx="10" duration="111" />
+			<frame idx="11" duration="111" />
+			<frame idx="12" duration="111" />
+			<frame idx="13" duration="0" />
+		</anim>
+	</anims>
+</entity>

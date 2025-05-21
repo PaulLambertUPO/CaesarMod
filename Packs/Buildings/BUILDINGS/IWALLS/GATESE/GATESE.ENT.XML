@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="IGateSE" type="vx/building" variations="1" pass_file="GateSE.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer3.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="5" file="GateSE_Bars" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="6" file="layer5.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="7" file="layer6.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="8" file="layer7.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="9" file="layer4.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="7" x="-220" y="110"/>
+<point idx="2" type="7" x="220" y="-110"/>
+<point idx="3" type="4" x="-106" y="-55"/>
+<point idx="4" type="4" x="113" y="-145"/>
+<point idx="5" type="4" x="21" y="-150"/>
+<point idx="6" type="4" x="138" y="-141"/>
+<point idx="7" type="4" x="-43" y="-123"/>
+<point idx="8" type="8" x="-61" y="-235"/>
+<point idx="9" type="10" x="-31" y="16"/>
+<point idx="10" type="10" x="23" y="-6"/>
+<point idx="11" type="10" x="67" y="-24"/>
+<point idx="12" type="2" x="-186" y="-25"/>
+<point idx="13" type="2" x="215" y="-168"/>
+<point idx="14" type="3" x="-155" y="-28"/>
+<point idx="15" type="3" x="-126" y="-40"/>
+<point idx="16" type="3" x="162" y="-146"/>
+<point idx="17" type="3" x="136" y="-136"/>
+<point idx="18" type="17" x="40" y="34"/>
+<point idx="19" type="17" x="-1" y="-51"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="0" offsetx="-262" offsety="-297" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-262" offsety="-297" sortoffsetx="-64" sortoffsety="53" xray="0"/>
+<layer idx="3" name="gate" image="5" z="1000" offsetx="-262" offsety="-297" sortoffsetx="18" sortoffsety="5" xray="0"/>
+<layer idx="4" name="layer3" image="4" z="1000" offsetx="-262" offsety="-297" sortoffsetx="-67" sortoffsety="43" xray="0"/>
+<layer idx="5" name="layer4" image="9" z="1000" offsetx="-262" offsety="-297" sortoffsetx="-129" sortoffsety="-44" xray="0"/>
+<layer idx="6" name="layer5" image="6" z="1000" offsetx="-262" offsety="-297" sortoffsetx="181" sortoffsety="-133" xray="0"/>
+<layer idx="7" name="layer6" image="7" z="1000" offsetx="-262" offsety="-297" sortoffsetx="218" sortoffsety="-50" xray="0" nohighlight="1"/>
+<layer idx="8" name="layer7" image="8" z="1000" offsetx="-262" offsety="-297" sortoffsetx="211" sortoffsety="-47" xray="0" nohighlight="1"/>
+<layer idx="9" name="layer2" image="3" z="1000" offsetx="-262" offsety="-297" sortoffsetx="112" sortoffsety="-7" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="-80" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="-80" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="-80" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="-80" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

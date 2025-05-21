@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="ETempleOfOsiris" type="vx/building" variations="1" pass_file="ETempleOfOsiris.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer3.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="11" x="85" y="107"/>
+<point idx="2" type="12" x="25" y="93"/>
+<point idx="7" type="2" x="29" y="94"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-254" offsety="-231" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-254" offsety="-231" sortoffsetx="-7" sortoffsety="62" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="1000" offsetx="-254" offsety="-231" sortoffsetx="34" sortoffsety="162" xray="0"/>
+<layer idx="4" name="layer3" image="4" z="500" offsetx="-254" offsety="-231" sortoffsetx="34" sortoffsety="162" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

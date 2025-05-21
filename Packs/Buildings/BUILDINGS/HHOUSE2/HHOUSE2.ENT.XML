@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="HHouse2" type="vx/building" variations="1" pass_file="HHouse2.pass">
+<images>
+<image idx="1" file="shadow" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer1B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer2" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="5" file="layer3" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="12" x="100" y="10"/>
+<point idx="2" type="10" x="100" y="58"/>
+<point idx="3" type="16" x="-59" y="-4"/>
+<point idx="4" type="16" x="99" y="-30"/>
+<point idx="5" type="16" x="-47" y="77"/>
+<point idx="6" type="16" x="27" y="71"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-220" offsety="-252" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1A" image="2" z="1000" offsetx="-220" offsety="-252" sortoffsetx="-2" sortoffsety="30" xray="0"/>
+<layer idx="3" name="layer1B" image="3" z="1000" offsetx="-220" offsety="-252" sortoffsetx="0" sortoffsety="-10" xray="0"/>
+<layer idx="4" name="layer2" image="4" z="1000" offsetx="-220" offsety="-252" sortoffsetx="30" sortoffsety="50" xray="0"/>
+<layer idx="5" name="layer3" image="5" z="500" offsetx="-220" offsety="-252" sortoffsetx="30" sortoffsety="50" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

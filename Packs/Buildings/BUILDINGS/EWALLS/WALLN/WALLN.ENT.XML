@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="EWallN" type="vx/building" variations="1" pass_file="WallN.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer3.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="16" x="60" y="-2"/>
+<point idx="2" type="7" x="110" y="-1"/>
+<point idx="3" type="7" x="-110" y="-1"/>
+<point idx="4" type="8" x="2" y="58"/>
+<point idx="5" type="2" x="-76" y="-80"/>
+<point idx="6" type="2" x="68" y="-83"/>
+<point idx="7" type="3" x="-55" y="-92"/>
+<point idx="8" type="3" x="46" y="-90"/>
+<point idx="9" type="16" x="-55" y="-17"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-267" offsety="-320" sortoffsetx="0" sortoffsety="-30" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-267" offsety="-320" sortoffsetx="-20" sortoffsety="-10" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="1000" offsetx="-267" offsety="-320" sortoffsetx="-9" sortoffsety="30" xray="0"/>
+<layer idx="4" name="layer3" image="4" z="1000" offsetx="-267" offsety="-320" sortoffsetx="-8" sortoffsety="69" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

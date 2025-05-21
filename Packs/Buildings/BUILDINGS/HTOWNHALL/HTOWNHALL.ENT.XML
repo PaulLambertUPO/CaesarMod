@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+<entity name="HTownhall" type="vx/building" variations="1" pass_file="HTownhall.pass">
+<images>
+<image idx="1" file="layer1A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer1C" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer1D" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="5" file="layer2A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="6" file="layer2B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="7" file="layer3A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="8" file="layer3B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="9" file="layer3C" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="10" file="shadow" drawmode="shadow" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="1" x="0" y="60"/>
+<point idx="5" type="1" x="-41" y="94"/>
+<point idx="9" type="2" x="35" y="94"/>
+<point idx="10" type="2" x="41" y="88"/>
+<point idx="11" type="2" x="41" y="2"/>
+<point idx="12" type="2" x="45" y="2"/>
+<point idx="13" type="2" x="-41" y="-94"/>
+<point idx="14" type="2" x="-45" y="88"/>
+<point idx="15" type="2" x="-45" y="2"/>
+<point idx="16" type="2" x="-51" y="2"/>
+<point idx="17" type="16" x="18" y="108"/>
+<point idx="18" type="16" x="-128" y="6"/>
+<point idx="19" type="16" x="-109" y="-28"/>
+<point idx="20" type="16" x="35" y="-8"/>
+<point idx="21" type="16" x="122" y="-48"/>
+<point idx="22" type="16" x="-86" y="-122"/>
+<point idx="23" type="16" x="-48" y="-114"/>
+<point idx="24" type="16" x="100" y="-152"/>
+<point idx="25" type="16" x="0" y="-208"/>
+</points>
+<layers>
+<layer idx="1" name="layer1A" image="1" z="800" offsetx="-229" offsety="95" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1B" image="2" z="800" offsetx="-229" offsety="26" sortoffsetx="0" sortoffsety="200" xray="0"/>
+<layer idx="3" name="layer1C" image="3" z="1000" offsetx="-229" offsety="-184" sortoffsetx="0" sortoffsety="200" xray="0"/>
+<layer idx="4" name="layer1D" image="4" z="1000" offsetx="-229" offsety="-312" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="5" name="layer2A" image="5" z="1000" offsetx="-229" offsety="-43" sortoffsetx="0" sortoffsety="200" xray="0"/>
+<layer idx="6" name="layer2B" image="6" z="1000" offsetx="-229" offsety="26" sortoffsetx="0" sortoffsety="150" xray="0"/>
+<layer idx="7" name="layer3A" image="7" z="1000" offsetx="-229" offsety="25" sortoffsetx="0" sortoffsety="60" xray="0"/>
+<layer idx="8" name="layer3B" image="8" z="1000" offsetx="-229" offsety="55" sortoffsetx="0" sortoffsety="115" xray="0"/>
+<layer idx="9" name="layer3C" image="9" z="1000" offsetx="-145" offsety="-42" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="10" name="shadow" image="10" z="700" offsetx="-229" offsety="-160" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

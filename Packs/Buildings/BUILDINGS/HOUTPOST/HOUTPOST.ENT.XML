@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="HOutpost" type="vx/building" variations="1" pass_file="HOutpost.pass">
+<images>
+<image idx="1" file="layer0A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer0B" drawmode="player_color" remaping="none" rows="1" columns="1"/>
+<image idx="3" file="layer1A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer1B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="5" file="layer1C" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="6" file="layer1D" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="7" file="layer1E" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="8" file="layer1F" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="9" file="layer1G" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="10" file="layer1H" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="11" file="layer2" drawmode="player_color" remaping="none" rows="1" columns="1"/>
+<image idx="12" file="shadow" drawmode="shadow" remaping="none" rows="1" columns="1"/>
+<image idx="13" file="layer1C2" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="4" x="-130" y="65"/>
+<point idx="2" type="4" x="-260" y="-40"/>
+<point idx="3" type="4" x="-35" y="-255"/>
+<point idx="4" type="4" x="190" y="20"/>
+<point idx="5" type="1" x="-100" y="130"/>
+<point idx="6" type="2" x="-100" y="130"/>
+<point idx="7" type="1" x="100" y="130"/>
+<point idx="8" type="2" x="100" y="130"/>
+<point idx="9" type="7" x="-265" y="-45"/>
+<point idx="10" type="7" x="-35" y="-265"/>
+<point idx="11" type="7" x="196" y="26"/>
+<point idx="12" type="7" x="-106" y="136"/>
+</points>
+<layers>
+<layer idx="1" name="layer01a" image="1" z="1500" offsetx="-300" offsety="-318" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="2" name="layer01b" image="2" z="1500" offsetx="-296" offsety="-170" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="3" name="layer1a" image="3" z="1000" offsetx="-300" offsety="200" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="4" name="layer1b" image="4" z="1500" offsetx="-300" offsety="126" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="5" name="layer1c" image="5" z="1500" offsetx="-300" offsety="52" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="6" name="layer1d" image="6" z="1500" offsetx="-300" offsety="-22" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="7" name="layer1e" image="7" z="1000" offsetx="-300" offsety="-96" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="8" name="layer1f" image="8" z="1000" offsetx="-300" offsety="-170" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="9" name="layer1g" image="9" z="1000" offsetx="-300" offsety="-244" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="10" name="layer1h" image="10" z="1000" offsetx="-300" offsety="-318" sortoffsetx="19" sortoffsety="110" xray="0"/>
+<layer idx="11" name="layer2" image="11" z="900" offsetx="-300" offsety="60" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="12" name="shadow" image="12" z="500" offsetx="-395" offsety="-298" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="13" name="layer1c2" image="13" z="1000" offsetx="-300" offsety="52" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

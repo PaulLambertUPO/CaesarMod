@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Palm Bush 2" type="vx/building" variations="1" pass_file="Desert Bush 2.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="6" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="6" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-174" offsety="-170" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-174" offsety="-170" sortoffsetx="0" sortoffsety="0" xray="1"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+<anim idx="1" name="the_anim" startstate="1" endstate="1" frames="8" duration="1500" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="1" offsetx="-174" offsety="-170"/>
+<replace layer="2" image="2" offsetx="-174" offsety="-170"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="250"/>
+<frame idx="3" duration="250"/>
+<frame idx="4" duration="250"/>
+<frame idx="5" duration="250"/>
+<frame idx="6" duration="250"/>
+<frame idx="7" duration="250"/>
+<frame idx="8" duration="0"/>
+</anim>
+</anims>
+</entity>

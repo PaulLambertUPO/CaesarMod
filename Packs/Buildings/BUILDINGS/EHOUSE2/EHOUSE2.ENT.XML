@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="EHouse2" type="vx/building" variations="1" pass_file="EHouse2.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer3.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+
+</images>
+<points>
+<point idx="1" type="12" x="-30" y="34"/>
+<point idx="2" type="10" x="-45" y="65"/>
+<point idx="3" type="16" x="13" y="-76"/>
+<point idx="4" type="16" x="-5" y="65"/>
+<point idx="5" type="16" x="-92" y="4"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-275" offsety="-286" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-275" offsety="-286" sortoffsetx="-7" sortoffsety="31" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="1000" offsetx="-275" offsety="-286" sortoffsetx="-32" sortoffsety="97" xray="0"/>
+<layer idx="4" name="layer3" image="4" z="500" offsetx="-275" offsety="-286" sortoffsetx="-32" sortoffsety="97" xray="0"/>
+
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

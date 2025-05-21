@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="TOutpost" type="vx/building" variations="1" pass_file="TOutpost.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="1" x="114" y="-76"/>
+<point idx="3" type="2" x="114" y="-76"/>
+<point idx="4" type="2" x="-92" y="141"/>
+<point idx="5" type="11" x="-141" y="168"/>
+<point idx="6" type="11" x="93" y="-67"/>
+<point idx="7" type="4" x="-70" y="-12"/>
+<point idx="8" type="4" x="-184" y="-126"/>
+<point idx="9" type="4" x="8" y="-264"/>
+<point idx="10" type="4" x="122" y="-29"/>
+<point idx="11" type="4" x="12" y="6"/>
+<point idx="12" type="4" x="-41" y="-110"/>
+<point idx="13" type="4" x="29" y="-97"/>
+<point idx="14" type="4" x="-7" y="-90"/>
+<point idx="15" type="1" x="-93" y="138"/>
+<point idx="16" type="17" x="133" y="-88"/>
+<point idx="17" type="17" x="-180" y="209"/>
+<point idx="18" type="7" x="5" y="67"/>
+<point idx="19" type="7" x="192" y="-78"/>
+<point idx="20" type="7" x="-191" y="-77"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-418" offsety="-385" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-418" offsety="-385" sortoffsetx="10" sortoffsety="108" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="1000" offsetx="-418" offsety="-385" sortoffsetx="-121" sortoffsety="243" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

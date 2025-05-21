@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="igule_explosion" type="vx/building" variations="1" pass_file="">
+<images>
+<image idx="1" file="igule_exploding_shadow.rle" drawmode="shadow" remaping="none" rows="11" columns="1"/>
+<image idx="2" file="igule_exploding.rle" drawmode="index" remaping="none" rows="11" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="0" offsetx="-81" offsety="-73" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="100" offsetx="-81" offsety="-73" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+<anim idx="1" name="the_anim" startstate="1" endstate="1" frames="13" duration="660" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="1" offsetx="-81" offsety="-73"/>
+<replace layer="2" image="2" offsetx="-81" offsety="-73"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="60"/>
+<frame idx="3" duration="60"/>
+<frame idx="4" duration="60"/>
+<frame idx="5" duration="60"/>
+<frame idx="6" duration="60"/>
+<frame idx="7" duration="60"/>
+<frame idx="8" duration="60"/>
+<frame idx="9" duration="60"/>
+<frame idx="10" duration="60"/>
+<frame idx="11" duration="60"/>
+<frame idx="12" duration="60"/>
+<frame idx="13" duration="0"/>
+</anim>
+</anims>
+</entity>

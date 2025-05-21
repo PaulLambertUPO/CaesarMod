@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Shrine" type="vx/building" variations="1" pass_file="Shrine.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="shadow" remaping="none" rows="1" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="1" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="1" columns="1"/>
+<image idx="4" file="fire.rle" drawmode="clouds" remaping="none" rows="5" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-291" offsety="-340" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-291" offsety="-340" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="900" offsetx="-291" offsety="-340" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="4" name="fire" image="4" z="1000" offsetx="-117" offsety="-292" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="5" name="fire" image="4" z="1000" offsetx="-268" offsety="-180" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="6" name="fire" image="4" z="1000" offsetx="-216" offsety="-47" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="7" name="fire" image="4" z="1000" offsetx="-30" offsety="-8" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="8" name="fire" image="4" z="1000" offsetx="116" offsety="-119" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="9" name="fire" image="4" z="1000" offsetx="64" offsety="-250" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+<anim idx="1" name="burn" startstate="1" endstate="1" frames="7" duration="1000" default_duration="0" action_time="0" step="0">
+<replace layer="4" image="4" offsetx="-117" offsety="-292"/>
+<replace layer="5" image="4" offsetx="-268" offsety="-180"/>
+<replace layer="6" image="4" offsetx="-216" offsety="-47"/>
+<replace layer="7" image="4" offsetx="-30" offsety="-8"/>
+<replace layer="8" image="4" offsetx="116" offsety="-119"/>
+<replace layer="9" image="4" offsetx="64" offsety="-250"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="200"/>
+<frame idx="3" duration="200"/>
+<frame idx="4" duration="200"/>
+<frame idx="5" duration="200"/>
+<frame idx="6" duration="200"/>
+<frame idx="7" duration="0"/>
+</anim>
+</anims>
+</entity>

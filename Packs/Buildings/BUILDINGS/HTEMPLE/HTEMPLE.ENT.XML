@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="HTemple" type="vx/building" variations="1" pass_file="HTemple.pass">
+<images>
+<image idx="1" file="shadow" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer1B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer1C" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="5" file="layer1D" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="6" file="layer2A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="7" file="layer2B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="8" file="layer2C" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="9" file="layer2D" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="2" x="35" y="-134"/>
+<point idx="2" type="16" x="40" y="-130"/>
+<point idx="3" type="16" x="94" y="-232"/>
+<point idx="4" type="16" x="152" y="-280"/>
+<point idx="5" type="16" x="-10" y="-248"/>
+<point idx="6" type="16" x="-96" y="-108"/>
+<point idx="7" type="16" x="-100" y="60"/>
+<point idx="8" type="16" x="42" y="-292"/>
+<point idx="9" type="16" x="-56" y="-4"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-276" offsety="-369" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1A" image="2" z="1000" offsetx="-276" offsety="-370" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="3" name="layer1B" image="3" z="900" offsetx="-276" offsety="-231" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="4" name="layer1C" image="4" z="900" offsetx="-276" offsety="-92" sortoffsetx="0" sortoffsety="150" xray="0"/>
+<layer idx="5" name="layer1D" image="5" z="900" offsetx="-276" offsety="47" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="6" name="layer2A" image="6" z="1000" offsetx="-187" offsety="-70" sortoffsetx="-50" sortoffsety="50" xray="0"/>
+<layer idx="7" name="layer2B" image="7" z="1000" offsetx="-116" offsety="10" sortoffsetx="0" sortoffsety="150" xray="0"/>
+<layer idx="8" name="layer2C" image="8" z="1000" offsetx="-15" offsety="-260" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="9" name="layer2D" image="9" z="1000" offsetx="-276" offsety="-231" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

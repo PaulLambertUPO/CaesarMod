@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+<entity name="RepublicanRomeFlag" type="vx/unit" variations="1" pass_file="">
+	<images>
+		<image idx="1" file="RR_Layer1.rle" drawmode="player_color" remaping="none" rows="11" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="Flag" image="1" z="1100" offsetx="-98" offsety="-142" sortoffsetx="0" sortoffsety="0" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="-98" offsety="-142" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="13" duration="1287" default_duration="0" action_time="0" step="0">
+			<replace layer="1" image="1" offsetx="-98" offsety="-142" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="99" />
+			<frame idx="3" duration="99" />
+			<frame idx="4" duration="99" />
+			<frame idx="5" duration="99" />
+			<frame idx="6" duration="99" />
+			<frame idx="7" duration="132" />
+			<frame idx="8" duration="132" />
+			<frame idx="9" duration="132" />
+			<frame idx="10" duration="132" />
+			<frame idx="11" duration="132" />
+			<frame idx="12" duration="132" />
+			<frame idx="13" duration="0" />
+		</anim>
+	</anims>
+</entity>

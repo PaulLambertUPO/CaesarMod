@@ -1,0 +1,10 @@
+<-- KCHARIOT -->
+
+DIRECTIONS  :   12
+
+ATTACK.RLE	14 frames
+DIE.RLE		20 frames
+IDLE.RLE	 	7 frames
+TAUNT.RLE	7 frames
+TOATTACK	6 frames
+WALK.RLE 	14 frames

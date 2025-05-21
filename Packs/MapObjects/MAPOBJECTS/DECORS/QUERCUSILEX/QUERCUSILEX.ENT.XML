@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Holm's Oak" type="vx/building" variations="1" pass_file="Holm's Oak.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="11" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="11" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-278" offsety="-372" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-278" offsety="-372" sortoffsetx="0" sortoffsety="64" xray="1"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="-9" offsety="-52" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+<anim idx="1" name="the_anim" startstate="1" endstate="1" frames="13" duration="2200" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="1" offsetx="-278" offsety="-372"/>
+<replace layer="2" image="2" offsetx="-278" offsety="-372"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="200"/>
+<frame idx="3" duration="200"/>
+<frame idx="4" duration="200"/>
+<frame idx="5" duration="200"/>
+<frame idx="6" duration="200"/>
+<frame idx="7" duration="200"/>
+<frame idx="8" duration="200"/>
+<frame idx="9" duration="200"/>
+<frame idx="10" duration="200"/>
+<frame idx="11" duration="200"/>
+<frame idx="12" duration="200"/>
+<frame idx="13" duration="0"/>
+</anim>
+</anims>
+</entity>

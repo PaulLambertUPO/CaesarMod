@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="CoverOfMercy" type="" variations="1" pass_file="">
+<images>
+<image idx="1" file="com01" drawmode="clouds" remaping="none" rows="20" columns="1"/>
+<image idx="2" file="com02" drawmode="clouds" remaping="none" rows="20" columns="1"/>
+<image idx="3" file="com01" drawmode="clouds" remaping="reverse" rows="20" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="fog" image="1" z="1500" offsetx="-175" offsety="-180" sortoffsetx="0" sortoffsety="0" percent="100"/>
+</layers>
+<states>
+<state idx="1" name="fog1" image_idx="0" image_row="1" offsetx="0" offsety="0" anim_idx="65536" anim_frame="1"/>
+<state idx="2" name="fog2" image_idx="1" image_row="1" offsetx="0" offsety="0" anim_idx="65536" anim_frame="1"/>
+</states>
+<anims>
+<anim idx="1" name="fog1" startstate="1" endstate="2" frames="22" duration="1482" default_duration="78" action_time="0" step="0">
+<replace layer="1" image="1" offsetx="-175" offsety="-180"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="78"/>
+<frame idx="3" duration="78"/>
+<frame idx="4" duration="78"/>
+<frame idx="5" duration="78"/>
+<frame idx="6" duration="78"/>
+<frame idx="7" duration="78"/>
+<frame idx="8" duration="78"/>
+<frame idx="9" duration="78"/>
+<frame idx="10" duration="78"/>
+<frame idx="11" duration="78"/>
+<frame idx="12" duration="78"/>
+<frame idx="13" duration="78"/>
+<frame idx="14" duration="78"/>
+<frame idx="15" duration="78"/>
+<frame idx="16" duration="78"/>
+<frame idx="17" duration="78"/>
+<frame idx="18" duration="78"/>
+<frame idx="19" duration="78"/>
+<frame idx="20" duration="78"/>
+<frame idx="21" duration="78"/>
+<frame idx="22" duration="0"/>
+</anim>
+<anim idx="2" name="fog2" startstate="2" endstate="2" frames="22" duration="1496" default_duration="73" action_time="0" step="0">
+<replace layer="1" image="2" offsetx="-175" offsety="-180"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="73"/>
+<frame idx="3" duration="73"/>
+<frame idx="4" duration="73"/>
+<frame idx="5" duration="73"/>
+<frame idx="6" duration="73"/>
+<frame idx="7" duration="73"/>
+<frame idx="8" duration="73"/>
+<frame idx="9" duration="73"/>
+<frame idx="10" duration="73"/>
+<frame idx="11" duration="73"/>
+<frame idx="12" duration="73"/>
+<frame idx="13" duration="73"/>
+<frame idx="14" duration="73"/>
+<frame idx="15" duration="73"/>
+<frame idx="16" duration="73"/>
+<frame idx="17" duration="73"/>
+<frame idx="18" duration="73"/>
+<frame idx="19" duration="73"/>
+<frame idx="20" duration="73"/>
+<frame idx="21" duration="73"/>
+<frame idx="22" duration="0"/>
+</anim>
+<anim idx="3" name="fog3" startstate="2" endstate="1" frames="22" duration="1482" default_duration="78" action_time="0" step="0">
+<replace layer="1" image="3" offsetx="-175" offsety="-180"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="78"/>
+<frame idx="3" duration="78"/>
+<frame idx="4" duration="78"/>
+<frame idx="5" duration="78"/>
+<frame idx="6" duration="78"/>
+<frame idx="7" duration="78"/>
+<frame idx="8" duration="78"/>
+<frame idx="9" duration="78"/>
+<frame idx="10" duration="78"/>
+<frame idx="11" duration="78"/>
+<frame idx="12" duration="78"/>
+<frame idx="13" duration="78"/>
+<frame idx="14" duration="78"/>
+<frame idx="15" duration="78"/>
+<frame idx="16" duration="78"/>
+<frame idx="17" duration="78"/>
+<frame idx="18" duration="78"/>
+<frame idx="19" duration="78"/>
+<frame idx="20" duration="78"/>
+<frame idx="21" duration="78"/>
+<frame idx="22" duration="0"/>
+</anim>
+</anims>
+</entity>

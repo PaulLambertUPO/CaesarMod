@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="MArena" type="vx/building" variations="1" pass_file="MArena.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="1" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="1" x="-168" y="152"/>
+<point idx="2" type="2" x="-171" y="150"/>
+<point idx="5" type="4" x="-126" y="-194"/>
+<point idx="6" type="4" x="146" y="2"/>
+<point idx="7" type="4" x="-87" y="-223"/>
+<point idx="8" type="4" x="132" y="-199"/>
+<point idx="9" type="4" x="-26" y="-230"/>
+<point idx="10" type="4" x="198" y="-59"/>
+<point idx="11" type="4" x="178" y="-28"/>
+<point idx="12" type="4" x="209" y="-96"/>
+<point idx="13" type="4" x="172" y="-175"/>
+<point idx="14" type="4" x="21" y="-231"/>
+<point idx="15" type="4" x="77" y="-222"/>
+<point idx="16" type="4" x="205" y="-141"/>
+<point idx="17" type="11" x="-178" y="174"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-364" offsety="-420" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-364" offsety="-420" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="1000" offsetx="-364" offsety="-420" sortoffsetx="-157" sortoffsety="217" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

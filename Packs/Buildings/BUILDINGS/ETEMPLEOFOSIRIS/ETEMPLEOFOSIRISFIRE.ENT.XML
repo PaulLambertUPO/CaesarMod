@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="ETempleOfOsirisFire" type="vx/building" variations="1" pass_file="">
+<images>
+<image idx="1" file="ETempleOfOsirisFire.rle" drawmode="index" remaping="pingpong" rows="9" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="" image="1" z="1001" offsetx="-254" offsety="-231" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+<anim idx="1" name="fire" startstate="1" endstate="1" frames="11" duration="1000" default_duration="200" action_time="300" step="0">
+<replace layer="1" image="1" offsetx="-254" offsety="-231"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="200"/>
+<frame idx="3" duration="200"/>
+<frame idx="4" duration="200"/>
+<frame idx="5" duration="200"/>
+<frame idx="6" duration="200"/>
+<frame idx="7" duration="200"/>
+<frame idx="8" duration="200"/>
+<frame idx="9" duration="200"/>
+<frame idx="10" duration="200"/>
+<frame idx="11" duration="0"/>
+</anim>
+</anims>
+</entity>

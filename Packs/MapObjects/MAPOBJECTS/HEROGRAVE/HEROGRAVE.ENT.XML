@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="HeroGrave" type="vx/unit" variations="1">
+
+<images>
+<image idx="1" file="building.rle" drawmode="index" remaping="none" rows="5" columns="1"/>
+<image idx="2" file="building_shadow.rle" drawmode="shadow" remaping="none" rows="5" columns="1"/>
+<image idx="3" file="destroy.rle" drawmode="player_color" remaping="none" rows="6" columns="1"/>
+<image idx="4" file="destroy_shadow.rle" drawmode="shadow" remaping="none" rows="6" columns="1"/>
+<image idx="5" file="states.rle" drawmode="player_color" remaping="none" rows="5" columns="1"/>
+<image idx="6" file="states_shadow.rle" drawmode="shadow" remaping="none" rows="5" columns="1"/>
+</images>
+
+<layers>
+<layer idx="1" name="grave" image="5" z="1000" offsetx="-100" offsety="-110" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="grave_shadow" image="6" z="800" offsetx="-100" offsety="-110" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+
+<states>
+<state idx="1" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="4" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="5" name="5" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+
+<anims>
+<anim idx="1" name="Building" startstate="1" endstate="1" frames="7" duration="1830" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="1" offsetx="-100" offsety="-110"/>
+<replace layer="2" image="2" offsetx="-100" offsety="-110"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="366"/>
+<frame idx="3" duration="366"/>
+<frame idx="4" duration="366"/>
+<frame idx="5" duration="366"/>
+<frame idx="6" duration="366"/>
+<frame idx="7" duration="0"/>
+</anim>
+<anim idx="9" name="die" startstate="5" endstate="5" frames="8" duration="6486" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="3" offsetx="-100" offsety="-110"/>
+<replace layer="2" image="4" offsetx="-100" offsety="-110"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="100"/>
+<frame idx="3" duration="300"/>
+<frame idx="4" duration="700"/>
+<frame idx="5" duration="2000"/>
+<frame idx="6" duration="4000"/>
+<frame idx="7" duration="5000"/>
+<frame idx="8" duration="0"/>
+</anim>
+</anims>
+
+</entity>

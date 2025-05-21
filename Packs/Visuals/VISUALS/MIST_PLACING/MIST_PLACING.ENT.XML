@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Catapult_Placing" type="" variations="1" pass_file="">
+<images>
+<image idx="1" file="empty" drawmode="normal" remaping="none" rows="1" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="base" image="1" z="1000" offsetx="-199" offsety="-210" sortoffsetx="0" sortoffsety="0"/>
+</layers>
+<states>
+<state idx="1" name="bla" image_idx="1" image_row="1" offsetx="-199" offsety="-210"/>
+</states>
+<anims>
+</anims>
+</entity>

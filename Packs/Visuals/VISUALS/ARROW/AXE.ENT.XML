@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="axe" type="" variations="32" pass_file="">
+<images>
+<image idx="1" file="axe" drawmode="normal" remaping="none" rows="17" columns="32"/>
+<image idx="2" file="axe" drawmode="normal" remaping="none" rows="17" columns="32"/>
+<image idx="3" file="axe" drawmode="normal" remaping="none" rows="17" columns="32"/>
+<image idx="4" file="axe_shadow" drawmode="shadow" remaping="none" rows="17" columns="32"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="Arrow" image="1" z="1500" offsetx="-89" offsety="-139" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="shadow" image="4" z="1200" offsetx="-83" offsety="-136" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="Arrow" image_idx="0" image_row="0" offsetx="39" offsety="-8" anim_idx="65536" anim_frame="1"/>
+</states>
+<anims>
+<anim idx="1" name="Anim1" startstate="1" endstate="1" frames="19" duration="561" default_duration="33" action_time="0" step="400">
+<replace layer="1" image="1" offsetx="-85" offsety="-126"/>
+<replace layer="2" image="4" offsetx="-110" offsety="-137"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="33"/>
+<frame idx="3" duration="33"/>
+<frame idx="4" duration="33"/>
+<frame idx="5" duration="33"/>
+<frame idx="6" duration="33"/>
+<frame idx="7" duration="33"/>
+<frame idx="8" duration="33"/>
+<frame idx="9" duration="33"/>
+<frame idx="10" duration="33"/>
+<frame idx="11" duration="33"/>
+<frame idx="12" duration="33"/>
+<frame idx="13" duration="33"/>
+<frame idx="14" duration="33"/>
+<frame idx="15" duration="33"/>
+<frame idx="16" duration="33"/>
+<frame idx="17" duration="33"/>
+<frame idx="18" duration="33"/>
+<frame idx="19" duration="0"/>
+</anim>
+<anim idx="2" name="Anim2" startstate="1" endstate="1" frames="19" duration="561" default_duration="33" action_time="0" step="400">
+<replace layer="1" image="2" offsetx="-89" offsety="-147"/>
+<replace layer="2" image="4" offsetx="-110" offsety="-137"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="33"/>
+<frame idx="3" duration="33"/>
+<frame idx="4" duration="33"/>
+<frame idx="5" duration="33"/>
+<frame idx="6" duration="33"/>
+<frame idx="7" duration="33"/>
+<frame idx="8" duration="33"/>
+<frame idx="9" duration="33"/>
+<frame idx="10" duration="33"/>
+<frame idx="11" duration="33"/>
+<frame idx="12" duration="33"/>
+<frame idx="13" duration="33"/>
+<frame idx="14" duration="33"/>
+<frame idx="15" duration="33"/>
+<frame idx="16" duration="33"/>
+<frame idx="17" duration="33"/>
+<frame idx="18" duration="33"/>
+<frame idx="19" duration="0"/>
+</anim>
+<anim idx="3" name="Anim3" startstate="1" endstate="1" frames="19" duration="561" default_duration="33" action_time="0" step="400">
+<replace layer="1" image="3" offsetx="-88" offsety="-140"/>
+<replace layer="2" image="4" offsetx="-110" offsety="-137"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="33"/>
+<frame idx="3" duration="33"/>
+<frame idx="4" duration="33"/>
+<frame idx="5" duration="33"/>
+<frame idx="6" duration="33"/>
+<frame idx="7" duration="33"/>
+<frame idx="8" duration="33"/>
+<frame idx="9" duration="33"/>
+<frame idx="10" duration="33"/>
+<frame idx="11" duration="33"/>
+<frame idx="12" duration="33"/>
+<frame idx="13" duration="33"/>
+<frame idx="14" duration="33"/>
+<frame idx="15" duration="33"/>
+<frame idx="16" duration="33"/>
+<frame idx="17" duration="33"/>
+<frame idx="18" duration="33"/>
+<frame idx="19" duration="0"/>
+</anim>
+</anims>
+</entity>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="BMorrigansMonument" type="vx/building" variations="1" pass_file="BMorrigansMonument.pass">
+<images>
+<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer3.rle" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+
+</images>
+<points>
+<point idx="1" type="1" x="0" y="0"/>
+<point idx="2" type="2" x="0" y="0"/>
+<point idx="3" type="11" x="27" y="30"/>
+<point idx="5" type="4" x="-16" y="-160"/>
+<point idx="6" type="4" x="84" y="-99"/>
+<point idx="7" type="4" x="-76" y="-62"/>
+<point idx="8" type="4" x="-15" y="-111"/>
+<point idx="11" type="3" x="86" y="-98"/>
+<point idx="12" type="3" x="-75" y="-59"/>
+<point idx="13" type="3" x="-17" y="-160"/>
+<point idx="14" type="3" x="-14" y="-107"/>
+</points>
+<layers>
+<layer idx="1" name="shadow" image="1" z="800" offsetx="-227" offsety="-250" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="2" name="layer1" image="2" z="1000" offsetx="-227" offsety="-250" sortoffsetx="0" sortoffsety="0" xray="0"/>
+<layer idx="3" name="layer2" image="3" z="1000" offsetx="-227" offsety="-250" sortoffsetx="-7" sortoffsety="49" xray="0"/>
+<layer idx="4" name="layer3" image="4" z="500" offsetx="-227" offsety="-250" sortoffsetx="-7" sortoffsety="49" xray="0"/>
+
+</layers>
+<states>
+<state idx="1" name="0" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="2" name="1" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="3" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+<state idx="4" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="65536"/>
+</states>
+<anims>
+</anims>
+</entity>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="HAgora" type="" variations="1" pass_file="HAgora.pass">
+<images>
+<image idx="1" file="layer1A" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="2" file="layer1B" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="3" file="layer1C" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="4" file="layer1D" drawmode="player_color" remaping="none" rows="4" columns="1"/>
+<image idx="5" file="shadow" drawmode="shadow" remaping="none" rows="4" columns="1"/>
+</images>
+<points>
+<point idx="1" type="16" x="18" y="-20"/>
+<point idx="2" type="16" x="106" y="-25"/>
+<point idx="3" type="16" x="44" y="-196"/>
+<point idx="4" type="16" x="-8" y="-154"/>
+<point idx="5" type="16" x="-48" y="-116"/>
+<point idx="6" type="16" x="-104" y="15"/>
+<point idx="7" type="16" x="-164" y="-25"/>
+</points>
+<layers>
+<layer idx="1" name="layer1A" image="1" z="1000" offsetx="-224" offsety="-248" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="2" name="layer1B" image="2" z="1000" offsetx="-224" offsety="-142" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="3" name="layer1C" image="3" z="1000" offsetx="-224" offsety="-36" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="4" name="layer1D" image="4" z="1000" offsetx="-224" offsety="70" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="5" name="shadow" image="5" z="800" offsetx="-224" offsety="-248" sortoffsetx="0" sortoffsety="0"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+<state idx="2" name="2" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+<state idx="3" name="3" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+<state idx="4" name="4" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+</states>
+<anims>
+</anims>
+</entity>

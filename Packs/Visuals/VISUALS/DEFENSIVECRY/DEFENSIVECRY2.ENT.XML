@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="DefensiveCry2" type="" variations="1" pass_file="">
+<images>
+<image idx="1" file="DefensiveCry2" drawmode="clouds" remaping="none" rows="1" columns="6"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="DefensiveCry2" image="1" z="900" offsetx="-54" offsety="-38" sortoffsetx="0" sortoffsety="0" xray="0"/>
+</layers>
+<states>
+<state idx="1" name="DefensiveCry2" image_idx="0" image_row="0" offsetx="0" offsety="0" anim_idx="65536" anim_frame="1"/>
+</states>
+<anims>
+<anim idx="1" name="DefensiveCry2" startstate="1" endstate="1" frames="8" duration="300" default_duration="200" action_time="0" step="0">
+<replace layer="1" image="1" offsetx="-54" offsety="-38"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="50"/>
+<frame idx="3" duration="50"/>
+<frame idx="4" duration="50"/>
+<frame idx="5" duration="50"/>
+<frame idx="6" duration="50"/>
+<frame idx="7" duration="50"/>
+<frame idx="8" duration="0"/>
+</anim>
+</anims>
+</entity>
