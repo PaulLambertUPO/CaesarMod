@@ -1,0 +1,13 @@
+	<game>
+		<properties
+			name="Random Map"
+			author=""
+			description="Random Map"
+			start_map="1"
+			last_edited_map="1"
+			victory_threshold="0"
+			start_player="1"
+			victory_condition="0"
+			single_only="0"
+			game_type="0"/>
+	</game>

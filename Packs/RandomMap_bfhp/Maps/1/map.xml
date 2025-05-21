@@ -1,0 +1,15 @@
+	<map
+		name=""
+		descr="">
+		<size
+			x="16384"
+			y="16384"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="0"/>
+		<start_pt
+			x="-842150451"
+			y="-842150451"/>
+	</map>

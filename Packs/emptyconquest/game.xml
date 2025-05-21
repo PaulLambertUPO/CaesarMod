@@ -1,0 +1,13 @@
+	<game>
+		<properties
+			name="Template Conquest"
+			author="Unknown Author"
+			description="Conquest Game"
+			start_map="1"
+			last_edited_map="1"
+			victory_threshold="0"
+			start_player="0"
+			victory_condition="0"
+			single_only="0"
+			game_type="2"/>
+	</game>
