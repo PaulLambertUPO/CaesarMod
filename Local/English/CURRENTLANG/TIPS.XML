@@ -1,0 +1,629 @@
+<tips>
+	<!-- SHORTCUTS -->
+	<tip link="/contents/shortcuts">
+		<text>
+			You can use the key combination 'CTRL'+'1', 'CTRL'+'2'
+			etc. to associate the selection of units or a building
+			(not in enemy hands) with a number.
+			To reuse the quick selection you just need to
+			press '1', '2' etc.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			To select units of two or more different types when
+			stationed inside a building, hold down the 'Shift'
+			key and click on their icons.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			To select a single unit in a group of units inside a
+			building, hold down the 'CTRL' key and click on the
+			icon of the group you want.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			To attach units in a structure to a hero hold down the
+			'Shift' key while selecting the unit icons and, while
+			holding it down, right-click on the hero icon.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			If you have any doubts during the game or need
+			information on some element of the game, you can
+			access the help window by pressing the F1 key.
+			You can also do this by selecting a unit or building
+			and right-clicking on the icon in the top left.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			To quickly change the selection from one hero to another,
+			use the mouse wheel.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			To send messages to other players during an online game,
+			press 'Enter' and write the message in the window that
+			will open afterwards (make sure to set the right options
+			not to send messages to anyone you do not want).
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			If you want to review the notes of a mission during
+			a battle, press 'F8' or the "Notes" button.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			If you right-click somewhere on the map while holding
+			down the 'CTRL' key, the selected units will head towards
+			the chosen point, attacking all enemies they come across.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			If you want your warriors to attack only units of a certain
+			type, hold down the 'CTRL' key and right-click on any unit
+			of that type.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			During a Single player game, you can press the 'F4' key to
+			see the game type, the duration and the list of all players
+			with their respective scores.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			You can press the ';' key to toggle the health and stamina
+			bars on the screen.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			By holding down the '\' key, you can make the trees
+			transparent so that you can follow the progress of a
+			battle in the middle of a dense forest.
+		</text>
+	</tip>
+	<!-- MAP -->
+	<tip link="/contents/map">
+		<text>
+			To open the minimap press the spacebar or the mouse
+			wheel.
+		</text>
+	</tip>
+	<!-- LEVEL -->
+	<tip link="/contents/stats/level">
+		<text>
+			The selected unit's level appears at the top of the
+			screen, next to the 'L' icon.
+		</text>
+	</tip>
+	<tip link="/contents/stats/level">
+		<text>
+			The higher the level of a warrior is, the more damage
+			he will deal and the less damage he will suffer.
+		</text>
+	</tip>
+	<tip link="/contents/stats/level">
+		<text>
+			Warriors change color depending on the level reached.
+			Watch out for golden enemies!
+		</text>
+	</tip>
+	<!-- RUINS (LEVEL-ITEMS) -->
+	<tip link="/contents/buildings/Ruins">
+		<text>
+			Only a hero with a high enough level will be able to
+			collect a magic item from the ruins.
+			To find out the minimum level required to obtain the
+			item from a particular ruin, select it and look at
+			the top left of the screen.
+		</text>
+	</tip>
+	<!-- ITEMS -->
+	<tip link="/contents/items">
+		<text>
+			There are many places containing magic objects, where
+			new ones appear periodically.
+			Go check them every now and then.
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			With a single "Finger of death" you can eliminate up to 20
+			enemies, and it is not the most powerful item in the game!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			With the "Battle drums of rage" you can greatly enhance
+			the attack power of your army: they are perfect for turning
+			the tide of a battle or creating even more synergy with
+			specials like "Triple Strike", "Penetration" and "Charge"!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Always have a few fast units or units with the "Sneak"
+			special ready near the stone piles, so that you can
+			secure their control and some "Poison mushrooms" with
+			which to easily increase the level of your heroes!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			You should always equip your heroes with curative items
+			such as "Ash of druid heart" or "Healing herbs", this
+			way you can greatly reduce the risk of losing them!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			By depositing 3 of certain objects in the same holder,
+			they will fuse into a single, more powerful one.
+			This applies to the "Snake skin", the "Eagle feather"
+			and the "Boar tooth".
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			If you have heroes that make great use of activable skills,
+			equip them with the marvelous "Invigorating dark harp".
+		</text>
+	</tip>
+	<!-- STONEHENGE -->
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			The "Divine sacrifice" ritual performed at the stonehenge
+			will constantly damage all sages on the map for 1 minute.
+			Be careful because even those performing the ritual are
+			damaged and you may still need them!
+		</text>
+	</tip>
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			The "Starvation" ritual performed at the stonehenge will
+			cause a great food reduction for all buildings and
+			caravans all over the map.
+			It is extremely effective to weaken Germany!
+		</text>
+	</tip>
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			The "Earthquake" ritual performed at the stonehenge will
+			heavily damage all the strongholds on the map: use it when
+			you need to attack one, but be careful not to damage
+			yours at the wrong time!
+		</text>
+	</tip>
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			The "Teuton horde" ritual performed at the stonehenge
+			reduces the population to the minimum and causes a huge
+			army of Teutons to appear in every stronghold on the map
+			after a delay of 3 minutes. Use this waiting time to
+			prepare for the upcoming battle!
+		</text>
+	</tip>
+	<!-- UNITS AND HEROES IN GENERAL -->
+	<tip link="/contents/units/Catapult">
+		<text>
+			Warriors can build catapults, rams and siege towers to
+			assault strongholds.
+			Select a few of them, then press the "Build siege machine"
+			button and find a suitable location for construction.
+		</text>
+	</tip>
+	<tip link="/contents/feeding">
+		<text>
+			Warriors need food to regain health and they lose health
+			when they do not eat.
+			If a unit with food is in a building, it will regain
+			much more health.
+		</text>
+	</tip>
+	<tip link="/contents/stats/stamina">
+		<text>
+			All units possess 10 stamina with which to use their
+			specials.
+			When they run out of stamina, they must wait for it to
+			regenerate.
+		</text>
+	</tip>
+	<tip link="/contents/heroes">
+		<text>
+			Heroes can deploy their warriors in various formations,
+			which provide different bonuses.
+			It is up to you to choose the most convenient for
+			the situation!
+		</text>
+	</tip>
+	<tip link="/contents/heroes">
+		<text>
+			Heroes possess 5 skills that can be improved up to level 10.
+			Julius Caesar, as supreme commander, has 6!
+		</text>
+	</tip>
+	<tip link="/contents/heroes">
+		<text>
+			Heroes can use "Divine grace", which helps them instantly
+			restore 100 health if they have sufficient stamina.
+		</text>
+	</tip>
+	<!-- HERO SKILLS AND UNIT SPECIALS -->
+	<tip link="/contents/heroskills">
+		<text>
+			With the "Ceasefire" skill you can pass undisturbed among
+			enemy armies or flee from a lost battle while minimizing
+			casualties.
+			You can also use it to capture enemy structures without
+			fighting if you have more warriors than the enemy!
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			With the "Defensive cry" skill it is possible to nullify
+			the damage of offensive skills such as "Triple strike"
+			or "Attack skill", but not that of "Penetration".
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			The "Administration" skill increases the maximum number
+			of units that can be attached to the hero, up to 80!
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			The "Battle cry" and "Leadership" skills are perfect to
+			make up for a negative level difference as well as
+			maximizing the bonus damage and armor provided by
+			"Offensive tactics" and "Defensive tactics".
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			The "Quick march" skill is probably the most versatile in
+			the game: by moving faster, in fact, you will be able to
+			avoid unwanted fights, outflank armies, chase the enemy
+			or help allies in trouble.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Death blow" special, such as Anubis warriors,
+			can eliminate an enemy with one strike if that has less than
+			50% health after taking damage (it does not affect heroes).
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Charge" special, such as Gaul horsemen,
+			deal 8 times the normal damage if they have not fought
+			for at least 10 seconds.
+			The damage increase applies after calculation with the
+			reduction by armor.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Cripple" special, such as German axemen,
+			can deplete all of an enemy's stamina in one hit (it
+			does not affect heroes).
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Deflection" special, such as hoplites,
+			can block enemy attacks, provided that they have
+			enough stamina.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Keen sight" special, such as Tuaregs,
+			reveal enemies hiding with "Sneak" and "Invisibility".
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Toughness" special, such as highlanders,
+			increase their maximum health by 5 points per level up,
+			thus becoming not only stronger, but also more difficult
+			to take down.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Units with the "Bleeding attack" special, such as elite
+			guards, deal an additional damage equal to 10% of the
+			enemy's maximum health with every hit (it does not
+			affect heroes).
+			As a result, they are lethal against special units or
+			when their level is lower than the enemy's.
+		</text>
+	</tip>
+	<!-- SPECIAL UNITS -->
+	<tip link="/contents/units/RChariot">
+		<text>
+			Roman chariots have "Triple strike" and are therefore ideal
+			for neutralizing units with low armor.
+			Besides, they can become incredibly powerful if they obtain
+			the researchable veteran upgrades in the arena.
+		</text>
+	</tip>
+	<tip link="/contents/units/RLiberatus">
+		<text>
+			The liberati have the "Bleeding attack" special and are
+			therefore perfect for eliminating the special units of
+			any enemy.
+			With the "Liberati guild" upgrade it is also possible
+			to recruit increasingly stronger ones.
+		</text>
+	</tip>
+	<tip link="/contents/units/GTridentWarrior">
+		<text>
+			Trident warriors completely restore their health at every
+			kill (if they have enough stamina).
+			For this reason, sometimes a single one can eliminate
+			an entire army.
+		</text>
+	</tip>
+	<tip link="/contents/units/IMountaineer">
+		<text>
+			Mountaineers combine "Sneak" and "Offensive tactics" with
+			the experience-based upgrades researchable in the arena
+			to set up deadly ambushes and dispatch isolated targets
+			before these can react.
+		</text>
+	</tip>
+	<tip link="/contents/units/CWarElephant">
+		<text>
+			War elephants are slow but have the "Trample" special and
+			are therefore capable of wreaking havoc in battles with
+			high troop concentrations. Beware of "Spike armor"!
+			Furthermore, with the "Mahout school", it is possible
+			to train others, without a maximum limit.
+		</text>
+	</tip>
+	<tip link="/contents/units/BVikingLord">
+		<text>
+			Viking lords restore their health every time that they
+			damage an enemy (if they have enough stamina).
+			For this reason, sometimes a single one can eliminate
+			an entire army.
+		</text>
+	</tip>
+	<tip link="/contents/units/EChariot">
+		<text>
+			Chariots of Osiris are the ultimate weapon to implement
+			the "hit and run" tactic as they have the insidious
+			"Disease attack" special, with which they can heavily
+			weaken the enemy over time.
+			The poison is eradicated when health returns to full,
+			so make sure the enemy has no way to heal himself!
+		</text>
+	</tip>
+	<tip link="/contents/units/TValkyrie">
+		<text>
+			Valkyries have "Toughness" and "Power strike", a deadly
+			combination against low health units like the archers.
+			With the "Legendary valkyries" upgrade the new ones
+			will be stronger than the previous ones.
+			They can also be attached to heroes as they are not limited
+			by the "Freedom" special typical of special units.
+		</text>
+	</tip>
+	<tip link="/contents/units/HMyrmidon">
+		<text>
+			Myrmidons specialize in killing units with low health, so
+			they stand out in ranged fights, but if they reach a good
+			number they become almost unbeatable in most situations.
+			They can also be attached to heroes as they are not limited
+			by the "Freedom" special typical of special units.
+		</text>
+	</tip>
+	<!-- RACES -->
+	<tip link="/contents/races/rome">
+		<text>
+			When you play as Republican Rome, aim to research all the
+			upgrades in the arena: by doing so, you will make your
+			units better but, above all, you will be able to hire
+			Julius Caesar himself after 40 game minutes!
+		</text>
+	</tip>
+	<tip link="/contents/races/rome">
+		<text>
+			When you play as Imperial Rome, your prioritiy has to be
+			the unlock of "Military Academy" and of the praetorians.
+			Also try to keep plenty of food ready as you will not be
+			able to buy it from the tavern.
+		</text>
+	</tip>
+	<tip link="/contents/races/rome">
+		<text>
+			When you play as Punic Rome, your units will have the
+			"Toughness" special, so make sure to research all the
+			training levels in the arena to increase the experience
+			and thus the health of your soldiers.
+		</text>
+	</tip>
+	<tip link="/contents/races/gaul">
+		<text>
+			When you play as Gaul, aim to fight often as with the
+			"Battle tactics" and "Warrior tales" upgrades of the
+			arena you will gain huge amounts of experience
+			compared to the enemy. Remember that, after 45 game
+			minutes, you can also count on the help of the
+			legendary Keltill and Larax!
+		</text>
+	</tip>
+	<tip link="/contents/races/iberia">
+		<text>
+			When you play as Iberia, you should keep a defensive
+			playstyle, as with the arena upgrades and enchantresses
+			you will be able to gain levels without having to fight.
+			Meanwhile, exhaust your opponents with mountaineers!
+		</text>
+	</tip>
+	<tip link="/contents/races/carthage">
+		<text>
+			When you play as Carthage, it will be easy for you to obtain
+			gold with which to recruit many troops and overwhelm your
+			enemies: make sure to research the "Spoils of War" in the
+			arena and the "Mercenary pact" in the market as quickly as
+			possible and keep your stronghold populated with several
+			villages, so that you can sell the inhabitants in exchange
+			for more gold.
+		</text>
+	</tip>
+	<tip link="/contents/races/britain">
+		<text>
+			When you play as Britain, you'll have various ways to fight
+			in unconventional ways, including the ability of your
+			druids to hide entire armies with "Invisibility" and
+			the chance to trigger various effects like the
+			instant elimination of lower-level enemies.
+		</text>
+	</tip>
+	<tip link="/contents/races/egypt">
+		<text>
+			When you play as Egypt, try to make the most of the speed
+			of your units to grab the resources on the map before the
+			enemy: you will secure an advantage that he cannot close.
+			Remember that Egyptian units have the most synergistic
+			specials in the game, especially "Bleeding attack" and
+			"Death blow" of the divine warriors.
+		</text>
+	</tip>
+	<tip link="/contents/races/germany">
+		<text>
+			When you play as Germany, research the "Attack focus"
+			and "Learning" upgrades as soon as possible, so that you
+			can face off against higher-level enemies as equals.
+			Your playstyle will have to focus exclusively on
+			aggression and attack!
+		</text>
+	</tip>
+	<tip link="/contents/races/greece">
+		<text>
+			When you play as Greece, you will have a huge amount of
+			upgrades available not only for your units but also for
+			your stronghold. As a result, you will be able to be more
+			daring in your attacks while even leaving your stronghold
+			unguarded because you can hire sentries, improve the
+			gates and even make them indestructible for 2 minutes!
+		</text>
+	</tip>
+	<!-- CAPTURING -->
+	<tip link="/contents/capturing">
+		<text>
+			To capture an ungarrisoned enemy building, you must
+			select a group of warriors and right-click on it.
+		</text>
+	</tip>
+	<tip link="/contents/capturing">
+		<text>
+			If you find an unprotected enemy caravan, you can capture
+			it by selecting some warriors and right-clicking on it.
+		</text>
+	</tip>
+	<!-- BUILDINGS -->
+	<tip link="/contents/buildings">
+		<text>
+			If a building in your stronghold is too damaged, you will
+			have to pay to repair it so that it works again.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/GoldOutpost">
+		<text>
+			Bring 2000 gold to a gold outpost and watch how the
+			amount gradually increases.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/TradeOutpost">
+		<text>
+			The trade outpost allows to sell the stored food in
+			exchange for gold and vice versa.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/TrainingOutpost">
+		<text>
+			A warrior stationed in a training outpost will gain
+			experience over time, until reaching level 8.
+			Consequently, with the "Nobility" upgrade, it is possible
+			to make him reach level 12.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/RecruitmentOutpost">
+		<text>
+			Peasants who remain in a recruitment outpost with the
+			Carthaginian architecture will be converted to
+			Carthaginian macemen.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/RecruitmentOutpost">
+		<text>
+			Peasants who remain in a recruitment outpost with the
+			Greek architecture will be converted to hoplites.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/TTent">
+		<text>
+			You can capture a Teuton tent by eliminating the group
+			of riders and archers protecting it.
+			When the camp is yours, you will get 10 Teutons.
+			Besides, for every 400 food stored in the tent, a new
+			Teuton of the type you desire will appear.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/CTent">
+		<text>
+			You can capture a Numidian tent by eliminating the group
+			of riders and archers protecting it.
+			When the camp is yours, you will get 10 Numidians.
+			Besides, for every 200 or 400 food stored in the tent,
+			a new Numidian of the type you desire will appear.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/RTavern">
+		<text>
+			Once per game, remember to ask for "Tribute": you will
+			gain a large amount of gold from all of your outposts.
+			This is why it is vital to have control of the map!
+		</text>
+	</tip>
+	<!-- GAME MODES -->
+	<tip link="contents/resources">
+		<text>
+			In a Single player game it is better to keep the stronghold
+			population at maximum to gain a higher amount of gold
+			(and food, in the case of a German stronghold).
+		</text>
+	</tip>
+	<tip link="contents/fogofwar">
+		<text>
+			In a Single player game you will have to explore the
+			terrain as quickly as you can: you will secure an
+			advantage both in resources and logistics.
+		</text>
+	</tip>
+	<tip link="contents/races">
+		<text>
+			In a Conquest game you will have to think and evaluate in
+			which order to subjugate the various territories based on
+			the effectiveness of the different bonuses with respect to
+			the people you have chosen and the enemy you want to
+			conquer.
+		</text>
+	</tip>
+</tips>

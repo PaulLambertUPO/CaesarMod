@@ -1,0 +1,341 @@
+﻿
+
+HAEMIMONT GAMES
+
+Imperivm: Great Battles of Rome
+
+
+-----
+
+CAESAR MOD
+
+This mod was made in honor of Julius Caesar and
+as a sign of appreciation towards modders of the
+original Greek Mod to support their work, in the
+hope that the game will become popular again all
+over the world and receive the treatment it deserves
+by being the best strategy game ever: Ave Caesar!
+
+You are free to use my mod as a starting point
+for your projects, I ask you just the courtesy
+of indicating my name in the credits/thanks
+(see LICENSE file for more information).
+
+
+PROGRAMMING
+BALANCING
+NEW MECHANICS
+ARTIFICIAL INTELLIGENCE
+GREAT BATTLES AND CONQUESTS UPDATE
+TEXTS AND HELP GUIDE IMPROVEMENT
+DUBBING
+
+Paolo Lamberto
+
+
+TESTING
+
+Paolo Lamberto
+Matteo Lamberto
+
+
+Copyright (c) 2025 Paolo Lamberto
+
+
+-----
+
+
+GREEK MOD
+
+
+ORIGINAL CREATORS
+
+Axaros
+Consul123
+Nicoghiro31
+
+
+PROGRAMMING
+
+Axaros
+Camarada
+GureTaiga
+IL_PRINS
+Nicoghiro31
+
+
+ASSET CREATION
+
+Axaros
+Nicoghiro31
+
+
+MODELS AND ANIMATIONS
+
+Nicoghiro31
+
+
+GRAPHICS
+
+IL_PRINS
+Nicoghiro31
+Vjenko
+
+
+DUBBING
+
+Coom Slayer
+Manuel Esposito
+
+
+TRANSLATIONS
+
+Coom Slayer
+Nicoghiro31
+
+
+NEW MAPS AND ADVENTURES
+
+Il Mietitore
+
+
+-----
+
+
+RATTLESMAKE TEAM
+
+
+PROGRAMMING
+
+supreme19
+
+
+GRAPHICS
+
+Gabrux5
+Gurkhan
+NuclearWinter
+
+
+MUSIC AND SOUND EFFECTS
+
+Edoardo1997
+
+
+DUBBING (ITALIAN)
+
+Caelum
+MR.Wolf
+
+
+TESTING
+
+Dark Ritual
+Kisame
+
+
+LAUNCHER
+
+DaniJerez
+
+
+ADDITIONAL THANKS
+
+Camarada
+Emanuè
+Giuseppe d'Addio
+Kame
+Skipi
+Warrior444
+Czech Community for translation (Husita)
+Imperivm Legacy Online&Competitive Community
+RetroSpy Community (Arves100, Sporesirius, xiaojiuwo)
+
+
+-----
+
+
+HLAVNÍ HRA
+
+
+HLAVNÍ NÁVRHÁŘ
+
+Gabriel Dobrev
+
+
+VEDOUCÍ PROGRAMÁTOŘI
+
+Ivan-Assen Ivanov
+Ivaylo Todorov
+Ivko Stanilov
+
+
+HLAVNÍ UMĚLEC
+
+Peter Stanimirov
+
+
+PRODUKCE
+
+Antonio Lucena Ferrero
+Gabriel Dobrev
+
+
+PROGRAMOVALI
+
+Alexander "Mordred" Andonov
+Dimo Zaprqnov
+Georgi Georgiev
+Ivan-Assen Ivanov
+Ivko Stanilov
+Luchezar "Lucho" Belev
+Maria Stanilova
+Michael "Miho" Peykov
+Sergei "Zemedelec" Milojkov
+
+
+POMOCNÉ PROGRAMÁTORSKÉ PRÁCE
+
+Alexander "Alex III" Alexandrov
+Danko Jordanov
+Krassimir "Kastchei" Tuevski
+Nikolay Georgiev
+Panayot "Otto" Yanazov
+
+
+UMĚLCI
+
+Angel "Gele" Stoianov
+Biser "Bobby" Parashkevov
+Dimitar Nikolov
+Dimitar "Chrom" Tzvetanov
+Dimitar "Lanternman" Tzvetanov
+Evgeni Jordanov
+George "Calader" Simeonov
+George "Yo" Stanimirov
+Kosta "Jovi" Atanasov
+Krasimir Nechevski
+Nelson "Atmos" Inomvan
+Viktor "PK" Asparuhov
+Vladimir "SNU" Stanimirov
+
+
+POMOCNÍ UMĚLCI
+
+Martin "Morgy" Petkov
+Simo Sokerov
+
+
+ASISTENT PRODUKCE
+
+Valeri Kalaijiev
+
+
+NÁVRHY ÚROVNÍ
+
+Bozhidar "Bave" Grozdanov
+Dimiter "Sedmi" Georgiev
+Ivan "Vani" Stoianov
+Konstantin "Balrog" Grozev
+Martin "Morgy" Petkov
+Svetoslav "SAA" Alexandrov
+
+
+HUDBA A ZVUKY
+
+Alexander Todorov
+Konstantin Markov
+Tzvetomir Hristov
+
+
+VIDEO
+
+Nacho Ruiz
+Félix Ruiz
+
+
+TESTOVÁNÍ
+
+Aleksander "James" Zamfirov
+Cesar Gil Ballesteros
+Desislava Vasileva
+Eduardo Báez
+Kalina "Kala" Mincheva
+Kiril Iliev
+Manuel Moreno
+Tsvetan "Angel" Angelov
+
+
+VZTAHY S VEŘEJNOSTÍ
+
+Good-PR
+Kiril Iliev
+Michail Kanabov
+
+
+WEBOVÁ STRÁNKA
+
+Alexander "Mordred" Andonov
+Kiril Iliev
+
+
+-----
+
+
+ČESKÁ VERZE
+
+
+LOKALIZACE
+
+Martin Lévay
+
+
+PŘEKLAD
+
+Jiří Holeček
+Lukáš Chwistek
+Martin Lévay
+Robert Major
+
+
+DODATEČNÉ TESTOVÁNÍ
+
+Martin Lévay
+Martin Pustelník
+Robert Major
+
+
+HLASY
+
+Antonia Todorova
+Atanas Ruskov
+Chavdar "Chuyo" Mihailov
+David Viktora
+Jan Fišar
+Jonas "Jotek" Talkington
+Laura "Lulu" Giosh
+Millen "The Mill" Stamatov
+Mirek Rataj
+Míša Kudela a další
+Petr Novák
+Richard "Deuce" Jackson
+Vasil Varbanov
+Vladimir Mihailov
+
+
+MANUÁL
+
+Bozhidar "Bave" Grozdanov
+
+
+SPECIÁlNÍ PODĚKOVÁNÍ
+
+Jay Powell
+Pablo de la Nuez
+
+
+-----
+
+
+Copyright (c) 2000-2004 Haemimont Games, Sofia, Bulgaria
+

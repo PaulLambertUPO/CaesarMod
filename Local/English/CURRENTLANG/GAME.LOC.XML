@@ -1,0 +1,76 @@
+<translationtable>
+<!-- start races -->
+<translationtableentry text="Republican Rome" result="Rome" />
+<translationtableentry text="Imperial Rome" result="Greece" />
+<translationtableentry text="Imparial Rome" result="Greece" />
+<translationtableentry text="Roman" result="Rome" />
+<translationtableentry text="Republican Roman" result="Rome" />
+<translationtableentry text="Imperial Roman" result="Greek" />
+<!-- end races -->
+<!-- start buildings (in game and in editor tree) -->
+<translationtableentry text="Stronghold (Republican Rome)" result="Stronghold (Rome)" />
+<translationtableentry text="Stronghold (Imperial Rome)" result="Stronghold (Greece)" />
+<translationtableentry text="Republican Roman walls" result="Roman walls" />
+<translationtableentry text="Imperial Roman walls" result="Greek walls" />
+<!-- end buildings (in game and in editor tree) -->
+<!-- start editor settings (all sections) -->
+<translationtableentry text="Do you really want to lose your current map and replace it with a randomly generated one" result="Do you really want to lose your current map and replace it with a randomly generated one?" />
+<!-- end editor settings (all sections) -->
+<!-- start common player names (for editor translations) -->
+<translationtableentry text="Giocatore" result="Player"/>
+<translationtableentry text="Giocatore %d1" result="Player %d1" />
+<translationtableentry text="Giocatore 1" result="Player 1" />
+<translationtableentry text="Giocatore 2" result="Player 2" />
+<translationtableentry text="Giocatore 3" result="Player 3" />
+<translationtableentry text="Giocatore 4" result="Player 4" />
+<translationtableentry text="Giocatore 5" result="Player 5" />
+<translationtableentry text="Giocatore 6" result="Player 6" />
+<translationtableentry text="Giocatore 7" result="Player 7" />
+<translationtableentry text="Giocatore 8" result="Player 8" />
+<translationtableentry text="Giocatore 9" result="Player 9" />
+<translationtableentry text="Giocatore 10" result="Player 10" />
+<translationtableentry text="Giocatore 11" result="Player 11" />
+<translationtableentry text="Giocatore 12" result="Player 12" />
+<translationtableentry text="Giocatore 13" result="Player 13" />
+<translationtableentry text="Giocatore 14" result="Player 14" />
+<translationtableentry text="Giocatore 15" result="Player 15" />
+<translationtableentry text="Giocatore 16" result="Player 16" />
+<translationtableentry text="Jugador" result="Player"/>
+<translationtableentry text="Jugador %d1" result="Player %d1" />
+<translationtableentry text="Jugador 1" result="Player 1" />
+<translationtableentry text="Jugador 2" result="Player 2" />
+<translationtableentry text="Jugador 3" result="Player 3" />
+<translationtableentry text="Jugador 4" result="Player 4" />
+<translationtableentry text="Jugador 5" result="Player 5" />
+<translationtableentry text="Jugador 6" result="Player 6" />
+<translationtableentry text="Jugador 7" result="Player 7" />
+<translationtableentry text="Jugador 8" result="Player 8" />
+<translationtableentry text="Jugador 9" result="Player 9" />
+<translationtableentry text="Jugador 10" result="Player 10" />
+<translationtableentry text="Jugador 11" result="Player 11" />
+<translationtableentry text="Jugador 12" result="Player 12" />
+<translationtableentry text="Jugador 13" result="Player 13" />
+<translationtableentry text="Jugador 14" result="Player 14" />
+<translationtableentry text="Jugador 15" result="Player 15" />
+<translationtableentry text="Jugador 16" result="Player 16" />
+<translationtableentry text="Nemico" result="Enemy"/>
+<translationtableentry text="Enemigo" result="Enemy"/>
+<translationtableentry text="Neutrale" result="Neutral"/>
+<translationtableentry text="Non usato" result="Unused"/>
+<translationtableentry text="No usado" result="Unused"/>
+<!-- end common player names (for editor translations) -->
+<!-- start online battle and GameSpy -->
+<translationtableentry text="Connecting to Imperivmchat server..." result="Connecting to Imperivm chat..." />
+<translationtableentry text="Connecting to Imperivm.." result="Connecting to Imperivm" />
+<translationtableentry text="Your profile name contains illegal characters for Imperivm,so your chat nick will be changed to '%s1'. Do you agree?" result="Your profile name contains illegal characters for Imperivm, so your chat nick will be changed to '%s1'. Ok?" />
+<translationtableentry text="Imperivmis unavailable, try again in a while." result="Imperivm is unavailable, try again later." />
+<translationtableentry text="Imperivmwas unavailable. Your victory could not be recorded." result="Imperivm was unavailable. Your victory was not recorded." />
+<translationtableentry text="Could not connect to the Imperivmlogin server, try again in a while." result="Could not connect to the Imperivm login server, try again later." />
+<translationtableentry text="There was an error when communicating with Imperivm,please try again." result="There was a communication error with Imperivm, please try again." />
+<translationtableentry text="Cannot connect to the Imperivmchat server." result="Cannot connect to Imperivm chat." />
+<!-- end online battle and GameSpy -->
+<!-- start game error messages -->
+<translationtableentry text="Please insert The Great Battle of Rome CD!" result="Please insert 'Imperivm: Great Battles of Rome' CD!" />
+<translationtableentry text="The game instances have become inconsistent" result="The game instances have become inconsistent (loss of synchronization)" />
+<!-- end game error messages -->
+</translationtable>

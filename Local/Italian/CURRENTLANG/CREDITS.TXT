@@ -1,0 +1,371 @@
+﻿
+
+HAEMIMONT GAMES
+
+Imperivm: Le Grandi Battaglie di Roma
+
+
+-----
+
+CAESAR MOD
+
+Questa mod è stata fatta in onore di Giulio Cesare
+e come segno di apprezzamento nei confronti dei modder
+della Greek Mod originale a supporto del loro lavoro,
+nella speranza che il gioco torni popolare in tutto il
+mondo e riceva il trattamento che merita essendo il
+miglior gioco di strategia di sempre: Ave Cesare!
+
+Siete liberi di usare la mia mod come punto di
+partenza per i vostri progetti, vi chiedo solo
+la cortesia di non cancellare il mio nome e di
+indicarlo nei crediti/ringraziamenti (per più
+informazioni, vedere il file LICENSE).
+
+
+PROGRAMMAZIONE
+BILANCIAMENTO
+NUOVE MECCANICHE
+INTELLIGENZA ARTIFICIALE
+AGGIORNAMENTO GRANDI BATTAGLIE E CONQUISTE
+MIGLIORAMENTO TESTI E GUIDA
+DOPPIAGGIO
+
+Paolo Lamberto
+
+
+TEST
+
+Paolo Lamberto
+Matteo Lamberto
+
+
+Copyright (c) 2025 Paolo Lamberto
+
+
+-----
+
+
+GREEK MOD
+
+
+IDEATORI ORIGINALI
+
+Axaros
+Consul123
+Nicoghiro31
+
+
+PROGRAMMAZIONE
+
+Axaros
+Camarada
+GureTaiga
+IL_PRINS
+Nicoghiro31
+
+
+CREAZIONE ASSETS
+
+Axaros
+Nicoghiro31
+
+
+MODELLI E ANIMAZIONI
+
+Nicoghiro31
+
+
+GRAFICA
+
+IL_PRINS
+Nicoghiro31
+Vjenko
+
+
+DOPPIAGGIO
+
+Coom Slayer
+Manuel Esposito
+
+
+TRADUZIONE
+
+Coom Slayer
+Nicoghiro31
+
+
+NUOVE MAPPE E AVVENTURE
+
+Il Mietitore
+
+
+-----
+
+
+RATTLESMAKE TEAM
+
+
+PROGRAMMAZIONE
+
+supreme19
+
+
+GRAFICA
+
+Gabrux5
+Gurkhan
+NuclearWinter
+
+
+MUSICA ED EFFETTI SONORI
+
+Edoardo1997
+
+
+DOPPIAGGIO (ITALIANO)
+
+Caelum
+MR.Wolf
+
+
+TEST
+
+Dark Ritual
+Kisame
+
+
+LAUNCHER
+
+DaniJerez
+
+
+ULTERIORI RINGRAZIAMENTI
+
+Camarada
+Emanuè
+Giuseppe d'Addio
+Kame
+Skipi
+Warrior444
+Czech Community for translation (Husita)
+Imperivm Legacy Online&Competitive Community
+RetroSpy Community (Arves100, Sporesirius, xiaojiuwo)
+
+
+-----
+
+
+GIOCO PRINCIPALE
+
+
+DISEGNATORE DEL GIOCO
+
+Gabriel Dobrev
+
+
+LEADER PROGRAMMATORI
+
+Ivan-Assen Ivanov
+Ivaylo Todorov
+Ivko Stanilov
+
+
+LEADER GRAFICA
+
+Peter Stanimirov
+
+
+PRODUZIONE
+
+Antonio Lucena Ferrero
+Gabriel Dobrev
+
+
+PROGRAMMAZIONE
+
+Alexander "Mordred" Andonov
+Dimo Zaprqnov
+Georgi Georgiev
+Ivan-Assen Ivanov
+Ivko Stanilov
+Luchezar "Lucho" Belev
+Maria Stanilova
+Michael "Miho" Peykov
+Sergei "Zemedelec" Milojkov
+
+
+PROGRAMMAZIONE ADDIZIONALE
+
+Alexander "Alex III" Alexandrov
+Danko Jordanov
+Krassimir "Kastchei" Tuevski
+Nikolay Georgiev
+Panayot "Otto" Yanazov
+
+
+GRAFICA
+
+Angel "Gele" Stoianov
+Biser "Bobby" Parashkevov
+Dimitar Nikolov
+Dimitar "Chrom" Tzvetanov
+Dimitar "Lanternman" Tzvetanov
+Evgeni Jordanov
+George "Calader" Simeonov
+George "Yo" Stanimirov
+Kosta "Jovi" Atanasov
+Krasimir Nechevski
+Nelson "Atmos" Inomvan
+Viktor "PK" Asparuhov
+Vladimir "SNU" Stanimirov
+
+
+GRAFICA ADDIZIONALE
+
+Martin "Morgy" Petkov
+Simo Sokerov
+
+
+ASSISTENZA PRODUZIONE
+
+Valeri Kalaijiev
+
+
+TEMA E DESIGN DEI LIVELLI
+
+Bozhidar "Bave" Grozdanov
+Dimiter "Sedmi" Georgiev
+Ivan "Vani" Stoianov
+Konstantin "Balrog" Grozev
+Martin "Morgy" Petkov
+Svetoslav "SAA" Alexandrov
+
+
+MUSICA ED EFFETTI SONORI
+
+Alexander Todorov
+Konstantin Markov
+Tzvetomir Hristov
+
+
+VIDEO
+
+Nacho Ruiz
+Félix Ruiz
+
+
+TEST
+
+Aleksander "James" Zamfirov
+Cesar Gil Ballesteros
+Desislava Vasileva
+Eduardo Báez
+Kalina "Kala" Mincheva
+Kiril Iliev
+Manuel Moreno
+Tsvetan "Angel" Angelov
+
+
+RELAZIONI PUBBLICHE
+
+Good-PR
+Kiril Iliev
+Michail Kanabov
+
+
+PAGINA WEB
+
+Alexander "Mordred" Andonov
+Kiril Iliev
+
+
+-----
+
+
+VERSIONE ITALIANA
+
+
+LOCALIZZAZIONE E TRADUZIONE
+
+Renata Forteleoni
+
+
+TEST ADDIZIONALE
+
+Jesús Martínez
+Manuel Moreno
+Matteo Caccialanza
+Stefano Griffini
+
+
+MESSA A PUNTO DELLA LOCALIZZAZIONE
+
+Fernando Conde
+
+
+DOPPIAGGIO
+
+Jingle Bells, Milano
+
+
+VOCI
+
+Cinzia Massironi
+Ciro Imparato
+Claudio Beccari
+Gianni Quillico
+Luca Sandri
+Marco Balzarotti
+Riccardo Rovatti
+Silvano Piccardi
+Valeria Falcinelli
+
+
+DIRETTORE DEL DOPPIAGGIO
+
+Fabio Zanuttini
+
+
+DIREZIONE DEL PROGETTO JINGLE BELLS
+
+Giorgio Papetti
+
+
+MANUALE
+
+Pablo Aranda
+Renata Forteleoni
+
+
+IMPAGINAZIONE DEL MANUALE
+
+Ismael Garduño
+
+
+GRAFICA PACKAGE
+
+Dimas Fernández
+
+
+GRAFICA ADDIZIONALE
+
+Nacho Ruiz
+
+
+IMMAGINE DI COPERTINA E BUSTI
+
+Kóveck
+
+
+RINGRAZIAMENTO SPECIALE
+
+Jay Powell
+Pablo de la Nuez
+
+
+-----
+
+
+Copyright (c) 2000-2004 Haemimont Games, Sofia, Bulgaria
+

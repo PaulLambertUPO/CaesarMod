@@ -1,0 +1,370 @@
+
+
+HAEMIMONT GAMES
+
+Imperivm: Great Battles of Rome
+
+
+-----
+
+CAESAR MOD
+
+This mod was made in honor of Julius Caesar and
+as a sign of appreciation towards modders of the
+original Greek Mod to support their work, in the
+hope that the game will become popular again all
+over the world and receive the treatment it deserves
+by being the best strategy game ever: Ave Caesar!
+
+You are free to use my mod as a starting point
+for your projects, I ask you just the courtesy
+of indicating my name in the credits/thanks
+(see LICENSE file for more information).
+
+
+PROGRAMMING
+BALANCING
+NEW MECHANICS
+ARTIFICIAL INTELLIGENCE
+GREAT BATTLES AND CONQUESTS UPDATE
+TEXTS AND HELP GUIDE IMPROVEMENT
+DUBBING
+
+Paolo Lamberto
+
+
+TESTING
+
+Paolo Lamberto
+Matteo Lamberto
+
+
+Copyright (c) 2025 Paolo Lamberto
+
+
+-----
+
+
+GREEK MOD
+
+
+ORIGINAL CREATORS
+
+Axaros
+Consul123
+Nicoghiro31
+
+
+PROGRAMMING
+
+Axaros
+Camarada
+GureTaiga
+IL_PRINS
+Nicoghiro31
+
+
+ASSET CREATION
+
+Axaros
+Nicoghiro31
+
+
+MODELS AND ANIMATIONS
+
+Nicoghiro31
+
+
+GRAPHICS
+
+IL_PRINS
+Nicoghiro31
+Vjenko
+
+
+DUBBING
+
+Coom Slayer
+Manuel Esposito
+
+
+TRANSLATIONS
+
+Coom Slayer
+Nicoghiro31
+
+
+NEW MAPS AND ADVENTURES
+
+Il Mietitore
+
+
+-----
+
+
+RATTLESMAKE TEAM
+
+
+PROGRAMMING
+
+supreme19
+
+
+GRAPHICS
+
+Gabrux5
+Gurkhan
+NuclearWinter
+
+
+MUSIC AND SOUND EFFECTS
+
+Edoardo1997
+
+
+DUBBING (ITALIAN)
+
+Caelum
+MR.Wolf
+
+
+TESTING
+
+Dark Ritual
+Kisame
+
+
+LAUNCHER
+
+DaniJerez
+
+
+ADDITIONAL THANKS
+
+Camarada
+Emanuè
+Giuseppe d'Addio
+Kame
+Skipi
+Warrior444
+Czech Community for translation (Husita)
+Imperivm Legacy Online&Competitive Community
+RetroSpy Community (Arves100, Sporesirius, xiaojiuwo)
+
+
+-----
+
+
+MAIN GAME
+
+
+GAME DESIGNER
+
+Gabriel Dobrev
+
+
+LEADER PROGRAMMERS
+
+Ivan-Assen Ivanov
+Ivaylo Todorov
+Ivko Stanilov
+
+
+GRAPHICS LEADER
+
+Peter Stanimirov
+
+
+PRODUCTION
+
+Antonio Lucena Ferrero
+Gabriel Dobrev
+
+
+PROGRAMMING
+
+Alexander "Mordred" Andonov
+Dimo Zaprqnov
+Georgi Georgiev
+Ivan-Assen Ivanov
+Ivko Stanilov
+Luchezar "Lucho" Belev
+Maria Stanilova
+Michael "Miho" Peykov
+Sergei "Zemedelec" Milojkov
+
+
+ADDITIONAL PROGRAMMING
+
+Alexander "Alex III" Alexandrov
+Danko Jordanov
+Krassimir "Kastchei" Tuevski
+Nikolay Georgiev
+Panayot "Otto" Yanazov
+
+
+GRAPHICS
+
+Angel "Gele" Stoianov
+Biser "Bobby" Parashkevov
+Dimitar Nikolov
+Dimitar "Chrom" Tzvetanov
+Dimitar "Lanternman" Tzvetanov
+Evgeni Jordanov
+George "Calader" Simeonov
+George "Yo" Stanimirov
+Kosta "Jovi" Atanasov
+Krasimir Nechevski
+Nelson "Atmos" Inomvan
+Viktor "PK" Asparuhov
+Vladimir "SNU" Stanimirov
+
+
+ADDITIONAL GRAPHICS
+
+Martin "Morgy" Petkov
+Simo Sokerov
+
+
+PRODUCTION ASSISTANCE
+
+Valeri Kalaijiev
+
+
+THEME AND LEVEL DESIGN
+
+Bozhidar "Bave" Grozdanov
+Dimiter "Sedmi" Georgiev
+Ivan "Vani" Stoianov
+Konstantin "Balrog" Grozev
+Martin "Morgy" Petkov
+Svetoslav "SAA" Alexandrov
+
+
+MUSIC AND SOUND EFFECTS
+
+Alexander Todorov
+Konstantin Markov
+Tzvetomir Hristov
+
+
+VIDEO
+
+Nacho Ruiz
+Félix Ruiz
+
+
+TESTING
+
+Aleksander "James" Zamfirov
+Cesar Gil Ballesteros
+Desislava Vasileva
+Eduardo Báez
+Kalina "Kala" Mincheva
+Kiril Iliev
+Manuel Moreno
+Tsvetan "Angel" Angelov
+
+
+PUBLIC RELATIONS
+
+Good-PR
+Kiril Iliev
+Michail Kanabov
+
+
+WEB PAGE
+
+Alexander "Mordred" Andonov
+Kiril Iliev
+
+
+-----
+
+
+ITALIAN VERSION
+
+
+LOCALIZATION AND TRANSLATION
+
+Renata Forteleoni
+
+
+ADDITIONAL TESTING
+
+Jesús Martínez
+Manuel Moreno
+Matteo Caccialanza
+Stefano Griffini
+
+
+LOCALIZATION TUNING
+
+Fernando Conde
+
+
+DUBBING
+
+Jingle Bells, Milano
+
+
+VOICES
+
+Cinzia Massironi
+Ciro Imparato
+Claudio Beccari
+Gianni Quillico
+Luca Sandri
+Marco Balzarotti
+Riccardo Rovatti
+Silvano Piccardi
+Valeria Falcinelli
+
+
+DUBBING DIRECTOR
+
+Fabio Zanuttini
+
+
+JINGLE BELLS PROJECT DIRECTION
+
+Giorgio Papetti
+
+
+MANUAL
+
+Pablo Aranda
+Renata Forteleoni
+
+
+MANUAL PAGINATION
+
+Ismael Garduño
+
+
+GRAPHICS PACKAGE
+
+Dimas Fernández
+
+
+ADDITIONAL GRAPHICS
+
+Nacho Ruiz
+
+
+COVER IMAGE AND BUSTS
+
+Kóveck
+
+
+SPECIAL THANKS
+
+Jay Powell
+Pablo de la Nuez
+
+
+-----
+
+
+Copyright (c) 2000-2004 Haemimont Games, Sofia, Bulgaria
+

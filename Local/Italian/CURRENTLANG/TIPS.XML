@@ -1,0 +1,649 @@
+﻿<tips>
+	<!-- SHORTCUTS -->
+	<tip link="/contents/shortcuts">
+		<text>
+			Puoi utilizzare la combinazione di tasti 'CTRL'+'1',
+			'CTRL'+'2' ecc. per associare a un numero la selezione di
+			unità o di una struttura (non in mano al nemico).
+			Per riutilizzare la selezione rapida devi solo premere il
+			tasto '1', '2' ecc.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Per selezionare unità di due o più tipi diversi quando
+			stanziano all'interno di una struttura, tieni premuto
+			il tasto 'Shift' e clicca sulle loro icone.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Per selezionare una sola unità in un gruppo di unità situate
+			in un foro o un forte, tieni premuto il tasto 'CTRL' e clicca
+			sull'icona del gruppo che desideri.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Per vincolare le unità in una struttura a un eroe tieni
+			premuto il tasto 'Shift' mentre selezioni le icone delle
+			unità e, tenendolo premuto, clicca col tasto destro
+			sull'icona dell'eroe.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Se hai qualche dubbio durante la partita o hai bisogno di
+			informazioni su qualche elemento del gioco, puoi accedere
+			alla finestra della guida premendo il tasto F1.
+			Puoi farlo anche selezionando un'unità o una struttura e
+			cliccando col tasto destro sull'icona in alto a sinistra.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Per cambiare rapidamente la selezione da un eroe all'altro,
+			usa la rotellina del mouse.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Per mandare messaggi ad altri giocatori durante una partita
+			in rete, premi 'Invio' e scrivi il messaggio nella finestra
+			che si aprirà in seguito (assicurati di impostare le giuste
+			opzioni per non mandare messaggi a chi non vuoi).
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Se vuoi riesaminare gli obiettivi di una missione durante
+			una battaglia, premi 'F8' o il pulsante "Obiettivi".
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Se clicchi col tasto destro in qualche punto della mappa
+			mentre tieni premuto il tasto 'CTRL', le unità selezionate
+			si dirigeranno verso il punto scelto attaccando tutti
+			i nemici in cui si imbatteranno.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Se vuoi che i tuoi guerrieri attacchino solo unità di un
+			certo tipo, tieni premuto il tasto 'CTRL' e clicca col
+			tasto destro su un'unità qualsiasi di quel tipo.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Durante una partita della modalità Strategia, puoi premere
+			il tasto 'F4' per vedere il tipo di partita, la durata e la
+			lista di tutti i giocatori con i rispettivi punteggi.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Puoi premere il tasto 'ò' per attivare/disattivare le barre
+			della salute e dell'energia nello schermo.
+		</text>
+	</tip>
+	<tip link="/contents/shortcuts">
+		<text>
+			Tenendo premuto il tasto '\', puoi rendere trasparenti gli
+			alberi in modo da riuscire a seguire l'andamento di una
+			battaglia nel mezzo di una fitta foresta.
+		</text>
+	</tip>
+	<!-- MAP -->
+	<tip link="/contents/map">
+		<text>
+			Per aprire la mappa strategica premi la barra spaziatrice
+			o la rotellina del mouse.
+		</text>
+	</tip>
+	<!-- LEVEL -->
+	<tip link="/contents/stats/level">
+		<text>
+			Il livello dell'unità selezionata appare nella parte
+			superiore dello schermo, accanto all'icona con la 'L'.
+		</text>
+	</tip>
+	<tip link="/contents/stats/level">
+		<text>
+			Più alto è il livello di un guerriero, maggiore sarà il danno
+			inflitto e minore sarà quello subìto.
+		</text>
+	</tip>
+	<tip link="/contents/stats/level">
+		<text>
+			I guerrieri cambiano colore a seconda del livello raggiunto.
+			Stai attento ai nemici dorati!
+		</text>
+	</tip>
+	<!-- RUINS (LEVEL-ITEMS) -->
+	<tip link="/contents/buildings/Ruins">
+		<text>
+			Solo un eroe con un livello abbastanza alto potrà
+			raccogliere un oggetto magico dalle rovine.
+			Per conoscere il livello minimo necessario per ottenere
+			l'oggetto di una determinata rovina, selezionala e guarda
+			la parte superiore sinistra dello schermo.
+		</text>
+	</tip>
+	<!-- ITEMS -->
+	<tip link="/contents/items">
+		<text>
+			Ci sono molti luoghi contenenti oggetti magici, in cui
+			periodicamente ne appaiono di nuovi.
+			Vai a controllarli ogni tanto.
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Con un solo "Dito della morte" puoi eliminare fino a 20
+			nemici, e non è l'oggetto più potente del gioco!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Con i "Tamburi da battaglia della furia" puoi potenziare
+			enormemente la potenza d'attacco del tuo esercito: sono
+			perfetti per rovesciare le sorti di una battaglia o per
+			creare ancora più sinergia con caratteristiche come
+			"Triplo colpo", "Perforazione" e "Carica"!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Tieni sempre pronta qualche unità veloce o dotata della
+			caratteristica "Mimetismo" vicino ai tumuli, così potrai
+			assicurarti il loro controllo e dei "Funghi velenosi" con
+			cui aumentare facilmente il livello dei tuoi eroi!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Ti conviene sempre dotare i tuoi eroi di oggetti curativi
+			come le "Ceneri di druido" o le "Erbe medicinali", in questo
+			modo potrai ridurre notevolmente il rischio di perderli!
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Depositando nello stesso contenitore 3 di certi oggetti,
+			questi si fonderanno in uno solo, più potente.
+			Questo vale per la "Pelle di serpente", la "Piuma d"aquila"
+			e il "Dente di cinghiale".
+		</text>
+	</tip>
+	<tip link="/contents/items">
+		<text>
+			Se possiedi eroi che fanno grande uso di abilità attivabili,
+			dotali dell'utilissima "Arpa oscura rinvigorente".
+		</text>
+	</tip>
+	<!-- STONEHENGE -->
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			Il rituale "Castigo spirituale" realizzato nell'altare dei
+			sacrifici danneggerà costantemente tutte le unità spirituali
+			presenti sulla mappa per 1 minuto.
+			Fai attenzione perché anche quelle che effettuano il rituale
+			vengono danneggiate e potrebbero ancora servirti!
+		</text>
+	</tip>
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			Il rituale "Carestia" realizzato nell'altare dei sacrifici
+			provocherà una grande riduzione di tutti i viveri di
+			strutture e unità di rifornimento in tutta la mappa.
+			È estremamente efficace per fiaccare la Germania!
+		</text>
+	</tip>
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			Il rituale "Terremoto" realizzato nell'altare dei sacrifici
+			danneggerà pesantemente tutte le fortezze presenti sulla
+			mappa: usalo quando devi assediarne una, ma fai attenzione
+			a non danneggiare le tue nel momento sbagliato!
+		</text>
+	</tip>
+	<tip link="/contents/buildings/Stonehenge">
+		<text>
+			Il rituale "Orda teutonica" realizzato nell'altare dei
+			sacrifici riduce al minimo la popolazione e fa comparire
+			un enorme esercito di teutoni in ogni fortezza nella
+			mappa, dopo un ritardo di 3 minuti. Sfrutta questo
+			tempo di attesa per prepararti all'imminente battaglia!
+		</text>
+	</tip>
+	<!-- UNITS AND HEROES IN GENERAL -->
+	<tip link="/contents/units/Catapult">
+		<text>
+			I guerrieri possono costruire catapulte, arieti e torri
+			d'assedio per assaltare le fortezze.
+			Selezionane alcuni, dopodiché premi il pulsante
+			"Costruisci macchina d'assedio" e trova un punto
+			adatto alla costruzione.
+		</text>
+	</tip>
+	<tip link="/contents/feeding">
+		<text>
+			I guerrieri hanno bisogno di viveri per ripristinare salute
+			e perdono salute quando non si alimentano.
+			Se un'unità che dispone di viveri si trova in una struttura,
+			ripristinerà molta più salute.
+		</text>
+	</tip>
+	<tip link="/contents/stats/stamina">
+		<text>
+			Tutte le unità possiedono 10 punti di energia con cui
+			utilizzare le loro caratteristiche speciali.
+			Quando hanno finito l'energia, devono aspettare che
+			si rigeneri.
+		</text>
+	</tip>
+	<tip link="/contents/heroes">
+		<text>
+			Gli eroi possono schierare i loro guerrieri in varie formazioni,
+			ognuna delle quali fornisce diversi bonus.
+			Sta a te scegliere la più conveniente per la situazione!
+		</text>
+	</tip>
+	<tip link="/contents/heroes">
+		<text>
+			Gli eroi possiedono 5 caratteristiche speciali che possono
+			essere migliorate fino al livello 10.
+			Giulio Cesare, in quanto comandante supremo, ne ha 6!
+		</text>
+	</tip>
+	<tip link="/contents/heroes">
+		<text>
+			Gli eroi possono utilizzare la "Guarigione eroica", che li
+			aiuta a ripristinare istantaneamente 100 punti di salute
+			se possiedono sufficiente energia.
+		</text>
+	</tip>
+	<!-- HERO SKILLS AND UNIT SPECIALS -->
+	<tip link="/contents/heroskills">
+		<text>
+			Con la caratteristica "Tregua" puoi passare indisturbato
+			tra gli eserciti nemici o fuggire da una battaglia ormai
+			persa riducendo al minimo i caduti.
+			Puoi anche usarla per conquistare strutture nemiche senza
+			combattere se hai più guerrieri del nemico!
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			Con la caratteristica "Chiamata alla difesa" è possibile
+			nullificare i danni di abilità d'attacco come "Triplo colpo"
+			o "Attacco speciale", ma non quelli di "Perforazione".
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			La caratteristica "Prestigio" aumenta il limite massimo di
+			unità vincolabili all'eroe, fino ad arrivare a 80!
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			Le caratteristiche "Prodezza" e "Maestria" sono perfette per
+			compensare una differenza negativa di livello così come per
+			massimizzare i bonus ai danni e alla difesa forniti da
+			"Attacco esperto" e "Tattiche difensive".
+		</text>
+	</tip>
+	<tip link="/contents/heroskills">
+		<text>
+			La caratteristica "Marcia forzata" è probabilmente la più
+			versatile del gioco: muovendoti più velocemente, infatti,
+			potrai evitare scontri indesiderati, aggirare eserciti,
+			inseguire il nemico o aiutare alleati in difficoltà.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità che possiedono la caratteristica "Colpo mortale",
+			come i guerrieri di Anubis, possono eliminare un nemico con
+			un colpo se questo possiede meno del 50% della salute
+			dopo aver subìto danni (non ha effetto sugli eroi).
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità che possiedono la caratteristica "Carica", come i
+			cavalieri gallici, colpiscono con un valore di attacco 8 volte
+			maggiore del normale se non hanno combattuto per almeno
+			10 secondi.
+			L'aumento ai danni si applica dopo il calcolo con la riduzione
+			da parte della difesa.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità dotate della caratteristica "Esaurimento vitale",
+			come i guerrieri con ascia germanici, possono togliere
+			tutta l'energia al nemico in un colpo solo (non ha
+			effetto sugli eroi).
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità dotate della caratteristica "Immunità", come gli
+			opliti, possono bloccare gli attacchi nemici, a patto che
+			abbiano abbastanza energia.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità dotate della caratteristica "Vista di lince", come
+			i tuareg, rivelano le unità che si sono nascoste tramite
+			"Mimetismo" e "Occultamento".
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità dotate della caratteristica "Resistenza", come gli
+			highlander, aumentano la loro salute massima di 5 punti per
+			ogni livello che raggiungono, diventando quindi non solo
+			più forti, ma anche più difficili da abbattere.
+		</text>
+	</tip>
+	<tip link="/contents/specials">
+		<text>
+			Le unità dotate della caratteristica "Ostinazione", come le
+			guardie d'élite, infliggono a ogni colpo un danno aggiuntivo
+			pari al 10% della salute massima del nemico (non ha
+			effetto sugli eroi).
+			Di conseguenza, sono letali contro le unità speciali o
+			quando il loro livello è inferiore a quello nemico.
+		</text>
+	</tip>
+	<!-- SPECIAL UNITS -->
+	<tip link="/contents/units/RChariot">
+		<text>
+			I carri da guerra romani possiedono "Triplo colpo" e sono
+			perciò ideali per neutralizzare unità con poca difesa.
+			Inoltre, possono diventare incredibilmente potenti se
+			ottengono le insegne ricercabili nel colosseo.
+		</text>
+	</tip>
+	<tip link="/contents/units/RLiberatus">
+		<text>
+			I liberati possiedono la caratteristica "Ostinazione" e sono
+			quindi perfetti per eliminare le unità speciali di qualunque
+			nemico. Con il potenziamento "Corporazione dei liberati" è
+			inoltre possibile reclutarne di sempre più forti.
+		</text>
+	</tip>
+	<tip link="/contents/units/GTridentWarrior">
+		<text>
+			I guerrieri di Fand ripristinano completamente la salute
+			a ogni uccisione (se hanno energia sufficiente).
+			Per questo motivo, a volte uno solo può eliminare un
+			intero esercito.
+		</text>
+	</tip>
+	<tip link="/contents/units/IMountaineer">
+		<text>
+			I guerriglieri combinano le caratteristiche "Mimetismo" e
+			"Attacco esperto" con i potenziamenti legati all'esperienza
+			ricercabili nel colosseo per organizzare letali imboscate ed
+			eliminare bersagli isolati prima che possano reagire.
+		</text>
+	</tip>
+	<tip link="/contents/units/CWarElephant">
+		<text>
+			Gli elefanti da guerra sono lenti ma dispongono della
+			caratteristica "Danno espansivo" e sono quindi in grado
+			di seminare il caos in battaglie con alta concentrazione
+			di truppe. Fai però attenzione al "Danno riflesso"!
+			Inoltre, con la "Scuola di mahout", è possibile addestrarne
+			altri, senza un limite massimo.
+		</text>
+	</tip>
+	<tip link="/contents/units/BVikingLord">
+		<text>
+			I capi normanni ripristinano salute ogni volta che
+			danneggiano un nemico (se hanno energia sufficiente).
+			Per questo motivo, a volte uno solo può eliminare un intero
+			esercito.
+		</text>
+	</tip>
+	<tip link="/contents/units/EChariot">
+		<text>
+			I carri di Osiris sono l'arma definitiva per attuare la
+			tattica "mordi e fuggi" in quanto dotati dell'insidiosa
+			caratteristica "Attacco velenoso", con cui indebolire in
+			modo pesante il nemico nel corso del tempo.
+			Il veleno viene debellato quando la salute torna al
+			massimo, perciò assicurati che il nemico non abbia modo
+			di curarsi!
+		</text>
+	</tip>
+	<tip link="/contents/units/TValkyrie">
+		<text>
+			Le valchirie possiedono "Resistenza" e "Attacco letale", una
+			combinazione micidiale contro unità con poca salute come
+			gli arcieri. Con il potenziamento "Leggenda delle valchirie"
+			quelle nuove saranno più forti delle precedenti.
+			Possono anche essere vincolate agli eroi non essendo
+			limitate dalla caratteristica "Libertà" tipica delle unità
+			speciali.
+		</text>
+	</tip>
+	<tip link="/contents/units/HMyrmidon">
+		<text>
+			I mirmidoni sono specializzati nell'eliminazione di unità con
+			poca salute, perciò spiccano negli scontri a distanza, ma se
+			raggiungono un certo numero diventano quasi imbattibili
+			nella maggior parte delle situazioni.
+			Possono anche essere vincolati agli eroi non essendo
+			limitati dalla caratteristica "Libertà" tipica delle unità
+			speciali.
+		</text>
+	</tip>
+	<!-- RACES -->
+	<tip link="/contents/races/rome">
+		<text>
+			Quando giochi come Roma repubblicana, punta a ricercare
+			tutti i potenziamenti del colosseo: così facendo, renderai
+			migliori le tue unità ma, soprattutto, potrai convocare
+			Giulio Cesare in persona dopo 40 minuti di gioco!
+		</text>
+	</tip>
+	<tip link="/contents/races/rome">
+		<text>
+			Quando giochi come Roma imperiale, la tua priorità deve
+			essere lo sblocco di "Accademia militare" e dei pretoriani.
+			Cerca inoltre di tenere pronti molti viveri dato che non
+			potrai comprarli dalla taverna.
+		</text>
+	</tip>
+	<tip link="/contents/races/rome">
+		<text>
+			Quando giochi come Roma punica, le tue unità saranno
+			dotate della caratteristica "Resistenza", perciò fai in modo
+			di ricercare tutti i livelli di addestramento nel colosseo per
+			aumentare l'esperienza e quindi la salute dei tuoi soldati.
+		</text>
+	</tip>
+	<tip link="/contents/races/gaul">
+		<text>
+			Quando giochi come Gallia, punta a combattere spesso dato
+			che con i potenziamenti "Tattiche di combattimento" e
+			"Poemi epici" del colosseo otterrai enormi quantità di
+			esperienza rispetto al nemico. Ricordati che, dopo 45
+			minuti di gioco, potrai anche contare sull'aiuto dei
+			leggendari Keltill e Larax!
+		</text>
+	</tip>
+	<tip link="/contents/races/iberia">
+		<text>
+			Quando giochi come Iberia, ti conviene tenere uno stile di
+			gioco difensivo, dato che con i potenziamenti del colosseo
+			e con le sacerdotesse potrai ottenere livelli senza bisogno
+			di combattere.
+			Nel frattempo, sfianca i tuoi avversari con i guerriglieri!
+		</text>
+	</tip>
+	<tip link="/contents/races/carthage">
+		<text>
+			Quando giochi come Cartagine, ti sarà facile ottenere oro
+			con cui reclutare molte truppe e soverchiare i tuoi nemici: fai
+			in modo di ricercare il "Bottino di guerra" nel colosseo e il
+			"Patto dei mercenari" nel mercato il più in fretta possibile e
+			tieni popolata la tua fortezza con diversi villaggi, così da
+			poter vendere gli abitanti in cambio di altro oro.
+		</text>
+	</tip>
+	<tip link="/contents/races/britain">
+		<text>
+			Quando giochi come Britannia, avrai a disposizione vari modi
+			con cui combattere in modo non convenzionale, tra cui la
+			capacità dei tuoi druidi di rendere invisibili interi eserciti
+			con "Occultamento" e la probabilità di scatenare vari effetti
+			come l'eliminazione istantanea di nemici di livello inferiore.
+		</text>
+	</tip>
+	<tip link="/contents/races/egypt">
+		<text>
+			Quando giochi come Egitto, cerca di sfruttare al meglio la
+			velocità delle tue unità per accaparrarti le risorse presenti
+			nella mappa prima del nemico: ti assicurerai un vantaggio
+			che non potrà colmare. Ricordati anche che le unità egizie
+			hanno le caratteristiche più sinergizzanti del gioco, in
+			particolar modo "Ostinazione" e "Colpo mortale" dei
+			guerrieri divini.
+		</text>
+	</tip>
+	<tip link="/contents/races/germany">
+		<text>
+			Quando giochi come Germania, punta subito a ricercare i
+			potenziamenti "Ardimento" e "Istruzione", così potrai
+			affrontare da pari a pari nemici di livello maggiore.
+			Il tuo stile di gioco dovrà essere incentrato
+			esclusivamente sull'aggressività e sull'attacco!
+		</text>
+	</tip>
+	<tip link="/contents/races/greece">
+		<text>
+			Quando giochi come Grecia, avrai a disposizione un'enorme
+			quantità di potenziamenti non solo per le tue unità ma
+			anche per la tua fortezza. Di conseguenza, potrai osare di
+			più nei tuoi attacchi lasciando anche sguarnita la tua
+			fortezza, dato che potrai reclutare sentinelle, migliorare
+			le porte e perfino renderle indistruttibili per 2 minuti!
+		</text>
+	</tip>
+	<!-- CAPTURING -->
+	<tip link="/contents/capturing">
+		<text>
+			Per conquistare una struttura nemica priva di guarnigioni,
+			devi selezionare un gruppo di guerrieri e cliccare
+			sulla struttura col tasto destro.
+		</text>
+	</tip>
+	<tip link="/contents/capturing">
+		<text>
+			Se trovi un'unità di rifornimento nemica senza protezione,
+			la puoi conquistare selezionando dei guerrieri e cliccandoci
+			sopra col tasto destro.
+		</text>
+	</tip>
+	<!-- BUILDINGS -->
+	<tip link="/contents/buildings">
+		<text>
+			Se una struttura della tua fortezza viene danneggiata
+			troppo, dovrai pagare per ripararla affinché funzioni
+			di nuovo.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/GoldOutpost">
+		<text>
+			Porta 2000 oro a un forte dell'oro e nota come la quantità
+			aumenta progressivamente.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/TradeOutpost">
+		<text>
+			Il forte commerciale permette di vendere i viveri
+			immagazzinati in cambio d'oro e viceversa.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/TrainingOutpost">
+		<text>
+			Un guerriero stanziato in un forte di addestramento
+			guadagnerà esperienza nel tempo, fino a raggiungere
+			il livello 8.
+			Di conseguenza, tramite il potenziamento "Nobiltà",
+			è possibile fargli raggiungere il livello 12.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/RecruitmentOutpost">
+		<text>
+			I contadini che rimangono in un forte di reclutamento con
+			l'architettura cartaginese si trasformeranno in guerrieri
+			con mazza cartaginesi.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/RecruitmentOutpost">
+		<text>
+			I contadini che rimangono in un forte di reclutamento con
+			l'architettura greca si trasformeranno in opliti.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/TTent">
+		<text>
+			Puoi conquistare un accampamento teutonico eliminando la
+			guarnigione di cavalieri e arcieri che lo protegge.
+			Quando l'accampamento sarà tuo, otterrai 10 teutoni.
+			Inoltre, per ogni 400 viveri lì depositati, apparirà
+			un nuovo teutone del tipo che desideri.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/CTent">
+		<text>
+			Puoi conquistare un accampamento numida eliminando la
+			guarnigione di fanti e cavalieri che lo protegge.
+			Quando l'accampamento sarà tuo, otterrai 10 numidi.
+			Inoltre, per ogni 200 o 400 viveri lì depositati,
+			apparirà un nuovo numida del tipo che desideri.
+		</text>
+	</tip>
+	<tip link="/contents/buildings/RTavern">
+		<text>
+			Una volta a partita, ricordati di chiedere i "Tributi":
+			riceverai una grande quantità d'oro da ognuno dei tuoi
+			forti.
+			Per questo è vitale avere il controllo della mappa!
+		</text>
+	</tip>
+	<!-- GAME MODES -->
+	<tip link="contents/resources">
+		<text>
+			In una partita della modalità "Strategia" è meglio tenere
+			la popolazione della fortezza al massimo per ottenere una
+			maggiore quantità d'oro (e di viveri, nel caso di una
+			fortezza della Germania).
+		</text>
+	</tip>
+	<tip link="contents/fogofwar">
+		<text>
+			In una partita della modalità "Strategia" dovrai esplorare
+			il terreno il più velocemente possibile: ti assicurerai un
+			vantaggio sia in termini logistici che di risorse.
+		</text>
+	</tip>
+	<tip link="contents/races">
+		<text>
+			In una partita della modalità "Conquista" dovrai fare dei
+			ragionamenti e valutare in che ordine assoggettare i vari
+			territori in base all'efficacia dei diversi bonus rispetto
+			al popolo che hai scelto e al nemico che vuoi conquistare.
+		</text>
+	</tip>
+</tips>

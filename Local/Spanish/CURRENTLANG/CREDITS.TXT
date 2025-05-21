@@ -1,0 +1,366 @@
+﻿
+
+HAEMIMONT GAMES
+
+Imperivm: Las Grandes Batallas de Roma
+
+
+-----
+
+CAESAR MOD
+
+Este mod fue hecho en honor a Julio César y como
+muestra de agradecimiento hacia los modders del
+Greek Mod original para apoyar su trabajo, con la
+esperanza de que el juego vuelva a ser popular en
+todo el mundo y a recibir el trato que se merece
+siendo el mejor juego de estrategia de todos los
+tiempos: ¡Ave César!
+
+Sois libre de usar mi mod como punto de partida
+para vuestros proyectos, sólo os pido la cortesía
+de no borrar mi nombre y de mencionarlo en los
+créditos/agradecimientos (para más información,
+consultar el archivo LICENSE).
+
+
+PROGRAMACIÓN
+EQUILIBRIO
+NUEVAS MECÁNICAS
+INTELIGENCIA ARTIFICIAL
+ACTUALIZACIÓN GRANDES BATALLAS Y CONQUISTAS
+MEJORA TEXTOS Y GUÍA DE AYUDA
+DOBLAJE
+
+Paolo Lamberto
+
+
+TESTING
+
+Paolo Lamberto
+Matteo Lamberto
+
+
+Copyright (c) 2025 Paolo Lamberto
+
+
+-----
+
+
+GREEK MOD
+
+
+CREADORES ORIGINALES
+
+Axaros
+Consul123
+Nicoghiro31
+
+
+PROGRAMACIÓN
+
+Axaros
+Camarada
+GureTaiga
+IL_PRINS
+Nicoghiro31
+
+
+CREACIÓN ASSETS
+
+Axaros
+Nicoghiro31
+
+
+MODELOS Y ANIMACIONES
+
+Nicoghiro31
+
+
+ARTE
+
+IL_PRINS
+Nicoghiro31
+Vjenko
+
+
+DOBLAJE
+
+Coom Slayer
+Manuel Esposito
+
+
+TRADUCCIÓN
+
+Coom Slayer
+Nicoghiro31
+
+
+NUEVOS MAPAS Y AVENTURAS
+
+Il Mietitore
+
+
+-----
+
+
+RATTLESMAKE TEAM
+
+
+PROGRAMACIÓN
+
+supreme19
+
+
+ARTE
+
+Gabrux5
+Gurkhan
+NuclearWinter
+
+
+MÚSICA Y EFECTOS DE SONIDO
+
+Edoardo1997
+
+
+DOBLAJE (ITALIANO)
+
+Caelum
+MR.Wolf
+
+
+TESTER
+
+Dark Ritual
+Kisame
+
+
+LAUNCHER
+
+DaniJerez
+
+
+OTRAS GRACIAS
+
+Camarada
+Emanuè
+Giuseppe d'Addio
+Kame
+Skipi
+Warrior444
+Czech Community for translation (Husita)
+Imperivm Legacy Online&Competitive Community
+RetroSpy Community (Arves100, Sporesirius, xiaojiuwo)
+
+
+-----
+
+
+JUEGO PRINCIPAL
+
+
+DISEÑADOR DEL JUEGO
+
+Gabriel Dobrev
+
+
+LÍDER PROGRAMADORES
+
+Ivan-Assen Ivanov
+Ivaylo Todorov
+Ivko Stanilov
+
+
+LÍDER ARTE
+
+Peter Stanimirov
+
+
+PRODUCCIÓN
+
+Antonio Lucena Ferrero
+Gabriel Dobrev
+
+
+PROGRAMACIÓN
+
+Alexander "Mordred" Andonov
+Dimo Zaprqnov
+Georgi Georgiev
+Ivan-Assen Ivanov
+Ivko Stanilov
+Luchezar "Lucho" Belev
+Maria Stanilova
+Michael "Miho" Peykov
+Sergei "Zemedelec" Milojkov
+
+
+PROGRAMACIÓN ADICIONAL
+
+Alexander "Alex III" Alexandrov
+Danko Jordanov
+Krassimir "Kastchei" Tuevski
+Nikolay Georgiev
+Panayot "Otto" Yanazov
+
+
+ARTE
+
+Angel "Gele" Stoianov
+Biser "Bobby" Parashkevov
+Dimitar Nikolov
+Dimitar "Chrom" Tzvetanov
+Dimitar "Lanternman" Tzvetanov
+Evgeni Jordanov
+George "Calader" Simeonov
+George "Yo" Stanimirov
+Kosta "Jovi" Atanasov
+Krasimir Nechevski
+Nelson "Atmos" Inomvan
+Viktor "PK" Asparuhov
+Vladimir "SNU" Stanimirov
+
+
+ARTE ADICIONAL
+
+Martin "Morgy" Petkov
+Simo Sokerov
+
+
+ASISTENCIA PRODUCCIÓN
+
+Valeri Kalaijiev
+
+
+
+ARGUMENTO Y DISEÑO DE NIVELES
+
+Bozhidar "Bave" Grozdanov
+Dimiter "Sedmi" Georgiev
+Ivan "Vani" Stoianov
+Konstantin "Balrog" Grozev
+Martin "Morgy" Petkov
+Svetoslav "SAA" Alexandrov
+
+
+MÚSICA Y EFECTOS DE SONIDO
+
+Alexander Todorov
+Konstantin Markov
+Tzvetomir Hristov
+
+
+VIDEOS
+
+Nacho Ruiz
+Félix Ruiz
+
+
+TESTEO
+
+Aleksander "James" Zamfirov
+Cesar Gil Ballesteros
+Desislava Vasileva
+Eduardo Báez
+Kalina "Kala" Mincheva
+Kiril Iliev
+Manuel Moreno
+Tsvetan "Angel" Angelov
+
+
+RELACIONES PÚBLICAS
+
+Good-PR
+Kiril Iliev
+Michail Kanabov
+
+
+PÁGINA WEB
+
+Alexander "Mordred" Andonov
+Kiril Iliev
+
+
+-----
+
+
+VERSIÓN ESPAÑOLA
+
+
+LOCALIZACIÓN Y TRADUCCIÓN
+
+Fernando Conde
+
+
+TESTEO ADICIONAL
+
+Fernando Fernández González
+Jesús Martínez
+Manuel Moreno
+Matteo Caccialanza
+Stefano Griffini
+
+
+DOBLAJE
+
+Estudios EXA, Madrid
+
+
+VOCES
+
+Antonio Galvez
+Carlos Ysbert
+Conchi Lopez
+Eduardo del Hoyo
+Iñaki Crespo
+Javier Martínez
+José Ángel Juanes
+Manuel Bellido
+Pablo Adan
+Pedro Tena
+Rosa Sánchez
+
+
+DIRECTORA DE DOBLAJE
+
+Rosa Sánchez
+
+
+MANUAL
+
+Pablo Aranda
+Renata Forteleoni
+
+
+MAQUETACIÓN DEL MANUAL
+
+Ismael Garduño
+
+
+ARTE PACKAGE
+
+Dimas Fernández
+
+
+ARTE ADICIONAL
+
+Nacho Ruiz
+
+
+IMAGEN DE LA PORTADA Y BUSTOS
+
+Kóveck
+
+
+GRACIAS ESPECIALES
+
+Jay Powell
+Pablo de la Nuez
+
+
+-----
+
+
+Copyright (c) 2000-2004 Haemimont Games, Sofia, Bulgaria
+
