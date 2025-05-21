@@ -1,0 +1,13 @@
+import os
+
+lista_file = os.listdir()
+nome = input ('Inseisci nome file ')
+numero = int (input ('Inserisci numero '))
+
+for file in lista_file:
+    if file != 'renamer.py' or 'voce':
+
+        nome_piu_numero = nome + str (numero)
+
+        os.rename(file, nome_piu_numero + '.wav')
+        numero += 1
