@@ -1,0 +1,17 @@
+	<map
+		name="Iberia"
+		displayname=""
+		descr=""
+		persist_state="1">
+		<size
+			x="32768"
+			y="32768"/>
+		<user_art
+			explored="CurrentMap/zoommap.bmp"/>
+		<expl
+			NoFog="0"
+			NoExplore="0"/>
+		<start_pt
+			x="24987"
+			y="7504"/>
+	</map>

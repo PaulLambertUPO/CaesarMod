@@ -1,0 +1,15 @@
+	<game>
+		<properties
+			game_type="2"
+			name="Forge your empire"
+			author="Haemimont Games"
+			description="Choose your favourite nation and forge your empire."
+			last_edited_map="9"
+			start_map="3"
+			victory_condition="0"
+			victory_threshold="0"
+			single_only="0"
+			start_player="0"
+			season="spring"
+			user_interface="1"/>
+	</game>
