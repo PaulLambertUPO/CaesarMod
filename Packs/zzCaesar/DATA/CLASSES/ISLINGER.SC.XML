@@ -1,0 +1,17 @@
+<class id="ISlinger" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/ISlinger/ISlinger.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="200" />
+	<properties damage="36" armor_slash="0" armor_pierce="0" />
+	<properties speed="80" />
+	<properties unit_specials="Attack skill, Defensive tactics, Toughness" />
+
+	<properties projectile_class="Slingstone" building_projectile_class="Slingstone" />
+
+	<properties icon="gameres/icons/ISlinger.bmp" />
+	<properties display_name="Slinger" display_name_plural="Slingers" />
+	<properties help="contents/units/ISlinger" />
+	<properties edittree_pos="Units/Iberia/Slinger" />
+
+	<sounds command="VoiceISlinger" attack="UnitSlingstoneFight" />
+</class>

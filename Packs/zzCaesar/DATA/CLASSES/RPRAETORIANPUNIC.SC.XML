@@ -1,0 +1,5 @@
+<class id="RPraetorianPunic" cpp_class="CVXUnit" parent="RPraetorian" entity="Units/RPraetorian/RPraetorian.ent.xml">
+	<properties unit_specials="Combat skill, Spike armor, Toughness" />
+	<properties icon="gameres/icons/zpwRPraetorian.bmp" />
+	<properties edittree_pos="Units/Roman/Praetorian (Punic)" />
+</class>

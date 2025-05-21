@@ -1,0 +1,5 @@
+<entity description="ItemUse_SoftEnchantment" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/ItemUse/SoftEnchantment.wav" frequency="100" />
+	</files>
+</entity>

@@ -1,0 +1,9 @@
+<entity description="VoiceHPriest" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/HPriest/Asclepius grant me knowledge.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPriest/I_ll help the wounded.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPriest/I shall invoke the power of the gods.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPriest/May Hades welcome you to the underworld.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPriest/Our opponents will fall into oblivion.wav" frequency="20" />
+	</files>
+</entity>

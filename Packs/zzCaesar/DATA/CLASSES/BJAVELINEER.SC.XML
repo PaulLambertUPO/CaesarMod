@@ -1,0 +1,17 @@
+<class id="BJavelineer" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/BJavelineer/BJavelineer.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="200" />
+	<properties damage="24" armor_slash="4" armor_pierce="4" />
+	<properties speed="80" />
+	<properties unit_specials="Active, Death blow, Drain" />
+
+	<properties projectile_class="Javelin" building_projectile_class="Javelin" />
+
+	<properties display_name="Javelineer" display_name_plural="Javelineers" />
+	<properties icon="gameres/icons/BJavelineer.bmp" />
+	<properties help="contents/units/BJavelineer" />
+	<properties edittree_pos="Units/Britain/Javelineer" />
+
+	<sounds command="VoiceBJavelineer" attack="JavelinAttack" />
+</class>

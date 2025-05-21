@@ -1,0 +1,9 @@
+<entity description="VoiceESwordsman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/ESwordsman/My sword delivers justice.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ESwordsman/Never falter never give up.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ESwordsman/The desert will be their grave.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ESwordsman/They will know fear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ESwordsman/Victory is close.wav" frequency="20" />
+	</files>
+</entity>

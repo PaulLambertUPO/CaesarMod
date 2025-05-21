@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="repair druid house" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="DruidHouse" />
+	</cmd>
+	<cmd name="trainGDruid" priority="2"
+		button="actions/train GDruid.bmp"
+		queueicon="gameres/icons/GDruid.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="d"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Druid"
+		method="train"
+		param="GDruid"
+		sclass="GDruid">
+		<src obj="DruidHouse" />
+	</cmd>
+	<cmd name="Ritual Chamber" priority="3"
+		button="research/ritual chamber.bmp"
+		queueicon="gameres/icons/upgrades/ritual chamber.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="40000"
+		rollover="Ritual Chamber"
+		description="Allows druids to gain experience by learning from more experienced allies"
+		method="research"
+		param="NamePlr, Ritual Chamber, default">
+		<src obj="DruidHouse" />
+	</cmd>
+	<cmd name="Ghoul Summoning" priority="4"
+		queueicon="gameres/icons/upgrades/Ghost.bmp"
+		button="research/Ghost.bmp"
+		key="g"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="20000"
+		rollover="Ghoul summoning"
+		description="Allows druids to sacrifice themselves to summon a Ghoul that drains the health of all nearby enemies for about 10 seconds"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Ghoul Summoning, default">
+		<src obj="DruidHouse" />
+	</cmd>
+	<cmd name="Eagle Summoning" priority="5"
+		queueicon="gameres/icons/upgrades/summon eagle.bmp"
+		button="actions/summon eagle.bmp"
+		key="e"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="20000"
+		rollover="Eagle summoning"
+		description="Allows druids to sacrifice themselves to summon an eagle that remains under your control for about 2 minutes"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Eagle Summoning, default">
+		<src obj="DruidHouse" />
+	</cmd>
+	<cmd name="Restoration" priority="6"
+		queueicon="gameres/icons/upgrades/restoration.bmp"
+		button="research/restoration.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="20000"
+		rollover="Restoration"
+		description="Allows druids to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a druid dies"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Restoration, default">
+		<src obj="DruidHouse" />
+	</cmd>
+	<cmd name="Reincarnation Ritual" priority="7"
+		queueicon="gameres/icons/upgrades/Druid relations.bmp"
+		button="research/Druid relations.bmp"
+		key="a"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="20000"
+		rollover="Reincarnation ritual"
+		description="Every time that a druid dies, either a bear or a boar of the same level is spawned and remains under your control for about 30 seconds"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Reincarnation Ritual, default">
+		<src obj="DruidHouse" />
+	</cmd>
+</commands>

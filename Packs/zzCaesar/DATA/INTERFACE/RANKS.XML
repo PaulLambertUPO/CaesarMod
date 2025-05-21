@@ -1,0 +1,50 @@
+<ranks>
+	<rank race="RepublicanRome" min_wins="1" max_wins="5" name="Citizen" icon="Citizen" />
+	<rank race="RepublicanRome" min_wins="6" max_wins="10" name="Hastatus" icon="Hastatus" />
+	<rank race="RepublicanRome" min_wins="11" max_wins="25" name="City Magistrate" icon="City Magistrate" />
+	<rank race="RepublicanRome" min_wins="26" max_wins="50" name="Captain of the Praetorian Guards" icon="Captain of the Praetorian Guards" />
+	<rank race="RepublicanRome" min_wins="51" max_wins="100" name="Senator" icon="Senator" />
+	<rank race="RepublicanRome" min_wins="101" max_wins="999999" name="Emperor" icon="Emperor" />
+	<rank race="Gaul" min_wins="1" max_wins="5" name="Swordsman" icon="Swordsman" />
+	<rank race="Gaul" min_wins="6" max_wins="10" name="Berserker" icon="Berserker" />
+	<rank race="Gaul" min_wins="11" max_wins="25" name="Gaul Swordmaster" icon="Gaul Swordmaster" />
+	<rank race="Gaul" min_wins="26" max_wins="50" name="Tribal Elder" icon="Tribal Elder" />
+	<rank race="Gaul" min_wins="51" max_wins="100" name="Gaul Chieftain" icon="Gaul Chieftain" />
+	<rank race="Gaul" min_wins="101" max_wins="999999" name="Uniter of Gaul" icon="Uniter of Gaul" />
+	<rank race="Iberia" min_wins="1" max_wins="5" name="Militiaman" icon="Militiaman" />
+	<rank race="Iberia" min_wins="6" max_wins="10" name="Iberian Defender" icon="Iberian Defender" />
+	<rank race="Iberia" min_wins="11" max_wins="25" name="Ancient Mountaineer" icon="Ancient Mountaineer" />
+	<rank race="Iberia" min_wins="26" max_wins="50" name="Elite Guard of Iberia" icon="Elite Guard of Iberia" />
+	<rank race="Iberia" min_wins="51" max_wins="100" name="Iberian Chieftain" icon="Iberian Chieftain" />
+	<rank race="Iberia" min_wins="101" max_wins="999999" name="Hero of Iberia" icon="Hero of Iberia" />
+	<rank race="Carthage" min_wins="1" max_wins="5" name="Recruit" icon="Recruit" />
+	<rank race="Carthage" min_wins="6" max_wins="10" name="Mercenary Leader" icon="Mercenary Leader" />
+	<rank race="Carthage" min_wins="11" max_wins="25" name="Noble of Carthage" icon="Noble of Carthage" />
+	<rank race="Carthage" min_wins="26" max_wins="50" name="General of the Sacred Legion" icon="General of the Sacred Legion" />
+	<rank race="Carthage" min_wins="51" max_wins="100" name="Elder of the Carthaginian Council" icon="Elder of the Carthaginian Council" />
+	<rank race="Carthage" min_wins="101" max_wins="999999" name="Supreme Shaman of Carthage" icon="Supreme Shaman of Carthage" />
+	<rank race="Britain" min_wins="1" max_wins="5" name="Warrior" icon="Warrior" />
+	<rank race="Britain" min_wins="6" max_wins="10" name="Highlander" icon="Highlander" />
+	<rank race="Britain" min_wins="11" max_wins="25" name="Lord of the Vikings" icon="Lord of the Vikings" />
+	<rank race="Britain" min_wins="26" max_wins="50" name="Warlord" icon="Warlord" />
+	<rank race="Britain" min_wins="51" max_wins="100" name="British Chieftain" icon="British Chieftain" />
+	<rank race="Britain" min_wins="101" max_wins="999999" name="King of all Britain" icon="King of all Britain" />
+	<rank race="Egypt" min_wins="1" max_wins="5" name="Follower" icon="Follower" />
+	<rank race="Egypt" min_wins="6" max_wins="10" name="Anubis Warrior" icon="Anubis Warrior" />
+	<rank race="Egypt" min_wins="11" max_wins="25" name="Sacred Guardian" icon="Sacred Guardian" />
+	<rank race="Egypt" min_wins="26" max_wins="50" name="Temple Priest" icon="Temple Priest" />
+	<rank race="Egypt" min_wins="51" max_wins="100" name="Supreme Priest of Amon Ra" icon="Supreme Priest of Amon Ra" />
+	<rank race="Egypt" min_wins="101" max_wins="999999" name="Pharaoh" icon="Pharaoh" />
+	<rank race="Germany" min_wins="1" max_wins="5" name="Fighter" icon="Fighter" />
+	<rank race="Germany" min_wins="6" max_wins="10" name="Teuton Rider" icon="Teuton Rider" />
+	<rank race="Germany" min_wins="11" max_wins="25" name="Master Hunter" icon="Master Hunter" />
+	<rank race="Germany" min_wins="26" max_wins="50" name="Teuton Chieftain" icon="Teuton Chieftain" />
+	<rank race="Germany" min_wins="51" max_wins="100" name="Master of the Valkyries" icon="Master of the Valkyries" />
+	<rank race="Germany" min_wins="101" max_wins="999999" name="Leader of the Teuton Tribes" icon="Leader of the Teuton Tribes" />
+	<rank race="ImperialRome" min_wins="1" max_wins="5" name="Hoplite" icon="Hoplite" />
+	<rank race="ImperialRome" min_wins="6" max_wins="10" name="Spartiate" icon="Spartiate" />
+	<rank race="ImperialRome" min_wins="11" max_wins="25" name="Myrmidon" icon="Myrmidon" />
+	<rank race="ImperialRome" min_wins="26" max_wins="50" name="Philosopher" icon="Philosopher" />
+	<rank race="ImperialRome" min_wins="51" max_wins="100" name="Epic Hero" icon="Epic Hero" />
+	<rank race="ImperialRome" min_wins="101" max_wins="999999" name="King of all Greece" icon="King of all Greece" />
+</ranks>

@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="trainESwordsman" priority="3"
+		button="actions/train ESwordsman.bmp"
+		queueicon="gameres/icons/ESwordsman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="s"
+		costgold="70"
+		costpop="1"
+		execdelay="8000"
+		rollover="Equip Swordsman"
+		method="train"
+		param="ESwordsman"
+		sclass="ESwordsman">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEArcher" priority="4"
+		button="actions/train EArcher.bmp"
+		queueicon="gameres/icons/EArcher.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costgold="60"
+		costpop="1"
+		execdelay="10000"
+		rollover="Equip Archer"
+		method="train"
+		param="EArcher"
+		sclass="EArcher">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEAxeTrower" priority="5"
+		button="actions/train EAxeTrower.bmp"
+		queueicon="gameres/icons/EAxeTrower.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="x"
+		costgold="160"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Axe thrower"
+		method="train"
+		param="EAxetrower"
+		sclass="EAxetrower">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEAnubisWarrior" priority="6"
+		button="actions/train EAnubisWarrior.bmp"
+		queueicon="gameres/icons/EAnubisWarrior.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="n"
+		costgold="280"
+		costpop="1"
+		execdelay="20000"
+		rollover="Equip Anubis Warrior"
+		method="train"
+		param="EAnubisWarrior, Cult of Anubis"
+		sclass="EAnubisWarrior">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEHorusWarrior" priority="7"
+		button="actions/train EHorusWarrior.bmp"
+		queueicon="gameres/icons/EHorusWarrior.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="h"
+		costgold="280"
+		costpop="1"
+		execdelay="20000"
+		rollover="Equip Horus Warrior"
+		method="train"
+		param="EHorusWarrior, Cult of Horus"
+		sclass="EHorusWarrior">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEGuardian" priority="8"
+		button="actions/train EGuardian.bmp"
+		queueicon="gameres/icons/EGuardian.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="g"
+		costgold="240"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Guardian"
+		method="train"
+		param="EGuardian"
+		sclass="EGuardian">
+		<src obj="EBarracks" />
+	</cmd>
+</commands>

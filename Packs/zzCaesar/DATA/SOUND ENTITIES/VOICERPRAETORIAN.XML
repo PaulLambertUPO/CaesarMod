@@ -1,0 +1,9 @@
+<entity description="VoiceRPraetorian" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RPraetorian/Death before retreat.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPraetorian/Fight to the death.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPraetorian/Fortune and glory.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPraetorian/Forward praetorians.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPraetorian/Here is the guard.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,87 @@
+<commands>
+	<cmd name="repair barracks" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		rollover="Repair"
+		costgold="500"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		execdelay="60000">
+		<src obj="GBarracks" />
+		<src obj="RBarracks" />
+		<src obj="CBarracks" />
+		<src obj="IBarracks" />
+		<src obj="MBarracks" />
+		<src obj="BBarracks" />
+		<src obj="TBarracks" />
+		<src obj="EBarracks" />
+		<src obj="HBarracks" />
+	</cmd>
+	<cmd name="Barrack Level 1" priority="2"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		queueicon="gameres/icons/upgrades/Barrack1.bmp"
+		button="upgrades/barrack1.bmp"
+		key="f"
+		rollover="Fast warrior equipment"
+		description="Equips warriors and sages twice as fast"
+		costgold="500"
+		execdelay="20000"
+		method="research"
+		param="NameSet, Barrack Level 1, , SetsSet, BarrackTrainTimeDecrease, 500">
+		<src obj="GBarracks" />
+		<src obj="RBarracks" />
+		<src obj="CBarracks" />
+		<src obj="IBarracks" />
+		<src obj="MBarracks" />
+		<src obj="BBarracks" />
+		<src obj="TBarracks" />
+		<src obj="EBarracks" />
+		<src obj="HBarracks" />
+	</cmd>
+	<cmd name="Barrack Level 2" priority="2"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		queueicon="gameres/icons/upgrades/Barrack2.bmp"
+		button="upgrades/barrack2.bmp"
+		key="f"
+		rollover="Faster warrior equipment"
+		description="Equips warriors and sages four times as fast"
+		costgold="1000"
+		execdelay="20000"
+		method="research"
+		param="ReqSet, Barrack Level 1, , NameSet, Barrack Level 2, , SetsSet, BarrackTrainTimeDecrease, 750">
+		<src obj="GBarracks" />
+		<src obj="RBarracks" />
+		<src obj="CBarracks" />
+		<src obj="IBarracks" />
+		<src obj="MBarracks" />
+		<src obj="BBarracks" />
+		<src obj="TBarracks" />
+		<src obj="EBarracks" />
+		<src obj="HBarracks" />
+	</cmd>
+	<cmd name="Barrack Level 3" priority="2"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		queueicon="gameres/icons/upgrades/Barrack3.bmp"
+		button="upgrades/barrack3.bmp"
+		key="f"
+		rollover="Fastest warrior equipment"
+		description="Equips warriors and sages eight times as fast"
+		costgold="2000"
+		execdelay="20000"
+		method="research"
+		param="ReqSet, Barrack Level 2, , NameSet, Barrack Level 3, default, SetsSet, BarrackTrainTimeDecrease, 875">
+		<src obj="GBarracks" />
+		<src obj="RBarracks" />
+		<src obj="CBarracks" />
+		<src obj="IBarracks" />
+		<src obj="MBarracks" />
+		<src obj="BBarracks" />
+		<src obj="TBarracks" />
+		<src obj="EBarracks" />
+		<src obj="HBarracks" />
+	</cmd>
+</commands>

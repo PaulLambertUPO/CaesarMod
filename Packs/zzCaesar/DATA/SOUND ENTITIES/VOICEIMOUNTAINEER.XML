@@ -1,0 +1,9 @@
+<entity description="VoiceIMountaineer" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/IMountaineer/I know the area well.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMountaineer/I will leave no trace.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMountaineer/Quick and silent as a roe deer.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMountaineer/They won_t know who strikes them.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMountaineer/This mission is tailor-made for me.wav" frequency="20" />
+	</files>
+</entity>

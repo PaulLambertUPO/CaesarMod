@@ -1,0 +1,3 @@
+<class id="GGhostUnlimited" cpp_class="CVXGhost" parent="GGhost" entity="Units/GGhost/GGhost.ent.xml">
+	<properties edittree_pos="Units/Others/Ghoul" />
+</class>

@@ -1,0 +1,17 @@
+<class id="CLibyanFootman" cpp_class="CVXUnit" parent="Melee" entity="Units/CLibyanFootman/CLibyanFootman.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="160" />
+	<properties damage="14" armor_slash="8" armor_pierce="8" />
+	<properties speed="80" />
+	<properties unit_specials="Drain, Revenge" />
+
+	<properties display_name="Numidian Footman" display_name_plural="Numidian Footmen" />
+	<properties icon="gameres/icons/CLibyanFootman.bmp" />
+	<properties help="contents/units/CLibyanFootman" />
+	<properties edittree_pos="Units/Carthage/Numidian Footman" />
+
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+
+	<sounds command="VoiceCLibyanFootman" attack="UnitPikeFight" />
+</class>

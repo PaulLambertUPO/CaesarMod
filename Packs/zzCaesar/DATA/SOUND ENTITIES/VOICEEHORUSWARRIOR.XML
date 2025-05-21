@@ -1,0 +1,9 @@
+<entity description="VoiceEHorusWarrior" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EHorusWarrior/Horus guides me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHorusWarrior/Horus judges we execute.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHorusWarrior/I am the pride of my people.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHorusWarrior/My legend is whispered by the desert.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHorusWarrior/My sword has no rival.wav" frequency="20" />
+	</files>
+</entity>

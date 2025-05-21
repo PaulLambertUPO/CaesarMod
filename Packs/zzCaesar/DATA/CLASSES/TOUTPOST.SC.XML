@@ -1,0 +1,22 @@
+<class id="TOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/TOutpost/TOutpost.ent.xml">
+	<properties race="German" />
+	<properties maxhealth="10000" />
+	<properties radius="345" selection_radius="350" />
+	<properties display_name="Trade outpost" />
+	<properties icon="gameres/icons/TOutpost.bmp" />
+	<properties help="/contents/buildings/TradeOutpost" />
+	<properties edittree_pos="Structures/Outposts/Trade outpost (German)" />
+	<properties description="Allows to exchange food for gold or vice versa" />
+	<properties
+		range="1000"
+		settlement_food="0"
+		settlement_gold="1000"
+		defender_cls_1="TValkyrie"
+		defenders_max_1="12"
+		defenders_out_1="8"
+		start_level_1="10"
+		end_level_1="24"
+	/>
+	<method sig="goutpost_sellfood" vs="data/subai/goutpost_sellfood.vs" />
+	<method sig="goutpost_sellgold" vs="data/subai/goutpost_sellgold.vs" />
+</class>

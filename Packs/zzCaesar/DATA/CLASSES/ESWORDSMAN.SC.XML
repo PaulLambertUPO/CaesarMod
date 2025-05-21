@@ -1,0 +1,15 @@
+<class id="ESwordsman" cpp_class="CVXUnit" parent="Melee" entity="units/ESwordsman/ESwordsman.ent.xml">
+
+	<properties race="Egypt" />
+	<properties maxhealth="300" />
+	<properties damage="18" armor_slash="6" armor_pierce="6" />
+	<properties speed="80" />
+	<properties unit_specials="Cripple, Toughness" />
+
+	<properties display_name="Swordsman" display_name_plural="Swordsmen" />
+	<properties icon="gameres/icons/ESwordsman.bmp" />
+	<properties help="contents/units/ESwordsman" />
+	<properties edittree_pos="Units/Egypt/Swordsman" />
+
+	<sounds command="VoiceESwordsman" />
+</class>

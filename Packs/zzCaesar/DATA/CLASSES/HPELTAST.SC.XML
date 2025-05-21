@@ -1,0 +1,17 @@
+<class id="HPeltast" cpp_class="CVXUnit" parent="ShortRanged" entity="Units/HPeltast/HPeltast.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties maxhealth="200" />
+	<properties damage="16" armor_slash="8" armor_pierce="8" />
+	<properties speed="80" />
+	<properties unit_specials="Penetration" />
+
+	<properties projectile_class="Javelin" building_projectile_class="Javelin" />
+
+	<properties display_name="Peltast" display_name_plural="Peltasts" />
+	<properties icon="gameres/icons/HPeltast.bmp" />
+	<properties help="contents/units/HPeltast" />
+	<properties edittree_pos="Units/Greece/Peltast" />
+
+	<sounds command="VoiceHPeltast" attack="JavelinAttack" />
+</class>

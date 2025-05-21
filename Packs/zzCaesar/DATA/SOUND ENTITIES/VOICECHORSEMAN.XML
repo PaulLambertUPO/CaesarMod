@@ -1,0 +1,9 @@
+<entity description="VoiceCHorseman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CHorseman/Extremely fast.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHorseman/I fight for the highest bidder.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHorseman/I know my horse better than anyone.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHorseman/Maharbal guides me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHorseman/My spear will finish them.wav" frequency="20" />
+	</files>
+</entity>

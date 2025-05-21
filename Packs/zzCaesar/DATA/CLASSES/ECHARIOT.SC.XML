@@ -1,0 +1,20 @@
+<class id="EChariot" cpp_class="CVXUnit" parent="Ranged" entity="units/EChariot/EChariot.ent.xml">
+
+	<properties race="Egypt" />
+	<properties maxhealth="620" />
+	<properties damage="36" armor_slash="14" armor_pierce="14" />
+	<properties speed="140" />
+	<properties unit_specials="Disease attack, Freedom" />
+
+	<properties healthbar_type="3" />
+	<properties radius="40" selection_radius="60" />
+
+	<properties display_name="Chariot of Osiris" display_name_plural="Chariots of Osiris" />
+	<properties icon="gameres/icons/EChariot.bmp" />
+	<properties help="contents/units/EChariot" />
+	<properties edittree_pos="Units/Egypt/Chariot of Osiris" />
+
+	<method sig="engage" vs="data/subai/echariot_engage.vs" />
+
+	<sounds walk="HorseWalk" command="VoiceEChariot" die="HorseUnitDeath" />
+</class>

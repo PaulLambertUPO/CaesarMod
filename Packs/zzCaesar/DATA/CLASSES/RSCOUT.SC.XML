@@ -1,0 +1,17 @@
+<class id="RScout" altid="RHorseman" cpp_class="CVXUnit" parent="Horse" entity="Units/RScout/RScout.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="240" />
+	<properties damage="22" armor_slash="12" armor_pierce="12" />
+	<properties speed="160" />
+	<properties unit_specials="Defense skill, Keen sight, Rage" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Scout" display_name_plural="Scouts" />
+	<properties icon="gameres/icons/RScout.bmp" />
+	<properties help="contents/units/RScout" />
+	<properties edittree_pos="Units/Roman/Scout" />
+
+	<sounds command="VoiceRScout" />
+</class>

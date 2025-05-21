@@ -1,0 +1,9 @@
+<entity description="VoiceRArcher" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RArcher/Archers ready.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RArcher/Battle beckons me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RArcher/For Mercury.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RArcher/Give me a target.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RArcher/I do not fear death.wav" frequency="20" />
+	</files>
+</entity>

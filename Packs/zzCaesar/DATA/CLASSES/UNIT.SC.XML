@@ -1,0 +1,182 @@
+<class id="Unit" cpp_class="CVXUnit" parent="Object">
+
+	<properties maxhealth="200" />
+	<properties maxstamina="10" />
+	<properties sight="500" />
+	<properties speed="50" />
+	<properties water_unit="0" />
+	<properties repair_rate="15" />
+	<properties damage_type="slash" />
+	<properties damage="10" armor_slash="0" armor_pierce="0" />
+	<properties inventory_size="4" />
+	<properties does_not_regenerate="0" />
+	<properties healthbar_type="1" />
+
+	<properties feeds="1" max_food="20" />
+	<properties damaged_by_ghost="1" />
+	<properties can_be_invisible="1" />
+	<properties interface="thumb,unit,items" />
+	<properties ignore_passability="0" />
+	<properties formation_radius="26" radius="15" selection_radius="15" />
+
+	<properties icon="gameres/icons/multi.bmp" />
+	<properties display_name="Unit" display_name_plural="Units" />
+	<properties help="/contents/units" />
+
+	<behavior script="data/subai/keensight_and_sneak_behavior.vs" />
+
+	<method sig="idle" vs="data/subai/unit_idle.vs" />
+	<method sig="standstill" vs="data/subai/unit_standstill.vs" />
+	<method sig="advance" vs="data/subai/unit_advance.vs" />
+	<method sig="advancealone" vs="data/subai/unit_advance.vs" />
+	<method sig="attach" vs="data/subai/unit_attach.vs" verify="data/subai/unit_attach_verify.vs" />
+	<method sig="attack" vs="data/subai/unit_attack.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="engage" vs="data/subai/unit_engage.vs" />
+	<method sig="attack" vs="data/subai/unit_advance.vs" />
+	<method sig="enter" vs="data/subai/unit_enter.vs" verify="data/subai/unit_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/unit_enter.vs" verify="data/subai/unit_enter_verify.vs" />
+	<method sig="move" vs="data/subai/unit_move.vs" />
+	<method sig="smartmove" vs="data/subai/unit_smartmove.vs" />
+	<method sig="form_move" vs="data/subai/unit_form_move.vs" />
+	<method sig="patrol" vs="data/subai/unit_patrol.vs" />
+	<method sig="protect" vs="data/subai/unit_protect.vs" />
+	<method sig="follow" vs="data/subai/unit_follow.vs" />
+	<method sig="approach" vs="data/subai/unit_approach.vs" />
+	<method sig="approach_hero" vs="data/subai/unit_approach_hero.vs" />
+	<method sig="giveitem" vs="data/subai/unit_giveitem.vs" />
+	<method sig="putitem" vs="data/subai/unit_putitem.vs" />
+	<method sig="dropitem" vs="data/subai/unit_dropitem.vs" />
+	<method sig="getitems" vs="data/subai/unit_getitems.vs" />
+	<method sig="getitem" vs="data/subai/unit_getitem.vs" />
+	<method sig="build_catapult" vs="data/subai/unit_build_catapult.vs" />
+	<method sig="hold_position" vs="data/subai/unit_hold_position.vs" />
+	<method sig="selfdestroy" vs="data/subai/unit_selfdestroy.vs" />
+	<method sig="wander" vs="data/subai/unit_wander.vs" />
+	<method sig="explore" vs="data/subai/unit_explore.vs" />
+	<method sig="teleport" vs="data/subai/unit_teleport.vs" />
+	<method sig="advanceenter" vs="data/subai/unit_advance_enter.vs" verify="data/subai/unit_enter_verify.vs" />
+	<method sig="face" vs="data/subai/unit_face.vs" />
+	<method sig="ai_attack_gate" vs="data/subai/unit_ai_attack_gate.vs" />
+	<method sig="ai_killall" vs="data/subai/unit_ai_killall.vs" />
+	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
+	<method sig="capture" vs="data/subai/unit_capture.vs" verify="data/subai/unit_capture_verify.vs" />
+	<method sig="attack_independent" vs="data/subai/unit_capture.vs" verify="data/subai/attack_independent_verify.vs" />
+	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
+	<method sig="disappear" vs="data/subai/unit_disappear.vs" />
+	<method sig="dismiss" vs="data/subai/unit_dismiss.vs" />
+	<method sig="grab_water" vs="data/subai/unit_grab_water.vs" />
+	<method sig="grab_goods" vs="data/subai/unit_grab_goods.vs" />
+	<method sig="grab_free" vs="data/subai/unit_grab_free.vs" />
+	<method sig="talk" vs="data/subai/unit_talk.vs" />
+	<method sig="walkanddie" vs="data/subai/unit_walk_and_die.vs" />
+	<method sig="moveenter" vs="data/subai/unit_move_enter.vs" />
+	<method sig="stand_position" vs="data/subai/unit_stand_position.vs" />
+	<method sig="attack_unit_type" vs="data/subai/unit_attack_unit_type.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="engage_unit_type" vs="data/subai/unit_engage_unit_type.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="engage_unit_type_exclusive" vs="data/subai/unit_engage_unit_type_exclusive.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="go_talk" vs="data/subai/unit_go_talk.vs" />
+	<method sig="boar_tooth_use" vs="data/subai/boar_tooth_use.vs" />
+	<method sig="onkill" vs="data/subai/unit_on_kill.vs" />
+	<method sig="onenter" vs="data/subai/unit_on_enter.vs" />
+	<method sig="convert" vs="data/subai/unit_convert.vs" />
+
+	<method sig="enter_parry_mode" vs="data/subai/unit_enter_parry_mode.vs" />
+	<method sig="leave_parry_mode" vs="data/subai/unit_leave_parry_mode.vs" />
+
+	<method sig="hero_set_final_party_orientation" vs="data/subai/hero_set_final_party_orientation.vs" />
+
+	<value0 icon="gameres/infobar/common/level ico.bmp"
+		script="return .AsUnit().level;"
+		help="/contents/stats/level"
+		rollover="Level"
+	/>
+	<value1 icon="gameres/infobar/common/attack ico.bmp"
+		script="return .AsUnit().damage;"
+		help="/contents/stats/attack"
+		rollover="Damage"
+	/>
+	<value2 icon="gameres/infobar/common/stamina ico.bmp"
+		script="return .AsUnit().stamina + '|' + .AsUnit().speed;"
+		help="/contents/stats/stamina"
+		rollover="Stamina|Speed"
+	/>
+	<value3 icon="gameres/infobar/common/defence ico.bmp"
+		script="return .AsUnit().armor_slash + '|' + .AsUnit().sight;"
+		help="/contents/stats/defense"
+		rollover="Armor|Sight"
+	/>
+	<value4 icon="gameres/infobar/common/health ico.bmp"
+		script="return .AsUnit().health + '/' + .AsUnit().maxhealth;"
+		help="/contents/stats/health"
+		rollover="Health"
+	/>
+	<value5 icon="gameres/infobar/common/food ico.bmp"
+		script="return .AsUnit().food + '/' + .AsUnit().maxfood;"
+		help="/contents/feeding"
+		rollover="Food"
+	/>
+
+	<defaultcmd target="">
+		<cmd name="move" />
+		<cmd name="advance" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Unit">
+		<cmd name="attack" />
+		<cmd name="approach" />
+		<cmd name="attack_unit_type" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+		<cmd name="attack" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Wagon">
+		<cmd name="capture" />
+	</defaultcmd>
+	<defaultcmd target="WildHorse">
+		<cmd name="capture" />
+	</defaultcmd>
+	<!-- no capture for towers, gates and walls -->
+	<defaultcmd target="Tower">
+		<cmd name="attack" />
+		<cmd name="enter" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Gate">
+		<cmd name="attack" />
+		<cmd name="enter" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Wall">
+		<cmd name="attack" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="attack_independent" />
+		<cmd name="capture" />
+		<cmd name="attack" />
+		<cmd name="enter" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="TTent">
+		<cmd name="attack_independent" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="ItemHolder">
+		<cmd name="getitems" />
+		<cmd name="approach" />
+	</defaultcmd>
+</class>

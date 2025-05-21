@@ -1,0 +1,9 @@
+<entity description="VoiceBSwordsman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BSwordsman/Fight or die.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BSwordsman/I do not know defeat.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BSwordsman/I smell the scent of battle.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BSwordsman/Our ferocity is legendary.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BSwordsman/They will bite the dust.wav" frequency="20" />
+	</files>
+</entity>

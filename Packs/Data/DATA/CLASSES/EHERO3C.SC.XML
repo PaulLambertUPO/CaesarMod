@@ -1,0 +1,6 @@
+<class id="EHero3c" cpp_class="CVXHero" parent="EgyptianHero" entity="Units/EHero3/EHero3.ent.xml">
+
+	<properties display_name="Tefibi" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/EHero3.bmp"/>
+
+</class>

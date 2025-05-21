@@ -1,0 +1,17 @@
+<class id="LionMUnit" cpp_class="CVXUnit" parent="AttackAnimal" entity="units/LionM/LionM.ent.xml">
+
+	<properties maxhealth="280" />
+	<properties damage="22" armor_slash="4" armor_pierce="4" />
+	<properties sight="550" />
+	<properties speed="80" />
+	<properties unit_specials="Active, Freedom, Triple strike" />
+
+	<properties radius="40" selection_radius="41" />
+
+	<properties display_name="Lion" display_name_plural="Lions" />
+	<properties icon="gameres/icons/lionM.bmp" />
+	<properties help="contents/units/Animals/LionM" />
+	<properties edittree_pos="Units/Animals/Lion" />
+
+	<sounds idle="Sounds/Animals/Lion/Lion_Idle.wav" attack="Sounds/Animals/Lion/Lion_Attack.wav" die="Sounds/Animals/Lion/Lion_Die.wav" />
+</class>

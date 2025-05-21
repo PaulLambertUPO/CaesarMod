@@ -1,0 +1,7 @@
+<class id="MultiOneRanged" cpp_class="CVXScriptObj" parent="MultiOne" entity="">
+	<value1 icon="gameres/infobar/common/piercing ico.bmp"
+		script="return SelAvgDamage();"
+		help="/contents/stats/attack"
+		rollover="Damage"
+	/>
+</class>

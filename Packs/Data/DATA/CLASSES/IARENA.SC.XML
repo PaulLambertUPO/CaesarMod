@@ -1,0 +1,13 @@
+<class id="IArena" cpp_class="CVXBuilding" parent="BaseArena"
+	entity="Buildings/IArena/IArena.ent.xml"
+>
+	<properties race="Iberia"/>
+	<properties display_name="Arena"/>
+	<properties radius="240" selection_radius="300"/>
+	<properties edittree_pos="Structures/Stronghold (Iberia)/Arena"/>
+	<properties help="/contents/buildings/IArena"/>
+
+	<properties icon="gameres/icons/IArena.bmp"/>
+	
+
+</class>

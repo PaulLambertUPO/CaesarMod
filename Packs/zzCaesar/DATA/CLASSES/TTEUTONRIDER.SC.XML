@@ -1,0 +1,19 @@
+<class id="TTeutonRider" cpp_class="CVXUnit" parent="Horse" entity="Units/TTeutonRider/TTeutonRider.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="340" />
+	<properties damage="26" armor_slash="10" armor_pierce="10" />
+	<properties speed="160" />
+	<properties unit_specials="Attack skill" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Teuton Rider" display_name_plural="Teuton Riders" />
+	<properties icon="gameres/icons/TTeutonRider.bmp" />
+	<properties help="contents/units/TTeutonRider" />
+	<properties edittree_pos="Units/Germany/Teuton Rider" />
+
+	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" /><!-- given by the behaviour script -->
+
+	<sounds command="VoiceTTeutonRider" attack="UnitMaceFight" />
+</class>

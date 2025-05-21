@@ -1,0 +1,9 @@
+<entity description="VoiceISlinger" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/ISlinger/I am the most skilled in slinging.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ISlinger/I am well trained.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ISlinger/I will aim at the enemy hero.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ISlinger/I will sling as my father taught me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ISlinger/In slinging position.wav" frequency="20" />
+	</files>
+</entity>

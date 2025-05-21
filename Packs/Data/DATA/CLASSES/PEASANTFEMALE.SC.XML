@@ -1,0 +1,6 @@
+<class id="PeasantFemale" cpp_class="CVXUnit" parent="Peasant" entity="">
+
+	<properties display_name="Peasant" display_name_plural="Peasants"/>
+	<sounds die="data/sound entities/UNITDEATHFEMALE.xml"/>
+
+</class>

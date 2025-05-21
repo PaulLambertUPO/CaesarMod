@@ -1,0 +1,5 @@
+<entity description="CatapultRotate" priority="Event" type="UnitOrder">
+	<files>
+		<sound file="Sounds/effects/Catapult_Rotate.wav" frequency="100" />
+	</files>
+</entity>

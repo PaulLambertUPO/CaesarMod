@@ -1,0 +1,11 @@
+<class id="EMarket" cpp_class="CVXTavern" parent="BaseTavern" entity="Buildings/EMarket/EMarket.ent.xml">
+
+	<properties race="Egypt" />
+
+	<properties radius="190" selection_radius="195" />
+
+	<properties display_name="Market" />
+	<properties icon="gameres/icons/EMarket.bmp" />
+	<properties help="/contents/buildings/ETavern" />
+	<properties edittree_pos="Structures/Stronghold (Egypt)/Market" />
+</class>

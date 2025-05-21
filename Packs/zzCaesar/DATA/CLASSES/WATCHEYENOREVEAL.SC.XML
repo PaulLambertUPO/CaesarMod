@@ -1,0 +1,3 @@
+<class id="WatchEyeNoReveal" cpp_class="CVXScriptObj" parent="Object" entity="">
+	<method sig="spy" vs="data/subai/watch_eye_no_reveal.vs" />
+</class>

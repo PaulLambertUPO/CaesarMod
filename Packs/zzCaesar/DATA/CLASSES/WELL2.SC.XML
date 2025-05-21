@@ -1,0 +1,6 @@
+<class id="well2" cpp_class="CVXItemHolder" parent="BaseWell" entity="MapObjects/bunar2_asw/bunar2_asw.ent.xml">
+	<properties radius="350" selection_radius="275" />
+	<properties icon="gameres/icons/Large well.bmp" />
+	<properties edittree_pos="Structures/Item holders/Large well" />
+	<properties respawn_item="Bag of healing water" respawn_time="600000" />
+</class>

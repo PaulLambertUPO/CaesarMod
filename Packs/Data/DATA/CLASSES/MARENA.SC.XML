@@ -1,0 +1,10 @@
+<class id="MArena" cpp_class="CVXBuilding" parent="BaseArena"
+entity="Buildings/MArena/MArena.ent.xml">
+
+	<properties race="ImperialRome"/>
+	<properties icon="gameres/icons/MArena.bmp"/>
+	<properties display_name="Arena"/>
+	<properties radius="360" selection_radius="365"/>
+	<properties help="/contents/buildings/MArena"/>
+
+</class>

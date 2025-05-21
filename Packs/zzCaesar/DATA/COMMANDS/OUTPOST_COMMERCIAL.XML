@@ -1,0 +1,52 @@
+<commands>
+	<cmd name="goutpost_sellfood" priority="4"
+		button="states/sell food.bmp"
+		immediate="yes"
+		traincommand="no"
+		method="goutpost_sellfood"
+		param="yes"
+		groupverifier="data/subai/group_goutpost_sell_food_verify.vs"
+		key="s"
+		rollover="Sell food"
+		description="Slowly exchanges stored food for gold">
+		<src obj="GOutpost" />
+		<src obj="TOutpost" />
+	</cmd>
+	<cmd name="goutpost_no_sellfood" priority="4"
+		button="states/Stop Selling Food.bmp"
+		immediate="yes"
+		traincommand="no"
+		method="goutpost_sellfood"
+		param="no"
+		groupverifier="data/subai/group_goutpost_no_sell_food_verify.vs"
+		key="s"
+		rollover="Stop selling food">
+		<src obj="GOutpost" />
+		<src obj="TOutpost" />
+	</cmd>
+	<cmd name="goutpost_sellgold" priority="5"
+		button="states/sell gold.bmp"
+		immediate="yes"
+		traincommand="no"
+		method="goutpost_sellgold"
+		param="yes"
+		groupverifier="data/subai/group_goutpost_sell_gold_verify.vs"
+		key="l"
+		rollover="Sell gold"
+		description="Slowly exchanges stored gold for food">
+		<src obj="GOutpost" />
+		<src obj="TOutpost" />
+	</cmd>
+	<cmd name="goutpost_no_sellgold" priority="5"
+		button="states/Stop Selling gold.bmp"
+		immediate="yes"
+		traincommand="no"
+		method="goutpost_sellgold"
+		param="no"
+		groupverifier="data/subai/group_goutpost_no_sell_gold_verify.vs"
+		key="l"
+		rollover="Stop selling gold">
+		<src obj="GOutpost" />
+		<src obj="TOutpost" />
+	</cmd>
+</commands>

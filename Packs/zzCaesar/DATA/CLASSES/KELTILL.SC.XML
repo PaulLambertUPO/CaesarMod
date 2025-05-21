@@ -1,0 +1,15 @@
+<class id="Keltill" cpp_class="CVXHero" parent="HeroMounted" entity="Units/Keltill/Keltill.ent.xml">
+
+	<properties race="Gaul" />
+	<properties maxhealth="1300" />
+	<properties damage="60" armor_slash="18" armor_pierce="18" />
+	<properties sight="650" speed="130"/>
+	<properties HeroSkills="Defensive cry, Epic attack, Epic endurance, Healing, Quick March" />
+
+	<properties display_name="Keltill" display_name_plural="Heroes" />
+	<properties icon="gameres/icons/Keltil.bmp" />
+	<properties help="contents/units/Keltill" />
+	<properties edittree_pos="Units/Heroes/Keltill" />
+
+	<sounds command="VoiceKeltill" />
+</class>

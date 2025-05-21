@@ -1,0 +1,3 @@
+<class id="DColumn" cpp_class="CVXDecor" parent="Object" entity="MapObjects/DColumn/DColumn.ent.xml">
+<properties edittree_pos="Structures/Others/Desert/Column"/>
+</class>

@@ -1,0 +1,8 @@
+<class
+	cpp_class = "CVXBuilding"
+	entity = "Buildings/GHouse4/House 04 w.ent.xml"
+	id = "GHouse4Winter"
+	parent = "GHouse4"
+>
+	<properties edittree_pos = "Structures/Village (Gaul)/Winter/House 4"/>
+</class>

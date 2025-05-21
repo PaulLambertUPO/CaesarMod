@@ -1,0 +1,6 @@
+<class id="CartTrader" cpp_class="CVXWagon" parent="Wagon" entity="units/CartTrader/CartTrader.ent.xml">
+	<properties radius="50" selection_radius="50" />
+	<properties display_name="Caravan" display_name_plural="Caravans"/><!-- do not move these values to Wagon class to avoid wrong translations -->
+	<properties icon="gameres/icons/CaravanHorse.bmp" />
+	<properties edittree_pos="Units/Others/Caravan Cart" />
+</class>

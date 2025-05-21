@@ -1,0 +1,9 @@
+<entity description="VoiceIMIlitiaman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/IMIlitiaman/At your orders.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMIlitiaman/I will defend my people from the invader.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMIlitiaman/I will do what is necessary.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMIlitiaman/The harvest can wait.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IMIlitiaman/They will not occupy our lands.wav" frequency="20" />
+	</files>
+</entity>

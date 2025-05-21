@@ -1,0 +1,51 @@
+<class id="Catapult" cpp_class="CVXCatapult" parent="Building" entity="Buildings/Catapult/Catapult.ent.xml">
+
+	<properties maxhealth="1000" />
+	<properties damage="120" armor_slash="0" armor_pierce="0" />
+	<properties damage_type="siege" attack_delay="500" splash_radius="100" />
+	<properties sight="760" range="750" min_range="300" />
+	<properties radius="50" selection_radius="90" />
+
+	<properties display_name="Catapult" />
+	<properties icon="gameres/icons/catapult.bmp" />
+	<properties interface="thumb,building,holder" />
+	<properties help="contents/units/Catapult" />
+
+	<method sig="idle" vs="data/subai/catapult_idle.vs" />
+	<method sig="attack" vs="data/subai/catapult_attack.vs" verify="data/subai/catapult_attack_verify.vs"/>
+	<method sig="autofire" vs="data/subai/catapult_autofire.vs" />
+	<method sig="stop" vs="data/subai/catapult_stop.vs" />
+	<method sig="disband" vs="data/subai/catapult_disband.vs" />
+
+	<properties
+		is_single_building="1"
+		is_central_building="1"
+		can_be_captured="0"
+		can_be_attacked="1"
+		produces_gold="0"
+		produces_food="0"
+		settlement_food="0"
+		settlement_gold="0"
+		settlement_maxfood="0"
+		settlement_maxgold="0"
+		efficiency="1"
+		population="0"
+		max_population="0"
+		max_units="10"
+		exit_interval="1000"
+		settlement_icon_name=""
+	/>
+
+	<value1 icon="gameres/infobar/common/attack ico.bmp"
+		script="return .AsBuilding().damage + '|' + .AsBuilding().range;"
+		help="/contents/stats/attack"
+		rollover="Damage|Range"
+	/>
+	<value4 icon="gameres/infobar/common/health ico.bmp"
+		script="return .AsBuilding().health + '/' + .AsBuilding().maxhealth;"
+		help="/contents/stats/health"
+		rollover="Health"
+	/>
+
+	<sounds attack="Sounds/Effects/Catapult_Attack.wav" die="Sounds/Effects/Catapult_Die.wav" />
+</class>

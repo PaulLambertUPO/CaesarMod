@@ -1,0 +1,6 @@
+<class id="MHero2a" cpp_class="CVXHero" parent="ImperialRomanHero" entity="Units/RHero5/RHero5.ent.xml">
+
+	<properties display_name="Cispius" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/MHero2.bmp"/>
+
+</class>

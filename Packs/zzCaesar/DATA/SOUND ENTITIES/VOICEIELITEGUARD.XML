@@ -1,0 +1,9 @@
+<entity description="VoiceIEliteGuard" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/IEliteGuard/Heads will roll.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IEliteGuard/I believe in you.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IEliteGuard/My axe is sharp.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IEliteGuard/No mercy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IEliteGuard/They will taste the steel of my axe.wav" frequency="20" />
+	</files>
+</entity>

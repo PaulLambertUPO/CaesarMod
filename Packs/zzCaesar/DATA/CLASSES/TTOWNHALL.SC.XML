@@ -1,0 +1,15 @@
+<class id="TTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/TTownhall/TTownhall.ent.xml">
+
+	<properties race="Germany" />
+	<properties foodperpop="45" />
+	<properties produces_gold="1" produces_food="1" />
+
+	<properties radius="160" selection_radius="190" />
+
+	<properties display_name="German Townhall" />
+	<properties icon="gameres/icons/TTownhall.bmp" />
+	<properties help="/contents/buildings/TTownhall" />
+	<properties edittree_pos="Structures/Stronghold (Germany)/Townhall" />
+
+	<behavior script="data/subai/townhall_buildingsbehavior_t.vs" />
+</class>

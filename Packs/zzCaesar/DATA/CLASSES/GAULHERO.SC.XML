@@ -1,0 +1,11 @@
+<class id="GaulHero" cpp_class="CVXHero" parent="HeroMounted" entity="">
+
+	<properties race="Gaul" />
+	<properties maxhealth="1200" />
+	<properties damage="50" armor_slash="14" armor_pierce="14" />
+	<properties HeroSkills="Battle cry, Defensive cry, Epic attack, Epic endurance, Leadership" />
+
+	<properties help="/contents/units/GHero" />
+
+	<sounds command="VoiceGHero" />
+</class>

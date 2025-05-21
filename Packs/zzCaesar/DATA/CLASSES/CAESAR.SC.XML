@@ -1,0 +1,15 @@
+<class id="Caesar" cpp_class="CVXHero" parent="HeroMounted" entity="Units/Caesar/Caesar.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties maxhealth="1250" />
+	<properties damage="42" />
+	<properties sight="675" speed="125" />
+	<properties HeroSkills="Administration, Battle cry, Quick March, Team attack, Team defense, Vigor" />
+
+	<properties display_name="Julius Caesar" display_name_plural="Heroes" />
+	<properties icon="gameres/icons/Caesar.bmp" />
+	<properties help="contents/units/Caesar" />
+	<properties edittree_pos="Units/Heroes/Julius Caesar" />
+
+	<sounds command="VoiceCaesar" />
+</class>

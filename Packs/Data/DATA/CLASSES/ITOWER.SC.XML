@@ -1,0 +1,5 @@
+<class id="ITower01" altid="ITower02" cpp_class="CVXBuilding" parent="Tower" entity="Buildings/IWalls/Tower/Tower.ent.xml">
+	<properties race="Iberia"/>
+	<properties wall_set="Iberian walls"/>
+	<properties icon="gameres/icons/ITower.bmp"/>
+</class>

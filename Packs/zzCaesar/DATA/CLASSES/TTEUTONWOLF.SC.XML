@@ -1,0 +1,19 @@
+<class id="TTeutonWolf" cpp_class="CVXUnit" parent="Horse" entity="Units/TTeutonWolf/TTeutonWolf.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="320" />
+	<properties damage="24" armor_slash="10" armor_pierce="10" />
+	<properties speed="160" />
+	<properties unit_specials="Charge" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Teuton Wolf" display_name_plural="Teuton Wolves" />
+	<properties icon="gameres/icons/TTeutonWolf.bmp" />
+	<properties help="contents/units/TTeutonWolf" />
+	<properties edittree_pos="Units/Germany/Teuton Wolf" />
+
+	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" /><!-- given by the behaviour script -->
+
+	<sounds command="VoiceTTeutonWolf" />
+</class>

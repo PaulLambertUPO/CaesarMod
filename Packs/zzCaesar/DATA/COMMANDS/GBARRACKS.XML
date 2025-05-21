@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="trainGSwordsman" priority="3"
+		button="actions/train GSwordsman.bmp"
+		queueicon="gameres/icons/GSwordsman.bmp"
+		transpicon="1"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		traincommand="yes"
+		key="s"
+		costgold="60"
+		costpop="1"
+		execdelay="6000"
+		rollover="Equip Swordsman"
+		method="train"
+		param="GSwordsman"
+		sclass="GSwordsman">
+		<src obj="GBarracks" />
+	</cmd>
+	<cmd name="trainGArcher" priority="4"
+		button="actions/train GArcher.bmp"
+		queueicon="gameres/icons/GArcher.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		key="a"
+		costgold="50"
+		costpop="1"
+		execdelay="8000"
+		rollover="Equip Archer"
+		method="train"
+		param="GArcher"
+		sclass="GArcher">
+		<src obj="GBarracks" />
+	</cmd>
+	<cmd name="trainGAxeman" priority="5"
+		button="actions/train GAxeman.bmp"
+		queueicon="gameres/icons/GAxeman.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		traincommand="yes"
+		key="x"
+		costgold="160"
+		costpop="1"
+		execdelay="14000"
+		rollover="Equip Axeman"
+		method="train"
+		param="GAxeman, Axes"
+		sclass="GAxeman">
+		<src obj="GBarracks" />
+	</cmd>
+	<cmd name="trainGSpearman" priority="6"
+		button="actions/train GSpearman.bmp"
+		queueicon="gameres/icons/GSpearman.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		key="p"
+		costgold="120"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Spearman"
+		method="train"
+		param="GSpearman, Spears"
+		sclass="GSpearman">
+		<src obj="GBarracks" />
+	</cmd>
+	<cmd name="trainGHorseman" priority="7"
+		button="actions/train GHorseman.bmp"
+		queueicon="gameres/icons/GHorseman.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		traincommand="yes"
+		key="h"
+		costgold="170"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Horseman"
+		method="train"
+		param="GHorseman, Horseshoes"
+		sclass="GHorseman">
+		<src obj="GBarracks" />
+	</cmd>
+	<cmd name="trainGWomanWarrior" priority="8"
+		button="actions/train GWomanWarrior.bmp"
+		queueicon="gameres/icons/GWomanWarrior.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		key="w"
+		costgold="240"
+		costpop="1"
+		execdelay="18000"
+		rollover="Equip Woman Warrior"
+		method="train"
+		param="GWomanWarrior, Woman Armor"
+		sclass="GWomanWarrior">
+		<src obj="GBarracks" />
+	</cmd>
+</commands>

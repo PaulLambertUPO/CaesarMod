@@ -1,0 +1,9 @@
+<entity description="VoiceCMaceman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CMaceman/Give me a powerful enemy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CMaceman/My tenacity is legendary.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CMaceman/No armor can withstand my blows.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CMaceman/Onward.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CMaceman/We shall destroy them.wav" frequency="20" />
+	</files>
+</entity>

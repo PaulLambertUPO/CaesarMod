@@ -1,0 +1,14 @@
+<entity description="VoiceRHastatus" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RHastatus/Always ready.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/Fight and win.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/For Apollo.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/For Rome.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/I can withstand any blow.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/It is an honor to fight on the frontline.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/Loyalty honor and glory.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/On the move.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/They will taste the edge of my sword.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RHastatus/We will win the battle.wav" frequency="10" />
+	</files>
+</entity>

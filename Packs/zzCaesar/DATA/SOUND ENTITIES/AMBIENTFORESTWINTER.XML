@@ -1,0 +1,12 @@
+<entity description="AmbientForestwinter">
+	<files>
+		<sound file="Sounds/Ambient/Wind1.wav" frequency="10" />
+		<sound file="Sounds/Ambient/Wind2.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Wind3.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Wind4.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Wind5.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Wind6.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Wind7.wav" frequency="9" />
+		<sound file="" frequency="36" />
+	</files>
+</entity>

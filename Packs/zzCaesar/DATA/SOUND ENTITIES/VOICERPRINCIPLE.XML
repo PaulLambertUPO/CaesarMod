@@ -1,0 +1,14 @@
+<entity description="VoiceRPrinciple" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RPrinciple/For the glory of Rome.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/In formation.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/It_s an honor to serve Rome.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/My bravery is legendary.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/Nothing stops my spear.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/Ready for the fight.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/Tell me O Caesar.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/Trust in my steel.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/Victory will be ours.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPrinciple/We will subjugate the enemy.wav" frequency="10" />
+	</files>
+</entity>

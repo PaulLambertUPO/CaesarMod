@@ -1,0 +1,4 @@
+<class id="Poseidon" cpp_class="CVXDecor" parent="Object"
+entity="MapObjects/statues/Poseidon.ent.xml">
+	<properties edittree_pos="Structures/Others/Ruins/Poseidon"/>
+</class>

@@ -1,0 +1,5 @@
+<class id="RGladiatorPunic" cpp_class="CVXUnit" parent="RGladiator" entity="Units/RGladiator/RGladiator.ent.xml">
+	<properties unit_specials="Learning, Offensive tactics, Toughness" />
+	<properties icon="gameres/icons/zpwGladiator.bmp" />
+	<properties edittree_pos="Units/Roman/Gladiator (Punic)" />
+</class>

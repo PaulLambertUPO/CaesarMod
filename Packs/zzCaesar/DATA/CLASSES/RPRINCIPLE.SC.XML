@@ -1,0 +1,15 @@
+<class id="RPrinciple" altid="RSpearman" cpp_class="CVXUnit" parent="Melee" entity="Units/RPrinciple/RPrinciple.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="320" />
+	<properties damage="24" armor_slash="16" armor_pierce="16" />
+	<properties speed="80" />
+	<properties unit_specials="Attack skill, Defense skill, Determination" />
+
+	<properties display_name="Principle" display_name_plural="Principles" />
+	<properties icon="gameres/icons/RPrinciple.bmp" />
+	<properties help="contents/units/RPrinciple" />
+	<properties edittree_pos="Units/Roman/Principle" />
+
+	<sounds command="VoiceRPrinciple" attack="UnitPikeFight" />
+</class>

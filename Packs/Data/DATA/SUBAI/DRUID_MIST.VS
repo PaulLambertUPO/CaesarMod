@@ -1,0 +1,14 @@
+// void, Obj This, point pt
+
+Druid this;
+Obj obj;
+
+this = This.AsDruid();
+if (!.IsValid()) return;
+
+while (!.Goto(pt, .sight, 2000, false, 2500));
+
+.PlayAnim(18, .pos);
+obj = Place("Mist", pt, .player);
+obj.SetStamina(10);
+.Damage(.health);

@@ -1,0 +1,9 @@
+<entity description="VoiceGSwordsman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GSwordsman/As you command.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSwordsman/For Teutates.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSwordsman/May the shields clash.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSwordsman/My sword is at your service.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSwordsman/Win or die.wav" frequency="20" />
+	</files>
+</entity>

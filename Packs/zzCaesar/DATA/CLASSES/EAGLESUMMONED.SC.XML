@@ -1,0 +1,7 @@
+<class id="EagleSummoned" cpp_class="CVXFlyingUnit" parent="Eagle" entity="Units/Eagle/Eagle.ent.xml">
+	<properties unit_specials="Keen sight" />
+	<properties does_not_regenerate="1" />
+	<properties stamina_dec_time="12000" />
+	<properties edittree_pos="" />
+	<behavior script="data/subai/summoning_behavior.vs" />
+</class>

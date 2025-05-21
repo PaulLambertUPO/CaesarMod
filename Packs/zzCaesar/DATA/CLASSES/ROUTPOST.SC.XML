@@ -1,0 +1,20 @@
+<class id="ROutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/ROutpost/ROutpost_as.ent.xml" entity_winter="Buildings/ROutpost/ROutpost_w.ent.xml">
+	<properties race="RepublicanRome" />
+	<properties maxhealth="10000" />
+	<properties radius="345" selection_radius="350" />
+	<properties display_name="Gold outpost" />
+	<properties icon="gameres/icons/ROutpost.bmp" />
+	<properties help="/contents/buildings/GoldOutpost" />
+	<properties edittree_pos="Structures/Outposts/Gold outpost (Roman)" />
+	<properties description="Produces additional gold as long as there is at least 2000 gold stored inside" />
+	<properties
+		range="1000"
+		settlement_food="0"
+		settlement_gold="1000"
+		defender_cls_1="RLiberatus"
+		defenders_max_1="18"
+		defenders_out_1="8"
+		start_level_1="6"
+		end_level_1="20"
+	/>
+</class>

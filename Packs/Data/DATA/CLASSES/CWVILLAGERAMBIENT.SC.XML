@@ -1,0 +1,6 @@
+<class id="CWVillagerAmbient" cpp_class="CVXUnit" parent="PeasantAmbient" entity="Units/CFemalePeasant/CFemalePeasant.ent.xml">
+
+	<properties race="Carthage"/>
+	<properties icon="gameres/icons/CWVillager.bmp"/>
+
+</class>

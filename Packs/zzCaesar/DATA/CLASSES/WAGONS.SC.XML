@@ -1,0 +1,20 @@
+<class id="Wagons" cpp_class="CVXWagon" parent="Object" entity="">
+
+	<properties icon="gameres/icons/Wagon.bmp" />
+
+	<value2 icon="gameres/infobar/common/gold ico.bmp"
+		script="return SelectionGold;"
+		help="/contents/resources"
+		rollover="Gold"
+	/>
+	<value3 icon="gameres/infobar/common/food ico.bmp"
+		script="return SelectionFood;"
+		help="/contents/resources"
+		rollover="Food"
+	/>
+	<value4 icon="gameres/infobar/common/health ico.bmp"
+		script="return SelHealth() * 100 / SelMaxHealth() + '%';"
+		help="/contents/feeding"
+		rollover="Health"
+	/>
+</class>

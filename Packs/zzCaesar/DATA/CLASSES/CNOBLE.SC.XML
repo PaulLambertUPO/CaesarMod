@@ -1,0 +1,17 @@
+<class id="CNoble" cpp_class="CVXUnit" parent="Melee" entity="Units/CNoble/CNoble.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="345" />
+	<properties damage="50" armor_slash="22" armor_pierce="22" />
+	<properties speed="70" />
+	<properties unit_specials="Learning, Toughness, Triumph" />
+
+	<properties formation_priority="1000" />
+
+	<properties icon="gameres/icons/CNoble.bmp" />
+	<properties display_name="Noble" display_name_plural="Nobles" />
+	<properties help="contents/units/CNoble" />
+	<properties edittree_pos="Units/Carthage/Noble" />
+
+	<sounds command="VoiceCNoble" attack="UnitSpearFight" />
+</class>

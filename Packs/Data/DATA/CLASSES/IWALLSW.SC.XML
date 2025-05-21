@@ -1,0 +1,8 @@
+<class id="IWallsW" altid="IWallS4" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/IWalls/WallW/WallW.ent.xml">
+	<properties race="Iberia"/>
+	<properties icon="gameres/icons/IWalls.bmp"/>
+	<properties radius="80" selection_radius="80"/>
+	<properties wall_set="Iberian walls"/>
+	<properties num_sentry_slots="4"/>
+	<properties sentry_class_name="ISentry"/>
+</class>

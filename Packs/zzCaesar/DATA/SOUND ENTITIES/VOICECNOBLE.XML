@@ -1,0 +1,9 @@
+<entity description="VoiceCNoble" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CNoble/Carthage_s sons never surrender.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNoble/The gods guide us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNoble/To me Sacred Legion.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNoble/Death before retreat.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNoble/We are the pride of Carthage.wav" frequency="20" />
+	</files>
+</entity>

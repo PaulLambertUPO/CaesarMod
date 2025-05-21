@@ -1,0 +1,3 @@
+<class id="RHero1a" cpp_class="CVXHero" parent="RHero1" entity="Units/RHero1/RHero1.ent.xml">
+	<properties display_name="Epicydes" edittree_pos="" />
+</class>

@@ -1,0 +1,17 @@
+<class id="RTribune" cpp_class="CVXUnit" parent="Melee" entity="Units/RTribune/RTribune.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="600" />
+	<properties damage="40" armor_slash="16" armor_pierce="16" />
+	<properties speed="70" />
+	<properties unit_specials="Ferocity, Parry, Penetration" />
+
+	<properties formation_priority="1000" />
+
+	<properties display_name="Tribune" display_name_plural="Tribunes" />
+	<properties icon="gameres/icons/RTribune.bmp" />
+	<properties help="contents/units/RTribune" />
+	<properties edittree_pos="Units/Roman/Tribune" />
+
+	<sounds command="VoiceRTribune" attack="UnitSpearFight" />
+</class>

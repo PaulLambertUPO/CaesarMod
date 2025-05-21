@@ -1,0 +1,11 @@
+<class id="MutableVillage" altid="Village" cpp_class="CVXTownHall" parent="BaseVillage"
+	entity="Buildings/MutableVillage/MutableVillage.ent.xml"
+>
+	<properties race="Mutable"/>
+	<properties foodperpop="45"/>
+	<properties display_name="Any Race Village"/>
+	<properties icon="gameres/icons/GWarehouse.bmp"/>
+	<properties edittree_pos="Structures/Any Race Village"/>
+	<properties help="/contents/buildings/Village"/>
+
+</class>

@@ -1,0 +1,9 @@
+<entity description="VoiceCLibyanFootman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CLibyanFootman/Marching.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CLibyanFootman/I_m as tough as the desert.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CLibyanFootman/As you command.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CLibyanFootman/You pay you command.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CLibyanFootman/They won_t escape the power of my spear.wav" frequency="20" />
+	</files>
+</entity>

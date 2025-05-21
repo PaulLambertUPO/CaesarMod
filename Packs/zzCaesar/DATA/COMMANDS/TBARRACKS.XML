@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="trainTSwordsman" priority="3"
+		button="actions/train TSwordsman.bmp"
+		queueicon="gameres/icons/TSwordsman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="s"
+		costfood="120"
+		costpop="1"
+		execdelay="8000"
+		rollover="Equip Swordsman"
+		method="train"
+		param="TSwordsman"
+		sclass="TSwordsman">
+		<src obj="TBarracks" />
+	</cmd>
+	<cmd name="trainTArcher" priority="4"
+		button="actions/train TArcher.bmp"
+		queueicon="gameres/icons/TArcher.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costfood="160"
+		costpop="1"
+		execdelay="10000"
+		rollover="Equip Archer"
+		method="train"
+		param="TArcher"
+		sclass="TArcher">
+		<src obj="TBarracks" />
+	</cmd>
+	<cmd name="trainTAxeman" priority="5"
+		button="actions/train TAxeman.bmp"
+		queueicon="gameres/icons/TAxeman.bmp"
+		groupverifier="data/subai/verify_trainex.vs"
+		transpicon="1"
+		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		traincommand="yes"
+		key="x"
+		costfood="280"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Axeman"
+		method="trainex"
+		param="1, axemen, TAxeman, Increase Axe production, Blacksmith">
+		<src obj="TBarracks" />
+	</cmd>
+	<cmd name="trainTHuntress" priority="6"
+		button="actions/train THuntress.bmp"
+		queueicon="gameres/icons/THuntress.bmp"
+		groupverifier="data/subai/verify_trainex.vs"
+		transpicon="1"
+		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		traincommand="yes"
+		key="h"
+		costfood="400"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Huntress"
+		method="trainex"
+		param="1, huntress, THuntress, Increase Javelin production, Blacksmith">
+		<src obj="TBarracks" />
+	</cmd>
+	<cmd name="trainTTeutonRider" priority="7"
+		button="actions/train TTeutonRider.bmp"
+		queueicon="gameres/icons/TTeutonRider.bmp"
+		groupverifier="data/subai/verify_trainex.vs"
+		transpicon="1"
+		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		traincommand="yes"
+		key="t"
+		costfood="360"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Teuton Rider"
+		method="trainex"
+		param="1, teutonrider, TTeutonRider, Increase Horseshoe production, Blacksmith">
+		<src obj="TBarracks" />
+	</cmd>
+	<cmd name="trainTMaceman" priority="8"
+		button="actions/train TMaceman.bmp"
+		queueicon="gameres/icons/TMaceman.bmp"
+		groupverifier="data/subai/verify_trainex.vs"
+		transpicon="1"
+		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		traincommand="yes"
+		key="m"
+		costfood="500"
+		costpop="1"
+		execdelay="22000"
+		rollover="Equip Maceman"
+		method="trainex"
+		param="1, macemen, TMaceman, Increase Mace production, Blacksmith">
+		<src obj="TBarracks" />
+	</cmd>
+</commands>

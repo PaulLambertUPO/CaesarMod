@@ -1,0 +1,7 @@
+<class id="IHero4b" cpp_class="CVXHero" parent="IberianHero" entity="Units/IHero4/IHero4.ent.xml">
+    
+	<properties race="Iberia"/>
+	<properties display_name="Inortes" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/IHero4.bmp"/>
+
+</class>

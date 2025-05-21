@@ -1,0 +1,14 @@
+<entity description="VoiceRScout" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RScout/Fight to the death.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/I will fight until death.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/It_s time to advance.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/May Mars guide us.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/My horse knows none of exhaustion.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/No army can withstand our charge.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/Onward.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/Ready for battle.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/Ready.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RScout/We are unstoppable at a gallop.wav" frequency="10" />
+	</files>
+</entity>

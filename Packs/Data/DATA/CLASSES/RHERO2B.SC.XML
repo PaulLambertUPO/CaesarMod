@@ -1,0 +1,6 @@
+<class id="RHero2b" cpp_class="CVXHero" parent="RepublicanRomanHero" entity="Units/RHero2/RHero2.ent.xml">
+
+	<properties display_name="Kaeso" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/RHero2.bmp"/>
+
+</class>

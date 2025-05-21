@@ -1,0 +1,20 @@
+<class id="ICatapult" cpp_class="CVXCatapult" parent="Catapult" entity="Buildings/ICatapult/Catapult.ent.xml">
+
+	<properties race="Iberia" />
+
+	<properties shot_tan="2200" />
+	<properties shot_height="110" />
+	<properties projectile_class="IGule" />
+	<properties projectile_shadow="IGule_shadow" />
+	<properties projectile_fire="Gule_fire" />
+	<properties projectile_explosion="IGule_explosion" />
+
+	<properties icon="gameres/icons/icatapult.bmp" />
+
+	<method sig="attack_ground" vs="data/subai/catapult_attack_ground.vs" verify="data/subai/catapult_attack_ground_verify.vs" />
+
+	<defaultcmd target="">
+		<cmd name="attack_ground" />
+		<cmd name="attack_ground" ctrl="1" />
+	</defaultcmd>
+</class>

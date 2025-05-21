@@ -1,0 +1,5 @@
+<class id="RScoutPunic" cpp_class="CVXUnit" parent="RScout" entity="Units/RScout/RScout.ent.xml">
+	<properties unit_specials="Defense skill, Keen sight, Rage, Toughness" />
+	<properties icon="gameres/icons/zpwRHorseman.bmp" />
+	<properties edittree_pos="Units/Roman/Scout (Punic)" />
+</class>

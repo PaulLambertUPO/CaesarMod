@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="trainBSwordsman" priority="3"
+		button="actions/train BSwordsman.bmp"
+		queueicon="gameres/icons/BSwordsman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="s"
+		costgold="50"
+		costpop="1"
+		execdelay="8000"
+		rollover="Equip Swordsman"
+		method="train"
+		param="BSwordsman"
+		sclass="BSwordsman">
+		<src obj="BBarracks" />
+	</cmd>
+	<cmd name="trainBBowman" priority="4"
+		button="actions/train BBowman.bmp"
+		queueicon="gameres/icons/BBowman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costgold="60"
+		costpop="1"
+		execdelay="6000"
+		rollover="Equip Bowman"
+		method="train"
+		param="BBowman"
+		sclass="BBowman">
+		<src obj="BBarracks" />
+	</cmd>
+	<cmd name="trainBBronzeSpearman" priority="5"
+		button="actions/train BBronzeSpearman.bmp"
+		queueicon="gameres/icons/BBronzeSpearman.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="x"
+		costgold="150"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Spearman"
+		method="train"
+		param="BBronzeSpearman, Spears"
+		sclass="BBronzeSpearman">
+		<src obj="BBarracks" />
+	</cmd>
+	<cmd name="trainBShieldBearer" priority="6"
+		button="actions/train BShieldBearer.bmp"
+		queueicon="gameres/icons/BShieldBearer.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="b"
+		costgold="150"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Shield Bearer"
+		method="train"
+		param="BShieldBearer, Large Shields"
+		sclass="BShieldBearer">
+		<src obj="BBarracks" />
+	</cmd>
+	<cmd name="trainBJavelineer" priority="7"
+		button="actions/train BJavelineer.bmp"
+		queueicon="gameres/icons/BJavelineer.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="j"
+		costgold="150"
+		costpop="1"
+		execdelay="14000"
+		rollover="Equip Javelineer"
+		method="train"
+		param="BJavelineer, Javelins"
+		sclass="BJavelineer">
+		<src obj="BBarracks" />
+	</cmd>
+	<cmd name="trainBHighlander" priority="8"
+		button="actions/train BHighlander.bmp"
+		queueicon="gameres/icons/BHighlander.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="h"
+		costgold="400"
+		costpop="1"
+		execdelay="22000"
+		rollover="Equip Highlander"
+		method="train"
+		param="BHighlander, Swords"
+		sclass="BHighlander">
+		<src obj="BBarracks" />
+	</cmd>
+</commands>

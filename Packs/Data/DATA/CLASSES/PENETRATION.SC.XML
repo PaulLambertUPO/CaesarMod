@@ -1,0 +1,3 @@
+<class id="Penetration" cpp_class="CVXFeedback" parent="Object" entity="Visuals/Penetration/Penetration.ent.xml">
+	<properties desync_hash="0"/>
+</class>

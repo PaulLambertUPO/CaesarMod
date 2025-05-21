@@ -1,0 +1,17 @@
+<class id="EAxetrower" cpp_class="CVXUnit" parent="ShortRanged" entity="units/EAxetrower/EAxetrower.ent.xml">
+
+	<properties race="Egypt" />
+	<properties maxhealth="240" />
+	<properties damage="22" armor_slash="8" armor_pierce="8" />
+	<properties speed="80" />
+	<properties unit_specials="Active, Triple strike" />
+
+	<properties projectile_class="Axe" building_projectile_class="Axe" />
+
+	<properties display_name="Axe Thrower" display_name_plural="Axe Throwers" />
+	<properties icon="gameres/icons/EAxetrower.bmp" />
+	<properties help="contents/units/EAxeThrower" />
+	<properties edittree_pos="Units/Egypt/Axe Thrower" />
+
+	<sounds command="VoiceEAxetrower" attack="AxeThrow" />
+</class>

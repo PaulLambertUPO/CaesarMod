@@ -1,0 +1,5 @@
+<entity description="Completed_Keltill" priority="UI" type="UI">
+	<files>
+		<sound file="CurrentLang/Voices/GHero/Always forward.wav" frequency="100" />
+	</files>
+</entity>

@@ -1,0 +1,9 @@
+<entity description="VoiceGTridentWarrior" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GTridentWarrior/Advance until victory.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GTridentWarrior/My trident is unmatched.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GTridentWarrior/We will repel the invaders.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GTridentWarrior/Who dares taste my steel.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GTridentWarrior/Who is next.wav" frequency="20" />
+	</files>
+</entity>

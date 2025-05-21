@@ -1,0 +1,34 @@
+<entity description="UnitPikeFight" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_1.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_2.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_3.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_4.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_5.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_6.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_7.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_8.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_9.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_10.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_11.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_12.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_13.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_14.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_15.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_16.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_17.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_18.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_19.wav" frequency="3" />
+		<sound file="Sounds/Fight/Pike_Attack/Pike_Attack_20.wav" frequency="2" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_1.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_2.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_3.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_4.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_5.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_6.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_7.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_8.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_9.wav" frequency="5" />
+		<sound file="Sounds/Fight/Pike_Attack_Voice/Pike_Attack_Voice_10.wav" frequency="5" />
+	</files>
+</entity>

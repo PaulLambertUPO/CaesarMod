@@ -1,0 +1,9 @@
+<entity description="VoiceBBronzeSpearman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BBronzeSpearman/No armor can stop my spear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBronzeSpearman/No quarter.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBronzeSpearman/Obey and fight.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBronzeSpearman/Ready for battle.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBronzeSpearman/Spearmen ready.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,20 @@
+<class id="RCatapult" cpp_class="CVXCatapult" parent="Catapult" entity="Buildings/RCatapult/RCatapult.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties range="725" min_range="150" />
+
+	<properties display_name="Tower" />
+	<properties icon="gameres/icons/Roman Tower.bmp" />
+
+	<method sig="attack" vs="data/subai/rcatapult_attack.vs" verify="data/subai/rcatapult_attack_verify.vs" />
+	<method sig="autofire" vs="data/subai/rcatapult_autofire.vs" />
+
+	<defaultcmd target="Building">
+		<cmd name="catapult_attack" />
+		<cmd name="catapult_attack" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Unit">
+		<cmd name="catapult_attack" />
+		<cmd name="catapult_attack" ctrl="1" />
+	</defaultcmd>
+</class>

@@ -1,0 +1,58 @@
+<class id="BaseVillage" cpp_class="CVXTownHall" parent="BaseBuilding">
+	<properties
+		is_central_building="1"
+		can_be_captured="1"
+		can_be_attacked="1"
+		produces_gold="0"
+		produces_food="1"
+		is_single_building="0"
+		settlement_food="100"
+		settlement_gold="0"
+		settlement_maxfood="5000"
+		settlement_maxgold="5000"
+		population="12"
+		efficiency="1"
+		max_population="20"
+		max_units="0"
+	/>
+	<properties house_pop_bonus="10" />
+	<properties radius="230" selection_radius="250" />
+	<properties interface="thumb,building,queue" />
+	<properties auto_repair="yes" repair_rate="250" />
+	<properties minimap_icon_type="color" />
+	<properties display_name="Village Hall" />
+
+	<behavior script="data/subai/settlement_behavior_ambient.vs" />
+	<behavior script="data/subai/village_behavior_givefood.vs" />
+	<behavior script="data/subai/village_behavior_supply.vs" />
+
+	<method sig="idle" vs="data/subai/village_idle.vs" />
+	<method sig="repopulate" vs="data/subai/village_repopulate.vs" />
+	<method sig="tribute" vs="data/subai/village_tributefood.vs" />
+	<method sig="tribute_default" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />
+	<method sig="stoptribute" vs="data/subai/village_stoptribute.vs" />
+	<method sig="createfoodmulesmall" vs="data/subai/create_food_mule_small.vs" />
+	<method sig="createfoodmulebig" vs="data/subai/create_food_mule_big.vs" />
+	<method sig="creategoldmulesmall" vs="data/subai/create_gold_mule_small.vs" />
+	<method sig="creategoldmulebig" vs="data/subai/create_gold_mule_big.vs" />
+	<method sig="trainpeasant" vs="data/subai/village_trainpeasant.vs" />
+	<method sig="trainfisherman" vs="data/subai/village_trainfisherman.vs" />
+
+	<defaultcmd target="BaseTownhall">
+		<cmd name="tribute_default" />
+	</defaultcmd>
+	<defaultcmd target="BaseVillage">
+		<cmd name="tribute_default" />
+	</defaultcmd>
+	<defaultcmd target="BaseShipyard">
+		<cmd name="tribute_default" />
+	</defaultcmd>
+	<defaultcmd target="Outpost">
+		<cmd name="tribute_default" />
+	</defaultcmd>
+	<defaultcmd target="TTent">
+		<cmd name="tribute_default" />
+	</defaultcmd>
+
+	<sounds select="VillageSelect" />
+</class>

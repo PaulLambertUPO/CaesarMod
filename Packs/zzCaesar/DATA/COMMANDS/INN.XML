@@ -1,0 +1,10 @@
+<commands>
+	<cmd name="transport_request"
+		offset="1"
+		button="Actions/InnTransport.bmp"
+		rollover="Transport Party"
+		description="Transports the party to another map"
+		key="t">
+		<src obj="Inn" sticky="yes" />
+	</cmd>
+</commands>

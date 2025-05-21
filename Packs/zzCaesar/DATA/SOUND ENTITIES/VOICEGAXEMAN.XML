@@ -1,0 +1,9 @@
+<entity description="VoiceGAxeman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GAxeman/For Belenos.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GAxeman/Leave them to me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GAxeman/My axe is sharp.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GAxeman/The time to fight has come.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GAxeman/To battle.wav" frequency="20" />
+	</files>
+</entity>

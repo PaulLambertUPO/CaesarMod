@@ -1,0 +1,9 @@
+<entity description="VoiceBBowman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BBowman/Being flawless is everything.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBowman/Dexterity is my best weapon.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBowman/One shot and it will be mine.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBowman/They will fall before my arrows.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BBowman/Today I will claim a nice prey.wav" frequency="20" />
+	</files>
+</entity>

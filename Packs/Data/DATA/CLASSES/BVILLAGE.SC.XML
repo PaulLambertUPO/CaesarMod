@@ -1,0 +1,11 @@
+<class id="BVillage" cpp_class="CVXTownHall" parent="BaseVillage"
+	entity="Buildings/BVillage/BVillage.ent.xml"
+>
+	<properties race="Britain"/>
+	<properties foodperpop="45"/>
+	<properties icon="gameres/icons/BVillage.bmp"/>
+	<properties edittree_pos="Structures/Village (Britain)/Village hall"/>
+	<properties help="/contents/buildings/Village"/>
+
+	
+</class>

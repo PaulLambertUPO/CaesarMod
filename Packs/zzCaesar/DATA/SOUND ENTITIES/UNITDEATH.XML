@@ -1,0 +1,49 @@
+<entity description="UnitDeath" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Death/Die_1.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_2.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_3.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_4.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_5.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_6.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_7.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_8.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_9.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_10.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_11.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_12.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_13.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_14.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_15.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_16.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_17.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_18.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_19.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_20.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_21.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_22.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_23.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_24.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_25.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_26.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_27.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_28.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_29.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_30.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_34.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_35.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_36.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_37.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_38.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_39.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_40.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_41.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_42.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_43.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_44.wav" frequency="3" />
+		<sound file="Sounds/Death/Die_45.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_46.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_47.wav" frequency="2" />
+		<sound file="Sounds/Death/Die_48.wav" frequency="2" />
+	</files>
+</entity>

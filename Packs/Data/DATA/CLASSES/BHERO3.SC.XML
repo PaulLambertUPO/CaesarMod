@@ -1,0 +1,7 @@
+<class id="BHero3" cpp_class="CVXHero" parent="BritonHero" entity="Units/BHero3/BHero3.ent.xml">
+
+	<properties display_name="Wuffa" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/BHero3.bmp"/>
+	<properties edittree_pos="Units/Britain/Hero 3"/>
+
+</class>

@@ -1,0 +1,3 @@
+<class id="SpikedArmor" cpp_class="CVXFeedback" parent="Object" entity="Visuals/SpikedArmor/SpikedArmor.ent.xml">
+	<properties desync_hash="0"/>
+</class>

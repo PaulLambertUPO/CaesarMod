@@ -1,0 +1,35 @@
+<class id="Wall" cpp_class="CVXBuilding" parent="Building">
+
+	<behavior script="data/subai/wall_patrol.vs"/>
+	
+	<properties num_sentry_slots="5"/>
+	<properties sentry_class_name="RSentry"/>
+	<properties display_name="Wall"/>
+	<properties help="/contents/buildings/Fortification"/>
+	<properties non_selectable="1"/>
+	<value0
+		icon="gameres/infobar/common/pop ico.bmp"
+		script="Settlement set; set=.AsBuilding.settlement; return set.population + ' / ' + set.max_population;"
+		flags="-1"
+		help="/contents/resources"
+		rollover = "Population"/>
+	<value1
+		icon="gameres/infobar/common/gold ico.bmp"
+		script="return .AsBuilding.settlement.gold;"
+		flags="5"
+		help="/contents/resources"
+		rolloveer = "Gold"/>
+	<value2
+		icon="gameres/infobar/common/food ico.bmp"
+		script="return .AsBuilding.settlement.food;"
+		flags="5"
+		help="/contents/resources"
+		rollover = "Food"/>
+	<value3
+		icon="gameres/infobar/common/Loyality.bmp"
+		script="return .AsBuilding.settlement.loyalty;"
+		flags="-1"
+		help="/contents/capturing"
+		rollover = "Loyalty"/>
+		
+</class>

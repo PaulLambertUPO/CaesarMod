@@ -1,0 +1,9 @@
+<entity description="VoiceHCataphract" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/HCataphract/Honor compels me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HCataphract/I will make Ares proud.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HCataphract/They are privileged to die at my feet.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HCataphract/They disgrace the art of war.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HCataphract/They will know war.wav" frequency="20" />
+	</files>
+</entity>

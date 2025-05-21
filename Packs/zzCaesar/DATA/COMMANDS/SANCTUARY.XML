@@ -1,0 +1,84 @@
+<commands>
+	<cmd name="repair sanctuary" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="ITemple" />
+	</cmd>
+	<cmd name="trainIEnchantress" priority="2"
+		button="actions/train ienchantress.bmp"
+		queueicon="gameres/icons/IEnchantress.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="e"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Enchantress"
+		method="train"
+		param="IEnchantress"
+		sclass="IEnchantress">
+		<src obj="ITemple" />
+	</cmd>
+	<cmd name="Code of Valor" priority="3"
+		button="research/code of valor.bmp"
+		key="c"
+		queueicon="gameres/icons/upgrades/code of valor.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="30000"
+		rollover="Code of Valor"
+		description="Makes all existing enchantresses level 8 and increases teaching speed depending on the level"
+		method="research"
+		param="NamePlr, Code of Valor, default">
+		<src obj="ITemple" />
+	</cmd>
+	<cmd name="Ancestral Knowledge" priority="4"
+		queueicon="gameres/icons/upgrades/ancestral knowledge.bmp"
+		button="research/Ancestral Knowledge.bmp"
+		key="k"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="30000"
+		rollover="Ancestral Knowledge"
+		description="Allows enchantresses to teach allies up to level 8"
+		method="research"
+		param="ReqPlr, Code of Valor, default, NamePlr, Ancestral Knowledge, default">
+		<src obj="ITemple" />
+	</cmd>
+	<cmd name="Cover of Mercy" priority="5"
+		queueicon="gameres/icons/upgrades/cover of mercy.bmp"
+		button="research/cover of mercy.bmp"
+		key="m"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="20000"
+		rollover="Cover of Mercy"
+		description="Allows enchantresses to sacrifice themselves to create a protective mist that reduces any damage dealt to allies by 50% for about 25 seconds"
+		method="research"
+		param="ReqPlr, Code of Valor, default, NamePlr, Cover of Mercy, default">
+		<src obj="ITemple" />
+	</cmd>
+	<cmd name="IRestoration" priority="6"
+		queueicon="gameres/icons/upgrades/restoration.bmp"
+		button="research/restoration.bmp"
+		key="v"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="20000"
+		rollover="Restoration"
+		description="Allows enchantresses to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that an enchantress dies"
+		method="research"
+		param="ReqPlr, Code of Valor, default, NamePlr, Restoration, default">
+		<src obj="ITemple" />
+	</cmd>
+</commands>

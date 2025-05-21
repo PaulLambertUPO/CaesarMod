@@ -1,0 +1,3 @@
+<class id="GetItem" cpp_class="CVXFeedback" parent="Object" entity="Visuals/GetItem/GetItem.ent.xml">
+	<properties desync_hash="0"/>
+</class>

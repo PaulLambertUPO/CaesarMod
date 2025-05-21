@@ -1,0 +1,10 @@
+<class id="DeerSummoned" cpp_class="CVXUnit" parent="Deer" entity="Units/Deer/Deer.ent.xml">
+	<properties speed="200" />
+	<properties unit_specials="Keen sight" />
+	<properties does_not_regenerate="1" />
+	<properties stamina_dec_time="18000" />
+	<properties edittree_pos="" />
+	<behavior script="data/subai/summoning_behavior.vs" />
+	<method sig="idle" vs="data/subai/unit_idle.vs" />
+	<method sig="move" vs="data/subai/unit_move.vs" />
+</class>

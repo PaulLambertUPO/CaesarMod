@@ -1,0 +1,5 @@
+<entity description="ItemUse" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/ItemUse/Item Use.wav" frequency="100" />
+	</files>
+</entity>

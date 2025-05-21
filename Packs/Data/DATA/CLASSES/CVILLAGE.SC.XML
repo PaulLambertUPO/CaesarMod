@@ -1,0 +1,13 @@
+<class id="CVillage" cpp_class="CVXTownHall" parent="BaseVillage" entity="Buildings/CVillage/CVillage.ent.xml">
+
+	<properties race="Carthage"/>
+	<properties radius="245" selection_radius="250"/>
+	<properties icon="gameres/icons/CStorage.bmp"/>
+	<properties radius="230" selection_radius="250"/>
+	<properties edittree_pos="Structures/Village (Carthage)/Village hall"/>
+	<properties foodperpop="100"/>
+	<properties help="/contents/buildings/Village"/>
+
+	
+	
+</class>

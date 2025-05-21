@@ -1,0 +1,17 @@
+<class id="ETempleOfOsiris" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/ETempleOfOsiris/ETempleOfOsiris.ent.xml">
+
+	<properties race="Egypt"/>
+	<properties display_name="Temple of Osiris"/>
+
+	<properties radius="165" selection_radius="170"/>
+	<properties edittree_pos="Structures/Stronghold (Egypt)/Temple of Osiris"/>
+
+	<properties auto_repair="no"/>
+	<properties icon="gameres/icons/ETempleOfOsiris.bmp"/>
+	<properties help="/contents/buildings/ETempleOfOsiris"/>
+
+	<sounds select="TempleSelect"/>
+
+	<behavior script="data/subai/ETempleofOsiris_anim.vs"/>
+			
+</class>

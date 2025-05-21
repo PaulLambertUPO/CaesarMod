@@ -1,0 +1,4 @@
+<class id="Watersteps" cpp_class="CVXFeedback" parent="Object"
+entity="Visuals/watersteps/watersteps.ent.xml">
+	<properties desync_hash="0"/>
+</class>

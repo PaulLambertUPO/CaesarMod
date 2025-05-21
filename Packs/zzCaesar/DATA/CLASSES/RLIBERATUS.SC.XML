@@ -1,0 +1,15 @@
+<class id="RLiberatus" altid="RChampion" cpp_class="CVXUnit" parent="Melee" entity="Units/RLiberatus/RLiberatus.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="480" />
+	<properties damage="46" armor_slash="14" armor_pierce="14" />
+	<properties speed="90" />
+	<properties unit_specials="Bleeding attack, Freedom, Learning" />
+
+	<properties display_name="Liberatus" display_name_plural="Liberati" />
+	<properties icon="gameres/icons/RLiberatus.bmp" />
+	<properties help="contents/units/RLiberatus" />
+	<properties edittree_pos="Units/Roman/Liberatus" />
+
+	<sounds command="VoiceRLiberatus" attack="AxeAttack" />
+</class>

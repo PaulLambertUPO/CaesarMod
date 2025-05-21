@@ -1,0 +1,15 @@
+<class id="EHorusWarrior" cpp_class="CVXUnit" parent="Melee" entity="units/EHorusWarrior/EHorusWarrior.ent.xml">
+
+	<properties race="Egypt" />
+	<properties maxhealth="340" />
+	<properties damage="36" armor_slash="8" armor_pierce="8" />
+	<properties speed="90" />
+	<properties unit_specials="Bleeding attack, Combat skill" />
+
+	<properties display_name="Horus Warrior" display_name_plural="Horus Warriors" />
+	<properties icon="gameres/icons/EHorusWarrior.bmp" />
+	<properties help="contents/units/EHorusWarrior" />
+	<properties edittree_pos="Units/Egypt/Horus Warrior" />
+
+	<sounds command="VoiceEHorusWarrior" />
+</class>

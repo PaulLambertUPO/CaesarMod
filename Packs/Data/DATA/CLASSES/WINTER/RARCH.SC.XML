@@ -1,0 +1,8 @@
+<class
+	cpp_class = "CVXDecor"
+	entity = "Buildings/RArch/RArch_w.ent.xml"
+	id = "RArchWinter"
+	parent = "RArch"
+>
+	<properties edittree_pos = "Structures/Others/Ruins/Winter/Roman Arch"/>
+</class>

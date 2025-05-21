@@ -1,0 +1,15 @@
+<class id="TMaceman" cpp_class="CVXUnit" parent="Melee" entity="Units/TMaceman/TMaceman.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="540" />
+	<properties damage="44" armor_slash="6" armor_pierce="6" />
+	<properties speed="80" />
+	<properties unit_specials="Active, Death blow, Regeneration" />
+
+	<properties display_name="Maceman" display_name_plural="Macemen" />
+	<properties icon="gameres/icons/TMaceman.bmp" />
+	<properties help="contents/units/TMaceman" />
+	<properties edittree_pos="Units/Germany/Maceman" />
+
+	<sounds command="VoiceTMaceman" attack="UnitHammerFight" />
+</class>

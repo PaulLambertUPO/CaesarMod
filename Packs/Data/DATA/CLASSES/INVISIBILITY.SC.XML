@@ -1,0 +1,3 @@
+<class id="Invisibility" cpp_class="CVXFeedback" parent="Object" entity="Visuals/Invisibility/Invisibility.ent.xml">
+	<properties desync_hash="0"/>
+</class>

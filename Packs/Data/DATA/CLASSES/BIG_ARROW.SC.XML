@@ -1,0 +1,8 @@
+<class id="Big_Arrow" cpp_class="CVXScriptObj" parent="Object"
+       entity="Visuals/arrow/big_arrow.ent.xml">
+
+  <properties projectile_explosion="CGule_fire"/>
+
+  <sounds walk="ShipAttack" />
+
+</class>

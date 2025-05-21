@@ -1,0 +1,9 @@
+<entity description="VoiceBJavelineer" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BJavelineer/A well-placed strike and they will be history.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BJavelineer/Infallible spears.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BJavelineer/Let_s go.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BJavelineer/No hero can withstand my spear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BJavelineer/The tip of my spear is deadly.wav" frequency="20" />
+	</files>
+</entity>

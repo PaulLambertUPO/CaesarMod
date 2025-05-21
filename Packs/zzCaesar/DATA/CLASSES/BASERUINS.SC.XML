@@ -1,0 +1,56 @@
+<class id="BaseRuins" cpp_class="CVXBuilding" parent="Building" entity="">
+
+	<properties
+		is_central_building="1"
+		can_be_captured="0"
+		can_be_attacked="0"
+		produces_gold="0"
+		produces_food="0"
+		is_single_building="1"
+		settlement_food="0"
+		settlement_gold="0"
+		settlement_maxfood="0"
+		settlement_maxgold="0"
+		population="0"
+		efficiency="0"
+		max_population="0"
+		max_units="1"
+		settlement_icon_name=""
+	/>
+
+	<properties interface="thumb,building,items" />
+	<properties icon="gameres/icons/Oracul.bmp" />
+	<properties help="/contents/buildings/Ruins" />
+	<properties	description="Allows heroes of the specified level to enter and obtain the item inside. Upon exiting, their health is always 20% of the maximum" />
+
+	<properties inventory_size="1" />
+	<properties itemmanage="0" />
+	<properties levelperitem="4" />
+	<properties minlevel="4" />
+
+	<properties itemtype="Elephant Tusk" />
+	<properties itemtype="Battle Drums of Rage" />
+	<properties itemtype="Horn of victory" />
+	<properties itemtype="Finger of death" />
+	<properties itemtype="Fur gloves of health" />
+	<properties itemtype="Travel boots" />
+	<properties itemtype="Invigorating dark harp" />
+	<properties itemtype="Concentration stone" />
+	<properties itemtype="Amulet of Triumph" />
+	<properties itemtype="Golden Ankh" />
+	<properties itemtype="Silver Ankh" />
+	<properties itemtype="Scroll of Death" />
+	<properties itemtype="Scroll of Life" />
+	<properties itemtype="Gem of Wisdom" />
+	<properties itemtype="Ring of Power" />
+	<properties itemtype="Amulet of Courage" />
+	<properties itemtype="Stamina Diamond" />
+
+	<behavior script="data/subai/ruin_behavior.vs" />
+
+	<value0 icon="gameres/infobar/common/level ico.bmp"
+		script="return EnvReadInt(.AsBuilding(), 'minlevel');"
+		help="/contents/stats/level"
+		rollover="Hero level"
+	/>
+</class>

@@ -1,0 +1,17 @@
+<class id="RGladiator" cpp_class="CVXUnit" parent="Melee" entity="Units/RGladiator/RGladiator.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="340" />
+	<properties damage="28" armor_slash="10" armor_pierce="10" />
+	<properties speed="80" />
+	<properties unit_specials="Learning, Offensive tactics" />
+
+	<properties formation_priority="1000" />
+
+	<properties display_name="Gladiator" display_name_plural="Gladiators" />
+	<properties icon="gameres/icons/RGladiator.bmp" />
+	<properties help="contents/units/RGladiator" />
+	<properties edittree_pos="Units/Roman/Gladiator" />
+
+	<sounds command="VoiceRGladiator" attack="UnitSpearFight" />
+</class>

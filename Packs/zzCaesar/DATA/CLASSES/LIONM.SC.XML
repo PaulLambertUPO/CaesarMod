@@ -1,0 +1,11 @@
+<class id="LionM" cpp_class="CVXUnit" parent="LionMUnit" entity="units/LionM/LionM.ent.xml">
+	<properties edittree_pos="Units/Animals/Lion (aggressive)" />
+
+	<method sig="idle" vs="data/subai/lion_idle.vs" />
+	<method sig="engage" vs="data/subai/lion_engage.vs" />
+	<method sig="attack" vs="data/subai/lion_attack.vs" />
+	<method sig="lead" vs="data/subai/lion_lead.vs" />
+
+	<method sig="move" vs="data/subai/unit_move.vs" />
+	<method sig="advance" vs="data/subai/unit_advance.vs" />
+</class>

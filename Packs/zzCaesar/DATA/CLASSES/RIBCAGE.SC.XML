@@ -1,0 +1,7 @@
+<class id="RibCage" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/ItemHolders/Rib_cage.ent.xml">
+	<properties radius="28" selection_radius="30" />
+	<properties display_name="Rib cage" />
+	<properties icon="gameres/icons/Rib cage.bmp" />
+	<properties edittree_pos="Structures/Item holders/Rib cage" />
+	<properties respawn_item="Bloodstone" respawn_time="1800000" />
+</class>

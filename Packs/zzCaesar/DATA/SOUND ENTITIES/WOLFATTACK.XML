@@ -1,0 +1,7 @@
+<entity description="WolfAttack" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Animals/Wolf/Wolf_Attack1.wav" frequency="33" />
+		<sound file="Sounds/Animals/Wolf/Wolf_Attack2.wav" frequency="34" />
+		<sound file="Sounds/Animals/Wolf/Wolf_Attack3.wav" frequency="33" />
+	</files>
+</entity>

@@ -1,0 +1,7 @@
+<class id="CHero4d" cpp_class="CVXHero" parent="CarthaginianHero" entity="Units/CHero4/CHero4.ent.xml">
+
+	<properties race="Carthage"/>
+	<properties display_name="Gisco" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/CHero4.bmp"/>
+
+</class>

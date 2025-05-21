@@ -1,0 +1,9 @@
+<entity description="VoiceCShaman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CShaman/For the blood of the fallen.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CShaman/For the god Moloch.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CShaman/Gods grant me power.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CShaman/The gods are with us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CShaman/Their resistance will be useless.wav" frequency="20" />
+	</files>
+</entity>

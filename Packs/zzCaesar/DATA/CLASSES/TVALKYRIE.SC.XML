@@ -1,0 +1,17 @@
+<class id="TValkyrie" cpp_class="CVXUnit" parent="Horse" entity="Units/TValkyrie/TValkyrie.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="380" />
+	<properties damage="32" armor_slash="16" armor_pierce="16" />
+	<properties speed="180" />
+	<properties unit_specials="Combat skill, Power strike, Toughness" />
+
+	<properties healthbar_type="3" />
+
+	<properties icon="gameres/icons/TValkyrie.bmp" />
+	<properties display_name="Valkyrie" display_name_plural="Valkyries" />
+	<properties help="contents/units/TValkyrie" />
+	<properties edittree_pos="Units/Germany/Valkyrie" />
+
+	<sounds command="VoiceTValkyrie" attack="HorseUnitSwordFightFemale" die="UnitDeathFemale" />
+</class>

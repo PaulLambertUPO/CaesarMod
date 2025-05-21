@@ -1,0 +1,9 @@
+<entity description="VoiceGWWarrior" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GWWarrior/At your orders.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GWWarrior/Glory or death.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GWWarrior/I am well trained.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GWWarrior/My sword will not fail you.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GWWarrior/To battle.wav" frequency="20" />
+	</files>
+</entity>

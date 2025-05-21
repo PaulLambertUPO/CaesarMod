@@ -1,0 +1,15 @@
+<class id="IMilitiaman" cpp_class="CVXUnit" parent="Melee" entity="Units/IMilitiaman/IMilitiaman.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="180" />
+	<properties damage="16" armor_slash="8" armor_pierce="8" />
+	<properties speed="80" />
+	<properties unit_specials="Defense skill" />
+
+	<properties display_name="Militiaman" display_name_plural="Militiamen" />
+	<properties icon="gameres/icons/IMilitiaman.bmp" />
+	<properties help="contents/units/IMilitiaman" />
+	<properties edittree_pos="Units/Iberia/Militiaman" />
+
+	<sounds command="VoiceIMilitiaman" />
+</class>

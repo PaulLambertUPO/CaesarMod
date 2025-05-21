@@ -1,0 +1,10 @@
+<class id="BaseHouse" cpp_class="CVXBuilding" parent="BaseBuilding">
+
+	<properties house_pop_bonus="10"/>
+	<properties interface="thumb,building"/>
+	<properties auto_repair="yes"/>
+	<properties maxhealth="1000"/>
+	<properties help="/contents/buildings/House"/>
+
+	<sounds select="HouseSelect"/>
+</class>

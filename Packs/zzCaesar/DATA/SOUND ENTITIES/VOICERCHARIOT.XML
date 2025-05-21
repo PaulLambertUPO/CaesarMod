@@ -1,0 +1,9 @@
+<entity description="VoiceRChariot" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RChariot/As swift as the wind.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RChariot/Defeating enemies gives me strength.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RChariot/I am deadly at a distance.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RChariot/I am the pride of Rome.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RChariot/The earth shakes as I advance.wav" frequency="20" />
+	</files>
+</entity>

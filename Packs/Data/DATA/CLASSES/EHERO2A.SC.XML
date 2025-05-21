@@ -1,0 +1,6 @@
+<class id="EHero2a" cpp_class="CVXHero" parent="EgyptianHero" entity="Units/EHero2/EHero2.ent.xml">
+
+	<properties display_name="Amenwahsu" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/EHero2.bmp"/>
+
+</class>

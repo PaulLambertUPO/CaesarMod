@@ -1,0 +1,3 @@
+<class id="GTownhallWinter" parent="GTownhall" cpp_class="CVXTownHall" entity="Buildings/GTownhall/Townhall_w.ent.xml">
+	<properties edittree_pos="Structures/Stronghold (Gaul)/Winter/Townhall" />
+</class>

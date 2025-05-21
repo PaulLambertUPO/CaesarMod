@@ -1,0 +1,7 @@
+<class id="ShipL" cpp_class="CVXShip" parent="ShipBattle" entity="Units/Ships/ShipL/ShipL.ent.xml">
+
+	<properties icon="gameres/icons/Ship.bmp"/>
+	<properties display_name="Ship" display_name_plural="Ships"/>
+	<properties edittree_pos="Units/Others/Ship"/>
+
+</class>

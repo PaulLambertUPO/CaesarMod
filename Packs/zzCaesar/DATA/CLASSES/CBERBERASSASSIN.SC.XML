@@ -1,0 +1,17 @@
+<class id="CBerberAssassin" cpp_class="CVXUnit" parent="Melee" entity="Units/CBerberAssassin/CBerberAssassin.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="280" />
+	<properties damage="22" armor_slash="4" armor_pierce="4" />
+	<properties speed="80" />
+	<properties unit_specials="Attack skill, Parry, Rage" />
+
+	<properties display_name="Berber Assassin" display_name_plural="Berber Assassins" />
+	<properties icon="gameres/icons/CBerberAssassin.bmp" />
+	<properties help="contents/units/CBerberAssassin" />
+	<properties edittree_pos="Units/Carthage/Berber Assassin" />
+
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+
+	<sounds command="VoiceCBerberAssassin" />
+</class>

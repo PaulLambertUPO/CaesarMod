@@ -1,0 +1,20 @@
+<class id="CNumidianRider" cpp_class="CVXUnit" parent="Horse" entity="Units/CNumidianRider/CNumidianRider.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="420" />
+	<properties damage="28" armor_slash="10" armor_pierce="10" />
+	<properties speed="110" />
+	<properties unit_specials="Combat skill, Keen sight, Regeneration" />
+	<properties max_food="40" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Tuareg" display_name_plural="Tuaregs" />
+	<properties icon="gameres/icons/CNumidianRider.bmp" />
+	<properties help="contents/units/CNumidianRider" />
+	<properties edittree_pos="Units/Carthage/Tuareg" />
+
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+
+	<sounds walk="UnarmoredUnitWalk" command="VoiceCNumidianRider" attack="UnitPikeFight" die="CamelDeath" />
+</class>

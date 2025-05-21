@@ -1,0 +1,35 @@
+<class id="CShaman" cpp_class="CVXDruid" parent="BaseMage" entity="Units/CShaman/CShaman.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="140" />
+	<properties armor_slash="4" armor_pierce="4" />
+	<properties speed="60" />
+	<properties unit_specials="Curse" />
+
+	<properties shaman_food_gain="2" />
+
+	<properties display_name="Shaman" display_name_plural="Shamans" />
+	<properties icon="gameres/icons/CShaman.bmp" />
+	<properties help="contents/units/CShaman" />
+	<properties edittree_pos="Units/Carthage/Shaman" />
+
+	<method sig="idle" vs="data/subai/shaman_idle.vs" />
+	<method sig="stand_position" vs="data/subai/shaman_stand_position.vs" />
+	<method sig="advance" vs="data/subai/shaman_advance.vs" />
+
+	<method sig="curse" vs="data/subai/shaman_curse.vs" verify="data/subai/shaman_curse_verify.vs" />
+	<method sig="zombify" vs="data/subai/druid_ghoul_summoning.vs" />
+
+	<defaultcmd target="Military">
+		<cmd name="curse" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+		<cmd name="approach" />
+	</defaultcmd>
+
+	<sounds command="VoiceCShaman" />
+</class>

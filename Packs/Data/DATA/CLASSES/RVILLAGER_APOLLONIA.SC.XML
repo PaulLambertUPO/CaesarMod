@@ -1,0 +1,9 @@
+<class id="RVillager_Apollonia" cpp_class="CVXUnit" parent="Peasant" entity="Units/RVillager/RVillager.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties speed="25"/>
+	<properties icon="gameres/icons/RMan.bmp"/>
+
+	<sounds command="data/sound entities/VoiceRMaleVillager.xml"/>
+
+</class>

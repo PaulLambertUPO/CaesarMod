@@ -1,0 +1,18 @@
+<class id="IVillage" altid="Village" cpp_class="CVXTownHall" parent="BaseVillage"
+	entity="Buildings/IStorage/IStorage.ent.xml"
+>
+	<properties race="Iberia"/>
+	<properties foodperpop="45"/>
+	<properties icon="gameres/icons/IStorage.bmp"/>
+	<properties edittree_pos="Structures/Village (Iberia)/Village hall"/>
+	<properties help="/contents/buildings/Village"/>
+	
+	<method sig="trainIScout"        vs="data/subai/iberian_village_trainIScout.vs"/>
+	
+	<value4
+		icon="gameres/infobar/common/horse ico.bmp"
+		script="return EnvReadInt(.AsBuilding().settlement(), 'EEE_IVillageNumberHorses');"
+		help="/contents/stats/attack"
+		rollover="Horses"/>
+	
+</class>

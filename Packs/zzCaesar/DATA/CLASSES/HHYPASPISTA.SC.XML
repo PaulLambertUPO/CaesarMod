@@ -1,0 +1,15 @@
+<class id="HHypaspista" cpp_class="CVXUnit" parent="Melee" entity="Units/HHypaspista/HHypaspista.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties maxhealth="400" />
+	<properties damage="42" armor_slash="14" armor_pierce="14" />
+	<properties speed="80" />
+	<properties unit_specials="Combat skill, Defense skill, Life steal" />
+
+	<properties display_name="Hypaspist" display_name_plural="Hypaspists" />
+	<properties icon="gameres/icons/HHypaspista.bmp" />
+	<properties help="contents/units/HHypaspista" />
+	<properties edittree_pos="Units/Greece/Hypaspista" />
+
+	<sounds command="VoiceHHypaspista" />
+</class>

@@ -1,0 +1,9 @@
+<entity description="VoiceHChariot" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/HChariot/Our chariot will scythe them.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HChariot/The crows will feast on their carcasses.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HChariot/They won_t escape us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HChariot/We_ll drag them to Hades.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HChariot/We_ll trample their bodies.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,12 @@
+<class id="CatapultTower" cpp_class="CVXBuilding" parent="FakeTower"
+entity="Buildings/FakeTower/faketower.ent.xml">
+
+	<properties range="800" min_range="150"/>
+	<properties sight="0"/>
+	<properties projectile_class="Arrow"/>
+	<properties building_projectile_class="Fire_Arrow"/>
+
+	<method sig="idle" vs="data/subai/catapult_tower_guard.vs"/>
+	<method sig="attack" vs="data/subai/do_nothing_obj.vs"/>
+
+</class>

@@ -1,0 +1,8 @@
+<class id="MTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/MTownhall/MTownhall.ent.xml">
+	<properties race="ImperialRome" />
+	<properties foodperpop="100" />
+	<properties display_name="Roman Townhall" />
+	<properties icon="gameres/icons/MTownhall.bmp" />
+	<properties radius="170" selection_radius="175" />
+	<properties help="/contents/buildings/RTownhall" />
+</class>

@@ -1,0 +1,3 @@
+<class id="Death" cpp_class="CVXFeedback" parent="Object" entity="Visuals/Death/Death.ent.xml">
+	<properties desync_hash="0"/>
+</class>

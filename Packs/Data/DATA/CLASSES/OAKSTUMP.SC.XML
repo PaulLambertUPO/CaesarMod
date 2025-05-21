@@ -1,0 +1,11 @@
+<class id="OakStump" cpp_class="CVXItemHolder" parent="BaseWell" entity="MapObjects/ItemHolders/Oak_stump.ent.xml">
+
+	<properties edittree_pos="Structures/Item holders/Oak stump"/>
+	<properties icon="gameres/icons/Oak stump.bmp"/>
+	<properties radius="70" selection_radius="72"/>
+	<properties display_name="Oak stump"/>
+	<properties 
+		respawn_time="300000"
+		respawn_item="Healing water"/>
+
+</class>

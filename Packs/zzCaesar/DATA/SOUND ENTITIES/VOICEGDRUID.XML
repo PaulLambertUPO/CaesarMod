@@ -1,0 +1,9 @@
+<entity description="VoiceGDruid" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GDruid/Follow your instinct.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GDruid/May the gods protect you.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GDruid/My powers are at your service.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GDruid/Nature is my teacher.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GDruid/The gods guide me.wav" frequency="20" />
+	</files>
+</entity>

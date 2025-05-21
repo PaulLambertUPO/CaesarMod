@@ -1,0 +1,8 @@
+<class id="BWallsE" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/BWalls/WallE/WallE.ent.xml">
+	<properties race="Britain"/>
+	<properties icon="gameres/icons/BWalls.bmp"/>
+	<properties radius="110" selection_radius="110"/>
+	<properties wall_set="British walls"/>
+	<properties num_sentry_slots="4"/>
+	<properties sentry_class_name="BSentry"/>
+</class>

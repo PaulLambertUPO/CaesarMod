@@ -1,0 +1,1240 @@
+<placeobjects>
+	<!-- Notes:
+		- mindist is in pixels
+		- the "Village" and "Town" ids are hardcoded in the source code
+		- placing of trees is in their own file - placetrees.xml -->
+	<!-- Small map -->
+	<PlaceGameObjects perlin-id="height" mapsize="8192">
+		<ifdef id="villages">
+			<GameObj SetName="Village" min="1" max="3" inf-max="10" inf="100" benefit="40" rescue="1" mindist="1500" fade="7" />
+		</ifdef>
+		<ifdef id="outposts">
+			<GameObj class="ROutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="GOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="COutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="IOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="EOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="TOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="BOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+			<GameObj class="HOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
+		</ifdef>
+		<ifdef id="stonehenge">
+			<GameObj class="Stonehenge2" min="0" max="1" inf-max="13" inf="30" mindist="4000" fade="2">
+				<RaceAlternative race="Gaul" class="Stonehenge2" />
+				<RaceAlternative race="Carthage" class="Shrine" />
+				<RaceAlternative race="RepublicanRome" class="Stonehenge1" />
+				<RaceAlternative race="Iberia" class="Stonehenge1" />
+				<RaceAlternative race="ImperialRome" class="Stonehenge1" />
+				<RaceAlternative race="Britain" class="Stonehenge1" />
+				<RaceAlternative race="Egypt" class="Shrine" />
+				<RaceAlternative race="Germany" class="Stonehenge1" />
+			</GameObj>
+		</ifdef>
+		<ifdef id="teutontents">
+			<GameObj class="CTent" min="1" max="1" inf-max="13" inf="60" benefit="30" mindist="4000" fade="4" />
+			<GameObj class="TTent" min="1" max="1" inf-max="13" inf="60" benefit="30" mindist="4000" fade="4" />
+		</ifdef>
+		<ifdef id="ruins">
+			<GameObj class="Ruins1" min="1" max="1" inf-max="13" inf="30" benefit="20" mindist="3000" fade="3" />
+		</ifdef>
+		<ifdef id="teleports">
+			<GameObj class="Teleport_1" min="1" max="1" inf-max="10" inf="43" fade="3" />
+			<GameObj class="Teleport_2" min="0" max="1" inf-max="10" inf="43" fade="3" />
+		</ifdef>
+		<ifdef id="wildlife">
+			<GameObj class="Bear" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="2" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Boar" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="2" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Wolf" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Eagle" min="1" max="3" mindist="1500" inf-max="20" inf="0" mingroup="1" maxgroup="2" groupdist="300" />
+			<GameObj class="Crow" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
+			<GameObj class="Deer" min="3" max="5" mindist="1500" inf-max="20" inf="0" mingroup="2" maxgroup="4" groupdist="100" />
+			<GameObj class="WildHorse" min="1" max="5" mindist="2500" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100" />
+			<GameObj class="Fish" min="5" max="10" mindist="500" inf-max="20" inf="0" mingroup="1" maxgroup="3" groupdist="100" />
+		</ifdef>
+		<ifdef id="itemholders">
+			<GameObj class="Area::HolderBoulderGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderBoulderSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderChestGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderChestSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTree1Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTree2Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTreeSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFacePillarGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFacePillarSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain1Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain1Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain2Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain2Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLargeWellGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLargeWellSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLionThroneGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLionThroneSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderOakStumpGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderOakStumpSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk1Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk1Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk2Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk2Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk3Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk4Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderRibCageGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderRibCageSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderSkullTreeGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderSkullTreeSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderStonePileGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderStonePileSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTombstoneGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTombstoneSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTreeTrunkGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTreeTrunkSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell1Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell1Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell2Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell2Sand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell3Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell4Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell5Grass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWitchHutGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWitchHutSand" min="0" max="1" inf-max="16" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+		</ifdef>
+		<GameObj class="Area::no_items_grass_camp1" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_camp2" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_cutting" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_farm" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_ruins" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_sacred" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_statue" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis1" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis2" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis3" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins1" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins2" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins3" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_sphinx" min="0" max="1" inf-max="16" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+	</PlaceGameObjects>
+	<!-- Normal map -->
+	<PlaceGameObjects perlin-id="height" mapsize="16384">
+		<ifdef id="villages">
+			<GameObj SetName="Village" mindist="2500" minperplayer="1" maxperplayer="3" inf-max="8" inf="42" benefit="100" rescue="1" fade="2" />
+		</ifdef>
+		<ifdef id="outposts">
+			<GameObj class="ROutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="GOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="COutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="IOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="EOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="TOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="BOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="HOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+		</ifdef>
+		<ifdef id="stonehenge">
+			<GameObj class="Stonehenge2" min="1" max="2" inf-max="13" inf="30" mindist="4000" fade="2">
+				<RaceAlternative race="Gaul" class="Stonehenge2" />
+				<RaceAlternative race="Carthage" class="Shrine" />
+				<RaceAlternative race="RepublicanRome" class="Stonehenge1" />
+				<RaceAlternative race="Iberia" class="Stonehenge1" />
+				<RaceAlternative race="ImperialRome" class="Stonehenge1" />
+				<RaceAlternative race="Britain" class="Stonehenge1" />
+				<RaceAlternative race="Egypt" class="Shrine" />
+				<RaceAlternative race="Germany" class="Stonehenge1" />
+			</GameObj>
+		</ifdef>
+		<ifdef id="teutontents">
+			<GameObj class="CTent" min="4" max="6" inf-max="8" inf="40" benefit="25" mindist="4000" fade="2" />
+			<GameObj class="TTent" min="4" max="6" inf-max="8" inf="40" benefit="25" mindist="4000" fade="2" />
+		</ifdef>
+		<ifdef id="ruins">
+			<GameObj class="Ruins1" min="4" max="4" inf-max="8" inf="40" benefit="20" mindist="4000" fade="2" />
+		</ifdef>
+		<ifdef id="teleports">
+			<GameObj class="Teleport_1" min="1" max="1" inf-max="10" inf="43" fade="3" />
+			<GameObj class="Teleport_2" min="1" max="1" inf-max="10" inf="43" fade="3" />
+		</ifdef>
+		<ifdef id="wildlife">
+			<GameObj class="Bear" min="3" max="5" mindist="1000" inf-max="16" inf="0" mingroup="2" maxgroup="3" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Boar" min="3" max="6" mindist="2000" inf-max="16" inf="0" mingroup="2" maxgroup="3" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Wolf" min="4" max="7" mindist="2000" inf-max="16" inf="0" mingroup="3" maxgroup="7" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Eagle" min="2" max="5" mindist="1500" inf-max="16" inf="0" mingroup="1" maxgroup="2" groupdist="300" />
+			<GameObj class="Crow" min="3" max="5" mindist="3000" inf-max="16" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
+			<GameObj class="Deer" min="4" max="10" mindist="1500" inf-max="16" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+			<GameObj class="WildHorse" min="5" max="10" mindist="2500" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100" />
+			<GameObj class="Fish" min="15" max="30" mindist="1000" inf-max="16" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+		</ifdef>
+		<ifdef id="itemholders">
+			<GameObj class="Area::HolderBoulderGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderBoulderSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderChestGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderChestSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTree1Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTree2Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTreeSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFacePillarGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFacePillarSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain1Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain1Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain2Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain2Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLargeWellGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLargeWellSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLionThroneGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLionThroneSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderOakStumpGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderOakStumpSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk1Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk1Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk2Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk2Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk3Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk4Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderRibCageGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderRibCageSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderSkullTreeGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderSkullTreeSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderStonePileGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderStonePileSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTombstoneGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTombstoneSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTreeTrunkGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTreeTrunkSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell1Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell1Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell2Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell2Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell3Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell3Sand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell4Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell5Grass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWitchHutGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWitchHutSand" min="1" max="2" inf-max="15" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+		</ifdef>
+		<GameObj class="Area::no_items_grass_camp1" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_camp2" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_cutting" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_farm" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_ruins" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_sacred" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_statue" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis1" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis2" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis3" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins1" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins2" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins3" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_sphinx" min="1" max="1" inf-max="15" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+	</PlaceGameObjects>
+	<!-- Huge map -->
+	<PlaceGameObjects perlin-id="height" mapsize="32768">
+		<ifdef id="strongholds">
+			<GameObj SetName="Town" minperplayer="1" maxperplayer="2" mindist="7000" inf-max="4" inf="38" benefit="300" />
+		</ifdef>
+		<ifdef id="villages">
+			<GameObj SetName="Village" minperplayer="2" maxperplayer="5" mindist="3000" inf-max="11" inf="28" benefit="100" rescue="1" />
+		</ifdef>
+		<ifdef id="outposts">
+			<GameObj class="ROutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="GOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="COutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="IOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="EOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="TOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="BOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="HOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+		</ifdef>
+		<ifdef id="teutontents">
+			<GameObj class="CTent" maxperplayer="3" inf-max="13" inf="30" benefit="30" mindist="4000" />
+			<GameObj class="TTent" maxperplayer="3" inf-max="13" inf="30" benefit="30" mindist="4000" />
+		</ifdef>
+		<ifdef id="stonehenge">
+			<GameObj class="Stonehenge2" min="2" max="3" inf-max="17" inf="30" mindist="8000">
+				<RaceAlternative race="Gaul" class="Stonehenge2" />
+				<RaceAlternative race="Carthage" class="Shrine" />
+				<RaceAlternative race="RepublicanRome" class="Stonehenge1" />
+				<RaceAlternative race="Iberia" class="Stonehenge1" />
+				<RaceAlternative race="ImperialRome" class="Stonehenge1" />
+				<RaceAlternative race="Britain" class="Stonehenge1" />
+				<RaceAlternative race="Egypt" class="Shrine" />
+				<RaceAlternative race="Germany" class="Stonehenge1" />
+			</GameObj>
+		</ifdef>
+		<ifdef id="ruins">
+			<GameObj class="Ruins1" minperplayer="1" maxperplayer="3" inf-max="15" inf="30" benefit="20" fade="2" mindist="4000" />
+		</ifdef>
+		<ifdef id="teleports">
+			<GameObj class="Teleport_1" min="2" max="3" inf-max="18" inf="30" fade="2" />
+			<GameObj class="Teleport_2" min="2" max="3" inf-max="18" inf="30" fade="2" />
+		</ifdef>
+		<ifdef id="wildlife">
+			<GameObj class="Bear" min="3" max="6" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="3" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Boar" min="3" max="8" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="3" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Wolf" min="5" max="9" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="7" groupdist="100">
+				<RaceAlternative race="Carthage" class="LionM" />
+				<RaceAlternative race="Egypt" class="LionM" />
+			</GameObj>
+			<GameObj class="Eagle" min="5" max="15" mindist="1500" inf-max="20" inf="0" mingroup="1" maxgroup="2" groupdist="300" />
+			<GameObj class="Crow" min="8" max="20" mindist="3000" inf-max="19" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
+			<GameObj class="Deer" min="10" max="20" mindist="1500" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+			<GameObj class="WildHorse" min="10" max="15" mindist="2500" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100" />
+			<GameObj class="Fish" min="20" max="50" mindist="1500" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+		</ifdef>
+		<ifdef id="itemholders">
+			<GameObj class="Area::HolderBoulderGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderBoulderSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderChestGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderChestSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTree1Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTree2Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderDeadTreeSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFacePillarGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFacePillarSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain1Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain1Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain2Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderFountain2Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLargeWellGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLargeWellSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLionThroneGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderLionThroneSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderOakStumpGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderOakStumpSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk1Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk1Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk2Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk2Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk3Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderObelisk4Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderRibCageGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderRibCageSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderSkullTreeGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderSkullTreeSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderStonePileGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderStonePileSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTombstoneGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTombstoneSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTreeTrunkGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderTreeTrunkSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell1Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell1Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell2Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell2Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell3Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell3Sand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell4Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWell5Grass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWitchHutGrass" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Carthage" class="Area::" />
+				<RaceAlternative race="Egypt" class="Area::" />
+			</GameObj>
+			<GameObj class="Area::HolderWitchHutSand" min="3" max="9" inf-max="12" inf="33" fade="2">
+				<RaceAlternative race="Gaul" class="Area::" />
+				<RaceAlternative race="RepublicanRome" class="Area::" />
+				<RaceAlternative race="Iberia" class="Area::" />
+				<RaceAlternative race="ImperialRome" class="Area::" />
+				<RaceAlternative race="Britain" class="Area::" />
+				<RaceAlternative race="Germany" class="Area::" />
+			</GameObj>
+		</ifdef>
+		<GameObj class="Area::no_items_grass_camp1" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_camp2" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_cutting" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_farm" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_ruins" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_sacred" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_grass_statue" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Carthage" class="Area::" />
+			<RaceAlternative race="Egypt" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis1" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis2" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_oasis3" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins1" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins2" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_ruins3" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+		<GameObj class="Area::no_items_sand_sphinx" min="1" max="2" inf-max="12" inf="33" fade="2">
+			<RaceAlternative race="Gaul" class="Area::" />
+			<RaceAlternative race="RepublicanRome" class="Area::" />
+			<RaceAlternative race="Iberia" class="Area::" />
+			<RaceAlternative race="ImperialRome" class="Area::" />
+			<RaceAlternative race="Britain" class="Area::" />
+			<RaceAlternative race="Germany" class="Area::" />
+		</GameObj>
+	</PlaceGameObjects>
+	<ifdef id="decorations">
+		<PlaceDecors group="Terrain patches" max="100" tries="1000" inf-max="17" />
+	</ifdef>
+</placeobjects>

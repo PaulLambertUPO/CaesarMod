@@ -1,0 +1,48 @@
+<commands>
+	<cmd name="StartCLibyanFootmanTrain" priority="1"
+		method="tentproduction"
+		button="actions/Hire CLibyanFootman.bmp"
+		groupverifier="data/subai/start_cfootman_verify.vs"
+		transpicon="1"
+		key="r"
+		immediate="yes"
+		rollover="Train Numidian Footmen"
+		description="Trains a Numidian Footman for 200 food every 15 seconds"
+		param="CLibyanFootman">
+		<src obj="CTent" />
+	</cmd>
+	<cmd name="StopCLibyanFootmanTrain" priority="1"
+		method="tentproduction"
+		button="actions/Stop_CLibyanFootman.bmp"
+		groupverifier="data/subai/stop_cfootman_verify.vs"
+		transpicon="1"
+		key="r"
+		immediate="yes"
+		rollover="Stop training Numidian Footmen"
+		param="Nothing">
+		<src obj="CTent" />
+	</cmd>
+	<cmd name="StartCHorsemanTrain" priority="2"
+		method="tentproduction"
+		button="actions/Hire CHorseman.bmp"
+		groupverifier="data/subai/start_chorseman_verify.vs"
+		transpicon="1"
+		key="h"
+		immediate="yes"
+		rollover="Train Numidian Horsemen"
+		description="Trains a Numidian Horseman for 400 food every 15 seconds"
+		param="CHorseman">
+		<src obj="CTent" />
+	</cmd>
+	<cmd name="StopCHorsemanTrain" priority="2"
+		method="tentproduction"
+		button="actions/Stop_CHorseman.bmp"
+		groupverifier="data/subai/stop_chorseman_verify.vs"
+		transpicon="1"
+		key="h"
+		immediate="yes"
+		rollover="Stop training Numidian Horsemen"
+		param="Nothing">
+		<src obj="CTent" />
+	</cmd>
+</commands>

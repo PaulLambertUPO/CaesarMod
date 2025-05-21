@@ -1,0 +1,14 @@
+<entity description="VoiceCaesar" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RImperialHero/Forward legionaries.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RImperialHero/I am Rome_s chosen one.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RImperialHero/I will conquer in the name of Rome.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RImperialHero/Mars give me your strength.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RImperialHero/We will honor our standard.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/Fortuna audaces iuvat.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/Forward legionaries.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/I know every inch of these lands.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/To me legion.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/Veni Vidi Vici.wav" frequency="10" />
+	</files>
+</entity>

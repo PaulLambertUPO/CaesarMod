@@ -1,0 +1,6 @@
+<class id="MercenaryHHoplite" cpp_class="CVXUnit" parent="HHoplite" entity="Units/HHoplite/HHoplite.ent.xml">
+	<properties display_name="Mercenary Hoplite" display_name_plural="Mercenary Hoplites" />
+	<properties icon="gameres/icons/MercenaryHHoplite.bmp" />
+	<properties edittree_pos="" />
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+</class>

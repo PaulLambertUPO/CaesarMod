@@ -1,0 +1,9 @@
+<entity description="VoiceEAnubisWarrior" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EAnubisWarrior/Anubis make me worthy of yourself.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAnubisWarrior/Born for battle.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAnubisWarrior/Eternal life awaits me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAnubisWarrior/War is my life.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAnubisWarrior/We will prevail by the power of Anubis.wav" frequency="20" />
+	</files>
+</entity>

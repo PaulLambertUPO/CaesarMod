@@ -1,0 +1,9 @@
+<entity description="VoiceHHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/HHero/Courage will lead us to victory.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HHero/For the glory of Sparta.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HHero/For the good of my people.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HHero/May Zeus give me strength.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HHero/Soldiers follow me.wav" frequency="20" />
+	</files>
+</entity>

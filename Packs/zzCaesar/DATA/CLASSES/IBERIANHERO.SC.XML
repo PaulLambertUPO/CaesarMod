@@ -1,0 +1,11 @@
+<class id="IberianHero" cpp_class="CVXHero" parent="HeroMounted" entity="">
+
+	<properties race="Iberia" />
+	<properties maxhealth="1400" />
+	<properties damage="40" armor_slash="14" armor_pierce="14" />
+	<properties HeroSkills="Ceasefire, Healing, Leadership, Team defense, Vigor" />
+
+	<properties help="/contents/units/IHero" />
+
+	<sounds command="VoiceIHero" />
+</class>

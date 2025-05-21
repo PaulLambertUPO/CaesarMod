@@ -1,0 +1,9 @@
+<entity description="VoiceBHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BHero/Conquest is my goal.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BHero/Death to the invader.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BHero/No mercy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BHero/They will speak of my courage.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BHero/We will win.wav" frequency="20" />
+	</files>
+</entity>

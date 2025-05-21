@@ -1,0 +1,9 @@
+<entity description="VoiceGFemaleHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GFemaleHero/Follow me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GFemaleHero/Attack.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GFemaleHero/I won_t let you down.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GFemaleHero/On them.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GFemaleHero/We will win.wav" frequency="20" />
+	</files>
+</entity>

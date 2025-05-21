@@ -1,0 +1,26 @@
+<class id="HeroGrave" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/HeroGrave/HeroGrave.ent.xml">
+
+	<properties radius="38" selection_radius="40" range="450" sight="0" />
+
+	<properties display_name="Hero grave" />
+	<properties icon="gameres/icons/Hero Grave.bmp" />
+	<properties help="contents/buildings/Hero grave" />
+	<properties edittree_pos="Structures/Item holders/Hero grave" />
+	<properties description="Heroes of the same player visiting the grave will benefit from the experience of the dead hero.\nWarriors of the same player visiting the grave will receive charms that improve their combat skills until they kill an enemy" />
+
+	<behavior script="data/subai/herograve_behavior.vs" />
+
+	<value0 icon="gameres/infobar/common/level ico.bmp"
+		script="return .maxstamina;"
+		help="/contents/stats/level"
+		rollover="The level of the hero lying in the grave"
+	/>
+	<value1 icon="gameres/infobar/common/army ico.bmp"
+		script="return .stamina;"
+		rollover="The number of warriors that will receive charms when they visit the grave"
+	/>
+	<value2 icon="gameres/infobar/common/Loyality.bmp"
+		script="return .health;"
+		rollover="Seconds before the grave disappears"
+	/>
+</class>

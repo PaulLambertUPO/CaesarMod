@@ -1,0 +1,34 @@
+<class id="EPriest" cpp_class="CVXDruid" parent="BaseMage" entity="Units/EPriest/EPriest.ent.xml">
+
+	<properties race="Egypt" />
+	<properties maxhealth="200" />
+	<properties armor_slash="4" armor_pierce="4" />
+	<properties speed="60" />
+	<properties unit_specials="Cripple, Revenge" />
+
+	<properties display_name="Priest" display_name_plural="Priests" />
+	<properties icon="gameres/icons/EPriest.bmp" />
+	<properties help="contents/units/EPriest" />
+	<properties edittree_pos="Units/Egypt/Priest" />
+
+	<method sig="idle" vs="data/subai/epriest_idle.vs" />
+	<method sig="stand_position" vs="data/subai/epriest_stand_position.vs" />
+	<method sig="advance" vs="data/subai/epriest_advance.vs" />
+
+	<method sig="cripple" vs="data/subai/epriest_cripple.vs" verify="data/subai/epriest_cripple_verify.vs" />
+	<method sig="zombify" vs="data/subai/druid_ghoul_summoning.vs" />
+	<method sig="mist" vs="data/subai/druid_mist.vs" />
+
+	<defaultcmd target="Military">
+		<cmd name="cripple" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+		<cmd name="approach" />
+	</defaultcmd>
+
+	<sounds command="VoiceEPriest" />
+</class>

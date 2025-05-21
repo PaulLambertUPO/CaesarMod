@@ -1,0 +1,7 @@
+<class id="ETempleOfOsirisFire" cpp_class="CVXDecor" parent="Object" entity="Buildings/ETempleofOsiris/ETempleOfOsirisFire.ent.xml">
+
+	<properties decor_always_animate="1"/>
+
+	<method sig="idle" vs="data/subai/anim.vs"/>
+
+</class>

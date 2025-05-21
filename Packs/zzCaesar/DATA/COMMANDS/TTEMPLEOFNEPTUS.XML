@@ -1,0 +1,84 @@
+<commands>
+	<cmd name="repairTTempleOfNeptus" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="TTempleOfNeptus" />
+	</cmd>
+	<cmd name="trainTEnchantress" priority="2"
+		button="actions/train TEnchantress.bmp"
+		queueicon="gameres/icons/TEnchantress.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		traincommand="yes"
+		transpicon="1"
+		key="s"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Enchantress"
+		method="train"
+		param="TEnchantress"
+		sclass="TEnchantress">
+		<src obj="TTempleOfNeptus" />
+	</cmd>
+	<cmd name="German chamber" priority="3"
+		key="c"
+		button="research/ritual chamber.bmp"
+		queueicon="gameres/icons/upgrades/ritual chamber.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="40000"
+		rollover="Ritual Chamber"
+		description="Allows enchantresses to gain experience by learning from more experienced allies"
+		method="research"
+		param="NamePlr, Ritual Chamber, default">
+		<src obj="TTempleOfNeptus" />
+	</cmd>
+	<cmd name="Wolf Summoning" priority="4"
+		queueicon="gameres/icons/upgrades/summon wolf.bmp"
+		button="actions/summon wolf.bmp"
+		key="w"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Wolf summoning"
+		description="Allows enchantresses to sacrifice themselves and summon a wolf that remains under your control for about 200 seconds"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Wolf Summoning, default">
+		<src obj="TTempleOfNeptus" />
+	</cmd>
+	<cmd name="Deer Summoning" priority="5"
+		queueicon="gameres/icons/upgrades/summon deer.bmp"
+		button="actions/summon deer.bmp"
+		key="d"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="20000"
+		rollover="Deer summoning"
+		description="Allows enchantresses to sacrifice themselves and summon a deer that remains under your control for about 3 minutes"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Deer Summoning, default">
+		<src obj="TTempleOfNeptus" />
+	</cmd>
+	<cmd name="German Mass Heal" priority="6"
+		queueicon="gameres/icons/upgrades/Mass Healing.bmp"
+		button="research/Mass Healing.bmp"
+		key="h"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="20000"
+		rollover="Mass Heal"
+		description="Allows enchantresses to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that an enchantress dies"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default">
+		<src obj="TTempleOfNeptus" />
+	</cmd>
+</commands>

@@ -1,0 +1,10 @@
+<class id="RArch" cpp_class="CVXDecor" parent="Object"
+	entity="Buildings/RArch/RArch_as.ent.xml"
+	entity_winter="Buildings/RArch/RArch_w.ent.xml"
+>
+	<properties race="RepublicanRome"/>
+	<properties display_name="Roman Arch"/>
+	<properties radius="150" selection_radius="170"/>
+	<properties edittree_pos="Structures/Others/Ruins/Roman Arch"/>
+	<properties icon="gameres/icons/RArch.bmp"/>
+</class>

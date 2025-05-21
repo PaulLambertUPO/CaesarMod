@@ -1,0 +1,6 @@
+<class id="Column Lion 01" cpp_class="CVXDecor" parent="Object" entity="MapObjects/Column Lion 01/Column Lion 01.ent.xml">
+
+<properties radius="300" selection_radius="300"/>
+<properties edittree_pos="Structures/Others/Ruins/Column Lion 1"/>
+
+</class>

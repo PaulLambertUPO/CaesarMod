@@ -1,0 +1,7 @@
+<class id="OldManE" cpp_class="CVXUnit" parent="PeasantAmbient" entity="units/OldManE/OldManE.ent.xml">
+
+	<properties race="Gaul"/>
+	<properties radius="20" selection_radius="20"/>
+	<properties edittree_pos="Units/Others/Old Man Europe"/>
+
+</class>

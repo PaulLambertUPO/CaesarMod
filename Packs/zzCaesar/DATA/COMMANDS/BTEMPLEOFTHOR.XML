@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="repair Temple of Thor" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="trainBDruid" priority="2"
+		button="actions/train BDruid.bmp"
+		queueicon="gameres/icons/BDruid.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="d"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Druid"
+		method="train"
+		param="BDruid"
+		sclass="BDruid">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="Britain chamber" priority="3"
+		button="research/ritual chamber.bmp"
+		queueicon="gameres/icons/upgrades/ritual chamber.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		key="c"
+		costgold="1000"
+		execdelay="40000"
+		rollover="Ritual Chamber"
+		description="Allows druids to gain experience by learning from more experienced allies"
+		method="research"
+		param="NamePlr, Ritual Chamber, default">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="Britain Ghoul Summoning" priority="4"
+		queueicon="gameres/icons/upgrades/Ghost.bmp"
+		button="research/Ghost.bmp"
+		key="g"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="30000"
+		rollover="Ghoul summoning"
+		description="Allows druids to sacrifice themselves to summon a Ghoul that drains the health of all nearby enemies for about 10 seconds"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Ghoul Summoning, default">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="Crow Summoning" priority="5"
+		queueicon="gameres/icons/upgrades/summon crow.bmp"
+		button="actions/summon crow.bmp"
+		key="w"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Crow summoning"
+		description="Allows druids to sacrifice themselves to summon a crow that remains under your control for about 4 minutes"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Crow Summoning, default">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="Mass Heal" priority="6"
+		queueicon="gameres/icons/upgrades/Mass Healing.bmp"
+		button="research/Mass Healing.bmp"
+		key="h"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="30000"
+		rollover="Mass heal"
+		description="Allows druids to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that a druid dies"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="Mass Concealment" priority="7"
+		queueicon="gameres/icons/upgrades/hide.bmp"
+		button="research/hide.bmp"
+		key="i"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="30000"
+		rollover="Mass invisibility"
+		description="Allows druids to automatically hide thmeselves and your nearby warriors"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Concealment, default">
+		<src obj="BTempleOfThor" />
+	</cmd>
+</commands>

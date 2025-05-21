@@ -1,0 +1,23 @@
+<class id="CWarElephant" cpp_class="CVXUnit" parent="Melee" entity="Units/CWarElephant/CWarElephant.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="2600" />
+	<properties damage="64" armor_slash="26" armor_pierce="26" />
+	<properties range="20" min_range="0" />
+	<properties speed="65" />
+	<properties unit_specials="Freedom, Regeneration, Trample" />
+	<properties max_food="100" />
+
+	<properties healthbar_type="3" />
+
+	<properties radius="40" selection_radius="40" />
+
+	<properties display_name="War Elephant" display_name_plural="War Elephants" />
+	<properties icon="gameres/icons/CWarElephant.bmp" />
+	<properties help="contents/units/CWarElephant" />
+	<properties edittree_pos="Units/Carthage/War Elephant" />
+
+	<behavior script="data/subai/Trample_CWarElephant.vs"/>
+
+	<sounds idle="CWarElephant Idle" command="VoiceCWarElephant" attack="CWarElephant Attack" die="CWarElephant Death" />
+</class>

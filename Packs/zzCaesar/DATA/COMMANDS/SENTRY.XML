@@ -1,0 +1,12 @@
+<commands>
+	<cmd name="sentry_attack" priority="1"
+		offset="1"
+		button="Actions/attack.bmp"
+		key="a"
+		rollover="Attack"
+		cursor="attack">
+		<cmdtext target="Hero" text="Click to attack this hero" default-text="Right-click to attack this hero" />
+		<cmdtext target="Unit" text="Click to attack this enemy" default-text="Right-click to attack this enemy" />
+		<src obj="Sentry" sticky="yes" />
+	</cmd>
+</commands>

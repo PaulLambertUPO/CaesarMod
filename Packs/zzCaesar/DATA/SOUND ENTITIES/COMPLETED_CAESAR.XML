@@ -1,0 +1,5 @@
+<entity description="Completed_Caesar" priority="UI" type="UI">
+	<files>
+		<sound file="CurrentLang/Voices/RRepublicanHero/Veni Vidi Vici.wav" frequency="100" />
+	</files>
+</entity>

@@ -1,0 +1,9 @@
+<entity description="VoiceCWarElephant" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CWarElephant/Elephants forward.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CWarElephant/I am unstoppable.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CWarElephant/The earth quakes beneath our stride.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CWarElephant/They will flee in terror.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CWarElephant/We shall stomp them like ants.wav" frequency="20" />
+	</files>
+</entity>

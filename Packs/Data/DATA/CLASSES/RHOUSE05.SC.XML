@@ -1,0 +1,12 @@
+<class id="Rhouse05" cpp_class="CVXBuilding" parent="BaseHouse"
+entity="Buildings/Rhouse05/Rhouse05_as.ent.xml"
+entity_autumn="Buildings/Rhouse05/Rhouse05_as.ent.xml"
+entity_spring="Buildings/Rhouse05/Rhouse05_as.ent.xml"
+entity_winter="Buildings/Rhouse05/Rhouse05_w.ent.xml">
+	<properties race="RepublicanRome"/>
+	<properties radius="140" selection_radius="145"/>
+	<properties icon="gameres/icons/rhouse.bmp"/>
+	<properties edittree_pos="Structures/Village (Rome)/House 2"/>
+	<properties display_name="House"/>
+	
+</class>

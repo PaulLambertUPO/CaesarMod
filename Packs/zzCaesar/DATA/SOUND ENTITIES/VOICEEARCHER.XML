@@ -1,0 +1,9 @@
+<entity description="VoiceEArcher" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EArcher/At a distance I am lethal.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EArcher/I can feel their fear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EArcher/I was born for battle.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EArcher/Isis make me infallible.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EArcher/My bow seeks a target.wav" frequency="20" />
+	</files>
+</entity>

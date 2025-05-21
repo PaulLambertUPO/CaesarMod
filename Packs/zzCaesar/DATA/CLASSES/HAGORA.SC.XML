@@ -1,0 +1,23 @@
+<class id="HAgora" cpp_class="CVXTavern" parent="BaseTavern" entity="Buildings/HAGORA/HAGORA.ent.xml">
+
+	<properties race="ImperialRome" />
+
+	<properties radius="210" selection_radius="215" />
+
+	<properties display_name="Agora" icon="gameres/icons/HAgora.bmp" />
+	<properties help="/contents/buildings/HAgora" />
+	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Agora" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
+
+	<behavior script="data/subai/storing_control.vs" />
+
+	<method sig="sellfoodforgold" vs="data/subai/itavern_sell_food.vs"/>
+	<method sig="startstoringfood" vs="data/subai/start_storing_food.vs" />
+	<method sig="stopstoringfood" vs="data/subai/stop_storing_food.vs" />
+
+	<value4 icon="gameres/infobar/common/food ico.bmp"
+		script="return EnvReadInt(.AsBuilding().settlement, 'FoodStorage');"
+		flags="5"
+		help="/contents/resources"
+		rollover="Storage"
+	/>
+</class>

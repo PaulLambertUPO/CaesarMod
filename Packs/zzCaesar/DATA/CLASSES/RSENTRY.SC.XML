@@ -1,0 +1,12 @@
+<class id="RSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/RArcher/RSentry.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="180" />
+	<properties damage="26" armor_slash="6" armor_pierce="6" />
+	<properties unit_specials="Defense skill, Keen sight, Freedom" />
+
+	<properties icon="gameres/icons/RArcher.bmp" />
+	<properties help="contents/units/RArcher"/>
+
+	<sounds command="VoiceRArcher" />
+</class>

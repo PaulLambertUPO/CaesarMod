@@ -1,0 +1,14 @@
+<class id="MTavern2" cpp_class="CVXTavern" parent="BaseTavern"
+entity_autumn="Buildings/Rhouse02/Rhouse02_as.ent.xml"
+entity_spring="Buildings/Rhouse02/Rhouse02_as.ent.xml"
+entity_winter="Buildings/Rhouse02/Rhouse02_w.ent.xml">
+
+	<properties race="ImperialRome"/>
+	<properties display_name="Tavern" icon="gameres/icons/RTavern.bmp"/>
+	<properties radius="190" selection_radius="195"/>
+	<properties help="/contents/buildings/RTavern"/>
+
+	<method sig="buyfoodforgold" vs="data/subai/tavern_buyfood.vs"/>
+
+	
+</class>

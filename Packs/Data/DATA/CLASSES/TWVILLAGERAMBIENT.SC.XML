@@ -1,0 +1,6 @@
+<class id="TWVillagerAmbient" cpp_class="CVXUnit" parent="PeasantAmbient" entity="Units/TWVillager/TWVillager.ent.xml">
+
+	<properties race="Germany"/>
+	<properties icon="gameres/icons/TWVillager.bmp"/>
+
+</class>

@@ -1,0 +1,7 @@
+<class id="THero1" cpp_class="CVXHero" parent="GermanHero" entity="Units/THero1/THero1.ent.xml">
+
+	<properties display_name="Otho" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/THero1.bmp"/>
+	<properties edittree_pos="Units/Germany/Hero 1"/>
+
+</class>

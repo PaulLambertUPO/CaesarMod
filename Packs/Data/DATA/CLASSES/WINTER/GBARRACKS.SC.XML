@@ -1,0 +1,8 @@
+<class
+	cpp_class = "CVXBarrack"
+	entity = "Buildings/GBarracks/GBarracks_w.ent.xml"
+	id = "GBarracksWinter"
+	parent = "GBarracks"
+>
+	<properties edittree_pos = "Structures/Stronghold (Gaul)/Winter/Barracks"/>
+</class>

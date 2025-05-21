@@ -1,0 +1,84 @@
+<commands>
+	<cmd name="createfoodboat1" priority="10"
+		method="createfoodboatsmall"
+		groupverifier="data/subai/create_food_boat_verify.vs"
+		button="actions/Create Boat Food Small.bmp"
+		queueicon="gameres/icons/Boat.bmp"
+		transpicon="1"
+		key="c"
+		rollover="Create Boat with 250 food">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="creategoldboat1" priority="11"
+		method="creategoldboatsmall"
+		groupverifier="data/subai/create_gold_boat_verify.vs"
+		button="actions/Create Boat Gold Small.bmp"
+		queueicon="gameres/icons/Boat.bmp"
+		transpicon="1"
+		key="v"
+		rollover="Create Boat with 250 gold">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="createfoodboat2" priority="12"
+		method="createfoodboatbig"
+		groupverifier="data/subai/create_food_boat_verify.vs"
+		button="actions/Boat Food.bmp"
+		queueicon="gameres/icons/Boat.bmp"
+		transpicon="1"
+		key="b"
+		rollover="Create Boat with 1000 food">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="creategoldboat2" priority="13"
+		method="creategoldboatbig"
+		groupverifier="data/subai/create_gold_boat_verify.vs"
+		button="actions/Boat Gold.bmp"
+		queueicon="gameres/icons/Boat.bmp"
+		transpicon="1"
+		key="n"
+		rollover="Create Boat with 1000 gold">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="buildship" priority="14"
+		method="build_ship"
+		traincommand="yes"
+		groupverifier="data/subai/create_boat_verify.vs"
+		button="actions/Ship.bmp"
+		queueicon="gameres/icons/Ship.bmp"
+		param="ShipL"
+		key="s"
+		costgold="1000"
+		execdelay="20000"
+		transpicon="1"
+		rollover="Create Ship">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="buildshipRome" priority="14"
+		method="build_ship"
+		traincommand="yes"
+		groupverifier="data/subai/create_boat_verify.vs"
+		button="actions/ShipRome.bmp"
+		queueicon="gameres/icons/ShipRome.bmp"
+		param="ShipRome"
+		key="s"
+		costgold="1000"
+		execdelay="20000"
+		transpicon="1"
+		rollover="Create Roman Ship">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="buildshipEgypt" priority="14"
+		method="build_ship"
+		traincommand="yes"
+		groupverifier="data/subai/create_boat_verify.vs"
+		button="actions/ShipEgypt.bmp"
+		queueicon="gameres/icons/ShipEgypt.bmp"
+		param="ShipEgypt"
+		key="s"
+		costgold="1000"
+		execdelay="20000"
+		transpicon="1"
+		rollover="Create Egyptian Ship">
+		<src obj="BaseShipyard" />
+	</cmd>
+</commands>

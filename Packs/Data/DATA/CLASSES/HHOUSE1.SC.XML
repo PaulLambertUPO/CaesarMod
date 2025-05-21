@@ -1,0 +1,10 @@
+<class id="Hhouse1" cpp_class="CVXBuilding" parent="BaseHouse" entity="Buildings/HHOUSE1/HHOUSE1.ent.xml">
+
+	<properties race="ImperialRome"/>
+	<properties radius="160" selection_radius="165"/>
+	<properties icon="gameres/icons/hhouse1.bmp"/>
+	<properties edittree_pos="Structures/Village (Greece)/House 1"/>
+	<properties display_name="House"/>
+
+	
+</class>

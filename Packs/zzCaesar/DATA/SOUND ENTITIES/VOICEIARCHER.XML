@@ -1,0 +1,9 @@
+<entity description="VoiceIArcher" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/IArcher/Fly arrow.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IArcher/This arrow carries its name.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IArcher/I cannot fail.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IArcher/My bow is well drawn.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/IArcher/As sure as lightning.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,13 @@
+<class id="CTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/CTownhall/CTownhall.ent.xml">
+
+	<properties race="Carthage"/>
+	<properties foodperpop="100"/>
+	<properties display_name="Carthaginian Townhall"/>
+	<properties icon="gameres/icons/CTownhall.bmp"/>
+	<properties radius="170" selection_radius="175"/>
+	<properties edittree_pos="Structures/Stronghold (Carthage)/Townhall"/>
+	<properties help="/contents/buildings/CTownhall"/>
+
+	
+
+</class>

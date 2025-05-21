@@ -1,0 +1,15 @@
+<class id="MutableStronghold" cpp_class="CVXTownHall" parent="BaseTownhall"
+entity="Buildings/MutableStronghold/MutableStronghold.ent.xml"
+>
+
+	<properties race="Mutable"/>
+	<properties foodperpop="100"/>
+	<properties display_name="Any Race Stronghold"/>
+	<properties icon="gameres/icons/Rtownhall.bmp"/>
+	<properties radius="1000" selection_radius="1000"/>
+	<properties edittree_pos="Structures/Any Race Stronghold"/>
+	<properties help="/contents/buildings/RTownhall"/>
+
+	<behavior script="data/subai/settlement_behavior_ambient.vs"/>
+
+</class>

@@ -1,0 +1,9 @@
+<entity description="VoiceCBerberAssasin" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CBerberAssassin/I smell the scent of blood.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CBerberAssassin/I want another notch in the hilt.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CBerberAssassin/May our enemies tremble.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CBerberAssassin/My swords are cooling down.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CBerberAssassin/Ruthless as a tiger.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+
+
+<entity name="Olive" type="tree" radius="0" selection_radius="0" variations="1" pass_file="Olive.pass">
+
+<images>
+
+<image idx="1" file="Layer1" drawmode="normal" remaping="none" rows="5" columns="1"/>
+
+<image idx="2" file="Shadow" drawmode="shadow" remaping="none" rows="5" columns="1"/>
+</images>
+
+<points>
+
+</points>
+
+<layers>
+<layer idx="1" name="layer1" image="1" z="1000" offsetx="-150" offsety="-250" sortoffsetx="0" sortoffsety="0" xray="1"/>
+
+<layer idx="2" name="shadow" image="2" z="800" offsetx="-192" offsety="-200" sortoffsetx="0" sortoffsety="0"/>
+</layers>
+
+<states>
+
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+
+
+</states>
+
+<anims>
+<anim idx="1" name="test_tree" sound_id="" startstate="1" endstate="1" frames="5" duration="2800" default_duration="420" action_time="0" step="0">
+
+<replace layer="1" image="1" offsetx="-150" offsety="-250"/>
+
+<replace layer="2" image="2" offsetx="-192" offsety="-200"/>
+
+<frame idx="1" duration="460"/>
+
+<frame idx="2" duration="480"/>
+
+<frame idx="3" duration="440"/>
+
+<frame idx="4" duration="400"/>
+
+<frame idx="5" duration="1020"/>
+
+</anim>
+
+</anims>
+
+</entity>

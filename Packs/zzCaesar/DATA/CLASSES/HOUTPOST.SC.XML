@@ -1,0 +1,21 @@
+<class id="HOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/HOutpost/HOutpost.ent.XML">
+	<properties race="Carthage" />
+	<properties maxhealth="10000" />
+	<properties radius="345" selection_radius="350" />
+	<properties display_name="Recruitment outpost" />
+	<properties icon="gameres/icons/houtpost.bmp" />
+	<properties help="/contents/buildings/RecruitmentOutpost" />
+	<properties edittree_pos="Structures/Outposts/Recruitment outpost (Greek)" />
+	<properties description="Converts peasants to Hoplites" />
+	<properties
+		range="1000"
+		settlement_food="2000"
+		settlement_gold="0"
+		defender_cls_1="HHoplite"
+		defenders_max_1="20"
+		defenders_out_1="12"
+		start_level_1="6"
+		end_level_1="10"
+	/>
+	<behavior script="data/subai/houtpost_behavior.vs" />
+</class>

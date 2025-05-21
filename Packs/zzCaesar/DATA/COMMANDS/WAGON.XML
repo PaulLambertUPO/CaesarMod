@@ -1,0 +1,40 @@
+<commands>
+	<cmd name="boardship" priority="0" cursor="do_something">
+		<cmdtext target="ShipBattle" default-text="Right-click to board this ship" />
+	</cmd>
+	<cmd name="follow" priority="1"
+		key="f"
+		cursor="do_something">
+		<cmdtext target="Unit" text="" default-text="Right-click to follow this unit" />
+	</cmd>
+	<cmd name="loadfood1" priority="2"
+		method="loadfoodsmall"
+		button="actions/load food small.bmp"
+		rollover="Load 250 food">
+		<src obj="Wagon" />
+	</cmd>
+	<cmd name="loadgold1" priority="3"
+		method="loadgoldsmall"
+		button="actions/load gold small.bmp"
+		rollover="Load 250 gold">
+		<src obj="Wagon" />
+	</cmd>
+	<cmd name="loadfood2" priority="4"
+		method="loadfoodbig"
+		button="Actions/load food.bmp"
+		rollover="Load 1000 food">
+		<src obj="Wagon" />
+	</cmd>
+	<cmd name="loadgold2" priority="5"
+		method="loadgoldbig"
+		button="actions/load gold.bmp"
+		rollover="Load 1000 gold">
+		<src obj="Wagon" />
+	</cmd>
+	<cmd name="unload" priority="6"
+		rollover="Unload caravan"
+		cursor="do_something">
+		<src obj="Wagon" />
+		<cmdtext target="Building" text="" default-text="Unload caravan" />
+	</cmd>
+</commands>

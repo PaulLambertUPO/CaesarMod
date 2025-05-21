@@ -1,0 +1,13 @@
+<entity description="BarracksSelect" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="Sounds/Selection/Baraks/Barraks_1.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_2.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_3.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_4.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_5.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_6.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_7.wav" frequency="11" />
+		<sound file="Sounds/Selection/Baraks/Barraks_8.wav" frequency="12" />
+		<sound file="Sounds/Selection/Baraks/Barraks_9.wav" frequency="11" />
+	</files>
+</entity>

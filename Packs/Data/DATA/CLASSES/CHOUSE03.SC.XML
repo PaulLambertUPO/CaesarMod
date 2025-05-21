@@ -1,0 +1,11 @@
+<class id="CHouse03" cpp_class="CVXBuilding" parent="BaseHouse"
+entity="Buildings/CHouse3/CHouse3.ent.xml"
+>
+	<properties race="Carthage"/>
+	<properties radius="140" selection_radius="145"/>
+	<properties icon="gameres/icons/chouse.bmp"/>
+	<properties edittree_pos="Structures/Village (Carthage)/House 3"/>
+	<properties display_name="House"/>
+
+	
+</class>

@@ -1,0 +1,101 @@
+<commands>
+	<cmd name="repairCTemple" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="CTemple" />
+	</cmd>
+	<cmd name="trainCShaman" priority="2"
+		button="actions/hire CShaman.bmp"
+		queueicon="gameres/icons/CShaman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		traincommand="yes"
+		transpicon="1"
+		key="s"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Shaman"
+		method="train"
+		param="CShaman"
+		sclass="CShaman">
+		<src obj="CTemple" />
+	</cmd>
+	<cmd name="Dark Rituals" priority="3"
+		button="research/dark rituals.bmp"
+		key="d"
+		queueicon="gameres/icons/upgrades/Dark Rituals.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		costpop="30"
+		execdelay="25000"
+		rollover="Dark Rituals"
+		description="Allows shamans to feed 2 nearby allies"
+		method="research"
+		param="NameSet, Dark Rituals, default, NamePlr, Foraging, default">
+		<src obj="CTemple" />
+	</cmd>
+	<cmd name="Zombify" priority="4"
+		queueicon="gameres/icons/upgrades/Zombify.bmp"
+		button="research/zombify.bmp"
+		key="z"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="20000"
+		rollover="Zombify"
+		description="Allows shamans to transform into a Ghoul that drains the health of all nearby enemies for about 10 seconds.\nThe same effect also applies every time that a shaman dies, but for about 5 seconds"
+		method="research"
+		param="ReqSet, Dark Rituals, default, NamePlr, Zombify, default">
+		<src obj="CTemple" />
+	</cmd>
+	<cmd name="Sacred Legion" priority="5"
+		button="Upgrades/Sacred Legion.bmp"
+		queueicon="gameres/icons/upgrades/Sacred Legion.bmp"
+		key="l"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="4000"
+		execdelay="30000"
+		rollover="Sacred Legion"
+		description="Allows Nobles to be equipped in the Temple"
+		method="research"
+		param="ReqSet, Dark Rituals, default, NameSet, Sacred Legion, default">
+		<src obj="CTemple" />
+	</cmd>
+	<cmd name="trainCNoble" priority="6"
+		button="actions/train CNoble.bmp"
+		queueicon="gameres/icons/CNoble.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="n"
+		costgold="400"
+		costpop="1"
+		execdelay="20000"
+		rollover="Equip Noble"
+		method="train"
+		param="CNoble, Sacred Legion"
+		sclass="CNoble">
+		<src obj="CTemple" />
+	</cmd>
+	<cmd name="Ferocity" priority="7"
+		queueicon="gameres/icons/upgrades/ferocity.bmp"
+		key="f"
+		button="research/ferocity.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="3000"
+		execdelay="30000"
+		rollover="Ferocity"
+		description="Makes all units restore 3 stamina at every kill and Nobles also give 10 gold to their commanding hero"
+		method="research"
+		param="ReqSet, Dark Rituals, default, NamePlr, Ferocity, default">
+		<src obj="CTemple" />
+	</cmd>
+</commands>

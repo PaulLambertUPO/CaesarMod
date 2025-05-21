@@ -1,0 +1,9 @@
+<entity description="VoiceTArcher" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TArcher/My arrows know no mercy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TArcher/My bow grows impatient.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TArcher/My target is close.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TArcher/Nothing will stop my arrows.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TArcher/Trained for war.wav" frequency="20" />
+	</files>
+</entity>

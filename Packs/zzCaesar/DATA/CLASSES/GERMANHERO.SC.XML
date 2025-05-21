@@ -1,0 +1,11 @@
+<class id="GermanHero" cpp_class="CVXHero" parent="HeroMounted" entity="">
+
+	<properties race="Germany" />
+	<properties maxhealth="1400" />
+	<properties damage="70" armor_slash="10" armor_pierce="10" />
+	<properties HeroSkills="Assault, Concealment, Frenzy, Quick March, Team attack" />
+
+	<properties help="/contents/units/THero" />
+
+	<sounds command="VoiceTHero" attack="AxeAttack" />
+</class>

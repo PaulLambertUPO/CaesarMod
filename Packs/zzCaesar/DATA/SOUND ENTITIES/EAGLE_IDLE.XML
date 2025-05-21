@@ -1,0 +1,7 @@
+<entity description="Eagle idle" priority="UnitIdle" type="UnitIdle">
+	<files>
+		<sound file="Sounds/Animals/Eagle/Eagle_Idle1.wav" frequency="40" />
+		<sound file="Sounds/Animals/Eagle/Eagle_Idle2.wav" frequency="40" />
+		<sound file="" frequency="20" />
+	</files>
+</entity>

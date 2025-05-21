@@ -1,0 +1,9 @@
+<entity description="VoiceBVikingLord" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BVikingLord/For Odin.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BVikingLord/For Thor.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BVikingLord/Trust my hammer.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BVikingLord/Valhalla awaits me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BVikingLord/Valkyries I_m coming.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,16 @@
+<class id="IMountaineer" cpp_class="CVXUnit" parent="Melee" entity="Units/IMountaineer/IMountaineer.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="440" />
+	<properties damage="54" armor_slash="14" armor_pierce="14" />
+	<properties sight="600" speed="90" />
+	<properties unit_specials="Freedom, Offensive tactics, Sneak" />
+	<properties feeds="0" />
+
+	<properties display_name="Mountaineer" display_name_plural="Mountaineers" />
+	<properties icon="gameres/icons/IMountaineer.bmp" />
+	<properties help="contents/units/IMountaineer" />
+	<properties edittree_pos="Units/Iberia/Mountaineer" />
+
+	<sounds command="VoiceIMountaineer" attack="UnitHammerFight" />
+</class>

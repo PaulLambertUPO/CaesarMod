@@ -1,0 +1,9 @@
+<entity description="VoiceTAxeman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TAxeman/Fight battle war.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TAxeman/I am invincible.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TAxeman/I will bring you victory.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TAxeman/They will taste the edge of my axe.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TAxeman/Trust my skill.wav" frequency="20" />
+	</files>
+</entity>

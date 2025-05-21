@@ -1,0 +1,17 @@
+<class id="IDefender" cpp_class="CVXUnit" parent="Melee" entity="Units/IDefender/IDefender.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="260" />
+	<properties damage="18" armor_slash="20" armor_pierce="20" />
+	<properties speed="80" />
+	<properties unit_specials="Deflection, Toughness" />
+
+	<properties formation_priority="1200" />
+
+	<properties display_name="Defender" display_name_plural="Defenders" />
+	<properties icon="gameres/icons/IDefender.bmp" />
+	<properties help="contents/units/IDefender" />
+	<properties edittree_pos="Units/Iberia/Defender" />
+
+	<sounds command="VoiceIDefender" attack="UnitPikeFight" />
+</class>

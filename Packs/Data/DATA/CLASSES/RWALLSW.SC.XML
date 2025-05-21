@@ -1,0 +1,8 @@
+<class id="RWallsW" altid="Rwalls4" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/RWalls/WallW/WallW.ent.xml">
+	<properties race="RepublicanRome"/>
+	<properties icon="gameres/icons/RWalls.bmp"/>
+	<properties radius="80" selection_radius="80"/>
+	<properties wall_set="Republican Roman walls"/>
+	<properties num_sentry_slots="4"/>
+	<properties sentry_class_name="RSentry"/>
+</class>

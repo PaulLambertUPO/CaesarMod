@@ -1,0 +1,12 @@
+<commands>
+	<cmd name="boardunit" priority="0" cursor="do_something">
+		<cmdtext target="Unit" text="" default-text="Right-click to board this ally" />
+	</cmd>
+	<cmd name="unboardall" priority="0"
+		button="actions/Unl Ship.bmp"
+		key="u"
+		rollover="Unboard units">
+		<cmdtext target="" text="Click to unboard all units here" />
+		<src obj="ShipBattle" />
+	</cmd>
+</commands>

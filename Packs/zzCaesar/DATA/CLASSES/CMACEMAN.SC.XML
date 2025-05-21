@@ -1,0 +1,17 @@
+<class id="CMaceman" cpp_class="CVXUnit" parent="Melee" entity="Units/CMaceman/CMaceman.ent.xml">
+
+	<properties race="Carthage" />
+	<properties maxhealth="360" />
+	<properties damage="24" armor_slash="6" armor_pierce="6" />
+	<properties speed="80" />
+	<properties unit_specials="Active, Bleeding attack" />
+
+	<properties display_name="Maceman" display_name_plural="Macemen" />
+	<properties icon="gameres/icons/CMaceman.bmp" />
+	<properties help="contents/units/CMaceman" />
+	<properties edittree_pos="Units/Carthage/Maceman" />
+
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+
+	<sounds command="VoiceCMaceman" attack="UnitMaceFight" />
+</class>

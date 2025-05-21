@@ -1,0 +1,22 @@
+<class id="TTeutonArcher" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/TTeutonArcher/TTeutonArcher.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="300" />
+	<properties damage="12" armor_slash="8" armor_pierce="8" />
+	<properties speed="160" />
+	<properties unit_specials="Attack skill" />
+
+	<properties healthbar_type="3" />
+
+	<properties formation_radius="35" />
+	<properties radius="30" selection_radius="32" />
+
+	<properties display_name="Teuton Archer" display_name_plural="Teuton Archers" />
+	<properties icon="gameres/icons/TTeutonArcher.bmp" />
+	<properties help="contents/units/TTeutonArcher" />
+	<properties edittree_pos="Units/Germany/Teuton Archer" />
+
+	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" /><!-- given by the behaviour script -->
+
+	<sounds walk="HorseWalk" command="VoiceTTeutonArcher" die="HorseUnitDeath" />
+</class>

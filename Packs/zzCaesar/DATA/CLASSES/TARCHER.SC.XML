@@ -1,0 +1,17 @@
+<class id="TArcher" cpp_class="CVXUnit" parent="Ranged" entity="Units/TArcher/TArcher.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="180" />
+	<properties damage="12" armor_slash="2" armor_pierce="2" />
+	<properties speed="70" />
+	<properties unit_specials="Active, Attack skill" />
+
+	<properties projectile_class="Arrow" />
+
+	<properties display_name="Archer" display_name_plural="Archers" />
+	<properties icon="gameres/icons/TArcher.bmp" />
+	<properties help="contents/units/TArcher" />
+	<properties edittree_pos="Units/Germany/Archer" />
+
+	<sounds command="VoiceTArcher" attack="UnitArrowFightFemale" die="UnitDeathFemale" />
+</class>

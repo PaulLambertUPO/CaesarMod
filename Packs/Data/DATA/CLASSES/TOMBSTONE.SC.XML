@@ -1,0 +1,9 @@
+<class id="Tombstone" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/ItemHolders/Tombstone.ent.xml">
+
+	<properties edittree_pos="Structures/Item holders/Tombstone"/>
+	<properties icon="gameres/icons/Tombstone.bmp"/>
+	<properties radius="38" selection_radius="40"/>
+	<properties display_name="Tombstone"/>
+	<properties respawn_time="120000" respawn_item="Healing water"/>
+
+</class>

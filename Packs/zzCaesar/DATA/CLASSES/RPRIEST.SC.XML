@@ -1,0 +1,35 @@
+<class id="RPriest" cpp_class="CVXDruid" parent="BaseMage" entity="Units/RPriest/RPriest.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="140" />
+	<properties armor_slash="2" armor_pierce="2" />
+	<properties speed="60" />
+	<properties unit_specials="Active, Healing" />
+
+	<properties display_name="Priest" display_name_plural="Priests" />
+	<properties icon="gameres/icons/RPriest.bmp" />
+	<properties help="contents/units/RPriest" />
+	<properties edittree_pos="Units/Roman/Priest" />
+
+	<method sig="idle" vs="data/subai/rpriest_idle.vs" />
+	<method sig="stand_position" vs="data/subai/rpriest_stand_position.vs" />
+	<method sig="advance" vs="data/subai/rpriest_advance.vs" />
+
+	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
+	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
+	<method sig="mist" vs="data/subai/druid_mist.vs" />
+	<method sig="wrath_of_jupiter" vs="data/subai/priest_jupiter_anger.vs" />
+
+	<defaultcmd target="Unit">
+		<cmd name="heal" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+		<cmd name="approach" />
+	</defaultcmd>
+
+	<sounds command="VoiceRPriest" />
+</class>

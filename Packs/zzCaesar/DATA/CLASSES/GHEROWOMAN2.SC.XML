@@ -1,0 +1,3 @@
+<class id="GHeroWoman2" cpp_class="CVXHero" parent="GHeroWoman" entity="Units/GHeroWoman/GHeroWoman.ent.xml">
+	<properties display_name="Morrigu" edittree_pos="" />
+</class>

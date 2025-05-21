@@ -1,0 +1,6 @@
+<class id="TCatapultUnit" cpp_class="CVXUnit" parent="RamUnit" entity="Units/TTaran/TTaran.ent.xml">
+
+	<properties race="Germany"/>
+	<properties icon="gameres/icons/tram.bmp"/>
+
+</class>

@@ -1,0 +1,25 @@
+<class id="BaseMage" cpp_class="CVXDruid" parent="Peaceful">
+
+	<properties damage="1" armor_slash="2" armor_pierce="2" />
+	<properties range="200" min_range="0" sight="400" />
+
+	<properties target_factor="100" />
+	<properties healthbar_type="2" />
+
+	<method sig="globalspell" vs="data/subai/druid_globalspell.vs" />
+	<method sig="train" vs="data/subai/basemage_do_nothing.vs" />
+	<method sig="learn" vs="data/subai/druid_learn.vs" />
+	<method sig="ondie" vs="data/subai/druid_ondie.vs" />
+
+	<value1 icon="gameres/infobar/common/attack ico.bmp"
+		script="return Translate('None') + '|' + .AsUnit().range;"
+		help="contents/stats/attack"
+		rollover="Damage|Range"
+	/>
+
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+
+	<sounds walk="UnarmoredUnitWalk" />
+</class>

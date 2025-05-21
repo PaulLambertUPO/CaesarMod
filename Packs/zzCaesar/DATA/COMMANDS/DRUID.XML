@@ -1,0 +1,235 @@
+<commands>
+	<cmd name="learn" priority="10"
+		button="actions/Learn.bmp"
+		rollover="Learn from ally"
+		description="Gains knowledge from a more experienced ally">
+		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
+	</cmd>
+	<cmd name="glearn" priority="10"
+		groupverifier="data/subai/verify_isresearched.vs"
+		button="actions/Learn.bmp"
+		rollover="Learn from ally"
+		description="Gains knowledge from a more experienced ally"
+		param="Ritual Chamber, Druid House">
+		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
+	</cmd>
+	<cmd name="blearn" priority="10"
+		groupverifier="data/subai/verify_isresearched.vs"
+		button="actions/Learn.bmp"
+		rollover="Learn from ally"
+		description="Gains knowledge from a more experienced ally"
+		param="Ritual Chamber, Temple of Thor">
+		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
+	</cmd>
+	<cmd name="tlearn" priority="10"
+		groupverifier="data/subai/verify_isresearched.vs"
+		button="actions/Learn.bmp"
+		rollover="Learn from ally"
+		description="Gains knowledge from a more experienced ally"
+		param="Ritual Chamber, Temple of Neptus">
+		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
+	</cmd>
+	<cmd name="curse" priority="10"
+		method="curse"
+		button="actions/curse.bmp"
+		key="c"
+		rollover="Curse"
+		description="Curses the target warrior to make him miss his next attack"
+		cursor="do_something"
+		coststamina="3">
+		<cmdtext target="Unit" text="Click to curse this enemy" default-text="Right-click to curse this enemy" />
+		<src obj="CShaman" sticky="yes" />
+		<src obj="TEnchantress" sticky="yes" />
+	</cmd>
+	<cmd name="cripple" priority="10"
+		button="actions/cripple.bmp"
+		key="c"
+		rollover="Cripple"
+		description="Drains all of the target's stamina"
+		cursor="do_something"
+		coststamina="3">
+		<cmdtext target="Unit" text="Click to cripple this enemy" default-text="Right-click to cripple this enemy" />
+		<src obj="EPriest" sticky="yes" />
+	</cmd>
+	<cmd name="heal" priority="11"
+		button="actions/heal.bmp"
+		key="h"
+		rollover="Heal"
+		description="Heals an ally by 20 plus the level"
+		cursor="do_something"
+		coststamina="1">
+		<cmdtext target="Unit" text="Click to heal this ally" default-text="Right-click to heal this ally" />
+		<src obj="RPriest" sticky="yes" />
+		<src obj="HPriest" sticky="yes" />
+		<src obj="GDruid" sticky="yes" />
+	</cmd>
+	<cmd name="teach" priority="11"
+		button="actions/Teach.bmp"
+		key="t"
+		rollover="Teach"
+		description="Teaches an ally"
+		cursor="do_something"
+		coststamina="1">
+		<cmdtext target="Unit" text="Click to teach this ally" default-text="Right-click to teach this ally" />
+		<src obj="IEnchantress" sticky="yes" />
+	</cmd>
+	<cmd name="hide" priority="13"
+		button="actions/invisibility.bmp"
+		key="i"
+		rollover="Invisibility"
+		description="Makes the target ally invisible"
+		cursor="do_something"
+		coststamina="2">
+		<cmdtext target="Unit" text="Click to hide this ally" default-text="Right-click to hide this ally" />
+		<src obj="BDruid" sticky="yes" />
+	</cmd>
+	<cmd name="cloud_of_plague" priority="14"
+		method="mist"
+		button="actions/mist.bmp"
+		key="p"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Create Cloud of Plague"
+		description="Creates a cloud of plague that damages all units (sacrificing the priest's life)"
+		param="Cloud of Plague, Temple">
+		<src obj="RPriest" sticky="yes" />
+	</cmd>
+	<cmd name="ecloud_of_plague" priority="14"
+		method="mist"
+		button="actions/mist.bmp"
+		key="p"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Create Cloud of Plague"
+		description="Creates a cloud of plague that damages all units (sacrificing the priest's life)"
+		param="Cloud of Plague, Temple of Osiris">
+		<src obj="EPriest" sticky="yes" />
+	</cmd>
+	<cmd name="cover_of_mercy" priority="14"
+		method="coverofmercy"
+		button="actions/CoverOfMercy.bmp"
+		key="c"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Create Cover of Mercy"
+		description="Creates a cloud that reduces all combat damage allies receive by half (sacrificing the enchantress' life)"
+		param="Cover of Mercy, Sanctuary">
+		<src obj="IEnchantress" sticky="yes" />
+	</cmd>
+	<cmd name="ghoul_summoning" priority="14"
+		button="actions/ghost.bmp"
+		key="g"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Ghoul"
+		description="Summons a ghoul that could be controlled (sacrificing the druid's life)"
+		param="Ghoul Summoning, Druid House">
+		<src obj="GDruid" sticky="yes" />
+	</cmd>
+	<cmd name="b_ghoul_summoning" priority="14"
+		button="actions/ghost.bmp"
+		key="g"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Ghoul"
+		description="Summons a ghoul that could be controlled (sacrificing the druid's life)"
+		param="Ghoul Summoning, Temple of Thor">
+		<src obj="BDruid" sticky="yes" />
+	</cmd>
+	<cmd name="eagle_summoning" priority="15"
+		button="actions/summon eagle.bmp"
+		key="e"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Eagle"
+		description="Summons an eagle that could be controlled (sacrificing the druid's life)"
+		param="Eagle Summoning, Druid House">
+		<src obj="GDruid" />
+	</cmd>
+	<cmd name="crow_summoning" priority="15"
+		button="actions/summon crow.bmp"
+		key="w"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Crow"
+		description="Summons a crow that could be controlled (sacrificing the druid's life)"
+		param="Crow Summoning, Temple of Thor">
+		<src obj="BDruid" />
+	</cmd>
+	<cmd name="tdeer_summoning" priority="15"
+		button="actions/summon deer.bmp"
+		key="e"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Deer"
+		description="Summons a deer that could be controlled (sacrificing the enchantress' life)"
+		param="Deer Summoning, Temple of Neptus">
+		<src obj="TEnchantress" />
+	</cmd>
+	<cmd name="twolf_summoning" priority="15"
+		button="actions/summon wolf.bmp"
+		key="w"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Wolf"
+		description="Summons a wolf that could be controlled (sacrificing the enchantress' life)"
+		param="Wolf Summoning, Temple of Neptus">
+		<src obj="TEnchantress" />
+	</cmd>
+	<cmd name="restoration" priority="16"
+		button="actions/restoration.bmp"
+		key="r"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Restoration"
+		description="Restores the stamina of up to 5 nearby allies (sacrificing the druid's life)"
+		param="Restoration, Druid House">
+		<src obj="GDruid" />
+	</cmd>
+	<cmd name="i_restoration" priority="16"
+		button="actions/restoration.bmp"
+		key="r"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Restoration"
+		description="Restores the stamina of up to 5 nearby allies (sacrificing the enchantress' life)"
+		param="Restoration, Sanctuary">
+		<src obj="IEnchantress" />
+	</cmd>
+	<cmd name="b_mass_heal" priority="16"
+		button="actions/Mass Healing.bmp"
+		key="a"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Mass heal"
+		description="Heals nearby allies (sacrificing the druid's life)"
+		param="Mass Heal, Temple of Thor">
+		<src obj="BDruid" />
+	</cmd>
+	<cmd name="t_mass_heal" priority="16"
+		button="actions/Mass Healing.bmp"
+		key="a"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Mass heal"
+		description="Heals nearby allies (sacrificing the enchantress' life)"
+		param="Mass Heal, Temple of Neptus">
+		<src obj="TEnchantress" />
+	</cmd>
+	<cmd name="wrath_of_jupiter" priority="16"
+		button="actions/jupiter.bmp"
+		key="j"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Wrath of Jupiter"
+		description="Channels the Wrath of Jupiter hurting the target (sacrificing the priest's life)"
+		param="Wrath of Jupiter, Temple">
+		<src obj="RPriest" sticky="yes" />
+	</cmd>
+	<cmd name="turn2zombie" priority="16"
+		button="research/Zombify.bmp"
+		key="z"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Zombify"
+		method="zombify"
+		description="Transform to zombie"
+		param="Zombify, Temple">
+		<src obj="CShaman" />
+	</cmd>
+	<cmd name="Eturn2zombie" priority="16"
+		button="research/Zombify.bmp"
+		key="z"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Zombify"
+		method="zombify"
+		description="Transform to zombie"
+		param="Zombify, Temple of Osiris">
+		<src obj="EPriest" />
+	</cmd>
+</commands>

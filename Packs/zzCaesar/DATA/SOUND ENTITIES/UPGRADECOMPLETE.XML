@@ -1,0 +1,5 @@
+<entity description="UpgradeComplete" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Notifications/Upgrade Complete.wav" frequency="100" />
+	</files>
+</entity>

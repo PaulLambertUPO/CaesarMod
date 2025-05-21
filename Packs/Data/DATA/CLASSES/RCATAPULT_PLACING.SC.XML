@@ -1,0 +1,6 @@
+<class
+	id="rcatapult_placing"
+	cpp_class="CVXMapObj"
+	parent="catapult_placing"
+	entity="Visuals/RCatapult_Placing/RCatapult_Placing.ent.xml">
+</class>

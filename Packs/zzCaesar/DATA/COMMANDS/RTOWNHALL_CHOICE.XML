@@ -1,0 +1,41 @@
+<commands>
+	<cmd name="ChooseRepublicanRome" priority="1"
+		button="research/Republican.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/Republican.bmp"
+		execdelay="1"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Lead Republican Rome"
+		description="Take the lead of Republican Rome"
+		method="research"
+		researchcommand="yes"
+		param="NameSet, ChooseRepublicanRome, default, SetsSet, ChooseRomanRace, 1">
+		<src obj="RTownhall" />
+	</cmd>
+	<cmd name="ChooseImperialRome" priority="2"
+		button="research/Imperial.bmp"
+		key="i"
+		queueicon="gameres/icons/upgrades/Imperial.bmp"
+		execdelay="1"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Lead Imperial Rome"
+		description="Take the lead of Imperial Rome"
+		method="research"
+		researchcommand="yes"
+		param="NameSet, ChooseImperialRome, default, SetsSet, ChooseRomanRace, 1">
+		<src obj="RTownhall" />
+	</cmd>
+	<cmd name="ChoosePunicRome" priority="3"
+		button="research/OldRome.bmp"
+		key="p"
+		queueicon="gameres/icons/upgrades/OldRome.bmp"
+		execdelay="1"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Lead Punic Rome"
+		description="Take the lead of Rome from the previous Imperivm games"
+		method="research"
+		researchcommand="yes"
+		param="NameSet, ChoosePunicRome, default, SetsSet, ChooseRomanRace, 1">
+		<src obj="RTownhall" />
+	</cmd>
+</commands>

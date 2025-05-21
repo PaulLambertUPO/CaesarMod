@@ -1,0 +1,9 @@
+<entity description="VoiceGSpearman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GSpearman/As you wish.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSpearman/My spear is sharp.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSpearman/The time for action has come.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSpearman/They will taste my steel.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GSpearman/You are the one who commands.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,18 @@
+<class id="Gate" cpp_class="CVXGate" parent="BaseBuilding">
+
+	<behavior script="data/subai/gate_patrol.vs"/>
+
+	<method sig="idle" vs="data/subai/gate_idle.vs"/>
+	<method sig="open" vs="data/subai/gate_open.vs"/>
+	<method sig="close" vs="data/subai/gate_close.vs"/>
+	<method sig="open_permanent" vs="data/subai/gate_open_permanent.vs"/>
+	<method sig="close_permanent" vs="data/subai/gate_close_permanent.vs"/>
+
+	<properties icon="gameres/icons/GGates.bmp"/>
+	<properties target_priority="200"/>
+	<properties display_name="Gate"/>
+	<properties auto_repair="no"/>
+	<properties help="/contents/buildings/Fortification"/>
+	<properties sentry_class_name="RSentry1"/>
+	
+</class>

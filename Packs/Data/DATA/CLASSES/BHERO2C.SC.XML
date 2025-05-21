@@ -1,0 +1,6 @@
+<class id="BHero2c" cpp_class="CVXHero" parent="BritonHero" entity="Units/BHero2/BHero2.ent.xml">
+
+	<properties display_name="Cadmon" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/BHero2.bmp"/>
+
+</class>

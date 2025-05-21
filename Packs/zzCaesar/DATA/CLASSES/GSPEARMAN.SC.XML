@@ -1,0 +1,17 @@
+<class id="GSpearman" cpp_class="CVXUnit" parent="Melee" entity="Units/GSpearman/GSpearman.ent.xml">
+
+	<properties race="Gaul" />
+	<properties maxhealth="280" />
+	<properties damage="18" armor_slash="16" armor_pierce="16" />
+	<properties speed="80" />
+	<properties unit_specials="Deflection, Learning" />
+
+	<properties formation_priority="1200" />
+
+	<properties icon="gameres/icons/GSpearman.bmp" />
+	<properties display_name="Spearman" display_name_plural="Spearmen" />
+	<properties help="contents/units/GSpearman" />
+	<properties edittree_pos="Units/Gaul/Spearman" />
+
+	<sounds command="VoiceGSpearman" attack="UnitPikeFight" />
+</class>

@@ -1,0 +1,5 @@
+<class id="RLiberatusPunic" altid="RChampion" cpp_class="CVXUnit" parent="RLiberatus" entity="Units/RLiberatus/RLiberatus.ent.xml">
+	<properties unit_specials="Bleeding attack, Freedom, Learning, Toughness" />
+	<properties icon="gameres/icons/zpwLiberatus.bmp" />
+	<properties edittree_pos="Units/Roman/Liberatus (Punic)" />
+</class>

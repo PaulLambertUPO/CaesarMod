@@ -1,0 +1,472 @@
+<items>
+	<!-- CONSUMABLE ITEMS -->
+	<item id="Healing water"
+		image="gameres/icons/items/Healing water.bmp"
+		sound="ItemUse"
+		name="Healing water"
+		description="If used, it distributes up to 2000 health among the owner and nearby allies"
+		usecount="2000"
+		use_script="file://Data/ItemScripts/healing water.vs"
+		important="yes">
+	</item>
+	<item id="Bag of healing water"
+		image="gameres/icons/items/Wine skin 01.bmp"
+		sound="ItemUse_WaterAura"
+		name="Bag of healing water"
+		description="If used, it distributes up to 4000 health among the owner and nearby allies"
+		usecount="4000"
+		use_script="file://Data/ItemScripts/healing water.vs"
+		important="yes">
+	</item>
+	<item id="Rye spikes"
+		image="gameres/icons/items/Rye Spikes.bmp"
+		sound="ItemUse"
+		usecount="1000"
+		name="Rye spikes"
+		description="If used, they distribute up to 1000 food among the owner and nearby allies"
+		use_script="file://Data/ItemScripts/rye spikes.vs"
+		important="yes">
+	</item>
+	<item id="Healing herbs"
+		image="gameres/icons/items/Healing Herbs.bmp"
+		sound="ItemUse_ClinkAndSpell"
+		name="Healing herbs"
+		description="If used, they completely restore health and stamina of the owner"
+		usecount="1"
+		use_script="file://Data/ItemScripts/healing herbs.vs"
+		important="yes">
+	</item>
+	<item id="Poison Mushroom"
+		image="gameres/icons/items/Poison Mushrooms.bmp"
+		sound="ItemUse_MagicWord"
+		name="Poison mushrooms"
+		description="If used, they permanently add 1 level to the owner.\nTo use them, the owner must have at least 90% health"
+		usecount="1"
+		use_script="file://Data/ItemScripts/mushroom.vs"
+		important="yes">
+	</item>
+	<item id="Ash of druid heart"
+		image="gameres/icons/items/Ash of Druid Hearth.bmp"
+		sound="ItemUse"
+		name="Ash of druid heart"
+		description="If used, it completely restores the health of the owner and 8 nearby allies"
+		usecount="5"
+		use_script="file://Data/ItemScripts/ash of druid heart.vs"
+		important="yes">
+	</item>
+	<item id="Battle Drums of Rage"
+		image="gameres/icons/items/Battle Drums of Rage.bmp"
+		sound="ItemUse_ThrillerDrum"
+		name="Battle drums of rage"
+		description="If used, they add 30 damage to the owner and nearby allies for 5 seconds"
+		usecount="5"
+		use_script="file://Data/ItemScripts/Battle Drums of Rage.vs"
+		important="yes">
+	</item>
+	<item id="Horn of victory"
+		image="gameres/icons/items/Horn of victory.bmp"
+		sound="ItemUse"
+		name="Horn of victory"
+		description="If used, it deals 75 damage to 15 nearby enemies"
+		usecount="10"
+		use_script="file://Data/ItemScripts/horn of victory.vs"
+		important="yes">
+	</item>
+	<item id="Finger of death"
+		image="gameres/icons/items/Finger of death.bmp"
+		sound="ItemUse_BeatAndBells"
+		name="Finger of death"
+		description="If used, it kills 4 nearby enemies (it does not affect heroes)"
+		usecount="5"
+		use_script="file://Data/ItemScripts/finger of death.vs"
+		important="yes">
+	</item>
+	<!-- ACTIVABLE ITEMS -->
+	<item id="Skull of Pain"
+		image="gameres/icons/items/Skull.bmp"
+		sound="ItemUse_SoftEnchantment"
+		name="Skull of pain"
+		description="Adds 250 health.\nIf used, it takes up to 10% from the owner's max health to deal half of that amount as damage to 6 nearby enemies (it does not affect heroes)"
+		use_script="file://Data/ItemScripts/skull of pain.vs"
+		important="yes">
+		<bonus health="250" />
+	</item>
+	<item id="Fur gloves of health"
+		image="gameres/icons/items/Fur Gloves of madness.bmp"
+		sound="ItemUse"
+		name="Fur gloves of health"
+		description="They add 1200 health.\nIf used, they restore the health of a nearby ally by taking it from the owner"
+		use_script="file://Data/ItemScripts/fur gloves of health.vs"
+		important="yes">
+		<bonus health="1200" />
+	</item>
+	<item id="Concentration stone"
+		image="gameres/icons/items/Concentration stone.bmp"
+		sound="ItemUse"
+		name="Concentration stone"
+		description="Adds 60 damage.\nIf used, it restores the health of the owner by taking it from an ally of choice"
+		object_script="file://Data/ItemScripts/concentration stone.vs"
+		important="yes">
+		<bonus damage="60" />
+	</item>
+	<item id="Bloodstone"
+		image="gameres/icons/items/Blood Stone.bmp"
+		sound="ItemUse_TribalBeat"
+		name="Blood stone"
+		description="Adds 50 experience.\nIf used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 20 seconds)"
+		equip_script="file://Data/ItemScripts/bloodstone_cooldown.vs"
+		object_script="file://Data/ItemScripts/bloodstone.vs"
+		important="yes">
+		<bonus experience="50" />
+	</item>
+	<!-- BASIC ITEMS -->
+	<item id="Snake skin"
+		image="gameres/icons/items/Snake skin.bmp"
+		name="Snake skin"
+		description="Adds 10 damage.\nIt is possible to combine 3 to create a Belt of snakes"
+		equip_script="file://Data/ItemScripts/belt of snakes condition.vs"
+		important="yes">
+		<bonus damage="10" />
+	</item>
+	<item id="Belt of snakes"
+		image="gameres/icons/items/Belt of snakes.bmp"
+		name="Belt of snakes"
+		description="Adds 30 damage"
+		important="yes">
+		<bonus damage="30" />
+	</item>
+	<item id="Eagle feather"
+		image="gameres/icons/items/Eagle feather.bmp"
+		name="Eagle feather"
+		description="Adds 200 health.\nIt is possible to combine 3 to create a Feather amulet"
+		equip_script="file://Data/ItemScripts/feather amulet condition.vs"
+		important="yes">
+		<bonus health="200" />
+	</item>
+	<item id="Feather amulet"
+		image="gameres/icons/items/Feather amulet.bmp"
+		name="Feather amulet"
+		description="Adds 600 health"
+		important="yes">
+		<bonus health="600" />
+	</item>
+	<item id="Boar tooth"
+		image="gameres/icons/items/Simple boar tooth.bmp"
+		name="Boar tooth"
+		description="Adds 2 levels.\nIt is possible to combine 3 to create a Boar teeth amulet"
+		equip_script="file://Data/ItemScripts/boar teeth condition.vs"
+		important="yes">
+		<bonus level="2" />
+	</item>
+	<item id="Boar teeth"
+		image="gameres/icons/items/Boar teeth.bmp"
+		name="Boar teeth amulet"
+		description="Adds 6 levels"
+		important="yes">
+		<bonus level="6" />
+	</item>
+	<item id="King's Belt"
+		image="gameres/icons/items/King's belt.bmp"
+		name="King's belt"
+		description="Adds 600 health and 10 armor"
+		important="yes">
+		<bonus health="600" armor_slash="10" armor_pierce="10" />
+	</item>
+	<!-- PASSIVE ITEMS -->
+	<item id="Elephant Tusk"
+		image="gameres/icons/items/Boar tooth.bmp"
+		name="Elephant tusk"
+		description="Restores the health of the owner by 25 every second"
+		equip_script="file://Data/ItemScripts/elephant tusk.vs"
+		important="yes">
+	</item>
+	<item id="Amulet of Triumph"
+		image="gameres/icons/items/Amulet of Triumph.bmp"
+		name="Amulet of triumph"
+		description="Restores the health of the owner by 100 upon every kill, with a 50% chance to restore 50 more health"
+		kill_script="file://Data/ItemScripts/amulet of triumph.vs"
+		important="yes">
+	</item>
+	<item id="Ring of Power"
+		image="gameres/icons/items/Ring of Power.bmp"
+		name="Ring of power"
+		description="Adds 20 damage.\nIt stores up to 600 charges to restore the health of the owner by 20 every second"
+		equip_script="file://Data/ItemScripts/ring of power.vs"
+		important="yes">
+		<bonus damage="20" />
+	</item>
+	<item id="Golden Ankh"
+		image="gameres/icons/items/golden ankh.bmp"
+		name="Golden ankh"
+		description="Adds 500 health and 8 armor.\nIt restores the health of the owner by 10 every second as long as it remains below 25%"
+		equip_script="file://Data/ItemScripts/golden ankh.vs"
+		important="yes">
+		<bonus health="500" armor_slash="8" armor_pierce="8" />
+	</item>
+	<item id="Silver Ankh"
+		image="gameres/icons/items/silver ankh.bmp"
+		name="Silver ankh"
+		description="Adds 4 armor to the owner's attached units"
+		important="yes"
+		equip_script="file://Data/ItemScripts/silver ankh.vs"
+		remove_script="file://Data/ItemScripts/silver ankh remove.vs"
+		die_script="file://Data/ItemScripts/silver ankh remove.vs">
+	</item>
+	<item id="Amulet of Courage"
+		image="gameres/icons/items/Sign of the Hammer.bmp"
+		name="Amulet of courage"
+		description="Adds 4 damage to the owner's attached units"
+		equip_script="file://Data/ItemScripts/attack_gem.vs"
+		remove_script="file://Data/ItemScripts/attack_gem_remove.vs"
+		die_script="file://Data/ItemScripts/attack_gem_remove.vs"
+		important="yes">
+	</item>
+	<item id="Stamina Diamond"
+		image="gameres/icons/items/Blue Diamond.bmp"
+		name="Stamina diamond"
+		description="Restores the stamina of the owner's attached units more quickly"
+		equip_script="file://Data/ItemScripts/energy_gem.vs"
+		important="yes">
+	</item>
+	<item id="Invigorating dark harp"
+		image="gameres/icons/items/Harp.bmp"
+		sound="ItemUse_DarkChant"
+		name="Invigorating dark harp"
+		description="Adds 300 health and 6 armor.\nIt restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds"
+		equip_script="file://Data/ItemScripts/invigorating dark harp.vs"
+		important="yes">
+		<bonus health="300" armor_slash="6" armor_pierce="6" />
+	</item>
+	<item id="Travel boots"
+		image="gameres/icons/items/Boots.bmp"
+		name="Travel boots"
+		description="Add 300 health and 2 levels.\nThey restore the health of the owner and all attached units by 1 every 0.5 seconds"
+		equip_script="file://Data/ItemScripts/travel boots.vs"
+		important="yes">
+		<bonus armor_slash="4" armor_pierce="4" level="2" />
+	</item>
+	<item id="Gem of Wisdom"
+		image="gameres/icons/items/Gem of Wisdom.bmp"
+		name="Gem of wisdom"
+		description="Gives a 33% chance to gain 2 experience every time that an attached unit dies"
+		attacheddie_script="file://Data/ItemScripts/gem of wisdom.vs"
+		important="yes">
+	</item>
+	<item id="Scroll of Death"
+		image="gameres/icons/items/scroll of death.bmp"
+		name="Scroll of death"
+		description="Restores the health of the owner by 5 every time that an attached unit dies.\nIt gives to every attached unit a 10% chance to spawn a ghoul upon death"
+		important="yes"
+		attacheddie_script="file://Data/ItemScripts/book of death.vs">
+	</item>
+	<item id="Scroll of Life"
+		image="gameres/icons/items/scroll large.bmp"
+		name="Scroll of life"
+		description="Restores the health of the owner by 5 every time that an attached unit kills an enemy.\nIt gives to every attached unit a 10% chance to spawn a ghoul upon every kill"
+		important="yes"
+		attachedkill_script="file://Data/ItemScripts/book of life.vs">
+	</item>
+	<!-- SPECIAL ITEMS -->
+	<item id="Bear teeth amulet"
+		image="gameres/icons/items/Bear Teeth.bmp"
+		name="Bear teeth amulet"
+		description="Adds 4 damage"
+		important="no">
+		<bonus damage="4" />
+	</item>
+	<item id="Belt of might"
+		image="gameres/icons/items/Belt of might.bmp"
+		name="Belt of might"
+		description="Adds 4 armor"
+		important="no">
+		<bonus armor_slash="4" armor_pierce="4" />
+	</item>
+	<item id="Herb amulet of luck"
+		image="gameres/icons/items/Herbs amolet of luck.bmp"
+		name="Herb amulet of luck"
+		description="Adds 30 health"
+		important="no">
+		<bonus health="30" />
+	</item>
+	<item id="God's Gift"
+		image="gameres/icons/items/Gods Gift.bmp"
+		name="God's gift"
+		description="Increases the owner's movement and attack speed by 10%.\nIt completely restores the health of the owner at the first kill, then it disappears"
+		equip_script="file://Data/ItemScripts/gods gift equipping.vs"
+		remove_script="file://Data/ItemScripts/gods gift removing.vs"
+		kill_script="file://Data/ItemScripts/gods gift.vs"
+		cursed="1"
+		important="no">
+	</item>
+	<item id="Spoils of War"
+		image="gameres/icons/items/Spoils of War.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		name="Spoils of war"
+		description="Add 100 gold to the settlement the owner enters, then they disappear"
+		important="no">
+	</item>
+	<item id="Gold"
+		image="gameres/icons/items/Gold hero.bmp"
+		name="Gold"
+		description="Adds gold to the settlement the owner enters"
+		important="no">
+	</item>
+	<item id="Gold1000"
+		image="gameres/icons/items/Oro.bmp"
+		usecount="1000"
+		name="Gold bag"
+		description="Adds gold to the settlement the owner enters, then it disappears"
+		equip_script="file://Data/ItemScripts/deposit_gold.vs"
+		important="yes">
+	</item>
+	<item id="Veteran Guild"
+		image="gameres/icons/items/Veteran Guild.bmp"
+		name="Veteran ring"
+		description="Becomes Veteran medal at the first kill"
+		kill_script="file://Data/ItemScripts/veteran guild.vs"
+		cursed="1"
+		important="no">
+	</item>
+	<item id="Veteran Medal"
+		image="gameres/icons/items/Veteran Medal.bmp"
+		name="Veteran medal"
+		description="Adds 6 and 10% damage"
+		cursed="1"
+		important="no">
+		<bonus damage="6" damage_percent="10" />
+	</item>
+	<item id="Veteran Offence"
+		image="gameres/icons/items/Veteran Offence.bmp"
+		important="no"
+		name="Veteran offence"
+		description="Adds 25% damage">
+		<bonus damage_percent="25" />
+	</item>
+	<item id="Veteran Defence"
+		image="gameres/icons/items/Veteran Defence.bmp"
+		important="no"
+		name="Veteran defence"
+		description="Adds 25% armor">
+		<bonus armor_slash_percent="25" armor_pierce_percent="25" />
+	</item>
+	<item id="Veteran Health"
+		image="gameres/icons/items/Veteran Health.bmp"
+		important="no"
+		name="Veteran health"
+		description="Adds 25% health">
+		<bonus health_percent="25" />
+	</item>
+	<item id="Noble Offence"
+		image="gameres/icons/items/Noble Offence.bmp"
+		important="no"
+		name="Noble offence"
+		description="Adds 8 damage">
+		<bonus damage="8" />
+	</item>
+	<item id="Noble Defence"
+		image="gameres/icons/items/Noble Defence.bmp"
+		important="no"
+		name="Noble defence"
+		description="Adds 8 armor">
+		<bonus armor_slash="8" armor_pierce="8" />
+	</item>
+	<item id="Damage charm"
+		image="gameres/icons/items/DamageCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Damage charm"
+		description="Adds 4 damage.\nIt disappears at the first kill">
+		<bonus damage="4" />
+	</item>
+	<item id="Armor charm"
+		image="gameres/icons/items/ArmorCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Armor charm"
+		description="Adds 4 armor.\nIt disappears at the first kill">
+		<bonus armor_slash="4" armor_pierce="4" />
+	</item>
+	<item id="Health charm"
+		image="gameres/icons/items/HealthCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Health charm"
+		description="Adds 40 health.\nIt disappears at the first kill">
+		<bonus health="40" />
+	</item>
+	<item id="Knowledge charm"
+		image="gameres/icons/items/KnowledgeCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Knowledge charm"
+		description="Adds 4 levels.\nIt disappears at the first kill">
+		<bonus level="4" />
+	</item>
+	<item id="Emblem of Democracy"
+		image="gameres/icons/items/Emblem of Democracy.bmp"
+		name="Emblem of Democracy"
+		important="no"
+		cursed="1"
+		description="Adds 80 health">
+		<bonus health="80" />
+	</item>
+	<item id="Emblem of Oligarchy"
+		image="gameres/icons/items/Emblem of Oligarchy.bmp"
+		name="Emblem of Oligarchy"
+		important="no"
+		cursed="1"
+		description="Adds 6 damage and 2 armor">
+		<bonus damage="6" armor_slash="2" armor_pierce="2" />
+	</item>
+	<item id="Charm of Athena"
+		image="gameres/icons/items/Charm of Athena.bmp"
+		name="Charm of Athena"
+		important="no"
+		cursed="1"
+		equip_script="file://Data/ItemScripts/charm of athena.vs"
+		remove_script="file://Data/ItemScripts/charm of athena removing.vs"
+		description="Increases the owner's movement and attack speed by 40%">
+	</item>
+	<item id="Charm of Aegle"
+		image="gameres/icons/items/Charm of Aegle.bmp"
+		name="Charm of Aegle"
+		important="no"
+		cursed="1"
+		description="Adds 10% health.\nIt restores the health of the owner by 2 every second"
+		equip_script="file://Data/ItemScripts/charm of aegle.vs">
+		<bonus health_percent="10" />
+	</item>
+	<item id="Faded gem"
+		image="gameres/icons/items/Green Diamond.bmp"
+		name="Faded gem"
+		description="The gem is too weak to channel the power of the Goddess Kathobodua"
+		cursed="1"
+		important="yes">
+	</item>
+	<item id="Glowing gem"
+		image="gameres/icons/items/Red Diamond.bmp"
+		name="Glowing gem"
+		description="If used, the gem can channel the power of the Goddess Kathobodua"
+		cursed="1"
+		important="yes">
+	</item>
+	<item id="Gem of Power"
+		image="gameres/icons/items/Glowing Diamond.bmp"
+		name="Gem of power"
+		description="The gem makes the power of the Goddess Kathobodua flow through the owner's veins"
+		cursed="1"
+		important="yes">
+	</item>
+	<item id="Chosen One's Gem"
+		image="gameres/icons/items/Glowing Diamond.bmp"
+		name="Chosen one's gem"
+		description="Adds 80 damage.\nThe gem makes the power of the Goddess Kathobodua flow through the Chosen one's veins: &#34;Gems hold their edge&#34;"
+		cursed="1"
+		important="no">
+		<bonus damage="80" />
+	</item>
+</items>

@@ -1,0 +1,12 @@
+<class id="TSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/TArcher/TSentry.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="180" />
+	<properties damage="16" armor_slash="4" armor_pierce="4" />
+	<properties unit_specials="Active, Attack skill, Freedom, Keen sight" />
+
+	<properties icon="gameres/icons/TArcher.bmp" />
+	<properties help="contents/units/TArcher"/>
+
+	<sounds command="VoiceTArcher" attack="UnitArrowFightFemale" die="UnitDeathFemale" />
+</class>

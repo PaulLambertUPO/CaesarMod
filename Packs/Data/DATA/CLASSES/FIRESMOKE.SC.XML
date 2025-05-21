@@ -1,0 +1,5 @@
+<class id="FireSmoke" cpp_class="CVXDecor" parent="Object" entity="Visuals/Smoke/Smoke.ent.xml">
+
+	<properties decor_always_animate="1"/>
+
+</class>

@@ -1,0 +1,4 @@
+<class id="HHero3a" cpp_class="CVXHero" parent="GreekHero" entity="Units/HHero3/HHero3.ent.xml">
+	<properties display_name="Ptolomeus" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/HHERO3.bmp"/>
+</class>

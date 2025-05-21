@@ -1,0 +1,9 @@
+<entity description="VoiceTTeutonArcher" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TTeutonArcher/Faster.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonArcher/I can feel the battle.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonArcher/I do not fear danger.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonArcher/On the move.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonArcher/Strike and vanish.wav" frequency="20" />
+	</files>
+</entity>

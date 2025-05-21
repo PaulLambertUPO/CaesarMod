@@ -1,0 +1,7 @@
+<class id="Field4" cpp_class="CVXDecor" parent="Object"
+entity_autumn="MapObjects/Decors/nivi/niva_05_a.ent.xml"
+entity_spring="MapObjects/Decors/nivi/niva_05_s.ent.xml"
+entity_winter="MapObjects/Decors/nivi/niva_05_w.ent.xml">
+
+	<properties edittree_pos="Structures/Others/Fields/Field 4"/>
+</class>

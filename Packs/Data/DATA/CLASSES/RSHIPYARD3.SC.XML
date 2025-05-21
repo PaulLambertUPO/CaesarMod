@@ -1,0 +1,14 @@
+<class id="RShipyard3" cpp_class="CVXTownHall" parent="BaseShipyard"
+	entity="Buildings/RShipyard3/RShipyard3_as.ent.xml"
+	entity_autumn="Buildings/RShipyard3/RShipyard3_as.ent.xml"
+	entity_spring="Buildings/RShipyard3/RShipyard3_as.ent.xml"
+	entity_winter="Buildings/RShipyard3/RShipyard3_w.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties edittree_pos="Structures/Shipyards/Stone SE"/>
+	<properties icon="gameres/icons/RShipyard.bmp"/>
+	<properties radius="410" selection_radius="415"/>
+	<properties importsettlement="RShipyard 3"/>
+	<properties exit_vector_x="120" exit_vector_y="-100"/>
+	<properties build_ship_variation="2"/>
+</class>

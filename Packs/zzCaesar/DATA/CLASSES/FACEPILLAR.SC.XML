@@ -1,0 +1,7 @@
+<class id="FacePillar" altid="artefakt1" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/ItemHolders/Face_pillar.ent.xml">
+	<properties radius="57" selection_radius="58" />
+	<properties display_name="Face pillar" />
+	<properties icon="gameres/icons/Face pillar.bmp" />
+	<properties edittree_pos="Structures/Item holders/Face pillar" />
+	<properties respawn_item="Ash of druid heart" respawn_time="900000" />
+</class>

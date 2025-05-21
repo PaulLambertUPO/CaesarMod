@@ -1,0 +1,9 @@
+<entity description="VoiceBDruid" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BDruid/I protect my ally.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BDruid/Taranis protects us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BDruid/We will pass unnoticed.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BDruid/We will swoop down on the enemy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BDruid/Yes, my lord.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,5 @@
+<class id="Toro 2" cpp_class="CVXDecor" parent="Object" entity="MapObjects/Toro 2/Toro 2.ent.xml">
+
+<properties radius="70" selection_radius="70"/>
+<properties edittree_pos="Structures/Others/Ruins/Bull 2"/>
+</class>

@@ -1,0 +1,12 @@
+<class id="BSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/BBowman/BSentry.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="200" />
+	<properties damage="14" armor_slash="4" armor_pierce="4" />
+	<properties unit_specials="Freedom, Keen sight, Triple strike" />
+
+	<properties icon="gameres/icons/BBowman.bmp" />
+	<properties help="contents/units/BBowman"/>
+
+	<sounds command="VoiceBBowman" />
+</class>

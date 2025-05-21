@@ -1,0 +1,3 @@
+<class id="Deflection" cpp_class="CVXFeedback" parent="Object" entity="Visuals/Deflection/Deflection.ent.xml">
+	<properties desync_hash="0"/>
+</class>

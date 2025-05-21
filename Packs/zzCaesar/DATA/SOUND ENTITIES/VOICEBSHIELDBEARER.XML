@@ -1,0 +1,9 @@
+<entity description="VoiceBShieldBearer" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/BShieldBearer/Fight until the invader is defeated.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BShieldBearer/I fight without mercy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BShieldBearer/I will die for my people.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BShieldBearer/Loyalty and valor.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/BShieldBearer/Nothing can pierce my shield.wav" frequency="20" />
+	</files>
+</entity>

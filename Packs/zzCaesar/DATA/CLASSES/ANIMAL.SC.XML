@@ -1,0 +1,19 @@
+<class id="Animal" cpp_class="CVXUnit" parent="BaseAnimal" entity="">
+	<!-- this class is actually PeacefulAnimal -->
+
+	<properties unit_specials="Freedom" />
+
+	<properties target_factor="-1" />
+
+	<method sig="move" vs="data/subai/unit_move.vs" />
+
+	<value1 icon="gameres/infobar/common/attack ico.bmp"
+		script="return Translate('None');"
+		help="contents/stats/attack"
+		rollover="Damage"
+	/>
+
+	<defaultcmd target="">
+		<cmd name="move" />
+	</defaultcmd>
+</class>

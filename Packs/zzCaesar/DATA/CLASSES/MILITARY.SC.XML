@@ -1,0 +1,17 @@
+<class id="Military" cpp_class="CVXUnit" parent="Unit" entity="">
+
+	<properties healthbar_type="2" />
+
+	<method sig="train" vs="data/subai/unit_train.vs" onfinish="data/subai/unit_train_onfinish.vs" />
+	<method sig="ondie" vs="data/subai/military_ondie.vs" />
+
+	<!-- for outpost/tent defenders -->
+	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" />
+	<method sig="guardadvance" vs="data/subai/unit_guard_advance.vs" />
+	<method sig="guardpatrol" vs="data/subai/unit_guard_patrol.vs" />
+	<method sig="guardengage" vs="data/subai/unit_guard_engage.vs" />
+
+	<behavior script="data/subai/sneak_bonus_attack.vs" />
+
+	<sounds walk="UnitWalk" />
+</class>

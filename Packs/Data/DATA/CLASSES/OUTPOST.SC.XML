@@ -1,0 +1,87 @@
+<class id="Outpost" cpp_class="CVXTownHall" parent="Building" entity="">
+
+	<properties maxhealth="5000" sight="1400"/>
+	<properties display_name="Outpost"/>
+	<properties radius="345" selection_radius="350"/>
+	<properties capture_health_percent="50"/>
+
+	<properties
+		is_central_building="1"
+		can_be_captured="1"
+		can_be_attacked="1"
+		produces_gold="0"
+		produces_food="0"
+		is_single_building="1"
+		settlement_maxfood="10000"
+		settlement_maxgold="10000"
+		population="0"
+		efficiency="0"
+		max_population="0"
+		max_units="10000"
+	/>
+	<properties minimap_icon_type="color"/>
+	<properties description="Outpost building"/>
+	
+	<sounds select="Sounds/selection/outpost.wav"/>
+
+	<behavior script="data/subai/outpost_behavior_guard.vs"/>
+	<behavior script="data/subai/outpost_behavior.vs"/>
+
+	<method sig="idle"                vs="data/subai/outpost_idle.vs"/>
+	<method sig="tribute"             vs="data/subai/village_tributefood.vs"/>
+	<method sig="tribute_default"     vs="data/subai/village_tributefood.vs"/>
+	<method sig="createfoodmulesmall" vs="data/subai/create_food_mule_small.vs"/>
+	<method sig="createfoodmulebig"   vs="data/subai/create_food_mule_big.vs"/>
+	<method sig="creategoldmulesmall" vs="data/subai/create_gold_mule_small.vs"/>
+	<method sig="creategoldmulebig"   vs="data/subai/create_gold_mule_big.vs"/>
+	<method sig="stoptribute"         vs="data/subai/village_stoptribute.vs"/>
+	<method sig="attack"              vs="data/subai/outpost_attack.vs" verify="data/subai/outpost_attack_verify.vs"/>
+
+	<value0
+		icon="gameres/infobar/common/Loyality.bmp"
+		script="return .AsBuilding.settlement.loyalty;"
+		flags="-1"
+		help="/contents/capturing"
+		rollover="Loyalty"/>
+	<value2
+		icon="gameres/infobar/common/gold ico.bmp"
+		script="Settlement set; set=.AsBuilding.settlement; if(set.loan > 0)return set.gold + '(' + Translate('Debt') + ':' + set.loan +')'; else return set.gold; return '';"
+		flags="5"
+		help="/contents/resources"
+		rollover="Gold"/>
+	<value3
+		icon="gameres/infobar/common/food ico.bmp"
+		script="return .AsBuilding.settlement.food;"
+		flags="5"
+		help="/contents/resources"
+		rollover="Food"/>
+	<value5
+		icon="gameres/infobar/common/health ico.bmp"
+		script="return .health + '/' + .maxhealth;"
+		flags="-1"
+		help="/contents/stats/health"
+		rollover="Health"/>
+
+	<properties interface="thumb,building,holder"/>
+
+	<defaultcmd target="">
+		<cmd name="unitsout"/>
+	</defaultcmd>
+
+	<defaultcmd target="BaseTownhall">
+		<cmd name="tribute_default"/>
+	</defaultcmd>
+
+	<defaultcmd target="BaseVillage">
+		<cmd name="tribute_default"/>
+	</defaultcmd>
+
+	<defaultcmd target="Outpost">
+		<cmd name="tribute_default"/>
+	</defaultcmd>
+
+	<defaultcmd target="BaseShipyard">
+		<cmd name="tribute_default"/>
+	</defaultcmd>
+
+</class>

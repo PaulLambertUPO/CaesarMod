@@ -1,0 +1,3 @@
+<class id="Fogs" cpp_class="CVXDecor" parent="Object"
+entity="Visuals/Fogs/Fogs.ent.xml">
+</class>

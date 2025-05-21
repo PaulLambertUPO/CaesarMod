@@ -1,0 +1,12 @@
+<class id="GSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/GArcher/GSentry.ent.xml">
+
+	<properties race="Gaul" />
+	<properties maxhealth="180" />
+	<properties damage="14" armor_slash="4" armor_pierce="4" />
+	<properties unit_specials="Attack skill, Determination, Freedom, Keen sight" />
+
+	<properties icon="gameres/icons/GArcher.bmp" />
+	<properties help="contents/units/GArcher"/>
+
+	<sounds command="VoiceGArcher" />
+</class>

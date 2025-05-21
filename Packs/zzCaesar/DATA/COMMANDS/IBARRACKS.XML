@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="trainIMilitiaman" priority="3"
+		button="actions/train imilitiaman.bmp"
+		queueicon="gameres/icons/IMilitiaman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="m"
+		costgold="50"
+		costpop="1"
+		execdelay="6000"
+		rollover="Equip Militiaman"
+		method="train"
+		param="IMilitiaman"
+		sclass="IMilitiaman">
+		<src obj="IBarracks" />
+	</cmd>
+	<cmd name="trainIArcher" priority="4"
+		button="actions/train iarcher.bmp"
+		queueicon="gameres/icons/IArcher.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costgold="60"
+		costpop="1"
+		execdelay="8000"
+		rollover="Equip Archer"
+		method="train"
+		param="IArcher"
+		sclass="IArcher">
+		<src obj="IBarracks" />
+	</cmd>
+	<cmd name="trainIDefender" priority="5"
+		button="actions/train idefender.bmp"
+		queueicon="gameres/icons/IDefender.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		key="d"
+		costgold="150"
+		costpop="1"
+		execdelay="14000"
+		rollover="Equip Defender"
+		method="train"
+		param="IDefender, Spears"
+		sclass="IDefender">
+		<src obj="IBarracks" />
+	</cmd>
+	<cmd name="trainICavalry" priority="6"
+		button="actions/train ICavalry.bmp"
+		queueicon="gameres/icons/ICavalry.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		traincommand="yes"
+		key="c"
+		costgold="160"
+		costpop="1"
+		execdelay="20000"
+		rollover="Equip Horseman"
+		method="train"
+		param="ICavalry, Horseshoes"
+		sclass="ICavalry">
+		<src obj="IBarracks" />
+	</cmd>
+	<cmd name="trainISlinger" priority="7"
+		button="actions/train islinger.bmp"
+		queueicon="gameres/icons/ISlinger.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		traincommand="yes"
+		key="s"
+		costgold="180"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Slinger"
+		method="train"
+		param="ISlinger, Slings"
+		sclass="ISlinger">
+		<src obj="IBarracks" />
+	</cmd>
+	<cmd name="trainIEliteGuard" priority="8"
+		button="actions/train IEliteGuard.bmp"
+		queueicon="gameres/icons/IEliteGuard.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		key="g"
+		costgold="300"
+		costpop="1"
+		execdelay="22000"
+		rollover="Equip Elite Guard"
+		method="train"
+		param="IEliteGuard, Battle Axes"
+		sclass="IEliteGuard">
+		<src obj="IBarracks" />
+	</cmd>
+</commands>

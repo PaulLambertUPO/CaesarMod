@@ -1,0 +1,14 @@
+<entity description="VoiceRPriest" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RPriest/As you wish.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/Knowledge is power.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/Mars is on our side.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/May Jupiter be with you.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/May Minerva be with you.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/My magic is at your service.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/My sacred mission is to heal the wounded.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/The gods are with us.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/The gods watch over us.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RPriest/This will please the gods.wav" frequency="10" />
+	</files>
+</entity>

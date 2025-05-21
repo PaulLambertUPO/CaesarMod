@@ -1,0 +1,9 @@
+<entity description="VoiceCNumidianRider" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CNumidianRider/Fast as a leopard.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNumidianRider/Forward Tuaregs.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNumidianRider/I can ride for days and days.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNumidianRider/Light as the wind.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CNumidianRider/The desert is my home.wav" frequency="20" />
+	</files>
+</entity>

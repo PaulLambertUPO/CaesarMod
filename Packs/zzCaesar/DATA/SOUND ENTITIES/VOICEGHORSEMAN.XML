@@ -1,0 +1,9 @@
+<entity description="VoiceGHorseman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GHorseman/As you command.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GHorseman/Charge.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GHorseman/Gallop.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GHorseman/March.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/GHorseman/To the horses.wav" frequency="20" />
+	</files>
+</entity>

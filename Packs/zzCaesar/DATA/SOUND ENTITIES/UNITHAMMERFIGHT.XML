@@ -1,0 +1,10 @@
+<entity description="UnitHammerFight" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Hammer_Attack/Hammer_Attack_1.wav" frequency="17" />
+		<sound file="Sounds/Fight/Hammer_Attack/Hammer_Attack_2.wav" frequency="17" />
+		<sound file="Sounds/Fight/Hammer_Attack/Hammer_Attack_3.wav" frequency="17" />
+		<sound file="Sounds/Fight/Hammer_Attack/Hammer_Attack_4.wav" frequency="16" />
+		<sound file="Sounds/Fight/Hammer_Attack/Hammer_Attack_5.wav" frequency="16" />
+		<sound file="Sounds/Fight/Hammer_Attack/Hammer_Attack_6.wav" frequency="17" />
+	</files>
+</entity>

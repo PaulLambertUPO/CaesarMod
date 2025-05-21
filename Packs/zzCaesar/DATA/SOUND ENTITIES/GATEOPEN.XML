@@ -1,0 +1,5 @@
+<entity description="GateOpen" priority="Event" type="UnitFight">
+	<files>
+		<sound file="Sounds/Gates/Gate_Open.wav" frequency="100" />
+	</files>
+</entity>

@@ -1,0 +1,5 @@
+<entity description="ItemUse_DarkChant" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/ItemUse/DarkChant.wav" frequency="100" />
+	</files>
+</entity>

@@ -1,0 +1,697 @@
+<commands>
+	<cmd name="repair blacksmith" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="RBlacksmith" />
+		<src obj="CBlacksmith" />
+		<src obj="GBlacksmith" />
+		<src obj="IBlacksmith" />
+		<src obj="MBlacksmith" />
+		<src obj="BBlacksmith" />
+		<src obj="TBlacksmith" />
+		<src obj="EBlacksmith" />
+		<src obj="HBlacksmith" />
+	</cmd>
+	<cmd name="Strenghten Stronghold Defences I" priority="10"
+		queueicon="gameres/icons/upgrades/Stronghold Defense.bmp"
+		key="d"
+		button="research/Stronghold Defense.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="30000"
+		rollover="Strengthen Stronghold Defenses I"
+		description="Makes the defenders at the stronghold walls level 12"
+		method="research"
+		param="NameSet, Strenghten Stronghold Defences I, , SetsSet, SentriesLevel, 12">
+		<src obj="RBlacksmith" />
+		<src obj="CBlacksmith" />
+		<src obj="GBlacksmith" />
+		<src obj="IBlacksmith" />
+		<src obj="MBlacksmith" />
+		<src obj="BBlacksmith" />
+		<src obj="TBlacksmith" />
+		<src obj="EBlacksmith" />
+		<src obj="HBlacksmith" />
+	</cmd>
+	<cmd name="Strenghten Stronghold Defences II" priority="10"
+		queueicon="gameres/icons/upgrades/Stronghold Defense2.bmp"
+		key="d"
+		button="research/Stronghold Defense2.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="30000"
+		rollover="Strengthen Stronghold Defenses II"
+		description="Makes the defenders at the stronghold walls level 24"
+		method="research"
+		param="ReqSet, Strenghten Stronghold Defences I, , NameSet, Strenghten Stronghold Defences II, default, SetsSet, SentriesLevel, 24">
+		<src obj="RBlacksmith" />
+		<src obj="CBlacksmith" />
+		<src obj="GBlacksmith" />
+		<src obj="IBlacksmith" />
+		<src obj="MBlacksmith" />
+		<src obj="BBlacksmith" />
+		<src obj="TBlacksmith" />
+		<src obj="EBlacksmith" />
+		<src obj="HBlacksmith" />
+	</cmd>
+	<!-- ROME -->
+	<cmd name="Roman Archers" priority="2"
+		queueicon="gameres/icons/upgrades/archer.bmp"
+		button="upgrades/Archer.bmp"
+		key="a"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="400"
+		execdelay="30000"
+		rollover="Arrows"
+		description="Allows Archers to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Arrows, default, NameSet, Roman Archers, , NameSet, Greek Archers">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Roman Velit" priority="3"
+		queueicon="gameres/icons/upgrades/throwing spears.bmp"
+		button="upgrades/throwing spears.bmp"
+		key="t"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1600"
+		execdelay="30000"
+		rollover="Throwing Spears"
+		description="Allows Velites to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Throwing Spears, default, NameSet, Roman Velit">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Roman Principle" priority="4"
+		queueicon="gameres/icons/upgrades/Principle.bmp"
+		button="upgrades/pikes.bmp"
+		key="p"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1800"
+		execdelay="30000"
+		rollover="Pikes"
+		description="Allows Principles to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Pikes, default, NameSet, Roman Principle">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Roman Scout" priority="5"
+		queueicon="gameres/icons/upgrades/Horseshoes.bmp"
+		button="upgrades/Horseshoes.bmp"
+		key="h"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="30000"
+		rollover="Horseshoes"
+		description="Allows Scouts to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Horseshoes, default, NameSet, Roman Scout, , NameSet, Gaul Horseman">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Roman Full Armor" priority="6"
+		queueicon="gameres/icons/upgrades/full armor.bmp"
+		key="f"
+		button="upgrades/full armor.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="3000"
+		execdelay="30000"
+		rollover="Full Armor"
+		description="Allows Tribunes to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Full Armor, default, NameSet, Roman Full Armor">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Roman Praetorian" priority="7"
+		queueicon="gameres/icons/upgrades/spike armor.bmp"
+		button="upgrades/spike armor.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="4000"
+		execdelay="30000"
+		rollover="Spike Armor"
+		description="Allows Praetorians to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Spike Armor, default, NameSet, Roman Praetorian">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Improve Praetorian Equipment" priority="7"
+		queueicon="gameres/icons/upgrades/Improve Praetorian Equipment.bmp"
+		button="upgrades/Improve Praetorian Equipment.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="3000"
+		execdelay="30000"
+		rollover="Improve Praetorian Equipment"
+		description="Reduces new Praetorians cost to 380 gold"
+		method="research"
+		param="ReqSet, Spike Armor, , NameSet, Improve Praetorian Equipment, default">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Roman Chariot Wheels" priority="8"
+		queueicon="gameres/icons/upgrades/chariot wheels.bmp"
+		key="c"
+		button="upgrades/chariot wheels.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="3500"
+		execdelay="30000"
+		rollover="Chariot Wheels"
+		description="Allows Chariots to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Chariot Wheels, default, NameSet, Roman Chariot Wheels">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<!-- GAUL -->
+	<cmd name="Gaul Axeman" priority="2"
+		queueicon="gameres/icons/upgrades/axe.bmp"
+		button="upgrades/axe.bmp"
+		key="x"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1600"
+		execdelay="30000"
+		rollover="Axes"
+		description="Allows Axemen to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Axes, , NameSet, Gaul Axeman">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Iron Axes" priority="2"
+		queueicon="gameres/icons/upgrades/axe iron.bmp"
+		button="upgrades/axe iron.bmp"
+		key="x"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Iron Axes"
+		description="Makes new Axemen level 6"
+		method="research"
+		param="ReqSet, Axes, , NameSet, Gaul Iron Axes, default, SetsSet, levels/GAxeman, 6">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Spearman" priority="3"
+		queueicon="gameres/icons/upgrades/spears bronze.bmp"
+		button="upgrades/spears bronze.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="30000"
+		rollover="Spears"
+		description="Allows Spearmen to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Spears, , NameSet, Gaul Spearman, , NameSet, Britain Spears, , NameSet, Greek Spears">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Iron Spearheads" priority="3"
+		queueicon="gameres/icons/upgrades/spears iron.bmp"
+		button="upgrades/spears iron.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Iron Spearheads"
+		description="Makes new Spearmen level 6"
+		method="research"
+		param="ReqSet, Spears, , NameSet, Gaul Iron Spearheads, default, SetsSet, levels/GSpearman, 6">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Horseman" priority="4"
+		queueicon="gameres/icons/upgrades/Horseshoes.bmp"
+		button="upgrades/Horseshoes.bmp"
+		key="h"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1700"
+		execdelay="30000"
+		rollover="Horseshoes"
+		description="Allows Horsemen to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Horseshoes, , NameSet, Gaul Horseman, , NameSet, Roman Scout">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Exceptional Horseshoes" priority="4"
+		queueicon="gameres/icons/upgrades/Exceptional Horseshoes.bmp"
+		button="upgrades/Exceptional Horseshoes.bmp"
+		key="h"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Exceptional Horseshoes"
+		description="Makes new Horsemen level 6"
+		method="research"
+		param="ReqSet, Horseshoes, , NameSet, Gaul Exceptional Horseshoes, default, SetsSet, levels/GHorseman, 6">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Woman Warrior" priority="5"
+		queueicon="gameres/icons/upgrades/woman armor.bmp"
+		button="upgrades/woman armor.bmp"
+		key="a"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2200"
+		execdelay="30000"
+		rollover="Woman Armor"
+		description="Allows Woman Warriors to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Woman Armor, , NameSet, Gaul Woman Warrior">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<cmd name="Gaul Fine Armor" priority="5"
+		queueicon="gameres/icons/upgrades/fine armor.bmp"
+		button="upgrades/fine armor.bmp"
+		key="a"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Fine Armor"
+		description="Makes new Woman Warriors level 6"
+		method="research"
+		param="ReqSet, Woman Armor, , NameSet, Gaul Fine Armor, default, SetsSet, levels/GWomanWarrior, 6">
+		<src obj="GBlacksmith" />
+	</cmd>
+	<!-- IBERIA -->
+	<cmd name="Spears" priority="2"
+		queueicon="gameres/icons/upgrades/ISpears.bmp"
+		button="upgrades/ispears.bmp"
+		key="p"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="30000"
+		rollover="Spears"
+		description="Allows Defenders to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Spears, default, NameSet, Gaul Spearman, , NameSet, Britain Spears, , NameSet, Greek Spears">
+		<src obj="IBlacksmith" />
+	</cmd>
+	<cmd name="Horseshoes" priority="3"
+		queueicon="gameres/icons/upgrades/Horseshoes.bmp"
+		button="upgrades/Horseshoes.bmp"
+		key="h"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1600"
+		execdelay="30000"
+		rollover="Horseshoes"
+		description="Allows Horsemen to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Horseshoes, default, NameSet, Roman Scout, , NameSet, Gaul Horseman">
+		<src obj="IBlacksmith" />
+	</cmd>
+	<cmd name="Slings" priority="4"
+		queueicon="gameres/icons/upgrades/ISlingstones.bmp"
+		button="upgrades/ISlingstones.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1400"
+		execdelay="30000"
+		rollover="Slings"
+		description="Allows Slingers to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Slings, default">
+		<src obj="IBlacksmith" />
+	</cmd>
+	<cmd name="Battleaxes" priority="5"
+		queueicon="gameres/icons/upgrades/IBattleaxes.bmp"
+		button="upgrades/IBattleAxe.bmp"
+		key="b"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2400"
+		execdelay="30000"
+		rollover="Battle Axes"
+		description="Allows Elite Guards to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Battle Axes, default, NameSet, Battleaxes">
+		<src obj="IBlacksmith" />
+	</cmd>
+	<!-- CARTHAGE -->
+	<cmd name="Forge spears" priority="2"
+		queueicon="gameres/icons/upgrades/CSpears.bmp"
+		button="upgrades/CSpears.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="800"
+		execdelay="30000"
+		rollover="Forge Spears"
+		description="Reduces Numidian Footmen cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
+		method="research"
+		param="NReqSet, CLibyanFootman, , NReqSet, Specialization, default, NameSet, CLibyanFootman, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 1, SetsSet, ResearchedLibyanFootman, yes, NameSet, Forge spears">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="Forge javelins" priority="3"
+		queueicon="gameres/icons/upgrades/CJavelins.bmp"
+		button="upgrades/CJavelins.bmp"
+		key="j"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="30000"
+		rollover="Forge Javelins"
+		description="Reduces Javelin Throwers cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
+		method="research"
+		param="NReqSet, CJavelinThrower, , NReqSet, Specialization, default, NameSet, CJavelinThrower, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 2, SetsSet, ResearchedJavelinThrower, yes, NameSet, Forge javelins">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="Forge swords" priority="4"
+		queueicon="gameres/icons/upgrades/CSwords.bmp"
+		button="upgrades/CSwords.bmp"
+		key="w"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1400"
+		execdelay="30000"
+		rollover="Forge Swords"
+		description="Reduces Berber Assassins cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
+		method="research"
+		param="NReqSet, CBerberAssassin, , NReqSet, Specialization, default, NameSet, CBerberAssassin, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 3, SetsSet, ResearchedBerberAssassin, yes, NameSet, Forge swords">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="Forge maces" priority="5"
+		queueicon="gameres/icons/upgrades/CMaces.bmp"
+		button="upgrades/CMaces.bmp"
+		key="m"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1600"
+		execdelay="30000"
+		rollover="Forge Maces"
+		description="Reduces Macemen cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
+		method="research"
+		param="NReqSet, CMaceman, , NReqSet, Specialization, default, NameSet, CMaceman, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 4, SetsSet, ResearchedMaceman, yes, NameSet, Forge maces">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="Forge pikes" priority="6"
+		queueicon="gameres/icons/upgrades/CPikes.bmp"
+		button="upgrades/CPikes.bmp"
+		key="p"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1800"
+		execdelay="30000"
+		rollover="Forge Pikes"
+		description="Reduces Tuaregs cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
+		method="research"
+		param="NReqSet, CNumidianRider, , NReqSet, Specialization, default, NameSet, CNumidianRider, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 5, SetsSet, ResearchedNumidianRider, yes, NameSet, Forge pikes">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="Forge shields" priority="7"
+		queueicon="gameres/icons/upgrades/CShields.bmp"
+		button="upgrades/CShields.bmp"
+		key="n"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="30000"
+		rollover="Forge Shields"
+		description="Reduces Numidian Horsemen cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
+		method="research"
+		param="NReqSet, CHorseman, , NReqSet, Specialization, default, NameSet, CHorseman, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 7, SetsSet, ResearchedHorseman, yes, NameSet, Forge shields"><!-- value 7 because 6 is for CNoble (AI scripts) -->
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="StopSpecialization1" priority="2"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		button="upgrades/stopCSpears.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the production of Spears to start another"
+		method="immediate_research"
+		param="ReqSet, CLibyanFootman, , SetsSet, Specialization, , SetsSet, CLibyanFootman, , SetsSet, SpecializedUnit, , SetsSet, Forge spears">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="StopSpecialization2" priority="3"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		button="upgrades/stopCJavelins.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the production of Javelins to start another"
+		method="immediate_research"
+		param="ReqSet, CJavelinThrower, , SetsSet, Specialization, , SetsSet, CJavelinThrower, , SetsSet, SpecializedUnit, , SetsSet, Forge javelins">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="StopSpecialization3" priority="4"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		button="upgrades/stopCSwords.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the production of Swords to start another"
+		method="immediate_research"
+		param="ReqSet, CBerberAssassin, , SetsSet, Specialization, , SetsSet, CBerberAssassin, , SetsSet, SpecializedUnit, , SetsSet, Forge swords">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="StopSpecialization4" priority="5"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		button="upgrades/stopCMaces.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the production of Maces to start another"
+		method="immediate_research"
+		param="ReqSet, CMaceman, , SetsSet, Specialization, , SetsSet, CMaceman, , SetsSet, SpecializedUnit, , SetsSet, Forge maces">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="StopSpecialization5" priority="6"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		button="upgrades/stopCPikes.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the production of Pikes to start another"
+		method="immediate_research"
+		param="ReqSet, CNumidianRider, , SetsSet, Specialization, , SetsSet, CNumidianRider, , SetsSet, SpecializedUnit, , SetsSet, Forge pikes">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<cmd name="StopSpecialization6" priority="7"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		button="upgrades/stopCShields.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the production of Shields to start another"
+		method="immediate_research"
+		param="ReqSet, CHorseman, , SetsSet, Specialization, , SetsSet, CHorseman, , SetsSet, SpecializedUnit, , SetsSet, Forge shields">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<!-- used by AI only -->
+	<cmd name="StopSpecialization" priority="8"
+		queueicon="gameres/icons/upgrades/WBreast.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		rollover="Stop production"
+		description="Stops the current production to start another"
+		method="immediate_research"
+		param="ReqSet, Specialization, , SetsSet, Specialization, , SetsSet, CLibyanFootman, , SetsSet, CJavelinThrower, , SetsSet, CBerberAssassin, , SetsSet, CMaceman, , SetsSet, CNumidianRider, , SetsSet, CHorseman, , SetsSet, SpecializedUnit, , SetsSet, Forge spears, , SetsSet, Forge javelins, , SetsSet, Forge swords, , SetsSet, Forge maces, , SetsSet, Forge pikes, , SetsSet, Forge shields">
+		<src obj="CBlacksmith" />
+	</cmd>
+	<!-- BRITAIN -->
+	<cmd name="Britain Spears" priority="2"
+		queueicon="gameres/icons/upgrades/spears iron.bmp"
+		key="p"
+		button="upgrades/spears iron.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="30000"
+		rollover="Spears"
+		description="Allows Spearmen to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Spears, default, NameSet, Britain Spears, , NameSet, Gaul Spearman, , NameSet, Greek Spears">
+		<src obj="BBlacksmith" />
+	</cmd>
+	<cmd name="Britain Large Shields" priority="3"
+		queueicon="gameres/icons/upgrades/shields.bmp"
+		key="l"
+		button="upgrades/shields.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="30000"
+		rollover="Large Shields"
+		description="Allows Shield Bearers to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Large Shields, default, NameSet, Britain Large Shields">
+		<src obj="BBlacksmith" />
+	</cmd>
+	<cmd name="Britain Javelins" priority="4"
+		queueicon="gameres/icons/upgrades/CJavelins.bmp"
+		key="j"
+		button="upgrades/CJavelins.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1500"
+		execdelay="30000"
+		rollover="Javelins"
+		description="Allows Javelineers to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Javelins, default, NameSet, Britain Javelins">
+		<src obj="BBlacksmith" />
+	</cmd>
+	<cmd name="Britain Swords" priority="5"
+		queueicon="gameres/icons/upgrades/CSwords.bmp"
+		key="s"
+		button="upgrades/CSwords.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2600"
+		execdelay="30000"
+		rollover="Swords"
+		description="Allows Highlanders to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Swords, default, NameSet, Britain Swords">
+		<src obj="BBlacksmith" />
+	</cmd>
+	<cmd name="Steel Weapons" priority="6"
+		queueicon="gameres/icons/upgrades/Steel Weapons.bmp"
+		key="w"
+		button="upgrades/Steel Weapons.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="40000"
+		rollover="Steel Weapons"
+		description="Makes new warriors level 6"
+		method="research"
+		param="NameSet, Steel Weapons, default, SetsSet, levels/BSwordsman, 6, SetsSet, levels/BBowman, 6, SetsSet, levels/BBronzeSpearman, 6, SetsSet, levels/BShieldBearer, 6, SetsSet, levels/BJavelineer, 6, SetsSet, levels/BHighlander, 6">
+		<src obj="BBlacksmith" />
+	</cmd>
+	<!-- EGYPT -->
+	<cmd name="Charm of Seth" priority="2"
+		queueicon="gameres/icons/upgrades/charm of seth.bmp"
+		key="s"
+		button="research/charm of seth.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/eblacksmith_charms_verify.vs"
+		costgold="500"
+		execdelay="5000"
+		rollover="Charm of Seth"
+		description="Gives a Damage charm (+4 damage) to up to 65 warriors around the townhall"
+		method="getcharm"
+		param="Damage charm">
+		<src obj="EBlacksmith" />
+	</cmd>
+	<cmd name="Charm of Thoth" priority="3"
+		queueicon="gameres/icons/upgrades/charm of thoth.bmp"
+		key="t"
+		button="research/charm of thoth.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/eblacksmith_charms_verify.vs"
+		costgold="500"
+		execdelay="5000"
+		rollover="Charm of Thoth"
+		description="Gives an Armor charm (+4 armor) to up to 65 warriors around the townhall"
+		method="getcharm"
+		param="Armor charm">
+		<src obj="EBlacksmith" />
+	</cmd>
+	<cmd name="Charm of Ra" priority="4"
+		queueicon="gameres/icons/upgrades/charm of ra.bmp"
+		key="h"
+		button="research/charm of ra.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/eblacksmith_charms_verify.vs"
+		costgold="500"
+		execdelay="5000"
+		rollover="Charm of Ra"
+		description="Gives a Health charm (+40 health) to up to 65 warriors around the townhall"
+		method="getcharm"
+		param="Health charm">
+		<src obj="EBlacksmith" />
+	</cmd>
+	<cmd name="Charm of Isis" priority="5"
+		queueicon="gameres/icons/upgrades/charm of isis.bmp"
+		key="i"
+		button="research/charm of isis.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/eblacksmith_charms_verify.vs"
+		costgold="500"
+		execdelay="5000"
+		rollover="Charm of Isis"
+		description="Gives a Knowledge charm (+4 levels) to up to 65 warriors around the townhall"
+		method="getcharm"
+		param="Knowledge charm">
+		<src obj="EBlacksmith" />
+	</cmd>
+	<!-- GERMANY -->
+	<cmd name="Axemen production" priority="2"
+		queueicon="gameres/icons/upgrades/axe iron.bmp"
+		key="x"
+		button="upgrades/axe iron.bmp"
+		costgold="600"
+		execdelay="20000"
+		groupverifier="data/subai/axemen_verify.vs"
+		rollover="Increase Axe production"
+		description="Increases the number of Axemen you can have by 10"
+		method="axemen_school"
+		traincommand="yes">
+		<src obj="TBlacksmith" />
+	</cmd>
+	<cmd name="Javelin production" priority="3"
+		queueicon="gameres/icons/upgrades/CJavelins.bmp"
+		key="j"
+		button="upgrades/CJavelins.bmp"
+		costgold="800"
+		execdelay="20000"
+		groupverifier="data/subai/huntress_verify.vs"
+		rollover="Increase Javelin production"
+		description="Increases the number of Huntresses you can have by 10"
+		method="huntress_school"
+		traincommand="yes">
+		<src obj="TBlacksmith" />
+	</cmd>
+	<cmd name="Horseshoes production" priority="4"
+		queueicon="gameres/icons/upgrades/Horseshoes.bmp"
+		key="h"
+		button="upgrades/Horseshoes.bmp"
+		costgold="700"
+		execdelay="20000"
+		groupverifier="data/subai/teutonrider_verify.vs"
+		rollover="Increase Horseshoe production"
+		description="Increases the number of Teuton Riders you can have by 10"
+		method="teutonrider_school"
+		traincommand="yes">
+		<src obj="TBlacksmith" />
+	</cmd>
+	<cmd name="Macemen production" priority="5"
+		queueicon="gameres/icons/upgrades/Incr Mace Production.bmp"
+		key="m"
+		button="upgrades/Incr Mace Production.bmp"
+		costgold="1000"
+		execdelay="20000"
+		groupverifier="data/subai/macemen_verify.vs"
+		rollover="Increase Mace production"
+		description="Increases the number of Macemen you can have by 10"
+		method="macemen_school"
+		traincommand="yes">
+		<src obj="TBlacksmith" />
+	</cmd>
+</commands>

@@ -1,0 +1,14 @@
+<class id="CBarracks" cpp_class="CVXBarrack" parent="BaseBarracks"
+	entity="Buildings/CBarracks/CBarracks.ent.xml"
+>
+
+	<properties race="Carthage"/>
+	<properties icon="gameres/icons/CBarracks.bmp"/>
+	<properties display_name="Barracks"/>
+	<properties radius="245" selection_radius="250"/>
+	<properties edittree_pos="Structures/Stronghold (Carthage)/Barracks"/>
+	<properties auto_repair="no"/>
+	<properties help="/contents/buildings/CBarracks"/>
+
+	
+</class>

@@ -1,0 +1,5 @@
+<class id="BTower" cpp_class="CVXBuilding" parent="Tower" entity="Buildings/BWalls/Tower/Tower.ent.xml">
+	<properties race="Britain"/>
+	<properties icon="gameres/icons/BTower.bmp"/>
+	<properties wall_set="British walls"/>
+</class>

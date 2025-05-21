@@ -1,0 +1,3 @@
+<class id="AdditionalDefense" cpp_class="CVXFeedback" parent="Object" entity="Visuals/AdditionalDefense/AdditionalDefense.ent.xml">
+	<properties desync_hash="0"/>
+</class>

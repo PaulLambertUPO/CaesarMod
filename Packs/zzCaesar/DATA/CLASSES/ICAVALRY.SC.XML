@@ -1,0 +1,17 @@
+<class id="ICavalry" cpp_class="CVXUnit" parent="Horse" entity="Units/ICavalry/ICavalry.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="280" />
+	<properties damage="34" armor_slash="2" armor_pierce="2" />
+	<properties speed="160" />
+	<properties unit_specials="Charge, Triumph" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Horseman" display_name_plural="Horsemen" />
+	<properties icon="gameres/icons/ICavalry.bmp" />
+	<properties help="contents/units/ICavalry" />
+	<properties edittree_pos="Units/Iberia/Horseman" />
+
+	<sounds command="VoiceICavalry" />
+</class>

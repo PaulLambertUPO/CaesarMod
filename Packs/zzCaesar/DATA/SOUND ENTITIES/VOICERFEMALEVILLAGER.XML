@@ -1,0 +1,10 @@
+<entity description="VoiceRFemaleVillager" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/VillagerFemale/At your orders.wav" frequency="16" />
+		<sound file="CurrentLang/Voices/VillagerFemale/At your service.wav" frequency="16" />
+		<sound file="CurrentLang/Voices/VillagerFemale/Quid novi.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/VillagerFemale/Right away.wav" frequency="16" />
+		<sound file="CurrentLang/Voices/VillagerFemale/So be it.wav" frequency="16" />
+		<sound file="CurrentLang/Voices/VillagerFemale/Yes.wav" frequency="16" />
+	</files>
+</entity>

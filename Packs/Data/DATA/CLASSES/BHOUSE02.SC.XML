@@ -1,0 +1,11 @@
+<class id="BHouse02" cpp_class="CVXBuilding" parent="BaseHouse" entity="Buildings/BHouse02/BHouse02.ent.xml">
+
+	<properties race="Britain"/>
+	<properties radius="160" selection_radius="165"/>
+	<properties icon="gameres/icons/bhouse.bmp"/>
+	<properties edittree_pos="Structures/Village (Britain)/House 2"/>
+	<properties display_name="House"/>
+
+	 
+
+</class>

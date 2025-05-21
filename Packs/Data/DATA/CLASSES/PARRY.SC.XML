@@ -1,0 +1,3 @@
+<class id="Parry" cpp_class="CVXFeedback" parent="Object" entity="Visuals/Ceasefire/Ceasefire.ent.xml">
+	<properties desync_hash="0"/>
+</class>

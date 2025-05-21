@@ -1,0 +1,17 @@
+<class id="RArcher" cpp_class="CVXUnit" parent="Ranged" entity="Units/RArcher/RArcher.ent.xml">
+
+	<properties race="RepublicanRome" />
+	<properties maxhealth="160" />
+	<properties damage="22" armor_slash="2" armor_pierce="2" />
+	<properties speed="70" />
+	<properties unit_specials="Defense skill" />
+
+	<properties projectile_class="Arrow" />
+
+	<properties display_name="Archer" display_name_plural="Archers" />
+	<properties icon="gameres/icons/RArcher.bmp" />
+	<properties help="contents/units/RArcher" />
+	<properties edittree_pos="Units/Roman/Archer" />
+
+	<sounds command="VoiceRArcher" />
+</class>

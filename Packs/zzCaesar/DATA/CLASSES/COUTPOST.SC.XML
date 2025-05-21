@@ -1,0 +1,21 @@
+<class id="COutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/COutpost/COutpost.ent.XML">
+	<properties race="Carthage" />
+	<properties maxhealth="10000" />
+	<properties icon="gameres/icons/COutpost.bmp" />
+	<properties display_name="Recruitment outpost" />
+	<properties radius="333" selection_radius="350" />
+	<properties help="/contents/buildings/RecruitmentOutpost" />
+	<properties edittree_pos="Structures/Outposts/Recruitment outpost (Carthaginian)" />
+	<properties description="Converts peasants to Macemen" />
+	<properties
+		range="1000"
+		settlement_food="2000"
+		settlement_gold="0"
+		defender_cls_1="CMaceman"
+		defenders_max_1="30"
+		defenders_out_1="16"
+		start_level_1="1"
+		end_level_1="6"
+	/>
+	<behavior script="data/subai/coutpost_behavior.vs" />
+</class>

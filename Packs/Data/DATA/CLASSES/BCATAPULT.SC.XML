@@ -1,0 +1,30 @@
+<class id="BCatapult" cpp_class="CVXCatapult" parent="Catapult" entity="Buildings/BTaran/BTaran.ent.xml">
+	<properties race="Britain"/>
+	<properties display_name="Ram"/>
+	<properties damage_type="siege"/>
+	<properties damage="300"/>
+	<properties maxhealth="1000"/>
+	<properties icon="gameres/icons/bram.bmp"/>
+
+	<value1
+		icon="gameres/infobar/common/attack ico.bmp"
+		script="return .damage;"
+		help="/contents/stats/attack"
+		rollover="Damage"/>
+	<value2
+		icon="gameres/infobar/common/stamina ico.bmp"
+		script="return 10;"
+		help="/contents/stats/stamina"
+		rollover="Stamina"/>
+	<value3
+		icon="gameres/infobar/common/defence ico.bmp"
+		script="return 20;"
+		help="/contents/stats/defense"
+		rollover="Armor"/>
+	<value4
+		icon="gameres/infobar/common/health ico.bmp"
+		script="return .health + '/' + .maxhealth;"
+		help="/contents/stats/health"
+		rollover="Health"/>
+
+</class>

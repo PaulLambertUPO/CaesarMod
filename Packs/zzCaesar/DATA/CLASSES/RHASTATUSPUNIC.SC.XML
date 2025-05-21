@@ -1,0 +1,5 @@
+<class id="RHastatusPunic" cpp_class="CVXUnit" parent="RHastatus" entity="Units/RHastatus/RHastatus.ent.xml">
+	<properties unit_specials="Deflection, Toughness" />
+	<properties icon="gameres/icons/zpwRSwordsman.bmp" />
+	<properties edittree_pos="Units/Roman/Hastatus (Punic)" />
+</class>

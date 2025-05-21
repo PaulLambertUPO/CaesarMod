@@ -1,0 +1,9 @@
+<class id="Tower" cpp_class="CVXBuilding" parent="Building">
+
+	<properties radius="47" selection_radius="49"/>
+	<properties non_selectable="1"/>
+	<properties auto_repair="no"/>
+	<properties display_name="Tower"/>
+	<properties help="/contents/buildings/Fortification"/>
+
+</class>

@@ -1,0 +1,14 @@
+<entity description="UnitSpearFight" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_1.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_2.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_3.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_4.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_5.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_6.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_7.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_8.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_9.wav" frequency="10" />
+		<sound file="Sounds/Fight/Spear_Attack/Spear_Attack_10.wav" frequency="10" />
+	</files>
+</entity>

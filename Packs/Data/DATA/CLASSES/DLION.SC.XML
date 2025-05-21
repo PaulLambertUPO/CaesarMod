@@ -1,0 +1,4 @@
+<class id="DLion" cpp_class="CVXDecor" parent="Object" entity="MapObjects/DLion/DLion.ent.xml">
+
+<properties edittree_pos="Structures/Others/Desert/Lion"/>
+</class>

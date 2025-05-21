@@ -1,0 +1,9 @@
+<entity description="VoiceEAxetrower" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EAxetrower/I am the most infallible.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAxetrower/They shall not desecrate the Nile.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAxetrower/They shall not pass.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAxetrower/They will fall before my axe.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EAxetrower/We honor Osiris.wav" frequency="20" />
+	</files>
+</entity>

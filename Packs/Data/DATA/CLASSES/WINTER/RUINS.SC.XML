@@ -1,0 +1,8 @@
+<class
+	cpp_class = "CVXDecor"
+	entity = "MapObjects/ruins/ruins_w.ent.xml"
+	id = "ruinsWinter"
+	parent = "ruins"
+>
+	<properties edittree_pos = "Structures/Others/Winter/Ruins"/>
+</class>

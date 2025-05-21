@@ -1,0 +1,6 @@
+<class id="THero3b" cpp_class="CVXHero" parent="GermanHero" entity="Units/THero3/THero3.ent.xml">
+
+	<properties display_name="Willamar" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/THero3.bmp"/>
+
+</class>

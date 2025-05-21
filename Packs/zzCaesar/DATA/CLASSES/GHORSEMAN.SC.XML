@@ -1,0 +1,17 @@
+<class id="GHorseman" cpp_class="CVXUnit" parent="Horse" entity="Units/GHorseman/GHorseman.ent.xml">
+
+	<properties race="Gaul" />
+	<properties maxhealth="370" />
+	<properties damage="26" armor_slash="6" armor_pierce="6" />
+	<properties speed="160" />
+	<properties unit_specials="Active, Charge, Defensive tactics" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Horseman" display_name_plural="Horsemen" />
+	<properties icon="gameres/icons/GHorseman.bmp" />
+	<properties help="contents/units/GHorseman" />
+	<properties edittree_pos="Units/Gaul/Horseman" />
+
+	<sounds command="VoiceGHorseman" />
+</class>

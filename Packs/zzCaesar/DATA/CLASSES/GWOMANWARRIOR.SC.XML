@@ -1,0 +1,17 @@
+<class id="GWomanWarrior" cpp_class="CVXUnit" parent="Melee" entity="Units/GWomanWarrior/GWomanWarrior.ent.xml">
+
+	<properties race="Gaul" />
+	<properties maxhealth="215" />
+	<properties damage="36" armor_slash="14" armor_pierce="14" />
+	<properties speed="80" />
+	<properties unit_specials="Death blow, Revenge, Toughness" />
+
+	<properties formation_priority="1000" />
+
+	<properties display_name="Woman Warrior" display_name_plural="Woman Warriors" />
+	<properties icon="gameres/icons/GWomanWarrior.bmp" />
+	<properties help="contents/units/GWWarrior" />
+	<properties edittree_pos="Units/Gaul/Woman Warrior" />
+
+	<sounds command="VoiceGWomanWarrior" attack="UnitSwordFightFemale" die="UnitDeathFemale" />
+</class>

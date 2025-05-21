@@ -1,0 +1,7 @@
+<class
+	cpp_class = "CVXTownHall"
+	entity = "Buildings/RTownhall/RTownhall_w.ent.xml"
+	id = "MTownhallWinter"
+	parent = "MTownhall"
+>
+</class>

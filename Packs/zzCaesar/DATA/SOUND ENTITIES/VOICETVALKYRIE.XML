@@ -1,0 +1,9 @@
+<entity description="VoiceTValkyrie" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TValkyrie/Gallop.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TValkyrie/I am the swiftest.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TValkyrie/My horse is the fastest.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TValkyrie/No one can stop me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TValkyrie/We will forge our own legends.wav" frequency="20" />
+	</files>
+</entity>

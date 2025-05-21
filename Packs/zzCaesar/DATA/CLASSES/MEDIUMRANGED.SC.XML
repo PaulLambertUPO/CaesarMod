@@ -1,0 +1,4 @@
+<class id="MediumRanged" cpp_class="CVXUnit" parent="Ranged" entity="">
+	<properties sight="500" range="400" />
+	<properties formation_priority="400" />
+</class>

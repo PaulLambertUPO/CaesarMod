@@ -1,0 +1,12 @@
+<class id="ISentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/IArcher/ISentry.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="220" />
+	<properties damage="22" armor_slash="6" armor_pierce="6" />
+	<properties unit_specials="Drain, Freedom, Keen sight" />
+
+	<properties icon="gameres/icons/IArcher.bmp" />
+	<properties help="contents/units/IArcher"/>
+
+	<sounds command="VoiceIArcher" />
+</class>

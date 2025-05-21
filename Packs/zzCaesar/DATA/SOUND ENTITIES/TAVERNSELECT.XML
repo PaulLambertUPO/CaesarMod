@@ -1,0 +1,13 @@
+<entity description="TavernSelect" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="Sounds/Selection/Tavern/Tavern_1.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_2.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_3.wav" frequency="12" />
+		<sound file="Sounds/Selection/Tavern/Tavern_4.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_5.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_6.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_7.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_8.wav" frequency="11" />
+		<sound file="Sounds/Selection/Tavern/Tavern_9.wav" frequency="11" />
+	</files>
+</entity>

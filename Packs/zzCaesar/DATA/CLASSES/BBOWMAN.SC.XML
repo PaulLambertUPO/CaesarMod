@@ -1,0 +1,17 @@
+<class id="BBowman" cpp_class="CVXUnit" parent="Ranged" entity="units/BBowman/BBowman.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="200" />
+	<properties damage="12" armor_slash="0" armor_pierce="0" />
+	<properties speed="80" />
+	<properties unit_specials="Triple strike" />
+
+	<properties projectile_class="Arrow" />
+
+	<properties display_name="Bowman" display_name_plural="Bowmen" />
+	<properties icon="gameres/icons/BBowman.bmp" />
+	<properties help="contents/units/BBowman" />
+	<properties edittree_pos="Units/Britain/Bowman" />
+
+	<sounds command="VoiceBBowman" />
+</class>

@@ -1,0 +1,6 @@
+<class id="Wild_Hen" cpp_class="CVXUnit" parent="Hen" entity="Units/Hen/Hen.ent.xml">
+	<properties icon="gameres/icons/Hen.bmp" />
+	<properties help="contents/units/Animals/Hen" />
+	<properties edittree_pos="Units/Animals/Hen" />
+	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
+</class>

@@ -1,0 +1,13 @@
+<class id="CArena" cpp_class="CVXBuilding" parent="BaseArena" entity="Buildings/CArena/CArena.ent.xml">
+
+	<properties race="Carthage"/>
+	<properties icon="gameres/icons/carena.bmp"/>
+	<properties display_name="Arena"/>
+	<properties radius="360" selection_radius="365"/>
+	<properties edittree_pos="Structures/Stronghold (Carthage)/Arena"/>
+	<properties help="/contents/buildings/CArena"/>
+
+	<method sig="mahout_school" vs="data/subai/mahout_school.vs"/>
+
+	
+</class>

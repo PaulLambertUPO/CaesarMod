@@ -1,0 +1,6 @@
+<class id="THero3c" cpp_class="CVXHero" parent="GermanHero" entity="Units/THero3/THero3.ent.xml">
+
+	<properties display_name="Raginmund" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/THero3.bmp"/>
+
+</class>

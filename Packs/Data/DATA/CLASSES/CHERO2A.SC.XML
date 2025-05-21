@@ -1,0 +1,6 @@
+<class id="CHero2a" cpp_class="CVXHero" parent="CarthaginianHero" entity="Units/CHero2/CHero2.ent.xml">
+
+	<properties display_name="Muttines" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/CHero2.bmp"/>
+
+</class>

@@ -1,0 +1,9 @@
+<entity description="VoiceCHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CHero/Follow the standard.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHero/For the glory of Carthage.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHero/Give me lands to conquer.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHero/I will bring you victory.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CHero/To victory always.wav" frequency="20" />
+	</files>
+</entity>

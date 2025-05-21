@@ -1,0 +1,34 @@
+<class id="IEnchantress" cpp_class="CVXDruid" parent="BaseMage" entity="Units/IEnchantress/IEnchantress.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="120" />
+	<properties armor_slash="4" armor_pierce="4" />
+	<properties speed="60" />
+	<properties unit_specials="Teaching, Active" />
+
+	<properties display_name="Enchantress" display_name_plural="Enchantresses" />
+	<properties icon="gameres/icons/IEnchantress.bmp" />
+	<properties help="contents/units/IEnchantress" />
+	<properties edittree_pos="Units/Iberia/Enchantress" />
+
+	<method sig="idle" vs="data/subai/enchantress_idle.vs" />
+	<method sig="stand_position" vs="data/subai/enchantress_stand_position.vs" />
+	<method sig="advance" vs="data/subai/enchantress_advance.vs" />
+
+	<method sig="teach" vs="data/subai/enchantress_teach.vs" verify="data/subai/enchantress_teach_verify.vs" />
+	<method sig="coverofmercy" vs="data/subai/enchantress_coverofmercy.vs" />
+	<method sig="i_restoration" vs="data/subai/druid_restoration.vs" />
+
+	<defaultcmd target="Unit">
+		<cmd name="teach" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+		<cmd name="approach" />
+	</defaultcmd>
+
+	<sounds command="VoiceIEnchantress" die="UnitDeathFemale" />
+</class>

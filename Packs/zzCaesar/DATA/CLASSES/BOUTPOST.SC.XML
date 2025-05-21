@@ -1,0 +1,26 @@
+<class id="BOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/BOutpost/BOutpost.ent.xml">
+	<properties race="Britain" />
+	<properties maxhealth="10000" />
+	<properties radius="345" selection_radius="350" />
+	<properties display_name="Training outpost" />
+	<properties icon="gameres/icons/BOutpost.bmp" />
+	<properties help="/contents/buildings/TrainingOutpost" />
+	<properties edittree_pos="Structures/Outposts/Training outpost (Britain)" />
+	<properties description="Gradually increases the experience of units inside up to level 8" />
+	<properties
+		range="1000"
+		settlement_food="2000"
+		settlement_gold="0"
+		defender_cls_1="BJavelineer"
+		defenders_max_1="10"
+		defenders_out_1="6"
+		start_level_1="4"
+		end_level_1="12"
+		defender_cls_2="BHighlander"
+		defenders_max_2="10"
+		defenders_out_2="10"
+		start_level_2="4"
+		end_level_2="12"
+	/>
+	<behavior script="data/subai/ioutpost_behavior.vs" />
+</class>

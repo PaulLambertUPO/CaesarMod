@@ -1,0 +1,8 @@
+<class id="TWallsS" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/TWalls/WallS/WallS.ent.xml">
+	<properties race="Germany"/>
+	<properties icon="gameres/icons/TWalls.bmp"/>
+	<properties radius="110" selection_radius="110"/>
+	<properties wall_set="German walls"/>
+	<properties num_sentry_slots="4"/>
+	<properties sentry_class_name="TSentry1"/>
+</class>

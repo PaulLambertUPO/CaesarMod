@@ -1,0 +1,19 @@
+<class id="Fisherman" cpp_class="CVXUnit" parent="Peasant" entity="units/BVillager/BVillager.ent.xml">
+
+	<properties display_name="Fisherman" display_name_plural="Fishermen" />
+	<properties icon="gameres/icons/Fisherman.bmp" />
+	<properties edittree_pos="Units/Others/Fisherman" />
+
+	<method sig="enter" vs="data/subai/fishermanenter.vs" verify="data/subai/fisherman_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/fishermanenter.vs" verify="data/subai/fisherman_enter_verify.vs" />
+	<method sig="enterfisherman" vs="data/subai/fishermanenter.vs" verify="data/subai/fisherman_enter_verify.vs" />
+
+	<defaultcmd target="Building"><!-- this is needed otherwise the verifier used is the peasant one even if overwritten above -->
+		<cmd name="enter" />
+	</defaultcmd>
+	<defaultcmd target="BaseShipyard">
+		<cmd name="enterfisherman" />
+	</defaultcmd>
+
+	<sounds command="VoiceFisherman" />
+</class>

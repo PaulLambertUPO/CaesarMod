@@ -1,0 +1,16 @@
+<class id="Larax" cpp_class="CVXHero" parent="HeroMounted" entity="Units/Larax/Larax.ent.xml">
+
+	<properties race="Gaul" />
+	<properties maxhealth="1400" />
+	<properties damage="70" />
+	<properties sight="700" speed="140" />
+	<properties HeroSkills="Defensive cry, Epic attack, Epic armor, Epic endurance, Scout" />
+	<properties inventory_size="6" />
+
+	<properties display_name="Larax" display_name_plural="Heroes" />
+	<properties icon="gameres/icons/Larax.bmp" />
+	<properties help="contents/units/Larax" />
+	<properties edittree_pos="Units/Heroes/Larax" />
+
+	<sounds command="VoiceLarax" attack="UnitHammerFight" />
+</class>

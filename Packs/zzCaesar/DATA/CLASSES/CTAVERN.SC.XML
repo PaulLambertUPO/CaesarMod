@@ -1,0 +1,16 @@
+<class id="CTavern" cpp_class="CVXTavern" parent="BaseTavern" entity="Buildings/CMarket/CMarket.ent.xml">
+
+	<properties race="Carthage" />
+
+	<properties radius="190" selection_radius="195" />
+
+	<properties display_name="Market" />
+	<properties icon="gameres/icons/CMarket.bmp" />
+	<properties help="/contents/buildings/CMarket" />
+	<properties edittree_pos="Structures/Stronghold (Carthage)/Market" />
+
+	<method sig="buyfoodforgold" vs="data/subai/tavern_buyfood.vs" />
+	<method sig="sellfoodforgold" vs="data/subai/itavern_sell_food.vs"/>
+	<method sig="expedition" vs="data/subai/tavern_expedition.vs" onfinish="data/subai/tavern_onfinish_expedition.vs" />
+	<method sig="hireforeignmercenaries" vs="data/subai/hire_foreign_mercenaries.vs" />
+</class>

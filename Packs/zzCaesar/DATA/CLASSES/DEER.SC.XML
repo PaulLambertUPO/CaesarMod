@@ -1,0 +1,17 @@
+<class id="Deer" cpp_class="CVXUnit" parent="Animal" entity="Units/Deer/Deer.ent.xml">
+
+	<properties speed="150" /><!-- the speed is changed in the scripts -->
+	<properties sight="650" />
+
+	<properties radius="20" selection_radius="20" />
+
+	<properties display_name="Deer" display_name_plural="Deer" />
+	<properties icon="gameres/icons/deer.bmp" />
+	<properties help="contents/units/Animals/Deer" />
+	<properties edittree_pos="Units/Animals/Deer" />
+
+	<method sig="idle" vs="data/subai/deer_idle.vs" />
+	<method sig="move" vs="data/subai/deer_move.vs" />
+
+	<sounds walk="Sounds/Animals/Deer/Deer_Galop.wav" command="Sounds/Animals/Deer/Deer_Select.wav" die="Sounds/Animals/Deer/Deer_Die.wav" />
+</class>

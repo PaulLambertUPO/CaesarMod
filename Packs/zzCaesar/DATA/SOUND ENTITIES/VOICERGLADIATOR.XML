@@ -1,0 +1,14 @@
+<entity description="VoiceRGladiator" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RGladiator/Fight and win.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/Hail emperor.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/I am well trained.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/I do not fear death.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/I have been hardened by a thousand fights.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/Morituri te salutant.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/My strike will be decisive.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/Ready.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/Victory will be ours.wav" frequency="10" />
+		<sound file="CurrentLang/Voices/RGladiator/Where is the battle.wav" frequency="10" />
+	</files>
+</entity>

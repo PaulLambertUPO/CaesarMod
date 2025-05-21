@@ -1,0 +1,22 @@
+<class id="GOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/GOutpost/GOutpost_as.ent.XML" entity_winter="Buildings/GOutpost/GOutpost_w.ent.XML">
+	<properties race="Gaul" />
+	<properties maxhealth="10000" />
+	<properties radius="345" selection_radius="350" />
+	<properties display_name="Trade outpost" />
+	<properties icon="gameres/icons/goutpost.bmp" />
+	<properties help="/contents/buildings/TradeOutpost" />
+	<properties edittree_pos="Structures/Outposts/Trade outpost (Gaul)" />
+	<properties description="Allows to exchange food for gold or vice versa" />
+	<properties
+		range="1000"
+		settlement_food="500"
+		settlement_gold="1000"
+		defender_cls_1="GTridentWarrior"
+		defenders_max_1="6"
+		defenders_out_1="3"
+		start_level_1="12"
+		end_level_1="30"
+	/>
+	<method sig="goutpost_sellfood" vs="data/subai/goutpost_sellfood.vs" />
+	<method sig="goutpost_sellgold" vs="data/subai/goutpost_sellgold.vs" />
+</class>

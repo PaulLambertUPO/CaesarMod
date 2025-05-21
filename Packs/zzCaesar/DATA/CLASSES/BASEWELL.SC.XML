@@ -1,0 +1,9 @@
+<class id="BaseWell" cpp_class="CVXItemHolder" parent="ItemHolder" entity="">
+	<properties sight="0" />
+	<properties display_name="Well" />
+	<properties help="contents/buildings/Well" />
+	<properties description="Restores the health of any nearby injured unit (animals excluded) by 100 every 0.5 seconds" />
+	<behavior script="data/subai/magic_well_behavior.vs" />
+	<method sig="idle" vs="data/subai/anim.vs" />
+	<sounds select="Sounds/Selection/Well.wav" />
+</class>

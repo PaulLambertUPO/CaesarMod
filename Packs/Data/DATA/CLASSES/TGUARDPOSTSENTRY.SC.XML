@@ -1,0 +1,3 @@
+<class id="TGuardPostSentry" cpp_class="CVXUnit" parent="TSentry" entity="Units/TArcher/TGuardPostSentry.ent.xml">
+		<sounds die="data/sound entities/UNITDEATHFEMALE.xml"/>
+</class>

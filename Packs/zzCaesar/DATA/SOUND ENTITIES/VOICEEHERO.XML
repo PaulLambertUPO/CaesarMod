@@ -1,0 +1,9 @@
+<entity description="VoiceEHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EHero/Death to the invader.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHero/For the glory of Egypt.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHero/For the Pharaoh.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHero/Victory awaits us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EHero/We shall destroy the enemy.wav" frequency="20" />
+	</files>
+</entity>

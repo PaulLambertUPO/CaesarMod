@@ -1,0 +1,5 @@
+<entity description="ItemUse_ThrillerDrum" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/ItemUse/ThrillerDrum.wav" frequency="100" />
+	</files>
+</entity>

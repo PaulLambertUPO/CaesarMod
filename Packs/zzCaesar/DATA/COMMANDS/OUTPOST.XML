@@ -1,0 +1,22 @@
+<commands>
+	<cmd name="repair guard post" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="GGuardPost" />
+	</cmd>
+	<cmd name="Outpost Attack" priority="2"
+		method="attack"
+		button="Actions/Attack.bmp"
+		key="a"
+		rollover="Attack">
+		<cmdtext target="Unit" text="Click to attack this enemy" />
+		<src obj="Outpost" />
+		<nsrc obj="GGuardPost" />
+	</cmd>
+</commands>

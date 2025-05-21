@@ -1,0 +1,9 @@
+<entity description="VoiceTHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/THero/Battle calls me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/THero/Blood and fire.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/THero/I will be worthy of you.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/THero/Victory is ours.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/THero/Victory or death.wav" frequency="20" />
+	</files>
+</entity>

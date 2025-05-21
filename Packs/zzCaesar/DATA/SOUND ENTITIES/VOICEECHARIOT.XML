@@ -1,0 +1,9 @@
+<entity description="VoiceEChariot" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EChariot/Bows drawn.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EChariot/Eternal life awaits me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EChariot/My shot will be flawless.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EChariot/Osiris guide my arrow.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EChariot/Wherever I set my gaze I set my arrow.wav" frequency="20" />
+	</files>
+</entity>

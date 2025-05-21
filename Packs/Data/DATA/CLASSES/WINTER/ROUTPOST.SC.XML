@@ -1,0 +1,8 @@
+<class
+	cpp_class = "CVXOutpost"
+	entity = "Buildings/ROutpost/ROutpost_w.ent.XML"
+	id = "ROutpostWinter"
+	parent = "ROutpost"
+>
+	<properties edittree_pos = "Structures/Interactive/Winter/Stone Outpost"/>
+</class>

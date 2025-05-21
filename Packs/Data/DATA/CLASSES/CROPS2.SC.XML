@@ -1,0 +1,7 @@
+<class id="Crops2" cpp_class="CVXDecor" parent="Object"
+entity_autumn="MapObjects/Decors/CornBig/Corn_Big_s1.ent.xml"
+entity_spring="MapObjects/Decors/CornBig/Corn_Big_s1.ent.xml"
+entity_winter="MapObjects/Decors/CornBig/Corn_Big_s1.ent.xml">
+
+	<properties edittree_pos="Structures/Others/Fields/Crops 2"/>
+</class>

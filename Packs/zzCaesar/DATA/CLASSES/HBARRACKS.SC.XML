@@ -1,0 +1,11 @@
+<class id="HBarracks" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/HBarracks/HBarracks.ent.xml">
+
+	<properties race="ImperialRome" />
+
+	<properties radius="265" selection_radius="270" />
+
+	<properties display_name="Barracks" />
+	<properties icon="gameres/icons/HBarracks.bmp" />
+	<properties help="/contents/buildings/HBarracks" />
+	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Barracks" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
+</class>

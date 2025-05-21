@@ -1,0 +1,7 @@
+<class id="BearSummoned" cpp_class="CVXUnit" parent="BearUnit" entity="Units/Bear/Bear.ent.xml">
+	<properties unit_specials="Attack skill, Combat skill, Freedom" />
+	<properties does_not_regenerate="1" />
+	<properties stamina_dec_time="3000" />
+	<properties edittree_pos="" />
+	<behavior script="data/subai/summoning_behavior.vs" />
+</class>

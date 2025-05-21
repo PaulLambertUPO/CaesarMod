@@ -1,0 +1,9 @@
+<entity description="VoiceICavalry" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/ICavalry/Behind me rides the storm.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ICavalry/Charge.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ICavalry/Hurry hurry.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ICavalry/I am as swift as the wind.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/ICavalry/My steed is ready.wav" frequency="20" />
+	</files>
+</entity>

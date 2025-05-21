@@ -1,0 +1,7 @@
+<entity description="ShipWalk" priority="UnitWalk" type="UnitWalk">
+	<files>
+		<sound file="Sounds/Walk/Ship_Walk/Ship_Walk_1.wav" frequency="33" />
+		<sound file="Sounds/Walk/Ship_Walk/Ship_Walk_2.wav" frequency="33" />
+		<sound file="Sounds/Walk/Ship_Walk/Ship_Walk_3.wav" frequency="34" />
+	</files>
+</entity>

@@ -1,0 +1,6 @@
+<class id="MercenaryGHorseman" cpp_class="CVXUnit" parent="GHorseman" entity="Units/GHorseman/GHorseman.ent.xml">
+	<properties display_name="Mercenary Horseman" display_name_plural="Mercenary Horsemen" />
+	<properties icon="gameres/icons/zpwGHorseman.bmp" />
+	<properties edittree_pos="" />
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+</class>

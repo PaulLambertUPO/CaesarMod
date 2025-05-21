@@ -1,0 +1,39 @@
+<class id="BDruid" cpp_class="CVXDruid" parent="BaseMage" entity="Units/BDruid/BDruid.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="160" />
+	<properties armor_slash="0" armor_pierce="0" />
+	<properties speed="60" />
+	<properties unit_specials="Invisibility" />
+
+	<properties display_name="Druid" display_name_plural="Druids" />
+	<properties icon="gameres/icons/BDruid.bmp" />
+	<properties help="contents/units/BDruid" />
+	<properties edittree_pos="Units/Britain/Druid" />
+
+	<behavior script="data/subai/bdruid_hide_close_allies.vs" />
+
+	<method sig="idle" vs="data/subai/bdruid_idle.vs" />
+	<method sig="stand_position" vs="data/subai/bdruid_stand_position.vs" />
+	<method sig="advance" vs="data/subai/unit_advance.vs" />
+
+	<method sig="blearn" vs="data/subai/druid_learn.vs" />
+	<method sig="hide" vs="data/subai/druid_hide_unit.vs" verify="data/subai/druid_hide_verify.vs" />
+	<method sig="hide" vs="data/subai/druid_hide_ground.vs" />
+	<method sig="b_ghoul_summoning" vs="data/subai/druid_ghoul_summoning.vs" />
+	<method sig="crow_summoning" vs="data/subai/druid_crow_summoning.vs" />
+	<method sig="b_mass_heal" vs="data/subai/druid_massheal.vs" />
+
+	<defaultcmd target="Unit">
+		<cmd name="hide" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+		<cmd name="approach" />
+	</defaultcmd>
+
+	<sounds command="VoiceBDruid" />
+</class>

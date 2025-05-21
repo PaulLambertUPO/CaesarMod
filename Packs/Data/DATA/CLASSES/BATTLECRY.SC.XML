@@ -1,0 +1,3 @@
+<class id="BattleCry" cpp_class="CVXFeedback" parent="Object" entity="Visuals/BattleCry/BattleCry.ent.xml">
+	<properties desync_hash="0"/>
+</class>

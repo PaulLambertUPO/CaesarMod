@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+
+
+<entity name="CarissaEdulis" type="tree" radius="0" selection_radius="0" variations="1" pass_file="CarissaEdulis.pass">
+
+<images>
+
+<image idx="1" file="Layer1" drawmode="normal" remaping="none" rows="3" columns="1"/>
+
+<image idx="2" file="Shadow" drawmode="shadow" remaping="none" rows="3" columns="1"/>
+</images>
+
+<points>
+
+</points>
+
+<layers>
+<layer idx="1" name="layer1" image="1" z="1000" offsetx="-68" offsety="-108" sortoffsetx="0" sortoffsety="-20" xray="1"/>
+
+<layer idx="2" name="shadow" image="2" z="800" offsetx="-85" offsety="-107" sortoffsetx="0" sortoffsety="0"/>
+</layers>
+
+<states>
+
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+
+
+</states>
+
+<anims>
+<anim idx="1" name="test_tree" sound_id="" startstate="1" endstate="1" frames="6" duration="5240" default_duration="220" action_time="0" step="0">
+
+<replace layer="1" image="1" offsetx="-68" offsety="-108"/>
+
+<replace layer="2" image="2" offsetx="-85" offsety="-107"/>
+
+<frame idx="1" duration="320"/>
+
+<frame idx="2" duration="440"/>
+
+<frame idx="3" duration="580"/>
+<frame idx="4" duration="660"/>
+
+<frame idx="5" duration="400"/>
+
+<frame idx="6" duration="220"/>
+
+</anim>
+
+</anims>
+
+</entity>

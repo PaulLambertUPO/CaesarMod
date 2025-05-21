@@ -1,0 +1,5 @@
+<class id="CTower01" altid="CTower02" cpp_class="CVXBuilding" parent="Tower" entity="Buildings/CWalls/Tower/Tower.ent.xml">
+	<properties race="Carthage"/>
+	<properties wall_set="Carthaginian walls"/>
+	<properties icon="gameres/icons/CTower.bmp"/>
+</class>

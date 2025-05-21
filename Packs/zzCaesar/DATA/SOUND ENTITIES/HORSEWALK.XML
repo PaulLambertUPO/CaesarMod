@@ -1,0 +1,30 @@
+<entity description="HorseWalk" priority="UnitWalk" type="UnitWalk">
+	<files>
+		<sound file="Sounds/Walk/Horse_Army_1.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_2.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_3.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_4.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_5.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_6.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_7.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_8.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_9.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_10.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_11.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_12.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_13.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_14.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_15.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_20.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_21.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_22.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_23.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_24.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_25.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_26.wav" frequency="4" />
+		<sound file="Sounds/Walk/Horse_Army_27.wav" frequency="3" />
+		<sound file="Sounds/Walk/Horse_Army_28.wav" frequency="3" />
+		<sound file="Sounds/Walk/Horse_Army_29.wav" frequency="3" />
+		<sound file="Sounds/Walk/Horse_Army_30.wav" frequency="3" />
+	</files>
+</entity>

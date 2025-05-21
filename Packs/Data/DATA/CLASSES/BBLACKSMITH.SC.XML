@@ -1,0 +1,14 @@
+<class id="BBlacksmith" cpp_class="CVXBuilding" parent="BaseBlacksmith" entity="Buildings/BBlacksmith/BBlacksmith.ent.xml">
+
+	<properties race="Britain"/>
+	<properties icon="gameres/icons/BBlacksmith.bmp"/>
+	<properties display_name="Blacksmith"/>
+	<properties radius="220" selection_radius="230"/>
+	<properties edittree_pos="Structures/Stronghold (Britain)/Blacksmith"/>
+
+	<properties help="/contents/buildings/BBlacksmith"/>
+	<properties auto_repair="no"/>
+	
+	<behavior script="data/subai/BBlacksmith_anim.vs"/>
+	
+</class>

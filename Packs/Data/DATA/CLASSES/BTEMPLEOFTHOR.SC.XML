@@ -1,0 +1,15 @@
+<class id="BTempleOfThor" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/BTempleOfThor/BTempleOfThor.ent.xml">
+
+	<properties race="Britain"/>
+	<properties display_name="Temple of Thor"/>
+	<properties radius="165" selection_radius="165"/>
+	<properties help="/contents/buildings/BTempleOfThor"/>
+
+	<properties edittree_pos="Structures/Stronghold (Britain)/Temple of Thor"/>
+	<properties auto_repair="no"/>
+	<properties icon="gameres/icons/BTempleOfThor.bmp"/>
+	<sounds select="TempleSelect"/>
+
+	<behavior script="data/subai/TempleOfThorFire.vs"/>
+
+</class>

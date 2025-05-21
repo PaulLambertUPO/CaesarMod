@@ -1,0 +1,6 @@
+<entity description="VoiceFisherman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/Fisherman/The sea is full of fish.wav" frequency="50" />
+		<sound file="CurrentLang/Voices/Fisherman/You snooze you lose.wav" frequency="50" />
+	</files>
+</entity>

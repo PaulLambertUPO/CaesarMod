@@ -1,0 +1,6 @@
+<class id="GVillagerAmbient" cpp_class="CVXUnit" parent="PeasantAmbient" entity="Units/GVillager/GVillager.ent.xml">
+
+	<properties race="Gaul"/>
+	<properties icon="gameres/icons/GMan.bmp"/>
+
+</class>

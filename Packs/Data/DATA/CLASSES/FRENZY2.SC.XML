@@ -1,0 +1,3 @@
+<class id="Frenzy2" cpp_class="CVXFeedback" parent="Object" entity="Visuals/Frenzy/Frenzy2.ent.xml">
+	<properties desync_hash="0"/>
+</class>

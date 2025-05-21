@@ -1,0 +1,17 @@
+<class id="HCataphract" cpp_class="CVXUnit" parent="Horse" entity="Units/HCataphract/HCataphract.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties maxhealth="340" />
+	<properties damage="24" armor_slash="14" armor_pierce="14" />
+	<properties speed="130" />
+	<properties unit_specials="Learning, Offensive tactics" />
+
+	<properties healthbar_type="3" />
+
+	<properties display_name="Hetairos" display_name_plural="Hetairoi" />
+	<properties icon="gameres/icons/HCataphract.bmp" />
+	<properties help="contents/units/HCataphract" />
+	<properties edittree_pos="Units/Greece/Hetairos" />
+
+	<sounds command="VoiceHCataphract" attack="UnitSpearFight" />
+</class>

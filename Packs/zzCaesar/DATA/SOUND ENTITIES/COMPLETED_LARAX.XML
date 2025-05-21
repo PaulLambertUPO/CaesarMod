@@ -1,0 +1,5 @@
+<entity description="Completed_Larax" priority="UI" type="UI">
+	<files>
+		<sound file="CurrentLang/Voices/GHero/I am the chosen one.wav" frequency="100" />
+	</files>
+</entity>

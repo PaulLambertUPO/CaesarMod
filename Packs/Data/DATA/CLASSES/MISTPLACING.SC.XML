@@ -1,0 +1,11 @@
+<class
+	id="mist_placing"
+	cpp_class="CVXMapObj"
+	parent="catapult_placing"
+	entity="Visuals/mist_placing/mist_placing.ent.xml">
+
+	<properties desync_hash="0"/>
+	<properties radius="50" selection_radius="200"/>
+	<properties sight="95"/>
+
+</class>

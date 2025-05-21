@@ -1,0 +1,26 @@
+<class id="IOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/IOutpost/IOutpost.ent.XML">
+	<properties race="Iberia" />
+	<properties maxhealth="10000" />
+	<properties radius="345" selection_radius="350" />
+	<properties display_name="Training outpost" />
+	<properties icon="gameres/icons/ioutpost.bmp" />
+	<properties help="/contents/buildings/TrainingOutpost" />
+	<properties edittree_pos="Structures/Outposts/Training outpost (Iberian)" />
+	<properties description="Gradually increases the experience of units inside up to level 8" />
+	<properties
+		range="1000"
+		settlement_food="0"
+		settlement_gold="1000"
+		defender_cls_1="IDefender"
+		defenders_max_1="12"
+		defenders_out_1="12"
+		start_level_1="8"
+		end_level_1="20"
+		defender_cls_2="ISlinger"
+		defenders_max_2="12"
+		defenders_out_2="8"
+		start_level_2="8"
+		end_level_2="20"
+	/>
+	<behavior script="data/subai/ioutpost_behavior.vs" />
+</class>

@@ -1,0 +1,3 @@
+<class id="DCube2" cpp_class="CVXDecor" parent="Object" entity="MapObjects/DCube2/DCube2.ent.xml">
+<properties edittree_pos="Structures/Others/Desert/Cube 2"/>
+</class>

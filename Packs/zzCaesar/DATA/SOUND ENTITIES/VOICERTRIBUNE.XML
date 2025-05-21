@@ -1,0 +1,9 @@
+<entity description="VoiceRTribune" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RTribune/For Rome.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RTribune/I do not know fear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RTribune/Retreat is not an option.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RTribune/Vulcan give me strength.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RTribune/Yes my general.wav" frequency="20" />
+	</files>
+</entity>

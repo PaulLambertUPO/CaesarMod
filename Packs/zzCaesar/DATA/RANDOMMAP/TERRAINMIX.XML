@@ -1,0 +1,30 @@
+<terrain-mixes>
+	<!-- Notes:
+		- Greece inherits settings from Gaul, Britain from Rome, Egypt from Carthage, Germany from Iberia, so there is no way to customize them (they are hardcoded)
+		- the ids used here are the values of the field "z" of each entry in the file "data/terrains.xml"
+		- absolutely avoid using these ids because they are for unpassable/bad terrains like rocks or water: 6, 10, 13, 15, 26, 51, 52 -->
+	<terrain-mix race="Gaul"><!-- focus on mixed grass -->
+		<terrain id="2" height="25" />
+		<terrain id="41" height="15" />
+		<terrain id="42" height="20" />
+	</terrain-mix>
+	<terrain-mix race="RepublicanRome"><!-- focus on pure grass -->
+		<terrain id="3" height="25" />
+		<terrain id="4" height="15" />
+		<terrain id="43" height="20" />
+	</terrain-mix>
+	<terrain-mix race="Carthage"><!-- focus on pure sand -->
+		<terrain id="5" height="30" />
+		<terrain id="9" height="10" />
+		<terrain id="17" height="20" />
+	</terrain-mix>
+	<terrain-mix race="Iberia"><!-- focus on mixed sand -->
+		<terrain id="0" height="30" />
+		<terrain id="16" height="10" />
+		<terrain id="54" height="20" />
+	</terrain-mix>
+	<terrain-mix race="ImperialRome" /><!-- Greece -->
+	<terrain-mix race="Britain" />
+	<terrain-mix race="Egypt" />
+	<terrain-mix race="Germany" />
+</terrain-mixes>

@@ -1,0 +1,9 @@
+<class id="Mist" cpp_class="CVXScriptObj" parent="SummoningObj" entity="Visuals/fogs/fogs.ent.xml">
+
+	<properties radius="100"/>
+	<properties range= "200"/>
+	<properties stamina_dec_time = "1200"/>
+
+	<method sig="idle" vs="data/subai/mist_idle.vs"/>
+
+</class>

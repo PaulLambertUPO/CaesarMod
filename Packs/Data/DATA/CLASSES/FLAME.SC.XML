@@ -1,0 +1,6 @@
+<class id="Flame" cpp_class="CVXScriptObj" parent="Object"
+entity="MapObjects/Flame/Flame.ent.xml">
+	<properties edittree_pos="Structures/Others/Flame"/>
+	<method sig="idle" vs="data/subai/anim.vs"/>
+	<properties sight="0"/>
+</class>

@@ -1,0 +1,107 @@
+<commands>
+	<cmd name="repair temple" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+		<src obj="HTemple" />
+	</cmd>
+	<cmd name="trainRPriest" priority="2"
+		button="actions/train RPriest.bmp"
+		queueicon="gameres/icons/RPriest.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		traincommand="yes"
+		transpicon="1"
+		key="p"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Priest"
+		method="train"
+		param="RPriest"
+		sclass="RPriest">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+	</cmd>
+	<cmd name="trainRPriestPunic" priority="2"
+		button="actions/train RPriest Punic.bmp"
+		queueicon="gameres/icons/zpwPriest.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		traincommand="yes"
+		transpicon="1"
+		key="p"
+		costgold="200"
+		execdelay="20000"
+		rollover="Call Priest"
+		method="train"
+		param="RPriestPunic"
+		sclass="RPriestPunic">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+	</cmd>
+	<cmd name="Altar of Jupiter" priority="3"
+		button="research/priest enlightment.bmp"
+		key="a"
+		queueicon="gameres/icons/upgrades/Priest Enlighment.bmp"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="1000"
+		execdelay="15000"
+		rollover="Altar of Jupiter"
+		description="Makes new priests level 4"
+		method="research"
+		param="NameSet, Altar of Jupiter, default, SetsSet, levels/RPriest, 4, SetsSet, levels/RPriestPunic, 4">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+	</cmd>
+	<cmd name="Cloud of Plague" priority="4"
+		queueicon="gameres/icons/upgrades/mist.bmp"
+		button="research/mist.bmp"
+		key="c"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="20000"
+		rollover="Cloud of Plague"
+		description="Allows priests to sacrifice themselves to create a cloud of plague which deals 45 damage to all units periodically for about 12 seconds"
+		method="research"
+		param="ReqSet, Altar of Jupiter, default, NamePlr, Cloud of Plague, default">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+	</cmd>
+	<cmd name="Wrath of Jupiter" priority="5"
+		button="research/Jupiter.bmp"
+		queueicon="gameres/icons/upgrades/Jupiter.bmp"
+		key="j"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="20000"
+		rollover="Wrath of Jupiter"
+		description="Allows priests to sacrifice themselves to strike the chosen unit with a non-lethal lightning, dealing up to 250 damage (40 if it is a hero).\nThe same effect also applies to the units that kill the priests"
+		method="research"
+		param="ReqSet, Altar of Jupiter, default, NamePlr, Wrath of Jupiter, default">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+	</cmd>
+	<cmd name="God's Gift" priority="6"
+		button="research/Gift of God.bmp"
+		queueicon="gameres/icons/upgrades/Gift of God.bmp"
+		key="g"
+		researchcommand="yes"
+		groupverifier="data/subai/verify_research.vs"
+		costgold="2000"
+		execdelay="20000"
+		rollover="God's gift"
+		description="Equips new warriors with a God's gift, which increases the owner's movement and attack speed by 10%, heals him at the first kill and then disappears"
+		method="research"
+		param="ReqSet, Altar of Jupiter, default, NameSet, God's Gift, default, SetsSet, items/God's Gift, 1">
+		<src obj="RTemple" />
+		<src obj="MTemple" />
+	</cmd>
+</commands>

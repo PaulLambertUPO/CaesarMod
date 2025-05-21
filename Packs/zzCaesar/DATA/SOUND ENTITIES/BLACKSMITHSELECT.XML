@@ -1,0 +1,13 @@
+<entity description="BlacksmithSelect" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_1.wav" frequency="6" /><!-- same audio -->
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_2.wav" frequency="7" /><!-- same audio -->
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_3.wav" frequency="12" />
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_4.wav" frequency="13" />
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_5.wav" frequency="12" />
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_6.wav" frequency="13" />
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_7.wav" frequency="12" />
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_8.wav" frequency="13" />
+		<sound file="Sounds/Selection/Blacksmith/Blacksmith_9.wav" frequency="12" />
+	</files>
+</entity>

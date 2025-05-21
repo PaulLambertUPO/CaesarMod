@@ -1,0 +1,15 @@
+<class id="ETempleOfHorusAndAnubis" cpp_class="CVXBarrack" parent="BaseArena" entity="Buildings/ETempleOfHorusAndAnubis/ETempleOfHorusAndAnubis.ent.xml">
+
+	<properties race="Egypt"/>
+	<properties display_name="Temple of Horus and Anubis"/>
+
+	<properties radius="165" selection_radius="170"/>
+	<properties edittree_pos="Structures/Stronghold (Egypt)/Temple of Horus and Anubis"/>
+
+	<properties auto_repair="no"/>
+	<properties icon="gameres/icons/ETempleOfHorusAndAnubis.bmp"/>
+	<properties help="/contents/buildings/ETempleOfHorusAndAnubis"/>
+
+	<sounds select="TempleSelect"/>
+
+</class>

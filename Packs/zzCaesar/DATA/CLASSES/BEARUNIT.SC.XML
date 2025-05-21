@@ -1,0 +1,16 @@
+<class id="BearUnit" cpp_class="CVXUnit" parent="AttackAnimal" entity="units/Bear/Bear.ent.xml">
+	<properties maxhealth="360" />
+	<properties damage="24" armor_slash="8" armor_pierce="8" />
+	<properties sight="500" />
+	<properties speed="75" />
+	<properties unit_specials="Attack skill, Determination, Freedom" />
+
+	<properties radius="40" selection_radius="41" />
+
+	<properties display_name="Bear" display_name_plural="Bears" />
+	<properties icon="gameres/icons/Bear.bmp" />
+	<properties help="contents/units/Animals/Bear" />
+	<properties edittree_pos="Units/Animals/Bear" />
+
+	<sounds idle="BearIdle" attack="Sounds/Animals/Bear/Bear_Attack.wav" die="Sounds/Animals/Bear/Bear_Die.wav" />
+</class>

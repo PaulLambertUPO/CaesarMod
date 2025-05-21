@@ -1,0 +1,13 @@
+<class id="Melee" cpp_class="CVXUnit" parent="Military" entity="">
+
+	<properties damage_type="slash" />
+	<properties range="40" min_range="0" />
+	<properties speed="80" />
+
+	<properties radius="10" selection_radius="15" />
+	<properties formation_priority="1100" formation_radius="26" />
+
+	<method sig="attack" vs="data/subai/melee_attack.vs" verify="data/subai/melee_attack_verify.vs" />
+
+	<sounds attack="UnitSwordFight" die="UnitDeath" />
+</class>

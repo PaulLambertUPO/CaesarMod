@@ -1,0 +1,12 @@
+<class id="BTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/BTownhall/BTownhall.ent.xml">
+
+	<properties race="Britain"/>
+	<properties foodperpop="100"/>
+	<properties display_name="British Townhall"/>
+	<properties icon="gameres/icons/BTownhall.bmp"/>
+	<properties radius="170" selection_radius="175"/>
+	<properties edittree_pos="Structures/Stronghold (Britain)/Townhall"/>
+	<properties help="/contents/buildings/BTownhall"/>
+
+	
+</class>

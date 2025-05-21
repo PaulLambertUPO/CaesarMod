@@ -1,0 +1,9 @@
+<entity description="VoiceEGuardian" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EGuardian/I am the protector of Egypt.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EGuardian/I will vanquish the heathens.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EGuardian/Let us crush the enemy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EGuardian/Nothing will stop us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EGuardian/We are an impenetrable wall.wav" frequency="20" />
+	</files>
+</entity>

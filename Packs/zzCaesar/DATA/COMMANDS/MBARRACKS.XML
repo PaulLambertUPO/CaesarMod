@@ -1,0 +1,98 @@
+<commands>
+	<cmd name="trainMHastatus" priority="3"
+		button="actions/train RHastatus.bmp"
+		queueicon="gameres/icons/RHastatus.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="h"
+		costgold="100"
+		costpop="1"
+		execdelay="6000"
+		rollover="Equip Hastatus"
+		method="train"
+		param="RHastatus"
+		sclass="RHastatus">
+		<src obj="MBarracks" />
+	</cmd>
+	<cmd name="trainMArcher" priority="4"
+		button="actions/train RArcher.bmp"
+		queueicon="gameres/icons/RArcher.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costgold="80"
+		costpop="1"
+		execdelay="8000"
+		rollover="Equip Archer"
+		method="train"
+		param="RArcher, Arrows"
+		sclass="RArcher">
+		<src obj="MBarracks" />
+	</cmd>
+	<cmd name="trainMVelit" priority="5"
+		button="actions/train RVelit.bmp"
+		queueicon="gameres/icons/RVelit.bmp"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="v"
+		costgold="150"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Velit"
+		method="train"
+		param="RVelit, Throwing Spears"
+		sclass="RVelit">
+		<src obj="MBarracks" />
+	</cmd>
+	<cmd name="trainMPrinciple" priority="6"
+		button="actions/train RPrinciple.bmp"
+		queueicon="gameres/icons/RPrinciple.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		key="p"
+		costgold="220"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Principle"
+		method="train"
+		param="RPrinciple, Pikes"
+		sclass="RPrinciple">
+		<src obj="MBarracks" />
+	</cmd>
+	<cmd name="trainMScout" priority="7"
+		button="actions/train RScout.bmp"
+		queueicon="gameres/icons/RScout.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		traincommand="yes"
+		key="s"
+		costgold="150"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Scout"
+		method="train"
+		param="RScout, Horseshoes"
+		sclass="RScout">
+		<src obj="MBarracks" />
+	</cmd>
+	<cmd name="trainMPraetorian" priority="8"
+		button="actions/train RPraetorian.bmp"
+		queueicon="gameres/icons/RPraetorian.bmp"
+		transpicon="1"
+		traincommand="yes"
+		groupverifier="data/subai/barrack_train_verify.vs"
+		key="r"
+		costgold="480"
+		costpop="1"
+		execdelay="24000"
+		rollover="Equip Praetorian"
+		method="train"
+		param="RPraetorian, Spike Armor"
+		sclass="RPraetorian">
+		<src obj="MBarracks" />
+	</cmd>
+</commands>

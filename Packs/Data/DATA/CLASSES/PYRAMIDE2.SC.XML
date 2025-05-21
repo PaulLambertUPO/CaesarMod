@@ -1,0 +1,5 @@
+<class id="Pyramide2" cpp_class="CVXDecor" parent="Object" entity="MapObjects/Egypt/Pyramide2/Pyramide2.ent.xml">
+
+<properties radius="40" selection_radius="40"/>
+<properties edittree_pos="Structures/Others/Egypt/Pyramide2"/>
+</class>

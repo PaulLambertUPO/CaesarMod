@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="colosseum" type="tree" variations="1" pass_file="COLOSSEUM.pass">
+<images>
+<image idx="1" file="layer1a" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="2" file="layer1b" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="3" file="layer1c" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="4" file="layer1d" drawmode="normal" remaping="none" rows="1" columns="1"/>
+
+<image idx="5" file="layer2a" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="6" file="layer2b" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="7" file="layer2c" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="8" file="layer2d" drawmode="normal" remaping="none" rows="1" columns="1"/>
+
+<image idx="9" file="layer3a" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="10" file="layer3b" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="11" file="layer3c" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="12" file="layer3d" drawmode="normal" remaping="none" rows="1" columns="1"/>
+
+<image idx="13" file="layer4a" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="14" file="layer4b" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="15" file="layer4c" drawmode="normal" remaping="none" rows="1" columns="1"/>
+<image idx="16" file="layer4d" drawmode="normal" remaping="none" rows="1" columns="1"/>
+
+<image idx="17" file="shadow" drawmode="shadow" remaping="none" rows="1" columns="1"/>
+</images>
+<points>
+</points>
+<layers>
+<layer idx="1" name="layer1a" image="1" z="1000" offsetx="-351" offsety="-352" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="2" name="layer1b" image="2" z="1000" offsetx="-172" offsety="-352" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="3" name="layer1c" image="3" z="1000" offsetx="0" offsety="-352" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="4" name="layer1d" image="4" z="1000" offsetx="175" offsety="-352" sortoffsetx="0" sortoffsety="0"/>
+
+<layer idx="5" name="layer2a" image="5" z="1000" offsetx="-351" offsety="-184" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="6" name="layer2b" image="6" z="1000" offsetx="-172" offsety="-184" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="7" name="layer2c" image="7" z="1000" offsetx="0" offsety="-184" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="8" name="layer2d" image="8" z="1000" offsetx="175" offsety="-184" sortoffsetx="0" sortoffsety="0"/>
+
+<layer idx="9" name="layer3a" image="9" z="1000" offsetx="-351" offsety="0" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="10" name="layer3b" image="10" z="1000" offsetx="-172" offsety="0" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="11" name="layer3c" image="11" z="1000" offsetx="0" offsety="0" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="12" name="layer3d" image="12" z="1000" offsetx="175" offsety="0" sortoffsetx="0" sortoffsety="0"/>
+
+<layer idx="13" name="layer4a" image="13" z="1000" offsetx="-351" offsety="183" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="14" name="layer4b" image="14" z="1000" offsetx="-172" offsety="183" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="15" name="layer4c" image="15" z="1000" offsetx="0" offsety="183" sortoffsetx="0" sortoffsety="0"/>
+<layer idx="16" name="layer4d" image="16" z="1000" offsetx="175" offsety="183" sortoffsetx="0" sortoffsety="0"/>
+
+<layer idx="17" name="shadow" image="17" z="800" offsetx="-428" offsety="-340" sortoffsetx="0" sortoffsety="0"/>
+</layers>
+<states>
+<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
+</states>
+<anims>
+</anims>
+</entity>

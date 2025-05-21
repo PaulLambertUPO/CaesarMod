@@ -1,0 +1,3 @@
+<class id="GHero2a" cpp_class="CVXHero" parent="GHero2" entity="Units/GHero2/GHero2.ent.xml">
+	<properties display_name="Beorht" edittree_pos="" />
+</class>

@@ -1,0 +1,6 @@
+<class id="EVillagerAmbient" cpp_class="CVXUnit" parent="PeasantAmbient" entity="Units/EVillager/EVillager.ent.xml">
+
+	<properties race="Egypt"/>
+	<properties icon="gameres/icons/RMan.bmp"/>
+
+</class>

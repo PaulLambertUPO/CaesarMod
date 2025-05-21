@@ -1,0 +1,9 @@
+<entity description="VoiceRRepublicanHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RRepublicanHero/Fortuna audaces iuvat.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/Forward legionaries.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/I know every inch of these lands.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/To me legion.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RRepublicanHero/Veni Vidi Vici.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,124 @@
+<placeobjects>
+<ifdef id="trees">
+	<TreeRace race="Gaul">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="0"/>
+			<TreeSubGrp name="Pine trees" weight="90"/>
+			<TreeSubGrp name="Palms" weight="0"/>
+			<TreeSubGrp name="Dead trees" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="85"/>
+			<TreeSubGrp name="Dead bushes" weight="15"/>
+			<TreeSubGrp name="Palm Bushes" weight="0"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="Iberia">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="80"/>
+			<TreeSubGrp name="Pine trees" weight="0"/>
+			<TreeSubGrp name="Palms" weight="0"/>
+			<TreeSubGrp name="Dead trees" weight="20"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="90"/>
+			<TreeSubGrp name="Dead bushes" weight="10"/>
+			<TreeSubGrp name="Palm Bushes" weight="0"/> 
+		</TreeGroup>
+	</TreeRace>
+
+	<TreeRace race="Carthage">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="0"/>
+			<TreeSubGrp name="Pine trees" weight="0"/>
+			<TreeSubGrp name="Palms" weight="90"/>
+			<TreeSubGrp name="Dead trees" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="0"/>
+			<TreeSubGrp name="Dead bushes" weight="10"/>
+			<TreeSubGrp name="Palm Bushes" weight="90"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="RepublicanRome">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="30"/>
+			<TreeSubGrp name="Pine trees" weight="60"/>
+			<TreeSubGrp name="Dead trees" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="50"/>
+			<TreeSubGrp name="Dead bushes" weight="30"/>
+			<TreeSubGrp name="Palm Bushes" weight="2"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="ImperialRome">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="20"/>
+			<TreeSubGrp name="Pine trees" weight="60"/>
+			<TreeSubGrp name="Dead trees" weight="0"/>
+			<TreeSubGrp name="Other" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="60"/>
+			<TreeSubGrp name="Dead bushes" weight="8"/>
+			<TreeSubGrp name="Palm Bushes" weight="2"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="Greece">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="20"/>
+			<TreeSubGrp name="Pine trees" weight="60"/>
+			<TreeSubGrp name="Dead trees" weight="0"/>
+			<TreeSubGrp name="Other" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="60"/>
+			<TreeSubGrp name="Dead bushes" weight="8"/>
+			<TreeSubGrp name="Palm Bushes" weight="2"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="Britain">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="30"/>
+			<TreeSubGrp name="Pine trees" weight="60"/>
+			<TreeSubGrp name="Dead trees" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="50"/>
+			<TreeSubGrp name="Dead bushes" weight="30"/>
+			<TreeSubGrp name="Palm Bushes" weight="2"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="Egypt">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="30"/>
+			<TreeSubGrp name="Pine trees" weight="60"/>
+			<TreeSubGrp name="Dead trees" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="50"/>
+			<TreeSubGrp name="Dead bushes" weight="30"/>
+			<TreeSubGrp name="Palm Bushes" weight="2"/> 
+		</TreeGroup>
+	</TreeRace>
+	<TreeRace race="Germany">
+		<TreeGroup name="Trees" weight="100">
+			<TreeSubGrp name="Broad-leaved" weight="30"/>
+			<TreeSubGrp name="Pine trees" weight="60"/>
+			<TreeSubGrp name="Dead trees" weight="10"/>
+		</TreeGroup>
+		<TreeGroup name="Bushes" weight="50">
+			<TreeSubGrp name="Green bushes" weight="50"/>
+			<TreeSubGrp name="Dead bushes" weight="30"/>
+			<TreeSubGrp name="Palm Bushes" weight="2"/> 
+		</TreeGroup>
+	</TreeRace>
+
+	<new-perlin id="trees" first-minor-oct="2" oct-count="3" persistence="0.3" cell-bits="6"/>
+
+		<PlaceTrees perlin-id="trees" thres="0.15" dens="0.10" inf-max="29" r1="3" r2="10"/>
+
+	<del-perlin id="trees"/>
+</ifdef>
+</placeobjects>

@@ -1,0 +1,10 @@
+<class id="EHouse3" cpp_class="CVXBuilding" parent="BaseHouse" entity="Buildings/EHouse3/EHouse3.ent.xml">
+
+	<properties race="Egypt"/>
+	<properties radius="160" selection_radius="165"/>
+	<properties icon="gameres/icons/ehouse.bmp"/>
+	<properties edittree_pos="Structures/Village (Egypt)/House 3"/>
+	<properties display_name="House"/>
+
+	
+</class>

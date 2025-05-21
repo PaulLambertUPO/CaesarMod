@@ -1,0 +1,47 @@
+<class id="Stonehenge" cpp_class="CVXTownHall" parent="Building" entity="">
+
+	<properties maxhealth="15000" sight="400" />
+	<properties
+		is_central_building="1"
+		can_be_captured="0"
+		can_be_attacked="0"
+		produces_gold="0"
+		produces_food="0"
+		is_single_building="1"
+		settlement_food="0"
+		settlement_gold="0"
+		settlement_maxfood="0"
+		settlement_maxgold="0"
+		population="0"
+		efficiency="1"
+		max_population="0"
+		max_units="0"
+		settlement_icon_name=""
+	/>
+	<properties minimap_icon_type="black" />
+	<properties hides_units="1" />
+
+	<properties display_name="Stonehenge" />
+	<properties icon="gameres/icons/stonehenge.bmp" />
+	<properties help="/contents/buildings/Stonehenge" />
+	<properties description="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Stonehenge, to ensure that it accumulates enough power for such rituals" />
+
+	<method sig="idle" vs="data/subai/stonehenge_idle.vs" />
+
+	<method sig="foraging" vs="data/subai/stonehenge_foraging.vs" />
+	<method sig="wisdom" vs="data/subai/stonehenge_wisdom.vs" />
+	<method sig="soothing" vs="data/subai/stonehenge_soothing.vs" />
+	<method sig="sacrifice" vs="data/subai/stonehenge_sacrifice.vs" />
+	<method sig="gold_rain" vs="data/subai/stonehenge_gold_rain.vs" />
+	<method sig="plague" vs="data/subai/stonehenge_plague.vs" />
+	<method sig="bloodlust" vs="data/subai/stonehenge_bloodlust.vs" />
+	<method sig="starvation" vs="data/subai/stonehenge_starvation.vs" />
+	<method sig="earthquake" vs="data/subai/stonehenge_earthquake.vs" />
+	<method sig="teuton_horde" vs="data/subai/stonehenge_teuton_horde.vs" />
+
+	<value0 icon="gameres/infobar/common/Loyality.bmp"
+		script="return .stamina;"
+		help="/contents/capturing"
+		rollover="Energy"
+	/>
+</class>

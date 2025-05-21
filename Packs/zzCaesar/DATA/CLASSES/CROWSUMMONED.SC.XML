@@ -1,0 +1,7 @@
+<class id="CrowSummoned" cpp_class="CVXFlyingUnit" parent="Crow" entity="Units/Crow/Crow.ent.xml">
+	<properties unit_specials="Keen sight" />
+	<properties does_not_regenerate="1" />
+	<properties stamina_dec_time="24000" />
+	<properties edittree_pos="" />
+	<behavior script="data/subai/summoning_behavior.vs" />
+</class>

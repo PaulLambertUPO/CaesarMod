@@ -1,0 +1,7 @@
+<class id="EGate3" cpp_class="CVXGate" parent="Gate" entity="Buildings/EWalls/GateW/GateW.ent.xml">
+	<properties race="Egypt"/>
+	<properties icon="gameres/icons/EGates.bmp"/>
+	<properties radius="170" selection_radius="170"/>
+	<properties wall_set="Egyptian walls"/>
+	<properties sentry_class_name="ESentry1"/>
+</class>

@@ -1,0 +1,7 @@
+<class id="SummoningUnit" cpp_class="CVXUnit" parent="BaseAnimal" entity="">
+
+	<properties stamina_dec_time = "1000"/>
+
+	<behavior script = "data/subai/summoning_behavior.vs"/>
+	
+</class>

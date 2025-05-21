@@ -1,0 +1,10 @@
+<entity description="VoiceIEnchantress" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/IEnchantress/As you wish.wav" frequency="16" />
+		<sound file="CurrentLang/Voices/IEnchantress/At your service.wav" frequency="16" />
+		<sound file="CurrentLang/Voices/IEnchantress/I am the source of wisdom.wav" frequency="17" />
+		<sound file="CurrentLang/Voices/IEnchantress/I can teach you.wav" frequency="17" />
+		<sound file="CurrentLang/Voices/IEnchantress/May the goddess Astarte protect you.wav" frequency="17" />
+		<sound file="CurrentLang/Voices/IEnchantress/The goddess smiles upon us.wav" frequency="17" />
+	</files>
+</entity>

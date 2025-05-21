@@ -1,0 +1,62 @@
+<terrain>
+	<!-- main terrains (both waters are hardcoded in the source using SHALLOW_WATER_IDX and DEEP_WATER_IDX) -->
+	<layer z="0" type="2" display="Ground 1" image="terrain/%season%/ground1024.vq" minimap="%season%/ground1024.bmp" />
+	<layer z="1" type="2" display="Ground 2" image="terrain/%season%/ground256.vq" minimap="%season%/ground256.bmp" />
+	<layer z="2" type="2" display="Ground 3" image="terrain/%season%/ground.vq" minimap="%season%/ground.bmp" />
+	<layer z="3" type="1" display="Grass 1" image="terrain/%season%/grass1024.vq" minimap="%season%/grass1024.bmp" />
+	<layer z="4" type="1" display="Grass 2" image="terrain/%season%/grass512.vq" minimap="%season%/grass512.bmp" />
+	<layer z="5" type="3" display="Sands" image="terrain/%season%/sands.vq" minimap="%season%/sands.bmp" />
+	<layer z="6" type="5" display="Rocks 1" passable="0" image="terrain/%season%/rocks1024.vq" minimap="%season%/rocks1024.bmp" />
+	<layer z="7" type="6" display="Roads" image="terrain/%season%/roads.vq" minimap="%season%/roads.bmp" />
+	<layer z="8" type="5" display="Rocks 2" image="terrain/%season%/rocks256.vq" minimap="%season%/rocks256.bmp" />
+	<layer z="9" type="3" display="Sand waves" image="terrain/%season%/SandsWave.vq" minimap="%season%/SandsWave.bmp" />
+	<layer z="10" type="7" image="terrain/waves.vq" />
+	<layer z="11" type="5" display="Shore rocks" image="terrain/%season%/rocks2.vq" minimap="%season%/rocks2.bmp" />
+	<layer z="12" type="4" display="Shallow water 1" dark="1" image="terrain/swater2.vq" minimap="swater2.bmp" frames="10" transition_terrain="10" animate_transition="1" transition="2" />
+	<layer z="13" type="4" display="Deep water" dark="1" image="terrain/dwater2.vq" minimap="dwater2.bmp" passable_water="1" frames="10" transition="2" />
+	<layer z="14" type="6" display="Roman roads" image="terrain/%season%/rroads.vq" minimap="%season%/rroads.bmp" />
+	<layer z="15" type="0" display="Invalid" image="terrain/invalid.vq" minimap="invalid.bmp" />
+	<layer z="16" type="3" display="Sand with grass" image="terrain/%season%/sand_grass512.vq" minimap="%season%/sand_grass512.bmp" />
+	<layer z="17" type="3" display="Sand with ground" image="terrain/%season%/sands_mix512.vq" minimap="%season%/sands_mix512.bmp" />
+	<layer z="18" type="1" display="Marsh" image="terrain/%season%/swamp1024.vq" minimap="%season%/swamp1024.bmp" />
+	<layer z="19" type="6" display="Carthaginian roads" image="terrain/%season%/sroads.vq" minimap="%season%/sroads.bmp" />
+	<layer z="20" type="6" display="Iberian roads" image="terrain/%season%/iroads.vq" minimap="%season%/iroads.bmp" />
+	<!-- Winter terrains -->
+	<layer z="21" type="2" display="Winter ground 1" image="terrain/Winter/ground1024.vq" minimap="Winter/ground1024.bmp" />
+	<layer z="22" type="2" display="Winter ground 2" image="terrain/Winter/ground.vq" minimap="Winter/ground.bmp" />
+	<layer z="23" type="1" display="Winter grass 1" image="terrain/Winter/grass1024.vq" minimap="Winter/grass1024.bmp" />
+	<layer z="24" type="1" display="Winter grass 2" image="terrain/Winter/grass512.vq" minimap="Winter/grass512.bmp" />
+	<layer z="25" type="3" display="Winter sands" image="terrain/Winter/sands.vq" minimap="Winter/sands.bmp" />
+	<layer z="26" type="5" display="Winter rocks" passable="0" image="terrain/Winter/rocks1024.vq" minimap="Winter/rocks1024.bmp" />
+	<layer z="27" type="6" display="Winter roads" image="terrain/Winter/roads.vq" minimap="Winter/roads.bmp" />
+	<layer z="28" type="5" display="Winter shore rocks" image="terrain/Winter/rocks2.vq" minimap="Winter/rocks2.bmp" />
+	<layer z="29" type="6" display="Winter Roman roads" image="terrain/Winter/rroads.vq" minimap="Winter/rroads.bmp" />
+	<layer z="30" type="1" display="Winter marsh" image="terrain/Winter/swamp1024.vq" minimap="Winter/swamp1024.bmp" />
+	<layer z="31" type="6" display="Winter Carthaginian roads" image="terrain/Winter/sroads.vq" minimap="Winter/sroads.bmp" />
+	<layer z="32" type="6" display="Winter Iberian roads" image="terrain/Winter/iroads.vq" minimap="Winter/iroads.bmp" />
+	<!-- Autumn terrains -->
+	<layer z="33" type="2" display="Autumn ground" image="terrain/Autumn/ground1024.vq" minimap="Autumn/ground1024.bmp" />
+	<layer z="34" type="1" display="Autumn grass 1" image="terrain/Autumn/grass1024.vq" minimap="Autumn/grass1024.bmp" />
+	<layer z="35" type="1" display="Autumn grass 2" image="terrain/Autumn/grass512.vq" minimap="Autumn/grass512.bmp" />
+	<layer z="36" type="6" display="Autumn roads" image="terrain/Autumn/roads.vq" minimap="Autumn/roads.bmp" />
+	<layer z="37" type="6" display="Autumn Roman roads" image="terrain/Autumn/rroads.vq" minimap="Autumn/rroads.bmp" />
+	<layer z="38" type="6" display="Autumn Carthaginian roads" image="terrain/Autumn/sroads.vq" minimap="Autumn/sroads.bmp" />
+	<layer z="39" type="6" display="Autumn Iberian roads" image="terrain/Autumn/iroads.vq" minimap="Autumn/iroads.bmp" />
+	<layer z="40" type="3" display="Autumn sand with grass" image="terrain/Autumn/sand_grass512.vq" minimap="Autumn/sand_grass512.bmp" />
+	<!-- terrains from old games (water does not work well because it is hardcoded to work with only the main ones) -->
+	<layer z="41" type="1" display="Grass 3" image="terrain/%season%/grass3.vq" minimap="%season%/grass3.bmp" />
+	<layer z="42" type="1" display="Grass 4" image="terrain/%season%/grass4.vq" minimap="%season%/grass4.bmp" />
+	<layer z="43" type="1" display="Grass 5" image="terrain/%season%/grass5.vq" minimap="%season%/grass5.bmp" />
+	<layer z="44" type="1" display="Autumn grass 3" image="terrain/Autumn/grass3.vq" minimap="Autumn/grass3.bmp" />
+	<layer z="45" type="1" display="Autumn grass 4" image="terrain/Autumn/grass4.vq" minimap="Autumn/grass4.bmp" />
+	<layer z="46" type="1" display="Autumn grass 5" image="terrain/Autumn/grass5.vq" minimap="Autumn/grass5.bmp" />
+	<layer z="47" type="1" display="Winter grass 3" image="terrain/Winter/grass3.vq" minimap="Winter/grass3.bmp" />
+	<layer z="48" type="1" display="Winter grass 4" image="terrain/Winter/grass4.vq" minimap="Winter/grass4.bmp" />
+	<layer z="49" type="1" display="Winter grass 5" image="terrain/Winter/grass5.vq" minimap="Winter/grass5.bmp" />
+	<layer z="50" type="4" display="Shallow water 2" dark="1" image="terrain/swater.vq" minimap="swater.bmp" frames="15" transition_terrain="10" animate_transition="1" transition="2" />
+	<layer z="51" type="4" display="Not navigable water" dark="1" image="terrain/dwater.vq" minimap="dwater.bmp" passable_water="1" frames="15" transition="2" />
+	<layer z="52" type="5" display="Rocks 3" passable="0" image="terrain/%Season%/rocks3.vq" minimap="%Season%/rocks3.bmp" />
+	<layer z="53" type="5" display="Shore rocks 2" image="terrain/%Season%/srocks2.vq" minimap="%Season%/srocks2.bmp" />
+	<layer z="54" type="2" display="Ground 4" image="terrain/Spring/ground4.vq" minimap="Spring/ground4.bmp" />
+	<layer z="55" type="2" display="Winter ground 3" image="terrain/Winter/wground4.vq" minimap="Winter/wground4.bmp" />
+</terrain>

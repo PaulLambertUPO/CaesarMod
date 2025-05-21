@@ -1,0 +1,29 @@
+<class id="GGuardPost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/GGuardPost/GGuardPost_AS.ent.xml" entity_winter="Buildings/GGuardPost/GGuardPost_W.ent.xml">
+	<properties race="Gaul" />
+	<properties maxhealth="10000" />
+	<properties auto_repair="no" />
+	<properties display_name="Guard Post" />
+	<properties icon="gameres/icons/GGuardPost.bmp" />
+	<properties help="/contents/buildings/GGuardPost" />
+	<properties edittree_pos="Structures/Outposts/Guard Post" />
+	<properties description="Guards the area with sentries and raises the alarm every time that it spots enemy warriors" />
+	<properties
+		sight="2000"
+		range="1000"
+		settlement_food="200"
+		settlement_gold="0"
+		max_units="85"
+		defender_cls_1="GArcher"
+		defenders_max_1="24"
+		defenders_out_1="14"
+		start_level_1="8"
+		end_level_1="18"
+		defender_cls_2="GSpearman"
+		defenders_max_2="24"
+		defenders_out_2="14"
+		start_level_2="8"
+		end_level_2="18"
+	/>
+	<behavior script="data/subai/GGuardPost_Sentries.vs" />
+	<method sig="repair" vs="data/subai/building_repair.vs" />
+</class>

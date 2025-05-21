@@ -1,0 +1,6 @@
+<class
+	id="ecatapult_placing"
+	cpp_class="CVXMapObj"
+	parent="catapult_placing"
+	entity="Visuals/ECatapult_Placing/ECatapult_Placing.ent.xml">
+</class>

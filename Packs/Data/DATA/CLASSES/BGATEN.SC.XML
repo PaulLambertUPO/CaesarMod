@@ -1,0 +1,7 @@
+<class id="BGate1" cpp_class="CVXGate" parent="Gate" entity="Buildings/BWalls/GateN/GateN.ent.xml">
+	<properties race="Britain"/>
+	<properties icon="gameres/icons/BGates.bmp"/>
+	<properties radius="170" selection_radius="170"/>
+	<properties wall_set="British walls"/>
+	<properties sentry_class_name="BSentry1"/>
+</class>

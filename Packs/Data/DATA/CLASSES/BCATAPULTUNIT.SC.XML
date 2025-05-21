@@ -1,0 +1,6 @@
+<class id="BCatapultUnit" cpp_class="CVXUnit" parent="RamUnit" entity="Units/BTaran/BTaran.ent.xml">
+
+	<properties race="Britain"/>
+	<properties icon="gameres/icons/bram.bmp"/>
+
+</class>

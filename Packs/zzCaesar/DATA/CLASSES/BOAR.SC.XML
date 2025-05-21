@@ -1,0 +1,10 @@
+<class id="Boar" cpp_class="CVXUnit" parent="BoarUnit" entity="units/Boar/Boar.ent.xml">
+	<properties edittree_pos="Units/Animals/Boar (aggressive)" />
+
+	<method sig="idle" vs="data/subai/bear_idle.vs" />
+	<method sig="engage" vs="data/subai/bear_engage.vs" />
+	<method sig="attack" vs="data/subai/bear_attack.vs" />
+
+	<method sig="move" vs="data/subai/unit_move.vs" />
+	<method sig="advance" vs="data/subai/unit_advance.vs" />
+</class>

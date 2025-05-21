@@ -1,0 +1,3 @@
+<class id="IHero3b" cpp_class="CVXHero" parent="IHero3" entity="Units/IHero3/IHero3.ent.xml">
+	<properties display_name="Poemana" edittree_pos="" />
+</class>

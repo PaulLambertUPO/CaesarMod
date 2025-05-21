@@ -1,0 +1,12 @@
+<class id="HSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/HToxotes/HSentry.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties maxhealth="200" />
+	<properties damage="24" armor_slash="6" armor_pierce="6" />
+	<properties unit_specials="Freedom, Keen sight, Life steal" />
+
+	<properties icon="gameres/icons/HToxotes.bmp" />
+	<properties help="contents/units/HToxotes"/>
+
+	<sounds command="VoiceHToxotes" />
+</class>

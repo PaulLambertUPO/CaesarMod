@@ -1,0 +1,9 @@
+<class id="GWVillager_Apollonia" cpp_class="CVXUnit" parent="PeasantFemale" entity="Units/GWVillager/GWVillager.ent.xml">
+
+	<properties race="Gaul"/>
+	<properties speed="25"/>
+	<properties icon="gameres/icons/GWoman.bmp"/>
+
+	<sounds command="data/sound entities/VoiceGFemaleVillager.xml"/>
+
+</class>

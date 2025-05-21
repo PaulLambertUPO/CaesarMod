@@ -1,0 +1,7 @@
+<entity description="VoiceHMaleVillager" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/HMaleVillager/Dionysus I trust in you.wav" frequency="33" />
+		<sound file="CurrentLang/Voices/HMaleVillager/Do not underestimate a peasant_s words.wav" frequency="34" />
+		<sound file="CurrentLang/Voices/HMaleVillager/Ready to work.wav" frequency="33" />
+	</files>
+</entity>

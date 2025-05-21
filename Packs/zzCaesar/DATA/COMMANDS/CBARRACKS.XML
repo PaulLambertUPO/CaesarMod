@@ -1,0 +1,182 @@
+<commands>
+	<cmd name="trainCLibyanFootman" priority="3"
+		button="actions/hire CLibyanFootman.bmp"
+		queueicon="gameres/icons/CLibyanFootman.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="l"
+		costgold="80"
+		execdelay="6000"
+		rollover="Hire Numidian Footman"
+		method="train"
+		param="CLibyanFootman, spec"
+		sclass="CLibyanFootman">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCLibyanFootmanNonSpec" priority="3"
+		button="actions/hire CLibyanFootman.bmp"
+		queueicon="gameres/icons/CLibyanFootman.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="l"
+		costgold="160"
+		execdelay="6000"
+		rollover="Hire Numidian Footman (at double price)"
+		method="train"
+		param="CLibyanFootman, non-spec"
+		sclass="CLibyanFootman">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCJavelinThrower" priority="4"
+		button="actions/hire CJavelinThrower.bmp"
+		queueicon="gameres/icons/CJavelinThrower.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="j"
+		costgold="90"
+		execdelay="10000"
+		rollover="Hire Javelin Thrower"
+		method="train"
+		param="CJavelinThrower, spec"
+		sclass="CJavelinThrower">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCJavelinThrowerNonSpec" priority="4"
+		button="actions/hire CJavelinThrower.bmp"
+		queueicon="gameres/icons/CJavelinThrower.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="j"
+		costgold="180"
+		execdelay="10000"
+		rollover="Hire Javelin Thrower (at double price)"
+		method="train"
+		param="CJavelinThrower, non-spec"
+		sclass="CJavelinThrower">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCBerberAssassin" priority="5"
+		button="actions/hire CBerberAssassin.bmp"
+		queueicon="gameres/icons/CBerberAssassin.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costgold="140"
+		execdelay="14000"
+		rollover="Hire Berber Assassin"
+		method="train"
+		param="CBerberAssassin, spec"
+		sclass="CBerberAssassin">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCBerberAssassinNonSpec" priority="5"
+		button="actions/hire CBerberAssassin.bmp"
+		queueicon="gameres/icons/CBerberAssassin.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="a"
+		costgold="280"
+		execdelay="14000"
+		rollover="Hire Berber Assassin (at double price)"
+		method="train"
+		param="CBerberAssassin, non-spec"
+		sclass="CBerberAssassin">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCMaceman" priority="6"
+		button="actions/hire CMaceman.bmp"
+		queueicon="gameres/icons/CMaceman.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="m"
+		costgold="150"
+		execdelay="14000"
+		rollover="Hire Maceman"
+		method="train"
+		param="CMaceman, spec"
+		sclass="CMaceman">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCMacemanNonSpec" priority="6"
+		button="actions/hire CMaceman.bmp"
+		queueicon="gameres/icons/CMaceman.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="m"
+		costgold="300"
+		execdelay="14000"
+		rollover="Hire Maceman (at double price)"
+		method="train"
+		param="CMaceman, non-spec"
+		sclass="CMaceman">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCNumidianRider" priority="7"
+		button="actions/hire CNumidianRider.bmp"
+		queueicon="gameres/icons/CNumidianRider.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="t"
+		costgold="170"
+		execdelay="20000"
+		rollover="Hire Tuareg"
+		method="train"
+		param="CNumidianRider, spec"
+		sclass="CNumidianRider">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCNumidianRiderNonSpec" priority="7"
+		button="actions/hire CNumidianRider.bmp"
+		queueicon="gameres/icons/CNumidianRider.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="t"
+		costgold="340"
+		execdelay="20000"
+		rollover="Hire Tuareg (at double price)"
+		method="train"
+		param="CNumidianRider, non-spec"
+		sclass="CNumidianRider">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCHorseman" priority="8"
+		button="actions/hire CHorseman.bmp"
+		queueicon="gameres/icons/CHorseman.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costgold="180"
+		execdelay="18000"
+		rollover="Hire Numidian Horseman"
+		method="train"
+		param="CHorseman, spec"
+		sclass="CHorseman">
+		<src obj="CBarracks" />
+	</cmd>
+	<cmd name="trainCHorsemanNonSpec" priority="8"
+		button="actions/hire CHorseman.bmp"
+		queueicon="gameres/icons/CHorseman.bmp"
+		groupverifier="data/subai/specialize_build_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costgold="360"
+		execdelay="18000"
+		rollover="Hire Numidian Horseman (at double price)"
+		method="train"
+		param="CHorseman, non-spec"
+		sclass="CHorseman">
+		<src obj="CBarracks" />
+	</cmd>
+</commands>

@@ -1,0 +1,15 @@
+<class id="RVillage" cpp_class="CVXTownHall" parent="BaseVillage" entity="Buildings/RVillage/RVillage.ent.xml"
+	entity_autumn="Buildings/RVillage/RVillage.ent.xml"
+	entity_spring="Buildings/RVillage/RVillage.ent.xml"
+	entity_winter="Buildings/RVillage/RVillage_w.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties radius="245" selection_radius="250"/>
+	<properties icon="gameres/icons/RStorage.bmp"/>
+	<properties radius="230" selection_radius="250"/>
+	<properties edittree_pos="Structures/Village (Rome)/Village hall"/>
+	<properties foodperpop="100"/>
+	<properties help="/contents/buildings/Village"/>
+	
+
+</class>

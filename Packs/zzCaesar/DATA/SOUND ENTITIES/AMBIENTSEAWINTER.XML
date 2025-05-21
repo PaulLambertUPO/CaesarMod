@@ -1,0 +1,12 @@
+<entity description="AmbientSeawinter">
+	<files>
+		<sound file="Sounds/Ambient/Waves1.wav" frequency="10" />
+		<sound file="Sounds/Ambient/Waves2.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Waves3.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Waves4.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Waves5.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Waves6.wav" frequency="9" />
+		<sound file="Sounds/Ambient/Waves7.wav" frequency="9" />
+		<sound file="" frequency="36" />
+	</files>
+</entity>

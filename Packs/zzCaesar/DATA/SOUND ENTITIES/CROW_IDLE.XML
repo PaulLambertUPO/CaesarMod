@@ -1,0 +1,8 @@
+<entity description="Crow_Idle" priority="UnitIdle" type="UnitIdle">
+	<files>
+		<sound file="Sounds/Animals/Crow/Crow_Idle1.wav" frequency="20" />
+		<sound file="Sounds/Animals/Crow/Crow_Idle2.wav" frequency="20" />
+		<sound file="Sounds/Animals/Crow/Crow_Idle3.wav" frequency="20" />
+		<sound file="" frequency="40" />
+	</files>
+</entity>

@@ -1,0 +1,32 @@
+<class id="WildHorse" cpp_class="CVXUnit" parent="Animal" entity="Units/WHorse/WHorse.ent.xml">
+
+	<properties armor_slash="2" armor_pierce="2" />
+	<properties speed="100" />
+	<properties radius="20" selection_radius="40" />
+	<properties maxhealth="200" />
+
+	<properties display_name="Horse" display_name_plural="Horses" />
+	<properties icon="gameres/icons/horse.bmp" />
+	<properties help="contents/units/Animals/Horse" />
+	<properties edittree_pos="Units/Animals/Horse" />
+
+	<method sig="idle" vs="data/subai/horse_idle.vs" />
+	<method sig="move" vs="data/subai/horse_move.vs" />
+	<method sig="galop" vs="data/subai/horse_galop.vs" />
+	<method sig="trot" vs="data/subai/horse_trot.vs" />
+	<method sig="enter" vs="data/subai/horse_enter.vs" verify="data/subai/horse_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/horse_enter.vs" verify="data/subai/horse_enter_verify.vs" />
+
+	<value0 icon="gameres/infobar/common/Loyality.bmp"
+		script="return 1;"
+		flags="-1"
+		help="/contents/capturing"
+		rollover="Loyalty"
+	/>
+
+	<defaultcmd target="IVillage">
+		<cmd name="enter" />
+	</defaultcmd>
+
+	<sounds command="Sounds/Animals/WHorse/Horse_Command.wav" die="Sounds/Animals/WHorse/Horse_Die.wav" />
+</class>

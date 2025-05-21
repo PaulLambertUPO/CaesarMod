@@ -1,0 +1,8 @@
+<class id="WatchEye" cpp_class="CVXScriptObj" parent="Object" entity="">
+
+	<properties sight="550"/>
+
+	<method sig="spy" vs="data/subai/watch_eye_spy.vs"/>
+	<method sig="infinite_spy" vs="data/subai/watch_eye_infinite_spy.vs"/>
+
+</class>

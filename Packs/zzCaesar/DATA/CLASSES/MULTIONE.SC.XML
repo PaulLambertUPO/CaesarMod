@@ -1,0 +1,38 @@
+<class id="MultiOne" cpp_class="CVXScriptObj" parent="Object" entity="">
+
+	<properties icon="gameres/icons/multi.bmp" />
+	<properties help="contents/units" />
+	<properties interface="thumb,unit" />
+
+	<value0 icon="gameres/infobar/common/level ico.bmp"
+		script="return SelAvgLevel();"
+		help="/contents/stats/level"
+		rollover="Level"
+	/>
+	<!-- the priests have damage 1, but should be desplayed as None -->
+	<value1	icon="gameres/infobar/common/attack ico.bmp"
+		script="int damage; damage = SelAvgDamage(); if (damage > 1) return damage; return Translate('None');"
+		help="/contents/stats/attack"
+		rollover="Damage"
+	/>
+	<value2	icon="gameres/infobar/common/stamina ico.bmp"
+		script="return SelAvgStamina();"
+		help="/contents/feeding"
+		rollover="Stamina"
+	/>
+	<value3	icon="gameres/infobar/common/defence ico.bmp"
+		script="return SelAvgArmor();"
+		help="/contents/stats/defense"
+		rollover="Armor"
+	/>
+	<value4	icon="gameres/infobar/common/health ico.bmp"
+		script="return SelHealth() * 100 / SelMaxHealth() + '%';"
+		help="/contents/feeding"
+		rollover="Health"
+	/>
+	<value5 icon="gameres/infobar/common/food ico.bmp"
+		script="return SelAvgFood();"
+		help="/contents/feeding"
+		rollover="Food"
+	/>
+</class>

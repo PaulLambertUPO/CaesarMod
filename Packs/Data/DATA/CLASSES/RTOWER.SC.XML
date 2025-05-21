@@ -1,0 +1,5 @@
+<class id="RTower01" altid="RTower02" cpp_class="CVXBuilding" parent="Tower" entity="Buildings/RWalls/Tower/Tower.ent.xml">
+	<properties race="RepublicanRome"/>
+	<properties wall_set="Republican Roman walls"/>
+	<properties icon="gameres/icons/RTower.bmp"/>
+</class>

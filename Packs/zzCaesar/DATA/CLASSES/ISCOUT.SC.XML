@@ -1,0 +1,17 @@
+<class id="IScout" cpp_class="CVXUnit" parent="Horse" entity="Units/ICavalry/ICavalry.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="220" />
+	<properties damage="30" armor_slash="2" armor_pierce="2" />
+	<properties speed="160" />
+	<properties unit_specials="Charge, Sneak, Keen sight" />
+	<properties healthbar_type="3" />
+	<properties inventory_size="1" />
+
+	<properties display_name="Scout" display_name_plural="Scouts" />
+	<properties icon="gameres/icons/zPWICavalry.bmp" />
+	<properties help="contents/units/IScout" />
+	<properties edittree_pos="Units/Iberia/Scout" />
+
+	<sounds command="VoiceICavalry" />
+</class>

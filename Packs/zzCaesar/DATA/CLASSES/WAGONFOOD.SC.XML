@@ -1,0 +1,28 @@
+<class id="WagonFood" cpp_class="CVXWagon" parent="Object" entity="">
+	<properties icon="gameres/icons/Wagon.bmp" />
+	<value0 icon="gameres/infobar/common/Loyality.bmp"
+		script="return .AsWagon().loyalty;"
+		help="/contents/capturing"
+		rollover="Loyalty"
+	/>
+	<value1 icon="gameres/infobar/common/food ico.bmp"
+		script="return .AsWagon().amount;"
+		help="/contents/resources"
+		rollover="Food"
+	/>
+	<value2 icon="gameres/infobar/common/stamina ico.bmp"
+		script="return .AsUnit().stamina + '|' + .AsUnit().speed;"
+		help="/contents/stats/stamina"
+		rollover="Stamina|Speed"
+	/>
+	<value3 icon="gameres/infobar/common/defence ico.bmp"
+		script="return .AsUnit().armor_slash + '|' + .AsUnit().sight;"
+		help="/contents/stats/defense"
+		rollover="Armor|Sight"
+	/>
+	<value4 icon="gameres/infobar/common/health ico.bmp"
+		script="return .AsUnit().health + '/' + .AsUnit().maxhealth;"
+		help="/contents/stats/health"
+		rollover="Health"
+	/>
+</class>

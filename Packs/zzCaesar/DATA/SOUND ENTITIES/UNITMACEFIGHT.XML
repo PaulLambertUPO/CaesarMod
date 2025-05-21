@@ -1,0 +1,15 @@
+<entity description="UnitMaceFight" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Mace_Attack/Mace_Attack_1.wav" frequency="8" />
+		<sound file="Sounds/Fight/Mace_Attack/Mace_Attack_2.wav" frequency="9" />
+		<sound file="Sounds/Fight/Mace_Attack/Mace_Attack_3.wav" frequency="9" />
+		<sound file="Sounds/Fight/Mace_Attack/Mace_Attack_4.wav" frequency="8" />
+		<sound file="Sounds/Fight/Mace_Attack/Mace_Attack_5.wav" frequency="8" />
+		<sound file="Sounds/Fight/Mace_Attack/Mace_Attack_6.wav" frequency="8" />
+		<sound file="Sounds/Fight/Mace_Attack_Voice/Mace_Attack_Voice_1.wav" frequency="10" />
+		<sound file="Sounds/Fight/Mace_Attack_Voice/Mace_Attack_Voice_2.wav" frequency="10" />
+		<sound file="Sounds/Fight/Mace_Attack_Voice/Mace_Attack_Voice_3.wav" frequency="10" />
+		<sound file="Sounds/Fight/Mace_Attack_Voice/Mace_Attack_Voice_4.wav" frequency="10" />
+		<sound file="Sounds/Fight/Mace_Attack_Voice/Mace_Attack_Voice_5.wav" frequency="10" />
+	</files>
+</entity>

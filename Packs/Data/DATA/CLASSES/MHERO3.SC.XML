@@ -1,0 +1,7 @@
+<class id="MHero3" cpp_class="CVXHero" parent="ImperialRomanHero" entity="Units/RHero3/RHero3.ent.xml">
+
+	<properties display_name="Sabucius" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/MHero3.bmp"/>
+	<properties edittree_pos="Units/Roman/Hero (Imperial) 3"/>
+
+</class>

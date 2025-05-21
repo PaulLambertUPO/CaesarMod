@@ -1,0 +1,64 @@
+<commands>
+	<cmd name="catapult_attack"
+		priority="1"
+		method="attack"
+		cursor="attack"
+		traincommand="yes">
+		<cmdtext target="Building" default-text="Right-click to attack this building" />
+		<cmdtext target="Unit" default-text="Right-click to attack this enemy" />
+		<src obj="GCatapult" />
+		<src obj="RCatapult" />
+		<src obj="ICatapult" />
+		<src obj="CCatapult" />
+		<src obj="ECatapult" />
+	</cmd>
+	<cmd name="attack_ground"
+		priority="1"
+		cursor="attack"
+		traincommand="yes">
+		<cmdtext target="" />
+		<src obj="ICatapult" />
+		<src obj="GCatapult" />
+		<src obj="CCatapult" />
+		<src obj="ECatapult" />
+	</cmd>
+	<cmd name="autofire"
+		priority="2"
+		button="actions/Catapult Attack.bmp"
+		key="a"
+		rollover="Fire at will"
+		traincommand="yes"
+		cursor="attack">
+		<src obj="GCatapult" />
+		<src obj="RCatapult" />
+		<src obj="ICatapult" />
+		<src obj="CCatapult" />
+		<src obj="ECatapult" />
+		<nsrc obj="BCatapult" />
+		<nsrc obj="TCatapult" />
+	</cmd>
+	<cmd name="stop"
+		priority="2"
+		button="actions/stand ground.bmp"
+		key="s"
+		rollover="Stop firing"
+		traincommand="yes">
+		<src obj="GCatapult" />
+		<src obj="RCatapult" />
+		<src obj="ICatapult" />
+		<src obj="CCatapult" />
+		<src obj="ECatapult" />
+		<nsrc obj="BCatapult" />
+		<nsrc obj="TCatapult" />
+	</cmd>
+	<cmd name="disband"
+		priority="3"
+		button="actions/Desert Catapult.bmp"
+		key="d"
+		rollover="Dismantle"
+		traincommand="yes">
+		<src obj="Catapult" />
+		<nsrc obj="BCatapult" />
+		<nsrc obj="TCatapult" />
+	</cmd>
+</commands>

@@ -1,0 +1,13 @@
+<class id="HBlacksmith" cpp_class="CVXBuilding" parent="BaseBlacksmith" entity="Buildings/HBlacksmith/HBlacksmith.ent.xml">
+
+	<properties race="ImperialRome" />
+
+	<properties radius="255" selection_radius="260" />
+
+	<properties display_name="Blacksmith" />
+	<properties icon="gameres/icons/HBlacksmith.bmp" />
+	<properties help="/contents/buildings/HBlacksmith" />
+	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Blacksmith" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
+
+	<behavior script="data/subai/HBlacksmith_anim.vs" />
+</class>

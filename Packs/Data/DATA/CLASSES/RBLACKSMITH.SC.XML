@@ -1,0 +1,16 @@
+<class id="RBlacksmith" cpp_class="CVXBuilding" parent="BaseBlacksmith"
+entity="Buildings/RBlacksmith/RBlacksmith_as.ent.xml"
+entity_autumn="Buildings/RBlacksmith/RBlacksmith_as.ent.xml"
+entity_spring="Buildings/RBlacksmith/RBlacksmith_as.ent.xml"
+entity_winter="Buildings/RBlacksmith/RBlacksmith_w.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties display_name="Blacksmith"/>
+	<properties icon="gameres/icons/RBlacksmith.bmp"/>
+	<properties radius="255" selection_radius="260"/>
+	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Blacksmith"/>
+	<properties help="/contents/buildings/RBlacksmith"/>
+
+	<behavior script="data/subai/RBlackSmith_Enable_Or_Disable_Cmd.vs"/>
+
+</class>

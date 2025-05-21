@@ -1,0 +1,17 @@
+<class id="THuntress" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/THuntress/THuntress.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="260" />
+	<properties damage="32" armor_slash="0" armor_pierce="0" />
+	<properties speed="70" />
+	<properties unit_specials="Penetration, Sneak" />
+
+	<properties projectile_class="Javelin" building_projectile_class="Javelin" />
+
+	<properties display_name="Huntress" display_name_plural="Huntresses" />
+	<properties icon="gameres/icons/THuntress.bmp" />
+	<properties help="contents/units/THuntress" />
+	<properties edittree_pos="Units/Germany/Huntress" />
+
+	<sounds command="VoiceTHuntress" attack="JavelinAttack" die="UnitDeathFemale" />
+</class>

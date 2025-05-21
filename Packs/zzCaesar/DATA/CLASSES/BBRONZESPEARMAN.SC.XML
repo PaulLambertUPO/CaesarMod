@@ -1,0 +1,15 @@
+<class id="BBronzeSpearman" cpp_class="CVXUnit" parent="Melee" entity="Units/BBronzeSpearman/BBronzeSpearman.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="240" />
+	<properties damage="24" armor_slash="16" armor_pierce="16" />
+	<properties speed="80" />
+	<properties unit_specials="Deflection, Penetration, Revenge" />
+
+	<properties display_name="Spearman" display_name_plural="Spearmen" />
+	<properties icon="gameres/icons/BBronzeSpearman.bmp" />
+	<properties help="contents/units/BBronzeSpearman" />
+	<properties edittree_pos="Units/Britain/Spearman" />
+
+	<sounds command="VoiceBBronzeSpearman" attack="UnitPikeFight" />
+</class>

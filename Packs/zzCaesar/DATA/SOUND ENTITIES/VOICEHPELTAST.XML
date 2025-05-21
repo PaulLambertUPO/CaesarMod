@@ -1,0 +1,9 @@
+<entity description="VoiceHPeltast" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/HPeltast/Consider it done.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPeltast/Glory awaits me.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPeltast/My javelin can pierce any armor.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPeltast/Swift and steady.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/HPeltast/Their fate is sealed.wav" frequency="20" />
+	</files>
+</entity>

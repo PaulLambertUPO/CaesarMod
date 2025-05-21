@@ -1,0 +1,3 @@
+<class id="CampTent4" cpp_class="CVXDecor" parent="Object" entity="MapObjects/CampTent4/CampTent4.ent.xml">
+<properties edittree_pos="Structures/Others/Camp/Tent 4"/>
+</class>

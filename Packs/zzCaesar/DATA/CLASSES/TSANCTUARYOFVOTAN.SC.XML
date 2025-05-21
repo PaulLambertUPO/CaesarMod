@@ -1,0 +1,11 @@
+<class id="TSanctuaryOfVotan" cpp_class="CVXBuilding" parent="BaseArena" entity="Buildings/TSanctuaryOfVotan/TSanctuaryOfVotan.ent.xml">
+
+	<properties race="Germany" />
+
+	<properties radius="165" selection_radius="170" />
+
+	<properties display_name="Sanctuary of Wotan" />
+	<properties icon="gameres/icons/TSanctuaryOfVotan.bmp" />
+	<properties help="/contents/buildings/TArena" />
+	<properties edittree_pos="Structures/Stronghold (Germany)/Sanctuary of Wotan" />
+</class>

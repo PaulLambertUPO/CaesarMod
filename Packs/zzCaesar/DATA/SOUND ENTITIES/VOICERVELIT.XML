@@ -1,0 +1,9 @@
+<entity description="VoiceRVelit" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RVelit/For Caesar.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RVelit/Ready for the fight.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RVelit/They will fall by my spear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RVelit/They will taste the steel of my weapon.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RVelit/Velites ready.wav" frequency="20" />
+	</files>
+</entity>

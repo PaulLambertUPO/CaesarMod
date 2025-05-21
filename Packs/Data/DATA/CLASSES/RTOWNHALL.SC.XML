@@ -1,0 +1,13 @@
+<class id="RTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/RTownhall/RTownhall_as.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties foodperpop="100"/>
+	<properties display_name="Roman Townhall"/>
+	<properties icon="gameres/icons/Rtownhall.bmp"/>
+	<properties radius="170" selection_radius="175"/>
+	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Townhall"/>
+	<properties help="/contents/buildings/RTownhall"/>
+
+	<behavior script="data/subai/RTownhall_Enable_Or_Disable_Cmd.vs"/>
+
+</class>

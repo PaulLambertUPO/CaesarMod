@@ -1,0 +1,7 @@
+<entity description="UnitDeathFemale" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Death/Female_Death1.wav" frequency="34" />
+		<sound file="Sounds/Death/Female_Death2.wav" frequency="33" />
+		<sound file="Sounds/Death/Female_Death3.wav" frequency="33" />
+	</files>
+</entity>

@@ -1,0 +1,12 @@
+<class id="HVillage" cpp_class="CVXTownHall" parent="BaseVillage" entity="Buildings/HVillage/HVillage.ent.xml">
+
+	<properties race="ImperialRome"/>
+	<properties radius="245" selection_radius="250"/>
+	<properties icon="gameres/icons/HVillage.bmp"/>
+	<properties radius="230" selection_radius="250"/>
+	<properties edittree_pos="Structures/Village (Greece)/Village hall"/>
+	<properties foodperpop="100"/>
+	<properties help="/contents/buildings/Village"/>
+
+</class>
+

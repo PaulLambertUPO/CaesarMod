@@ -1,0 +1,7 @@
+<class id="CGateSW" altid="CWallL04" cpp_class="CVXGate" parent="Gate" entity="Buildings/CWalls/GateSW/GateSW.ent.xml">
+	<properties race="Carthage"/>
+	<properties icon="gameres/icons/CGates.bmp"/>
+	<properties radius="170" selection_radius="170"/>
+	<properties wall_set="Carthaginian walls"/>
+	<properties sentry_class_name="CSentry1"/>
+</class>

@@ -1,0 +1,9 @@
+<entity description="VoiceTTeutonRider" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TTeutonRider/Battle is my home.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonRider/Fight is my law.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonRider/Gallop.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonRider/Give me the fastest horse.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonRider/No mercy.wav" frequency="20" />
+	</files>
+</entity>

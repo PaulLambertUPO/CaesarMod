@@ -1,0 +1,7 @@
+<entity description="JavelinAttack" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Javelin_Attack/Javelin_Throw_1.wav" frequency="33" />
+		<sound file="Sounds/Fight/Javelin_Attack/Javelin_Throw_2.wav" frequency="33" />
+		<sound file="Sounds/Fight/Javelin_Attack/Javelin_Throw_3.wav" frequency="34" />
+	</files>
+</entity>

@@ -1,0 +1,8 @@
+<class id="EWallsW" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/EWalls/WallW/WallW.ent.xml">
+	<properties race="Egypt"/>
+	<properties icon="gameres/icons/EWalls.bmp"/>
+	<properties radius="80" selection_radius="80"/>
+	<properties wall_set="Egyptian walls"/>
+	<properties num_sentry_slots="4"/>
+	<properties sentry_class_name="ESentry"/>
+</class>

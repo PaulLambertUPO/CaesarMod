@@ -1,0 +1,9 @@
+<entity description="VoiceTMaceman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TMaceman/I do not know pain.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TMaceman/I will finish them in one strike.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TMaceman/My mace will be the last thing they see.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TMaceman/Neither shields nor armor will protect them.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TMaceman/They will soon be with their gods.wav" frequency="20" />
+	</files>
+</entity>

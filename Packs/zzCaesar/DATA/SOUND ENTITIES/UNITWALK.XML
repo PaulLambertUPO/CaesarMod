@@ -1,0 +1,19 @@
+<entity description="Unit Walk" priority="UnitWalk" type="UnitWalk">
+	<files>
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_1.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_2.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_3.wav" frequency="6" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_4.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_5.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_6.wav" frequency="6" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_7.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_8.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_9.wav" frequency="6" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_10.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_11.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_12.wav" frequency="6" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_13.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_14.wav" frequency="7" />
+		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_15.wav" frequency="6" />
+	</files>
+</entity>

@@ -1,0 +1,17 @@
+<class id="BShieldBearer" cpp_class="CVXUnit" parent="Melee" entity="units/BShieldBearer/BShieldBearer.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="300" />
+	<properties damage="26" armor_slash="14" armor_pierce="14" />
+	<properties speed="80" />
+	<properties unit_specials="Defense skill, Determination" />
+
+	<properties formation_priority="1200" />
+
+	<properties display_name="Shield Bearer" display_name_plural="Shield Bearers" />
+	<properties icon="gameres/icons/BShieldBearer.bmp" />
+	<properties help="contents/units/BShieldBearer" />
+	<properties edittree_pos="Units/Britain/Shield Bearer" />
+
+	<sounds command="VoiceBShieldBearer" />
+</class>

@@ -1,0 +1,19 @@
+<class id="HeroRTribune" altid="RTribune" cpp_class="CVXHero" parent="Hero" entity="Units/RTribune/RTribune.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties maxhealth="1000"/>
+	<properties damage="40" armor_slash="16" armor_pierce="16"/>
+	<properties speed="60"/>
+	<properties HeroSkills="Administration, Team attack, Team defense, Quick March, Epic endurance"/>
+
+	<properties formation_priority="1000"/>
+	<properties formation_radius="26"/>
+
+	<properties icon="gameres/icons/RTribune.bmp"/>
+	<properties display_name="Tribune" display_name_plural="Tribunes"/>
+	<properties help="contents/units/RTribune"/>
+	
+	<sounds attack="UnitPikeFight" 
+			command="data/sound entities/VoiceRTribune.xml"/>
+
+</class>

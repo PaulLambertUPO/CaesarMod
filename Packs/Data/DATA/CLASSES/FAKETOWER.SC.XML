@@ -1,0 +1,18 @@
+<class id="FakeTower" cpp_class="CVXBuilding" parent="Building" entity="Buildings/FakeTower/faketower.ent.xml">
+
+	<properties sight="600" range="600" min_range="100" speed="0"/>
+	<properties maxhealth="1500"/>
+	<properties damage="40" armor_slash="0" armor_pierce="0"/>
+	<properties attack_delay="400"/>
+	<properties damage_type="pierce"/>
+	<properties projectile_class="Arrow"/>
+	<properties target_priority="150"/>
+	<properties radius="45"/>
+
+	<properties non_selectable="1"/>
+	<properties auto_repair="no"/>
+
+	<method sig="idle" vs="data/subai/tower_guard.vs"/>
+	<method sig="attack" vs="data/subai/tower_attack.vs" verify="data/subai/tower_attack_verify.vs"/>
+
+</class>

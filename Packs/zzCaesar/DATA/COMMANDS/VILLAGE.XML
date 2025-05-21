@@ -1,0 +1,263 @@
+<commands>
+	<cmd name="repair village" priority="1"
+		method="repopulate"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/village_repopulate_verify.vs"
+		rollover="Repopulate"
+		description="Repairs the village hall and/or restores its minimum population"
+		costgold="500"
+		execdelay="60000">
+		<src obj="BaseVillage" />
+	</cmd>
+	<cmd name="tribute" priority="3"
+		immediate="yes"
+		button="states/tribute.bmp"
+		key="t"
+		rollover="Supply"
+		description="Constantly sends resources to another settlement"
+		failtext="Click on a townhall, village, outpost or shipyard to start sending resources">
+		<cmdtext target="BaseTownhall" text="Click on this Townhall to start sending resources" default-text="" />
+		<cmdtext target="BaseVillage" text="Click on this Village to start sending resources" default-text="" />
+		<cmdtext target="Outpost" text="Click on this Outpost to start sending resources" default-text="" />
+		<cmdtext target="GGuardPost" text="Click on this Guard Post to start sending resources" default-text="" />
+		<cmdtext target="TTent" text="Click on this Teuton Tent to start sending resources" default-text="" />
+		<cmdtext target="CTent" text="Click on this Numidian Tent to start sending resources" default-text="" />
+		<cmdtext target="BaseShipyard" text="Click on this Shipyard to start sending resources" default-text="" />
+		<src obj="BaseVillage" />
+		<src obj="Outpost" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="tribute_default" priority="3"
+		immediate="yes"
+		cursor="do_something">
+		<cmdtext target="BaseTownhall" text="" default-text="Right-click on this Townhall to start sending resources" />
+		<cmdtext target="BaseVillage" text="" default-text="Right-click on this Village to start sending resources" />
+		<cmdtext target="Outpost" text="" default-text="Right-click on this Outpost to start sending resources" />
+		<cmdtext target="GGuardPost" text="" default-text="Right-click on this Guard Post to start sending resources" />
+		<cmdtext target="TTent" text="" default-text="Right-click on this Teuton Tent to start sending resources" />
+		<cmdtext target="CTent" text="" default-text="Right-click on this Numidian Tent to start sending resources" />
+		<cmdtext target="BaseShipyard" text="" default-text="Click on this Shipyard to start sending resources" />
+		<src obj="BaseVillage" />
+		<src obj="Outpost" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="stoptribute" priority="3"
+		immediate="yes"
+		button="states/Stop Tribute.bmp"
+		key="t"
+		rollover="Stop sending resources">
+		<src obj="BaseVillage" />
+		<src obj="Outpost" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="trainpeasantr" priority="4"
+		button="actions/call RPeasants.bmp"
+		queueicon="gameres/icons/RPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="RVillage" />
+	</cmd>
+	<cmd name="trainpeasantg" priority="4"
+		button="actions/call GPeasants.bmp"
+		queueicon="gameres/icons/GPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="GVillage" />
+	</cmd>
+	<cmd name="trainpeasanti" priority="4"
+		button="actions/call IPeasants.bmp"
+		queueicon="gameres/icons/IPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="IVillage" />
+	</cmd>
+	<cmd name="trainpeasantc" priority="4"
+		button="actions/call CPeasants.bmp"
+		queueicon="gameres/icons/CPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="CVillage" />
+	</cmd>
+	<cmd name="trainpeasantb" priority="4"
+		button="actions/call BPeasants.bmp"
+		queueicon="gameres/icons/BPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="BVillage" />
+	</cmd>
+	<cmd name="trainpeasante" priority="4"
+		button="actions/call EPeasants.bmp"
+		queueicon="gameres/icons/EPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		traincommand="yes"
+		transpicon="1"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="EVillage" />
+	</cmd>
+	<cmd name="trainpeasantt" priority="4"
+		button="actions/call TPeasants.bmp"
+		queueicon="gameres/icons/TPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="TVillage" />
+	</cmd>
+	<cmd name="trainpeasanth" priority="4"
+		button="actions/call RPeasants.bmp"
+		queueicon="gameres/icons/RPeasants.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="c"
+		costpop="5"
+		execdelay="25000"
+		method="trainpeasant"
+		rollover="Call peasants"
+		description="Calls 5 peasants of the population"
+		sclass="Peasant">
+		<src obj="HVillage" />
+	</cmd>
+	<cmd name="createfoodmule1" priority="6"
+		method="createfoodmulesmall"
+		groupverifier="data/subai/create_food_boat_verify.vs"
+		button="actions/Create Mule Food Small.bmp"
+		queueicon="gameres/icons/wagon.bmp"
+		transpicon="1"
+		key="d"
+		immediate="yes"
+		rollover="Load a caravan with 250 food">
+		<src obj="BaseVillage" />
+		<src obj="BaseTownhall" />
+		<src obj="Outpost" />
+		<src obj="TTent" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="creategoldmule1" priority="7"
+		method="creategoldmulesmall"
+		groupverifier="data/subai/create_gold_boat_verify.vs"
+		button="actions/Create Mule Gold Small.bmp"
+		queueicon="gameres/icons/wagon.bmp"
+		transpicon="1"
+		key="h"
+		immediate="yes"
+		rollover="Load a caravan with 250 gold">
+		<src obj="BaseVillage" />
+		<src obj="BaseTownhall" />
+		<src obj="Outpost" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="createfoodmule2" priority="8"
+		method="createfoodmulebig"
+		groupverifier="data/subai/create_food_boat_verify.vs"
+		button="actions/Create Mule Food.bmp"
+		queueicon="gameres/icons/wagon.bmp"
+		transpicon="1"
+		key="f"
+		immediate="yes"
+		rollover="Load a caravan with 1000 food">
+		<src obj="BaseVillage" />
+		<src obj="BaseTownhall" />
+		<src obj="Outpost" />
+		<src obj="TTent" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="creategoldmule2" priority="9"
+		method="creategoldmulebig"
+		groupverifier="data/subai/create_gold_boat_verify.vs"
+		button="actions/Create Mule Gold.bmp"
+		queueicon="gameres/icons/wagon.bmp"
+		transpicon="1"
+		key="g"
+		immediate="yes"
+		rollover="Load a caravan with 1000 gold">
+		<src obj="BaseVillage" />
+		<src obj="BaseTownhall" />
+		<src obj="Outpost" />
+		<src obj="BaseShipyard" />
+	</cmd>
+	<cmd name="trainfisherman" priority="10"
+		button="actions/call Fisherman.bmp"
+		queueicon="gameres/icons/Fisherman.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="f"
+		costfood="100"
+		costpop="1"
+		execdelay="5000"
+		method="trainfisherman"
+		rollover="Call fisherman"
+		sclass="Fisherman">
+		<src obj="BaseVillage" />
+	</cmd>
+	<cmd name="callIScout" priority="11"
+		button="actions/train IScout.bmp"
+		queueicon="gameres/icons/zPWICavalry.bmp"
+		groupverifier="data/subai/verify_scout_train.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="s"
+		costpop="1"
+		execdelay="1"
+		method="trainIScout"
+		rollover="Call scout"
+		param="IScout"
+		sclass="IScout">
+		<src obj="IVillage" />
+	</cmd>
+</commands>

@@ -1,0 +1,15 @@
+<scdebug>
+	<keys>
+		<key id="F5" script="ProfileStart();" />
+		<key id="F6" script="ProfileStop();" />
+		<key id="Add" script="int i; for (i=1; i&lt;=5; i+=1) if (GetSpeed()&lt;GetConst('Speed'+i)) { SetSpeed(GetConst('Speed'+i)); break; }" />
+		<key id="Sub" script="int i; for (i=5; i&gt;=1; i-=1) if (GetSpeed()&gt;GetConst('Speed'+i)) { SetSpeed(GetConst('Speed'+i)); break; }" />
+		<key id="Pause" script="Pause();" />
+		<key id="Tab" script="if (!IsViewLocked()) ShowLastNotificationPos();" />
+		<key id="Mul" script="if (!IsMultiplayer()) if (GetSpeed() != 10000) SetSpeed(10000); else SetSpeed(1000);" />
+		<!--<key id="Backspace" script="if (!IsMultiplayer()) {int i; for (i = _GetSelection().count() - 1; i >= 0; i = i - 1) _GetSelection()[i].Damage(1000000);}"/> -->
+
+		<watch class="Unit" slot="0" script=".AsUnit.level" />
+		<watch class="Wagon" slot="0" script=".AsWagon.loyalty;" />
+	</keys>
+</scdebug>

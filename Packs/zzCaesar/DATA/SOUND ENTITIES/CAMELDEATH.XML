@@ -1,0 +1,11 @@
+<entity description="CamelDeath" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Death/C_Die_1.wav" frequency="10" />
+		<sound file="Sounds/Death/C_Die_2.wav" frequency="10" />
+		<sound file="Sounds/Death/C_Die_3.wav" frequency="10" />
+		<sound file="Sounds/Death/C_Die_4.wav" frequency="10" />
+		<sound file="Sounds/Death/CamelDie_1.wav" frequency="20" />
+		<sound file="Sounds/Death/CamelDie_2.wav" frequency="20" />
+		<sound file="Sounds/Death/CamelDie_3.wav" frequency="20" />
+	</files>
+</entity>

@@ -1,0 +1,20 @@
+<class id="DLleldoryn" cpp_class="CVXDruid" parent="BaseMage" entity="Units/DLleldoryn/DLleldoryn.ent.xml">
+
+	<properties race="Gaul"/>
+	<properties damage="1" armor_slash="0" armor_pierce="0"/>
+	<properties speed="65"/>
+	<properties unit_specials="Freedom"/>
+
+	<properties range="200" minrange="0" sight="400"/>
+
+	<properties icon="gameres/icons/Lleo.bmp"/>
+	<properties display_name="Lleldoryn" display_name_plural="Druids"/>
+	<properties edittree_pos="Units/Heroes/Lleldoryn (Druid)"/>
+	<sounds command="data/sound entities/VoiceGDruid.xml"/>
+
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship"/>
+		<cmd name="approach"/>
+	</defaultcmd>
+
+</class>

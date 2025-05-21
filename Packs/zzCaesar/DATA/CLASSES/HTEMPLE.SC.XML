@@ -1,0 +1,18 @@
+<class id="HTemple" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/HTemple/HTemple.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties auto_repair="no" />
+
+	<properties radius="300" selection_radius="300" />
+
+	<properties display_name="Acropolis" />
+	<properties icon="gameres/icons/HTemple.bmp" />
+	<properties help="/contents/buildings/HTemple" />
+	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Acropolis" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
+
+	<behavior script="data/subai/apollo_protection.vs" />
+
+	<method sig="apollo_protection" vs="data/subai/invoke_apollo_protection.vs" />
+
+	<sounds select="TempleSelect" />
+</class>

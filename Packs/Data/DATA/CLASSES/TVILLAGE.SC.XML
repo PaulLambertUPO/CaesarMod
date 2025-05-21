@@ -1,0 +1,13 @@
+<class id="TVillage" cpp_class="CVXTownHall" parent="BaseVillage" entity="Buildings/TVillage/TVillage.ent.xml">
+
+	<properties race="Germany"/>
+	<properties radius="245" selection_radius="250"/>
+	<properties icon="gameres/icons/TVillage.bmp"/>
+	<properties radius="230" selection_radius="250"/>
+	<properties edittree_pos="Structures/Village (Germany)/Village hall"/>
+	<properties foodperpop="100"/>
+	<properties help="/contents/buildings/Village"/>
+
+	
+</class>
+

@@ -1,0 +1,19 @@
+<entity description="ArrowFight" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_1.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_2.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_3.wav" frequency="6" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_4.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_5.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_6.wav" frequency="6" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_7.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_8.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_9.wav" frequency="6" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_10.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_11.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_12.wav" frequency="6" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_13.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_14.wav" frequency="7" />
+		<sound file="Sounds/Fight/Arrow_Attack/Arrow_Attack_15.wav" frequency="6" />
+	</files>
+</entity>

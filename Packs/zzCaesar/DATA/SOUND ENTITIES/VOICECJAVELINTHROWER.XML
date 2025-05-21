@@ -1,0 +1,9 @@
+<entity description="VoiceCJavelinThrower" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/CJavelinThrower/Direct to the heart.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CJavelinThrower/Give me a target.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CJavelinThrower/His shields will be of no use to him.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CJavelinThrower/My spears are at your service.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/CJavelinThrower/Nothing stops my spears.wav" frequency="20" />
+	</files>
+</entity>

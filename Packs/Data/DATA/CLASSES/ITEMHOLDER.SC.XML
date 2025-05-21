@@ -1,0 +1,11 @@
+<class id="ItemHolder" cpp_class="CVXItemHolder" parent="Object"
+	entity=""
+	entity_autumn=""
+	entity_spring=""
+	entity_winter=""
+>
+	<properties interface="thumb,items"/>
+	<properties can_be_captured = "0"/>
+	<properties inventory_size = "16"/>
+	<properties help="/contents/items"/>
+</class>

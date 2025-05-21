@@ -1,0 +1,14 @@
+<class id="HTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/HTownhall/HTownhall.ent.xml">
+
+	<properties race="ImperialRome" />
+	<properties foodperpop="100" />
+
+	<properties radius="173" selection_radius="178" />
+
+	<properties display_name="Greek Townhall" />
+	<properties icon="gameres/icons/HTownhall.bmp" />
+	<properties help="/contents/buildings/HTownhall" />
+	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Townhall" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
+
+	<behavior script="data/subai/townhall_buildingsbehavior_h.vs" />
+</class>

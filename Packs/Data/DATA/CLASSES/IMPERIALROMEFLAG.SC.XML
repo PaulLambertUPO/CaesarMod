@@ -1,0 +1,6 @@
+<class id="ImperialRomeFlag" cpp_class="CVXUnit" parent="Object" entity="Units/Rome Flags/ImperialRomeFlag.ent.xml">
+
+	<properties target_factor="-1"/>
+	<method sig="idle"	vs="data/subai/flagging.vs"/>
+
+</class>

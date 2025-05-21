@@ -1,0 +1,10 @@
+<class id="Shrine" cpp_class="CVXTownHall" parent="Stonehenge" entity="MapObjects/Shrine/Shrine.ent.xml">
+
+	<properties edittree_pos="Structures/Interactive/Shrine"/>
+	<properties icon="gameres/icons/Shrine.bmp"/>
+	<properties radius="250" selection_radius="255"/>
+	<properties description="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Shrine, to ensure that it accumulates enough power for such rituals"/>
+
+	<behavior script="data/subai/shrine_behavior.vs"/>
+
+</class>

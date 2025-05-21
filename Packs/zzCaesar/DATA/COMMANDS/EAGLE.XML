@@ -1,0 +1,8 @@
+<commands>
+	<cmd name="hover" priority="0"
+		button="Actions/Move.bmp"
+		key="h"
+		rollover="Hover over that point">
+		<src obj="Eagle" />
+	</cmd>
+</commands>

@@ -1,0 +1,6 @@
+<class id="IHero2c" cpp_class="CVXHero" parent="IberianHero" entity="Units/IHero2/IHero2.ent.xml">
+
+	<properties display_name="Obana" display_name_plural="Heroes"/>
+	<properties icon="gameres/icons/IHero2.bmp"/>
+
+</class>

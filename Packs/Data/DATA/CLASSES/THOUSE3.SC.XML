@@ -1,0 +1,9 @@
+<class id="THouse3" cpp_class="CVXBuilding" parent="BaseHouse" entity="Buildings/THouse3/THouse3.ent.xml">
+
+	<properties race="Germany"/>
+	<properties radius="60" selection_radius="60"/>
+	<properties icon="gameres/icons/Thouse.bmp"/>
+	<properties edittree_pos="Structures/Village (Germany)/House 3"/>
+	<properties display_name="House"/>
+
+</class>

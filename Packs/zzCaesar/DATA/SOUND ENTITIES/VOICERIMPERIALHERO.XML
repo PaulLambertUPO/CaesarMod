@@ -1,0 +1,9 @@
+<entity description="VoiceRImperialHero" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RImperialHero/Forward legionaries.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RImperialHero/I am Rome_s chosen one.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RImperialHero/I will conquer in the name of Rome.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RImperialHero/Mars give me your strength.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RImperialHero/We will honor our standard.wav" frequency="20" />
+	</files>
+</entity>

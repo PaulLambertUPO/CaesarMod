@@ -1,0 +1,5 @@
+<entity description="StonehengeSpell" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Notifications/Stonehenge.wav" frequency="100" />
+	</files>
+</entity>

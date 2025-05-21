@@ -1,0 +1,47 @@
+<class id="Wagon" cpp_class="CVXUnit" parent="Peaceful" entity="">
+
+	<properties select_class="Wagon" />
+	<properties maxhealth="400" />
+	<properties speed="80" />
+	<properties max_load="1000" />
+	<properties inventory_size="0" />
+	<properties feeds="0" />
+	<properties healthbar_type="1" />
+	<properties icon="gameres/icons/Wagon.bmp" />
+	<properties help="/contents/units/Mule" />
+
+	<method sig="follow" vs="data/subai/wagon_follow.vs" />
+	<method sig="loadgoldbig" vs="data/subai/wagon_loadgoldbig.vs" />
+	<method sig="loadfoodbig" vs="data/subai/wagon_loadfoodbig.vs" />
+	<method sig="loadgoldsmall" vs="data/subai/wagon_loadgoldsmall.vs" />
+	<method sig="loadfoodsmall" vs="data/subai/wagon_loadfoodsmall.vs" />
+	<method sig="unload" vs="data/subai/wagon_unload.vs" verify="data/subai/wagon_unload_verify.vs" />
+	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
+	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
+
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+	</defaultcmd>
+	<defaultcmd target="Unit">
+		<cmd name="follow" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+	</defaultcmd>
+	<defaultcmd target="Sentry">
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="unload" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
+	</defaultcmd>
+</class>

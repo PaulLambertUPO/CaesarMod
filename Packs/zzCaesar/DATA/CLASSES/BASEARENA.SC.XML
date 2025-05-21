@@ -1,0 +1,11 @@
+<class id="BaseArena" cpp_class="CVXBuilding" parent="BaseTownBuilding" entity="">
+
+	<properties interface="thumb,building,queue" />
+
+	<behavior script="data/subai/arena_behavior.vs" />
+
+	<method sig="hirehero" vs="data/subai/arena_hirehero.vs" />
+	<method sig="trainex" vs="data/subai/train_ex.vs" />
+
+	<sounds select="ArenaSelect" />
+</class>

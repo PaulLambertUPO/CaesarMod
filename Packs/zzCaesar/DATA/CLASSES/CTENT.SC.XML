@@ -1,0 +1,10 @@
+<class id="CTent" cpp_class="CVXTownHall" parent="TTent" entity="Buildings/Numidian_tent/Numidian_tent.ent.xml">
+	<properties race="Carthage" />
+	<properties display_name="Numidian Tent" />
+	<properties icon="gameres/icons/CTent.bmp" />
+	<properties help="/contents/buildings/CTent" />
+	<properties edittree_pos="Structures/Interactive/Numidian Tent" />
+	<properties description="Keeps up to 40 neutral Numidians that attack any enemy in sight.\nAllows to equip Numidians by spending food" />
+
+	<behavior script="data/subai/ctent_behavior.vs" />
+</class>

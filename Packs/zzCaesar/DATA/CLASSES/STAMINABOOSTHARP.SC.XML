@@ -1,0 +1,4 @@
+<class id="StaminaBoostHarp" cpp_class="CVXFeedback" parent="Object" entity="Visuals/StaminaBoost/StaminaBoost.ent.xml">
+	<properties desync_hash="0"/>
+	<sounds walk="Sounds/Effects/ItemUse/DarkChant.wav"/>
+</class>

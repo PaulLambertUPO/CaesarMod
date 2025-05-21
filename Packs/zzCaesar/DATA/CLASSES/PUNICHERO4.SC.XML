@@ -1,0 +1,5 @@
+<class id="PunicHero4" cpp_class="CVXHero" parent="PunicRomanHero" entity="Units/RHero4/RHero4.ent.xml">
+	<properties display_name="Nigellus" display_name_plural="Heroes" />
+	<properties icon="gameres/icons/zpwRHero8.bmp" />
+	<properties edittree_pos="Units/Roman/Hero (Punic) 4" />
+</class>

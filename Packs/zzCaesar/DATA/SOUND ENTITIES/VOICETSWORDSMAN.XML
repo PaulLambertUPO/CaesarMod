@@ -1,0 +1,9 @@
+<entity description="VoiceTSwordsman" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TSwordsman/Let the battle horns sound.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TSwordsman/My sword will bring slaughter.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TSwordsman/Their shields will sharpen my sword.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TSwordsman/They will flee or they will die.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TSwordsman/Valor is my best weapon.wav" frequency="20" />
+	</files>
+</entity>

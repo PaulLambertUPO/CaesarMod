@@ -1,0 +1,6 @@
+<entity description="CWarElephant Attack" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Animals/Elephant/Elephant_Attack_1.wav" frequency="50" />
+		<sound file="Sounds/Animals/Elephant/Elephant_Attack_2.wav" frequency="50" />
+	</files>
+</entity>

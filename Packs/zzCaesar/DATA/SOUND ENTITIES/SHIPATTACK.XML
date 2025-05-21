@@ -1,0 +1,8 @@
+<entity description="ShipAttack" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Fight/Ship_Attack/Ship_Attack_1.wav" frequency="25" />
+		<sound file="Sounds/Fight/Ship_Attack/Ship_Attack_2.wav" frequency="25" />
+		<sound file="Sounds/Fight/Ship_Attack/Ship_Attack_3.wav" frequency="25" />
+		<sound file="Sounds/Fight/Ship_Attack/Ship_Attack_4.wav" frequency="25" />
+	</files>
+</entity>

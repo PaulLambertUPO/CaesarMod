@@ -1,0 +1,9 @@
+<entity description="VoiceEPriest" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/EPriest/Their false gods are powerless in the face of Ra.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EPriest/My wisdom is at your service.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EPriest/Gods protect us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EPriest/I guide my people.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/EPriest/I am the servant of Isis.wav" frequency="20" />
+	</files>
+</entity>

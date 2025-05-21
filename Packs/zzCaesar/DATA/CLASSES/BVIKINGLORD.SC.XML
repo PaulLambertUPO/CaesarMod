@@ -1,0 +1,15 @@
+<class id="BVikingLord" altid="Thoric" cpp_class="CVXUnit" parent="Melee" entity="Units/BVikingLord/BVikingLord.ent.xml">
+
+	<properties race="Britain" />
+	<properties maxhealth="1200" />
+	<properties damage="120" armor_slash="8" armor_pierce="8" />
+	<properties speed="90" />
+	<properties unit_specials="Ferocity, Freedom, Life steal" />
+
+	<properties display_name="Viking Lord" display_name_plural="Viking Lords" />
+	<properties icon="gameres/icons/BVikingLord.bmp" />
+	<properties help="contents/units/BVikingLord" />
+	<properties edittree_pos="Units/Britain/Viking Lord" />
+
+	<sounds command="VoiceBVikingLord" attack="UnitHammerFight" />
+</class>

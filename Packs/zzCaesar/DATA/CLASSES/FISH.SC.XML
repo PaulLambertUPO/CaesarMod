@@ -1,0 +1,18 @@
+<class id="Fish" cpp_class="CVXUnit" parent="Animal" entity="Units/Fish/Fish.ent.xml">
+
+	<properties maxhealth="100"/>
+	<properties sight="300"/>
+	<properties speed="110"/>
+
+	<properties radius="20" selection_radius="100"/>
+	<properties healthbar_type="0"/>
+	<properties water_unit="1" always_visible_on_minimap="0"/>
+
+	<properties display_name="Fish" display_name_plural="Fish"/>
+	<properties icon="gameres/icons/Fish.bmp" />
+	<properties help="contents/units/Animals/Fish" />
+	<properties edittree_pos="Units/Animals/Fish"/>
+
+	<method sig="idle" vs="data/subai/fish_idle.vs"/>
+	<method sig="move" vs="data/subai/unit_move.vs"/>
+</class>

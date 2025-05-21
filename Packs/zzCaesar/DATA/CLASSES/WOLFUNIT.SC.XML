@@ -1,0 +1,18 @@
+<class id="WolfUnit" cpp_class="CVXUnit" parent="AttackAnimal" entity="Units/Wolf/Wolf.ent.xml">
+
+	<properties maxhealth="240" />
+	<properties damage="18" armor_slash="2" armor_pierce="2" />
+	<properties sight="600" />
+	<properties speed="140" />
+	<properties unit_specials="Drain, Ferocity, Freedom" />
+
+	<properties radius="20" selection_radius="21" />
+	<properties healthbar_type="2" />
+
+	<properties display_name="Wolf" display_name_plural="Wolves" />
+	<properties icon="gameres/icons/wolf.bmp" />
+	<properties help="contents/units/Animals/Wolf" />
+	<properties edittree_pos="Units/Animals/Wolf" />
+
+	<sounds command="Sounds/Animals/Wolf/Wolf_Command.wav" attack="WolfAttack" die="Sounds/Animals/Wolf/Wolf_Die.wav" />
+</class>

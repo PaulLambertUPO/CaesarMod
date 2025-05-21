@@ -1,0 +1,7 @@
+<class
+	cpp_class = "CVXBarrack"
+	entity = "Buildings/RBarracks/RBarracks_w.ent.xml"
+	id = "MBarracksWinter"
+	parent = "MBarracks"
+>
+</class>

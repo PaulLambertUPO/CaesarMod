@@ -1,0 +1,9 @@
+<entity description="VoiceTEnchantress" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TEnchantress/May the gods curse the enemy.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TEnchantress/The forest is my home.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TEnchantress/The gods are with us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TEnchantress/They will be a toy in my hands.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TEnchantress/Wotan inspires me.wav" frequency="20" />
+	</files>
+</entity>

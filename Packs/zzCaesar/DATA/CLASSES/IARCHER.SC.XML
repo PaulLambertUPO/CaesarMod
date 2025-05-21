@@ -1,0 +1,17 @@
+<class id="IArcher" cpp_class="CVXUnit" parent="Ranged" entity="Units/IArcher/IArcher.ent.xml">
+
+	<properties race="Iberia" />
+	<properties maxhealth="200" />
+	<properties damage="18" armor_slash="2" armor_pierce="2" />
+	<properties speed="80" />
+	<properties unit_specials="Drain" />
+
+	<properties projectile_class="Arrow" />
+
+	<properties display_name="Archer" display_name_plural="Archers" />
+	<properties icon="gameres/icons/IArcher.bmp" />
+	<properties help="contents/units/IArcher" />
+	<properties edittree_pos="Units/Iberia/Archer" />
+
+	<sounds command="VoiceIArcher" />
+</class>

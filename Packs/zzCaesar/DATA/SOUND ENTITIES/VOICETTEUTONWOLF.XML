@@ -1,0 +1,9 @@
+<entity description="VoiceTTeutonWolf" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/TTeutonWolf/Honor is for the weak.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonWolf/Money is not to blame.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonWolf/Old is better.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonWolf/Suspicion is the fever of tyrants.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/TTeutonWolf/Will makes it happen.wav" frequency="20" />
+	</files>
+</entity>

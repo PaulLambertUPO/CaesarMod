@@ -1,0 +1,5 @@
+<class id="ETower" cpp_class="CVXBuilding" parent="Tower" entity="Buildings/EWalls/Tower/Tower.ent.xml">
+	<properties race="Egypt"/>
+	<properties wall_set="Egyptian walls"/>
+	<properties icon="gameres/icons/ETower.bmp"/>
+</class>

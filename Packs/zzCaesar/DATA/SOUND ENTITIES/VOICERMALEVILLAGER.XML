@@ -1,0 +1,7 @@
+<entity description="VoiceRMaleVillager" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/VillagerMale/I will do so.wav" frequency="33" />
+		<sound file="CurrentLang/Voices/VillagerMale/To serve you.wav" frequency="33" />
+		<sound file="CurrentLang/Voices/VillagerMale/Yes sir.wav" frequency="34" />
+	</files>
+</entity>

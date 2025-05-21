@@ -1,0 +1,9 @@
+<entity description="VoiceKeltill" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/GHero/Always forward.wav" frequency="48" />
+		<sound file="CurrentLang/Voices/GHero/Follow me.wav" frequency="13" />
+		<sound file="CurrentLang/Voices/GHero/I am the chosen one.wav" frequency="13" />
+		<sound file="CurrentLang/Voices/GHero/On my honor.wav" frequency="13" />
+		<sound file="CurrentLang/Voices/GHero/Trust me.wav" frequency="13" />
+	</files>
+</entity>

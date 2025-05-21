@@ -1,0 +1,12 @@
+<class id="IHero4" cpp_class="CVXHero" parent="HeroMounted" entity="Units/IHero4/IHero4.ent.xml">
+
+	<properties race="Iberia" />
+	<properties HeroSkills="Ceasefire, Epic endurance, Euphoria, Healing, Team defense" />
+
+	<properties display_name="Zurfah" display_name_plural="Heroes" />
+	<properties icon="gameres/icons/IHero4.bmp" />
+	<properties help="/contents/units/IHero" />
+	<properties edittree_pos="Units/Heroes/Zurfah (Iberian)" />
+
+	<sounds command="VoiceIHero" />
+</class>

@@ -1,0 +1,33 @@
+<class id="Sentry" cpp_class="CVXUnit" parent="Ranged" entity="">
+
+	<properties maxhealth="150" />
+	<properties damage="10" armor_slash="0" armor_pierce="0" />
+	<properties speed="60" />
+	<properties sight="700" range="600" />
+	<properties unit_specials="Freedom" />
+
+	<properties min_range="2" damage_type="pierce" />
+
+	<properties select_class="Sentry" />
+	<properties ignore_passability="1" />
+	<properties feeds="0" max_food="0" />
+	<properties inventory_size="0" />
+
+	<properties display_name="Sentry" display_name_plural="Sentries" />
+
+	<method sig="goto" vs="data/subai/sentry_goto.vs" />
+	<method sig="patrol" vs="data/subai/sentry_patrol.vs" />
+	<method sig="guard" vs="data/subai/sentry_guard.vs" />
+	<method sig="attack" vs="data/subai/sentry_attack.vs" />
+	<method sig="disappear" vs="data/subai/sentry_disappear.vs" />
+	<method sig="idle" vs="data/subai/do_nothing_void.vs" />
+
+	<nodefcmdinherit />
+
+	<defaultcmd target="Unit">
+		<cmd name="attack" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="attack" />
+	</defaultcmd>
+</class>

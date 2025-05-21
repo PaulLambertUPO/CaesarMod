@@ -1,0 +1,16 @@
+<class id="TBlacksmith" cpp_class="CVXBuilding" parent="BaseBlacksmith" entity="Buildings/TBlacksmith/TBlacksmith.ent.xml">
+	<properties race="Germany"/>
+	<properties icon="gameres/icons/TBlacksmith.bmp"/>
+	<properties display_name="Blacksmith"/>
+	<properties radius="220" selection_radius="230"/>
+	<properties edittree_pos="Structures/Stronghold (Germany)/Blacksmith"/>
+	<properties help="/contents/buildings/TBlacksmith"/>
+	<properties auto_repair="no"/>
+
+	<method sig="axemen_school" vs="data/subai/axeman_school.vs"/>
+	<method sig="huntress_school" vs="data/subai/huntress_school.vs"/>
+	<method sig="teutonrider_school" vs="data/subai/teutonrider_school.vs"/>
+	<method sig="macemen_school" vs="data/subai/macemen_school.vs"/>
+	
+	<behavior script="data/subai/TBlacksmith_anim.vs"/>
+</class>

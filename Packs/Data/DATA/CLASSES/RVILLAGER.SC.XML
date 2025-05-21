@@ -1,0 +1,9 @@
+<class id="RVillager" cpp_class="CVXUnit" parent="Peasant" entity="Units/RVillager/RVillager.ent.xml">
+
+	<properties race="RepublicanRome"/>
+	<properties icon="gameres/icons/RMan.bmp"/>
+
+	<properties edittree_pos="Units/Roman/Peasant (male)"/>
+	<sounds command="data/sound entities/VoiceRMaleVillager.xml"/>
+
+</class>

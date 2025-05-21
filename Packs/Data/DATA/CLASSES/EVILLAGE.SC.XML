@@ -1,0 +1,15 @@
+<class id="EVillage" cpp_class="CVXTownHall" parent="BaseVillage" entity="Buildings/EVillage/EVillage.ent.xml">
+
+	<properties race="Egypt"/>
+	<properties radius="245" selection_radius="250"/>
+	<properties icon="gameres/icons/EVillage.bmp"/>
+	<properties radius="230" selection_radius="250"/>
+	<properties edittree_pos="Structures/Village (Egypt)/Village hall"/>
+	<properties foodperpop="100"/>
+	<properties help="/contents/buildings/Village"/>
+
+	
+
+	
+</class>
+

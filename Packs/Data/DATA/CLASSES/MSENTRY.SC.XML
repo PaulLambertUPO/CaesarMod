@@ -1,0 +1,9 @@
+<class id="MSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/RArcher/RSentry.ent.xml">
+
+	<properties race="ImperialRome"/>
+	<properties maxhealth="150"/>
+	<properties damage="20" armor_slash="0" armor_pierce="0"/>
+	<properties icon="gameres/icons/RArcher.bmp"/>
+	<properties unit_specials="Defense skill, Keen sight, Freedom"/>
+
+</class>
