@@ -1,0 +1,66 @@
+ENGLISH
+
+The Caesar Mod is released under the Creative Commons Attribution - ShareAlike 4.0 International (CC BY-SA 4.0).
+
+License Terms
+
+Attribution
+You may copy, modify, distribute, and create derivative works from the Caesar Mod, but you must always provide proper attribution to the original author (Paolo Lamberto) and the creators of the Greek Mod, as specified in the credits viewable from the main menu (or in the CREDITS file extractable from the language packs in the 'Local' folder).
+
+ShareAlike
+If you create derivative works from the Caesar Mod, you must distribute them under the same license (CC BY-SA 4.0). This means that anyone else can modify and redistribute them, provided that the same license is respected.
+
+Commercial Use
+Commercial use of the Caesar Mod is allowed, but it must comply with the attribution requirements to the original author and other contributors. Derivative works must be released under the same CC BY-SA 4.0 license.
+
+No Warranty
+The mod is provided "as is", without any warranties of any kind, either express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose.
+
+The full text of the license is available at:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+
+
+ITALIANO
+
+La Caesar Mod è rilasciata sotto la Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale (CC BY-SA 4.0).
+
+Termini della Licenza
+
+Attribuzione
+Puoi copiare, modificare, distribuire e fare opere derivate dalla Caesar Mod, ma devi sempre attribuire il credito all'autore originale (Paolo Lamberto) e ai creatori della Greek Mod, come specificato nei riconoscimenti visualizzabili dal menù principale (o nel file CREDITS estraibile dai pacchetti delle lingue nella cartella 'Local').
+
+Condividi allo stesso modo
+Se crei opere derivate dalla Caesar Mod, devi distribuirle sotto la stessa licenza (CC BY-SA 4.0). Questo significa che chiunque altro potrà modificarle e ridistribuirle, a condizione che venga rispettata la stessa licenza.
+
+Uso commerciale
+L'uso commerciale della Caesar Mod è consentito, ma deve rispettare le condizioni di attribuzione dell'autore originale e degli altri contributori. Le opere derivate devono essere rilasciate sotto la stessa licenza CC BY-SA 4.0.
+
+Senza garanzie
+La mod è fornita "così com'è", senza garanzie di alcun tipo, esplicite o implicite, incluse, ma non limitate, a garanzie di commerciabilità o idoneità per uno scopo particolare.
+
+Il testo completo della licenza è disponibile su:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+
+
+ESPAÑOL
+
+El Caesar Mod se distribuye bajo la Creative Commons Atribución - CompartirIgual 4.0 Internacional (CC BY-SA 4.0).
+
+Términos de la Licencia
+
+Atribución
+Puedes copiar, modificar, distribuir y crear obras derivadas del Caesar Mod, pero debes siempre dar el crédito al autor original (Paolo Lamberto) y a los creadores del Greek Mod, tal como se especifica en los reconocimientos visibles en el menú principal (o en el archivo CREDITS extraíble de los paquetes de idiomas en la carpeta 'Local').
+
+CompartirIgual
+Si creas obras derivadas del Caesar Mod, debes distribuirlas bajo la misma licencia (CC BY-SA 4.0). Esto significa que cualquier otra persona puede modificarlas y redistribuirlas, siempre y cuando se respete la misma licencia.
+
+Uso comercial
+El uso comercial del Caesar Mod está permitido, pero debe cumplir con los requisitos de atribución al autor original y a los demás colaboradores. Las obras derivadas deben ser distribuidas bajo la misma licencia CC BY-SA 4.0.
+
+Sin garantías
+El mod se proporciona "tal cual", sin garantías de ningún tipo, ya sean expresas o implícitas, incluidas, pero no limitadas a garantías de comerciabilidad o idoneidad para un propósito en particular.
+
+El texto completo de la licencia está disponible en:
+https://creativecommons.org/licenses/by-sa/4.0/
