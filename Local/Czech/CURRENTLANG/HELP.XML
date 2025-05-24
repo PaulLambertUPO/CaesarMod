@@ -6021,7 +6021,7 @@ Constantly sends resources to another settlement.
 				<entry hcenter="1" font="large">Recruitment outpost</entry>
 				<entry image="UI/Help/Icons/RecruitmentOutpostsV.bmp">
 The recruitment outpost is a settlement that allows units to enter for shelter and to shoot arrows at nearby enemies.
-The Carthaginian variant converts peasants to macemen, the Greek one to hoplites (1 every 20 seconds).
+The Carthaginian variant converts peasants to macemen (1 every 30 seconds), the Greek one to hoplites (1 every 40 seconds).
 				</entry>
 				<entry font="large">Neutral garrison</entry>
 				<entry>Carthaginian outpost</entry>

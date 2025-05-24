@@ -17,5 +17,5 @@ while (1) {
 		u = Place("CMaceman", This.pos, .player);
 		.ForceAddUnit(u);
 	}
-	Sleep(20000);
+	Sleep(30000);
 }

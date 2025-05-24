@@ -6021,7 +6021,7 @@ Envía constantemente recursos a otro asentamiento.
 				<entry hcenter="1" font="large">Fortín de reclutamiento</entry>
 				<entry image="UI/Help/Icons/RecruitmentOutpostsV.bmp">
 El fortín de reclutamiento es un asentamiento que permite a las unidades entrar para refugiarse y disparar flechas contra los enemigos cercanos.
-La variante cartaginesa transforma a los campesinos en guerreros con maza, la griega en hoplitas (1 cada 20 segundos).
+La variante cartaginesa transforma a los campesinos en guerreros con maza (1 cada 30 segundos), la griega en hoplitas (1 cada 40 segundos).
 				</entry>
 				<entry font="large">Guarnición neutral</entry>
 				<entry>Fortín cartaginés</entry>

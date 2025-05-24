@@ -1,4 +1,5 @@
 <class id="Catapult" cpp_class="CVXCatapult" parent="Building" entity="Buildings/Catapult/Catapult.ent.xml">
+	<!-- the entity value is necessary otherwise catapults can be placed onto buildings even if the specific classes have their own entities and ".pass" files (Buildings pak) -->
 
 	<properties maxhealth="1000" />
 	<properties damage="120" armor_slash="0" armor_pierce="0" />

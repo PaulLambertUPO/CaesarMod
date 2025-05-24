@@ -6021,7 +6021,7 @@ Invia costantemente risorse a un altro insediamento.
 				<entry hcenter="1" font="large">Forte di reclutamento</entry>
 				<entry image="UI/Help/Icons/RecruitmentOutpostsV.bmp">
 Il forte di reclutamento è un insediamento che consente alle unità di entrare per rifugiarsi e scoccare frecce contro i nemici vicini.
-La variante cartaginese trasforma i contadini in guerrieri con mazza, quella greca in opliti (1 ogni 20 secondi).
+La variante cartaginese trasforma i contadini in guerrieri con mazza (1 ogni 30 secondi), quella greca in opliti (1 ogni 40 secondi).
 				</entry>
 				<entry font="large">Guarnigione neutrale</entry>
 				<entry>Forte cartaginese</entry>
