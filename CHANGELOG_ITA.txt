@@ -1,0 +1,1287 @@
+CAESAR MOD - CHANGELOG
+
+In questo file sono elencate tutte le modifiche principali apportate alle versioni della Caesar Mod pubblicate nel corso del tempo.
+
+
+PREMESSA - DISCLAIMER
+
+Grazie per aver scaricato la Caesar Mod!
+Sono Paolo Lamberto, un giocatore di vecchia data da sempre appassionato dei giochi di strategia in tempo reale e, tra i tanti che adoro, i giochi di Imperivm occupano un posto speciale essendo i miei preferiti in assoluto ("La guerra gallica"/"Celtic Kings: Rage of War", "Le guerre puniche"/"Nemesis of the Roman Empire" e, soprattutto, "Le grandi battaglie di Roma"/"Great Battles of Rome").
+Tuttavia, nonostante la mia grande passione per Imperivm, non mi ero mai interessato a cosa facesse la community: per anni e anni ho giocato solo in single-player e poi anche in rete con amici (tramite programmi come Hamachi) a GBR 1.40 vanilla.
+Solo per caso, per curiosità, durante una ricerca di eventuali DLC che mi fossi perso, ho scoperto che era stata creata una mod che introduceva la Grecia, un popolo di cui non avevo mai capito l'esclusione da parte degli sviluppatori originali: ho apprezzato moltissimo gli sforzi fatti da tutti coloro che ci hanno lavorato e, secondo me, la versione definitiva di Imperivm GBR è proprio questa, con tutti i popoli più importanti dell'antichità (se non consideriamo anche i Parti).
+Allo stesso tempo, però, così come ho scoperto la meraviglia della Greek Mod, ho potuto constatare con mia grande tristezza che in generale il grande Imperivm GBR è stato quasi dimenticato da tutti: esiste una versione HD su Steam, ma è inferiore alla Greek Mod e da anni non viene più aggiornata.
+Anche la Greek Mod stessa, nonostante tutti i suoi pregi, presentava alcuni problemi e poteva essere migliorata ulteriormente ed è per questo che ho deciso di mettermi in gioco e sfruttare tutte le mie conoscenze e competenze possibili da sviluppatore per dare il mio contributo e rendere Imperivm un gioco migliore, nella speranza che prima o poi il franchise venga riscoperto e apprezzato da sempre più persone.
+Ho quindi cominciato a lavorare da autodidatta partendo dalla Greek Mod per crearne una nuova, la Caesar Mod, puntando a migliorare ogni aspetto del gioco per poter offrire a chiunque un prodotto che possa permettere di avere un'esperienza di gioco piacevole e memorabile, da soli o in compagnia, così come offrire un punto di partenza per facilitare il lavoro ad altre persone appassionate di Imperivm con le mie stesse intenzioni (non è stato per niente facile lavorare su una base di codice poco performante, molto disordinato e palesemente amatoriale in svariati punti, quindi voglio evitare che altre persone debbano perdere tempo a sistemare cose come ho dovuto fare io).
+La mia passione per Imperivm è così grande che è pressoché impossibile da esprimere a parole e voglio anche precisare che non ho nessuna intenzione di "rubare" quello che hanno fatto i creatori della Greek Mod, infatti nei riconoscimenti del menù principale ho inserito un ringraziamento nei loro confronti e non ho nascosto nessuno di loro, io mi sono semplicemente aggiunto ai loro nomi.
+Se un'altra persona decide di usare la Caesar Mod come punto di partenza per un nuovo progetto, per me è ben più che libera di farlo: l'unica cortesia che chiedo è quella di fare come ho fatto io e di tenere tutti i nomi originali, specificando di aver cominciato dalla mia mod e rilasciando il nuovo progetto sotto la stessa licenza CC BY-SA, i cui dettagli sono indicati nel file LICENSE.txt incluso nel pacchetto.
+
+
+[1.0.0] - 2 giugno 2025
+
+Questa è la prima versione in assoluto della Caesar Mod: si tratta di un progetto nato con l'obiettivo di migliorare ogni aspetto del gioco tramite ribilanciamento generale, introduzione di nuovi potenziamenti e meccaniche, risoluzione di numerosi problemi, aggiornamento di grandi battaglie, grandi sfide e conquiste, miglioramento dell'IA e sistemazione delle traduzioni.
+Trattandosi di un "fork" della Greek Mod 1.9, per una questione di correttezza nessuno dei suoi creatori è stato nascosto e nella sezione dei riconoscimenti del menù principale è espressamente scritto il ringraziamento nei loro confronti.
+Tutte le modifiche elencate qui di seguito usano come punto di riferimento la Greek Mod 1.9 per i confronti su aumento/diminuzione di parametri e quant'altro.
+
+
+GENERALE - VARIE
+
+Qui sono elencate modifiche di gameplay comuni a tutti i popoli e la risoluzione di molti bug.
+I cambiamenti alle caratteristiche speciali possono sembrare strani a prima vista, ma sarà tutto più chiaro una volta lette le modifiche alle singole unità nelle sezioni successive; in linea generale si può dire che abilità troppo forti sono state indebolite e altre troppo deboli sono state migliorate. Per esempio, "ostinazione" ora costa 3 energia, non permettendo più a unità deboli di eliminare qualunque unità non-eroe in 1v1 ma dando quindi solo un buon boost che rimane comunque letale se usato in gruppo, mentre "istruzione" ora costa 0 energia, diventando quindi un'abilità veramente utile anziché un handicap.
+I bug risolti portano una svolta rivoluzionaria per alcune unità e popoli (soprattutto per Cartagine) ed evitano certi tipi di exploit che potevano trasformarsi in gioco scorretto in multiplayer.
+La guida aggiornata permette una consultazione completa di quasi tutti gli aspetti del gioco: nella versione originale di Imperivm c'erano incongruenze ed errori e non aveva quasi senso leggerla; inoltre, nel menù principale è stato inserito nuovamente il riquadro con i trucchi e i consigli, anch'essi aggiornati per essere allineati con la mod.
+
+- attacco velenoso: costo aumentato a 4
+- audacia: durata base aumentata a 2 secondi, durata per livello ridotta a 0,6 secondi
+- carica: costo aumentato a 5
+- chiamata alla difesa: difesa ridotta a 16, durata base ridotta a 1 secondo, durata per livello ridotta a 1,5 secondi
+- colpo mortale: costo aumentato a 5
+- esaurimento vitale: costo aumentato a 3
+- foga: costo aumentato a 5
+- gesta: durata base aumentata a 2 secondi, durata per livello ridotta a 0,6 secondi
+- istruzione: costo ridotto a 0
+- maledizione: costo aumentato a 3, durata ridotta a 5 secondi
+- movimento sfuggente: probabilità ridotta a 1%
+- occultamento: costo aumentato a 2
+- ostinazione: costo aumentato a 3
+- prestigio: aumento unità vincolabili per livello aumentato a 3
+- prodezza: durata aumentata a 8 secondi
+- rigenerazione: vita aumentata a 50
+- tregua: durata per livello ridotta a 0,7 secondi
+- flagello: danno aumentato a 45
+- veleno: danno ridotto a 30, percentuale salute minima ridotta a 40
+- forte di addestramento: tempo di guadagno esperienza ridotto a 10 secondi
+- forte commerciale: guadagno viveri da vendita oro aumentato a 20
+- forte dell'oro: guadagno oro aumentato a 10
+- forte di reclutamento: tempo di conversione ridotto a 30 secondi per i guerrieri con mazza e a 40 per gli opliti, anche gli opliti generati si spostano se è impostata una rotta di rifornimento
+- accampamento teutonico: tempo di generazione unità ridotto a 15 secondi, costo dell'incursore teutonico ridotto a 400 viveri, ora genera un carro con cavallo anziché un mulo come unità di rifornimento
+- accampamento numida: tempo di generazione unità ridotto a 15 secondi, costo del fante numida ridotto a 200 viveri, ora genera un cammello anziché un mulo come unità di rifornimento
+- posto di guardia: numero di unità stanziabili aumentato a 85, può usare rotte di rifornimento, aggiunto timer variabile (3-6-9-12 secondi) alla morte di ogni sentinella, aggiunta descrizione all'interfaccia
+- addestramento: probabilità di guadagnare esperienza aumentata a 95%
+- fonti d'acqua: guarigione ridotta a 100, tempo di attesa ridotto a 1 secondo, raggio aumentato a 400, esclusi tutti gli animali per la guarigione, aggiunta descrizione all'interfaccia
+- tomba dell'eroe: soglia livello cambiata a 4/5, tutti gli eroi vicini ottengono livelli (solo stesso giocatore), tempo di attesa livelli aumentato a 4 secondi, rimossa la soglia livelli per i talismani, aggiunto tempo residuo
+- risolto il problema per cui "danno espansivo" attivava "danno riflesso" e "vendetta" da parte delle unità morte
+- risolto il problema per cui "danno espansivo" non funzionava contro le macchine d'assedio
+- risolto il problema per cui reclutare un eroe in un colosseo non romano da una fortezza romana faceva comparire un eroe di Roma anziché del popolo corretto
+- risolto il problema per cui l'oro e i bottini di guerra scomparivano quando si entrava in una grotta, così come il mancato deposito di oro se non si aveva ancora ricercato il "patto dei mercenari"
+- risolto il problema per cui "camera dei rituali" comprometteva la ricerca dei potenziamenti successivi in altre fortezze
+- risolto il problema per cui "addestramento spartano" riduceva da 12 a 10 il livello massimo se "addestramento speciale" era già stato completato e il caso inverso a 4 con "addestramento" e 8 con "addestramento avanzato"
+- risolto il problema per cui bisognava ricercare nuovamente lo stesso potenziamento se si cancellava un'istanza successiva alla prima quando era in corso da più strutture contemporaneamente
+- risolto il problema/exploit in cui si poteva eccedere il limite massimo di unità speciali o germaniche avanzate se le si reclutava da più strutture contemporaneamente
+- risolto il problema per cui i potenziamenti legati al livello massimo di liberati, guerriglieri e valchirie non tenevano conto di unità già presenti da prima del reclutamento
+- risolto il problema/exploit in cui vari bonus (come "democrazia/oligarchia", "nobiltà", ...) si applicavano a unità di altri giocatori vincolate a un eroe (effetto collaterale di GetPlayerUnits)
+- risolto il problema per cui gli eroi e le unità con limite massimo non attaccavano i nemici vicini nel tragitto verso il foro dopo il reclutamento
+- risolto il problema per cui i comandi di alcune unità spirituali non avevano descrizione o tooltip in fase di click (es. "maledizione" o "esaurimento vitale")
+- risolto il problema per cui il posto di guardia continuava a far comparire e scomparire un cammello nella guarnigione così come in qualunque costruzione di macchina d'assedio nella mappa
+- risolto il problema per cui i villaggi perdevano viveri per darli ai contadini "decorativi" e per cui non rifornivano correttamente le unità con più di 20 viveri massimi (come gli elefanti)
+- risolto il problema per cui le unità non militari potevano conquistare le unità di rifornimento e domare i cavalli
+- accomunati i potenziamenti legati allo sblocco di truppe simili nella fucina (esempio: se una fortezza ha una fucina iberica e una gallica, ricercare "ferri di cavallo" sblocca i cavalieri di entrambi i popoli)
+- porto: aggiornata l'icona di costruzione nave da guerra in base al popolo (Egitto, Roma, generica), aggiunte statistiche nave da guerra al tooltip del comando
+- locanda: rimosse le informazioni superflue dall'interfaccia, popolazione iniziale standard aumentata a 10 (per consentirne l'autoriparazione)
+- casa romana: corretta l'icona
+- ripopola: costo ridotto a 500 oro, tempo di ricerca aumentato a 60 secondi, ripristina la popolazione minima solo se quella attuale è inferiore e/o ripara solo il centro del villaggio se è danneggiato (ignora le case)
+- convoca contadini: se c'è una rotta di rifornimento verso un porto, i contadini rimangono vicino al villaggio anziché provare a entrare invano nel porto
+- aggiunto comando di creazione unità di rifornimento da 250 a villaggi, porti, fori, accampamenti e forti
+- unità di rifornimento: risolto il problema per cui potevano entrare in strutture senza risorse (es. rovine/locande), aggiunte tutte le informazioni principali all'interfaccia, migliorati i tooltip basati sul puntatore del mouse
+- formazione a linea: bonus gittata aumentato a 30%
+- formazione a quadrato: bonus difesa aumentato a 8, aggiunto bonus 20% gittata
+- formazione con cavalleria al centro: bonus gittata aumentato a 30%
+- formazione a schermaglia: bonus gittata ridotto a 50%, sostituito bonus livello con bonus attacco 2
+- formazione a colonna: aumentata leggermente la larghezza dell'esercito, bonus difesa aumentato a 0, bonus gittata ridotto a 50%, aggiunto bonus livello 2
+- spirito: quello nell'editor non è più quello evocato e quindi non morirà automaticamente se l'energia scende a 0
+- contadino/a: corretta l'icona di contadini greci multipli, aggiunto comando con cui svincolarsi da un eroe (utile quando si congedano dei miliziani vincolati), migliorati i tooltip basati sul puntatore del mouse
+- pescatore: costo ridotto a 100 viveri, tempo di reclutamento ridotto a 5 secondi, migliorati i tooltip basati sul puntatore del mouse, aggiunto tooltip dedicato in caso di puntamento su un porto
+- nave da guerra: vista aumentata a 720, aggiunte "perforazione" e "rianimazione", aggiunte tutte le informazioni (eccetto le abilità) e gli oggetti all'interfaccia, migliorati i tooltip basati sul puntatore del mouse
+- Keltill: vita aumentata a 1300, attacco aumentato a 60, difesa ridotta a 18, vista aumentata a 650, velocità aumentata a 130, abilità "chiamata alla difesa"-"attacco eroico"-"resistenza eroica"-"guarigione"-"marcia forzata"
+- Larax: vita aumentata a 1400, attacco aumentato a 70, vista aumentata a 700, velocità aumentata a 140, inventario aumentato a 6, abilità "chiamata alla difesa"-"attacco eroico"-"resistenza eroica"-"difesa eroica"-"esplorazione"
+- Giulio Cesare: vita aumentata a 1250, attacco aumentato a 42, vista aumentata a 675, velocità aumentata a 125, abilità "prestigio"-"prodezza"-"marcia forzata"-"superiorità difensiva"-"superiorità offensiva"-"vigore"
+- giocatori: accentuati colori esistenti, sostituito verdino con argento, sostituito rosso scuro con marrone, sostituito giallognolo con oro
+- ranghi: aggiunti nuovi titoli onorifici fino a una media di 400 punti
+- audio e voci: aggiornati e rivisti gli effetti sonori di ogni unità per farli corrispondere correttamente al tipo di arma usato, completate le frasi mancanti per ogni unità (italiano, inglese e spagnolo)
+- menù principale: aggiunta sezione "Trucchi e consigli" (numero totale di frasi aumentato a 80), rimosso bottone "Online (BETA)"
+- interfaccia: rimosso il bottone di diplomazia in basso
+- editor: aggiunte alcune unità mancanti, aggiunte altre icone a quelle selezionabili per le unità
+- guida: correzione di errori grammaticali e concettuali, aggiunta sezione "popoli", aggiunti moltissimi dettagli
+- stringhe: riviste e migliorate tutte quante le traduzioni in ogni parte del gioco
+
+
+ALTARI DEI SACRIFICI
+
+I poteri originali degli altari erano pressoché inutilizzabili e così situazionali che di solito finivano per aiutare gli avversari anziché ricompensare l'utilizzatore.
+L'obiettivo di questi cambiamenti è rendere gli altari un luogo strategico importante per il quale i giocatori devono combattere, il che li incentiva a puntare sul controllo della mappa, essendo uno degli aspetti su cui si basa Imperivm. Proprio per questo, ora gli altari hanno un bordo come le altre strutture nella mappa strategica, in modo da essere facilmente individuabili e utilizzabili senza uscire appunto dalla visuale strategica e i poteri sono più efficaci per chi li utilizza. Il potere "carestia" ha ricevuto un enorme aumento al suo costo per ridurre il rischio di bloccare quasi completamente un giocatore della Germania.
+
+- aggiunto il bordo visibile dalla mappa strategica
+- rimosso il recupero di energia di un'unità vicina scelta casualmente ogni secondo
+- nutrizione: nuovo potere, costo 10 energia, tutte le unità recuperano viveri per 45 secondi ogni 15 secondi (3 viveri per le unità del lanciatore, 2 per le altre)
+- vento della saggezza: costo aumentato a 20 energia, durata ridotta a 20 secondi, limite livello massimo aumentato a 30, bonus di 5 esperienza per il lanciatore
+- rituale della vitalità: costo ridotto a 30 energia, aumento energia cambiato a 10 per le unità del lanciatore e a 5 per le altre
+- sacrificio spirituale: costo ridotto a 40 energia, danno ridotto a 50% per il lanciatore, tempo di attesa per il danno aumentato a 4 secondi
+- pioggia d'oro: nuovo potere, costo 50 energia, aggiunge oro a tutte le strutture per 2 minuti (10 oro ogni 3 secondi, 15 oro per il lanciatore)
+- peste: nuovo potere, costo 60 energia, avvelena 1 unità ogni 7 e 8 per il lanciatore (animali esclusi), ricarica 60 secondi
+- sete di sangue: costo aumentato a 70 energia, durata aumentata a 90 secondi, le unità del lanciatore presenti al momento del lancio ottengono 4 attacco bonus per la durata
+- carestia: costo aumentato a 80 energia, percentuale di viveri tolti aumentata a 2, viveri tolti dimezzati per il lanciatore
+- terremoto: nuovo potere, costo 90 energia, danneggia tutte le fortezze per 10 secondi (300 danni ogni secondo, 225 per il lanciatore)
+- orda teutonica: nuovo potere, costo 100 energia, aggiunge 40 cavalieri, 40 arcieri e 20 incursori di livello 12 (18 per il lanciatore) dopo 3 minuti a ogni fortezza svuotandone la popolazione
+
+
+GUARNIGIONI NEUTRALI
+
+L'obiettivo di queste modifiche è rendere più interessanti gli scontri con le truppe delle guarnigioni neutrali sia a inizio partita che a gioco ormai prolungato; una volta raggiunto un certo livello di potenza o con la giusta combinazione di unità rimarrà comunque facile vincere, ma negli altri casi il giocatore dovrà prestare attenzione, il che lo costringerà a migliorare le proprie capacità di "micro" e "macro" gestione. La modifica più importante, però, consiste nella rimozione delle sentinelle dalle fortezze neutrali: questa modifica è pensata per lo più per l'IA, dato che la maggior parte delle volte tendeva a fermarsi e a perdere troppo tempo nell'eliminazione delle sentinelle (un problema derivato dal fatto che gli script di assedio sono ancora gli stessi usati nei precedenti titoli, in cui le sentinelle non esistevano proprio).
+
+- le unità di guardia non escono se ci sono solo nemici invisibili intorno e questi non contano ai fini della conquista
+- forte di addestramento britannico: tutti gli highlander escono contemporaneamente, livello iniziale aumentato a 4, aggiunti 10 guerrieri con giavellotto, ne escono al massimo 6 contemporaneamente
+- forte di addestramento iberico: numero di difensori aumentato a 12, livello massimo aumentato a 20
+- forte commerciale germanico: numero di vachirie aumentato a 12, ne escono al massimo 8 contemporaneamente, livello iniziale aumentato a 10
+- forte commerciale gallico: numero di guerrieri di Fand aumentato a 6, ne escono al massimo 3 contemporaneamente, livello massimo aumentato a 30
+- forte dell'oro romano: numero di liberati ridotto a 18, livello iniziale aumentato a 6, livello massimo aumentato a 20
+- forte dell'oro egizio: numero di lanciatori d'asce ridotto a 10, tutti escono contemporaneamente
+- forte di reclutamento greco: numero di opliti ridotto a 20, livello iniziale aumentato a 6, livello massimo aumentato a 10
+- forte di reclutamento cartaginese: numero di guerrieri con mazza aumentato a 30, ne escono al massimo 16 contemporaneamente, livello massimo aumentato a 6
+- accampamento teutonico: numero di truppe che escono in difesa e ottenute alla conquista ridotto a 10
+- accampamento numida: numero di truppe che escono in difesa e ottenute alla conquista ridotto a 10
+- posto di guardia: numero di lancieri e arcieri aumentato a 24, ne escono al massimo 14 contemporaneamente
+- fortezza: numero di sentinelle ridotto a 0
+
+
+OGGETTI
+
+L'obiettivo di queste modifiche è rendere più variegata e interessante ogni partita grazie all'introduzione di nuovi oggetti e al miglioramento di quasi tutti quelli già esistenti. Erano presenti anche alcune piccole sottigliezze che non facevano funzionare gli oggetti come da descrizione e sono stati risolti. Visto quanto possono diventare estreme certe combinazioni di oggetti, come si potrà leggere più avanti, nelle partite di strategia e in rete si potrà scegliere se giocare in mappe con o senza rovine (restano comunque gli oggetti generati dagli altri contenitori, ma sono generalmente più deboli).
+
+- amuleto del trionfo: aggiunta probabilità del 50% di guarire 50 vita in più
+- amuleto di Aegle: rigenera anche 2 vita al secondo
+- amuleto di erbe: aumenta la vita massima di 30
+- amuleto di piume: rigenerazione vita rimossa, può essere costruito direttamente dalle unità
+- anello del potere: massimo cariche aumentato a 600
+- ankh argentato: nuovo oggetto ottenibile nelle rovine, aumenta di 4 la difesa di tutte le unità vincolate
+- ankh dorato: rigenera anche la vita di 10 al secondo quando è inferiore al 25%
+- arpa oscura rinvigorente: nuovo oggetto ottenibile nelle rovine, aumenta la vita massima di 300 e la difesa di 6, ogni 10 secondi ripristina 4 energia al possessore e a 8 alleati vicini
+- borsa d'acqua curativa: nuovo oggetto ottenibile nel pozzo grande ogni 10 minuti, cura fino a 4000 vita tra gli alleati vicini
+- ceneri di druido: rimosso dagli oggetti generati nelle rovine, ottenibile nella colonna ogni 15 minuti, non considera più né il portatore né le unità alleate con tutta la vita come parte degli 8 alleati vicini
+- cintura dei re: ottenibile nel trono del leone ogni 30 minuti
+- corno della vittoria: danno aumentato a 75, numero di unità colpite aumentato a 15, non consuma utilizzi se non colpisce nulla, aggiunta ricarica di 1 secondo
+- dente di cinghiale: nuovo oggetto ottenibile negli obelischi ogni 10 minuti, aggiunge 2 livelli, può essere combinato con altri 2 oggetti identici per creare i denti di cinghiale
+- denti di cinghiale: rinominati in "amuleto di denti di cinghiale", livello aumentato a 6, rimosso dagli oggetti generati nelle rovine, può essere costruito con 3 singoli denti di cinghiale
+- cintura di serpenti: rimosso attacco bonus in condizioni di vita bassa, può essere costruita direttamente dalle unità
+- dito della morte: numero di utilizzi ridotto a 5, numero di bersagli aumentato a 4, elimina qualsiasi unità nemica eccetto gli eroi, uccide in sequenza, non consuma utilizzi se non uccide nulla, ricarica ridotta a 3 secondi
+- dono degli dei: aumenta anche il fattore velocità del 10%, scompare alla prima uccisione anche quando il possessore ha tutta la vita
+- emblema di democrazia: vita ridotta a 80
+- emblema di oligarchia: attacco aumentato a 6, aumenta anche la difesa di 2
+- erbe medicinali: guariscono anche l'energia
+- gemma dell'eletto: nuovo oggetto ottenibile solo da Larax quando viene reclutato, aumenta l'attacco di 80
+- gemma della saggezza: esperienza aumentata a 2, probabilità ridotta a 33%, funziona anche quando il possessore si trova in un edificio
+- guanti della salute: non considera le unità alleate con tutta la vita, aggiunto effetto visivo di danno al possessore quando avviene la guarigione
+- insegna del combattimento: attacco aumentato a 25%
+- insegna protettrice: difesa aumentata a 25%
+- insegna della forza: vita aumentata a 25%
+- insegna del veterano: aumenta anche l'attacco del 10%
+- pergamena della morte: fa anche recuperare 5 vita al possessore a ogni morte di unità vincolata
+- pergamena della vita: nuovo oggetto ottenibile nelle rovine, ogni unità vincolata che uccide un nemico fa recuperare 5 vita al possessore e ha una probabilità del 10% di generare uno spirito
+- pietra sanguinaria: ottenibile nello scheletro ogni 30 minuti, fornisce 50 esperienza, permette di rubare la vita mancante da un nemico a scelta (ricarica 20 secondi, gli eroi nemici non possono scendere sotto il 50%)
+- scudo della nobiltà: difesa aumentata a 8
+- spada della nobiltà: attacco aumentato a 8
+- spighe di segale: viveri aumentati a 1000
+- stivali da viaggio: nuovo oggetto ottenibile nelle rovine, aumenta la difesa di 4 e il livello di 2, rigenera 1 vita al possessore e a tutte le unità vincolate 2 volte al secondo
+- talismani egizi: possono essere rimossi tramite doppio click
+- tamburi da battaglia della furia: nuovo oggetto ottenibile nelle rovine, all'attivazione aggiungono 30 attacco al possessore e tutti gli alleati vicini per 5 secondi
+- teschio del dolore: nuovo oggetto ottenibile nell'albero del teschio ogni 20 minuti, aggiunge 250 vita, attivarlo sottrae fino al 10% della vita massima del possessore per danneggiare della metà 6 nemici vicini (non eroi)
+- zanna di elefante: rigenerazione aumentata a 25
+- aggiornate tutte le icone e aggiunte quelle mancanti alla tendina di selezione per gli oggetti personalizzati nell'editor
+
+
+ASSEDIO
+
+L'obiettivo di queste modifiche è fornire alcuni miglioramenti per l'interfaccia e ribilanciare leggermente le macchine d'assedio, soprattutto grazie alla reintroduzione del comando di attacco manuale, utile per le catapulte quando si ha a che fare con la tecnica della "bolla" (ossia una massa concentrata di unità a distanza, possibilmente circondate da oggetti invalicabili come mura, rocce o case).
+
+- torre: gittata minima ridotta a 150, gittata aumentata a 725
+- catapulta: gittata aumentata a 750, raggio dell'area colpita ridotto a 150
+- ariete: velocità ridotta a 35, vista aumentata a 650, durata totale aumentata a 50 secondi
+- costruzione: tempo prima di subire danni ridotto a 10 secondi, gittata di costruzione ridotta a 700
+- ripristinati i comandi di cessare il fuoco e di attacco manuale
+- aggiunti all'interfaccia i valori della gittata e della salute
+- variegati gli archi compiuti dai colpi delle catapulte dei diversi popoli
+
+
+ANIMALI
+
+Gli animali originali erano veramente deboli e non ponevano alcuna minaccia nemmeno se in branco, rendendosi quindi anche abbastanza inutili come evocazione da parte delle unità spirituali.
+L'obiettivo di queste modifiche è potenziarli e diversificarli donando loro delle abilità speciali come per le unità: l'orso è diventato singolarmente l'animale più forte, il cinghiale è molto più duro da uccidere specialmente in 1v1, il leone è letale contro unità con poca difesa o quando fa parte di un branco, il lupo è il più fastidioso e un'ottima unità di supporto.
+Adesso i giocatori dovranno fare attenzione alle proprie rotte commerciali e ai contadini, dato che verranno inseguiti e uccisi molto più facilmente.
+Come si potrà notare nelle sezioni in seguito, gli animali evocati possono giocare un ruolo rilevante anche in battaglie importanti.
+
+- orso: vita ridotta a 360, attacco aumentato a 24, difesa aumentata a 8, vista aumentata a 500, velocità aumentata a 75, aggiunte "attacco speciale" e "determinazione"
+- orso evocato: nuova unità con statistiche dell'orso e "rianimazione" anziché "determinazione", durata totale 30 secondi
+- cinghiale: vita ridotta a 320, attacco aumentato a 20, difesa aumentata a 6, vista aumentata a 450, velocità aumentata a 70, aggiunte "rianimazione" e "difesa speciale"
+- cinghiale evocato: nuova unità con statistiche del cinghiale e "determinazione" anziché "rianimazione", durata totale 30 secondi
+- leone/leonessa: vita ridotta a 280, attacco aumentato a 22, difesa aumentata a 4, vista ridotta a 550, velocità aumentata a 80, aggiunte "vitalità" e "triplo colpo"
+- lupo: attacco aumentato a 18, velocità ridotta a 140, aggiunte "sfinimento" e "ferocia"
+- lupo evocato: aggiunte "sfinimento", "ferocia" e "rianimazione", durata totale aumentata a 200 secondi
+- aquila: vita aumentata a 50, vista aumentata a 1000, velocità aumentata a 200, quella nell'editor non è più quella evocata e quindi non morirà automaticamente se l'energia scende a 0
+- aquila evocata: durata totale aumentata a 120 secondi
+- corvo: vita ridotta a 25, vista aumentata a 950, velocità aumentata a 180
+- corvo evocato: nuova unità con statistiche del corvo, "vista di lince" e durata totale 240 secondi
+- pesci: vita ridotta a 100, vista ridotta a 300, velocità aumentata a 110
+- cervo: vista aumentata a 650
+- cervo evocato: nuova unità con statistiche del cervo, velocità 200, "vista di lince" e durata totale 180 secondi
+- cavallo: vita aumentata a 200, non diventa neutrale vicino alle fortezze nemiche, ora il comando di domazione (col relativo tooltip) ha la priorità su quello di attacco una volta ottenuto il potenziamento "doma cavalli"
+- la barra della salute ora mostra anche l'energia della maggior parte degli animali
+- aggiunte energia, velocità, difesa e vista degli animali pacifici all'interfaccia
+- aggiunti effetti sonori ai leoni quando sono fermi
+- sistemata la gerarchia di classi dei leoni (ora estendono "AttackAnimal" anziché "BaseAnimal")
+
+
+BRITANNIA
+
+L'obiettivo di queste modifiche è variegare e migliorare lo stile di gioco della Britannia potenziando le unità intermedie della caserma, i capi normanni e i druidi.
+Precedentemente, infatti, l'unica unità veramente valida era l'highlander, eventualmente supportato da guerrieri con giavellotto o masse di arcieri con "gesta" e "destrezza divina", mentre tutte le altre unità erano troppo deboli o quasi inutili essendo veramente facili da contrastare. Inoltre, anche la componente della fortuna è stata rivista: oltre alla scommessa iniziale, la Britannia adesso può usarne un'altra (ripetibile) molto più potente e al contempo rischiosa ed entrambe permettono comunque di ottenere qualcosa anche in caso di perdita, mentre le altre ricerche della taverna sono state indebolite per compensare la nuova forza delle unità ("destrezza divina" ha ricevuto un enorme indebolimento alla probabilità di uccidere in un colpo, ma in compenso può fornire un bonus di attacco alle unità invisibili, cosa voluta apposta per incentivare l'uso dei druidi).
+Adesso la combinazione principale dell'esercito britannico consiste in lancieri e guerrieri con giavellotto o in alternativa lottatori caledoni e arcieri con "gesta", ma gli highlander rimangono ancora l'unità migliore per il late game: inizialmente sono più deboli di prima dato che la salute base è stata ridotta, ma essendo dotati di "resistenza" sono destinati a diventare più potenti man mano che aumentano di livello, soprattutto quando ottenono spada e scudo della nobiltà, che ora forniscono 8 come bonus alle statistiche.
+Anche il reclutamento di nuovi eroi è stato semplificato grazie all'abilità "saggezza" e al fatto che "giochi circensi" permette di reclutarli già di livello 6, mentre per le unità della caserma (che tra l'altro adesso finalmente dispone del reclutamento migliorato di livello 3 come per tutti gli altri popoli) bisogna ricercare un nuovo potenziamento nella fucina in modo da addestrarle di livello 6 (per semplificare l'ottenimento di "nobiltà"). L'aumento all'attacco e alla gittata dell'eroe (voluto per equilibrare il fatto che può mancare il bersaglio) è compensato dalla riduzione della difesa perché essendo un'unità a distanza non può permettersi di avvicinarsi troppo al nemico.
+
+- guerriero: vita aumentata a 180, attacco aumentato a 16, difesa aumentata a 8, aggiunta "istruzione"
+- arciere: vita aumentata a 200, attacco aumentato a 12, tempo di reclutamento aumentato a 6 secondi
+- sentinella: vita aumentata a 200, attacco aumentato a 14, difesa aumentata a 4
+- lanciere: vita aumentata a 240, attacco aumentato a 24, aggiunta "vendetta", costo ridotto a 150 oro, tempo di reclutamento aumentato a 12 secondi
+- lottatore caledone: vita aumentata a 300, attacco aumentato a 26, difesa aumentata a 14, sostituita "rianimazione" con "determinazione", costo aumentato a 150 oro, tempo di reclutamento aumentato a 12 secondi
+- guerriero con giavellotto: attacco aumentato a 24, difesa aumentata a 4, gittata aumentata a 400, aggiunte "vitalità" e "sfinimento", costo aumentato a 150 oro, tempo di reclutamento aumentato a 14 secondi
+- highlander: vita ridotta a 475, difesa aumentata a 8, aggiunta "resistenza", tempo di reclutamento aumentato a 22 secondi
+- capo normanno: difesa aumentata a 8, velocità aumentata a 90, limite massimo aumentato a 6
+- druido: vita aumentata a 160, velocità aumentata a 60, costo aumentato a 200 oro
+- eroe: attacco aumentato a 70, difesa ridotta a 12, gittata aumentata a 525, sostituite "recupero" e "maestria" con "euforia" e "saggezza", costo ridotto a 800 oro
+- caserma: aggiunto equipaggiamento rapido dei guerrieri 3
+- forgia lance: costo aumentato a 1500 oro
+- forgia scudi caledoni: costo aumentato a 1500 oro
+- forgia giavellotti: costo aumentato a 1500 oro
+- forgia spade: costo aumentato a 2600 oro
+- forgia armi d'acciaio: nuovo potenziamento ricercabile nella fucina, costo 2000 oro, tempo di ricerca 40 secondi, tutti i nuovi guerrieri sono di livello 6
+- giochi circensi: costo ridotto a 2000 oro, solo gli eroi escono di livello 6, aggiornata icona
+- spada della nobiltà: richiede "nobiltà", costo ridotto a 1000 oro
+- scudo della nobiltà: richiede "nobiltà", costo ridotto a 1000 oro
+- erigi altare di Thor: livello massimo aumentato a 24
+- intercessione divina: tempo di ricerca ridotto a 20 secondi, esplora un'area di raggio 3600, probabilità guadagno oro ridotta a 40%, 400 viveri in caso di perdita
+- esperienza divina: costo ridotto a 1500 oro, probabilità ridotta a 45%
+- destrezza divina: costo ridotto a 1500 oro, probabilità ridotta a 1%, aggiunta probabilità 75% di ottenere 12 attacco bonus quando si diventa invisibili
+- fortuna divina: costo ridotto a 1500 oro, probabilità ridotta a 15%
+- tutto per tutto: nuovo potenziamento ricercabile nella taverna, costo 4000 oro, tempo di ricerca 5 secondi, aggiunge 40 popolazione, probabilità 35% di ottenere 10000 oro (ripetibile con una ricarica di 3 minuti)
+- invoca spirito: costo ridotto a 1500 oro
+- evoca lupo: sostituito con "evoca corvo"
+- evoca corvo: nuovo potenziamento ricercabile nel tempio di Thor, costo 800 oro, i druidi possono sacrificarsi per trasformarsi in corvi
+- occultamento di massa: nuovo potenziamento ricercabile nel tempio di Thor, costo 2000 oro, i druidi usano automaticamente "occultamento" sulle unità alleate vicine (solo stesso giocatore)
+
+
+IBERIA
+
+L'obiettivo di queste modifiche è enfatizzare ancora di più l'identità dell'Iberia come popolo difensivo da late game: a inizio partita, infatti, è inferiore rispetto a probabilmente qualunque altro popolo, ma a partita inoltrata diventa pressoché inarrestabile grazie al livello raggiunto dagli eroi, che con la combinazione di "vigore", "guarigione" e "superiorità difensiva" rendono quasi indistruttibili i loro eserciti.
+Le più grandi differenze per le unità consistono nel drastico aumento di velocità per il reclutamento dei guerriglieri, nella rimozione di "colpo esperto" ai frombolieri (abilità troppo sbilanciata in quanto troppo forte e spesso imprevedibile non essendo molto chiaro quando inizia ad avere effetto) e nel costo aumentato di "ostinazione" per le guardie d'élite. I guerriglieri ora possono veramente diventare parte integrante dell'esercito iberico e non essere più la vecchia "trappola mangia-oro-e-tempo" di prima. I frombolieri adesso manterranno il loro ruolo come unità a distanza anti-eroe da tenere lontana dal nemico grazie ad "attacco speciale" e "tattiche difensive", che funziona bene per via del livello elevato ma che rimuove energia che sarebbe utile per fare più danni. Le guardie d'élite possono ancora continuare a usare "ostinazione" con discreta facilità grazie a "vigore", "ferocia" o "sacrificio rigenerante"; senza supporto non saranno efficaci come prima, ma questo è voluto per spingere il giocatore a variegare la composizione del suo esercito.
+I difensori adesso sono degni del loro nome e in generale le due combinazioni più efficaci sono difensori e frombolieri o guardie d'élite e arcieri, più cavalieri, sacerdotesse e guerriglieri di supporto. L'esploratore adesso può raccogliere un oggetto, cosa che può tornare estremamente utile per sottrarre i funghi velenosi direttamente sotto il naso del nemico.
+Le più grandi modifiche per l'Iberia in generale consistono nel grande aumento di guadagno esperienza nel corso del tempo (giustamente compensato con un costo maggiore), nella reintroduzione della "corporazione dei veterani", nel doppio livello di "costruisci alloggi" per avere un'economia impareggiabile e nella riduzione del raggio di "manto della misericordia" (era veramente esagerato, una sola nube copriva più o meno un'intera fortezza).
+
+- miliziano: attacco aumentato a 16, difesa aumentata a 8, può essere congedato anche a bordo di una nave
+- arciere: vita aumentata a 200, attacco ridotto a 18, difesa aumentata a 2, tempo di reclutamento ridotto a 8 secondi
+- sentinella: vita aumentata a 220, attacco aumentato a 22, difesa aumentata a 6
+- difensore: vita aumentata a 260, attacco aumentato a 18, difesa ridotta a 20, costo aumentato a 150 oro, tempo di reclutamento ridotto a 14 secondi
+- cavaliere: vita aumentata a 280, difesa ridotta a 2, velocità ridotta a 160, aggiunta "trionfo", costo aumentato a 160 oro
+- fromboliere: attacco ridotto a 36, vista ridotta a 500, gittata ridotta a 400, sostituita "colpo esperto" con "attacco speciale" e "tattiche difensive", costo ridotto a 180 oro
+- esploratore: vita ridotta a 220, attacco ridotto a 30, difesa ridotta a 2, velocità ridotta a 160, inventario aumentato a 1, costo ridotto a 1 popolazione, aggiunte statistiche al tooltip del comando nel villaggio
+- guardia d'élite: vita ridotta a 400, attacco aumentato a 34, aggiunta "ferocia", tempo di reclutamento aumentato a 22 secondi
+- guerrigliero: vita aumentata a 440, attacco aumentato a 54, vista aumentata a 600, velocità aumentata a 90, tempo di reclutamento ridotto a 8 secondi
+- sacerdotessa: velocità aumentata a 60
+- eroe: vita aumentata a 1400, difesa ridotta a 14, sostituite "euforia" e "resistenza eroica" con "vigore" e "saggezza"
+- forgia lance: costo aumentato a 1500 oro
+- forgia ferri di cavallo: costo aumentato a 1600 oro
+- produci fionde: costo ridotto a 1400 oro
+- tornei: i nuovi miliziani e arcieri sono di livello 4
+- saggezza degli eroi: costo aumentato a 2500 oro, tempo di guadagno esperienza ridotto a 30 secondi
+- saggezza dei guerrieri: costo aumentato a 2500 oro, tempo di guadagno esperienza ridotto a 30 secondi, rimosso il limite di livello 12, non fornisce esperienza agli eroi
+- clan della montagna: tempo di ricerca ridotto a 30 secondi
+- corporazione dei veterani: nuovo potenziamento ricercabile nel colosseo, costo 2500 oro, i nuovi guerrieri ricevono l'"anello del veterano" che si trasforma in "insegna del veterano" alla prima uccisione (+6 e +10% attacco)
+- celebra festa iberica: costo ridotto a 1500 oro, aggiunge anche 800 viveri, può eccedere la popolazione massima
+- vendi viveri: tempo di ricerca ridotto a 20 secondi
+- doma cavalli: i nuovi cavalieri sono di livello 6
+- costruisci alloggi: costo ridotto a 750 oro, incremento popolazione massima ridotto a 15, aggiunge anche 5 popolazione attuale
+- costruisci più alloggi: nuovo potenziamento ricercabile nella taverna, richiede "costruisci alloggi", costo 750 oro, aumenta la popolazione massima di 15 e aggiunge 5 alla popolazione attuale
+- chiamata alle armi: tempo di ricerca ridotto a 15 secondi, i miliziani non sono più denutriti e dal minuto 10 in poi sono di livello 8 
+- rituale di Ainé: costo ridotto a 1000 oro, aggiunto effetto grafico di esperienza alle sacerdotesse che aumentano di livello
+- conoscenze ancestrali: costo ridotto a 2000 oro
+- manto della misericordia: raggio ridotto a 325, durata totale aumentata a 25 secondi
+- guarigione di massa: sostituito con "sacrificio rigenerante"
+
+
+GERMANIA
+
+L'obiettivo di queste modifiche è rendere la Germania la definizione perfetta di "alto rischio, alta ricompensa", ossia un popolo basato solo ed esclusivamente sul fare il maggior numero di danni possibile. Precedentemente, infatti, lo stile di gioco della Germania era abbastanza incongruente e/o vincolato: da un lato, i costi in viveri per recuperare la popolazione erano alti e bastava una "carestia" per metterla in ginocchio; dall'altro, disponeva sia di "gesta" che "chiamata alla difesa", una combinazione pressoché impossibile da contrastare per alcuni popoli, aggravata ancor di più dalla grande velocità di "marcia forzata" e/o dall'eventuale immunità ai danni di "movimento sfuggente". Tale combinazione era terribilmente sbagliata quando veniva sfruttata con i guerrieri con mazza per via della già menzionata abilità "colpo esperto" che con "ardimento" diventava nel giro di pochi secondi l'arma per eliminare istantaneamente eserciti palesemente superiori sia di livello che equipaggiamento.
+Detto questo, adesso l'eroe germanico dispone quasi esclusivamente di abilità d'attacco, mentre le unità sono state riviste di conseguenza, con un attacco iniziale minore ma potenzialmente superiore di prima per via di "superiorità offensiva". Il già menzionato guerriero con mazza è diventato molto più sano di prima per mezzo di "colpo mortale" (molto più gestibile di "colpo esperto") e di "rigenerazione", volutamente aggiunta per compensare la bassa difesa e per dare l'idea di "barbaro furioso che non conosce il dolore".
+Un altro aspetto rivoluzionario consiste nel costo in energia azzerato dell'abilità "istruzione", che permette all'omonimo potenziamento di essere davvero utile anziché uno svantaggio. È anche possibile trasformare gli arcieri teutonici in incursori teutonici (l'idea è quella di iniziare a colpire a distanza come arcieri, poi caricare come incursori e infine combattere a lungo come cavalieri, infine ritirarsi e ricominciare).
+Un ultimo aspetto importante è che la valchiria ora è l'unità anti-arciere più veloce del gioco: un gruppo di valchirie può tranquillamente fare strage di unità a distanza sfruttando "rianimazione".
+
+- guerriero: attacco aumentato a 14, difesa aumentata a 6, costo aumentato a 120 viveri, tempo di reclutamento ridotto a 8 secondi
+- arciera: vita ridotta a 180, attacco aumentato a 12, difesa aumentata a 2, velocità ridotta a 70, costo ridotto a 160 viveri, tempo di reclutamento ridotto a 10 secondi
+- sentinella: vita ridotta a 180, attacco aumentato a 16, difesa aumentata a 4
+- guerriero con ascia: vita aumentata a 320, attacco ridotto a 24, difesa aumentata a 4, velocità aumentata a 70, aggiunta "vitalità", costo aumentato a 280 viveri, tempo di reclutamento ridotto a 12 secondi
+- cacciatrice: vita aumentata a 260, attacco ridotto a 32, velocità aumentata a 70, gittata aumentata a 400, tempo di reclutamento aumentato a 16 secondi
+- cavaliere teutonico: vita aumentata a 340, attacco ridotto a 26, difesa aumentata a 10, costo ridotto a 360 viveri, tempo di reclutamento ridotto a 16 secondi
+- arciere teutonico: attacco aumentato a 12, vista ridotta a 500, gittata ridotta a 400
+- incursore teutonico: vita aumentata a 320, attacco ridotto a 24, difesa aumentata a 10
+- guerriero con mazza: vita ridotta a 540, attacco ridotto a 44, difesa aumentata a 6, sostituita "colpo esperto" con "colpo mortale", "rigenerazione" e "vitalità", tempo di reclutamento aumentato a 22 secondi
+- valchiria: vita ridotta a 380, attacco aumentato a 32, difesa aumentata a 16, velocità aumentata a 180, aggiunta "rianimazione"
+- maga: vita ridotta a 140, difesa ridotta a 6, velocità aumentata a 60
+- eroe: vita aumentata a 1400, sostituite "chiamata alla difesa" e "euforia" con "audacia" e "superiorità offensiva", costo ridotto a 800 oro
+- equipaggiamento rapido dei guerrieri 3: non richiede giochi circensi
+- incrementa la produzione di asce: costo aumentato a 600 oro
+- incrementa la produzione di ferri di cavallo: costo ridotto a 700 oro
+- incrementa la produzione di mazze: costo aumentato a 1000 oro
+- giochi circensi: viveri aumentati a 4000
+- leggenda delle valchirie: costo aumentato a 1500 oro
+- istruzione: costo aumentato a 2500 oro
+- ardimento: costo aumentato a 2500 oro
+- maestro teutonico: costo ridotto a 500 oro, consente la trasformazione in incursori teutonici (il ciclo è cavaliere -> arciere -> incursore)
+- poemi barbarici: nuovo potenziamento ricercabile nel santuario di Wotan, costo 1000 oro, quando eroi e valchirie uccidono unità con almeno 3 livelli in più gli alleati ottengono 15 esperienza (raggio 500, solo stesso giocatore)
+- aumenta popolazione: costo ridotto a 400 viveri
+- compra viveri: costo ridotto a 400 oro
+- commercio di viveri: costo cambiato in 2000 viveri, raccoglie 1000 oro nella fortezza
+- benedizione: costo ridotto a 1500 oro
+- evoca lupo: costo aumentato a 800 oro
+- evoca aquila: sostituito con "evoca cervo"
+- evoca cervo: nuovo potenziamento ricercabile nel tempio di Neptus, costo 800 oro, le maghe possono sacrificarsi per trasformarsi in cervi
+
+
+GALLIA
+
+L'obiettivo di queste modifiche è dare un grosso e meritato aiuto alla Gallia e farla tornare alla gloria dei giochi precedenti.
+Le modifiche sono tante, in generale lo scopo è stato migliorare le unità base fornendo aiuti di vario genere per variegare anche lo stile di gioco (precedentemente il focus era quasi tutto sui cavalieri), potenziare "poemi epici" in quanto pressoché inutile e parzialmente buggato, rendere i druidi parte integrante dell'esercito principale e dare alla Gallia ciò per cui si contraddistingue meglio: eroi degni di tale di nome.
+I cambiamenti generali alle abilità speciali hanno reso il guerriero di Fand un'unità davvero temibile e valida per il suo costo (seppur ancora facilmente contrastabile con le unità giuste) mentre la riduzione di salute base delle guerriere galliche combinata con "resistenza" è voluta per spingere il giocatore a fare uso dell'addestramento, specialmente adesso che i druidi sono più veloci a eseguire l'animazione di apprendimento esperienza da unità di livello maggiore (la velocità di prima era veramente ridicola per la sua lentezza).
+I druidi gallici sono da considerarsi come i più grandi maestri della natura, pertanto ora dispongono di "rituale della reincarnazione", un nuovo potenziamento che alla morte li trasforma in orsi o cinghiali dello stesso livello: le modifiche agli animali descritte nell'apposita sezione permettono loro di infliggere notevoli danni e/o di tenere occupato il nemico molto efficacemente.
+Tuttavia, la vera novità consiste nella possibilità di reclutare Keltill e Larax dopo aver ricercato tutti i potenziamenti del colosseo e dopo 45 minuti di partita: c'è quindi abbastanza tempo per finire una partita normale senza vederli fare la loro comparsa, ma nel caso in cui dovesse iniziare una tediosa guerra di logoramento il loro arrivo darà indubbiamente una svolta alla battaglia in corso; Keltill è un ottimo combattente pensato per potenziare le truppe base mentre Larax è un eroe che può tranquillamente distruggere da solo interi eserciti grazie al vantaggio fornitogli dalla gemma della dea Kathobodua (è comunque facile da contrastare con le giuste unità, soprattutto i pretoriani, che sono probabilmente la più grande nemesi di tutta la Gallia).
+
+- guerriero: vita ridotta a 180, attacco aumentato a 14, difesa aumentata a 8, aggiunta "istruzione"
+- arciere: vita ridotta a 140, attacco ridotto a 12, difesa aumentata a 2, aggiunta "determinazione", costo ridotto a 50 oro, tempo di reclutamento ridotto a 8 secondi
+- sentinella: difesa aumentata a 4, aggiunta "determinazione"
+- guerriero con ascia: vita ridotta a 240, difesa aumentata a 10, velocità aumentata a 70, costo aumentato a 160 oro, tempo di reclutamento ridotto a 14 secondi
+- lanciere: vita ridotta a 280, attacco ridotto a 18, aggiunta "istruzione", costo ridotto a 120 oro, tempo di reclutamento ridotto a 12 secondi
+- cavaliere: vita ridotta a 370, difesa ridotta a 6, aggiunte "tattiche difensive" e "vitalità", costo aumentato a 170 oro, tempo di reclutamento ridotto a 16 secondi
+- guerriera gallica: vita ridotta a 215, attacco aumentato a 36, difesa ridotta a 14, aggiunta "resistenza", costo aumentato a 240 oro, tempo di reclutamento ridotto a 18 secondi
+- guerriero di Fand: vita ridotta a 1000, difesa aumentata a 18, velocità aumentata a 90, aggiunta "vitalità", limite massimo aumentato a 6
+- druido: difesa ridotta a 0, velocità aumentata a 60, dimezzati i tempi di apprendimento da unità più esperte e di avvio evocazione spirito/aquila
+- eroe: vita aumentata a 1200, difesa aumentata a 14, costo aumentato a 1200 oro
+- equipaggiamento rapido dei guerrieri 3: non richiede giochi circensi
+- forgia asce: costo aumentato a 1600 oro
+- forgia lance: costo ridotto a 1000 oro
+- forgia lance d'acciaio: costo aumentato a 800 oro
+- forgia ferri di cavallo: costo aumentato a 1700 oro
+- forgia ferri di cavallo eccezionali: nuovo potenziamento ricercabile nella fucina, costo 800 oro, i nuovi cavalieri sono di livello 6
+- produci armature femminili: costo ridotto a 2200 oro
+- forgia armature femminili rinforzate: costo ridotto a 800 oro
+- recluta eroe: possibilità che venga reclutata un'eroina galla (differenza solo estetica-audio)
+- addestramento: costo ridotto a 500 oro
+- addestramento avanzato: costo ridotto a 1000 oro
+- addestramento speciale: costo ridotto a 1500 oro
+- poemi epici: costo aumentato a 3000 oro, quando un guerriero muore fornisce 1 esperienza a tutti gli alleati vicini (33%, raggio 500, solo stesso giocatore), 5 se è un guerriero di Fand (100%), 10 se è un eroe (100%)
+- eroi leggendari: nuovo potenziamento ricercabile nel colosseo, richiede tutti i potenziamenti precedenti e almeno 45 minuti di gioco, costo 1000 oro, tempo di ricerca 60 secondi
+- convoca Keltill: nuovo potenziamento ricercabile nel colosseo, richiede "eroi leggendari", costo 8000 oro, recluta Keltill (limite massimo 1)
+- convoca Larax: nuovo potenziamento ricercabile nel colosseo, richiede "eroi leggendari", costo 12000 oro, recluta Larax (limite massimo 1)
+- aumenta popolazione: costo aumentato a 600 viveri
+- imbandisci banchetto gallico: può eccedere la popolazione massima
+- rotte commerciali nordiche: costo ridotto a 1000 oro, tempo di ricerca ridotto a 30 secondi
+- cintura di forza: costo aumentato a 1000 oro
+- amuleto di erbe: nuovo potenziamento ricercabile nella taverna, costo 1000 oro, i nuovi guerrieri ricevono l'"amuleto di erbe" (+30 vita)
+- invoca spirito: costo ridotto a 1500 oro
+- evoca aquila: costo aumentato a 800 oro
+- rituale della reincarnazione: nuovo potenziamento ricercabile nella capanna dei druidi, costo 1500 oro, i druidi che muoiono (uccisi o tramite sacrificio rigenerante) si trasformano in orsi o cinghiali dello stesso livello
+
+
+ROMA
+
+L'obiettivo di queste modifiche è enfatizzare il senso di potenza e disciplina delle truppe romane, variegare lo stile di gioco per tutte e 3 le versioni di Roma dando anche una valida motivazione per giocare Roma Repubblicana rispetto a Imperiale grazie a colui che dà il nome alla mod: Giulio Cesare.
+Precedentemente, il divario tra Repubblicana e Imperiale (e in parte Punica) era davvero a favore dell'ultima e difficile da colmare principalmente per via dei pretoriani, di "accademia militare" e di "guerrieri d'élite". Allo stesso tempo, Roma Imperiale aveva il problema che i liberati erano troppo deboli e richiedevano troppo oro per iniziare a diventare decenti (morendo molte volte), mentre Roma Repubblicana concentrava quasi tutte le risorse nel reclutamento di gladiatori per via di "colpo esperto" (che ora è stato finalmente rimosso), intanto c'erano i princeps che tendevano a perdere contro buona parte delle unità nemiche.
+Adesso le cose sono migliorate e più sane: i princeps possono usare la combinazione di "attacco speciale", "difesa speciale" e "determinazione" per metter in pratica l'uso della "testudo" e avvicinarsi al nemico nonostante la pioggia di proiettili per poi eliminarlo rapidamente seppur stancandosi nel tempo, i gladiatori rimangono l'unità da usare quando si raggiunge un livello molto alto grazie ad "attacco esperto", gli equites sono gli esploratori generalmente più efficaci del gioco grazie a "vista di lince" (mentre "esplorazione" della taverna non rivela più i nemici nascosti), i pretoriani sono ancora l'unità base più forte del gioco e il loro costo è stato coerentemente aumentato ma è possibile ridurlo tramite un nuovo potenziamento nella fucina, mentre i liberati possiedono "ostinazione" e sono quindi l'unità speciale più idonea a eliminare altre unità speciali (è voluto per una questione tematica, essendo i lottatori campioni degli scontri nell'arena hanno affrontato gli avversari più disparati).
+Riassumendo, adesso il focus di Roma Repubblicana sta nelle pure statistiche delle unità per mezzo delle insegne e, come per la Gallia con gli eroi leggendari, nella possibilità di reclutare Giulio Cesare, l'eroe probabilmente più forte del gioco per quanto riguarda il miglioramento dell'esercito; il focus di Roma Imperiale sta ancora nei pretoriani ma anche in altre unità prima che possano essere reclutati e nei liberati (è anche possibile generare gladiatori dal colosseo); Roma Punica dispone di meno potenziamenti rispetto a ogni altro popolo, ma per compensare ed emulare la vecchia meccanica di gioco dei precedenti Imperivm è stata aggiunta "resistenza" e cambiata l'icona a ogni unità.
+
+- Roma Punica: aggiunta "resistenza" a tutte le unità (eroi compresi), aggiornate icone
+- legionario: difesa aumentata a 14, velocità aumentata a 70
+- arciere: vita aumentata a 160, attacco aumentato a 22, difesa aumentata a 2, velocità ridotta a 70, tempo di reclutamento ridotto a 8 secondi
+- sentinella: vita aumentata a 180, attacco aumentato a 26, difesa aumentata a 6
+- gladiatore: vita aumentata a 340, attacco ridotto a 28, sostituita "colpo esperto" con "attacco esperto", tempo di reclutamento aumentato a 12 secondi
+- velite: vita aumentata a 220, gittata aumentata a 400, velocità aumentata a 70, aggiunta "tattiche difensive", costo aumentato a 150 oro, tempo di reclutamento ridotto a 12 secondi
+- princep: vita aumentata a 320, attacco aumentato a 24, difesa ridotta a 16, aggiunta "determinazione", costo aumentato a 220 oro, tempo di reclutamento ridotto a 16 secondi, aumentata la durata dell'animazione di morte
+- equite: vita ridotta a 240, attacco aumentato a 22, velocità ridotta a 160, aggiunta "vista di lince", costo aumentato a 150 oro, tempo di reclutamento aumentato a 12 secondi
+- tribuno: velocità aumentata a 70, aggiunta "ferocia", costo aumentato a 340 oro
+- pretoriano: vita aumentata a 620, difesa aumentata a 18, velocità aumentata a 70, costo aumentato a 480 oro per Roma Imperiale e a 420 per Roma Punica, tempo di reclutamento aumentato a 24 secondi
+- carro da guerra: vita aumentata a 600, attacco aumentato a 32, difesa aumentata a 16, gittata ridotta a 400, costo aumentato a 400 oro e 1 popolazione, tempo di reclutamento aumentato a 30 secondi, limite massimo aumentato a 15
+- liberatus: vita aumentata a 480, attacco aumentato a 44, difesa aumentata a 14, velocità aumentata a 90, sostituita "rigenerazione" con "ostinazione"
+- sacerdote: vita aumentata a 140, difesa ridotta a 2, velocità aumentata a 60, aggiunta "vitalità"
+- eroe repubblicano: sostituita "carisma" con "vigore"
+- eroe imperiale: vita ridotta a 1200, attacco aumentato a 40, sostituite "maestria" e "prestigio" con "prodezza" e "vigore", costo aumentato a 1200 oro
+- eroe punico: sostituita "carisma" con "prodezza"
+- equipaggiamento rapido dei guerrieri 3: non richiede giochi circensi
+- produci picche: costo aumentato a 1800 oro
+- forgia ferri di cavallo: costo aumentato a 1000 oro
+- forgia corazze: costo aumentato a 3000 oro
+- forgia armature per pretoriani: costo aumentato a 4000 oro
+- migliora equipaggiamento per pretoriani: nuovo potenziamento ricercabile nella fucina per Roma Imperiale, costo 3000 oro, riduce a 380 oro il costo dei nuovi pretoriani
+- produci ruote: costo aumentato a 3500 oro
+- giochi circensi: i nuovi eroi sono di livello 4 (solo Roma Repubblicana), aggiunge 800 viveri (solo Roma Imperiale), i nuovi gladiatori sono di livello 6
+- addestramento: costo ridotto a 500 oro
+- addestramento avanzato: costo ridotto a 1000 oro
+- addestramento speciale: costo ridotto a 1500 oro, rimosso per Roma Repubblicana
+- reclutamento avanzato: livello ridotto a 6, tempo di ricerca aumentato a 30 secondi
+- corporazione dei liberati: costo ridotto a 1500 oro
+- trionfo dei liberati: nuovo potenziamento ricercabile nel colosseo per Roma Imperiale, costo 1500 oro, tempo di ricerca 40 secondi, i liberati si curano del 50% e ottengono 3 esperienza bonus quando uccidono unità speciali
+- organizza torneo: nuovo potenziamento ricercabile nel colosseo per Roma Imperiale, costo 4000 viveri e 40 popolazione, tempo di ricerca 60 secondi, raccoglie 2000 oro nella fortezza e recluta 20 gladiatori
+- insegna del combattimento: costo aumentato a 2500 oro
+- insegna protettrice: costo aumentato a 2500 oro
+- insegna della forza: costo aumentato a 2500 oro
+- nobiltà: aggiunto al colosseo per Roma Repubblicana
+- accademia militare: tempo di ricerca aumentato a 30 secondi
+- transizione verso l'impero: nuovo potenziamento ricercabile nel colosseo per Roma Repubblicana, richiede tutti i potenziamenti precedenti e almeno 40 minuti di gioco, costo 1000 oro, tempo di ricerca 60 secondi
+- convoca Cesare: nuovo potenziamento ricercabile nel colosseo per Roma Repubblicana, richiede "transizione verso l'impero", costo 10000 oro, recluta Giulio Cesare (limite massimo 1)
+- compra viveri: costo ridotto a 400 oro
+- celebra festa di Bacco: costo ridotto a 1500 oro
+- importa cavalli: costo ridotto a 1000 oro, rimosso per Roma Repubblicana
+- esplora mappa: non rileva le unità nascoste
+- compra mappa: nuovo potenziamento ricercabile nella taverna per Roma Punica, costo 2000 oro, tempo di ricerca 90 secondi, esplora un'enorme area (raggio 18000) intorno alla fortezza
+- ira di Giove: reso non letale (per evitare un bug di "resurrezione" causato da "trionfo" o altre cure), danno contro eroi ridotto a 40, danno contro unità ridotto a 250
+- dono degli dei: costo aumentato a 2000 oro
+
+
+EGITTO
+
+L'obiettivo di queste modifiche è mantenere l'Egitto il popolo più rapido del gioco, ma allo stesso tempo mettergli un freno in quanto generalmente troppo forte/rapido fin dalla prima versione di Imperivm GBR.
+Ciò è stato reso possibile da una revisione dei costi di alcuni potenziamenti e unità: le statue costano tutte 500 oro in più (tra l'altro quella di Isis ora è più utile di prima, anche se quella di Osiris rimane ancora la migliore delle due), il guerriero, il lanciatore d'asce e il guardiano del Nilo costano di meno e hanno ricevuto alcuni accorgimenti alle statistiche per riflettere meglio il loro ruolo; "servitù" non porta subito al massimo la popolazione bensì fornisce 20 abitanti per volta.
+I guerrieri divini hanno ricevuto un certo focus per via delle modifiche alle abilità speciali ed essendo veramente potenti adesso hanno visto il loro costo aumentare, anche le unità del tempio (carro di Osiris e sacerdote) hanno ricevuto qualche revisione per fornire armi alternative all'esercito principale (fortunatamente ora un singolo carro non può più avvelenare un esercito intero senza problemi, anche se l'aumento di velocità gli permette di avvelenare i nemici più facilmente con la "micro-gestione").
+Sono stati anche ridotti i costi dei talismani e aumentato il limite di unità a cui fornirli per consentire con un unico acquisto di equipaggiare un esercito di 50 unità e tutti i possibili carri di Osiris.
+
+- guerriero: vita ridotta a 300, attacco aumentato a 18, difesa aumentata a 6, aggiunta "resistenza", costo ridotto a 70 oro
+- arciere: vita aumentata a 160, attacco aumentato a 24, tempo di reclutamento aumentato a 10 secondi
+- sentinella: vita aumentata a 180, attacco aumentato a 26, difesa aumentata a 6
+- lanciatore d'asce: vita ridotta a 240, attacco aumentato a 22, difesa ridotta a 8, velocità aumentata a 80, aggiunta "vitalità", costo ridotto a 160 oro
+- guerriero di Anubis: vita aumentata a 340, aggiunta "rianimazione", velocità aumentata a 90, costo aumentato a 280 oro, tempo di reclutamento aumentato a 20 secondi
+- guerriero di Horus: vita aumentata a 340, aggiunta "rianimazione", velocità aumentata a 90, costo aumentato a 280 oro, tempo di reclutamento aumentato a 20 secondi
+- guardiano del Nilo: attacco ridotto a 28, difesa aumentata a 10, costo ridotto a 240 oro, tempo di reclutamento ridotto a 16 secondi
+- carro di Osiris: vita aumentata a 620, attacco ridotto a 36, difesa ridotta a 14, velocità aumentata a 140, limite massimo aumentato a 15
+- sacerdote: vita ridotta a 200, difesa aumentata a 4, velocità aumentata a 60, aggiunta "vendetta", costo ridotto a 200 oro, tempo di reclutamento aumentato a 20 secondi
+- eroe: difesa ridotta a 18
+- talismano di Seth: costo ridotto a 500 oro, numero di unità equipaggiate aumentato a 65
+- talismano di Thoth: costo ridotto a 500 oro, numero di unità equipaggiate aumentato a 65
+- talismano di Ra: costo ridotto a 500 oro, numero di unità equipaggiate aumentato a 65
+- talismano di Isis: costo ridotto a 500 oro, numero di unità equipaggiate aumentato a 65
+- statua di Isis, madre di Anubis: costo aumentato a 2500 oro, le unità recuperano 2 viveri a ogni uccisione
+- sentiero dei defunti 1: livello per i guerrieri di Anubis aumentato a 6
+- sentiero dei defunti 2: livello per i guerrieri di Anubis aumentato a 10
+- sentiero dei defunti 3: livello per i guerrieri di Anubis aumentato a 14, corretta icona in fase di ricerca
+- statua di Osiris, padre di Horus: costo aumentato a 2500 oro
+- luce di Horus 1: livello per i guerrieri di Horus aumentato a 4
+- luce di Horus 2: livello per i guerrieri di Horus aumentato a 6
+- luce di Horus 3: livello per i guerrieri di Horus aumentato a 8
+- statua di Amon-Ra: costo aumentato a 3000 oro, effetto esteso a tutte le unità al completamento della ricerca
+- servitù: costo ridotto a 400 oro, aggiunge 20 popolazione
+- commercio di viveri: costo ridotto a 1500 oro
+- benedizione: costo aumentato a 1500 viveri
+- cronache di viaggio: costo ridotto a 800 viveri
+- rituale della fertilità: costo aumentato a 2000 viveri
+- investimento nella schiavitù: nuovo potenziamento ricercabile nel mercato, costo 1000 oro, tempo di ricerca 25 secondi, aggiunge 10 popolazione a ogni villaggio
+- offerta a Osiris: tempo di ricerca ridotto a 30 secondi, i nuovi sacerdoti sono di livello 10
+- culto dei defunti: esteso a tutti gli eroi di qualunque fortezza
+- addestramento forzato: sostituito con "guarigione"
+
+
+GRECIA
+
+L'obiettivo di queste modifiche è dare un aiuto alla Grecia dato che era generalmente inferiore rispetto a molti altri popoli ma soprattutto per contraddistinguere meglio la sua identità di popolo lento e difensivo e sistemare alcuni problemi legati a unità e potenziamenti.
+Per quanto riguarda le unità, tutte quante hanno ricevuto miglioramenti o accorgimenti compensati da un aumento del costo: il peltasta ha ricevuto un miglioramento alla velocità d'attacco poiché era imbarazzante la sua lentezza nel lanciare il giavellotto, il toxotes ora eccelle negli scontri a distanza anche se non rimuove più energia al nemico, l'oplita adesso può veramente assorbire i colpi nemici a lungo e svolgere il suo ruolo di unità da prima linea, l'hetairos è potentissimo ma più lento essendo pesantemente corazzato, l'ipaspista eccelle negli scontri 1v1 ma perde facilmente efficacia se in inferiorità numerica, il carro da guerra è stato completamente rivisto con un indebolimento delle statistiche compensato però dalla rimozione del limite massimo e continua a mantenere la sua identità di unità in grado di fare danni ad area ma non in modo esagerato come prima visto che "danno espansivo" è stato sostituito con "determinazione" (che rende illimitato "danno riflesso"), infine il mirmidone ha ricevuto vari miglioramenti generali, primo tra tutti una riduzione al tempo di reclutamento (ci vuole comunque un po' a reclutarne 50, ma almeno adesso non serve aspettare un'eternità) e poi un potenziamento dedicato per reclutarne di nuovi di livello più alto, il tutto compensato da una riduzione di salute iniziale e da un maggior costo.
+I potenziamenti della Grecia hanno ricevuto alcune rifiniture, ad esempio Democrazia è stata leggermente indebolita per far più spazio a Oligarchia (che è stata notevolmente potenziata) ed evitare di ricercare la prima in quasi ogni partita, ma soprattutto è stato fatto un grande focus su ciò che permette alla fortezza greca di diventare un bastione pressoché inespugnabile: si possono reclutare le sentinelle dal foro, è stata aggiunta "benedizione" (per facilitare l'addestramento), si possono vendere i viveri e soprattutto adesso la "protezione di Apollo" è più facile da eseguire e dura il doppio, inoltre è ricercabile per ogni fortezza greca anziché una sola e questo vale per ogni giocatore, quindi se qualcuno conquista una fortezza che è stata già protetta può proteggerla di nuovo (una volta).
+Anche l'eroe è diventato migliore, gli sono state aggiunte alcune statistiche per renderlo più in linea con l'idea di eroe da poema epico e, dopo una costosa serie di ricerche, è possibile reclutarlo di livello 15 (è sicuramente una gran cosa ma rimane comunque generalmente inferiore a "accademia militare" di Roma e le abilità dell'eroe sono un po' più deboli di quelle dell'eroe romano).
+
+- peltasta: vita aumentata a 200, attacco ridotto a 16, difesa aumentata a 8, velocità d'attacco aumentata di circa 50%, costo ridotto a 80 oro, tempo di reclutamento ridotto a 8 secondi
+- toxotes: vita aumentata a 180, difesa aumentata a 2, sostituita "sfinimento" con "colpo assorbente", costo aumentato a 70 oro, tempo di reclutamento aumentato a 10 secondi
+- sentinella: vita aumentata a 200, attacco aumentato a 24, difesa aumentata a 6, sostituita "sfinimento" con "colpo assorbente"
+- oplita: vita aumentata a 320, attacco aumentato a 22, difesa ridotta a 16, velocità aumentata a 80, aggiunta "vitalità", costo aumentato a 180 oro, tempo di reclutamento aumentato a 14 secondi
+- hetairos: vita aumentata a 340, attacco aumentato a 24, difesa aumentata a 14, velocità ridotta a 130, aggiunta "istruzione", costo aumentato a 220 oro, tempo di reclutamento aumentato a 16 secondi
+- ipaspista: attacco aumentato a 42, difesa ridotta a 14, aggiunta "colpo assorbente", costo aumentato a 320 oro, tempo di reclutamento aumentato a 20 secondi
+- carro da guerra: vita ridotta a 700, attacco ridotto a 68, difesa ridotta a 24, sostituita "danno espansivo" con "determinazione", costo ridotto a 450 oro, tempo di reclutamento aumentato a 30 secondi, limite massimo rimosso
+- mirmidone: vita ridotta a 320, attacco aumentato a 34, vista aumentata a 600, gittata aumentata a 500, velocità aumentata a 90, aggiunta "resistenza", costo aumentato a 360 oro, tempo di reclutamento ridotto a 6 secondi
+- sacerdote: vita aumentata a 180, difesa ridotta a 2, velocità aumentata a 60, sostituita "vitalità" con "vista di lince"
+- eroe: attacco aumentato a 50, difesa aumentata a 14, sostituite "difesa eroica" e "aggressione" con "attacco eroico" e "carisma", costo aumentato a 1200 oro
+- produci equipaggiamento da arcieri: costo aumentato a 400 oro, tempo di ricerca aumentato a 30 secondi
+- forgia lance: costo aumentato a 1400 oro
+- produci armatura reale: costo ridotto a 2400 oro
+- rinforza porte: ripara completamente le porte non rotte
+- giochi olimpici: consente di reclutare fino a 10 mirmidoni
+- addestramento spartano: ricerca automaticamente anche "addestramento" e "addestramento avanzato"
+- forgia equipaggiamento d'élite: costo aumentato a 1500 oro
+- tributo a Eracle: nuovo potenziamento ricercabile nel ginnasio, richiede "addestramento spartano", costo 1500 oro, i nuovi mirmidoni sono del livello migliore e ottengono 2 esperienza bonus uccidendo un nemico più esperto
+- oligarchia: livello minimo ridotto a 6
+- preparazione militare: nuovo potenziamento ricercabile nel ginnasio, richiede "addestramento spartano", costo 3500 oro, tempo di ricerca 30 secondi, tutti i nuovi eroi sono di livello 15
+- rotte commerciali: costo ridotto a 1500 oro, tempo di ricerca ridotto a 30 secondi
+- vendi viveri: aggiunto all'agorà
+- rifornimenti: riduce il consumo di viveri anche oltre il limite massimo (es. in avventure)
+- immagazzina viveri: quantità aumentata a 10 viveri
+- assolda mercenari: sostituito con "benedizione"
+- benedizione: aggiunto all'agorà, costo 1000 oro e 1000 viveri
+- offerta agli dei: costo ridotto a 1500 oro
+- invoca la protezione di Apollo: durata aumentata a 2 minuti, soglia danneggiamento porte ridotta a quando sono da riparare, rimosso il vincolo dei nemici vicini, richiedibile una volta per ogni fortezza per ogni giocatore
+- statua di Zeus: costo aumentato a 2500 oro, soglia salute aumentata a 20%
+- addestramento forzato: sostituito con "recluta sentinelle"
+- recluta sentinelle: nuovo potenziamento ricercabile nel foro, costo 1000 oro, aggiunge 10 sentinelle sulle mura
+
+
+CARTAGINE
+
+L'obiettivo di queste modifiche è dare una mano a Cartagine dato che assieme alla Gallia e alla Grecia era il popolo più debole in partite standard senza bonus, incentivando la sua identità di popolo ricchissimo e con truppe deboli ma molto numerose.
+Le unità intermedie (lottatore mauritano e guerriero con mazza) ora sono più efficaci a infliggere danni, specialmente contro gli eroi, ma rimangono comunque facili da contrastare ed eliminare, mentre le altre unità della caserma sono state riviste per stare al passo con le modifiche agli altri popoli e in generale della mod, ciononostante sono tra le più deboli del gioco e risultano efficaci solo in massa o come unità di supporto per i nobili e gli elefanti. Parlando di queste ultime due unità, il nobile è tornato molto simile alla versione originale della 1.40 con l'idea di unità molto potente e non sacrificabile, in grado di diventare sempre più forte e resistente aumentando di livello grazie alla combinazione "istruzione" (che ora non costa più energia) e "resistenza"; l'elefante, ora che soffre di molti meno problemi grazie alla risoluzione di vari bug come quello di "vendetta" dei morti o del danno contro le macchine d'assedio, ha ricevuto un piccolo aumento ad attacco e velocità ma una relativa riduzione alle sue capacità di sopravvivenza e un aumento ai costi, che comunque non sono un problema per Cartagine.
+Il mercato cartaginese ora offre molti più comandi e ricerche economiche e anche militari, ciò che spicca di più è: "assolda mercenari stranieri" con cui reclutare in un colpo solo un mix di 50 unità di altri popoli (il tutto è stato fatto basandosi su fatti storici), il miglioramento a "patto dei mercenari" per ridurre lo spreco di possibili bottini di guerra e poi l'aggiunta sia di "aggiungi popolazione" che "vendi viveri", così come una riduzione di costo e guadagno a "servitù" per consentirne la ricerca in partite con 50 di popolazione massima senza dover per forza ricorrere al sovraffollamento della fortezza.
+Infine, la fucina cartaginese è stata rivista per renderla più tattica e al contempo rimuoverle molti problemi: adesso sviluppare un'arma costa più di prima ma dalla seconda volta in poi il costo viene rimborsato e la ricerca è molto più veloce; questo vincola il giocatore a tenere da parte un po' di oro se ha bisogno/voglia di cambiare unità specializzata, ma gli permette di farlo con più comodità ed evitare di sprecare oro se si accorge in ritardo di aver sbagliato.
+
+- fante numida: vita ridotta a 160, difesa ridotta a 8, aggiunta "sfinimento", costo ridotto a 80/160 oro
+- lanciere libico: vita aumentata a 160, attacco ridotto a 24, difesa aumentata a 2, costo ridotto a 90/180 oro
+- sentinella: vita aumentata a 180, difesa aumentata a 6
+- lottatore mauritano: vita ridotta a 280, attacco aumentato a 22, difesa ridotta a 4, aggiunta "attacco speciale", costo ridotto a 140/280 oro
+- guerriero con mazza: vita ridotta a 360, attacco aumentato a 24, difesa aumentata a 6, velocità aumentata a 80, aggiunta "vitalità", costo aumentato a 150/300 oro, tempo di reclutamento ridotto a 14 secondi
+- tuareg: vita aumentata a 420, attacco ridotto a 28, velocità ridotta a 110, aggiunta "rianimazione", capacità viveri aumentata a 40, costo ridotto a 170/340 oro
+- cavaliere numida: vita aumentata a 260, difesa aumentata a 8, velocità ridotta a 160, costo ridotto a 180/360 oro, tempo di reclutamento ridotto a 18 secondi
+- nobile: vita ridotta a 345, attacco aumentato a 50, difesa aumentata a 22, velocità aumentata a 70, sostituite "colpo assorbente" e "determinazione" con "istruzione", "trionfo" e "resistenza"
+- elefante da guerra: vita ridotta a 2600, attacco aumentato a 64, difesa ridotta a 26, velocità aumentata a 65, costo aumentato a 1200 viveri
+- sciamano: vita aumentata a 140, difesa ridotta a 4, velocità aumentata a 60
+- eroe: difesa ridotta a 12, sostituite "vigore" e "movimento sfuggente" con "recupero" e "difesa eroica", costo aumentato a 1000 oro
+- forgia lance: costo aumentato a 800 oro, dalla seconda volta in poi il costo viene rimborsato completamente alla fine e il tempo di ricerca si riduce del 75%
+- forgia giavellotti: costo aumentato a 1000 oro, dalla seconda volta in poi il costo viene rimborsato completamente alla fine e il tempo di ricerca si riduce del 75%
+- forgia spade: costo aumentato a 1400 oro, dalla seconda volta in poi il costo viene rimborsato completamente alla fine e il tempo di ricerca si riduce del 75%
+- forgia mazze: costo aumentato a 1600 oro, dalla seconda volta in poi il costo viene rimborsato completamente alla fine e il tempo di ricerca si riduce del 75%
+- forgia picche: costo aumentato a 1800 oro, dalla seconda volta in poi il costo viene rimborsato completamente alla fine e il tempo di ricerca si riduce del 75%
+- forgia scudi: costo aumentato a 2000 oro, dalla seconda volta in poi il costo viene rimborsato completamente alla fine e il tempo di ricerca si riduce del 75%
+- assemblea del popolo: aggiunge 15 popolazione
+- forza condivisa: costo aumentato a 1500 oro, soglia ridotta a 10 unità
+- trionfo condiviso: costo aumentato a 1500 oro, soglia ridotta a 20 unità
+- scuola di mahout: costo aumentato a 1000 oro
+- maestria dei mahout: costo aumentato a 2500 oro, livello aumentato a 16
+- bottino di guerra: costo aumentato a 2500 oro
+- aumenta popolazione: aggiunto al mercato, costo 1000 viveri
+- compra viveri: costo ridotto a 400 oro
+- vendi viveri: aggiunto al mercato
+- attira la popolazione: porta al massimo la popolazione della fortezza
+- spedizione: tempo di ricerca ridotto a 20 secondi
+- patto dei mercenari: costo aumentato a 2500 oro, l'oro ricevuto aumenta di 40 per ogni bottino di guerra posseduto dal mercenario, non fornisce oro a eroi di altri giocatori
+- cura dei mercenari: nuovo potenziamento ricercabile nel mercato, richiede "patto dei mercenari", costo 2000 oro, tempo di ricerca 30 secondi, quando un mercenario muore gli alleati vicini si curano di 2% della sua salute
+- assolda mercenari stranieri: nuovo potenziamento ricercabile nel mercato, richiede "cura dei mercenari", costo 6000 oro e 3000 viveri, tempo di ricerca 60 secondi, recluta 10 cavalieri gallici, 20 opliti e 20 frombolieri
+- servitù: costo ridotto a 40 popolazione, guadagno ridotto a 1600 oro
+- rituali arcani: tempo di ricerca ridotto a 25 secondi
+- legione sacra: costo aumentato a 4000 oro
+- ferocia: costo aumentato a 3000 oro, i nobili donano 10 oro all'eroe a cui sono vincolati quando uccidono un nemico
+
+
+MAPPE CASUALI
+
+L'obiettivo di queste modifiche è fornire maggiore varietà alle partite di strategia e multiplayer così come dare alcuni miglioramenti di qualità e comodità ai giocatori, ad esempio creando automaticamente le rotte di rifornimento iniziali o assegnando automaticamente alla prima icona di selezione rapida l'eroe di livello 12 ottenuto con il bonus.
+La modifica più importante in assoluto consiste nel poter scegliere se giocare con o senza le rovine in qualunque tipologia di mappa, cosa che prima non era possibile e al contempo limitante dato che nelle mappe marittime non esistevano a prescindere.
+
+- risolto il problema per cui uno dei villaggi casuali greci aveva più popolazione rispetto agli altri
+- aggiunta la versione con/senza rovine per ogni tipologia di mappa
+- aggiunta rotta di rifornimento verso la fortezza più vicina da parte di ogni villaggio iniziale
+- aggiunte 2 aree per le zone desertiche: una con alcune colonne/statue e un albero del teschio, l'altra coi resti di muraglie ormai in rovina intorno a un obelisco (erano già esistenti ma mai usate)
+- il bonus "eroe di livello 12" assegna automaticamente l'eroe alla prima icona di selezione rapida e quindi al gruppo "ctrl-1"
+- il bonus "eroe di livello 12" per Roma genera l'eroe corrispondente al tipo di Roma scelto
+- rimosso l'indicatore uccisioni/morti in quanto sempre valorizzato solo a 0 o NaN, migliorata la chiarezza dei timer di sudden death ed eliminazione per le modalità legate al limite di punteggio
+- mappa piccola: minimo-massimo grotte aumentato a 1-2, massimo altari dei sacrifici aumentato a 1
+- mappa normale: massimo altari dei sacrifici aumentato a 2, numero accampamenti teutonici/numidi neutrali cambiato a 4-6, rovine fissate a 4, grotte fissate a 2, numero animali pericolosi aumentato di circa 50%
+- mappa grande: minimo-massimo altari dei sacrifici aumentato a 2-3, minimo-massimo grotte cambiato a 4-6, rovine cambiate a 1-3 per giocatore, numero animali pericolosi aumentato di circa 50%
+- differenziati in maniera più netta i terreni dei popoli (erba e terra per Gallia e Grecia, erba per Roma e Britannia, sabbia per Cartagine ed Egitto, erba e sabbia per Iberia e Germania)
+
+
+MAPPE PERSONALIZZATE
+
+L'obiettivo di queste modifiche è semplicemente migliorare l'esperienza di gioco nelle partite di strategia e multiplayer in mappe alternative risolvendo i diversi bug dovuti all'importazione dei file dai precedenti Imperivm, che funzionavano in modo diverso e che quindi comportavano strane situazioni in Imperivm GBR, così come agli errori e dettagli trascurati dai vari utenti, per esempio dimenticarsi di impostare un punto iniziale di visuale, cosa fastidiosa in quanto costringeva il giocatore a cercare dalla mappa strategica la sua fortezza.
+
+- aggiunto supporto completo inglese, italiano e spagnolo
+- comune a molte mappe: risolto il problema per cui i forti neutrali erano senza guarnigione, risolto il problema per cui gli animali pericolosi non si muovevano per la mappa, impostato un punto iniziale di visuale
+- Mαppα 2v2 Grєciα ~ Iвєriα: rimosso il porto, migliorato il comportamento degli spettatori
+- Mediterraneo: completate le mura delle fortezze costiere
+- La maledizione dell'altare: risolto il problema per cui solo fino a 3 giocatori umani potevano partecipare, danno nell'area centrale ridotto a 15 ogni 5 secondi, aggiunti denti d'orso alla borsa di cuoio vuota al centro
+- Ascendenza: sotituiti Morgatha e Baetius con Larax e Giulio Cesare, sostituiti druidi e sacerdoti con cavalieri/arcieri teutonici di livello 4 nei forti, punto di generazione liberati spostato ai forti dell'oro
+- Il dominio sui Balcani: risolto il problema per cui i villaggi non venivano automaticamente conquistati da chi vi passava vicino, sostituita fortezza romana imperiale con greca, corretti i proprietari dei villaggi
+- Hispania: risolto il problema per cui solo fino a 6 giocatori umani potevano partecipare, risolto il problema per cui gli spiriti perdevano energia, risolto il problema per cui i lupi a guardia degli oggetti non stavano fermi
+- Tutti contro Roma: aggiunti 10 punti a "superiorità offensiva" e "superiorità difensiva" agli eroi a guardia del foro, lasciati solo "castigo spirituale", "pioggia d'oro" e "carestia" ai poteri lanciati dal nemico romano
+- Bots vs Humans: disposizione dei giocatori cambiata a 4 umani/IA al centro e 4 IA sui bordi, giocatori sui bordi inseriti nella stessa squadra, aggiunta capanna dei druidi ai giocatori centrali
+- Grotte: risolto il problema per cui le grotte cambiavano giocatore, rimossi i pesci, livello orsi aumentato a 10
+- Croce: risolto il problema per cui le grotte cambiavano giocatore, livello animali pericolosi aumentato a 10
+- Percorsi incrociati: risolto il problema per cui i forti venivano automaticamente conquistati da chi vi passava vicino, sostituiti forti commerciali nella zona esterna con forti di reclutamento greci
+- Cipro - Grande: risolto il problema per cui le grotte cambiavano giocatore, livello lupi aumentato a 10
+- Cipro - Medio: risolto il problema per cui vari elementi dello scenario si sovrapponevano alle fortezze, risolto il problema per cui gli orsi cambiavano giocatore, livello orsi aumentato a 10
+- Egitto in mezzo: aggiunta descrizione, rimossi i fori a nord-ovest, aggiunto il comando di vincolamento a eroe alle guardie, popolazione massima fortezza centrale aumentata a 200, sostituito villaggio casuale con egizio
+- Europa Full - 8 Civiltà: risolto il problema per cui l'altare dei sacrifici a sud era del giocatore 1, nomi insediamenti cambiati in latino, rimossi nomi di insediamenti geograficamente sbagliati
+- La fortezza romana: sostituiti forti dell'oro dei giocatori in alto con forti commerciali gallici, giocatore unità sparse neutrali cambiato a 15, cavalieri di pattuglia spostati a difesa dell'accampamento teutonico a nord
+- Gabbo_map: risolto il problema per cui le grotte erano del giocatore 1, risolto il problema per cui potevano partecipare 8 giocatori, aggiunta descrizione, rimosso 1 forte dell'oro, livello animali pericolosi aumentato a 10
+- Gallia - Grande: risolto il problema per cui la grotta a nord della fortezza centro-est cambiava giocatore, livello animali pericolosi aumentato a 10
+- Gallia - Medio: sostituito forte dell'oro a nord con forte commerciale gallico, aggiunto 1 forte commerciale gallico, rimossi i pesci, livello animali pericolosi aumentato a 10
+- Germania - Grande: aggiunta descrizione, livello animali pericolosi aumentato a 10
+- Febbre dell'oro: risolto il problema per cui altari dei sacrifici, grotte e rovine cambiavano giocatore
+- Gran Bretagna e Irlanda - Grande: risolto il problema per cui nessun giocatore poteva partecipare, risolto il problema per cui grotte e rovine cambiavano giocatore, aggiunti 3 altari dei sacrifici, livello orsi aumentato a 10
+- Grecia - Grande: risolto il problema per cui le grotte cambiavano giocatore, risolto il problema per cui i porti non venivano automaticamente conquistati da chi vi passava vicino, livello lupi aumentato a 10
+- Hunger Games: migliorato il posizionamento dei capi normanni
+- Forze ostili: risolto il problema per cui solo il giocatore 1 aveva una fortezza gallica non modificabile, risolto il problema per cui alcune unità neutrali consumavano viveri, cambiato giocatore unità sparse neutrali in 15
+- Irlanda - Grande: livello animali pericolosi aumentato a 10
+- Le tre isole: aggiunti 2 altari dei sacrifici, sostituita cintura di forza con cintura dei re nella borsa di cuoio sull'isola centrale
+- Isole incrociate: giocatore unità sparse neutrali cambiato a 15
+- Lo sbarco: risolto il problema per cui i porti non venivano automaticamente conquistati da chi vi passava vicino, aggiunta descrizione, aggiunto 1 forte dell'oro nella penisola nord-ovest
+- Battaglia nelle isole: livello lupi aumentato a 10, rimossa piuma d'aquila dal ceppo al centro
+- Italia - Grande: risolto il problema per cui grotte e animali pacifici cambiavano giocatore, livello animali pericolosi aumentato a 10
+- Creta - Grande: livello animali pericolosi aumentato a 10
+- Creta - Medio: sostituito forte di addestramento con forte dell'oro egizio, livello animali pericolosi aumentato a 10
+- Il dono degli dei: risolto il problema per cui solo fino a 3 giocatori umani potevano partecipare, risolto il problema per cui le rovine cambiavano giocatore, aggiunti guanti della salute nell'albero secco 
+- Mediterraneo: risolto il problema per cui villaggi e porti non venivano automaticamente conquistati da chi vi passava vicino, risolto il problema per cui le rovine cambiavano giocatore, aggiunti leoni e leonesse in Africa
+- Campo di battaglia: aggiunto 1 altare dei sacrifici a ovest, aggiunte 2 rovine (a nord e al centro), aggiunti 3 accampamenti teutonici e 40 lupi al centro
+- Passi di montagna: risolto il problema per cui le grotte cambiavano giocatore, livello lupi aumentato a 10, sostituita cintura di forza con corno della vittoria nella borsa di cuoio a sud-ovest
+- Nord e Sud: risolto il problema per cui il forte di reclutamento a nord-est era del giocatore 1
+- L'attacco dei teutoni: risolto il problema per cui l'altare dei sacrifici a sud cambiava giocatore, aggiunti 6 accampamenti teutonici e 3 rovine
+- Conquista: risolto il problema per cui altari dei sacrifici, grotte, rovine e fortezze cambiavano giocatore
+- Fiume di confine: risolto il problema per cui la grotta sull'isola non era cliccabile dalla mappa strategica, livello lupi vicino agli accampamenti teutonici aumentato a 10
+- Rombo: l'eroe neutrale lascia a terra solo l'oggetto "???" quando muore, aggiornate icone eroe e oggetto "???", aggiunta "vigore" (10 punti) a eroe neutrale, aggiunta leonessa per ogni leone, livello leoni aumentato a 10
+- Terre distrutte: risolto il problema per cui i druidi neutrali consumavano viveri, sostituita acqua curativa con 2 borse di acqua curativa nell'albero secco, livello lupi e capi normanni neutrali aumentato a 20
+- Sicilia - Grande: risolto il problema per cui altari dei sacrifici, grotte e vari animali cambiavano giocatore, livello animali pericolosi aumentato a 10
+- Sud Italia - Grande: risolto il problema per cui le grotte cambiavano giocatore, livello animali pericolosi aumentato a 10
+- Battaglia per la sopravvivenza: risolto il problema per cui le fortezze cambiavano giocatore, risolto il problema per cui l'eroina galla non aveva abilità speciali, sostituita "erudizione" con "vigore" per gli eroi romani
+- L'arduo cammino: risolto il problema per cui le grotte cambiavano giocatore, livello lupi cambiato a 10
+- Il triangolo maledetto: aggiunto corno della vittoria nell'albero secco a ovest
+- Montagne insormontabili: risolto il problema per cui gli altari dei sacrifici cambiavano giocatore, sostituito forte di addestramento a sud-est con forte dell'oro romano
+- Scontro sulla costa: risolto il problema per cui il forte di reclutamento a sud-est era del giocatore 3, livello lupi aumentato a 10
+- Supremazia: viveri nella fortezza neutrale al centro aumentati a 2000, aggiunte varie decorazioni, resi più visibili i luoghi con oggetti
+- Triangolo: rimossi gli eroi neutrali nelle fortezze
+- Vulcano: risolto il problema per cui solo fino a 3 giocatori umani potevano partecipare
+- X: aggiunti 14 arcieri neutrali nell'isola a nord e all'altare dei sacrifici al centro, livello arcieri neutrali aumentato a 20
+
+
+APPRENDISTATO
+
+L'apprendistato è rimasto molto simile all'originale e le uniche modifiche apportate hanno come obiettivo risolvere principalmente alcuni problemi e bug, che comunque non erano così evidenti e/o bisognava volutamente sviare dalle istruzioni della missione per generarli. La più grande e importante modifica, però, consiste nell'aggiunta di supporto per l'inglese (con audio conversazioni) e per lo spagnolo (prima completamente mancante).
+
+- risolto il problema per cui la partita rimaneva bloccata se il giocatore perdeva tutti i pretoriani prima dell'arrivo di Cesare
+- risolto il problema per cui si potevano muovere liberamente i pretoriani quando bisogna inviare viveri a Cesare
+- risolto il problema per cui le sentinelle venivano contate per il reclutamento di 50 soldati
+- rimossi gli animali pericolosi (potevano interferire coi movimenti dei pretoriani alleati e dei nemici)
+- aggiunto audio conversazioni inglese
+- aggiunto supporto versione spagnola
+- migliorati tutti i testi degli obiettivi/insegnamenti
+- villaggio, Lindum e Dumnorium: non possono essere conquistati prima del momento giusto
+- forte di addestramento: non ci si può avvicinare prima del momento giusto
+- oggetti: vengono generati solo quando Cesare si avvicina al tumulo
+- pretoriani iniziali: livello aumentato a 4, aggiunta non necessità di viveri fino al momento in cui se ne parla
+- Giulio Cesare: livello aumentato a 20
+- Larax ed esercito: livello ridotto a 6, aggiunta non necessità di viveri
+- Lindum: oro iniziale aumentato a 5000
+- guarnigione di Dumnorium: aggiunti 5 arcieri e 10 lottatori caledoni
+- aggiunta selezione rapida con assegnamento al gruppo "ctrl-1" prima con pretoriani e poi con Cesare
+
+
+GRANDI BATTAGLIE E GRANDI SFIDE DI ROMA
+
+Sono state apportate tantissime modifiche a tutte quante le missioni per renderle più avvincenti da giocare e più memorabili, oltre che per sistemare svariati problemi che potevano dar fastidio o rovinare proprio l'esperienza di gioco. Inoltre, sono stati corretti innumerevoli errori ortografici e grammaticali ed è stata allineata la versione inglese di ogni partita allo stesso livello di quella italiana e spagnola (l'unica cosa ancora mancante è l'audio delle conversazioni). I dettagli sono elencati in una sezione distinta per ogni scenario in quanto troppo numerosi da inserire in un unico punto, con anche un giudizio di difficoltà e durata basato su alcune prove a difficoltà massima dopo l'apportazione dei cambiamenti (è soggettivo e può quindi variare da giocatore a giocatore, ma può comunque tornare utile per dare un'idea generale di cosa aspettarsi).
+
+- corretti innumerevoli errori ortografici e grammaticali
+- corretta l'interfaccia del giocatore in base al popolo giocato
+- corretti i nomi di tutti i giocatori
+- aggiunto supporto lingua inglese (ma senza audio delle conversazioni)
+
+
+SBARCO IN AFRICA
+
+Lo sbarco in Africa rimane la grande battaglia più semplice del gioco, i ritocchi hanno come obiettivo sistemare vari problemi e rendere più avvincenti le battaglie con Syphax e Annibale.
+Lo scontro con Syphax costringerà il giocatore a fare attenzione a non far morire Massinissa dato che senza di lui i Numidi non parteciperanno alla battaglia finale (questo succedeva già nella versione originale ma non era specificato), che grazie alle abilità e ai nuovi oggetti forniti ad Annibale sarà molto più impegnativa e richiederà una maggiore capacità di "micro-gestione" dell'esercito di Scipione.
+Il giocatore può ancora decidere di stazionare a Utica prima della battaglia di Zama e trivializzare le cose reclutando un enorme esercito di mercenari, ma non essendoci più porte adesso non si può più ingannare facilmente l'IA e farle perdere tempo continuamente danneggiandola pesantemente con le sentinelle, che tra l'altro non sono più potenziabili. 
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: facile
+Giudizio di durata con test in difficile dopo le modifiche: breve
+
+- risolto il problema per cui se per qualche motivo le unità iniziali andavano troppo avanti nel percorso iniziava un filmato in cui Massinissa veniva raggiunto da tuareg nemici e da cui era impossibile uscire
+- risolto il problema per cui Syphax scioglieva l'esercito all'inizio dell'attacco
+- risolto il problema per cui i muli di supporto potevano subire danni da fame
+- aggiunto un dettaglio nell'obiettivo di uccisione di Syphax in cui si specifica di non far morire Massinissa altrimenti i Numidi non parteciperanno alla battaglia finale
+- truppe romane: livello aumentato a 6 per i soldati sbarcati, 11 per i gladiatori, 50 per le navi di supporto a inizio partita
+- gladiatori: dopo l'eliminazione dei rinforzi iberici, ne compaiono 30, 20 o 10 in base alla difficoltà a prescindere dalle condizioni dell'esercito di Scipione
+- muli di supporto: viveri aumentati a 2000 ciascuno
+- rinforzi iberici: tempo di attesa tra uno spostamento e l'altro ridotto a 30, 20 o 10 secondi in base alla difficoltà
+- esercito di Syphax: aggiunto un eroe con 50 cavalieri numidi con l'obiettivo di uccidere Massinissa, gli eroi con fanti numidi e lottatori mauritani danno priorità alla riconquista di Utica
+- eroi di Syphax: aggiunti 10 punti a "difesa eroica", "prestigio" e "marcia forzata"
+- esercito di Annibale: livello aumentato a 10
+- villaggi di Utica: aggiunti 15 lancieri libici nascosti nel villaggio centro-ovest, aggiunti 10 cavalieri numidi e 10 fanti numidi nascosti nel villaggio nord-ovest vicino alla città
+- guarnigione di Utica: aggiunti 20 guerrieri con mazza, livello aumentato a 20, i viveri di ogni unità vengono immediatamente azzerati quando tutti i villaggi vengono conquistati
+- Utica: rimosse le porte, popolazione iniziale e massima aumentata a 50, ricercato automaticamente il potenziamento "forgia mazze", disattivati i potenziamenti per le sentinelle
+- rimosso il vincolamento dei lancieri libici a Scipione dopo la morte di Syphax se l'esercito è minore di 30 unità
+- battaglia di Zama: anche i lancieri libici di pattuglia nell'accampamento di Syphax e in quello di Massinissa si uniscono allo scontro
+- Scipione: sostituita "movimento sfuggente" con "prestigio", rimossi i punti abilità preassegnati, viene guarito dopo le conversazioni principali
+- Massinissa: aggiunti 10 punti a tutte le abilità, sostituite "euforia" e "tregua" con "recupero" e "prestigio", ritorna all'accampamento dopo aver parlato se gli Iberi raggiungono Syphax
+- Carthalo: livello cambiato a 10, 15 o 20 in base alla difficoltà, aggiunti 10 punti a "recupero", aggiornata icona
+- Syphax: livello ridotto a 20, 30 o 40 in base alla difficoltà, sostituite "resistenza eroica" e "difesa eroica" con "fedeltà" e "movimento sfuggente" (10 punti), aggiunti 10 punti a "marcia forzata", aggiornata icona
+- Annibale: sostituite "vigore" e "movimento sfuggente" con "euforia" e "audacia" (10 punti), sostituiti guanti, cintura di forza e pietra di fuoco con ankh dorato, cintura dei re e di serpenti, aggiunti stivali da viaggio
+- albero secco: sostituita acqua curativa con borsa d'acqua curativa
+
+
+L'ASSEDIO DI NUMANZIA
+
+L'assedio di Numanzia è stato completamente rivisto per fornire al giocatore una grande battaglia molto più avvincente.
+Ci sono continui scontri con gruppi di rinforzi nemici che non smettono mai di essere generati e tali gruppi non compaiono più dai forti nemici più vicini bensì da alcune zone fisse per dare al giocatore il tempo di conquistare alcune strutture prima che si avvicinino e inizi il combattimento. Questo è stato fatto per dare l'idea di un assedio estenuante che gli Iberi tentano continuamente di stroncare, come è successo veramente nella storia.
+Ora il giocatore non viene più sconfitto se perde tutte le strutture (cosa che prima non era nemmeno specificata) ma solo se muore Scipione, così ha qualche possibilità di riconquistare almeno un forte dell'oro con cui ottenere preziosi rinforzi: i nemici infatti puntano prima a riconquistare tutto, dopodiché si dirigeranno in massa verso il condottiero romano.
+Non sarà facile mantenere il possesso di tutte le strutture, bisognerà quindi saper attaccare Numanzia al momento giusto e mantenere sempre alcune unità di difesa nelle retrovie per evitare che l'assedio venga ostacolato con attacchi alle spalle.
+La difficoltà generale è sicuramente aumentata e, per far fronte a questo, le unità di rinforzo (soprattutto quelle dei forti di addestramento) sono state migliorate e si potrà far ricorso a capanne delle streghe, rovine, forzieri e "pioggia d'oro" (facendo attenzione a tenere protette le unità spirituali) per ottenere risorse aggiuntive.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: media
+Giudizio di durata con test in difficile dopo le modifiche: media
+
+- risolto il problema per cui i villaggi non riprendevano a mandare viveri verso Numanzia se venivano riconquistati dal nemico
+- risolto il problema per cui i gruppi di romani non comparivano se la torre di osservazione e/o il magazzino di viveri erano già stati conquistati
+- rimossa la condizione di sconfitta per la perdita di tutti i forti dell'oro
+- truppe iniziali: sostituiti pretoriani con tribuni, aggiunti 2 arcieri e 2 gladiatori, livello aumentato a 4
+- carri da guerra: dimensione gruppi aumentata a 10, aggiunto un gruppo alla conquista del magazzino di viveri, livello aumentato a 6
+- Scipione: sostituite "sopravvivenza" e "prodezza" con "marcia forzata" e "superiorità offensiva"
+- Cornelio Flavio: sostituita "superiorità difensiva" con "guarigione", aggiornata icona
+- Crasius: livello aumentato a 12, sostituite "superiorità difensiva", "resistenza eroica" e "prodezza" con "marcia forzata", "attacco eroico" e "guarigione", aggiornata icona
+- unità mercenarie a scelta: livello aumentato a 15
+- prigionieri romani: generazione casuale sostituita con gruppi di unità di potenza crescente, livello aumentato a 12
+- rinforzi romani: tempo di frequenza generazione aumentato a 2, 3 o 4 minuti in base alla difficoltà, aggiunto possibile gruppo di 6 equites o 4 tribuni, livello aumentato a 4
+- rinforzi iberici: rimossi gli eroi, livello aumentato a 12, divisi in 5 gruppi diversi generati a nord-ovest e nord-est, ognuno con il suo percorso e tempo di frequenza generazione (3-7 minuti in base alla difficoltà)
+- nemici iberici: aggiunti vari gruppi lungo il percorso a guardia dei forti, livello variabile tra 4 e 14, aggiunta non necessità di viveri
+- esercito di Heardred: sostituite unità con 15 guerrieri con ascia, 15 cavalieri e 20 guerriere galliche, livello aumentato a 20, punta a riconquistare la torre di osservazione
+- Heardred: punto di generazione spostato a nord, livello aumentato a 30, aggiunti 10 punti a "euforia" e "attacco eroico", sostituiti oggetti con ankh dorato e amuleto del coraggio
+- piccolo foro meridionale: rimossa la porta (creava problemi con gli attacchi dei rinforzi iberici)
+- torre di osservazione: se il nemico la riconquista, il bonus esplorazione viene perso (si può riottenere riconquistandola ancora)
+- magazzino di viveri: se il nemico lo riconquista, i villaggi intorno vengono persi (si possono riottenere riconquistandolo ancora)
+- torre di guardia: aggiunta guarnigione di 30 guardie d'élite di livello 30, fintanto che rimane in mano al giocatore le sentinelle vicino al foro principale di Numanzia non compaiono
+- guarnigione del piccolo foro meridionale: livello aumentato a 12, migliorate le abilità degli eroi, forti vicini sostituiti col villaggio appena a sud-est come bersaglio di riconquista
+- guarnigione della torre di osservazione: aggiunti 20 difensori, livello aumentato a 18, spostata all'interno del foro
+- guarnigione del magazzino di viveri: aggiunti 10 frombolieri e 15 difensori, livello aumentato a 24, sostituita "vigore" con "recupero" (10 punti) per Baraeco, spostata all'interno del foro
+- pattuglie di Numanzia: cavalieri per gruppo aumentati a 20, livello aumentato a 30, migliorati i percorsi coperti
+- guarnigione di Numanzia: rimossi gli eroi, aggiunte altre unità, livello aumentato a 30, rimosso il comando di mantenere la posizione, si muove a difesa del foro quando il giocatore gli si avvicina
+- esercito di Caraunio: dimensioni aumentate a 30 guardie d'élite, 25 difensori e 25 frombolieri, livello aumentato a 40, aggiunta insegna del veterano, aggiunta non necessità di viveri
+- Caraunio: livello aumentato a 50, sostituite "euforia", "tregua" e "gesta" con "prestigio", "resistenza eroica" e "vigore" (10 punti), aggiunti diamante energetico, arpa oscura e pergamena della vita, aggiornata icona
+- altare dei sacrifici: disattivati "castigo spirituale" e "orda teutonica"
+- ceppo: sostituito con pozzo, aggiunte ceneri di druido
+- aggiunte alcune capanne delle streghe lungo il percorso
+
+
+L'ACCERCHIAMENTO DI ALESIA
+
+L'accerchiamento di Alesia è stato modificato per fornire al giocatore l'esperienza di quello che si può considerare l'assedio più difficile della storia antica e il più spettacolare capolavoro di Giulio Cesare.
+Di conseguenza, le ondate galliche provenienti sia dall'esterno che dall'interno di Alesia sono state variegate e generalmente potenziate per creare una battaglia incessante ed estenuante. Il giocatore verrà spinto a portare al massimo le sue abilità di "macro-gestione" per far fronte agli attacchi nemici e riconquistare le fortificazioni perdute (suggerimento: per i forti dell'oro torna utilissimo stazionare al loro interno dei contadini).
+La chiave della vittoria è saper spostare correttamente gli eserciti guidati dagli eroi così come gruppi vari di unità: questo enfatizza il concetto di strategia, infatti è possibile giocare l'intera battaglia quasi solo dalla mappa strategica; tutto ciò è voluto apposta per dare ancora più soddisfazione al giocatore e farlo sentire come un vero generale alla pari di Giulio Cesare.
+Sarà un enorme sollievo il momento in cui gli attacchi dall'esterno cesseranno, perché a quel punto le truppe del giocatore saranno ormai ben più che veterane e conquistare la città principale di Alesia sarà ancora più piacevole.
+Parlando di questo, le difese della città sono state potenziate per evitare che il giocatore mandi subito tutte le truppe iniziali a conquistarla e finire lo scenario prima che cominci la vera battaglia (prima era possibile farlo e non era nemmeno difficile vincere così).
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: difficile
+Giudizio di durata con test in difficile dopo le modifiche: media/lunga
+
+- risolto il problema per cui Giulio Cesare non parlava alla conquista di Alesia
+- fortificazioni romane: tempo di riconquista cambiato a 6, 5 o 4 minuti in base alla difficoltà, rimossa la conquista automatica da parte del giocatore
+- difensori romani: numero generazioni cambiato a 12, 10 o 8 per ogni singola fortificazione in base alla difficoltà, livello aumentato a 17
+- fuggitivi gallici: tempo di attesa generazione ridotto a 1 minuto, livello ridotto a 4
+- rinforzi gallici: numero totale di ondate aumentato a 40, 50 o 60 in base alla difficoltà, variegati i punti di origine e le unità di ogni gruppo, livello cambiato e uniformato in base al tipo di unità
+- rinforzi da Alesia: generazione separata per ogni foro e attivata solo dopo l'inizio degli attacchi gallici, aggiunta ripresa generazione nel foro corrispondente se riconquistato, livello cambiato a 6
+- rinforzi del foro esterno: tempo di frequenza generazione ridotto a 120, 100 o 80 secondi in base alla difficoltà, unità cambiate con 20 guerrieri, 20 arcieri e 10 lancieri
+- rinforzi del foro interno: tempo di frequenza generazione ridotto a 180, 150 o 120 secondi in base alla difficoltà, unità cambiate con 20 lancieri, 20 guerrieri con ascia e 10 guerriere galliche
+- pattuglie di Alesia: cavalieri per gruppo aumentati a 25, livello aumentato a 20, migliorati i percorsi coperti
+- difensori di Alesia: livello aumentato a 20
+- guarnigione del foro esterno: aggiunti 20 arcieri, 20 lancieri e 10 guerriere galliche, livello aumentato a 20
+- guarnigione del foro interno: sostituita con 30 guerrieri con ascia, 30 cavalieri, 30 guerriere galliche e 10 guerrieri di Fand, livello aumentato a 25
+- accampamento ovest: ricercati automaticamente i giochi circensi (per sbloccare i gladiatori senza colosseo)
+- accampamento est: cambiata scelta con Roma Imperiale, aggiunte 2 mura, aggiunti 2 gruppi da 10 velites di livello 10 nascosti che compaiono quando il nemico si avvicina alla linea di difesa meridionale
+- forti dell'oro: oro iniziale aumentato a 1000
+- Vercingetorige: livello aumentato a 50, sostituite "maestria" e "prodezza" con "difesa eroica" e "movimento sfuggente", aggiunta "euforia", aggiunti 10 punti a tutte le abilità
+- Giulio Cesare: livello aumentato a 15, sostituita "maestria" con "prestigio", aggiunta "movimento sfuggente"
+- Glario: rinominato in "Gaius Trebonius", livello aumentato a 10, aggiornata icona
+- Baetius: rinominato in "Titus Labienus", livello aumentato a 10, sostituita "erudizione" con "movimento sfuggente", aggiornata icona
+
+
+AUGUSTO SUL NILO
+
+Augusto sul Nilo ha ricevuto un'enorme quantità di cambiamenti ed era un miracolo che la versione originale funzionasse perché le sequenze e gli script erano il caos totale, mancavano anche alcune traduzioni e/o erano sbagliate.
+L'obiettivo delle modifiche è rendere lo scenario molto più interessante e dinamico: questo è stato reso possibile sia da vari ritocchi alla mappa in sé che dai cambiamenti dell'IA (vedere sezione apposita).
+Si può vedere questo scenario come una partita di strategia abbellita da meccaniche speciali, ad esempio una maggiore utilità dei forti di reclutamento, la presenza di un forte dell'oro, gli assalti delle truppe sudanesi e i costanti attacchi marittimi a Pelusio dalla città di Alessandria.
+Quest'ultima città ora è impossibile da conquistare con le truppe iniziali (che sono state migliorate e rese consistenti, prima invece erano casuali) perché i difensori sono molto più forti, perché ci sono 2 navi superpotenziate a guardia del porto (per rendere più difficile l'interruzione degli attacchi marittimi) ma soprattutto perché sono stati inseriti Cleopatra e Marco Antonio con eserciti estremamente potenti, pensati per essere affrontati solo a fine partita, quando il giocatore avrà ormai raggiunto un enorme livello di potenza.
+Nel frattempo, i costanti assalti delle tribù sudanesi a Memphis non smettono di essere generati, nemmeno dopo la conquista della fortezza, trasformandosi quindi in enormi gruppi di rinforzo qualora dovessero sconfiggere i difensori (prima, invece, non comparivano più dalla conquista del foro).
+La città di Pelusio è stata potenziata per dare una mano al giocatore dopo i potenziamenti ai nemici: ci sono più risorse e grazie all'aggiunta del tempio di Horus e Anubis si possono reclutare eroi aggiuntivi e ricercare i potenziamenti delle statue, infine ci sono anche alcune sorgenti d'acqua con cui curare rapidamente le truppe.
+È stata risolta una notevole quantità di bug ed exploit, ad esempio completando le mura di Alessandria e Pelusio o impedendo al giocatore di far sbarcare le unità iniziali prima di completare la battaglia navale; se in qualche modo dovesse riuscire ancora a farlo, la popolazione dei villaggi resterà comunque al minimo per evitare che possa usarla per trasformare i contadini in mercenari prima di proseguire correttamente con lo scenario.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: media/difficile
+Giudizio di durata con test in difficile dopo le modifiche: lunga
+
+- risolto il problema per cui le navi nemiche restavano ferme (con l'exploit di scappare e attaccarle con calma una per volta)
+- IA: inizia a giocare solo dopo la conquista di una città
+- Pelusio e Alessandria: completate le mura sul mare
+- Flavio Publio: colore cambiato in azzurro
+- aggiunto un forte dell'oro con 2000 oro iniziale vicino ad Alessandria protetto da 60 unità di livello 20
+- oro bonus dei forti: tempo di frequenza ridotto a 1 minuto, quantità cambiata a 300, 400 o 500 per i nemici e a 500, 400 o 300 per il giocatore in base alla difficoltà
+- rinforzi navali egizi: rimosso il limite di attacchi, tempo di frequenza generazione ridotto a 7, 6 o 5 minuti in base alla difficoltà, unità cambiate con 20 lanciatori d'asce e 20 guardiani del Nilo, livello aumentato a 20
+- villaggi: popolazione massima aumentata a 80, finché una città non viene conquistata la popolazione rimane fissata a 10, aggiunto un albero secco a ogni villaggio
+- difensori di villaggi e forti: aggiunte altre unità, livello aumentato a 20
+- Pelusio: oro iniziale ridotto a 4000, viveri iniziali aumentati a 5000, popolazione massima aumentata a 120, aggiunto tempio di Horus e Anubis, aggiunti 2 ceppi e 1 fonte
+- Memphis: oro iniziale aumentato a 5000, viveri iniziali aumentati a 7500, popolazione massima aumentata a 140, spostate a sinistra le caserme
+- Alessandria: oro iniziale aumentato a 6000, popolazione massima aumentata a 160, quando è occupata dagli Egizi ottiene 5, 15 o 25 oro e 20, 35 o 50 viveri ogni 2 secondi in base alla difficoltà
+- guarnigione di Pelusio: aggiunti 10 guerrieri, spostata all'interno del foro
+- guarnigione di Memphis: aggiunte altre unità, livello aumentato a 25 per le unità e a 30 per gli eroi, migliorate le abilità degli eroi, forti sostituiti col villaggio a sud-est come bersaglio di riconquista
+- guarnigione di Alessandria: aggiunte altre unità, eroe sostituito con Cleopatra e Marco Antonio, livello aumentato a 30, rimosso il comando di mantenere la posizione, aggiunti talismani egizi a tutte le unità
+- porto di Alessandria: aggiunte 2 navi di livello 30 con 120 unità a bordo e con pietra di fuoco, guanti della salute, zanna di elefante e amuleto di Atena
+- Cleopatra: posta a difesa di Alessandria con 40 guerrieri di Horus e 40 guerrieri di Anubis, livello 40, con "prestigio", "movimento sfuggente", "superiorità difensiva" e "guarigione" (10 punti), con ankh dorato e argentato
+- Marco Antonio: posto a difesa di Alessandria con 50 pretoriani, livello 40, con "vigore", "attacco eroico", "superiorità offensiva" e "gesta" (10 punti), con pergamena della morte e della vita
+- Ottaviano Augusto: rimossi i punti abilità preassegnati, sostituita "erudizione" con "guarigione", sostituiti oggetti con 2 spighe di segale
+- Glario: livello aumentato a 10, sostituita "prodezza" con "marcia forzata", rimossa non necessità di viveri, aggiunte 2 spighe di segale
+- Calosius: livello aumentato a 10, sostituite "erudizione" e "prestigio" con "guarigione" e "sopravvivenza", rimossa non necessità di viveri, aggiunte 2 spighe di segale
+- truppe iniziali: sostituita la generazione casuale con gruppi fissi, migliorata la disposizione nelle navi (22-33 unità per nave), livello aumentato a 6
+- navi romane: livello aumentato a 6, disattivato il comando di sbarco delle truppe fintanto che la battaglia navale è in corso
+- navi nemiche: livello aumentato a 6, cambiate navi verdi con navi egizie, fuggono anche quando quelle verdi vengono distrutte o il giocatore si avvicina alla costa, punto di ritirata spostato ad Alessandria
+- tribù sudanesi: tempo di frequenza generazione ridotto a 8, 7 o 6 minuti in base alla difficoltà, generazione non interrotta dopo la conquista di Memphis, aggiunte altre unità, rimosso l'eroe, livello aumentato a 15
+- altare dei sacrifici: disattivati "castigo spirituale" e "orda teutonica"
+
+
+LA CONQUISTA DELLA BRITANNIA
+
+La conquista della Britannia è stata rivisitata con l'obiettivo di fornire una partita di strategia avvincente su vasta scala con alcune meccaniche speciali.
+Sono stati innanzitutto risolti vari bug legati a comportamenti strani sia dei nemici che degli alleati dato che questi ultimi spesso interrompevano l'assedio di Lindum o Dumnorium per entrare in certe strutture e non fare più niente.
+La vera rivoluzione dello scenario è in realtà dovuta ai cambiamenti apportati all'IA, che è molto più pericolosa di prima (vedere sezione apposita) e molto più attiva nel riprendere le fortezze e i villaggi che il giocatore conquisterà nel corso della grande battaglia.
+Sono stati variegati e migliorati i gruppi di supporto alleati introducendo anche alcune unità della Grecia mentre Stonehenge, grazie alle modifiche generali apportate agli altari dei sacrifici, sarà uno strumento molto utile nelle mani del giocatore (ammesso che riesca a prenderne e tenerne possesso), soprattutto con "pioggia d'oro" e "orda teutonica" che, nonostante il limite massimo di un solo utilizzo, permetteranno di sfruttare il loro potenziale al massimo una volta conquistate molte città.
+In particolare, "orda teutonica" sarà essenziale per vincere la battaglia finale contro l'esercito di Calgacus, visto che è stato enormemente rafforzato e non sarà più facilmente eliminabile già alla fortezza di Lindum, dato che le sono state rimosse tutte le porte e una parte delle mura settentrionali (l'esercito tendeva a rimanere bloccato per continuare a eliminare le sentinelle e non conquistava il foro).
+Infine, come viene anche spiegato nel filmato iniziale, i caledoni del nord erano esperti nella tattica dell'imboscata, quindi il giocatore dovrà fare attenzione a dove mette i piedi: ci sono luoghi e percorsi apparentemente sicuri che potrebbero rivelarsi una trappola letale se non si dispone di forze sufficientemente numerose e/o addestrate.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: media
+Giudizio di durata con test in difficile dopo le modifiche: lunga
+
+- risolto il problema per cui le diverse aree indicate nel corso dello scenario non venivano esplorate completamente
+- risolto il problema per cui non comparivano gli obiettivi legati alle interazioni con il senatore Publio e all'uso delle grotte
+- risolto il problema per cui gli assedianti alleati di Lindum o Dumnorium abbandonavano l'attacco per unirsi alla difesa di una struttura alleata qualunque
+- rimosso l'audio della frase di congedo del senatore Publio in quanto sbagliato (italiano)
+- rimossa la notifica inutile del senatore Publio che vuole parlare a ogni evento
+- tempo di attesa tra un evento e l'altro aumentato a 24, 22 o 20 minuti in base alla difficoltà
+- IA: inizia a giocare dopo 30 secondi, rimosso ogni limite al numero di unità, rimosso il controllo di tutte le unità preesistenti, rimosso l'uso delle grotte
+- eroi reclutabili per 6000 oro: sostituito eroe imperiale con cartaginese, aggiunto eroe greco, livello aumentato a 20
+- rinforzi alleati: navi da guerra cambiate con navi romane, livello aumentato a 4, aumentate le unità di ogni gruppo, aggiunti nuovi possibili gruppi (15 carri greci per Lindum, 15 ipaspisti o 35 opliti per Londinium)
+- rinforzi nemici: tempo di frequenza generazione cambiato a 10, 8 o 6 minuti in base alla difficoltà, rimossi i muli, aggiunto gruppo di 8 lottatori caledoni, livello aumentato a 12-16
+- truppe nemiche: livello aumentato a 4-21, aggiunti 10 nuovi punti di imboscata
+- truppe iniziali: aggiunti 2 pretoriani, livello aumentato a 4
+- Gneo Giulio Agricola: sostituita "erudizione" con "prestigio"
+- esercito di Lomhar: punto di generazione spostato a foresta a est del foro, generazione indipendente dal possesso del foro, tempo di generazione cambiato a 15, 10 o 5 minuti in base alla difficoltà, livello aumentato a 6
+- capi tribali: rimosso il limite di tempo per la cattura, livello aumentato a 10, spostati i punti abilità a 10 in un'abilità attivabile diversa ciascuno, aggiornate icone
+- esercito di Calgacus: viene completamente rigenerato tra una tappa e l'altra, tempo di attesa prima di ogni spostamento ridotto a 1 minuto, aggiunte 2 tappe per il foro e il forte appena a nord di Londinium
+- eroi di Calgacus: rimosso 1 eroe, sostituiti con eroi britannici, livello aumentato a 30, sostituite abilità con combinazioni di 3 abilità (10 punti) per massimizzare il potenziale delle unità vincolate, aggiornate icone
+- unità di Calgacus: livello aumentato a 20 (21 per gli highlander), cambiate in modo da essere di un unico tipo per ciascun eroe, aggiunti 20 capi normanni
+- Calgacus: livello aumentato a 50, sostituita cintura dei re con zanna di elefante, aggiunti arpa oscura e ankh argentato, sostituite 4 abilità con "prestigio", "maestria", "vigore" e "gesta" (10 punti), aggiornata icona
+- Londinium: oro iniziale aumentato a 7000, popolazione iniziale ridotta a 20, popolazione massima aumentata a 120, aggiunti 2 muri di legno a nord e 1 a sud, aggiunte più decorazioni da accampamento
+- Dumnorium, Mancunium e Lindum: oro iniziale aumentato a 5000, popolazione massima aumentata a 100, aggiunto tempio di Morrigan a Dumnorium, cambiate drasticamente le mura di Lindum (per problemi con l'assedio fatto da Calgacus)
+- Dumnorium e Lindum: quando sono occupate dai nemici ottengono 10, 20 o 30 oro ogni 2 secondi in base alla difficoltà
+- fortezze senza mura: disattivati i potenziamenti per le sentinelle
+- forti dell'oro vicino a Dumnorium: oro iniziale aumentato a 2000
+- forti di addestramento iberici: sostituiti con la variante britannica
+- Stonehenge: impostato un limite massimo di 1 uso per "pioggia d'oro" e "orda teutonica"
+- fonte a nord di Mancunium: aggiunta borsa d'acqua curativa
+- aggiunte 2 borse di cuoio nascoste nelle isole minori: una coi tamburi da battaglia della furia e il diamante energetico, l'altra col dito della morte e gli stivali da viaggio
+
+
+MARCO AURELIO IN GERMANIA
+
+Marco Aurelio in Germania è stato parzialmente modificato per rendere più interessante la difesa della città di Aquileia.
+Innanzitutto, ora il filmato di fine partita è quello corretto, prima invece veniva avviato quello della vittoria per la conquista della Britannia.
+Le ondate germaniche sono più grandi e diventano sempre più pericolose man mano che la partita procede, perciò il giocatore dovrà saper muovere correttamente le sue truppe tra i forti dell'oro, i villaggi e la fortezza attaccando il nemico da più punti contemporaneamente. Fortunatamente, questo risulta facile una volta sbloccato l'eroe con gli equites, che è stato rinominato e aggiornato per far scatenare l'inferno al suo segnale.
+Una volta finite le ondate principali, i nemici ora continueranno a colpire periodicamente, seppur con frequenza ridotta e con livello minore, semplicemente per dare un minimo da fare al giocatore mentre si prepara per l'attacco finale all'accampamento nemico.
+Sarà fondamentale usare al meglio i liberati e i pretoriani contro le valchirie dell'accampamento, dato che ora sono dotate di molti oggetti che aumentano la salute oltre che di un livello notevole. Anche questo, però, risulterà abbastanza facile sfruttando al meglio l'esercito di alleati romani che arriva in aiuto dei villaggi.
+Infine, conviene anche mandare qualcuno (possibilmente Marco Aurelio) a esplorare la mappa e raccogliere gli oggetti nascosti in giro, visto che si riveleranno molto utili.
+In generale, i nemici sono molto più potenti di prima ma la partita sarà comunque facile grazie a tutti questi aiuti, oltre all'enorme ricchezza che i 3 forti dell'oro potranno procurare se verranno utilizzati fin da subito.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: facile
+Giudizio di durata con test in difficile dopo le modifiche: lunga
+
+- risolto il problema per cui non partiva il filmato corretto a fine partita
+- risolto il problema per cui le unità nemiche conquistavano i villaggi nonostante la presenza degli alleati romani
+- ondate germaniche principali: tempi di generazione prima ondata e frequenza generazione cambiati a 5, 4 o 3 minuti e a 2, 1.5 o 1 minuto in base alla difficoltà, ridotto il tempo di attesa tra una tappa e l'altra
+- ondate germaniche indebolite: livello aumentato a 6, 12 o 18 in base alla difficoltà
+- ondate germaniche a sinistra e al centro: numero massimo di gruppi generabili aumentato a 4, solo queste valgono per il conteggio prima di quelle indebolite
+- ondate germaniche a destra: numero massimo di gruppi generabili aumentato a 5, continuano a essere generate per tutta la partita
+- alleati romani: livello aumentato a 24, gruppo principale aumentato a 100 unità
+- valchirie accampate: livello aumentato a 61, tutte ricevono l'amuleto di piume, la cintura dei re, l'ankh dorato e i guanti della salute
+- guardia cittadina: numero massimo di unità rimanenti per la rigenerazione ridotto a 5
+- truppe iniziali: livello aumentato a 8, liberati assegnati alla quarta icona di selezione rapida e quindi al gruppo "ctrl-4"
+- Marco Aurelio: livello aumentato a 15, sostituita "saggezza" con "maestria"
+- Calosius: rinominato in "Maximus", livello aumentato a 12, sostituita "erudizione" con "carisma", aggiornata icona
+- Rutilanus al centro: livello aumentato a 12, sostituite "maestria" e "movimento sfuggente" con "superiorità difensiva" e "sopravvivenza", sostituita cintura dei re con erbe medicinali
+- Rutilanus a sinistra: livello aumentato a 12, sostituite "erudizione" e "movimento sfuggente" con "superiorità offensiva" e "guarigione", sostituita cintura dei re con erbe medicinali
+- Aquileia: popolazione massima aumentata a 120
+- villaggi: popolazione massima aumentata a 40
+- accampamenti teutonici: viveri aumentati a 4000
+- Tullio: parla solo con Marco Aurelio, aggiunto il comando di mantenere la posizione
+- forziere a sinistra: sostituiti denti d'orso con pergamena della vita
+- lapide a destra: sostituita con forziere, aggiunto amuleto del coraggio
+- aggiunta 1 valchiria di livello 101 con guanti della salute, amuleto del trionfo e amuleto di Aegle a guardia del forziere in alto
+- aggiunti 2 incursori teutonici di livello 10 a guardia del forziere a sinistra
+- nessuna valchiria lascia a terra gli oggetti quando muore
+- aggiunto amuleto di Atena a tutte le unità a guardia dei forzieri
+- altare dei sacrifici: disattivati "castigo spirituale", "pioggia d'oro", "carestia", "terremoto" e "orda teutonica"
+
+
+ANNIBALE ALLE PORTE DI ROMA
+
+Annibale alle porte di Roma ha ricevuto una serie di adattamenti che non hanno cambiato molto le dinamiche generali della partita ma hanno reso molto più tenace la difesa di Roma e più interessanti i rinforzi di Ostia.
+Il giocatore dovrà rapidamente conquistare tale città prima che inizino ad arrivare gli eserciti romani e, una volta conquistata la fortezza, potrà ricevere rinforzi che adesso possono variare in maniera casuale: c'è un esercito debole composto da unità mercenarie di fanteria, uno di media potenza composto da unità mercenarie di cavalleria e uno molto potente composto da nobili e un elefante.
+Il giocatore potrà constatare in prima persona l'immensa potenza dei nobili vincolati ad Annibale, essenziali per riuscire a espugnare Roma, dato che i suoi difensori non indietreggeranno di un centimetro.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: media/difficile
+Giudizio di durata con test in difficile dopo le modifiche: lunga
+
+- risolto il problema per cui alcuni fori non venivano presi di mira da alcune truppe di rinforzo romane
+- risolto il problema per cui la nave coi rinforzi di Ostia attaccava le unità del giocatore
+- corretti gli interlocutori del dialogo dopo la distruzione di una delle porte di Roma
+- colossei: disattivati "transizione verso l'impero" e "convoca Cesare"
+- sentinelle di Roma: livello aumentato a 50
+- rinforzi cartaginesi di Ostia: tempo di arrivo cambiato a 5, 6 o 7 minuti in base alla difficoltà, suddivisi in 3 combinazioni di diversa potenza con una certa probabilità (debole 50%, normale 35%, forte 15%)
+- rinforzi romani di Ostia: tempo di arrivo cambiato a 7, 6 o 5 minuti in base alla difficoltà, aggiunti 20 tribuni, livello aumentato a 8
+- truppe dentro Roma: livello aumentato a 20, tempo di frequenza generazione unità nascoste ridotto a 10, 7 o 4 secondi in base alla difficoltà
+- eroi romani di rinforzo: sostituiti tutti gli oggetti con 2 acque curative
+- eserciti romani di rinforzo fuori Roma: continuano a essere generati anche dopo la conquista di un foro
+- eserciti romani di rinforzo dentro Roma: tempo di frequenza generazione ridotto a 5, 4 o 3 minuti in base alla difficoltà, ritardo per frequenza generazione ridotto a 15 secondi per ogni foro
+- truppe iniziali cartaginesi: migliorato il dispiegamento tramite vincolamento immediato all'eroe, aggiunti 2 muli di supporto con 1000 viveri ciascuno
+- Allifae: rimosso il forte di reclutamento, aggiunto un gruppo di 50, 40 o 30 opliti di livello 6 in base alla difficoltà una volta ottenuta la fortezza
+- nobile consigliere: livello ridotto a 5, rimossi ankh dorato e anello del potere
+- Annone e Magone: sostituita "erudizione" con "saggezza", aggiornate icone
+- Maharbal: sostituita "prodezza" con "gesta"
+- Annibale: sostituite "tregua" e "recupero" con "audacia" e "euforia", aggiunti ankh dorato e anello del potere
+
+
+VIRIATO DOMINA L'HISPANIA
+
+Viriato domina l'Hispania rimane la grande sfida più facile, i ritocchi hanno come obiettivo eliminare alcuni problemi/exploit e rendere più soddisfacente il momento in cui si supera la fase iniziale della partita.
+Innanzitutto, ora il filmato di fine partita (inglese) è quello corretto, prima invece veniva avviato quello della vittoria per Arminio, generale ribelle.
+Nella versione originale, giusto con le truppe iniziali era possibile conquistare i forti a est ed eliminare le guardie dell'accampamento e del porto, rendendo quindi facilissima la partita tramite il precoce arrivo di Larax, per non parlare del fatto che si poteva addirittura passare dalla costa ovest, aggirare qualunque nemico e conquistare quasi indisturbati il porto.
+Ora ciò non è più possibile perché ci sono delle rocce che bloccano il passaggio mentre i nemici stazionati nei forti sono stati generalmente migliorati: di conseguenza, il giocatore dovrà fare più attenzione, ricercare alcuni potenziamenti e reclutare altre unità prima di riuscire ad arrivare al porto.
+Tutto ciò è stato intenzionalmente fatto per spingere il giocatore ad attuare tattiche di guerriglia contro gli eserciti romani provenienti da Saetabis, cosa che già doveva essere fatta prima ma era appunto evitabile con gli exploit citati; ci sono infatti anche dei cavalli che possono essere catturati per reclutare esploratori a tal scopo.
+Quando il giocatore libererà Larax, avrà l'imbarazzo della scelta su quali oggetti assegnare a lui e a Viriato: Larax può arrivare a 300 di attacco con la combinazione giusta di equipaggiamento. I due eroi, per chi non lo sapesse, sono i protagonisti dei tutorial dei giochi precedenti, quindi il fatto che si incontrino non è un semplice caso.
+A questo punto, il giocatore sarà libero di fare quello che vorrà e la conquista di Saetabis sarà molto più divertente di prima.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: facile
+Giudizio di durata con test in difficile dopo le modifiche: breve/media
+
+- inglese: risolto il problema per cui non partiva il filmato corretto a fine partita
+- Mons Herminus: oro iniziale aumentato a 500, popolazione massima aumentata a 40
+- truppe iniziali: aggiunto anello del veterano, vengono vincolate automaticamente a Viriato
+- eserciti nemici: non smettono di comparire dopo 30 attacchi, compaiono anche quando ci sono unità del giocatore vicino a Saetabis, tempo di attesa assedio/generazione cambiato a 35, 25 o 15 secondi in base alla difficoltà
+- eroi nemici: livello bonus casuale (probabilità 50%) aumentato a 2, 4 o 6 in base alla difficoltà
+- guarnigioni dei forti: aumentati di circa 50% i soldati stanziati nei forti dell'oro, livello minimo aumentato a 10, sostituiti velites con princeps nel forte dell'oro più a est
+- guardie dell'accampamento: livello aumentato a 24
+- guerrieri di Fand: livello aumentato a 24
+- Viriato: livello aumentato a 8, rimossi 2 punti da "superiorità difensiva" e aggiunti 4 punti a "guarigione"
+- Larax: sostituita pietra di fuoco con gemma dell'eletto, sostituita "prodezza" con "resistenza eroica", parla solo con Viriato
+- Publio Septis: livello cambiato al valore più alto tra 50 e il livello di Viriato aumentato di 5, sostituite "prestigio" e "saggezza" con "vigore" e "maestria"
+- aggiunto dialogo in cui Publio Septis chiede pietà se la sua salute scende sotto il 45%
+- borsa di cuoio in isola nord: sostituite acque curative con ceneri di druido
+- lapide in isola sud-ovest: sostituite ceneri di druido e pelle di serpente con tamburi da battaglia della furia e cintura di serpenti
+- isola est vuota: aggiunto un forziere con amuleto di denti di cinghiale e teschio del dolore
+- trono del leone in isola est: sostituito con colonna, sostituiti corno della vittoria e dito della morte con arpa oscura rinvigorente
+- aggiunto un gruppo di cavalli alla zona delle rovine
+- aggiunto un branco di lupi nascosto alle rovine
+- aggiunto un ammasso di rocce per impedire aggiramenti per la conquista del porto
+
+
+L'EGITTO ALLE ARMI
+
+L'Egitto alle armi è stato risistemato per risolvere molteplici problemi e per diventare più logico in quanto a crescita di difficoltà.
+Gli eserciti romani sono inizialmente più deboli di prima ma diventano sempre più potenti, mantenendo sempre un fattore di generazione casuale ma più sensato della versione precedente: c'era infatti troppa discrepanza tra le unità vincolate agli eroi, a volte dopo 2 attacchi arrivavano pretoriani e/o tribuni che erano quasi impossibili da fermare a inizio partita, altre volte arrivavano unità molto scarse anche negli ultimi attacchi, rendendo quindi inconsistente l'esperienza di gioco.
+Il giocatore dovrà fare grande uso di guerrieri divini ed elefanti da guerra per riuscire a difendersi dagli attacchi finali: fortunatamente, evocare i guerrieri divini è stato semplificato dall'aggiunta del nuovo potenziamento "investimento nella schiavitù", con cui recuperare velocemente la popolazione dei villaggi, mentre col mercato cartaginese e i forti dell'oro (compreso il forte dei mercenari stesso) si può ottenere la ricchezza necessaria per gli elefanti.
+I sacerdoti possono rivelarsi un'arma molto efficace contro il nemico grazie all'uso del flagello e alla presenza di un altare dei sacrifici con cui attivare alcuni rituali: di questi, il più utile è indubbiamente "vento della saggezza" per aumentare il livello degli eroi.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: media
+Giudizio di durata con test in difficile dopo le modifiche: media
+
+- risolto il problema per cui potevano essere generati nuovi eserciti romani quando quelli attivi arrivavano a Herakleopolis Magna
+- risolto il problema per cui potevano essere sacrificati più di 50 contadini in un singolo rituale nell'area apposita
+- risolto il problema per cui i sacerdoti contavano come contadini per il sacrificio
+- risolto il problema per cui tutti gli elefanti sulla mappa si spostavano verso Herakleopolis Magna quando ne venivano generati altri col forte dei mercenari
+- risolto il problema per cui Seti parlava riguardo alle spie anche se morto
+- risolto il problema per cui il capo dei mercenari combatteva i romani col rischio di morire e non far comparire l'obiettivo riguardo agli elefanti
+- aggiunto un obiettivo che spiega che con la conquista di Saqqara non arriveranno più eserciti nemici dalla città
+- Herakleopolis Magna: oro iniziale ridotto a 4000, popolazione massima ridotta a 80
+- Memphis e Saqqara: rimossa la generazione di difensori nel caso di avvicinamento di unità del giocatore
+- mercato cartaginese: disattivati "patto dei mercenari", "cura dei mercenari" e "assolda mercenari stranieri"
+- villaggi: popolazione massima ridotta a 40
+- sacerdoti in villaggi: aggiunta generazione di cammelli con 100 viveri, tempo di frequenza generazione contadini e viveri aumentato a 5 secondi, rimossa generazione se il villaggio non appartiene al giocatore
+- forti dell'oro: oro iniziale ridotto a 0
+- guerrieri divini: livello aumentato a 50 in difficoltà facile e a 40 in difficoltà normale, aggiunti tutti i talismani egizi a ogni guerriero, rimossa la doppia generazione in difficoltà facile
+- eserciti nemici: unità cambiate in base alla fascia di ondate, numero unità ondate 4-7 e 8-10 aumentato a 65 e a 80, livello ondate 1-3 e 8-10 aumentato a 2 in difficoltà facile e a 10, 12 o 14 in base alla difficoltà
+- oggetti nemici: rimossi durante le ondate 1-3, sostituiti amuleto del trionfo e insegna del veterano con dono degli dei durante le ondate 4-7, sostituito amuleto del trionfo con dono degli dei durante le ondate 8-10
+- truppe alleate: aggiunti 5 carri di Osiris a ogni gruppo, sostituita pelle di serpente con denti d'orso, entrambi i gruppi compaiono ancora quando è il momento di attaccare Memphis
+- truppe iniziali: sostituiti 20 guardiani del Nilo con 20 lanciatori d'asce, livello aumentato a 5, vengono automaticamente vincolate agli eroi
+- elefanti da guerra: livello aumentato a 18, 12 o 6 in base alla difficoltà
+- Seti: livello aumentato a 10, difesa ripristinata a 18, sostituite "prodezza", "euforia" e "saggezza" con "guarigione", "sopravvivenza" e "marcia forzata", aggiornata icona
+- Imhotep: rinominato in "Thutmose", livello aumentato a 10, sostituita "movimento sfuggente" con "vigore", aggiornata icona
+- capo dei mercenari: parla solo una volta
+- obelischi: rimossa la generazione di denti di cinghiale
+- aggiunte due fonti contenenti entrambe la gemma della saggezza, una l'ankh dorato e l'altra l'ankh argentato
+- aggiunto altare dei sacrifici a nord con disattivati "castigo spirituale", "pioggia d'oro", "carestia", "terremoto" e "orda teutonica"
+
+
+LA BATTAGLIA DI GERGOVIA
+
+La battaglia di Gergovia è stata modificata per diventare molto più dinamica e soddisfacente, oltre che per risolvere alcuni bug e problemi (come il fatto che le truppe iniziali venivano sconfitte nella sequenza introduttiva).
+A livello generale, lo scenario è come prima: bisogna difendersi dalle ondate nemiche evitando che vengano uccisi troppi capi tribali e infine proteggere la fortezza da un grosso assalto, o da un immenso esercito pressoché inarrestabile se i capi muoiono troppo presto.
+Tuttavia, ora le unità che compongono le ondate romane sono state variegate mentre i difensori gallici sono stati migliorati in quanto troppo deboli: nella versione originale (ammesso che venisse superata la sequenza introduttiva), bastavano pochi soldati romani per eliminare sia i capi che buona parte delle truppe a difesa di Gergovia prima ancora dell'attacco finale e la misera quantità di risorse presenti nella fortezza combinata con la bassa popolazione rendevano impossibile il reclutamento di unità decenti per dare supporto, il che si traduceva in una probabile disfatta finale e nel quasi obbligatorio uso di exploit.
+Tutto ciò è cambiato e ora la sfida per il giocatore rimane buona ma non impossibile e, con una minima dose di "macro-gestione", è tranquillamente possibile muovere gli eroi e gli eserciti nei punti giusti al momento giusto.
+Il vecchio Ercenbehrt è stato sostituito con Luthal, uno degli eroi dell'avventura principale de "La guerra gallica", e sono state migliorate le abilità di Vercingetorige.
+Una volta eliminate le ondate principali, un immenso esercito romano attaccherà in massa dalla strada centrale combinando tutti i gruppi delle singole ondate e un eroe con un buon esercito: quest'ultimo, però, dispone dell'abilità "audacia", cosa che in realtà si rivelerà un aiuto per il giocatore qualora reclutasse molte guerriere galliche.
+Se il giocatore vince, potrà anche vedere Giulio Cesare in persona allontanarsi dal campo di battaglia e sentire un commento da parte di Keltill che non esiste nel gioco originale, un'aggiunta specifica della Caesar Mod.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: facile/media
+Giudizio di durata con test in difficile dopo le modifiche: breve
+
+- risolto il problema per cui diversi soldati nemici potevano subire danni da fame
+- risolto il problema per cui diversi soldati nemici non comparivano proprio
+- risolto il problema per cui diversi soldati nemici non partecipavano all'attacco finale
+- risolto il problema per cui diversi difensori gallici non si dirigevano verso Gergovia una volta iniziata l'ondata finale anche se i rispettivi capi tribali erano ancora vivi
+- risolto il problema per cui il messaggio di conquista dei passaggi a causa della morte di troppi capi tribali compariva sempre nel momento in cui iniziava l'ondata finale anche se non erano morti
+- ondate nemiche: tempi di attesa iniziale e rigenerazione cambiato a 5, 4 o 3 minuti e a 150, 120 o 90 secondi in base alla difficoltà, numero totale aumentato a 16, 20 e 24 in base alla difficoltà, variegate le unità
+- ondata finale: dà priorità ad attaccare passando dalla strada centrale, aggiunta generazione di ogni tipologia di ondata oltre a quelle eventuali rimaste, aggiunto eroe di livello 10 con 30 princeps, 10 tribuni e 10 pretoriani
+- capi tribali: quando muoiono, i loro guerrieri si disperdono e non partecipano più alla difesa finale
+- aggiunta esplorazione di tutta la mappa all'arrivo dell'ondata finale
+- aggiunta breve sequenza in cui si vede Giulio Cesare allontanarsi verso l'accampamento nemico al termine della battaglia, con un commento di Keltill
+- truppe alleate: livello aumentato a 30 per i guerrieri di Fand e a 20 per il resto, migliorate le aree difese, aggiunte alcune unità nascoste ad alcuni villaggi, aggiunta la condivisione di viveri con il giocatore
+- capi tribali e difensori di Gergovia: aggiunti denti d'orso, cintura di forza e amuleto di erbe
+- Damasus: aggiunti 10 punti a "vigore", aggiornata icona
+- Vercingetorige: livello aumentato a 15, sostituite "erudizione" e "audacia" con "chiamata alla difesa" e "gesta"
+- Ercenbehrt: rinominato in "Luthal", livello aumentato a 10, sostituita "prodezza" con "chiamata alla difesa", aggiornata icona
+- esercito di Luthal: aggiunti 5 cavalieri e 5 guerriere galliche
+- villaggi: popolazione iniziale aumentata a 30, popolazione massima aumentata a 80, aggiunte rotte di rifornimento verso Gergovia
+- Gergovia: oro iniziale aumentato a 8000, viveri iniziali aumentati a 1000, popolazione massima aumentata a 120, ricercati automaticamente "forgia ferri di cavallo" e "forgia ferri di cavallo eccezionali"
+- mura di Gergovia: rimossa la roccia che separava le porte, rimossa 1 porta
+- altare dei sacrifici: disattivati "castigo spirituale", "pioggia d'oro", "carestia", "terremoto" e "orda teutonica"
+- aggiunte 2 borse di cuoio nascoste contenenti una la cintura di serpenti e l'amuleto del coraggio e l'altra l'amuleto del trionfo e la gemma della saggezza
+
+
+ARMINIO, GENERALE RIBELLE
+
+Arminio, generale ribelle è stato modificato per risolvere un'enorme quantità di bug, problemi ed exploit e per rendere più soddisfacente l'esecuzione dell'imboscata finale.
+Ora non è più possibile reclutare eroi aggiuntivi: il giocatore dovrà muovere Arminio dove serve in base alla situazione mentre cerca di tenere pieni di unità i forti commerciali in modo da far funzionare le imboscate.
+C'è da stare attenti anche ai periodici attacchi all'accampamento segreto: di per sé non sono molto potenti ma, proprio per il costante rifornimento di truppe ai forti, l'accampamento sarà spesso sguarnito e quindi facilmente conquistabile.
+La partita si semplifica notevolmente con l'immediata ricerca di "istruzione", sfruttabile al massimo mandando Arminio al villaggio distrutto a combattere gli animali e a prendere gli oggetti lì presenti.
+Sono stati apportati alcuni cambiamenti al funzionamento delle imboscate per fornire una maggiore comodità al giocatore: ora le truppe rientrano nei forti dopo i combattimenti anziché stare fuori (eliminando quindi il rischio di non partecipare all'imboscata successiva qualora il giocatore non se ne accorgesse) e tutte quante parteciperanno allo scontro (prima non era così).
+L'imboscata finale risulterà molto facile se il giocatore manterrà all'interno delle strutture le sue unità (Arminio compreso). Questo in realtà succedeva già nella versione originale, ma una combinazione di bug comportava l'immediata vittoria non appena le truppe comparivano nei pantani e la traduzione italiana/spagnola era completamente fuorviante visto che c'era scritto di mandare le truppe ai pantani senza fare minimamente cenno di tale meccanica.
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: facile/media
+Giudizio di durata con test in difficile dopo le modifiche: breve
+
+- risolto il problema per cui l'ultima battaglia finiva in vittoria immediata nell'istante in cui doveva partire l'imboscata finale nei pantani tramite le truppe stazionate nei vari forti
+- risolto il problema per cui Arminio veniva preso come parte delle truppe delle imboscate, cosa che comportava l'immediata sconfitta
+- risolto il problema per cui svariate truppe non prendevano parte alle imboscate e si limitavano a uscire dai forti senza fare nulla
+- italiano e spagnolo: aggiunta una nota aggiuntiva per indicare che è sufficiente tenere le truppe nei forti e nel foro per farle partecipare all'imboscata finale
+- imboscata finale: se Arminio si trova in una struttura, verrà teletrasportato nella zona a est dell'assalto
+- accampamento segreto: oro iniziale aumentato a 6000, popolazione massima ridotta a 60
+- fucina: disattivati i potenziamenti per le sentinelle (non ci sono mura), il potenziamento "incrementa la produzione di mazze" iniziale viene ricercato istantaneamente
+- santuario di Wotan: disattivati "recluta eroe" e "leggenda delle valchirie" (per aumentare la difficoltà e per evitare exploit di aumento di livello delle valchirie tramite imboscate)
+- incursori dell'accampamento: sostituiti princeps con gladiatori, livello eroi aumentato a 10, sostituiti 5 punti in "superiorità offensiva/difensiva" con 10 punti in "erudizione", tornano a Bingium quando arriva Varo
+- incursori settentrionali: tempo di attesa prima di attaccare ridotto a 8, 7 o 6 minuti in base alla difficoltà, tappa di attesa spostata vicino al villaggio centrale
+- incursori meridionali: tempo di attesa prima di attaccare cambiato a 6, 5.5 o 5 minuti in base alla difficoltà
+- legioni finali: livello aumentato a 10, 15 o 20 in base alla difficoltà
+- imboscatori germanici: bonus livello aumentato a 26, rientrano nei forti una volta finite le imboscate
+- forti commerciali: resi impossibili da conquistare
+- tomba dell'eroe nel villaggio distrutto: rimossi i denti d'orso
+- altare dei sacrifici: disattivati "castigo spirituale", "pioggia d'oro", "carestia", "terremoto" e "orda teutonica"
+
+
+LA RIBELLIONE DI BOADICEA
+
+La ribellione di Boadicea è stata completamente rivista per risolvere alcuni problemi e fornire un'esperienza di gioco ibrida tra strategia e avventura vecchio stile con l'obiettivo di renderla una delle sfide più impegnative.
+I Romani e i Trinovanti adesso sono nemici tra loro e combatteranno nel caso in cui dovessero incrociare i propri cammini, l'IA è stata disattivata e sostituita da periodici e continui attacchi alla fortezza degli Iceni sia per evitare che andasse in certe zone della mappa che per mantenere l'attenzione del giocatore concentrata sulla difesa di una sola fortezza. Di conseguenza, sia la fortezza maledetta che quella dei Trinovanti, una volta conquistate, forniranno risorse utili e sicure all'arsenale del giocatore.
+La quantità di risorse iniziali è stata notevolmente aumentata per far fronte all'immediata raffica di attacchi nemici e per dare un aiuto a lungo termine: gli eserciti nemici hanno tempi di generazione diversi e sono in grado di accumularsi, rendendosi quindi estremamente pericolosi.
+Anche la grotta è diventata più pericolosa: il danno periodico è molto più frequente e i nemici sono stati raggruppati e potenziati, ma l'aggiunta di uno scheletro nascosto in un punto della mappa consentirà al giocatore di scegliere una ricompensa diversa dalla pietra sanguinaria (vedere sezione apposita).
+
+Giudizio di difficoltà con test in difficile dopo le modifiche: difficile
+Giudizio di durata con test in difficile dopo le modifiche: lunga
+
+- risolto il problema per cui non compariva l'obiettivo di conquistare i forti dei Trinovanti
+- risolto il problema per cui non compariva la guarnigione nel forte dell'oro più a sud
+- IA: sostituita con generazione periodica di diversi eserciti nemici (5-24 minuti in base al gruppo e alla difficoltà, 4 dei Trinovanti e 6 dei Romani) che puntano a conquistare i villaggi e la fortezza degli Iceni
+- Trinovanti: rimosse tutte le alleanze, oro nella fortezza tenuto costante a 2000, ottengono un potenziamento ricercabile (taverna, poi tempio di Morrigan) ogni 8, 7 o 6 minuti in base alla difficoltà
+- Romani: rimosse tutte le alleanze, ottengono un potenziamento ricercabile (insegne di Roma Repubblicana) ogni 16, 14 o 12 minuti in base alla difficoltà
+- guardie dei villaggi dei Trinovanti: livello aumentato a 12, aggiunto il comando di mantenere la posizione
+- forti nemici: aggiunta non necessità di viveri per le guarnigioni, forte di addestramento più in basso spostato un po' più a est
+- guarnigioni dei forti: aumentati di circa 50% i soldati stanziati nei forti dell'oro, livello minimo aumentato a 10, sostituite unità con legionari e carri da guerra nel forte dell'oro più a sud-est
+- pattuglie romane: numero di unità per esercito aumentato a 50, livello aumentato a 20 per le unità e a 30 per gli eroi, percorsi cambiati e avvicinati a Camulodunum
+- carri da guerra: numero aumentato a 10 per gruppo, restano a difesa dei villaggi
+- legione finale: sostituiti legionari con pretoriani, livello aumentato a 30
+- Rutilanus: livello aumentato a 50, sostituite "erudizione" e "prestigio" con "resistenza eroica" e "movimento sfuggente", sostituita cintura dei re con ankh dorato e pergamena della vita, aggiornata icona
+- caverna: danno nel tempo ridotto a 6, 8 o 10 in base alla difficoltà, tempo di frequenza danno ridotto a 3 secondi, si applica a tutti i giocatori (eccetto i cavernicoli)
+- cavernicoli: massimizzate le abilità degli eroi, variegato il posizionamento delle unità, aggiunti 2 capi normanni, Thoric, Milred e Larax al gruppo finale, livello delle unità aumentato a 30, 50 per eroi e gruppo finale
+- Penut: rinominato in "Lleldoryn", livello aumentato a 50, gli si può parlare senza dover uccidere tutti i cavernicoli bensì solo quelli del gruppo finale
+- migliorato l'aggiornamento degli obiettivi, aggiunto obiettivo di raccogliere la pietra sanguinaria se la si sceglie come ricompensa da Lleldoryn
+- druido della fortezza maledetta: parla solo una volta e solo se Boadicea è nei paraggi, migliorato il dialogo una volta annullata la maledizione
+- spiriti della fortezza maledetta: numero massimo aumentato a 50
+- Iceni: oro iniziale aumentato a 10000, viveri iniziali aumentati a 6000, popolazione massima aumentata a 140, ricercati automaticamente "forgia spade", "giochi circensi" e "camera dei rituali"
+- Boadicea: livello aumentato a 10
+- Lomhar: sostituito con Alvin, aggiornata icona
+- druido iniziale: assegnato al secondo riquadro di selezione rapida e quindi al gruppo "ctrl-2"
+- rovine in centro mappa: spostate a nord insieme alle altre rovine
+- aggiunti un obelisco, una fonte, una colonna e un monolito alla fortezza degli Iceni
+- aggiunto uno scheletro nascosto con alcune unità di guardia
+- altare dei sacrifici: disattivati "castigo spirituale", "pioggia d'oro", "carestia" e "orda teutonica"
+
+
+FORGIA IL TUO IMPERO
+
+L'obiettivo di queste modifiche è rendere la modalità di gioco "conquista" molto più divertente e avvincente con un'enorme serie di cambiamenti a mappe e meccaniche in modo da sfruttare al massimo il potenziale dell'IA (vedere sezione apposita).
+Sono stati risolti svariati bug (primo tra tutti quello dei villaggi/porti neutrali non sempre conquistati automaticamente, cosa che tendeva a bloccare permanentemente l'IA già nella versione originale) e sono state aggiunte delle migliorie ai bonus dei popoli e alla generazione di risorse per il giocatore; ora è anche possibile scegliere in ogni partita con quale versione di Roma si desidera giocare e non più sempre solo come Roma Repubblicana.
+Se l'IA arriva all'apice del suo potere (specialmente a difficoltà massima), sommergerà il giocatore con enormi e potenti eserciti, portando quindi a battaglie continue e memorabili; con un attacco immediato a inizio partita è possibile impedire che ciò accada, è una tattica più che valida ma per la migliore e soddisfacente esperienza di gioco è meglio procedere normalmente.
+È fondamentale che il giocatore conosca i punti di forza e di debolezza di ogni popolo prima di giocare a difficoltà massima e che capisca quale sia il bonus migliore da scegliere contro il popolo che si desidera sottomettere.
+Per ogni mappa sono state enfatizzate le caratteristiche e meccaniche speciali in modo da diventare una sorta di mini-avventura alternativa.
+
+- risolto il problema per cui i villaggi e i porti neutrali non venivano conquistati automaticamente da chi vi passava vicino
+- migliorate e aggiornate le descrizioni dei territori e dei rispettivi bonus
+- rimossa la scelta automatica di Roma Repubblicana
+- aggiunta rotta di rifornimento verso la fortezza del giocatore da parte del villaggio iniziale
+- risorse iniziali giocatore: oro aumentato a 14000, 12000 e 10000, viveri aumentati a 5000, 4000 e 3000, popolazione massima aumentata a 150, popolazione iniziale aumentata a 80, 65 o 50 in base alla difficoltà
+- risorse iniziali nemici: oro aumentato a 6000, 7000 e 8000, viveri aumentati a 3000, 4000 e 5000, popolazione iniziale aumentata a 50, 65 o 80 in base alla difficoltà
+- villaggi: popolazione iniziale cambiata a 20, popolazione massima cambiata a 70
+- animali pericolosi: livello cambiato a 10
+- nemico: aggiunta ricerca automatica di alcuni potenziamenti
+- bonus Roma: sostituito eroe con Giulio Cesare, assegnato al primo riquadro di selezione rapida e quindi al gruppo "ctrl-1"
+- bonus Gallia: livello aumentato a 18, aggiunti denti d'orso, cintura di forza e amuleto di erbe
+- bonus Iberia: guarigione aumentata a 30, sostituito ottenimento esperienza passivo con ricerca automatica di "saggezza degli eroi" e "saggezza dei guerrieri"
+- bonus Cartagine: aggiunta ricerca automatica di "maestria dei mahout"
+- bonus Britannia: tempo di frequenza rigenerazione arcieri ridotto a 1 minuto, punto di rigenerazione fissato al foro iniziale, livello aumentato a 4
+- bonus Egitto: risolto il problema per cui venivano generati talismani duplicati, rimossa "sopravvivenza" agli eroi per evitare possibili errori manuali nell'aggiunta dei punti abilità
+- bonus Germania: tempo di frequenza generazione viveri ridotto a 30 secondi, rimosso il limite di 20000 viveri per il guadagno automatico
+- bonus Grecia: sostituito con generazione di 10 carri da guerra di livello 10 con amuleti divini nel foro e ricerca automatica di "amuleto di Atena" e "amuleto di Aegle"
+- mappa Roma: nemico sud-ovest cambiato con Roma Imperiale, sostituiti 2 forti commerciali con forti dell'oro, oro dei muli fissato a 3000, aggiunta generazione di 4 muli con 500 oro ciascuno ogni 6 minuti verso le fortezze
+- mappa Gallia: aggiunto 1 forte dell'oro romano, rimosso il limite di tempo per il bonus al livello degli eroi nemici, livello massimo aumentato a 20, tempo di frequenza bonus livello ridotto a 1 minuto
+- mappa Iberia: risolti i problemi degli animali, cambiati gli oggetti nelle isole, popolazione massima fortezza nemica aumentata a 120, aggiunto 1 porto con 2000 oro, livello guardie accampamenti aumentato a 20
+- mappa Cartagine: aggiunti 6 accampamenti numidi e 1 forte dell'oro egizio, aggiunti mercenari alle oasi, tempo di generazione unità nelle fortezze cambiato a 8 minuti, unità cambiate con 20 cavalieri numidi e 10 nobili
+- mappa Britannia: numero imboscate aumentato a 8, livello unità imboscate aumentato a 16, altare dei sacrifici al centro sostituito con rovine, aggiunti tutti i poteri alla lista di quelli lanciati dal nemico
+- mappa Egitto: aggiunti 3 forti dell'oro egizi e 8 accampamenti numidi, aggiunta pergamena della vita agli eroi nemici, tempo di frequenza generazione pergamene fissato a 1 minuto
+- mappa Germania: aggiunti 2 forti dell'oro romani e 3 rovine, aggiunta insegna della forza alle valchirie nemiche generate periodicamente, tempo di rivolta per ogni accampamento teutonico ridotto a 3 minuti
+- mappa Grecia: aggiunti alcuni forzieri, rimossa la rigenerazione dei protettori del porto, bonus porto cambiato a generazione di 2000 oro ogni 5 minuti e sbarco di rinforzi ogni 15 minuti, cambiate le unità dei rinforzi
+
+
+MARE NOSTRUM
+
+La precedente versione di "Mare Nostrum" aveva delle incredibili mappe a livello di puro scenario geografico, ma il gameplay lasciava molto a desiderare perché l'IA non era abbastanza forte e perché non c'era nessuna meccanica speciale in nessuna mappa, quindi era come giocare una partita di strategia con il doppio vantaggio di avere un bonus speciale e dei nemici molto scarsi che combattevano tra loro.
+Tutte le risoluzioni di bug e le modifiche a risorse, bonus e meccaniche di "Forgia il tuo impero" sono state replicate qui e a ogni mappa è stata aggiunta una serie di migliorie e caratterizzazioni tramite l'aggiunta di svariate strutture legate al popolo lì residente.
+Grazie a questi miglioramenti, ora il giocatore può veramente provare l'esperienza di una partita di conquista su vasta scala.
+
+- risolto il problema per cui i posti di guardia non ottenevano viveri
+- conquista aggiornata come "Forgia il tuo impero" in quanto a risoluzione di problemi e a modifiche a risorse, bonus e meccaniche di gioco speciali nelle mappe
+- aggiunto requisito di conquista anche delle fortezze neutrali per vincere
+- fortezze neutrali: oro iniziale aumentato a 4000, viveri iniziali aumentati a 1000
+- mappa Roma: cambiate le grotte, aggiunti 4 accampamenti nemici, rimossi 4 altari dei sacrifici, aggiunti 4 forti dell'oro romani e 2 posti di guardia
+- mappa Gallia: rimosse le grotte, aggiunti 3 accampamenti teutonici, 1 porto, 1 forte di addestramento iberico, 3 forti commerciali gallici, 1 posto di guardia, 10 rovine e 3 altari dei sacrifici
+- mappa Iberia: scambiati colori di 2 nemici, fortezza neutrale gallica cambiata in iberica, cambiate le grotte, aggiunti 3 accampamenti nemici, rimossi 3 altari dei sacrifici, aggiunti 6 forti di addestramento iberici
+- mappa Cartagine: scambiati colori di 3 nemici, aggiunte 6 oasi, disattivati i potenziamenti per le sentinelle nella fortezza neutrale, aggiunti 8 forti di reclutamento cartaginesi, 2 rovine, 1 tempio e 12 accampamenti numidi
+- mappa Britannia: altare dei sacrifici spostato in fortezza nemica settentrionale, aggiunti 4 forti di addestramento britannici, 2 rovine e 2 accampamenti teutonici
+- mappa Egitto: aggiunto 1 nemico a nord-est (senza alleanze), aggiunte 5 zone contaminate, rimosse le grotte, aggiunti 4 forti dell'oro egizi, 2 forti di reclutamento cartaginesi, 6 accampamenti numidi e 1 tempio
+- mappa Germania: scambiati colori di 2 nemici, cambiate le grotte, rimosso altare dei sacrifici a sud-ovest, aggiunti 11 accampamenti teutonici e 4 forti commerciali germanici
+- mappa Grecia: squadre nemiche cambiate con 2 al centro (alleati) e 2 a nord e a sud (senza alleanze), cambiate le grotte, rimossi 3 altari dei sacrifici, aggiunti 13 forti di reclutamento greci, 1 posto di guardia e 5 rovine
+
+
+INTELLIGENZA ARTIFICIALE
+
+Essendo stata fatta una completa revisione di quasi tutti gli script, le modifiche sono troppo numerose e complicate per essere descritte tutte quante, quindi in questo elenco ci saranno solo quelle principali. In generale si può dire che le modifiche puntano a rendere l'IA molto più potente in quanto ora dispone di tutte le ricerche principali del gioco senza limitazioni artificiali o vincoli bloccanti e recluta anche quelle unità militari che prima non venivano considerate per bug e/o programmazione errata degli script. Inoltre, se l'IA possiede abbastanza oro a inizio partita e la mappa non è piccola, seguirà una tattica che le darà alcuni potenziamenti e un buon esercito iniziale con cui proseguire più agevolmente rispetto a prima (in totale ci sono 40 tattiche, 4 per ogni popolo a parte Roma con 12 per via delle sue 3 varianti). Tutti i cambiamenti hanno tenuto in considerazione principalmente l'IA "imprevedibile difficile", ma anche le altre difficoltà hanno automaticamente ricevuto migliorie in maniera sia diretta che non.
+
+- risolti svariati problemi legati ai tipi e ai nomi dei potenziamenti (insediamento/giocatore) così come varie parti obsolete ancora legate a funzionamenti dei giochi precedenti
+- risolto il problema per cui i costi di svariate ricerche effettuate non venivano sommati alle statistiche delle risorse spese
+- risolto il problema per cui l'IA non attaccava proprio o "a scatti" gli accampamenti teutonici/numidi
+- risolto il problema per cui l'IA non riusciva a conquistare le strutture usando squadre senza eroi per via di un continuo reset del comando
+- gli eroi usano i funghi velenosi anche quando possiedono la zanna di elefante, l'anello del potere, le ceneri di druido o abbastanza acqua curativa per recuperare almeno metà vita
+- cavalli aggiunti agli animali cacciati per aumentare il livello degli eroi, priorità ad animali di livello 10 se "esperienza divina" è stata completata, frombolieri neutrali esclusi dalle unità usate per ottenere esperienza
+- ottimizzato l'ordine delle ricerche sviluppate per ogni popolo (mantenendo comunque una minima variabilità) e rimosse dipendenze troppo bloccanti da altre ricerche quando ne viene valutato il bisogno
+- minuti minimi per potenziamenti sentinelle IA imprevedibile ridotti a 20 e 30, minuti minimi per "rinforza porte" ridotti a 25 per IA imprevedibile e a 15 per IA difensiva
+- livello massimo caserma aumentato a 1 per IA facile e ridotto a 2 per IA media (le tattiche iniziali non ne tengono conto)
+- aggiunto reclutamento del cavaliere numida per Cartagine
+- aggiunto reclutamento degli eroi supremi per Roma e Gallia (solo IA difficile)
+- aumentata la varietà delle unità reclutate per ogni popolo, tutte le unità sono sempre abilitate e senza limiti massimi di numero/potenza (limite unità speciali aumentato per IA facile a circa 50% del massimo possibile)
+- migliorato l'uso delle abilità speciali degli eroi
+- sistemata costruzione di nave da guerra comune, romana o egizia in base al popolo giocato
+- aggiunto trasporto risorse depositate in porti e accampamenti teutonici/numidi verso le fortezze
+- aggiunto uso del forte commerciale più vicino per vendere viveri in cambio d'oro (disattivato per IA facile)
+- aggiunto sistema di difesa disperata: l'IA recluta il maggior numero possibile di unità base (fante numida o lanciere libico per Cartagine a seconda della specializzazione) per difendere la fortezza dai nemici che sono entrati
+- aggiunto sistema di decisione per la migliore caserma per Grecia (minor numero di comandi in coda, seppur senza considerarne l'effettiva durata, modifica pensata per scenari/avventure in cui ci sono più strutture uguali)
+
+
+TATTICHE INTELLIGENZA ARTIFICIALE
+
+Gallia
+
+1 - 30 cavalieri + denti d'orso
+2 - 25 lancieri + 20 arcieri + 5 druidi + denti d'orso
+3 - 25 guerrieri con ascia + cintura di forza
+4 - 30 guerrieri + 20 arcieri + cintura di forza + poemi epici
+
+Iberia
+
+1 - 20 difensori + 15 arcieri + 8 sacerdotesse + conoscenze ancestrali
+2 - 20 difensori + 20 frombolieri + 5 sacerdotesse
+3 - 10 guardie d'élite + 10 arcieri + 2 sacerdotesse + gilda dei veterani
+4 - 30 cavalieri + 2 sacerdotesse + doma cavalli
+
+Germania
+
+1 - 20 guerrieri con ascia + 10 cacciatrici + ardimento
+2 - 20 cavalieri teutonici + istruzione + poemi barbarici
+3 - 20 guerrieri con mazza + ardimento + imposta in viveri
+4 - 10 valchirie + 15 guerrieri + 10 arciere + istruzione + imposta in viveri
+
+Egitto
+
+1 - 20 guerrieri + 15 arcieri + 15 lanciatori d'asce + sentiero dei defunti 2 + commercio di viveri + 1 talismano random + benedizione (opzionale)
+2 - 20 guardiani del Nilo + 20 lanciatori d'asce + commercio di viveri + 1 talismano random + benedizione (opzionale)
+3 - 15 guerrieri di Anubis + 5 guerrieri + 10 arcieri + sentiero dei defunti 3 + commercio di viveri + 1 talismano random + benedizione (opzionale)
+4 - 15 guerrieri di Horus + 5 guerrieri + 10 arcieri + luce di Horus 3 + commercio di viveri + 1 talismano random + benedizione (opzionale)
+
+Britannia
+
+1 - 20 lancieri + 20 arcieri o guerrieri con giavellotto + esperienza divina
+2 - 20 lottatori caledoni + 20 arcieri o guerrieri con giavellotto + esperienza divina
+3 - 10 lancieri o highlander + 20 arcieri + giochi circensi o armi d'acciaio + esperienza divina
+4 - 10 lottatori caledoni o highlander + 20 arcieri + giochi circensi o armi d'acciaio + esperienza divina
+
+Cartagine
+
+1 - 50 fanti numidi + patto dei mercenari + rituali arcani + bottino di guerra
+2 - 30 lottatori mauritani + patto dei mercenari + rituali arcani + bottino di guerra
+3 - 30 guerrieri con mazza + patto dei mercenari + rituali arcani + bottino di guerra
+4 - 25 tuareg + 1 elefante da guerra + rituali arcani + bottino di guerra
+
+Roma Repubblicana
+
+1 - 25 legionari + 25 arcieri + festa di Bacco + giochi circensi
+2 - 20 gladiatori + 10 sacerdoti + addestramento avanzato
+3 - 20 princeps + 5 sacerdoti + giochi circensi
+4 - 30 equites + festa di Bacco + giochi circensi
+
+Roma Imperiale
+
+1 - 20 legionari + 20 arcieri + festa di Bacco + accademia militare
+2 - 15 princeps + accademia militare
+3 - 15 legionari + 15 velites + accademia militare
+4 - 20 equites + importa cavalli + accademia militare
+
+Roma Punica
+
+1 - 25 legionari + 15 arcieri + festa di Bacco + accademia militare
+2 - 10 legionari + 10 princeps + accademia militare
+3 - 10 legionari + 20 gladiatori + accademia militare
+4 - 20 equites + importa cavalli + accademia militare
+
+Grecia
+
+1 - 15 opliti + 15 toxotai + 5 sacerdoti + addestramento spartano
+2 - 20 hetairoi + 5 sacerdoti + addestramento spartano
+3 - 20 ipaspisti + giochi olimpici
+4 - 15 peltasti + 10 toxotai + 5 sacerdoti + preparazione militare
+______________________________________
+
+BUG NOTI
+
+Qui sono elencati alcuni bug che potrebbero venire risolti nelle prossime versioni della mod. Purtroppo, non tutti sono fixabili, perché richiedono l'accesso al codice sorgente del gioco.
+
+RISOLVIBILI
+- l'eroe egizio coi capelli "a caschetto" cambia colore del vestito quando combatte, diventando sempre rosso anche quando non dovrebbe esserlo
+- la guardia d'élite dorata (livello 18+) ritorna "metallica" quando combatte
+- i movimenti dei toxotes non sono in sincronia con la sua ombra
+
+DA INVESTIGARE PIÙ A FONDO
+- a volte le unità spirituali cercano di attaccare le catapulte eseguendo un'animazione di tentativo di mettersi al riparo, bloccando qualunque altra azione -> richiede analisi sia di script che file di animazioni
+- trasformare un'unità (ad esempio tramite "maestro teutonico") non mantiene il fattore velocità originale -> probabilmente non risolvibile senza generare overhead
+- ogni tanto, senza un apparente motivo, il gioco crasha -> magari è legato a qualche script, ma è anche probabile che sia dovuto a qualche funzione intrinsecamente buggata o a errata gestione di memoria nel codice sorgente
+- le sentinelle che rientrano nelle torri delle mura sembrano essere contate nelle statistiche post-partita per il numero di unità perse -> verificare script sentinelle (la funzione PutSentry è sospetta)
+
+NON RISOLVIBILI
+- il cambio di fattore velocità per un eroe funziona solo in fase di combattimento e non di movimento
+- le unità con fattore velocità modificato rallentano tutto l'esercito quando sono vincolate a un eroe
+- le unità morte in possesso di "fortuna divina" che vengono colpite da "danno espansivo" possono generare lo stesso bug di "resurrezione" che si verificava con "ira di Giove"
+- nell'editor di mappe, quando si crea un gruppo tramite la selezione di oggetti dall'apposito tasto in finestra, se tra questi è presente qualcosa che non è un'unità (ad esempio le tende dell'accampamento), il gioco crasha
+- nell'editor di mappe, quando si assegna un oggetto a più unità e poi se ne selezionano tante insieme, ad almeno una di queste viene tolto l'oggetto
+- nell'editor di mappe, a volte scompare un'abilità o un oggetto di un eroe dopo che gli si cambia l'icona
+- nell'editor di mappe, se l'unica modifica apportata consiste nel ridimensionamento o nello spostamento di aree, non viene chiesto di salvare quando si desidera uscire, con conseguente perdita dei cambiamenti

@@ -1,0 +1,1287 @@
+CAESAR MOD - CHANGELOG
+
+This file lists all the major changes made to the versions of the Caesar Mod published over time.
+
+
+INTRODUCTION - DISCLAIMER
+
+Thank you for downloading the Caesar Mod!
+I’m Paolo Lamberto, a long-time player who has always been passionate about real-time strategy games and, among the many I love, the Imperivm games hold a special place as my absolute favourites ("Celtic Kings: Rage of War", "Nemesis of the Roman Empire" and, especially, "Great Battles of Rome").
+However, despite my great passion for Imperivm, I never paid attention to what the community was doing: for years, I only played single player and later multiplayer with friends (via programs like Hamachi) on the GBR 1.40 vanilla version.
+It was only by chance, out of curiosity, while searching for any DLC I might have missed, that I discovered a mod introducing Greece, a civilization I had never understood the original developers’ decision to exclude. I greatly appreciated the efforts of everyone who worked on it and, in my opinion, the definitive version of Imperivm GBR is this one, with all the major ancient civilizations (if we don’t include the Parthians, too).
+At the same time, however, just as I discovered the wonder of the Greek Mod, I sadly realized that, in general, the great Imperivm GBR has been almost forgotten by everyone: there is an HD version on Steam, but it’s inferior to the Greek Mod and hasn’t been updated in years.
+Even the Greek Mod itself, despite all its merits, had some issues and could have been further improved. That’s why I decided to step up and use all my knowledge and developer skills to contribute and make Imperivm a better game, hoping that someday the franchise will be rediscovered and appreciated by more and more people.
+I then started working as a self-taught modder, beginning with the Greek Mod to create a new one, the Caesar Mod, aiming to improve every aspect of the game in order to offer everyone a product that provides a pleasant and memorable game experience, whether solo or with others, as well as offering a starting point to help others passionate about Imperivm with the same intentions as mine (it wasn’t easy at all working on a code base that was poorly optimized, very messy, and clearly amateurish in many areas, so I want to prevent others from wasting time fixing things like I had to do).
+My passion for Imperivm is so great that it’s almost impossible to express in words and I also want to clarify that I have no intention of "stealing" what the creators of Greek Mod did. In fact, I’ve included a thank-you to them in the main menu credits and haven’t hidden any of their names, I’ve simply added my name alongside theirs.
+If another person decides to use the Caesar Mod as a starting point for a new project, they are more than welcome to do so: the only courtesy I ask is that they do as I did and keep all the original names, specifying that they started from my mod and releasing the new project under the same CC BY-SA license, whose details can be found in the LICENSE.txt file included in the package.
+
+
+[1.0.0] - 2 June 2025
+
+This is the very first version of the Caesar Mod: it is a project created with the aim of improving every aspect of the game through general rebalancing, introduction of new upgrades and mechanics, resolution of numerous issues, update of great battles, great challenges and conquests, AI improvement, and translations tuning.
+As it is a "fork" of the Greek Mod 1.9, out of fairness, none of its creators have been hidden, and in the credits section of the main menu, a thank-you is explicitly given to them.
+All the changes listed below use the Greek Mod 1.9 as a reference for comparisons on parameter increases/decreases and other adjustments.
+
+
+GENERAL - MISCELLANEOUS
+
+Here are listed gameplay changes common to all peoples and the resolution of many bugs.
+The changes to specials and skills may seem strange at first, but everything will be clearer once you read the changes to individual units in the following sections; generally speaking, it can be said that overly strong abilities have been weakened, and those that were too weak have been improved. For example, "bleeding attack" now costs 3 stamina, no longer allowing weak units to eliminate any non-hero unit in a 1v1 situation, but providing a good boost that is still lethal if used in groups, while "learning" now costs 0 stamina, becoming a truly useful ability instead of a handicap.
+The resolved bugs bring a revolutionary turn for certain units and peoples (especially for Carthage) and prevent certain types of exploits that could have turned into unfair play in multiplayer.
+The updated help guide allows for a comprehensive consultation of almost all aspects of the game: in the original version of Imperivm there were inconsistencies and errors, making it almost meaningless to read; besides, in the main menu there is the tips box again, also updated to stay in line with the mod.
+
+- disease attack: cost increased to 4
+- frenzy: base duration increased to 2 seconds, duration per level reduced to 0.6 seconds
+- charge: cost increased to 5
+- defensive cry: armor reduced to 16, base duration reduced to 1 second, duration per level reduced to 1.5 seconds
+- death blow: cost increased to 5
+- cripple: cost increased to 3
+- rage: cost increased to 5
+- assault cry: base duration increased to 2 seconds, duration per level reduced to 0.6 seconds
+- learning: cost reduced to 0
+- curse: cost increased to 3, duration reduced to 5 seconds
+- concealment: probability reduced to 1%
+- invisibility: cost increased to 2
+- bleeding attack: cost increased to 3
+- administration: increment in attachable units per level increased to 3
+- battle cry: duration increased to 7 seconds
+- regeneration: health increased to 50
+- ceasefire: duration per level reduced to 0.7 seconds
+- mist: damage increased to 45
+- poison: damage reduced to 30, minimum health percentage reduced to 40
+- training outpost: experience gain time reduced to 10 seconds
+- trade outpost: food gain from selling gold increased to 20
+- gold outpost: gold gain increased to 10
+- recruitment outpost: conversion time reduced to 30 seconds for macemen and to 40 for hoplites, also generated hoplites move if a supply route is set
+- Teuton tent: unit spawn time reduced to 15 seconds, Teuton wolf cost reduced to 400 food, now generates a horse-drawn cart instead of a mule for supply unit
+- Numidian tent: unit spawn time reduced to 15 seconds, Numidian soldier cost reduced to 200 food, now generates a camel instead of a mule for supply unit
+- guard post: stationable units increased to 85, can use supply routes, added variable timer (3-6-9-12 seconds) to the death of each sentinel, added description to the interface
+- training: probability of gaining experience increased to 95%
+- water sources: healing reduced to 100, waiting time reduced to 1 second, radius increased to 400, excludes all animals for healing, added description to the interface
+- hero’s grave: level threshold changed to 4/5, all nearby heroes gain levels (same player only), level waiting time increased to 4 seconds, level threshold for talismans removed, added remaining time
+- fixed the issue where "trample" activated "spike armor" and "revenge" from dead units
+- fixed the issue where "trample" did not work against siege machines
+- fixed the issue where hiring a hero from a non-Roman arena from a Roman stronghold spawned a Roman hero instead of the correct people's hero
+- fixed the issue where gold and spoils of war disappeared when entering a cave, as well as the failure to deposit gold if "Mercenary Pact" had not been researched
+- fixed the issue where the "ritual chamber" compromised the research of subsequent upgrades in other strongholds
+- fixed the issue where "Spartan training" reduced the maximum level from 12 to 10 if "special training" had already been completed and the reverse case at level 4 with "training" and 8 with "advanced training"
+- fixed the issue where one had to research the same upgrade again if a subsequent instance was deleted when it was in progress from multiple buildings simultaneously
+- fixed the issue/exploit where one could exceed the maximum limit of special or advanced German units if recruited from multiple buildings simultaneously
+- fixed the issue where upgrades related to the maximum level of liberati, mountaineers, and valkyries did not account for units already present before recruitment
+- fixed the issue/exploit where various bonuses (such as "democracy/oligarchy", "nobility", ...) were applied to units of other players attached to a hero (side effect of GetPlayerUnits)
+- fixed the issue where heroes and units with a maximum limit did not attack nearby enemies on their way to the townhall after recruitment
+- fixed the issue where commands for certain sages lacked descriptions or tooltips during click phase (e.g., "curse" or "cripple")
+- fixed the issue where the guard post kept making a camel appear and disappear in the garrison as well as in any siege machine building on the map
+- fixed the issue where villages lost food to give it to "decorative" peasants and did not properly supply units with more than 20 maximum food (like elephants)
+- fixed the issue where non-military units could capture caravans and tame horses
+- unified upgrades related to unlocking similar troops in the blacksmith (e.g., if a stronghold has both Iberian and Gaul blacksmiths, researching "horseshoes" unlocks horsemen of both peoples)
+- shipyard: updated ship creation icon based on the people (Egypt, Rome, generic), added ship statistics to the command tooltip
+- inn: removed unnecessary information from the interface, increased standard initial population to 10 (to allow self-repair)
+- Roman house: corrected the icon
+- repopulate: cost reduced to 500 gold, research time increased to 60 seconds, restores minimum population only if the current one is lower and/or repairs only the village hall if damaged (ignores houses)
+- call peasants: if there is a supply route to a shipyard, peasants stay near the village rather than trying to enter the shipyard in vain
+- added caravan creation command with 250 to villages, shipyards, townhalls, tents and outposts
+- caravan: fixed the issue where they could enter buildings without resources (e.g., ruins/inns), added all main information to the interface, improved tooltips based on the mouse pointer
+- line formation: range bonus increased to 30%
+- block formation: armor bonus increased to 8, added 20% range bonus
+- core cavalry formation: range bonus increased to 30%
+- skirmish formation: range bonus reduced to 50%, replaced level bonus with 2 damage bonus
+- column formation: army width slightly increased, armor bonus increased to 0, range bonus reduced to 50%, added level bonus 2
+- ghoul: the one in the editor is no longer the summoned one and thus it will not die automatically if the stamina reaches 0
+- peasant: corrected the icon of multiple Greek peasants, added command to detach from a hero (useful when disarming attached militiamen), improved tooltips based on the mouse pointer
+- fisherman: cost reduced to 100 food, recruitment time reduced to 5 seconds, improved tooltips based on the mouse pointer, added dedicated tooltip when pointing to a shipyard
+- ship: sight increased to 720, added "penetration" and "combat skill", added all information (except specials) and items to the interface, improved tooltips based on the mouse pointer
+- Keltill: health increased to 1300, damage increased to 60, armor reduced to 18, sight increased to 650, speed increased to 130, skills "defensive cry", "epic attack", "epic endurance", "healing", "quick march"
+- Larax: health increased to 1400, damage increased to 70, sight increased to 700, speed increased to 140, inventory increased to 6, skills "defensive cry", "epic attack", "epic endurance", "epic armor", "scout"
+- Julius Caesar: health increased to 1250, damage increased to 42, sight increased to 675, speed increased to 125, skills "administration", "battle cry", "quick march", "team defense", "team attack", "vigor"
+- players: enhanced existing colors, replaced greenish with silver, replaced dark red with brown, replaced yellowish with gold
+- ranks: added new honorary titles up to an average of 400 points
+- audio and voices: updated and reviewed the sound effects of each unit to match the type of weapon used, completed missing lines for each unit (Italian, English, and Spanish)
+- main menu: added "Tips" section (total sentences increased to 80), removed "Online (BETA)" button
+- interface: removed diplomacy button at the bottom
+- editor: added some missing units, added more icons to those selectable for units
+- help guide: corrected grammatical and conceptual errors, added "Peoples" section, added many details
+- strings: reviewed and improved all translations in every part of the game
+
+
+STONEHENGES
+
+The original stonehenge powers were almost unusable and so situational that they usually ended up helping the opponents rather than rewarding the caster.
+The goal of these changes is to make stonehenges an important strategic location for which players must fight, encouraging them to focus on map control, which is one of the key aspects of Imperivm. For this reason, stonehenges now have a border like other buildings on the minimap, making them easily identifiable and usable without exiting the minimap view and the powers are more effective for the caster. The "starvation" power has received a huge increase in its cost to reduce the risk of almost completely blocking a Germany player.
+
+- added the border visible from minimap
+- removed stamina regeneration of a random nearby unit every second
+- foraging: new power, cost 10 energy, all units restore food for 45 seconds every 15 seconds (3 food for caster's units, 2 for the others)
+- wind of wisdom: cost increased to 20 energy, duration reduced to 20 seconds, maximum level limit increased to 30, bonus 5 experience for the caster
+- soothing rain: cost reduced to 30 energy, stamina increment changed to 10 for caster's units and 5 for the others
+- divine sacrifice: cost reduced to 40 energy, damage reduced to 50% for the caster, damage waiting time increased to 4 seconds
+- gold rain: new power, cost 50 energy, adds gold to all buildings for 2 minutes (10 gold every 3 seconds, 15 gold for the caster)
+- plague: new power, cost 60 energy, poisons 1 unit every 7 and 8 for the caster (excluding animals), cooldown 60 seconds
+- bloodlust: cost increased to 70 energy, duration increased to 90 seconds, caster's units present at cast time gain 4 bonus damage for the duration
+- starvation: cost increased to 80 energy, food removal percentage increased to 2, food removal halved for the caster
+- earthquake: new power, cost 90 energy, damages all strongholds for 10 seconds (300 damage every second, 225 for the caster)
+- Teuton horde: new power, cost 100 energy, spawns 40 riders, 40 archers and 20 wolves that are level 12 (18 for the caster) after 3 minutes in every stronghold depleting population
+
+
+NEUTRAL GARRISONS
+
+The goal of these changes is to make fights with neutral garrison troops more interesting both in the early and late game; once a certain power level is reached or with the right combination of units it will still be easy to win, but in the other cases the player will have to pay more attention, forcing them to improve their "micro" and "macro" management skills. However, the most important change is the removal of sentries from neutral strongholds: this is mainly aimed at the AI, as most of the time it would stop and waste too much time eliminating the sentries (a problem derived from the fact that the siege scripts are still the same ones used in the previous titles, where sentries didn't exist at all).
+
+- guard units do not move out if there are only invisible enemies around and these are not considered for the capture
+- British training outpost: all highlanders move out at the same time, initial level increased to 4, added 10 javelineers, at most 6 move out at the same time
+- Iberian training outpost: defenders increased to 12, maximum level increased to 20
+- German trade outpost: valkyries increased to 12, at most 8 move out at the same time, initial level increased to 10
+- Gaul trade outpost: trident warriors increased to 6, at most 3 move out at the same time, maximum level increased to 30
+- Roman gold outpost: liberati reduced to 18, initial level increased to 6, maximum level increased to 20
+- Egyptian gold outpost: axe throwers reduced to 10, all move out at the same time
+- Greek recruitment outpost: hoplites reduced to 20, initial level increased to 6, maximum level increased to 10
+- Carthaginian recruitment outpost: macemen increased to 30, at most 16 move out at the same time, maximum level increased to 6
+- Teuton tent: troops that move out in defense and gained at capture reduced to 10
+- Numidian tent: troops that move out in defense and gained at capture reduced to 10
+- guard post: spearmen and archers increased to 24, at most 14 move out at the same time
+- stronghold: sentries reduced to 0
+
+
+ITEMS
+
+The goal of these changes is to make each game more varied and interesting by introducing new items and improving almost all of the existing ones. There were also some small subtleties that caused the items not to function as described and they have been fixed. Given how extreme certain item combinations can become, as you will read later, in single player and multiplayer matches, it will be able to choose whether to play on maps with or without ruins (items generated by other holders will still appear, but they are generally weaker).
+
+- amulet of triumph: added 50% chance to heal 50 more health
+- charm of Aegle: also regenerates 2 health per second
+- herb amulet of luck: increases maximum health by 30
+- feather amulet: removed health regeneration, can be created directly by units
+- ring of power: maximum charges increased to 600
+- silver ankh: new item obtainable in the ruins, increases armor of all attached units by 4
+- golden ankh: also regenerates 10 health per second when below 25%
+- invigorating dark harp: new item obtainable in the ruins, increases maximum health by 300 and armor by 6, every 10 seconds restores 4 stamina to the owner and 8 nearby allies
+- bag of healing water: new item obtainable in the large well every 10 minutes, heals up to 4000 health among nearby allies
+- ash of druid heart: removed from the items generated in the ruins, obtainable in the face pillar every 15 minutes, does not consider anymore the owner and allied units at full health as part of the 8 nearby allies
+- king's belt: obtainable in the lion throne every 30 minutes
+- horn of victory: damage increased to 75, units hit increased to 15, does not consume uses if nothing is hit, added 1 second cooldown
+- boar tooth: new item obtainable in the obelisks every 10 minutes, adds 2 levels, can be combined with 2 more identical items to create the boar teeth amulet
+- boar teeth amulet: level increased to 6, removed from the items generated in the ruins, can be created with 3 single boar teeth
+- belt of snakes: removed bonus damage in low health conditions, can be created directly by units
+- finger of death: uses reduced to 5, targets increased to 4, eliminates any unit excluding heroes, kills in sequence, does not consume uses if nothing is hit, cooldown reduced to 3 seconds
+- god's gift: also increases speed factor by 10%, disappears at the first kill even when the owner is at full health
+- emblem of Democracy: health reduced to 80
+- emblem of Oligarchy: damage increased to 6, also increases armor by 2
+- healing herbs: also heal stamina
+- chosen one's gem: new item obtainable only by Larax when he is recruited, increases damage by 80
+- gem of wisdom: experience increased to 2, chance reduced to 33%, works also when the owner is in a building
+- fur gloves of health: does not consider allied units at full health, added damage visual effect to the owner when healing is performed
+- veteran offence: damage increased to 25%
+- veteran defence: armor increased to 25%
+- veteran health: health increased to 25%
+- veteran medal: also increases damage by 10%
+- scroll of death: also makes the owner regenerate 5 health at every attached unit death
+- scroll of life: new item obtainable in the ruins, every attached unit that kills an enemy makes the owner regenerate 5 health and has a 10% chance to spawn a ghoul
+- blood stone: obtainable in the rib cage every 30 minutes, gives 50 experience, allows to steal missing health from an enemy at choice (cooldown 20 seconds, enemy heroes cannot go below 50%)
+- noble defence: armor increased to 8
+- noble offence: damage increased to 8
+- rye spikes: food increased to 1000
+- travel boots: new item obtainable in the ruins, increases armor by 4 and level by 2, regenerates 1 health to the owner and all attached units 2 times per second
+- Egyptian charms: can be removed by double click
+- battle drums of rage: new item obtainable in the ruins, add 30 damage to the owner and all nearby allies for 5 seconds upon activation
+- skull of pain: new item obtainable in the skull tree every 20 minutes, adds 250 health, activating it subtracts up to 10% owner's maximum health to damage 6 nearby enemies by half that amount (not heroes)
+- elephant tusk: regeneration increased to 25
+- updated all icons and added missing ones to the dropdown selection for customized items in the editor
+
+
+SIEGE
+
+The goal of these changes is to provide some improvements to the interface and slightly rebalance the siege machines, especially thanks to the reintroduction of the manual attack command, useful for catapults when dealing with the "bubble" technique (i.e., a concentrated mass of ranged units, possibly surrounded by impassable objects like walls, rocks, or houses).
+
+- tower: minimum range reduced to 150, range increased to 725
+- catapult: range increased to 750, area of effect radius reduced to 150
+- ram: speed reduced to 35, sight increased to 650, total duration increased to 50 seconds
+- construction: time before taking damage reduced to 10 seconds, construction range reduced to 700
+- restored the ceasefire and manual attack commands
+- added range and health values to the interface
+- varied the arcs of the shots from catapults of different peoples
+
+
+ANIMALS
+
+The original animals were really weak and posed no threat even in packs, making them quite useless even as summons by sages.
+The goal of these changes is to strengthen and diversify them, giving them specials just as the units: the bear has become the strongest animal individually, the boar is much harder to kill especially in 1v1, the lion is lethal against units with low armor or when forming a pack, the wolf is the most annoying and an excellent support unit.
+Now, players will need to pay attention to their supply routes and peasants, as they will be chased down and killed much more easily.
+As it can be seen in the following sections, summoned animals can play a significant role even in major battles.
+
+- bear: health reduced to 360, damage increased to 24, armor increased to 8, sight increased to 500, speed increased to 75, added "attack skill" and "determination"
+- summoned bear: new unit with the bear stats and "combat skill" instead of "determination", total duration 30 seconds
+- boar: health reduced to 320, damage increased to 20, armor increased to 6, sight increased to 450, speed increased to 70, added "combat skill" and "defense skill"
+- summoned boar: new unit with the boar stats and "determination" instead of "combat skill", total duration 30 seconds
+- lion/lioness: health reduced to 280, damage increased to 22, armor increased to 4, sight reduced to 550, speed increased to 80, added "active" and "triple strike"
+- wolf: damage increased to 18, speed reduced to 140, added "drain" and "ferocity"
+- summoned wolf: added "drain", "ferocity" and "combat skill", total duration increased to 200 seconds
+- eagle: health increased to 50, sight increased to 1000, speed increased to 200, the editor one is no longer the summoned one and will not automatically die if stamina drops to 0
+- summoned eagle: total duration increased to 120 seconds
+- crow: health reduced to 25, sight increased to 950, speed increased to 180
+- summoned crow: new unit with the crow stats, "keen sight" and total duration 240 seconds
+- fish: health reduced to 100, sight reduced to 300, speed increased to 110
+- deer: sight increased to 650
+- summoned deer: new unit with the deer stats, speed 200, "keen sight" and total duration 180 seconds
+- horse: health increased to 200, it does not become neutral near enemy strongholds, the taming command (along with its tooltip) now takes priority over the attack command once the "tame horses" upgrade is researched
+- the health bar now also shows the stamina of most animals
+- added stamina, speed, armor and sight of peaceful animals to the interface
+- added sound effects for lions when they are idle
+- fixed the class hierarchy for lions (now they extend "AttackAnimal" instead of "BaseAnimal")
+
+
+BRITAIN
+
+The goal of these changes is to diversify and improve Britain's gameplay style by enhancing the intermediate barracks units, Viking lords and druids.
+Previously, the only truly effective unit was the highlander, possibly supported by javelineers or masses of archers with "assault cry" and "gambler's test", while all the other units were too weak or almost useless, being very easy to counter. Furthermore, the luck component has also been revised: in addition to the initial bet, Britain can now use another (repeatable) much more powerful and risky one, both allowing the player to still gain something even in case of loss, while the other upgrades in the tavern have been weakened to compensate for the new strength of the units ("gambler's test" has received a huge reduction in the chance of killing in one blow, but in return it can now provide a damage bonus to invisible units, which has been done on purpose to encourage the use of druids).
+Now, Britain's main army combination consists of either spermen and javelineers or shield bearers and archers with "assault cry", but highlanders are still the best unit for the late game: initially, they are weaker than before because their base health has been reduced, but since they have "toughness" they are meant to become stronger as they level up, especially when they obtain the noble offence and defence, which now provide 8 as a bonus to their stats.
+Recruiting new heroes has also been simplified thanks to the "wisdom" ability and to the fact that "fights" allows to hire them at level 6, while for units of the barracks (which, by the way, now finally has the "fastest warrior equipment" upgrade like all other peoples) a new blacksmith upgrade must be researched to train them at level 6 (to simplify the acquisition of "nobility"). The increase in damage and range for the hero (intended to balance the fact that he can miss the target) is compensated by the armor reduction, because, being a ranged unit, he cannot afford to get too close to the enemy.
+
+- swordsman: health increased to 180, damage increased to 16, armor increased to 8, added "learning"
+- bowman: health increased to 200, damage increased to 12, recruitment time increased to 6 seconds
+- sentry: health increased to 200, damage increased to 14, armor increased to 4
+- spearman: health increased to 240, damage increased to 24, added "revenge", cost reduced to 150 gold, recruitment time increased to 12 seconds
+- shield bearer: health increased to 300, damage increased to 26, armor increased to 14, replaced "combat skill" with "determination", cost increased to 150 gold, recruitment time increased to 12 seconds
+- javelineer: damage incresed to 24, armor increased to 4, range increased to 400, added "active" and "drain", cost increased to 150 gold, recruitment time increased to 14 seconds
+- highlander: health reduced to 475, armor increased to 8, added "toughness", recruitment time increased to 22 seconds
+- Viking lord: armor increased to 8, speed increased to 90, maximum limit increased to 6
+- druid: health increased to 160, speed increased to 60, cost increased to 200 gold
+- hero: damage increased to 70, armor reduced to 12, range increased to 525, replaced "recovery" and "leadership" with "euphoria" and "wisdom", cost reduced to 800 gold
+- barracks: added fastest warrior equipment
+- spears: cost increased to 1500 gold
+- large shields: cost increased to 1500 gold
+- javelins: cost increased to 1500 gold
+- swords: cost increased to 2600 gold
+- steel weapons: new upgrade researchable in the blacksmith, cost 2000 gold, research time 40 seconds, all new warriors are level 6
+- fights: cost reduced to 2000 gold, only heroes are level 6, updated icon
+- noble offence: requires "nobility", cost reduced to 1000 gold
+- noble defence: requires "nobility", cost reduced to 1000 gold
+- shrine of Thor: maximum level increased to 24
+- gambling: research time reduced to 20 seconds, explores a 3600 radius area, gold gain chance reduced to 40%, 400 food in case of loss
+- gambler's day: cost reduced to 1500 gold, chance reduced to 45%
+- gambler's test: cost reduced to 1500 gold, chance reduced to 1%, added 75% chance to gain 12 bonus damage when becoming invisible
+- gambler's luck: cost reduced to 1500 gold, chance reduced to 15%
+- gambler's all-in: new upgrade researchable in the tavern, cost 4000 gold, research time 5 seconds, adds 40 population, 35% chance to gain 10000 gold (repeatable with a 3 minutes cooldown)
+- ghoul summoning: cost reduced to 1500 gold
+- wolf summoning: replaced with "crow summoning"
+- crow summoning: new upgrade researchable in the temple of Thor, cost 800 gold, druids can sacrifice themselves to transform into crows
+- mass invisibility: new upgrade researchable in the temple of Thor, cost 2000 gold, druids automatically use "invisibility" on nearby allied units (same player only)
+
+
+IBERIA
+
+The goal of these changes is to further emphasize the Iberia's identity as a late game defensive people: in the early game, in fact, it is weaker than probably any other people, but as the game progresses it becomes nearly unstoppable thanks to the level reached by the heroes, who make their armies almost indestructible with the combination of "vigor", "healing", and "team defense".
+The biggest changes for the units include a drastic increase to the recruitment speed of mountaineers, the removal of "expertise" for slingers (an ability that was too unbalanced because it was too powerful and often unpredictable since it wasn't very clear when it would take effect), and the increased cost of "bleeding attack" for elite guards. Mountaineers can now truly become an integral part of the Iberian army and no longer be the old "gold-and-time-eating trap" they were before. Slingers will now maintain their role as ranged anti-hero units to be kept away from the enemy thanks to "attack skill" and "defensive tactics", which works well due to their high level but removes stamina that would be useful for dealing more damage. Elite guards can still continue to use "bleeding attack" with relative ease thanks to "vigor", "ferocity" or "restoration"; without support they will not be as effective as before, but this is intentional to push the player to diversify their army composition.
+Defenders are now worthy of their name and, in general, the two most effective combinations are defenders and slingers or elite guards and archers, with additional support from cavalry, priestesses, and muntaineers. The scout can now collect an item, which can be extremely useful for stealing poison mushrooms directly under the enemy's nose.
+The biggest changes for Iberia overall include a significant increase in experience gain over time (rightly compensated with a higher cost), the reintroduction of the "veterans guild", the double level of "housing" to have an unmatched economy and the radius reduction for "cover of mercy" (it was really exaggerated, as a single cloud covered nearly an entire stronghold).
+
+- militiaman: damage increased to 16, armor increased to 8, can be disarmed even on board a ship
+- archer: health increased to 200, damage reduced to 18, armor increased to 2, recruitment time reduced to 8 seconds
+- sentry: health increased to 220, damage increased to 22, armor increased to 6
+- defender: health increased to 260, damage increased to 18, armor reduced to 20, cost increased to 150 gold, recruitment time reduced to 14 seconds
+- horseman: health increased to 280, armor reduced to 2, speed reduced to 160, added "triumph", cost increased to 160 gold
+- slinger: damage reduced to 36, sight reduced to 500, range reduced to 400, replaced "expertise" with "attack skill" and "defensive tactics", cost reduced to 180 gold
+- elite guard: health reduced to 400, damage increased to 34, added "ferocity", recruitment time increased to 22 seconds
+- mountaineer: health increased to 440, damage increased to 54, sight increased to 600, speed increased to 90, recruitment time reduced to 8 seconds
+- priestess: speed increased to 60
+- hero: health increased to 1400, armor reduced to 14, replaced "euphoria" and "epic endurance" with "vigor" and "wisdom"
+- spears: cost increased to 1500 gold
+- horeshoes: cost increased to 1600 gold
+- slings: cost reduced to 1400 gold
+- tournaments: new militiamen and archers are level 4
+- heroes' wisdom: cost increased to 2500 gold, experience gain time reduced to 30 seconds
+- warriors' wisdom: cost increased to 2500 gold, experience gain time reduced to 30 seconds, removed level 12 limit, does not give experience to heroes
+- mountain clan: research time reduced to 30 seconds
+- veterans guild: new upgrade researchable in the arena, cost 2500 gold, new warriors receive the "veteran ring" which becomes "veteran medal" at the first kill (+6 and +10% damage)
+- free drinks: cost reduced to 1500 gold, also adds 800 food, can exceed maximum population
+- sell food: research time reduced to 20 seconds
+- tame horses: new horsemen are level 6
+- housing: cost reduced to 750 gold, maximum population increment reduced to 15, also adds 5 current population
+- more housing: new upgrade researchable in the tavern, requires "housing", cost 750 gold, increases maximum population by 15 and adds 5 current population
+- call to arms: research time reduced to 15 seconds, militiamen are not undernourished anymore and since minute 10 they are level 8
+- code of valor: cost reduced to 1000 gold, added experience visual effect to priestesses that level up
+- ancestral knowledge: cost reduced to 2000 gold
+- cover of mercy: radius reduced to 325, total duration increased to 25 seconds
+- mass heal: replaced with "restoration"
+
+
+GERMANY
+
+The goal of these changes is to make Germany the perfect definition of "high risk, high reward", that is a people solely and exclusively focused on causing as much damage as possible.
+Previously, Germany's playstyle was quite inconsistent and/or restrictive: on one hand, the food costs to recover the population were high and a single "starvation" was enough to bring it to its knees; on the other hand, it had both "assault cry" and "defensive cry", a combination nearly impossible to counter for some peoples, further exacerbated by the great speed of "quick march" and/or the potential immunity to damage given by "concealment". This combination was terribly wrong when used with macemen because of the already mentioned "expertise" special which, combined with "attack focus", could turn it into a weapon that instantly wiped out armies clearly superior in both level and equipment within seconds.
+That said, now the German hero almost exclusively has damage skills, while the units have been reworked accordingly, with a lower initial attack but potentially higher than before due to "team attack". The already mentioned maceman has become much healthier than before through "death blow" (much more manageable than "expertise") and "regeneration", deliberately added to compensate for the low armor and to give the impression of a "furious barbarian who does not know pain".
+Another revolutionary aspect is the stamina cost for the "learning" special being eliminated, allowing the eponymous upgrade to actually be useful instead of a disadvantage. It is also possible to transform Teuton archers into Teuton wolves (the idea is to start by attacking at range as archers, then charge as wolves, and finally fight at close range as riders, then retreat and start again).
+One last important aspect is that the valkyrie is now the fastest anti-archer unit in the game: a group of valkyries can easily decimate ranged units now by using "combat skill".
+
+- swordsman: damage increased to 14, armor increased to 6, cost increased to 120 food, recruitment time reduced to 8 seconds
+- archer: health reduced to 180, damage increased to 12, armor increased to 2, speed reduced to 70, cost reduced to 160 food, recruitment time reduced to 10 seconds
+- sentry: health reduced to 180, damage increased to 16, armor increased to 4
+- axeman: health increased to 320, damage reduced to 24, armor increased to 4, speed increased to 70, added "active", cost increased to 280 food, recruitment reduced to 12 seconds
+- huntress: health increased to 260, damage increased to 32, speed increased to 70, range increased to 400, recruitment time increased to 16 seconds
+- Teuton rider: health increased to 340, damage reduced to 26, armor increased to 10, cost reduced to 360 food, recruitment time reduced to 16 seconds
+- Teuton archer: damage increased to 12, sight reduced to 500, range reduced to 400
+- Teuton wolf: health increased to 320, damage reduced to 24, armor increased to 10
+- maceman: health reduced to 540, damage reduced to 44, armor increased to 6, replaced "expertise" with "death blow", "regeneration" and "active", recruitment time increased to 22 seconds
+- valkyrie: health reduced to 380, damage increased to 32, armor increased to 16, speed increased to 180, added "combat skill"
+- enchantress: health reduced to 140, armor reduced to 6, speed increased to 60
+- hero: health increased to 1400, replaced "defensive cry" and "euphoria" with "frenzy" and "team attack", cost reduced to 800 gold
+- fastest warrior equipment: does not require "fights"
+- increase axe production: cost increased to 600 gold
+- increase javelin production: cost reduced to 700 gold
+- increase mace production: cost increased to 1000 gold
+- fights: food increased to 4000
+- legendary valkyries: cost increased to 1500 gold
+- learning: cost increased to 2500 gold
+- attack focus: cost increased to 2500 gold
+- Teuton master: cost reduced to 500 gold, allows trasnformation into Teuton wolves (the cycle is rider -> archer -> wolf)
+- barbaric tales: new upgrade researchable in the sanctuary of Wotan, cost 1000 gold, when heroes and valkyries kill units with at least 3 more levels the allies gain 15 experience (radius 500, same player only)
+- increase population: cost reduced to 400 food
+- buy food: cost reduced to 400 gold
+- grain trade: cost changed to 2000 food, gathers 1000 gold in the stronghold
+- religious feast: cost reduced to 1500 gold
+- wolf summoning: cost increased to 800 gold
+- eagle summoning: replaced with "deer summoning"
+- deer summoning: new upgrade researchable in the temple of Neptus, cost 800 gold, enchantresses can sacrifice themselves to transform into deer
+
+
+GAUL
+
+The goal of these changes is to give Gaul a significant and deserved help and bring it back to the glory of the previous games.
+The changes are many, in general the aim was to improve the basic units by providing various types of support to diversify the gameplay style (previously, the focus was almost entirely on horsemen), enhance "warrior tales" as they were nearly useless and partially bugged, make druids an integral part of the main army and give Gaul what it is best known for: heroes worthy of their name.
+The general changes to specials and skills have made the trident warrior a truly formidable unit and valuable for his cost (though still easily counterable with the right units), while the base health redutcion for woman warriors combined with "toughness" is intended to encourage players to use training, especially now that druids are faster at performing the experience-learning animation from higher level units (the previous speed was ridiculously slow).
+Gaul druids are to be considered the greatest masters of nature, so they now have the "reincarnation ritual", a new upgrade that, upon death, transforms them into either bears or boars of the same level: the changes to animals described in the dedicated section allow them to deal significant damage and/or effectively keeping the enemy busy.
+However, the real novelty is the ability to recruit Keltill and Larax after researching all of the arena upgrades and after 45 game minutes: there is enough time to finish a normal game without seeing them appear, but if a tedious war of attrition begins, their arrival will undoubtedly turn the tide of the ongoing battle. Keltill is an excellent fighter designed to enhance basic troops, while Larax is a hero who can easily destroy entire armies on his own thanks to the advantage provided by the gem of the goddess Kathobodua (though he can still be countered with the right units, especially the praetorians, who are probably Gaul's greatest nemesis).
+
+- swordsman: health reduced to 180, damage increased to 14, armor increased to 8, added "learning"
+- archer: health reduced to 140, damage reduced to 12, armor increased to 2, added "determination", cost reduced to 50 gold, recruitment time reduced to 8 seconds
+- sentry: armor increased to 4, added "determination"
+- axeman: health reduced to 240, armor increased to 10, speed increased to 70, cost increased to 160 gold, recruitment time reduced to 14 seconds
+- spearman: health reduced to 280, damage reduced to 18, added "learning", cost reduced to 120 gold, recruitment time reduced to 12 seconds
+- horseman: health reduced to 370, armor reduced to 6, added "defensive tactics" and "active", cost increased to 170 gold, recruitment time reduced to 16 seconds
+- woman warrior: health reduced to 215, damage increased to 36, armor reduced to 14, added "toughness", cost increased to 240 gold, recruitment time reduced to 18 seconds
+- trident warrior: health reduced to 1000, armor increased to 18, speed increased to 90, added "active", maximum limit increased to 6
+- druid: armor reduced to 0, speed increased to 60, halved learning time from more experienced units and ghoul/eagle summoning time
+- hero: health increased to 1200, armor increased to 14, cost increased to 1200 gold
+- fastest warrior equipment: does not require fights
+- axes: cost increased to 1600 gold
+- spears: cost reduced to 1000 gold
+- iron spearheads: cost increased to 800 gold
+- horseshoes: cost increased to 1700 gold
+- exceptional horseshoes: new upgrade researchable in the blacksmith, cost 800 gold, new horsemen are level 6
+- woman armor: cost reduced to 2200 gold
+- fine armor: cost reduced to 800 gold
+- hire hero: chance for a Gaul heroine to be recruited (aesthetic-audio difference only)
+- training: cost reduced to 500 gold
+- advanced training: cost reduced to 1000 gold
+- special training: cost reduced to 1500 gold
+- warrior tales: cost increased to 3000 gold, when a warrior dies all nearby allies receive 1 experience (33%, radius 500, same player only), 5 in case of trident warrior (100%), 10 in case of hero (100%)
+- legendary heroes: new upgrade researchable in the arena, requires all previous upgrades and 45 game minutes, cost 1000 gold, research time 60 seconds
+- hire Keltill: new upgrade researchable in the arena, requires "legendary heroes", cost 8000 gold, recruits Keltill (maximum limit 1)
+- hire Larax: new upgrade researchable in the arena, requires "legendary heroes", cost 12000 gold, recruits Larax (maximum limit 1)
+- increase population: cost increased to 600 food
+- free beer: can exceed maximum population
+- Nordic trade routes: cost reduced to 1000 gold, research time reduced to 30 seconds
+- belt of might: cost increased to 1000 gold
+- herb amulet of luck: new upgrade researchable in the tavern, cost 1000 gold, new warriors receive the "herb amulet of luck" (+30 health)
+- ghoul summoning: cost reduced to 1500 gold
+- eagle summoning: cost reduced to 800 gold
+- reincarnation ritual: new upgrade researchable in the druid house, cost 1500 gold, druids that die (killed or via restoration) transform into bears or boars of the same level
+
+
+ROME
+
+The goal of these changes is to emphasize the sense of power and discipline of the Roman troops, diversify the playstyle for all 3 versions of Rome and provide a valid reason to play Republican Rome over Imperial thanks to the one who gives the mod his name: Julius Caesar.
+Previously, the gap between Republican and Imperial Rome (and partially Punic) heavily favored the latter and it was difficult to bridge that primarily because of the praetorians, "military academy" and "flexibility". At the same time, Imperial Rome had the problem that liberati were too weak and required too much gold to become decent (by dying multiple times), while Republican Rome focused almost all its resources on recruiting gladiators due to "expertise" (which has now been finally removed); meanwhile, principles tended to lose against most enemy units.
+Now things have improved and become healthier: principles can use a combination of "attack skill", "defense skill" and "determination" to implement the use of the "testudo" formation and approach the enemy despite a rain of projectiles, then quickly eliminate it, though they tire over time; gladiators remain the unit to use when reaching a very high level thanks to "offensive tactics"; scouts are now the generally most effective explorers in the game thanks to "keen sight" (while "scout area" in the tavern no longer reveals hidden enemies); praetorians are still the strongest basic unit in the game and their cost has been consistently increased, but it can be reduced through a new upgrade in the blacksmith; liberati now have "bleeding attack" and are the most suitable special unit for eliminating other special units (this is thematically intentional, they are champions of arena combat and have faced the most varied opponents).
+To summarize, the focus of Republican Rome now lies in the raw stats of the units via veteran upgrades and, just like Gaul with legendary heroes, in the possibility of recruiting Julius Caesar, probably the strongest hero in the game when it comes to improving the army; the focus of Imperial Rome still lies in the praetorians but also in other units before they can be equipped, as well as in the liberati (it is also possible to generate gladiators from the arena); Punic Rome has fewer upgrades than any other people but, to compensate and emulate the old mechanics of previous Imperivm games, all of its units have been given "toughness" and their icons have been changed.
+
+- Punic Rome: added "toughness" to all units (heroes included), updated icons
+- hastatus: armor increased to 14, speed increased to 70
+- archer: health increased to 160, damage increased to 22, armor increased to 2, speed reduced to 70, recruitment time reduced to 8 seconds
+- sentry: health increased to 180, damage increased to 26, armor increased to 6
+- gladiator: health increased to 340, damage reduced to 28, replaced "expertise" with "offensive tactics", recruitment time increased to 12 seconds
+- velit: health increased to 220, range increased to 400, speed increased to 70, added "defensive tactics", cost increased to 150 gold, recruitment time reduced to 12 seconds
+- principle: health increased to 320, damage increased to 24, armor reduced to 16, added "determination", cost increased to 220 gold, recruitment time reduced to 16 seconds, increased death animation duration 
+- scout: health reduced to 240, damage increased to 22, speed reduced to 160, added "keen sight", cost increased to 150 gold, recruitment time increased to 12 seconds
+- tribune: speed increased to 70, added "ferocity", cost increased to 340 gold
+- praetorian: health increased to 620, armor increased to 18, speed increased to 70, cost increased to 480 gold for Imperial Rome and to 420 gold for Punic Rome, recruitment time increased to 24 seconds
+- chariot: health increased to 600, damage increased to 32, armor increased to 16, range reduced to 400, cost increased to 400 gold and 1 population, recruitment time increased to 30 seconds, maximum limit increased to 15
+- liberatus: health increased to 480, damage increased to 44, armor increased to 14, speed increased to 90, replaced "regeneration" with "bleeding attack"
+- priest: health increased to 140, armor reduced to 2, speed increased to 60, added "active"
+- republican hero: replaced "charge" with "vigor"
+- imperial hero: health reduced to 1200, damage increased to 40, replaced "leadership" and "administration" with "battle cry" and "vigor", cost increased to 1200 gold
+- punic hero: replaced "charge" with "battle cry"
+- fastest warrior equipment: does not require gladiator shows
+- pikes: cost increased to 1800 gold
+- horseshoes: cost increased to 1000 gold
+- full armor: cost increased to 3000 gold
+- spike armor: cost increased to 4000 gold
+- improve praetorian equipment: new upgrade researchable in the blacksmith for Imperial Rome, cost 3000 gold, reduces new praetorians cost to 380 gold
+- chariot wheels: cost increased to 3500 gold
+- gladiator shows: new heroes are level 4 (Republican Rome only), adds 800 food (Imperial Rome only), new gladiators are level 6
+- training: cost reduced to 500 gold
+- advanced training: cost reduced to 1000 gold
+- special training: cost reduced to 1500 gold, removed for Republican Rome
+- standardization 2: level reduced to 6, research time increased to 30 seconds
+- liberati guild: cost reduced to 1500 gold
+- liberati triumph: new upgrade researchable in the arena for Imperial Rome, cost 1500 gold, research time 40 seconds, liberati heal by 50% and gain 3 bonus experience when they kill special units
+- organize tournament: new upgrade researchable in the arena for Imperial Rome, cost 4000 food and 40 population, research time 60 seconds, gathers 2000 gold in the stronghold and recruits 20 gladiators
+- veteran offence: cost increased to 2500 gold
+- veteran defence: cost increased to 2500 gold
+- veteran health: cost increased to 2500 gold
+- nobility: added to the arena for Republican Rome
+- military academy: research time increased to 30 seconds
+- transition to empire: new upgrade researchable in the arena for Republican Rome, requires all previous upgrades and 40 game minutes, cost 1000 gold, research time 60 seconds
+- hire Caesar: new upgrade researchable in the arena for Republican Rome, requires "transition to empire", cost 10000 gold, recruits Julius Caesar (maximum limit 1)
+- buy food: cost reduced to 400 gold
+- free wine: cost reduced to 1500 gold
+- import horses: cost reduced to 1000 gold, removed for Republican Rome
+- scout area: does not reveal hidden units
+- buy map: new upgrade researchable in the tavern for Punic Rome, cost 2000 gold, research time 90 seconds, explores a huge area (radius 18000) around the stronghold
+- wrath of Jupiter: made non-lethal (to avoid a "resurrection" bug caused by "triumph" or other heals), damage to heroes reduced to 40, damage to units reduced to 250
+- god's gift: cost increased to 2000 gold
+
+
+EGYPT
+
+The goal of these changes is to keep Egypt as the fastest people in the game, while at the same time putting a brake in front of it as it has generally been too strong/fast since the first version of Imperivm GBR.
+This has been made possible through a revision of the costs of some upgrades and units: statues now cost 500 more gold (by the way, the Isis statue is now more useful than before, although the Osiris statue is still the better one); the swordsman, axe thrower and guardian cost less and have received some adjustments to their stats to better reflect their role; "buy slaves" no longer immediately maxes out the population but instead provides 20 inhabitants at a time.
+Divine warriors have received a certain focus due to the changes to specials and skills and their cost has been increased since they are truly powerful now, temple units (chariot of Osiris and priest) have also received some revisions to provide alternative weapons to the main army (fortunately, now a single chariot can no longer poison an entire army without problems, though the increased speed makes it easier to poison enemies with "micro-management").
+Charm costs have also been reduced and the unit cap to equip them has been increased, allowing a single purchase to equip an army of 50 units and all possible chariots of Osiris.
+
+- swordsman: health reduced to 300, damage increased to 18, armor increased to 6, added "torughness", cost reduced to 70 gold
+- archer: health increased to 160, damage increased to 24, recruitment time increased to 10 seconds
+- sentry: health increased to 180, damage increased to 26, armor increased to 6
+- axe thrower: health reduced to 240, damage increased to 22, armor reduced to 8, speed increased to 80, added "active", cost reduced to 160 gold
+- Anubis warrior: health increased to 340, added "combat skill", speed increased to 90, cost increased to 280 gold, recruitment time increased to 20 seconds
+- Horus warrior: health increased to 340, added "combat skill", speed increased to 90, cost increased to 280 gold, recruitment time increased to 20 seconds
+- guardian: damage reduced to 28, armor increased to 10, cost reduced to 240 gold, recruitment time reduced to 16 seconds
+- chariot of Osiris: health increased to 620, damage reduced to 36, armor reduced to 14, speed increased to 140, maximum limit increased to 15
+- priest: health reduced to 200, armor increased to 4, speed increased to 60, added "revenge", cost reduced to 200 gold, recruitment time increased to 20 seconds
+- hero: armor reduced to 18
+- charm of Seth: cost reduced to 500 gold, units equipped increased to 65
+- charm of Thoth: cost reduced to 500 gold, units equipped increased to 65
+- charm of Ra: cost reduced to 500 gold, units equipped increased to 65
+- charm of Isis: cost reduced to 500 gold, units equipped increased to 65
+- statue of Isis, mother of Anubis: cost increased to 2500 gold, units restore 2 food at every kill
+- path of the dead 1: level for Anubis warriors increased to 6
+- path of the dead 2: level for Anubis warriors increased to 10
+- path of the dead 3: level for Anubis warriors increased to 14, corrected icon during research phase
+- statue of Osiris, father of Horus: cost increased to 2500 gold
+- light of Horus 1: level for Horus warriors increased to 4
+- light of Horus 2: level for Horus warriors increased to 6
+- light of Horus 3: level for Horus warriors increased to 8
+- statue of Amon-Ra: cost increased to 3000 gold, effect extended to all units at research completion 
+- buy slaves: cost reduced to 400 gold, adds 20 population
+- grain trade: cost reduced to 1500 gold
+- religious feast: cost increased to 1500 food
+- gossip: cost reduced to 800 food
+- hecatomb: cost increased to 2000 food
+- slavery investment: new upgrade researchable in the market, cost 1000 gold, research time 25 seconds, adds 10 population to each village
+- cult of Osiris: research time reduced to 30 seconds, new priests are level 10
+- mummification: extended to all heroes of any stronghold
+- military training: replaced with "healing"
+
+
+GREECE
+
+The goal of these changes is to provide assistance to Greece as it was generally inferior compared to many other peoples, but especially to better distinguish its identity as a slow and defensive people and to address some issues related to units and upgrades.
+Regarding the units, all of them have received improvements or adjustments balanced by an increase in cost: the peltast has received an improvement in attack speed because his slow throwing of the javelin was embarrassing, the toxotes now excels in ranged combat although he no longer drains stamina from the enemy, the hoplite can now truly absorb enemy blows for long and fulfill his role as a frontline unit, the hetairos is very powerful but slower due to heavy armor, the hypaspist excels in 1v1 combat but loses effectiveness if outnumbered, the chariot has been completely reworked by weakening its stats and removing the maximum limit and it still maintains its identity as a unit capable of dealing area damage, though not as excessively as before, since "trample" has been replaced with "determination" (which makes "spike armor" unlimited); finally, the myrmidon has received various general improvements, the first being a reduction in recruitment time (it still takes a while to recruit 50, but at least not an eternity like before) and the other being a dedicated upgrade to recruit higher-level ones, all balanced by reduced initial health and a higher cost.
+Greece's upgrades have received some refinements, too: for example, Democracy has been slightly weakened to make more room for Oligarchy (which has been significantly strengthened) and to avoid researching the former in almost every game and a major focus has been placed on what allows the Greek stronghold to become an almost impregnable bastion: sentries can now be recruited from the townhall, "religious feast" has been added (to simplify training), food can be sold and, most importantly, "Apollo's protection" is now easier to execute and lasts twice as long, it is now available for every Greek fortress rather than just one and this applies to all players, so if someone conquers a fortress that has already been protected, they can protect it again (once).
+The hero has also been improved: some stats have been added to align him more with the idea of a hero from an epic poem, and after an expensive series of upgrades, he can now be recruited at level 15 (which is certainly great, but still generally inferior to Rome's "military academy" and the hero's skills are a bit weaker than those of the Roman hero).
+
+- peltast: health increased to 200, damage reduced to 16, armor increased to 8, attack speed increased by about 50%, cost reduced to 80 gold, recruitment time reduced to 8 seconds
+- toxotes: health increased to 180, armor increased to 2, replaced "drain" with "life steal", cost increased to 70 gold, recruitment time increased to 10 seconds
+- sentry: health increased to 200, damage increased to 24, armor increased to 6, replaced "drain" with "life steal"
+- hoplite: health increased to 320, damage increased to 22, armor reduced to 16, speed increased to 80, added "active", cost increased to 180 gold, recruitment time increased to 14 seconds
+- hetairos: health increased to 340, damage increased to 24, armor increased to 14, speed reduced to 130, added "learning", cost increased to 220 gold, recruitment time increased to 16 seconds
+- hypaspist: damage increased to 42, armor reduced to 14, added "life steal", cost increased to 320 gold, recruitment time increased to 20 seconds
+- chariot: health reduced to 700, damage reduced to 68, armor reduced to 24, replaced "trample" with "determination", cost reduced to 450 gold, recruitment time increased to 30 seconds, maximum limit removed
+- myrmidon: health reduced to 320, damage increased to 34, sight increased to 600, range increased to 500, speed increased to 90, added "toughness", cost increased to 360 gold, recruitment time reduced to 6 seconds
+- priest: health increased to 180, armor reduced to 2, speed increased to 60, replaced "active" with "keen sight"
+- hero: damage increased to 50, armor increased to 14, replaced "epic armor" and "rush" with "epic attack" and "charge", cost increased to 1200 gold
+- arrows: cost increased to 400 gold, research time increased to 30 seconds
+- spears: cost increased to 1400 gold
+- royal armor: cost decreased to 2400 gold
+- strengthen stronghold gates: completely repairs unbroken gates
+- olympic games: allows to recruit up to 10 myrmidons
+- Spartan training: also automatically researches "training" and "advanced training"
+- forge elite equipment: cost increased to 1500 gold
+- tribute to Heracles: new upgrade researchable in the gymnasium, requires "Spartan training", cost 1500 gold, new myrmidons are of the best level and gain 2 bonus experience by killing more experienced enemies
+- oligarchy: minimum level reduced to 6
+- military preparation: new upgrade researchable in the gymnasium, requires "Spartan training", cost 3500 gold, new heroes are level 15
+- trade routes: cost reduced to 1500 gold, research time reduced to 30 seconds
+- sell food: added to the agora
+- supplies: reduces food consumption even when beyond maximum limit (e.g. in adventures)
+- store food: amount increased to 10 food
+- hire mercenaries: replaced with "religious feast"
+- religious feast: added to the agora, cost 1000 gold and 1000 food
+- offer to gods: cost reduced to 1500 gold
+- invoke the protection of Apollo: duration increased to 2 minutes, gate damage threshold reduced to when they need repair, removed nearby enemies constraint, requestable once for each stronghold for each player
+- statue of Zeus: cost increased to 2500 gold, health threshold increased to 20%
+- military training: replaced with "hire sentries"
+- hire sentries: new upgrade researchable in the townhall, cost 1000 gold, adds 10 sentries on the walls
+
+
+CARTHAGE
+
+The goal of these changes is to support Carthage as it was one of the weakest peoples in standard games without bonuses, alongside Gaul and Greece, by enhancing its identity as a very rich people with weak but very numerous troops.
+The intermediate units (Berber assassin and maceman) are now more effective at dealing damage, especially against heroes, but they remain relatively easy to counter and eliminate; the other barracks units have been revised to keep up with changes to the other peoples and the mod in general, they are still among the weakest in the game and they are only effective in large numbers or as a support for nobles and elephants. Speaking of these two units, the noble has now returned very similar to his original version from 1.40 with the idea of a very powerful and non-sacrificable unit that becomes stronger and more resilient as it levels up, thanks to the combination of "learning" (now no longer costing stamina) and "toughness"; as for the elephant, now that many issues have been resolved (such as bugs related to "revenge" for the dead or the damage against siege machines) it has received a small boost to its attack and speed but a relative reduction in its survivability and an increase in costs which, however, are not a problem for Carthage.
+The Carthaginian market now offers many more commands and both economic and military researches, what stands out the most is: "hire foreign mercenaries", which allows you to recruit a mix of 50 units from other peoples all at once (this is based on historical facts), the improvement to "mercenary pact" to reduce the waste of potential spoils of war and the addition of both "increase population" and "sell food", along with a reduction in cost and gain for "slavery" enabling its use in games with a maximum population of 50 without necessarily resorting to stronghold overcrowding.
+Finally, the Carthaginian blacksmith has been revamped to make it more tactical while also removing many issues: now, developing a weapon costs more than before but from the second time onward the cost is refunded and the research is much faster; this forces the player to keep some gold in reserve in case they need/want to change specialized units but allows them to do so more comfortably and avoid wasting gold if they realize late that they made a mistake.
+
+- Numidian footman: health reduced to 160, armor reduced to 8, added "drain", cost reduced to 80/160 gold
+- javelin thrower: health increased to 160, damage reduced to 24, armor increased to 2, cost reduced to 90/180 gold
+- sentry: health increased to 180, armor increased to 6
+- Berber assassin: health reduced to 280, damage increased to 22, armor reduced to 4, added "attack skill", cost reduced to 140/280 gold
+- maceman: health reduced to 360, damage increased to 24, armor increased to 6, speed increased to 80, added "active", cost increased to 150/300 gold, recruitment time reduced to 14 seconds
+- Tuareg: health increased to 420, damage reduced to 28, speed reduced to 110, added "combat skill", food capacity increased to 40, cost reduced to 170/340 gold
+- Numidian horseman: health increased to 260, armor increased to 8, speed reduced to 160, cost reduced to 180/360 gold, recruitment time reduced to 18 seconds
+- noble: health reduced to 345, damage increased to 50, armor increased to 22, speed increased to 70, replaced "life steal" and "determination" with "learning", "triumph" and "toughness"
+- war elephant: health reduced to 2600, damage increased to 64, armor reduced to 26, speed increased to 65, cost increased to 1200 food
+- shaman: health increased to 140, armor reduced to 4, speed increased to 60
+- hero: armor reduced to 12, replaced "vigor" and "concealment" with "recovery" and "epic armor", cost increased to 1000 gold
+- forge spears: cost increased to 800 gold, from the second time onward the cost is fully refunded at completion and the research time is reduced by 75%
+- forge javelins: cost increased to 1000 gold, from the second time onward the cost is fully refunded at completion and the research time is reduced by 75%
+- forge sowrds: cost increased to 1400 gold, from the second time onward the cost is fully refunded at completion and the research time is reduced by 75%
+- forge maces: cost increased to 1600 gold, from the second time onward the cost is fully refunded at completion and the research time is reduced by 75%
+- forge pikes: cost increased to 1800 gold, from the second time onward the cost is fully refunded at completion and the research time is reduced by 75%
+- forge shields: cost increased to 2000 gold, from the second time onward the cost is fully refunded at completion and the research time is reduced by 75%
+- people's assembly: adds 15 population
+- shared strength: cost increased to 1500 gold, threshold reduced to 10 units
+- shared triumph: cost increased to 1500 gold, threshold reduced to 20 units
+- mahout school: cost increased to 1000 gold
+- mahout mastery: cost increased to 2500 gold, level increased to 16
+- spoils of war: cost increased to 2500 gold
+- increase population: added to the market, cost 1000 food
+- buy food: cost reduced to 400 gold
+- sell food: added to the market
+- free trade: brings the stronghold population to the maximum
+- expedition: research time reduced to 20 seconds
+- mercenary pact: cost increased to 2500 gold, received gold increases by 40 per spoils of war owned by the mercenary, does not give gold to other players' heroes
+- mercenary heal: new upgrade researchable in the market, requires "mecenary pact", cost 2000 gold, research time 30 seconds, when a mercenary dies nearby allies are healed by 2% of his maximum health
+- hire foreign mercenaries: new upgrade researchable in the market, requires "mecenary heal", cost 6000 gold and 3000 food, research time 60 seconds, recruits 10 Gaul horsemen, 20 hoplites and 20 slingers
+- slavery: cost reduced to 40 population, gain reduced to 1600 gold
+- dark rituals: research time reduced to 25 seconds
+- sacred legion: cost increased to 4000 gold
+- ferocity: cost increased to 3000 gold, nobles donate 10 gold to the hero they are attached to when they kill an enemy
+
+
+RANDOM MAPS
+
+The goal of these changes is to provide greater variety to single player and multiplayer game, as well as offer some quality and convenience improvements for players, for example by automatically creating initial supply routes or by automatically assigning the level 12 hero obtained via the bonus to the first quick selection icon.
+The most important change by far is the possibility to choose whether to play with or without ruins on any map type, something that was not possible before and was limiting, especially since ruins didn't exist on maritime maps by default.
+
+- fixed the issue where one of the random Greek villages had more population than the others
+- added the version with/without ruins for each map type
+- added supply route towards the nearest stronghold from each initial village
+- added 2 areas for desert zones: one with some columns/statues and a skull tree, the other with the remains of ruined walls around an obelisk (they were already existing but never used)
+- the "level 12 hero" bonus automatically assigns the hero to the first quick selection icon and consequently to the "ctrl-1" group
+- the "level 12 hero" bonus for Rome generates the hero corresponding to the chosen type of Rome
+- removed the kills/deaths indicator as it was always set to either 0 or NaN only, improved clarity for sudden death and elimination timers for game modes related to the score limit
+- small map: minimum-maximum caves increased to 1-2, maximum stonehenges increased to 1
+- normal map: maximum stonehenges increased to 2, neutral Teuton/Numidian tents changed to 4-6, ruins set to 4, caves set to 2, dangerous animals increased by about 50%
+- huge map: minimum-maximum stonehenges increased to 2-3, minimum-maximum caves changed to 4-6, ruins changed to 1-3 per player, dangerous animals increased by about 50%
+- more clearly differentiated the terrains of the peoples (grass and ground for Gaul and Greece, grass for Rome and Britain, sand for Carthage and Egypt, grass and sand for Iberia and Germany)
+
+
+CUSTOM MAPS
+
+The goal of these changes is simply to improve the gameplay experience in single player and multiplayer games on alternative maps by fixing various bugs caused by the importation of files from previous Imperivm titles, which worked differently and therefore led to strange situations in Imperivm GBR, as well as addresses mistakes and overlooked details by the creator users, such as forgetting to set a starting point, which was annoying as it forced the player to search for their stronghold on the minimap.
+
+- added complete English, Italian and Spanish support
+- common to many maps: fixed the issue where many outposts were ungarrisoned, fixed the issue where dangerous animals didn't wander around the map, set a starting point
+- 2v2 Mαp Grєєcє ~ Iвєriα: removed the shipyard, improved spectator behaviour
+- Ancient world: completed the walls of coastal strongholds
+- Arena of Sorrow: fixed the issue where only up to 3 human players could participate, damage in the central area reduced to 15 every 5 seconds, added bear teeth amulet to the empty leather bag in the centre
+- Ascendacy: replaced Morgatha and Anteros with Larax and Julius Caesar, replaced druids and priests with level 4 Teuton riders/archers in the outposts, liberati spawn point moved to the gold outposts
+- Balcans: fixed the issue where villages were not automatically captured by those passing by, replaced imperial Roman stronghold with Greek, corrected village owners
+- Battle for Spain: fixed the issue where only up to 6 human players could participate, fixed the issue where ghouls lost stamina, fixed the issue where wolves guarding items didn't stay still
+- Battle for Stonehenge: added 10 points to "team attack" and "team defense" to the heroes guarding the townhall, left only "divine sacrifice", "gold rain" and "starvation" to the powers cast by the Roman enemy
+- Bots vs Humans: player layout changed to 4 humans/AIs in the centre and 4 AIs on the edges, players on the edges put in the same team, added druid house to central players
+- Caves: fixed the issue where caves changed player, removed fish, bears level increased to 10
+- Cross: fixed the issue where caves changed player, dangerous animals level increased to 10
+- Crossroads: fixed the issue where outposts were automatically captured by those passing by, replaced trade outposts in the external area with Greek recruitment outposts
+- Cyprus - Huge: fixed the issue where caves changed player, wolves level increased to 10
+- Cyprus - Normal: fixed the issue where various decorations overlapped with strongholds, fixed the issue where bears changed player, bears level increased to 10
+- Egypt in the middle: added description, removed northwest townhalls, added hero attachment command to guards, central stronghold maximum population increased to 200, replaced random village with Egyptian
+- Europe Full - 8 Civilizations: fixed the issue where the stonehenge in the south belonged to player 1, settlement names changed to Latin, removed geographically wrong settlement names
+- Four kingdoms: replaced top players' gold outposts with Gaul trade outposts, neutral scattered units' player changed to 15, patrolling horsemen moved to defend the Teuton tent in the north
+- Gabbo_map: fixed the issue where caves belonged to player 1, fixed the issue where 8 players could participate, added description, removed 1 gold outpost, dangerous animals level increased to 10
+- Gaul - Huge: fixed the issue where the cave north of the central-east stronghold changed player, dangerous animals level increased to 10
+- Gaul - Normal: replaced gold outpost in the north with Gaul trade outpost, added 1 Gaul trade outpost, removed fish, dangerous animals level increased to 10
+- Germany - Huge: added description, dangerous animals level increased to 10
+- Golden land: fixed the issue where stonehenges, caves and ruins changed player
+- Great Britain and Ireland - Huge: fixed the issue where no player could participate, fixed the issue where caves and ruins changed player, added 3 stonehenges, bears level increased to 10
+- Greece - Huge: fixed the issue where caves changed player, fixed the issue where shipyards were not automatically captured by those passing by, wolves level increased to 10
+- Hunger Games: improved positioning of Viking lords
+- I of the sea: fixed the issue where only player 1 had a Gaul stronghold that couldn't be changed, fixed the issue where some neutral units consumed food, neutral scattered units' player changed to 15
+- Ireland - Huge: dangerous animals level increased to 10
+- Island chaos: added 2 stonehenges, replaced belt of might with king's belt in the leather bag on the central island
+- Island troubles: neutral scattered units' player changed to 15
+- Island War: fixed the issue where shipyards were not automatically captured by those passing by, added description, added 1 gold outpost to the northwest peninsula
+- Island battle: wolves level increased to 10, removed eagle feather from the oak stump in the centre 
+- Italy - Huge: fixed the issue where caves and peaceful animals changed player, dangerous animals level increased to 10
+- Crete - Huge: dangerous animals level increased to 10
+- Crete - Normal: replaced training outpost with Egyptian gold outpost, dangerous animals level increased to 10
+- Land of gods: fixed the issue where only up to 3 human players could participate, fixed the issue where ruins changed player, added fur gloves of health to the dead tree
+- Mediterranean: fixed the issue where villages and shipyards were not automatically captured by those passing by, fixed the issue where ruins changed player, added lions and lionesses in Africa
+- Mountain battlegrounds: added 1 stonehenge to the west, added 2 ruins (to the north and to the centre), added 3 Teuton tents and 40 wolves to the centre
+- Mountain passes: fixed the issue where caves changed player, wolves level increased to 10, replaced belt of might with horn of victory in the southwest leather bag
+- North and South: fixed the issue where the northeast recruitment outpost belonged to player 1
+- River of Teutons: fixed the issue where the stonehenge in the south changed player, added 6 Teuton tents and 3 ruins
+- River Utopia: fixed the issue where stonehenges, caves, ruins and strongholds changed player
+- Riverside: fixed the issue where the cave on the island was not clickable from the minimap, wolves level near the Teuton tents increased to 10
+- Rhombus: the neutral hero drops only the "???" item upon dying, updated hero and "???" item icons, added "vigor" (10 points) to the neutral hero, added lioness for each lion, lions level increased to 10
+- Shattered lands: fixed the issue where neutral druids consumed food, replaced healing water with 2 bags of healing water in the dead tree, wolves and neutral Viking lords level increased to 20
+- Sicily - Huge: fixed the issue where stonehenges, caves and various animals changed player, dangerous animals level increased to 10
+- Southern Italy - Huge: fixed the issue where caves changed player, dangerous animals level increased to 10
+- The battle for survival: fixed the issue where strongholds changed player, fixed the issue where the Gaul heroine had no skills, replaced "discipline" with "vigor" for Roman heroes
+- The cross-shaped islands: fixed the issue where caves changed player, wolves level changed to 10
+- The deadly triangle: added horn of victory to the dead tree in the west
+- The mountain wall: fixed the issue where stonehenges changed player, replaced southeast training outpost with Roman gold outpost
+- The northern coast: fixed the issue where the southeast recruitment outpost belonged to player 3, wolves level increased to 10
+- The Teuton Sun: food in neutral stronghold in the centre increased to 2000, added various decorations, made item holders more visible
+- Triangle: removed neutral heroes in the strongholds
+- Volcano: fixed the issue where only up to 3 human players could participate
+- X: added 14 neutral archers to the island in the north and to the stonehenge in the centre, neutral archers level increased to 20
+
+
+TUTORIAL
+
+The tutorial has remained very similar to the original and the only changes made primarily aim to fix some issues and bugs which, however, were not very noticeable and/or required deliberately deviating from the mission instructions to be triggered. The biggest and most important change, however, is the support addition for English (conversation audio) and Spanish (which was previously completely missing).
+
+- fixed the issue where the game softlocked if the player lost all praetorians before Caesar's arrival
+- fixed the issue where praetorians could be moved freely when food had to be sent to Caesar
+- fixed the issue where sentries were counted for the recruitment of 50 soldiers
+- removed dangerous animals (they could interfere with the movements of allied praetorians and enemies)
+- added English conversation audio
+- added Spanish version support
+- improved all the texts of the notes/teachings
+- village, Lindum and Dumnorium: they cannot be captured before the right moment
+- training outpost: it cannot be approached before the right moment
+- items: they are only generated when Caesar approaches the stone pile
+- initial praetorians: level increased to 4, added no food needs until the moment it is talked about
+- Julius Caesar: level increased to 20
+- Larax and army: level reduced to 6, added no food needs
+- Lindum: initial gold increased to 5000
+- Dumnorium garrison: added 5 bowmen and 10 shield bearers
+- added quick selection with assignment to "ctrl-1" group with praetorians first then with Caesar
+
+
+GREAT BATTLES AND GREAT CHALLENGES OF ROME
+
+Tons of changes have been made to all the missions to make them more engaging to play and more memorable, as well as to fix various issues that could be annoying or ruin the game experience. Additionally, countless spelling and grammar mistakes have been corrected, and the English version of each game has been aligned with the Italian and Spanish versions (the only thing still missing is the conversation audio). The details are listed in a distinct section for each scenario, as they are too numerous to include in one place, along with a difficulty and duration rating based on some tests at maximum difficulty after the changes were made (this is subjective and may vary from player to player, but it can still be useful for giving a general idea of what to expect).
+
+- corrected countless spelling and grammar mistakes
+- corrected player interface based on the played people
+- corrected the names of all players
+- added English version support (but without conversation audio)
+
+
+LANDING IN AFRICA
+
+The landing in Africa remains the game's easiest great battle, with tweaks aimed at addressing various issues and making the battles with Syphax and Hannibal more engaging.
+The confrontation with Syphax will force the player to be careful not to let Masinissa die because without him the Numidians will not participate in the final battle (this was already the case in the original version but was not specified), which, thanks to the skills and new items given to Hannibal, will be much more challenging and will require greater "micro-management" skills of Scipio's army.
+The player can still choose to stay in Utica before the battle of Zama and trivialize things by recruiting a huge mercenary army, but since there are no more gates it's no longer easy to trick the AI and waste its time continuously by heavily damaging it with sentries, which, by the way, can no longer be upgraded.
+
+Difficulty rating with tests at hard after the changes: easy
+Duration rating with tests at hard after the changes: short
+
+- fixed the issue where if for some reason the initial units went too far along the path a cutscene started where Masinissa was approached by enemy Tuaregs and the game softlocked
+- fixed the issue where Syphax left the army at the beginning of the attack
+- fixed the issue where the support caravans could suffer starvation damage
+- added a detail in Syphax's kill note that specifies not to let Masinissa die otherwise the Numidians will not participate in the final battle
+- Roman troops: level increased to 6 for landed soldiers, 11 for gladiators, 50 for support ships at the beginning of the game
+- gladiators: after the elimination of Iberian reinforcements, spawn 30, 20 or 10 based on difficulty regardless of the conditions of Scipio's army
+- support caravans: food increased to 2000 each
+- Iberian reinforcements: waiting time between moves reduced to 30, 20 or 10 seconds based on difficulty
+- Syphax's army: added a hero with 50 Numidian horsemen with the objective of killing Masinissa, heroes with Numidian footmen and Berber assassins prioritize recapturing Utica
+- Syphax's heroes: added 10 points to "epic armor", "administration" and "quick march"
+- Hannibal's army: level increased to 10
+- Utica villages: added 15 hidden javelin throwers to the central-west village, added 10 Numidian horsemen and 10 hidden Numidian footmen to the northwest village near the city
+- Utica garrison: added 20 macemen, level increased to 20, the food of each unit is immediately brought to zero when all villages are captured
+- Utica: removed the gates, initial and maximum population increased to 50, automatically researched the "forge maces" upgrade, disabled sentry-related upgrades
+- removed the attachment of javelin throwers to Scipio after Syphax's death if the army is smaller than 30 units
+- battle of Zama: patrolling javelin throwers in Syphax and Masinissa's camps also join the fight
+- Scipio: replaced "concealment" with "administration", removed pre-assigned skill points, healed after main conversations
+- Masinissa: added 10 points to all skills, replaced "euphoria" and "ceasefire" with "recovery" and "administration", goes back to the camp after talking if Iberians reach Syphax
+- Carthalo: level changed to 10, 15, or 20 based on difficulty, added 10 points to "recovery", updated icon
+- Syphax: level reduced to 20, 30 or 40 based on difficulty, replaced "epic endurance" and "epic armor" with "egoism" and "concealment" (10 points), added 10 points to "quick march", updated icon
+- Hannibal: replaced "vigor" and "concealment" with "euphoria" and "frenzy" (10 points), replaced fur gloves, belt of might and concentration stone with golden ankh, king's belt and belt of snakes, added travel boots
+- dead tree: replaced healing water with bag of healing water
+
+
+THE SIEGE OF NUMANTIA
+
+The siege of Numantia has been completely revamped to provide the player with a much more engaging great battle.
+There are continuous clashes with groups of enemy reinforcements that never stop being generated and these groups no longer spawn in the nearest enemy outposts but in specific fixed areas to give the player time to capture some buildings before they get close and the fight begins. This has been done to create the feeling of an exhausting siege that the Iberians continuously attempt to thwart, which historically happened.
+Now the player is no longer defeated if all buildings are lost (which was previously not even specified) but only if Scipio dies, so there is a chance to reclaim at least one of the gold outposts to obtain valuable reinforcements: the enemies, in fact, first aim to reclaim everything, then they will head en masse towards the Roman commander.
+It will not be easy to maintain control of all buildings, so it will be important to know when to attack Numantia and always keep some defensive units in the rear to avoid the siege being hindered by attacks from behind.
+Overall, the difficulty has definitely increased and, to address this, reinforcement units (especially those from training outposts) have been improved and it will also be possible to use witch huts, ruins, chests, and "gold rain" (while being careful to protect the mages) to acquire additional resources.
+
+Difficulty rating with tests at hard after the changes: medium
+Duration rating with tests at hard after the changes: medium
+
+- fixed the issue where villages didn't resume sending food to Numantia if they were recaptured by the enemy
+- fixed the issue where groups of Romans didn't appear if the watch tower and/or the food storage had already been captured
+- removed the defeat condition for losing all gold outposts
+- initial troops: replaced praetorians with tribunes, added 2 archers and 2 gladiators, level increased to 4
+- chariots: group size increased to 10, added a group upon capturing the food storage, level increased to 6
+- Scipio: replaced "survival" and "battle cry" with "quick march" and "team attack"
+- Cornelius Flavius: replaced "team defense" with "healing", updated icon
+- Chilo: level increased to 12, replaced "team defense", "epic endurance" and "battle cry" with "quick march", "epic attack" and "healing", updated icon
+- mercenary units at choice: level increased to 15
+- Roman prisoners: random spawn replaced with groups of units of growing power, level increased to 12
+- Roman reinforcements: spawn frequency time increased to 2, 3 or 4 minutes based on difficulty, added possible group of 6 scouts or 4 tribunes, level increased to 4
+- Iberian reinforcements: removed heroes, level increased to 12, divided into 5 different groups spawned in the northwest and northeast, each with its own path and spawn frequency time (3-7 minutes based on difficulty)
+- Iberian enemies: added various groups along the route guarding the outposts, variable level between 4 and 14, added no food needs
+- Heardred's army: replaced units with 15 axemen, 15 horsemen and 20 woman warriors, level increased to 20, aims to recapture the watch tower
+- Heardred: spawn point moved to the north, level increased to 30, added 10 points to "euphoria" and "epic attack", replaced items with golden ankh and amulet of courage
+- small southern townhall: removed the gate (it created problems with the Iberian reinforcements attacks)
+- watch tower: if the enemy recaptures it, the exploration bonus is lost (it can be got back by recapturing it again)
+- food storage: if the enemy recaptures it, the villages around are lost (they can be got back by recapturing it again)
+- guard tower: added garrison of 30 level 30 elite guards, as long as it remains in the player's hand the sentries near Numantia main townhall don't spawn
+- small southern townhall garrison: level increased to 12, improved hero skills, nearby outposts replaced with village just southeast as recapture target
+- watch tower garrison: added 20 defenders, level increased to 18, moved inside the townhall
+- food storage garrison: added 10 slingers and 15 defenders, level increased to 24, replaced "vigor" with "recovery" (10 points) for Baraeco, moved inside the townhall
+- Numantia patrols: horsemen per group increased to 20, level increased to 30, improved covered paths
+- Numantia garrison: removed heroes, added more units, level increased to 30, removed stand ground command, moves to defend the townhall when the player approaches it
+- Caraunio's army: size increased to 30 elite guards, 25 defenders and 25 slingers, level increased to 40, added veteran medal, added no food needs
+- Caraunio: level increased to 50, replaced "euphoria", "ceasefire" and "assault cry" with "administration", "epic endurance" and "vigor" (10 points), added stamina diamond, dark harp and scroll of life, updated icon
+- stonehenge: disabled "divine sacrifice" and "Teuton horde"
+- oak stump: replaced with well, added ash of druid heart
+- added some witch huts along the path
+
+
+THE SIEGE OF ALESIA
+
+The siege of Alesia has been modified to provide the player with the experience of what can be considered the most difficult siege in ancient history and Julius Caesar's most spectacular masterpiece.
+As a result, the Gaul waves coming from both outside and inside Alesia have been varied and generally enhanced to create an incessant and exhausting battle. The player will be pushed to maximize their "macro-management" skills to deal with the enemy attacks and recapture lost fortifications (hint: for gold outposts, it is extremely useful to station peasants inside them).
+The key to victory lies in knowing how to correctly move hero-led armies as well as various groups of units: this emphasizes the concept of strategy and, as a result, it is possible to play the entire battle almost exclusively from the minimap; all of this has been deliberately designed to provide even more satisfaction to the player, making them feel like a true general on par with Julius Caesar.
+It will be a huge relief when the attacks from the outside cease, because by that point the player's troops will be much more than seasoned veterans and capturing the main city of Alesia will be even more enjoyable.
+Speaking of that, the city's defenses have been strengthened to prevent the player from sending all the initial troops to capture it and finish the scenario before the real battle even begins (this was possible before and it wasn't even hard to win that way).
+
+Difficulty rating with tests at hard after the changes: hard
+Duration rating with tests at hard after the changes: medium/long
+
+- fixed the issue where Julius Caesar didn't speak upon capturing Alesia
+- Roman fortifications: recapture time changed to 6, 5 or 4 minutes based on difficulty, removed automatic capture by the player
+- Roman defenders: spawns changed to 12, 10 or 8 for each individual fortification based on difficulty, level increased to 17
+- Gaul fugitives: spawn waiting time reduced to 1 minute, level reduced to 4
+- Gaul reinforcements: total waves increased to 40, 50 or 60 based on difficulty, varied origin points and units of each group, level changed and uniformed based on unit type
+- reinforcements from Alesia: spawn separated for each townhall and activated only after Gaul attacks start, added respawn in corresponding townhall if recaptured, level changed to 6
+- outer townhall reinforcements: spawn frequency time reduced to 120, 100 or 80 seconds based on difficulty, units changed with 20 swordsmen, 20 archers and 10 spearmen
+- inner townhall reinforcements: spawn frequency time reduced to 180, 150 or 120 seconds based on difficulty, units changed with 20 spearmen, 20 axemen and 10 woman warriors
+- Alesia patrols: horsemen per group increased to 25, level increased to 20, improved covered paths
+- Alesia defenders: level increased to 20
+- outer townhall garrison: added 20 archers, 20 spearmen and 10 woman warriors, level increased to 20
+- inner townhall garrison: replaced with 30 axemen, 30 horsemen, 30 woman warriors and 10 trident warriors, level increased to 25
+- west camp: automatically researched gladiator shows (to unlock gladiators without arena)
+- east camp: changed choice with Imperial Rome, added 2 walls, added 2 groups of 10 level 10 hidden velites that spawn when the enemy approaches the southern defense line
+- gold outposts: initial gold increased to 1000
+- Vercingetorix: level increased to 50, replaced "leadership" and "battle cry" with "epic armor" and "concealment", added "euphoria", added 10 points to all skills
+- Julius Caesar: level increased to 15, replaced "leadership" with "administration", added "concealment"
+- Dioges: renamed to "Gaius Trebonius", level increased to 10, updated icon
+- Anteros: renamed to "Titus Labienus", level increased to 10, replaced "discipline" with "concealment", updated icon
+
+
+AUGUSTUS ON THE NILE
+
+Augustus on the Nile has undergone a huge amount of changes and it was a miracle that the original version even worked because the sequences and scripts were total chaos, there were also missing and/or incorrect translations.
+The goal of the changes is to make the scenario much more interesting and dynamic: this has been made possible both by various tweaks to the map itself and by the changes to the AI (see the dedicated section).
+This scenario can be seen as a single player game embellished with special mechanics, such as the increased utility of recruitment outposts, the presence of a gold outpost, Sudanese troop assaults and the constant maritime attacks on Pelusium from the city of Alexandria.
+The latter city is now impossible to conquer with the initial troops (which have been improved and made consistent, as they were previously random) because the defenders are much stronger, there are two superpowered ships guarding the port (to make it harder to disrupt the maritime attacks), but most importantly because Mark Antony and Cleopatra along with extremely powerful armies have been added, designed to be faced only at the end of the game, when the player has reached an enormous power level.
+Meanwhile, the constant assaults from the Sudanese tribes on Memphis never stop being generated, even after the stronghold is captured, turning into massive reinforcement groups should they defeat the defenders (previously, they would no longer appear after the capture of the townhall).
+The city of Pelusium has been strengthened to help the player after the buffs to the enemies: there are more resources and, thanks to the addition of the temple of Horus and Anubis, additional heroes can be recruited and statue upgrades researched, finally there are also some water sources for quickly healing the troops.
+A significant amount of bugs and exploits has been fixed, for example by completing the walls of Alexandria and Pelusium or by preventing the player from landing the initial units before completing the naval battle; if the player somehow manages to do that, the population of the villages will still remain at a minimum to prevent the player from using it to transform peasants into mercenaries before proceeding correctly with the scenario.
+
+Difficulty rating with tests at hard after the changes: medium/hard
+Duration rating with tests at hard after the changes: long
+
+- fixed the issue where enemy ships stayed still (with the exploit of running away and attacking them calmly one at a time)
+- AI: starts playing only after the capture of a city
+- Pelusio and Alexandria: completed the walls on the sea
+- Flavius Publius: color changed to light blue
+- added a gold outpost with 2000 initial gold near Alexandria protected by 60 level 20 units
+- outposts bonus gold: frequency time reduced to 1 minute, amount changed to 300, 400 or 500 for the enemies and to 500, 400 or 300 for the player based on difficulty
+- Egyptian naval reinforcements: removed attack limit, spawn frequency time reduced to 7, 6 or 5 minutes based on difficulty, units changed with 20 axe throwers and 20 guardians, level increased to 20
+- villages: maximum population increased to 80, until a city is captured the population stays set to 10, added a dead tree to each village
+- village and outpost defenders: added more units, level increased to 20
+- Pelusio: initial gold reduced to 4000, initial food increased to 5000, maximum population increased to 120, added temple of Horus and Anubis, added 2 oak stumps and 1 fountain
+- Memphis: initial gold increased to 5000, initial food increased to 7500, maximum population increased to 140, moved barracks to the left
+- Alexandria: initial gold increased to 6000, maximum population increased to 160, when it is occupied by the Egyptians it gains 5, 15 or 25 gold and 20, 35 or 50 food every 2 seconds based on difficulty
+- Pelusio garrison: added 10 swordsmen, moved inside the townhall
+- Memphis garrison: added more units, level increased to 25 for units and to 30 for heroes, improved hero skills, outposts replaced with southeast village as recapture target
+- Alexandria garrison: added more units, hero replaced with Cleopatra and Mark Antony, level increased to 30, removed stand ground command, added Egyptian charms to all units 
+- Alexandria shipyard: added 2 level 30 ships with 120 units aboard and with concentration stone, fur gloves of health, elephant tusk and charm of Athena
+- Cleopatra: placed to defend Alexandria with 40 Horus warriors and 40 Anubis warriors, level 40, with "administration", "concealment", "team defense" and "healing" (10 points), with golden ankh and silver ankh
+- Mark Antony: placed to defend Alexandria with 50 praetorians, level 40, with "vigor", "epic attack", "team attack" and "assault cry" (10 points), with scroll of life and scroll of death
+- Octavian Augustus: removed pre-assigned skill points, replaced "discipline" with "healing", replaced items with 2 rye spikes
+- Dioges: level increased to 10, replaced "battle cry" with "quick march", removed no food needs, added 2 rye spikes
+- Sabucius: level increased to 10, replaces "discipline" and "administration" with "healing" and "survival", removed no food needs, added 2 rye spikes
+- initial troops: replaced random spawn with set groups, improved arrangement in the ships (22-33 units per ship), level increased to 6
+- Rome ships: level increased to 6, disabled unboard troops command as long as the naval battle is ongoing
+- enemy ships: level increased to 6, green ships changed with Egypt ships, they also flee when the green ones are destroyed or the player approaches the coast, moved retreat point to Alexandria
+- Sudanese tribes: spawn frequency time reduced to 8, 7 or 6 minutes based on difficulty, spawn not interrumpted after Memphis capture, added more units, removed the hero, level increased to 15
+- shrine: disabled "divine sacrifice" and "Teuton horde"
+
+
+THE CONQUEST OF BRITAIN
+
+The conquest of Britain has been revisited with the goal of providing an engaging large-scale single player game with some special mechanics.
+Various bugs related to strange behaviors of both enemies and allies have been fixed, as the latter often interrupted the siege of Lindum or Dumnorium to enter certain buildings and do nothing.
+The real revolution of the scenario is actually due to the changes made to the AI, which is now much more dangerous than before (see the dedicated section) and much more active in retaking the strongholds and villages that the player will capture during the great battle.
+The allied support groups have been diversified and improved by introducing even some Greek units while the ancient Stonehenge, thanks to general modifications made to the stonehenges, will be a very useful tool in the player's hands (provided they can capture and hold it), especially with "gold rain" and "Teuton horde" which, despite the limit of only one use, will allow the player to fully exploit their potential once many cities have been conquered.
+In particular, "Teuton horde" will be essential to win the final battle against Calgacus's army, as it has been greatly strengthened and will no longer be easily eliminated already at the Lindum stronghold, since all the gates and part of the northern walls have been removed (the army tended to get stuck while continuing to eliminate the sentries and did not capture the townhall).
+Finally, as explained in the introductory cinematic, the northern Caledonians were experts in ambush tactics, so the player will need to be careful where they step: there are seemingly safe places and paths that could turn out to be a deadly trap if the player doesn't have sufficiently numerous and/or trained forces.
+
+Difficulty rating with tests at hard after the changes: medium
+Duration rating with tests at hard after the changes: long
+
+- fixed the issue where various areas indicated during the scenario were not fully explored
+- fixed the issue where notes related to interactions with Senator Publius and the use of caves didn't appear
+- fixed the issue where allied besiegers in Lindum or Dumnorium would abandon the attack to join the defense of any allied structure
+- removed the audio of Senator Publius' farewell sentence as it was incorrect (Italian)
+- removed the useless notification from Senator Publius who wants to speak at every event
+- waiting time between events increased to 24, 22 or 20 minutes based on difficulty
+- AI: starts playing after 30 seconds, removed any limit to the number of units, removed control of all pre-existing units, removed use of caves
+- heroes recruitable for 6000 gold: replaced imperial hero with Carthaginian, added Greek hero, level increased to 20
+- allied reinforcements: ships changed to Rome ships, level increased to 4, increased units in each group, added new possible groups (15 Greek chariots for Lindum, 15 hypaspists or 35 hoplites for Londinium)
+- enemy reinforcements: spawn frequency time changed to 10, 8 or 6 minutes based on difficulty, removed caravans, added group of 8 shield bearers, level increased to 12-16
+- enemy troops: level increased to 4-21, added 10 new ambush points
+- initial troops: added 2 praetorians, level increased to 4
+- Gnaeus Julius Agricola: replaced "discipline" with "administration"
+- Wuffa's army: spawn point moved to forest east of the townhall, spawn independent of townhall ownership, spawn time changed to 15, 10 or 5 minutes based on difficulty, level increased to 6
+- tribal chieftains: removed capture time limit, level increased to 10, moved skill points to 10 in a different activable skill each, updated icons
+- Calgacus's army: fully regenerates between stops, waiting time before each move reduced to 1 minute, added 2 stops for the townhall and the outpost just north of Londinium
+- Calgacus's heroes: removed 1 hero, replaced with British heroes, level increased to 30, replaced skills with combinations of 3 skills (10 points) to maximize the potential of attached units, updated icons
+- Calgacus's units: level increased to 20 (21 for highlanders), changed to be of a single type per hero, added 20 Viking lords
+- Calgacus: level increased to 50, replaced king's belt with elephant tusk, added dark harp and silver ankh, replaced 4 skills with "administration", "leadership", "vigor" and "assault cry" (10 points), updated icon
+- Londinium: initial gold increased to 7000, initial population reduced to 20, maximum population increased to 120, added 2 wooden walls to the north and 1 to the south, added more camp decorations
+- Dumnorium, Mancunium and Lindum: initial gold increased to 5000, maximum population increased to 100, added Morrigan's monument to Dumnorium, drastically changed Lindum walls (due to issues with the siege made by Calgacus)
+- Dumnorium and Lindum: when occupied by the enemies they gain 10, 20 or 30 gold every 2 seconds based on difficulty
+- strongholds without walls: disabled sentry-related upgrades
+- gold outposts near Dumnorium: initial gold increased to 2000
+- Iberian training outposts: replaced with the British variant
+- ancient Stonehenge: set a maximum limit of 1 use for "gold rain" and "Teuton horde"
+- fountain north of Mancunium: added bag of healing water
+- added 2 hidden leather bags in the smaller islands: one with the battle drums of rage and the stamina diamond, the other with the finger of death and the travel boots
+
+
+MARCUS AURELIUS IN GERMANY
+
+Marcus Aurelius in Germany has been partially modified to make the defense of the city of Aquileia more interesting.
+First of all, the end-game cinematic is now the correct one, whereas before it would start the victory one for the conquest of Britain.
+The German waves are now larger and become more and more dangerous as the game progresses, so the player will need to move their troops correctly between the gold outposts, the villages and the stronghold, attacking the enemy from multiple points at the same time. Luckily, this becomes easier once the hero with the scouts is unlocked, who has been renamed and updated to unleash hell at his signal.
+Once the main waves are over, the enemies will now continue to strike periodically, although with a reduced frequency and at a lower level, simply to give the player something to do while preparing for the final attack on the enemy camp.
+It will be essential to make the best use of liberati and praetorians against the valkyries in the camp, as they are now equipped with many items that increase health in addition to a considerable level. However, this will also be quite easy by making the best use of the army of Roman allies that arrive to assist the villages.
+Finally, it's a good idea to send someone (preferably Marcus Aurelius) to explore the map and collect the hidden items around, as they will prove very useful.
+In general, the enemies are much stronger than before but the game will still be easy thanks to all these aids, along with the enormous wealth that the 3 gold outposts can provide if used right from the start.
+
+Difficulty rating with tests at hard after the changes: easy
+Duration rating with tests at hard after the changes: long
+
+- fixed the issue where the correct cinematic didn't play at the end of the game
+- fixed the issue where enemy units would capture villages despite the presence of Roman allies
+- German main waves: first wave and spawn frequency times changed to 5, 4 or 3 minutes and 2, 1.5 or 1 minute based on difficulty, reduced waiting time between stops
+- German weakened waves: level increased to 6, 12 or 18 based on difficulty
+- German left and centre waves: maximum spawnable groups increased to 4, only these are considered for the count before the weakened ones
+- German right waves: maximum spawnable groups increased to 5, they keep being spawned for all the game
+- Roman allies: level increased to 24, main group units increased to 100
+- encamped valkyries: level increased to 61, all receive the feather amulet, the king's belt, the golden ankh and the fur gloves of health
+- city guard: maximum remaining units for the respawn reduced to 5
+- initial troops: level increased to 8, assigned liberati to the fourth quick selection icon and consequently to the "ctrl-4" group
+- Marcus Aurelius: level increased to 15, replaced "wisdom" with "leadership"
+- Sabucius: renamed to "Maximus", level increased to 12, replaced "discipline" with "charge", updated icon
+- Rutilanus in the center: level increased to 12, replaced "leadership" and "concealment" with "team defense" and "survival", replaced king's belt with healing herbs
+- Rutilanus to the left: level increased to 12, replaced "discipline" and "concealment" with "team attack" and "healing", replaced king's belt with healing herbs
+- Aquileia: maximum population increased to 120
+- villages: maximum population increased to 40
+- Teuton tents: food increased to 4000
+- Tullius: talks to Marcus Aurelius only, added stand ground command
+- chest on the left: replaced bear teeth amulet with scroll of life
+- tombstone on the right: replaced with chest, added amulet of courage
+- added 1 level 101 valkyrie with fur gloves of health, amulet of triumph and charm of Aegle guarding the top chest
+- added 2 level 10 Teuton wolves guarding the chest on the left
+- no valkyrie drops items upon dying
+- added charm of Athena to all units guarding chests
+- stonehenge: disabled "divine sacrifice", "gold rain", "starvation", "earthquake" and "Teuton horde"
+
+
+HANNIBAL AT THE GATES OF ROME
+
+Hannibal at the gates of Rome has undergone a series of adaptations that haven't changed the overall dynamics of the game but have made Rome's defense much more tenacious and the reinforcements from Ostia more interesting.
+The player must quickly capture this city before the Roman armies start to arrive and, once the stronghold is taken, they can receive reinforcements that now can vary randomly: there is a weak army made up of mercenary infantry units, a medium-strength army made up of mercenary cavalry units and a very powerful one made up of nobles and an elephant.
+The player will be able to personally witness the immense power of the nobles attached to Hannibal, essential for capturing Rome, as its defenders will not give an inch.
+
+Difficulty rating with tests at hard after the changes: medium/hard
+Duration rating with tests at hard after the changes: long
+
+- fixed the issue where some townhalls were not targeted by some Roman reinforcement troops
+- fixed the issue where the Ostia reinforcement ship attacked player units
+- corrected the interlocutors of the dialogue after the destruction of one of the gates of Rome
+- arenas: disabled "transition to empire" and "hire Caesar"
+- Rome sentries: level increased to 50
+- Carthaginian Ostia reinforcements: arrival time changed to 5, 6 or 7 minutes based on difficulty, split into 3 combinations of different power with a certain chance (weak 50%, normal 35%, strong 15%)
+- Roman Ostia reinforcements: arrival time changed to 7, 6 or 5 minutes based on difficulty, added 20 tribunes, level increased to 8
+- troops inside Rome: level increased to 20, hidden units spawn frequency time decreased to 10, 7 or 4 seconds based on difficulty
+- Roman reinforcement heroes: replaced all items with 2 healing waters
+- Roman reinforcement armies outside Rome: they keep being spawned even after the capture of a townhall
+- Roman reinforcement armies inside Rome: spawn frequency time reduced to 5, 4 or 3 minutes based on difficulty, spawn frequency delay reduced to 15 seconds per townhall
+- Carthaginian initial troops: improved deployment via immediate attachment to hero, added 2 support caravans with 1000 food each
+- Allifae: removed recruitment fort, added a group of 50, 40, or 30 level 6 hoplites based on difficulty once the stronghold is obtained
+- advisor noble: level reduced to 5, removed golden ankh and ring of power
+- Hanno and Mago: replaced "discipline" with "wisdom", updated icons
+- Maharbal: replaced "battle cry" with "assault cry"
+- Hannibal: replaced "ceasefire" and "recovery" with "frenzy" and "euphoria", added golden ankh and ring of power
+
+
+VIRIATO DOMINATES HISPANIA
+
+Viriato dominates Hispania remains the easiest great challenge, the tweaks aim to eliminate some issues/exploits and make the moment when the player surpasses the early stages of the game more satisfying.
+First of all, the end-game cinematic (English) is now the correct one, previously, instead, it was played the one for Arminius, rebel general.
+In the original version, just with the initial troops it was possible to capture the outposts in the east and eliminate the guards at the camp and shipyard, making the game incredibly easy due to Larax's early arrival, not to mention the fact that one could even bypass any enemy by passing through the western coast and capture the shipyard almost unchallenged.
+Now, that is no longer possible because rocks block the path while the enemies stationed at the outposts have generally been improved: as a result, the player will need to pay more attention, research some upgrades and recruit additional units before managing to reach the shipyard.
+All of this has been intentionally done to encourage the player to use guerrilla tactics against the Roman armies coming from Saetabis, something that was already required before but could be avoided with the mentioned exploits; in fact, there are also some horses that can be captured to recruit scouts with for such goal.
+When the player frees Larax, they will have plenty of choices on which items to assign to him and Viriato: with the right combination of equipment, Larax can reach 300 damage. The two heroes, for those who don't know, are the protagonists of the tutorials in the previous titles, so their encounter is not a mere coincidence.
+At this point, the player will be free to do whatever they want and the capture of Saetabis will be much more fun than before.
+
+Difficulty rating with tests at hard after the changes: easy
+Duration rating with tests at hard after the changes: short/medium
+
+- English: fixed the issue where the correct cinematic didn't play at the end of the game
+- Mons Herminus: initial gold increased to 500, max population increased to 40
+- initial troops: added veteran ring, they are automatically attached to Viriato
+- enemy armies: do not stop spawning after 30 attacks, they spawn even when player units are near Saetabis, siege/spawn waiting time changed to 35, 25 or 15 seconds based on difficulty
+- enemy heroes: random bonus level (50% chance) increased to 2, 4, or 6 based on difficulty
+- outpost garrisons: soldiers stationed in gold outposts increased by about 50%, minimum level increased to 10, replaced velites with principles in the easternmost gold outpost
+- camp guards: level increased to 24
+- trident warriors: level increased to 24
+- Viriato: level increased to 8, removed 2 points from "team defense" and added 4 points to "healing"
+- Larax: replaced concentration stone with chosen one's gem, replaced "battle cry" with "epic endurance", talks to Viriato only
+- Publius Septis: level changed to the higher value between 50 and Viriato's level increased by 5, replaced "administration" and "wisdom" with "vigor" and "leadership"
+- added dialogue where Publius Septis asks for mercy if his health drops below 45%
+- leather bag in north island: replaced healing waters with ash of druid heart
+- tombstone in southwest island: replaced ash of druid heart and snake skin with battle drums of rage and belt of snakes
+- empty east island: added a chest with boar teeth amulet and skull of pain
+- lion throne in east island: replaced with face pillar, replaced horn of vistory and finger of death with invigorating dark harp
+- added a group of horses to the ruins area
+- added a hidden wolf pack to the ruins
+- added a rock pile to prevent bypasses for the shipyard capture
+
+
+EGYPT TO ARMS
+
+Egypt to arms has been revamped to fix multiple bugs and to become more logical in terms of difficulty progression.
+The Roman armies are initially weaker than before but they become more and more powerful, still maintaining a random generation factor but that makes more sense than the previous version: there was too much discrepancy between the units attached to the heroes, sometimes after two attacks praetorians and/or tribunes would come and they were nearly impossible to stop in the early game, while other times very weak units would show up even in the last attacks, making the game experience inconsistent.
+The player will have to make great use of divine warriors and war elephants to defend against the final attacks: luckily, summoning the divine warriors has been simplified by the addition of the new upgrade "slavery investment", which helps quickly recover the population of the villages, while the Carthaginian market and the gold outposts (including the mercenary fort itself) can provide the wealth needed for the elephants.
+Priests can prove to be a very effective weapon against the enemy thanks to the use of the plague mist and to the presence of a shrine with which they can cast some powers: the most useful of these is undoubtedly "wind of wisdom" to increase the heroes' level.
+
+Difficulty rating with tests at hard after the changes: medium
+Duration rating with tests at hard after the changes: medium
+
+- fixed the issue where new Roman armies could be spawned when the active ones arrived in Herakleopolis Magna
+- fixed the issue where more than 50 peasants could be sacrificed in a single ritual in the designated area
+- fixed the issue where the priests counted as peasants for the sacrifice
+- fixed the issue where all elephants on the map moved towards Herakleopolis Magna when more were spawned via the mercenary fort
+- fixed the issue where Seti talked about spies even if dead
+- fixed the issue where the mercenary leader fought the Romans with the risk of dying and not generating the note regarding the elephants
+- added a note explaining that by capturing Saqqara no more enemy armies will come from the city
+- Herakleopolis Magna: initial gold reduced to 4000, maximum population reduced to 80
+- Memphis and Saqqara: removed defenders spawning in case of player units approaching
+- Carthaginian market: disabled "mercenary pact", "mercenary heal" and "hire foreign mercenaries"
+- villages: maximum population reduced to 40
+- priests in villages: added spawn of caravans with 100 food, peasants and food spawn frequency time increased to 5 seconds, removed spawn if village does not belong to player
+- gold outposts: initial gold reduced to 0
+- divine warriors: level increased to 50 on easy difficulty and 40 on normal difficulty, added all Egyptian charms to each warrior, removed double spawn on easy difficulty
+- enemy armies: units changed based on wave range, units in waves 4-7 and 8-10 increased to 65 and to 80, level in waves 1-3 and 8-10 increased to 2 on easy difficulty and to 10, 12 or 14 based on difficulty
+- enemy items: removed during waves 1-3, replaced amulet of triumph and veteran medal with god's gift during waves 4-7, replaced amulet of triumph with god's gift during waves 8-10
+- allied troops: added 5 chariots of Osiris to each group, replaced snake skin with bear teeth amulet, both groups still appear when it's time to attack Memphis
+- initial troops: replaced 20 guardians with 20 axe throwers, level increased to 5, they are automatically attached to heroes
+- war elephants: level increased to 18, 12 or 6 based on difficulty
+- Seti: level increased to 10, armor reset to 18, replaced "battle cry", "euphoria" and "wisdom" with "healing", "survival" and "quick march", updated icon
+- Imhotep: renamed to "Thutmose", level increased to 10, replaced "concealment" with "vigor", updated icon
+- mercenary leader: talks only once
+- obelisks: removed boar teeth amulet generation
+- added two fountains both containing the wisdom gem, one the golden ankh and the other the silver ankh
+- added shrine to the north with disabled "divine sacrifice", "gold rain", "starvation", "earthquake" and "Teuton horde"
+
+
+THE BATTLE OF GERGOVIA
+
+The battle of Gergovia has been modified to become much more dynamic and satisfying, as well as to fix some bugs and issues (like the fact that the initial troops were defeated during the introductory cutscene).
+On a general level, the scenario is the same as before: the player must defend against enemy waves preventing too many tribal chieftains from being killed and finally protect the stronghold from a large assault, or from an immense, nearly unstoppable army if the chieftains die too early.
+However, now the units making up the Roman waves have been diversified while the Gallic defenders have been improved as they were too weak: in the original version (assuming the introductory cutscene was overcome), few Roman soldiers were enough to eliminate both the chieftains and a good part of the troops defending Gergovia even before the final attack and the poor amount of resources in the stronghold combined with the low population made it impossible to recruit decent units for support, which resulted in a likely final defeat and the almost mandatory use of exploits.
+All of that has changed and now the challenge for the player remains fair but not impossible and, with a minimal dose of "macro-management", it is fairly possible to move the heroes and the armies to the right points at the right time.
+The old Ercenbehrt has been replaced with Luthal, one of the heroes from the main adventure of "Celtic Kings", and Vercingetorix's skills have been improved.
+Once the main waves are eliminated, a massive Roman army will attack in force from the central road, combining all the groups of the individual waves along with a hero and a strong army: however, this army has the "frenzy" skill, which will actually be helpful to the player if they recruit many woman warriors.
+If the player wins, they will also see Julius Caesar himself leaving the battlefield and hear a comment from Keltill that does not exist in the original game, a new addition specific of the Caesar Mod.
+
+Difficulty rating with tests at hard after the changes: easy/medium
+Duration rating with tests at hard after the changes: short
+
+- fixed the issue where several enemy soldiers could suffer starvation damage
+- fixed the issue where several enemy soldiers didn't spawn at all
+- fixed the issue where several enemy soldiers didn't participate in the final attack
+- fixed the issue where several Gaul defenders didn't head towards Gergovia once the final wave began even if their respective tribal chieftains were still alive
+- fixed the issue where the message about the capture of the passes due to too many dead tribal chieftains always appeared when the final wave started even if they were not dead
+- enemy waves: initial waiting and respawn times changed to 5, 4 or 3 minutes and to 150, 120 or 90 seconds based on difficulty, total waves increased to 16, 20 and 24 based on difficulty, varied units
+- final wave: gives priority to attacking through the central road, added spawn of each wave type in addition to any remaining ones, added level 10 hero with 30 principles, 10 tribunes and 10 praetorians
+- tribal chieftains: when they die, their warriors scatter and no longer participate in the final defense
+- added full map exploration when the final wave arrives
+- added short cutscene showing Julius Caesar walking away towards the enemy camp at the end of the battle, with a comment by Keltill
+- allied troops: level increased to 30 for trident warriors and to 20 for the rest, improved defended areas, added some hidden units to some villages, added food sharing with the player
+- tribal chieftains and Gergovia defenders: added bear teeth amulet, belt of might and herb amulet of luck
+- Damasus: added 10 points to "vigor", updated icon
+- Vercingetorix: level increased to 15, replaced "discipline" and "frenzy" with "defensive cry" and "assault cry"
+- Ercenbehrt: renamed to "Luthal", level increased to 10, replaced "battle cry" with "defensive cry", updated icon
+- Luthal's army: added 5 horsemen and 5 woman warriors
+- villages: initial population increased to 30, maximum population increased to 80, added supply routes towards Gergovia
+- Gergovia: initial gold increased to 8000, initial food increased to 1000, maximum population increased to 120, automatically researched "horseshoes" and "exceptional horseshoes"
+- Gergovia walls: removed the rock separating the gates, removed 1 gate
+- stonehenge: disabled "divine sacrifice", "gold rain", "starvation", "earthquake" and "Teuton horde"
+- added 2 hidden leather bags one containing the belt of snakes and the amulet of courage and the other the amulet of triumph and the gem of wisdom
+
+
+ARMINIUS, REBEL GENERAL
+
+Arminius, rebel general has been modified to fix a huge amount of bugs, issues and exploits and to make the final ambush execution more satisfying.
+It is no longer possible to recruit additional heroes now: the player will have to move Arminius where needed based on the situation while trying to keep the trade outposts filled with units in order to make the ambushes work.
+There is also to be cautious of the periodic attacks on the secret camp: these are not very powerful per se but, due to the constant reinforcement of troops at the trade outposts, the camp will often be left unprotected and therefore easy to capture.
+The game is significantly simplified by immediately researching "learning", which can be fully utilized by sending Arminius to the destroyed village to fight the animals and collect the items there.
+Some changes have been made to how ambushes work to provide more convenience to the player: now, troops return to the outposts after battles rather than staying outside (thus eliminating the risk of not participating in the following ambushes if the player doesn't notice) and all of them will join the fight (which wasn't the case before).
+The final ambush will be much easier if the player keeps their units inside the buildings (including Arminius). This was actually already happening in the original version, but a combination of bugs caused the immediate victory as soon as the troops spawned in the swamps and the Italian/Spanish translation was completely misleading because it suggested sending the troops to the swamps without mentioning this mechanic at all.
+
+Difficulty rating with tests at hard after the changes: easy/medium
+Duration rating with tests at hard after the changes: short
+
+- fixed the issue where the last battle ended in immediate victory at the moment the final ambush in the swamps was to be launched by the troops stationed in the various forts
+- fixed the issue where Arminius was taken as part of the ambush troops, which resulted in immediate defeat
+- fixed the issue where several troops didn't take part in the ambushes and simply walked out of the outposts without doing anything
+- Italian and Spanish: added an additional note to indicate that it is sufficient to keep the troops in the outposts and in the townhall to have them join the final ambush
+- final ambush: ff Arminius is in a building, he will be teleported to the area east of the assault
+- secret camp: initial gold increased to 6000, maximum population reduced to 60
+- blacksmith: disabled sentry-related upgrades (there are no walls), initial "increase mace production" upgrade is researched instantly
+- sanctuary of Wotan: disabled "hire hero" and "legendary valkyries" (to increase difficulty and to avoid valkyrie level-up exploits via ambushes)
+- camp raiders: replaced principles with gladiators, hero level increased to 10, replaced 5 points in "team attack/defense" with 10 points in "discipline", they return to Bingium when Varus arrives
+- northern raiders: waiting time before attacking reduced to 8, 7 or 6 minutes based on difficulty, waiting stop stage moved near the central village
+- southern raiders: waiting time before attacking changed to 6, 5.5 or 5 minutes based on difficulty
+- final legions: level increased to 10, 15 or 20 based on difficulty
+- German ambushers: level bonus increased to 26, they re-enter outposts once the ambushes are over
+- trade outposts: made impossible to capture
+- hero grave in the destroyed village: removed bear teeth amulet
+- stonehenge: disabled "divine sacrifice", "gold rain", "starvation", "earthquake" and "Teuton horde"
+
+
+BOUDICCA'S REBELLION
+
+Boadicea's rebellion has been completely revised to fix some issues and provide a hybrid gameplay experience between single player and old-school adventure with the goal of making it one of the most challenging experiences.
+The Romans and the Trinovantes are now enemies and will fight each other if they cross paths, the AI has been disabled and replaced with periodic and continuous attacks on the Iceni stronghold both to prevent it from accessing certain areas of the map and to keep the player's focus on the defense of only one stronghold. As a result, both the cursed stronghold and the Trinovantes one, once captured, will provide useful and safe resources to the player's arsenal.
+The amount of initial resources has been significantly increased to cope with the immediate barrage of enemy attacks and to offer a long-term help: enemy armies have different spawn times and are able to accumulate, which makes them extremely dangerous.
+The cave has also become more dangerous: the periodic damage occurs much more frequently and the enemies have been grouped and strengthened, but the addition of a hidden rib cage in a point on the map will allow the player to choose a reward different than the blood stone (see dedicated section).
+
+Difficulty rating with tests at hard after the changes: hard
+Duration rating with tests at hard after the changes: long
+
+- fixed the issue where the note about capturing the Trinovantes outposts didn't appear
+- fixed the issue where the southernmost gold outpost garrison wasn't spawned
+- AI: replaced with periodic spawn of several enemy armies (5-24 minutes based on group and difficulty, 4 by Trinovantes and 6 by Romans) aiming to capture the Iceni villages and stronghold
+- Trinovantes: removed all alliances, stronghold gold kept constant at 2000, they gain a researchable upgrade (tavern, then Morrigan's monument) every 8, 7 or 6 minutes based on difficulty
+- Romans: removed all alliances, they gain a researchable upgrade (Republican Rome veteran upgrades) every 16, 14 or 12 minutes based on difficulty
+- Trinovantes village guards: level increased to 12, added stand ground command
+- enemy outposts: added no food needs for garrisons, training outpost further down moved a little further east
+- outpost garrisons: soldiers stationed in gold outposts increased by about 50%, minimum level increased to 10, replaced units with hastati and chariots in the southeasternmost gold outpost
+- Roman patrols: units per army increased to 50, level increased to 20 for units and to 30 for heroes, paths changed and moved closer to Camulodunum
+- chariots: increased to 10 per group, they remain to protect the villages
+- final legion: replaced hastati with praetorians, level increased to 30
+- Rutilanus: level increased to 50, replaced "discipline" and "administration" with "epic endurance" and "concealment", replaced king's belt with golden ankh and scroll of life, updated icon
+- wild cave: damage over time reduced to 6, 8 or 10 based on difficulty, damage frequency time reduced to 3 seconds, applies to all players (excluding cave dwellers)
+- cave dwellers: maxed out hero skills, varied units placement, added 2 Viking lords, Thoric, Milred and Larax to the final group, units level increased to 30, 50 for heroes and final group
+- Lleldoryn: level increased to 50, he can be talked to without having to kill all the cave dwellers but only those in the final group
+- improved notes updating, added note about collecting the blood stone if chosen as a reward from Lleldoryn
+- cursed stronghold druid: talks only once and only if Boadicea is nearby, improved the dialogue once the curse is lifted
+- cursed stronghold ghouls: maximum increased to 50
+- Iceni: initial gold increased to 10000, initial food increased to 6000, maximum population increased to 140, automatically researched "swords", "fights" and "ritual chamber"
+- Boudicca: level increased to 10
+- Wuffa: replaced with Alvin, updated icon
+- initial druid: assigned to the second quick selection icon and consequently to the "ctrl-2" group 
+- ruins in center of map: moved north along with the other ruins
+- added an obelisk, a fountain, a face pillar and a boulder to the Iceni stronghold
+- added a hidden rib cage with some guarding units
+- stonehenge: disabled "divine sacrifice", "gold rain", "starvation" and "Teuton horde"
+
+
+FORGE YOUR EMPIRE
+
+The goal of these changes is to make the "conquest" game mode much more fun and engaging with a huge series of changes to maps and mechanics in order to fully leverage the AI potential (see dedicated section).
+Several bugs have been fixed (the most notable being the issue with neutral villages/shipyards not always being automatically captured, which tended to permanently block the AI in the original version) and improvements have been made to people bonuses and to resource generation for the player; now it's also possible to choose which Rome version to play with in each game, no longer limited to Republican Rome only.
+If the AI reaches the peak of its power (especially on the highest difficulty), it will overwhelm the player with enormous and powerful armies, leading to continuous and memorable battles; an early game immediate attack can prevent this from happening, it's a valid tactic but for the best and most satisfying gameplay experience it's better to proceed normally.
+It is essential that the player understands the strengths and weaknesses of each people before playing on the highest difficulty and knows which bonus is best to choose against the people they wish to subjugate.
+For each map, the special features and mechanics have been emphasized to create a sort of alternative mini-adventure.
+
+- fixed the issue where neutral villages and shipyards were not automatically captured by those passing by
+- improved and updated the descriptions of the territories and of their bonuses
+- removed Republican Rome automatic choice
+- added supply route towards the player stronghold from the initial village
+- player initial resources: gold increased to 14000, 12000 and 10000, food increased to 5000, 4000 and 3000, maximum population increased to 150, initial population increased to 80, 65 or 50 based on difficulty
+- enemy initial resources: gold increased to 6000, 7000 and 8000, food increased to 3000, 4000 and 5000, initial population increased to 50, 65 or 80 based on difficulty
+- villages: initial population changed to 20, maximum population changed to 70
+- dangerous animals: level changed to 10
+- enemy: added automatic research of some upgrades
+- Rome bonus: replaced hero with Julius Caesar, assigned to the first quick selection icon and consequently to the "ctrl-1" group
+- Gaul bonus: level increased to 18, added bear teeth amulet, belt of might and herb amulet of luck
+- Iberia bonus: healing increased to 30, replaced passive experience gain with automatic research of "heroes' wisdom" and "warriors' wisdom"
+- Carthage bonus: added automatic research of "mahout mastery"
+- Britain bonus: archers respawn frequency time reduced to 1 minute, respawn point set to the initial townhall, level increased to 4
+- Egypt bonus: fixed the issue where duplicated charms were generated, removed "survival" from heroes to avoid possible manual mistakes in adding skill points
+- Germany bonus: food generation frequency time reduced to 30 seconds, removed the limit of 20000 food for automatic gain
+- Greece bonus: replaced with spawn of 10 level 10 chariots with divine charms in the townhall and automatic research of "charm of Athena" and "charm of Aegle"
+- Rome map: southwest enemy changed to Imperial Rome, replaced 2 trade outposts with gold outposts, caravans gold set to 3000, added spawn of 4 caravans with 500 gold each every 6 minutes towards the strongholds
+- Gaul map: added 1 Roman gold outpost, removed time limit to enemy heroes level bonus, max level increased to 20, level bonus frequency time reduced to 1 minute
+- Iberia map: fixed animal issues, changed items on islands, enemy stronghold max population increased to 120, added a shipyard with 2000 gold, camp guards level increased to 20
+- Carthage map: added 6 Numidian tents and 1 Egyptian gold outpost, added mercenaries to oases, unit spawn time in strongholds changed to 8 minutes, units changed to 20 Numidian horsemen and 10 nobles
+- Britain map: ambushes increased to 8, ambush units level increased to 16, stonehenge in the center replaced with ruins, added all powers to the list of those cast by the enemy
+- Egypt map: added 3 Egyptian gold outposts and 8 Numidian tents, added scroll of life to enemy heroes, scroll generation frequency time set to 1 minute
+- Germany map: added 2 Roman gold outposts and 3 ruins, added veteran health to periodically spawned enemy valkyries, uprising time for each Teuton tent reduced to 3 minutes
+- Greece map: added some chests, removed shipyard protectors respawn, shipyard bonus changed to 2000 gold generation every 5 minutes and reinforcements landing every 15 minutes, changed reinforcement units
+
+
+MARE NOSTRUM
+
+The previous version of "Mare Nostrum" had incredible maps in terms of pure geographical scenery, but the gameplay left much to be desired because the AI wasn't strong enough and there were no special mechanics in any of the maps, so it was like playing a single player game with the double advantage of having a special bonus and very weak enemies fighting among themselves.
+All bug fixes and changes to resources, bonuses and mechanics from "Forge your empire" have been replicated here and each map has been enhanced with a series of improvements and characterizations through the addition of various buildings related to the people living there.
+Thanks to these improvements, the player can now truly experience the feeling of a large-scale conquest game.
+
+- fixed the issue where guard posts didn't get food
+- conquest updated as "Forge your empire" in terms of bug fixes and changes to resources, bonuses and special game mechanics in maps
+- added requirement to also capture neutral strongholds to win
+- neutral strongholds: initial gold increased to 4000, initial food increased to 1000
+- Rome map: changed caves, added 4 enemy camps, removed 4 stonehenges, added 4 Roman gold outposts and 2 guard posts
+- Gaul map: removed caves, added 3 Teuton tents, 1 shipyard, 1 Iberian training outpost, 3 Gaul trade outposts, 1 guard post, 10 ruins and 3 stonehenges
+- Iberia map: swapped 2 enemy colors, Gaul neutral stronghold changed to Iberian, changed caves, added 3 enemy camps, removed 3 stonehenges, added 6 Iberian training outposts
+- Carthage map: swapped 3 enemy colors, added 6 oases, disabled sentry upgrades in the neutral stronghold, added 8 Carthaginian recruitment outposts, 2 ruins, 1 shrine and 12 Numidian tents
+- Britain map: stonehenge moved to northern enemy stronghold, added 4 British training outposts, 2 ruins and 2 Teuton camps
+- Egypt map: added 1 enemy in the northeast (without alliances), added 5 contaminated areas, removed caves, added 4 Egyptian gold outposts, 2 Carthaginian recruitment outposts, 6 Numidian camps and 1 shrine
+- Germany map: swapped 2 enemy colors, changed caves, removed southwest stonehenge, added 11 Teuton tents and 4 German trade outposts
+- Greece map: enemy teams changed to 2 in the center (allied) and 2 in the north and south (without alliances), changed caves, removed 3 stonehenges, added 13 Greek recruitment outposts, 1 guard post and 5 ruins
+
+
+ARTIFICIAL INTELLIGENCE
+
+Since a complete revision of almost all the scripts has been made, the changes are too numerous and complex to be fully described, so only the main ones will be listed here. In general, it can be said that the changes aim to make the AI much more powerful, as it now has access to all the main game upgrades without artificial limitations or blocking constraints and it also recruits military units that were previously not considered due to bugs and/or incorrect script programming. Besides, if the AI has enough gold at the start of the game and the map is not small, it will follow a tactic that grants it some enhancements and a good initial army, allowing it to progress more easily than before (there are 40 tactics in total, 4 for each people except Rome, which has 12 due to its 3 variants). All the changes were primarily focused on the "chaotic hard" AI, but the other difficulty levels have also automatically received improvements, both directly and indirectly.
+
+- fixed various issues related to the type and name of the upgrades (settlement/player) as well as different obsolete parts that were still tied to the functioning of the previous titles
+- fixed the issue where the costs of several researches performed were not added to the spent resources statistics
+- fixed the issue where the AI did not attack Teuton/Numidian tents at all or did so but "intermittently"
+- fixed the issue where the AI was not able to capture buildings when using squads without heroes because of a continuous command reset
+- heroes use poison mushrooms also when they have the elephant tusk, the ring of power, the ashes of druid heart or enough healing water to restore at least half their health
+- horses added to the animals hunted by heroes to level up, priority to level 10 animals if "gambler's day" has been completed, neutral slingers excluded from the units farmed to gain experience
+- optimized the order of the upgrades researched for each people (while still maintaining a minimal variability) and removed overly blocking dependencies on other upgrades when the need is assessed
+- minimum minutes for sentry upgrades of chaotic AI reduced to 20 and 30, minimum minutes for "strengthen stronghold gates" reduced to 25 for chaotic AI and to 15 for defensive AI
+- barracks maximum level increased to 1 for easy AI and reduced to 2 for medium AI (initial tactics do not consider it)
+- added Numidian horseman recruitment for Carthage
+- added supreme heroes recruitment for Rome and Gaul (hard AI only)
+- increased the variety of units recruited for each people, all units are always enabled and without maximum number/power limits (special units limit increased for easy AI to about 50% of the maximum possible)
+- improved hero skills usage
+- managed construction of common, Roman or Egyptian ship based on the played people
+- added transport of resources stored in shipyards and Teuton/Numidian tents towards strongholds
+- added usage of the nearest trade outpost to sell food for gold (disabled for easy AI)
+- added desperate defence system: the AI ​​recruits as many basic units as possible (Numidian footmen or javelin throwers for Carthage depending on specialization) to defend the stronghold from enemies who have entered
+- added decision system for the best barracks for Greece (less commands in queue, although without considering their actual duration, change intended for scenarios/adventures where there are more identical buildings)
+
+
+ARTIFICIAL INTELLIGENCE TACTICS
+
+Gaul
+
+1 - 30 horsemen + bear teeth amulet
+2 - 25 spearmen + 20 archers + 5 druids + bear teeth amulet
+3 - 25 axemen + belt of might
+4 - 30 swordsmen + 20 archers + belt of might + warrior tales
+
+Iberia
+
+1 - 20 defenders + 15 archers + 8 priestesses + ancestral knowledge
+2 - 20 defenders + 20 slingers + 5 priestesses
+3 - 10 elite guards + 10 archers + 2 priestesses + veterans guild
+4 - 30 horsemen + 2 priestesses + doma cavalli
+
+Germany
+
+1 - 20 axemen + 10 huntresses + attack focus
+2 - 20 Teuton riders + learning + barbaric tales
+3 - 20 macemen + attack focus + food tax
+4 - 10 valkyries + 15 swordsmen + 10 archers + learning + food tax
+
+Egypt
+
+1 - 20 swordsmen + 15 archers + 15 axe throwers + path of the dead 2 + grain trade + 1 random charm + religious feast (optional)
+2 - 20 guardians + 20 axe throwers + grain trade + 1 random charm + religious feast (optional)
+3 - 15 Anubis warriors + 5 swordsmen + 10 archers + path of the dead 3 + grain trade + 1 random charm + religious feast (optional)
+4 - 15 Horus warriors + 5 swordsmen + 10 archers + Horus light 3 + grain trade + 1 random charm + religious feast (optional)
+
+Britain
+
+1 - 20 spearmen + 20 archers or javelineers + gambler's day
+2 - 20 shield bearers + 20 archers or javelineers + gambler's day
+3 - 10 spearmen or highlanders + 20 archers + giochi circensi o armi d'acciaio + gambler's day
+4 - 10 shield bearers or highlanders + 20 archers + giochi circensi o armi d'acciaio + gambler's day
+
+Carthage
+
+1 - 50 Numidian footmen + mercenary pact + dark rituals + spoils of war
+2 - 30 Berber assassins + mercenary pact + dark rituals + spoils of war
+3 - 30 macemen + mercenary pact + dark rituals + spoils of war
+4 - 25 Tuaregs + 1 war elephant + dark rituals + spoils of war
+
+Republican Rome
+
+1 - 25 hastati + 25 archers + free wine + gladiator shows
+2 - 20 gladiators + 10 priests + advanced training
+3 - 20 principles + 5 priests + gladiator shows
+4 - 30 scouts + free wine + gladiator shows
+
+Imperial Rome
+
+1 - 20 hastati + 20 archers + free wine + military academy
+2 - 15 principles + military academy
+3 - 15 hastati + 15 velites + military academy
+4 - 20 scouts + import horses + military academy
+
+Punic Rome
+
+1 - 25 hastati + 15 archers + free wine + military academy
+2 - 10 hastati + 10 principles + military academy
+3 - 10 hastati + 20 gladiators + military academy
+4 - 20 scouts + import horses + military academy
+
+Greece
+
+1 - 15 hoplites + 15 toxotai + 5 priests + Spartan training
+2 - 20 hetairoi + 5 priests + Spartan training
+3 - 20 hypaspists + olympic games
+4 - 15 peltasts + 10 toxotai + 5 priests + military preparation
+______________________________________
+
+KNOWN BUGS
+
+Here are listed some bugs that may be fixed in future versions of the mod. Unfortunately, not all of them are fixable, as they require access to the game's source code.
+
+FIXABLE
+- the Egyptian hero with the "bobbed" hair changes the color of his clothes when he fights, always becoming red even when it shouldn't be
+- the golden elite guard (level 18+) goes back to "metallic" when he fights
+- the toxotes movements are not in sync with his own shadow
+
+TO BE INVESTIGATED FURTHER
+- sages sometimes try to attack catapults by performing a cover-attempting animation, blocking any other action -> requires analysis of both scripts and animation files
+- transforming a unit (e.g., via "Teuton master") does not maintain the original speed factor -> likely not fixable without generating overhead
+- every now and then, for no apparent reason, the game crashes -> maybe it's related to some scripts, but it's more likely due to some intrinsically buggy function or incorrect memory management in the source code
+- sentries re-entering wall towers seem to be counted in post-game statistics for the number of units lost -> check sentry scripts (PutSentry function is suspect)
+
+NOT FIXABLE
+- the speed factor change for a hero only works in fight phase and not in movement phase
+- units with modified speed factor slow down the entire army when they are attached to a hero
+- dead units with "gambler's luck" that are hit by "trample" can generate the same "resurrection" bug that occurred with "wrath of Jupiter"
+- in the map editor, when creating a group by selecting objects from the appropriate button in the window, if among these there is something that is not a unit (for example the camp tents), the game crashes
+- in the map editor, when an item is assigned to multiple units and then many of them are selected together, at least one of them will have the object removed
+- in the map editor, sometimes a hero's skill or item disappears after changing their icon
+- in the map editor, if the only change made is the resizing or moving of areas, the user is not prompted to save when exiting, resulting in the loss of the changes
