@@ -1,6 +1,6 @@
 <class id="PeasantAmbient" cpp_class="CVXUnit" parent="Peaceful">
 
-	<properties maxhealth="100" />
+	<properties maxhealth="1" maxstamina="1" />
 	<properties sight="150" />
 	<properties speed="60" />
 	<properties feeds="0" max_food="0" />

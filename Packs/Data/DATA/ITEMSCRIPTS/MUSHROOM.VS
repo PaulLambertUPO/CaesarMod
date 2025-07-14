@@ -1,10 +1,14 @@
 //void, Obj owner
+
 Unit this;
 
 this = owner.AsUnit();
-if (.health > .maxhealth*9/10) { //if more than 90%
-	CreateFeedback("Damage1", .AsUnit());
-	.SetLevel(.inherentlevel+1);
-	.Damage(.health - .maxhealth/10 - 5); //set to 10%
-	ItemUsed(1);
-}
+
+if (.IsValid)
+	if (.health >= .maxhealth * 9 / 10) {//owner needs at least 90% maximum health in order to use the item
+		.SetLevel(.inherentlevel + 1);
+		.SetHealth(.maxhealth / 10);
+		if (!.InHolder)
+			CreateFeedback("Damage1", this);
+		ItemUsed(1);
+	}

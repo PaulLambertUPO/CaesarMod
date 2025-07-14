@@ -13,6 +13,8 @@ if (nRace == RepublicanRome) {
 		cmd = "hireheroRImperial";
 	else if (IsResearched(set, "ChoosePunicRome"))
 		cmd = "hireheroRPunic";
+	else
+		cmd = "hireheroR";
 }
 else if (nRace == Greece)
 	cmd = "hireheroH";

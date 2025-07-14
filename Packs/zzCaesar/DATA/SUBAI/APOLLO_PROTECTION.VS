@@ -2,10 +2,12 @@
 
 Building this;
 Settlement set;
+str announcement;
 int timer;
 
 this = This.AsBuilding();
 set = .settlement;
+announcement = "ApolloProtectionS" + set.GetGaika().ID;
 
 while (1) {
 	timer = EnvReadInt(set, "ApolloProtectionTimer");
@@ -23,12 +25,12 @@ while (1) {
 		if (secs < 10)
 			zero_sec_marker = "0";
 
-		ShowAnnouncement("ApolloProtectionS" + set.GetGaika().ID, Translatef("Player %s1 - protected for %s2", .player, timer / 60 + ":" + zero_sec_marker + secs));
+		ShowAnnouncement(announcement, Translatef("Player %s1 - protected for %s2", .player, timer / 60 + ":" + zero_sec_marker + secs));
 
 		EnvWriteInt(set, "ApolloProtectionTimer", timer - 1);
 	}
 	else
-		HideAnnouncement("ApolloProtectionS" + set.GetGaika().ID);
+		HideAnnouncement(announcement);
 
 	Sleep(1000);
 }

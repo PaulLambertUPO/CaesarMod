@@ -2,7 +2,7 @@
 
 int Greece, AIPlayer, nRace, nSquanderGoldAmount, nExcessGold, nTradeGold, nTradeFood, nTrainStart, nArenaHire, nSleepES;
 str maxUpgradeBarracks;
-bool tactic_finished = true;
+bool tactic_finished;
 
 Sleep(2000 + rand(501));//sleep must be higher than tactic script initial sleep (1000)
 
@@ -43,9 +43,7 @@ if (nRace != Carthage)
 		if (EnvReadInt(set, "TechSeq" + AIPlayer + "_Initted") == 0)
 			set.AIRun("ESH_ArmyTechSeq.vs");
 
-//avoid using tactic if the map is small
-if (MapSize() >= 16000)
-	tactic_finished = AIVar(AIPlayer, AIV_WaitTactic) != 1;
+tactic_finished = AIVar(AIPlayer, AIV_WaitTactic) != 1;
 
 while (set.player == AIPlayer) {
 	if (tactic_finished) {

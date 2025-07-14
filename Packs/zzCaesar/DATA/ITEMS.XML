@@ -311,12 +311,11 @@
 		description="Adds gold to the settlement the owner enters"
 		important="no">
 	</item>
-	<item id="Gold1000"
+	<item id="Gold bag"
 		image="gameres/icons/items/Oro.bmp"
 		usecount="1000"
 		name="Gold bag"
 		description="Adds gold to the settlement the owner enters, then it disappears"
-		equip_script="file://Data/ItemScripts/deposit_gold.vs"
 		important="yes">
 	</item>
 	<item id="Veteran Guild"

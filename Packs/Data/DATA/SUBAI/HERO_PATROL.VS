@@ -1,52 +1,39 @@
-// void, Obj This, point pt
-{
-  Hero this;
-  Obj u;
-  this = This.AsHero ();
-  //.pr("Hero::Patrol");
-  .AddCommand(false, "patrol", .posRH);
+//void, Obj This, point pt
 
-  //.pr("Hero::patroling");
-  {
-    .FormSetupAndMoveTo (pt, 0, 0, true);
-	//.pr("Hero::Patrol::move setup");
-    
-		// freeze patch
-		if (!.HasPath()) {
-			Sleep(785);
-			return;
-		}
-    while(.HasPath())
-    {
-	  //.pr("Hero::moving");
-      .FormKeepMoving (1500);
-  	  //.pr("Hero::Patrol::Looking for enemys");
-	  u = .BestTargetInSquadSight();
-		if(u.IsValid)
-		{
-			//.pr("Hero::Patrol::Enemy Found, ATTACK!!!");
-			while(u.IsValid)
-			{
-				//.pr("Hero::patrol: Everybody attack now");
+Hero this;
+
+this = This.AsHero();
+
+if (.IsValid) {
+	Unit u;
+
+	.AddCommand(false, "patrol", .posRH);
+	.FormSetupAndMoveTo(pt, 0, 0, true);
+
+	while (.HasPath()) {
+		.FormKeepMoving(1500);
+		
+		u = .BestTargetInSquadSight();
+
+		if (u.IsValid) {
+			while (u.IsValid) {
 				.army.SetCommand("idle");
-				while(!.GotoAttack(u, 1500, false, 15000))
-				{
+
+				while (!.GotoAttack(u, 1500, false, 15000)) {
 					u = .BestTargetInSquadSight();
-					if(!u.IsAlive())
+					if (!u.IsAlive)
 						break;
 				}
-				//.pr("Hero::patrol: fighting");
 				
-				if (u.IsAlive && .IsValidTarget(u))
-				{
-					while (.Attack(u));
+				if (u.IsAlive)
+					if (.IsValidTarget(u))
+						while (.Attack(u))
+							;
 
-				}
 				u = .BestTargetInSquadSight();
 			}											
-		    .FormSetupAndMoveTo (pt, 0, 0, true);
+			.FormSetupAndMoveTo(pt, 0, 0, true);
 		}
-		//.pr("Hero::Patrol::No Enemy");
-	  }
-    }
+	}
+	Sleep(785);//this is to avoid a game freeze
 }

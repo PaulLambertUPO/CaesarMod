@@ -145,7 +145,6 @@
 <translationtableentry text="Gold" result="Oro" />
 <translationtableentry text="Adds gold to the settlement the owner enters" result="Aggiunge oro all'insediamento in cui entra il possessore" />
 <translationtableentry text="Gold bag" result="Borsa di oro" />
-<translationtableentry text="Gold1000" result="Borsa di oro" />
 <translationtableentry text="Adds gold to the settlement the owner enters, then it disappears" result="Aggiunge oro all'insediamento in cui entra il possessore, poi scompare" />
 <translationtableentry text="Veteran ring" result="Anello del veterano" />
 <translationtableentry text="Veteran Guild" result="Anello del veterano" />
@@ -912,7 +911,7 @@
 <translationtableentry text="Attack focus" result="Ardimento" />
 <translationtableentry text="The warriors' damage is not reduced when fighting more experienced enemies" result="Il danno dei guerrieri non viene ridotto se si affrontano nemici con più esperienza" />
 <translationtableentry text="Teuton Master" result="Maestro teutonico" />
-<translationtableentry text="Allows Teuton Riders to transform into Teuton Archers and the latter into Teuton Wolves (and vice versa)" result="Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici e a questi ultimi in incursori teutonici (e viceversa)" />
+<translationtableentry text="Allows Teuton Riders to transform into Teuton Archers, Archers into Wolves and Wolves into Riders (only in buildings and ships)" result="Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici, agli arcieri in incursori e agli incursori in cavalieri (solo in strutture e navi)" />
 <translationtableentry text="Barbaric Tales" result="Poemi barbarici" />
 <translationtableentry text="Every time that your Heroes and Valkyries kill an enemy that is at least 3 levels higher, they and all nearby allies gain 15 bonus experience" result="Ogni volta che i tuoi eroi e valchirie uccidono un nemico superiore di almeno 3 livelli, loro e tutti gli alleati vicini guadagnano 15 punti esperienza bonus" />
 <translationtableentry text="Olympic Games" result="Giochi olimpici" />
@@ -1256,10 +1255,14 @@
 <translationtableentry text="Enter parry mode" result="Attiva modalità contenimento" />
 <translationtableentry text="Leave parry mode" result="Disattiva modalità contenimento" />
 <translationtableentry text="Warriors are in parry mode" result="I guerrieri sono in modalità contenimento" />
-<translationtableentry text="Convert to peasant" result="Trasforma in contadino" />
-<translationtableentry text="Convert to Teuton Rider" result="Trasforma in cavaliere teutonico" />
+<translationtableentry text="Demobilize" result="Congeda" />
+<translationtableentry text="Transforms the militiamen into peasants (only in buildings and ships)" result="Trasforma i miliziani in contadini (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Archer" result="Trasforma in arciere teutonico" />
+<translationtableentry text="Transforms the Riders into Archers (only in buildings and ships)" result="Trasforma i cavalieri in arcieri (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Wolf" result="Trasforma in incursore teutonico" />
+<translationtableentry text="Transforms the Archers into Wolves (only in buildings and ships)" result="Trasforma gli arcieri in incursori (solo in strutture e navi)" />
+<translationtableentry text="Convert to Teuton Rider" result="Trasforma in cavaliere teutonico" />
+<translationtableentry text="Transforms the Wolves into Riders (only in buildings and ships)" result="Trasforma gli incursori in cavalieri (solo in strutture e navi)" />
 <translationtableentry text="Requires Teuton Master from Sanctuary of Wotan" result="Richiede Maestro teutonico (Santuario di Wotan)" />
 <!-- end generic unit commands -->
 <!-- start hero commands -->

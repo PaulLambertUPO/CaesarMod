@@ -1,15 +1,12 @@
 //void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
-int i;
 Unit u;
+int i;
 
-if (EnvReadString(objs[0].player, "Teuton Master")!="researched")
-  return;
-
-for(i = 0; i < objs.count(); i += 1)
-{
-	u = objs[i].AsUnit;
-	if(u.IsValid) {
-		u.SneakCommand("convert");
-	}
+for (i = 0; i < objs.count; i += 1) {
+	u = objs[i].AsUnit();
+	if (u.IsValid)
+		if (u.InHolder)
+			if (IsResearched(u.player, "Teuton Master"))
+				u.SneakCommand("convert");
 }

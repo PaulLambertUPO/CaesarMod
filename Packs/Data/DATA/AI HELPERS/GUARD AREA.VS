@@ -1,76 +1,45 @@
-// void, str GroupName, str TargetArea
+//void, str GroupName, str TargetArea
 
-// Guard AI Helper
+Query q_guards;
+ObjList ol_guards;
+Unit u, enemy, target;
+int i;
 
-Obj target;
-Query qry;
-int nCounter = 0;
-int retreat_timeout = 0;
+AttackArea(Group(GroupName), TargetArea);
 
-target = GetNamedObj(TargetArea).obj;
-qry = Group(GroupName);
-AttackArea(qry, TargetArea);
+Sleep(1500);
 
-while (1)
-{
-	int i, j, nAwayDist;
-	ObjList ol;
-
-	ol = qry.GetObjList();
-	for (i = 0; i < ol.count(); i += 1)
-	{
-		Obj obj; obj = ol[i];
-		if (obj.AsUnit.hero.IsValid) continue;
-		if (!obj.IsAlive()) continue;
-		nAwayDist = AreaDistTo(obj.pos, TargetArea);
-
-		if (nAwayDist > 500) {
-			obj.SetCommand("move", GetRandomPointInArea(TargetArea));
-		}
-		else
-			if (obj.command == "engage")
-			{
-				int nAttacker = 0;
-				for (j = 0; j < ol.count(); j += 1)
-					if (ol[j].AsUnit) if (ol[j].AsUnit.TimeWithoutAttack < 2500)
-						nAttacker += 1;
-				if (retreat_timeout == 0)
-					retreat_timeout = 10;
-
-				if (nAttacker > 2 || retreat_timeout > 2)
-				{
-					target = obj.AsUnit.BestTargetInSquadSight;
-					nCounter = 20;
-					if (retreat_timeout > 2)
-						retreat_timeout -= 1;
-				} else {
-					//pr("Let's Get Back from Where we Started");
-					ol.ClearDead();
-					for (j = 0; j < ol.count(); j += 1)
-						ol[j].SetCommand("move", GetRandomPointInArea(TargetArea));
-					retreat_timeout = 0;
-				}
-			}
-			else
-			{
-				if (nCounter > 0 && target.IsValid)
-				{
-					obj.AddCommand(true, "advance", target.pos);
-					obj.KillCommand();
-				} else
-					if (obj.command == "idle" || obj.command == "stand_position")
-					{
-						point pt;
-						pt = GetRandomPointInArea(TargetArea);
-						obj.AddCommand(true, "advance", pt);
-						obj.KillCommand();
-					}
-			}
-		nCounter -= 1;
-		if (ol.count/6 != 0) if ((i % (ol.count/6)) == 0)
-			Sleep(750);
-	}
-	if (ol.count == 0)
+while (1) {
+	ol_guards = Group(GroupName).GetObjList();
+	if (ol_guards.count <= 0)
 		return;
-	Sleep(1753);
+	for (i = 0; i < ol_guards.count(); i += 1) {
+		u = ol_guards[i].AsUnit();
+		if (u.IsValid)
+			if (u.IsAlive)
+				if (!u.AsUnit.hero.IsValid) {
+					if (AreaDistTo(u.pos, TargetArea) >= 550)//return to the area when too far
+						u.SetCommand("move", AreaCenter(TargetArea));
+					else if (u.command == "engage") {
+						if (!target.IsValid)//the first/new enemy sighted is marked as the main target
+							target = u.BestTargetInSquadSight();
+					}
+					else if (target.IsValid) {
+						if (target.IsDead)//the next enemy sighted will be marked as the main target
+							target.Clear();
+						else if (AreaDistTo(target.posRH, TargetArea) < 550)
+							u.SetCommand("advance", target.posRH);
+						else
+							target.Clear();
+					}
+					else if (u.command == "idle")
+						u.SetCommand("advance", GetRandomPointInArea(TargetArea));
+					else if (u.command == "stand_position")
+						u.SetCommand("advance", GetRandomPointInArea(TargetArea));
+					else if (u.command == "move")
+						if (u.DistTo(AreaCenter(TargetArea)) <= 320)//it's not necessary to move all the way back to the area centre
+							u.SetCommand("advance", GetRandomPointInArea(TargetArea));
+				}
+	}
+	Sleep(1500);
 }

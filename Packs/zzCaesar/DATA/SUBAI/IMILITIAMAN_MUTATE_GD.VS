@@ -6,5 +6,6 @@ int i;
 for (i = 0; i < objs.count; i += 1) {
 	u = objs[i].AsUnit();
 	if (u.IsValid)
-		u.SneakCommand("convert");
+		if (u.InHolder)
+			u.SneakCommand("convert");
 }

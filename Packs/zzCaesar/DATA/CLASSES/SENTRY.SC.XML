@@ -4,7 +4,7 @@
 	<properties damage="10" armor_slash="0" armor_pierce="0" />
 	<properties speed="60" />
 	<properties sight="700" range="600" />
-	<properties unit_specials="Freedom" />
+	<properties unit_specials="Freedom, Keen sight" />
 
 	<properties min_range="2" damage_type="pierce" />
 

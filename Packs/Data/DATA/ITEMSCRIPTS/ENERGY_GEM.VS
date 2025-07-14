@@ -1,16 +1,20 @@
 //void, Obj owner
 
-Unit this;
-ObjList army;
+Hero this;
 
-this = owner.AsHero;
-if (!.IsValid) return;
+this = owner.AsHero();
 
-while (true)
-{
-	int i;
-	Sleep(4570);
-	army = .AsHero.army;
-	for (i=0; i<army.count; i+=1)
-		army[i].HealStamina(1);
+if (.IsValid) {
+	ObjList army;
+	int i, interval;
+
+	interval = GetConst("HealthDropIvl");
+
+	while (1) {
+		Sleep(interval);
+
+		army = .army;
+		for (i = 0; i < army.count; i += 1)
+			army[i].HealStamina(1);
+	}
 }

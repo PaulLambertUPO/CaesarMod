@@ -1,4 +1,5 @@
 <class id="Wild_Hen" cpp_class="CVXUnit" parent="Hen" entity="Units/Hen/Hen.ent.xml">
+	<properties maxhealth="20" maxstamina="10" />
 	<properties icon="gameres/icons/Hen.bmp" />
 	<properties help="contents/units/Animals/Hen" />
 	<properties edittree_pos="Units/Animals/Hen" />

@@ -6,12 +6,10 @@ int i;
 for (i = 0; i < objs.count; i += 1) {
 	u = objs[i].AsUnit();
 	if (u.IsValid)
-		if (u.stamina >= cmdcost_stamina) {
-			reasonText = rollover(u, false);
+		if (IsResearched(u.player, "Teuton Master"))
 			return true;
-		}
 }
 
-reasonText = rollover(u, true);
+reasonText = rollover(u, false) + "\n<color 255 0 0>" + Translate("Requires Teuton Master from Sanctuary of Wotan");
 
 return false;

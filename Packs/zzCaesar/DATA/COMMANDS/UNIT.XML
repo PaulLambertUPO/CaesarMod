@@ -151,6 +151,7 @@
 		rollover="Patrol">
 		<cmdtext target="" text="Click to patrol this position" />
 		<src obj="Military" sticky="yes" />
+		<src obj="AttackAnimal" sticky="yes" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />
 	</cmd>
@@ -189,39 +190,40 @@
 	<cmd name="convert2peasant" priority="12"
 		button="actions/disband.bmp"
 		key="x"
-		voidgroupdispatch="1"
 		groupdispatch="data/subai/imilitiaman_mutate_gd.vs"
-		rollover="Convert to peasant">
+		voidgroupdispatch="1"
+		rollover="Demobilize"
+		description="Transforms the militiamen into peasants (only in buildings and ships)">
 		<src obj="IMilitiaman" />
 	</cmd>
 	<cmd name="to_teuton_archer" priority="13"
 		button="actions/train TTeutonArcher.bmp"
 		key="x"
-		groupverifier="data/subai/teuton_rider_mutate_gv.vs"
-		voidgroupdispatch="1"
+		groupverifier="data/subai/teuton_mutate_gv.vs"
 		groupdispatch="data/subai/teuton_mutate_gd.vs"
+		voidgroupdispatch="1"
 		rollover="Convert to Teuton Archer"
-		param="Requires Teuton Master from Sanctuary of Wotan">
+		description="Transforms the Riders into Archers (only in buildings and ships)">
 		<src obj="TTeutonRider" />
 	</cmd>
 	<cmd name="to_teuton_wolf" priority="13"
 		button="actions/train TTeutonWolf.bmp"
 		key="x"
-		groupverifier="data/subai/teuton_archer_mutate_gv.vs"
-		voidgroupdispatch="1"
+		groupverifier="data/subai/teuton_mutate_gv.vs"
 		groupdispatch="data/subai/teuton_mutate_gd.vs"
+		voidgroupdispatch="1"
 		rollover="Convert to Teuton Wolf"
-		param="Requires Teuton Master from Sanctuary of Wotan">
+		description="Transforms the Archers into Wolves (only in buildings and ships)">
 		<src obj="TTeutonArcher" />
 	</cmd>
 	<cmd name="to_teuton_rider" priority="13"
 		button="actions/train TTeutonRider.bmp"
 		key="x"
-		groupverifier="data/subai/teuton_wolf_mutate_gv.vs"
-		voidgroupdispatch="1"
+		groupverifier="data/subai/teuton_mutate_gv.vs"
 		groupdispatch="data/subai/teuton_mutate_gd.vs"
+		voidgroupdispatch="1"
 		rollover="Convert to Teuton Rider"
-		param="Requires Teuton Master from Sanctuary of Wotan">
+		description="Transforms the Wolves into Riders (only in buildings and ships)">
 		<src obj="TTeutonWolf" />
 	</cmd>
 	<!-- this command is a hack -->

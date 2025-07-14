@@ -4,18 +4,19 @@ Unit this;
 
 this = owner.AsUnit();
 
-if (!.InHolder) {
-	ObjList ol;
-	Unit u;
-	int i, enemies_killed;
+if (.IsValid)
+	if (!.InHolder) {
+		ObjList ol;
+		Unit u;
+		int i, enemies_killed;
 
-	ol = ObjsInSight(this, "Unit").GetObjList();
+		ol = Subtract(ObjsInSight(this, "Unit"), Union(ObjsInSight(this, "Hen"), ObjsInSight(this, "PeasantAmbient"))).GetObjList();
+		ol.ClearDead();
 
-	//make 25 attempts to kill 4 enemies chosen randomly, then in order
-	for (i = 0; ol.count > 0 && i < 25 && enemies_killed < 4; i += 1) {
-		u = ol[rand(ol.count)];
-		if (u.IsValid)
-			if (!u.IsDead())
+		//make 25 attempts to kill 4 enemies chosen randomly, then in order
+		for (i = 0; ol.count > 0 && i < 25 && enemies_killed < 4; i += 1) {
+			u = ol[rand(ol.count)].AsUnit();
+			if (u.IsValid)
 				if (.IsEnemy(u))
 					if (!u.AsHero().IsValid) {
 						enemies_killed += 1;
@@ -25,11 +26,10 @@ if (!.InHolder) {
 						u.Damage(u.health);
 						ol.Remove(u);//avoid killing the same unit more than once
 					}
-	}
-	for (i = 0; i < ol.count && enemies_killed < 4; i += 1) {
-		u = ol[i];
-		if (u.IsValid)
-			if (!u.IsDead())
+		}
+		for (i = 0; i < ol.count && enemies_killed < 4; i += 1) {
+			u = ol[i].AsUnit();
+			if (u.IsValid)
 				if (.IsEnemy(u))
 					if (!u.AsHero().IsValid) {
 						enemies_killed += 1;
@@ -38,12 +38,12 @@ if (!.InHolder) {
 						Sleep(500);
 						u.Damage(u.health);
 					}
+		}
+
+		if (enemies_killed > 0)
+			ItemUsed(1);
+
+		Sleep(3000);//cooldown
 	}
-
-	if (enemies_killed > 0)
-		ItemUsed(1);
-
-	Sleep(3000);//cooldown
-}
-else
-	UserNotification("item cannot use in holder", "", owner.posRH, owner.player);
+	else
+		UserNotification("item cannot use in holder", "", owner.posRH, owner.player);

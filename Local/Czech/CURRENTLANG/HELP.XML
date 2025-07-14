@@ -1561,8 +1561,8 @@ The druid sacrifices himself to restore the stamina of 5 nearby allies.
 				<entry />
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/disband.bmp" link="/contents/units/Villagers">
-Convert to peasant
-Disarms the militiaman to make him become a civilian again.
+Demobilize
+The militiaman leaves his weapons and becomes a peasant (only in buildings and ships).
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/IBarracks.bmp" link="/contents/buildings/IBarracks">Equipped in the Barracks</entry>
@@ -2408,7 +2408,7 @@ The priest transforms into a ghoul that remains under your control for about 10 
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonArcher.bmp" link="/contents/units/TTeutonArcher">
 Convert to Teuton archer
-The Teuton rider changes equipment and transforms into a Teuton archer.
+The Teuton rider changes equipment and transforms into a Teuton archer (only in buildings and ships).
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/TBarracks.bmp" link="/contents/buildings/TBarracks">Equipped in the Barracks</entry>
@@ -2431,7 +2431,7 @@ The Teuton rider changes equipment and transforms into a Teuton archer.
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonWolf.bmp" link="/contents/units/TTeutonWolf">
 Convert to Teuton wolf
-The Teuton archer changes equipment and transforms into a Teuton wolf.
+The Teuton archer changes equipment and transforms into a Teuton wolf (only in buildings and ships).
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Depends on Teuton master</entry>
@@ -2442,7 +2442,7 @@ The Teuton archer changes equipment and transforms into a Teuton wolf.
 				<entry hcenter="1" font="large">Teuton wolf</entry>
 				<entry image="UI/Icons/TTeutonWolf.bmp">The Teuton wolf has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 320</entry>
-				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Damage 24</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 160</entry>
 				<entry />
@@ -2451,7 +2451,7 @@ The Teuton archer changes equipment and transforms into a Teuton wolf.
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonRider.bmp" link="/contents/units/TTeutonRider">
 Convert to Teuton rider
-The Teuton wolf changes equipment and transforms into a Teuton rider.
+The Teuton wolf changes equipment and transforms into a Teuton rider (only in buildings and ships).
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Depends on Teuton master</entry>
@@ -4924,7 +4924,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Teuton Master.bmp">
 Teuton master
-Allows Teuton riders to transform into Teuton archers and the latter into Teuton wolves (and vice versa).
+Allows Teuton riders to transform into Teuton archers, archers into wolves and wolves into riders (only in buildings and ships).
 Cost: 500 gold
 Time: 30 seconds
 				</entry>

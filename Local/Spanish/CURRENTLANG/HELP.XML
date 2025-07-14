@@ -1561,8 +1561,8 @@ El druida se sacrifica para restablecer completamente la energía de 5 aliados c
 				<entry />
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Disband.bmp" link="/contents/units/Villagers">
-Transformar en campesino
-Desarma al miliciano para que vuelva a ser un civil.
+Licenciar
+El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
 				</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/IBarracks.bmp" link="/contents/buildings/IBarracks">Se equipa en el Cuartel</entry>
@@ -2408,7 +2408,7 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonArcher.bmp" link="/contents/units/TTeutonArcher">
 Transformar en arquero teutón
-El jinete teutón cambia equipos y se convierte en arquero teutón.
+El jinete teutón cambia equipos y se convierte en arquero teutón (solo en estructuras y navíos).
 				</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/TBarracks.bmp" link="/contents/buildings/TBarracks">Se equipa en el Cuartel</entry>
@@ -2431,7 +2431,7 @@ El jinete teutón cambia equipos y se convierte en arquero teutón.
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonWolf.bmp" link="/contents/units/TTeutonWolf">
 Transformar en asaltador teutón
-El arquero teutón cambia equipos y se convierte en asaltador teutón.
+El arquero teutón cambia equipos y se convierte en asaltador teutón (solo en estructuras y navíos).
 				</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Depende de Maestro de teutones</entry>
@@ -2442,7 +2442,7 @@ El arquero teutón cambia equipos y se convierte en asaltador teutón.
 				<entry hcenter="1" font="large">Asaltador teutón</entry>
 				<entry image="UI/Icons/TTeutonWolf.bmp">El asaltador teutón tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 320</entry>
-				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Ataque 24</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 160</entry>
 				<entry />
@@ -2451,7 +2451,7 @@ El arquero teutón cambia equipos y se convierte en asaltador teutón.
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonRider.bmp" link="/contents/units/TTeutonRider">
 Transformar en jinete teutón
-El asaltador teutón cambia equipos y se convierte en jinete teutón.
+El asaltador teutón cambia equipos y se convierte en jinete teutón (solo en estructuras y navíos).
 				</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Depende de Maestro de teutones</entry>
@@ -4924,7 +4924,7 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Teuton Master.bmp">
 Maestro de teutones
-Permite a los jinetes teutonici transformarse en arqueros teutones y a estos últimos en asaltadores teutones (y viceversa).
+Permite a los jinetes teutones transformarse en arqueros teutones, a los arqueros en asaltadores y a los asaltadores en jinetes (solo en estructuras y navíos).
 Coste: 500 oro
 Tiempo: 30 segundos
 				</entry>

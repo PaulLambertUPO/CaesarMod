@@ -1,39 +1,49 @@
 //void, Obj owner
 
-ObjList ol;
-Unit u;
-int i, nHealth, nGive;
+Unit this;
 
-nHealth = GetUseCount();
-if (owner.health < owner.maxhealth) {
-	CreateFeedback("Heal", owner.AsUnit());
-	nGive = owner.maxhealth - owner.health;
-	if (nGive > nHealth) nGive = nHealth;
-	nHealth -= nGive;
-	owner.Heal(nGive);
-	if (nHealth == 0) {
-		ItemUsed(GetUseCount());
-		return;
+this = owner.AsUnit();
+
+if (.IsValid) {
+	int health_to_distribute, give;
+
+	health_to_distribute = GetUseCount();
+
+	if (.health < .maxhealth) {
+		give = MIN(health_to_distribute, .maxhealth - .health);
+		health_to_distribute -= give;
+		.Heal(give);
+		if (!.InHolder)
+			CreateFeedback("Heal", this);
 	}
-}
 
-if (owner.AsUnit.InHolder)
-	ol = owner.AsUnit.GetUnitsInSameHolder();
-else
-        ol = ObjsInSight(owner, "Unit").GetObjList();
+	if (health_to_distribute > 0) {
+		ObjList ol;
+		Unit u;
+		int i;
 
-for(i = 0; i < ol.count; i += 1) {
-	u = ol[i].AsUnit();
-	if (u.IsDead()) continue;
-	if (owner.IsEnemy(u)) continue;
-	if (u.health < u.maxhealth) {
-		CreateFeedback("Heal", u);
-		nGive = u.maxhealth - u.health;
-		if (nGive > nHealth) nGive = nHealth;
-		nHealth -= nGive;
-		u.Heal(nGive);
-		if (nHealth == 0) break;
+		if (.InHolder) {
+			ol = .GetUnitsInSameHolder();
+			ol.Remove(this);
+		}
+		else
+			ol = ObjsInSight(this, "Unit").GetObjList();
+
+		ol.ClearDead();
+
+		for (i = 0; i < ol.count && health_to_distribute > 0; i += 1) {
+			u = ol[i].AsUnit();
+			if (u.IsValid)
+				if (u.health < u.maxhealth)
+					if (!.IsEnemy(u)) {
+						give = MIN(health_to_distribute, u.maxhealth - u.health);
+						health_to_distribute -= give;
+						u.Heal(give);
+						if (!u.InHolder)
+							CreateFeedback("Heal", u);
+					}
+		}
 	}
+
+	ItemUsed(GetUseCount() - health_to_distribute);
 }
-ItemUsed(GetUseCount()-nHealth);
-return;

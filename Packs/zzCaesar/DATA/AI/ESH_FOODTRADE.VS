@@ -15,12 +15,13 @@ else if (!gSellFood.settlement.supplied.IsValid)
 	gSellFood = 0;
 
 if (gSellFood == 0) {//find best place to sell food
-	int i, best, nRace, nDist, nODist, nADist, nEDist, nEval;
 	point gCenter;
+	int i, best, nMaxSetIdx, nRace, nDist, nODist, nADist, nEDist, nEval;
 
 	gCenter = set.GetGaika().Center;
+	nMaxSetIdx = MaxSetIdx();
 
-	for (i = 0; i < MaxSetIdx; i += 1) {
+	for (i = 0; i < nMaxSetIdx; i += 1) {
 		sSell = IdxToSet(i);
 		if (!sSell.IsOwn(AIPlayer))
 			continue;

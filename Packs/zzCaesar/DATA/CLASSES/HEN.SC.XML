@@ -1,6 +1,6 @@
 <class id="Hen" cpp_class="CVXUnit" parent="Animal" entity="Units/Hen/Hen.ent.xml">
 
-	<properties maxhealth="20" feeds="0" />
+	<properties maxhealth="1" maxstamina="1" />
 	<properties sight="100" />
 	<properties speed="30" />
 

@@ -1,8 +1,7 @@
-<class id="Chest" cpp_class="CVXItemHolder" parent="ItemHolder"
-entity="MapObjects/ItemHolders/Chest.ent.xml">
-	<properties edittree_pos="Structures/Item holders/Chest"/>
-	<properties icon="gameres/icons/Chest.bmp"/>
-	<properties radius="28" selection_radius="30"/>
-	<properties display_name="Chest"/>
-	<properties respawn_item="Gold1000" respawn_time="900000"/>
+<class id="Chest" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/ItemHolders/Chest.ent.xml">
+	<properties radius="28" selection_radius="30" />
+	<properties display_name="Chest" />
+	<properties icon="gameres/icons/Chest.bmp" />
+	<properties edittree_pos="Structures/Item holders/Chest" />
+	<properties respawn_item="Gold bag" respawn_time="900000" />
 </class>

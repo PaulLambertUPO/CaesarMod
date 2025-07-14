@@ -1,13 +1,20 @@
-//void, Obj attached
+//void, Obj owner, Obj attached
 
-if (!attached.AsUnit().InHolder()) {
-	owner.Heal(5);
-	if (rand(10) == 0) {
-		Unit u;
-		u = Place("GGhost", attached.pos, attached.player);
-		u.SetStamina(5);
-		u.SetLevel(attached.AsUnit().level);
-		u.SetCommand("spawn");
-		SwapSelectedObj(attached, u);
-	}
+if (owner.AsHero().IsValid) {
+	Unit this;
+
+	this = attached.AsUnit();
+
+	if (.IsValid)
+		if (!.InHolder) {
+			owner.Heal(5);
+			if (rand(10) == 0) {
+				Unit u;
+				u = Place("GGhost", .pos, .player);
+				u.SetStamina(5);
+				u.SetLevel(.level);
+				u.SetCommand("spawn");
+				SwapSelectedObj(this, u);
+			}
+		}
 }

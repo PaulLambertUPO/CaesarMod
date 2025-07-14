@@ -61,6 +61,7 @@
 	<method sig="transport" vs="data/subai/hero_transport.vs" verify="data/subai/unit_transport_verify.vs" />
 
 	<method sig="capture" vs="data/subai/hero_capture.vs" verify="data/subai/unit_capture_verify.vs" />
+	<method sig="attack_independent" vs="data/subai/hero_capture.vs" verify="data/subai/attack_independent_verify.vs" />
 	<method sig="attack_unit_type" vs="data/subai/hero_attack_unit_type.vs" />
 	<method sig="engage_unit_type" vs="data/subai/hero_engage_unit_type.vs" />
 	<method sig="taunt" vs="data/subai/hero_taunt.vs" />

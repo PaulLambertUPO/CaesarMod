@@ -142,8 +142,6 @@
 		key="s"
 		rollover="Stand ground"
 		description="Keeps army in battle formation (applies bonus)"
-		groupverifier=""
-		groupdispatch=""
 		voidgroupdispatch="1">
 		<src obj="Hero" />
 	</cmd>

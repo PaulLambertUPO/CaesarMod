@@ -90,7 +90,8 @@ while (.IsAlive) {
 						military_units += 1;
 						if (enemy_in_sight)
 							if (u.TimeWithoutAttack <= 2000)
-								fighting_units += 1;
+								if (u.command != "capture")
+									fighting_units += 1;
 					}
 					army_health += u.health;
 					army_max_health += u.maxhealth;
@@ -210,7 +211,7 @@ while (.IsAlive) {
 						}
 					}
 
-			//Frenzy -> low priority because it can be immensely powerful but it is short and depends a lot on the units involved
+			//Frenzy -> low priority because it can be immensely powerful but it is short and it depends a lot on the units/specials involved (rage, death blow, triumph, etc.)
 			skill_points = .GetSkill(hsFrenzy);
 			if (skill_points >= 5)
 				if (fighting_units_perc >= 80)
@@ -222,7 +223,7 @@ while (.IsAlive) {
 						}
 					}
 
-			//Rush -> lowest priority because it is so situational and risky that it can be considered useless or even harmful
+			//Rush -> lowest priority because it can be powerful but so situational and risky that it can be considered useless or even harmful
 			tmpWeight = rush_weight;
 			if (tmpWeight > weight)
 				if (rand(5) == 0) {

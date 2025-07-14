@@ -2,7 +2,7 @@
 
 if (.IsMilitary)
 	if (.IsEnemy(other))
-		if (other.AsBuilding().IsValid()) {
+		if (other.AsBuilding().IsValid) {
 			if (.IsValidCaptureTarget(other))
 				return true;
 		}

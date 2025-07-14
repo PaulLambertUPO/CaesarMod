@@ -1,7 +1,13 @@
 //void, Obj owner, Obj victim
 
-if (owner.IsValid) {
-	if (owner.health < owner.maxhealth)
-		owner.Heal(owner.maxhealth);
-	owner.RemoveItem("God's Gift");
+if (victim.AsUnit().IsValid) {
+	Unit this;
+
+	this = owner.AsUnit();
+
+	if (.IsValid) {
+		if (.health < .maxhealth)
+			.Heal(.maxhealth);
+		.RemoveItem("God's Gift");
+	}
 }

@@ -146,7 +146,6 @@
 <translationtableentry text="Gold" result="Oro" />
 <translationtableentry text="Adds gold to the settlement the owner enters" result="Añade oro al asentamiento en el que entra el poseedor" />
 <translationtableentry text="Gold bag" result="Bolsa de oro" />
-<translationtableentry text="Gold1000" result="Bolsa de oro" />
 <translationtableentry text="Adds gold to the settlement the owner enters, then it disappears" result="Añade oro al asentamiento en el que entra el poseedor, luego desaparece" />
 <translationtableentry text="Veteran ring" result="Anillo del veterano" />
 <translationtableentry text="Veteran Guild" result="Anillo del veterano" />
@@ -909,7 +908,7 @@
 <translationtableentry text="Attack focus" result="Audacia" />
 <translationtableentry text="The warriors' damage is not reduced when fighting more experienced enemies" result="El daño de los guerreros no se reduce al enfrentarse a enemigos con más experiencia" />
 <translationtableentry text="Teuton Master" result="Maestro de teutones" />
-<translationtableentry text="Allows Teuton Riders to transform into Teuton Archers and the latter into Teuton Wolves (and vice versa)" result="Permite a los jinetes teutonici transformarse en arqueros teutones y a estos últimos en asaltadores teutones (y viceversa)" />
+<translationtableentry text="Allows Teuton Riders to transform into Teuton Archers, Archers into Wolves and Wolves into Riders (only in buildings and ships)" result="Permite a los jinetes teutones transformarse en arqueros teutones, a los arqueros en asaltadores y a los asaltadores en jinetes (solo en estructuras y navíos)" />
 <translationtableentry text="Barbaric Tales" result="Poemas bárbaros" />
 <translationtableentry text="Every time that your Heroes and Valkyries kill an enemy that is at least 3 levels higher, they and all nearby allies gain 15 bonus experience" result="Cada vez que tus héroes y valquirias matan a un enemigo de al menos 3 niveles superior, ellos y todos los aliados cercanos ganan 15 puntos de experiencia adicionales" />
 <translationtableentry text="Olympic Games" result="Juegos olímpicos" />
@@ -1253,10 +1252,14 @@
 <translationtableentry text="Enter parry mode" result="Activar modo contención" />
 <translationtableentry text="Leave parry mode" result="Desactivar modo contención" />
 <translationtableentry text="Warriors are in parry mode" result="Los guerreros están en modo contención" />
-<translationtableentry text="Convert to peasant" result="Transformar en campesino" />
-<translationtableentry text="Convert to Teuton Rider" result="Transformar en jinete teutón" />
+<translationtableentry text="Demobilize" result="Licenciar" />
+<translationtableentry text="Transforms the militiamen into peasants (only in buildings and ships)" result="Transforma a los milicianos en campesinos (solo en estructuras y navíos)" />
 <translationtableentry text="Convert to Teuton Archer" result="Transformar en arquero teutón" />
+<translationtableentry text="Transforms the Riders into Archers (only in buildings and ships)" result="Transforma a los jinetes en arqueros (solo en estructuras y navíos)" />
 <translationtableentry text="Convert to Teuton Wolf" result="Transformar en asaltador teutón" />
+<translationtableentry text="Transforms the Archers into Wolves (only in buildings and ships)" result="Transforma a los arqueros en asaltadores (solo en estructuras y navíos)" />
+<translationtableentry text="Convert to Teuton Rider" result="Transformar en jinete teutón" />
+<translationtableentry text="Transforms the Wolves into Riders (only in buildings and ships)" result="Transforma a los asaltadores en jinetes (solo en estructuras y navíos)" />
 <translationtableentry text="Requires Teuton Master from Sanctuary of Wotan" result="Requiere Maestro de teutones (Santuario de Wotan)" />
 <!-- end generic unit commands -->
 <!-- start hero commands -->
@@ -2988,7 +2991,7 @@
 <translationtableentry text="Lack of food" result="Escasez de víveres" />
 <translationtableentry text="Some of your units are starving! Their health will slowly decrease to 10% of the maximum value. Send them to a settlement with food or bring them a food caravan to feed them and restore their health." result="¡Algunas de tus unidades tienen hambre! Su salud disminuirá lentamente hasta un 10% de la máxima. Envíalas a un asentamiento con víveres o llévales una unidad de suministro para alimentarlas y restablecer su salud." />
 <translationtableentry text="Faster healing" result="Curación más rápida" />
-<translationtableentry text="When the health of your units is low, order them to enter a townhall or an outpost because they will heal faster while sheltered (provided that there is enough food)." result="Cuando la salud de tus unidades es baja, ordénales que entren en un foro o en un fortín porque se curarán más rápido mientras estén protegidos (suponiendo que haya suficientes víveres)." />
+<translationtableentry text="When the health of your units is low, order them to enter a townhall or an outpost because they will heal faster while sheltered (provided that there is enough food)." result="Cuando la salud de tus unidades es baja, ordénales que entren en un foro o en un fortín porque se curarán más rápido mientras estén a cubierto (suponiendo que haya suficientes víveres)." />
 <translationtableentry text="Hire heroes!" result="¡Recluta héroes!" />
 <translationtableentry text="You should hire some heroes to lead your units and increase their effectiveness." result="Deberías reclutar algunos héroes para liderar a tus unidades y aumentar su eficacia." />
 <translationtableentry text="Equip more units!" result="¡Equipa más unidades!" />

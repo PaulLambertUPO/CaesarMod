@@ -24,6 +24,8 @@ if (set.population > GetConst("MinPopulation")) {
 			nRaceIsImperialRome = true;
 		else if (IsResearched(set, "ChoosePunicRome"))
 			nRaceIsPunicRome = true;
+		else
+			imperialOrPunicOrGreekOrGaulTechs[1] = "Roman Archers";//this manages the final part about basic units if nothing has been chosen
 
 	if (nRaceIsImperialRome) {
 		imperialOrPunicOrGreekOrGaulTechs[0] = "";

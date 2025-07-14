@@ -1561,8 +1561,8 @@ Il druido si sacrifica per ripristinare completamente l'energia di 5 alleati vic
 				<entry />
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/disband.bmp" link="/contents/units/Villagers">
-Trasforma in contadino
-Disarma il miliziano per farlo tornare un civile.
+Congeda
+Il miliziano lascia le armi e diventa un contadino (solo in strutture e navi).
 				</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/IBarracks.bmp" link="/contents/buildings/IBarracks">Si equipaggia nella Caserma</entry>
@@ -2408,7 +2408,7 @@ Il sacerdote si trasforma in uno spirito che rimane sotto il tuo controllo per c
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonArcher.bmp" link="/contents/units/TTeutonArcher">
 Trasforma in arciere teutonico
-Il cavaliere teutonico cambia equipaggiamento e diventa un arciere teutonico.
+Il cavaliere teutonico cambia equipaggiamento e diventa un arciere teutonico (solo in strutture e navi).
 				</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/TBarracks.bmp" link="/contents/buildings/TBarracks">Si equipaggia nella Caserma</entry>
@@ -2431,7 +2431,7 @@ Il cavaliere teutonico cambia equipaggiamento e diventa un arciere teutonico.
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonWolf.bmp" link="/contents/units/TTeutonWolf">
 Trasforma in incursore teutonico
-L'arciere teutonico cambia equipaggiamento e diventa un incursore teutonico.
+L'arciere teutonico cambia equipaggiamento e diventa un incursore teutonico (solo in strutture e navi).
 				</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Dipende da Maestro teutonico</entry>
@@ -2442,7 +2442,7 @@ L'arciere teutonico cambia equipaggiamento e diventa un incursore teutonico.
 				<entry hcenter="1" font="large">Incursore teutonico</entry>
 				<entry image="UI/Icons/TTeutonWolf.bmp">L'incursore teutonico ha i seguenti parametri e caratteristiche:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salute 320</entry>
-				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Attacco 24</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 160</entry>
 				<entry />
@@ -2451,7 +2451,7 @@ L'arciere teutonico cambia equipaggiamento e diventa un incursore teutonico.
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonRider.bmp" link="/contents/units/TTeutonRider">
 Trasforma in cavaliere teutonico
-L'incursore teutonico cambia equipaggiamento e diventa un cavaliere teutonico.
+L'incursore teutonico cambia equipaggiamento e diventa un cavaliere teutonico (solo in strutture e navi).
 				</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Dipende da Maestro teutonico</entry>
@@ -4924,7 +4924,7 @@ Tempo: 30 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Teuton Master.bmp">
 Maestro teutonico
-Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici e a questi ultimi in incursori teutonici (e viceversa).
+Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici, agli arcieri in incursori e agli incursori in cavalieri (solo in strutture e navi).
 Costo: 500 oro
 Tempo: 30 secondi
 				</entry>

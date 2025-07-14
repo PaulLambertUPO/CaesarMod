@@ -7,7 +7,6 @@ this = owner.AsUnit();
 if (.IsValid)
 	while (1) {
 		Sleep(1000);
-		if (.IsValid)
-			if (.health < .maxhealth)
-				.Heal(2);
+		if (.health < .maxhealth)
+			.Heal(2);
 	}

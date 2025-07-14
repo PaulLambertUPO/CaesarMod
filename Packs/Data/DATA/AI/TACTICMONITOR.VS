@@ -1,23 +1,24 @@
-// void
-int         nSetIdx, nMaxSet;
-Settlement  Set;
-int         AIPlayer;
-int         script;
+//void
 
-Sleep(rand(500) + 500);
+if (MapSize() >= 16000) {//avoid using tactic if the map is small
+	Settlement set;
+	int AIPlayer, nMaxSetIdx, script, i;
 
-AIPlayer = AIGetPlayer();
-nMaxSet = MaxSetIdx();
-while( true )
-{
-	for( nSetIdx = 0; nSetIdx < nMaxSet; nSetIdx += 1 )
-	{
-		Set = IdxToSet( nSetIdx );
-		if (!Set.IsOwn(AIPlayer)) continue;
-		if( Set.TacticScript != TS_NONE ) continue;
-		script = Set.GetTacticScript( AIPlayer );
-		if( script != TS_NONE )
-			Set.RunTacticScript( script );
+	Sleep(500 + rand(501));
+
+	AIPlayer = AIGetPlayer();
+	nMaxSetIdx = MaxSetIdx();
+
+	while (1) {
+		for (i = 0; i < nMaxSetIdx; i += 1) {
+			set = IdxToSet(i);
+			if (set.IsOwn(AIPlayer))
+				if (set.TacticScript == TS_NONE) {
+					script = set.GetTacticScript(AIPlayer);
+					if (script != TS_NONE)
+						set.RunTacticScript(script);
+				}
+		}
+		Sleep(1000);
 	}
-	Sleep(1000);
 }

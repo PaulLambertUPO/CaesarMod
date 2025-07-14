@@ -1,65 +1,45 @@
 //void, Obj owner
 
-ObjList ol;
-Unit u, this;
-int i, nFood, nGive;
+Unit this;
 
 this = owner.AsUnit();
-if (!.IsValid()) return;
 
-nFood = GetUseCount();
-if (.food < .maxfood) {
-	nGive = .maxfood - .food;
-	if (nGive > nFood) nGive = nFood;
-	nFood -= nGive;
-	.SetFood(.food + nGive);
-	if (nFood == 0) {
-		ItemUsed(GetUseCount());
-		return;
+if (.IsValid) {
+	int food_to_distribute, give;
+
+	food_to_distribute = GetUseCount();
+
+	if (.food < .maxfood) {
+		give = MIN(food_to_distribute, .maxfood - .food);
+		food_to_distribute -= give;
+		.SetFood(.food + give);
 	}
-}
 
-if (.InHolder)
-	ol = .GetUnitsInSameHolder();
-else
-        ol = ObjsInSight(owner, "Military").GetObjList(); //first try the militaries
+	if (food_to_distribute > 0) {
+		ObjList ol;
+		Unit u;
+		int i;
 
-for(i = 0; i < ol.count; i += 1) {
-	u = ol[i].AsUnit();
-	if (u.IsDead()) continue;
-	if (.IsEnemy(u)) continue;
-	if (u.food < u.maxfood) {
-		nGive = u.maxfood - u.food;
-		if (nGive > nFood) nGive = nFood;
-		nFood -= nGive;
-		u.SetFood(u.food + nGive);
-		if (nFood == 0) {
-			ItemUsed(GetUseCount());
-			return;
+		if (.InHolder) {
+			ol = .GetUnitsInSameHolder();
+			ol.Remove(this);
+		}
+		else
+			ol = ObjsInSight(this, "Unit").GetObjList();
+
+		ol.ClearDead();
+
+		for (i = 0; i < ol.count && food_to_distribute > 0; i += 1) {
+			u = ol[i].AsUnit();
+			if (u.IsValid)
+				if (u.food < u.maxfood)
+					if (!.IsEnemy(u)) {
+						give = MIN(food_to_distribute, u.maxfood - u.food);
+						food_to_distribute -= give;
+						u.SetFood(u.food + give);
+					}
 		}
 	}
-}
 
-if (!.InHolder)
-{
-//if some food is left - give it to the poor, I mean the civilians :)
-	ol = ObjsInSight(owner, "Peaceful").GetObjList();
-	for(i = 0; i < ol.count; i += 1) {
-		u = ol[i].AsUnit();
-		if (u.IsDead()) continue;
-		if (owner.IsEnemy(u)) continue;
-		if (u.food < u.maxfood) {
-			nGive = u.maxfood - u.food;
-			if (nGive > nFood) nGive = nFood;
-			nFood -= nGive;
-			u.SetFood(u.food + nGive);
-			if (nFood == 0) {
-				ItemUsed(GetUseCount());
-				return;
-			}
-		}
-	}
+	ItemUsed(GetUseCount() - food_to_distribute);
 }
-
-ItemUsed(GetUseCount()-nFood);
-return;

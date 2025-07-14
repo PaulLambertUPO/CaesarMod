@@ -1197,7 +1197,7 @@
 		execdelay="30000"
 		groupverifier="data/subai/verify_research.vs"
 		rollover="Teuton Master"
-		description="Allows Teuton Riders to transform into Teuton Archers and the latter into Teuton Wolves (and vice versa)"
+		description="Allows Teuton Riders to transform into Teuton Archers, Archers into Wolves and Wolves into Riders (only in buildings and ships)"
 		method="research"
 		researchcommand="yes"
 		param="ReqSet, Fights, default, NamePlr, Teuton Master, default">

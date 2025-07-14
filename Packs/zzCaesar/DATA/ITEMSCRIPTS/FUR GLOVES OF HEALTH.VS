@@ -1,31 +1,34 @@
 //void, Obj owner
 
 Unit this;
-int health_to_give;
 
 this = owner.AsUnit();
 
-health_to_give = .health - .maxhealth / 10;//owner needs at least 1 health more than 10% maximum health in order to use the item
+if (.IsValid) {
+	int health_to_give;
 
-if (health_to_give > 0) {
-	ObjList ol;
+	health_to_give = .health - .maxhealth / 10;//owner needs at least 1 health more than 10% maximum health in order to use the item
 
-	if (.InHolder) {
-		ol = .GetUnitsInSameHolder();
-		ol.Remove(this);
-	}
-	else
-		ol = ObjsInSight(this, "Unit").GetObjList();
+	if (health_to_give > 0) {
+		ObjList ol;
 
-	if (ol.count > 0) {
-		Unit u;
-		int i;
+		if (.InHolder) {
+			ol = .GetUnitsInSameHolder();
+			ol.Remove(this);
+		}
+		else
+			ol = ObjsInSight(this, "Unit").GetObjList();
 
-		//make 5 attempts to heal an ally chosen randomly, then in order
-		for (i = 0; i < 5; i += 1) {
-			u = ol[rand(ol.count)];
-			if (u.IsValid)
-				if (!u.IsDead())
+		ol.ClearDead();
+
+		if (ol.count > 0) {
+			Unit u;
+			int i;
+
+			//make 5 attempts to heal an ally chosen randomly, then in order
+			for (i = 0; i < 5; i += 1) {
+				u = ol[rand(ol.count)].AsUnit();
+				if (u.IsValid)
 					if (!.IsEnemy(u))
 						if (u.health < u.maxhealth) {
 							int health_to_take, heal_damage;
@@ -39,11 +42,10 @@ if (health_to_give > 0) {
 								CreateFeedback("Damage1", this);
 							return;
 						}
-		}
-		for (i = 0; i < ol.count; i += 1) {
-			u = ol[i];
-			if (u.IsValid)
-				if (!u.IsDead())
+			}
+			for (i = 0; i < ol.count; i += 1) {
+				u = ol[i].AsUnit();
+				if (u.IsValid)
 					if (!.IsEnemy(u))
 						if (u.health < u.maxhealth) {
 							int health_to_take, heal_damage;
@@ -55,7 +57,9 @@ if (health_to_give > 0) {
 							.Damage(heal_damage);
 							if (!.InHolder)
 								CreateFeedback("Damage1", this);
+							return;
 						}
+			}
 		}
 	}
 }

@@ -52,12 +52,13 @@ if (.IsValid) {
 				int health_to_distribute = 1000, give;
 
 				ol = ObjsInCircle(.pos, .sight, "Unit").GetObjList();
+				ol.ClearDead();
 
 				for (i = 0; i < ol.count && health_to_distribute > 0; i += 1) {
 					u = ol[i].AsUnit();
 					if (u.IsValid)
-						if (!.IsEnemy(u))
-							if (u.health < u.maxhealth) {
+						if (u.health < u.maxhealth)
+							if (!.IsEnemy(u)) {
 								give = MIN(health_to_distribute, u.maxhealth - u.health);
 								health_to_distribute -= give;
 								u.Heal(give);
@@ -71,12 +72,13 @@ if (.IsValid) {
 				int nRestored;
 
 				ol = ObjsInCircle(.pos, .sight, "Unit").GetObjList();
+				ol.ClearDead();
 
 				for (i = 0; i < ol.count && nRestored < 5; i += 1) {
 					u = ol[i].AsUnit();
 					if (u.IsValid)
-						if (!.IsEnemy(u))
-							if (u.stamina < u.maxstamina) {
+						if (u.stamina < u.maxstamina)
+							if (!.IsEnemy(u)) {
 								u.SetStamina(u.maxstamina);
 								CreateFeedback("StaminaBoost", u);
 								nRestored += 1;
