@@ -14,7 +14,36 @@ Incluso el Greek Mod en sí, a pesar de todos sus méritos, tenía algunos probl
 Comencé a trabajar entonces como autodidacta, partiendo del Greek Mod para crear uno nuevo, el Caesar Mod, con el objetivo de mejorar cada aspecto del juego para ofrecer a todos un producto que permita tener una experiencia de juego agradable y memorable, tanto en solitario como en compañía, además de ofrecer un punto de inicio para facilitar el trabajo a otras personas apasionadas por Imperivm con las mismas intenciones que las mías (no fue nada fácil trabajar sobre una base de código poco optimizada, muy desordenada y claramente amateur en muchos puntos, así que quiero evitar que otras personas pierdan tiempo arreglando cosas como me pasó a mí).
 Mi pasión por Imperivm es tan grande que es casi imposible de expresar con palabras y también quiero aclarar que no tengo ninguna intención de "robar" lo que hicieron los creadores del Greek Mod. De hecho, he incluido un agradecimiento a ellos en los créditos del menú principal y no he ocultado ninguno de sus nombres, simplemente me he añadido junto a ellos.
 Si otra persona decide usar el Caesar Mod como punto de partida para un nuevo proyecto, es más que libre de hacerlo: lo único que pido es que haga como yo y mantenga todos los nombres originales, especificando que ha comenzado desde mi mod y publicando el nuevo proyecto bajo la misma licencia CC BY-SA, cuyos detalles están indicados en el archivo LICENSE.txt incluido el paquete.
+______________________________________
 
+[1.0.1] - 15 julio 2025
+
+Esta nueva versión del Caesar Mod resuelve varios bugs y exploits para hacer que la experiencia de juego sea más agradable y evitar ciertos comportamientos indebidos en las partidas multijugador. Durante el desarrollo, investigué por qué las estadísticas de final de partida relacionadas con las unidades perdidas y eliminadas siempre están desfasadas respecto al verdadero desarrollo del combate y, lamentablemente, comprobé otro problema relacionado con el código fuente: los detalles están al final del archivo, en la sección de errores no resolvibles (función "Erase").
+Además, los scripts relacionados con los asedios y las unidades de guardia en las aventuras han sido completamente revisados con el objetivo de hacer que el comportamiento de las unidades implicadas sea más inteligente (se distraían constantemente con los centinelas) y reducir la gran cantidad de exploits que se podían usar para enfrentarse a los enemigos: además de mejorar las grandes batallas/desafíos ya existentes, este cambio sirve como base para las aventuras que se introducirán en las futuras versiones del mod.
+
+CAMBIOS
+
+- resuelto el problema por el cual la IA iniciaba la táctica inicial en paralelo con la gestión de la fortaleza en mapas pequeños
+- resuelto el problema por el cual la IA no reclutaba héroes durante la táctica inicial con Roma Republicana
+- resuelto el problema por el cual la IA a veces reclutaba legionarios en lugar de arqueros con Roma Republicana
+- resuelto el problema por el cual "sanación heroica" estaba bloqueada si el primero de varios héroes seleccionados no tenía suficiente energía
+- resuelto el problema por el cual hacer doble clic en el retrato de una habilidad activable en el menú superior dedicado consumía energía aunque la habilidad ya estuviera en uso
+- resuelto el problema por el cual la orden de patrulla crasheaba el juego si había un águila entre las unidades seleccionadas
+- resuelto el problema por el cual la orden de patrulla para unidades normales (no héroes) no las hacía regresar si estaban en una estructura
+- resuelto el problema por el cual las unidades intentaban conquistar una unidad de suministro que había entrado en una estructura mediante la orden de seguir a un aliado
+- resuelto el problema por el cual a veces la lealtad de un asentamiento que acababa de ser conquistado disminuía incluso si ninguna unidad lo estaba conquistando
+- resuelto el problema por el cual las unidades en fase de conquista contaban como unidades en combate activando así las habilidades especiales de los héroes con autoactivación habilitada
+- resuelto el problema por el cual el amuleto del coraje aumentaba el ataque de unidades no militares, llevando a la aparición de un valor numérico en lugar de "no" junto al icono de ataque en la interfaz
+- resuelto el problema por el cual la orden de transformación de los teutones estaba bloqueada si el jugador del primero de varios teutones seleccionados no había investigado "maestro de teutones"
+- resuelto el exploit por el cual era posible transformar teutones sin haber investigado "maestro de teutones" si el jugador del primero de varios teutones seleccionados lo había investigado (control compartido)
+- añadida descripción a las órdenes de licenciar milicianos y transformar teutones indicando que deben estar en una estructura/navío (a veces la transformación al aire libre podía bloquear el juego)
+- añadida orden de patrulla a los animales peligrosos y removido de los pacíficos (sus movimientos eran inconsistentes y dependían de la animación activa al iniciar la patrulla)
+- campesinos/gallinas no controlables: salud y energía reducidas a 1, removidos de efectos basados en unidades cercanas (ej. agua curativa, cuerno de la victoria, ...)
+- espigas de centeno: removida prioridad de unidades militares (podía descuidar las espirituales)
+- catapulta ibera: centrada la imagen blanca/roja de colocación sobre el puntero al construir
+- construcción máquinas de asedio: tiempo antes de recibir daño aumentado a 14 segundos
+- mejorados enormemente los asedios guionizados y los comportamientos de guardia en las aventuras
+______________________________________
 
 [1.0.0] - 2 junio 2025
 
@@ -189,7 +218,7 @@ El objetivo de estos cambios es hacer cada partida más variada e interesante gr
 
 ASEDIO
 
-El objetivo de estos cambios es ofrecer algunas mejoras para la interfaz y reequilibrar ligeramente las máquinas de asedio, sobre todo gracias a la reintroducción del comando de ataque manual, útil para las catapultas cuando uno se enfrenta a la técnica de la "burbuja" (es decir, una masa concentrada de unidades a distancia, posiblemente rodeadas de obstáculos infranqueables como muros, rocas o casas).
+El objetivo de estos cambios es ofrecer algunas mejoras para la interfaz y reequilibrar ligeramente las máquinas de asedio, sobre todo gracias a la reintroducción de la orden de ataque manual, útil para las catapultas cuando uno se enfrenta a la técnica de la "burbuja" (es decir, una masa concentrada de unidades a distancia, posiblemente rodeadas de obstáculos infranqueables como muros, rocas o casas).
 
 - torre: alcance mínimo reducido a 150, alcance aumentado a 725
 - catapulta: alcance aumentado a 750, radio del área de impacto reducido a 150
@@ -221,7 +250,7 @@ Como se verá en las secciones posteriores, los animales invocados pueden tener 
 - peces: salud reducida a 100, vista reducida a 300, velocidad aumentada a 110
 - ciervo: vista aumentada a 650
 - ciervo invocado: nueva unidad con parámetros del ciervo, velocidad 200, "vista de lince" y duración total 180 segundos
-- caballo: salud aumentada a 200, no se vuelve neutral cerca de las fortalezas enemigas, ahora el comando de doma (con su tooltip correspondiente) tiene prioridad sobre el de ataque una vez obtenida la mejora "domar caballos"
+- caballo: salud aumentada a 200, no se vuelve neutral cerca de las fortalezas enemigas, ahora la orden de doma (con su tooltip correspondiente) tiene prioridad sobre el de ataque una vez obtenida la mejora "domar caballos"
 - la barra de salud ahora también muestra la energía de la mayoría de los animales
 - la interfaz muestra energía, velocidad, defensa y vista de los animales pacíficos
 - añadidos efectos de sonido a los leones cuando están quietos
@@ -279,7 +308,7 @@ Los mayores cambios para Iberia en general consisten en el gran aumento en la ga
 - defensor: salud aumentada a 260, ataque aumentado a 18, defensa reducida a 20, coste aumentado a 150 oro, tiempo de reclutamiento reducido a 14 segundos
 - jinete: salud aumentada a 280, defensa reducida a 2, velocidad reducida a 160, añadida "triunfo", coste aumentado a 160 oro
 - hondero: ataque reducido a 36, vista reducida a 500, alcance reducido a 400, sustituida "golpe experto" con "ataque especial" y "tácticas defensivas", coste reducido a 180 oro
-- explorador: salud reducida a 220, ataque reducido a 30, defensa reducida a 2, velocidad reducida a 160, inventario aumentado a 1, coste reducido a 1 población, añadidos parámetros al tooltip del comando en la aldea
+- explorador: salud reducida a 220, ataque reducido a 30, defensa reducida a 2, velocidad reducida a 160, inventario aumentado a 1, coste reducido a 1 población, añadidos parámetros al tooltip de la orden en la aldea
 - guardia de élite: salud reducida a 400, ataque aumentado a 34, añadida "ferocidad", tiempo de reclutamiento aumentado a 22 segundos
 - guerrillero: salud aumentada a 440, ataque aumentado a 54, vista aumentada a 600, velocidad aumentada a 90, tiempo de reclutamiento reducido a 8 segundos
 - sacerdotisa: velocidad aumentada a 60
@@ -1275,9 +1304,9 @@ NECESITAN INVESTIGACIÓN MÁS PROFUNDA
 - a veces las unidades espirituales intentan atacar las catapultas haciendo una animación como si buscaran cobertura, bloqueando cualquier otra acción -> requiere análisis tanto de scripts como de archivos de animaciones
 - transformar una unidad (por ejemplo mediante "maestro teutón") no conserva su factor velocidad original -> probablemente no solucionable sin generar sobrecarga
 - de vez en cuando, sin motivo aparente, el juego crashea -> quizás esté relacionado con algún script, pero también es probable que sean funciones con errores intrínsecos o una gestión incorrecta de memoria en el código fuente
-- los centinelas que regresan a las torres de las murallas parecen ser contados como muertes en las estadísticas de final de partida -> verificar scripts de centinelas (la función PutSentry es sospechosa)
 
 NO RESOLVIBLES
+- la función "Erase" activa los efectos relacionados con la muerte de las unidades (como los "poemas épicos") y aumenta el contador de unidades perdidas (los centinelas que regresan a las torres son la causa principal)
 - el cambio de factor velocidad para un héroe solo se aplica durante el combate y no durante el movimiento
 - las unidades con factor velocidad modificado ralentizan a todo el ejército cuando están vinculadas a un héroe
 - las unidades muertas en posesión de "fortuna de los dioses" que son golpeadas por "daño expansivo" pueden generar el mismo bug de "resurrección" que ocurría con "ira de Júpiter"

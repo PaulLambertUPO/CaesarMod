@@ -14,7 +14,36 @@ Anche la Greek Mod stessa, nonostante tutti i suoi pregi, presentava alcuni prob
 Ho quindi cominciato a lavorare da autodidatta partendo dalla Greek Mod per crearne una nuova, la Caesar Mod, puntando a migliorare ogni aspetto del gioco per poter offrire a chiunque un prodotto che possa permettere di avere un'esperienza di gioco piacevole e memorabile, da soli o in compagnia, così come offrire un punto di partenza per facilitare il lavoro ad altre persone appassionate di Imperivm con le mie stesse intenzioni (non è stato per niente facile lavorare su una base di codice poco performante, molto disordinato e palesemente amatoriale in svariati punti, quindi voglio evitare che altre persone debbano perdere tempo a sistemare cose come ho dovuto fare io).
 La mia passione per Imperivm è così grande che è pressoché impossibile da esprimere a parole e voglio anche precisare che non ho nessuna intenzione di "rubare" quello che hanno fatto i creatori della Greek Mod, infatti nei riconoscimenti del menù principale ho inserito un ringraziamento nei loro confronti e non ho nascosto nessuno di loro, io mi sono semplicemente aggiunto ai loro nomi.
 Se un'altra persona decide di usare la Caesar Mod come punto di partenza per un nuovo progetto, per me è ben più che libera di farlo: l'unica cortesia che chiedo è quella di fare come ho fatto io e di tenere tutti i nomi originali, specificando di aver cominciato dalla mia mod e rilasciando il nuovo progetto sotto la stessa licenza CC BY-SA, i cui dettagli sono indicati nel file LICENSE.txt incluso nel pacchetto.
+______________________________________
 
+[1.0.1] - 15 luglio 2025
+
+Questa nuova versione della Caesar Mod risolve diversi bug ed exploit per rendere più piacevole l'esperienza di gioco ed evitare alcuni comportamenti scorretti nelle partite multigiocatore. Durante lo sviluppo, ho indagato per capire come mai le statistiche di fine partita legate alle unità perse ed eliminate siano sempre sfalsate rispetto al reale andamento della partita e, purtroppo, ho potuto constatare l'ennesimo problema legato al codice sorgente: i dettagli sono inseriti in fondo al file, nella sezione dei bug non risolvibili (funzione "Erase").
+Inoltre, gli script legati agli assedi e alle unità di guardia nelle avventure sono stati completamente rivisti in modo da rendere più intelligente il comportamento delle unità coinvolte (si facevano distrarre continuamente dalle sentinelle) e ridurre il notevole numero di exploit che si potevano usare per contrastare i nemici: oltre a migliorare le grandi battaglie/sfide già esistenti, questa è una modifica propedeutica alle avventure che verranno introdotte nelle prossime versioni della mod.
+
+MODIFICHE
+
+- risolto il problema per cui l'IA faceva partire la tattica iniziale in parallelo alla gestione della fortezza su mappa piccola
+- risolto il problema per cui l'IA non reclutava eroi durante la tattica iniziale con Roma Repubblicana
+- risolto il problema per cui a volte l'IA reclutava legionari anziché arcieri con Roma Repubblicana
+- risolto il problema per cui "guarigione eroica" era bloccata se il primo di diversi eroi selezionati non aveva abbastanza energia
+- risolto il problema per cui fare doppio click sul ritratto di un'abilità attivabile nel menù apposito in alto consumava energia nonostante l'abilità fosse già in uso
+- risolto il problema per cui il comando di pattuglia faceva crashare il gioco se c'era un'aquila tra le unità selezionate
+- risolto il problema per cui il comando di pattuglia per le unità normali (non eroi) non le faceva tornare indietro se erano in una struttura 
+- risolto il problema per cui le unità cercavano di conquistare un'unità di rifornimento che era entrata in una struttura tramite il comando di seguire un alleato
+- risolto il problema per cui a volte la lealtà di un insediamento che era stato appena conquistato diminuiva anche se nessun'unità lo stava conquistando
+- risolto il problema per cui le unità in fase di conquista contavano come unità in combattimento e quindi facevano attivare le abilità speciali degli eroi con auto-attivazione abilitata
+- risolto il problema per cui l'amuleto del coraggio aumentava l'attacco di unità non militari, portando all'apparizione di un valore numerico anziché "no" di fianco all'icona di attacco nell'interfaccia
+- risolto il problema per cui il comando di trasformazione dei teutoni era bloccato se il giocatore del primo di diversi teutoni selezionati non aveva ricercato "maestro teutonico"
+- risolto l'exploit per cui era possibile trasformare i teutoni anche senza aver ricercato "maestro teutonico" se il giocatore del primo di diversi teutoni selezionati l'aveva ricercato (controllo condiviso)
+- aggiunta descrizione ai comandi di congedo dei miliziani e di trasformazione dei teutoni indicando che devono trovarsi all'interno di una struttura/nave (a volte la trasformazione all'aperto poteva bloccare il gioco)
+- aggiunto comando di pattuglia agli animali pericolosi e rimosso a quelli pacifici (i loro movimenti erano inconsistenti e dipendevano dall'animazione in corso all'avvio della pattuglia)
+- contadini/galline non controllabili: vita ed energia ridotte a 1, rimossi da effetti basati sulle unità vicine (es. acqua curativa, corno della vittoria, ...)
+- spighe di segale: rimossa priorità a unità militari (rischiava di trascurare quelle spirituali)
+- catapulta iberica: centrata sul puntatore l'immagine bianca/rossa del posizionamento per la costruzione
+- costruzione macchine d'assedio: tempo prima di subire danni aumentato a 14 secondi
+- migliorati enormemente gli assedi scriptati e i comportamenti di guardia delle avventure
+______________________________________
 
 [1.0.0] - 2 giugno 2025
 
@@ -1275,9 +1304,9 @@ DA INVESTIGARE PIÙ A FONDO
 - a volte le unità spirituali cercano di attaccare le catapulte eseguendo un'animazione di tentativo di mettersi al riparo, bloccando qualunque altra azione -> richiede analisi sia di script che file di animazioni
 - trasformare un'unità (ad esempio tramite "maestro teutonico") non mantiene il fattore velocità originale -> probabilmente non risolvibile senza generare overhead
 - ogni tanto, senza un apparente motivo, il gioco crasha -> magari è legato a qualche script, ma è anche probabile che sia dovuto a qualche funzione intrinsecamente buggata o a errata gestione di memoria nel codice sorgente
-- le sentinelle che rientrano nelle torri delle mura sembrano essere contate nelle statistiche post-partita per il numero di unità perse -> verificare script sentinelle (la funzione PutSentry è sospetta)
 
 NON RISOLVIBILI
+- la funzione "Erase" fa partire gli effetti legati alla morte delle unità (come "poemi epici") e fa aumentare il contatore di unità perse (le sentinelle che rientrano nelle torri sono la causa principale)
 - il cambio di fattore velocità per un eroe funziona solo in fase di combattimento e non di movimento
 - le unità con fattore velocità modificato rallentano tutto l'esercito quando sono vincolate a un eroe
 - le unità morte in possesso di "fortuna divina" che vengono colpite da "danno espansivo" possono generare lo stesso bug di "resurrezione" che si verificava con "ira di Giove"

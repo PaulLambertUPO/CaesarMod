@@ -14,7 +14,36 @@ Even the Greek Mod itself, despite all its merits, had some issues and could hav
 I then started working as a self-taught modder, beginning with the Greek Mod to create a new one, the Caesar Mod, aiming to improve every aspect of the game in order to offer everyone a product that provides a pleasant and memorable game experience, whether solo or with others, as well as offering a starting point to help others passionate about Imperivm with the same intentions as mine (it wasn’t easy at all working on a code base that was poorly optimized, very messy, and clearly amateurish in many areas, so I want to prevent others from wasting time fixing things like I had to do).
 My passion for Imperivm is so great that it’s almost impossible to express in words and I also want to clarify that I have no intention of "stealing" what the creators of Greek Mod did. In fact, I’ve included a thank-you to them in the main menu credits and haven’t hidden any of their names, I’ve simply added my name alongside theirs.
 If another person decides to use the Caesar Mod as a starting point for a new project, they are more than welcome to do so: the only courtesy I ask is that they do as I did and keep all the original names, specifying that they started from my mod and releasing the new project under the same CC BY-SA license, whose details can be found in the LICENSE.txt file included in the package.
+______________________________________
 
+[1.0.1] - 15 July 2025
+
+This new version of the Caesar Mod fixes several bugs and exploits in order to make the game experience more enjoyable and to prevent some unfair behaviours in multiplayer games. During the development, I investigated why the endgame statistics related to lost and killed units are always inaccurate compared to the actual course of the match and, unfortunately, I found yet another issue related to the source code: the details are listed at the end of the file, in the section on not fixable bugs ("Erase" function).
+Additionally, the scripts related to sieges and guard units in adventures have been completely overhauled in order to make the behaviour of the involved units smarter (they kept getting distracted by sentries) and to reduce the large amount of exploits that could be used to counter the enemies: besides improving the existing great battles/challenges, this change also lays the groundwork for the new adventures that will be introduced in the future versions of the mod.
+
+CHANGES
+
+- fixed the issue where the AI triggered the initial tactic in parallel with stronghold management on small maps
+- fixed the issue where the AI didn’t recruit heroes during the initial tactic with Republican Rome
+- fixed the issue where the AI sometimes recruited hastati instead of archers with Republican Rome
+- fixed the issue where "divine grace" was blocked if the first of multiple selected heroes didn’t have enough stamina
+- fixed the issue where double-clicking on the portrait of an activable skill in the top menu consumed stamina even if the skill was already in use
+- fixed the issue where the patrol command made the game crash if there was an eagle among the selected units
+- fixed the issue where the patrol command for regular units (not heroes) didn’t make them go back if they were inside a building
+- fixed the issue where units attempted to capture a supply unit that had entered a building via the command of following an ally
+- fixed the issue where the loyalty of a settlement that was just captured sometimes decreased even if no unit was actually capturing it
+- fixed the issue where units in the process of capturing were counted as fighting units and triggered skills of heroes with auto-cast enabled
+- fixed the issue where the amulet of courage increased the attack of non-military units, showing a numeric value instead of "none" next to the attack icon in the interface
+- fixed the issue where the Teuton transformation command was blocked if the player of the first of multiple selected Teutons had not researched "Teuton master"
+- fixed the exploit where it was possible to transform Teutons even without researching "Teuton master" if the player of the first of multiple selected Teutons had researched it (shared control)
+- added description to the militiamen dismissal and Teuton transformation commands indicating they must be inside a building/ship (transforming outdoors could sometimes freeze the game)
+- added patrol command to dangerous animals and removed from peaceful ones (their movements were inconsistent and animation-dependent at patrol start)
+- uncontrollable peasants/hens: health and stamina reduced to 1, removed from effects based on nearby units (e.g. healing water, horn of victory, ...)
+- rye spikes: removed priority from military units (it risked neglecting sages)
+- Iberian catapult: centered the white/red positioning image on the pointer for the construction
+- siege machine construction: time before taking damage increased to 14 seconds
+- massively improved scripted sieges and guard behaviours in adventures
+______________________________________
 
 [1.0.0] - 2 June 2025
 
@@ -70,18 +99,18 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - fixed the issue where upgrades related to the maximum level of liberati, mountaineers, and valkyries did not account for units already present before recruitment
 - fixed the issue/exploit where various bonuses (such as "democracy/oligarchy", "nobility", ...) were applied to units of other players attached to a hero (side effect of GetPlayerUnits)
 - fixed the issue where heroes and units with a maximum limit did not attack nearby enemies on their way to the townhall after recruitment
-- fixed the issue where commands for certain sages lacked descriptions or tooltips during click phase (e.g., "curse" or "cripple")
+- fixed the issue where commands for certain sages lacked descriptions or tooltips during click phase (e.g. "curse" or "cripple")
 - fixed the issue where the guard post kept making a camel appear and disappear in the garrison as well as in any siege machine building on the map
 - fixed the issue where villages lost food to give it to "decorative" peasants and did not properly supply units with more than 20 maximum food (like elephants)
 - fixed the issue where non-military units could capture caravans and tame horses
-- unified upgrades related to unlocking similar troops in the blacksmith (e.g., if a stronghold has both Iberian and Gaul blacksmiths, researching "horseshoes" unlocks horsemen of both peoples)
+- unified upgrades related to unlocking similar troops in the blacksmith (e.g. if a stronghold has both Iberian and Gaul blacksmiths, researching "horseshoes" unlocks horsemen of both peoples)
 - shipyard: updated ship creation icon based on the people (Egypt, Rome, generic), added ship statistics to the command tooltip
 - inn: removed unnecessary information from the interface, increased standard initial population to 10 (to allow self-repair)
 - Roman house: corrected the icon
 - repopulate: cost reduced to 500 gold, research time increased to 60 seconds, restores minimum population only if the current one is lower and/or repairs only the village hall if damaged (ignores houses)
 - call peasants: if there is a supply route to a shipyard, peasants stay near the village rather than trying to enter the shipyard in vain
 - added caravan creation command with 250 to villages, shipyards, townhalls, tents and outposts
-- caravan: fixed the issue where they could enter buildings without resources (e.g., ruins/inns), added all main information to the interface, improved tooltips based on the mouse pointer
+- caravan: fixed the issue where they could enter buildings without resources (e.g. ruins/inns), added all main information to the interface, improved tooltips based on the mouse pointer
 - line formation: range bonus increased to 30%
 - block formation: armor bonus increased to 8, added 20% range bonus
 - core cavalry formation: range bonus increased to 30%
@@ -331,7 +360,7 @@ One last important aspect is that the valkyrie is now the fastest anti-archer un
 - legendary valkyries: cost increased to 1500 gold
 - learning: cost increased to 2500 gold
 - attack focus: cost increased to 2500 gold
-- Teuton master: cost reduced to 500 gold, allows trasnformation into Teuton wolves (the cycle is rider -> archer -> wolf)
+- Teuton master: cost reduced to 500 gold, allows transformation into Teuton wolves (the cycle is rider -> archer -> wolf)
 - barbaric tales: new upgrade researchable in the sanctuary of Wotan, cost 1000 gold, when heroes and valkyries kill units with at least 3 more levels the allies gain 15 experience (radius 500, same player only)
 - increase population: cost reduced to 400 food
 - buy food: cost reduced to 400 gold
@@ -1273,11 +1302,11 @@ FIXABLE
 
 TO BE INVESTIGATED FURTHER
 - sages sometimes try to attack catapults by performing a cover-attempting animation, blocking any other action -> requires analysis of both scripts and animation files
-- transforming a unit (e.g., via "Teuton master") does not maintain the original speed factor -> likely not fixable without generating overhead
+- transforming a unit (e.g. via "Teuton master") does not maintain the original speed factor -> likely not fixable without generating overhead
 - every now and then, for no apparent reason, the game crashes -> maybe it's related to some scripts, but it's more likely due to some intrinsically buggy function or incorrect memory management in the source code
-- sentries re-entering wall towers seem to be counted in post-game statistics for the number of units lost -> check sentry scripts (PutSentry function is suspect)
 
 NOT FIXABLE
+- the "Erase" function triggers the effects related to the death of units (such as "warrior tales") and increases the lost units counter (sentries returning to towers are the main cause)
 - the speed factor change for a hero only works in fight phase and not in movement phase
 - units with modified speed factor slow down the entire army when they are attached to a hero
 - dead units with "gambler's luck" that are hit by "trample" can generate the same "resurrection" bug that occurred with "wrath of Jupiter"
