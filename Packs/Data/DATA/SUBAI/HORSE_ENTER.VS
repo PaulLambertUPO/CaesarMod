@@ -1,50 +1,38 @@
-// void, Obj This,Obj bld
+//void, Obj This, Obj bld
 
 Unit this;
-point pt, ptDummy;
-Building building;
-Settlement set;
-Obj objDummy;
 
 this = This.AsUnit();
-building = bld.AsBuilding();
 
-if(.IsValid() == false || .IsAlive() == false)
-	return;
+if (.IsValid) {
+	Building b;
 
-if(building.IsValid() == false || this.IsEnemy(building) == true)
-	return;
+	b = bld.AsBuilding();
 
-//Horse can enter only in iberian villages.
-if(building.IsHeirOf("IVillage") == false) 
-{
-	return;
-}
+	if (b.IsValid)
+		if (bld.IsHeirOf("IVillage"))
+			if (!.IsEnemy(bld)) {
+				Settlement set;
 
-set = building.settlement();
-if(set.IsValid() == false)
-{
-	return;
-}
+				set = b.settlement;
 
-.SetSpeedFactor(150);
-.SetWalkAnim(2);
+				if (set.IsValid) {
+					.SetSpeedFactor(150);
+					.SetWalkAnim(1);
+					.SetEntering(true);
 
-.SetEntering(true);																
-if(set.Units().Contains(this) == false)
-{
-	pt = building.GetEnterPoint(this);
+					if (!set.Units.Contains(this)) {
+						point pt;
 
-	while(!.GotoEnter(pt, 0, 1000, true, 5000))
-	{
-		if(this.IsEnemy(building) == true)
-		{
-			return;
-		}
-		Sleep(100);
-	}
+						pt = b.GetEnterPoint(this);
 
-	.ExecCmd("detach",ptDummy,objDummy,false);
-	EnvWriteInt(set, "EEE_IVillageNumberHorses", EnvReadInt(set, "EEE_IVillageNumberHorses") + 1);
-	.Erase();
+						while (!.GotoEnter(pt, 0, 1000, true, 5000))
+							if (.IsEnemy(b))
+								return;
+					}
+
+					EnvWriteInt(set, "EEE_IVillageNumberHorses", EnvReadInt(set, "EEE_IVillageNumberHorses") + 1);
+					.Erase();
+				}
+			}
 }

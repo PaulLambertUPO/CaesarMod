@@ -1,0 +1,14 @@
+<class id="UntamableHorse" cpp_class="CVXUnit" parent="Animal" entity="Units/WildHorse/WildHorse.ent.xml">
+
+	<properties maxhealth="200" />
+	<properties armor_slash="2" armor_pierce="2" />
+	<properties speed="150" />
+	<properties radius="20" selection_radius="40" />
+
+	<properties display_name="Horse" display_name_plural="Horses" />
+	<properties icon="gameres/icons/horse.bmp" />
+	<properties help="contents/units/Animals/Horse" />
+	<properties edittree_pos="Units/Animals/Horse (untamable)" />
+
+	<sounds walk="Sounds/Animals/Deer/Deer_Galop.wav" command="Sounds/Animals/WHorse/Horse_Command.wav" die="Sounds/Animals/WHorse/Horse_Die.wav" />
+</class>

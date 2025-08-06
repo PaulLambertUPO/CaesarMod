@@ -81,4 +81,17 @@
 		rollover="Create Egyptian Ship">
 		<src obj="BaseShipyard" />
 	</cmd>
+	<cmd name="deployFishermen" priority="15"
+		button="actions/call Fisherman.bmp"
+		queueicon="gameres/icons/Fisherman.bmp"
+		transpicon="1"
+		groupverifier="data/subai/shipyard_deploy_fishermen_verify.vs"
+		traincommand="yes"
+		key="e"
+		execdelay="10000"
+		method="deploy_fishermen"
+		rollover="Deploy fishermen"
+		description="Deploys up to 5 fishermen from the shipyard">
+		<src obj="BaseShipyard" />
+	</cmd>
 </commands>

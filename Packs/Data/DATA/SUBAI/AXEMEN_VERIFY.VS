@@ -1,21 +1,23 @@
 //bool, ObjList objs, str OUT reasonText
 
-Obj this;
-int i;
-int max_axemen;
-str dest, name, reason;
+Building this;
+Settlement set;
 
-this = objs[0];
-dest = cmdparam;
+this = objs[0].AsBuilding();
 
-max_axemen = EnvReadInt(.player, "MaxAxemen");
-if ((cmdcost_gold > this.AsBuilding.settlement.gold))
-{
-	reasonText = rollover(this,false)+ Translatef(" (currently %s1)",  "" + (max_axemen));
-	reasonText = reasonText + "\n<color 255 0 0>";
-	reasonText = reasonText + Translate("Not enough gold");
-	
-	return true;
+set = .settlement;
+
+reasonText = rollover(this, false) + Translatef(" (currently %s1)", EnvReadInt(.player, "MaxAxemen"));
+
+if (cmdcost_gold > set.gold)
+	reasonText = reasonText + "\n<color 255 0 0>" + Translate("Not enough gold");
+if (cmdcost_food > set.food)
+	reasonText = reasonText + "\n<color 255 0 0>" + Translate("Not enough food");
+if (cmdcost_pop > 0) {
+	int min_pop;
+	min_pop = GetConst("MinPopulation");
+	if (set.population - cmdcost_pop < min_pop)
+		reasonText = reasonText + "\n<color 255 0 0>" + Translatef("The current population is under the minimum of %s1 people", min_pop + cmdcost_pop);
 }
-reasonText = rollover(this,false) + Translatef(" (currently %s1)",  "" + (max_axemen));
+
 return true;

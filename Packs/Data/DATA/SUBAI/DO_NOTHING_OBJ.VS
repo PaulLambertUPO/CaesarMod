@@ -1,5 +1,4 @@
-// void, Obj me, Obj u
+//void, Obj me, Obj u
 
-while(true) {
-	Sleep(10000);
-}
+while (true)
+	Sleep(3600000);

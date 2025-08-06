@@ -38,12 +38,12 @@
 	/>
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
-		script="return .AsBuilding().damage + '|' + .AsBuilding().range;"
+		script="return .damage + '|' + .range;"
 		help="/contents/stats/attack"
 		rollover="Damage|Range"
 	/>
 	<value4 icon="gameres/infobar/common/health ico.bmp"
-		script="return .AsBuilding().health + '/' + .AsBuilding().maxhealth;"
+		script="return .health + '/' + .maxhealth;"
 		help="/contents/stats/health"
 		rollover="Health"
 	/>

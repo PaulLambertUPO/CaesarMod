@@ -4,6 +4,6 @@ Building this;
 
 this = This.AsBuilding();
 
-.Progress(.cmddelay);
+.Progress();
 
 .settlement.AddToPopulation(10);

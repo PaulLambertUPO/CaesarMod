@@ -1,13 +1,12 @@
 //void, Obj This
 
-Place("TBarrackHorse1", This.pos, This.player);
-Place("TBarrackHorse2", This.pos, This.player);
-Place("TBarrackHorse3", This.pos, This.player);
-Place("TBarrackHorse4", This.pos, This.player);
-Place("TBarrackHorse5", This.pos, This.player);
+Sleep(rand(10) + 1);
 
-Sleep(rand(50000) + 10000);
-
-while (1) {
-	Sleep(50000);
+{
+	int i;
+	for (i = 1; i <= 5; i += 1)
+		Place("TBarrackHorse" + i, This.pos, This.player);
 }
+
+while (1)
+	Sleep(3600000);

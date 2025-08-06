@@ -1,26 +1,16 @@
 //bool, ObjList objs, str OUT reasonText
 
 Building this;
-str strEnvStr_gold;
-str strEnvStr_food;
+Settlement set;
 
-if(objs.count > 0)
-{
-	this = objs[0].AsBuilding();
-	if(.IsValid())
-	{
-        strEnvStr_gold = EnvReadString(.settlement, "GOutpostSellGold");
-        strEnvStr_food = EnvReadString(.settlement, "GOutpostSellFood");
-        
-        if(strEnvStr_gold != "yes" && strEnvStr_food != "yes"){
-            return true;
-        }
-        if (strEnvStr_gold != "yes" && strEnvStr_food=="yes"){
-            reasonText = Translate(rollover(this,false));
-            reasonText = reasonText + "\n<color 255 0 0>";
-            reasonText = reasonText + Translate("(Another exchange is under way)");
-            return false;
-        }
-	}
-}
+this = objs[0].AsBuilding();
+
+set = .settlement;
+
+if (EnvReadString(set, "GOutpostSellGold") != "yes")
+	if (EnvReadString(set, "GOutpostSellFood") != "yes")
+		return true;
+	else
+		reasonText = Translate(rollover(this, false)) + "\n<color 255 0 0>" + Translate("(Another exchange is under way)");
+
 return false;

@@ -103,10 +103,11 @@ if (!Union(Q_Masinissa, Q_Iberians).IsEmpty())
 	RunConv("SyphaxDeath");
 RemoveNote("Kill Syphax");
 
+StopAIHelper("SyphaxSiege");
 ClassPlayerObjs(cMilitary, 6).SetPlayer(2);
-if (IsAIHelperRunning("SyphaxSiege"))
-	StopAIHelper("SyphaxSiege");
 if (NO_Utica.obj.player == 6)
+	NO_Utica.obj.SetPlayer(1);
+else if (NO_Utica.obj.player == 2)
 	NO_Utica.obj.SetPlayer(1);
 
 WaitEmptyQuery(Q_Iberians, -1);

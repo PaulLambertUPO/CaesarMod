@@ -116,14 +116,12 @@ if (main_target.IsValid) {
 												pt = u.pos - main_target_pos;
 												j = pt.Len + 1;
 												if (j < 900) {
-													pt = pt * (900 + rand(100)) / j;
-													pt = pt + main_target_pos;
+													pt = pt * (900 + rand(100)) / j + main_target_pos;
 													pt.IntoRect(rc);
 													u.SetCommand("advance", pt);
 												}
 												else if (j > 1000) {
-													pt = pt * (900 + rand(100)) / j;
-													pt = pt + main_target_pos;
+													pt = pt * (900 + rand(100)) / j + main_target_pos;
 													pt.IntoRect(rc);
 													u.SetCommand("advance", pt);
 												}

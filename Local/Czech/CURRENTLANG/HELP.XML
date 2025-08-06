@@ -2746,6 +2746,7 @@ To do his job, he has to enter a shipyard: once there, he will start producing f
 				<entry image="UI/Help/Train Ico.bmp">Training time 5 seconds</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/RStorage.bmp" link="/contents/buildings/Village">Called in the Village hall</entry>
+				<entry vcenter="1" image="UI/Icons/RShipyard.bmp" link="/contents/buildings/Shipyard">Used in the Shipyard</entry>
 			</topic>
 			<topic id="Mule">
 				<entry hcenter="1" font="large">Caravans</entry>
@@ -5294,7 +5295,7 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gamblers day.bmp">
 Gambler's day
-Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one.
+Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one (100% in the case of non-summoned animals).
 Cost: 1500 gold
 Time: 30 seconds
 				</entry>
@@ -6154,6 +6155,11 @@ Time: 20 seconds
 Create Egyptian ship (only Egypt)
 Cost: 1000 gold
 Time: 20 seconds
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Call Fisherman.bmp" link="/contents/units/Fisherman">
+Deploy fishermen
+Deploys up to 5 fishermen from the shipyard.
+Time: 10 seconds
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/Fisherman.bmp" link="/contents/units/Fisherman">Fisherman</entry>

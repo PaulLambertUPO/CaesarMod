@@ -5,7 +5,7 @@ Settlement supplied;
 Unit unit;
 StrArray villager_classes;
 point pos, pt_dest, pt_place;
-int i, radius, villager_train_radius, pop_group;
+int i, radius, player, villager_train_radius, pop_group;
 
 this = This.AsBuilding();
 
@@ -13,6 +13,7 @@ this = This.AsBuilding();
 
 pos = .pos;
 radius = .radius;
+player = .player;
 villager_train_radius = GetConst("VillageTrainPeasantRadius");
 pop_group = GetConst("PopGroup");
 
@@ -42,18 +43,19 @@ for (i = 0; i < pop_group; i += 1) {
 	else if (i == 3)
 		pt_place.Set(pt_place.x + 10, pt_place.y - 10);
 
-	unit = Place(villager_classes[rand(2)], pt_place, .player).AsUnit();
+	unit = Place(villager_classes[rand(2)], pt_place, player);
 
 	supplied = .settlement.supplied;
 
 	if (supplied.IsValid)
 		if (!supplied.IsTTent)
 			if (!supplied.IsShipyard)
-				if (!unit.IsEnemy(supplied.GetCentralBuilding())) {
+				if (!supplied.IsEnemy(player)) {
 					unit.SetCommand("enter", supplied.GetCentralBuilding());
 					Sleep(100);
 					continue;
 				}
+
 	unit.SetCommand("move", pt_dest);
 	Sleep(100);
 }

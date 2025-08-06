@@ -1,38 +1,33 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Flying this;
-point  newPos;
-int    i, radius, circleSegs, angle, min, dist, start;
 
-radius = 3000;
-circleSegs = 32;
 this = This.AsFlying();
-start = 0;
 
-// find closest point to the 'hover circle'
-min = 64000;
-for( i = 0; i < circleSegs; i += 1 )
-{
-	angle = 360 * i / circleSegs;
-	newPos = pt + GetVecByDir( GetDirByAngle( angle ), radius );
-	dist = .DistTo( newPos );
-	if( dist < min )
-	{
-		min = dist;
-		start = i;
+if (.IsValid) {
+	point new_pos;
+	int i, dist, start, min = 2000000;//radius = 1800
+
+	//find closest point to the hovering circle
+	for (i = 0; i < 32; i += 1) {
+		dist = .DistTo(pt + GetVecByDir(GetDirByAngle(360 * i / 32), 1800));
+		if (dist < min) {
+			min = dist;
+			start = i;
+		}
 	}
+
+	.AddCommand(true, "hover", pt);
+
+	new_pos = pt + GetVecByDir(GetDirByAngle(360 * (start - 4) / 32), 1800);
+	.AddCommand(true, "move", new_pos);
+
+	new_pos = pt + GetVecByDir(GetDirByAngle(360 * (start + 21) / 32), 1800);
+	.AddCommand(true, "move", new_pos);
+
+	new_pos = pt + GetVecByDir(GetDirByAngle(360 * (start + 10) / 32), 1800);
+	.AddCommand(true, "move", new_pos);
+
+	new_pos = pt + GetVecByDir(GetDirByAngle(360 * start / 32), 1800);
+	.AddCommand(true, "move", new_pos);
 }
-// compose commands so eagle starts hovering from the closest point
-newPos = pt + GetVecByDir( GetDirByAngle( 360 * start / circleSegs ), radius );
-.AddCommand( false, "move", newPos );
-
-newPos = pt + GetVecByDir( GetDirByAngle( 360 * ( start + circleSegs / 3 ) / circleSegs ), radius );
-.AddCommand( false, "move", newPos );
-
-newPos = pt + GetVecByDir( GetDirByAngle( 360 * ( start + circleSegs * 2 / 3 ) / circleSegs ), radius );
-.AddCommand( false, "move", newPos );
-
-newPos = pt + GetVecByDir( GetDirByAngle( 360 * ( start - circleSegs / 8 ) / circleSegs ), radius );
-.AddCommand( false, "move", newPos );
-
-.AddCommand( false, "hover", pt );

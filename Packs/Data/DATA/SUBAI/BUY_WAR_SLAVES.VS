@@ -1,8 +1,9 @@
-// void, Obj This 
+//void, Obj This
 
 Building this;
 
 this = This.AsBuilding();
 
-.Progress(.cmddelay);
+.Progress();
+
 .settlement.AddToPopulation(20);

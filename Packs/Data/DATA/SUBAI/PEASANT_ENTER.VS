@@ -1,48 +1,55 @@
-// void, Obj This,Obj bld
+//void, Obj This, Obj bld
 
 Unit this;
-point pt;
-Building building;
-bool error;
-Settlement set;
 
 this = This.AsUnit();
-building = bld.AsBuilding();
 
+if (.IsValid)
+	if (.IsAlive) {
+		Building building;
 
-if (!building.IsValid() || this.IsEnemy(building))
-  return;
+		building = bld.AsBuilding();
 
-if( building.IsHeirOf("BaseRuins")) return;
+		if (building.IsValid)
+			if (building.IsCentralBuliding)
+				if (!.IsEnemy(building))
+					if (!building.IsHeirOf("BaseRuins")) 
+						if (!building.IsHeirOf("Catapult")) {
+							Settlement set;
 
-set = building.settlement;
-if (!set.IsValid()) return;
+							set = building.settlement;
 
-.SetEntering(true);																
-if (!set.Units().Contains(this))
-  {
+							if (set.IsValid) {
+								.SetEntering(true);
 
-    pt = building.GetEnterPoint(this);
-    //.pr("unit::enter: going");
-	while(!.GotoEnter(pt, 0, 1000, true, 5000)){
-		if(this.IsEnemy(building)){
-			return;
-		}
-		Sleep(100);
+								if (!set.Units.Contains(this)) {
+									point pt;
+
+									pt = building.GetEnterPoint(this);
+
+									while (!.GotoEnter(pt, 0, 1000, true, 5000))
+										if (.IsEnemy(building))
+											return;
+
+									if (set.max_population > 0) {
+										point pt_dummy;
+										Obj o_dummy;
+
+										.ExecCmd("detach", pt_dummy, o_dummy, false);
+										set.AddToPopulation(1);
+										.Erase();
+									}
+									else if (set.max_units > 0)
+										set.AddUnit(this);
+								}
+								else if (set.max_population > 0) {
+									point pt_dummy;
+									Obj o_dummy;
+
+									.ExecCmd("detach", pt_dummy, o_dummy, false);
+									set.AddToPopulation(1);
+									.Erase();
+								}
+							}
+						}
 	}
-
-    //.pr("unit::enter: entering");
-    if (set.max_population==0) {
-    	if (set.max_units != 0)
-    		set.AddUnit(this);
-    	//else pr("peasant_enter: both max_population and max_units are 0 for this settlement");
-    }
-	else {
-		point ptDummy;
-		Obj objDummy;
-	
-		.ExecCmd("detach",ptDummy,objDummy,false);
-    		set.AddToPopulation(1);
-		.Erase();
-	}
-  }

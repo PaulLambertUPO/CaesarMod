@@ -1,11 +1,11 @@
-// void, Obj This 
+//void, Obj This
 
-Building this;
-int k;
-this = This.AsBuilding();
+int player;
 
-.Progress();
+This.AsBuilding().Progress();
 
-k = EnvReadInt(.player, "MaxHuntresses");
-EnvWriteInt(.player, "MaxHuntresses", k + 10);
-EnvWriteString(.player, "Increase Javelin production", "researched");
+player = This.player;
+
+EnvWriteInt(player, "MaxHuntresses", EnvReadInt(player, "MaxHuntresses") + 10);
+
+EnvWriteString(player, "Increase Javelin production", "researched");

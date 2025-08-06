@@ -366,26 +366,30 @@
 <translationtableentry text="Animals" result="Animales" />
 <translationtableentry text="Bear" result="Oso" />
 <translationtableentry text="Bears" result="Osos" />
-<translationtableentry text="Bear (aggressive)" result="Oso (agresivo)" />
+<translationtableentry text="Bear (wild)" result="Oso (salvaje)" />
 <translationtableentry text="Boar" result="Jabalí" />
 <translationtableentry text="Boars" result="Jabalíes" />
-<translationtableentry text="Boar (aggressive)" result="Jabalí (agresivo)" />
+<translationtableentry text="Boar (wild)" result="Jabalí (salvaje)" />
 <translationtableentry text="Lion" result="León" />
 <translationtableentry text="Lions" result="Leones" />
-<translationtableentry text="Lion (aggressive)" result="León (agresivo)" />
+<translationtableentry text="Lion (wild)" result="León (salvaje)" />
 <translationtableentry text="Lioness" result="Leona" />
 <translationtableentry text="Lionesses" result="Leonas" />
-<translationtableentry text="Lioness (aggressive)" result="Leona (agresiva)" />
+<translationtableentry text="Lioness (wild)" result="Leona (salvaje)" />
 <translationtableentry text="Wolf" result="Lobo" />
 <translationtableentry text="Wolves" result="Lobos" />
-<translationtableentry text="Wolf (aggressive)" result="Lobo (agresivo)" />
+<translationtableentry text="Wolf (wild)" result="Lobo (salvaje)" />
 <translationtableentry text="Crow" result="Cuervo" />
 <translationtableentry text="Crows" result="Cuervos" />
+<translationtableentry text="Crow (wild)" result="Cuervo (salvaje)" />
 <translationtableentry text="Eagle" result="Águila" />
 <translationtableentry text="Eagles" result="Águilas" />
 <translationtableentry text="Deer" result="Ciervo" />
+<translationtableentry text="Deer (wild)" result="Ciervo (salvaje)" />
 <translationtableentry text="Horse" result="Caballo" />
 <translationtableentry text="Horses" result="Caballos" />
+<translationtableentry text="Horse (wild)" result="Caballo (salvaje)" />
+<translationtableentry text="Horse (untamable)" result="Caballo (indomable)" />
 <translationtableentry text="Fish" result="Peces" />
 <translationtableentry text="Hen" result="Gallina" />
 <translationtableentry text="Hens" result="Gallinas" />
@@ -989,7 +993,7 @@
 <translationtableentry text="Gambling" result="Favor de los dioses" />
 <translationtableentry text="Explores a medium area around the stronghold and gives you a 40% chance to win 5000 gold or 400 food if you lose" result="Explora una media área alrededor de la fortaleza y te proporciona una probabilidad del 40% de ganar 5000 oro o 400 víveres si pierdes" />
 <translationtableentry text="Gambler's Day" result="Experiencia de los dioses" />
-<translationtableentry text="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one" result="Proporciona a cada guerrero una probabilidad del 45% de alcanzar el nivel del enemigo cada vez que mata a uno más experimentado" />
+<translationtableentry text="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one (100% in the case of non-summoned animals)" result="Proporciona a cada guerrero una probabilidad del 45% de alcanzar el nivel del enemigo cada vez que mata a uno más experimentado (100% en el caso de animales no invocados)" />
 <translationtableentry text="Gambler's Test" result="Destreza de los dioses" />
 <translationtableentry text="Gives every warrior a 1% chance to instantly kill a less experienced enemy and a 75% chance to gain 12 bonus damage every time that he becomes invisible" result="Proporciona a cada guerrero una probabilidad del 1% de matar instantáneamente a un enemigo menos experimentado y una probabilidad del 75% de ganar 12 puntos de ataque adicionales cada vez que se hace invisible" />
 <translationtableentry text="Gambler's Luck" result="Fortuna de los dioses" />
@@ -1155,6 +1159,10 @@
 <translationtableentry text="Create Ship" result="Construir navío de guerra" />
 <translationtableentry text="Create Roman Ship" result="Construir navío romano" />
 <translationtableentry text="Create Egyptian Ship" result="Construir navío egipcio" />
+<translationtableentry text="Deploy fishermen" result="Desplegar pescadores" />
+<translationtableentry text="Deploys up to 5 fishermen from the shipyard" result="Despliega hasta 5 pescadores desde el puerto" />
+<translationtableentry text="There are no fishermen in the shipyard" result="No hay pescadores en el puerto" />
+<translationtableentry text="There are already enough queued commands to deploy all fishermen" result="Ya hay suficientes órdenes en cola para desplegar a todos los pescadores" />
 <!-- end shipyard commands -->
 <!-- start stonehenge commands and announcements -->
 <translationtableentry text="Foraging" result="Nutrición" />
@@ -1201,7 +1209,9 @@
 <translationtableentry text="Cancel Command" result="Anular orden" />
 <translationtableentry text="Move" result="Mover" />
 <translationtableentry text="Click to move to this point" result="Haz clic para moverte hasta este punto" />
-<translationtableentry text="Hover over that point" result="Sobrevolar hasta el punto" />
+<translationtableentry text="Hover" result="Sobrevolar" />
+<translationtableentry text="Hover (tight)" result="Sobrevolar (cerca)" />
+<translationtableentry text="Click to hover around this point" result="Haz clic para sobrevolar alrededor de este punto" />
 <translationtableentry text="Stand ground" result="Mantener posición" />
 <translationtableentry text="Right-click to transport from this Inn" result="Haz clic con el botón derecho para el transporte desde esta posada" />
 <translationtableentry text="Right-click to approach" result="Haz clic con el botón derecho para aproximarte" />

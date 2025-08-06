@@ -1,45 +1,35 @@
-// void, Obj This
+//void, Obj This
 
 Building this;
-Unit unit;
-point ptDest, pt;
-int lRadius, i, pop_group;
-int  xfix, yfix;
 
-lRadius = GetConst("VillageTrainPeasantRadius");
-pop_group = GetConst("PopGroup");
 this = This.AsBuilding();
+
 .Progress();
 
-xfix = 1;
-yfix = 1;
-
-	ptDest.Set(1,1);
-	ptDest.SetLen(rand(lRadius - .settlement.GetCentralBuilding().radius) + .settlement.GetCentralBuilding().radius );
-	ptDest.Rot(rand(360));
-	ptDest = ptDest + .settlement.GetCentralBuilding().pos;
-
-	pt = .GetExitPoint(ptDest, false);
-
-	unit = Place("Fisherman", pt, .player).AsUnit();
-
-if(unit.IsValid() == false)
 {
-	return;
-}
+	Settlement supplied;
+	Unit u;
+	point pt_dest;
+	int radius, player;
 
-if(unit.IsAlive() == true){
+	radius = .radius;
+	player = .player;
 
-	if (.settlement().supplied().IsValid() == true){
+	pt_dest.Set(1, 1);
+	pt_dest.SetLen(rand(GetConst("VillageTrainPeasantRadius") - radius) + radius);
+	pt_dest.Rot(rand(360));
+	pt_dest = pt_dest + .pos;
 
-		if( (.settlement().supplied().IsTTent() == false) && (unit.IsEnemy(.settlement().supplied().GetCentralBuilding()) == false) ){
+	u = Place("Fisherman", .GetExitPoint(pt_dest, false), player);
 
-			unit.SetCommand("enter", .settlement().supplied().GetCentralBuilding());
-			Sleep(250);
-			return;
+	supplied = .settlement.supplied;
 
-		}
-	}
+	if (supplied.IsValid)
+		if (supplied.IsShipyard)
+			if (!supplied.IsEnemy(player)) {
+				u.SetCommand("enter", supplied.GetCentralBuilding());
+				return;
+			}
 
-	unit.SetCommand("move", ptDest);
+	u.SetCommand("move", pt_dest);
 }

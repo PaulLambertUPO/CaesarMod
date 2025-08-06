@@ -1,17 +1,31 @@
 //void, Obj This
 
-Settlement this;
-Wagon wagon;
-point p;
+Building this;
+Wagon mule;
 
-this = This.AsBuilding().settlement;
+this = This.AsBuilding();
 
-wagon = .CreateMuleGold(1000);
+mule = .settlement.CreateMuleGold(1000);
 
-if (wagon.IsValid) {
-	ClearSelection(wagon.player);
-	wagon.Select(wagon.player);
-	p.Set(This.radius, This.radius);
-	wagon.AddCommand(false, "move", This.pos + p);
-	wagon.KillCommand();
+if (mule.IsValid) {
+	point pt_exit;
+
+	ClearSelection(mule.player);
+	mule.Select(mule.player);
+
+	if (.IsHeirOf("RomanShipyard")) {
+		pt_exit = .GetExitVector();
+		pt_exit.Rot(rand(91) - 45);//randomly rotate the destination to reduce the risk of boats getting stuck in the building (they can be moved manually, but it's not nice to look at)
+		mule.SetCommand("move", .pos + pt_exit * -5);//go opposite the shipyard direction
+	}
+	else if (.IsHeirOf("GaulShipyard")) {
+		pt_exit = .GetExitVector();
+		pt_exit.Rot(rand(91) - 45);//randomly rotate the destination to reduce the risk of boats getting stuck in the building (they can be moved manually, but it's not nice to look at)
+		mule.SetCommand("move", .pos + pt_exit * -2);//go opposite the shipyard direction
+	}
+	else {
+		pt_exit = Point(.radius, .radius);
+		pt_exit.Rot(rand(91) - 45);//randomly rotate the destination to reduce the risk of boats getting stuck in the building (they can be moved manually, but it's not nice to look at)
+		mule.SetCommand("move", .pos + pt_exit);
+	}
 }

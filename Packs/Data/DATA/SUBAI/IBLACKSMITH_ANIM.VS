@@ -1,10 +1,12 @@
-// void, Obj This
+//void, Obj This
 
-Place("ChimneySmoke",This.pos+Point(-122, -30), This.player);
+Sleep(rand(10) + 1);
+
 Place("IBlacksmithAnim", This.pos, This.player);
 
-Sleep(rand(50000) + 10000);
+Sleep(rand(10) + 1);
 
-while (1) {
-	Sleep(50000);
-}
+Place("ChimneySmoke", This.pos + Point(-122, -30), This.player);
+
+while (1)
+	Sleep(3600000);

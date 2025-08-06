@@ -1,6 +1,3 @@
-// void, Obj This 
+//void, Obj This
 
-Building this;
-this = This.AsBuilding();
-EnvWriteString(.settlement, "GOutpostSellGold", cmdparam);
-
+EnvWriteString(This.AsBuilding().settlement, "GOutpostSellGold", cmdparam);

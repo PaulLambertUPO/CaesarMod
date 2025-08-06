@@ -537,7 +537,7 @@
 		execdelay="30000"
 		queueicon="gameres/icons/upgrades/gamblers day.bmp"
 		rollover="Gambler's Day"
-		description="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one"
+		description="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one (100% in the case of non-summoned animals)"
 		researchcommand="yes"
 		param="ReqSet, Gambling, default, SetsPlr, GamblersDayChance, 45, NamePlr, Gambler's Day, default">
 		<src obj="BTavern" />

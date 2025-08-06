@@ -1,22 +1,23 @@
-// void, Obj This
+//void, Obj This
 
-Flying  this;
-point   oldPos, newPos, dir, vec;
-int     animIdx, speed, angle;
+Flying this;
 
 this = This.AsFlying();
 
-oldPos = .pos;
+if (.IsValid) {
+	point pt_fly;
 
-oldPos.Set( oldPos.x - 1500, oldPos.y - 1500 );
-oldPos = oldPos.ClampToMap;
-oldPos.Set( oldPos.x + 1500, oldPos.y + 1500 );
+	pt_fly = .pos;
 
-oldPos.Set( oldPos.x + 1500, oldPos.y + 1500 );
-oldPos = oldPos.ClampToMap;
-oldPos.Set( oldPos.x - 1500, oldPos.y - 1500 );
+	pt_fly.Set(pt_fly.x - 1500, pt_fly.y - 1500);
 
-newPos.Set( oldPos.x + 1000 - rand( 2000 ), oldPos.y + 1000 - rand( 2000 ));
+	pt_fly = pt_fly.ClampToMap();
 
-.AddCommand( true, "move", .ClipDestToMap( newPos ) );
+	pt_fly.Set(pt_fly.x + 3000, pt_fly.y + 3000);
 
+	pt_fly = pt_fly.ClampToMap();
+
+	pt_fly.Set(pt_fly.x - 1500, pt_fly.y - 1500);
+
+	.AddCommand(true, "move", .ClipDestToMap(Point(pt_fly.x + 1000 - rand(2001), pt_fly.y + 1000 - rand(2001))));
+}

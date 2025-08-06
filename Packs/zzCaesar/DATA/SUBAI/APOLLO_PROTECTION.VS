@@ -14,12 +14,17 @@ while (1) {
 
 	if (timer > 0) {
 		ObjList gates;
+		Gate g;
 		str zero_sec_marker;
 		int i, secs;
 
 		gates = set.ObjectsAround("Gate");
-		for (i = 0; i < gates.count; i += 1)
-			gates[i].SetHealth(gates[i].maxhealth);
+		for (i = 0; i < gates.count; i += 1) {
+			g = gates[i].AsGate();
+			if (g.IsValid)
+				if (!g.IsBroken)
+					g.SetHealth(gates[i].maxhealth);
+		}
 
 		secs = timer % 60;
 		if (secs < 10)

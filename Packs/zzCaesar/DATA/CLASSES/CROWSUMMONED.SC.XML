@@ -1,5 +1,5 @@
-<class id="CrowSummoned" cpp_class="CVXFlyingUnit" parent="Crow" entity="Units/Crow/Crow.ent.xml">
-	<properties unit_specials="Keen sight" />
+<class id="CrowSummoned" cpp_class="CVXFlyingUnit" parent="CrowUnit" entity="Units/Crow/Crow.ent.xml">
+	<properties unit_specials="Freedom, Keen sight" />
 	<properties does_not_regenerate="1" />
 	<properties stamina_dec_time="24000" />
 	<properties edittree_pos="" />

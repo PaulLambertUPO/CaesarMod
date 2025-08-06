@@ -12,5 +12,5 @@
 	<properties help="contents/units/Animals/Bear" />
 	<properties edittree_pos="Units/Animals/Bear" />
 
-	<sounds idle="BearIdle" attack="Sounds/Animals/Bear/Bear_Attack.wav" die="Sounds/Animals/Bear/Bear_Die.wav" />
+	<sounds command="BearIdle" attack="Sounds/Animals/Bear/Bear_Attack.wav" die="Sounds/Animals/Bear/Bear_Die.wav" />
 </class>

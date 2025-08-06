@@ -1,0 +1,5 @@
+<class id="RomanShipyard" cpp_class="CVXTownHall" parent="BaseShipyard" entity="">
+	<properties race="RepublicanRome" />
+	<properties radius="430" selection_radius="435" />
+	<properties icon="gameres/icons/RShipyard.bmp" />
+</class>

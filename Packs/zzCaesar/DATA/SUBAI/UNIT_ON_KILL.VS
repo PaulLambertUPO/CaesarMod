@@ -125,7 +125,17 @@ if (.IsValid) {
 				if (vict_not_sentry)
 					if (me.inherentlevel < vict.inherentlevel)
 						if (IsResearched(p, "Gambler's Day"))
-							if (rand(100) < EnvReadInt(p, "GamblersDayChance")) {
+							if (vict.IsHeirOf("BaseAnimal")) {
+								if (vict.GetStaminaDecTime() <= 0) {//exclude summoned animals because they can have a really high level (especially bears and boars for Gaul)
+									me.SetLevel(vict.inherentlevel);
+									CreateFeedback("Experience", me);
+								}
+								else if (rand(100) < EnvReadInt(p, "GamblersDayChance")) {
+									me.SetLevel(vict.inherentlevel);
+									CreateFeedback("Experience", me);
+								}
+							}
+							else if (rand(100) < EnvReadInt(p, "GamblersDayChance")) {
 								me.SetLevel(vict.inherentlevel);
 								CreateFeedback("Experience", me);
 							}

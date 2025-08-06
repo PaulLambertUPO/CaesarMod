@@ -804,8 +804,7 @@
 		rollover="Mahout School"
 		description="Increases the number of War Elephants you can have by 1"
 		method="mahout_school"
-		traincommand="yes"
-		param="People's Assembly">
+		traincommand="yes">
 		<src obj="CArena" />
 	</cmd>
 	<cmd name="Mahout Mastery" priority="7"

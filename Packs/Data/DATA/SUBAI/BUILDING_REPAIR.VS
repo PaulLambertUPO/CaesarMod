@@ -3,8 +3,8 @@
 Building this;
 
 this = b.AsBuilding();
-.Progress();
-if(.IsValid())
-{
+
+if (.IsValid) {
+	.Progress();
 	.RRepair();
-}				  
+}

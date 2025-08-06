@@ -40,18 +40,12 @@ if (k >= 3)
 	if (set.player == 3) {
 		ObjList ol;
 		Hero h;
-		int i;
-
-		DiplCeaseFire(1, 3, true);
-		DiplCeaseFire(3, 1, true);
-		DiplShareView(1, 3, true);
-		DiplShareView(3, 1, true);
-		DiplShareSupport(1, 3, true);
-		DiplShareSupport(3, 1, true);
-		DiplShareControl(1, 3, true);
-		DiplShareControl(3, 1, true);
+		int i, j;
 
 		StopAIHelper("Guard_Trinovantes");
+		for (i = 1; i <= 3; i += 1)
+			for (j = 0; j < 7; j += 1)
+				StopAIHelper("AI_GreenAttackers" + i + "Siege" + j);
 
 		if (!GreenHero.IsDead()) {
 			if (GreenHero.obj.AsUnit().InHolder) {
@@ -74,4 +68,13 @@ if (k >= 3)
 			BritVillage1.SetPlayer(1);
 		if (BritVillage2.obj.player == 3)
 			BritVillage2.SetPlayer(1);
+
+		DiplCeaseFire(1, 3, true);
+		DiplCeaseFire(3, 1, true);
+		DiplShareView(1, 3, true);
+		DiplShareView(3, 1, true);
+		DiplShareSupport(1, 3, true);
+		DiplShareSupport(3, 1, true);
+		DiplShareControl(1, 3, true);
+		DiplShareControl(3, 1, true);
 	}

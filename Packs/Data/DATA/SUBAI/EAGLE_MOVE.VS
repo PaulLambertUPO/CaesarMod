@@ -1,105 +1,68 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
-Flying  this;
-point   vec, dir, newPos, straightDir, relativePos, newDir, middle;
-int     angle, newAngle, straightAngle, animIdx, speed, x, y, th, newZ, minHeight, maxHeight;
-bool    bToward, bNewToward;
+Flying this;
 
-minHeight = 150;
-maxHeight = 300;
+this = This.AsFlying();
 
-this    = This.AsFlying;
-dir     = .dir;
-bToward = false;
+if (.IsValid) {
+	point dir, vec, pt_fly;
+	int duration_anim_4, duration_anim_0, angle, terr_h, anim_idx;
+	bool fly_to_target = false;
 
-x = pt.x;
-y = pt.y;
-if( x < 0 ) x = 0;
-if( y < 0 ) y = 0;
-if( x > MapSize()) x = MapSize();
-if( y > MapSize()) y = MapSize();
-pt.Set( x, y );
+	dir = .dir;
 
-while( ! .IsInState ) Sleep( 50 );
+	duration_anim_4 = .GetAnimDuration(4);
+	duration_anim_0 = .GetAnimDuration(0);
 
-while( .DistTo( pt ) > 100 )
-{
-	angle = GetAngleByDir( dir );
-	straightDir.Set( pt.x - .pos.x, pt.y - .pos.y );
-	straightAngle = GetAngleByDir( straightDir );
-// which side to rotate to (if not heading toward the target already)
-	bNewToward = false;
-	if( ! bToward )
-	{
-		relativePos.Set( pt.x - .pos.x, pt.y - .pos.y );
-		if( OnLeft( dir, relativePos ))
-		{
-			newAngle = angle - 30;
-			if( newAngle < 0 ) newAngle += 360;
-			newDir = GetDirByAngle( newAngle );
-			middle.Set( dir.x + newDir.x, dir.y + newDir.y );
-			animIdx = 17;
-			if( ! OnLeft( middle, relativePos )) bNewToward = true;
+	angle = MapSize();
+	pt.Set(CLAMP(pt.x, 0, angle), CLAMP(pt.y, 250, angle - 675));//keep eagles away from UI bars at top/bottom edges, which hide them
+
+	while (!.IsInState)
+		Sleep(50);
+
+	while (.DistTo(pt) > 100) {
+		if (!fly_to_target) {//rotate
+			vec = pt - .pos;//relative pos
+
+			if (OnLeft(dir, vec)) {
+				angle = GetAngleByDir(dir) - 30;
+				if (angle < 0)
+					angle += 360;
+				if (!OnLeft(dir + GetDirByAngle(angle), vec))
+					fly_to_target = true;
+				anim_idx = 17;
+			}
+			else {
+				angle = GetAngleByDir(dir) + 30;
+				if (OnLeft(dir + GetDirByAngle(angle), vec))
+					fly_to_target = true;
+				anim_idx = 18;
+			}
+
+			if (fly_to_target)
+				dir = pt - .pos;
+			else {
+				pt_fly = .pos + GetVecByDir(dir, .speed / 2);
+				terr_h = GetTerrainHeight(pt_fly);
+
+				.PlayAnim(anim_idx, pt_fly, CLAMP(.z, terr_h + 150, terr_h + 300));
+
+				dir = GetDirByAngle(angle);//rotate
+			}
 		}
-		else
-		{
-			newAngle = angle + 30;
-			newDir = GetDirByAngle( newAngle );
-			middle.Set( dir.x + newDir.x, dir.y + newDir.y );
-			animIdx = 18;
-			if( OnLeft( middle, relativePos )) bNewToward = true;
-		}
-		if( newAngle < 0 ) newAngle += 360;
-		if( bNewToward )
-		{
-			bToward = true;
-			dir = straightDir;
-		}
-		else
-		{
-// rotate
-			vec = GetVecByDir( dir, .speed / 2 );
-			newPos.Set( .pos.x + vec.x, .pos.y + vec.y );
-// correct z
-			th = GetTerrainHeight( newPos );
-			newZ = .z;
-			if( th + minHeight > newZ )
-				newZ = th + minHeight;
-			if( th + maxHeight < newZ )
-				newZ = th + maxHeight;
+		if (fly_to_target) {
+			if (rand(5) == 0) {
+				anim_idx = 0;
+				pt_fly = .pos + GetVecByDir(dir, .speed);
+			}
+			else {
+				anim_idx = 4;
+				pt_fly = .pos + GetVecByDir(dir, .speed * duration_anim_4 / duration_anim_0);
+			}
 
-			.PlayAnim( animIdx, newPos, newZ );
-			dir = GetDirByAngle( newAngle );
-		}
-	}
-// fly straight to the target point
-	if( bToward )
-	{
-		if( rand( 30 ) < 6 )
-		{
-			animIdx = 0;
-			speed = .speed;
-		}
-		else
-		{
-			animIdx = 4;
-			speed = .speed * .GetAnimDuration( 4 ) / .GetAnimDuration( 0 );
-		}
-		vec = GetVecByDir( dir, speed );
-		newPos.Set( .pos.x + vec.x, .pos.y + vec.y );
-// correct z
-		th = GetTerrainHeight( newPos );
-		newZ = .z;
-		if( th + minHeight > newZ )
-			newZ = th + minHeight;
-		if( th + maxHeight < newZ )
-			newZ = th + maxHeight;
+			terr_h = GetTerrainHeight(pt_fly);
 
-//		pr("th: " + th + " z: " + .z + " newZ: " + newZ );
-
-/*		if( newZ == .z )
-			if( newZ - th < (minHeight + maxHeight) / 2 )
-				newZ -= 5;
-*/		.PlayAnim( animIdx, newPos, newZ );
+			.PlayAnim(anim_idx, pt_fly, CLAMP(.z, terr_h + 150, terr_h + 300));
+		}
 	}
 }

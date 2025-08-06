@@ -1,105 +1,81 @@
-// void, Obj This
+//void, Obj This
 
-Unit this, u;
-int i,rnd;
-point pt, ptDir;
-Query qNewDestTowers, qWolves;
-Obj attacker, target;
-ObjList ol;
-bool bFleeing;
-rect rcMap;
-this = This.AsUnit();
-bFleeing = false;
+Unit this;
+
 this = This.AsUnit();
 
-//pr("hero::move: defensive move - attack if attacked");
-rcMap = GetMapRect;
-while(!.Stop(1000));
-.Idle(700);
-ptDir = .GetDir;
-while(1)
-{
-	rnd = rand(30);
-	if((pt.x==0 && pt.y==0 )|| ((!bFleeing && rnd== 0) || (bFleeing && rnd!=0)))
-	{
-		ptDir.SetLen(.sight + rand(.sight/4));
-		ptDir.Rot(rand(15)+15);
-		pt = ptDir +.pos; 
-		if(!pt.InRect(rcMap) || !IsPassable3x3(pt))
-		{
-			Sleep(100); // instruction limit gets exceeded here, probably not the best solution
+if (.IsValid) {
+	ObjList pack;
+	Unit u;
+	point pt_move;
+	rect rc;
+	bool flee = false;
+
+	rc = GetMapRect();
+
+	.SetSpeedFactor(100);
+
+	while (!.Stop(1000))
+		;
+
+	.Idle(500);
+
+	while (1) {
+		Sleep(500);
+
+		if (rand(5) == 0) {
+			.Idle(1500);
 			continue;
 		}
-	}
-	Sleep(100); // instruction limit gets exceeded here, probably not the best solution
-	if(rnd!= 0)
-	{
-		qNewDestTowers = Intersect(ObjsInCircle(pt, .sight, "TTent,Tower,Military"), EnemyObjs(.player, "Object"));
-												
-		if(qNewDestTowers.count > 0)
-		{
-			//pr("ooops! think, think, think what shall we do now? just saw a " + qNewDestTowers.GetObjList[0].class);
-			.Idle(700); 
+
+		pt_move.SetLen(200 + rand(.sight));
+		pt_move.Rot(rand(360));
+		pt_move = .pos + pt_move;
+
+		if (!pt_move.InRect(rc))
 			continue;
-		}
-		if(rand(3) == 0)
-		{
-			ol = ObjsInCircle(pt, .sight, "Building").GetObjList;
-			if(ol.count != 0)
-			{
-				ptDir = .pos - ol[0].pos;
+		if (!IsPassable3x3(pt_move))
+			continue;
+		if (IsPointInWater(pt_move))
+			continue;
+		if (Intersect(ObjsInCircle(pt_move, .sight, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).count > 0)
+			continue;
+		if (rand(3) == 0)
+			if (ObjsInCircle(pt_move, .sight, "Building").count > 0)
 				continue;
+
+		if (rand(5) == 0) {
+			pack = Intersect(
+				Union(ObjsInRange(this, "LionM", .sight / 2), ObjsInRange(this, "LionF", .sight / 2)),
+				Union(FriendlyObjs(.player, "LionM"), FriendlyObjs(.player, "LionF"))
+			).GetObjList();
+			if (pack.count > 7) {
+				u = pack[0];
+				u.SetCommand("lead");	 
+				pack.Remove(u);
+				pack.SetCommand("idle");
 			}
 		}
-		if(IsPointInWater(pt))
-		{
-			ptDir = .pos - pt;
-			continue;
-		}
-	} 
-	
-	if(Intersect(ObjsInSight(this, "BaseVillage,Unit,Tower"), EnemyObjs(.player, "Object")).count == 0 )
-	{
-		for(i = 0; i < 16; i+=1)
-		{
-			attacker = .BestTargetInSquadSight();
-			if(attacker.IsAlive())
-			{
-				if(attacker.attack > 1)
-				{
-					ptDir = .pos - attacker.pos;
-					bFleeing = true;
-					break; 
-				} else
-				if(.health < .maxhealth) // i'm really angry grrrr!!!
-				{
-					.AddCommand(true, "engage");
-					return;
-				}
-			}
-			while(!.Stop(1000));
-			.Idle(2000);	
-		}
-		if(attacker.IsAlive())
-			continue;
-	}
-	ol = Intersect(Intersect(ObjsInCircle(.pos, .sight * 2, "LionM, LionF"), FriendlyObjs(.player, "LionM")),FriendlyObjs(.player, "LionF")).GetObjList();
-	while(!.Goto(pt, 0, 1000, true, 0) && .HasPath)
-	{
-		attacker = .BestTargetInSquadSight();
-		if(attacker.IsAlive() && !bFleeing)
-		{
-			if(attacker.DistTo(this) < .sight/4 || .health < .maxhealth)
-			{
-				.AddCommand(true, "engage");
-				return;
-			} else
-			{
-				ptDir = .pos - attacker.pos;
-				bFleeing = true;
-				break; 
+
+		flee = false;
+
+		while (!.Goto(pt_move, 0, 1000, true, 0)) {
+			if (!.HasPath())
+				break;
+			if (!flee) {
+				u = .BestTargetInSquadSight();
+				if (u.IsValid)
+					if (.DistTo(u) < .sight * 2 / 3) {
+						.AddCommand(true, "engage");
+						return;
+					}
+					else if (.health < .maxhealth * 9 / 10) {
+						.AddCommand(true, "engage");
+						return;
+					}
+					else
+						flee = true;
 			}
 		}
 	}
-	bFleeing = false;
 }

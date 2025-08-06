@@ -50,7 +50,7 @@
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
-			<GameObj class="Wolf" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100">
+			<GameObj class="Wolf" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="6" groupdist="100">
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
@@ -454,7 +454,7 @@
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
-			<GameObj class="Wolf" min="4" max="7" mindist="2000" inf-max="16" inf="0" mingroup="3" maxgroup="7" groupdist="100">
+			<GameObj class="Wolf" min="4" max="7" mindist="2000" inf-max="16" inf="0" mingroup="4" maxgroup="8" groupdist="100">
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
@@ -869,7 +869,7 @@
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
-			<GameObj class="Wolf" min="5" max="9" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="7" groupdist="100">
+			<GameObj class="Wolf" min="5" max="9" mindist="2000" inf-max="20" inf="0" mingroup="4" maxgroup="8" groupdist="100">
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>

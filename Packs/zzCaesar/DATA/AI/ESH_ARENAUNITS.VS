@@ -102,7 +102,7 @@ else if (nRaceIsPunicRome) {
 else if (nRace == Carthage) {
 	strHire = "Train War Elephant";
 	class = "CWarElephant";
-	max = EnvReadInt(AIPlayer, "MaxElephants") + 1;
+	max = EnvReadInt(AIPlayer, "MaxElephants");
 	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxCWarElephant);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)

@@ -2746,6 +2746,7 @@ Para hacer su trabajo, tiene que entrar en un puerto: una vez allí, empezará a
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 5 segundos</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/RStorage.bmp" link="/contents/buildings/Village">Se alista en el Centro de la aldea</entry>
+				<entry vcenter="1" image="UI/Icons/RShipyard.bmp" link="/contents/buildings/Shipyard">Se usa en el Puerto</entry>
 			</topic>
 			<topic id="Mule">
 				<entry hcenter="1" font="large">Unidades de suministro</entry>
@@ -5294,7 +5295,7 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gamblers day.bmp">
 Experiencia de los dioses
-Proporciona a cada guerrero una probabilidad del 45% de alcanzar el nivel del enemigo cada vez que mata a uno más experimentado.
+Proporciona a cada guerrero una probabilidad del 45% de alcanzar el nivel del enemigo cada vez que mata a uno más experimentado (100% en el caso de animales no invocados).
 Coste: 1500 oro
 Tiempo: 30 segundos
 				</entry>
@@ -6154,6 +6155,11 @@ Tiempo: 20 segundos
 Construir navío egipcio (solo Egipto)
 Coste: 1000 oro
 Tiempo: 20 segundos
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Call Fisherman.bmp" link="/contents/units/Fisherman">
+Desplegar pescadores
+Despliega hasta 5 pescadores desde el puerto.
+Tiempo: 10 segundos
 				</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/Fisherman.bmp" link="/contents/units/Fisherman">Pescador</entry>

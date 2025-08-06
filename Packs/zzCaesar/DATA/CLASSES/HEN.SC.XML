@@ -1,14 +1,7 @@
-<class id="Hen" cpp_class="CVXUnit" parent="Animal" entity="Units/Hen/Hen.ent.xml">
-
+<class id="Hen" cpp_class="CVXUnit" parent="HenUnit" entity="Units/Hen/Hen.ent.xml">
 	<properties maxhealth="1" maxstamina="1" />
-	<properties sight="100" />
-	<properties speed="30" />
-
-	<properties radius="7" selection_radius="7" />
 	<properties healthbar_type="0" />
 	<properties no_transparent_draw="1" always_visible_on_minimap="0" />
-
-	<properties display_name="Hen" display_name_plural="Hens" />
-
+	<properties edittree_pos="" />
 	<method sig="idle" vs="data/subai/hen_idle.vs" />
 </class>

@@ -1,0 +1,10 @@
+<class id="HenUnit" cpp_class="CVXUnit" parent="Animal" entity="Units/Hen/Hen.ent.xml">
+	<properties maxhealth="20" />
+	<properties sight="100" />
+	<properties speed="30" />
+	<properties radius="7" selection_radius="7" />
+	<properties display_name="Hen" display_name_plural="Hens" />
+	<properties icon="gameres/icons/Hen.bmp" />
+	<properties help="contents/units/Animals/Hen" />
+	<properties edittree_pos="Units/Animals/Hen" />
+</class>

@@ -1,18 +1,25 @@
-// void, Obj This
+//void, Obj This
 
-Settlement this;
-Wagon      wagon;
-point      ptGo;
+Building this;
+Wagon boat;
 
-this = This.AsBuilding().settlement;
+this = This.AsBuilding();
 
-wagon = .CreateBoatGold( 1000 );
-if( wagon.IsValid )
-{
-	ClearSelection( wagon.player );
-	wagon.Select( wagon.player );
-	ptGo = .GetCentralBuilding.GetExitVector();
-	ptGo.Set( ptGo.x * 5, ptGo.y * 5 );
-	wagon.AddCommand( false, "move", This.pos + ptGo );
-	wagon.KillCommand();
+boat = .settlement.CreateBoatGold(1000);
+
+if (boat.IsValid) {
+	point pt_exit;
+
+	ClearSelection(boat.player);
+	boat.Select(boat.player);
+
+	pt_exit = .GetExitVector();
+	pt_exit.Rot(rand(91) - 45);//randomly rotate the destination to reduce the risk of boats getting stuck in the shipyard (they can be moved manually, but it's not nice to look at)
+
+	if (.IsHeirOf("GShipyard3"))//Gaul NE
+		boat.SetCommand("move", .pos + pt_exit * 2);
+	else if (.IsHeirOf("GShipyard4"))//Gaul NW
+		boat.SetCommand("move", .pos + pt_exit * 2);
+	else
+		boat.SetCommand("move", .pos + pt_exit * 4);
 }

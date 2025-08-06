@@ -1,11 +1,13 @@
-// void, Obj me
+//void, Obj me
 
 Unit this;
+
 this = me.AsUnit();
 
-.SetFeeding( false );
-.SetNoselectFlag( true );
-.SetMinimapFlag( true );
+.SetNoselectFlag(true);
+.SetMinimapFlag(true);
 
-.StartAnim(1, .pos);
-Sleep(.GetAnimTime(1));
+Sleep(rand(10) + 1);
+
+while (1)
+	.PlayAnim(1, .pos);

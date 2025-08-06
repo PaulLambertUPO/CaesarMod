@@ -1,3 +1,4 @@
-// void, Obj This
+//void, Obj This
 
-while(1) Sleep(100000);
+while (1)
+	Sleep(3600000);

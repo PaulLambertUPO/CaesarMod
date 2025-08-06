@@ -1,4 +1,4 @@
-<class id="GTownhall" altid="Townhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/GTownhall/Townhall_as.ent.xml">
+<class id="GTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/GTownhall/Townhall_as.ent.xml" entity_winter="Buildings/GTownhall/Townhall_w.ent.xml">
 
 	<properties race="Gaul" />
 

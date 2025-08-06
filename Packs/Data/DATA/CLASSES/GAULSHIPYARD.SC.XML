@@ -1,0 +1,5 @@
+<class id="GaulShipyard" cpp_class="CVXTownHall" parent="BaseShipyard" entity="">
+	<properties race="Gaul" />
+	<properties radius="410" selection_radius="430" />
+	<properties icon="gameres/icons/GShipyard.bmp" />
+</class>

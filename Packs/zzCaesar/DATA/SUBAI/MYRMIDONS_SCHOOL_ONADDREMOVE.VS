@@ -1,15 +1,11 @@
 //bool, Obj This, bool bAdd
 
-Building this;
-
-this = This.AsBuilding();
-
 if (bAdd)
-	if (EnvReadInt(.player, "MaxMyrmidons") >= GetConst("MaxMyrmidonsValue"))
+	if (EnvReadInt(This.player, "MaxMyrmidons") >= GetConst("MaxMyrmidonsValue"))
 		return false;
 	else
-		EnvWriteString(this, "researching", "yes");
+		EnvWriteString(This.AsBuilding(), "researching", "yes");
 else
-	EnvWriteString(this, "researching", "no");
+	EnvWriteString(This.AsBuilding(), "researching", "no");
 
 return true;

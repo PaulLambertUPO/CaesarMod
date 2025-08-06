@@ -1,25 +1,15 @@
 //bool, ObjList objs, str OUT reasonText
 
-int nMinRes;
+Building this;
+int min_resource;
 
-nMinRes = GetConst("MinResQtyToTransport");
-if(objs.count)
-{
-	Building bld;
-	bld = objs[0].AsBuilding();
-	if(bld.IsValid)
-	{
-		Settlement this;
-		this = bld.settlement;
-		if(.IsValid)
-		{
-			if(.food < nMinRes)
-			{
-				reasonText = rollover(bld,true) + "\n<color 255 0 0>";
-				reasonText = reasonText + Translatef("Requires %s1 food", nMinRes);
-				return false;
-			}
-		}
-	}
-}
-return true;
+this = objs[0].AsBuilding();
+
+min_resource = GetConst("MinResQtyToTransport");
+
+if (.settlement.food >= min_resource)
+	return true;
+
+reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 food", min_resource);
+
+return false;

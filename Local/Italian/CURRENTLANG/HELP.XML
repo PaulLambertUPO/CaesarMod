@@ -2746,6 +2746,7 @@ Per svolgere il suo lavoro, deve entrare in un porto: una volta lì, inizierà a
 				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 5 secondi</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/RStorage.bmp" link="/contents/buildings/Village">Si arruola nel Centro del villaggio</entry>
+				<entry vcenter="1" image="UI/Icons/RShipyard.bmp" link="/contents/buildings/Shipyard">Si usa nel Porto</entry>
 			</topic>
 			<topic id="Mule">
 				<entry hcenter="1" font="large">Unità di rifornimento</entry>
@@ -5294,7 +5295,7 @@ Tempo: 20 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gamblers day.bmp">
 Esperienza divina
-Fornisce a ogni guerriero una probabilità del 45% di raggiungere il livello del nemico ogni volta che ne uccide uno più esperto.
+Fornisce a ogni guerriero una probabilità del 45% di raggiungere il livello del nemico ogni volta che ne uccide uno più esperto (100% nel caso di animali non invocati).
 Costo: 1500 oro
 Tempo: 30 secondi
 				</entry>
@@ -6154,6 +6155,11 @@ Tempo: 20 secondi
 Costruisci nave egizia (solo Egitto)
 Costo: 1000 oro
 Tempo: 20 secondi
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Call Fisherman.bmp" link="/contents/units/Fisherman">
+Schiera pescatori
+Schiera fino a 5 pescatori dal porto.
+Tempo: 10 secondi
 				</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/Fisherman.bmp" link="/contents/units/Fisherman">Pescatore</entry>

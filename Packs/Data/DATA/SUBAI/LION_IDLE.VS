@@ -1,110 +1,76 @@
-// void, Obj me
+//void, Obj This
 
-Unit this, u, packleader,mele;
-point pt, v, vSum, ptMyOffset, ptOldLeaderPos;
-Query qWolves;
+Unit this;
 
-ObjList olWolves;
-int i;
+this = This.AsUnit();
 
-this = me.AsUnit();
-if (!.IsValid()) return;
-qWolves = ObjsInCircle(.pos, .sight*2,"LionM,LionF");
+if (.IsValid) {
+	ObjList pack;
+	Unit u, pack_leader;
+	int i;
 
-.Idle(2000);
-while (!.Stop(1000));
+	Sleep(rand(15));//random delay to manage the leader check of the first iteration for multiple lions (lower for alpha male lions to increase their lead chance)
+	if (.IsHeirOf("LionF"))
+		Sleep(15);
 
-olWolves = qWolves.GetObjList();
-olWolves.ClearDead();
-for (i=0; i<olWolves.count; i+=1) 
-{
-	u=olWolves[i].AsUnit();
-	if (!u.IsValid()) continue;
-	if (u.IsHeirOf("LionM"))
-	  {
-		packleader = u;
-		u.SetCommand("lead");
-	  }
-}
+	while (!.Stop(1000))
+		;
 
-for (i=0; i<olWolves.count; i+=1) 
-{
-	u=olWolves[i].AsUnit();
-	if (!u.IsValid()) continue;
-	if(u.command == "engage")
-	{
-		.AddCommand(true, "engage");
-		return;
-	}
-	if (!packleader.IsAlive() )
-	  {
-		packleader = u;
-		u.SetCommand("lead");
-	  }
-}
+	.Idle(500);
 
-	{ //follow the pack
-		if(packleader.IsValid)
-		{
-			while(packleader.command == "lead")
-			{
-				ptOldLeaderPos = packleader.pos;
-				if(.Goto(packleader, 15, 1000, false, 0))
-				{
-					while(!.Stop(1000));
-					.Idle(700);
-				}
-				if(!packleader.IsValid)
-					break;
-				if(!.IsValid)
-					break;
-				if(ptOldLeaderPos == packleader.pos )
-					.Heal(.maxhealth/3);
-                if (!.IsAlive()) return;
-				while(ptOldLeaderPos == packleader.pos && .DistTo(packleader) < 50)
-				{
-					if (!packleader.IsAlive()) return;
-					if(rand(20) == 0)
-					{
-						pt = .pos - packleader.pos;
-						pt.SetLen(pt.Len + 30);
-						for(i = 0; i < 6; i+=1)
-						{
-							pt.Rot(45);
-							pt.SetLen(pt.Len + 10);
-							
-							while(!.Goto(pt + packleader.pos, 0, 1500, false, 0))
-								if(!packleader.IsAlive)
-									return;
-							if(ptOldLeaderPos != packleader.pos)
-							{
-								while(!.Stop(1000));
-								break;
-							}
-						}
-					} else
-					{
-						while(!.Stop(1000));
-						.Idle(1500);
-					}
-				 if (!.IsAlive()) return;
-				}
+	while (1) {
+		Sleep(500);
 
-				if(!packleader.IsValid)
-					break;	
-			}
-			if(packleader.IsValid) {
-				if (packleader.command == "engage")	{
-					.AddCommand(true, "advance", packleader.pos);
+		pack = ObjsInRange(this, "LionM", .sight * 3 / 2).GetObjList();
+		for (i = 0; i < pack.count; i += 1) {
+			u = pack[i].AsUnit();
+			if (u.IsValid) {
+				if (u.command == "engage") {
 					.AddCommand(true, "engage");
+					return;
+				}
+				if (u.command == "lead") {
+					pack_leader = u;
+					break;
 				}
 			}
-			return;
-		} else
-		{
-			.AddCommand(true, "lead");
 		}
-		return;
+		if (!pack_leader.IsValid) {
+			pack = ObjsInRange(this, "LionF", .sight * 3 / 2).GetObjList();
+			for (i = 0; i < pack.count; i += 1) {
+				u = pack[i].AsUnit();
+				if (u.IsValid) {
+					if (u.command == "engage") {
+						.AddCommand(true, "engage");
+						return;
+					}
+					if (u.command == "lead") {
+						pack_leader = u;
+						break;
+					}
+				}
+			}
+		}
+		if (!pack_leader.IsValid) {
+			.AddCommand(true, "lead");
+			return;
+		}
+		while (pack_leader.IsAlive) {
+			if (pack_leader.command == "engage") {
+				.AddCommand(true, "engage");
+				return;
+			}
+			if (pack_leader.command == "lead")
+				if (.DistTo(pack_leader) > 50)
+					.Goto(pack_leader.pos + Point(rand(51) - 25, rand(51) - 25), 0, 1500, false, 0);
+				else {
+					.Idle(500);
+					continue;
+				}
+			else
+				break;
+			Sleep(500);
+		}
+		pack_leader.Clear();
 	}
-	 
-	return;
+}

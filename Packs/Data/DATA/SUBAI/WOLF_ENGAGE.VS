@@ -1,82 +1,86 @@
-// void, Obj me
+//void, Obj me
 
-	Unit this;
-	point ptCenter;
-	Obj u;
-	Query qEnemy, qWolves;
-	int i, noattacktime;
-	ObjList ol;
-	bool bImSoScared;
+Unit this;
 
-	bImSoScared = false;
-	this = me.AsUnit();
-	//pr("advance: searching for new enemy");
-	u = .BestTargetInSquadSight();
-	noattacktime = 0;
-	if(u.IsAlive())	
-	{
-		//pr("advance: target found!");
-		while (u.AsUnit.IsAlive())
-		{
-			if(u.AsUnit.InHolder)
-				break;
-			 if(!.IsValidTarget(u)) break;
-		
-			while(!.GotoAttack(u, 1500, true, -1)) 
-			{
-				noattacktime += 1;
-				if((noattacktime >= 2 && .attack > 1) ||
-					noattacktime >= 3)
-					bImSoScared = true;
-				//pr("advance: approaching target!");
-				u = .BestTargetInSquadSight();
-				if(!u.IsAlive())
+this = me.AsUnit();
+
+if (.IsValid) {
+	Unit target;
+
+	.SetSpeedFactor(125);
+
+	target = .BestTargetInSquadSight();
+
+	if (target.IsValid)
+		while (target.IsAlive) {
+			if (target.InHolder)
+				return;
+			if (!.IsValidTarget(target))
+				return;
+
+			while (!.GotoAttack(target, 1500, true, -1)) {
+				target = .BestTargetInSquadSight();
+				if (!target.IsValid)
 					break;
-				else
-				 if(!.IsValidTarget(u)) break;
-			}
-			//pr("advance: attacking target!");
-			if (u.IsAlive() && .IsValidTarget(u))
-			{
-				while (.Attack(u))
-				{
-					if (.HasSpecial(sneak)) .SetLastAttackTime(); // mountaineer patch
-					if(.health < 2*.maxhealth/3)
-					{
-						if(Intersect(ObjsInSight(this, "Tower"), EnemyObjs(.player, "Tower")).count > 0 && u.attack <= 1)
-						{
-							bImSoScared = true;;
-							break;
-						}
+				if (!.IsValidTarget(target))
+					break;
+				if (.health < .maxhealth / 2) {
+					ObjList enemies;
+
+					enemies = Intersect(ObjsInSight(this, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).GetObjList();
+					enemies.ClearDead();
+
+					if (enemies.count > 0) {//find the centre among all enemies and flee in the opposite direction
+						point pt_flee;
+						int i;
+
+						for (i = 0; i < enemies.count; i += 1)
+							pt_flee = pt_flee + enemies[i].pos;
+
+						pt_flee = .pos - (pt_flee / enemies.count);
+						pt_flee.SetLen(.sight * 2);
+						pt_flee = (pt_flee + .pos).ClampToMap();
+
+						if (rand(3) == 0)
+							Intersect(ObjsInSight(this, "Wolf"), FriendlyObjs(.player, "Wolf")).SetCommandOffset("move", pt_flee);
+						.AddCommand(true, "move", pt_flee);
+						return;
 					}
-					
-				}
-				noattacktime = 0;
-			}
-			if(bImSoScared) // I'm sooooo scared 
-			{
-				qEnemy = Intersect(ObjsInSight(this, "Military,Tower"), EnemyObjs(.player, "Object"));
-				ol = qEnemy.GetObjList();
-				if(ol.count > 0)
-				{
-					ptCenter = ol[0].pos;
-					for(i = 1; i < ol.count; i += 1)
-					{
-						ptCenter = ptCenter + ol[i].pos;
-					}
-					ptCenter = ptCenter / ol.count;
-					ptCenter = ptCenter - .pos; 
-					ptCenter.SetLen(.sight*3);
-					ptCenter = .pos - ptCenter;
-					ptCenter = ptCenter.ClampToMap();
-					qWolves = Intersect(ObjsInCircle(.pos, .sight*2, "Wolf"), FriendlyObjs(.player, "Wolf"));
-					ol = qWolves.GetObjList;
-					ol.Remove(this);
-					ol.SetCommandOffset("move", ptCenter);
-					.AddCommand(true, "move", ptCenter);
-					return;
 				}
 			}
-			u = .BestTargetInSquadSight();
+
+			if (target.IsValid)
+				if (target.IsAlive)
+					if (.IsValidTarget(target)) {
+						while (.Attack(target))
+							if (rand(3) == 0)
+								if (.health < .maxhealth / 2) {
+									ObjList enemies;
+
+									enemies = Intersect(ObjsInSight(this, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).GetObjList();
+									enemies.ClearDead();
+
+									if (enemies.count > 0) {//find the centre among all enemies and flee in the opposite direction
+										point pt_flee;
+										int i;
+
+										for (i = 0; i < enemies.count; i += 1)
+											pt_flee = pt_flee + enemies[i].pos;
+
+										pt_flee = .pos - (pt_flee / enemies.count);
+										pt_flee.SetLen(.sight * 2);
+										pt_flee = (pt_flee + .pos).ClampToMap();
+
+										if (rand(3) == 0)
+											Intersect(ObjsInSight(this, "Wolf"), FriendlyObjs(.player, "Wolf")).SetCommandOffset("move", pt_flee);
+										.AddCommand(true, "move", pt_flee);
+										return;
+									}
+								}
+					}
+
+			target = .BestTargetInSquadSight();
+			if (!target.IsValid)
+				return;
 		}
-	} 
+}

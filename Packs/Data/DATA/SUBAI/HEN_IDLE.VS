@@ -1,57 +1,81 @@
-// void, Obj This
+//void, Obj This
 
-Unit        this;
-int         setIdx, maxSetIdx, dist, maxDist, x, y, try;
-Settlement  set, maxSet;
-point       center, pt, pt2;
-bool        bSleep, bWalked;
+Unit this;
 
-this = This.AsUnit;
+this = This.AsUnit();
 
-maxDist = 2000000;
-maxSetIdx = MaxSetIdx();
-for( setIdx = 0; setIdx < maxSetIdx; setIdx += 1 )
-{
-	Sleep(10);
-	set = IdxToSet( setIdx );
-	if( ! set.IsValid ) continue;
-	if( ! set.IsVillage ) continue;
-	dist = .DistTo( set.GetCentralBuilding.pos );
-	if( dist < maxDist )
+if (.IsValid) {
+	point centre, pt, pt_walk;
+	int i;
+	bool wait, walked = false;
+
+	Sleep(rand(501) + 200);
+
 	{
-		maxDist = dist;
-		maxSet = set;
-	}
-}
-center = maxSet.GetCentralBuilding.pos;
-Sleep(rand(1000) + 200);
-bWalked = false;
-while( 1 )
-{
-	bSleep = true;
-	if( rand( 20 ) < 4 && ! bWalked )
-	{
-		if( maxSet.IsValid && Dist( .pos, center ) > 600 )
-			pt = GetVecByDir( .pos - center, 500 ) + center;
-		else
-			pt = .pos;
-		for( try = 0; try < 5; try += 1 )
-		{
-			pt2 = pt + RandomOffset(200);
-			if( IsPassable3x3( pt2 )) break;
+		Settlement set;
+		Building hall, bld;
+		int j, dist, min = 2000000;
+
+		j = MaxSetIdx();
+		for (i = 0; i < j; i += 1) {
+			set = IdxToSet(i);
+			if (set.IsValid)
+				if (set.IsVillage) {
+					bld = set.GetCentralBuilding();
+					if (bld.IsValid) {
+						dist = .DistTo(bld.pos);
+						if (dist < min) {
+							min = dist;
+							hall = bld;
+						}
+					}
+				}
 		}
-		if( try < 5 )
-			while( ! .Goto( pt2, 0, 2000, true, -1 )) bSleep = false;
-		if( bSleep ) Sleep( 2000 );
-		bWalked = true;
+		if (hall.IsValid)
+			centre = hall.pos;
+		else
+			centre = .pos;//this should never happen because hens are spawned by villages
 	}
-	else
-	{
-		bWalked = false;
-		pt2 = .pos + RandomOffset(20);
-		if( pt2.x == .pos.x && pt2.y == .pos.y ) pt2.Set( 10, 10 );
-		.Face( pt2 );
-		.ForceIdle();
-		.Idle( 2000 );
+
+	while (1) {
+		if (walked) {
+			walked = false;
+			pt = .pos + RandomOffset(10);
+			if (.pos == pt)
+				pt = pt + Point(1 + rand(10), 1 + rand(10));
+			.Face(pt);
+			.ForceIdle();
+			.Idle(2000);
+		}
+		else if (rand(5) > 0) {
+			pt = .pos + RandomOffset(15);
+			if (.pos == pt)
+				pt = pt + Point(1 + rand(15), 1 + rand(15));
+			.Face(pt);
+			.ForceIdle();
+			.Idle(2000);
+		}
+		else {
+			if (Dist(.pos, centre) > 600)
+				pt = GetVecByDir(.pos - centre, 500) + centre;
+			else
+				pt = .pos;
+			for (i = 0; i < 5; i += 1) {
+				pt_walk = pt + RandomOffset(200);
+				if (IsPassable3x3(pt_walk))
+					break;
+			}
+			wait = true;
+			if (i < 5)
+				while (!.Goto(pt_walk, 0, 2000, true, -1)) {
+					wait = false;
+					if (!.HasPath())
+						break;
+				}
+			if (wait)
+				Sleep(2000);
+			walked = true;
+		}
+		Sleep(250);
 	}
 }

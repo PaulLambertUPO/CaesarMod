@@ -15,7 +15,7 @@ max_param = ParseStr(dest, dest);
 class = ParseStr(dest, dest);
 
 if (max_param == "elephant")
-	max_units = EnvReadInt(player, "MaxElephants") + 1;
+	max_units = EnvReadInt(player, "MaxElephants");
 else if (max_param == "axemen")
 	max_units = EnvReadInt(player, "MaxAxemen");
 else if (max_param == "huntress")

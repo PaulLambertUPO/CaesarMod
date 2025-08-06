@@ -1,8 +1,16 @@
 <commands>
-	<cmd name="hover" priority="0"
-		button="Actions/Move.bmp"
+	<cmd name="hover" priority="1"
+		button="Actions/Hover.bmp"
 		key="h"
-		rollover="Hover over that point">
-		<src obj="Eagle" />
+		rollover="Hover">
+		<cmdtext target="" text="Click to hover around this point" />
+		<src obj="Eagle" sticky="yes" />
+	</cmd>
+	<cmd name="lesser_hover" priority="2"
+		button="Actions/Lesser_Hover.bmp"
+		key="l"
+		rollover="Hover (tight)">
+		<cmdtext target="" text="Click to hover around this point" />
+		<src obj="Eagle" sticky="yes" />
 	</cmd>
 </commands>

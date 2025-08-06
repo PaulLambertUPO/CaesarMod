@@ -7,7 +7,6 @@
 		<cmd name="move" />
 		<cmd name="advance" ctrl="1" />
 	</defaultcmd>
-
 	<defaultcmd target="Unit">
 		<cmd name="attack" />
 	</defaultcmd>

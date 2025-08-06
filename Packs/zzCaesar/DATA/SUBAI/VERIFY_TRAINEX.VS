@@ -23,7 +23,7 @@ if (EnvReadString(set, research) == "researched" || EnvReadString(player, resear
 	int max_units, curr_units;
 
 	if (max_param == "elephant")
-		max_units = EnvReadInt(player, "MaxElephants") + 1;
+		max_units = EnvReadInt(player, "MaxElephants");
 	else if (max_param == "huntress")
 		max_units = EnvReadInt(player, "MaxHuntresses");
 	else if (max_param == "axemen")

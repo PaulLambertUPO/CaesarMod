@@ -1,3 +1,3 @@
 //void, Obj this, point pt
 
-Sleep(pt.x + pt.y);
+Sleep(1 + pt.x + pt.y);

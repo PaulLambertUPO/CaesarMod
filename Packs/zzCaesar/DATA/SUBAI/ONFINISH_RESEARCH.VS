@@ -223,8 +223,10 @@ while (dest != "") {
 			}
 			else if (name == "TFights")
 				set.SetFood(set.food + 4000);
-			else if (name == "People's Assembly")
+			else if (name == "People's Assembly") {
 				set.AddToPopulation(15);
+				EnvWriteInt(player, "MaxElephants", MAX(1, EnvReadInt(player, "MaxElephants")));
+			}
 			else if (name == "Olympic Games")
 				EnvWriteInt(player, "MaxMyrmidons", MAX(10, EnvReadInt(player, "MaxMyrmidons")));
 			else if (name == "RGladiator Shows2")

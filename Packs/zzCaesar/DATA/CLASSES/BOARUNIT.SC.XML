@@ -13,5 +13,5 @@
 	<properties help="contents/units/Animals/Boar" />
 	<properties edittree_pos="Units/Animals/Boar" />
 
-	<sounds idle="Sounds/Animals/Boar/Boar_Idle.wav" attack="Sounds/Animals/Boar/Boar_Attack.wav" die="Sounds/Animals/Boar/Boar_Die.wav" />
+	<sounds command="Sounds/Animals/Boar/Boar_Idle.wav" attack="Sounds/Animals/Boar/Boar_Attack.wav" die="Sounds/Animals/Boar/Boar_Die.wav" />
 </class>
