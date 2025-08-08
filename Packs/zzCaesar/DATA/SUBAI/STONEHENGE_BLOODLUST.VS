@@ -24,8 +24,9 @@ if (.IsValid) {
 		for (j = 0; j < c; j += 1) {
 			u = tmp_units[j].AsUnit();
 			if (u.IsValid)
-				if (u.player == owning_player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-					owning_player_units.Add(u);
+				if (u.player == owning_player)//check unit player instead of i because GetPlayerUnits takes units from other players that are attached to player i's heroes
+					if (!u.IsRanged)
+						owning_player_units.Add(u);
 		}
 	}
 	c = owning_player_units.count;

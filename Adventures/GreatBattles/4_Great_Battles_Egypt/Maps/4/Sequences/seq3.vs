@@ -38,6 +38,8 @@ E_CleopatraArmy.SetCommand("attach", E_Cleopatra);
 E_Cleopatra.obj.AsHero().SetAutocast(true);
 
 ol = E_AlexandriaDefence.GetObjList();
+ol.Remove(E_MarkAntony);
+ol.Remove(E_Cleopatra);
 for (i = 0; i < ol.count; i += 1) {
 	u = ol[i].AsUnit();
 	u.AddItem("Damage charm");

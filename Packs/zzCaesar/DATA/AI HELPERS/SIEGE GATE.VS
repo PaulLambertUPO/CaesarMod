@@ -51,13 +51,13 @@ if (main_target.IsValid) {
 									u_cmd = u.command;
 									if (u.DistTo(main_target) > 1200) {
 										if (u_cmd == "move") {
-											u_tmp = u.BestTargetInSquadSight("Military");//ignore sentries but not the other warriors
+											u_tmp = u.BestTargetInSquadSightMisZeroDamage();//ignore sentries but not the other warriors and sages
 											if (u_tmp.IsValid)
 												if (!u_tmp.IsSentry)
 													u.SetCommand("advance", main_target_pos);
 										}
 										else if (u_cmd == "engage") {
-											u_tmp = u.BestTargetInSquadSight("Military");//avoid fighting sentries forever
+											u_tmp = u.BestTargetInSquadSightMisZeroDamage();//avoid fighting sentries forever
 											if (!u_tmp.IsValid)
 												u.SetCommand("move", main_target_pos);
 											else if (u_tmp.IsSentry)
@@ -105,7 +105,7 @@ if (main_target.IsValid) {
 										u_cmd = u.command;
 										if (u_cmd == "build_catapult")
 											cataps_placed = true;
-										else if (u_cmd == "idle") {
+										else if (u_cmd == "idle" || u_cmd == "stand_position") {
 											//for some reason, units sometimes do not attack the gate by calling the Siege function (it seems to happen with multiple heroes)
 											if (u.AsHero().IsValid)
 												u.SetCommand("attack", main_target);
@@ -134,7 +134,7 @@ if (main_target.IsValid) {
 						Sleep(2000);
 					}
 
-					//step 3: clear catapults
+					//step 3: clear catapults and advance to the hall
 					for (i = 0; i < ol_siegers.count; i += 1) {
 						u = ol_siegers[i].AsUnit();
 						if (u.IsValid)
@@ -143,7 +143,7 @@ if (main_target.IsValid) {
 									Catapult c;
 									c = u.GetHolderSett().GetCentralBuilding().AsCatapult();
 									if (c.IsValid)
-										c.SetCommand("disband");
+										c.SetCommand("stop");
 								}
 								pt.Set(0, hall.radius + rand(60));
 								pt.Rot(rand(360));
@@ -152,6 +152,7 @@ if (main_target.IsValid) {
 								u.SetCommand("advance", pt);
 							}
 					}
+					Sleep(2000);
 
 					//step 4: capture
 					while (1) {
@@ -166,27 +167,49 @@ if (main_target.IsValid) {
 								if (!u.hero.IsValid) {
 									u_cmd = u.command;
 									if (u_cmd == "idle") {//new units added to the group and heroes who are interrupted while capturing (normal units become "engage" instead)
-										u.SetCommand("engage");
+										if (u.DistTo(main_target) <= 400)
+											u.SetCommand("engage");
+										else
+											u.SetCommand("advance", hall_pos);
 										u.AddCommand(false, "capture", hall);
 									}
-									else if (u_cmd == "capture") {//chance to abort the capture and attack an enemy warrior nearby (ignore sentries)
-										if (u.DistTo(hall) <= 550) {
-											if (rand(8) == 0) {//low chance in order to reduce the risk of interrupting the capture when the defender keeps training new units
-												u_tmp = u.BestTargetInSquadSight("Military");
+									else if (u_cmd == "stand_position") {//hero armies sometimes decide not to move
+										if (u.DistTo(main_target) <= 400)
+											u.SetCommand("engage");
+										else
+											u.SetCommand("advance", hall_pos);
+										u.AddCommand(false, "capture", hall);
+									}
+									else if (u_cmd == "capture") {//chance to abort the capture and attack an enemy warrior/sage nearby (ignore sentries and spammed basic barracks units)
+										if (u.DistTo(hall) <= 300) {
+											if (rand(8) == 0) {
+												u_tmp = u.BestTargetInSquadSightMisZeroDamage();
 												if (u_tmp.IsValid)
-													if (!u_tmp.IsSentry)
+													if (!u_tmp.IsSentry) {
+														if (!u_tmp.hero.IsValid)
+															if (u_tmp.IsRanged) {//shorter ranges for shooters because they do not need to move much to attack after being recruited
+																if (ObjsInRange(u_tmp, "BaseBarracks", 80).count > 0)
+																	if (ObjsInRange(u_tmp, u_tmp.class, 100).count <= 5)
+																		if (Intersect(ObjsInSight(hall, "Military"), FriendlyObjs(hall.player, "Military")).count < 10)
+																			continue;
+															}
+															else if (ObjsInRange(u_tmp, "BaseBarracks", 120).count > 0)
+																if (ObjsInRange(u_tmp, u_tmp.class, 150).count <= 5)
+																	if (Intersect(ObjsInSight(hall, "Military"), FriendlyObjs(hall.player, "Military")).count < 10)
+																		continue;
 														u.SetCommand("advance", u_tmp.pos);
+													}
 											}
 										}
 										else if (rand(2) == 0) {//good chance in order to reduce the risk of ignoring the enemy (for idle units and new ones added to the group)
-											u_tmp = u.BestTargetInSquadSight("Military");
+											u_tmp = u.BestTargetInSquadSightMisZeroDamage();
 											if (u_tmp.IsValid)
 												if (!u_tmp.IsSentry)
 													u.SetCommand("advance", hall_pos);
 										}
 									}
-									else if (u_cmd == "engage") {//chance to interrupt the fight and either capture the target or move to it depending on the distance
-										u_tmp = u.BestTargetInSquadSight("Military");
+									else if (u_cmd == "engage") {//chance to abort the fight and either capture the hall or move to it depending on the distance
+										u_tmp = u.BestTargetInSquadSightMisZeroDamage();
 										if (!u_tmp.IsValid)
 											if (u.DistTo(hall) <= 400)
 												u.SetCommand("capture", hall);
@@ -197,20 +220,36 @@ if (main_target.IsValid) {
 												u.SetCommand("capture", hall);
 											else
 												u.SetCommand("move", hall_pos);
-										else if (u.DistTo(hall) <= 350) {//shorter distance to reduce the risk of stopping fighting real enemies (not barracks-trained units)
-											if (rand(5) == 0)
+										else if (u.DistTo(hall) <= 400) {
+											if (rand(2) == 0)//few spammed basic barracks units should not be considered much to avoid fighting forever
+												if (!u_tmp.hero.IsValid)
+													if (u_tmp.IsRanged) {//shorter ranges for archers because they do not need to move much to attack
+														if (ObjsInRange(u_tmp, "BaseBarracks", 80).count > 0)
+															if (ObjsInRange(u_tmp, u_tmp.class, 100).count <= 6)
+																if (Intersect(VisibleObjsInSight(hall, "Military"), FriendlyObjs(hall.player, "Military")).count < 10) {
+																	u.SetCommand("capture", hall);
+																	continue;
+																}
+													}
+													else if (ObjsInRange(u_tmp, "BaseBarracks", 120).count > 0)
+														if (ObjsInRange(u_tmp, u_tmp.class, 150).count <= 6)
+															if (Intersect(VisibleObjsInSight(hall, "Military"), FriendlyObjs(hall.player, "Military")).count < 10) {
+																u.SetCommand("capture", hall);
+																continue;
+															}
+											if (rand(16) == 0)
 												u.SetCommand("capture", hall);
 										}
-										else if (rand(15) == 0)//low chance to reduce the risk of a move-engage cycle
+										else if (rand(30) == 0)//very low chance to reduce the risk of a move-engage cycle
 											u.SetCommand("move", hall_pos);
 									}
 									else if (u_cmd == "move") {//when near, stop moving and start capture
-										if (u.DistTo(hall) <= 300) {
+										if (u.DistTo(hall) <= 400) {
 											u.SetCommand("engage");
 											u.AddCommand(false, "capture", hall);
 										}
-										else if (rand(3) == 0) {
-											u_tmp = u.BestTargetInSquadSight("Military");
+										else if (rand(2) == 0) {
+											u_tmp = u.BestTargetInSquadSightMisZeroDamage();
 											if (u_tmp.IsValid)
 												if (!u_tmp.IsSentry)
 													u.SetCommand("advance", hall_pos);

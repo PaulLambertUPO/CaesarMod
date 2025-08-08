@@ -6204,7 +6204,7 @@ Coste: 60 energía
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Bloodlust.bmp">
 Sed de sangre
-Permite a todos los guerreros ignorar la defensa del enemigo y los del lanzador presentes en el momento de la activación obtienen 4 puntos de ataque adicionales por la duración. Dura 90 segundos.
+Permite a todos los guerreros ignorar la defensa del enemigo y las unidades cuerpo a cuerpo del lanzador presentes en el momento de la activación obtienen 6 puntos de ataque adicionales por la duración. Dura 30 segundos.
 Coste: 70 energía
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Hunger.bmp">

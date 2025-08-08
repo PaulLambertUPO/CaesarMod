@@ -3,7 +3,10 @@
 Query q_guards;
 ObjList ol_guards;
 Unit u, enemy, target;
+point area_centre;
 int i;
+
+area_centre = AreaCenter(TargetArea);
 
 AttackArea(Group(GroupName), TargetArea);
 
@@ -18,17 +21,21 @@ while (1) {
 		if (u.IsValid)
 			if (u.IsAlive)
 				if (!u.AsUnit.hero.IsValid) {
-					if (AreaDistTo(u.pos, TargetArea) >= 550)//return to the area when too far
-						u.SetCommand("move", AreaCenter(TargetArea));
-					else if (u.command == "engage") {
-						if (!target.IsValid)//the first/new enemy sighted is marked as the main target
-							target = u.BestTargetInSquadSight();
+					if (AreaDistTo(u.pos, TargetArea) >= 525)//return to the area when too far
+						u.SetCommand("move", area_centre);
+					else if (u.command == "engage") {//this check must stay before the validity one to avoid resetting the advance command
+						if (!target.IsValid)
+							target = u.BestTargetInSquadSightMisZeroDamage();//the first/new enemy sighted is marked as the main target
 					}
 					else if (target.IsValid) {
 						if (target.IsDead)//the next enemy sighted will be marked as the main target
 							target.Clear();
-						else if (AreaDistTo(target.posRH, TargetArea) < 550)
-							u.SetCommand("advance", target.posRH);
+						else if (AreaDistTo(target.posRH, TargetArea) <= 525) {
+							if (u.command != "move")
+								u.SetCommand("advance", target.posRH);
+							else if (u.DistTo(area_centre) <= 350)//units that are coming back after being too far keep should keep moving until they are near the are centre
+								u.SetCommand("advance", target.posRH);
+						}
 						else
 							target.Clear();
 					}
@@ -37,7 +44,7 @@ while (1) {
 					else if (u.command == "stand_position")
 						u.SetCommand("advance", GetRandomPointInArea(TargetArea));
 					else if (u.command == "move")
-						if (u.DistTo(AreaCenter(TargetArea)) <= 320)//it's not necessary to move all the way back to the area centre
+						if (u.DistTo(area_centre) <= 350)//it's not necessary to move all the way back to the area centre
 							u.SetCommand("advance", GetRandomPointInArea(TargetArea));
 				}
 	}

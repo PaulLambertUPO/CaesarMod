@@ -6204,7 +6204,7 @@ Costo: 60 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Bloodlust.bmp">
 Sete di sangue
-Consente a tutti i guerrieri di ignorare la difesa del nemico e quelli del lanciatore presenti al momento dell'attivazione ottengono 4 punti di attacco bonus per la durata. Dura 90 secondi.
+Consente a tutti i guerrieri di ignorare la difesa del nemico e le unità da mischia del lanciatore presenti al momento dell'attivazione ottengono 6 punti di attacco bonus per la durata. Dura 30 secondi.
 Costo: 70 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Hunger.bmp">

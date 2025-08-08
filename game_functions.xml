@@ -1,248 +1,317 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="scdoc.xsl"?>
+<!--
+	Note about special markers:
+	- latent="1": this marks functions that can pause the execution of a script, resuming it when the function's action is complete
+	- ptr="1": this means that a parameter is passed "by reference", so the function gets a direct link to the variable (not its copy) and can modify it
+-->
 <functions>
+<!-- Pauses the current script | WARNING: it can cause a crash, depending on the type of script it is used in -->
 <func name="Sleep" returns="void" latent="1">
-	<param type="int" />
+	<param type="int" /><!-- milliseconds to pause for -->
 </func>
+<!-- Terminates the current script -->
 <func name="KillScript" returns="void">
 </func>
-<func name="+=" returns="int">
-	<param type="int" ptr="1" />
-	<param type="int" />
+<!-- Assigns the second integer to a variable -->
+<func name="=" returns="void">
+	<param type="int" ptr="1" /><!-- variable to modify -->
+	<param type="int" /><!-- value to assign -->
 </func>
-<func name="-=" returns="int">
-	<param type="int" ptr="1" />
-	<param type="int" />
-</func>
-<func name="\a" returns="int">
-	<param type="int" />
-	<param type="int" />
-</func>
-<func name="|" returns="int">
-	<param type="int" />
-	<param type="int" />
-</func>
+<!-- Adds two integers and returns the sum -->
 <func name="+" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Adds the second integer to a variable -->
+<func name="+=" returns="int">
+	<param type="int" ptr="1" /><!-- variable to modify -->
+	<param type="int" /><!-- value to modify by -->
+</func>
+<!-- Inverts the sign of an integer and returns the result (+ <-> -) -->
 <func name="-" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- value to invert -->
 </func>
+<!-- Subtracts two integers and returns the difference -->
 <func name="-" returns="int">
-	<param type="int" />
+	<param type="int" /><!-- first operand (minuend) -->
+	<param type="int" /><!-- second operand (subtrahend) -->
 </func>
-<func name="=" returns="void">
-	<param type="int" ptr="1" />
-	<param type="int" />
+<!-- Subtracts the second integer from a variable -->
+<func name="-=" returns="int">
+	<param type="int" ptr="1" /><!-- variable to modify -->
+	<param type="int" /><!-- value to modify by -->
 </func>
+<!-- Performs the 'bitwise AND' operation and returns the result (useful for checking multiple flags stored in a single integer) -->
+<func name="\a" returns="int">
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
+</func>
+<!-- Performs the 'bitwise OR' operation and returns the result (useful for checking multiple flags stored in a single integer) -->
+<func name="|" returns="int">
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
+</func>
+<!-- Multiplies two integers and returns the product -->
 <func name="*" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Divides two integers and returns the quotient (result rounded down) -->
 <func name="/" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand (dividend) -->
+	<param type="int" /><!-- second operand (divider) -->
 </func>
+<!-- Divides two integers and returns the remainder -->
 <func name="%" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand (dividend) -->
+	<param type="int" /><!-- second operand (divider) -->
 </func>
+<!-- Checks if two integers are equal -->
 <func name="==" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Checks if two integers are different -->
 <func name="!=" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Checks if the first integer is lesser than the second (<) -->
 <func name="\l" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Checks if the first integer is greater than the second (>) -->
 <func name="\g" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Checks if the first integer is lesser than or equal to the second (<=) -->
 <func name="\l=" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Checks if the first integer is greater than or equal to the second (>=) -->
 <func name="\g=" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand -->
 </func>
+<!-- Returns the absolute value of an integer (the value without sign, always positive) -->
 <func name="abs" returns="int">
-	<param type="int" />
+	<param type="int" /><!-- the number to get the absolute value of -->
 </func>
+<!-- TBD: UNKNOWN -->
 <func name="Write" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- value to write -->
 </func>
+<!-- Compares two integers and returns the minimum value -->
 <func name="MIN" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first value -->
+	<param type="int" /><!-- second value -->
 </func>
+<!-- Compares two integers and returns the maximum value -->
 <func name="MAX" returns="int">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first value -->
+	<param type="int" /><!-- second value -->
 </func>
+<!-- Clamps an integer to be within the range defined by the second and third values (inclusive) -->
 <func name="CLAMP" returns="int">
-	<param type="int" />
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- value to clamp, returned if between the second and third values -->
+	<param type="int" /><!-- minimum value, returned if the first value is lesser than it -->
+	<param type="int" /><!-- maximum value, returned if the first value is greater than it -->
 </func>
+<!-- Assigns the second float to a variable -->
+<func name="=" returns="void">
+	<param type="float" ptr="1" /><!-- variable to modify -->
+	<param type="float" /><!-- value to assign -->
+</func>
+<!-- Adds two floats and returns the sum -->
 <func name="+" returns="float">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand -->
+	<param type="float" /><!-- second operand -->
 </func>
+<!-- Inverts the sign of a float and returns the result (+ <-> -) -->
 <func name="-" returns="float">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- value to invert -->
 </func>
+<!-- Subtracts two floats and returns the difference -->
 <func name="-" returns="float">
-	<param type="float" />
+	<param type="float" /><!-- first operand (minuend) -->
+	<param type="float" /><!-- second operand (subtrahend) -->
 </func>
-<func name="=" returns="void">
-	<param type="float" ptr="1" />
-	<param type="float" />
-</func>
+<!-- Multiplies two floats and returns the product -->
 <func name="*" returns="float">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand -->
+	<param type="float" /><!-- second operand -->
 </func>
+<!-- Divides two floats and returns the result (not rounded) -->
 <func name="/" returns="float">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand (dividend) -->
+	<param type="float" /><!-- second operand (divider) -->
 </func>
+<!-- Checks if two floats are equal -->
 <func name="==" returns="bool">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand -->
+	<param type="float" /><!-- second operand -->
 </func>
+<!-- Checks if two floats are different -->
 <func name="!=" returns="bool">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand -->
+	<param type="float" /><!-- second operand -->
 </func>
+<!-- Checks if the first float is lesser than the second (<) -->
 <func name="\l" returns="bool">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand -->
+	<param type="float" /><!-- second operand -->
 </func>
+<!-- Checks if the first float is greater than the second (>) -->
 <func name="\g" returns="bool">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first operand -->
+	<param type="float" /><!-- second operand -->
 </func>
+<!-- Calculates the square root of a float and returns the result (the value that, after being multiplied by itself, is equal to the float; e.g., sqrt(25) = 5) -->
 <func name="sqrt" returns="float">
-	<param type="float" />
+	<param type="float" /><!-- value to take the square root of -->
 </func>
+<!-- Converts a float to an integer (rounded down) -->
 <func name="Int" returns="int">
-	<param type="float" />
+	<param type="float" /><!-- value to convert -->
 </func>
+<!-- TBD: UNKNOWN -->
 <func name="Write" returns="void">
-	<param type="float" />
+	<param type="float" /><!-- value to write -->
 </func>
+<!-- Compares two floats and returns the maximum value -->
 <func name="MIN" returns="float">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first value -->
+	<param type="float" /><!-- second value -->
 </func>
+<!-- Compares two floats and returns the maximum value -->
 <func name="MAX" returns="float">
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- first value -->
+	<param type="float" /><!-- second value -->
 </func>
+<!-- Clamps a float to be within the range defined by the second and third values (inclusive) -->
 <func name="CLAMP" returns="float">
-	<param type="float" />
-	<param type="float" />
-	<param type="float" />
+	<param type="float" /><!-- value to clamp, returned if between the second and third values -->
+	<param type="float" /><!-- minimum value, returned if the first value is lesser than it -->
+	<param type="float" /><!-- maximum value, returned if the first value is greater than it -->
 </func>
+<!-- Assigns a boolean (true/false) to a variable -->
 <func name="=" returns="void">
-	<param type="bool" ptr="1" />
-	<param type="bool" />
+	<param type="bool" ptr="1" /><!-- variable to modify -->
+	<param type="bool" /><!-- value to assign -->
 </func>
+<!-- Inverts a boolean and returns the result (true <-> false) -->
 <func name="!" returns="bool">
-	<param type="bool" />
+	<param type="bool" /><!-- value to invert -->
 </func>
+<!-- Checks if two booleans are both true (logical AND) | WARNING: with complex expressions, it is better to use multiple 'if' clauses since the script language has no short-circuit evaluation -->
 <func name="\a\a" returns="bool">
-	<param type="bool" />
-	<param type="bool" />
+	<param type="bool" /><!-- first value -->
+	<param type="bool" /><!-- second value -->
 </func>
+<!-- Checks if at least one of two booleans is true (logical OR) | WARNING: with complex expressions, it is better to use an 'else-if' clause since the script language has no short-circuit evaluation -->
 <func name="||" returns="bool">
-	<param type="bool" />
-	<param type="bool" />
+	<param type="bool" /><!-- first value -->
+	<param type="bool" /><!-- second value -->
 </func>
+<!-- Checks if two booleans are different (logical XOR) | WARNING: with complex expressions, it is better to use multiple 'if' clauses since the script language has no short-circuit evaluation -->
 <func name="^" returns="bool">
-	<param type="bool" />
-	<param type="bool" />
+	<param type="bool" /><!-- first value -->
+	<param type="bool" /><!-- second value -->
 </func>
-<func name="Write" returns="void">
-	<param type="pstr" />
-</func>
-<func name="Write" returns="void">
-	<param type="str" />
-</func>
+<!-- TBD: UNKNOWN -->
 <func name="=" returns="void">
-	<param type="pstr" ptr="1" />
-	<param type="pstr" />
+	<param type="pstr" ptr="1" /><!-- variable to modify -->
+	<param type="pstr" /><!-- value to assign -->
 </func>
+<!-- TBD: UNKNOWN -->
+<func name="Write" returns="void">
+	<param type="pstr" /><!-- value to write -->
+</func>
+<!-- Assigns the second string to a variable -->
 <func name="=" returns="void">
-	<param type="str" ptr="1" />
-	<param type="str" />
+	<param type="str" ptr="1" /><!-- variable to modify -->
+	<param type="str" /><!-- value to assign -->
 </func>
-<func name="StrCmp" returns="int">
-	<param type="str" />
-	<param type="str" />
+<!-- Concatenates two strings and returns the result -->
+<func name="+" returns="str">
+	<param type="str" /><!-- base string -->
+	<param type="str" /><!-- string to append -->
 </func>
+<!-- Checks if two strings are equal -->
+<func name="==" returns="bool">
+	<param type="str" /><!-- first operand -->
+	<param type="str" /><!-- second operand -->
+</func>
+<!-- Checks if two strings are different -->
+<func name="!=" returns="bool">
+	<param type="str" /><!-- first operand -->
+	<param type="str" /><!-- second operand -->
+</func>
+<!-- Appends the second string to a variable (+=) -->
 <func name="StrCat" returns="void">
-	<param type="str" ptr="1" />
-	<param type="str" />
+	<param type="str" ptr="1" /><!-- variable to modify -->
+	<param type="str" /><!-- string to add -->
 </func>
+<!-- Compares two strings and returns 0 if they are equal, -1 if the first is smaller, 1 if the first is larger -->
+<func name="StrCmp" returns="int">
+	<param type="str" /><!-- first string -->
+	<param type="str" /><!-- second string -->
+</func>
+<!-- TBD: UNKNOWN -->
+<func name="Write" returns="void">
+	<param type="str" /><!-- value to write -->
+</func>
+<!-- Parses the first string, returning all trimmed characters (without leading/trailing spaces) up to the first comma (excluded) and saving the remainder in a variable (without the comma, not trimmed) -->
 <func name="ParseStr" returns="str">
-	<param type="str" />
-	<param type="str" ptr="1" />
+	<param type="str" /><!-- string to parse -->
+	<param type="str" ptr="1" /><!-- variable to modify (remainder after the comma, not trimmed) -->
 </func>
+<!-- Checks if the first string contains the second (case-sensitive), that is if the second string is a substring of the first -->
 <func name="StrStr" returns="bool">
-	<param type="str" />
-	<param type="str" />
+	<param type="str" /><!-- string to search in -->
+	<param type="str" /><!-- string to search for (substring) -->
 </func>
+<!-- TBD: UNKNOWN -->
 <func name="GetFromStr" returns="str">
 	<param type="str" />
 	<param type="str" />
 </func>
+<!-- TBD: UNKNOWN -->
 <func name="GetFromStrToEOL" returns="str">
 	<param type="str" />
 	<param type="str" />
 </func>
-<func name="+" returns="str">
-	<param type="str" />
-	<param type="str" />
-</func>
+<!-- Searches the string for the first occurrence of the character corresponding to the ASCII integer value (e.g. 'A' = 65, 'a' = 97) and returns the index, -1 if not found | WARNING: non-ASCII characters (e.g. 'à') are not supported well and make the function return seemingly random values -->
 <func name="FindChrPos" returns="int">
-	<param type="str" />
-	<param type="int" />
+	<param type="str" /><!-- string to search in -->
+	<param type="int" /><!-- ASCII integer value of the character to search for -->
 </func>
+<!-- Searches the string for the character found at the index of the integer value and returns the corresponding ASCII integer value (e.g. 'A' = 65, 'a' = 97) | WARNING: non-ASCII characters (e.g. 'à') or indexes outside the string make the funtion return random values -->
 <func name="GetChr" returns="int">
-	<param type="str" />
+	<param type="str" /><!-- string to search in -->
 	<param type="int" />
 </func>
+<!-- WARNING: this function always return false, even if the string is empty ("") -->
 <func name="IsNull" returns="bool">
-	<param type="str" />
+	<param type="str" /><!-- string to check -->
 </func>
+<!-- Returns the length of a string (number of bytes) | WARNING: non-ASCII characters (e.g. 'à') occupy more than one byte -->
 <func name="StrLen" returns="int">
-	<param type="str" />
+	<param type="str" /><!-- string to get the length of (in bytes) -->
 </func>
+<!-- Returns the portion of a string starting from the index corresponding to the first integer with a length of up to the second integer (any negative value returns an empty string, no spaces are added if the substring exceeds the string length) -->
 <func name="StrMid" returns="str">
-	<param type="str" />
-	<param type="int" />
-	<param type="int" />
+	<param type="str" /><!-- string to get the portion of -->
+	<param type="int" /><!-- starting index of the substring (inclusive) -->
+	<param type="int" /><!-- maximum length of the substring (number of characters to take) -->
 </func>
+<!-- Returns the integer corresponding to the string, which must be a series of numeric characters -->
 <func name="Str2Int" returns="int">
-	<param type="str" />
-</func>
-<func name="==" returns="bool">
-	<param type="str" />
-	<param type="str" />
-</func>
-<func name="!=" returns="bool">
-	<param type="str" />
-	<param type="str" />
+	<param type="str" /><!-- string to convert -->
 </func>
 <func name="IsFlagSet" returns="bool">
 	<param type="int" />
@@ -257,21 +326,21 @@
 	<param type="int" />
 	<param type="int" />
 </func>
-<func name="point::x" returns="int" ptr="1">
+<func name="point::x" returns="int" ptr="1"><!-- returns the x coordinate of the point -->
 </func>
-<func name="point::y" returns="int" ptr="1">
+<func name="point::y" returns="int" ptr="1"><!-- returns the y coordinate of the point -->
 </func>
-<func name="point::Set" returns="point">
-	<param type="int" />
-	<param type="int" />
+<func name="point::Set" returns="point"><!-- sets the x-y coordinates of the point -->
+	<param type="int" /><!-- x coordinate -->
+	<param type="int" /><!-- y coordinate -->
 </func>
-<func name="point::SetLen" returns="void">
-	<param type="int" />
+<func name="point::SetLen" returns="void"><!-- sets the length of the point vector (distance from the origin) -->
+	<param type="int" /><!-- distance from the origin: if positive, it keeps their original sign (+/-); if negative, it inverts them (+ -> - and - -> +) -->
 </func>
-<func name="point::Len" returns="int">
+<func name="point::Len" returns="int"><!-- returns the length of the point vector (distance from the origin); it is always a positive value, even with negative coordinates -->
 </func>
-<func name="point::Rot" returns="void">
-	<param type="int" />
+<func name="point::Rot" returns="void"><!-- rotates the vector of the point, changing its x-y coordinates, by the given degree -->
+	<param type="int" /><!-- rotation degree (positive = counterclockwise; negative = clockwise) | e.g. (20,0).Rot(90) -> (0,-20) -->
 </func>
 <func name="point::InRect" returns="bool">
 	<param type="rect" />
@@ -700,7 +769,7 @@
 <func name="ClearSelection" returns="void">
 	<param type="int" />
 </func>
-<func name="Obj::PlayAnim" returns="void" latent="1">
+<func name="Obj::PlayAnim" returns="void" latent="1"><!-- it causes a crash if called from behaviour scripts, not from methods -->
 	<param type="int" />
 	<param type="point" />
 </func>
@@ -982,11 +1051,11 @@
 	<param type="Settlement" />
 	<param type="str" />
 </func>
-<func name="EnemyObjs" returns="Query">
+<func name="EnemyObjs" returns="Query"><!-- multiple class support: NO -->
 	<param type="int" />
 	<param type="str" />
 </func>
-<func name="FriendlyObjs" returns="Query">
+<func name="FriendlyObjs" returns="Query"><!-- multiple class support: NO -->
 	<param type="int" />
 	<param type="str" />
 </func>
@@ -1002,20 +1071,20 @@
 	<param type="rect" />
 	<param type="str" />
 </func>
-<func name="ObjsInCircle" returns="Query">
+<func name="ObjsInCircle" returns="Query"><!-- multiple class support: YES -->
 	<param type="point" />
 	<param type="int" />
 	<param type="str" />
 </func>
-<func name="ObjsInSight" returns="Query">
+<func name="ObjsInSight" returns="Query"><!-- multiple class support: YES -->
 	<param type="Obj" />
 	<param type="str" />
 </func>
-<func name="VisibleObjsInSight" returns="Query">
+<func name="VisibleObjsInSight" returns="Query"><!-- multiple class support: YES -->
 	<param type="Obj" />
 	<param type="str" />
 </func>
-<func name="ObjsInRange" returns="Query">
+<func name="ObjsInRange" returns="Query"><!-- multiple class support: NO -->
 	<param type="Obj" />
 	<param type="str" />
 	<param type="int" />
@@ -1411,14 +1480,17 @@
 </func>
 <func name="Unit::SetLastAttackTime" returns="void">
 </func>
-<func name="Unit::BestTargetInSquadSightMisZeroDamage" returns="Obj">
-</func>
+<!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 </func>
-<func name="Unit::BestNoIndependentTargetInSquadSight" returns="Obj">
-</func>
+<!-- Works like BestTargetInSquadSight, but it uses the specified hierarchy class string as a preference filter | WARNING: it does not really overwrite the standard priority order (e.g. specifying "Military" can still return a sage if it is closer than a warrior) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 	<param type="str" />
+</func>
+<!-- Works like BestTargetInSquadSight, but it completely excludes all enemy targets with 0 damage (note that sages have 1 damage, so they are considered by the function) | WARNING: it seems that it gives more priority to sages that to military units, maybe it is specifically because they have a damage closer to 0 -->
+<func name="Unit::BestTargetInSquadSightMisZeroDamage" returns="Obj">
+</func>
+<func name="Unit::BestNoIndependentTargetInSquadSight" returns="Obj">
 </func>
 <func name="Unit::BestTargetInSquadSightExclusive" returns="Obj">
 	<param type="str" />
@@ -1540,7 +1612,7 @@
 <func name="Unit::SetMinimapFlag" returns="void">
 	<param type="bool" />
 </func>
-<func name="Unit::SetNoAIFlag" returns="void">
+<func name="Unit::SetNoAIFlag" returns="void"><!-- WARNING: using this function after SetNoselectFlag causes a crash -->
 	<param type="bool" />
 </func>
 <func name="Unit::PathDestFound" returns="point">

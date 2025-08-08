@@ -1181,7 +1181,7 @@
 <translationtableentry text="Plague" result="Peste" />
 <translationtableentry text="Poisons 1 in every 7 units (8 for the caster's).\nIt has a 1 minute cooldown" result="Avvelena 1 unità ogni 7 (8 per il lanciatore).\nHa una ricarica di 1 minuto" />
 <translationtableentry text="Bloodlust" result="Sete di sangue" />
-<translationtableentry text="Allows all warriors to ignore enemy armor and those of the caster present at the time of the activation gain 4 bonus damage for the duration.\nLasts 90 seconds" result="Consente a tutti i guerrieri di ignorare la difesa del nemico e quelli del lanciatore presenti al momento dell'attivazione ottengono 4 punti di attacco bonus per la durata.\nDura 90 secondi" />
+<translationtableentry text="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nLasts 30 seconds" result="Consente a tutti i guerrieri di ignorare la difesa del nemico e le unità da mischia del lanciatore presenti al momento dell'attivazione ottengono 6 punti di attacco bonus per la durata.\nDura 30 secondi" />
 <translationtableentry text="Starvation" result="Carestia" />
 <translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nLasts 2 minutes" result="Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 2% e di 20 (1% e 10 per quelli del lanciatore).\nDura 2 minuti" />
 <translationtableentry text="Earthquake" result="Terremoto" />

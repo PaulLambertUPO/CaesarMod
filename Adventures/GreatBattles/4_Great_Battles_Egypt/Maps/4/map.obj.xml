@@ -15374,7 +15374,7 @@
 	type="1"
 	ptx="2169"
 	pty="5310"
-	r="837"
+	r="872"
 	player="1"
 	healthperc="100"
 	inventorysize="0"
@@ -19508,7 +19508,9 @@
 	player="2"
 	healthperc="100"
 	stamina="10"
-	inventorysize="0"
+	inventorysize="2"
+	slot0="Scroll of Death"
+	slot1="Scroll of Life"
 	x="2434"
 	y="6253"
 	flags="0xA9400002"
@@ -22342,7 +22344,7 @@
 	type="1"
 	ptx="711"
 	pty="8007"
-	r="786"
+	r="913"
 	player="1"
 	healthperc="100"
 	inventorysize="0"
@@ -41723,6 +41725,10 @@
 				num="1485"/>
 			<obj
 				num="1486"/>
+			<obj
+				num="1379"/>
+			<obj
+				num="1398"/>
 		</group>
 		<group
 			name="E_AlexandriaFleet"

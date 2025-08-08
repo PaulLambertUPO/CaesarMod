@@ -72,7 +72,7 @@
 		groupdispatch="data/subai/stonehenge_bloodlust_dispatch.vs"
 		coststamina="70"
 		rollover="Bloodlust"
-		description="Allows all warriors to ignore enemy armor and those of the caster present at the time of the activation gain 4 bonus damage for the duration.\nLasts 90 seconds"
+		description="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nLasts 30 seconds"
 		key="b">
 		<src obj="Stonehenge" sticky="no" />
 	</cmd>
