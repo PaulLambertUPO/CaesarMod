@@ -16,10 +16,62 @@ La mia passione per Imperivm è così grande che è pressoché impossibile da es
 Se un'altra persona decide di usare la Caesar Mod come punto di partenza per un nuovo progetto, per me è ben più che libera di farlo: l'unica cortesia che chiedo è quella di fare come ho fatto io e di tenere tutti i nomi originali, specificando di aver cominciato dalla mia mod e rilasciando il nuovo progetto sotto la stessa licenza CC BY-SA, i cui dettagli sono indicati nel file LICENSE.txt incluso nel pacchetto.
 ______________________________________
 
+[1.0.2] - 10 agosto 2025
+
+Questa nuova versione della Caesar Mod migliora enormemente due aspetti del gioco: i porti e gli animali.
+È ora disponibile un nuovo comando nel porto per consentire al giocatore di far uscire i pescatori in modo da spostarli altrove, è stata migliorata la traiettoria di uscita di tutte le imbarcazioni (nel caso delle navi da guerra, se l'area d'acqua intorno al porto era molto piccola, poteva succedere che finissero sulla terraferma e a quel punto potevano muoversi come delle unità normali senza poter più tornare in acqua) e anche delle unità di rifornimento in generale; dato che era possibile accumulare immense quantità di viveri con i pescatori, è stato aggiunto un limite massimo di 50 a ogni porto e l'indicatore adesso si aggiorna correttamente.
+Le modifiche agli animali migliorano notevolmente il loro comportamento, soprattutto nelle mappe casuali: fuggono quando sono feriti (per esempio, ora il cavallo fugge al galoppo anziché camminando come se niente fosse), mentre quelli pericolosi sono generalmente più aggressivi di prima e, nel caso di lupi e leoni, si riuniscono in branchi più grandi, diventando quindi una seria minaccia per unità vulnerabili come i contadini o quelle spirituali; dato che è più difficile inseguirli quando scappano, ora "intercessione divina" ha una probabilità del 100% di fornire il bonus al livello nel caso di animali non evocati, rendendo più deterministica e meno frustrante l'esperienza di gioco come Britannia.
+Inoltre, nell'editor, è stata aggiunta la distinzione tra animali selvatici e controllabili, cosa che può tornare molto utile per la creazione di nuove avventure; infine, il potere "sete di sangue" è stato ribilanciato in quanto troppo forte con le unità a distanza (soprattutto con Egitto) e sono stati risolti svariati bug ed exploit.
+
+
+PORTI
+
+- risolto il problema per cui inviavano risorse solo se ne avevano almeno 101 anziché 100
+- risolto il problema per cui perdevano la rotta di rifornimento se venivano danneggiati
+- risolto il problema per cui non inviavano unità di rifornimento se avevano un comando in coda nonostante la rotta fosse impostata
+- risolto il problema per cui il numero di pescatori nell'interfaccia non veniva aggiornato
+- risolto il problema per cui le navi romane ed egizie non avevano un'animazione di costruzione
+- tempo di frequenza generazione viveri/pesci ridotto a 3 secondi, aggiunto limite massimo di 50 pescatori, migliorata l'uscita delle navi per ridurre il rischio di generare il bug in cui si muovono solo su terra
+- schiera pescatori: nuovo comando disponibile nel porto, tempo di ricerca 10 secondi, fa uscire fino a 5 pescatori
+- pescatore: aggiunto link alla guida
+- barca: ridotta la distanza percorsa alla creazione, aggiunta angolazione casuale per ridurre il rischio che rimanga incastrata nel porto
+
+
+ANIMALI
+
+- risolto il problema per cui potevano diventare invisibili ma rimanere comunque in vista e non cliccabili se la nebbia di guerra era disattivata
+- risolto il problema per cui i cavalli interrompevano la coda di comandi se comprendeva quello di movimento
+- risolto il problema/exploit per cui cavalli e cervi selvatici rimanevano incastrati sul bordo settentrionale della mappa o in punti con poco spazio libero
+- animali selvatici: migliorato il comportamento generale, rimossa la guarigione periodica, ridotta l'eccessiva quantità di audio in fase di attesa
+- animali selvatici controllabili: rimossa probabilità di fuga quando viene dato loro l'ordine diretto di attacco (possono ancora scappare se ingaggiano un nemico per conto loro)
+- aquila: separato comando "sorvola" in 2 modalità (raggio 1800 e 800)
+- editor: aggiunta distinzione categoria selvatico/controllabile per ogni animale (aquila, gallina e pesci esclusi)
+
+
+GENERALE - VARIE
+
+- risolto il problema per cui venivano generati fori gallici e romani con l'aspetto normale anziché invernale tramite generazione casuale con l'editor nonostante la stagione selezionata fosse "inverno"
+- migliorati ulteriormente gli assedi scriptati e i comportamenti di guardia delle avventure
+- sete di sangue: durata ridotta a 30 secondi, bonus attacco aumentato a 6 ma solo in mischia
+- sbarco in Africa: risolto il problema per cui i soldati di Syphax appena resi alleati conquistavano istantaneamente Utica se era in corso il comando di conquista
+- la ribellione di Boadicea: risolto il problema per cui i Trinovanti appena resi alleati conquistavano istantaneamente la fortezza degli Iceni se era in corso il comando di conquista (causando la sconfitta del giocatore)
+- Augusto sul Nilo: risolto il problema per cui Marco Antonio non aveva oggetti, risolto l'exploit per cui era possibile attirare lui e Cleopatra lontano da Alessandria senza che i loro eserciti li seguissero
+- unità di rifornimento su terra: spostato punto di uscita dai porti in direzione opposta rispetto alle imbarcazioni, aggiunta angolazione casuale per ridurre il rischio che rimangano incastrate nelle strutture
+- villaggi: tempo di frequenza donazione viveri a unità vicine aumentato a 3 secondi
+- contadini: possono aggiungersi alla popolazione di un insediamento senza dover prima uscire (comodo per miliziani congedati)
+- intercessione divina: probabilità aumentata a 100% nel caso di animali non evocati
+- occultamento di massa: tempo di frequenza aumentato a 2 secondi, risolto il problema/exploit per cui non era tenuto in considerazione il cambio di giocatore dopo aver ricercato il potenziamento
+- forgia equipaggiamento d'élite: aggiunto indicatore del numero attuale di mirmidoni reclutabili anche quando "giochi olimpici" non è ancora stato ricercato
+- scuola di mahout: conquistare una fortezza cartaginese con "assemblea del popolo" già ricercato non sbloccherà gli elefanti (come già accade coi mirmidoni conquistando una fortezza greca con "giochi olimpici")
+- invoca la protezione di Apollo: non ripara le porte rotte (le lasciava comunque rotte e con solo il comando "ripara" disponibile)
+- tempio di Osiris: migliorato il posizionamento del fumo decorativo
+______________________________________
+
 [1.0.1] - 15 luglio 2025
 
 Questa nuova versione della Caesar Mod risolve diversi bug ed exploit per rendere più piacevole l'esperienza di gioco ed evitare alcuni comportamenti scorretti nelle partite multigiocatore. Durante lo sviluppo, ho indagato per capire come mai le statistiche di fine partita legate alle unità perse ed eliminate siano sempre sfalsate rispetto al reale andamento della partita e, purtroppo, ho potuto constatare l'ennesimo problema legato al codice sorgente: i dettagli sono inseriti in fondo al file, nella sezione dei bug non risolvibili (funzione "Erase").
 Inoltre, gli script legati agli assedi e alle unità di guardia nelle avventure sono stati completamente rivisti in modo da rendere più intelligente il comportamento delle unità coinvolte (si facevano distrarre continuamente dalle sentinelle) e ridurre il notevole numero di exploit che si potevano usare per contrastare i nemici: oltre a migliorare le grandi battaglie/sfide già esistenti, questa è una modifica propedeutica alle avventure che verranno introdotte nelle prossime versioni della mod.
+
 
 MODIFICHE
 
@@ -1310,6 +1362,7 @@ NON RISOLVIBILI
 - il cambio di fattore velocità per un eroe funziona solo in fase di combattimento e non di movimento
 - le unità con fattore velocità modificato rallentano tutto l'esercito quando sono vincolate a un eroe
 - le unità morte in possesso di "fortuna divina" che vengono colpite da "danno espansivo" possono generare lo stesso bug di "resurrezione" che si verificava con "ira di Giove"
+- nell'editor di mappe, quando si posiziona una fortezza o un villaggio casuale con delle strutture che non si trovano nella mappa, il gioco crasha all'avvio della partita
 - nell'editor di mappe, quando si crea un gruppo tramite la selezione di oggetti dall'apposito tasto in finestra, se tra questi è presente qualcosa che non è un'unità (ad esempio le tende dell'accampamento), il gioco crasha
 - nell'editor di mappe, quando si assegna un oggetto a più unità e poi se ne selezionano tante insieme, ad almeno una di queste viene tolto l'oggetto
 - nell'editor di mappe, a volte scompare un'abilità o un oggetto di un eroe dopo che gli si cambia l'icona

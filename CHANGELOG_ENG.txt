@@ -6,30 +6,82 @@ This file lists all the major changes made to the versions of the Caesar Mod pub
 INTRODUCTION - DISCLAIMER
 
 Thank you for downloading the Caesar Mod!
-I’m Paolo Lamberto, a long-time player who has always been passionate about real-time strategy games and, among the many I love, the Imperivm games hold a special place as my absolute favourites ("Celtic Kings: Rage of War", "Nemesis of the Roman Empire" and, especially, "Great Battles of Rome").
+I'm Paolo Lamberto, a long-time player who has always been passionate about real-time strategy games and, among the many I love, the Imperivm games hold a special place as my absolute favourites ("Celtic Kings: Rage of War", "Nemesis of the Roman Empire" and, especially, "Great Battles of Rome").
 However, despite my great passion for Imperivm, I never paid attention to what the community was doing: for years, I only played single player and later multiplayer with friends (via programs like Hamachi) on the GBR 1.40 vanilla version.
-It was only by chance, out of curiosity, while searching for any DLC I might have missed, that I discovered a mod introducing Greece, a civilization I had never understood the original developers’ decision to exclude. I greatly appreciated the efforts of everyone who worked on it and, in my opinion, the definitive version of Imperivm GBR is this one, with all the major ancient civilizations (if we don’t include the Parthians, too).
-At the same time, however, just as I discovered the wonder of the Greek Mod, I sadly realized that, in general, the great Imperivm GBR has been almost forgotten by everyone: there is an HD version on Steam, but it’s inferior to the Greek Mod and hasn’t been updated in years.
-Even the Greek Mod itself, despite all its merits, had some issues and could have been further improved. That’s why I decided to step up and use all my knowledge and developer skills to contribute and make Imperivm a better game, hoping that someday the franchise will be rediscovered and appreciated by more and more people.
-I then started working as a self-taught modder, beginning with the Greek Mod to create a new one, the Caesar Mod, aiming to improve every aspect of the game in order to offer everyone a product that provides a pleasant and memorable game experience, whether solo or with others, as well as offering a starting point to help others passionate about Imperivm with the same intentions as mine (it wasn’t easy at all working on a code base that was poorly optimized, very messy, and clearly amateurish in many areas, so I want to prevent others from wasting time fixing things like I had to do).
-My passion for Imperivm is so great that it’s almost impossible to express in words and I also want to clarify that I have no intention of "stealing" what the creators of Greek Mod did. In fact, I’ve included a thank-you to them in the main menu credits and haven’t hidden any of their names, I’ve simply added my name alongside theirs.
+It was only by chance, out of curiosity, while searching for any DLC I might have missed, that I discovered a mod introducing Greece, a civilization I had never understood the original developers' decision to exclude. I greatly appreciated the efforts of everyone who worked on it and, in my opinion, the definitive version of Imperivm GBR is this one, with all the major ancient civilizations (if we don't include the Parthians, too).
+At the same time, however, just as I discovered the wonder of the Greek Mod, I sadly realized that, in general, the great Imperivm GBR has been almost forgotten by everyone: there is an HD version on Steam, but it's inferior to the Greek Mod and hasn't been updated in years.
+Even the Greek Mod itself, despite all its merits, had some issues and could have been further improved. That's why I decided to step up and use all my knowledge and developer skills to contribute and make Imperivm a better game, hoping that someday the franchise will be rediscovered and appreciated by more and more people.
+I then started working as a self-taught modder, beginning with the Greek Mod to create a new one, the Caesar Mod, aiming to improve every aspect of the game in order to offer everyone a product that provides a pleasant and memorable game experience, whether solo or with others, as well as offering a starting point to help others passionate about Imperivm with the same intentions as mine (it wasn't easy at all working on a code base that was poorly optimized, very messy, and clearly amateurish in many areas, so I want to prevent others from wasting time fixing things like I had to do).
+My passion for Imperivm is so great that it's almost impossible to express in words and I also want to clarify that I have no intention of "stealing" what the creators of Greek Mod did. In fact, I've included a thank-you to them in the main menu credits and haven't hidden any of their names, I've simply added my name alongside theirs.
 If another person decides to use the Caesar Mod as a starting point for a new project, they are more than welcome to do so: the only courtesy I ask is that they do as I did and keep all the original names, specifying that they started from my mod and releasing the new project under the same CC BY-SA license, whose details can be found in the LICENSE.txt file included in the package.
+______________________________________
+
+[1.0.2] - 10 August 2025
+
+This new version of the Caesar Mod greatly improves two aspects of the game: shipyards and animals.
+A new command is now available at the shipyard to allow the player to send fishermen away so that they can be moved elsewhere, the exit path of all vessels has been improved (in the case of ships, if the water area around the shipyard was very small, they could end up on land and then move like regular units without being able to return to the water) as well as that of supply units in general; since it was possible to accumulate huge amounts of food with fishermen, a maximum limit of 50 has been added to every shipyard and the indicator now updates correctly.
+The changes to animals significantly improve their behavior, especially on random maps: they flee when injured (for example, the horse now gallops away instead of walking as if nothing happened), while the dangerous ones are generally more aggressive than before and, in the case of wolves and lions, they now gather in larger packs, becoming a serious threat to vulnerable units such as peasants or sages; since it is harder to chase them when they flee, "gambler's day" now has a 100% chance to grant the level bonus in the case of non-summoned animals, making the gameplay experience as Britain more deterministic and less frustrating.
+Besides, in the editor, the distinction between wild and controllable animals has been added, which can be very useful for creating new adventures; finally, the "bloodlust" power has been rebalanced as it was too strong with ranged units (especially with Egypt) and several bugs and exploits have been fixed.
+
+
+SHIPYARDS
+
+- fixed the issue where they sent resources only if they had at least 101 instead of 100
+- fixed the issue where they lost the supply route if damaged
+- fixed the issue where they didn't send supply units if they had a queued command even if the route was set
+- fixed the issue where the number of fishermen in the interface wasn't updated
+- fixed the issue where Rome and Egypt ships had no construction animation
+- food/fish spawn frequency time reduced to 3 seconds, added maximum limit of 50 fishermen, improved ship exit to reduce the risk of the bug where they move on land only
+- deploy fishermen: new command available in the shipyard, research time 10 seconds, sends out up to 5 fishermen
+- fisherman: added help guide link
+- boat: reduced distance traveled upon creation, added random angle to reduce the risk of getting stuck in the shipyard
+
+
+ANIMALS
+
+- fixed the issue where they could become invisible but still in sight and unclickable if the fog of war was disabled
+- fixed the issue where horses interrupted the command queue if it included the movement one
+- fixed the issue/exploit where wild horses and deer got stuck on the northern edge of the map or in spaces with little free space
+- wild animals: improved general behavior, removed the periodic healing, reduced the excessive audio amount when idle
+- controllable wild animals: removed chance to flee when they are given the direct attack order (they can still flee if they engage an enemy on their own)
+- eagle: split "hover" command into 2 modes (radius 1800 and 800)
+- editor: added wild/controllable category distinction for each animal (excluding eagle, hen and fish)
+
+
+GENERAL - MISCELLANEOUS
+
+- fixed the issue where Gaul and Roman townhalls were generated with the regular appearance instead of the winter one via random generation with the editor, even when the selected season was "winter"
+- further improved scripted sieges and guard behaviours in adventures
+- bloodlust: duration reduced to 30 seconds, bonus damage increased to 6 but only in melee
+- landing in Africa: fixed the issue where newly allied Syphax's troops instantly captured Utica if a capture command was in progress
+- Boudicca's rebellion: fixed the issue where the newly allied Trinovantes instantly captured the Iceni stronghold if a capture command was in progress (causing the player defeat)
+- Augustus on the Nile: fixed the issue where Mark Antony had no items, fixed the exploit where it was possible to lure him and Cleopatra away from Alexandria without their armies following them
+- supply units on land: exit point from shipyards moved to the opposite side of vessels, added random angle to reduce the risk of getting stuck in buildings
+- villages: nearby units food donation frequency time increased to 3 seconds
+- peasants: they can join a settlement's population without first exiting (useful for dismissed militiamen)
+- gambler's day: chance increased to 100% in the case of non-summoned animals
+- mass invisibility: frequency time increased to 2 seconds, fixed the issue/exploit where player change was not considered after researching the upgrade
+- forge elite equipment: added indicator of the current number of recruitable myrmidons even when "olympic games" hasn't been researched yet
+- mahout school: capturing a Carthaginian stronghold with "people's assembly" already researched will not unlock elephants (just like with myrmidons in Greek strongholds with "olympic games")
+- invoke the protection of Apollo: it doesn't repair broken gates (it still left them broken and with only the "repair" command available)
+- temple of Osiris: improved placement of decorative smoke
 ______________________________________
 
 [1.0.1] - 15 July 2025
 
 This new version of the Caesar Mod fixes several bugs and exploits in order to make the game experience more enjoyable and to prevent some unfair behaviours in multiplayer games. During the development, I investigated why the endgame statistics related to lost and killed units are always inaccurate compared to the actual course of the match and, unfortunately, I found yet another issue related to the source code: the details are listed at the end of the file, in the section on not fixable bugs ("Erase" function).
-Additionally, the scripts related to sieges and guard units in adventures have been completely overhauled in order to make the behaviour of the involved units smarter (they kept getting distracted by sentries) and to reduce the large amount of exploits that could be used to counter the enemies: besides improving the existing great battles/challenges, this change also lays the groundwork for the new adventures that will be introduced in the future versions of the mod.
+Additionally, the scripts related to sieges and guard units in adventures have been completely overhauled in order to make the behaviour of the involved units smarter (they kept getting distracted by sentries) and to reduce the large amount of exploits that could be used to counter the enemies: besides improving the existing great battles/challenges, this change also lays the groundwork for the new adventures that will be introduced in the next versions of the mod.
+
 
 CHANGES
 
 - fixed the issue where the AI triggered the initial tactic in parallel with stronghold management on small maps
-- fixed the issue where the AI didn’t recruit heroes during the initial tactic with Republican Rome
+- fixed the issue where the AI didn't recruit heroes during the initial tactic with Republican Rome
 - fixed the issue where the AI sometimes recruited hastati instead of archers with Republican Rome
-- fixed the issue where "divine grace" was blocked if the first of multiple selected heroes didn’t have enough stamina
+- fixed the issue where "divine grace" was blocked if the first of multiple selected heroes didn't have enough stamina
 - fixed the issue where double-clicking on the portrait of an activable skill in the top menu consumed stamina even if the skill was already in use
 - fixed the issue where the patrol command made the game crash if there was an eagle among the selected units
-- fixed the issue where the patrol command for regular units (not heroes) didn’t make them go back if they were inside a building
+- fixed the issue where the patrol command for regular units (not heroes) didn't make them go back if they were inside a building
 - fixed the issue where units attempted to capture a supply unit that had entered a building via the command of following an ally
 - fixed the issue where the loyalty of a settlement that was just captured sometimes decreased even if no unit was actually capturing it
 - fixed the issue where units in the process of capturing were counted as fighting units and triggered skills of heroes with auto-cast enabled
@@ -87,7 +139,7 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - guard post: stationable units increased to 85, can use supply routes, added variable timer (3-6-9-12 seconds) to the death of each sentinel, added description to the interface
 - training: probability of gaining experience increased to 95%
 - water sources: healing reduced to 100, waiting time reduced to 1 second, radius increased to 400, excludes all animals for healing, added description to the interface
-- hero’s grave: level threshold changed to 4/5, all nearby heroes gain levels (same player only), level waiting time increased to 4 seconds, level threshold for talismans removed, added remaining time
+- hero's grave: level threshold changed to 4/5, all nearby heroes gain levels (same player only), level waiting time increased to 4 seconds, level threshold for talismans removed, added remaining time
 - fixed the issue where "trample" activated "spike armor" and "revenge" from dead units
 - fixed the issue where "trample" did not work against siege machines
 - fixed the issue where hiring a hero from a non-Roman arena from a Roman stronghold spawned a Roman hero instead of the correct people's hero
@@ -117,7 +169,7 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - skirmish formation: range bonus reduced to 50%, replaced level bonus with 2 damage bonus
 - column formation: army width slightly increased, armor bonus increased to 0, range bonus reduced to 50%, added level bonus 2
 - ghoul: the one in the editor is no longer the summoned one and thus it will not die automatically if the stamina reaches 0
-- peasant: corrected the icon of multiple Greek peasants, added command to detach from a hero (useful when disarming attached militiamen), improved tooltips based on the mouse pointer
+- peasant: corrected the icon of multiple Greek peasants, added command to detach from a hero (useful when dismissing attached militiamen), improved tooltips based on the mouse pointer
 - fisherman: cost reduced to 100 food, recruitment time reduced to 5 seconds, improved tooltips based on the mouse pointer, added dedicated tooltip when pointing to a shipyard
 - ship: sight increased to 720, added "penetration" and "combat skill", added all information (except specials) and items to the interface, improved tooltips based on the mouse pointer
 - Keltill: health increased to 1300, damage increased to 60, armor reduced to 18, sight increased to 650, speed increased to 130, skills "defensive cry", "epic attack", "epic endurance", "healing", "quick march"
@@ -308,12 +360,13 @@ The biggest changes for Iberia overall include a significant increase in experie
 - defender: health increased to 260, damage increased to 18, armor reduced to 20, cost increased to 150 gold, recruitment time reduced to 14 seconds
 - horseman: health increased to 280, armor reduced to 2, speed reduced to 160, added "triumph", cost increased to 160 gold
 - slinger: damage reduced to 36, sight reduced to 500, range reduced to 400, replaced "expertise" with "attack skill" and "defensive tactics", cost reduced to 180 gold
+- scout: health reduced to 220, damage reduced to 30, armor reduced to 2, speed reduced to 160, inventory increased to 1, cost reduced to 1 population, added stats to the command tooltip in the village
 - elite guard: health reduced to 400, damage increased to 34, added "ferocity", recruitment time increased to 22 seconds
 - mountaineer: health increased to 440, damage increased to 54, sight increased to 600, speed increased to 90, recruitment time reduced to 8 seconds
 - priestess: speed increased to 60
 - hero: health increased to 1400, armor reduced to 14, replaced "euphoria" and "epic endurance" with "vigor" and "wisdom"
 - spears: cost increased to 1500 gold
-- horeshoes: cost increased to 1600 gold
+- horseshoes: cost increased to 1600 gold
 - slings: cost reduced to 1400 gold
 - tournaments: new militiamen and archers are level 4
 - heroes' wisdom: cost increased to 2500 gold, experience gain time reduced to 30 seconds
@@ -334,8 +387,7 @@ The biggest changes for Iberia overall include a significant increase in experie
 
 GERMANY
 
-The goal of these changes is to make Germany the perfect definition of "high risk, high reward", that is a people solely and exclusively focused on causing as much damage as possible.
-Previously, Germany's playstyle was quite inconsistent and/or restrictive: on one hand, the food costs to recover the population were high and a single "starvation" was enough to bring it to its knees; on the other hand, it had both "assault cry" and "defensive cry", a combination nearly impossible to counter for some peoples, further exacerbated by the great speed of "quick march" and/or the potential immunity to damage given by "concealment". This combination was terribly wrong when used with macemen because of the already mentioned "expertise" special which, combined with "attack focus", could turn it into a weapon that instantly wiped out armies clearly superior in both level and equipment within seconds.
+The goal of these changes is to make Germany the perfect definition of "high risk, high reward", that is a people solely and exclusively focused on causing as much damage as possible. Previously, Germany's playstyle was quite inconsistent and/or restrictive: on one hand, the food costs to recover the population were high and a single "starvation" was enough to bring it to its knees; on the other hand, it had both "assault cry" and "defensive cry", a combination nearly impossible to counter for some peoples, further exacerbated by the great speed of "quick march" and/or the potential immunity to damage given by "concealment". This combination was terribly wrong when used with macemen because of the already mentioned "expertise" special which, combined with "attack focus", could turn it into a weapon that instantly wiped out armies clearly superior in both level and equipment within seconds.
 That said, now the German hero almost exclusively has damage skills, while the units have been reworked accordingly, with a lower initial attack but potentially higher than before due to "team attack". The already mentioned maceman has become much healthier than before through "death blow" (much more manageable than "expertise") and "regeneration", deliberately added to compensate for the low armor and to give the impression of a "furious barbarian who does not know pain".
 Another revolutionary aspect is the stamina cost for the "learning" special being eliminated, allowing the eponymous upgrade to actually be useful instead of a disadvantage. It is also possible to transform Teuton archers into Teuton wolves (the idea is to start by attacking at range as archers, then charge as wolves, and finally fight at close range as riders, then retreat and start again).
 One last important aspect is that the valkyrie is now the fastest anti-archer unit in the game: a group of valkyries can easily decimate ranged units now by using "combat skill".
@@ -1039,7 +1091,7 @@ THE BATTLE OF GERGOVIA
 
 The battle of Gergovia has been modified to become much more dynamic and satisfying, as well as to fix some bugs and issues (like the fact that the initial troops were defeated during the introductory cutscene).
 On a general level, the scenario is the same as before: the player must defend against enemy waves preventing too many tribal chieftains from being killed and finally protect the stronghold from a large assault, or from an immense, nearly unstoppable army if the chieftains die too early.
-However, now the units making up the Roman waves have been diversified while the Gallic defenders have been improved as they were too weak: in the original version (assuming the introductory cutscene was overcome), few Roman soldiers were enough to eliminate both the chieftains and a good part of the troops defending Gergovia even before the final attack and the poor amount of resources in the stronghold combined with the low population made it impossible to recruit decent units for support, which resulted in a likely final defeat and the almost mandatory use of exploits.
+However, now the units making up the Roman waves have been diversified while the Gaul defenders have been improved as they were too weak: in the original version (assuming the introductory cutscene was overcome), few Roman soldiers were enough to eliminate both the chieftains and a good part of the troops defending Gergovia even before the final attack and the poor amount of resources in the stronghold combined with the low population made it impossible to recruit decent units for support, which resulted in a likely final defeat and the almost mandatory use of exploits.
 All of that has changed and now the challenge for the player remains fair but not impossible and, with a minimal dose of "macro-management", it is fairly possible to move the heroes and the armies to the right points at the right time.
 The old Ercenbehrt has been replaced with Luthal, one of the heroes from the main adventure of "Celtic Kings", and Vercingetorix's skills have been improved.
 Once the main waves are eliminated, a massive Roman army will attack in force from the central road, combining all the groups of the individual waves along with a hero and a strong army: however, this army has the "frenzy" skill, which will actually be helpful to the player if they recruit many woman warriors.
@@ -1103,7 +1155,7 @@ Duration rating with tests at hard after the changes: short
 
 BOUDICCA'S REBELLION
 
-Boadicea's rebellion has been completely revised to fix some issues and provide a hybrid gameplay experience between single player and old-school adventure with the goal of making it one of the most challenging experiences.
+Boudicca's rebellion has been completely revised to fix some issues and provide a hybrid gameplay experience between single player and old-school adventure with the goal of making it one of the most challenging experiences.
 The Romans and the Trinovantes are now enemies and will fight each other if they cross paths, the AI has been disabled and replaced with periodic and continuous attacks on the Iceni stronghold both to prevent it from accessing certain areas of the map and to keep the player's focus on the defense of only one stronghold. As a result, both the cursed stronghold and the Trinovantes one, once captured, will provide useful and safe resources to the player's arsenal.
 The amount of initial resources has been significantly increased to cope with the immediate barrage of enemy attacks and to offer a long-term help: enemy armies have different spawn times and are able to accumulate, which makes them extremely dangerous.
 The cave has also become more dangerous: the periodic damage occurs much more frequently and the enemies have been grouped and strengthened, but the addition of a hidden rib cage in a point on the map will allow the player to choose a reward different than the blood stone (see dedicated section).
@@ -1127,7 +1179,7 @@ Duration rating with tests at hard after the changes: long
 - cave dwellers: maxed out hero skills, varied units placement, added 2 Viking lords, Thoric, Milred and Larax to the final group, units level increased to 30, 50 for heroes and final group
 - Lleldoryn: level increased to 50, he can be talked to without having to kill all the cave dwellers but only those in the final group
 - improved notes updating, added note about collecting the blood stone if chosen as a reward from Lleldoryn
-- cursed stronghold druid: talks only once and only if Boadicea is nearby, improved the dialogue once the curse is lifted
+- cursed stronghold druid: talks only once and only if Boudicca is nearby, improved the dialogue once the curse is lifted
 - cursed stronghold ghouls: maximum increased to 50
 - Iceni: initial gold increased to 10000, initial food increased to 6000, maximum population increased to 140, automatically researched "swords", "fights" and "ritual chamber"
 - Boudicca: level increased to 10
@@ -1310,6 +1362,7 @@ NOT FIXABLE
 - the speed factor change for a hero only works in fight phase and not in movement phase
 - units with modified speed factor slow down the entire army when they are attached to a hero
 - dead units with "gambler's luck" that are hit by "trample" can generate the same "resurrection" bug that occurred with "wrath of Jupiter"
+- in the map editor, when placing a random stronghold or village with buildings that are not on the map, the game crashes at game start
 - in the map editor, when creating a group by selecting objects from the appropriate button in the window, if among these there is something that is not a unit (for example the camp tents), the game crashes
 - in the map editor, when an item is assigned to multiple units and then many of them are selected together, at least one of them will have the object removed
 - in the map editor, sometimes a hero's skill or item disappears after changing their icon
