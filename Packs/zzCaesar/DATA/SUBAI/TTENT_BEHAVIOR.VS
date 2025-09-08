@@ -15,7 +15,7 @@ else {
 	Unit u;
 	point pos, pt1, pt2;
 	rect rc;
-	int i, j, sight, player, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain;
+	int i, j, radius, sight, player, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain;
 	bool first_time_independent;
 
 	set = .settlement;
@@ -24,6 +24,7 @@ else {
 
 	rc = GetMapRect();
 
+	radius = .radius + 150;
 	sight = .sight;
 	pos = .pos;
 
@@ -37,6 +38,12 @@ else {
 
 	while (1) {
 		player = .player;
+
+		//send away enemy units inside
+		pt1 = Point(radius, 0);
+		pt1.Rot(rand(360));
+		set.Units.ObjEnemy(player).SetCommand("advance", pt1 + pos);
+
 		exp_gain = MAX(0, GetTime() / 120000 - 5);
 
 		//spawn neutral or produced teutons
@@ -50,17 +57,19 @@ else {
 						break;
 				if (teutons_1.count < initial_army) {
 					u = Place("TTeutonRider", pos, player);
-					u.SetFeeding(false);
 					set.ForceAddUnit(u);
+					u.SetFeeding(false);
 					u.SetExperience(old_exp_gain);
+					u.SetNoAIFlag(true);
 					teutons_1.Add(u);
 					all_teutons.Add(u);
 				}
 				if (teutons_2.count < initial_army) {
 					u = Place("TTeutonArcher", pos, player);
-					u.SetFeeding(false);
 					set.ForceAddUnit(u);
+					u.SetFeeding(false);
 					u.SetExperience(old_exp_gain);
+					u.SetNoAIFlag(true);
 					teutons_2.Add(u);
 					all_teutons.Add(u);
 				}
@@ -74,8 +83,8 @@ else {
 				if (class_prod != "") {
 					set.SetFood(set.food - 400);
 					u = Place(class_prod, pos, player);
-					u.SetFeeding(false);
 					set.ForceAddUnit(u);
+					u.SetFeeding(false);
 					u.SetExperience(old_exp_gain);
 					all_teutons.Add(u);
 				}
@@ -124,7 +133,6 @@ else {
 				EnemyObjs(player, "Sentry")
 			)
 		).GetObjList();
-		enemies.ClearDead();
 		if (enemies.count <= 0) {
 			//no threat around, command all teutons that are out to come back in
 			teutons_out.SetCommand("enter_tent", this);
@@ -172,30 +180,31 @@ else {
 				enemies.ClearDead();
 				i = enemies.count;
 				if (i > 0)
-					if (Intersect(VisibleObjsInSight(this, "Unit"), FriendlyObjs(player, "Military")).IsEmpty()) {//exclude hidden allies (just like with capturable buildings)
-						j = enemies[rand(i)].player;
-						.SetPlayer(j);
-						if (first_time_independent)//spawn some teutons for the new player (only once)
-							if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
-								int t;
-								t = GetConst("TTentCapturedArmy");
-								for (i = 0; i < t; i += 1) {
-									u = Place("TTeutonRider", pos, j);
-									set.ForceAddUnit(u);
-									u.SetExperience(old_exp_gain);
-									u.SetFeeding(false);
-									all_teutons.Add(u);
-									u = Place("TTeutonArcher", pos, j);
-									set.ForceAddUnit(u);
-									u.SetExperience(old_exp_gain);
-									u.SetFeeding(false);
-									all_teutons.Add(u);
-								}
-								first_time_independent = false;
-							}
-					}
+					if (Intersect(VisibleObjsInSight(this, "Unit"), FriendlyObjs(player, "Military")).IsEmpty())//exclude hidden allies (just like with capturable buildings)
+						.SetPlayer(enemies[rand(i)].player);
 			}
 		}
+
+		if (first_time_independent)//spawn some teutons for the new player (only once)
+			if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
+				int t;
+				t = GetConst("TTentCapturedArmy");
+				j = .player;
+				for (i = 0; i < t; i += 1) {
+					u = Place("TTeutonRider", pos, j);
+					set.ForceAddUnit(u);
+					u.SetExperience(old_exp_gain);
+					u.SetFeeding(false);
+					all_teutons.Add(u);
+					u = Place("TTeutonArcher", pos, j);
+					set.ForceAddUnit(u);
+					u.SetExperience(old_exp_gain);
+					u.SetFeeding(false);
+					all_teutons.Add(u);
+				}
+				first_time_independent = false;
+			}
+
 		Sleep(1000);
 	}
 }

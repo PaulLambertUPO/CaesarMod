@@ -8,7 +8,7 @@
 	result="¡Alabados sean los dioses! ¡Por fin te encuentro, poderoso Lárax! Vengo a pedirte tu ayuda para luchar contra Roma."
 	sound="2/conversations/cnv3_phrase1.wav"/>
 <translationtableentry
-	text="It will be a pleassure, Iberian!"
+	text="It will be a pleasure, Iberian!"
 	result="¡Será un placer, ibero!"
 	sound="2/conversations/cnv3_phrase2.wav"/>
 <translationtableentry

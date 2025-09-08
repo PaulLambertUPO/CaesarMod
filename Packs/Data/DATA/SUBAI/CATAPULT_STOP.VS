@@ -1,7 +1,9 @@
 //void, Obj me
 
-//make the fake towers shut up without forgeting the target
-//(it will remain in m_hTarget ot the catapult itself)
-me.AsCatapult.ClearTowerTarget();
+Catapult this;
 
-return;
+this = me.AsCatapult();
+
+if (.IsValid)
+	if (.IsAlive)
+		.ClearTowerTarget();//stop the fake tower (for the Roman tower) without forgetting the target (it will remain in m_hTarget)

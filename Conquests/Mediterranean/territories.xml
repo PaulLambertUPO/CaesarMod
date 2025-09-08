@@ -96,7 +96,7 @@
 			state="1"
 			visualname="Greece"
 			mapname="Greece"
-			description="Symbol of culture and mythology, Greece boasts city-states ready to put aside their differences to repel any invader. You will be able to conquer it only if you take possession of all the mighty enemy strongholds.\n\nThe Athens shipyard is a key strategic economic and military point, as it allows the Greeks to obtain valuable resources and receive reinforcements from Crete.\n\nIf conquer Greece, you will get the support of its lethal Chariots and your warriors will be rewarded by the gods with powerful charms if they prove their worth in battle."
+			description="Symbol of culture and mythology, Greece boasts city-states ready to put aside their differences to repel any invader. You will be able to conquer it only if you take possession of all the mighty enemy strongholds.\n\nThe Athens shipyard is a key strategic economic and military point, as it allows the Greeks to obtain valuable resources and receive reinforcements from Crete.\n\nIf you conquer Greece, you will get the support of its lethal Chariots and your warriors will be rewarded by the gods with powerful charms if they prove their worth in battle."
 			bonus="rGreece"
 			bonus_descr="You start with 10 level 10 Chariots in the townhall.\nYour warriors receive divine charms at the first kill."
 			neighbours="Egypt, Carthage, Rome, Germany"

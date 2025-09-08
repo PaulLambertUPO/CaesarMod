@@ -1,25 +1,22 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
 
-Building this;
-ObjList blds;
-Settlement sett;
-int i;
+Settlement this;
 
-this = This.AsBuilding();
+this = This.AsBuilding().settlement;
 
-if (!.IsValid)
-	return;
-if (.settlement.IsIndependent())
-	return;
-if (.IsValid() && target.IsValid()) {
-	sett = .settlement();
-	blds = sett.Buildings;
-	for (i = 0; i < blds.count(); i += 1) {
+if (!.IsIndependent)
+	if (target.AsUnit().IsValid) {
+		ObjList blds;
 		Tower t;
-		t = blds[i].AsTower();
-		if (t.IsValid()) {
-			if (t.IsHeirOf("FakeTower")) 
-				t.SetCommand("attack",target);
+		int i;
+
+		blds = .Buildings;
+
+		for (i = 0; i < blds.count; i += 1) {
+			t = blds[i].AsTower();
+			if (t.IsValid)
+				if (t.IsHeirOf("FakeTower"))
+					if (t.CanAttack(target))
+						t.SetCommand("attack", target);
 		}
 	}
-}

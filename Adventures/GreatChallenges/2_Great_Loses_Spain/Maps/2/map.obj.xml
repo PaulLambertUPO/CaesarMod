@@ -362,6 +362,7 @@
 	<scriptobj
 		class="GDruid"
 		num="26"
+	display_name="Margulx"
 	Level="0"
 	UnitFlags="262144"
 	player="2"

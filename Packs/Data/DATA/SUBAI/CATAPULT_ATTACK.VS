@@ -1,35 +1,72 @@
-// void, Obj me, Obj target
+//void, Obj me, Obj target
 
 Catapult  this;
-point     ptNew;
-int       ttw;
-bool      bRotated;
 
 this = me.AsCatapult();
-if (!.IsValid) return;
-bRotated = false;
 
-.SetTarget( target );
-while (.IsAlive)
-{
-	if (.CmdCount() > 1)
-		break;
+if (.IsValid)
+	if (.IsAlive)
+		if (.IsBuilt)
+			if (target.IsValid) {
+				Settlement set;
+				Building target_bld;
+				point pt_attack;
+				bool target_is_building, rotated = false;
 
-	if (.settlement.UnitsCount <= 0) break;
-	ttw = .AttackWait;
-	if (ttw > 0) Sleep(ttw);
+				set = .settlement;
 
-	if (!target.IsValid) return;
-	if (!target.IsAlive || !.IsEnemy(target) || !.IsValidTarget(target)) return;
-	ptNew = .GetPointOnTarget(target);
-	if (!.InRange(ptNew)) return;
-	if (bRotated == false){ //rotate to the object the user clicked
-		.RotateTo(ptNew);
-		bRotated = true;
-	}
-	ptNew = GetCatapultAttackPoint(ptNew);
-	
-	if (!.IsAlive || .settlement.UnitsCount == 0) break;
-	.Attack(ptNew);
-}
-.ClearTarget();
+				target_bld = target.AsBuilding();
+				target_is_building = target_bld.IsValid;
+
+				.SetTarget(target);
+
+				while (.IsAlive) {
+					if (.CmdCount > 1)
+						break;
+					if (set.UnitsCount <= 0)
+						break;
+
+					Sleep(.AttackWait);
+
+					if (.IsDead)
+						break;
+					if (.CmdCount > 1)
+						break;
+					if (set.UnitsCount <= 0)
+						break;
+
+					if (target.IsDead)
+						break;
+					if (!.IsEnemy(target))
+						break;
+					if (!.IsValidTarget(target))
+						break;
+					if (target_is_building)
+						if (target_bld.IsVeryBroken) {
+							if (!target_bld.IsCentralBuliding)
+								break;
+							if (target_bld.settlement.UnitsCount <= 0)
+								break;
+						}
+
+					pt_attack = .GetPointOnTarget(target);
+					if (!.InRange(pt_attack))
+						break;
+					pt_attack = GetCatapultAttackPoint(pt_attack);
+
+					if (!rotated) {
+						.RotateTo(pt_attack);
+						rotated = target_is_building;//units will probably move around the catapult
+						if (.IsDead)
+							break;
+						if (.CmdCount > 1)
+							break;
+						if (set.UnitsCount <= 0)
+							break;
+					}
+
+					.Attack(pt_attack);
+				}
+
+				.ClearTarget();
+			}

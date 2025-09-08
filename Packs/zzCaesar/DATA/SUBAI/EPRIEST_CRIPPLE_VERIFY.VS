@@ -2,7 +2,7 @@
 
 Unit this;
 
-this = This.AsUnit();
+this = This.AsDruid();
 
 if (.IsValid)
 	if (.IsAlive)

@@ -1,8 +1,3 @@
-<class
-	cpp_class = "CVXBarrack"
-	entity = "Buildings/RBarracks/RBarracks_w.ent.xml"
-	id = "RBarracksWinter"
-	parent = "RBarracks"
->
-	<properties edittree_pos = "Structures/Stronghold (Republican Rome)/Winter/Barracks"/>
+<class id="RBarracksWinter" parent="RBarracks" cpp_class="CVXBarrack" entity="Buildings/RBarracks/RBarracks_w.ent.xml">
+	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Winter/Barracks" />
 </class>

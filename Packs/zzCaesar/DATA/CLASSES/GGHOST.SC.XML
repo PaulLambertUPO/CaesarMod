@@ -1,20 +1,28 @@
-<class id="GGhost" cpp_class="CVXGhost" parent="SummoningUnit" entity="Units/GGhost/GGhost.ent.xml">
+<class id="GGhost" parent="Unit" cpp_class="CVXGhost" entity="Units/GGhost/GGhost.ent.xml">
 
 	<properties race="Gaul" />
 	<properties maxhealth="600" />
+	<properties damage="0" damage_type="none" />
 	<properties armor_slash="4" armor_pierce="4" />
 	<properties range="250" />
 	<properties speed="60" />
-
+	<properties unit_specials="Freedom" />
+	<properties feeds="0" max_food="0" />
+	
+	<properties damaged_by_ghost="0" />
+	<properties repair_rate="0" />
 	<properties target_factor="200" />
 	<properties healthbar_type="2" />
 	<properties healthbaroffset="-65" />
 
 	<properties does_not_regenerate="1" />
+	<properties stamina_dec_time="1000" />
 
 	<properties display_name="Ghoul" display_name_plural="Ghouls" />
 	<properties icon="gameres/icons/Ghost.bmp" />
 	<properties help="contents/units/Ghost" />
+
+	<behavior script="data/subai/summoning_behavior.vs" />
 
 	<method sig="advance" vs="data/subai/ghost_move.vs" />
 	<method sig="attack" vs="data/subai/ghost_attack.vs" />
@@ -24,7 +32,7 @@
 	<method sig="spawn" vs="data/subai/ghost_spawn.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
-		script="return Translate('None') + '|' + .AsUnit().range;"
+		script="return Translate('No') + '|' + .AsUnit().range;"
 		help="/contents/stats/attack"
 		rollover="Damage|Range"
 	/>

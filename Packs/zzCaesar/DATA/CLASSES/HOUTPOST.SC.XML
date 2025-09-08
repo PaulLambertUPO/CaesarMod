@@ -1,5 +1,5 @@
-<class id="HOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/HOutpost/HOutpost.ent.XML">
-	<properties race="Carthage" />
+<class id="HOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/HOutpost/HOutpost.ent.XML">
+	<properties race="ImperialRome" />
 	<properties maxhealth="10000" />
 	<properties radius="345" selection_radius="350" />
 	<properties display_name="Recruitment outpost" />

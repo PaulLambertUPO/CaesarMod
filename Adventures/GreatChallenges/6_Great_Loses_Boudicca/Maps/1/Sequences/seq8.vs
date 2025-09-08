@@ -1,7 +1,6 @@
 Building this;
 Settlement set;
-Query q_enemies;
-ObjList ol_enemies, all_defenders_1, all_defenders_2, defenders_outside_1, defenders_outside_2;
+ObjList all_defenders_1, all_defenders_2, defenders_outside_1, defenders_outside_2, enemies;
 Unit u;
 point pos, pt1, pt2;
 rect rc;
@@ -43,22 +42,12 @@ if (end_level_2 != old_level_2)
 start_time_1 = GetTime();
 start_time_2 = start_time_1;
 
-q_enemies = Union(
-	Subtract(
-		Intersect(
-			ObjsInRange(this, "Unit", range),
-			Union(EnemyObjs(player, "Military"), EnemyObjs(player, "BaseMage"))
-		),
-		EnemyObjs(player, "Sentry")
-	),
-	Intersect(ObjsInRange(this, "Building", range), EnemyObjs(player, "Catapult"))
-);
-
 for (i = 0; i < defenders_max_1; i += 1) {
 	u = Place(defenders_class_1, pos, player);
 	set.ForceAddUnit(u);
 	u.SetFeeding(false);
 	u.SetLevel(old_level_1);
+	u.SetNoAIFlag(true);
 	all_defenders_1.Add(u);
 }
 for (i = 0; i < defenders_max_2; i += 1) {
@@ -66,10 +55,11 @@ for (i = 0; i < defenders_max_2; i += 1) {
 	set.ForceAddUnit(u);
 	u.SetFeeding(false);
 	u.SetLevel(old_level_2);
+	u.SetNoAIFlag(true);
 	all_defenders_2.Add(u);
 }
 
-while (1) {
+while (player == .player) {
 	set.SetLoyalty(100);//impossible to capture until the garrison is defeated
 
 	all_defenders_1.ClearDead();
@@ -104,9 +94,20 @@ while (1) {
 				}
 			}
 
-	ol_enemies = q_enemies.GetObjList();
-	ol_enemies.ClearDead();
-	if (ol_enemies.count <= 0) {
+	enemies = Union(
+		Intersect(
+			VisibleObjsInSight(this, "Unit"),
+			Subtract(
+				Intersect(
+					ObjsInRange(this, "Unit", range),
+					Union(EnemyObjs(player, "Military"), EnemyObjs(player, "BaseMage"))
+				),
+				EnemyObjs(player, "Sentry")
+			)
+		),
+		Intersect(ObjsInRange(this, "Catapult", range), EnemyObjs(player, "Catapult"))
+	).GetObjList();
+	if (enemies.count <= 0) {
 		//no threat around, command all units that are out to come back in
 		defenders_outside_1.SetCommand("enter_tent", this);
 		defenders_outside_1.Clear();
@@ -199,20 +200,12 @@ while (1) {
 		if (all_defenders_1.count <= 0) {
 			all_defenders_2.ClearDead();
 			if (all_defenders_2.count <= 0) {
-				ol_enemies.ClearDead();
-				i = ol_enemies.count;
-				if (i > 0) {
-					j = ol_enemies[rand(i)].player;
-					if (j <= 8) {
-						.SetPlayer(j);
-						set.SetFood(.GetOutpostFood());
-					}
-				}
+				enemies.ClearDead();
+				i = enemies.count;
+				if (i > 0)
+					.SetPlayer(enemies[rand(i)].player);
 			}
 		}
-
-		if (player != .player)
-			break;
 	}
 	Sleep(1000);
 }

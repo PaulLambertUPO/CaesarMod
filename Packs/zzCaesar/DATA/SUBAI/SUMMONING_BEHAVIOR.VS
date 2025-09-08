@@ -1,7 +1,7 @@
 //void, Obj This
 
 if (This.IsValid)
-	if (!This.IsDead)
+	if (This.IsAlive)
 		if (!This.IsHeirOf("GGhostUnlimited")) {
 			int time;
 
@@ -13,7 +13,7 @@ if (This.IsValid)
 			while (This.IsValid) {
 				Sleep(time);
 				if (This.IsValid)
-					if (!This.IsDead) {
+					if (This.IsAlive) {
 						This.SetStamina(This.stamina - 1);
 						if (This.stamina <= 0)
 							break;
@@ -23,7 +23,7 @@ if (This.IsValid)
 			}
 
 			if (This.IsValid)
-				if (!This.IsDead) {
+				if (This.IsAlive) {
 					if (This.IsHeirOf("GGhost"))
 						This.MagicActionEnd();
 					else if (This.IsHeirOf("Mist"))
@@ -33,5 +33,6 @@ if (This.IsValid)
 				}
 		}
 
+//without this instruction, the game crashes
 while (1)
 	Sleep(3600000);

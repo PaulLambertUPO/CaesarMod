@@ -48,16 +48,16 @@ if (.IsValid) {
 		Unit u;
 		int i, heal;
 		heal = .maxhealth / 50;
-		ol = ObjsInCircle(.pos, 350, "Unit").GetObjList();
-		ol.ClearDead();
+		ol = ObjsInRange(this, "Unit", 350).GetObjList();
 		for (i = 0; i < ol.count; i += 1) {
 			u = ol[i].AsUnit();
 			if (u.IsValid)
 				if (player == u.player)
-					if (u.health < u.maxhealth) {
-						u.Heal(heal);
-						CreateFeedback("Heal", u);
-					}
+					if (u.IsAlive)
+						if (u.health < u.maxhealth) {
+							u.Heal(heal);
+							CreateFeedback("Heal", u);
+						}
 		}
 	}
 }

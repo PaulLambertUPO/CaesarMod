@@ -54,9 +54,10 @@ Sono essenziali per mantenere la salute di tutte le unità e possono essere util
 L'oro viene riscosso automaticamente in ogni fortezza e immagazzinato nel rispettivo foro, la struttura centrale.
 È necessario per impartire ordini nelle strutture e per reclutare unità.
 			</entry>
-			<entry>
+			<entry image="UI/InfoBar/Common/Pop_Cost.bmp">
 Maggiore è la popolazione di un villaggio o di una fortezza, maggiore sarà la sua produzione di viveri e/o oro.
-
+			</entry>
+			<entry>
 Le risorse si immagazzinano negli insediamenti (fortezze, villaggi, forti e porti).
 
 Sono utilizzate nel luogo in cui si trovano, ma se vuoi utilizzarle in un altro posto devi trasportarle tramite le unità di rifornimento, che vanno protette dagli attacchi del nemico e di animali feroci in modo da non perdere tutto ciò che viene trasportato.
@@ -202,83 +203,87 @@ La maggior parte delle caratteristiche speciali consuma energia: quando questa d
 			</entry>
 			<entry />
 			<entry image="UI/InfoBar/Unit Specials/Active.bmp">Vitalità - l'unità ripristina 2 punti di energia anziché 1.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attacco speciale - l'unità aggiunge al valore di attacco il doppio dei punti di energia che possiede.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Ostinazione - l'unità infligge un danno supplementare equivalente al 10% della salute massima del nemico (non ha effetto sugli eroi).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Carica - l'unità infligge 8 volte il suo danno se non ha effettuato un attacco per almeno 10 secondi.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attacco speciale (costo 1) - l'unità aggiunge al valore di attacco il doppio dei punti di energia che possiede.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Ostinazione (costo 3) - l'unità infligge un danno supplementare equivalente al 10% della salute massima del nemico (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Carica (costo 5) - l'unità infligge 8 volte il suo danno se non ha effettuato un attacco per almeno 10 secondi.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp">Rianimazione - l'unità ripristina 1 punto di energia ogni volta che danneggia il nemico.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Esaurimento vitale - l'unità rimuove tutti i punti di energia del nemico (non ha effetto sugli eroi).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Maledizione - l'unità fa andare a vuoto il prossimo attacco effettuato dal nemico.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Colpo mortale - l'unità elimina il nemico se la salute di quest'ultimo dopo aver ricevuto il colpo è al di sotto del 50% (non ha effetto sugli eroi).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Difesa speciale - l'unità aggiunge al valore di difesa il doppio dei punti di energia che possiede.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Tattiche difensive - l'unità aggiunge il livello al valore di difesa.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Immunità - l'unità blocca il colpo ricevuto dal nemico.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Esaurimento vitale (costo 3) - l'unità rimuove tutti i punti di energia del nemico (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Maledizione (costo 3) - l'unità fa andare a vuoto il prossimo attacco effettuato dal nemico.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Colpo mortale (costo 5) - l'unità elimina il nemico se la salute di quest'ultimo dopo aver ricevuto il colpo è al di sotto del 50% (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Difesa speciale (costo 1) - l'unità aggiunge al valore di difesa il doppio dei punti di energia che possiede.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Tattiche difensive (costo 1) - l'unità aggiunge il livello al valore di difesa.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Immunità (costo 1) - l'unità blocca il colpo ricevuto dal nemico.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Determination.bmp">Determinazione - l'unità ripristina 1 punto di energia ogni volta che viene danneggiata dal nemico.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Attacco velenoso - l'unità infetta il nemico, facendogli perdere punti di salute costantemente (che non possono scendere al di sotto della 40% della salute massima).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Sfinimento - l'unità rimuove 2 punti di energia del nemico (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Attacco velenoso (costo 4) - l'unità infetta il nemico, facendogli perdere punti di salute costantemente (che non possono scendere al di sotto della 40% della salute massima).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Sfinimento (costo 1) - l'unità rimuove 2 punti di energia del nemico (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Expertise.bmp">Colpo esperto (costo 10) - l'unità elimina il nemico se il danno inflitto a quest'ultimo è maggiore dell'attacco base (non ha effetto sugli eroi).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp">Ferocia - l'unità ripristina completamente l'energia a ogni uccisione.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Freedom.bmp">Libertà - l'unità non può essere vincolata a un eroe.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Guarigione - l'unità guarisce un alleato per una quantità di punti di salute pari a 20 più il livello.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Occultamento - l'unità può rendere invisibile un alleato (o se stessa).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Guarigione (costo 1) - l'unità guarisce un alleato per una quantità di punti di salute pari a 20 più il livello.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Occultamento (costo 2) - l'unità può rendere invisibile un alleato (o se stessa).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp">Vista di lince - l'unità rivela i nemici invisibili.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Learning.bmp">Istruzione - l'unità guadagna 1 punto esperienza ogni volta che danneggia un nemico con più esperienza.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Colpo assorbente - l'unità ripristina una quantità di punti di salute pari al danno inflitto.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Attacco esperto - l'unità aggiunge il livello al valore di attacco.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Colpo assorbente (costo 1) - l'unità ripristina una quantità di punti di salute pari al danno inflitto.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Attacco esperto (costo 1) - l'unità aggiunge il livello al valore di attacco.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Parry.bmp">Contenimento - se si utilizza, l'unità non può né infliggere né ricevere danni fintanto che ha energia disponibile. Ogni colpo ricevuto consuma 1 punto di energia e ogni colpo inflitto ne fornisce 1.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Perforazione - l'unità ignora la difesa nemica e le caratteristiche speciali "Difesa speciale", "Immunità" e "Tattiche difensive" (non ha effetto sugli eroi).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Attacco letale - l'unità elimina il nemico se questo è danneggiato e con una salute massima minore o uguale alla metà di quella dell'unità (non ha effetto sugli eroi).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Foga - l'unità infligge un danno supplementare sacrificando i suoi punti di salute, che non possono scendere al di sotto del 50% di quella massima (non ha effetto sugli eroi).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Rigenerazione - l'unità ripristina 50 punti di salute ogni 5 secondi fintanto che ha viveri a disposizione.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Perforazione (costo 1) - l'unità ignora la difesa nemica e le caratteristiche speciali "Difesa speciale", "Immunità" e "Tattiche difensive" (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Attacco letale (costo 4) - l'unità elimina il nemico se questo è danneggiato e con una salute massima minore o uguale alla metà di quella dell'unità (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Foga (costo 5) - l'unità infligge un danno supplementare sacrificando i suoi punti di salute, che non possono scendere al di sotto del 50% di quella massima (non ha effetto sugli eroi).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Rigenerazione (costo 4) - l'unità ripristina 50 punti di salute ogni 5 secondi fintanto che ha viveri a disposizione.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Revenge.bmp">Vendetta - l'unità infligge 100 punti di danno al suo uccisore (funziona solo in mischia).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Sneak.bmp">Mimetismo - l'unità diventa invisibile se non attacca per 20 secondi.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Danno riflesso - l'unità infligge all'attaccante tutto il danno ricevuto (funziona solo in mischia).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Iniziazione - l'unità fornisce esperienza agli alleati (fino al livello 4, aumentabile a 8 tramite il potenziamento "Conoscenze ancestrali" nel Santuario).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Danno riflesso (costo 1) - l'unità infligge all'attaccante tutto il danno ricevuto (funziona solo in mischia).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Iniziazione (costo 1) - l'unità fornisce esperienza agli alleati (fino al livello 4, aumentabile a 8 tramite il potenziamento "Conoscenze ancestrali" nel Santuario).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Toughness.bmp">Resistenza - l'unità aumenta la salute massima di 5 punti ogni volta che aumenta di livello.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Trample.bmp">Danno espansivo - l'unità infligge danno a tutti i nemici intorno a sé.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triplo colpo - l'unità infligge 3 volte il suo danno.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Trionfo - l'unità ripristina completamente la salute a ogni uccisione.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triplo colpo (costo 1) - l'unità infligge 3 volte il suo danno.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Trionfo (costo 3) - l'unità ripristina completamente la salute a ogni uccisione.</entry>
 			<entry hcenter="1" font="large">Vedi anche</entry>
 			<entry link="/contents/stats/stamina">Energia</entry>
 			<topic id="active">
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp">Vitalità - l'unità ripristina 2 punti di energia anziché 1.</entry>
 			</topic>
 			<topic id="attackskill">
-				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attacco speciale - l'unità aggiunge al valore di attacco il doppio dei punti di energia che possiede.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attacco speciale (costo 1) - l'unità aggiunge al valore di attacco il doppio dei punti di energia che possiede.</entry>
 			</topic>
 			<topic id="bleedingattack">
-				<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Ostinazione - l'unità infligge un danno supplementare equivalente al 10% della salute massima del nemico (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Ostinazione (costo 3) - l'unità infligge un danno supplementare equivalente al 10% della salute massima del nemico (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="ucharge">
-				<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Carica - l'unità infligge 8 volte il suo danno se non ha effettuato un attacco per almeno 10 secondi.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Carica (costo 5) - l'unità infligge 8 volte il suo danno se non ha effettuato un attacco per almeno 10 secondi.</entry>
 			</topic>
 			<topic id="combatskill">
 				<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp">Rianimazione - l'unità ripristina 1 punto di energia ogni volta che danneggia il nemico.</entry>
 			</topic>
 			<topic id="cripple">
-				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Esaurimento vitale - l'unità rimuove tutti i punti di energia del nemico (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Esaurimento vitale (costo 3) - l'unità rimuove tutti i punti di energia del nemico (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="curse">
-				<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Maledizione - l'unità fa andare a vuoto il prossimo attacco effettuato dal nemico.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Maledizione (costo 3) - l'unità fa andare a vuoto il prossimo attacco effettuato dal nemico.</entry>
 			</topic>
 			<topic id="deathblow">
-				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Colpo mortale - l'unità elimina il nemico se la salute di quest'ultimo dopo aver ricevuto il colpo è al di sotto del 50% (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Colpo mortale (costo 5) - l'unità elimina il nemico se la salute di quest'ultimo dopo aver ricevuto il colpo è al di sotto del 50% (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="defenseskill">
-				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Difesa speciale - l'unità aggiunge al valore di difesa il doppio dei punti di energia che possiede.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Difesa speciale (costo 1) - l'unità aggiunge al valore di difesa il doppio dei punti di energia che possiede.</entry>
 			</topic>
 			<topic id="deflection">
-				<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Immunità - l'unità blocca il colpo ricevuto dal nemico.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Immunità (costo 1) - l'unità blocca il colpo ricevuto dal nemico.</entry>
 			</topic>
 			<topic id="defensivetactics">
-				<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Tattiche difensive - l'unità aggiunge il livello al valore di difesa.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Tattiche difensive (costo 1) - l'unità aggiunge il livello al valore di difesa.</entry>
 			</topic>
 			<topic id="diseaseattack">
-				<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Attacco velenoso - l'unità infetta il nemico, facendogli perdere punti di salute costantemente (che non possono scendere al di sotto della 40% della salute massima).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Attacco velenoso (costo 4) - l'unità infetta il nemico, facendogli perdere punti di salute costantemente (che non possono scendere al di sotto della 40% della salute massima).</entry>
 			</topic>
 			<topic id="determination">
 				<entry image="UI/InfoBar/Unit Specials/Determination.bmp">Determinazione - l'unità ripristina 1 punto di energia ogni volta che viene danneggiata dal nemico.</entry>
 			</topic>
 			<topic id="drain">
-				<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Sfinimento - l'unità rimuove 2 punti di energia del nemico (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Sfinimento (costo 1) - l'unità rimuove 2 punti di energia del nemico (non ha effetto sugli eroi).</entry>
+			</topic>
+			<topic id="expertise">
+				<entry image="UI/InfoBar/Unit Specials/Expertise.bmp">Colpo esperto (costo 10) - l'unità elimina il nemico se il danno inflitto a quest'ultimo è maggiore dell'attacco base (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="ferocity">
 				<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp">Ferocia - l'unità ripristina completamente l'energia a ogni uccisione.</entry>
@@ -287,10 +292,10 @@ La maggior parte delle caratteristiche speciali consuma energia: quando questa d
 				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp">Libertà - l'unità non può essere vincolata a un eroe.</entry>
 			</topic>
 			<topic id="uhealing">
-				<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Guarigione - l'unità guarisce un alleato per una quantità di punti di salute pari a 20 più il livello.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Guarigione (costo 1) - l'unità guarisce un alleato per una quantità di punti di salute pari a 20 più il livello.</entry>
 			</topic>
 			<topic id="invisibility">
-				<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Occultamento - l'unità può rendere invisibile un alleato (o se stessa).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Occultamento (costo 2) - l'unità può rendere invisibile un alleato (o se stessa).</entry>
 			</topic>
 			<topic id="keensight">
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp">Vista di lince - l'unità rivela i nemici invisibili.</entry>
@@ -299,25 +304,25 @@ La maggior parte delle caratteristiche speciali consuma energia: quando questa d
 				<entry image="UI/InfoBar/Unit Specials/Learning.bmp">Istruzione - l'unità guadagna 1 punto esperienza ogni volta che danneggia un nemico con più esperienza.</entry>
 			</topic>
 			<topic id="lifesteal">
-				<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Colpo assorbente - l'unità ripristina una quantità di punti di salute pari al danno inflitto.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Colpo assorbente (costo 1) - l'unità ripristina una quantità di punti di salute pari al danno inflitto.</entry>
 			</topic>
 			<topic id="offensivetactics">
-				<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Attacco esperto - l'unità aggiunge il livello al valore di attacco.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Attacco esperto (costo 1) - l'unità aggiunge il livello al valore di attacco.</entry>
 			</topic>
 			<topic id="parry">
 				<entry image="UI/InfoBar/Unit Specials/Parry.bmp">Contenimento - se si utilizza, l'unità non può né infliggere né ricevere danni fintanto che ha energia disponibile. Ogni colpo ricevuto consuma 1 punto di energia e ogni colpo inflitto ne fornisce 1.</entry>
 			</topic>
 			<topic id="penetration">
-				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Perforazione - l'unità ignora la difesa nemica e le caratteristiche speciali "Difesa speciale", "Immunità" e "Tattiche difensive" (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Perforazione (costo 1) - l'unità ignora la difesa nemica e le caratteristiche speciali "Difesa speciale", "Immunità" e "Tattiche difensive" (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="powerstrike">
-				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Attacco letale - l'unità elimina il nemico se questo è danneggiato e con una salute massima minore o uguale alla metà di quella dell'unità (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Attacco letale (costo 4) - l'unità elimina il nemico se questo è danneggiato e con una salute massima minore o uguale alla metà di quella dell'unità (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="rage">
-				<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Foga - l'unità infligge un danno supplementare sacrificando i suoi punti di salute, che non possono scendere al di sotto del 50% di quella massima (non ha effetto sugli eroi).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Foga (costo 5) - l'unità infligge un danno supplementare sacrificando i suoi punti di salute, che non possono scendere al di sotto del 50% di quella massima (non ha effetto sugli eroi).</entry>
 			</topic>
 			<topic id="regeneration">
-				<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Rigenerazione - l'unità ripristina 50 punti di salute ogni 5 secondi fintanto che ha viveri a disposizione.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Rigenerazione (costo 4) - l'unità ripristina 50 punti di salute ogni 5 secondi fintanto che ha viveri a disposizione.</entry>
 			</topic>
 			<topic id="revenge">
 				<entry image="UI/InfoBar/Unit Specials/Revenge.bmp">Vendetta - l'unità infligge 100 punti di danno al suo uccisore (funziona solo in mischia).</entry>
@@ -326,10 +331,10 @@ La maggior parte delle caratteristiche speciali consuma energia: quando questa d
 				<entry image="UI/InfoBar/Unit Specials/Sneak.bmp">Mimetismo - l'unità diventa invisibile se non attacca per 20 secondi.</entry>
 			</topic>
 			<topic id="spikearmor">
-				<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Danno riflesso - l'unità infligge all'attaccante tutto il danno ricevuto (funziona solo in mischia).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Danno riflesso (costo 1) - l'unità infligge all'attaccante tutto il danno ricevuto (funziona solo in mischia).</entry>
 			</topic>
 			<topic id="teaching">
-				<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Iniziazione - l'unità fornisce esperienza agli alleati (fino al livello 4, aumentabile a 8 tramite il potenziamento "Conoscenze ancestrali" nel Santuario).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Iniziazione (costo 1) - l'unità fornisce esperienza agli alleati (fino al livello 4, aumentabile a 8 tramite il potenziamento "Conoscenze ancestrali" nel Santuario).</entry>
 			</topic>
 			<topic id="toughness">
 				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp">Resistenza - l'unità aumenta la salute massima di 5 punti ogni volta che aumenta di livello.</entry>
@@ -338,10 +343,10 @@ La maggior parte delle caratteristiche speciali consuma energia: quando questa d
 				<entry image="UI/InfoBar/Unit Specials/Trample.bmp">Danno espansivo - l'unità infligge danno a tutti i nemici intorno a sé.</entry>
 			</topic>
 			<topic id="triplestrike">
-				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triplo colpo - l'unità infligge 3 volte il suo danno.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triplo colpo (costo 1) - l'unità infligge 3 volte il suo danno.</entry>
 			</topic>
 			<topic id="triumph">
-				<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Trionfo - l'unità ripristina completamente la salute a ogni uccisione.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Trionfo (costo 3) - l'unità ripristina completamente la salute a ogni uccisione.</entry>
 			</topic>
 		</topic>
 		<topic id="heroskills">
@@ -594,7 +599,7 @@ Oltre al nucleo principale di mercenari, Cartagine può schierare potenti unità
 				</entry>
 				<entry hcenter="1">Punti deboli</entry>
 				<entry>
-- Debole contro popoli veloci e/o con truppe in grado di curarsi
+- Debole contro popoli veloci e/o con truppe in grado di curarsi, facile bersaglio per numerose unità a distanza
 
 - Dipendenza dai villaggi per poter continuare a vendere la popolazione mentre si reclutano le unità migliori
 
@@ -1739,7 +1744,7 @@ La sacerdotessa istruisce l'alleato selezionato fornendogli esperienza (fino al 
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Cover of Mercy.bmp">
 Manto della misericordia
-La sacerdotessa si sacrifica per creare una nube protettrice nel punto selezionato per circa 25 secondi. Questa nube riduce del 50% qualunque danno inflitto agli alleati.
+La sacerdotessa si sacrifica per creare una nube protettrice nel punto selezionato per circa 25 secondi. Questa nube riduce del 50% qualunque danno inflitto agli alleati (eccetto veleno e "Flagello").
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Sacrificio rigenerante
@@ -2825,7 +2830,7 @@ Può risultare molto efficace contro unità prioritarie e veloci, oppure come ul
 				<entry />
 				<entry image="UI/Icons/BRam.bmp">
 L'ariete è una lenta macchina d'assedio tanto resistente agli attacchi a distanza quanto vulnerabile a quelli in mischia.
-Una volta costruito, si dirige automaticamente verso la porta o struttura nemica più vicina.
+Una volta costruito, si dirige automaticamente verso la porta, il forte o il porto nemico più vicino.
 				</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salute 1000</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 300</entry>
@@ -5615,7 +5620,7 @@ Tempo: 30 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Cover of Mercy.bmp">
 Manto della misericordia
-Consente alle sacerdotesse di sacrificarsi per creare una nube protettrice che riduce del 50% qualunque danno inflitto agli alleati per circa 25 secondi.
+Consente alle sacerdotesse di sacrificarsi per creare una nube protettrice che riduce del 50% qualunque danno inflitto agli alleati (eccetto veleno e "Flagello") per circa 25 secondi.
 Costo: 2000 oro
 Tempo: 20 secondi
 				</entry>
@@ -5936,7 +5941,7 @@ Tempo: 60 secondi
 				<entry hcenter="1" font="large">Forte dell'oro</entry>
 				<entry image="UI/Help/Icons/GoldOutpostsV.bmp">
 Il forte dell'oro è un insediamento che consente alle unità di entrare per rifugiarsi e scoccare frecce contro i nemici vicini.
-Produce oro aggiuntivo se c'è almeno 2000 oro immagazzinato all'interno (10 oro ogni 2 secondi).
+Produce oro aggiuntivo se c'è almeno 2000 oro immagazzinato all'interno (10 oro ogni 2 secondi, se non è troppo danneggiato).
 				</entry>
 				<entry font="large">Guarnigione neutrale</entry>
 				<entry>Forte romano</entry>
@@ -5945,7 +5950,7 @@ Produce oro aggiuntivo se c'è almeno 2000 oro immagazzinato all'interno (10 oro
 				<entry vcenter="1" image="UI/Icons/EAxeTrower.bmp" link="/contents/units/EAxeThrower">10 lanciatori d'asce (livello 8 - 18)</entry>
 				<entry vcenter="1" image="UI/Icons/EGuardian.bmp" link="/contents/units/EGuardian">10 guardiani del Nilo (livello 8 - 18)</entry>
 				<entry font="large">Comandi</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attacca
 Concentra il fuoco su un bersaglio specifico.
 				</entry>
@@ -5962,7 +5967,7 @@ Invia costantemente risorse a un altro insediamento.
 				<entry hcenter="1" font="large">Forte commerciale</entry>
 				<entry image="UI/Help/Icons/TradeOutpostsV.bmp">
 Il forte commerciale è un insediamento che consente alle unità di entrare per rifugiarsi e scoccare frecce contro i nemici vicini.
-Consente di scambiare viveri con oro o viceversa (20 viveri in cambio di 10 oro o viceversa ogni 2 secondi).
+Consente di scambiare viveri con oro o viceversa (20 viveri in cambio di 10 oro o viceversa ogni 2 secondi, se non è troppo danneggiato).
 				</entry>
 				<entry font="large">Guarnigione neutrale</entry>
 				<entry>Forte gallico</entry>
@@ -5970,7 +5975,7 @@ Consente di scambiare viveri con oro o viceversa (20 viveri in cambio di 10 oro 
 				<entry>Forte germanico</entry>
 				<entry vcenter="1" image="UI/Icons/TValkyrie.bmp" link="/contents/units/TValkyrie">10 valchirie (livello 10 - 24)</entry>
 				<entry font="large">Comandi</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attacca
 Concentra il fuoco su un bersaglio specifico.
 				</entry>
@@ -5995,7 +6000,7 @@ Invia costantemente risorse a un altro insediamento.
 				<entry hcenter="1" font="large">Forte di addestramento</entry>
 				<entry image="UI/Help/Icons/TrainingOutpostsV.bmp">
 Il forte di addestramento è un insediamento che consente alle unità di entrare per rifugiarsi e scoccare frecce contro i nemici vicini.
-Aumenta gradualmente l'esperienza delle unità all'interno fino al livello 8 (1 punto esperienza ogni 10 secondi).
+Aumenta gradualmente l'esperienza delle unità all'interno fino al livello 8 (1 punto esperienza ogni 10 secondi, se non è troppo danneggiato).
 				</entry>
 				<entry font="large">Guarnigione neutrale</entry>
 				<entry>Forte iberico</entry>
@@ -6005,7 +6010,7 @@ Aumenta gradualmente l'esperienza delle unità all'interno fino al livello 8 (1 
 				<entry vcenter="1" image="UI/Icons/BJavelineer.bmp" link="/contents/units/BJavelineer">10 guerrieri con giavellotto (livello 4 - 12)</entry>
 				<entry vcenter="1" image="UI/Icons/BHighlander.bmp" link="/contents/units/BHighlander">10 highlander (livello 4 - 12)</entry>
 				<entry font="large">Comandi</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attacca
 Concentra il fuoco su un bersaglio specifico.
 				</entry>
@@ -6022,7 +6027,7 @@ Invia costantemente risorse a un altro insediamento.
 				<entry hcenter="1" font="large">Forte di reclutamento</entry>
 				<entry image="UI/Help/Icons/RecruitmentOutpostsV.bmp">
 Il forte di reclutamento è un insediamento che consente alle unità di entrare per rifugiarsi e scoccare frecce contro i nemici vicini.
-La variante cartaginese trasforma i contadini in guerrieri con mazza (1 ogni 30 secondi), quella greca in opliti (1 ogni 40 secondi).
+La variante cartaginese trasforma i contadini in guerrieri con mazza (1 ogni 30 secondi), quella greca in opliti (1 ogni 40 secondi), se non sono troppo danneggiate.
 				</entry>
 				<entry font="large">Guarnigione neutrale</entry>
 				<entry>Forte cartaginese</entry>
@@ -6030,7 +6035,7 @@ La variante cartaginese trasforma i contadini in guerrieri con mazza (1 ogni 30 
 				<entry>Forte greco</entry>
 				<entry vcenter="1" image="UI/Icons/HHoplite.bmp" link="/contents/units/HHoplite">20 opliti (livello 6 - 10)</entry>
 				<entry font="large">Comandi</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attacca
 Concentra il fuoco su un bersaglio specifico.
 				</entry>
@@ -6048,7 +6053,7 @@ Invia costantemente risorse a un altro insediamento.
 				<entry image="UI/Icons/GGuardPost.bmp">
 Il posto di guardia è un insediamento che consente alle unità di entrare per rifugiarsi.
 Protegge l'area con sentinelle e lancia l'allarme ogni volta che avvista i guerrieri nemici.
-Il livello delle sentinelle aumenta di 1 punto ogni minuto fino ad arrivare a 36, ricominciando da 1 se il posto di guardia viene conquistato.
+Il livello delle sentinelle aumenta di 1 punto ogni minuto fino ad arrivare a 36, ricominciando da 1 se il posto di guardia viene conquistato o danneggiato troppo.
 				</entry>
 				<entry font="large">Guarnigione neutrale</entry>
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">24 arcieri (livello 8 - 18)</entry>

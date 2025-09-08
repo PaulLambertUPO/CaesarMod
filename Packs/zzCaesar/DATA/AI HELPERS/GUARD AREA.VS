@@ -31,21 +31,22 @@ while (1) {
 						if (target.IsDead)//the next enemy sighted will be marked as the main target
 							target.Clear();
 						else if (AreaDistTo(target.posRH, TargetArea) <= 525) {
-							if (u.command != "move")
-								u.SetCommand("advance", target.posRH);
-							else if (u.DistTo(area_centre) <= 350)//units that are coming back after being too far keep should keep moving until they are near the are centre
+							if (u.command == "move") {
+								if (u.DistTo(area_centre) <= 350)//units that are coming back after being too far should keep moving until they are near the area centre
+									u.SetCommand("advance", target.posRH);
+							}
+							else if (u.command != "advance")
 								u.SetCommand("advance", target.posRH);
 						}
 						else
 							target.Clear();
 					}
-					else if (u.command == "idle")
-						u.SetCommand("advance", GetRandomPointInArea(TargetArea));
-					else if (u.command == "stand_position")
-						u.SetCommand("advance", GetRandomPointInArea(TargetArea));
-					else if (u.command == "move")
+					else if (u.command == "move") {
 						if (u.DistTo(area_centre) <= 350)//it's not necessary to move all the way back to the area centre
 							u.SetCommand("advance", GetRandomPointInArea(TargetArea));
+					}
+					else if (u.command != "advance")
+						u.SetCommand("advance", GetRandomPointInArea(TargetArea));
 				}
 	}
 	Sleep(1500);

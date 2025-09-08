@@ -1,5 +1,0 @@
-<class id="Ghost_sacrifice" cpp_class="CVXSacrifice" parent="Sacrifice" entity="">
-
-	<method sig="idle" vs="data/subai/ghost_sac_idle.vs"/>
-
-</class>

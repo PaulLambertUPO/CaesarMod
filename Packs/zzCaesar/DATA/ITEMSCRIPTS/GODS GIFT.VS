@@ -6,8 +6,10 @@ if (victim.AsUnit().IsValid) {
 	this = owner.AsUnit();
 
 	if (.IsValid) {
-		if (.health < .maxhealth)
+		if (.health < .maxhealth) {
 			.Heal(.maxhealth);
+			CreateFeedback("Heal", this);
+		}
 		.RemoveItem("God's Gift");
 	}
 }

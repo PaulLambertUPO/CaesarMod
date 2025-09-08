@@ -1,10 +1,14 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Unit this;
+
 this = This.AsUnit();
 
-//.pr("ghost::move: move to a point");
+if (.GetAnim() == 17)//spawn
+	Sleep(.TimeToAnimFinish);
 
-if (.GetAnim == 17) Sleep(.TimeToAnimFinish);
+while (!.Goto(pt, 0, 2000, false, 0))
+	if (!.HasPath())
+		break;
 
-while (!.Goto(pt, 0, 2000, false, 0));
+Sleep(15);//this reduces the risk of a move-idle loop

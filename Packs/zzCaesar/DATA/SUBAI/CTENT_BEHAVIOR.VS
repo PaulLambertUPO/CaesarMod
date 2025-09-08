@@ -6,7 +6,7 @@ ObjList all_numidians, numidians_1, numidians_2, numidians_out, enemies;
 Unit u;
 point pos, pt1, pt2;
 rect rc;
-int i, j, sight, player, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain;
+int i, j, radius, sight, player, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain;
 bool first_time_independent;
 
 Sleep(rand(1000) + 500);
@@ -19,6 +19,7 @@ set.SetLoyalty(100);//impossible to capture until the garrison is defeated
 
 rc = GetMapRect();
 
+radius = .radius + 150;
 sight = .sight;
 pos = .pos;
 
@@ -32,6 +33,12 @@ first_time_independent = set.IsIndependent;
 
 while (1) {
 	player = .player;
+
+	//send away enemy units inside
+	pt1 = Point(radius, 0);
+	pt1.Rot(rand(360));
+	set.Units.ObjEnemy(player).SetCommand("advance", pt1 + pos);
+
 	exp_gain = MAX(0, GetTime() / 120000 - 5);
 
 	//spawn neutral or produced numidians
@@ -45,17 +52,19 @@ while (1) {
 					break;
 			if (numidians_1.count < initial_army) {
 				u = Place("CLibyanFootman", pos, player);
-				u.SetFeeding(false);
 				set.ForceAddUnit(u);
+				u.SetFeeding(false);
 				u.SetExperience(old_exp_gain);
+				u.SetNoAIFlag(true);
 				numidians_1.Add(u);
 				all_numidians.Add(u);
 			}
 			if (numidians_2.count < initial_army) {
 				u = Place("CHorseman", pos, player);
-				u.SetFeeding(false);
 				set.ForceAddUnit(u);
+				u.SetFeeding(false);
 				u.SetExperience(old_exp_gain);
+				u.SetNoAIFlag(true);
 				numidians_2.Add(u);
 				all_numidians.Add(u);
 			}
@@ -69,8 +78,8 @@ while (1) {
 			if (set.food >= 200) {
 				set.SetFood(set.food - 200);
 				u = Place(class_prod, pos, player);
-				u.SetFeeding(false);
 				set.ForceAddUnit(u);
+				u.SetFeeding(false);
 				u.SetExperience(old_exp_gain);
 				all_numidians.Add(u);
 			}
@@ -79,8 +88,8 @@ while (1) {
 			if (set.food >= 400) {
 				set.SetFood(set.food - 400);
 				u = Place(class_prod, pos, player);
-				u.SetFeeding(false);
 				set.ForceAddUnit(u);
+				u.SetFeeding(false);
 				u.SetExperience(old_exp_gain);
 				all_numidians.Add(u);
 			}
@@ -128,7 +137,6 @@ while (1) {
 			EnemyObjs(player, "Sentry")
 		)
 	).GetObjList();
-	enemies.ClearDead();
 	if (enemies.count <= 0) {
 		//no threat around, command all numidians that are out to come back in
 		numidians_out.SetCommand("enter_tent", this);
@@ -176,29 +184,30 @@ while (1) {
 			enemies.ClearDead();
 			i = enemies.count;
 			if (i > 0)
-				if (Intersect(VisibleObjsInSight(this, "Unit"), FriendlyObjs(player, "Military")).IsEmpty()) {//exclude hidden allies (just like with capturable buildings)
-					j = enemies[rand(i)].player;
-					.SetPlayer(j);
-					if (first_time_independent)//spawn some numidians for the new player (only once)
-						if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
-							int t;
-							t = GetConst("TTentCapturedArmy");
-							for (i = 0; i < t; i += 1) {
-								u = Place("CLibyanFootman", pos, j);
-								set.ForceAddUnit(u);
-								u.SetExperience(old_exp_gain);
-								u.SetFeeding(false);
-								all_numidians.Add(u);
-								u = Place("CHorseman", pos, j);
-								set.ForceAddUnit(u);
-								u.SetExperience(old_exp_gain);
-								u.SetFeeding(false);
-								all_numidians.Add(u);
-							}
-							first_time_independent = false;
-						}
-				}
+				if (Intersect(VisibleObjsInSight(this, "Unit"), FriendlyObjs(player, "Military")).IsEmpty())//exclude hidden allies (just like with capturable buildings)
+					.SetPlayer(enemies[rand(i)].player);
 		}
 	}
+
+	if (first_time_independent)//spawn some numidians for the new player (only once)
+		if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
+			int t;
+			t = GetConst("TTentCapturedArmy");
+			j = .player;
+			for (i = 0; i < t; i += 1) {
+				u = Place("CLibyanFootman", pos, j);
+				set.ForceAddUnit(u);
+				u.SetExperience(old_exp_gain);
+				u.SetFeeding(false);
+				all_numidians.Add(u);
+				u = Place("CHorseman", pos, j);
+				set.ForceAddUnit(u);
+				u.SetExperience(old_exp_gain);
+				u.SetFeeding(false);
+				all_numidians.Add(u);
+			}
+			first_time_independent = false;
+		}
+
 	Sleep(1000);
 }

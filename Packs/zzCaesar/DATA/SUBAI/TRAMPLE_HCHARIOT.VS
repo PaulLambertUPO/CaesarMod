@@ -19,7 +19,7 @@ if (.IsValid) {
 	while (.IsAlive) {
 		if (.HasSpecial(trample)) {//just a security check in case the special is removed by an adventure sequence
 			while (.GetAnim() == 5) {
-				ol = Intersect(EnemyObjs(.player, "Catapult"), ObjsInCircle(.pos, 160, "Catapult")).GetObjList();
+				ol = Intersect(ObjsInRange(this, "Catapult", 160), EnemyObjs(.player, "Catapult")).GetObjList();
 				if (ol.count > 0) {
 					//example values: 532 (100 s_f, standard), 483 (110 s_f, God's Gift), 380 (140 s_f, Charm of Athena), 354 (150 s_f, both items)
 					attack_time = Int(1 / (.speed_factor / 100.0 / 1.064) * 500);

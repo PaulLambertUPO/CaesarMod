@@ -1,15 +1,21 @@
 <commands>
-	<cmd name="boardshiphero" priority="0"
-		cursor="do_something">
+	<!-- DEFAULT COMMANDS (NO INTERFACE BUTTON AND ONLY USED BY CLASSES WITH THE CORRESPONDING METHOD) -->
+	<cmd name="moveinfight" offset="1" cursor="move_in_fight">
+		<cmdtext target="" default-text="Right-click to move the hero to this point" />
+	</cmd>
+	<cmd name="boardshiphero" cursor="do_something">
 		<cmdtext target="ShipBattle" default-text="Right-click to board this ship" />
 	</cmd>
-	<cmd name="moveinfight" priority="0"
-		offset="1"
-		cursor="move_in_fight">
-		<cmdtext target="" default-text="Right-click to move the hero to this point" />
-		<src obj="Hero" sticky="yes" />
+	<cmd name="hero_set_final_party_orientation" method="hero_set_final_party_orientation" /><!-- this command is a hack -->
+	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
+	<cmd name="leavearmy" priority="9"
+		button="actions/leave army.bmp"
+		key="v"
+		rollover="Leave army"
+		description="Leaves the attached allies on their own">
+		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-line-menu" priority="1"
+	<cmd name="form-line-menu" priority="10"
 		method="move"
 		button="states/line form.bmp"
 		key="f"
@@ -19,7 +25,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-front-menu" priority="1"
+	<cmd name="form-front-menu" priority="10"
 		method="move"
 		button="states/front form.bmp"
 		key="f"
@@ -29,7 +35,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-block-menu" priority="1"
+	<cmd name="form-block-menu" priority="10"
 		method="move"
 		button="states/block form.bmp"
 		key="f"
@@ -39,7 +45,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-cavalry-menu" priority="1"
+	<cmd name="form-cavalry-menu" priority="10"
 		method="move"
 		button="states/horse wing form.bmp"
 		key="f"
@@ -49,7 +55,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-skirmish-menu" priority="1"
+	<cmd name="form-skirmish-menu" priority="10"
 		method="move"
 		button="states/skirmish.bmp"
 		key="f"
@@ -59,7 +65,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-column-menu" priority="1"
+	<cmd name="form-column-menu" priority="10"
 		method="move"
 		button="states/column.bmp"
 		key="f"
@@ -80,7 +86,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-front" priority="1"
+	<cmd name="form-front" priority="2"
 		method="formation"
 		button="states/front form.bmp"
 		immediate="yes"
@@ -91,7 +97,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-block" priority="1"
+	<cmd name="form-block" priority="3"
 		method="formation"
 		button="states/block form.bmp"
 		immediate="yes"
@@ -102,7 +108,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-cavalry" priority="1"
+	<cmd name="form-cavalry" priority="4"
 		method="formation"
 		button="states/horse wing form.bmp"
 		immediate="yes"
@@ -113,7 +119,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-skirmish" priority="1"
+	<cmd name="form-skirmish" priority="5"
 		method="formation"
 		button="states/skirmish.bmp"
 		immediate="yes"
@@ -124,7 +130,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-column" priority="1"
+	<cmd name="form-column" priority="6"
 		method="formation"
 		button="states/column.bmp"
 		immediate="yes"
@@ -135,24 +141,23 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="stand_ground" priority="3"
-		offset="1"
-		method="stand_position"
-		button="Actions/Stand Ground.bmp"
-		key="s"
-		rollover="Stand ground"
-		description="Keeps army in battle formation (applies bonus)"
-		voidgroupdispatch="1">
+	<cmd name="enter_autocast_mode" priority="16"
+		button="actions/Autocast Mode.bmp"
+		key="d"
+		groupverifier="data/subai/hero_enter_autocast_mode_verify.vs"
+		immediate="yes"
+		rollover="Start automatic skill activation">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="leavearmy" priority="6"
-		button="actions/leave army.bmp"
-		key="v"
-		rollover="Leave army"
-		description="Leaves the attached allies on their own">
+	<cmd name="leave_autocast_mode" priority="17"
+		button="actions/Leave Autocast Mode.bmp"
+		key="c"
+		groupverifier="data/subai/hero_leave_autocast_mode_verify.vs"
+		immediate="yes"
+		rollover="Stop automatic skill activation">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="divine_grace" priority="10"
+	<cmd name="divine_grace" priority="18"
 		button="Skills/DivineGrace.bmp"
 		key="g"
 		rollover="Divine Grace"
@@ -163,7 +168,7 @@
 		<src obj="Hero" />
 	</cmd>
 	<!-- Skills -->
-	<cmd name="skill_assault" priority="11"
+	<cmd name="skill_assault" priority="19"
 		button="skills/Assault.bmp"
 		key="x"
 		rollover="Assault Cry"
@@ -175,7 +180,7 @@
 		param="Assault">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_battle_cry" priority="12"
+	<cmd name="skill_battle_cry" priority="20"
 		button="skills/BattleCry.bmp"
 		key="y"
 		rollover="Battle Cry"
@@ -187,7 +192,7 @@
 		param="Battle cry">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_ceasefire" priority="13"
+	<cmd name="skill_ceasefire" priority="21"
 		button="skills/Ceasefire.bmp"
 		key="n"
 		rollover="Ceasefire"
@@ -199,7 +204,7 @@
 		param="Ceasefire">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_charge" priority="14"
+	<cmd name="skill_charge" priority="22"
 		button="skills/Charge.bmp"
 		key="j"
 		rollover="Charge"
@@ -211,7 +216,7 @@
 		param="Charge">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_defensive_cry" priority="15"
+	<cmd name="skill_defensive_cry" priority="23"
 		button="skills/DefensiveCry.bmp"
 		key="o"
 		rollover="Defensive Cry"
@@ -223,7 +228,7 @@
 		param="Defensive cry">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_frenzy" priority="16"
+	<cmd name="skill_frenzy" priority="24"
 		button="skills/Frenzy.bmp"
 		key="z"
 		rollover="Frenzy"
@@ -235,7 +240,7 @@
 		param="Frenzy">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_healing" priority="17"
+	<cmd name="skill_healing" priority="25"
 		button="skills/Healing.bmp"
 		key="h"
 		rollover="Healing"
@@ -247,7 +252,7 @@
 		param="Healing">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="skill_divine_rush" priority="18"
+	<cmd name="skill_divine_rush" priority="26"
 		button="skills/Rush.bmp"
 		key="k"
 		rollover="Rush"

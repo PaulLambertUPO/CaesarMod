@@ -11,7 +11,11 @@ if (.IsValid) {
 
 	u = Place("DeerSummoned", .posRH, .player);
 	u.SetStamina(10);
+	u.SetLevel(.inherentlevel);
+	u.SetNoAIFlag(true);
+
 	SwapSelectedObj(this, u);
+
 	.SetSummoningDeath(true);
 	.Damage(.health);
 }

@@ -1,4 +1,4 @@
-<class id="Hero" cpp_class="CVXHero" parent="Military" entity="">
+<class id="Hero" parent="Military" cpp_class="CVXHero">
 
 	<properties maxhealth="1000" />
 	<properties damage="40" damage_type="slash" />
@@ -18,7 +18,7 @@
 
 	<behavior script="data/subai/hero_skill_behaviour.vs" />
 
-	<method sig="sleep" vs="data/subai/object_idle.vs" />
+	<method sig="sleep" vs="data/subai/hero_sleep.vs" />
 	<method sig="idle" vs="data/subai/hero_idle.vs" />
 	<method sig="uiadvance" vs="data/subai/hero_advance.vs" />
 	<method sig="uipatrol" vs="data/subai/hero_patrol.vs" />
@@ -66,6 +66,8 @@
 	<method sig="engage_unit_type" vs="data/subai/hero_engage_unit_type.vs" />
 	<method sig="taunt" vs="data/subai/hero_taunt.vs" />
 	<method sig="divine_grace" vs="data/subai/hero_divinegrace.vs" />
+	<method sig="enter_autocast_mode" vs="data/subai/hero_enter_autocast_mode.vs" />
+	<method sig="leave_autocast_mode" vs="data/subai/hero_leave_autocast_mode.vs" />
 
 	<defaultcmd target="">
 		<cmd name="moveinfight" />

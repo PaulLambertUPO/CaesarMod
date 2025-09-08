@@ -1,4 +1,4 @@
-<class id="Unit" cpp_class="CVXUnit" parent="Object">
+<class id="Unit" parent="Object" cpp_class="CVXUnit">
 
 	<properties maxhealth="200" />
 	<properties maxstamina="10" />
@@ -48,6 +48,7 @@
 	<method sig="dropitem" vs="data/subai/unit_dropitem.vs" />
 	<method sig="getitems" vs="data/subai/unit_getitems.vs" />
 	<method sig="getitem" vs="data/subai/unit_getitem.vs" />
+	<method sig="take_nearby_items" vs="data/subai/unit_take_nearby_items.vs" />
 	<method sig="build_catapult" vs="data/subai/unit_build_catapult.vs" />
 	<method sig="hold_position" vs="data/subai/unit_hold_position.vs" />
 	<method sig="selfdestroy" vs="data/subai/unit_selfdestroy.vs" />
@@ -61,6 +62,7 @@
 	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
 	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
 	<method sig="capture" vs="data/subai/unit_capture.vs" verify="data/subai/unit_capture_verify.vs" />
+	<method sig="capture" vs="data/subai/unit_advance.vs" />
 	<method sig="attack_independent" vs="data/subai/unit_capture.vs" verify="data/subai/attack_independent_verify.vs" />
 	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
 	<method sig="disappear" vs="data/subai/unit_disappear.vs" />
@@ -83,8 +85,6 @@
 
 	<method sig="enter_parry_mode" vs="data/subai/unit_enter_parry_mode.vs" />
 	<method sig="leave_parry_mode" vs="data/subai/unit_leave_parry_mode.vs" />
-
-	<method sig="hero_set_final_party_orientation" vs="data/subai/hero_set_final_party_orientation.vs" />
 
 	<value0 icon="gameres/infobar/common/level ico.bmp"
 		script="return .AsUnit().level;"

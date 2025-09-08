@@ -42,17 +42,17 @@ while (dest != "") {
 				int i, j;
 				for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 					ol = GetPlayerUnits(i);//filtering here with "IEnchantress" does not always return the units (it happens when player i has no enchantresses independently from whom they are attached to)
-					ol.ClearDead();
 					for (j = 0; j < ol.count; j += 1) {
 						u = ol[j].AsUnit();
 						if (u.IsValid)
 							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
 								if (u.inherentlevel < 8)
-									if (u.IsHeirOf("IEnchantress")) {
-										u.SetLevel(8);
-										if (!u.InHolder)
-											CreateFeedback("Experience", u);
-									}
+									if (u.IsAlive)
+										if (u.IsHeirOf("IEnchantress")) {
+											u.SetLevel(8);
+											if (!u.InHolder)
+												CreateFeedback("Experience", u);
+										}
 					}
 				}
 			}
@@ -68,17 +68,17 @@ while (dest != "") {
 				int i, j;
 				for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 					ol = GetPlayerUnits(i, "Military");
-					ol.ClearDead();
 					for (j = 0; j < ol.count; j += 1) {
 						u = ol[j].AsUnit();
 						if (u.IsValid)
 							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
 								if (u.inherentlevel >= 8)
-									if (u.inherentlevel < 12) {
-										u.SetLevel(12);
-										if (!u.InHolder)
-											CreateFeedback("Experience", u);
-									}
+									if (u.inherentlevel < 12)
+										if (u.IsAlive) {
+											u.SetLevel(12);
+											if (!u.InHolder)
+												CreateFeedback("Experience", u);
+										}
 					}
 				}
 			}
@@ -125,12 +125,12 @@ while (dest != "") {
 				int i, j;
 				for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 					ol = GetPlayerUnits(i);
-					ol.ClearDead();
 					for (j = 0; j < ol.count; j += 1) {
 						u = ol[j].AsUnit();
 						if (u.IsValid)
 							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-								u.RecalcBonuses();
+								if (u.IsAlive)
+									u.RecalcBonuses();
 					}
 				}
 			}

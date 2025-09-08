@@ -38,7 +38,6 @@ if (.IsValid) {
 					return;
 
 				army = .army;
-				army.ClearDead();
 				for (i = 0; i < army.count; i += 1)
 					if (army[i].IsValidCaptureTarget(b))
 						army[i].SetCommand("capture", b);
@@ -89,7 +88,6 @@ if (.IsValid) {
 
 							.Face(b.pos);
 							army = .army;
-							army.ClearDead();
 							for (i = 0; i < army.count; i += 1)//new units might be attached during the capture
 								if (army[i].command == "idle")
 									if (army[i].IsValidCaptureTarget(b))
@@ -108,7 +106,6 @@ if (.IsValid) {
 			w = u.AsWagon();
 
 			army = .army;
-			army.ClearDead();
 			for (i = 0; i < army.count; i += 1)
 				army[i].SetCommand("capture", w);
 					
@@ -145,7 +142,6 @@ if (.IsValid) {
 
 					.Face(w.pos);
 					army = .army;
-					army.ClearDead();
 					for (i = 0; i < army.count; i += 1)//new units might be attached during the capture
 						if (army[i].command == "idle")
 							army[i].SetCommand("capture", w);
@@ -162,7 +158,6 @@ if (.IsValid) {
 				h = u.AsUnit();
 
 				army = .army;
-				army.ClearDead();
 				for (i = 0; i < army.count; i += 1)
 					army[i].SetCommand("capture", h);
 
@@ -195,7 +190,6 @@ if (.IsValid) {
 						
 						.Face(h.pos);
 						army = .army;
-						army.ClearDead();
 						for (i = 0; i < army.count; i += 1)//new units might be attached during the capture
 							if (army[i].command == "idle")
 								army[i].SetCommand("capture", h);

@@ -38,9 +38,9 @@ this = This.AsBuilding();
 	.CmdEnable("townhall_military_training");
 
 	if (IsResearched(set, "ChooseRepublicanRome"))
-		flag = Place("RepublicanRomeFlag", .pos + Point(167, -225), .player);
+		flag = Place("RepublicanRomeFlag", .pos + Point(65, -450), .player);
 	else if (IsResearched(set, "ChooseImperialRome"))
-		flag = Place("ImperialRomeFlag", .pos + Point(167, -225), .player);
+		flag = Place("ImperialRomeFlag", .pos + Point(65, -448), .player);
 }
 
 while (1) {

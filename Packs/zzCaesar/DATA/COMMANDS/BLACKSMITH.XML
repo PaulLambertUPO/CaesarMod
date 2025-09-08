@@ -8,15 +8,7 @@
 		rollover="Repair"
 		costgold="500"
 		execdelay="60000">
-		<src obj="RBlacksmith" />
-		<src obj="CBlacksmith" />
-		<src obj="GBlacksmith" />
-		<src obj="IBlacksmith" />
-		<src obj="MBlacksmith" />
-		<src obj="BBlacksmith" />
-		<src obj="TBlacksmith" />
-		<src obj="EBlacksmith" />
-		<src obj="HBlacksmith" />
+		<src obj="BaseBlacksmith" />
 	</cmd>
 	<cmd name="Strenghten Stronghold Defences I" priority="10"
 		queueicon="gameres/icons/upgrades/Stronghold Defense.bmp"
@@ -30,15 +22,7 @@
 		description="Makes the defenders at the stronghold walls level 12"
 		method="research"
 		param="NameSet, Strenghten Stronghold Defences I, , SetsSet, SentriesLevel, 12">
-		<src obj="RBlacksmith" />
-		<src obj="CBlacksmith" />
-		<src obj="GBlacksmith" />
-		<src obj="IBlacksmith" />
-		<src obj="MBlacksmith" />
-		<src obj="BBlacksmith" />
-		<src obj="TBlacksmith" />
-		<src obj="EBlacksmith" />
-		<src obj="HBlacksmith" />
+		<src obj="BaseBlacksmith" />
 	</cmd>
 	<cmd name="Strenghten Stronghold Defences II" priority="10"
 		queueicon="gameres/icons/upgrades/Stronghold Defense2.bmp"
@@ -52,15 +36,7 @@
 		description="Makes the defenders at the stronghold walls level 24"
 		method="research"
 		param="ReqSet, Strenghten Stronghold Defences I, , NameSet, Strenghten Stronghold Defences II, default, SetsSet, SentriesLevel, 24">
-		<src obj="RBlacksmith" />
-		<src obj="CBlacksmith" />
-		<src obj="GBlacksmith" />
-		<src obj="IBlacksmith" />
-		<src obj="MBlacksmith" />
-		<src obj="BBlacksmith" />
-		<src obj="TBlacksmith" />
-		<src obj="EBlacksmith" />
-		<src obj="HBlacksmith" />
+		<src obj="BaseBlacksmith" />
 	</cmd>
 	<!-- ROME -->
 	<cmd name="Roman Archers" priority="2"
@@ -642,16 +618,16 @@
 		<src obj="EBlacksmith" />
 	</cmd>
 	<!-- GERMANY -->
-	<cmd name="Axemen production" priority="2"
+	<cmd name="Axe production" priority="2"
 		queueicon="gameres/icons/upgrades/axe iron.bmp"
 		key="x"
 		button="upgrades/axe iron.bmp"
 		costgold="600"
 		execdelay="20000"
-		groupverifier="data/subai/axemen_verify.vs"
+		groupverifier="data/subai/axeman_verify.vs"
 		rollover="Increase Axe production"
 		description="Increases the number of Axemen you can have by 10"
-		method="axemen_school"
+		method="axeman_school"
 		traincommand="yes">
 		<src obj="TBlacksmith" />
 	</cmd>
@@ -668,7 +644,7 @@
 		traincommand="yes">
 		<src obj="TBlacksmith" />
 	</cmd>
-	<cmd name="Horseshoes production" priority="4"
+	<cmd name="Horseshoe production" priority="4"
 		queueicon="gameres/icons/upgrades/Horseshoes.bmp"
 		key="h"
 		button="upgrades/Horseshoes.bmp"
@@ -681,16 +657,16 @@
 		traincommand="yes">
 		<src obj="TBlacksmith" />
 	</cmd>
-	<cmd name="Macemen production" priority="5"
+	<cmd name="Mace production" priority="5"
 		queueicon="gameres/icons/upgrades/Incr Mace Production.bmp"
 		key="m"
 		button="upgrades/Incr Mace Production.bmp"
 		costgold="1000"
 		execdelay="20000"
-		groupverifier="data/subai/macemen_verify.vs"
+		groupverifier="data/subai/maceman_verify.vs"
 		rollover="Increase Mace production"
 		description="Increases the number of Macemen you can have by 10"
-		method="macemen_school"
+		method="maceman_school"
 		traincommand="yes">
 		<src obj="TBlacksmith" />
 	</cmd>

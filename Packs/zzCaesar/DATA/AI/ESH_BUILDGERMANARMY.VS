@@ -26,10 +26,10 @@ if (set.population > GetConst("MinPopulation")) {
 
 	germanTechs[0] = "";
 	germanTechs[1] = "";
-	germanTechs[2] = "Axemen production";
+	germanTechs[2] = "Axe production";
 	germanTechs[3] = "Javelin production";
-	germanTechs[4] = "Horseshoes production";
-	germanTechs[5] = "Macemen production";
+	germanTechs[4] = "Horseshoe production";
+	germanTechs[5] = "Mace production";
 
 	nType = -1;
 

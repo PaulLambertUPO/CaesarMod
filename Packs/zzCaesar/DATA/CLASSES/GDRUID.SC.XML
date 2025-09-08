@@ -1,4 +1,4 @@
-<class id="GDruid" cpp_class="CVXDruid" parent="BaseMage" entity="Units/GDruid/GDruid.ent.xml">
+<class id="GDruid" parent="BaseMage" cpp_class="CVXDruid" entity="Units/GDruid/GDruid.ent.xml">
 
 	<properties race="Gaul" />
 	<properties maxhealth="120" />
@@ -15,7 +15,6 @@
 	<method sig="stand_position" vs="data/subai/rpriest_stand_position.vs" />
 	<method sig="advance" vs="data/subai/rpriest_advance.vs" />
 
-	<method sig="glearn" vs="data/subai/druid_learn.vs" />
 	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
 	<method sig="ghoul_summoning" vs="data/subai/druid_ghoul_summoning.vs" />

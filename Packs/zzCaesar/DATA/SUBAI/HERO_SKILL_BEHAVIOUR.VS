@@ -16,15 +16,9 @@ skill_to_develop_level = -1;
 heal_per_level = GetConst("HealthPerHealingLevel");
 rush_damage = GetConst("RushDamage");
 
-Sleep(5500 + rand(3) * 100);//the big time is to let the AI manage the skill points when the hero is recruited in specific tactic scripts
+Sleep(5500 + rand(6) * 100);//the big time is to let the AI manage the skill points when the hero is recruited in specific tactic scripts
 
 while (.IsAlive) {
-	if (!.autocast)
-		if (!.AI) {
-			Sleep(6000);
-			continue;
-		}
-
 	//check for available_points skill points
 	if (.AI)
 		while (1) {
@@ -34,10 +28,9 @@ while (.IsAlive) {
 				break;
 			if (skill_to_develop < 0) {
 				.AIGetSkillToDevelop(skill_to_develop, skill_to_develop_level);
-				if (skill_to_develop < 0)//maxed skill
+				if (skill_to_develop < 0)//maxed out
 					break;
 			}
-			//already developing a skill
 			skill_points = .GetSkill(skill_to_develop);
 			if (skill_points >= skill_to_develop_level) {//this case can appear only when any bad guy messes up with the skills on the fly
 				skill_to_develop = -1;
@@ -55,8 +48,11 @@ while (.IsAlive) {
 			skill_to_develop = -1;
 			skill_to_develop_level = -1;
 		}
+	else if (!.autocast) {
+		Sleep(4000);
+		continue;
+	}
 
-	.army.ClearDead();
 	army_size = .army.count;
 
 	fighting_units_perc = 0;
@@ -85,28 +81,29 @@ while (.IsAlive) {
 
 			for (i = 0; i < army_size; i += 1) {
 				u = .army[i].AsUnit();
-				if (u.IsValid) {
-					if (u.IsHeirOf("Military")) {
-						military_units += 1;
-						if (enemy_in_sight)
-							if (u.TimeWithoutAttack <= 2000)
-								if (u.command != "capture")
-									fighting_units += 1;
-					}
-					army_health += u.health;
-					army_max_health += u.maxhealth;
-					healing_amount += MIN(healing_skill_amount, u.maxhealth - u.health);
+				if (u.IsValid)
+					if (u.IsAlive) {
+						if (u.IsHeirOf("Military")) {
+							military_units += 1;
+							if (enemy_in_sight)
+								if (u.TimeWithoutAttack <= 2000)
+									if (u.command != "capture")
+										fighting_units += 1;
+						}
+						army_health += u.health;
+						army_max_health += u.maxhealth;
+						healing_amount += MIN(healing_skill_amount, u.maxhealth - u.health);
 
-					army_stamina += u.stamina;
-					army_max_stamina += u.maxstamina;
-					charge_amount += MIN(charge_skill_level, u.maxstamina - u.stamina);
+						army_stamina += u.stamina;
+						army_max_stamina += u.maxstamina;
+						charge_amount += MIN(charge_skill_level, u.maxstamina - u.stamina);
 
-					if (rush_amount > -1) {
-						rush_amount += MIN(rush_skill_level, u.maxstamina - u.stamina);
-						if (u.health - rush_skill_level * rush_damage <= 0)//don't let anyone die from the skill (only a human player can understand when it is acceptable)
-							rush_amount = -1;
+						if (rush_amount > -1) {
+							rush_amount += MIN(rush_skill_level, u.maxstamina - u.stamina);
+							if (u.health - rush_skill_level * rush_damage <= 0)//don't let anyone die from the skill (only a human player can understand when it is acceptable)
+								rush_amount = -1;
+						}
 					}
-				}
 			}
 			if (military_units > 0)
 				fighting_units_perc = fighting_units * 100 / military_units;
@@ -243,4 +240,7 @@ while (.IsAlive) {
 	}
 	Sleep(1500);
 }
-Sleep(10000);
+
+//without this instruction, the game crashes
+while (1)
+	Sleep(3600000);

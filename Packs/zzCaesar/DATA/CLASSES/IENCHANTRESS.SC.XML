@@ -1,4 +1,4 @@
-<class id="IEnchantress" cpp_class="CVXDruid" parent="BaseMage" entity="Units/IEnchantress/IEnchantress.ent.xml">
+<class id="IEnchantress" parent="BaseMage" cpp_class="CVXDruid" entity="Units/IEnchantress/IEnchantress.ent.xml">
 
 	<properties race="Iberia" />
 	<properties maxhealth="120" />
@@ -17,7 +17,7 @@
 
 	<method sig="teach" vs="data/subai/enchantress_teach.vs" verify="data/subai/enchantress_teach_verify.vs" />
 	<method sig="coverofmercy" vs="data/subai/enchantress_coverofmercy.vs" />
-	<method sig="i_restoration" vs="data/subai/druid_restoration.vs" />
+	<method sig="restoration" vs="data/subai/druid_restoration.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="teach" />

@@ -363,8 +363,10 @@
 <translationtableentry text="Peasant (female)" result="Contadina" />
 <translationtableentry text="Fisherman" result="Pescatore" />
 <translationtableentry text="Fishermen" result="Pescatori" />
-<translationtableentry text="Old Man Africa" result="Anziano d'Africa" />
-<translationtableentry text="Old Man Europe" result="Anziano d'Europa" />
+<translationtableentry text="Old Man" result="Anziano" />
+<translationtableentry text="Old Men" result="Anziani" />
+<translationtableentry text="Old Man (Africa)" result="Anziano d'Africa" />
+<translationtableentry text="Old Man (Europe)" result="Anziano d'Europa" />
 <translationtableentry text="Ghoul" result="Spirito" />
 <translationtableentry text="Ghouls" result="Spiriti" />
 <translationtableentry text="Animals" result="Animali" />
@@ -1098,6 +1100,7 @@
 <translationtableentry text="Close Gate" result="Chiudi porta" />
 <translationtableentry text="Open Gate Permanent" result="Apri porta permanentemente" />
 <translationtableentry text="Close Gate Permanent" result="Chiudi porta permanentemente" />
+<translationtableentry text="Right-click to attack this point" result="Clicca col tasto destro per attaccare questo punto" />
 <translationtableentry text="Fire at will" result="Fuoco a volontà" />
 <translationtableentry text="Stop firing" result="Cessate il fuoco" />
 <translationtableentry text="Dismantle" result="Smantella" />
@@ -1224,7 +1227,6 @@
 <translationtableentry text="Click to attack this building" result="Clicca per attaccare questa struttura" />
 <translationtableentry text="Right-click to attack this building" result="Clicca col tasto destro per attaccare questa struttura" />
 <translationtableentry text="Click to advance to this position" result="Clicca per avanzare fino a questa posizione" />
-<translationtableentry text="Click to attack this type of enemy" result="Clicca per attaccare questo tipo di nemico" />
 <translationtableentry text="Right-click to attack this type of enemy" result="Clicca col tasto destro per attaccare questo tipo di nemico" />
 <translationtableentry text="Capture" result="Conquista" />
 <translationtableentry text="Walls cannot be captured, only attacked" result="Non si possono conquistare i muri, solo attaccarli" />
@@ -1238,13 +1240,9 @@
 <translationtableentry text="Right-click to tame this horse" result="Clicca col tasto destro per domare questo cavallo" />
 <translationtableentry text="Explore" result="Esplora" />
 <translationtableentry text="Click to explore from this point" result="Clicca per esplorare da questo punto" />
-<translationtableentry text="Click to attach to this hero" result="Clicca per vincolare a questo eroe" />
 <translationtableentry text="Right-click to attach to this hero" result="Clicca col tasto destro per vincolare a questo eroe" />
-<translationtableentry text="Click to enter this cave" result="Clicca per entrare in questa grotta" />
 <translationtableentry text="Right-click to enter this cave" result="Clicca col tasto destro per entrare in questa grotta" />
-<translationtableentry text="Click to enter this building" result="Clicca per entrare in questa struttura" />
 <translationtableentry text="Right-click to enter this building" result="Clicca col tasto destro per entrare in questa struttura" />
-<translationtableentry text="Click to enter this shipyard and start fishing" result="Clicca per entrare in questo porto e iniziare a pescare" />
 <translationtableentry text="Right-click to enter this shipyard and start fishing" result="Clicca col tasto destro per entrare in questo porto e iniziare a pescare" />
 <translationtableentry text="Train" result="Addestra" />
 <translationtableentry text="Cannot train warriors" result="Impossibile addestrare i guerrieri" />
@@ -1261,10 +1259,16 @@
 <translationtableentry text="Click to patrol this position" result="Clicca per pattugliare fino a questo punto" />
 <translationtableentry text="Build siege machine" result="Costruisci macchina d'assedio" />
 <translationtableentry text="Select a place to build the machine" result="Seleziona un luogo dove costruire la macchina" />
-<translationtableentry text="You need to select more units to build catapult" result="Devi selezionare più unità per costruire la catapulta" />
+<translationtableentry text="You need to select more units to build the machine" result="Devi selezionare più unità per costruire la macchina" />
+<translationtableentry text="Take nearby items" result="Prendi oggetti vicini" />
+<translationtableentry text="Makes the unit take everything from the nearest item holder" result="Fa sì che l'unità prenda tutto dal luogo con oggetti più vicino" />
+<translationtableentry text="Inventory full" result="Inventario pieno" />
+<translationtableentry text="No item holders in sight" result="Nessun luogo con oggetti in vista" />
+<translationtableentry text="No items to take" result="Nessun oggetto da prendere" />
 <translationtableentry text="Enter parry mode" result="Attiva modalità contenimento" />
 <translationtableentry text="Leave parry mode" result="Disattiva modalità contenimento" />
-<translationtableentry text="Warriors are in parry mode" result="I guerrieri sono in modalità contenimento" />
+<translationtableentry text="Select special units" result="Seleziona unità speciali" />
+<translationtableentry text="Selects all special units of the currently selected types across the map (except those attached to a hero)" result="Seleziona tutte le unità speciali dei tipi attualmente selezionati in tutta la mappa (eccetto quelle vincolate a un eroe)" />
 <translationtableentry text="Demobilize" result="Congeda" />
 <translationtableentry text="Transforms the militiamen into peasants (only in buildings and ships)" result="Trasforma i miliziani in contadini (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Archer" result="Trasforma in arciere teutonico" />
@@ -1292,10 +1296,11 @@
 <translationtableentry text="Select Skirmish formation" result="Seleziona formazione da schermaglia" />
 <translationtableentry text="Column" result="in colonna" />
 <translationtableentry text="Select Column formation" result="Seleziona formazione in colonna" />
-<translationtableentry text="Keeps army in battle formation (applies bonus)" result="Mantiene l'esercito in formazione (applica i bonus)" />
 <translationtableentry text="Army bonus during stand ground" result="Bonus per l'esercito se gli si ordina di mantenere la posizione" />
 <translationtableentry text="Leave army" result="Sciogli esercito" />
 <translationtableentry text="Leaves the attached allies on their own" result="Svincola tutte le unità" />
+<translationtableentry text="Start automatic skill activation" result="Avvia attivazione automatica delle abilità" />
+<translationtableentry text="Stop automatic skill activation" result="Ferma attivazione automatica delle abilità" />
 <translationtableentry text="Activates the Assault skill" result="Attiva l'abilità Gesta" />
 <translationtableentry text="Activates the Battle Cry skill" result="Attiva l'abilità Prodezza" />
 <translationtableentry text="Activates the Ceasefire skill" result="Attiva l'abilità Tregua" />
@@ -1335,26 +1340,23 @@
 <translationtableentry text="Click to cripple this enemy" result="Clicca per prosciugare l'energia di questo nemico" />
 <translationtableentry text="Right-click to cripple this enemy" result="Clicca col tasto destro per prosciugare l'energia di questo nemico" />
 <translationtableentry text="Create Cloud of Plague" result="Flagello" />
-<translationtableentry text="Creates a cloud of plague that damages all units (sacrificing the priest's life)" result="Crea una nube velenosa che danneggia tutte le unità (sacrificando la vita del sacerdote)" />
+<translationtableentry text="Creates a cloud of plague that damages all units (at the cost of life)" result="Crea una nube velenosa che danneggia tutte le unità (al costo della vita)" />
 <translationtableentry text="Create Cover of Mercy" result="Manto della misericordia" />
-<translationtableentry text="Creates a cloud that reduces all combat damage allies receive by half (sacrificing the enchantress' life)" result="Crea una nube protettrice che riduce della metà il danno subìto dagli alleati (sacrificando la vita della sacerdotessa)" />
-<translationtableentry text="Channels the Wrath of Jupiter hurting the target (sacrificing the priest's life)" result="Incanala l'ira di Giove danneggiando il bersaglio (sacrificando la vita del sacerdote)" />
+<translationtableentry text="Creates a cloud that reduces all combat damage allies receive by half (at the cost of life)" result="Crea una nube protettrice che riduce della metà il danno subìto dagli alleati (al costo della vita)" />
+<translationtableentry text="Channels the Wrath of Jupiter hurting the target (at the cost of life)" result="Incanala l'ira di Giove danneggiando il bersaglio (al costo della vita)" />
 <translationtableentry text="Transform to zombie" result="Trasformazione in spirito" />
 <translationtableentry text="Summon Ghoul" result="Invoca spirito" />
-<translationtableentry text="Summons a ghoul that could be controlled (sacrificing the druid's life)" result="Invoca uno spirito che puoi controllare (sacrificando la vita del druido)" />
+<translationtableentry text="Summons a ghoul that could be controlled (at the cost of life)" result="Invoca uno spirito che puoi controllare (al costo della vita)" />
 <translationtableentry text="Summon Eagle" result="Invoca aquila" />
-<translationtableentry text="Summons an eagle that could be controlled (sacrificing the druid's life)" result="Invoca un'aquila che puoi controllare (sacrificando la vita del druido)" />
+<translationtableentry text="Summons an eagle that could be controlled (at the cost of life)" result="Invoca un'aquila che puoi controllare (al costo della vita)" />
 <translationtableentry text="Summon Crow" result="Invoca corvo" />
-<translationtableentry text="Summons a crow that could be controlled (sacrificing the druid's life)" result="Invoca un corvo che puoi controllare (sacrificando la vita del druido)" />
+<translationtableentry text="Summons a crow that could be controlled (at the cost of life)" result="Invoca un corvo che puoi controllare (al costo della vita)" />
 <translationtableentry text="Summon Wolf" result="Invoca lupo" />
-<translationtableentry text="Summons a wolf that could be controlled (sacrificing the enchantress' life)" result="Invoca un lupo che puoi controllare (sacrificando la vita della maga)" />
+<translationtableentry text="Summons a wolf that could be controlled (at the cost of life)" result="Invoca un lupo che puoi controllare (al costo della vita)" />
 <translationtableentry text="Summon Deer" result="Invoca cervo" />
-<translationtableentry text="Summons a deer that could be controlled (sacrificing the enchantress' life)" result="Invoca un cervo che puoi controllare (sacrificando la vita della maga)" />
-<translationtableentry text="Restores the stamina of up to 5 nearby allies (sacrificing the druid's life)" result="Ripristina l'energia di un massimo di 5 alleati vicini (sacrificando la vita del druido)" />
-<translationtableentry text="Restores the stamina of up to 5 nearby allies (sacrificing the enchantress' life)" result="Ripristina l'energia di un massimo di 5 alleati vicini (sacrificando la vita della sacerdotessa)" />
-<translationtableentry text="Restores the stamina of up to 5 nearby allies (sacrificing the priest's life)" result="Ripristina l'energia di un massimo di 5 alleati vicini (sacrificando la vita del sacerdote)" />
-<translationtableentry text="Heals nearby allies (sacrificing the druid's life)" result="Cura gli alleati vicini (sacrificando la vita del druido)" />
-<translationtableentry text="Heals nearby allies (sacrificing the enchantress' life)" result="Cura gli alleati vicini (sacrificando la vita della maga)" />
+<translationtableentry text="Summons a deer that could be controlled (at the cost of life)" result="Invoca un cervo che puoi controllare (al costo della vita)" />
+<translationtableentry text="Restores the stamina of up to 5 nearby allies (at the cost of life)" result="Ripristina l'energia di un massimo di 5 alleati vicini (al costo della vita)" />
+<translationtableentry text="Heals nearby allies (at the cost of life)" result="Cura gli alleati vicini (al costo della vita)" />
 <!-- end sage commands -->
 <!-- start caravan and ship commands -->
 <translationtableentry text="Load 1000 gold" result="Carica 1000 oro" />
@@ -2390,7 +2392,7 @@
 <translationtableentry text="Arminius" result="Arminio" />
 <translationtableentry text="Augustus" result="Augusto" />
 <translationtableentry text="Ayax" result="Aiace" />
-<translationtableentry text="Boudica" result="Boadicea" />
+<translationtableentry text="Boudicca" result="Boadicea" />
 <translationtableentry text="Commodus" result="Commodo" />
 <translationtableentry text="Gnaeus Julius Agricola" result="Gneo Giulio Agricola" />
 <translationtableentry text="Hannibal" result="Annibale" />
@@ -2966,7 +2968,7 @@
 <translationtableentry text="Use your shipyards to build ships that can transport resources and units. There are two types of vessels: boats and ships. Boats are used solely for transporting resources and work like land caravans. Ships are used for naval combat and to transport up to 120 units over water. The higher the amount of units aboard is, the higher the attack speed and repairs will be." result="Usa i tuoi porti per costruire imbarcazioni che possano trasportare risorse e unità. Ci sono due tipi di vascelli: barche e navi da guerra. Le barche sono usate esclusivamente per trasportare risorse e funzionano come le unità di rifornimento su terra. Le navi da guerra sono usate per il combattimento in mare e per trasportare fino a 120 unità sull'acqua. Maggiore è il numero di unità a bordo, maggiori saranno la velocità di attacco e le riparazioni." />
 <translationtableentry text="Ruins are places where heroes can gather powerful items that will aid them in battle. In order to acquire an item, the hero must be of the specified level (displayed when the ruins are selected). Upon exiting the ruins, the hero's health is always 20% of the maximum." result="Le rovine sono luoghi dove gli eroi possono ottenere potenti oggetti che li aiuteranno in battaglia. Per acquisire un oggetto, l'eroe dev'essere del livello specificato (mostrato quando le rovine sono selezionate). Quando l'eroe esce dalle rovine, la sua salute è sempre il 20% di quella massima." />
 <translationtableentry text="Places of interest" result="Luoghi di interesse" />
-<translationtableentry text="Throughout the map there are a number of locations with item holders that provide minor items or heal units located nearby. Almost all item holders are marked by a circle of small stones around them. To get an item, select a unit then right-click on the item holder." result="In tutta la mappa ci sono diversi punti che forniscono oggetti minori o che guariscono le unità nei paraggi. Quasi tutti i luoghi con oggetti sono circondati da piccole pietre. Per raccogliere un oggetto, seleziona un'unità e clicca col tasto destro sul contenitore." />
+<translationtableentry text="Throughout the map there are a number of locations with item holders that provide minor items or heal units located nearby. Almost all item holders are marked by a circle of small stones around them. To get an item, select a unit then right-click on the item holder." result="In tutta la mappa ci sono diversi punti che forniscono oggetti minori o che guariscono le unità nei paraggi. Quasi tutti i luoghi con oggetti sono circondati da piccole pietre. Per prendere un oggetto, seleziona un'unità e clicca col tasto destro sul contenitore." />
 <translationtableentry text="Select a building" result="Seleziona una struttura" />
 <translationtableentry text="Every building has its use. To examine what a building can do, select it and check its list of commands. Some buildings can be used to recruit units, others to store resources, others to protect and heal the troops... Buildings are repaired automatically based on the number of units sheltered inside them, unless they are very damaged: in that case, they must be repaired by spending some gold." result="Ogni struttura ha il suo uso. Per esaminare cosa può fare una struttura, selezionala e controlla la sua lista di comandi. Alcune strutture possono essere usate per reclutare unità, altre per immagazzinare risorse, altre per proteggere e guarire le truppe... Le strutture vengono riparate automaticamente in base al numero di unità rifugiate al loro interno, a meno che non siano molto danneggiate: in quel caso, devono essere riparate spendendo dell'oro." />
 <translationtableentry text="Town population" result="Popolazione delle fortezze" />

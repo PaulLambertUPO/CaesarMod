@@ -1,60 +1,88 @@
 //void, Obj This
 
-Obj target;
 Catapult this;
-bool bRotated;
-int ttw;
-point ptNew;
-int sleeptime;//constant
 
-this = This.AsCatapult;
-if(!.IsValid) return;
+this = This.AsCatapult();
 
-sleeptime = 1000;
+if (.IsValid)
+	if (.IsAlive)
+		if (.IsBuilt) {
+			Settlement set;
+			Obj target;
 
-while (.IsAlive)
-{
-	if (.CmdCount() > 1)
-		return;
+			set = .settlement;
 
-	if (.settlement.UnitsCount <= 0) break;
-	target = .GetCurrentTarget;
-	if (!target.IsValid) target = .BestTarget();
-	if(target.IsValid())
-	{
-		bRotated = false;
-		while(.IsAlive && target.IsAlive && .IsEnemy(target) && .IsValidTarget(target))
-		{
-			Building bld;
-			if (.CmdCount() > 1)
-				return;
+			while (.IsAlive) {
+				if (.CmdCount > 1)
+					break;
+				if (set.UnitsCount <= 0)
+					break;
 
-			bld = target.AsBuilding;
-			if (bld.IsValid)
-			if (bld.IsVeryBroken)
-			if (!bld.IsCentralBuliding || bld.settlement.UnitsCount == 0)
-				break; /// try to find another target
+				target = .GetCurrentTarget();
+				if (!target.IsValid)
+					target = .BestTarget();
 
-			ttw = .AttackWait;
-			if (ttw > 0) Sleep(ttw);
-			
-			ptNew = .GetPointOnTarget(target);
-			if (!.InRange(ptNew)) return;
-			ptNew = GetCatapultAttackPoint(ptNew);
-			if (bRotated == false)
-			{
-				.RotateTo(ptNew);
-				bRotated = true;
+				if (target.IsValid) {
+					Building target_bld;
+					point pt_attack;
+					bool target_is_building, rotated = false;
+
+					target_bld = target.AsBuilding();
+					target_is_building = target_bld.IsValid;
+
+					.SetTarget(target);
+
+					while (.IsAlive) {
+						if (.CmdCount > 1)
+							break;
+						if (set.UnitsCount <= 0)
+							break;
+
+						Sleep(.AttackWait);
+
+						if (.IsDead)
+							break;
+						if (.CmdCount > 1)
+							break;
+						if (set.UnitsCount <= 0)
+							break;
+
+						if (target.IsDead)
+							break;
+						if (!.IsEnemy(target))
+							break;
+						if (!.IsValidTarget(target))
+							break;
+						if (target_is_building)
+							if (target_bld.IsVeryBroken) {
+								if (!target_bld.IsCentralBuliding)
+									break;
+								if (target_bld.settlement.UnitsCount <= 0)
+									break;
+							}
+
+						pt_attack = .GetPointOnTarget(target);
+						if (!.InRange(pt_attack))
+							break;
+						pt_attack = GetCatapultAttackPoint(pt_attack);
+
+						if (!rotated) {
+							.RotateTo(pt_attack);
+							rotated = target_is_building;//units will probably move around the catapult
+							if (.IsDead)
+								break;
+							if (.CmdCount > 1)
+								break;
+							if (set.UnitsCount <= 0)
+								break;
+						}
+
+						.Attack(pt_attack);
+					}
+
+					.ClearTarget();
+				}
+
+				Sleep(1000);
 			}
-			if (!.IsAlive || .settlement.UnitsCount == 0)
-			{
-				.ClearTarget();
-				return;
-			}
-			.SetTarget( target );
-			.Attack(ptNew);
 		}
-		.ClearTarget();
-	}
-	Sleep(sleeptime);
-}

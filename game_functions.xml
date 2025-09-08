@@ -103,7 +103,7 @@
 </func>
 <!-- TBD: UNKNOWN -->
 <func name="Write" returns="void">
-	<param type="int" /><!-- value to write -->
+	<param type="int" />
 </func>
 <!-- Compares two integers and returns the minimum value -->
 <func name="MIN" returns="int">
@@ -180,7 +180,7 @@
 </func>
 <!-- TBD: UNKNOWN -->
 <func name="Write" returns="void">
-	<param type="float" /><!-- value to write -->
+	<param type="float" />
 </func>
 <!-- Compares two floats and returns the maximum value -->
 <func name="MIN" returns="float">
@@ -229,7 +229,7 @@
 </func>
 <!-- TBD: UNKNOWN -->
 <func name="Write" returns="void">
-	<param type="pstr" /><!-- value to write -->
+	<param type="pstr" />
 </func>
 <!-- Assigns the second string to a variable -->
 <func name="=" returns="void">
@@ -263,7 +263,7 @@
 </func>
 <!-- TBD: UNKNOWN -->
 <func name="Write" returns="void">
-	<param type="str" /><!-- value to write -->
+	<param type="str" />
 </func>
 <!-- Parses the first string, returning all trimmed characters (without leading/trailing spaces) up to the first comma (excluded) and saving the remainder in a variable (without the comma, not trimmed) -->
 <func name="ParseStr" returns="str">
@@ -293,9 +293,9 @@
 <!-- Searches the string for the character found at the index of the integer value and returns the corresponding ASCII integer value (e.g. 'A' = 65, 'a' = 97) | WARNING: non-ASCII characters (e.g. 'à') or indexes outside the string make the funtion return random values -->
 <func name="GetChr" returns="int">
 	<param type="str" /><!-- string to search in -->
-	<param type="int" />
+	<param type="int" /><!-- index of the character to get -->
 </func>
-<!-- WARNING: this function always return false, even if the string is empty ("") -->
+<!-- WARNING: this function always returns false, even if the string is empty ("") -->
 <func name="IsNull" returns="bool">
 	<param type="str" /><!-- string to check -->
 </func>
@@ -313,14 +313,16 @@
 <func name="Str2Int" returns="int">
 	<param type="str" /><!-- string to convert -->
 </func>
+<!-- Checks if the 'bitwise AND' operation performed between two integers returns a value different from 0, ignoring the leading bits in excess of the second integer if it is greater than the first (e.g. IsFlagSet(2, 5) = false (10 & 101 -> 10 & 01 = 0) -->
 <func name="IsFlagSet" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- first operand -->
+	<param type="int" /><!-- second operand ('cut' to the first) -->
 </func>
+<!-- Updates the value of an integer variable by using the boolean value to either set (true) or unset (false) the bit mask corresponding to the second integer, considering the leading bits in excess of the latter if it is greater than the former (e.g. x = 6 -> SetFlag(x, 12, true) -> x = 14 (110 + 1100 -> 0110 + 1100 = 14|1110)) (e.g. x = 14 -> SetFlag(x, 5, false) -> x = 10 (1110 - 101 -> 1110 - 0101 = 10|1010))-->
 <func name="SetFlag" returns="int">
-	<param type="int" ptr="1" />
-	<param type="int" />
-	<param type="bool" />
+	<param type="int" ptr="1" /><!-- variable to modify -->
+	<param type="int" /><!-- bit mask to set/unset -->
+	<param type="bool" /><!-- operation type (true = set, false = unset) -->
 </func>
 <func name="Point" returns="point">
 	<param type="int" />
@@ -1043,7 +1045,7 @@
 	<param type="Settlement" />
 	<param type="str" />
 </func>
-<func name="UnitsAroundSettlement" returns="Query">
+<func name="UnitsAroundSettlement" returns="Query"><!-- multiple class support: NO -->
 	<param type="Settlement" />
 	<param type="str" />
 </func>
@@ -1059,9 +1061,10 @@
 	<param type="int" />
 	<param type="str" />
 </func>
+<!-- Gets all units of the specified class hierarchy that can be controlled by the specified player, that is the owned ones and the allied ones via shared control | WARNING: it does not consider units in a holder | WARNING: it considers units inside a holder if immediately followed by other functions, for example "Contains" (see hero skill activation script) -->
 <func name="ControllableObjs" returns="Query">
-	<param type="int" />
-	<param type="str" />
+	<param type="int" /><!-- player -->
+	<param type="str" /><!-- class hierarchy | multiple class support: NO -->
 </func>
 <func name="AreaObjs" returns="Query">
 	<param type="str" />

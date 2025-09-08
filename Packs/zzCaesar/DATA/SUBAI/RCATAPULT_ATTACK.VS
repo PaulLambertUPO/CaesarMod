@@ -5,5 +5,7 @@ Catapult this;
 this = me.AsCatapult();
 
 if (.IsValid)
-	if (.CmdCount() <= 1)
-		.SetTarget(target);
+	if (.IsAlive)
+		if (.IsBuilt)
+			if (.CmdCount <= 1)
+				.SetTarget(target);

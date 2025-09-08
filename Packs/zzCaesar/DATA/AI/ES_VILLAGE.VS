@@ -54,7 +54,11 @@ while (set.player == AIPlayer) {
 						if (outpost.IsValid) {
 							bool supplyOutpost = false;
 							if (outpost.player == AIPlayer)
-								if (outpost.race == Carthage)//note that the Greek outpost has Carthage as race value
+								if (outpost.race == Carthage) {
+									if (hall == EnvReadObj(outpost.settlement, "SuppledVillage").AsBuilding())
+										supplyOutpost = true;
+								}
+								else if (outpost.race == ImperialRome)
 									if (hall == EnvReadObj(outpost.settlement, "SuppledVillage").AsBuilding())
 										supplyOutpost = true;
 							if (supplyOutpost) {

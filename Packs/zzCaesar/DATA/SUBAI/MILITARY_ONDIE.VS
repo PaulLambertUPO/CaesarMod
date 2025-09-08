@@ -54,15 +54,16 @@ if (.IsValid) {
 					ObjList ol;
 					int i;
 
-					ol = ObjsInCircle(.pos, 500, "Military").GetObjList();
+					ol = ObjsInRange(this, "Military", 500).GetObjList();
 
 					for (i = 0; i < ol.count; i += 1) {
 						u = ol[i].AsUnit();
 						if (u.IsValid)
-							if (player == u.player) {
-								CreateFeedback("Experience", u);
-								u.SetExperience(u.experience + exp);
-							}
+							if (u.player == player)
+								if (u.IsAlive) {
+									CreateFeedback("Experience", u);
+									u.SetExperience(u.experience + exp);
+								}
 					}
 				}
 			}

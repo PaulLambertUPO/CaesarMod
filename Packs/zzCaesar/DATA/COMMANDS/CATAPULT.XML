@@ -1,29 +1,15 @@
 <commands>
-	<cmd name="catapult_attack"
-		priority="1"
-		method="attack"
-		cursor="attack"
-		traincommand="yes">
+	<!-- DEFAULT COMMANDS (NO INTERFACE BUTTON AND ONLY USED BY CLASSES WITH THE CORRESPONDING METHOD) -->
+	<cmd name="catapult_attack" method="attack" cursor="attack" traincommand="yes">
 		<cmdtext target="Building" default-text="Right-click to attack this building" />
 		<cmdtext target="Unit" default-text="Right-click to attack this enemy" />
-		<src obj="GCatapult" />
-		<src obj="RCatapult" />
-		<src obj="ICatapult" />
-		<src obj="CCatapult" />
-		<src obj="ECatapult" />
 	</cmd>
-	<cmd name="attack_ground"
-		priority="1"
-		cursor="attack"
-		traincommand="yes">
-		<cmdtext target="" />
-		<src obj="ICatapult" />
-		<src obj="GCatapult" />
-		<src obj="CCatapult" />
-		<src obj="ECatapult" />
+	<cmd name="attack_ground" cursor="attack" traincommand="yes">
+		<cmdtext target="" default-text="Right-click to attack this point" />
 	</cmd>
+	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
 	<cmd name="autofire"
-		priority="2"
+		priority="1"
 		button="actions/Catapult Attack.bmp"
 		key="a"
 		rollover="Fire at will"
@@ -34,8 +20,6 @@
 		<src obj="ICatapult" />
 		<src obj="CCatapult" />
 		<src obj="ECatapult" />
-		<nsrc obj="BCatapult" />
-		<nsrc obj="TCatapult" />
 	</cmd>
 	<cmd name="stop"
 		priority="2"
@@ -48,8 +32,6 @@
 		<src obj="ICatapult" />
 		<src obj="CCatapult" />
 		<src obj="ECatapult" />
-		<nsrc obj="BCatapult" />
-		<nsrc obj="TCatapult" />
 	</cmd>
 	<cmd name="disband"
 		priority="3"
@@ -58,7 +40,5 @@
 		rollover="Dismantle"
 		traincommand="yes">
 		<src obj="Catapult" />
-		<nsrc obj="BCatapult" />
-		<nsrc obj="TCatapult" />
 	</cmd>
 </commands>

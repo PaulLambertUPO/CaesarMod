@@ -459,6 +459,17 @@
 		<src obj="HAgora" />
 	</cmd>
 	<!-- TEMPLE -->
+	<cmd name="repairHtemple" priority="1"
+		method="repair"
+		button="actions/repair.bmp"
+		key="r"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		groupverifier="data/subai/verify_cmdcost_building.vs"
+		rollover="Repair"
+		costgold="500"
+		execdelay="60000">
+		<src obj="HTemple" />
+	</cmd>
 	<cmd name="trainHPriest" priority="2"
 		button="actions/train HPriest.bmp"
 		queueicon="gameres/icons/HPriest.bmp"
@@ -527,15 +538,5 @@
 		method="research"
 		param="ReqSet, Offer to Gods, default, NamePlr, Statue of Zeus, default">
 		<src obj="HTemple" />
-	</cmd>
-	<!-- PRIEST -->
-	<cmd name="h_restoration" priority="16"
-		button="actions/restoration.bmp"
-		key="r"
-		groupverifier="data/subai/verify_isresearched.vs"
-		rollover="Restoration"
-		description="Restores the stamina of up to 5 nearby allies (sacrificing the priest's life)"
-		param="Restoration, Acropolis">
-		<src obj="HPriest" />
 	</cmd>
 </commands>

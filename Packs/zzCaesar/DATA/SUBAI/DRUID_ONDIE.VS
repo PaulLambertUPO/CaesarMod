@@ -38,11 +38,12 @@ if (.IsValid) {
 		}
 		else if (race == Carthage || race == Egypt) {
 			if (IsResearched(.player, "Zombify"))
-				if (!.IsSummoningDeath()) {
+				if (!.IsSummoningDeath) {
 					Unit u;
 					u = Place("GGhost", .pos, .player);
 					u.SetStamina(5);
 					u.SetLevel(.inherentlevel);
+					u.SetNoAIFlag(true);
 					u.SetCommand("spawn");
 					SwapSelectedObj(this, u);
 				}
@@ -51,19 +52,19 @@ if (.IsValid) {
 			if (IsResearched(.player, "Mass Heal")) {
 				int health_to_distribute = 1000, give;
 
-				ol = ObjsInCircle(.pos, .sight, "Unit").GetObjList();
-				ol.ClearDead();
+				ol = ObjsInSight(this, "Unit").GetObjList();
 
 				for (i = 0; i < ol.count && health_to_distribute > 0; i += 1) {
 					u = ol[i].AsUnit();
 					if (u.IsValid)
-						if (u.health < u.maxhealth)
-							if (!.IsEnemy(u)) {
-								give = MIN(health_to_distribute, u.maxhealth - u.health);
-								health_to_distribute -= give;
-								u.Heal(give);
-								CreateFeedback("Heal", u);
-							}
+						if (u.IsAlive)
+							if (u.health < u.maxhealth)
+								if (!.IsEnemy(u)) {
+									give = MIN(health_to_distribute, u.maxhealth - u.health);
+									health_to_distribute -= give;
+									u.Heal(give);
+									CreateFeedback("Heal", u);
+								}
 				}
 			}
 		}
@@ -71,23 +72,23 @@ if (.IsValid) {
 			if (IsResearched(.player, "Restoration")) {
 				int nRestored;
 
-				ol = ObjsInCircle(.pos, .sight, "Unit").GetObjList();
-				ol.ClearDead();
+				ol = ObjsInSight(this, "Unit").GetObjList();
 
 				for (i = 0; i < ol.count && nRestored < 5; i += 1) {
 					u = ol[i].AsUnit();
 					if (u.IsValid)
-						if (u.stamina < u.maxstamina)
-							if (!.IsEnemy(u)) {
-								u.SetStamina(u.maxstamina);
-								CreateFeedback("StaminaBoost", u);
-								nRestored += 1;
-							}
+						if (u.IsAlive)
+							if (u.stamina < u.maxstamina)
+								if (!.IsEnemy(u)) {
+									u.SetStamina(u.maxstamina);
+									CreateFeedback("StaminaBoost", u);
+									nRestored += 1;
+								}
 				}
 			}
 			if (race == Gaul)
 				if (IsResearched(.player, "Reincarnation Ritual"))
-					if (!.IsSummoningDeath()) {
+					if (!.IsSummoningDeath) {
 						if (rand(2) == 0)
 							u = Place("BearSummoned", .pos, .player);
 						else
@@ -95,6 +96,7 @@ if (.IsValid) {
 						u.SetStamina(u.maxstamina);
 						u.SetLevel(.inherentlevel);
 						u.SetNoAIFlag(true);
+						u.SetCommand("engage");
 						SwapSelectedObj(this, u);
 					}
 		}

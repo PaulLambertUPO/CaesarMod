@@ -47,6 +47,7 @@ for (i = 0; i < defenders_max_1; i += 1) {
 	set.ForceAddUnit(u);
 	u.SetFeeding(false);
 	u.SetLevel(old_level_1);
+	u.SetNoAIFlag(true);
 	all_defenders_1.Add(u);
 }
 for (i = 0; i < defenders_max_2; i += 1) {
@@ -54,10 +55,11 @@ for (i = 0; i < defenders_max_2; i += 1) {
 	set.ForceAddUnit(u);
 	u.SetFeeding(false);
 	u.SetLevel(old_level_2);
+	u.SetNoAIFlag(true);
 	all_defenders_2.Add(u);
 }
 
-while (1) {
+while (player == .player) {
 	set.SetLoyalty(100);//impossible to capture until the garrison is defeated
 
 	all_defenders_1.ClearDead();
@@ -103,9 +105,8 @@ while (1) {
 				EnemyObjs(player, "Sentry")
 			)
 		),
-		Intersect(ObjsInRange(this, "Building", range), EnemyObjs(player, "Catapult"))
+		Intersect(ObjsInRange(this, "Catapult", range), EnemyObjs(player, "Catapult"))
 	).GetObjList();
-	enemies.ClearDead();
 	if (enemies.count <= 0) {
 		//no threat around, command all units that are out to come back in
 		defenders_outside_1.SetCommand("enter_tent", this);
@@ -201,14 +202,8 @@ while (1) {
 			if (all_defenders_2.count <= 0) {
 				enemies.ClearDead();
 				i = enemies.count;
-				if (i > 0) {
-					j = enemies[rand(i)].player;
-					.SetPlayer(j);
-					if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
-						set.SetFood(.GetOutpostFood());
-						break;
-					}
-				}
+				if (i > 0)
+					.SetPlayer(enemies[rand(i)].player);
 			}
 		}
 	}

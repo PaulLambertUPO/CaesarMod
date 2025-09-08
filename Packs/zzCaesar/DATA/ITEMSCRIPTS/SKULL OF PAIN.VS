@@ -10,7 +10,6 @@ if (.IsValid)
 			ObjList ol;
 
 			ol = Subtract(ObjsInSight(this, "Unit"), Union(ObjsInSight(this, "Hen"), ObjsInSight(this, "PeasantAmbient"))).GetObjList();
-			ol.ClearDead();
 
 			if (ol.count > 0) {
 				Unit u;
@@ -23,23 +22,25 @@ if (.IsValid)
 				for (i = 0; ol.count > 0 && i < 25 && enemies_damaged < 6; i += 1) {
 					u = ol[rand(ol.count)].AsUnit();
 					if (u.IsValid)
-						if (.IsEnemy(u))
-							if (!u.AsHero().IsValid) {
-								enemies_damaged += 1;
-								u.Damage(out_damage);
-								CreateFeedback("Lightning", u);
-								ol.Remove(u);//avoid damaging the same unit more than once
-							}
+						if (u.IsAlive)
+							if (.IsEnemy(u))
+								if (!u.AsHero().IsValid) {
+									enemies_damaged += 1;
+									u.Damage(out_damage);
+									CreateFeedback("Lightning", u);
+									ol.Remove(u);//avoid damaging the same unit more than once
+								}
 				}
 				for (i = 0; i < ol.count && enemies_damaged < 6; i += 1) {
 					u = ol[i].AsUnit();
 					if (u.IsValid)
-						if (.IsEnemy(u))
-							if (!u.AsHero().IsValid) {
-								enemies_damaged += 1;
-								u.Damage(out_damage);
-								CreateFeedback("Lightning", u);
-							}
+						if (u.IsAlive)
+							if (.IsEnemy(u))
+								if (!u.AsHero().IsValid) {
+									enemies_damaged += 1;
+									u.Damage(out_damage);
+									CreateFeedback("Lightning", u);
+								}
 				}
 
 				if (enemies_damaged > 0) {

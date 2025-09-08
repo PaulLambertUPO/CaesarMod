@@ -31,7 +31,7 @@ aSkillLevels[2] = 6;
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bAxes)
-			bAxes = set.TSResearch("Axemen production");
+			bAxes = set.TSResearch("Axe production");
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
@@ -90,7 +90,7 @@ aSkillLevels[2] = 6;
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bAxes)
-			bAxes = set.TSResearch("Axemen production");
+			bAxes = set.TSResearch("Axe production");
 		if (!bBarrack2)
 			bBarrack2 = set.TSResearch("Barrack Level 2");
 		Sleep(4100 + rand(15) * 100);

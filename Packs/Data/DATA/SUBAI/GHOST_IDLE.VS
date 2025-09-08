@@ -1,29 +1,41 @@
-// void, Obj me
+//void, Obj me
 
 Unit this;
-  
+ObjList ol_enemies;
+
 this = me.AsUnit();
 
-if (.GetAnim == 17) Sleep(.TimeToAnimFinish);
+if (.GetAnim() == 17)//spawn
+	Sleep(.TimeToAnimFinish);
 
-while (!.Stop(1000));
+while (!.Stop(1000))
+	;
 
-//.pr("ghost::idle: started");
-while(1)
-{
-  if (.AI) {
-    int own, ally, enemy; Eval(.player, .pos, .range, own, ally, enemy);
-    if (enemy < 500) {
-      point pt; pt = .BestMDPos(.range, 0, 1000, 500, false);
-      if (pt.x >= 0) {
-        .AddCommand(true, "move", pt);
-        return;
-      }
-    }
-  }
+while (1) {
+	.Idle(2000);
 
-  if (.Stop(2000)) {
-	  //.pr("ghost::idle: idling");
-	  .Idle(2000);
-  }
+	ol_enemies = Intersect(VisibleObjsInSight(this, "Military,Peaceful"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "Peaceful"))).GetObjList();
+
+	if (ol_enemies.count > 0) {//move to the central point among enemies that can be damaged
+		Unit u;
+		point pt_move;
+		int i, j;
+
+		for (i = 0; i < ol_enemies.count; i += 1) {
+			u = ol_enemies[i].AsUnit();
+			if (u.IsValid)
+				if (u.health > u.maxhealth / 5) {
+					pt_move = pt_move + u.pos;
+					j += 1;
+				}
+		}
+
+		if (j > 0) {
+			pt_move = pt_move / j;
+			if (.DistTo(pt_move) > 60) {//this reduces the risk of a move-idle loop
+				.AddCommand(true, "move", pt_move);
+				return;
+			}
+		}
+	}
 }

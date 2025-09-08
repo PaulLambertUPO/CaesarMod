@@ -31,7 +31,7 @@ aSkillLevels[2] = 4;
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bHorseshoes)
-			bHorseshoes = set.TSResearch("Horseshoes production");
+			bHorseshoes = set.TSResearch("Horseshoe production");
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
@@ -90,7 +90,7 @@ aSkillLevels[2] = 4;
 		if (!bBarbaricTales)
 			bBarbaricTales = set.TSResearch("Barbaric Tales");
 		if (!bHorseshoes)
-			bHorseshoes = set.TSResearch("Horseshoes production");
+			bHorseshoes = set.TSResearch("Horseshoe production");
 		Sleep(4100 + rand(15) * 100);
 	}
 }

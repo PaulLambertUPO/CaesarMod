@@ -12,7 +12,7 @@ else {
 	Settlement this;
 	Building bld1, bld2, bld_damaged;
 	ObjList peasants;
-	Unit u;
+	Unit u, u_talk;
 	StrArray villager_classes;
 	point pos, pt1, pt2;
 	int player, prev_pop, alive_or_dead_pop, total_peasants, hide_timer, pop_timer = 8000, i, j;
@@ -38,11 +38,11 @@ else {
 
 	if (.IsVillage) {
 		if (bld1.race == Carthage)
-			villager_classes[2] = "OldManA";
+			villager_classes[2] = "OldManAAmbient";
 		else if (bld1.race == Egypt)
-			villager_classes[2] = "OldManA";
+			villager_classes[2] = "OldManAAmbient";
 		else
-			villager_classes[2] = "OldManE";
+			villager_classes[2] = "OldManEAmbient";
 		for (i = rand(5) + 4; i > 0; i -= 1)//place up to 8 hens
 			for (j = 0; j < 5; j += 1) {
 				pt1.Set(pos.x + 600 - rand(1200), pos.y + 600 - rand(1200));
@@ -91,16 +91,23 @@ else {
 		if (hide_timer > 0) {
 			if (!hide_peasants) {
 				hide_peasants = true;
-				for (i = 0; i < peasants.count; i += 1)
-					if (peasants[i].command == "disappear")
-						peasants[i].Erase();
-					else if (peasants[i].pos.x == -1)
-						peasants[i].Erase();
-					else {
-						pt1 = .FindNearEnterExit(peasants[i].pos);
-						peasants[i].SetCommand("moveenter", pt1);
-						peasants[i].AddCommand(false, "dismiss");
-					}
+				for (i = 0; i < peasants.count; i += 1) {
+					u = peasants[i].AsUnit();
+					if (u.IsValid)
+						if (u.command == "disappear")
+							u.Erase();
+						else {
+							pt1 = u.pos;
+							if (pt1.x == -1)
+								u.Erase();
+							else if (pt1.y == -1)
+								u.Erase();
+							else {
+								u.SetCommand("moveenter", .FindNearEnterExit(pt1));
+								u.AddCommand(false, "dismiss");
+							}
+						}
+				}
 			}
 			for (alive_or_dead_pop = .PopulationDied; prev_pop < alive_or_dead_pop; prev_pop += 1)
 				if (rand(5) < 2) {
@@ -131,30 +138,35 @@ else {
 			.ClearDamageTaken();
 			if (alive_or_dead_pop > 0) {
 				for (i = 0; i < peasants.count - 1; i += 1)//talk behaviour
-					if (rand(5) > 0)
-						if (peasants[i].IsValid)
-							if (!peasants[i].IsDead())
-								if (peasants[i].command == "moveenter")
-									if (peasants[i].AsUnit().DoCarryNothing())
-										for (j = i + 1; j < peasants.count; j += 1)
-											if (peasants[j].IsValid)
-												if (!peasants[j].IsDead())
-													if (peasants[j].command == "moveenter")
-														if (peasants[j].AsUnit().DoCarryNothing())
-															if (Dist(peasants[i].pos, peasants[j].pos) < 120) {
-																peasants[i].SetCommand("talk", peasants[j]);
-																peasants[j].SetCommand("talk", peasants[i]);
+					if (rand(5) > 0) {
+						u = peasants[i].AsUnit();
+						if (u.IsValid)
+							if (u.IsAlive)
+								if (u.command == "moveenter")
+									if (u.DoCarryNothing())
+										for (j = i + 1; j < peasants.count; j += 1) {
+											u_talk = peasants[j].AsUnit();
+											if (u_talk.IsValid)
+												if (u_talk.IsAlive)
+													if (u_talk.command == "moveenter")
+														if (u_talk.DoCarryNothing())
+															if (Dist(u.pos, u_talk.pos) < 120) {
+																u.SetCommand("talk", u_talk);
+																u_talk.SetCommand("talk", u);
 															}
+										}
+					}
 				found_idle_peasant = false;
-				for (i = 0; i < peasants.count; i += 1)
-					if (peasants[i].command == "idle") {
-						if (peasants[i].pos.x == -1)
-							peasants[i].Erase();
-						else if (peasants[i].pos.y == -1)
-							peasants[i].Erase();
-						else {
-							u = peasants[i].AsUnit();
-							if (u.DoCarryNothing())
+				for (i = 0; i < peasants.count; i += 1) {
+					u = peasants[i].AsUnit();
+					if (u.IsValid)
+						if (u.command == "idle") {
+							pt1 = u.pos;
+							if (pt1.x == -1)
+								u.Erase();
+							else if (pt1.y == -1)
+								u.Erase();
+							else if (u.DoCarryNothing())
 								found_idle_peasant = true;
 							else {
 								bld1 = .GetEnterExit();
@@ -172,9 +184,9 @@ else {
 								else
 									u.Erase();
 							}
+							break;
 						}
-						break;
-					}
+				}
 				if (peasants.count < total_peasants || found_idle_peasant) {
 					bld1 = .GetEnterExit();
 					if (bld1.IsValid) {
@@ -204,17 +216,19 @@ else {
 												u.SetMinimapFlag(true);
 												peasants.Add(u);
 											}
-											u.SetCommand("moveenter", pt2);
-											if (i <= 2) {
-												u.AddCommand(false, "disappear");
-												if (i == 0)
-													u.AddCommand(false, "grab_water");
-												else
-													u.AddCommand(false, "grab_goods");
-												u.AddCommand(false, "moveenter", pt1);
+											if (u.IsValid) {
+												u.SetCommand("moveenter", pt2);
+												if (i <= 2) {
+													u.AddCommand(false, "disappear");
+													if (i == 0)
+														u.AddCommand(false, "grab_water");
+													else
+														u.AddCommand(false, "grab_goods");
+													u.AddCommand(false, "moveenter", pt1);
+												}
+												u.AddCommand(false, "dismiss");
+												u.SetCmdEnable(false);
 											}
-											u.AddCommand(false, "dismiss");
-											u.SetCmdEnable(false);
 										}
 								}
 							}

@@ -131,7 +131,7 @@ while (ol.count > 0) {
 		if (u.command == "getitem")
 			continue;
 		if (u.item_count < u.max_items)
-			if (u.GetSquad().TakeNearbyItems(u.sight()))
+			if (u.GetSquad().TakeNearbyItems(u.sight))
 				continue;
 		if (u.command != "idle")
 			continue;

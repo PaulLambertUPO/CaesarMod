@@ -1,4 +1,4 @@
-<class id="TTownhall" cpp_class="CVXTownHall" parent="BaseTownhall" entity="Buildings/TTownhall/TTownhall.ent.xml">
+<class id="TTownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/TTownhall/TTownhall.ent.xml">
 
 	<properties race="Germany" />
 	<properties foodperpop="45" />
@@ -10,6 +10,4 @@
 	<properties icon="gameres/icons/TTownhall.bmp" />
 	<properties help="/contents/buildings/TTownhall" />
 	<properties edittree_pos="Structures/Stronghold (Germany)/Townhall" />
-
-	<behavior script="data/subai/townhall_buildingsbehavior_t.vs" />
 </class>

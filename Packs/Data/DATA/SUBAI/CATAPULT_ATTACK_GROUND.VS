@@ -1,34 +1,46 @@
-// void, Obj me, point pt
+//void, Obj me, point pt
 
 Catapult this;
-point ptNew;
-int ttw;
-bool bRotated;
 
 this = me.AsCatapult();
 
-if (!.IsValid) return;
-if (!.InRange(pt)) return;
+if (.IsValid)
+	if (.IsAlive)
+		if (.IsBuilt)
+			if (.InRange(pt)) {
+				Settlement set;
+				bool rotated = false;
 
-.ClearTarget();
-bRotated = false;
-while (.IsAlive)
-{
-	if (.CmdCount() > 1)
-		break;
+				set = .settlement;
 
-	if (.settlement.UnitsCount <= 0) break;
-	ttw = .AttackWait();
-	if (ttw > 0) Sleep(ttw);
-	
-	if (bRotated == false)
-	{
-		.RotateTo(pt);
-		bRotated = true;
-	}
-	ptNew = GetCatapultAttackPoint(pt);
+				.ClearTarget();
 
-	
-	if (!.IsAlive || .settlement.UnitsCount == 0) return;
-	.Attack(ptNew);
-}
+				while (.IsAlive) {
+					if (.CmdCount > 1)
+						break;
+					if (set.UnitsCount <= 0)
+						break;
+
+					Sleep(.AttackWait);
+
+					if (.IsDead)
+						break;
+					if (.CmdCount > 1)
+						break;
+					if (set.UnitsCount <= 0)
+						break;
+
+					if (!rotated) {
+						.RotateTo(pt);
+						rotated = true;
+						if (.IsDead)
+							break;
+						if (.CmdCount > 1)
+							break;
+						if (set.UnitsCount <= 0)
+							break;
+					}
+
+					.Attack(GetCatapultAttackPoint(pt));
+				}
+			}

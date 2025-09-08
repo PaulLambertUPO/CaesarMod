@@ -1,4 +1,4 @@
-<class id="ECatapult" cpp_class="CVXCatapult" parent="Catapult" entity="Buildings/EBalista/EBalista.ent.xml">
+<class id="ECatapult" parent="Catapult" cpp_class="CVXCatapult" entity="Buildings/EBalista/EBalista.ent.xml">
 
 	<properties race="Egypt" />
 
@@ -16,5 +16,13 @@
 	<defaultcmd target="">
 		<cmd name="attack_ground" />
 		<cmd name="attack_ground" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="catapult_attack" />
+		<cmd name="catapult_attack" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Unit">
+		<cmd name="catapult_attack" />
+		<cmd name="catapult_attack" ctrl="1" />
 	</defaultcmd>
 </class>

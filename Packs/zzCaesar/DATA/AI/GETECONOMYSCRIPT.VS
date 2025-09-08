@@ -25,7 +25,9 @@ else if (set.IsOutpost) {
 		return ES_OutpostSendGold;
 	else if (set.food >= 100)
 		return ES_OutpostSendGold;
-	if (nRace == Carthage)//note that the Greek outpost has Carthage as race value
+	if (nRace == Carthage)
+		return ES_OutpostArmy;
+	if (nRace == ImperialRome)
 		return ES_OutpostArmy;
 }
 return ES_NONE;

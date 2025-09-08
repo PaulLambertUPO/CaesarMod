@@ -1,27 +1,31 @@
 //void, Obj This
 
-Building this;
+Settlement this;
+Building hall;
 ObjList ol;
-int i;
-int nSleepTime;
 Unit u;
+int i;
 
-nSleepTime = GetConst("IOutpostExpTick");
+hall = This.AsBuilding();
 
-this = This.AsBuilding();
+this = hall.settlement;
 
-Sleep(rand(nSleepTime) + 1000);
+Sleep(rand(501) + 1000);
 
-while(1)
-{
-	ol = .settlement.Units;
-	for (i = 0; i < ol.count; i += 1)
-	{
-		u = ol[i].AsUnit;
-		if (!u.IsValid) continue;
-		if (.IsEnemy(u)) continue;
-		if (u.inherentlevel >= 8) continue;
-		u.SetExperience(u.experience + 1);
-	}
-	Sleep(nSleepTime);
+while (.IsIndependent)
+	Sleep(2000);
+
+while (1) {
+	Sleep(10000);
+	if (!hall.IsBroken)
+		if (!.IsIndependent) {
+			ol = .Units;
+			for (i = 0; i < ol.count; i += 1) {
+				u = ol[i].AsUnit();
+				if (u.IsValid)
+					if (!.IsEnemy(u.player))
+						if (u.inherentlevel < 8)
+							u.SetExperience(u.experience + 1);
+			}
+		}
 }

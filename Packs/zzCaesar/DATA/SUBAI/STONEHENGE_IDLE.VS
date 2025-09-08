@@ -8,7 +8,7 @@ if (.IsValid) {
 	int count;
 
 	while (1) {
-		Sleep(1000);
+		Sleep(3000);
 
 		count = .StonehengeNumControllingMages();
 
@@ -16,10 +16,10 @@ if (.IsValid) {
 			if (.stamina < 100)
 				.SetStamina(.stamina + 1);
 			if (count < 50)
-				Sleep(12500 / count - 250);
+				Sleep(15000 / count);
 		}
 	}
 }
-else
-	while (1)
-		Sleep(3600000);
+
+while (1)
+	Sleep(3600000);

@@ -1,4 +1,4 @@
-<class id="BaseRuins" cpp_class="CVXBuilding" parent="Building" entity="">
+<class id="BaseRuins" parent="Building" cpp_class="CVXBuilding">
 
 	<properties
 		is_central_building="1"
@@ -53,4 +53,6 @@
 		help="/contents/stats/level"
 		rollover="Hero level"
 	/>
+
+	<sounds select="Sounds/Selection/Ruins.wav" />
 </class>

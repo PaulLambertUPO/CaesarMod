@@ -24,15 +24,15 @@ if (.IsValid) {
 		else
 			d = base_divider;
 		player_units = GetPlayerUnits(i);//there would be too much overhead to check the real player of every unit for the divider to work correctly (GetPlayerUnits takes units from other players that are attached to player i's heroes)
-		player_units.ClearDead();
 		c = player_units.count;
 		for (j = 0; j < c; j += 1)
 			if (j % d == 0) {
 				u = player_units[j].AsUnit();
 				if (u.IsValid)
-					if (!u.IsDiseased())
-						if (!u.IsHeirOf("BaseAnimal"))
-							u.Disease();
+					if (u.IsAlive)
+						if (!u.IsDiseased)
+							if (!u.IsHeirOf("BaseAnimal"))
+								u.Disease();
 			}
 	}
 	while (duration > 0) {

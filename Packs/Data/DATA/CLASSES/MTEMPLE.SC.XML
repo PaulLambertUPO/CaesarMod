@@ -1,12 +1,4 @@
-<class id="MTemple" cpp_class="CVXBarrack" parent="BaseBarracks"
-entity="Buildings/MTemple/MTemple.ent.xml">
-
-	<properties race="ImperialRome"/>
-	<properties display_name="Temple"/>
-	<properties radius="165" selection_radius="170"/>
-	<properties auto_repair="no"/>
-	<properties icon="gameres/icons/MTemple.bmp"/>
-	<properties help="/contents/buildings/RTemple"/>
-
-	<sounds select="TempleSelect"/>
+<class id="MTemple" parent="RTemple" cpp_class="CVXBarrack" entity="Buildings/MTemple/MTemple.ent.xml" entity_winter="Buildings/RTemple/RTemple_w.ent.xml">
+	<properties icon="gameres/icons/MTemple.bmp" />
+	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Temple (alternative)" />
 </class>

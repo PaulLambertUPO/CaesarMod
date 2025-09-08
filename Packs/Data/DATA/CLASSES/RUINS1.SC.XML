@@ -7,6 +7,4 @@
 	<properties display_name="Ruins" />
 	<properties icon="gameres/icons/Oracul.bmp" />
 	<properties edittree_pos="Structures/Interactive/Ruins" />
-
-	<sounds select="Sounds/Selection/Ruins.wav" />
 </class>

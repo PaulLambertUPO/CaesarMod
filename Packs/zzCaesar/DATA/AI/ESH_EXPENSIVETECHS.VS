@@ -17,10 +17,10 @@ if (nRace == Germany || nRace == Carthage)
 		if (nRace == Germany) {//Germany researches are unlimited, so all of them are made twice to increase limits of all advanced units (and food is bought to recruit them)
 			int j;
 			StrArray germanTechs;
-			germanTechs[0] = "Axemen production";
+			germanTechs[0] = "Axe production";
 			germanTechs[1] = "Javelin production";
-			germanTechs[2] = "Horseshoes production";
-			germanTechs[3] = "Macemen production";
+			germanTechs[2] = "Horseshoe production";
+			germanTechs[3] = "Mace production";
 			for (i = 0; i < 2; i += 1)
 				for (j = 0; j < 4; j += 1) {
 					cmd = germanTechs[j];

@@ -54,9 +54,10 @@ It is essential for maintaining the health of all units and it can also be used 
 Gold is automatically collected in each stronghold and stored in the respective townhall, the central building.
 It is necessary for issuing orders in buildings and for recruiting units.
 			</entry>
-			<entry>
+			<entry image="UI/InfoBar/Common/Pop_Cost.bmp">
 The greater the population of a village or stronghold is, the greater its production of food and/or gold will be.
-
+			</entry>
+			<entry>
 Resources are stored in settlements (strongholds, villages, outposts and shipyards).
 
 They are used where they are, but if you want to use them in another place you have to transport them with caravans, which must be protected from attacks by the enemy and fierce animals so that you do not lose everything that is being transported.
@@ -202,83 +203,87 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 			</entry>
 			<entry />
 			<entry image="UI/InfoBar/Unit Specials/Active.bmp">Active - the unit restores 2 stamina instead of 1.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attack skill - the unit adds twice the current stamina to damage.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Bleeding attack - the unit deals an additional damage equal to 10% of the enemy's max health (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Charge - the unit deals 8 times the damage if it has not attacked for at least 10 seconds.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attack skill (cost 1) - the unit adds twice the current stamina to damage.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Bleeding attack (cost 3) - the unit deals an additional damage equal to 10% of the enemy's max health (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Charge (cost 5) - the unit deals 8 times the damage if it has not attacked for at least 10 seconds.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp">Combat skill - the unit restores 1 stamina every time that it damages the enemy.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Cripple - the unit completely depletes the stamina of the enemy (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Curse - the unit makes the enemy miss the next attack.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Death blow - the unit kills the enemy if the latter's health after receiving the hit is below 50% (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Defense skill - the unit adds twice the current stamina to armor.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Defensive tactics - the unit adds the level to armor.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Deflection - the unit blocks the hit received by the enemy.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Cripple (cost 3) - the unit completely depletes the stamina of the enemy (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Curse (cost 3) - the unit makes the enemy miss the next attack.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Death blow (cost 5) - the unit kills the enemy if the latter's health after receiving the hit is below 50% (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Defense skill (cost 1) - the unit adds twice the current stamina to armor.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Defensive tactics (cost 1) - the unit adds the level to armor.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Deflection (cost 1) - the unit blocks the hit received by the enemy.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Determination.bmp">Determination - the unit restores 1 stamina every time that it is damaged by the enemy.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Disease attack - the unit infects the enemy, causing it to constantly lose health (which cannot go below 40%).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Drain - the unit removes 2 stamina from the enemy (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Disease attack (cost 4) - the unit infects the enemy, causing it to constantly lose health (which cannot go below 40%).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Drain (cost 1) - the unit removes 2 stamina from the enemy (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Expertise.bmp">Expertise (cost 10) - The unit kills the enemy if the damage dealt to the latter is higher than the base damage (it does not affect heroes).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp">Ferocity - the unit completely restores the stamina at every kill.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Freedom.bmp">Freedom - the unit cannot be attached to a hero.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Healing - the unit heals an ally by 20 plus the level.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Invisibility - the unit can make an ally (or itself) invisible.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Healing (cost 1) - the unit heals an ally by 20 plus the level.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Invisibility (cost 2) - the unit can make an ally (or itself) invisible.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp">Keen sight - the unit reveals hidden enemies.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Learning.bmp">Learning - the unit receives 1 experience every time that it damages a more experienced enemy.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Life steal - the unit restores health by the amount of damage dealt.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Offensive tactics - the unit adds the level to damage.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Life steal (cost 1) - the unit restores health by the amount of damage dealt.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Offensive tactics (cost 1) - the unit adds the level to damage.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Parry.bmp">Parry - if used, the unit can neither deal nor receive damage as long as it has stamina available. Every hit received costs 1 stamina and every hit inflicted restores 1.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetration - the unit ignores enemy armor and "Defense skill", "Deflection" and "Defensive tactics" specials (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Rage - the unit deals an additional damage by taking its own health, which cannot go below 50% of the maximum (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Regeneration - the unit restores 50 health every 5 seconds as long as it has food available.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetration (cost 1) - the unit ignores enemy armor and "Defense skill", "Deflection" and "Defensive tactics" specials (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike (cost 4) - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Rage (cost 5) - the unit deals an additional damage by taking its own health, which cannot go below 50% of the maximum (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Regeneration (cost 4) - the unit restores 50 health every 5 seconds as long as it has food available.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Revenge.bmp">Revenge - the unit deals 100 damage to its killer (it works only in melee).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Sneak.bmp">Sneak - the unit becomes invisible if it does not attack for 20 seconds.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Spike armor - the unit deals to the attacker all the damage received (it works only in melee).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Teaching - the unit gives experience to allies (up to level 4, increaseable to 8 with the upgrade "Ancestral knowledge" in the Sanctuary).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Spike armor (cost 1) - the unit deals to the attacker all the damage received (it works only in melee).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Teaching (cost 1) - the unit gives experience to allies (up to level 4, increaseable to 8 with the upgrade "Ancestral knowledge" in the Sanctuary).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Toughness.bmp">Toughness - the unit increases the maximum health by 5 every time that it levels up.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Trample.bmp">Trample - the unit deals damage to all surrounding enemies.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triple strike - the unit deals 3 times the damage.</entry>
-			<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Triumph - the unit completely restores the health at every kill.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triple strike (cost 1) - the unit deals 3 times the damage.</entry>
+			<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Triumph (cost 3) - the unit completely restores the health at every kill.</entry>
 			<entry hcenter="1" font="large">See also</entry>
 			<entry link="/contents/stats/stamina">Stamina</entry>
 			<topic id="active">
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp">Active - the unit restores 2 stamina instead of 1.</entry>
 			</topic>
 			<topic id="attackskill">
-				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attack skill - the unit adds twice the current stamina to damage.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp">Attack skill (cost 1) - the unit adds twice the current stamina to damage.</entry>
 			</topic>
 			<topic id="bleedingattack">
-				<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Bleeding attack - the unit deals an additional damage equal to 10% of the enemy's max health (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp">Bleeding attack (cost 3) - the unit deals an additional damage equal to 10% of the enemy's max health (it does not affect heroes).</entry>
 			</topic>
 			<topic id="ucharge">
-				<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Charge - the unit deals 8 times the damage if it has not attacked for at least 10 seconds.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Charge.bmp">Charge (cost 5) - the unit deals 8 times the damage if it has not attacked for at least 10 seconds.</entry>
 			</topic>
 			<topic id="combatskill">
 				<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp">Combat skill - the unit restores 1 stamina every time that it damages the enemy.</entry>
 			</topic>
 			<topic id="cripple">
-				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Cripple - the unit completely depletes the stamina of the enemy (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp">Cripple (cost 3) - the unit completely depletes the stamina of the enemy (it does not affect heroes).</entry>
 			</topic>
 			<topic id="curse">
-				<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Curse - the unit makes the enemy miss the next attack.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Curse.bmp">Curse (cost 3) - the unit makes the enemy miss the next attack.</entry>
 			</topic>
 			<topic id="deathblow">
-				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Death blow - the unit kills the enemy if the latter's health after receiving the hit is below 50% (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp">Death blow (cost 5) - the unit kills the enemy if the latter's health after receiving the hit is below 50% (it does not affect heroes).</entry>
 			</topic>
 			<topic id="defenseskill">
-				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Defense skill - the unit adds twice the current stamina to armor.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp">Defense skill (cost 1) - the unit adds twice the current stamina to armor.</entry>
 			</topic>
 			<topic id="deflection">
-				<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Deflection - the unit blocks the hit received by the enemy.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Deflection.bmp">Deflection (cost 1) - the unit blocks the hit received by the enemy.</entry>
 			</topic>
 			<topic id="defensivetactics">
-				<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Defensive tactics - the unit adds the level to armor.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Defensive Tactics.bmp">Defensive tactics (cost 1) - the unit adds the level to armor.</entry>
 			</topic>
 			<topic id="diseaseattack">
-				<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Disease attack - the unit infects the enemy, causing it to constantly lose health (which cannot go below 40%).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Disease Attack.bmp">Disease attack (cost 4) - the unit infects the enemy, causing it to constantly lose health (which cannot go below 40%).</entry>
 			</topic>
 			<topic id="determination">
 				<entry image="UI/InfoBar/Unit Specials/Determination.bmp">Determination - the unit restores 1 stamina every time that it is damaged by the enemy.</entry>
 			</topic>
 			<topic id="drain">
-				<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Drain - the unit removes 2 stamina from the enemy (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Drain.bmp">Drain (cost 1) - the unit removes 2 stamina from the enemy (it does not affect heroes).</entry>
+			</topic>
+			<topic id="expertise">
+				<entry image="UI/InfoBar/Unit Specials/Expertise.bmp">Expertise (cost 10) - The unit kills the enemy if the damage dealt to the latter is higher than the base damage (it does not affect heroes).</entry>
 			</topic>
 			<topic id="ferocity">
 				<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp">Ferocity - the unit completely restores the stamina at every kill.</entry>
@@ -287,10 +292,10 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp">Freedom - the unit cannot be attached to a hero.</entry>
 			</topic>
 			<topic id="uhealing">
-				<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Healing - the unit heals an ally by 20 plus the level.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Healing.bmp">Healing (cost 1) - the unit heals an ally by 20 plus the level.</entry>
 			</topic>
 			<topic id="invisibility">
-				<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Invisibility - the unit can make an ally (or itself) invisible.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp">Invisibility (cost 2) - the unit can make an ally (or itself) invisible.</entry>
 			</topic>
 			<topic id="keensight">
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp">Keen sight - the unit reveals hidden enemies.</entry>
@@ -299,25 +304,25 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 				<entry image="UI/InfoBar/Unit Specials/Learning.bmp">Learning - the unit receives 1 experience every time that it damages a more experienced enemy.</entry>
 			</topic>
 			<topic id="lifesteal">
-				<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Life steal - the unit restores health by the amount of damage dealt.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Life Steal.bmp">Life steal (cost 1) - the unit restores health by the amount of damage dealt.</entry>
 			</topic>
 			<topic id="offensivetactics">
-				<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Offensive tactics - the unit adds the level to damage.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Offensive tactics (cost 1) - the unit adds the level to damage.</entry>
 			</topic>
 			<topic id="parry">
 				<entry image="UI/InfoBar/Unit Specials/Parry.bmp">Parry - if used, the unit can neither deal nor receive damage as long as it has stamina available. Every hit received costs 1 stamina and every hit inflicted restores 1.</entry>
 			</topic>
 			<topic id="penetration">
-				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetration - the unit ignores enemy armor and "Defense skill", "Deflection" and "Defensive tactics" specials (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetration (cost 1) - the unit ignores enemy armor and "Defense skill", "Deflection" and "Defensive tactics" specials (it does not affect heroes).</entry>
 			</topic>
 			<topic id="powerstrike">
-				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike (cost 4) - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
 			</topic>
 			<topic id="rage">
-				<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Rage - the unit deals an additional damage by taking its own health, which cannot go below 50% of the maximum (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Rage (cost 5) - the unit deals an additional damage by taking its own health, which cannot go below 50% of the maximum (it does not affect heroes).</entry>
 			</topic>
 			<topic id="regeneration">
-				<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Regeneration - the unit restores 50 health every 5 seconds as long as it has food available.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Regeneration (cost 4) - the unit restores 50 health every 5 seconds as long as it has food available.</entry>
 			</topic>
 			<topic id="revenge">
 				<entry image="UI/InfoBar/Unit Specials/Revenge.bmp">Revenge - the unit deals 100 damage to its killer (it works only in melee).</entry>
@@ -326,10 +331,10 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 				<entry image="UI/InfoBar/Unit Specials/Sneak.bmp">Sneak - the unit becomes invisible if it does not attack for 20 seconds.</entry>
 			</topic>
 			<topic id="spikearmor">
-				<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Spike armor - the unit deals to the attacker all the damage received (it works only in melee).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Spike Armor.bmp">Spike armor (cost 1) - the unit deals to the attacker all the damage received (it works only in melee).</entry>
 			</topic>
 			<topic id="teaching">
-				<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Teaching - the unit gives experience to allies (up to level 4, increaseable to 8 with the upgrade "Ancestral knowledge" in the Sanctuary).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Teaching.bmp">Teaching (cost 1) - the unit gives experience to allies (up to level 4, increaseable to 8 with the upgrade "Ancestral knowledge" in the Sanctuary).</entry>
 			</topic>
 			<topic id="toughness">
 				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp">Toughness - the unit increases the maximum health by 5 every time that it levels up.</entry>
@@ -338,10 +343,10 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 				<entry image="UI/InfoBar/Unit Specials/Trample.bmp">Trample - the unit deals damage to all surrounding enemies.</entry>
 			</topic>
 			<topic id="triplestrike">
-				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triple strike - the unit deals 3 times the damage.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp">Triple strike (cost 1) - the unit deals 3 times the damage.</entry>
 			</topic>
 			<topic id="triumph">
-				<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Triumph - the unit completely restores the health at every kill.</entry>
+				<entry image="UI/InfoBar/Unit Specials/Triumph.bmp">Triumph (cost 3) - the unit completely restores the health at every kill.</entry>
 			</topic>
 		</topic>
 		<topic id="heroskills">
@@ -594,7 +599,7 @@ In addition to the core group of mercenaries, Carthage can deploy powerful elite
 				</entry>
 				<entry hcenter="1">Weaknesses</entry>
 				<entry>
-- Weak against fast nations and/or with troops able to heal
+- Weak against fast nations and/or with troops able to heal, easy target for numerous ranged units
 
 - Dependence on villages to be able to continue selling the population while equipping the best units
 
@@ -1739,7 +1744,7 @@ The enchantress teaches the chosen ally by giving him experience (up to level 4 
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Cover of Mercy.bmp">
 Cover of mercy
-The enchantress sacrifices herself to create a protective mist in the chosen point for about 25 seconds. This mist reduces any damage dealt to allies by 50%.
+The enchantress sacrifices herself to create a protective mist in the chosen point for about 25 seconds. This mist reduces any damage dealt to allies by 50% (except poison and "Cloud of plague").
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Restoration
@@ -2825,7 +2830,7 @@ It can be very effective against priority and fast units, or as an additional li
 				<entry />
 				<entry image="UI/Icons/BRam.bmp">
 The ram is a slow siege machine as resistant to ranged attacks as vulnerable to melee attacks.
-Once built, it automatically heads towards the nearest enemy gate or building.
+Once built, it automatically heads towards the nearest enemy gate, outpost or shipyard.
 				</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1000</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 300</entry>
@@ -5615,7 +5620,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Cover of Mercy.bmp">
 Cover of mercy
-Allows enchantresses to sacrifice themselves to create a protective mist that reduces any damage dealt to allies by 50% for about 25 seconds.
+Allows enchantresses to sacrifice themselves to create a protective mist that reduces any damage dealt to allies by 50% for about 25 seconds (except poison and "Cloud of plague").
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
@@ -5936,7 +5941,7 @@ Time: 60 seconds
 				<entry hcenter="1" font="large">Gold outpost</entry>
 				<entry image="UI/Help/Icons/GoldOutpostsV.bmp">
 The gold outpost is a settlement that allows units to enter for shelter and to shoot arrows at nearby enemies.
-It produces additional gold as long as there is at least 2000 gold stored inside (10 gold every 2 seconds).
+It produces additional gold as long as there is at least 2000 gold stored inside (10 gold every 2 seconds, if it is not too damaged).
 				</entry>
 				<entry font="large">Neutral garrison</entry>
 				<entry>Roman outpost</entry>
@@ -5945,7 +5950,7 @@ It produces additional gold as long as there is at least 2000 gold stored inside
 				<entry vcenter="1" image="UI/Icons/EAxeTrower.bmp" link="/contents/units/EAxeThrower">10 axe throwers (level 8 - 18)</entry>
 				<entry vcenter="1" image="UI/Icons/EGuardian.bmp" link="/contents/units/EGuardian">10 guardians (level 8 - 18)</entry>
 				<entry font="large">Commands</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attack
 Focuses fire on a specific target.
 				</entry>
@@ -5962,7 +5967,7 @@ Constantly sends resources to another settlement.
 				<entry hcenter="1" font="large">Trade outpost</entry>
 				<entry image="UI/Help/Icons/TradeOutpostsV.bmp">
 The trade outpost is a settlement that allows units to enter for shelter and to shoot arrows at nearby enemies.
-It allows to exchange food for gold or vice versa (20 food for 10 gold o vice versa every 2 seconds).
+It allows to exchange food for gold or vice versa (20 food for 10 gold o vice versa every 2 seconds, if it is not too damaged).
 				</entry>
 				<entry font="large">Neutral garrison</entry>
 				<entry>Gaul outpost</entry>
@@ -5970,7 +5975,7 @@ It allows to exchange food for gold or vice versa (20 food for 10 gold o vice ve
 				<entry>German outpost</entry>
 				<entry vcenter="1" image="UI/Icons/TValkyrie.bmp" link="/contents/units/TValkyrie">10 valkyries (level 10 - 24)</entry>
 				<entry font="large">Commands</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attack
 Focuses fire on a specific target.
 				</entry>
@@ -5995,7 +6000,7 @@ Constantly sends resources to another settlement.
 				<entry hcenter="1" font="large">Training outpost</entry>
 				<entry image="UI/Help/Icons/TrainingOutpostsV.bmp">
 The training outpost is a settlement that allows units to enter for shelter and to shoot arrows at nearby enemies.
-It gradually increases the experience of units inside up to level 8 (1 experience every 10 seconds).
+It gradually increases the experience of units inside up to level 8 (1 experience every 10 seconds, if it is not too damaged).
 				</entry>
 				<entry font="large">Neutral garrison</entry>
 				<entry>Iberian outpost</entry>
@@ -6005,7 +6010,7 @@ It gradually increases the experience of units inside up to level 8 (1 experienc
 				<entry vcenter="1" image="UI/Icons/BJavelineer.bmp" link="/contents/units/BJavelineer">10 javelineers (level 4 - 12)</entry>
 				<entry vcenter="1" image="UI/Icons/BHighlander.bmp" link="/contents/units/BHighlander">10 highlanders (level 4 - 12)</entry>
 				<entry font="large">Commands</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attack
 Focuses fire on a specific target.
 				</entry>
@@ -6022,7 +6027,7 @@ Constantly sends resources to another settlement.
 				<entry hcenter="1" font="large">Recruitment outpost</entry>
 				<entry image="UI/Help/Icons/RecruitmentOutpostsV.bmp">
 The recruitment outpost is a settlement that allows units to enter for shelter and to shoot arrows at nearby enemies.
-The Carthaginian variant converts peasants to macemen (1 every 30 seconds), the Greek one to hoplites (1 every 40 seconds).
+The Carthaginian variant converts peasants to macemen (1 every 30 seconds), the Greek one to hoplites (1 every 40 seconds), if they are not too damaged.
 				</entry>
 				<entry font="large">Neutral garrison</entry>
 				<entry>Carthaginian outpost</entry>
@@ -6030,7 +6035,7 @@ The Carthaginian variant converts peasants to macemen (1 every 30 seconds), the 
 				<entry>Greek outpost</entry>
 				<entry vcenter="1" image="UI/Icons/HHoplite.bmp" link="/contents/units/HHoplite">20 hoplites (level 6 - 10)</entry>
 				<entry font="large">Commands</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack.bmp">
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attack
 Focuses fire on a specific target.
 				</entry>
@@ -6048,7 +6053,7 @@ Constantly sends resources to another settlement.
 				<entry image="UI/Icons/GGuardPost.bmp">
 The guard post is a settlement that allows units to enter for shelter.
 It guards the area with sentries and raises the alarm every time that it spots enemy warriors.
-The level of the sentries increases by 1 every minute until reaching 36, starting again at 1 if the guard post is captured.
+The level of the sentries increases by 1 every minute until reaching 36, starting again at 1 if the guard post is either captured or damaged too much.
 				</entry>
 				<entry font="large">Neutral garrison</entry>
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">24 archers (level 8 - 18)</entry>

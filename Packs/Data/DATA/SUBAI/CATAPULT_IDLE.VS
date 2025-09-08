@@ -1,115 +1,96 @@
 //void, Obj This
 
-Catapult this;//the hero of this story
-int emptytimestartdamage, maxunits, minunits, buildspeed, decayspeed; //building constants taken from const.ini
-int cycletime; //how much time it takes to run the building loop (constant)
-int emptytime, healthleft, unitsinside;//variables
-int origsight;
+Catapult this;
 
 this = This.AsCatapult();
 
-if(!.IsValid) return;
-if(!.IsAlive) return;
+if (.IsValid)
+	if (.IsAlive)
+		if (.IsBuilt) {
+			if (.settlement.UnitsCount <= 0) {
+				if (.race == Britain || .race == Germany) {
+					Unit ram;
+					str ram_class;
 
-cycletime = 500;
+					if (.race == Britain)
+						ram_class = "BCatapultUnit";
+					else
+						ram_class = "TCatapultUnit";
 
-if(!.IsBuilt)
-{//catapult building
+					ram = Place(ram_class, .pos, .player);
+					ram.SetHealth(.health);
+					ram.Face(ram.pos + Point(-3, -2));
 
-	//fundamental constants init
-	origsight = .sight;
-	.SetSight(GetConst("CatapultBuildSight"));
-	emptytimestartdamage = GetConst("CatapultBuildOnEmptyStartDamageTime");
-	maxunits             = GetConst("CatapultMaxUnits");
-	minunits             = GetConst("CatapultBuildUnits");
-	buildspeed           = GetConst("CatapultBuildSpeed");
-	decayspeed           = GetConst("CatapultDecaySpeed");
+					SwapSelectedObj(this, ram);
 
-	//variables init
-	emptytime = 0;
-	healthleft = .maxhealth - 1;
-
-	.StartDelayedAnim(1, .pos, -1);
-	while(.IsAlive)
-	{
-		if (.IsBuilt) break;
-		unitsinside = .settlement.UnitsCount();
-		if(unitsinside > 0)
-		{
-			if(unitsinside >= minunits)
-			{
-				int healamount;
-
-				emptytime = 0;
-				healamount = .maxhealth * buildspeed * unitsinside / (maxunits * 100);//percents of .maxhealth to heal, per second
-				healamount = healamount * cycletime / 1000;//the above calculated health is 'per second'
-
-				if(healthleft > healamount)
-				{
-					healthleft -= healamount;
-					.Heal(healamount);
-					.SetBuildFrame(healthleft);
+					.Erase();
 				}
 				else
-				{
-					.Heal(healthleft);
-					healthleft = 0;
-					.SetBuilt;
+					.Damage(.health);
+			}
+			Sleep(500);
+		}
+		else {
+			Settlement set;
+			int original_sight, build_speed, decay_speed, empty_time_to_decay, health_left, builders, empty_time, build_heal_perc, decay_damage_perc;
+
+			set = .settlement;
+
+			original_sight = .sight;
+
+			.SetSight(GetConst("CatapultBuildSight"));
+
+			build_speed = GetConst("CatapultBuildSpeed");
+			decay_speed = GetConst("CatapultDecaySpeed");
+			empty_time_to_decay = GetConst("CatapultBuildOnEmptyStartDamageTime");
+
+			health_left = .maxhealth - .health;
+
+			.StartDelayedAnim(1, .pos, -1);
+
+			while (.IsAlive) {
+				if (.IsBuilt)
+					break;
+
+				builders = set.UnitsCount;
+
+				if (builders >= 1) {
+					empty_time = 0;
+					build_heal_perc = .maxhealth * build_speed * builders / 2000;
+
+					if (health_left > build_heal_perc) {
+						.Heal(build_heal_perc);
+						health_left -= build_heal_perc;
+						.SetBuildFrame(health_left);
+					}
+					else {
+						.Heal(health_left);
+						.SetBuilt();
+					}
+				}
+				else {
+					.SetBuildFrame(health_left);
+					empty_time += 500;
+					if (empty_time > empty_time_to_decay) {
+						decay_damage_perc = .maxhealth * decay_speed * 500 / 100000;
+						.Damage(decay_damage_perc);
+						health_left = MIN(.maxhealth, health_left + decay_damage_perc);
+					}
+				}
+
+				Sleep(500);
+			}
+
+			if (.IsAlive) {
+				.SetSight(original_sight);
+
+				if (.race == Britain)
+					.SetCommand("disband");
+				else if (.race == Germany)
+					.SetCommand("disband");
+				else {
+					ExploreCircle(.player, .pos, .sight);
+					.AddCommand(true, "autofire");
 				}
 			}
 		}
-		else
-		{//no units inside
-			int damageamount;
-			damageamount = (.maxhealth * decayspeed * cycletime) / 100000;// 100000 is 100(damagespeed is percents) * 1000(which is one second)
-
-			.SetBuildFrame(healthleft);
-
-			emptytime += cycletime;
-			if(emptytime > emptytimestartdamage)
-			{
-				.Damage(damageamount);
-				healthleft += damageamount;
-				if(healthleft > .maxhealth) healthleft = .maxhealth;
-			}
-		}
-		Sleep(cycletime);
-	}
-
-	.SetSight(origsight);
-	
-	if (.race == Britain) {
-		//.Face(.pos + Point(-3, -2));
-		.SetCommand("disband");
-		return;
-	}
-
-	
-	if (.race == Germany) {
-		.SetCommand("disband");
-		return;
-	}
-
-	ExploreCircle(.player, .pos, .sight);
-	
-	.AddCommand(true, "autofire");
-} else {//looking around
-	if(.settlement.UnitsCount == 0) {
-		if (.race == Britain || .race == Germany) {
-			if (.IsAlive()) {
-				Unit unit;
-				str class_name;
-				if (.race == Britain) class_name = "BCatapultUnit";
-				else if (.race == Germany) class_name = "TCatapultUnit";
-				unit = Place(class_name, .pos, .player);
-				unit.SetHealth(.health);
-				unit.Face(unit.pos + Point(-3,-2));
-				SwapSelectedObj(this, unit);
-				.Erase();
-			}
-		} else
-			.Damage(100000);
-	}
-	else emptytime = 0;
-	Sleep(cycletime);
-}

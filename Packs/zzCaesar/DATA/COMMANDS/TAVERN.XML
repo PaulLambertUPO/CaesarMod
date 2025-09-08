@@ -21,7 +21,6 @@
 		rollover="Buy food"
 		description="Buys 800 food at the market for 400 gold">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
 		<src obj="CTavern" />
 		<src obj="TTavern" />
 	</cmd>
@@ -38,9 +37,6 @@
 		description="Increases the stronghold population by 10"
 		rollover="Increase population">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<cmd name="Free Wine" priority="4"
 		key="w"
@@ -55,9 +51,6 @@
 		description="Explores a large area around the stronghold"
 		rollover="Free wine">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<cmd name="Import horses" priority="5"
 		key="h"
@@ -72,9 +65,6 @@
 		rollover="Import horses"
 		description="Makes new Scouts level 10">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<cmd name="Scout Area" priority="6"
 		groupverifier="data/subai/verify_research.vs"
@@ -87,9 +77,6 @@
 		immediate="yes"
 		param="ReqSet, Free Wine, default">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<cmd name="Buy map" priority="7"
 		queueicon="gameres/icons/upgrades/Buy Maps.bmp"
@@ -104,9 +91,6 @@
 		description="Explores a huge area around the stronghold"
 		param="ReqSet, Free Wine, default, NameSet, Buy map, default">
 		<src obj="RTavern"/>
-		<src obj="RTavern2"/>
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<cmd name="investR" priority="8"
 		key="i"
@@ -121,9 +105,6 @@
 		traincommand="yes"
 		param="ReqSet, Free Wine, default">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<cmd name="RTribute" priority="9"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
@@ -139,9 +120,6 @@
 		description="Gathers %s1 gold in each outpost you own (the amount increases by 500 every 10 minutes, up to 2000)"
 		rollover="Tribute (once per game)">
 		<src obj="RTavern" />
-		<src obj="RTavern2" />
-		<src obj="MTavern" />
-		<src obj="MTavern2" />
 	</cmd>
 	<!-- GAUL -->
 	<cmd name="GAddPop" priority="2"
@@ -622,7 +600,7 @@
 		execdelay="20000"
 		researchcommand="yes"
 		method="research"
-		param="NameSet, Grain Trade, default"
+		param="NameSet, Grain Trade, default, SetsSet, FoodTrade, 1"
 		description="Slowly exchanges the food in the stronghold for gold"
 		rollover="Grain Trade">
 		<src obj="EMarket" />

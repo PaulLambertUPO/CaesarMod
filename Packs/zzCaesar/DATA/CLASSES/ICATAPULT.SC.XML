@@ -1,4 +1,4 @@
-<class id="ICatapult" cpp_class="CVXCatapult" parent="Catapult" entity="Buildings/ICatapult/Catapult.ent.xml">
+<class id="ICatapult" parent="Catapult" cpp_class="CVXCatapult" entity="Buildings/ICatapult/Catapult.ent.xml">
 
 	<properties race="Iberia" />
 
@@ -16,5 +16,13 @@
 	<defaultcmd target="">
 		<cmd name="attack_ground" />
 		<cmd name="attack_ground" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="catapult_attack" />
+		<cmd name="catapult_attack" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Unit">
+		<cmd name="catapult_attack" />
+		<cmd name="catapult_attack" ctrl="1" />
 	</defaultcmd>
 </class>

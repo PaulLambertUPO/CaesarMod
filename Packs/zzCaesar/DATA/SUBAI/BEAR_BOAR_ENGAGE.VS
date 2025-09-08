@@ -28,7 +28,6 @@ if (.IsValid) {
 					ObjList enemies;
 
 					enemies = Intersect(ObjsInSight(this, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).GetObjList();
-					enemies.ClearDead();
 
 					if (enemies.count > 0) {//find the centre among all enemies and flee in the opposite direction
 						point pt_flee;
@@ -55,7 +54,6 @@ if (.IsValid) {
 									ObjList enemies;
 
 									enemies = Intersect(ObjsInSight(this, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).GetObjList();
-									enemies.ClearDead();
 
 									if (enemies.count > 0) {//find the centre among all enemies and flee in the opposite direction
 										point pt_flee;

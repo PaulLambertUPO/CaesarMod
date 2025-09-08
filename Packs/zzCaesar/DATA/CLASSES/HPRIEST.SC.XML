@@ -1,4 +1,4 @@
-<class id="HPriest" cpp_class="CVXDruid" parent="BaseMage" entity="Units/HPriest/HPriest.ent.xml">
+<class id="HPriest" parent="BaseMage" cpp_class="CVXDruid" entity="Units/HPriest/HPriest.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="180" />
@@ -17,7 +17,7 @@
 
 	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
-	<method sig="h_restoration" vs="data/subai/druid_restoration.vs" />
+	<method sig="restoration" vs="data/subai/druid_restoration.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="heal" />

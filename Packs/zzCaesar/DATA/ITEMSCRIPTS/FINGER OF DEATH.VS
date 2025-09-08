@@ -11,33 +11,34 @@ if (.IsValid)
 		int i, enemies_killed;
 
 		ol = Subtract(ObjsInSight(this, "Unit"), Union(ObjsInSight(this, "Hen"), ObjsInSight(this, "PeasantAmbient"))).GetObjList();
-		ol.ClearDead();
 
 		//make 25 attempts to kill 4 enemies chosen randomly, then in order
 		for (i = 0; ol.count > 0 && i < 25 && enemies_killed < 4; i += 1) {
 			u = ol[rand(ol.count)].AsUnit();
 			if (u.IsValid)
-				if (.IsEnemy(u))
-					if (!u.AsHero().IsValid) {
-						enemies_killed += 1;
-						if (!u.InHolder)//units in sight are automatically not in holder, but they might enter in a building during the effect time
-							CreateFeedback("Lightning2", u);
-						Sleep(500);
-						u.Damage(u.health);
-						ol.Remove(u);//avoid killing the same unit more than once
-					}
+				if (u.IsAlive)
+					if (.IsEnemy(u))
+						if (!u.AsHero().IsValid) {
+							enemies_killed += 1;
+							if (!u.InHolder)//units in sight are automatically not in holder, but they might enter in a building during the effect time
+								CreateFeedback("Lightning2", u);
+							Sleep(500);
+							u.Damage(u.health);
+							ol.Remove(u);//avoid killing the same unit more than once
+						}
 		}
 		for (i = 0; i < ol.count && enemies_killed < 4; i += 1) {
 			u = ol[i].AsUnit();
 			if (u.IsValid)
-				if (.IsEnemy(u))
-					if (!u.AsHero().IsValid) {
-						enemies_killed += 1;
-						if (!u.InHolder)//units in sight are automatically not in holder, but they might enter in a building during the effect time
-							CreateFeedback("Lightning2", u);
-						Sleep(500);
-						u.Damage(u.health);
-					}
+				if (u.IsAlive)
+					if (.IsEnemy(u))
+						if (!u.AsHero().IsValid) {
+							enemies_killed += 1;
+							if (!u.InHolder)//units in sight are automatically not in holder, but they might enter in a building during the effect time
+								CreateFeedback("Lightning2", u);
+							Sleep(500);
+							u.Damage(u.health);
+						}
 		}
 
 		if (enemies_killed > 0)

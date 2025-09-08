@@ -1,6 +1,6 @@
 <commands>
 	<cmd name="trainCLibyanFootman" priority="3"
-		button="actions/hire CLibyanFootman.bmp"
+		button="actions/hire CLibyanFootman spec.bmp"
 		queueicon="gameres/icons/CLibyanFootman.bmp"
 		groupverifier="data/subai/specialize_build_verify.vs"
 		transpicon="1"
@@ -30,7 +30,7 @@
 		<src obj="CBarracks" />
 	</cmd>
 	<cmd name="trainCJavelinThrower" priority="4"
-		button="actions/hire CJavelinThrower.bmp"
+		button="actions/hire CJavelinThrower spec.bmp"
 		queueicon="gameres/icons/CJavelinThrower.bmp"
 		groupverifier="data/subai/specialize_build_verify.vs"
 		transpicon="1"
@@ -60,7 +60,7 @@
 		<src obj="CBarracks" />
 	</cmd>
 	<cmd name="trainCBerberAssassin" priority="5"
-		button="actions/hire CBerberAssassin.bmp"
+		button="actions/hire CBerberAssassin spec.bmp"
 		queueicon="gameres/icons/CBerberAssassin.bmp"
 		groupverifier="data/subai/specialize_build_verify.vs"
 		transpicon="1"
@@ -90,7 +90,7 @@
 		<src obj="CBarracks" />
 	</cmd>
 	<cmd name="trainCMaceman" priority="6"
-		button="actions/hire CMaceman.bmp"
+		button="actions/hire CMaceman spec.bmp"
 		queueicon="gameres/icons/CMaceman.bmp"
 		groupverifier="data/subai/specialize_build_verify.vs"
 		transpicon="1"
@@ -120,7 +120,7 @@
 		<src obj="CBarracks" />
 	</cmd>
 	<cmd name="trainCNumidianRider" priority="7"
-		button="actions/hire CNumidianRider.bmp"
+		button="actions/hire CNumidianRider spec.bmp"
 		queueicon="gameres/icons/CNumidianRider.bmp"
 		groupverifier="data/subai/specialize_build_verify.vs"
 		transpicon="1"
@@ -150,7 +150,7 @@
 		<src obj="CBarracks" />
 	</cmd>
 	<cmd name="trainCHorseman" priority="8"
-		button="actions/hire CHorseman.bmp"
+		button="actions/hire CHorseman spec.bmp"
 		queueicon="gameres/icons/CHorseman.bmp"
 		groupverifier="data/subai/specialize_build_verify.vs"
 		transpicon="1"

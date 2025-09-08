@@ -1,8 +1,8 @@
 //void, Obj me
 
-int i;
 Unit this;
 
 this = me.AsUnit();
-if(.IsValid)
+
+if (.IsValid)
 	.SetParryMode(false);

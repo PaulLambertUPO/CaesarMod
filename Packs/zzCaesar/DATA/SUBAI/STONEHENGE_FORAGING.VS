@@ -30,18 +30,18 @@ if (.IsValid) {
 		if (duration % time_step == 0)
 			for (i = 1; i <= 16; i += 1) {
 				player_units = GetPlayerUnits(i);
-				player_units.ClearDead();
 				c = player_units.count;
 				for (j = 0; j < c; j += 1) {
 					u = player_units[j].AsUnit();
 					if (u.IsValid)
-						if (u.food <= u.maxfood) {
-							if (u.player == owning_player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-								food_increase = caster_food;
-							else
-								food_increase = base_food;
-							u.SetFood(MIN(u.food + food_increase, u.maxfood));
-						}
+						if (u.IsAlive)
+							if (u.food <= u.maxfood) {
+								if (u.player == owning_player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
+									food_increase = caster_food;
+								else
+									food_increase = base_food;
+								u.SetFood(MIN(u.food + food_increase, u.maxfood));
+							}
 				}
 			}
 

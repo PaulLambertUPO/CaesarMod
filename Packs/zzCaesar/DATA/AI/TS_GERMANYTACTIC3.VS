@@ -31,7 +31,7 @@ aSkillLevels[2] = 5;
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bMaces)
-			bMaces = set.TSResearch("Macemen production");
+			bMaces = set.TSResearch("Mace production");
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
@@ -90,7 +90,7 @@ aSkillLevels[2] = 5;
 		if (!bFoodTax)
 			bFoodTax = set.TSResearch("TFoodTax");
 		if (!bMaces)
-			bMaces = set.TSResearch("Macemen production");
+			bMaces = set.TSResearch("Mace production");
 		Sleep(4100 + rand(15) * 100);
 	}
 }

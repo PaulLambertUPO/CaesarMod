@@ -1,4 +1,4 @@
-<class id="Animal" cpp_class="CVXUnit" parent="BaseAnimal" entity="">
+<class id="Animal" parent="BaseAnimal" cpp_class="CVXUnit">
 	<!-- this class is actually PeacefulAnimal -->
 
 	<properties unit_specials="Freedom" />
@@ -9,7 +9,7 @@
 	<method sig="move" vs="data/subai/peaceful_move.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
-		script="return Translate('None');"
+		script="return Translate('No');"
 		help="contents/stats/attack"
 		rollover="Damage"
 	/>

@@ -1,21 +1,21 @@
-// void, Obj this, point pt
-Obj WatchEye, WatchEyePrev;
-Settlement sett;
+//void, Obj this, point pt
 
-sett = .AsBuilding.settlement;
+Settlement set;
+Obj new_expedition_watch_eye, old_expedition_watch_eye;
 
-EnvWriteString(this.AsBuilding, "researching", "yes");
-EnvWriteString(sett, "Expedition", "researching");
+set = .AsBuilding().settlement;
+
+EnvWriteString(.AsBuilding(), "researching", "yes");
+EnvWriteString(set, "Expedition", "researching");
 
 .Progress();
 
-WatchEye = Place("WatchEye", pt, .player);
-WatchEye.SetSight(1000);
-WatchEye.SetCommand("infinite_spy");
+new_expedition_watch_eye = Place("WatchEye", pt, .player);
+new_expedition_watch_eye.SetSight(1000);
+new_expedition_watch_eye.SetCommand("infinite_spy");
 
-// remove the previous eye
-WatchEyePrev = EnvReadObj(sett, "WatchEye");
-if (WatchEyePrev.IsValid)
-	WatchEyePrev.Damage(WatchEyePrev.maxhealth);
+old_expedition_watch_eye = EnvReadObj(set, "ExpeditionWatchEye");
+if (old_expedition_watch_eye.IsValid)
+	old_expedition_watch_eye.Erase();
 
-EnvWriteObj(sett, "WatchEye", WatchEye);
+EnvWriteObj(set, "ExpeditionWatchEye", new_expedition_watch_eye);

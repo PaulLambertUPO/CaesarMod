@@ -19,14 +19,14 @@ if (.IsValid) {
 
 	for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 		tmp_units = GetPlayerUnits(i, "Military");
-		tmp_units.ClearDead();
 		c = tmp_units.count;
 		for (j = 0; j < c; j += 1) {
 			u = tmp_units[j].AsUnit();
 			if (u.IsValid)
 				if (u.player == owning_player)//check unit player instead of i because GetPlayerUnits takes units from other players that are attached to player i's heroes
-					if (!u.IsRanged)
-						owning_player_units.Add(u);
+					if (u.IsAlive)
+						if (!u.IsRanged)
+							owning_player_units.Add(u);
 		}
 	}
 	c = owning_player_units.count;
@@ -40,11 +40,11 @@ if (.IsValid) {
 
 	SetGlobalBloodlust(false);
 
-	owning_player_units.ClearDead();
 	c = owning_player_units.count;
 	for (i = 0; i < c; i += 1) {
 		u = owning_player_units[i].AsUnit();
 		if (u.IsValid)
-			u.RemoveBonus(bonus_damage, 0, 0, 0, 0);
+			if (u.IsAlive)
+				u.RemoveBonus(bonus_damage, 0, 0, 0, 0);
 	}
 }

@@ -44,12 +44,12 @@ if (.IsValid) {
 				additional = base_additional;
 			}
 			things = GetPlayerUnits(k, "Wagon");
-			things.ClearDead();
 			c = things.count;
 			for (l = 0; l < c; l += 1) {
 				wagon = things[l].AsWagon();
-				if (wagon.restype == 1)//0 = gold, 1 = food
-					wagon.SetFood(MAX(0, wagon.amount * (100 - percent) / 100 - additional));
+				if (wagon.IsAlive)
+					if (wagon.restype == 1)//0 = gold, 1 = food
+						wagon.SetFood(MAX(0, wagon.amount * (100 - percent) / 100 - additional));
 			}
 		}
 		Sleep(time_step);

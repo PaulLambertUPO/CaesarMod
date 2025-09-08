@@ -1,0 +1,4 @@
+<class id="OldManEAmbient" parent="PeasantAmbient" cpp_class="CVXUnit" entity="units/OldManE/OldManE.ent.xml">
+	<properties race="Gaul" />
+	<properties radius="20" />
+</class>

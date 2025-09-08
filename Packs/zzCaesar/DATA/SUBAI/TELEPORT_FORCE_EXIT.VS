@@ -16,7 +16,6 @@ else {
 		Sleep(1000);
 
 		lost_units = .settlement.Units;
-		lost_units.ClearDead();
 
 		for (i = 0; i < lost_units.count; i += 1) {
 			u = lost_units[i].AsUnit();

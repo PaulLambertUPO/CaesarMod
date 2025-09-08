@@ -12,17 +12,16 @@ if (.IsValid)
 
 		ItemUsed(1);
 
-		units_in_sight = ObjsInSight(this, "Military").GetObjList();
-		units_in_sight.Add(this);
-		units_in_sight.ClearDead();
+		units_in_sight = ObjsInCircle(.pos, .sight, "Military").GetObjList();//do not use ObjsInSight to avoid having to add the owner manually
 
 		for (i = 0; i < units_in_sight.count; i += 1) {
 			u = units_in_sight[i].AsUnit();
 			if (u.IsValid)
-				if (!.IsEnemy(u)) {
-					u.AddBonus(30, 0, 0, 0, 0);
-					units_enraged.Add(u);
-				}
+				if (u.IsAlive)
+					if (!.IsEnemy(u)) {
+						u.AddBonus(30, 0, 0, 0, 0);
+						units_enraged.Add(u);
+					}
 		}
 
 		while (time < 5000) {
@@ -40,11 +39,11 @@ if (.IsValid)
 			Sleep(250);
 		}
 
-		units_enraged.ClearDead();
 		for (i = 0; i < units_enraged.count; i += 1) {
 			u = units_enraged[i].AsUnit();
 			if (u.IsValid)
-				u.RemoveBonus(30, 0, 0, 0, 0);
+				if (u.IsAlive)
+					u.RemoveBonus(30, 0, 0, 0, 0);
 		}
 	}
 	else

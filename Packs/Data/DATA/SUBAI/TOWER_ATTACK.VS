@@ -1,15 +1,17 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
 
-Building Bld;
+if (target.IsValid) {
+	Building this;
 
-Bld = This.AsBuilding();
+	this = This.AsBuilding();
 
+	if (.IsValid) {
+		if (.settlement.IsOutpost)
+			if (.settlement.IsIndependent)
+				return;
 
-if (Bld.IsValid() && target.IsValid()) {
-	if (Bld.settlement.IsOutpost() && Bld.settlement.IsIndependent)
-	{
-		return;
+		.SetUITarget(target);
+
+		Sleep(100);
 	}
-	Bld.SetUITarget(target);
-	Sleep(100);
 }

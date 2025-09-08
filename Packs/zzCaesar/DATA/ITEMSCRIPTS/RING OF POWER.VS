@@ -9,15 +9,19 @@ if (.IsValid) {
 
 	while (1) {
 		Sleep(1000);
-		charges = GetUseCount();
-		if (.health < .maxhealth && charges >= 25) {
-			charges -= 20;
-			.Heal(20);
-			if (!.InHolder)
-				CreateFeedback("Heal", this);
+		if (.health >= .maxhealth)
+			charges = MIN(600, GetUseCount() + 5);
+		else {
+			charges = GetUseCount();
+			if (charges < 25)
+				charges = MIN(600, charges + 5);
+			else {
+				charges -= 20;
+				.Heal(20);
+				if (!.InHolder)
+					CreateFeedback("Heal", this);
+			}
 		}
-		else
-			charges = MIN(600, charges + 5);
 		ItemUsed(GetUseCount() - charges);
 	}
 }

@@ -1,48 +1,54 @@
-// void, Obj me
+//void, Obj me
 
 Tower this;
-this = me.AsTower;
 
-//pr("FireTower::Guard");
+this = me.AsTower();
 
-while (.IsValid)
-{
+if (.IsValid) {
+	Settlement set;
 	Unit target;
-	if (.settlement.IsOutpost() && .settlement.IsIndependent)
-	{
-			Sleep(500);
-			return;
-	}
-	target = .GetUITarget.AsUnit;
-	if (target.IsAlive)
-	if (.IsValidTarget(target))
-	if (.CanAttack(target))
-	{
-		bool bAttacked = false;
-		while (.Attack(target))
-		{
-			bAttacked = true;
-			Sleep(100);
-			if (!.IsValid) return;
-			if (!target.IsAlive) break;
-		}
+
+	set = .settlement;
+
+	while (1) {
+		if (set.IsOutpost)
+			while (set.IsIndependent)
+				Sleep(500);
+
+		target = .GetUITarget();
+
+		if (target.IsValid)
+			if (target.IsAlive)
+				if (.IsValidTarget(target))
+					if (.CanAttack(target))
+						while (.Attack(target)) {
+							Sleep(500);
+
+							if (target.IsDead)
+								break;
+							if (!.IsValidTarget(target))
+								break;
+							if (!.CanAttack(target))
+								break;
+						}
+
+		target = .BestTarget;
+
+		if (target.IsValid)
+			if (target.IsAlive)
+				if (.IsValidTarget(target))
+					if (.CanAttack(target))
+						while (.Attack(target)) {
+							Sleep(500);
+
+							if (target.IsDead)
+								break;
+							if (!.IsValidTarget(target))
+								break;
+							if (!.CanAttack(target))
+								break;
+						}
+
 		Sleep(500);
-		if (bAttacked) continue;
 	}
-//	pr("Looking for best target");
-	target = .BestTarget;
-	if (!target.IsAlive) {
-//		pr("Best target not found, sleeping for 1000");
-		Sleep(1000); 
-		continue;
-	}
-//	pr("Trying to attack enemy");
-	while (.Attack(target)) {
-//		pr("FireTower::Guard - attacking");
-		Sleep(100);
-		if (!.IsValid) return;
-		if (!target.IsValid) break;
-		if (!target.IsAlive) break;
-	}
-	Sleep(500);
 }

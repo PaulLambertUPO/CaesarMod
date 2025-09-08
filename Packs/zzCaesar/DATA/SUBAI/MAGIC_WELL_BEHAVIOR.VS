@@ -1,23 +1,21 @@
 //void, Obj This
 
-ObjList l;
+ObjList damaged_units;
 Unit u;
+point pos;
 
 Sleep(rand(501) + 500);
 
+pos = This.pos;
+
 while (1) {
-	Sleep(500);
-	l = Union(ObjsInRange(This, "Military", 400), ObjsInRange(This, "Peaceful", 400)).GetObjList();//exclude animals
-	if (l.count > 0) {
-		l.ClearDead();
-		l = l.ObjInjured();
-		if (l.count > 0) {
-			u = l[rand(l.count)].AsUnit();
-			if (u.IsValid) {
-				u.Heal(100);
-				CreateFeedback("Heal", u);
-			}
-			Sleep(500);
+	damaged_units = ObjsInCircle(pos, 400, "Military,Peaceful").GetObjList().ObjInjured();//exclude animals
+	if (damaged_units.count > 0) {
+		u = damaged_units[rand(damaged_units.count)].AsUnit();
+		if (u.IsValid) {
+			u.Heal(100);
+			CreateFeedback("Heal", u);
 		}
 	}
+	Sleep(1000);
 }

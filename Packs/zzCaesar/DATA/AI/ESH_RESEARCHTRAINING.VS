@@ -394,7 +394,7 @@ if (nRace == Egypt) {
 		Building b;
 		Unit u;
 		StrArray items, techs;
-		int i, j, nCount, min = 30;
+		int i, j, count_units;
 		str charm;
 
 		items[0] = "Damage charm";
@@ -411,15 +411,18 @@ if (nRace == Egypt) {
 		l = set.ObjectsAround("Military");
 		j = rand(4);
 		charm = items[j];
-		for (i = 0; i < l.count && nCount < min; i += 1) {
+		for (i = 0; i < l.count && count_units < 30; i += 1) {
 			u = l[i].AsUnit();
-			if (!b.IsEnemy(u))
-				if (!u.IsSentry)
-					if (!u.AsHero().IsValid)
-						if (!u.HasItem(charm))
-							nCount += 1;
+			if (u.IsValid)
+				if (u.IsAlive)
+					if (!b.IsEnemy(u))
+						if (u.free_item_slots > 0)
+							if (!u.HasItem(charm))
+								if (!u.IsSentry)
+									if (!u.IsHeirOf("Hero"))
+										count_units += 1;
 		}
-		if (nCount >= min)
+		if (count_units >= 30)
 			strTech = techs[j];
 	}
 }

@@ -9,8 +9,6 @@
 		costgold="500"
 		execdelay="60000">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
-		<src obj="HTemple" />
 	</cmd>
 	<cmd name="trainRPriest" priority="2"
 		button="actions/train RPriest.bmp"
@@ -26,7 +24,6 @@
 		param="RPriest"
 		sclass="RPriest">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
 	</cmd>
 	<cmd name="trainRPriestPunic" priority="2"
 		button="actions/train RPriest Punic.bmp"
@@ -42,7 +39,6 @@
 		param="RPriestPunic"
 		sclass="RPriestPunic">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
 	</cmd>
 	<cmd name="Altar of Jupiter" priority="3"
 		button="research/priest enlightment.bmp"
@@ -57,7 +53,6 @@
 		method="research"
 		param="NameSet, Altar of Jupiter, default, SetsSet, levels/RPriest, 4, SetsSet, levels/RPriestPunic, 4">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
 	</cmd>
 	<cmd name="Cloud of Plague" priority="4"
 		queueicon="gameres/icons/upgrades/mist.bmp"
@@ -72,7 +67,6 @@
 		method="research"
 		param="ReqSet, Altar of Jupiter, default, NamePlr, Cloud of Plague, default">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
 	</cmd>
 	<cmd name="Wrath of Jupiter" priority="5"
 		button="research/Jupiter.bmp"
@@ -87,7 +81,6 @@
 		method="research"
 		param="ReqSet, Altar of Jupiter, default, NamePlr, Wrath of Jupiter, default">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
 	</cmd>
 	<cmd name="God's Gift" priority="6"
 		button="research/Gift of God.bmp"
@@ -102,6 +95,5 @@
 		method="research"
 		param="ReqSet, Altar of Jupiter, default, NameSet, God's Gift, default, SetsSet, items/God's Gift, 1">
 		<src obj="RTemple" />
-		<src obj="MTemple" />
 	</cmd>
 </commands>

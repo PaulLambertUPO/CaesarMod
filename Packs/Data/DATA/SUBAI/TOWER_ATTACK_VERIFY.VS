@@ -1,17 +1,18 @@
 //bool, Obj this, Obj other
 
-Settlement sett; 
-sett = .AsBuilding().settlement();
+Settlement set;
 
-if (sett.IsOutpost())
-	if (sett.IsIndependent)
+set = .AsBuilding().settlement;
+
+if (set.IsOutpost)
+	if (set.IsIndependent)
 		return false;
 
-if (sett.UnitsCount() == 0)
-	return false;
-
-if (this.IsValidTarget(other))
-	if (other.IsAlive())
-		return .CanAttack(other);
+if (set.UnitsCount > 0)
+	if (other.IsValid)
+		if (other.IsAlive)
+			if (.IsValidTarget(other))
+				if (.CanAttack(other))
+					return true;
 
 return false;

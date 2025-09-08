@@ -1,125 +1,128 @@
-// void, Obj me, Obj target1
+//void, Obj me, Obj target1
 
 Unit this;
-point target_pt, pt, pt1, pt2;
-int npt, k, best_radius, radius, dx, dy, dist1, dist2;
-Building target;
-int range;
 
 this = me.AsUnit();
-target = target1.AsBuilding();
-if (!.IsAlive() || !target.IsAlive())
-	return;
 
-range = .radius + 10;
-if (target.IsHeirOf("Gate")) {
-	pt1 = target.GetPoint(17, 0);
-	pt2 = target.GetPoint(17, 1);
-	if (pt1.x != -32768 || pt2.x != -32768) {
-		dist1 = -1;
-		dist2 = -1;
-		if (pt2.x != -32768) {
-			pt2 = pt2 + target.pos;
-			dist2 = .PathTo(pt2, 0, 0);
-			target_pt = pt2;
-		}
-		if (pt1.x != -32768) {
-			pt1 = pt1 + target.pos;
-			dist1 = .PathTo(pt1, 0, 0);
-			target_pt = pt1;
-		}
-		if (dist1 >= 0) {
-			if (dist2 >= 0) {
-				if (dist2 < dist1) target_pt = pt2;
-				else target_pt = pt1;
-			} else target_pt = pt1;
-			range = 0;
-		} else if (dist2 >= 0) {
-			target_pt = pt2 + target.pos;
-			range = 0;
-		}
-	} else {
-		npt = 0;
-		pt = target.GetPoint(10, 0);
-		if (pt.x != -32768) {
-			npt = 1;
-			target_pt = pt + target.pos;
-		}
-		pt = target.GetPoint(10, 1);
-		if (pt.x != -32768) {
-			npt += 1;
-			target_pt = target_pt + pt + target.pos;
-		}
-		pt = target.GetPoint(10, 2);
-		if (pt.x != -32768) {
-			npt += 1;
-			target_pt = target_pt + pt + target.pos;
-		}
-		if (npt == 0) {
-			//pr("Gate " + .class + " has no points of type etDestLock2!!");
-			return;
-		}
-		target_pt = target_pt / npt;
-//		pr ("target pt = " + target_pt.x + "," + target_pt.y);
+if (.IsValid)
+	if (.IsAlive) {
+		Building target;
+
+		target = target1.AsBuilding();
+
+		if (target.IsValid)
+			if (target.IsAlive) {
+				point target_pos, pt_target;
+				int range;
+
+				range = .radius + 10;
+				target_pos = target.pos;
+
+				if (target.IsHeirOf("Gate")) {
+					point pt_0, pt_1;
+
+					pt_0 = target.GetPoint(17, 0);
+					pt_1 = target.GetPoint(17, 1);
+
+					if (pt_0.x != -32768 || pt_1.x != -32768) {
+						int dist_0, dist_1;
+
+						dist_0 = -1;
+						dist_1 = -1;
+
+						if (pt_1.x != -32768) {
+							pt_1 = pt_1 + target_pos;
+							dist_1 = .PathTo(pt_1, 0, 0);
+							pt_target = pt_1;
+						}
+						if (pt_0.x != -32768) {
+							pt_0 = pt_0 + target_pos;
+							dist_0 = .PathTo(pt_0, 0, 0);
+							pt_target = pt_0;
+						}
+						if (dist_0 >= 0) {
+							range = 0;
+							if (dist_1 >= 0)
+								if (dist_1 < dist_0)
+									pt_target = pt_1;
+								else
+									pt_target = pt_0;
+							else
+								pt_target = pt_0;
+						}
+						else if (dist_1 >= 0) {
+							range = 0;
+							pt_target = pt_1 + target_pos;
+						}
+					}
+					else {
+						point pt;
+						int i, j;
+
+						for (i = 0; i < 3; i += 1) {
+							pt = target.GetPoint(10, i);
+							if (pt.x != -32768) {
+								j += 1;
+								pt_target = pt + target_pos;
+							}
+						}
+						if (j < 1)//no "etDestLock2" points
+							return;
+						pt_target = pt_target / j;
+					}
+				}
+				else if (target.settlement.IsOutpost || target.settlement.IsShipyard) {
+					point pt;
+					int i, dist_x, dist_y, radius, best_radius = 100000000;
+
+					while (1) {
+						pt = target.GetPoint(17, i);
+						if (pt.x == -32768)
+							break;
+						i += 1;
+						pt = pt + target_pos;
+						dist_x = pt.x - .pos.x;
+						dist_y = pt.y - .pos.y;
+						radius = dist_x * dist_x + dist_y * dist_y;
+						if (radius < best_radius) {
+							best_radius = radius;
+							pt_target = pt;
+							range = 0;
+						}
+					}
+
+					if (i < 1) {
+						while (1) {
+							pt = target.GetPoint(1, i);
+							if (pt.x == -32768)
+								break;
+							i += 1;
+							pt = pt + target_pos;
+							dist_x = pt.x - .pos.x;
+							dist_y = pt.y - .pos.y;
+							radius = dist_x * dist_x + dist_y * dist_y;
+							if (radius < best_radius) {
+								best_radius = radius;
+								pt_target = pt;
+							}
+						}
+						if (i < 1)//no enter points
+							return;
+					}
+				}
+				else
+					return;
+
+				while (1)
+					if (.GotoEnter(pt_target, range, 2000, false, 0))
+						break;
+
+				while (1) {
+					if (!.CanAttack(target))
+						break;
+					if (target.IsVeryBroken)
+						break;
+					.Attack(target);
+				}
+			}
 	}
-} 
-
-
-else if (target.settlement.IsOutpost() || target.settlement.IsShipyard()) {
-	best_radius = 100000000;
-	k = 0;
-	while (1) {
-		pt = target.GetPoint(17, k);
-		k += 1;
-		if (pt.x == -32768) break;
-		pt = pt + target.pos;
-		dx = pt.x - .pos.x;
-		dy = pt.y - .pos.y;
-		radius = dx*dx + dy*dy;
-		if (radius >= best_radius) continue;
-		best_radius = radius;
-		target_pt = pt;
-		range = 0;
-	}
-
-	if (k == 1) {
-		k = 0;
-		while (1) {
-			pt = target.GetPoint(1, k);
-			k += 1;
-			if (pt.x == -32768) break;
-			pt = pt + target.pos;
-			dx = pt.x - .pos.x;
-			dy = pt.y - .pos.y;
-			radius = dx*dx + dy*dy;
-			if (radius >= best_radius) continue;
-			best_radius = radius;
-			target_pt = pt;
-		}
-		if (k == 1) {
-			//pr ("outpost/shipyard has no enter points!");
-			return;
-		}
-	}
-}
-
-
-else {
-	//pr ("invalid ram target");
-	return;
-}
-
-
-//Place("Feedback", target_pt, .player);
-
-while (1) {
-	if (.GotoEnter(target_pt, range, 2000, false, 0)) break;
-}
-
-while (1) {
-	if (!.CanAttack(target)) break;
-	if (target.health == 0) break;
-	.Attack(target);
-}
-
-

@@ -1,4 +1,4 @@
-<class id="TTent" cpp_class="CVXTownHall" parent="Building" entity="Buildings/Teuton_camp/Teuton_camp_as.ent.xml" entity_winter="Buildings/Teuton_camp/Teuton_camp_w.ent.xml">
+<class id="TTent" parent="Building" cpp_class="CVXTownHall" entity="Buildings/Teuton_camp/Teuton_camp_as.ent.xml" entity_winter="Buildings/Teuton_camp/Teuton_camp_w.ent.xml">
 	<properties race="Germany" />
 	<properties maxhealth="15000" sight="900" />
 	<properties radius="190" selection_radius="195" />
@@ -27,8 +27,6 @@
 		minimap_icon_type="color"
 	/>
 	<behavior script="data/subai/ttent_behavior.vs" />
-	<behavior script="data/subai/ttent_feeding_behavior.vs" />
-	<behavior script="data/subai/outpost_behavior_guard.vs"/>
 
 	<method sig="createfoodmulesmall" vs="data/subai/create_food_mule_small.vs" />
 	<method sig="createfoodmulebig" vs="data/subai/create_food_mule_big.vs" />

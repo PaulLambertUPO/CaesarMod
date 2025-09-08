@@ -1,6 +1,5 @@
-// void, Obj gate
-Gate this;
-this = gate.AsGate();
+//void, Obj gate
 
-.OpenNow();
+gate.AsGate().OpenNow();
+
 Sleep(10000);

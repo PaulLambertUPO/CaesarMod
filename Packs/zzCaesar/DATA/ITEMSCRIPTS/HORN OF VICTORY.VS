@@ -11,27 +11,28 @@ if (.IsValid)
 		int i, enemies_damaged;
 
 		ol = Subtract(ObjsInSight(this, "Unit"), Union(ObjsInSight(this, "Hen"), ObjsInSight(this, "PeasantAmbient"))).GetObjList();
-		ol.ClearDead();
 
 		//make 25 attempts to damage 15 enemies chosen randomly, then in order
 		for (i = 0; ol.count > 0 && i < 25 && enemies_damaged < 15; i += 1) {
 			u = ol[rand(ol.count)].AsUnit();
 			if (u.IsValid)
-				if (.IsEnemy(u)) {
-					enemies_damaged += 1;
-					u.Damage(75);
-					CreateFeedback("Damage2", u);
-					ol.Remove(u);//avoid damaging the same unit more than once
-				}
+				if (u.IsAlive)
+					if (.IsEnemy(u)) {
+						enemies_damaged += 1;
+						u.Damage(75);
+						CreateFeedback("Damage2", u);
+						ol.Remove(u);//avoid damaging the same unit more than once
+					}
 		}
 		for (i = 0; i < ol.count && enemies_damaged < 15; i += 1) {
 			u = ol[i].AsUnit();
 			if (u.IsValid)
-				if (.IsEnemy(u)) {
-					enemies_damaged += 1;
-					u.Damage(75);
-					CreateFeedback("Damage2", u);
-				}
+				if (u.IsAlive)
+					if (.IsEnemy(u)) {
+						enemies_damaged += 1;
+						u.Damage(75);
+						CreateFeedback("Damage2", u);
+					}
 		}
 
 		if (enemies_damaged > 0)

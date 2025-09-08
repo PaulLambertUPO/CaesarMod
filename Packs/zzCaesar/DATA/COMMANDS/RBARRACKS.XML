@@ -128,7 +128,7 @@
 		<src obj="RBarracks" />
 	</cmd>
 	<cmd name="trainRPraetorianDiscounted" priority="8"
-		button="actions/train RPraetorian.bmp"
+		button="actions/train RPraetorian discounted.bmp"
 		queueicon="gameres/icons/RPraetorian.bmp"
 		transpicon="1"
 		traincommand="yes"

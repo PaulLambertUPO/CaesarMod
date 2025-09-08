@@ -10349,7 +10349,7 @@
 		<settlement
 			id="7"
 			player="1"
-			classoffirstbuilding="RTownhall"
+			classoffirstbuilding="MTownhall"
 			maxpopulation="100"
 			extrasentries="0"
 			maxgold="100000"
@@ -10636,7 +10636,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="RTownhall"
+		class="MTownhall"
 		num="1029"
 	data="-1"
 	player="1"
@@ -10649,7 +10649,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="RArena"
+		class="MArena"
 		num="1030"
 	player="1"
 	healthperc="100"
@@ -10709,7 +10709,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="RTemple"
+		class="MTemple"
 		num="1035"
 	player="1"
 	healthperc="100"

@@ -2,24 +2,29 @@
 
 Building this;
 Settlement set;
+point pos;
+int i, radius;
+bool first_time_independent;
 
 Sleep(rand(1000) + 500);
 
 this = This.AsBuilding();
-
 set = .settlement;
+
+radius = .radius + 150;
+pos = .pos;
+
+//this manages the cases where the outpost returns independent (with adventure sequences) and where it becomes independent because of other neutral units after the first capture
+first_time_independent = EnvReadInt(set, "FirstCaptureReward") != 1;
 
 set.SetLoyalty(100);//impossible to capture until the garrison is defeated
 
-if (!set.IsIndependent)
-	while (1)
-		Sleep(3600000);
-else {
+if (set.IsIndependent) {
 	ObjList all_defenders_1, all_defenders_2, defenders_outside_1, defenders_outside_2, enemies;
 	Unit u;
-	point pos, pt1, pt2;
+	point pt1, pt2;
 	rect rc;
-	int i, j, range, player, old_level_1, old_level_2, end_level_1, end_level_2, start_time_1, start_time_2, interval_1, interval_2, time;
+	int j, range, player, old_level_1, old_level_2, end_level_1, end_level_2, start_time_1, start_time_2, interval_1, interval_2, time;
 	int defenders_max_1, defenders_max_2, defenders_out_1, defenders_out_2;
 	str defenders_class_1, defenders_class_2;
 
@@ -27,7 +32,6 @@ else {
 
 	range = .range;
 	player = .player;
-	pos = .pos;
 
 	defenders_max_1 = .GetDefendersMax(1);
 	defenders_max_2 = .GetDefendersMax(2);
@@ -59,6 +63,7 @@ else {
 			set.ForceAddUnit(u);
 			u.SetFeeding(false);
 			u.SetLevel(old_level_1);
+			u.SetNoAIFlag(true);
 			all_defenders_1.Add(u);
 		}
 	if (defenders_class_2 != "")
@@ -67,10 +72,16 @@ else {
 			set.ForceAddUnit(u);
 			u.SetFeeding(false);
 			u.SetLevel(old_level_2);
+			u.SetNoAIFlag(true);
 			all_defenders_2.Add(u);
 		}
 
-	while (1) {
+	while (player == .player) {
+		//send away enemy units inside
+		pt1 = Point(radius, 0);
+		pt1.Rot(rand(360));
+		set.Units.ObjEnemy(.player).SetCommand("advance", pt1 + pos);
+
 		all_defenders_1.ClearDead();
 		all_defenders_2.ClearDead();
 		defenders_outside_1.ClearDead();
@@ -114,9 +125,8 @@ else {
 					EnemyObjs(player, "Sentry")
 				)
 			),
-			Intersect(ObjsInRange(this, "Building", range), EnemyObjs(player, "Catapult"))
+			Intersect(ObjsInRange(this, "Catapult", range), EnemyObjs(player, "Catapult"))
 		).GetObjList();
-		enemies.ClearDead();
 		if (enemies.count <= 0) {
 			//no threat around, command all units that are out to come back in
 			defenders_outside_1.SetCommand("enter_tent", this);
@@ -212,30 +222,149 @@ else {
 				if (all_defenders_2.count <= 0) {
 					enemies.ClearDead();
 					i = enemies.count;
-					if (i > 0) {
-						j = enemies[rand(i)].player;
-						.SetPlayer(j);
-						if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
-							set.SetFood(.GetOutpostFood());
-							//spawn 20 villagers
-							if (.class == "COutpost") {
-								for (i = 0; i < 20; i += 1) {
-									u = Place("CVillager", pos, j);
-									set.ForceAddUnit(u);
-								}
-							}
-							else if (.class == "HOutpost") {
-								for (i = 0; i < 20; i += 1) {
-									u = Place("HVillager", pos, j);
-									set.ForceAddUnit(u);
-								}
-							}
-							return;
-						}
-					}
+					if (i > 0)
+						.SetPlayer(enemies[rand(i)].player);
 				}
 			}
 		}
 		Sleep(1000);
+	}
+
+	if (first_time_independent)//spawn food and peasants for the new player (only once)
+		if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
+			set.SetFood(.GetOutpostFood());
+			j = .player;
+			if (.class == "COutpost") {
+				for (i = 0; i < 20; i += 1) {
+					u = Place("CVillager", pos, j);
+					set.ForceAddUnit(u);
+				}
+			}
+			else if (.class == "HOutpost") {
+				for (i = 0; i < 20; i += 1) {
+					u = Place("HVillager", pos, j);
+					set.ForceAddUnit(u);
+				}
+			}
+			EnvWriteInt(set, "FirstCaptureReward", 1);
+		}
+}
+else
+	EnvWriteInt(set, "FirstCaptureReward", 1);//if the outpost starts as not independent, never give the reward
+
+{
+	Settlement supplied;
+	ObjList macemen, hoplites, units_in;
+	Wagon wagon;
+	Unit u;
+	Building suppliedHall;
+	point pt;
+	int refresh, food_sales, food_income, gold_income, required_gold, min_resource;
+	bool is_gold_outpost = false, is_selling_food, is_selling_gold;
+
+	refresh = GetConst("OutpostRefresh");
+	food_sales = GetConst("GOutpostFoodSales");
+	food_income = GetConst("GOutpostGoldReturn");
+	gold_income = GetConst("ROutpostGoldReturn");
+	required_gold = GetConst("ROutpostRequiredGold");
+	min_resource = GetConst("MinResQtyToTransport");
+
+	if (.class == "ROutpost")
+		is_gold_outpost = true;
+	else if (.class == "EOutpost")
+		is_gold_outpost = true;
+
+	while (1) {
+		//send away enemy units inside
+		pt = Point(radius, 0);
+		pt.Rot(rand(360));
+		set.Units.ObjEnemy(.player).SetCommand("advance", pt + pos);
+
+		if (set.IsIndependent) {//this is probably impossible to happen, in that case just restart the script and wait for the player check loop to end
+			if (set.supplied.IsValid)
+				set.StopSupply();
+			return;
+		}
+		else {
+			is_selling_food = EnvReadString(set, "GOutpostSellFood") == "yes";
+			is_selling_gold = EnvReadString(set, "GOutpostSellGold") == "yes";
+	
+			if (!.IsBroken) {
+				if (is_selling_food)
+					if (set.food >= food_sales) {
+						set.SetFood(set.food - food_sales);
+						set.SetGold(set.gold + food_income);
+						set.GoldConverted(food_income);
+					}
+				if (is_selling_gold)
+					if (set.gold >= food_income) {
+						set.SetGold(set.gold - food_income);
+						set.SetFood(set.food + food_sales);
+					}
+				if (is_gold_outpost)
+					if (set.gold >= required_gold) {
+						set.SetGold(set.gold + gold_income);
+						set.GoldConverted(gold_income);
+					}
+			}
+
+			if (set.supplied == set)
+				set.StopSupply();
+
+			supplied = set.supplied;
+
+			if (supplied.IsValid)
+				if (!set.IsEnemy(supplied.player)) {
+					suppliedHall = supplied.GetCentralBuilding();
+	
+					if (!is_selling_gold)
+						if (set.gold >= min_resource) {
+							i = 1000;
+							if (is_gold_outpost)
+								if (set.gold >= required_gold)
+									if (set.gold - required_gold < i)
+										i = set.gold - required_gold;//0-999
+							if (i >= min_resource) {
+								wagon = set.CreateMuleGold(i);
+								wagon.SetCommand("unload", suppliedHall);
+								wagon.AddCommand(false, "unload", this);//come back if the destination becomes invalid during the travel
+							}
+						}
+					if (!is_selling_food)
+						if (set.food >= min_resource) {
+							wagon = set.CreateMuleFood(MIN(1000, set.food));
+							wagon.SetCommand("unload", suppliedHall);
+							wagon.AddCommand(false, "unload", this);//come back if the destination becomes invalid during the travel
+						}
+	
+					macemen.Clear();
+					hoplites.Clear();
+					units_in = set.Units;
+					for (i = 0; i < units_in.count; i += 1) {
+						u = units_in[i].AsUnit();
+						if (u.IsValid)
+							if (u.IsAlive)
+								if (!u.GetCommanded())
+									if (u.IsHeirOf("CMaceman"))
+										macemen.Add(u);
+									else if (u.IsHeirOf("HHoplite"))
+										hoplites.Add(u);
+					}
+					if (suppliedHall.IsHeirOf("BaseTownhall")) {
+						if (macemen.count >= 5)
+							macemen.SetCommand("enter", suppliedHall);
+						if (hoplites.count >= 5)
+							hoplites.SetCommand("enter", suppliedHall);
+					}
+					else if (suppliedHall.IsHeirOf("Outpost")) {
+						if (macemen.count >= 5)
+							macemen.SetCommand("enter", suppliedHall);
+						if (hoplites.count >= 5)
+							hoplites.SetCommand("enter", suppliedHall);
+					}
+				}
+		}
+
+		Sleep(refresh);
 	}
 }

@@ -7,7 +7,7 @@ IntArray race_nums;
 int i, r, race, max;
 
 objs.ClearDead();
-builders = objs.FilterClosest(pt, GetConst("CatapultMaxUnits"));
+builders = objs.FilterClosest(pt, 10);
 
 max = -1;
 

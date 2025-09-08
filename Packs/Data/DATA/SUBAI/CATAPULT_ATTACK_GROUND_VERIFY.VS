@@ -1,9 +1,13 @@
 //bool, Obj me, point pt
 
 Catapult this;
+
 this = me.AsCatapult();
 
-if (!.InRange(pt)) return false;
-	         
-return true;
-	
+if (.IsValid)
+	if (.IsAlive)
+		if (.IsBuilt)
+			if (.InRange(pt))
+				return true;
+
+return false;
