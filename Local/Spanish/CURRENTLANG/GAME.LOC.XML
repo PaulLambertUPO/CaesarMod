@@ -1181,11 +1181,11 @@
 <translationtableentry text="Plague" result="Peste" />
 <translationtableentry text="Poisons 1 in every 7 units (8 for the caster's).\nIt has a 1 minute cooldown" result="Envenena 1 unidad cada 7 (8 para el lanzador).\nTiene una recarga de 1 minuto" />
 <translationtableentry text="Bloodlust" result="Sed de sangre" />
-<translationtableentry text="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nLasts 30 seconds" result="Permite a todos los guerreros ignorar la defensa del enemigo y las unidades cuerpo a cuerpo del lanzador presentes en el momento de la activación obtienen 6 puntos de ataque adicionales por la duración.\nDura 30 segundos" />
+<translationtableentry text="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nIt lasts 30 seconds" result="Permite a todos los guerreros ignorar la defensa del enemigo y las unidades cuerpo a cuerpo del lanzador presentes en el momento de la activación obtienen 6 puntos de ataque adicionales por la duración.\nDura 30 segundos" />
 <translationtableentry text="Starvation" result="Hambruna" />
-<translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nLasts 2 minutes" result="Cada 5 segundos reduce ols víveres de todos los asentamientos y las unidades de suministro en un 2% y en 20 (1% y 10 para los del lanzador).\nDura 2 minutos" />
+<translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nIt lasts 2 minutes" result="Cada 5 segundos reduce ols víveres de todos los asentamientos y las unidades de suministro en un 2% y en 20 (1% y 10 para los del lanzador).\nDura 2 minutos" />
 <translationtableentry text="Earthquake" result="Terremoto" />
-<translationtableentry text="Every second deals 300 damage to all strongholds (225 to the caster's).\nLasts 10 seconds" result="Cada segundo inflige 300 puntos de daño a todas la fortalezas (225 a las del lanzador).\nDura 10 segundos" />
+<translationtableentry text="Every second deals 300 damage to all strongholds (225 to the caster's).\nIt lasts 10 seconds" result="Cada segundo inflige 300 puntos de daño a todas la fortalezas (225 a las del lanzador).\nDura 10 segundos" />
 <translationtableentry text="Teuton horde" result="Horda teutona" />
 <translationtableentry text="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes" result="Reúne a una horda de 100 teutones (40 jinetes, 40 arqueros y 20 asaltadores) de nivel 12 (18 para los del lanzador) en todas la fortalezas, vaciando la población.\nRequiere 3 minutos" />
 <translationtableentry text="Player %s1 - Foraging - %s2" result="Jugador %s1 - Nutrición - %s2" />
@@ -1259,10 +1259,7 @@
 <translationtableentry text="Select a place to build the machine" result="Selecciona un lugar donde construir la máquina" />
 <translationtableentry text="You need to select more units to build the machine" result="Tienes que seleccionar más unidades para construir la máquina" />
 <translationtableentry text="Take nearby items" result="Tomar objetos cercanos" />
-<translationtableentry text="Makes the unit take everything from the nearest item holder" result="Hace que la unidad tome todo del lugar con objetos más cercano" />
 <translationtableentry text="Inventory full" result="Inventario lleno" />
-<translationtableentry text="No item holders in sight" result="Ningún lugar con objetos a la vista" />
-<translationtableentry text="No items to take" result="Ningún objeto que tomar" />
 <translationtableentry text="Select special units" result="Seleccionar unidades especiales" />
 <translationtableentry text="Selects all special units of the currently selected types across the map (except those attached to a hero)" result="Selecciona todas las unidades especiales de los tipos seleccionados actualmente en todo el mapa (excluyendo aquellas vinculadas a un héroe)" />
 <translationtableentry text="Enter parry mode" result="Activar modo contención" />

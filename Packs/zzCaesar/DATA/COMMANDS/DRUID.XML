@@ -163,7 +163,7 @@
 	</cmd>
 	<cmd name="restoration" priority="28"
 		button="actions/restoration.bmp"
-		key="r"
+		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Restoration"
 		description="Restores the stamina of up to 5 nearby allies (at the cost of life)"
@@ -174,7 +174,7 @@
 	</cmd>
 	<cmd name="mass_heal" priority="29"
 		button="actions/Mass Healing.bmp"
-		key="r"
+		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Mass heal"
 		description="Heals nearby allies (at the cost of life)"

@@ -9,7 +9,7 @@ if (.IsValid) {
 	Unit u, pack_leader;
 	int i;
 
-	Sleep(rand(15));//give a random delay to manage the leader check of the first iteration for multiple wolves
+	Sleep(rand(15));//random delay to manage the leader check of the first iteration for multiple wolves
 
 	while (!.Stop(1000))
 		;
@@ -33,10 +33,12 @@ if (.IsValid) {
 				}
 			}
 		}
+
 		if (!pack_leader.IsValid) {
 			.AddCommand(true, "lead");
 			return;
 		}
+
 		while (pack_leader.IsAlive) {
 			if (pack_leader.command == "engage") {
 				.AddCommand(true, "engage");
@@ -53,6 +55,7 @@ if (.IsValid) {
 				break;
 			Sleep(500);
 		}
+
 		pack_leader.Clear();
 	}
 }

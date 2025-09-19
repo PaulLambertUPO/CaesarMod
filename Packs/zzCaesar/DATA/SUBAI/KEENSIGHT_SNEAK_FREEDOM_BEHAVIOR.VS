@@ -14,6 +14,9 @@ if (.IsValid)
 			if (.TimeWithoutAttack >= 20000)
 				if (.IsVisible)
 					.SetVisible(false);
+		if (.HasFreedom)
+			if (.hero.IsValid)//this should happen only with adventure sequences
+				.DetachFrom(.hero);
 		Sleep(1000);
 	}
 

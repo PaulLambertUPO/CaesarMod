@@ -8,7 +8,8 @@ int i;
 
 Sleep(60000);
 
-ruins = ClassPlayerObjs(cBaseRuins, 15).GetObjList();
+for (i = 1; i <= 16; i += 1)
+	ruins.AddList(ClassPlayerObjs(cBaseRuins, i).GetObjList());
 
 while (1) {
 	Sleep(30000);

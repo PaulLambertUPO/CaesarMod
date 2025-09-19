@@ -23,7 +23,7 @@
 	<properties display_name="Unit" display_name_plural="Units" />
 	<properties help="/contents/units" />
 
-	<behavior script="data/subai/keensight_and_sneak_behavior.vs" />
+	<behavior script="data/subai/keensight_sneak_freedom_behavior.vs" />
 
 	<method sig="idle" vs="data/subai/unit_idle.vs" />
 	<method sig="standstill" vs="data/subai/unit_standstill.vs" />

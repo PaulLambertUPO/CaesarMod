@@ -6209,17 +6209,17 @@ Cost: 60 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Bloodlust.bmp">
 Bloodlust
-Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration. Lasts 30 seconds.
+Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration. It lasts 30 seconds.
 Cost: 70 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Hunger.bmp">
 Starvation
-Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's). Lasts 2 minutes.
+Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's). It lasts 2 minutes.
 Cost: 80 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Earthquake.bmp">
 Earthquake
-Every second deals 300 damage to all strongholds (225 to the caster's). Lasts 10 seconds.
+Every second deals 300 damage to all strongholds (225 to the caster's). It lasts 10 seconds.
 Cost: 90 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/T Invasion.bmp">
@@ -6627,6 +6627,7 @@ It is generated with the upgrade "Hire Larax" of the Gaul arena.
 			<entry>Right click - Performs the default action of the selected units</entry>
 			<entry>CTRL + right click - Performs the secondary action of the selected units</entry>
 			<entry>SHIFT + any command - Queues the command to be executed later</entry>
+			<entry>i - Toggles the army and items interface with the skills one (heroes only)</entry>
 			<entry>Mouse wheel - Selects and move the camera from one hero to another</entry>
 			<entry>CTRL + 1, 2, 3... - Assigns to a number the current selection</entry>
 			<entry>1, 2, 3... - Selects the selection assigned to that number</entry>

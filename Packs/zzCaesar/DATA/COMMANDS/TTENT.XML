@@ -4,7 +4,7 @@
 		button="actions/train TTeutonRider.bmp"
 		groupverifier="data/subai/start_trider_verify.vs"
 		transpicon="1"
-		key="t"
+		key="r"
 		immediate="yes"
 		rollover="Train Teuton Riders"
 		description="Trains a Teuton Rider for 400 food every 15 seconds"
@@ -17,7 +17,7 @@
 		button="actions/Stop TTeutonRider.bmp"
 		groupverifier="data/subai/stop_trider_verify.vs"
 		transpicon="1"
-		key="t"
+		key="r"
 		immediate="yes"
 		rollover="Stop training Teuton Riders"
 		param="Nothing">

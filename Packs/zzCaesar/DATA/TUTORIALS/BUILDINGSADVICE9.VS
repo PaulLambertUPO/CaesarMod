@@ -11,7 +11,7 @@ player_buildings = ClassPlayerObjs(cBuilding, playerid).GetObjList();
 
 if (player_buildings.count > 0) {
 	for (i = 0; i < player_buildings.count; i += 1)
-		if (player_buildings[i]._LastSelectionTime() != -1)
+		if (player_buildings[i]._LastSelectionTime != -1)
 			return;
 	ShowTutorial(
 		Translate("Select a building"),

@@ -6,11 +6,11 @@ int player_buildings;
 
 Sleep(5000);
 
-player_buildings = ClassPlayerObjs(cBuilding, playerid).count;
+player_buildings = Count(playerid, cBuilding);
 
 Sleep(60000);
 
-if (ClassPlayerObjs(cBuilding, playerid).count <= player_buildings) {
+if (Count(playerid, cBuilding) <= player_buildings) {
 	Obj obj;
 	ShowTutorial(
 		Translate("Exploration"),

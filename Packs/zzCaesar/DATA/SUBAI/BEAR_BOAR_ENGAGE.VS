@@ -7,7 +7,7 @@ this = me.AsUnit();
 if (.IsValid) {
 	Unit target;
 
-	.SetSpeedFactor(125);
+	.SetSpeedFactor(110);
 
 	target = .BestTargetInSquadSight();
 

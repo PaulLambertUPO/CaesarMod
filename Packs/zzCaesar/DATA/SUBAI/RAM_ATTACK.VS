@@ -55,7 +55,7 @@ if (.IsValid)
 							pt_target = pt_1 + target_pos;
 						}
 					}
-					else {
+					else {//this happens only with German gates
 						point pt;
 						int i, j;
 
@@ -63,7 +63,7 @@ if (.IsValid)
 							pt = target.GetPoint(10, i);
 							if (pt.x != -32768) {
 								j += 1;
-								pt_target = pt + target_pos;
+								pt_target = pt_target + pt + target_pos;
 							}
 						}
 						if (j < 1)//no "etDestLock2" points

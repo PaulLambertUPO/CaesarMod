@@ -12,7 +12,7 @@
 	</cmd>
 	<cmd name="Tower Attack" priority="2"
 		method="attack"
-		button="Actions/Attack.bmp"
+		button="Actions/Attack Arrows.bmp"
 		key="a"
 		cursor="attack"
 		rollover="Attack">

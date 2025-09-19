@@ -8,7 +8,7 @@ Sleep(300000);
 
 while (1) {
 	Sleep(60000);
-	if (!Union(ClassPlayerObjs(cShipL, playerid), ClassPlayerObjs(cShipS, playerid)).IsEmpty())
+	if (!Union(ClassPlayerObjs(cShipL, playerid), ClassPlayerObjs(cShipS, playerid)).IsEmpty)
 		return;
 	player_shipyards = ClassPlayerObjs(cBaseShipyard, playerid).GetObjList();
 	if (player_shipyards.count > 0) {

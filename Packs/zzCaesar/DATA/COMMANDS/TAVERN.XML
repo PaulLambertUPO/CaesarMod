@@ -255,7 +255,7 @@
 		<src obj="ITavern" />
 	</cmd>
 	<cmd name="Free Drinks" priority="3"
-		key="t"
+		key="d"
 		queueicon="gameres/icons/upgrades/free beer.bmp"
 		groupverifier="data/subai/verify_research.vs"
 		button="research/free beer.bmp"
@@ -312,7 +312,7 @@
 		queueicon="gameres/icons/upgrades/More Housing.bmp"
 		groupverifier="data/subai/verify_research.vs"
 		button="research/More Housing.bmp"
-		key="d"
+		key="h"
 		costgold="750"
 		rollover="More housing"
 		execdelay="30000"

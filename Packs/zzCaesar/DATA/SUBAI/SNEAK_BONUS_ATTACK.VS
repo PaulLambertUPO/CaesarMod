@@ -29,7 +29,7 @@ if (.IsValid) {
 			}
 			bonus_chance = false;
 		}
-		Sleep(250);
+		Sleep(500);
 	}
 }
 

@@ -43,7 +43,7 @@
 			mapname="Britain"
 			description="Britain is a region of mysterious habits and brave warriors, who combine courage with deception and surprise to overcome the enemy. The only way to achieve victory is to control all enemy strongholds.\n\nBeware the powerful Stonehenge in the area, because British druids will use its spells to stop your advance.\n\nIf you conquer Britain, you will get a map of the territory and a great group of bowmen."
 			bonus="rBritain"
-			bonus_descr="The next area map is completely explored and there is no fog war.\nYou start with 30 level 4 Bowmen in the townhall: they will be replaced by new ones if killed."
+			bonus_descr="The next area map is completely explored and there is no fog of war.\nYou start with 30 level 4 Bowmen in the townhall: they will be replaced by new ones if killed."
 			neighbours="Gaul, Iberia, Germany"
 			interface="5"/>
 		<territory

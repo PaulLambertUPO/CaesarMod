@@ -1,6 +1,5 @@
 <commands>
 	<cmd name="foraging"
-		offset="1"
 		button="Research/Foraging.bmp"
 		groupverifier="data/subai/stonehenge_foraging_verify.vs"
 		groupdispatch="data/subai/stonehenge_foraging_dispatch.vs"
@@ -8,10 +7,9 @@
 		rollover="Foraging"
 		description="Every 15 seconds restores the food of all units by 2 (3 for the caster's).\nIt lasts 45 seconds"
 		key="f">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="wisdom"
-		offset="1"
 		button="Actions/Wise Wind.bmp"
 		groupverifier="data/subai/stonehenge_wisdom_verify.vs"
 		groupdispatch="data/subai/stonehenge_wisdom_dispatch.vs"
@@ -19,10 +17,9 @@
 		rollover="Wind of wisdom"
 		description="Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 30).\nIt takes 20 seconds"
 		key="w">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="soothing"
-		offset="1"
 		button="Research/Restoration.bmp"
 		groupverifier="data/subai/stonehenge_soothing_verify.vs"
 		groupdispatch="data/subai/stonehenge_soothing_dispatch.vs"
@@ -30,10 +27,9 @@
 		rollover="Soothing rain"
 		description="Every 5 seconds restores the stamina of all units by 5 (10 for the caster's).\nIt lasts 30 seconds"
 		key="s">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="sacrifice"
-		offset="1"
 		button="Actions/Last Sacrifice.bmp"
 		groupverifier="data/subai/stonehenge_sacrifice_verify.vs"
 		groupdispatch="data/subai/stonehenge_sacrifice_dispatch.vs"
@@ -41,10 +37,9 @@
 		rollover="Divine sacrifice"
 		description="Every 4 seconds deals 40 damage to all sages (20 for the caster's).\nIt lasts 1 minute"
 		key="c">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="gold_rain"
-		offset="1"
 		button="Actions/Gold Rain.bmp"
 		groupverifier="data/subai/stonehenge_gold_rain_verify.vs"
 		groupdispatch="data/subai/stonehenge_gold_rain_dispatch.vs"
@@ -52,10 +47,9 @@
 		rollover="Gold rain"
 		description="Every 3 seconds adds 10 gold to all settlements (15 for the caster's).\nIt lasts 2 minutes"
 		key="g">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="plague"
-		offset="1"
 		button="Actions/Mist.bmp"
 		groupverifier="data/subai/stonehenge_plague_verify.vs"
 		groupdispatch="data/subai/stonehenge_plague_dispatch.vs"
@@ -63,43 +57,39 @@
 		rollover="Plague"
 		description="Poisons 1 in every 7 units (8 for the caster's).\nIt has a 1 minute cooldown"
 		key="p">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="bloodlust"
-		offset="1"
 		button="Actions/Bloodlust.bmp"
 		groupverifier="data/subai/stonehenge_bloodlust_verify.vs"
 		groupdispatch="data/subai/stonehenge_bloodlust_dispatch.vs"
 		coststamina="70"
 		rollover="Bloodlust"
-		description="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nLasts 30 seconds"
+		description="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nIt lasts 30 seconds"
 		key="b">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="starvation"
-		offset="1"
 		button="Actions/Hunger.bmp"
 		groupverifier="data/subai/stonehenge_starvation_verify.vs"
 		groupdispatch="data/subai/stonehenge_starvation_dispatch.vs"
 		coststamina="80"
 		rollover="Starvation"
-		description="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nLasts 2 minutes"
+		description="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nIt lasts 2 minutes"
 		key="r">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="earthquake"
-		offset="1"
 		button="Actions/Earthquake.bmp"
 		groupverifier="data/subai/stonehenge_earthquake_verify.vs"
 		groupdispatch="data/subai/stonehenge_earthquake_dispatch.vs"
 		coststamina="90"
 		rollover="Earthquake"
-		description="Every second deals 300 damage to all strongholds (225 to the caster's).\nLasts 10 seconds"
+		description="Every second deals 300 damage to all strongholds (225 to the caster's).\nIt lasts 10 seconds"
 		key="e">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="teuton_horde"
-		offset="1"
 		button="Actions/T Invasion.bmp"
 		groupverifier="data/subai/stonehenge_teuton_horde_verify.vs"
 		groupdispatch="data/subai/stonehenge_teuton_horde_dispatch.vs"
@@ -107,6 +97,6 @@
 		rollover="Teuton horde"
 		description="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes"
 		key="t">
-		<src obj="Stonehenge" sticky="no" />
+		<src obj="Stonehenge" />
 	</cmd>
 </commands>

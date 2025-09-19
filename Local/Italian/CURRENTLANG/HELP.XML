@@ -6627,6 +6627,7 @@ Viene generata tramite il comando "Convoca Larax" del colosseo gallico.
 			<entry>Click destro - Realizza l'azione predefinita delle unità selezionate</entry>
 			<entry>CTRL + click destro - Esegue l'azione secondaria delle unità selezionate</entry>
 			<entry>SHIFT + qualsiasi comando - Mette in coda il comando affinché sia eseguito successivamente</entry>
+			<entry>i - Alterna l'interfaccia di esercito e oggetti a quella delle abilità (solo per eroi)</entry>
 			<entry>Rotellina del mouse - Seleziona e sposta la visuale da un eroe all'altro</entry>
 			<entry>CTRL + 1, 2, 3... - Assegna a un numero la selezione attuale</entry>
 			<entry>1, 2, 3... - Seleziona la selezione assegnata a quel tasto</entry>

@@ -8,7 +8,8 @@ int i;
 
 Sleep(50000);
 
-teleports = ClassPlayerObjs(cTeleport, 15).GetObjList();
+for (i = 1; i <= 16; i += 1)
+	teleports.AddList(ClassPlayerObjs(cTeleport, i).GetObjList());
 
 while (1) {
 	Sleep(30000);

@@ -165,10 +165,9 @@
 	</cmd>
 	<cmd name="take_nearby_items" priority="13"
 		button="actions/Take Nearby Items.bmp"
-		key="i"
+		key="r"
 		groupverifier="data/subai/unit_take_nearby_items_verify.vs"
-		rollover="Take nearby items"
-		description="Makes the unit take everything from the nearest item holder">
+		rollover="Take nearby items">
 		<src obj="Unit" />
 		<nsrc obj="BaseAnimal" />
 		<nsrc obj="Sentry" />

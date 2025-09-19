@@ -8,7 +8,8 @@ int i;
 
 Sleep(90000);
 
-item_holders = ClassPlayerObjs(cItemHolder, 15).GetObjList();
+for (i = 1; i <= 16; i += 1)
+	item_holders.AddList(ClassPlayerObjs(cItemHolder, i).GetObjList());
 
 while (1) {
 	Sleep(30000);

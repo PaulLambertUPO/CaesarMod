@@ -44,5 +44,5 @@
 		<cmd name="approach" />
 	</defaultcmd>
 
-	<sounds walk="TaranWalk" attack="TaranAttack" die="Sounds/Effects/Catapult_Die.wav" />
+	<sounds walk="TaranWalk" command="TaranWalk" attack="TaranAttack" die="Sounds/Effects/Catapult_Die.wav" />
 </class>

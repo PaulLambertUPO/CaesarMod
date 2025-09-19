@@ -19,7 +19,7 @@ while (1) {
 	Sleep(10000);
 	for (i = 0; i < enemy_gates.count; i += 1) {
 		obj = enemy_gates[i];
-		if (obj.AsGate().AreEnemiesAround()) {//if allied units are near an enemy gate
+		if (obj.AsGate().AreEnemiesAround)//if allied units are near an enemy gate
 			if (enemy_gates_status[i] == 0) {
 				enemy_gates_status[i] += 1;
 				enemy_health[i] = obj.health;
@@ -28,7 +28,6 @@ while (1) {
 				enemy_gates_status[i] += 1;
 			else
 				enemy_gates_status[i] = 0;
-		}
 		if (enemy_gates_status[i] > 1) {//show hint only from the second time an enemy gate is detected with health not decreasing
 			ShowHint(
 				Translate("Siege weapons"),

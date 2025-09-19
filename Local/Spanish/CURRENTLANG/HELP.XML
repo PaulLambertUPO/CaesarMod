@@ -6627,6 +6627,7 @@ Se genera a través de la orden "Convocar a Lárax" del coliseo galo.
 			<entry>Clic derecho - Realiza la acción por defecto de las unidades seleccionadas</entry>
 			<entry>CTRL + clic derecho - Realiza la acción secundaria de las unidades seleccionadas</entry>
 			<entry>Mayús + cualquier orden - Pone la orden a la cola para que se ejecute posteriormente</entry>
+			<entry>i - Alterna la interfaz de ejército y objetos con la de las habilidades (solo para héroes)</entry>
 			<entry>Rueda del ratón - Selecciona y cambia la visión de un héroe a otro</entry>
 			<entry>CTRL + 1, 2, 3... - Asigna la selección actual a un número</entry>
 			<entry>1, 2, 3... - Selecciona la selección asignada a esa tecla</entry>

@@ -8,7 +8,8 @@ int i;
 
 Sleep(30000);
 
-stonehenges = ClassPlayerObjs(cStonehenge, 15).GetObjList();
+for (i = 1; i <= 16; i += 1)
+	stonehenges.AddList(ClassPlayerObjs(cStonehenge, i).GetObjList());
 
 while (1) {
 	Sleep(30000);

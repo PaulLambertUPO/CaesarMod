@@ -1,4 +1,9 @@
 <commands>
+	<!-- DEFAULT COMMANDS (NO INTERFACE BUTTON AND ONLY USED BY CLASSES WITH THE CORRESPONDING METHOD) -->
+	<cmd name="unitsout" groupdispatch="data/subai/group_unitsout.vs">
+		<cmdtext target="" />
+	</cmd>
+	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
 	<cmd name="repair townhall" priority="1"
 		method="repair"
 		button="actions/repair.bmp"
@@ -30,12 +35,7 @@
 		rollover="Stop automatic training">
 		<src obj="BaseTownhall" />
 	</cmd>
-	<cmd name="unitsout" priority="11"
-		traincommand="no"
-		groupdispatch="data/subai/group_unitsout.vs">
-		<cmdtext target="" text="" />
-	</cmd>
-	<cmd name="refreshment" priority="12"
+	<cmd name="refreshment" priority="11"
 		immediate="yes"
 		key="r"
 		costgold="600"
@@ -48,9 +48,9 @@
 		<src obj="GTownhall" />
 		<src obj="BTownhall" />
 	</cmd>
-	<cmd name="healing" priority="12"
+	<cmd name="healing" priority="11"
 		immediate="yes"
-		key="h"
+		key="c"
 		costgold="1000"
 		method="healing"
 		researchcommand="yes"
@@ -61,7 +61,7 @@
 		<src obj="ITownhall" />
 		<src obj="ETownhall" />
 	</cmd>
-	<cmd name="townhall_military_training" priority="12"
+	<cmd name="townhall_military_training" priority="11"
 		method="military_training"
 		key="m"
 		groupverifier="data/subai/verify_cmdcost_building.vs"
@@ -76,7 +76,7 @@
 		<src obj="CTownhall" />
 		<src obj="TTownhall" />
 	</cmd>
-	<cmd name="hire_sentries" priority="12"
+	<cmd name="hire_sentries" priority="11"
 		method="hiresentries"
 		key="s"
 		groupverifier="data/subai/verify_cmdcost_building.vs"

@@ -1184,11 +1184,11 @@
 <translationtableentry text="Plague" result="Peste" />
 <translationtableentry text="Poisons 1 in every 7 units (8 for the caster's).\nIt has a 1 minute cooldown" result="Avvelena 1 unità ogni 7 (8 per il lanciatore).\nHa una ricarica di 1 minuto" />
 <translationtableentry text="Bloodlust" result="Sete di sangue" />
-<translationtableentry text="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nLasts 30 seconds" result="Consente a tutti i guerrieri di ignorare la difesa del nemico e le unità da mischia del lanciatore presenti al momento dell'attivazione ottengono 6 punti di attacco bonus per la durata.\nDura 30 secondi" />
+<translationtableentry text="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nIt lasts 30 seconds" result="Consente a tutti i guerrieri di ignorare la difesa del nemico e le unità da mischia del lanciatore presenti al momento dell'attivazione ottengono 6 punti di attacco bonus per la durata.\nDura 30 secondi" />
 <translationtableentry text="Starvation" result="Carestia" />
-<translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nLasts 2 minutes" result="Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 2% e di 20 (1% e 10 per quelli del lanciatore).\nDura 2 minuti" />
+<translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nIt lasts 2 minutes" result="Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 2% e di 20 (1% e 10 per quelli del lanciatore).\nDura 2 minuti" />
 <translationtableentry text="Earthquake" result="Terremoto" />
-<translationtableentry text="Every second deals 300 damage to all strongholds (225 to the caster's).\nLasts 10 seconds" result="Ogni secondo infligge 300 punti di danno a tutte le fortezze (225 a quelle del lanciatore).\nDura 10 secondi" />
+<translationtableentry text="Every second deals 300 damage to all strongholds (225 to the caster's).\nIt lasts 10 seconds" result="Ogni secondo infligge 300 punti di danno a tutte le fortezze (225 a quelle del lanciatore).\nDura 10 secondi" />
 <translationtableentry text="Teuton horde" result="Orda teutonica" />
 <translationtableentry text="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes" result="Raduna un'orda di 100 teutoni (40 cavalieri, 40 arcieri e 20 incursori) di livello 12 (18 per quelli del lanciatore) in tutte le fortezze, svuotandone la popolazione.\nRichiede 3 minuti" />
 <translationtableentry text="Player %s1 - Foraging - %s2" result="Giocatore %s1 - Nutrizione - %s2" />
@@ -1261,10 +1261,7 @@
 <translationtableentry text="Select a place to build the machine" result="Seleziona un luogo dove costruire la macchina" />
 <translationtableentry text="You need to select more units to build the machine" result="Devi selezionare più unità per costruire la macchina" />
 <translationtableentry text="Take nearby items" result="Prendi oggetti vicini" />
-<translationtableentry text="Makes the unit take everything from the nearest item holder" result="Fa sì che l'unità prenda tutto dal luogo con oggetti più vicino" />
 <translationtableentry text="Inventory full" result="Inventario pieno" />
-<translationtableentry text="No item holders in sight" result="Nessun luogo con oggetti in vista" />
-<translationtableentry text="No items to take" result="Nessun oggetto da prendere" />
 <translationtableentry text="Enter parry mode" result="Attiva modalità contenimento" />
 <translationtableentry text="Leave parry mode" result="Disattiva modalità contenimento" />
 <translationtableentry text="Select special units" result="Seleziona unità speciali" />

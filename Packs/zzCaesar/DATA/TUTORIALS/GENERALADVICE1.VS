@@ -4,7 +4,7 @@
 
 Sleep(15000);
 
-if (_ZoomMapLastShownTime() == -1) {
+if (_ZoomMapLastShownTime == -1) {
 	Obj obj;
 	ShowTutorial(
 		Translate("Minimap"),

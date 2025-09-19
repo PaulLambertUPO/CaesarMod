@@ -9,7 +9,7 @@ if (.IsValid) {
 	Unit u, pack_leader;
 	int i;
 
-	Sleep(rand(15));//random delay to manage the leader check of the first iteration for multiple lions (lower for alpha male lions to increase their lead chance)
+	Sleep(rand(15));//random delay to manage the leader check of the first iteration for multiple lions (lower value for alpha male lions to increase their lead chance)
 	if (.IsHeirOf("LionF"))
 		Sleep(15);
 
@@ -35,6 +35,7 @@ if (.IsValid) {
 				}
 			}
 		}
+
 		if (!pack_leader.IsValid) {
 			pack = ObjsInRange(this, "LionF", .sight * 3 / 2).GetObjList();
 			for (i = 0; i < pack.count; i += 1) {
@@ -51,10 +52,12 @@ if (.IsValid) {
 				}
 			}
 		}
+
 		if (!pack_leader.IsValid) {
 			.AddCommand(true, "lead");
 			return;
 		}
+
 		while (pack_leader.IsAlive) {
 			if (pack_leader.command == "engage") {
 				.AddCommand(true, "engage");
@@ -71,6 +74,7 @@ if (.IsValid) {
 				break;
 			Sleep(500);
 		}
+
 		pack_leader.Clear();
 	}
 }
