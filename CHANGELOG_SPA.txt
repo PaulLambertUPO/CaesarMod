@@ -16,6 +16,55 @@ Mi pasión por Imperivm es tan grande que es casi imposible de expresar con pala
 Si otra persona decide usar el Caesar Mod como punto de partida para un nuevo proyecto, es más que libre de hacerlo: lo único que pido es que haga como yo y mantenga todos los nombres originales, especificando que ha comenzado desde mi mod y publicando el nuevo proyecto bajo la misma licencia CC BY-SA, cuyos detalles están indicados en el archivo LICENSE.txt incluido el paquete.
 ______________________________________
 
+[1.0.3] - 20 septiembre 2025
+
+Esta nueva versión del Caesar Mod resuelve varios problemas, se centra en diversos aspectos gráficos y añade algunas funciones nuevas muy útiles.
+Entre los problemas resueltos, uno de los más importantes es que ciertas mejoras disponibles en algunas tabernas (como "bendición" de Egipto, Germania y Grecia) no funcionaban si el foro no correspondía al pueblo de esas estructuras: ahora que funcionan con cualquier foro, es posible crear mapas personalizados donde se mezclen estructuras de diferentes pueblos. Otro aspecto interesante para los mapas personalizados es que la guarnición de un fortín ahora reaparece si este vuelve a ser neutral: esto permite crear mapas dinámicos con condiciones/mecánicas especiales (similares a las revueltas de los campamentos teutones en los mapas de conquista de Germania).
+En cuanto a las numerosas mejoras gráficas, se ha añadido un fondo a todas las órdenes introducidas en la primera versión del Caesar Mod, ya que antes era blanco y desentonaba con los existentes; para aclarar las cosas al jugador, ahora la orden de reclutamiento de un mercenario cartaginés para el cual ha sido especializada la producción de armas tiene un fondo verde que resalta respecto a los demás, de modo que se pueda identificar al instante la unidad a reclutar si no se quiere gastar el doble de oro y el mismo principio se aplica a los pretorianos de Roma Imperial tras investigar la segunda mejora en la herrería. Hablando precisamente de Roma, ahora existe la posibilidad de que se generen el foro, el coliseo y el templo con el aspecto alternativo usado en la versión original 1.40 del juego para Roma Imperial, mientras que en el editor, además de estas tres estructuras, se han añadido todas las romanas con aspecto invernal.
+Finalmente, las nuevas funciones incluyen la posibilidad de atacar unidades con las catapultas (siguiendo sus movimientos si se desplazan), un comportamiento mejorado de los espíritus que hace que se dirijan automáticamente hacia los enemigos para causar el mayor daño posible, pero sobre todo 3 nuevas órdenes en la interfaz de las unidades: la activación automática de las habilidades de los héroes (muy útil cuando se tienen muchos ejércitos en diferentes partes del mapa), la selección global de unidades especiales (también muy útil si están dispersas en un mapa grande) y la recogida de objetos del contenedor visible más cercano (muy útil si una unidad muere detrás de estructuras que bloquean la visual). Es importante precisar que las dos últimas funciones son similares y en parte inspiradas en las presentes en el Legacy Mod: la implementación es muy diferente, pero la idea de fondo es la misma y por lo tanto es deberoso darle crédito y agradecimiento por esta aportación.
+
+
+CAMBIOS
+
+- resuelto el problema por el cual los fortines realizaban sus funciones incluso siendo neutrales (todos) o estando dañados (adiestramiento y reclutamiento)
+- resuelto el problema por el cual hoplitas y guerreros con maza generados con el fortín de reclutamiento no se movían si este estaba dañado
+- resuelto el problema por el cual "bendición" no funcionaba si el foro no era egipcio/germano/griego
+- resuelto el problema por el cual "comerciar con víveres" no funcionaba si el foro no era egipcio
+- resuelto el problema por el cual también se consideraban las unidades con el inventario lleno para los conteos relacionados con los talismanes egipcios
+- resuelto el problema por el cual la orden de conquista no era gestionada al hacer clic en el terreno (generaba un mensaje de error en los logs)
+- resuelto el problema por el cual las unidades interrumpían la orden de vinculación a un héroe al terminar la construcción de una máquina de asedio
+- resuelto el problema por el cual a veces los héroes de la IA quedaban permanentemente atrapados en las ruinas
+- resuelto el problema por el cual las unidades con "libertad" no se desvinculaban del héroe
+- Viriato domina Hispania: druida galo en el campamento romano renombrado a "Margulx"
+- forja tu imperio: ampliado el lado oeste del territorio de Grecia para facilitar su selección
+- conquista: movido más a la derecha el cuadro con la descripción del pueblo y del bonus
+- estrategia: añadida probabilidad del 50% de generar foro, coliseo y templo con aspecto alternativo al jugar como Roma
+- fortín de reclutamiento griego: ahora genera un carro con mula en lugar de un camello como unidad de suministro
+- fortines: añadida posibilidad de hacer clic derecho en enemigos para atacarlos con las torres, añadida reaparición de la guarnición si vuelven a ser neutrales (ej. mapas personalizados), actualizado icono de la orden de ataque
+- torre romana y torres de los fortines: frecuencia de ataque aumentada en unos 0,5 segundos, mejorada coordinación ataques para reducir el riesgo de disparar inútilmente a enemigos ya muertos
+- centinelas: removido botón orden de ataque en la interfaz (no funcionaba)
+- altar de sacrificios: tiempo generación energía aumentado a 3–18 segundos (3s + 15s / unidades espirituales)
+- unidades: reorganizadas las órdenes en la interfaz, añadidos atajos de teclado faltantes
+- unidades espirituales: añadida orden "aprender" a la interfaz
+- unidades invocadas: nivel aumentado al del invocador, reactividad inicial enormemente aumentada
+- animales peligrosos salvajes: bonus velocidad de movimiento y ataque reducido a 10%
+- espíritu: se mueve automáticamente hacia el punto central entre enemigos con más del 20% de salud, se oculta en el mapa estratégico si no está a la vista
+- Roma: hecha más visible la orden de reclutamiento de los pretorianos a precio reducido (Roma Imperial), bandera movida a la parte superior del foro
+- Cartago: hecha más visible la orden de reclutamiento de la unidad actualmente especializada con la herrería
+- expedición: removida cuando la fortaleza es conquistada por un enemigo
+- héroes: añadida nueva orden para activación automática de las habilidades (activable/desactivable en cualquier momento)
+- tomar objetos cercanos: nueva orden disponible para la mayoría de las unidades (hay que seleccionar solo una), recoge objetos del contenedor más cercano a la vista
+- seleccionar unidades especiales: nueva orden para las unidades especiales (aquellas con límite máximo reclutadas en los coliseos), las selecciona en todo el mapa sin considerar las vinculadas a héroes
+- ariete: inventario reducido a 0
+- catapulta: añadida posibilidad de atacar directamente a las unidades rotando y siguiendo sus movimientos si se desplazan y permanecen en alcance, añadidos tooltips según dónde apunte el ratón
+- aldea: removida la orden "repoblar" si la población máxima es inferior al mínimo posible (10)
+- anciano: salud aumentada a 100 para la versión no "decorativa"
+- editor: añadidas estructuras romanas alternativas e invernales faltantes
+- guía: añadidos costes de energía de las características especiales, añadidas aclaraciones en varios puntos
+- añadidos fondos faltantes a botones e iconos de las nuevas mejoras creadas con la versión 1.0.0
+- removidos píxeles verdes presentes en los iconos de pescador, botín de guerra y unidades griegas
+______________________________________
+
 [1.0.2] - 10 agosto 2025
 
 Esta nueva versión del Caesar Mod mejora enormemente dos aspectos del juego: los puertos y los animales.
