@@ -1,4 +1,4 @@
-<class id="RPriest" cpp_class="CVXDruid" parent="BaseMage" entity="Units/RPriest/RPriest.ent.xml">
+<class id="RPriest" parent="BaseMage" cpp_class="CVXDruid" entity="Units/RPriest/RPriest.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="140" />
@@ -14,6 +14,7 @@
 	<method sig="idle" vs="data/subai/rpriest_idle.vs" />
 	<method sig="stand_position" vs="data/subai/rpriest_stand_position.vs" />
 	<method sig="advance" vs="data/subai/rpriest_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/rpriest_advance.vs" />
 
 	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />

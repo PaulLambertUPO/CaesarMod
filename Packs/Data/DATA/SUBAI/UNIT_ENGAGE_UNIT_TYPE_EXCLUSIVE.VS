@@ -3,9 +3,13 @@
 Unit this;
 Obj u;
 str class;
-class = tgt.class;
+bool melee;
 
 this = me.AsUnit();
+
+class = tgt.class;
+
+melee = !.IsRanged;
 
 if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
 	.SetParryMode(false);
@@ -20,8 +24,16 @@ while (.IsValidTarget(u))
 		if(!.IsValidTarget(u)) break;
 	}
 
-	if (.IsValidTarget(u))
-		while (.Attack(u));
+	if (.IsValidTarget(u)) {
+		if (u.AsCatapult().IsValid) {
+			while (.Attack(u))
+				if (melee)
+					if (.HasSpecial(trample))
+						u.Damage(.damage);
+		}
+		else while (.Attack(u))
+			;
+	}
 
 	u = .BestTargetInSquadSightExclusive(class);
 }

@@ -1,3 +1,3 @@
-// void, int nSetIdx
+//void, int nSetIdx
 
-//pr("AI exec: Upgrade settlement (not implemented)");
+//this script is not used but, since it is present in the exe, it is better not to remove it

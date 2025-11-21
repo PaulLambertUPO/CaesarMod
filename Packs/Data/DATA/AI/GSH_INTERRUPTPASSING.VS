@@ -1,22 +1,25 @@
-// void, GAIKA g, int AIPlayer
+//void, GAIKA g, int aiPlayer
 
-int own, lown, ally, enemy, enemy_hidden, nMinNeed;
+int own, ally, enemy, enemy_hidden, nMinNeed;
 
-g.Eval(AI_STAYING, AIPlayer, own, ally, enemy, enemy_hidden);
-nMinNeed = g.MinNeed(AIPlayer, own, ally, enemy);
+g.Eval(AI_STAYING, aiPlayer, own, ally, enemy, enemy_hidden);
+nMinNeed = g.MinNeed(aiPlayer, own, ally, enemy);
 
-if (own + ally < nMinNeed) {
-  lown = g.Eval(AI_LEAVING, AIPlayer);
-  if (own + ally + lown >= nMinNeed) {
-    SquadList SL; g.GetSquads(SL, AI_LEAVING, AIPlayer);
-    SL.Lock;
-    while( SL.EOL == false ) {
-      Squad sq; sq = SL.Cur; SL.Next();
-      if (sq.State != SS_Flee) {
-		    //sq.DelOrder(); sq.ClrCmd(SS_IDLE, 0, SF_ADVCHOOSER);
-        sq.SetState(SS_IDLE); sq.SendTo(g, 1);
-      }
-    }
-    SL.Unlock;
-  }
-}
+if (own + ally < nMinNeed)
+	if (own + ally + g.Eval(AI_LEAVING, aiPlayer) >= nMinNeed) {
+		SquadList SL;
+		Squad sq;
+
+		g.GetSquads(SL, AI_LEAVING, aiPlayer);
+
+		SL.Lock();
+		while (!SL.EOL) {
+			sq = SL.Cur;
+			if (sq.State != SS_Flee) {
+				sq.SetState(SS_IDLE);
+				sq.SendTo(g, 1);
+			}
+			SL.Next();
+		}
+		SL.Unlock();
+	}

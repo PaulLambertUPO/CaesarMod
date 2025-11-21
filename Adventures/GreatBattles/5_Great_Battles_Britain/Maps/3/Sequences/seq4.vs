@@ -21,10 +21,10 @@ EnvWriteInt("/CalgacusSpawned", 0);
 
 GetSettlement("S_Sett1").Research("ChooseImperialRome");
 NO_0.SetCommand("tribute", NO_1);
-NO_Blacksmith1.obj.CmdDisable("Strenghten Stronghold Defences I");
-NO_Blacksmith1.obj.CmdDisable("Strenghten Stronghold Defences II");
-NO_Blacksmith2.obj.CmdDisable("Strenghten Stronghold Defences I");
-NO_Blacksmith2.obj.CmdDisable("Strenghten Stronghold Defences II");
+NO_Blacksmith1.obj.CmdDisable("Strengthen Stronghold Defences I");
+NO_Blacksmith1.obj.CmdDisable("Strengthen Stronghold Defences II");
+NO_Blacksmith2.obj.CmdDisable("Strengthen Stronghold Defences I");
+NO_Blacksmith2.obj.CmdDisable("Strengthen Stronghold Defences II");
 
 RunConv("HelloAgricola");
 

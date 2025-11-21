@@ -25,6 +25,7 @@
 	<behavior script="data/subai/summoning_behavior.vs" />
 
 	<method sig="advance" vs="data/subai/ghost_move.vs" />
+	<method sig="advance_aggressive" vs="data/subai/ghost_move.vs" />
 	<method sig="attack" vs="data/subai/ghost_attack.vs" />
 	<method sig="attack" vs="data/subai/ghost_move.vs" />
 	<method sig="move" vs="data/subai/ghost_move.vs" />

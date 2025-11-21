@@ -1,51 +1,72 @@
-// void, Obj me
+//void, Obj me
 
 Unit this;
-Obj u;
-bool disease_shot;
-int disease_cost;
-int k;
 
 this = me.AsUnit();
 
-disease_cost = GetConst("DiseaseCost");
+if (.IsValid) {
+	Obj enemy;
+	Unit u;
+	int i, disease_cost;
 
-if (.stamina >= disease_cost)
-	u = .BestTargetInSquadSight_PreferUndiseased();
-else
-	u = .BestTargetInSquadSight();
-
-while (u.IsAlive() && .IsValidTarget(u)) {
-	Sleep(rand(80) + 50); // Disperse the times
-	while(!.GotoAttack(u, 1471, true, 15000)) {
-		//pr("engage: approaching target!");
-		if (.stamina >= disease_cost)
-			u = .BestTargetInSquadSight_PreferUndiseased();
-		else
-			u = .BestTargetInSquadSight();
-		if(!u.IsAlive() || !.IsValidTarget(u)) break;
-	}
-
-	//pr("engage: attacking target!");
-	if (u.IsAlive() && .IsValidTarget(u)) {
-		disease_shot = false;
-		if (.stamina >= disease_cost)
-		if (u.AsUnit().IsValid()) {
-			disease_shot = true;
-			if (u.AsUnit().IsDiseased())
-				disease_shot = false;
-		}
-		if (disease_shot)
-			.Attack(u);
-		else {
-			for (k = 0; k < 4; k += 1)
-				if (!.Attack(u))
-					break;
-		}
-	}
+	disease_cost = GetConst("DiseaseCost");
 
 	if (.stamina >= disease_cost)
-		u = .BestTargetInSquadSight_PreferUndiseased();
+		enemy = .BestTargetInSquadSight_PreferUndiseased();
 	else
-		u = .BestTargetInSquadSight();
+		enemy = .BestTargetInSquadSight();
+
+	while (enemy.IsValid) {
+		Sleep(20 + rand(31));//disperse the times
+
+		if (!enemy.IsAlive)
+			break;
+		if (!.IsEnemy(enemy))
+			break;
+		if (!.IsValidTarget(enemy))
+			break;
+
+		while (!.GotoAttack(enemy, 1500, true, 15000)) {
+			if (.stamina >= disease_cost)
+				enemy = .BestTargetInSquadSight_PreferUndiseased();
+			else
+				enemy = .BestTargetInSquadSight();
+			if (!enemy.IsValid)
+				break;
+			if (!.IsValidTarget(enemy))
+				break;
+		}
+
+		if (enemy.IsValid)
+			if (enemy.IsAlive)
+				if (.IsEnemy(enemy))
+					if (.IsValidTarget(enemy)) {
+						u = enemy.AsUnit();
+						if (u.IsValid) {
+							if (!u.InHolder) {
+								if (.stamina >= disease_cost)
+									if (u.IsDiseased)
+										i = 1;
+									else
+										i = 2;
+								else
+									i = 4;
+								while (i > 0) {
+									if (!.Attack(enemy))
+										break;
+									i -= 1;
+								}
+							}
+						}
+						else if (enemy.AsCatapult().IsValid)
+							while (.Attack(enemy))
+								;
+					}
+
+		if (.stamina >= disease_cost)
+			enemy = .BestTargetInSquadSight_PreferUndiseased();
+		else
+			enemy = .BestTargetInSquadSight();
+	}
 }
+Sleep(15);

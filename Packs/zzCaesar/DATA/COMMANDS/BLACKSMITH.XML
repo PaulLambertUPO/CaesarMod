@@ -10,7 +10,7 @@
 		execdelay="60000">
 		<src obj="BaseBlacksmith" />
 	</cmd>
-	<cmd name="Strenghten Stronghold Defences I" priority="10"
+	<cmd name="Strengthen Stronghold Defences I" priority="10"
 		queueicon="gameres/icons/upgrades/Stronghold Defense.bmp"
 		key="d"
 		button="research/Stronghold Defense.bmp"
@@ -21,10 +21,10 @@
 		rollover="Strengthen Stronghold Defenses I"
 		description="Makes the defenders at the stronghold walls level 12"
 		method="research"
-		param="NameSet, Strenghten Stronghold Defences I, , SetsSet, SentriesLevel, 12">
+		param="NameSet, Strengthen Stronghold Defences I, , SetsSet, SentriesLevel, 12">
 		<src obj="BaseBlacksmith" />
 	</cmd>
-	<cmd name="Strenghten Stronghold Defences II" priority="10"
+	<cmd name="Strengthen Stronghold Defences II" priority="10"
 		queueicon="gameres/icons/upgrades/Stronghold Defense2.bmp"
 		key="d"
 		button="research/Stronghold Defense2.bmp"
@@ -35,7 +35,7 @@
 		rollover="Strengthen Stronghold Defenses II"
 		description="Makes the defenders at the stronghold walls level 24"
 		method="research"
-		param="ReqSet, Strenghten Stronghold Defences I, , NameSet, Strenghten Stronghold Defences II, default, SetsSet, SentriesLevel, 24">
+		param="ReqSet, Strengthen Stronghold Defences I, , NameSet, Strengthen Stronghold Defences II, default, SetsSet, SentriesLevel, 24">
 		<src obj="BaseBlacksmith" />
 	</cmd>
 	<!-- ROME -->
@@ -50,7 +50,7 @@
 		rollover="Arrows"
 		description="Allows Archers to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Arrows, default, NameSet, Roman Archers, , NameSet, Greek Archers">
+		param="NameSet, Roman Archers, default, NameSet, Arrows, , NameSet, Greek Archers">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Roman Velit" priority="3"
@@ -64,7 +64,7 @@
 		rollover="Throwing Spears"
 		description="Allows Velites to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Throwing Spears, default, NameSet, Roman Velit">
+		param="NameSet, Roman Velit, default, NameSet, Throwing Spears">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Roman Principle" priority="4"
@@ -78,7 +78,7 @@
 		rollover="Pikes"
 		description="Allows Principles to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Pikes, default, NameSet, Roman Principle">
+		param="NameSet, Roman Principle, default, NameSet, Pikes">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Roman Scout" priority="5"
@@ -92,7 +92,7 @@
 		rollover="Horseshoes"
 		description="Allows Scouts to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Horseshoes, default, NameSet, Roman Scout, , NameSet, Gaul Horseman">
+		param="NameSet, Roman Scout, default, NameSet, Horseshoes, , NameSet, Gaul Horseman">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Roman Full Armor" priority="6"
@@ -106,7 +106,7 @@
 		rollover="Full Armor"
 		description="Allows Tribunes to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Full Armor, default, NameSet, Roman Full Armor">
+		param="NameSet, Roman Full Armor, default, NameSet, Full Armor">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Roman Praetorian" priority="7"
@@ -120,7 +120,7 @@
 		rollover="Spike Armor"
 		description="Allows Praetorians to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Spike Armor, default, NameSet, Roman Praetorian">
+		param="NameSet, Roman Praetorian, default, NameSet, Spike Armor">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Improve Praetorian Equipment" priority="7"
@@ -148,7 +148,7 @@
 		rollover="Chariot Wheels"
 		description="Allows Chariots to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Chariot Wheels, default, NameSet, Roman Chariot Wheels">
+		param="NameSet, Roman Chariot Wheels, default, NameSet, Chariot Wheels">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<!-- GAUL -->
@@ -163,7 +163,7 @@
 		rollover="Axes"
 		description="Allows Axemen to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Axes, , NameSet, Gaul Axeman">
+		param="NameSet, Gaul Axeman, , NameSet, Axes">
 		<src obj="GBlacksmith" />
 	</cmd>
 	<cmd name="Gaul Iron Axes" priority="2"
@@ -191,7 +191,7 @@
 		rollover="Spears"
 		description="Allows Spearmen to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Spears, , NameSet, Gaul Spearman, , NameSet, Britain Spears, , NameSet, Greek Spears">
+		param="NameSet, Gaul Spearman, , NameSet, Spears, , NameSet, Britain Spears, , NameSet, Greek Spears">
 		<src obj="GBlacksmith" />
 	</cmd>
 	<cmd name="Gaul Iron Spearheads" priority="3"
@@ -219,7 +219,7 @@
 		rollover="Horseshoes"
 		description="Allows Horsemen to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Horseshoes, , NameSet, Gaul Horseman, , NameSet, Roman Scout">
+		param="NameSet, Gaul Horseman, , NameSet, Horseshoes, , NameSet, Roman Scout">
 		<src obj="GBlacksmith" />
 	</cmd>
 	<cmd name="Gaul Exceptional Horseshoes" priority="4"
@@ -247,7 +247,7 @@
 		rollover="Woman Armor"
 		description="Allows Woman Warriors to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Woman Armor, , NameSet, Gaul Woman Warrior">
+		param="NameSet, Gaul Woman Warrior, , NameSet, Woman Armor">
 		<src obj="GBlacksmith" />
 	</cmd>
 	<cmd name="Gaul Fine Armor" priority="5"
@@ -318,7 +318,7 @@
 		rollover="Battle Axes"
 		description="Allows Elite Guards to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Battle Axes, default, NameSet, Battleaxes">
+		param="NameSet, Battleaxes, default, NameSet, Battle Axes">
 		<src obj="IBlacksmith" />
 	</cmd>
 	<!-- CARTHAGE -->
@@ -333,7 +333,7 @@
 		rollover="Forge Spears"
 		description="Reduces Numidian Footmen cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
 		method="research"
-		param="NReqSet, CLibyanFootman, , NReqSet, Specialization, default, NameSet, CLibyanFootman, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 1, SetsSet, ResearchedLibyanFootman, yes, NameSet, Forge spears">
+		param="NameSet, Forge spears, , NameSet, Specialization, spec, SetsSet, SpecializedUnit, 1, SetsSet, ResearchedLibyanFootman, yes, NameSet, CLibyanFootman">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="Forge javelins" priority="3"
@@ -347,7 +347,7 @@
 		rollover="Forge Javelins"
 		description="Reduces Javelin Throwers cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
 		method="research"
-		param="NReqSet, CJavelinThrower, , NReqSet, Specialization, default, NameSet, CJavelinThrower, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 2, SetsSet, ResearchedJavelinThrower, yes, NameSet, Forge javelins">
+		param="NameSet, Forge javelins, , NameSet, Specialization, spec, SetsSet, SpecializedUnit, 2, SetsSet, ResearchedJavelinThrower, yes, NameSet, CJavelinThrower">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="Forge swords" priority="4"
@@ -361,7 +361,7 @@
 		rollover="Forge Swords"
 		description="Reduces Berber Assassins cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
 		method="research"
-		param="NReqSet, CBerberAssassin, , NReqSet, Specialization, default, NameSet, CBerberAssassin, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 3, SetsSet, ResearchedBerberAssassin, yes, NameSet, Forge swords">
+		param="NameSet, Forge swords, , NameSet, Specialization, spec, SetsSet, SpecializedUnit, 3, SetsSet, ResearchedBerberAssassin, yes, NameSet, CBerberAssassin">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="Forge maces" priority="5"
@@ -375,7 +375,7 @@
 		rollover="Forge Maces"
 		description="Reduces Macemen cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
 		method="research"
-		param="NReqSet, CMaceman, , NReqSet, Specialization, default, NameSet, CMaceman, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 4, SetsSet, ResearchedMaceman, yes, NameSet, Forge maces">
+		param="NameSet, Forge maces, , NameSet, Specialization, spec, SetsSet, SpecializedUnit, 4, SetsSet, ResearchedMaceman, yes, NameSet, CMaceman">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="Forge pikes" priority="6"
@@ -389,7 +389,7 @@
 		rollover="Forge Pikes"
 		description="Reduces Tuaregs cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
 		method="research"
-		param="NReqSet, CNumidianRider, , NReqSet, Specialization, default, NameSet, CNumidianRider, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 5, SetsSet, ResearchedNumidianRider, yes, NameSet, Forge pikes">
+		param="NameSet, Forge pikes, , NameSet, Specialization, spec, SetsSet, SpecializedUnit, 5, SetsSet, ResearchedNumidianRider, yes, NameSet, CNumidianRider">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="Forge shields" priority="7"
@@ -403,7 +403,7 @@
 		rollover="Forge Shields"
 		description="Reduces Numidian Horsemen cost by half (the command time is reduced by 75% and the cost is paid back from the second time)"
 		method="research"
-		param="NReqSet, CHorseman, , NReqSet, Specialization, default, NameSet, CHorseman, , SetsSet, Specialization, researched, SetsSet, SpecializedUnit, 7, SetsSet, ResearchedHorseman, yes, NameSet, Forge shields"><!-- value 7 because 6 is for CNoble (AI scripts) -->
+		param="NameSet, Forge shields, , NameSet, Specialization, spec, SetsSet, SpecializedUnit, 7, SetsSet, ResearchedHorseman, yes, NameSet, CHorseman"><!-- value 7 because 6 is for CNoble (AI scripts) -->
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="StopSpecialization1" priority="2"
@@ -415,7 +415,7 @@
 		rollover="Stop production"
 		description="Stops the production of Spears to start another"
 		method="immediate_research"
-		param="ReqSet, CLibyanFootman, , SetsSet, Specialization, , SetsSet, CLibyanFootman, , SetsSet, SpecializedUnit, , SetsSet, Forge spears">
+		param="ReqSet, Forge spears, , SetsSet, Forge spears, , SetsSet, Specialization, , SetsSet, CLibyanFootman, , SetsSet, SpecializedUnit">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="StopSpecialization2" priority="3"
@@ -427,7 +427,7 @@
 		rollover="Stop production"
 		description="Stops the production of Javelins to start another"
 		method="immediate_research"
-		param="ReqSet, CJavelinThrower, , SetsSet, Specialization, , SetsSet, CJavelinThrower, , SetsSet, SpecializedUnit, , SetsSet, Forge javelins">
+		param="ReqSet, Forge javelins, , SetsSet, Forge javelins, , SetsSet, Specialization, , SetsSet, CJavelinThrower, , SetsSet, SpecializedUnit">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="StopSpecialization3" priority="4"
@@ -439,7 +439,7 @@
 		rollover="Stop production"
 		description="Stops the production of Swords to start another"
 		method="immediate_research"
-		param="ReqSet, CBerberAssassin, , SetsSet, Specialization, , SetsSet, CBerberAssassin, , SetsSet, SpecializedUnit, , SetsSet, Forge swords">
+		param="ReqSet, Forge swords, , SetsSet, Forge swords, , SetsSet, Specialization, , SetsSet, CBerberAssassin, , SetsSet, SpecializedUnit">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="StopSpecialization4" priority="5"
@@ -451,7 +451,7 @@
 		rollover="Stop production"
 		description="Stops the production of Maces to start another"
 		method="immediate_research"
-		param="ReqSet, CMaceman, , SetsSet, Specialization, , SetsSet, CMaceman, , SetsSet, SpecializedUnit, , SetsSet, Forge maces">
+		param="ReqSet, Forge maces, , SetsSet, Forge maces, , SetsSet, Specialization, , SetsSet, CMaceman, , SetsSet, SpecializedUnit">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="StopSpecialization5" priority="6"
@@ -463,7 +463,7 @@
 		rollover="Stop production"
 		description="Stops the production of Pikes to start another"
 		method="immediate_research"
-		param="ReqSet, CNumidianRider, , SetsSet, Specialization, , SetsSet, CNumidianRider, , SetsSet, SpecializedUnit, , SetsSet, Forge pikes">
+		param="ReqSet, Forge pikes, , SetsSet, Forge pikes, , SetsSet, Specialization, , SetsSet, CNumidianRider, , SetsSet, SpecializedUnit">
 		<src obj="CBlacksmith" />
 	</cmd>
 	<cmd name="StopSpecialization6" priority="7"
@@ -475,19 +475,15 @@
 		rollover="Stop production"
 		description="Stops the production of Shields to start another"
 		method="immediate_research"
-		param="ReqSet, CHorseman, , SetsSet, Specialization, , SetsSet, CHorseman, , SetsSet, SpecializedUnit, , SetsSet, Forge shields">
+		param="ReqSet, Forge shields, , SetsSet, Forge shields, , SetsSet, Specialization, , SetsSet, CHorseman, , SetsSet, SpecializedUnit">
 		<src obj="CBlacksmith" />
 	</cmd>
-	<!-- used by AI only -->
-	<cmd name="StopSpecialization" priority="8"
-		queueicon="gameres/icons/upgrades/WBreast.bmp"
+	<!-- used only by AI -->
+	<cmd name="StopSpecialization"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
-		rollover="Stop production"
-		description="Stops the current production to start another"
 		method="immediate_research"
-		param="ReqSet, Specialization, , SetsSet, Specialization, , SetsSet, CLibyanFootman, , SetsSet, CJavelinThrower, , SetsSet, CBerberAssassin, , SetsSet, CMaceman, , SetsSet, CNumidianRider, , SetsSet, CHorseman, , SetsSet, SpecializedUnit, , SetsSet, Forge spears, , SetsSet, Forge javelins, , SetsSet, Forge swords, , SetsSet, Forge maces, , SetsSet, Forge pikes, , SetsSet, Forge shields">
-		<src obj="CBlacksmith" />
+		param="SetsSet, Specialization, , SetsSet, SpecializedUnit, , SetsSet, Forge spears, , SetsSet, Forge javelins, , SetsSet, Forge swords, , SetsSet, Forge maces, , SetsSet, Forge pikes, , SetsSet, Forge shields, , SetsSet, CLibyanFootman, , SetsSet, CJavelinThrower, , SetsSet, CBerberAssassin, , SetsSet, CMaceman, , SetsSet, CNumidianRider, , SetsSet, CHorseman">
+		<src obj="CBlacksmith" /><!-- this is needed to work with the settlement Research function -->
 	</cmd>
 	<!-- BRITAIN -->
 	<cmd name="Britain Spears" priority="2"
@@ -501,7 +497,7 @@
 		rollover="Spears"
 		description="Allows Spearmen to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Spears, default, NameSet, Britain Spears, , NameSet, Gaul Spearman, , NameSet, Greek Spears">
+		param="NameSet, Britain Spears, default, NameSet, Spears, , NameSet, Gaul Spearman, , NameSet, Greek Spears">
 		<src obj="BBlacksmith" />
 	</cmd>
 	<cmd name="Britain Large Shields" priority="3"
@@ -515,7 +511,7 @@
 		rollover="Large Shields"
 		description="Allows Shield Bearers to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Large Shields, default, NameSet, Britain Large Shields">
+		param="NameSet, Britain Large Shields, default, NameSet, Large Shields">
 		<src obj="BBlacksmith" />
 	</cmd>
 	<cmd name="Britain Javelins" priority="4"
@@ -529,7 +525,7 @@
 		rollover="Javelins"
 		description="Allows Javelineers to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Javelins, default, NameSet, Britain Javelins">
+		param="NameSet, Britain Javelins, default, NameSet, Javelins">
 		<src obj="BBlacksmith" />
 	</cmd>
 	<cmd name="Britain Swords" priority="5"
@@ -543,7 +539,7 @@
 		rollover="Swords"
 		description="Allows Highlanders to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Swords, default, NameSet, Britain Swords">
+		param="NameSet, Britain Swords, default, NameSet, Swords">
 		<src obj="BBlacksmith" />
 	</cmd>
 	<cmd name="Steel Weapons" priority="6"

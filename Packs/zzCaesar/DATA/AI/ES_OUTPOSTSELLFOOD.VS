@@ -1,21 +1,25 @@
 //void, Settlement set
 
-int idPlayer;
-idPlayer = set.player;
-while (set.supplied.player == idPlayer) {
+int aiPlayer;
+Settlement supplied;
+
+aiPlayer = set.player;
+
+while (set.player == aiPlayer) {
+	supplied = set.supplied;
+	if (!supplied.IsValid)
+		break;
+	if (supplied.player != aiPlayer)
+		break;
 	if (EnvReadString(set, "GOutpostSellFood") != "yes") {//start selling food
 		EnvWriteString(set, "GOutpostSellFood", "yes");
 		EnvWriteString(set, "GOutpostSellGold", "no");
-		Sleep(100);
-		continue;
 	}
-	if (set.gold >= 100) {//send only gold
-		Wagon wagon;
-		wagon = set.CreateMuleGold(set.gold);
-		if (wagon.IsValid) {
-			wagon.AddCommand(false, "unload", set.supplied.GetCentralBuilding());
-			wagon.KillCommand();
-		}
+	if (set.gold >= 100) {//send produced gold
+		Wagon mule;
+		mule = set.CreateMuleGold(set.gold);
+		if (mule.IsValid)
+			mule.SetCommand("unload", supplied.GetCentralBuilding());
 	}
 	Sleep(2000);
 }

@@ -14,14 +14,12 @@ if (.IsValid) {
 		Unit u;
 		int i, count_units;
 
-		EnvWriteString(this, "researching", "yes");
+		EnvWriteString(this, "researching", "yes");//no is already managed in "on_finish_research.vs"
 
 		.Progress();
 
-		EnvWriteString(this, "researching", "no");
-
 		ol = set.ObjectsAround("Military");
-		for (i = 0; i < ol.count && count_units < 65; i += 1) {
+		for (i = 0; i < ol.count; i += 1) {
 			u = ol[i].AsUnit();
 			if (u.IsValid)
 				if (u.IsAlive)
@@ -32,6 +30,8 @@ if (.IsValid) {
 									if (!u.IsHeirOf("Hero")) {
 										u.AddItem(cmdparam);
 										count_units += 1;
+										if (count_units >= 65)
+											break;
 									}
 		}
 	}

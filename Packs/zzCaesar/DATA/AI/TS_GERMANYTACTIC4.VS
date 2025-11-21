@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olValkyries, olSwordsmen, olArchers;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsTeamAttack;
 aSkills[1] = hsQuickMarch;
@@ -26,16 +26,17 @@ aSkillLevels[2] = 4;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -50,30 +51,30 @@ aSkillLevels[2] = 4;
 	}
 }
 
-//fights + barrack level 1
+//tribal fights + barrack level 1
 {
-	bool bFights = false, bBarrack1 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bFights || !bBarrack1)) {
+	bool bTribalFights = false, bBarrack1 = false;
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTribalFights || !bBarrack1)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		if (!bFights)
-			bFights = set.TSResearch("TFights");
+		if (!bTribalFights)
+			bTribalFights = set.TSResearch("Tribal fights");
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		Sleep(4100 + rand(15) * 100);
 	}
 }
 
-//learning + grain trade
+//learning + food sale
 {
-	bool bLearning = false, bGrainTrade = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bLearning || !bGrainTrade)) {
+	bool bLearning = false, bFoodSale = false;
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bLearning || !bFoodSale)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bLearning)
 			bLearning = set.TSResearch("Learning");
-		if (!bGrainTrade)
-			bGrainTrade = set.TSResearch("TGrainTrade");
+		if (!bFoodSale)
+			bFoodSale = set.TSResearch("Food sale");
 		Sleep(4100 + rand(15) * 100);
 	}
 }
@@ -81,7 +82,7 @@ aSkillLevels[2] = 4;
 //legendary valkyries + food tax
 {
 	bool bLegendaryValkyries = false, bFoodTax = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bLegendaryValkyries || !bFoodTax)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bLegendaryValkyries || !bFoodTax)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bLegendaryValkyries)
@@ -96,7 +97,7 @@ aSkillLevels[2] = 4;
 {
 	int nCount, nValkyries = 10, nSwordsmen = 15, nArchers = 10;
 	str supportCmd = "buyfoodforgold";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (olValkyries.count < nValkyries || olSwordsmen.count < nSwordsmen || olArchers.count < nArchers)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (olValkyries.count < nValkyries || olSwordsmen.count < nSwordsmen || olArchers.count < nArchers)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olValkyries.count < nValkyries) {
@@ -125,13 +126,19 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olValkyries.SetCommand("attach", hero);
 		olSwordsmen.SetCommand("attach", hero);
 		olArchers.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olValkyries.ClearDead();
@@ -141,4 +148,4 @@ SetNoAIFlag(olValkyries, false);
 SetNoAIFlag(olSwordsmen, false);
 SetNoAIFlag(olArchers, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

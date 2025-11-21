@@ -35,17 +35,18 @@ if (.IsValid) {
 
 											Sleep(.TimeToActionMoment);
 
-											if (.experience < u.experience)
-												if (!.IsEnemy(u))
-													if (!u.InHolder)
-														if (!.InShip)
-															if (.CanSee(u)) {
-																if (!.IsVisible)
-																	.SetVisible(true);
-																.SetLastAttackTime();
-																.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
-																CreateFeedback("Experience", this);
-															}
+											if (u.IsAlive)
+												if (.experience < u.experience)
+													if (!.IsEnemy(u))
+														if (!u.InHolder)
+															if (!.InShip)
+																if (.CanSee(u)) {
+																	if (!.IsVisible)
+																		.SetVisible(true);
+																	.SetLastAttackTime();
+																	.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																	CreateFeedback("Experience", this);
+																}
 
 											Sleep(.TimeToAnimFinish);
 										}

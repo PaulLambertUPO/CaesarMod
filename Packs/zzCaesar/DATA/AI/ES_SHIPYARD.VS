@@ -1,56 +1,48 @@
 //void, Settlement set
 
-int idPlayer, playerRace, needs, ships;
-str cmd;
+int aiPlayer, waterLsa, nSleepES;
+str cmd = "buildship";
 
-idPlayer = set.player;
+aiPlayer = set.player;
+waterLsa = set.WaterLsa;
+nSleepES = AIVar(aiPlayer, AIV_Sleep_ES);
 
-playerRace = GetPlayerRace(idPlayer);
-if (playerRace == RepublicanRome)
-	cmd = "buildshipRome";
-else if (playerRace == Egypt)
-	cmd = "buildshipEgypt";
-else
-	cmd = "buildship";
+{
+	int playerRace;
+	playerRace = GetPlayerRace(aiPlayer);
+	if (playerRace == RepublicanRome)
+		cmd = "buildshipRome";
+	else if (playerRace == Egypt)
+		cmd = "buildshipEgypt";
+}
 
-while (set.player == idPlayer) {
+while (set.player == aiPlayer) {
 	if (set.gold >= 100 || set.food >= 100) {
-		Settlement dest;
-		dest = set.BestToSupply();
-		if (dest.IsValid) {
-			Wagon wagon;
+		Settlement stronghold;
+		stronghold = set.BestToSupply;//it returns the nearest owned stronghold
+		if (stronghold.IsValid) {
 			if (set.gold >= 100) {
-				wagon = set.CreateMuleGold(set.gold);
-				if (wagon.IsValid) {
-					wagon.AddCommand(false, "unload", dest.GetCentralBuilding());
-					wagon.KillCommand();
-				}
+				Wagon mule;
+				mule = set.CreateMuleGold(set.gold);
+				if (mule.IsValid)
+					mule.SetCommand("unload", stronghold.GetCentralBuilding());
 			}
 			if (set.food >= 100) {
-				wagon = set.CreateMuleFood(set.food);
-				if (wagon.IsValid) {
-					wagon.AddCommand(false, "unload", dest.GetCentralBuilding());
-					wagon.KillCommand();
-				}
+				Wagon mule;
+				mule = set.CreateMuleFood(set.food);
+				if (mule.IsValid)
+					mule.SetCommand("unload", stronghold.GetCentralBuilding());
 			}
 		}
 	}
-	needs = ShipNeeds(idPlayer, set.WaterLsa);
-	ships = Ships(idPlayer, set.WaterLsa);
-	if (needs > ships)
-		if (needs - ships >= 100)
-			if (set.CanResearch(cmd)) {
-				if (!set.CanAfford(cmd)) {//cheating
-					int gold, food;
-					GetCmdCost(cmd, gold, food);
-					if (set.gold < gold)
-						set.SetGold(gold);
-					if (set.food < food)
-						set.SetFood(food);
-					set.SpentGoldOnArmy(gold + food / 2);
-				}
-				set.Research(cmd);
-				ClrShipNeeds(idPlayer, set.WaterLsa);
+	if (ShipNeeds(aiPlayer, waterLsa) - Ships(aiPlayer, waterLsa) >= 100)
+		if (set.CanResearch(cmd)) {
+			int gold, food;
+			if (GetCmdCost(cmd, gold, food)) {//save the original command costs, but use the cheating one
+				set.SpentGoldOnArmy(gold + food / 2);
+				set.Research(cmd + "Ai");
+				ClrShipNeeds(aiPlayer, waterLsa);
 			}
-	Sleep(AIVar(idPlayer, AIV_Sleep_ES));
+		}
+	Sleep(nSleepES);
 }

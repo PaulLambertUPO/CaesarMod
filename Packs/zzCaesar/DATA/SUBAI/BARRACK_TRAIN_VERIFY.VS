@@ -35,8 +35,6 @@ if (.IsValid) {
 		reasonText = rollover(this, class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Arena", research);
 	else if (class == "RGladiatorPunic")
 		reasonText = rollover(this, class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Arena", research);
-	else if (class == "CNoble")
-		reasonText = rollover(this, class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", research);
 	else if (class == "EAnubisWarrior")
 		reasonText = rollover(this, class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Temple of Horus and Anubis", research);
 	else if (class == "EHorusWarrior")

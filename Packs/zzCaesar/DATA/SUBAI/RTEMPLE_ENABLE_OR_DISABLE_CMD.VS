@@ -1,24 +1,29 @@
 //void, Obj This
 
-Building this;
+;//this empty instruction avoids problems due to starting the script with a scope
 
-this = This.AsBuilding();
-
-.CmdDisable("trainRPriest");
-.CmdDisable("trainRPriestPunic");
-.CmdDisable("Altar of Jupiter");
-.CmdDisable("Cloud of Plague");
-.CmdDisable("Wrath of Jupiter");
-.CmdDisable("God's Gift");
-
-//use a scope to remove settlement variable when the final loop is reached
+//use a scope to remove variables when the final loop is reached
 {
+	Building this;
 	Settlement set;
+
+	this = This.AsBuilding();
+
+	.CmdDisable("trainRPriest");
+	.CmdDisable("trainRPriestPunic");
+	.CmdDisable("Altar of Jupiter");
+	.CmdDisable("Cloud of Plague");
+	.CmdDisable("Wrath of Jupiter");
+	.CmdDisable("God's Gift");
 
 	set = .settlement;
 
 	while (EnvReadInt(set, "ChooseRomanRace") != 1)
 		Sleep(250);
+
+	.CmdDisable("ChooseRepublicanRome");
+	.CmdDisable("ChooseImperialRome");
+	.CmdDisable("ChoosePunicRome");
 
 	if (IsResearched(set, "ChoosePunicRome"))
 		.CmdEnable("trainRPriestPunic");
@@ -31,5 +36,6 @@ this = This.AsBuilding();
 	.CmdEnable("God's Gift");
 }
 
+//without this instruction, the game crashes
 while (1)
 	Sleep(3600000);

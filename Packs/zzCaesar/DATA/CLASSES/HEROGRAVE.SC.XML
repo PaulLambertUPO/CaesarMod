@@ -1,6 +1,6 @@
-<class id="HeroGrave" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/HeroGrave/HeroGrave.ent.xml">
+<class id="HeroGrave" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/HeroGrave/HeroGrave.ent.xml">
 
-	<properties radius="38" selection_radius="40" range="450" sight="0" />
+	<properties radius="38" selection_radius="40" range="450" />
 
 	<properties display_name="Hero grave" />
 	<properties icon="gameres/icons/Hero Grave.bmp" />
@@ -17,7 +17,7 @@
 	/>
 	<value1 icon="gameres/infobar/common/army ico.bmp"
 		script="return .stamina;"
-		rollover="The number of warriors that will receive charms when they visit the grave"
+		rollover="Warriors that will receive charms when visiting the grave"
 	/>
 	<value2 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .health;"

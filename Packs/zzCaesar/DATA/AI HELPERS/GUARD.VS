@@ -29,7 +29,7 @@ if (set.IsValid) {
 				if (ol_guards[0].IsEnemy(main_target))
 					return;
 				enemies = Intersect(
-					Union(VisibleObjsInSight(main_target, "Unit"), ObjsInRange(main_target, "Catapult", 1200)),
+					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhost"), ObjsInRange(main_target, "Catapult", 1200)),
 					Union(EnemyObjs(main_target.player, "Unit"), EnemyObjs(main_target.player, "Catapult"))
 				).GetObjList();
 				for (i = 0; i < ol_guards.count; i += 1) {
@@ -38,7 +38,7 @@ if (set.IsValid) {
 						if (!u.hero.IsValid)
 							if (u.InHolder) {
 								if (enemies.count > 0)
-									u.SetCommand("advance", enemies[0].pos);
+									u.SetCommand("advance_aggressive", enemies[0].posRH);
 							}
 							else {
 								j = u.DistTo(main_target_pos);
@@ -49,19 +49,19 @@ if (set.IsValid) {
 								}
 								else if (j >= 750) {
 									if (u_cmd != "enter")
-										if (u_cmd != "advance")
+										if (u_cmd != "advance_aggressive")
 											if (u_cmd != "advanceenter")
 												if (u_cmd != "engage")
 													if (enemies.count > 0)
-														u.SetCommand("advance", enemies[0].pos);
+														u.SetCommand("advance_aggressive", enemies[0].posRH);
 													else
 														u.SetCommand("advanceenter", main_target);
 								}
 								else if (u_cmd != "advanceenter")
-									if (u_cmd != "advance")
+									if (u_cmd != "advance_aggressive")
 										if (u_cmd != "engage")
 											if (enemies.count > 0)
-												u.SetCommand("advance", enemies[0].pos);
+												u.SetCommand("advance_aggressive", enemies[0].posRH);
 											else
 												u.SetCommand("advanceenter", main_target);
 							}
@@ -76,7 +76,7 @@ if (set.IsValid) {
 				if (ol_guards[0].IsEnemy(main_target))
 					return;
 				enemies = Intersect(
-					Union(VisibleObjsInSight(main_target, "Unit"), ObjsInRange(main_target, "Catapult", 1200)),
+					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhost"), ObjsInRange(main_target, "Catapult", 1200)),
 					Union(EnemyObjs(main_target.player, "Unit"), EnemyObjs(main_target.player, "Catapult"))
 				).GetObjList();
 				for (i = 0; i < ol_guards.count; i += 1) {
@@ -85,7 +85,7 @@ if (set.IsValid) {
 						if (!u.hero.IsValid)
 							if (u.InHolder) {
 								if (enemies.count > 0)
-									u.SetCommand("advance", enemies[0].pos);
+									u.SetCommand("advance_aggressive", enemies[0].posRH);
 							}
 							else {
 								j = u.DistTo(main_target_pos);
@@ -96,19 +96,19 @@ if (set.IsValid) {
 								}
 								else if (j >= 1050) {
 									if (u_cmd != "enter")
-										if (u_cmd != "advance")
+										if (u_cmd != "advance_aggressive")
 											if (u_cmd != "advanceenter")
 												if (u_cmd != "engage")
 													if (enemies.count > 0)
-														u.SetCommand("advance", enemies[0].pos);
+														u.SetCommand("advance_aggressive", enemies[0].posRH);
 													else
 														u.SetCommand("advanceenter", main_target);
 								}
 								else if (u_cmd != "advanceenter")
-									if (u_cmd != "advance")
+									if (u_cmd != "advance_aggressive")
 										if (u_cmd != "engage")
 											if (enemies.count > 0)
-												u.SetCommand("advance", enemies[0].pos);
+												u.SetCommand("advance_aggressive", enemies[0].posRH);
 											else
 												u.SetCommand("advanceenter", main_target);
 							}
@@ -123,7 +123,7 @@ if (set.IsValid) {
 				if (ol_guards[0].IsEnemy(main_target))
 					return;
 				enemies = Intersect(
-					Union(VisibleObjsInSight(main_target, "Unit"), ObjsInRange(main_target, "Catapult", 1200)),
+					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhost"), ObjsInRange(main_target, "Catapult", 1200)),
 					Union(EnemyObjs(main_target.player, "Unit"), EnemyObjs(main_target.player, "Catapult"))
 				).GetObjList();
 				for (i = 0; i < ol_guards.count; i += 1) {
@@ -138,19 +138,19 @@ if (set.IsValid) {
 							}
 							else if (j >= 700) {
 								if (u_cmd != "move")
-									if (u_cmd != "advance")
+									if (u_cmd != "advance_aggressive")
 										if (u_cmd != "engage")
 											if (enemies.count > 0)
-												u.SetCommand("advance", enemies[0].pos);
+												u.SetCommand("advance_aggressive", enemies[0].posRH);
 											else
-												u.SetCommand("advance", main_target_pos);
+												u.SetCommand("advance_aggressive", main_target_pos);
 							}
-							else if (u_cmd != "advance")
+							else if (u_cmd != "advance_aggressive")
 								if (u_cmd != "engage")
 									if (enemies.count > 0)
-										u.SetCommand("advance", enemies[0].pos);
+										u.SetCommand("advance_aggressive", enemies[0].posRH);
 									else if (j >= 150)
-										u.SetCommand("advance", main_target_pos);
+										u.SetCommand("advance_aggressive", main_target_pos);
 						}
 				}
 				Sleep(2000);

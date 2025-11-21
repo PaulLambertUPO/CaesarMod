@@ -9,7 +9,7 @@ if (set.IsShipyard)
 if (set.IsTTent) {
 	if (set.food >= 100)
 		return ES_OutpostSendGold;
-	else if (set.gold >= 100)
+	else if (set.gold >= 100)//this should never happen
 		return ES_OutpostSendGold;
 }
 else if (set.IsOutpost) {
@@ -27,7 +27,7 @@ else if (set.IsOutpost) {
 		return ES_OutpostSendGold;
 	if (nRace == Carthage)
 		return ES_OutpostArmy;
-	if (nRace == ImperialRome)
+	if (nRace == ImperialRome)//Greece
 		return ES_OutpostArmy;
 }
 return ES_NONE;

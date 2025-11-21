@@ -1,37 +1,42 @@
 //void, Obj This
 
-Building this;
+;//this empty instruction avoids problems due to starting the script with a scope
 
-this = This.AsBuilding();
-
-.CmdDisable("Barrack Level 1");
-.CmdDisable("Barrack Level 2");
-.CmdDisable("Barrack Level 3");
-.CmdDisable("trainRHastatus");
-.CmdDisable("trainRArcher");
-.CmdDisable("trainRGladiator");
-.CmdDisable("trainRVelit");
-.CmdDisable("trainRPrinciple");
-.CmdDisable("trainRScout");
-.CmdDisable("trainRTribune");
-.CmdDisable("trainRPraetorianBase");
-.CmdDisable("trainRPraetorianDiscounted");
-.CmdDisable("Equip Chariot");
-.CmdDisable("trainRHastatusPunic");
-.CmdDisable("trainRArcherPunic");
-.CmdDisable("trainRGladiatorPunic");
-.CmdDisable("trainRPrinciplePunic");
-.CmdDisable("trainRScoutPunic");
-.CmdDisable("trainRPraetorianPunic");
-
-//use a scope to remove settlement variable when the final loop is reached
+//use a scope to remove variables when the final loop is reached
 {
+	Building this;
 	Settlement set;
+
+	this = This.AsBuilding();
+
+	.CmdDisable("Barrack Level 1");
+	.CmdDisable("Barrack Level 2");
+	.CmdDisable("Barrack Level 3");
+	.CmdDisable("trainRHastatus");
+	.CmdDisable("trainRArcher");
+	.CmdDisable("trainRGladiator");
+	.CmdDisable("trainRVelit");
+	.CmdDisable("trainRPrinciple");
+	.CmdDisable("trainRScout");
+	.CmdDisable("trainRTribune");
+	.CmdDisable("trainRPraetorianBase");
+	.CmdDisable("trainRPraetorianDiscounted");
+	.CmdDisable("Equip Chariot");
+	.CmdDisable("trainRHastatusPunic");
+	.CmdDisable("trainRArcherPunic");
+	.CmdDisable("trainRGladiatorPunic");
+	.CmdDisable("trainRPrinciplePunic");
+	.CmdDisable("trainRScoutPunic");
+	.CmdDisable("trainRPraetorianPunic");
 
 	set = .settlement;
 
 	while (EnvReadInt(set, "ChooseRomanRace") != 1)
 		Sleep(250);
+
+	.CmdDisable("ChooseRepublicanRome");
+	.CmdDisable("ChooseImperialRome");
+	.CmdDisable("ChoosePunicRome");
 
 	.CmdEnable("Barrack Level 1");
 	.CmdEnable("Barrack Level 2");
@@ -68,5 +73,6 @@ this = This.AsBuilding();
 	}
 }
 
+//without this instruction, the game crashes
 while (1)
 	Sleep(3600000);

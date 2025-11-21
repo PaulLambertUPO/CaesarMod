@@ -1,3 +1,3 @@
-// void, int nSetSrc, int nSquad
+//void, int nSetSrc, int nSquad
 
-//pr( "AI exec: Supply squad (not implemented)" );
+//this script is not used but, since it is present in the exe, it is better not to remove it

@@ -1,0 +1,3 @@
+<class id="Rhouse05Winter" parent="Rhouse05" cpp_class="CVXBuilding" entity="Buildings/Rhouse05/Rhouse05_w.ent.xml">
+	<properties edittree_pos="Structures/Village (Rome)/Winter/House 2" />
+</class>

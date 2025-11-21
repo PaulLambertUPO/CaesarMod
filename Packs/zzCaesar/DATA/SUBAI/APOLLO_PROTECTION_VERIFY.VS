@@ -18,7 +18,7 @@ if (IsResearched(set, "Offer to Gods"))
 
 				for (i = 0; i < gates.count; i += 1)
 					if (gates[i].AsGate().IsBroken()) {
-						reasonText = Translate(rollover(this, false)) + "\n<color 255 0 0>" + Translate("One or more gates are broken");
+						reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("One or more gates are broken");
 						return false;
 					}
 
@@ -36,10 +36,10 @@ if (IsResearched(set, "Offer to Gods"))
 			else
 				reasonText = rollover(this, true);
 		else
-			reasonText = rollover(this, "Already available");
+			reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available");
 	else
-		reasonText = rollover(this, "Already available");
+		reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available");
 else
-	reasonText = Translate(rollover(this, false)) + "\n<color 255 0 0>" + Translatef("Requires %s1", "Offer to Gods");
+	reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", "Offer to Gods");
 
 return false;

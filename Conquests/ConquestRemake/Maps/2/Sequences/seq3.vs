@@ -3,8 +3,8 @@ int difficulty;
 
 difficulty = GetDifficulty();
 
-NO_Blacksmith.obj.CmdDisable("Strenghten Stronghold Defences I");
-NO_Blacksmith.obj.CmdDisable("Strenghten Stronghold Defences II");
+NO_Blacksmith.obj.CmdDisable("Strengthen Stronghold Defences I");
+NO_Blacksmith.obj.CmdDisable("Strengthen Stronghold Defences II");
 
 {
 	Building b;

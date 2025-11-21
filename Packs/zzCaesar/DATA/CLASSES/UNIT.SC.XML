@@ -29,6 +29,8 @@
 	<method sig="standstill" vs="data/subai/unit_standstill.vs" />
 	<method sig="advance" vs="data/subai/unit_advance.vs" />
 	<method sig="advancealone" vs="data/subai/unit_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/unit_advance_aggressive.vs" />
+	<method sig="advanceenter" vs="data/subai/unit_advance_enter.vs" verify="data/subai/unit_enter_verify.vs" />
 	<method sig="attach" vs="data/subai/unit_attach.vs" verify="data/subai/unit_attach_verify.vs" />
 	<method sig="attack" vs="data/subai/unit_attack.vs" verify="data/subai/unit_attack_verify.vs" />
 	<method sig="engage" vs="data/subai/unit_engage.vs" />
@@ -55,7 +57,6 @@
 	<method sig="wander" vs="data/subai/unit_wander.vs" />
 	<method sig="explore" vs="data/subai/unit_explore.vs" />
 	<method sig="teleport" vs="data/subai/unit_teleport.vs" />
-	<method sig="advanceenter" vs="data/subai/unit_advance_enter.vs" verify="data/subai/unit_enter_verify.vs" />
 	<method sig="face" vs="data/subai/unit_face.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/unit_ai_attack_gate.vs" />
 	<method sig="ai_killall" vs="data/subai/unit_ai_killall.vs" />

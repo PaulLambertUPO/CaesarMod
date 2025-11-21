@@ -1,34 +1,39 @@
 //void, Obj This
 
-Building this;
+;//this empty instruction avoids problems due to starting the script with a scope
 
-this = This.AsBuilding();
-
-.CmdDisable("Roman Archers");
-.CmdDisable("Roman Velit");
-.CmdDisable("Roman Principle");
-.CmdDisable("Roman Scout");
-.CmdDisable("Roman Full Armor");
-.CmdDisable("Roman Praetorian");
-.CmdDisable("Improve Praetorian Equipment");
-.CmdDisable("Roman Chariot Wheels");
-.CmdDisable("Strenghten Stronghold Defences I");
-.CmdDisable("Strenghten Stronghold Defences II");
-
-//use a scope to remove settlement variable when the final loop is reached
+//use a scope to remove variables when the final loop is reached
 {
+	Building this;
 	Settlement set;
+
+	this = This.AsBuilding();
+
+	.CmdDisable("Roman Archers");
+	.CmdDisable("Roman Velit");
+	.CmdDisable("Roman Principle");
+	.CmdDisable("Roman Scout");
+	.CmdDisable("Roman Full Armor");
+	.CmdDisable("Roman Praetorian");
+	.CmdDisable("Improve Praetorian Equipment");
+	.CmdDisable("Roman Chariot Wheels");
+	.CmdDisable("Strengthen Stronghold Defences I");
+	.CmdDisable("Strengthen Stronghold Defences II");
 
 	set = .settlement;
 
 	while (EnvReadInt(set, "ChooseRomanRace") != 1)
 		Sleep(250);
 
+	.CmdDisable("ChooseRepublicanRome");
+	.CmdDisable("ChooseImperialRome");
+	.CmdDisable("ChoosePunicRome");
+
 	.CmdEnable("Roman Archers");
 	.CmdEnable("Roman Principle");
 	.CmdEnable("Roman Scout");
-	.CmdEnable("Strenghten Stronghold Defences I");
-	.CmdEnable("Strenghten Stronghold Defences II");
+	.CmdEnable("Strengthen Stronghold Defences I");
+	.CmdEnable("Strengthen Stronghold Defences II");
 
 	if (IsResearched(set, "ChooseRepublicanRome")) {
 		.CmdEnable("Roman Full Armor");
@@ -46,5 +51,6 @@ this = This.AsBuilding();
 		.CmdEnable("Roman Praetorian");
 }
 
+//without this instruction, the game crashes
 while (1)
 	Sleep(3600000);

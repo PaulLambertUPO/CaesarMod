@@ -1,104 +1,127 @@
-// void, Settlement set
-int idPlayer, gold, i, l;
-Settlement base;
-ObjList ol;
-bool bAttacked;
-int min_resource;
+//void, Settlement set
 
-idPlayer = set.player;
-base = NearestStronghold(set.GetCentralBuilding.pos, idPlayer);
-min_resource = GetConst("MinResQtyToTransport");
+Settlement stronghold;
 
-EnvWriteInt(idPlayer, "GoldTradeStartInProgress", 1);
-set.StopSupply();
+stronghold = set.BestToSupply;//it returns the nearest owned stronghold
 
-// Preparation phase - get gold needed from the closest stronghold
-while (set.gold<2000)
-{
-  // Calculate gold in mules and attack status
-  gold = 0;
-  bAttacked = false;
-  ol = Group("GoldMules"+idPlayer).GetObjList();
-  for (i = 0; i<ol.count; i+=1)
-    {
-      gold += ol[i].AsWagon().amount;
-      if (ol[i].health<ol[i].maxhealth*2/3)
-        bAttacked = true;
-    }
+if (stronghold.IsValid) {//it should always be valid thanks to "ESH_GoldTrade.vs" checks
+	int aiPlayer, min_resource, i;
+	Building hall;
+	Wagon mule;
 
-  if (bAttacked) 
-		Sleep(20000); // Don't send more gold if a mule is attacked
-	else
-		if (gold+set.gold<2000) if (base.gold>=250)
-			{
-				Wagon wagon; wagon = base.CreateMuleGold(250);
-				if (wagon.IsValid) {
-					wagon.AddCommand(false, "unload", set.GetCentralBuilding);
-					wagon.KillCommand();
-					wagon.AddToGroup("GoldMules"+idPlayer);
-				}
-			}
+	aiPlayer = set.player;
+	min_resource = GetConst("MinResQtyToTransport");
+	hall = set.GetCentralBuilding();
 
-  Sleep(1000);
+	EnvWriteInt(aiPlayer, "GoldTradeStartInProgress", 1);
 
-  if (set.player != idPlayer || base.player != idPlayer) 
-    {
-			if (base.player == idPlayer)
-				Group("GoldMules"+idPlayer).SetCommand("unload", base.GetCentralBuilding);
-			Group("GoldMules"+idPlayer).RemoveFromAllGroups();
-      EnvWriteInt(idPlayer, "GoldTradeStartInProgress", 0);
-      return;
-    }
-}
+	//step 1: get gold from the nearest stronghold and check if mules are attacked
+	{
+		ObjList olMules;
+		Building strongholdHall;
+		int l, muleGold;
+		bool bAttacked;
 
-Group("GoldMules"+idPlayer).RemoveFromAllGroups();
-EnvWriteInt(idPlayer, "GoldTradeStartInProgress", 0);
-EnvWriteInt(idPlayer, "GoldTradeOutposts", EnvReadInt(idPlayer, "GoldTradeOutposts")+1);
-set.StartSupplyFood(base);
+		strongholdHall = stronghold.GetCentralBuilding();
+		l = set.loyalty;
 
-// Selling phase - only look if the outpost is under attack
-l = set.loyalty;
-while (set.player == idPlayer)
-{
-	Sleep(2000);
+		while (set.gold < 2000) {
+			if (stronghold.player == aiPlayer)
+				if (set.player == aiPlayer) {
+					set.StopSupply();
 
-	if (base.player != idPlayer)
-		{
-			set.StopSupply;
-			base = NearestStronghold(set.GetCentralBuilding.pos, idPlayer, AI_ALLY);
-			if (!base.IsValid()) return; //just leave the gold where it is
-			while (set.gold >= min_resource)
-				{
-					Wagon wagon; wagon = set.CreateMuleGold(1000);
-					if (wagon.IsValid) {
-						wagon.AddCommand(false, "unload", base.GetCentralBuilding);
-						wagon.KillCommand();
+					muleGold = 0;
+					bAttacked = false;
+
+					olMules = Group("ES_OutpostSellGoldMulesAI" + aiPlayer).GetObjList();
+					for (i = 0; i < olMules.count; i += 1) {
+						mule = olMules[i].AsWagon();
+						if (mule.IsValid) {
+							muleGold += mule.amount;
+							if (!bAttacked)
+								if (mule.health < mule.maxhealth * 2 / 3)
+									bAttacked = true;
+						}
 					}
-					Sleep(1000);
+
+					if (set.loyalty < l)
+						if (set.loyalty < 50) {
+							while (set.gold >= min_resource) {
+								if (set.player != aiPlayer)
+									break;
+								mule = set.CreateMuleGold(250);
+								if (mule.IsValid) {
+									mule.SetCommand("unload", strongholdHall);
+									mule.AddToGroup("ES_OutpostSellGoldMulesAI" + aiPlayer);
+								}
+							}
+							Group("ES_OutpostSellGoldMulesAI" + aiPlayer).SetCommand("unload", strongholdHall);
+							if (!bAttacked)
+								bAttacked = true;
+						}
+
+					l = set.loyalty;
+
+					if (bAttacked)
+						Sleep(18000);
+					else {
+						if (muleGold + set.gold < 2000)
+							if (stronghold.gold >= 250) {
+								mule = stronghold.CreateMuleGold(250);
+								if (mule.IsValid) {
+									mule.SetCommand("unload", hall);
+									mule.AddToGroup("ES_OutpostSellGoldMulesAI" + aiPlayer);
+								}
+							}
+						Group("ES_OutpostSellGoldMulesAI" + aiPlayer).SetCommand("unload", hall);
+					}
+
+					Sleep(2000);
+					continue;
 				}
-			EnvWriteInt(idPlayer, "GoldTradeOutposts", EnvReadInt(idPlayer, "GoldTradeOutposts")-1);
+				else
+					Group("ES_OutpostSellGoldMulesAI" + aiPlayer).SetCommand("unload", strongholdHall);
+			Group("ES_OutpostSellGoldMulesAI" + aiPlayer).RemoveFromAllGroups();
+			EnvWriteInt(aiPlayer, "GoldTradeStartInProgress", 0);
 			return;
 		}
-	else
-		{
-			set.StartSupplyFood(base);
-			// Get gold back if attacked
-			if (set.loyalty<l) if (set.loyalty<50)
-				{
-					while (set.gold >= min_resource)
-						{
-							Wagon wagon; wagon = set.CreateMuleGold(1000);
-							if (wagon.IsValid) {
-								wagon.AddCommand(false, "unload", base.GetCentralBuilding);
-								wagon.KillCommand();
-							}
-							Sleep(1000);
-						}
-					EnvWriteInt(idPlayer, "GoldTradeOutposts", EnvReadInt(idPlayer, "GoldTradeOutposts")-1);
-					return;
-				}
-		}
-	l = set.loyalty;
-}
+	}
 
-EnvWriteInt(idPlayer, "GoldTradeOutposts", EnvReadInt(idPlayer, "GoldTradeOutposts")-1);
+	//step 2: manage group and environment
+	Group("ES_OutpostSellGoldMulesAI" + aiPlayer).RemoveFromAllGroups();
+	EnvWriteInt(aiPlayer, "GoldTradeStartInProgress", 0);
+	EnvWriteInt(aiPlayer, "GoldTradeOutposts", EnvReadInt(aiPlayer, "GoldTradeOutposts") + 1);
+
+	//step 3: Selling phase - check if the outpost is under attack
+	i = set.loyalty;
+	while (set.player == aiPlayer) {
+		if (stronghold.player == aiPlayer) {
+			if (!(set.supplied == stronghold))//the != operator does not exist for settlements
+				set.StartSupplyFood(stronghold);
+			if (set.loyalty < i)
+				if (set.loyalty < 50) {
+					set.StopSupply();
+					break;
+				}
+			i = set.loyalty;
+		}
+		else {
+			set.StopSupply();
+			stronghold = NearestStronghold(hall.pos, aiPlayer, AI_ALLY);
+			break;
+		}
+		Sleep(2000);
+	}
+	if (stronghold.IsValid) {
+		hall = stronghold.GetCentralBuilding();
+		while (set.gold >= min_resource) {
+			if (set.player != aiPlayer)
+				break;
+			mule = set.CreateMuleGold(250);
+			if (mule.IsValid)
+				mule.SetCommand("unload", hall);
+			Sleep(250);
+		}
+	}
+	EnvWriteInt(aiPlayer, "GoldTradeOutposts", EnvReadInt(aiPlayer, "GoldTradeOutposts") - 1);
+}

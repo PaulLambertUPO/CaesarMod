@@ -1,11 +1,10 @@
 //void, Settlement set, Hero *h
 
 ObjList ol;
-int Greece, nRace, i;
+int nRace, i;
 str cmd;
 Hero hh;
 
-Greece = ImperialRome;
 nRace = set.GetCentralBuilding().race;
 
 if (nRace == RepublicanRome) {
@@ -16,7 +15,7 @@ if (nRace == RepublicanRome) {
 	else
 		cmd = "hireheroR";
 }
-else if (nRace == Greece)
+else if (nRace == ImperialRome)//Greece
 	cmd = "hireheroH";
 else
 	cmd = "hirehero" + GetRaceStrPref(nRace);
@@ -32,29 +31,30 @@ for (i = 0; i < ol.count; i += 1) {
 		break;
 	}
 }
+
 if (!h.IsAlive) {
 	bool hero_needed = true;
-	ObjList barracks;
-	if (nRace == Greece) {
+	ObjList arenae;
+	if (nRace == ImperialRome) {//Greece
 		ObjList buildings;
-		buildings = set.Buildings();
+		buildings = set.Buildings;
 		for (i = 0; i < buildings.count; i += 1)
 			if (buildings[i].class == "HGymnasium")
-				barracks.Add(buildings[i]);
+				arenae.Add(buildings[i]);
 	}
 	else
-		barracks = set.TSGetAllBarracks();
-	for (i = 0; hero_needed && i < barracks.count; i += 1)
-		if (barracks[i].CmdCount(cmd))
+		arenae = set.TSGetAllArenae();
+	for (i = 0; i < arenae.count; i += 1)
+		if (arenae[i].CmdCount(cmd) > 0) {
 			hero_needed = false;
+			break;
+		}
 	if (hero_needed) {
 		int gold, food;
 		if (GetCmdCost(cmd, gold, food))
-			if (set.gold >= gold)
-				if (set.food >= food)
-					if (set.CanResearch(cmd)) {
-						set.SpentGoldOnArmy(gold + food / 2);
-						set.Research(cmd);
-					}
+			if (set.CanAfford(cmd)) {
+				set.SpentGoldOnArmy(gold + food / 2);
+				set.Research(cmd);
+			}
 	}
 }

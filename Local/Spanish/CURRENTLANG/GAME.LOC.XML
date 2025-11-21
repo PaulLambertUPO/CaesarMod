@@ -80,7 +80,7 @@
 <translationtableentry text="Adds 60 damage.\nIf used, it restores the health of the owner by taking it from an ally of choice" result="Aumenta el ataque en 60 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un aliado a elección" />
 <translationtableentry text="Blood stone" result="Piedra sanguinaria" />
 <translationtableentry text="Bloodstone" result="Piedra sanguinaria" />
-<translationtableentry text="Adds 50 experience.\nIf used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 20 seconds)" result="Aumenta la experiencia en 50 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un enemigo a elección (con una recarga de 20 segundos)" />
+<translationtableentry text="Adds 50 experience.\nIf used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 30 seconds)" result="Aumenta la experiencia en 50 puntos.\nSi se utiliza, restablece la salud del poseedor sustrayéndola de un enemigo a elección (con una recarga de 30 segundos)" />
 <translationtableentry text="Snake skin" result="Piel de serpiente" />
 <translationtableentry text="Adds 10 damage.\nIt is possible to combine 3 to create a Belt of snakes" result="Aumenta el ataque en 10 puntos.\nEs posible combinar 3 para generar un Cinturón de serpientes" />
 <translationtableentry text="Belt of snakes" result="Cinturón de serpientes" />
@@ -475,6 +475,7 @@
 <translationtableentry text="Stronghold (Germany)" result="Fortaleza germana" />
 <translationtableentry text="Any Race Stronghold" result="Fortaleza para cualquier pueblo" />
 <translationtableentry text="Townhall" result="Foro" />
+<translationtableentry text="Townhall (alternative)" result="Foro (alternativo)" />
 <translationtableentry text="Roman Townhall" result="Foro romano" />
 <translationtableentry text="Gaul Townhall" result="Foro galo" />
 <translationtableentry text="Iberian Townhall" result="Foro ibero" />
@@ -486,6 +487,7 @@
 <translationtableentry text="Barracks" result="Cuartel" />
 <translationtableentry text="Blacksmith" result="Herrería" />
 <translationtableentry text="Arena" result="Coliseo" />
+<translationtableentry text="Arena (alternative)" result="Coliseo (alternativo)" />
 <translationtableentry text="Arena SW" result="Coliseo SO" />
 <translationtableentry text="Arena SE" result="Coliseo SE" />
 <translationtableentry text="Morrigan's monument" result="Templo de Morrigan" />
@@ -498,6 +500,7 @@
 <translationtableentry text="Market" result="Mercado" />
 <translationtableentry text="Agora" result="Ágora" />
 <translationtableentry text="Temple" result="Templo" />
+<translationtableentry text="Temple (alternative)" result="Templo (alternativo)" />
 <translationtableentry text="Druid House" result="Cabaña de los druidas" />
 <translationtableentry text="Sanctuary" result="Santuario" />
 <translationtableentry text="Temple of Thor" result="Templo de Thor" />
@@ -605,6 +608,7 @@
 <translationtableentry text="Not enough population" result="No hay suficiente población" />
 <translationtableentry text="Not enough population. You must have at least %d1" result="Non c'è abbastanza popolazione. Debes tener al menos %d1" />
 <translationtableentry text="Already available" result="Ya disponible" />
+<translationtableentry text="Already researching" result="Ya investigando" />
 <translationtableentry text="Requires %s1" result="Requiere %s1" />
 <translationtableentry text="Requires %s1 gold" result="Requiere %s1 oro" />
 <translationtableentry text="Requires %s1 food" result="Requiere %s1 víveres" />
@@ -692,6 +696,7 @@
 <translationtableentry text="Equip Hypaspist" result="Equipar hipaspista" />
 <translationtableentry text="Requires %s1 from Blacksmith" result="Requiere %s1 (Herrería)" />
 <translationtableentry text="You cannot have more than %s1" result="No puedes tener más de %s1" />
+<translationtableentry text="You cannot have more than %s1 (currently %s2)" result="No puedes tener más de %s1 (actualmente %s2)" />
 <translationtableentry text="(you cannot have more than %s1, currently %s2)" result="(no puedes tener más de %s1, actualmente %s2)" />
 <translationtableentry text="The current population is under the minimum of %s1 people" result="La población actual está por debajo del mínimo de %s1 unidades" />
 <!-- end barracks commands -->
@@ -755,7 +760,6 @@
 <translationtableentry text="Stops the production of Maces to start another" result="Interrumpe la producción de mazas para empezar otra" />
 <translationtableentry text="Stops the production of Pikes to start another" result="Interrumpe la producción de picas para empezar otra" />
 <translationtableentry text="Stops the production of Shields to start another" result="Interrumpe la producción de escudos para empezar otra" />
-<translationtableentry text="Stops the current production to start another" result="Interrumpe la producción actual para empezar otra" />
 <translationtableentry text="Large Shields" result="Forjar escudos caledonios" />
 <translationtableentry text="Allows Shield Bearers to be equipped in the Barracks" result="Permite equipar a los luchadores caledonios en el cuartel" />
 <translationtableentry text="Javelins" result="Forjar jabalinas" />
@@ -875,6 +879,7 @@
 <translationtableentry text="Mahout Mastery" result="Maestría de los mahouts" />
 <translationtableentry text="Makes new War Elephants level 16" result="Hace a los nuevos elefantes de guerra de nivel 16" />
 <translationtableentry text="Makes all warriors collect spoils of war worth 100 gold at every kill" result="Con cada asesinato los guerreros reciben un Botín de guerra, que añade 100 oro al asentamiento en el que entra el poseedor, luego desaparece" />
+<translationtableentry text="Challenges" result="Desafíos" />
 <translationtableentry text="Makes new heroes level 6" result="Hace a los nuevos héroes de nivel 6" />
 <translationtableentry text="Makes all warriors level 12 and above receive a Noble offence artifact (+8 damage) at the first kill" result="Con el primer asesinato los guerreros de nivel 12 o superior reciben la Espada de la nobleza, que aumenta el ataque en 8 puntos" />
 <translationtableentry text="Makes all warriors level 12 and above receive a Noble defence artifact (+8 armor) at the first kill" result="Con el primer asesinato los guerreros de nivel 12 o superior reciben el Escudo de la nobleza, que aumenta la defensa en 8 puntos" />
@@ -904,6 +909,7 @@
 <translationtableentry text="Statue of Amon-Ra" result="Erigir estatua de Amon-Ra" />
 <translationtableentry text="Increases the maximum health of every unit by 5 for each level up" result="Aumenta la salud máxima de todas las unisades en 5 puntos por cada aumento de nivel" />
 <translationtableentry text="Requires Cult of Anubis and Cult of Horus" result="Requiere Ofrenda a Anubis y Ofrenda a Horus" />
+<translationtableentry text="Tribal fights" result="Combates tribales" />
 <translationtableentry text="Gathers 4000 food" result="Recauda 4000 víveres" />
 <translationtableentry text="Call Valkyries" result="Reclutar valquirias" />
 <translationtableentry text="Calls 5 Valkyries" result="Recluta a un grupo de 5 valquirias" />
@@ -955,7 +961,7 @@
 <translationtableentry text="Tribute" result="Tributos" />
 <translationtableentry text="Tribute (once per game)" result="Tributos (una vez por partida)" />
 <translationtableentry text="Gathers %s1 gold in each outpost you own (the amount increases by 500 every 10 minutes, up to 2000)" result="Recauda %s1 oro en cada uno de tus fortines (la cantidad aumenta en 500 cada 10 minutos, hasta 2000)" />
-<translationtableentry text="Already collected" result="Ya recaudado" />
+<translationtableentry text="Already collected" result="Ya recaudados" />
 <translationtableentry text="Free beer" result="Celebrar banquete galo" />
 <translationtableentry text="Increases the stronghold population by 20" result="Aumenta la población de la fortaleza en 20 unidades" />
 <translationtableentry text="Food Tax" result="Impuesto en víveres" />
@@ -1013,6 +1019,7 @@
 <translationtableentry text="Hecatomb" result="Ritual de la fertilidad" />
 <translationtableentry text="Slavery investment" result="Invertir en la servidumbre" />
 <translationtableentry text="Increases all your villages population by 10" result="Aumenta la población de todos tus aldeas en 10 unidades" />
+<translationtableentry text="Food sale" result="Venta de víveres" />
 <translationtableentry text="Gathers 1000 gold" result="Recauda 1000 oro" />
 <translationtableentry text="Trade routes" result="Rutas comerciales" />
 <translationtableentry text="Gathers 1000 food in each village you own" result="Recauda 1000 víveres en cada una de tus aldeas poseída" />
@@ -2697,7 +2704,7 @@
 <translationtableentry text="loyalty" result="lealtad" />
 <translationtableentry text="Energy" result="Energía" />
 <translationtableentry text="Hero level" result="Nivel héroe" />
-<translationtableentry text="The number of warriors that will receive charms when they visit the grave" result="El número de guerreros que recibirán talismanes cuando visiten la tumba" />
+<translationtableentry text="Warriors that will receive charms when visiting the grave" result="Guerreros que recibirán talismanes al visitar la tumba" />
 <translationtableentry text="Seconds before the grave disappears" result="Segundos antes de que la tumba desaparezca" />
 <translationtableentry text="Neutral (will attack anyone who approaches)" result="Neutral (atacará a cualquiera que se acerque)" />
 <translationtableentry text="One %s1" result="1 %s1" />

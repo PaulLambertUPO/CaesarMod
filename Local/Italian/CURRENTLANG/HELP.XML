@@ -505,7 +505,7 @@ Simbolo di ordine e civiltà, Roma ha a sua disposizione un esercito di soldati 
 
 Per vincere, infatti, Roma fa affidamento sulle ottime statistiche base delle sue truppe, migliorate ulteriormente dalle caratteristiche speciali degli eroi, e sull'esplorazione del territorio.
 
-A inizio partita, dal foro, bisogna scegliere con quale tipo di Roma si desidera giocare: repubblicana, imperiale o punica, ognuna con le sue peculiarità.
+A inizio partita, bisogna scegliere con quale tipo di Roma si desidera giocare: repubblicana, imperiale o punica, ognuna con le sue peculiarità.
 				</entry>
 				<entry />
 				<entry hcenter="1">Punti forti</entry>
@@ -680,7 +680,7 @@ A differenza degli altri popoli, la Germania usa i viveri per reclutare le propr
 				</entry>
 				<entry hcenter="1">Punti deboli</entry>
 				<entry>
-- Truppe con difesa pressoché inesistente
+- Truppe con difesa pressoché inesistente e disponibili in numero limitato
 
 - Per iniziare a diventare davvero efficaci, gli eroi devono essere di livello alto
 
@@ -1039,7 +1039,7 @@ La Grecia può scegliere se seguire una forma di governo democratica come Atene 
 				<entry />
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Si recluta nel Tempio di Morrigan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Dipende da Giochi circensi</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Dipende da Sfide</entry>
 			</topic>
 			<topic id="EHero">
 				<entry hcenter="1" font="large">Eroe egizio</entry>
@@ -2091,7 +2091,7 @@ Lo sciamano si trasforma in uno spirito che rimane sotto il tuo controllo per ci
 				<entry />
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Si recluta nel Tempio di Morrigan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Richiede Giochi circensi</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Richiede Sfide</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Shrine of Thor.bmp" link="/contents/buildings/BArena">Dipende da Erigi altare di Thor</entry>
 			</topic>
 			<topic id="BDruid">
@@ -2500,7 +2500,7 @@ L'incursore teutonico cambia equipaggiamento e diventa un cavaliere teutonico (s
 				<entry />
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/TSanctuaryOfVotan.bmp" link="/contents/buildings/TArena">Si recluta nel Santuario di Wotan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Fights.bmp" link="/contents/buildings/TArena">Richiede Giochi circensi</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsT.bmp" link="/contents/buildings/TArena">Richiede Combattimenti tribali</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Legendary Valkyries.bmp" link="/contents/buildings/TArena">Dipende da Leggenda delle valchirie</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Tales of Heroes1.bmp" link="/contents/buildings/TArena">Dipende da Poemi barbarici</entry>
 			</topic>
@@ -4762,7 +4762,7 @@ Costo: 800 oro
 Tempo: 20 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Upgrades/FightsB.bmp">
-Giochi circensi
+Sfide
 Rende i nuovi eroi di livello 6.
 Costo: 2000 oro
 Tempo: 30 secondi
@@ -4898,8 +4898,8 @@ Recluta eroe
 Costo: 800 oro
 Tempo: 20 secondi
 				</entry>
-				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Fights.bmp">
-Giochi circensi
+				<entry vcenter="1" image="UI/Help/TCmdBar/Upgrades/FightsT.bmp">
+Combattimenti tribali
 Riscuote 4000 viveri.
 Costo: 2000 oro
 Tempo: 30 secondi
@@ -5404,8 +5404,8 @@ Compra 800 viveri al mercato per 400 oro.
 Costo: 400 oro
 Tempo: 10 secondi
 				</entry>
-				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Grain Trade.bmp">
-Commercio di viveri
+				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Grain Trade T.bmp">
+Vendita di viveri
 Riscuote 1000 oro.
 Costo: 2000 viveri
 Tempo: 20 secondi
@@ -6352,7 +6352,7 @@ Viene generata nelle rovine.
 			<entry image="UI/Icons/Items/Blood Stone.bmp">
 Pietra sanguinaria
 Aumenta l'esperienza di 50 punti.
-Se si utilizza, ripristina la salute del possessore sottraendola a un nemico a scelta (con una ricarica di 20 secondi).
+Se si utilizza, ripristina la salute del possessore sottraendola a un nemico a scelta (con una ricarica di 30 secondi).
 Viene generata nello scheletro ogni 30 minuti.
 			</entry>
 			<entry image="UI/Icons/Items/Snake Skin.bmp">

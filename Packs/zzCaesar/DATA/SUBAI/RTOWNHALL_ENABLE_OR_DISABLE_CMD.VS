@@ -1,24 +1,21 @@
 //void, Obj This
 
-Building this;
 Unit flag;
 
-this = This.AsBuilding();
-
-.CmdEnable("ChooseRepublicanRome");
-.CmdEnable("ChooseImperialRome");
-.CmdEnable("ChoosePunicRome");
-.CmdDisable("createfoodmule1");
-.CmdDisable("creategoldmule1");
-.CmdDisable("createfoodmule2");
-.CmdDisable("creategoldmule2");
-.CmdDisable("autotrain_start");
-.CmdDisable("autotrain_stop");
-.CmdDisable("townhall_military_training");
-
-//use a scope to remove settlement variable when the final loop is reached
+//use a scope to remove variables when the final loop is reached
 {
+	Building this;
 	Settlement set;
+
+	this = This.AsBuilding();
+
+	.CmdDisable("createfoodmule1");
+	.CmdDisable("creategoldmule1");
+	.CmdDisable("createfoodmule2");
+	.CmdDisable("creategoldmule2");
+	.CmdDisable("autotrain_start");
+	.CmdDisable("autotrain_stop");
+	.CmdDisable("townhall_military_training");
 
 	set = .settlement;
 
@@ -44,7 +41,7 @@ this = This.AsBuilding();
 }
 
 while (1) {
-	if (.player != flag.player)
-		flag.SetPlayer(.player);
+	if (This.player != flag.player)
+		flag.SetPlayer(This.player);
 	Sleep(500);
 }

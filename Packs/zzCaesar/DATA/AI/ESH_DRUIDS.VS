@@ -1,11 +1,11 @@
 //void, Settlement set
 
-int AIPlayer;
+int aiPlayer;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-if (Count(AIPlayer, "BaseMage") < AIVar(AIPlayer, AIV_Mages) * MilUnits(AIPlayer) / 100) {//available < needed
-	int nRace, gold, food;
+if (Count(aiPlayer, "BaseMage") < AIVar(aiPlayer, AIV_Mages) * MilUnits(aiPlayer) / 100) {//available < needed
+	int nRace;
 	str cmd;
 
 	nRace = set.GetCentralBuilding().race;
@@ -24,17 +24,19 @@ if (Count(AIPlayer, "BaseMage") < AIVar(AIPlayer, AIV_Mages) * MilUnits(AIPlayer
 		cmd = "trainIEnchantress";
 	else if (nRace == Britain)
 		cmd = "trainBDruid";
-	else if (nRace == Germany)
-		cmd = "trainTEnchantress";
 	else if (nRace == Egypt)
 		cmd = "trainEPriest";
-	else
+	else if (nRace == Germany)
+		cmd = "trainTEnchantress";
+	else//Greece
 		cmd = "trainHPriest";
 
-	if (GetCmdCost(cmd, gold, food))
-		if (set.CanResearch(cmd))
-			if (set.CanAfford(cmd)) {
+	if (set.CanResearch(cmd))
+		if (set.CanAfford(cmd)) {
+			int gold, food;
+			if (GetCmdCost(cmd, gold, food)) {
 				set.SpentGoldOnArmy(gold + food / 2);
 				set.Research(cmd);
 			}
+		}
 }

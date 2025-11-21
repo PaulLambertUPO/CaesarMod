@@ -1,16 +1,14 @@
 //void, Settlement set
 
 //called by ES_Stronghold, this script manages arena units and their specific researches
-//be careful: research commands to be issued to the settlement sometimes have different names from what they set in the player/settlement environment
 
-int Greece, AIPlayer, nRace, max, nMaxAllowed, nCallCount = 1, upgrade_units, gold, food;
+int aiPlayer, nRace, upgrade_units, max, nMaxAllowed, nCallCount = 1;
 bool nRaceIsRepublicanRome = false, nRaceIsImperialRome = false, nRaceIsPunicRome = false;
 str strTech, strHire, class;
 int nArenaResearchLevel;//0 - no upgrades, 1 - first, 2 - important
 int nUpgradeType;//0 - no upgrades, 1 - player, 2 - settlement
 
-Greece = ImperialRome;
-AIPlayer = set.player;
+aiPlayer = set.player;
 nRace = set.GetCentralBuilding().race;
 
 if (nRace == RepublicanRome)
@@ -38,12 +36,12 @@ if (nArenaResearchLevel < 1) {
 	else if (nRace == Iberia)
 		strTech = "Tournaments";
 	else if (nRace == Britain)
-		strTech = "Britain Fights";
+		strTech = "Challenges";
 	else if (nRace == Egypt)
 		strTech = "Cult of Osiris";
 	else if (nRace == Germany)
-		strTech = "TFights";
-	else if (nRace == Greece)
+		strTech = "Tribal fights";
+	else if (nRace == ImperialRome)//Greece
 		strTech = "Olympic Games";
 	if (!IsResearched(set, strTech)) {
 		EnvWriteString(set, "strTech", strTech);
@@ -59,7 +57,7 @@ if (nRace == Gaul) {
 	strHire = "Hire Trident warrior";
 	class = "GTridentWarrior";
 	max = 6;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxGTridentWarrior);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxGTridentWarrior);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -70,7 +68,7 @@ else if (nRaceIsRepublicanRome) {
 	strHire = "Equip Chariot";
 	class = "RChariot";
 	max = 15;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxRChariot);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxRChariot);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -80,7 +78,7 @@ else if (nRaceIsImperialRome) {
 	class = "RLiberatus";
 	nCallCount = 10;
 	max = 20;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxRLiberati);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxRLiberati);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -90,9 +88,9 @@ else if (nRaceIsImperialRome) {
 else if (nRaceIsPunicRome) {
 	strHire = "Hire Liberati Punic";
 	class = "RLiberatus";//do not use RLiberatusPunic otherwise Count below might give a wrong result
-	nCallCount = 10;
+	nCallCount = 10 + EnvReadInt(aiPlayer, "QueuedBuild/RLiberatusPunic");//needed for the check below
 	max = 20;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxRLiberati);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxRLiberati);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -102,8 +100,8 @@ else if (nRaceIsPunicRome) {
 else if (nRace == Carthage) {
 	strHire = "Train War Elephant";
 	class = "CWarElephant";
-	max = EnvReadInt(AIPlayer, "MaxElephants");
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxCWarElephant);
+	max = EnvReadInt(aiPlayer, "MaxElephants");
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxCWarElephant);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -114,9 +112,9 @@ else if (nRace == Iberia) {
 	strHire = "Call Mountaineer";
 	class = "IMountaineer";
 	max = 10;
-	if (IsResearched(AIPlayer, "Mountain Clan"))
+	if (IsResearched(aiPlayer, "Mountain Clan"))
 		max = 20;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxIMountaineers);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxIMountaineers);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -127,7 +125,7 @@ else if (nRace == Britain) {
 	strHire = "Hire Viking Lord";
 	class = "BVikingLord";
 	max = 6;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxBVikingLord);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxBVikingLord);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -138,7 +136,7 @@ else if (nRace == Egypt) {
 	strHire = "Chariot of Osiris";
 	class = "EChariot";
 	max = 15;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxEChariot);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxEChariot);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -148,18 +146,18 @@ else if (nRace == Germany) {
 	class = "TValkyrie";
 	nCallCount = 5;
 	max = 10;
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxTValkyrie);
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxTValkyrie);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
 	nUpgradeType = 2;
 	strTech = "Legendary Valkyries";
 }
-else if (nRace == Greece) {
+else if (nRace == ImperialRome) {//Greece
 	strHire = "trainHMyrmidon";
 	class = "HMyrmidon_Javelin";
-	max = EnvReadInt(AIPlayer, "MaxMyrmidons");
-	nMaxAllowed	= AIVar(AIPlayer, AIV_MaxHMyrmidon);
+	max = EnvReadInt(aiPlayer, "MaxMyrmidons");
+	nMaxAllowed	= AIVar(aiPlayer, AIV_MaxHMyrmidon);
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
@@ -169,15 +167,15 @@ else if (nRace == Greece) {
 }
 
 //decide whether to upgrade units
-upgrade_units = AIVar(AIPlayer, AIV_ArenaUpgradeHires);//0 - easy, 1 - normal, -1 - hard
+upgrade_units = AIVar(aiPlayer, AIV_ArenaUpgradeHires);//0 - easy, 1 - normal, -1 - hard
 if (upgrade_units == 0)
 	nArenaResearchLevel = 2;
 else if (nArenaResearchLevel < 2)
 	if (nUpgradeType == 1) {//player upgrades (Iberia and Greece)
 		if (nRace == Iberia)
-			if (IsResearched(AIPlayer, strTech))
+			if (IsResearched(aiPlayer, strTech))
 				strTech = "Mountain Clan Legacy";
-		if (IsResearched(AIPlayer, strTech))
+		if (IsResearched(aiPlayer, strTech))
 			nArenaResearchLevel = 2;
 		else {
 			EnvWriteString(set, "strTech", strTech);
@@ -211,14 +209,15 @@ else if (nArenaResearchLevel < 2)
 
 EnvWriteInt(set, "ArenaResearchLevel", nArenaResearchLevel);
 
-if (Count(AIPlayer, class) + nCallCount <= max) {
-	if (!GetCmdCost(strHire, gold, food))
-		return;
-	if (nRace == Carthage)
-		if (set.food - food < MIN(500, EnvReadInt(set, "nFoodReserve") / 2))
-			return;
-	EnvWriteString(set, "strTech", strHire);
-	set.AIRun("ESH_NeedTech.vs");
+if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) + nCallCount <= max) {
+	int gold, food;
+	if (GetCmdCost(strHire, gold, food)) {
+		if (nRace == Carthage)
+			if (set.food - food < MIN(500, EnvReadInt(set, "nFoodReserve") / 2))
+				return;
+		EnvWriteString(set, "strTech", strHire);
+		set.AIRun("ESH_NeedTech.vs");
+	}
 	return;
 }
 
@@ -227,7 +226,7 @@ if (nArenaResearchLevel == 2) {
 	//upgrades to either further improve units (Imperial Rome) or increase their limit (Carthage and Greece)
 	if (upgrade_units != 0)
 		if (nRaceIsImperialRome) {
-			if (!IsResearched(AIPlayer, "Liberati triumph")) {
+			if (!IsResearched(aiPlayer, "Liberati triumph")) {
 				EnvWriteString(set, "strTech", "Liberati triumph");
 				set.AIRun("ESH_NeedTech.vs");
 				return;
@@ -241,7 +240,7 @@ if (nArenaResearchLevel == 2) {
 					return;
 				}
 		}
-		else if (nRace == Greece)
+		else if (nRace == ImperialRome)//Greece
 			if (nMaxAllowed < 0 || max < nMaxAllowed)
 				if (set.CanAfford(strHire)) {
 					EnvWriteString(set, "strTech", "Forge Elite Equipment");
@@ -249,19 +248,19 @@ if (nArenaResearchLevel == 2) {
 					return;
 				}
 	//supreme heroes (Gaul and Republican Rome)
-	if (AIVar(AIPlayer, AIV_SupremeHeroes) != 0) {
+	if (AIVar(aiPlayer, AIV_SupremeHeroes) != 0) {
 		class = "";
 		if (nRace == Gaul) {
 			if (GetTime() >= 2700000)
-				if (IsResearched(AIPlayer, "Special training"))
+				if (IsResearched(aiPlayer, "Gaul Training 3"))
 					if (IsResearched(set, "Trident Warrior Exp3"))
-						if (IsResearched(AIPlayer, "Warrior Tales"))
-							if (IsResearched(AIPlayer, "Battle tactics"))
+						if (IsResearched(aiPlayer, "Warrior Tales"))
+							if (IsResearched(aiPlayer, "Battle tactics"))
 								if (IsResearched(set, "Legendary Heroes")) {
 									if (rand(2) == 0) {
 										strHire = "Hire Keltill";
 										class = "Keltill";
-										if (Count(AIPlayer, class) >= 1) {
+										if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) >= 1) {
 											strHire = "Hire Larax";
 											class = "Larax";
 										}
@@ -269,7 +268,7 @@ if (nArenaResearchLevel == 2) {
 									else {
 										strHire = "Hire Larax";
 										class = "Larax";
-										if (Count(AIPlayer, class) >= 1) {
+										if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) >= 1) {
 											strHire = "Hire Keltill";
 											class = "Keltill";
 										}
@@ -282,11 +281,11 @@ if (nArenaResearchLevel == 2) {
 		}
 		else if (nRaceIsRepublicanRome)
 			if (GetTime() >= 2400000)
-				if (IsResearched(AIPlayer, "Advanced Training"))
-					if (IsResearched(AIPlayer, "Veteran Offence"))
-						if (IsResearched(AIPlayer, "Veteran Defence"))
-							if (IsResearched(AIPlayer, "Veteran Health"))
-								if (IsResearched(AIPlayer, "Nobility"))
+				if (IsResearched(aiPlayer, "Rome Training 2"))
+					if (IsResearched(aiPlayer, "Veteran Offence"))
+						if (IsResearched(aiPlayer, "Veteran Defence"))
+							if (IsResearched(aiPlayer, "Veteran Health"))
+								if (IsResearched(aiPlayer, "RNobility"))
 									if (IsResearched(set, "Transition to Empire")) {
 										strHire = "Hire Caesar";
 										class = "Caesar";
@@ -296,21 +295,28 @@ if (nArenaResearchLevel == 2) {
 										set.AIRun("ESH_NeedTech.vs");
 									}
 		if (class != "")
-			if (Count(AIPlayer, class) < 1)
-				if (set.CanResearch(strHire) && set.CanAfford(strHire)) {
-					GetCmdCost(strHire, gold, food);
-					set.SpentGoldOnArmy(gold + food / 2);
-					set.Research(strHire);
-				}
-				else {
-					int budget;
-					budget = AIVar(AIPlayer, AIV_TechBudget);//save original value
-					SetAIVar(AIPlayer, AIV_TechBudget, 100);
-					set.StopReserving();
-					EnvWriteString(set, "ReserveFor" + (AIPlayer - 1), "");
-					EnvWriteString(set, "strTech", strHire);
-					set.AIRun("ESH_NeedTech.vs");
-					SetAIVar(AIPlayer, AIV_TechBudget, budget);//restore budget
-				}
+			if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) < 1)
+				if (set.CanResearch(strHire))
+					if (set.CanAfford(strHire)) {
+						int gold, food;
+						if (EnvReadString(set, "ReserveFor" + (aiPlayer - 1)) == strHire) {
+							set.StopReserving();
+							EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
+						}
+						if (GetCmdCost(strHire, gold, food)) {
+							set.SpentGoldOnArmy(gold + food / 2);
+							set.Research(strHire);
+						}
+					}
+					else {
+						int budget;
+						budget = AIVar(aiPlayer, AIV_TechBudget);//save original value
+						SetAIVar(aiPlayer, AIV_TechBudget, 100);
+						set.StopReserving();
+						EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
+						EnvWriteString(set, "strTech", strHire);
+						set.AIRun("ESH_NeedTech.vs");
+						SetAIVar(aiPlayer, AIV_TechBudget, budget);//restore value
+					}
 	}
 }

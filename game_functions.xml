@@ -1,12 +1,135 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="scdoc.xsl"?>
 <!--
-	Note about special markers:
-	- latent="1": this marks functions that can pause the execution of a script, resuming it when the function's action is complete
-	- ptr="1": this means that a parameter is passed "by reference", so the function gets a direct link to the variable (not its copy) and can modify it
+	Note about function special markers:
+	- latent="1": this marks functions that "pause" the execution of a script, resuming it when the function's action is complete (e.g. animations)
+	- ptr="1": this means that a parameter is passed "by reference", meaning that the function gets a direct link to the variable (not to its copy) and can modify it
+-->
+<!--
+	Note about types:
+	- void: when a function returns void, it means that it does not return any direct value
+	- int: an integer number (no dot) that can be either positive or negative (e.g. -5)
+	- float: a floating point number (with dot) that can be either positive or negative (e.g. 3.14)
+	- bool: a boolean value (true/false)
+	- str: a string, which is a series of characters included between "" (e.g. "this is an example"), it can also be given an int value that will be converted automatically
+	- pstr: probably a string pointer, but since it is never used in the game scripts, its real meaning/use is unknown
+	- point: a point with x-y int coordinates; the higher x becomes, the further it goes to the right; the higher y becomes, the further it goes down
+	- rect: a rectangle made of 2 points, one for the top-left corner and the other for the bottom-right corner
+	- IntArray: a list (array) of int values that can be accessed with [] and their index (starting from 0) (e.g. arr[0] = 5)
+	- StrArray: a list (array) of str values that can be accessed with [] and their index (starting from 0) (e.g. arr[0] = "an example")
+	- StrMap: a set of str values that can be accessed with [] and their key (which is a string) (e.g. map["key"] = "an example")
+	- Obj: an entity corresponding to an object in the game (unit, building, ...), directly related to the CVXObject cpp_class present in class files
+	- Unit: an entity corresponding to a unit in the game, directly related to the CVXUnit cpp_class present in class files, able to use Obj functions
+	- Hero: an entity corresponding to a hero in the game, directly related to the CVXHero cpp_class present in class files, able to use Unit functions
+	- Druid: an entity corresponding to a sage in the game, directly related to the CVXDruid cpp_class present in class files, able to use Unit functions
+	- Ghost: an entity corresponding to a ghoul in the game, able to use Unit functions
+	- Sacrifice: an entity corresponding to a sage spell in the game (mainly used in the previous titles), able to use Obj functions
+	- Flying: an entity corresponding to a flying entity in the game, able to use Unit functions
+	- Wagon: an entity corresponding to a supply unit in the game, able to use Unit functions
+	- Ship: an entity corresponding to a ship in the game, able to use Unit functions
+	- Building: an entity corresponding to a building in the game, directly related to the CVXBuilding cpp_class present in class files, able to use Obj functions
+	- Barrack: an entity corresponding to a barracks in the game, able to use Building functions
+	- Gate: an entity corresponding to a gate in the game, able to use Building functions
+	- Catapult: an entity corresponding to a static siege machine (not a fully-built ram) in the game, able to use Building functions
+	- Tower: an entity corresponding to a tower in the game, able to use Building functions
+	- ItemHolder: an entity corresponding to an item holder in the game, able to use Obj functions
+	- Item: an entity corresponding to an equippable item in the game
+	- Settlement: an entity corresponding to a full settlement in the game, defined by a main building that can also have other buildings with it
+	- ObjList: a list (array) of Obj entities that can be accessed with [] and their index (starting from 0) (e.g. list[0] = object)
+	- Query: a particular operator that defines a dynamic way to get a set of objects, it can be seen as a function pointer because it is executed every time it is reached
+	- NamedObj: an entity with a script name set from the editor, able to use Query functions, it is mainly used for the sequences of custom maps
+	- Conversation: an entity containing phrases pronounced by actors, it is mainly used for the sequences of custom maps
+	- GAIKA: an entity that represents a "Game AI Knowledge Area" defined by a settlement, it is mainly used for the AI scripts
+	- Squad: an entity consisting of a group of units (or the army of a hero), it is mainly used for the AI scripts
+	- SquadList: a list of Squad entities that works like the iterator pattern (able to be scrolled forward only), it is mainly used for the AI scripts
+-->
+<!--
+	Note about game constants and class references:
+	- races are referenced by specific names and they have both an int value and a str prefix
+		- 0|G = Gaul
+		- 1|R = RepublicanRome
+		- 2|C = Carthage
+		- 3|I = Iberia
+		- 4|M = ImperialRome
+		- 5|B = Britain
+		- 6|E = Egypt
+		- 7|T = Germany
+		- -1 = None
+	- hero skills are int values referenced by taking their display/class names and removing spaces and prepending "hs"
+		- 0 = hsAdministration
+		- 1 = hsTeamAttack
+		- 2 = hsTeamDefense
+		- 3 = hsQuickMarch
+		- 4 = hsEpicEndurance
+		- 5 = hsDiscipline
+		- 6 = hsLeadership
+		- 7 = hsEpicAttack
+		- 8 = hsBattleCry
+		- 9 = hsHealing
+		- 10 = hsCeasefire
+		- 11 = hsVigor
+		- 12 = hsFrenzy
+		- 13 = hsRush
+		- 14 = hsEgoism
+		- 15 = hsWisdom
+		- 16 = hsRecovery
+		- 17 = hsSurvival
+		- 18 = hsCharge
+		- 19 = hsScout
+		- 20 = hsAssault
+		- 21 = hsEpicArmor
+		- 22 = hsConcealment
+		- 23 = hsDefensiveCry
+		- 24 = hsEuphoria
+	- specials are int values referenced by taking their display/class names and replacing spaces with underscores "_" and using lower case
+		- 0 = parry
+		- 1 = drain
+		- 2 = ferocity
+		- 3 = triple_strike
+		- 4 = deflection
+		- 5 = active
+		- 6 = life_steal
+		- 7 = determination
+		- 8 = combat_skill
+		- 9 = toughness
+		- 10 = offensive_tactics
+		- 11 = defensive_tactics
+		- 12 = penetration
+		- 13 = spike_armor
+		- 14 = bleeding_attack
+		- 15 = attack_skill
+		- 16 = defense_skill
+		- 17 = death_blow
+		- 18 = power_strike
+		- 19 = expertise
+		- 20 = charge
+		- 21 = regeneration
+		- 22 = rage
+		- 23 = revenge
+		- 24 = triumph
+		- 25 = disease_attack
+		- 26 = sneak
+		- 27 = invisibility
+		- 28 = learning
+		- 29 = teaching
+		- 30 = freedom
+		- 31 = cripple
+		- 32 = healing
+		- 33 = keen_sight
+		- 34 = trample
+		- 35 = curse
+	- global spells are int values referenced by taking their display/command names and removing spaces and prepending "hs"
+		- 0 = gsWindOfWisdom
+		- 1 = gsStarvation
+		- 2 = gsSoothingRain
+		- 3 = gsDivineSacrifice
+		- 4 = gsBloodlust
+		- 5 = gsTribute
+	- MaxGAIKAPriority = 100
+	- classes are str values referenced by prepending "c" before the class id (e.g. cCNoble, cTTownhall, ...), replacing spacing with underscores does not work properly
 -->
 <functions>
-<!-- Pauses the current script | WARNING: it can cause a crash, depending on the type of script it is used in -->
+<!-- Pauses the current script | WARNING: it can cause a crash, depending on the type of script it is used in | WARNING: negative values pause the script permanently -->
 <func name="Sleep" returns="void" latent="1">
 	<param type="int" /><!-- milliseconds to pause for -->
 </func>
@@ -101,7 +224,7 @@
 <func name="abs" returns="int">
 	<param type="int" /><!-- the number to get the absolute value of -->
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="Write" returns="void">
 	<param type="int" />
 </func>
@@ -178,7 +301,7 @@
 <func name="Int" returns="int">
 	<param type="float" /><!-- value to convert -->
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="Write" returns="void">
 	<param type="float" />
 </func>
@@ -222,12 +345,12 @@
 	<param type="bool" /><!-- first value -->
 	<param type="bool" /><!-- second value -->
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="=" returns="void">
-	<param type="pstr" ptr="1" /><!-- variable to modify -->
-	<param type="pstr" /><!-- value to assign -->
+	<param type="pstr" ptr="1" />
+	<param type="pstr" />
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="Write" returns="void">
 	<param type="pstr" />
 </func>
@@ -261,7 +384,7 @@
 	<param type="str" /><!-- first string -->
 	<param type="str" /><!-- second string -->
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="Write" returns="void">
 	<param type="str" />
 </func>
@@ -275,12 +398,12 @@
 	<param type="str" /><!-- string to search in -->
 	<param type="str" /><!-- string to search for (substring) -->
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="GetFromStr" returns="str">
 	<param type="str" />
 	<param type="str" />
 </func>
-<!-- TBD: UNKNOWN -->
+<!-- UNKNOWN -->
 <func name="GetFromStrToEOL" returns="str">
 	<param type="str" />
 	<param type="str" />
@@ -324,297 +447,405 @@
 	<param type="int" /><!-- bit mask to set/unset -->
 	<param type="bool" /><!-- operation type (true = set, false = unset) -->
 </func>
+<!-- Returns a point with the integer x-y coordinates (note that the higher x is, the further it goes to the right and the higher y is, the further it goes down) -->
 <func name="Point" returns="point">
-	<param type="int" />
-	<param type="int" />
-</func>
-<func name="point::x" returns="int" ptr="1"><!-- returns the x coordinate of the point -->
-</func>
-<func name="point::y" returns="int" ptr="1"><!-- returns the y coordinate of the point -->
-</func>
-<func name="point::Set" returns="point"><!-- sets the x-y coordinates of the point -->
 	<param type="int" /><!-- x coordinate -->
 	<param type="int" /><!-- y coordinate -->
 </func>
-<func name="point::SetLen" returns="void"><!-- sets the length of the point vector (distance from the origin) -->
-	<param type="int" /><!-- distance from the origin: if positive, it keeps their original sign (+/-); if negative, it inverts them (+ -> - and - -> +) -->
+<!-- Returns the x coordinate of a point -->
+<func name="point::x" returns="int">
 </func>
-<func name="point::Len" returns="int"><!-- returns the length of the point vector (distance from the origin); it is always a positive value, even with negative coordinates -->
+<!-- Returns the y coordinate of a point -->
+<func name="point::y" returns="int">
 </func>
-<func name="point::Rot" returns="void"><!-- rotates the vector of the point, changing its x-y coordinates, by the given degree -->
-	<param type="int" /><!-- rotation degree (positive = counterclockwise; negative = clockwise) | e.g. (20,0).Rot(90) -> (0,-20) -->
+<!-- Sets the x-y coordinates of a point and also returns the modified point -->
+<func name="point::Set" returns="point">
+	<param type="int" /><!-- x coordinate -->
+	<param type="int" /><!-- y coordinate -->
 </func>
+<!-- Sets the length of the point vector (distance from the origin located at 0-0) -->
+<func name="point::SetLen" returns="void">
+	<param type="int" /><!-- distance from the origin: if positive, it keeps the x-y original sign (+/-); if negative, it inverts it (+ -> - and - -> +) -->
+</func>
+<!-- Returns the length of the point vector (distance from the origin located at 0-0); it is always a positive value, even with negative coordinates -->
+<func name="point::Len" returns="int">
+</func>
+<!-- Rotates the vector of a point, changing its x-y coordinates, by the integer degree (positive = counterclockwise; negative = clockwise) (e.g. (20,0).Rot(90) -> (0,-20)) -->
+<func name="point::Rot" returns="void">
+	<param type="int" /><!-- rotation degree (positive = counterclockwise; negative = clockwise) -->
+</func>
+<!-- Checks whether the point is covered by the rectangle area -->
 <func name="point::InRect" returns="bool">
-	<param type="rect" />
+	<param type="rect" /><!-- rectangle area to check -->
 </func>
+<!-- Clamps the x-y coordinates of the point to be within the area covered by the rectangle (left/right for x, top/bottom for y) -->
 <func name="point::IntoRect" returns="void">
-	<param type="rect" />
+	<param type="rect" /><!-- rectangle to clamp the point to -->
 </func>
+<!-- Returns the distance from a point to another -->
 <func name="point::Dist" returns="int">
-	<param type="point" />
+	<param type="point" /><!-- other point -->
 </func>
-<func name="+" returns="point">
-	<param type="point" />
-	<param type="point" />
-</func>
-<func name="-" returns="point">
-	<param type="point" />
-	<param type="point" />
-</func>
-<func name="*" returns="point">
-	<param type="point" />
-	<param type="int" />
-</func>
-<func name="/" returns="point">
-	<param type="point" />
-	<param type="int" />
-</func>
+<!-- Returns the distance between two points -->
 <func name="Dist" returns="int">
-	<param type="point" />
-	<param type="point" />
+	<param type="point" /><!-- first point -->
+	<param type="point" /><!-- second point -->
 </func>
+<!-- Returns a point consisting of the sum of the coordinates of two points (x1 + x2 and y1 + y2) -->
+<func name="+" returns="point">
+	<param type="point" /><!-- first point -->
+	<param type="point" /><!-- second point -->
+</func>
+<!-- Returns a point consisting of the difference of the coordinates of two points (x1 - x2 and y1 - y2) -->
+<func name="-" returns="point">
+	<param type="point" /><!-- first point -->
+	<param type="point" /><!-- second point -->
+</func>
+<!-- Multiplies the coordinates of a point by an integer and returns the resulting point -->
+<func name="*" returns="point">
+	<param type="point" /><!-- point to multiply -->
+	<param type="int" /><!-- multiplier -->
+</func>
+<!-- Divides the coordinates of a point by an integer and returns the resulting point -->
+<func name="/" returns="point">
+	<param type="point" /><!-- point to divide-->
+	<param type="int" /><!-- divider -->
+</func>
+<!-- Assigns the second point to a variable -->
 <func name="=" returns="void">
-	<param type="point" ptr="1" />
-	<param type="point" />
+	<param type="point" ptr="1" /><!-- variable to modify -->
+	<param type="point" /><!-- value to assign -->
 </func>
+<!-- Checks if two points are equal -->
 <func name="==" returns="bool">
-	<param type="point" />
-	<param type="point" />
+	<param type="point" /><!-- first operand -->
+	<param type="point" /><!-- second operand -->
 </func>
+<!-- Checks if two points are different -->
 <func name="!=" returns="bool">
-	<param type="point" />
-	<param type="point" />
+	<param type="point" /><!-- first operand -->
+	<param type="point" /><!-- second operand -->
 </func>
+<!-- Returns the x coordinate of the top-left corner/point of the rectangle -->
+<func name="rect::left" returns="int">
+</func>
+<!-- Returns the y coordinate of the top-left corner/point of the rectangle -->
+<func name="rect::top" returns="int">
+</func>
+<!-- Returns the x coordinate of the bottom-right corner/point of the rectangle -->
+<func name="rect::right" returns="int">
+</func>
+<!-- Returns the y coordinate of the bottom-right corner/point of the rectangle -->
+<func name="rect::bottom" returns="int">
+</func>
+<!-- Returns the full width of the rectangle, that is the distance between left and right increased by 1 (e.g. (0,5,10,6) -> 11) -->
 <func name="rect::width" returns="int">
 </func>
+<!-- Returns the full height of the rectangle, that is the distance between top and bottom increased by 1 (e.g. (5,0,6,10) -> 11) -->
 <func name="rect::height" returns="int">
 </func>
-<func name="rect::left" returns="int" ptr="1">
-</func>
-<func name="rect::top" returns="int" ptr="1">
-</func>
-<func name="rect::right" returns="int" ptr="1">
-</func>
-<func name="rect::bottom" returns="int" ptr="1">
-</func>
+<!-- Sets the x-y coordinates of the top-left and bottom-right corners/points of the rectangle -->
 <func name="rect::Set" returns="void">
-	<param type="int" />
-	<param type="int" />
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- x coordinate of the top-left corner -->
+	<param type="int" /><!-- y coordinate of the top-left corner -->
+	<param type="int" /><!-- x coordinate of the bottom-right corner -->
+	<param type="int" /><!-- y coordinate of the bottom-right corner -->
 </func>
+<!-- Returns the point corresponding to the centre of the rectangle -->
 <func name="rect::Center" returns="point">
 </func>
+<!-- Returns a rectangle with the maximum left and top values and the minimum right and bottom values of two rectangles (IntersectRects((0,1,2,3), (1,0,3,2)) -> (1,1,2,2)) -->
 <func name="IntersectRects" returns="rect">
-	<param type="rect" />
-	<param type="rect" />
+	<param type="rect" /><!-- first rectangle -->
+	<param type="rect" /><!-- second rectangle -->
 </func>
+<!-- Returns a rectangle with the minimum left and top values and the maximum right and bottom values of two rectangles (AddRects((0,1,2,3), (1,0,3,2)) -> (0,0,3,3)) | WARNING: if one of the rectangles has invalid coordinates (left > right and/or top > bottom), the function will return a copy of the other; if both are invalid, it will return a copy of the first rectangle -->
 <func name="AddRects" returns="rect">
-	<param type="rect" />
-	<param type="rect" />
+	<param type="rect" /><!-- first rectangle -->
+	<param type="rect" /><!-- second rectangle -->
 </func>
+<!-- Assigns the second rectangle to a variable -->
 <func name="=" returns="void">
-	<param type="rect" ptr="1" />
-	<param type="rect" />
+	<param type="rect" ptr="1" /><!-- variable to modify -->
+	<param type="rect" /><!-- value to assign -->
 </func>
+<!-- Checks if two rectangles are equal -->
 <func name="==" returns="bool">
-	<param type="rect" />
-	<param type="rect" />
+	<param type="rect" /><!-- first operand -->
+	<param type="rect" /><!-- second operand -->
 </func>
+<!-- Checks if two rectangles are different -->
 <func name="!=" returns="bool">
-	<param type="rect" />
-	<param type="rect" />
+	<param type="rect" /><!-- first operand -->
+	<param type="rect" /><!-- second operand -->
 </func>
+<!-- Assigns the second integer array variable to a variable -->
 <func name="=" returns="void">
-	<param type="IntArray" ptr="1" />
-	<param type="IntArray" ptr="1" />
+	<param type="IntArray" ptr="1" /><!-- variable to modify -->
+	<param type="IntArray" ptr="1" /><!-- variable to assign -->
 </func>
+<!-- Accesses/Returns the value stored in the integer array at the specified index, allowing it to be changed | WARNING: the access automatically resizes the array if the index is out of bounds (e.g. arr1 has size 1, arr2 has size 3 -> arr1[0] = arr2[10]; -> arr2 has size 11) | WARNING: negative indexes can be used, but they do not change the size of the array -->
 <func name="[" returns="int" ptr="1">
-	<param type="IntArray" ptr="1" />
-	<param type="int" />
+	<param type="IntArray" ptr="1" /><!-- variable to access -->
+	<param type="int" /><!-- index of the value to access -->
 </func>
+<!-- Sets the size of the integer array, resetting to 0 all values starting from the index (negative indexes are treated as 0) -->
 <func name="IntArray::resize" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- new size of the array -->
 </func>
+<!-- Returns the size of the integer array (how many values it contains, starting from index 0) -->
 <func name="IntArray::size" returns="int">
 </func>
+<!-- Searches for the integer value in the array and returns its index increased by 1, -1 if not found, 0 if the index is negative -->
 <func name="IntArray::find" returns="int">
-	<param type="int" />
+	<param type="int" /><!-- value to search for -->
 </func>
+<!-- Assigns the second string array variable to a variable -->
 <func name="=" returns="void">
-	<param type="StrArray" ptr="1" />
-	<param type="StrArray" ptr="1" />
+	<param type="StrArray" ptr="1" /><!-- variable to modify -->
+	<param type="StrArray" ptr="1" /><!-- variable to assign -->
 </func>
+<!-- Accesses/Returns the value stored in the string array at the specified index, allowing it to be changed | WARNING: the access automatically resizes the array if the index is out of bounds (e.g. arr1 has size 1, arr2 has size 3 -> arr1[0] = arr2[10]; -> arr2 has size 11) | WARNING: negative indexes can be used, but they do not change the size of the array -->
 <func name="[" returns="str" ptr="1">
-	<param type="StrArray" ptr="1" />
-	<param type="int" />
+	<param type="StrArray" ptr="1" /><!-- variable to access -->
+	<param type="int" /><!-- index of the value to access -->
 </func>
+<!-- Sets the size of the string array, resetting to "" all values starting from the index (negative indexes are treated as 0) -->
 <func name="StrArray::resize" returns="void">
 	<param type="int" />
 </func>
+<!-- Returns the size of the string array (how many values it contains, starting from index 0) -->
 <func name="StrArray::size" returns="int">
 </func>
+<!-- Searches for the string value in the array and returns its index increased by 1, -1 if not found, 0 if the index is negative -->
 <func name="StrArray::find" returns="int">
 	<param type="str" />
 </func>
+<!-- Assigns the second string map variable to a variable -->
 <func name="=" returns="void">
-	<param type="StrMap" ptr="1" />
-	<param type="StrMap" ptr="1" />
+	<param type="StrMap" ptr="1" /><!-- variable to modify -->
+	<param type="StrMap" ptr="1" /><!-- variable to assign -->
 </func>
+<!-- Accesses/Returns the value stored in the string map at the specified key, allowing it to be changed | WARNING: the access automatically resizes the map if the key does not exist unless it has been erased (e.g. str s; StrMap m; s = m["x"]; -> m.size = 1 -> m.erase("x"); -> m.size = 0 -> s = m["x"]; -> m.size = 0) -->
 <func name="[" returns="str" ptr="1">
-	<param type="StrMap" ptr="1" />
-	<param type="str" />
+	<param type="StrMap" ptr="1" /><!-- variable to access -->
+	<param type="str" /><!-- key of the value to access -->
 </func>
+<!-- Returns the size of the string map (how many values it contains) -->
 <func name="StrMap::size" returns="int">
 </func>
+<!-- Removes the key (along with its paired value) from the string map | WARNING: the removal of the key affects the size of the map: if the erased key is accessed, the size does not change, but if it is set, then it does -->
 <func name="StrMap::erase" returns="void">
-	<param type="str" />
+	<param type="str" /><!-- key to remove -->
 </func>
+<!-- Checks if the key exists in the string map -->
 <func name="StrMap::exists" returns="bool">
-	<param type="str" />
+	<param type="str" /><!-- key to search for -->
 </func>
+<!-- UNKNOWN -->
 <func name="DumpStack" returns="void">
 </func>
+<!-- UNKNOWN -->
 <func name="DumpCode" returns="void">
 	<param type="int" />
 </func>
+<!-- Returns a point whose x-y coordinates are equal to the size of the map (small = 8192, normal = 16384, huge = 32768) -->
 <func name="GetMapSize" returns="point">
 </func>
+<!-- Generates a random terrain from a configuration file | WARNING: the name format of the file is unknown (full path, extension, ...) | WARNING: it causes a crash if the file is not found -->
 <func name="_RandomTerrain2" returns="void">
-	<param type="str" />
+	<param type="str" /><!-- configuration file -->
 </func>
+<!-- Assigns the second object to a variable -->
 <func name="=" returns="void">
-	<param type="Obj" ptr="1" />
-	<param type="Obj" />
+	<param type="Obj" ptr="1" /><!-- variable to modify -->
+	<param type="Obj" /><!-- value to assign -->
 </func>
+<!-- Assigns the second item to a variable -->
 <func name="=" returns="void">
-	<param type="Item" ptr="1" />
-	<param type="Item" />
+	<param type="Item" ptr="1" /><!-- variable to modify -->
+	<param type="Item" /><!-- value to assign -->
 </func>
+<!-- Checks if two objects are equal -->
 <func name="==" returns="bool">
-	<param type="Obj" />
-	<param type="Obj" />
+	<param type="Obj" /><!-- first operand -->
+	<param type="Obj" /><!-- second operand -->
 </func>
+<!-- Checks if two objects are different -->
 <func name="!=" returns="bool">
-	<param type="Obj" />
-	<param type="Obj" />
+	<param type="Obj" /><!-- first operand -->
+	<param type="Obj" /><!-- second operand -->
 </func>
+<!-- Makes the object invalid by clearing its reference/handle (IsValid will return false) -->
 <func name="Obj::Clear" returns="void">
 </func>
+<!-- Returns a Unit reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsUnit" returns="Unit">
 </func>
+<!-- Returns a Building reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsBuilding" returns="Building">
 </func>
+<!-- Returns a Hero reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsHero" returns="Hero">
 </func>
+<!-- Returns a Druid reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsDruid" returns="Druid">
 </func>
+<!-- Returns a Ghost reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsGhost" returns="Ghost">
 </func>
+<!-- Returns a Tower reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsTower" returns="Tower">
 </func>
+<!-- Returns a Wagon reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsWagon" returns="Wagon">
 </func>
+<!-- Returns a Catapult reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsCatapult" returns="Catapult">
 </func>
+<!-- Returns an ItemHolder reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsItemHolder" returns="ItemHolder">
 </func>
+<!-- Returns a Barrack reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsBarrack" returns="Barrack">
 </func>
+<!-- Returns a Sacrifice reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsSacrifice" returns="Sacrifice">
 </func>
+<!-- Returns a Ship reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsShip" returns="Ship">
 </func>
+<!-- Returns a Flying reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsFlying" returns="Flying">
 </func>
+<!-- Returns the race value of the class id -->
 <func name="GetClassRace" returns="int">
-	<param type="str" />
+	<param type="str" /><!-- class id -->
 </func>
+<!-- Returns the race integer value of the object -->
 <func name="Obj::race" returns="int">
 </func>
+<!-- Returns the race string value of the object ("" for None|-1 and invalid values) -->
 <func name="Obj::raceStr" returns="str">
 </func>
+<!-- Returns the race string prefix of the object ("" for None|-1 and invalid values) -->
 <func name="Obj::raceStrPref" returns="str">
 </func>
+<!-- Returns the lowercased race string prefix of the object ("" for None|-1 and invalid values) -->
 <func name="Obj::raceStrPrefLow" returns="str">
 </func>
+<!-- Returns the race string value corresponding to the integer value ("" for None|-1 and invalid values) -->
 <func name="GetRaceStr" returns="str">
-	<param type="int" />
+	<param type="int" /><!-- value to convert -->
 </func>
+<!-- Returns the race string prefix corresponding to the integer value ("" for None|-1 and invalid values) -->
 <func name="GetRaceStrPref" returns="str">
-	<param type="int" />
+	<param type="int" /><!-- value to convert -->
 </func>
+<!-- Returns the lowercased race string value corresponding to the integer value ("" for None|-1 and invalid values) -->
 <func name="GetRaceStrPrefLow" returns="str">
-	<param type="int" />
+	<param type="int" /><!-- value to convert -->
 </func>
+<!-- Returns the slash armor value of the object (resistance against damage_type 1) -->
 <func name="Obj::armor_slash" returns="int">
 </func>
+<!-- Returns the slash armor value of the object (resistance against damage_type 2) -->
 <func name="Obj::armor_pierce" returns="int">
 </func>
+<!-- Returns the current health value of the object (when it drops to 0, units and catapults die, while buildings enter the broken status when below ~25% of the maximum health) -->
 <func name="Obj::health" returns="int">
 </func>
+<!-- Returns the current stamina value of the object -->
 <func name="Obj::stamina" returns="int">
 </func>
+<!-- Returns the maximum health value of the object -->
 <func name="Obj::maxhealth" returns="int">
 </func>
+<!-- Returns the maximum stamina value of the object -->
 <func name="Obj::maxstamina" returns="int">
 </func>
-<func name="Obj::sight" returns="int">
-</func>
+<!-- Returns the current position of the object on the map, with -1 x-y coordinates if it is in a holder (building/ship) -->
 <func name="Obj::pos" returns="point">
 </func>
+<!-- Returns the current position of the object on the map without considering any holder it is in (RH = Remove Holder)-->
 <func name="Obj::posRH" returns="point">
 </func>
+<!-- Returns the damage/attack value of the object -->
 <func name="Obj::damage" returns="int">
 </func>
+<!-- Returns the attack/damage value of the object -->
 <func name="Obj::attack" returns="int">
 </func>
+<!-- Returns the damage type value of the object (0|slash, 1|pierce, 2|siege, 3|none/invalid, 4|building) -->
 <func name="Obj::damage_type" returns="int">
 </func>
+<!-- Returns the sight value of the object (how far it can see) -->
+<func name="Obj::sight" returns="int">
+</func>
+<!-- Returns the range value of the object (how far it can attack) -->
 <func name="Obj::range" returns="int">
 </func>
+<!-- Returns the minimum range value of the object (any target closer than it cannot be attacked) -->
 <func name="Obj::min_range" returns="int">
 </func>
+<!-- Returns the radius value of the object (how big it is) -->
 <func name="Obj::radius" returns="int">
 </func>
+<!-- Returns the script name value of the object (not the class/visible name, but the one set either from the editor or by the SetName function) -->
 <func name="Obj::name" returns="str">
 </func>
+<!-- Checks if the object class is a descendant of the class hierarchy starting from the class id string -->
 <func name="Obj::IsHeirOf" returns="bool">
-	<param type="str" />
+	<param type="str" /><!-- class id -->
 </func>
+<!-- Checks if the object class is a sentry, that is a descendant of the class hierarchy starting from the "Sentry" class id -->
 <func name="Obj::IsSentry" returns="bool">
 </func>
+<!-- Checks if the object class is a gate, that is a descendant of the class hierarchy starting from the "Gate" class id (it is the same of using obj.AsGate().IsValid) -->
 <func name="Obj::IsGate" returns="bool">
 </func>
+<!-- Checks if the object class is a ram, that is a descendant of the class hierarchy starting from the "RamUnit" class id -->
 <func name="Obj::IsRam" returns="bool">
 </func>
+<!-- Checks if the object class is a ranged unit, that is a unit whose projectile values are set in its class, not a descendant of the class hierarchy starting from the "Ranged" class id (for example, British heroes have a different class hierarchy) -->
 <func name="Obj::IsRanged" returns="bool">
 </func>
+<!-- Checks if the object class is a warrior, that is a descendant of the class hierarchy starting from the "Military" class id -->
 <func name="Obj::IsMilitary" returns="bool">
 </func>
+<!-- Checks if the object class is a sage, that is a descendant of the class hierarchy starting from the "BaseMage" class id (it is the same of using obj.AsDruid().IsValid) -->
 <func name="Obj::IsReligious" returns="bool">
 </func>
+<!-- Checks if the object class is harmless, that is a descendant of the class hierarchy starting from the "Peaceful" class id -->
 <func name="Obj::IsPeaceful" returns="bool">
 </func>
+<!-- Checks if the object class is a peasant, that is a descendant of the class hierarchy starting from the "Peasant" class id -->
 <func name="Obj::IsPeasant" returns="bool">
 </func>
+<!-- Checks if the object class is a "decorative" peasant, that is a descendant of the class hierarchy starting from the "PeasantAmbient" class id -->
 <func name="Obj::IsPeasantAmbient" returns="bool">
 </func>
+<!-- Sets the current health value of the object | WARNING: using values that are not between 1 and the maximum health can lead to strange behaviours (e.g. fragmented healthbar on moving units, dead units still selectable, health reset at the first use of the Heal function, ...) -->
 <func name="Obj::SetHealth" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- health to set -->
 </func>
+<!-- Sets the maximum health value of the object | WARNING: items and the AddBonus function reset the original class value | WARNING: using negative values can lead to strange behaviours, especially with buildings -->
 <func name="Obj::SetMaxHealth" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- maximum health to set -->
 </func>
+<!-- Sets the current stamina value of the object | WARNING: values that are not between 0 and the maximum stamina are reset to the closest value after a short time unless the object class has the "does_not_regenerate" property set to 1) -->
 <func name="Obj::SetStamina" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- stamina to set -->
 </func>
+<!-- Sets the maximum stamina value of the object | WARNING: using negative values can lead to strange behaviours, especially with units -->
 <func name="Obj::SetMaxStamina" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- maximum stamina to set -->
 </func>
+<!-- Sets the sight value of the object, from a minimum of 100 up to a maximum of 2048 -->
 <func name="Obj::SetSight" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- sight to set -->
 </func>
+<!-- Returns the "stamina_dec_time" property value of the object class, that is how many milliseconds it takes for its stamina to drop by 1 (0 means that stamina does not decay over time) -->
 <func name="Obj::GetStaminaDecTime" returns="int">
 </func>
 <func name="Obj::CmdCount" returns="int">
@@ -1016,12 +1247,12 @@
 	<param type="Query" />
 	<param type="Query" />
 </func>
-<func name="ClassPlayerAreaObjs" returns="Query">
+<func name="ClassPlayerAreaObjs" returns="Query"><!-- multiple class support: NO -->
 	<param type="str" />
 	<param type="int" />
 	<param type="str" />
 </func>
-<func name="ClassPlayerObjs" returns="Query">
+<func name="ClassPlayerObjs" returns="Query"><!-- multiple class support: NO -->
 	<param type="str" />
 	<param type="int" />
 </func>
@@ -1486,7 +1717,7 @@
 <!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 </func>
-<!-- Works like BestTargetInSquadSight, but it uses the specified hierarchy class string as a preference filter | WARNING: it does not really overwrite the standard priority order (e.g. specifying "Military" can still return a sage if it is closer than a warrior) -->
+<!-- Works like BestTargetInSquadSight, but it uses the specified class hierarchy string as a preference filter | WARNING: it does not really overwrite the standard priority order (e.g. specifying "Military" can still return a sage if it is closer than a warrior) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 	<param type="str" />
 </func>
@@ -1730,6 +1961,9 @@
 <func name="HeroSkillId" returns="int">
 	<param type="str" />
 </func>
+<func name="HeroSkillName" returns="str">
+	<param type="int" />
+</func>
 <func name="Hero::SetSkill" returns="void">
 	<param type="int" />
 	<param type="int" />
@@ -1738,9 +1972,6 @@
 	<param type="int" />
 </func>
 <func name="Hero::UseSkill" returns="bool">
-	<param type="int" />
-</func>
-<func name="HeroSkillName" returns="str">
 	<param type="int" />
 </func>
 <func name="Hero::AvailableSkillPoints" returns="int">
@@ -3749,7 +3980,7 @@
 </func>
 <func name="GetMouseXY" returns="void">
 </func>
-<func name="RUType" returns="int">
+<func name="RUType" returns="int"><!--ReverseUType-->
 	<param type="str" />
 	<param type="int" />
 </func>

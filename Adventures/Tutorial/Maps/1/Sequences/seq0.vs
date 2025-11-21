@@ -3,6 +3,8 @@ Settlement settle_town;
 int time_1, time_2, time_3, i;
 bool first_time = true;
 
+Instructor.SetCommand("hold_position");
+
 settle_town = GetSettlement("Lindum");
 
 settle_town.AllowCapture(false);
@@ -51,8 +53,10 @@ while (!WaitUnitsInArea(G1, "A_RuinsInner", 200)) {
 			first_time = false;
 			Instructor.obj.SetVisible(false);
 			Instructor.obj.SetPos(AreaCenter("A_CampExit"));
+			Instructor.SetCommand("hold_position");
 			RunConv("2B Fog");
 			Instructor.obj.SetPos(AreaCenter("A_RuinsInner"));
+			Instructor.SetCommand("hold_position");
 			GiveNote("Fog");
 		}
 }
@@ -91,6 +95,7 @@ while (Village.obj.player != 1) {
 	if (first_time)
 		if (Village.obj.AsBuilding().settlement.loyalty < 30) {
 			Instructor.obj.SetPos(AreaCenter("A_VillageHall"));
+			Instructor.SetCommand("hold_position");
 			ClearSelection(1);
 			Village.obj.Select(1);
 			RunConv("3B Loyalty");
@@ -119,6 +124,7 @@ EHero2.obj.Select(1);
 BlockUserInput();
 
 Instructor.obj.SetPos(AreaCenter("A_CampAttack"));
+Instructor.SetCommand("hold_position");
 RunConv("4A Camp attack");
 GiveNote("Heroes");
 GiveNote("Experience");
@@ -133,6 +139,7 @@ Sleep(2000);
 SpawnNamed("Caesar");
 View(AreaCenter("A_VillageHall"), false);
 Instructor.obj.SetPos(AreaCenter("A_VillageHall"));
+Instructor.SetCommand("hold_position");
 RunConv("4B Caesar arrival");
 GiveNote("Caesar must survive");
 GiveNote("HeroSkills");
@@ -157,6 +164,7 @@ RunConv("4C Retake camp");
 GiveNote("Help");
 
 Instructor.obj.SetPos(AreaCenter("A_CampAttack"));
+Instructor.SetCommand("hold_position");
 
 time_1 = GetTime() + 150000;
 time_2 = GetTime() + 10000;
@@ -209,6 +217,7 @@ Sleep(2000);
 
 RunConv("5C Fed");
 Instructor.obj.SetPos(AreaCenter("A_NearPost"));
+Instructor.SetCommand("hold_position");
 
 time_1 = GetTime + 150000;
 while (Post.obj.player != 1) {
@@ -239,6 +248,7 @@ while (!settle_town.Units.Contains(Caesar)) {
 Sleep(2000);
 
 Instructor.obj.SetPos(AreaCenter("A_Lindum"));
+Instructor.SetCommand("hold_position");
 
 RunConv("6B Build army");
 GiveNote("ShelteredUnits");

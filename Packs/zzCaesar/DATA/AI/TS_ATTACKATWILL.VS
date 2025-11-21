@@ -4,36 +4,26 @@
 
 Building hall;
 Unit ruin_hero, u;
-Query bears, boars, lions, lionesses, horses, wolves, deer, dangerous_enemies;
-Query slow_lvl_10_animals, slow_animals, fast_animals, wells, c_outposts, training_camps;
-Obj well, curr_target, ruins, outpost_to_farm;
-ObjList units_to_farm;
-point area_center, pt;
-int area_radius_big = 4000, area_radius_small = 2000, i, m;
+Query wolves, slow_lvl_10_animals, slow_animals, fast_animals;
+ObjList wells, villages, c_outposts, training_outposts;
+point hall_pos;
+int i;
 bool check_ruins = true, use_ruins;
 
 hall = set.GetCentralBuilding();
-area_center = hall.pos();
+hall_pos = hall.pos;
 
-bears = ObjsInCircle(area_center, area_radius_small, "BearUnit");
-boars = ObjsInCircle(area_center, area_radius_small, "BoarUnit");
-lions = ObjsInCircle(area_center, area_radius_small, "LionMUnit");
-lionesses = ObjsInCircle(area_center, area_radius_small, "LionFUnit");
-horses = ObjsInCircle(area_center, area_radius_small, "WildHorse");
-wolves = ObjsInCircle(area_center, area_radius_small, "WolfUnit");
-deer = ObjsInCircle(area_center, area_radius_small, "Deer");
+wolves = Intersect(ObjsInCircle(hall_pos, 2000, "WolfUnit"), EnemyObjs(set.player, "WolfUnit"));
+slow_lvl_10_animals = Intersect(ObjsInCircle(hall_pos, 2000, "BearUnit,BoarUnit,LionMUnit,LionFUnit"), EnemyObjs(set.player, "AttackAnimal"));
+slow_animals = Union(Intersect(ObjsInCircle(hall_pos, 2000, "UntamableHorse"), EnemyObjs(set.player, "UntamableHorse")), slow_lvl_10_animals);
+fast_animals = Union(wolves, Intersect(ObjsInCircle(hall_pos, 2000, "DeerUnit"), EnemyObjs(set.player, "DeerUnit")));
 
-slow_lvl_10_animals = Union(Union(bears, boars), Union(lions, lionesses));
-slow_animals = Union(horses, slow_lvl_10_animals);
-fast_animals = Union(wolves, deer);
+wells = ObjsInCircle(hall_pos, 4000, "BaseWell").GetObjList();
+villages = ObjsInCircle(hall_pos, 4500, "BaseVillage").GetObjList();
+c_outposts = ObjsInCircle(hall_pos, 4000, "COutpost").GetObjList();
+training_outposts = ObjsInCircle(hall_pos, 4500, "IOutpost,BOutpost").GetObjList();
 
-wells = ObjsInCircle(area_center, area_radius_big, "BaseWell");
-
-c_outposts = ObjsInCircle(area_center, area_radius_big, "COutpost");
-
-training_camps = Intersect(Union(ObjsInCircle(area_center, area_radius_big, "IOutpost"), ObjsInCircle(area_center, area_radius_big, "BOutpost")), FriendlyObjs(set.player, "Outpost"));
-
-use_ruins = AIVar(set.player(), AIV_UseRuins) != 0;
+use_ruins = AIVar(set.player, AIV_UseRuins) != 0;
 
 SetNoAIFlag(ol, true);
 
@@ -49,7 +39,7 @@ while (ol.count > 0) {
 					u.ExecCmd("divine_grace", u.pos, u, false);
 
 		//try to prevent premature death by using healing items
-		if (u.health <= 350)
+		if (u.health <= MIN(350, u.maxhealth / 3))
 			if (u.HasItem("Healing herbs"))
 				u.UseItem("Healing herbs");
 			else if (u.HasItem("Healing water"))
@@ -63,42 +53,30 @@ while (ol.count > 0) {
 			if (u.HasItem("Rye spikes"))
 				u.UseItem("Rye spikes");
 
-		//these units are too tough and/or too dangerous to stay nearby, the check on this query avoids an impossible fight after hunting an animal if there is a neutral outpost nearby
-		dangerous_enemies = Union(
-			Union(
-				Union(ObjsInSight(u, "BHighlander"), ObjsInSight(u, "BJavelineer")),
-				Union(ObjsInSight(u, "IDefender"), ObjsInSight(u, "ISlinger"))
-			),
-			Union(
-				Union(ObjsInSight(u, "EGuardian"), ObjsInSight(u, "EAxetrower")),
-				Union(
-					Union(ObjsInSight(u, "HHoplite"), ObjsInSight(u, "TValkyrie")),
-					Union(ObjsInSight(u, "RLiberatus"), ObjsInSight(u, "GTridentWarrior"))
-				)
-			)
-		);
-
 		//try to prevent premature death by going near a well or back to the townhall if there are enemies nearby
-		if (u.health <= 800) {
+		if (u.health <= MIN(800, u.maxhealth * 4 / 5)) {
 			bool flee = false;
-			if (!dangerous_enemies.IsEmpty()) {
+			//these units are too tough/dangerous to stay nearby, avoids an unwinnable fight after hunting an animal if there is a neutral outpost nearby
+			if (!VisibleObjsInSight(u, "BHighlander,BJavelineer,IDefender,ISlinger,EGuardian,EAxetrower,HHoplite,TValkyrie,RLiberatus,GTridentWarrior").IsEmpty)
 				if (u.command == "attack")
 					flee = true;
 				else if (u.command == "engage")
 					flee = true;
-			}
 			if (!flee)
-				if (u.health <= 450)
+				if (u.health <= MIN(450, u.maxhealth / 2))
 					if (u.command != "move")
-						if (u.IsEnemyInSquadSight())
-							flee = true;
+						if (u.command != "enter")//entering ruins and training outposts can be considered as a fleeing move
+							if (u.IsEnemyInSquadSight)
+								flee = true;
 			if (flee) {
-				m = 1000000;
-				if (!wells.IsEmpty()) {
-					well = wells.GetObjList().FilterClosest(u.pos, 1)[0];
+				Obj well;
+				int m = 1000000;
+				if (wells.count > 0) {
+					well = wells.FilterClosest(u.pos, 1)[0];
 					m = u.DistTo(well);
 				}
 				if (m <= u.DistTo(hall)) {//priority to the well
+					point pt;
 					pt = well.pos - u.pos;
 					pt.SetLen(pt.Len + 150);
 					pt = pt + u.pos;
@@ -110,10 +88,11 @@ while (ol.count > 0) {
 			}
 		}
 
-		if (use_ruins) {
-			if (check_ruins)
-				if (u.item_count < u.max_items) {
-					ruins = FindRuins(area_center, area_radius_big, u.level);
+		if (use_ruins)
+			if (check_ruins) {
+				if (u.free_item_slots > 0) {
+					Obj ruins;
+					ruins = FindRuins(hall_pos, 4000, u.inherentlevel);
 					if (ruins.IsValid) {
 						u.SetCommand("enter", ruins);
 						ruin_hero = u;
@@ -121,12 +100,11 @@ while (ol.count > 0) {
 						continue;
 					}
 				}
-			if (!check_ruins)
-				if (u == ruin_hero)
-					if (u.command != "enter")
-						if (u.command != "sleep")
-							check_ruins = true;
-		}
+			}
+			else if (u == ruin_hero)
+				if (u.command != "enter")
+					if (u.command != "sleep")
+						check_ruins = true;
 
 		if (u.command == "getitem")
 			continue;
@@ -134,7 +112,8 @@ while (ol.count > 0) {
 			if (u.GetSquad().TakeNearbyItems(u.sight))
 				continue;
 		if (u.command != "idle")
-			continue;
+			if (u.DistTo(hall) < 5000)//avoid going too far away
+				continue;
 
 		//try to get maximum profit with spoils of war
 		if (u.HasItem("Spoils of War")) {
@@ -152,65 +131,88 @@ while (ol.count > 0) {
 			}
 		}
 
+		//take nearby neutral villages
+		if (villages.count > 0) {
+			Obj village_to_take;
+			village_to_take = villages.ObjPlayer(16).FilterClosest(u.pos, 1)[0];
+			if (village_to_take.IsValid) {
+				u.SetCommand("approach", village_to_take);
+				continue;
+			}
+		}
+
 		//try to hunt a level 10 animal if Gambler's Day is researched
 		if (u.inherentlevel < 10)
 			if (IsResearched(u.player, "Gambler's Day"))
-				if (!slow_lvl_10_animals.IsEmpty()) {
+				if (!slow_lvl_10_animals.IsEmpty) {
 					u.SetCommand("attack", slow_lvl_10_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
 					continue;
 				}
-				else if (!wolves.IsEmpty()) {
+				else if (!wolves.IsEmpty) {
 					u.SetCommand("attack", wolves.GetObjList().FilterClosest(u.pos, 1)[0]);
 					continue;
 				}
 
-		//farm some exp with animals near the fortress
+		//farm some exp with animals near the stronghold
 		if (u.inherentlevel < 3)
-			if (!slow_animals.IsEmpty()) {
+			if (!slow_animals.IsEmpty) {
 				u.SetCommand("attack", slow_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
 				continue;
 			}
 
-		//farm exp by attacking near neutral CMacemen (do not do this with non-hero units to avoid being killed in few seconds by bleeding attack)
-		if (u.health >= 750)
-			if (u.AsHero().IsValid)
-				if (!c_outposts.IsEmpty()) {
-					outpost_to_farm = c_outposts.GetObjList().FilterClosest(u.pos, 1)[0];
-					units_to_farm = outpost_to_farm.AsBuilding().settlement.ObjectsAround("CMaceman");
-					units_to_farm.ClearDead();
-					if (units_to_farm.count > 0) {
-						u.SetCommand("approach", outpost_to_farm);
-						u.AddCommand(false, "engage");
+		//farm exp by attacking nearby neutral CMacemen (do not do this with non-hero units to avoid being killed in few seconds by bleeding attack)
+		if (u.AsHero().IsValid)
+			if (u.health >= MIN(750, u.maxhealth * 3 / 4))
+				if (c_outposts.count > 0) {
+					Obj outpost_to_farm;
+					outpost_to_farm = c_outposts.ObjPlayer(15).FilterClosest(u.pos, 1)[0];
+					if (outpost_to_farm.IsValid)
+						if (outpost_to_farm.AsBuilding().settlement.ObjectsAround("CMaceman").count > 0) {
+							u.SetCommand("approach", outpost_to_farm);
+							u.AddCommand(false, "engage");
+							continue;
+						}
+				}
+
+		//go to some nearby training outpost
+		if (u.inherentlevel < 8)
+			if (training_outposts.count > 0)
+				if (!u.InHolder) {
+					Obj outpost_to_train;
+					outpost_to_train = training_outposts.ObjAlly(u.player).FilterClosest(u.pos, 1)[0];
+					if (outpost_to_train.IsValid) {
+						u.SetCommand("enter", outpost_to_train);
 						continue;
 					}
 				}
-
-		//go to some nearby training camp
-		if (u.inherentlevel < 8)
-			if (!training_camps.IsEmpty())
-				if (!u.InHolder())
-					u.SetCommand("enter", training_camps.GetObjList().FilterClosest(u.pos, 1)[0]);
 				else {
 					str class_name;
 					class_name = u.GetHolderSett().GetCentralBuilding().class;
-					if (class_name != "BOutpost" && class_name != "IOutpost")
-						u.SetCommand("enter", training_camps.GetObjList().FilterClosest(u.pos, 1)[0]);
+					if (class_name != "BOutpost")
+						if (class_name != "IOutpost") {
+							Obj outpost_to_train;
+							outpost_to_train = training_outposts.ObjAlly(u.player).FilterClosest(u.pos, 1)[0];
+							if (outpost_to_train.IsValid) {
+								u.SetCommand("enter", outpost_to_train);
+								continue;
+							}
+						}
 				}
 
 		//try to hunt a slow/fast animal
 		if (u.inherentlevel < 8) {
-			if (!slow_animals.IsEmpty()) {
+			if (!slow_animals.IsEmpty) {
 				u.SetCommand("attack", slow_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
 				continue;
 			}
-			if (!fast_animals.IsEmpty()) {
+			if (!fast_animals.IsEmpty) {
 				u.SetCommand("attack", fast_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
 				continue;
 			}
 		}
 
-		//if there is nothing else to do, go home and wait for the tactic script to end
-		if (!u.InHolder())
+		//if there is nothing else to do, stay in the stronghold and wait for the tactic script to end
+		if (!u.InHolder)
 			u.SetCommand("enter", hall);
 	}
 }

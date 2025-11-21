@@ -2,6 +2,7 @@
 
 Unit this;
 ObjList enemies;
+bool melee;
 
 this = me.AsUnit();
 
@@ -11,6 +12,8 @@ if( (u.IsEnemy(this) == false && .player() != u.player()) || (u.IsHeirOf("Catapu
 {
 	return;
 }
+
+melee = !.IsRanged;
 
 if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
 	.SetParryMode(false);
@@ -35,7 +38,14 @@ if(.IsEnemy(u) || u.AsBuilding.IsValid)
 		if(.GotoAttack(u, 5000, true, 2500))
 		{
 			//.pr("unit::attack: fighting");
-			while(.Attack(u));
+			if (u.AsCatapult().IsValid) {
+				while (.Attack(u))
+					if (melee)
+						if (.HasSpecial(trample))
+							u.Damage(.damage);
+			}
+			while(.Attack(u))
+				;
 		}
 	} 
 }

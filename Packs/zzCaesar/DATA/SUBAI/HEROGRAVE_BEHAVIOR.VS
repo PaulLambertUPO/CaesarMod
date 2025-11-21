@@ -64,33 +64,30 @@ while (1) {
 		u = list[i].AsUnit();
 		if (u.IsValid)
 			if (u.IsAlive)
-				if (!u.AsHero().IsValid) {
-					items_given = false;
-					if (!u.HasItem("Damage charm")) {
-						u.AddItem("Damage charm");
-						items_given = true;
+				if (!u.AsHero().IsValid)
+					if (u.free_item_slots > 0) {
+						items_given = false;
+						if (!u.HasItem("Damage charm"))
+							if (u.AddItem("Damage charm"))
+								items_given = true;
+						if (!u.HasItem("Armor charm"))
+							if (u.AddItem("Armor charm"))
+								items_given = true;
+						if (!u.HasItem("Health charm"))
+							if (u.AddItem("Health charm"))
+								items_given = true;
+						if (!u.HasItem("Knowledge charm"))
+							if (u.AddItem("Knowledge charm"))
+								items_given = true;
+						if (items_given) {
+							.SetStamina(.stamina - 1);
+							if (.stamina <= 0)
+								break;
+							units_blessed += 1;
+							if (units_blessed >= 5)
+								break;
+						}
 					}
-					if (!u.HasItem("Armor charm")) {
-						u.AddItem("Armor charm");
-						items_given = true;
-					}
-					if (!u.HasItem("Health charm")) {
-						u.AddItem("Health charm");
-						items_given = true;
-					}
-					if (!u.HasItem("Knowledge charm")) {
-						u.AddItem("Knowledge charm");
-						items_given = true;
-					}
-					if (items_given) {
-						.SetStamina(.stamina - 1);
-						if (.stamina <= 0)
-							break;
-						units_blessed += 1;
-						if (units_blessed >= 5)
-							break;
-					}
-				}
 		i += 1;
 		if (i >= list.count)
 			i = 0;

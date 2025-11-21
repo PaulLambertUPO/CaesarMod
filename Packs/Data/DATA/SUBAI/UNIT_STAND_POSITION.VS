@@ -48,11 +48,20 @@ while(.IsAlive)
 			}
 			if( u.IsAlive && .IsValidTarget( u ) && .IsVisible)
 			{
-				while( .Attack( u ))
-				{
-					if( ! .IsVisible ) break;
-					bSleeped = true;
-				}
+				if (u.AsCatapult().IsValid)
+					while( .Attack( u ))
+					{
+						if (.HasSpecial(trample))
+							u.Damage(.damage);
+						if( ! .IsVisible ) break;
+						bSleeped = true;
+					}
+				else
+					while( .Attack( u ))
+					{
+						if( ! .IsVisible ) break;
+						bSleeped = true;
+					}
 			}
 			if( ! bSleeped ) Sleep( 50 );
 			u = .BestTargetInRange( pt, range );

@@ -2,13 +2,12 @@
 
 //called by ES_Stronghold, this script decides a sequence of researches to unlock advanced units
 
-int Greece, AIPlayer, nRace, i, a, b, count;
+int aiPlayer, nRace, i, j, k;
 StrArray imperialOrPunicOrGreekTechs;
 IntArray randoms;
 bool nRaceIsImperialRome = false, nRaceIsPunicRome = false;
 
-Greece = ImperialRome;
-AIPlayer = set.player;
+aiPlayer = set.player;
 nRace = set.GetCentralBuilding().race;
 
 if (nRace == RepublicanRome)
@@ -33,7 +32,7 @@ else if (nRaceIsPunicRome) {
 	imperialOrPunicOrGreekTechs[4] = "Roman Scout";
 	imperialOrPunicOrGreekTechs[5] = "Roman Praetorian";
 }
-else if (nRace == Greece) {
+else if (nRace == ImperialRome) {//Greece
 	imperialOrPunicOrGreekTechs[0] = "";
 	imperialOrPunicOrGreekTechs[1] = "Greek Archers";
 	imperialOrPunicOrGreekTechs[2] = "Greek Spears";
@@ -45,42 +44,43 @@ else if (nRace == Greece) {
 for (i = 0; i < 6; i += 1)
 	randoms[i] = i;
 
-//scramble
+//shuffle
 for (i = 0; i < 10; i += 1) {
-	a = rand(5);
-	b = randoms[a];
-	randoms[a] = randoms[a + 1];
-	randoms[a + 1] = b;
+	j = rand(5);
+	k = randoms[j];
+	randoms[j] = randoms[j + 1];
+	randoms[j + 1] = k;
 }
 
 //remove disabled or not needed techs (CHorseman is not managed here, but that is not a problem because this script is not used for Carthage/Germany stronghold)
+j = 0;
 for (i = 0; i < 6; i += 1)
 	if (nRaceIsImperialRome) {
 		if (imperialOrPunicOrGreekTechs[randoms[i]] != "") {
-			randoms[count] = randoms[i];
-			count += 1;
+			randoms[j] = randoms[i];
+			j += 1;
 		}
 	}
 	else if (nRaceIsPunicRome) {
 		if (imperialOrPunicOrGreekTechs[randoms[i]] != "") {
-			randoms[count] = randoms[i];
-			count += 1;
+			randoms[j] = randoms[i];
+			j += 1;
 		}
 	}
-	else if (nRace == Greece) {
+	else if (nRace == ImperialRome) {//Greece
 		if (imperialOrPunicOrGreekTechs[randoms[i]] != "") {
-			randoms[count] = randoms[i];
-			count += 1;
+			randoms[j] = randoms[i];
+			j += 1;
 		}
 	}
 	else if (UTech(randoms[i], nRace) != "") {
-		randoms[count] = randoms[i];
-		count += 1;
+		randoms[j] = randoms[i];
+		j += 1;
 	}
 
-randoms[count] = -1;//anything starting from -1 is not to be considered
+randoms[j] = -1;//anything starting from -1 is not to be considered
 
-for (i = 0; i < count; i += 1)
-	EnvWriteInt(set, "TechSeq" + AIPlayer + "_" + i, randoms[i]);
+for (i = 0; i <= j; i += 1)
+	EnvWriteInt(set, "TechSeq" + aiPlayer + "_" + i, randoms[i]);
 
-EnvWriteInt(set, "TechSeq" + AIPlayer + "_Initted", 1);
+EnvWriteInt(set, "TechSeq" + aiPlayer + "_Initted", 1);

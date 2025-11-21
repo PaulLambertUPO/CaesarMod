@@ -1,4 +1,4 @@
-<class id="Peaceful" cpp_class="CVXUnit" parent="Unit" entity="">
+<class id="Peaceful" parent="Unit" cpp_class="CVXUnit" entity="">
 
 	<properties damage="0" damage_type="none" />
 	<properties range="17" min_range="2" />
@@ -8,6 +8,7 @@
 	<properties target_factor="1000" />
 
 	<method sig="advance" vs="data/subai/peaceful_move.vs" />
+	<method sig="advance_aggressive" vs="data/subai/peaceful_move.vs" />
 	<method sig="attack" vs="data/subai/peaceful_attack.vs" />
 	<method sig="attack" vs="data/subai/peaceful_move.vs" />
 	<method sig="move" vs="data/subai/peaceful_move.vs" />

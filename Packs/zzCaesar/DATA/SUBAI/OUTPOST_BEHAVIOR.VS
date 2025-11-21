@@ -227,12 +227,12 @@ if (set.IsIndependent) {
 				}
 			}
 		}
+
 		Sleep(1000);
 	}
 
-	if (first_time_independent)//spawn food and peasants for the new player (only once)
-		if (!set.IsIndependent) {//avoid giving units/resources to possible neutral units coming from other outposts
-			set.SetFood(.GetOutpostFood());
+	if (first_time_independent)//spawn peasants for the new player (only once)
+		if (!set.IsIndependent) {//avoid giving peasants to possible neutral units coming from other outposts
 			j = .player;
 			if (.class == "COutpost") {
 				for (i = 0; i < 20; i += 1) {

@@ -1,41 +1,27 @@
-// void,Hero hero, IntArray* aSkills, IntArray* aSkillLevels
+//void, Hero hero, IntArray* aSkills, IntArray* aSkillLevels
 
-int nAvailabelPts,curLevel;
-int i,j;
-bool bSetPt;
+if (hero.IsValid)
+	if (hero.IsAlive)
+		if (aSkills.size > 0)
+			if (aSkillLevels.size > 0) {
+				int avblPts;
 
-if (!hero.IsValid)	return;
-if (hero.IsDead)	  return;
-if (aSkills.size()==0)      return;	
-if (aSkillLevels.size()==0) return;	
+				avblPts = hero.AvailableSkillPoints;
+				if (avblPts > 0) {
+					int i, ptsToSpend, currSklLvl;
 
-nAvailabelPts = hero.AvailableSkillPoints();
-while (nAvailabelPts>0)
-{
-	j = 0;
-	bSetPt = false;
-	while (!bSetPt && j<aSkills.size())
-	{
-		int nLevelsNeeded;	
-		
-		curLevel = hero.GetSkill(aSkills[j]);
-		nLevelsNeeded = aSkillLevels[j] - curLevel;
-		if (nLevelsNeeded>0)
-		{
-			if (nAvailabelPts<=nLevelsNeeded)
-			{
-			  hero.SetSkill(aSkills[j],curLevel + nAvailabelPts);
-			  nAvailabelPts =0;
+					for (i = 0; i < aSkills.size; i += 1) {
+						currSklLvl = hero.GetSkill(aSkills[i]);
+						if (currSklLvl > -1) {
+							ptsToSpend = CLAMP(aSkillLevels[i], 0, 10) - currSklLvl;
+							if (ptsToSpend > 0) {
+								ptsToSpend = MIN(avblPts, ptsToSpend);
+								hero.SetSkill(aSkills[i], currSklLvl + ptsToSpend);
+								avblPts -= ptsToSpend;
+								if (avblPts <= 0)
+									break;
+							}
+						}
+					}
+				}
 			}
-			else
-			{
-			  hero.SetSkill(aSkills[j],curLevel + nLevelsNeeded);
-			  nAvailabelPts -=nLevelsNeeded;
-			}
-			bSetPt = true;
-		}
-		j+=1;
-	}
-	if (!bSetPt && j>=aSkills.size())
-		return; // No more 
-}

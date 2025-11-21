@@ -108,7 +108,7 @@
 		rollover="Arrows"
 		description="Allows Toxotai to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Arrows, default, NameSet, Greek Archers, , NameSet, Roman Archers">
+		param="NameSet, Greek Archers, default, NameSet, Arrows, , NameSet, Roman Archers">
 		<src obj="HBlacksmith" />
 	</cmd>
 	<cmd name="Greek Spears" priority="3"
@@ -122,7 +122,7 @@
 		rollover="Spears"
 		description="Allows Hoplites to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Spears, default, NameSet, Greek Spears, , NameSet, Gaul Spearman, , NameSet, Britain Spears">
+		param="NameSet, Greek Spears, default, NameSet, Spears, , NameSet, Gaul Spearman, , NameSet, Britain Spears">
 		<src obj="HBlacksmith" />
 	</cmd>
 	<cmd name="Greek Horse Armor" priority="4"
@@ -136,7 +136,7 @@
 		rollover="Horse Armor"
 		description="Allows Hetairoi to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Horse Armor, default, NameSet, Greek Horse Armor">
+		param="NameSet, Greek Horse Armor, default, NameSet, Horse Armor">
 		<src obj="HBlacksmith" />
 	</cmd>
 	<cmd name="Greek Royal Armor" priority="5"
@@ -150,7 +150,7 @@
 		rollover="Royal Armor"
 		description="Allows Hypaspists to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Royal Armor, default, NameSet, Greek Royal Armor">
+		param="NameSet, Greek Royal Armor, default, NameSet, Royal Armor">
 		<src obj="HBlacksmith" />
 	</cmd>
 	<cmd name="Greek Chariot Wheels" priority="6"
@@ -164,7 +164,7 @@
 		rollover="Scythed Chariot Wheels"
 		description="Allows Chariots to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Scythed Chariot Wheels, default, NameSet, Greek Chariot Wheels">
+		param="NameSet, Greek Chariot Wheels, default, NameSet, Scythed Chariot Wheels">
 		<src obj="HBlacksmith" />
 	</cmd>
 	<cmd name="Strengthen Stronghold Gates" priority="7"
@@ -220,7 +220,7 @@
 		description="Allows warriors to train up to level 10"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Olympic Games, default, SetsPlr, maxtrainlevel, 10, NamePlr, Spartan Training, default, break, NamePlr, Training, , NamePlr, Advanced Training"><!-- break token must stay before training and advanced training -->
+		param="ReqSet, Olympic Games, default, NamePlr, Spartan Training, default, break, SetsPlr, maxtrainlevel, 10, NamePlr, Training, , NamePlr, Rome Training 1, , NamePlr, Gaul Training 1, , NamePlr, Advanced Training, , NamePlr, Rome Training 2, , NamePlr, Gaul Training 2"><!-- break token must stay before the other Training commands -->
 		<src obj="HGymnasium" />
 	</cmd>
 	<cmd name="trainHMyrmidon" priority="4"
@@ -334,7 +334,7 @@
 		description="Makes new heroes level 15"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Olympic Games, default, ReqPlr, Spartan Training, default, SetsSet, levels/Hero, 15, NameSet, Military Preparation, default">
+		param="ReqPlr, Spartan Training, default, ReqSet, Olympic Games, default, NameSet, Military Preparation, default, SetsSet, levels/Hero, 15">
 		<src obj="HGymnasium"/>
 	</cmd>
 	<!-- AGORA -->
@@ -438,7 +438,7 @@
 		costfood="1000"
 		execdelay="30000"
 		method="research"
-		param="ReqSet, Trade Routes, default, NameSet, Religious Feast, default"
+		param="ReqSet, Trade Routes, default, NameSet, HReligiousFeast, default, NameSet, Religious Feast, , NameSet, TReligiousFeast"
 		description="Heals 5 warriors around the townhall by 30 every 2 seconds"
 		rollover="Religious Feast">
 		<src obj="HAgora"/>
@@ -522,7 +522,7 @@
 		rollover="Restoration"
 		description="Allows priests to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a priest dies"
 		method="research"
-		param="ReqSet, Offer to Gods, default, NamePlr, Restoration, default">
+		param="ReqSet, Offer to Gods, default, NamePlr, HRestoration, default, NamePlr, Restoration, , NamePlr, IRestoration">
 		<src obj="HTemple" />
 	</cmd>
 	<cmd name="Statue of Zeus" priority="6"

@@ -1,5 +1,5 @@
 //void, Obj This
-//cmdparam: [ReqSet, <research>, <explanation>, ReqPlr, <research>, <explanation>, NamePlr, <research>, NameSet, <research>, <value>, SetsPlr, <env>, <value>, SetsSet, <env>, <value>]
+//cmdparam: [ReqSet, <research>, <explanation>, ReqPlr, <research>, <explanation>, SetsSet, <env>, <value>, SetsPlr, <env>, <value>, NameSet, <research>, <value>, NamePlr, <research>, <value>]
 
 Building this;
 Settlement set;
@@ -25,36 +25,37 @@ while (dest != "") {
 			EnvWriteObj(.player, "TributeBuilding", th);
 			PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 		}
-		break;
 	}
 	else if (token == "NameSet") {
 		name = ParseStr(dest, dest);
 		EnvWriteString(set, name, "researching");
-		if (name == "CLibyanFootman") {
+		if (name == "Forge spears") {
 			if (EnvReadString(set, "ResearchedLibyanFootman") == "yes")
 				spec_already_done = true;
 		}
-		else if (name == "CJavelinThrower") {
+		else if (name == "Forge javelins") {
 			if (EnvReadString(set, "ResearchedJavelinThrower") == "yes")
 				spec_already_done = true;
 		}
-		else if (name == "CBerberAssassin") {
+		else if (name == "Forge swords") {
 			if (EnvReadString(set, "ResearchedBerberAssassin") == "yes")
 				spec_already_done = true;
 		}
-		else if (name == "CMaceman") {
+		else if (name == "Forge maces") {
 			if (EnvReadString(set, "ResearchedMaceman") == "yes")
 				spec_already_done = true;
 		}
-		else if (name == "CNumidianRider") {
+		else if (name == "Forge pikes") {
 			if (EnvReadString(set, "ResearchedNumidianRider") == "yes")
 				spec_already_done = true;
 		}
-		else if (name == "CHorseman")
+		else if (name == "Forge shields") {
 			if (EnvReadString(set, "ResearchedHorseman") == "yes")
 				spec_already_done = true;
-		break;
+		}
 	}
+	else if (token == "break")//used only by Spartan/Special Training
+		break;
 }
 
 if (spec_already_done)

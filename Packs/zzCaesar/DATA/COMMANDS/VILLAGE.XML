@@ -9,6 +9,13 @@
 		<cmdtext target="CTent" default-text="Right-click on this Numidian Tent to start sending resources" />
 		<cmdtext target="BaseShipyard" default-text="Click on this Shipyard to start sending resources" />
 	</cmd>
+	<!-- used only by AI (since it cheats for the cost, this avoids the exploit where a human player with shared control stops the command to get free resources) -->
+	<cmd name="repair village ai"
+		method="repopulate"
+		queueicon="gameres/icons/upgrades/repair.bmp"
+		execdelay="60000">
+		<src obj="BaseVillage" />
+	</cmd>
 	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
 	<cmd name="repair village" priority="1"
 		method="repopulate"

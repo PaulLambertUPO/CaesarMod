@@ -1,17 +1,15 @@
 //void, Settlement set
 
 //called by ES_Stronghold, this script manages researches mainly focused on magic powers
-//note that research commands to be issued to the settlement sometimes have different names from what they set in the player/settlement environment
 
-int Greece, AIPlayer, nRace;
+int aiPlayer, nRaceAvail;//the strange name is to save some memory
 str strTech;
 
-Greece = ImperialRome;
-AIPlayer = set.player;
-nRace = set.GetCentralBuilding().race;
+aiPlayer = set.player;
+nRaceAvail = set.GetCentralBuilding().race;
 
-//upgrades that do not have focus on magic units
-if (nRace == RepublicanRome) {
+//upgrades that do not have focus on sages
+if (nRaceAvail == RepublicanRome) {
 	if (IsResearched(set, "Altar of Jupiter"))
 		if (!IsResearched(set, "God's Gift"))
 			if (rand(5) == 0)
@@ -19,25 +17,25 @@ if (nRace == RepublicanRome) {
 			else if (set.gold >= 2500)
 				strTech = "God's Gift";
 }
-else if (nRace == Greece) {
+else if (nRaceAvail == ImperialRome) {//Greece
 	if (IsResearched(set, "Offer to Gods"))
-		if (!IsResearched(AIPlayer, "Statue of Zeus"))
+		if (!IsResearched(aiPlayer, "Statue of Zeus"))
 			if (rand(5) == 0)
 				strTech = "Statue of Zeus";
 			else if (set.gold >= 3000)
 				strTech = "Statue of Zeus";
 }
-else if (nRace == Carthage) {
-	if (IsResearched(set, "Dark Rituals"))
-		if (!IsResearched(AIPlayer, "Ferocity"))
+else if (nRaceAvail == Carthage) {
+	if (IsResearched(aiPlayer, "Dark Rituals"))
+		if (!IsResearched(aiPlayer, "Ferocity"))
 			if (rand(5) == 0)
 				strTech = "Ferocity";
 			else if (set.gold >= 3500)
 				strTech = "Ferocity";
 }
-else if (nRace == Egypt) {
+else if (nRaceAvail == Egypt) {
 	if (IsResearched(set, "Cult of Osiris"))
-		if (!IsResearched(AIPlayer, "Mumification"))
+		if (!IsResearched(aiPlayer, "Mumification"))
 			if (rand(5) == 0)
 				strTech = "Mumification";
 			if (set.gold >= 3500)
@@ -45,95 +43,94 @@ else if (nRace == Egypt) {
 }
 
 if (strTech == "") {
-	int nAvail;
-	if (nRace == Gaul) {
+	if (nRaceAvail == Gaul) {
 		strTech = "Ritual Chamber";
-		if (IsResearched(AIPlayer, strTech)) {
+		if (IsResearched(aiPlayer, strTech)) {
 			strTech = "Reincarnation Ritual";
-			if (IsResearched(AIPlayer, strTech)) {
+			if (IsResearched(aiPlayer, strTech)) {
 				strTech = "Restoration";
-				if (IsResearched(AIPlayer, strTech))
+				if (IsResearched(aiPlayer, strTech))
 					return;
 			}
 		}
-		nAvail = Count(AIPlayer, "GDruid");
+		nRaceAvail = Count(aiPlayer, "GDruid");
 	}
-	else if (nRace == RepublicanRome) {
+	else if (nRaceAvail == RepublicanRome) {
 		strTech = "Altar of Jupiter";
 		if (IsResearched(set, strTech)) {
 			strTech = "Wrath of Jupiter";
-			if (IsResearched(AIPlayer, strTech))
+			if (IsResearched(aiPlayer, strTech))
 				return;
 		}
-		nAvail = Count(AIPlayer, "RPriest");
+		nRaceAvail = Count(aiPlayer, "RPriest");
 	}
-	else if (nRace == Greece) {
+	else if (nRaceAvail == ImperialRome) {//Greece
 		strTech = "Offer to Gods";
 		if (IsResearched(set, strTech)) {
 			strTech = "HRestoration";
-			if (IsResearched(AIPlayer, "Restoration"))
+			if (IsResearched(aiPlayer, strTech))
 				return;
 		}
-		nAvail = Count(AIPlayer, "HPriest");
+		nRaceAvail = Count(aiPlayer, "HPriest");
 	}
-	else if (nRace == Carthage) {
+	else if (nRaceAvail == Carthage) {
 		strTech = "Dark Rituals";
-		if (IsResearched(set, strTech)) {
+		if (IsResearched(aiPlayer, strTech)) {
 			strTech = "Zombify";
-			if (IsResearched(AIPlayer, strTech))
+			if (IsResearched(aiPlayer, strTech))
 				return;
 		}
-		nAvail = Count(AIPlayer, "CShaman");
+		nRaceAvail = Count(aiPlayer, "CShaman");
 	}
-	else if (nRace == Iberia) {
+	else if (nRaceAvail == Iberia) {
 		strTech = "Code of Valor";
 		if (IsResearched(set, strTech)) {
 			strTech = "Cover of Mercy";
-			if (IsResearched(AIPlayer, strTech)) {
+			if (IsResearched(aiPlayer, strTech)) {
 				strTech = "IRestoration";
-				if (IsResearched(AIPlayer, "Restoration"))
+				if (IsResearched(aiPlayer, strTech))
 					return;
 			}
 		}
-		nAvail = Count(AIPlayer, "IEnchantress");
-		if (!IsResearched(AIPlayer, "Cover of Mercy"))
-			nAvail = 3 * nAvail;//boost combat upgrades priority because enchantresses can "only" train units
+		nRaceAvail = Count(aiPlayer, "IEnchantress");
+		if (!IsResearched(aiPlayer, "Cover of Mercy"))
+			nRaceAvail = 3 * nRaceAvail;//boost combat upgrades priority because enchantresses can "only" train units
 	}
-	else if (nRace == Britain) {
+	else if (nRaceAvail == Britain) {
 		strTech = "Britain chamber";
-		if (IsResearched(AIPlayer, "Ritual Chamber")) {
+		if (IsResearched(aiPlayer, strTech)) {
 			strTech = "Mass Heal";
-			if (IsResearched(AIPlayer, strTech)) {
+			if (IsResearched(aiPlayer, strTech)) {
 				strTech = "Mass Concealment";
-				if (IsResearched(AIPlayer, strTech))
+				if (IsResearched(aiPlayer, strTech))
 					return;
 			}
 		}
-		nAvail = Count(AIPlayer, "BDruid");
-		if (!IsResearched(AIPlayer, "Mass Heal"))
-			nAvail = 3 * nAvail;//boost combat upgrades priority because Britain druids can "only" hide units
+		nRaceAvail = Count(aiPlayer, "BDruid");
+		if (!IsResearched(aiPlayer, "Mass Heal"))
+			nRaceAvail = 3 * nRaceAvail;//boost combat upgrades priority because Britain druids can "only" hide units
 	}
-	else if (nRace == Egypt) {
+	else if (nRaceAvail == Egypt) {
 		strTech = "Cult of Osiris";
 		if (IsResearched(set, strTech)) {
 			strTech = "EZombify";
-			if (IsResearched(AIPlayer, "Zombify"))
+			if (IsResearched(aiPlayer, strTech))
 				return;
 		}
-		nAvail = Count(AIPlayer, "EPriest");
+		nRaceAvail = Count(aiPlayer, "EPriest");
 	}
-	else if (nRace == Germany) {
+	else if (nRaceAvail == Germany) {
 		strTech = "German chamber";
-		if (IsResearched(AIPlayer, "Ritual Chamber")) {
+		if (IsResearched(aiPlayer, strTech)) {
 			strTech = "German Mass Heal";
-			if (IsResearched(AIPlayer, "Mass Heal"))
+			if (IsResearched(aiPlayer, strTech))
 				return;
 		}
-		nAvail = Count(AIPlayer, "TEnchantress");
+		nRaceAvail = Count(aiPlayer, "TEnchantress");
 	}
 
-	if (nAvail < AIVar(AIPlayer, AIV_CombatMagic))
-		if (set.gold < AIVar(AIPlayer, AIV_SquanderGoldAmount))
+	if (nRaceAvail < AIVar(aiPlayer, AIV_CombatMagic))
+		if (set.gold < AIVar(aiPlayer, AIV_SquanderGoldAmount))
 			return;
 }
 

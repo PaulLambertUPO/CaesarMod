@@ -1,12 +1,10 @@
 //int, Settlement set, int idPlayer
 
-if (set.IsStronghold) {
-	int Greece, nRace;
-	Greece = ImperialRome;
-	nRace = set.GetCentralBuilding().race;
+if (set.IsStronghold)
 	if (GetTime() <= 2000)
 		if (set.gold >= 7000) {//use tactic only if starting gold is one of [10000, 2500 + bonus 5, 5000 + bonus 2/5]
-			int rnd;
+			int nRace, rnd;
+			nRace = set.GetCentralBuilding().race;
 			rnd = rand(4);
 			if (nRace == Gaul) {
 				if (rnd < 1)
@@ -63,8 +61,8 @@ if (set.IsStronghold) {
 				return TS_CarthageTactic4;
 			}
 			if (nRace == RepublicanRome) {
+				int nRome;
 				if (EnvReadInt(set, "ChooseRomanRace") != 1) {
-					int nRome;
 					nRome = rand(3);
 					if (nRome == 0)
 						set.Research("ChooseRepublicanRome");
@@ -73,7 +71,15 @@ if (set.IsStronghold) {
 					else
 						set.Research("ChoosePunicRome");
 				}
-				if (IsResearched(set, "ChooseRepublicanRome")) {
+				else if (IsResearched(set, "ChooseRepublicanRome"))
+					nRome = 0;
+				else if (IsResearched(set, "ChooseImperialRome"))
+					nRome = 1;
+				else if (IsResearched(set, "ChoosePunicRome"))
+					nRome = 2;
+				else
+					nRome = -1;
+				if (nRome == 0) {
 					if (rnd < 1)
 						return TS_RRomeTactic;
 					if (rnd < 2)
@@ -82,7 +88,7 @@ if (set.IsStronghold) {
 						return TS_RRomeTactic3;
 					return TS_RRomeTactic4;
 				}
-				if (IsResearched(set, "ChooseImperialRome")) {
+				if (nRome == 1) {
 					if (rnd < 1)
 						return TS_MRomeTactic;
 					if (rnd < 2)
@@ -91,7 +97,7 @@ if (set.IsStronghold) {
 						return TS_MRomeTactic3;
 					return TS_MRomeTactic4;
 				}
-				if (IsResearched(set, "ChoosePunicRome")) {
+				if (nRome == 2) {
 					if (rnd < 1)
 						return TS_PRomeTactic;
 					if (rnd < 2)
@@ -101,7 +107,7 @@ if (set.IsStronghold) {
 					return TS_PRomeTactic4;
 				}
 			}
-			if (nRace == Greece) {
+			if (nRace == ImperialRome) {//Greece
 				if (rnd < 1)
 					return TS_GreekTactic;
 				if (rnd < 2)
@@ -111,5 +117,4 @@ if (set.IsStronghold) {
 				return TS_GreekTactic4;
 			}
 		}
-}
 return TS_NONE;

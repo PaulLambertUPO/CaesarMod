@@ -113,7 +113,7 @@
 		image="gameres/icons/items/Blood Stone.bmp"
 		sound="ItemUse_TribalBeat"
 		name="Blood stone"
-		description="Adds 50 experience.\nIf used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 20 seconds)"
+		description="Adds 50 experience.\nIf used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 30 seconds)"
 		equip_script="file://Data/ItemScripts/bloodstone_cooldown.vs"
 		object_script="file://Data/ItemScripts/bloodstone.vs"
 		important="yes">
@@ -307,6 +307,7 @@
 	</item>
 	<item id="Gold"
 		image="gameres/icons/items/Gold hero.bmp"
+		use_script="if (GetUseCount() \l= 0) owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		name="Gold"
 		description="Adds gold to the settlement the owner enters"
 		important="no">

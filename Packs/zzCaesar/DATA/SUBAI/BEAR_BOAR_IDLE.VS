@@ -5,7 +5,7 @@ Unit this;
 this = This.AsUnit();
 
 if (.IsValid) {
-	Unit u;
+	Obj enemy;
 	point pt_move;
 	rect rc;
 	bool flee = false;
@@ -45,9 +45,9 @@ if (.IsValid) {
 							if (!.HasPath())
 								break;
 							if (!flee) {
-								u = .BestTargetInSquadSight();
-								if (u.IsValid)
-									if (.DistTo(u) < .sight * 2 / 3) {
+								enemy = .BestTargetInSquadSight();
+								if (enemy.IsValid)
+									if (.DistTo(enemy) < .sight * 2 / 3) {
 										.AddCommand(true, "engage");
 										return;
 									}

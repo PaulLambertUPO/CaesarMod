@@ -43,8 +43,8 @@ SpawnGroupInHolder("Q_HannibalForce2", "S_CarthageOutpost2");
 NO_Masinissa.obj.AsHero().SetAutocast(true);
 
 NO_Utica.obj.AsBuilding().Research("Forge maces");
-NO_Blacksmith.obj.CmdDisable("Strenghten Stronghold Defences I");
-NO_Blacksmith.obj.CmdDisable("Strenghten Stronghold Defences II");
+NO_Blacksmith.obj.CmdDisable("Strengthen Stronghold Defences I");
+NO_Blacksmith.obj.CmdDisable("Strengthen Stronghold Defences II");
 
 GetSettlement("S_ChartageOutpost1").AllowCapture(false);
 GetSettlement("S_ChartageOutpost2").AllowCapture(false);

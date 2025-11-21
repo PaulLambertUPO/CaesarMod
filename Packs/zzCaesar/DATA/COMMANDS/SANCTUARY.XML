@@ -78,7 +78,7 @@
 		rollover="Restoration"
 		description="Allows enchantresses to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that an enchantress dies"
 		method="research"
-		param="ReqPlr, Code of Valor, default, NamePlr, Restoration, default">
+		param="ReqPlr, Code of Valor, default, NamePlr, IRestoration, default, NamePlr, Restoration, , NamePlr, HRestoration">
 		<src obj="ITemple" />
 	</cmd>
 </commands>

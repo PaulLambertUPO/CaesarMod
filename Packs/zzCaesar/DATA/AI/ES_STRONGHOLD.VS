@@ -1,16 +1,19 @@
 //void, Settlement set
 
-int Greece, AIPlayer, nRace, nSquanderGoldAmount, nExcessGold, nTradeGold, nTradeFood, nTrainStart, nArenaHire, nSleepES;
+GAIKA g;
+int aiPlayer, nSquanderGoldAmount, nTradeGold, nTradeFood, nTrainStart, nArenaHire, nSleepES;
+int nMilUnits, nMinEnemyEval, nMaxEnemyEval, nAvgEnemyEval, nFreezeArmyBuild, nOwn, nAlly, nEnemy, enemy_hidden;
 str maxUpgradeBarracks;
-bool tactic_finished;
+bool bAssUnderFire, bResearchTrainingComplete, nRaceIsGreece = false;
 
-Sleep(2000 + rand(501));//sleep must be higher than tactic script initial sleep (1000)
+Sleep(2500 + rand(501));//sleep must be higher than tactic script initial sleep (1000) and max allowed time (2000)
 
-Greece = ImperialRome;
-AIPlayer = set.player;
-nRace = set.GetCentralBuilding().race;
+g = set.GetGaika();
+
+aiPlayer = set.player;
 EnvWriteInt(set, "nArmyBuilds", 0);//the amount of times ESH_BuildArmy has been called
 EnvWriteInt(set, "ResearchTechTime", GetTime());//time of the next allowed research for ESH_NeedTech
+EnvWriteInt(set, "ResearchTrainingComplete", 0);//flag used by ESH_ResearchTraining to research upgrades (reset here to prevent a new owner from ignoring player upgrades)
 
 if (EnvReadInt(set, "ChooseRomanRace") != 1) {
 	int nRome;
@@ -21,138 +24,185 @@ if (EnvReadInt(set, "ChooseRomanRace") != 1) {
 		set.Research("ChooseImperialRome");
 	else
 		set.Research("ChoosePunicRome");
+	Sleep(500);//give some time to the settlement to register the chosen Rome
 }
 
 //store these values because they are constant and it is not good to retrieve them from AI variables every time
-nSquanderGoldAmount = AIVar(AIPlayer, AIV_SquanderGoldAmount);
-nExcessGold = AIVar(AIPlayer, AIV_ExcessGold);
-maxUpgradeBarracks = "Barrack Level " + AIVar(AIPlayer, AIV_UpgradeBarracks);
-nTradeGold = AIVar(AIPlayer, AIV_TradeGold);
-nTradeFood = AIVar(AIPlayer, AIV_TradeFood);
-nTrainStart = AIVar(AIPlayer, AIV_Training);
-nArenaHire = AIVar(AIPlayer, AIV_ArenaHire);
-nSleepES = AIVar(AIPlayer, AIV_Sleep_ES);
+nSquanderGoldAmount = AIVar(aiPlayer, AIV_SquanderGoldAmount);
+maxUpgradeBarracks = "Barrack Level " + AIVar(aiPlayer, AIV_UpgradeBarracks);
+nTradeGold = AIVar(aiPlayer, AIV_TradeGold);
+nTradeFood = AIVar(aiPlayer, AIV_TradeFood);
+nTrainStart = AIVar(aiPlayer, AIV_Training);
+nArenaHire = AIVar(aiPlayer, AIV_ArenaHire);
+nSleepES = AIVar(aiPlayer, AIV_Sleep_ES);
 
 //normalize the value of nTradeFood in case the AI variable value is below 1100 (result of 1000 + GetConst("MinResQtyToTransport"))
 if (nTradeFood > 0)
-	nTradeFood = MAX(nTradeFood, 1100);
+	if (nTradeFood < 1100)
+		nTradeFood = 1100;
 
-//decide sequence of research for advanced units for when there is a lot of gold
-if (nRace != Carthage)
-	if (nRace != Germany)
-		if (EnvReadInt(set, "TechSeq" + AIPlayer + "_Initted") == 0)
-			set.AIRun("ESH_ArmyTechSeq.vs");
+{
+	Building hall;
+	int nRace;
 
-tactic_finished = AIVar(AIPlayer, AIV_WaitTactic) != 1;
+	hall = set.GetCentralBuilding();
 
-while (set.player == AIPlayer) {
-	if (tactic_finished) {
-		int nMilUnits, nEnemyMilEval, nMinEnemyEval, nMaxEnemyEval, nAverEnemyEval, nFreezeArmyBuild, i;
-		bool bEnemies, bAssUnderFire, bResearchTrainingComplete;
-
-		nMilUnits = MilUnits(AIPlayer);
-		nEnemyMilEval = EnemyPlayersEval(AIPlayer, nMinEnemyEval, nMaxEnemyEval, nAverEnemyEval);
-
-		i = MAX(nMilUnits / Strongholds(AIPlayer), set.Units.count);
-		EnvWriteInt(set, "nFoodReserve", i * 15);//used in ESH_Market and ESH_ArenaUnits
-
-		nFreezeArmyBuild = EnvReadInt(set, "FreezeArmyBuild");
-		if (nFreezeArmyBuild > 0) {
-			nFreezeArmyBuild -= 1;
-			EnvWriteInt(set, "FreezeArmyBuild", nFreezeArmyBuild);
+	//decide sequence of researches for advanced units for when there is a lot of gold
+	nRace = hall.race;
+	if (nRace != Carthage)
+		if (nRace != Germany) {
+			nRaceIsGreece = nRace == ImperialRome;
+			if (EnvReadInt(set, "TechSeq" + aiPlayer + "_Initted") == 0)
+				set.AIRun("ESH_ArmyTechSeq.vs");
 		}
 
-		{
-			int nOwn, nAlly, nEnemy, enemy_hidden;
-			set.GetGaika().Eval(AI_ALL, AIPlayer, nOwn, nAlly, nEnemy, enemy_hidden);
-			bEnemies = nEnemy > 0;
-			bAssUnderFire = nEnemy > nOwn + nAlly;
+	//wait for the tactic to end (normal completion, stronghold captured, max time reached or enemies near the townhall)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1) {
+		if (set.player != aiPlayer)
+			SetAIVar(aiPlayer, AIV_WaitTactic, 0);
+		else if (GetTime() >= 420000)
+			SetAIVar(aiPlayer, AIV_WaitTactic, 0);
+		else if (!Intersect(VisibleObjsInSight(hall, "Military"), EnemyObjs(aiPlayer, "Military")).IsEmpty)
+			SetAIVar(aiPlayer, AIV_WaitTactic, 0);
+		Sleep(nSleepES);
+	}
+}
+
+while (set.player == aiPlayer) {
+	nMilUnits = MilUnits(aiPlayer);
+	EnemyPlayersEval(aiPlayer, nMinEnemyEval, nMaxEnemyEval, nAvgEnemyEval);
+
+	EnvWriteInt(set, "nFoodReserve", 15 * MAX(set.Units.count, nMilUnits / Strongholds(aiPlayer)));//used in ESH_Market and ESH_ArenaUnits
+
+	nFreezeArmyBuild = EnvReadInt(set, "FreezeArmyBuild");
+	if (nFreezeArmyBuild > 0) {
+		nFreezeArmyBuild -= 1;
+		EnvWriteInt(set, "FreezeArmyBuild", nFreezeArmyBuild);
+	}
+
+	g.Eval(AI_ALL, aiPlayer, nOwn, nAlly, nEnemy, enemy_hidden);
+	if (nEnemy > nOwn + nAlly) {
+		int nAssUnderFire;
+		bAssUnderFire = true;
+		nAssUnderFire = 1 + EnvReadInt(set, "AssUnderFire");
+		EnvWriteInt(set, "AssUnderFire", nAssUnderFire);
+		if (nAssUnderFire > 10) {
+			set.StopReserving();
+			EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
 		}
-		if (bAssUnderFire) {
-			int nAssUnderFire;
-			nAssUnderFire = 1 + EnvReadInt(set, "AssUnderFire");
-			EnvWriteInt(set, "AssUnderFire", nAssUnderFire);
-			if (nAssUnderFire > 10) {
-				set.StopReserving();
-				EnvWriteString(set, "ReserveFor" + (AIPlayer - 1), "");
-			}
+	}
+	else {
+		bAssUnderFire = false;
+		EnvWriteInt(set, "AssUnderFire", 0);
+	}
+
+	//chance to give higher priority to arena units based on the upgrade level reached (0 -> 1/70, 1 -> 1/40, 2 -> 1/10)
+	if (rand(70 - EnvReadInt(set, "ArenaResearchLevel") * 30) == 0)
+		set.AIRun("ESH_ArenaUnits.vs");
+
+	//recruit heroes and/or military units
+	set.AIRun("ESH_ArmyRecruitment.vs");
+
+	//research something when there is a lot of gold in the stronghold
+	if (set.gold >= nSquanderGoldAmount)
+		set.AIRun("ESH_SquanderGoldTechs.vs");
+
+	//improve stronghold defences/gates
+	if (!IsResearched(set, "Strengthen Stronghold Defences II"))
+		if (GetTime() >= 60000 * AIVar(aiPlayer, AIV_TimeStrongholdDefences)) {
+			EnvWriteString(set, "strTech", "Strengthen Stronghold Defences II");
+			set.AIRun("ESH_NeedTech.vs");
 		}
-		else
-			EnvWriteInt(set, "AssUnderFire", 0);
-
-		//chance to give higher priority to arena units based on the upgrade level reached (0 -> 1/70, 1 -> 1/40, 2 -> 1/10)
-		if (rand(70 - EnvReadInt(set, "ArenaResearchLevel") * 30) == 0)
-			set.AIRun("ESH_ArenaUnits.vs");
-
-		//recruit heroes and/or military units
-		set.AIRun("ESH_ArmyRecruitment.vs");
-
-		//research something to improve the army when there is a lot of gold in the stronghold
-		if (set.gold >= nExcessGold)
-			set.AIRun("ESH_ExpensiveTechs.vs");
-
-		//improve stronghold defences/gates
-		if (!IsResearched(set, "Strenghten Stronghold Defences I")) {
-			if (set.gold >= nSquanderGoldAmount || GetTime() >= 60000 * AIVar(AIPlayer, AIV_TimeStrongholdDefences1)) {
-				EnvWriteString(set, "strTech", "Strenghten Stronghold Defences I");
+		else if (set.gold >= nSquanderGoldAmount) {
+			EnvWriteString(set, "strTech", "Strengthen Stronghold Defences II");
+			set.AIRun("ESH_NeedTech.vs");
+		}
+	if (nRaceIsGreece)
+		if (!IsResearched(set, "Strengthen Stronghold Gates"))
+			if (GetTime() >= 60000 * AIVar(aiPlayer, AIV_TimeStrongholdGates)) {
+				EnvWriteString(set, "strTech", "Strengthen Stronghold Gates");
 				set.AIRun("ESH_NeedTech.vs");
 			}
-		}
-		else if (!IsResearched(set, "Strenghten Stronghold Defences II")) {
-			if (set.gold >= nSquanderGoldAmount || GetTime() >= 60000 * AIVar(AIPlayer, AIV_TimeStrongholdDefences2)) {
-				EnvWriteString(set, "strTech", "Strenghten Stronghold Defences II");
+			else if (set.gold >= nSquanderGoldAmount) {
+				EnvWriteString(set, "strTech", "Strengthen Stronghold Gates");
 				set.AIRun("ESH_NeedTech.vs");
 			}
-		}
-		if (nRace == Greece)
-			if (!IsResearched(set, "Strengthen Stronghold Gates"))
-				if (set.gold >= nSquanderGoldAmount || GetTime() >= 60000 * AIVar(AIPlayer, AIV_TimeStrongholdGates)) {
-					EnvWriteString(set, "strTech", "Strengthen Stronghold Gates");
-					set.AIRun("ESH_NeedTech.vs");
-				}
 
-		//barrack upgrades
-		if (!bAssUnderFire)
-			if (set.gold >= 500)
-				if (!IsResearched(set, maxUpgradeBarracks))
-					set.AIRun("ESH_UpgradeBarracks.vs");
+	//barrack upgrades
+	if (!bAssUnderFire)
+		if (set.gold >= 500)
+			if (!IsResearched(set, maxUpgradeBarracks))
+				set.AIRun("ESH_UpgradeBarracks.vs");
 
-		//tavern and defensive townhall researches/commands
-		set.AIRun("ESH_Market.vs");
+	//tavern and defensive townhall researches/commands
+	set.AIRun("ESH_Market.vs");
 
-		//gold and food trade
-		if (MilEval(AIPlayer) >= nAverEnemyEval) {
-			if (nTradeGold > 0)
-				if (set.gold >= 1000)
-					if (EnvReadInt(AIPlayer, "GoldTradeOutposts") < nTradeGold)
+	//gold and food trade
+	if (MilEval(aiPlayer) >= nAvgEnemyEval) {
+		if (nTradeGold > 0)
+			if (set.gold >= 1000)
+				if (EnvReadInt(aiPlayer, "GoldTradeOutposts") < nTradeGold)
+					if (EnvReadInt(aiPlayer, "GoldTradeStartInProgress") != 1)
 						set.AIRun("ESH_GoldTrade.vs");
-			if (nTradeFood > 0)
-				if (set.food >= nTradeFood)
+		if (nTradeFood > 0)
+			if (set.food >= nTradeFood)
+				if (GetTime() >= EnvReadInt(set, "FoodTradeMuleWait"))
 					set.AIRun("ESH_FoodTrade.vs");
-		}
+	}
 
-		//research training upgrades and then combat magic, druids and arena units
-		if (set.gold >= nSquanderGoldAmount || !bAssUnderFire && nMilUnits >= nTrainStart || rand(50) == 0)
+	//research various upgrades
+	if (set.gold >= nSquanderGoldAmount)
+		set.AIRun("ESH_ResearchTraining.vs");
+	else if (rand(50) == 0)
+		set.AIRun("ESH_ResearchTraining.vs");
+	else if (!bAssUnderFire)
+		if (nMilUnits >= nTrainStart)
 			set.AIRun("ESH_ResearchTraining.vs");
 
-		bResearchTrainingComplete = EnvReadInt(set, "ResearchTrainingComplete") != 0;
-		if (set.gold >= nSquanderGoldAmount || !bAssUnderFire && bResearchTrainingComplete || rand(70) == 0)
-			set.AIRun("ESH_CombatMagic.vs");
-		if (!bAssUnderFire && set.gold >= 1000 || set.gold >= nSquanderGoldAmount)
-			if (set.gold >= nSquanderGoldAmount || nMilUnits >= 20 && bResearchTrainingComplete || rand(60) == 0)
-				set.AIRun("ESH_Druids.vs");
-		if (set.gold >= nSquanderGoldAmount || !bAssUnderFire && bResearchTrainingComplete && nMilUnits >= nArenaHire || rand(40) == 0)
-			set.AIRun("ESH_ArenaUnits.vs");
+	bResearchTrainingComplete = EnvReadInt(set, "ResearchTrainingComplete") == 1;
 
-		//repair fortress
-		if (!bEnemies)
-			set.RepairAll();
-	}
-	else {//after 7 minutes, stop waiting for tactic in order to unlock stronghold management
-		if (GetTime() >= 420000)
-			SetAIVar(AIPlayer, AIV_WaitTactic, 0);
-		tactic_finished = AIVar(AIPlayer, AIV_WaitTactic) != 1;
-	}
+	//research combat magic upgrades
+	if (set.gold >= nSquanderGoldAmount)
+		set.AIRun("ESH_CombatMagic.vs");
+	else if (rand(70) == 0)
+		set.AIRun("ESH_CombatMagic.vs");
+	else if (bResearchTrainingComplete)
+		if (!bAssUnderFire)
+			set.AIRun("ESH_CombatMagic.vs");
+
+	//train sages
+	if (set.gold >= nSquanderGoldAmount)
+		set.AIRun("ESH_Druids.vs");
+	else if (!bAssUnderFire)
+		if (set.gold >= 1000)
+			if (rand(60) == 0)
+				set.AIRun("ESH_Druids.vs");
+			else if (bResearchTrainingComplete)
+				if (nMilUnits >= 20)
+					set.AIRun("ESH_Druids.vs");
+
+	//train arena units and research their upgrades
+	if (set.gold >= nSquanderGoldAmount)
+		set.AIRun("ESH_ArenaUnits.vs");
+	else if (rand(40) == 0)
+		set.AIRun("ESH_ArenaUnits.vs");
+	else if (bResearchTrainingComplete)
+		if (!bAssUnderFire)
+			if (nMilUnits >= nArenaHire)
+				set.AIRun("ESH_ArenaUnits.vs");
+
+	//unlock more army units
+	if (set.gold >= nSquanderGoldAmount)
+		set.AIRun("ESH_ArmyTechs.vs");
+	else if (rand(80) == 0)
+		set.AIRun("ESH_ArmyTechs.vs");
+	else if (bResearchTrainingComplete)
+		if (!bAssUnderFire)
+			set.AIRun("ESH_ArmyTechs.vs");
+
+	//repair stronghold
+	if (nEnemy <= 0)
+		set.RepairAll();
+
 	Sleep(nSleepES);
 }
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);//this is to stop the tactic script if the stronghold is captured before it ends (difficult but not impossible)

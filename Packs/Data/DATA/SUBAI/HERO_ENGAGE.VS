@@ -3,11 +3,11 @@
 Hero this;
 Obj u, u2;
 point ptStart;
-bool bSquadTarget;
+bool melee, bSquadTarget;
 int i;
 
-
 this = This.AsHero;
+melee = !.IsRanged;
 ptStart = .pos;
 
 //.pr("hero::engage: looking for enemies");
@@ -50,7 +50,15 @@ while (1)
 		//.pr("hero::engage: fighting");
 		if (u.IsAlive)
 		if (.IsValidTarget(u))
-			while (.Attack(u));
+			if (u.AsCatapult().IsValid) {
+				while (.Attack(u))
+					if (melee)
+						if (.HasSpecial(trample))
+							u.Damage(.damage);
+			}
+			else
+				while (.Attack(u))
+					;
 
 		//if (GetTime - nStartTime > 1000) break;
 

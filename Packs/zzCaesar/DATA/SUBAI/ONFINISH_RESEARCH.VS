@@ -1,5 +1,5 @@
 //void, Obj This, bool bCanceled
-//cmdparam: [ReqSet, <research>, <explanation>, ReqPlr, <research>, <explanation>, NamePlr, <research>, NameSet, <research>, <value>, SetsPlr, <env>, <value>, SetsSet, <env>, <value>]
+//cmdparam: [ReqSet, <research>, <explanation>, ReqPlr, <research>, <explanation>, SetsSet, <env>, <value>, SetsPlr, <env>, <value>, NameSet, <research>, <value>, NamePlr, <research>, <value>]
 
 Building this;
 Settlement set;
@@ -19,9 +19,9 @@ if (!GetResearchHack())
 while (dest != "") {
 	token = ParseStr(dest, dest);
 	if (token == "NamePlr") {
+		name = ParseStr(dest, dest);
+		value = ParseStr(dest, dest);
 		if (bCanceled) {
-			name = ParseStr(dest, dest);
-			value = ParseStr(dest, dest);
 			if (EnvReadString(player, name) != "researched")
 				EnvWriteString(player, name, "");
 			if (name == "Tribute") {
@@ -32,10 +32,7 @@ while (dest != "") {
 			}
 		}
 		else {
-			name = ParseStr(dest, dest);
-			value = ParseStr(dest, dest);
 			EnvWriteString(player, name, "researched");
-
 			if (name == "Code of Valor") {
 				ObjList ol;
 				Unit u;
@@ -134,14 +131,10 @@ while (dest != "") {
 					}
 				}
 			}
-			else if (name == "Statue of Osiris") {
+			else if (name == "Statue of Osiris")
 				InvalidateRegenConsts();
-				EnvWriteString(player, "Statue of Osiris, father of Horus", "researched");//for AI scripts
-			}
-			else if (name == "Statue of Isis") {
+			else if (name == "Statue of Isis")
 				InvalidateRegenConsts();
-				EnvWriteString(player, "Statue of Isis, mother of Anubis", "researched");//for AI scripts
-			}
 			else if (name == "Gambler's Test")
 				InvalidateDamageFormulaParams();
 			else if (name == "Gambler's Luck")
@@ -201,15 +194,13 @@ while (dest != "") {
 		}
 	}
 	else if (token == "NameSet") {
+		name = ParseStr(dest, dest);
+		value = ParseStr(dest, dest);
 		if (bCanceled) {
-			name = ParseStr(dest, dest);
-			value = ParseStr(dest, dest);
 			if (EnvReadString(set, name) != "researched")
 				EnvWriteString(set, name, "");
 		}
 		else {
-			name = ParseStr(dest, dest);
-			value = ParseStr(dest, dest);
 			EnvWriteString(set, name, "researched");
 			if (name == "Gambling") {
 				ExploreCircle(player, .pos, 3600);
@@ -221,7 +212,7 @@ while (dest != "") {
 				else
 					set.SetFood(set.food + 400);
 			}
-			else if (name == "TFights")
+			else if (name == "Tribal fights")
 				set.SetFood(set.food + 4000);
 			else if (name == "People's Assembly") {
 				set.AddToPopulation(15);
@@ -231,7 +222,7 @@ while (dest != "") {
 				EnvWriteInt(player, "MaxMyrmidons", MAX(10, EnvReadInt(player, "MaxMyrmidons")));
 			else if (name == "RGladiator Shows2")
 				set.SetFood(set.food + 800);
-			else if (name == "TGrainTrade") {
+			else if (name == "Food sale") {
 				set.SetGold(set.gold + 1000);
 				set.GoldConverted(1000);
 			}
@@ -364,27 +355,27 @@ while (dest != "") {
 				set.AddToMaxPopulation(15);
 				set.AddToPopulation(5);
 			}
-			else if (name == "CLibyanFootman") {
+			else if (name == "Forge spears") {
 				if (EnvReadString(set, "ResearchedLibyanFootman") == "yes")
 					set.SetGold(set.gold + cmdcost_gold);
 			}
-			else if (name == "CJavelinThrower") {
+			else if (name == "Forge javelins") {
 				if (EnvReadString(set, "ResearchedJavelinThrower") == "yes")
 					set.SetGold(set.gold + cmdcost_gold);
 			}
-			else if (name == "CBerberAssassin") {
+			else if (name == "Forge swords") {
 				if (EnvReadString(set, "ResearchedBerberAssassin") == "yes")
 					set.SetGold(set.gold + cmdcost_gold);
 			}
-			else if (name == "CMaceman") {
+			else if (name == "Forge maces") {
 				if (EnvReadString(set, "ResearchedMaceman") == "yes")
 					set.SetGold(set.gold + cmdcost_gold);
 			}
-			else if (name == "CNumidianRider") {
+			else if (name == "Forge pikes") {
 				if (EnvReadString(set, "ResearchedNumidianRider") == "yes")
 					set.SetGold(set.gold + cmdcost_gold);
 			}
-			else if (name == "CHorseman")
+			else if (name == "Forge shields")
 				if (EnvReadString(set, "ResearchedHorseman") == "yes")
 					set.SetGold(set.gold + cmdcost_gold);
 		}

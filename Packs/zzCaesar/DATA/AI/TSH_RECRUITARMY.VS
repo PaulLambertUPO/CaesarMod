@@ -1,15 +1,14 @@
 //void, Settlement set, str class, int num, ObjList ol
 
 //called by specific tactic scripts (TS_...Tactic), this script manages the recruitment of standard units (barracks)
+//IMPORTANT: do not assign directly to ol because it references the original list (only use Add/Remove to update it)
 
-ObjList ol1, ol2;
-Unit u;
-int Greece, nRace, nBuildType, i;
+ObjList ol1;
+int nRace, nBuildType, i;
 str cmd, tech;
 bool nRaceIsImperialRome = false, nRaceIsPunicRome = false;
 StrArray imperialOrPunicOrGreekClasses, imperialOrPunicOrGreekTrainCmds, imperialOrPunicOrGreekTechs;
 
-Greece = ImperialRome;
 nRace = set.GetCentralBuilding().race;
 
 if (nRace == RepublicanRome)
@@ -65,7 +64,7 @@ else if (nRaceIsPunicRome) {
 	imperialOrPunicOrGreekTechs[4] = "Roman Scout";
 	imperialOrPunicOrGreekTechs[5] = "Roman Praetorian";
 }
-else if (nRace == Greece) {
+else if (nRace == ImperialRome) {//Greece
 	imperialOrPunicOrGreekClasses[0] = "HPeltast";
 	imperialOrPunicOrGreekClasses[1] = "HToxotes";
 	imperialOrPunicOrGreekClasses[2] = "HHoplite";
@@ -102,7 +101,7 @@ else if (nRaceIsPunicRome)
 			break;
 		}
 	}
-else if (nRace == Greece)
+else if (nRace == ImperialRome)//Greece
 	for (i = 0; i < 6; i += 1) {
 		if (imperialOrPunicOrGreekClasses[i] == class) {
 			nBuildType = i;
@@ -120,7 +119,7 @@ else if (nRaceIsPunicRome) {
 	cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 	tech = imperialOrPunicOrGreekTechs[nBuildType];
 }
-else if (nRace == Greece) {
+else if (nRace == ImperialRome) {//Greece
 	cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 	tech = imperialOrPunicOrGreekTechs[nBuildType];
 }
@@ -129,24 +128,26 @@ else {
 	tech = UTech(nBuildType, nRace);
 }
 
-if (num) {//steal from the AI
-	ol1 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, false);
-	for (i = 0; i < ol1.count; i += 1) {
-		u = ol1[i].AsUnit();
+if (num > 0) {//steal from the AI
+	ObjList ol2;
+	Unit u;
+	ol2 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, false);
+	for (i = 0; i < ol2.count; i += 1) {
+		u = ol2[i].AsUnit();
 		if (u.IsAlive) {
 			if (u.hero.IsValid)
 				u.DetachFrom(u.hero);
-			ol2.Add(u);
+			ol1.Add(u);
 		}
 	}
-	num -= ol2.count;
+	num -= ol1.count;
 }
 
-if (num) {//count how many are queued
+if (num > 0) {//count how many are queued
 	ObjList barracks;
-	if (nRace == Greece) {
+	if (nRace == ImperialRome) {//Greece
 		ObjList buildings;
-		buildings = set.Buildings();
+		buildings = set.Buildings;
 		for (i = 0; i < buildings.count; i += 1)
 			if (buildings[i].class == "HBarracks")
 				barracks.Add(buildings[i]);
@@ -168,39 +169,46 @@ if (tech == "") {
 	point ptDummy;
 	Obj objDummy;
 	for (i = 0; i < num; i += 1) {
-		if (nRace == Greece) {
+		if (nRace == ImperialRome) {//Greece
 			ObjList buildings;
+			Building b;
 			int j, min;
 			bool first_time = true;
-			buildings = set.Buildings();
-			for (j = 0; j < buildings.count; j += 1)
-				if (buildings[j].class == "HBarracks")
-					if (first_time || buildings[j].CmdCount < min) {
-						first_time = false;
-						min = buildings[j].CmdCount;
-						barrack = buildings[j];
-					}
+			buildings = set.Buildings;
+			for (j = 0; j < buildings.count; j += 1) {
+				b = buildings[j];
+				if (b.IsHeirOf("HBarracks"))//using IsHeirOf is better than a direct class check because it manages winter variants
+					if (!b.IsBroken)
+						if (first_time) {
+							first_time = false;
+							min = b.CmdCount;
+							barrack = b;
+						}
+						else if (b.CmdCount < min) {
+							min = b.CmdCount;
+							barrack = b;
+						}
+			}
 		}
 		else if (nRace == Carthage && nBuildType == 5)//CNoble
 			barrack = set.FindResearchLab(cmd);
 		else
 			barrack = set.BestBarrack(100);
 
-		if (barrack.IsValid) {
-			if (nRace == Carthage)
-				if (!IsResearched(set, UTech(nBuildType, nRace)))
-					cmd = cmd + "NonSpec";
-			if (GetCmdCost(cmd, gold, food)) {
-				if (set.gold < gold)
-					break;
-				if (set.food < food)
-					break;
-				set.SpentGoldOnArmy(gold + food / 2);
-				barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+		if (barrack.IsValid)
+			if (!barrack.IsBroken) {
+				if (nRace == Carthage)
+					if (!IsResearched(set, UTech(nBuildType, nRace)))
+						cmd = cmd + "NonSpec";
+				if (GetCmdCost(cmd, gold, food)) {
+					if (!set.CanAfford(cmd))
+						break;
+					set.SpentGoldOnArmy(gold + food / 2);
+					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+				}
 			}
-		}
 	}
 }
 
-SetNoAIFlag(ol2, true);
-ol.AddList(ol2);
+SetNoAIFlag(ol1, true);
+ol.AddList(ol1);

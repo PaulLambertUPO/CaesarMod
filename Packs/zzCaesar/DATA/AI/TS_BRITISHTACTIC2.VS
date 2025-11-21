@@ -6,12 +6,12 @@ Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olShieldBearers, olRangedUnits;
 str rangedUnitClass;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false, bLuckyGambling;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsAssault;
 aSkills[1] = hsEuphoria;
@@ -26,7 +26,7 @@ aSkillLevels[1] = 10;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGambling || !bLargeShields || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGambling || !bLargeShields || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bGambling)
@@ -36,10 +36,11 @@ aSkillLevels[1] = 10;
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);//this interval combined with hero recruitment time makes sure that we can safely check settlement lucky environment variable
@@ -63,7 +64,7 @@ else
 //gambler day + barrack level 1 + lucky javelins
 {
 	bool bGamblerDay = false, bBarrack1 = false, bJavelins = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bGamblerDay || !bBarrack1 || !bJavelins)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bGamblerDay || !bBarrack1 || !bJavelins)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bGamblerDay)
@@ -84,7 +85,7 @@ else
 	int nCount, nShieldBearers = 20, nRangedUnits = 20;
 	bool bBarrack2 = false;
 	str supportCmd = "BAddPop";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olShieldBearers.count < nShieldBearers || olRangedUnits.count < nRangedUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olShieldBearers.count < nShieldBearers || olRangedUnits.count < nRangedUnits)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack2)
@@ -115,12 +116,18 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olShieldBearers.SetCommand("attach", hero);
 		olRangedUnits.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olShieldBearers.ClearDead();
@@ -128,4 +135,4 @@ olRangedUnits.ClearDead();
 SetNoAIFlag(olShieldBearers, false);
 SetNoAIFlag(olRangedUnits, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

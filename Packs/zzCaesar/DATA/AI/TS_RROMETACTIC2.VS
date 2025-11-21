@@ -5,17 +5,19 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olGladiators, olPriests;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsTeamAttack;
 aSkills[1] = hsQuickMarch;
 aSkillLevels[0] = 6;
 aSkillLevels[1] = 6;
+
+Sleep(500);//give some time to the settlement to register the chosen Rome before researching upgrades
 
 //gladiator shows + 3 exploring hastati
 {
@@ -25,16 +27,17 @@ aSkillLevels[1] = 6;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bGladiatorShows || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bGladiatorShows || i < nExploringUnits)) {
 		if (!bGladiatorShows)
 			bGladiatorShows = set.TSResearch("RGladiator Shows");
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -44,7 +47,7 @@ aSkillLevels[1] = 6;
 //hero + barrack level 1
 {
 	bool bBarrack1 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bBarrack1)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bBarrack1)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bBarrack1)
@@ -65,7 +68,7 @@ aSkillLevels[1] = 6;
 //training 1 + arrows
 {
 	bool bTraining1 = false, bArrows = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bTraining1 || !bArrows)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTraining1 || !bArrows)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bTraining1)
@@ -81,7 +84,7 @@ aSkillLevels[1] = 6;
 	bool bTraining2 = false;
 	int nCount, nGladiators = 20, nPriests = 10;
 	str supportCmd1 = "RAddPop", supportCmd2 = "buyfoodforgold";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bTraining2 || olGladiators.count < nGladiators || olPriests.count < nPriests)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTraining2 || olGladiators.count < nGladiators || olPriests.count < nPriests)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bTraining2)
@@ -129,7 +132,7 @@ aSkillLevels[1] = 6;
 			hero.AddCommand(false, "train");
 		}
 	Sleep(30000);
-	if (set.player == AIPlayer)
+	if (set.player == aiPlayer)
 		set.Research("autotrain_start");
 }
 
@@ -138,12 +141,18 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olGladiators.SetCommand("attach", hero);
 		olPriests.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olGladiators.ClearDead();
@@ -151,4 +160,4 @@ olPriests.ClearDead();
 SetNoAIFlag(olGladiators, false);
 SetNoAIFlag(olPriests, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

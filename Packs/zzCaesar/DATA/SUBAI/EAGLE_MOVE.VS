@@ -14,7 +14,7 @@ if (.IsValid) {
 	duration_anim_4 = .GetAnimDuration(4);
 	duration_anim_0 = .GetAnimDuration(0);
 
-	angle = MapSize();
+	angle = MapSize;
 	pt.Set(CLAMP(pt.x, 0, angle), CLAMP(pt.y, 250, angle - 675));//keep eagles away from UI bars at top/bottom edges, which hide them
 
 	while (!.IsInState)

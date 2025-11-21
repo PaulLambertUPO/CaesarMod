@@ -42,11 +42,11 @@ if (EnvReadString(set, research) == "researched" || EnvReadString(player, resear
 		max_units = Str2Int(max_param);
 
 	if (max_param == "teutonrider")
-		curr_units = number_to_train + Count(player, "TTeutonRider") + Count(player, "TTeutonArcher") + Count(player, "TTeutonWolf") + EnvReadInt(player, "QueuedBuild/" + class) + EnvReadInt(this, "Build/" + class);
+		curr_units = number_to_train + Count(player, "TTeutonRider") + Count(player, "TTeutonArcher") + Count(player, "TTeutonWolf") + EnvReadInt(player, "QueuedBuild/" + class);
 	else if (max_param == "liberatus")
-		curr_units = number_to_train + Count(player, "RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatusPunic") + EnvReadInt(this, "Build/" + class);
+		curr_units = number_to_train + Count(player, "RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatusPunic");
 	else
-		curr_units = number_to_train + Count(player, class) + EnvReadInt(player, "QueuedBuild/" + class) + EnvReadInt(this, "Build/" + class);
+		curr_units = number_to_train + Count(player, class) + EnvReadInt(player, "QueuedBuild/" + class);
 
 	if (curr_units <= max_units) {
 		reasonText = rollover(this, class, false) + "\n" + Translatef("(you cannot have more than %s1, currently %s2)", max_units, curr_units - number_to_train);
@@ -64,7 +64,7 @@ if (EnvReadString(set, research) == "researched" || EnvReadString(player, resear
 
 		return true;
 	}
-	reasonText = rollover(this, class, false) + "<color 255 0 0>\n" + Translatef("You cannot have more than %s1", max_units);
+	reasonText = rollover(this, class, false) + "\n<color 255 0 0>" + Translatef("You cannot have more than %s1 (currently %s2)", max_units, curr_units - number_to_train);
 }
 else if (research_building != "")
 	reasonText = rollover(this, class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from %s2", research, research_building);

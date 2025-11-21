@@ -10,7 +10,7 @@ Sleep(rand(1501) + 500);
 player = .player;
 
 while (1) {
-	if (EnvReadInt(this, "FoodTrade") == 1)//FoodTrade is used instead of IsResearched(set, "Grain Trade") to avoid the German version working as the Egyptian one
+	if (IsResearched(this, "Grain Trade"))
 		if (.food >= 10) {
 			.SetFood(.food - 10);
 			.SetGold(.gold + 5);

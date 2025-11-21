@@ -11,7 +11,7 @@ if (.IsValid) {
 
 	dir = .dir;
 
-	angle = MapSize();
+	angle = MapSize;
 	pt.Set(CLAMP(pt.x, 0, angle), CLAMP(pt.y, 250, angle - 675));//keep crows away from UI bars at top/bottom edges, which hide them
 
 	while (!.IsInState)

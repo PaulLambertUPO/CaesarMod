@@ -5,13 +5,13 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olDefenders, olArchers, olEnchantresses;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 point ptTeaching;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsHealing;
 aSkills[1] = hsVigor;
@@ -31,7 +31,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 	point ptDummy;
 	Obj objDummy;
 	Barrack barrack;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSpears || olEnchantresses.count < nEnchantresses || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSpears || olEnchantresses.count < nEnchantresses || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		else {
@@ -48,10 +48,11 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -62,7 +63,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 {
 	bool bBarrack1 = false;
 	int nCount, nEnchantresses = 8;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || olEnchantresses.count < nEnchantresses)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || olEnchantresses.count < nEnchantresses)) {
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		if (olEnchantresses.count < nEnchantresses) {
@@ -77,7 +78,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 {
 	olEnchantresses.SetCommand("move", ptTeaching);
 	olEnchantresses.AddCommand(false, "teach", hero);
-	if (set.player == AIPlayer)
+	if (set.player == aiPlayer)
 		set.Research("autotrain_start");
 	Sleep(4100 + rand(15) * 100);
 }
@@ -87,7 +88,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 	bool bCodeValor = false, bAncestralKnowledge = false;
 	int nCount, nDefenders = 20, nArchers = 15;
 	str supportCmd = "IAddPop";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bCodeValor || !bAncestralKnowledge || olDefenders.count < nDefenders || olArchers.count < nArchers)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bCodeValor || !bAncestralKnowledge || olDefenders.count < nDefenders || olArchers.count < nArchers)) {
 		if (hero.IsValid) {
 			if (!bHeroScript)
 				if (hero.inherentlevel >= 8) {
@@ -128,12 +129,18 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olDefenders.SetCommand("attach", hero);
 		olArchers.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 		//enchantresses remain in the fortress to train other units
 	}
 
@@ -144,4 +151,4 @@ SetNoAIFlag(olDefenders, false);
 SetNoAIFlag(olArchers, false);
 SetNoAIFlag(olEnchantresses, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

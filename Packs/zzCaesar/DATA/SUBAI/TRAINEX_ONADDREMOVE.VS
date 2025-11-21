@@ -1,5 +1,5 @@
 //bool, Obj This, bool bAdd
-//cmdparam: "number_to_train, max_param, class, research"
+//cmdparam: "number_to_train, max_param, class, research, research_building"
 
 Building this;
 int player, number_to_train, max_units;
@@ -39,11 +39,11 @@ if (bAdd) {
 	queued = EnvReadInt(player, "QueuedBuild/" + class);
 
 	if (max_param == "teutonrider")
-		curr_units = number_to_train + Count(player, "TTeutonRider") + Count(player, "TTeutonArcher") + Count(player, "TTeutonWolf") + queued + EnvReadInt(this, "Build/" + class);
+		curr_units = number_to_train + Count(player, "TTeutonRider") + Count(player, "TTeutonArcher") + Count(player, "TTeutonWolf") + queued;
 	else if (max_param == "liberatus")
-		curr_units = number_to_train + Count(player, "RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatusPunic") + EnvReadInt(this, "Build/" + class);
+		curr_units = number_to_train + Count(player, "RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatus") + EnvReadInt(player, "QueuedBuild/RLiberatusPunic");
 	else
-		curr_units = number_to_train + Count(player, class) + queued + EnvReadInt(this, "Build/" + class);
+		curr_units = number_to_train + Count(player, class) + queued;
 
 	if (curr_units > max_units)
 		return false;
@@ -51,6 +51,6 @@ if (bAdd) {
 	EnvWriteInt(player, "QueuedBuild/" + class, queued + number_to_train);
 }
 else
-	EnvWriteInt(player, "QueuedBuild/" + class, EnvReadInt(player, "QueuedBuild/" + class) - number_to_train);
+	EnvWriteInt(player, "QueuedBuild/" + class, MAX(0, EnvReadInt(player, "QueuedBuild/" + class) - number_to_train));
 
 return true;

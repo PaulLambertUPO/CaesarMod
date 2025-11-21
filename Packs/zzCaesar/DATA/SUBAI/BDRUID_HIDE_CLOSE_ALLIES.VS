@@ -20,7 +20,7 @@ if (.IsValid) {
 				if (.stamina >= hide_stamina_cost)
 					if (IsResearched(.player, "Mass Concealment")) {
 						prev_cmd = .command;
-						if (prev_cmd == "idle" || prev_cmd == "stand_position" || prev_cmd == "hold_position") {
+						if (prev_cmd == "idle" || prev_cmd == "stand_position") {
 							if (.IsVisible)
 								.SetCommand("hide", this);
 							else {
@@ -52,8 +52,8 @@ if (.IsValid) {
 																			}
 								}
 							}
-							if (prev_cmd != "idle")
-								.AddCommand(false, prev_cmd);//avoid moving the druid if he was ordered to stand still
+							if (prev_cmd == "stand_position")
+								.AddCommand(false, "stand_position");//avoid moving the druid if he was ordered to stand still
 						}
 					}
 		Sleep(2000);

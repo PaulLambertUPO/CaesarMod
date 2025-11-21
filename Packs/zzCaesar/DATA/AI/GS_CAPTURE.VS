@@ -1,295 +1,303 @@
 //void, GAIKA gaika
 
+int aiPlayer, nSleepGS, squadState;
+bool bIsStronghold = false, bIsOutpost = false, bIsTTent = false;
+point gaikaCenter;
 Settlement set;
-Building hall;
-int AIPlayer, gtStart, nApproachDist = 1600;//important: nApproachDist value must be like in GetGAIKAStrat.vs!
-bool bIsStronghold, bIsOutpost;
+Squad squad;
 
-set = gaika.settlement;
-hall = set.GetCentralBuilding();
-AIPlayer = AIGetPlayer();
-gtStart = GetTime();
-bIsStronghold = set.IsStronghold;
-bIsOutpost = set.IsOutpost;
+aiPlayer = AIGetPlayer();
+nSleepGS = AIVar(aiPlayer, AIV_Sleep_GS);
+gaikaCenter = gaika.Center;
+set = gaika.settlement;//always valid (checked in "GetGAIKAStrat.vs")
+if (set.IsStronghold)
+	bIsStronghold = true;
+else if (set.IsOutpost)
+	bIsOutpost = true;
+else if (set.IsTTent)
+	bIsTTent = true;
 
 //step 1: gather approaching army
-while (set.IsEnemy(AIPlayer) && gaika.GetStrat(AIPlayer) == GS_Capture) {
-	int own, ally, enemy, enemy_hidden, ownC, allyC, enemyC, enemyCHidden;
-	bool bWait = false;
+{
+	int gtStart, own, ally, enemy, enemy_hidden, ownC, allyC, enemyC, enemyHiddenC;
+	bool bWait;
+	gtStart = GetTime();
+	while (set.IsEnemy(aiPlayer)) {
+		if (gaika.GetStrat(aiPlayer) != GS_Capture)
+			break;
 
-	//evaluate the gaika army: do not wait the rest of army if the current one is enough
-	gaika.Count(AI_STAYING, AIPlayer, ownC, allyC, enemyC, enemyCHidden);
-	enemyC -= enemyCHidden;
-	if (bIsStronghold)
-		enemyC -= set.GetNumSentries();
-	if (bIsOutpost)
-		enemyC += gaika.Count(AI_ENEMY, AIPlayer, "Peasant");//count peasants because they contribute to the attack rate of outpost towers
-	gaika.Eval(AI_STAYING, AIPlayer, own, ally, enemy, enemy_hidden);
-	enemy -= enemy_hidden;
-	if (bIsOutpost)
-		own += gaika.ApproachingSquads(AIPlayer, nApproachDist);
-
-	if (ownC > 8)
-		if (ownC >= enemyC + 5)
-			if (own + ally >= gaika.MinNeed(AIPlayer, own, ally, enemy))
-				break;
-
-	//decide whether to wait approaching army
-	{
-		SquadList SL;
-		Squad squad;
-		gaika.GetSquads(SL, AI_COMING + AI_STAYING, AIPlayer, AI_OWN);
-		SL.Rewind;
-		SL.Lock;
-		while (!SL.EOL) {
-			squad = SL.Cur;
-			if (squad.GAIKAIn == gaika)
-				if (squad.LastFightTime > gtStart)
+		//evaluate the gaika army: do not wait for the rest of army if the current one is enough
+		gaika.Count(AI_STAYING, aiPlayer, ownC, allyC, enemyC, enemyHiddenC);
+		enemyC -= enemyHiddenC;
+		if (bIsStronghold)
+			enemyC -= set.GetNumSentries();
+		else if (bIsOutpost)
+			enemyC += gaika.Count(AI_ENEMY, aiPlayer, "Peasant");//count peasants because they contribute to the attack rate of outpost towers
+		gaika.Eval(AI_STAYING, aiPlayer, own, ally, enemy, enemy_hidden);
+		enemy -= enemy_hidden;
+		if (bIsOutpost)
+			own += gaika.ApproachingSquads(aiPlayer, 1600);//important: approach distance value must be like in "GetGAIKAStrat.vs"!
+		if (ownC > 8)
+			if (ownC >= enemyC + 5)
+				if (own + ally >= gaika.MinNeed(aiPlayer, own, ally, enemy))
 					break;
-			if (squad.State == SS_Approach)
+
+		bWait = false;
+
+		//decide whether to wait approaching army
+		{
+			SquadList SL;
+			gaika.GetSquads(SL, AI_COMING + AI_STAYING, aiPlayer, AI_OWN);
+			SL.Lock();
+			while (!SL.EOL) {
+				squad = SL.Cur;
 				if (squad.GAIKAIn == gaika)
-					squad.ClrCmd(SS_Wait, 0, SF_ADVCHOOSER);
-				else if (squad.pos.Dist(gaika.Center) > nApproachDist)
-					bWait = true;
-			SL.Next;
+					if (squad.LastFightTime > gtStart)
+						break;
+				if (squad.State == SS_Approach)
+					if (squad.GAIKAIn == gaika)
+						squad.ClrCmd(SS_Wait, 0, SF_ADVCHOOSER);
+					else if (!bWait)
+						if (squad.pos.Dist(gaikaCenter) > 1600)//important: approach distance value must be like in "GetGAIKAStrat.vs"!
+							bWait = true;
+				SL.Next();
+			}
+			SL.Unlock();
 		}
-		SL.Unlock;
+		if (!bWait)
+			break;
+		Sleep(nSleepGS);
 	}
-	if (!bWait)
-		break;
-	Sleep(AIVar(AIPlayer, AIV_Sleep_GS));
 }
 
 //step 2: siege/capture
-while (set.IsEnemy(AIPlayer) && gaika.GetStrat(AIPlayer) == GS_Capture) {
-	bool bNoCataps = false;
-	int i, state, nMilInCataps, nEnemyInsidePerc, own, ally, enemy, enemy_hidden, ownC, allyC, enemyC, enemyCHidden, nMaxCatapsUnits = 1;
+{
+	ObjList ol, olSg;
+	Building hall;
+	Catapult catap;
+	Unit u;
+	int i, state, nEnemyInsidePerc, nMaxCatapsUnits, nMilInCataps, own, ally, enemy, enemy_hidden, ownC, allyC, enemyC, enemyHiddenC;
+	bool bNoCataps;
 
-	gaika.Count(AI_STAYING, AIPlayer, ownC, allyC, enemyC, enemyCHidden);
-	enemyC -= enemyCHidden;
+	hall = set.GetCentralBuilding();
 
-	if (bIsStronghold)
-		enemyC -= set.GetNumSentries();
-	if (bIsOutpost)
-		enemyC += gaika.Count(AI_ENEMY, AIPlayer, "Peasant");
-
-	gaika.Eval(AI_STAYING, AIPlayer, own, ally, enemy, enemy_hidden);
-	enemy -= enemy_hidden;
-	if (bIsOutpost)
-		own += gaika.ApproachingSquads(AIPlayer, nApproachDist);
-	if (enemy * 8 > own + ally)
-		if (!gaika.AllEnemiesInHolder(AIPlayer))
+	while (set.IsEnemy(aiPlayer)) {
+		if (gaika.GetStrat(aiPlayer) != GS_Capture)
 			break;
 
-	if (enemyC > 0)
-		nEnemyInsidePerc = set.UnitsCount * 100 / enemyC;
-	if (ownC <= 1)
-		nMaxCatapsUnits = 0;
-	else {
-		int nUnitsOut;
-		nUnitsOut = MAX(0, enemyC - set.UnitsCount);//invisible units can exist
-		nMaxCatapsUnits = ownC * MAX(30, nEnemyInsidePerc) / 100;
-		if (ownC - nMaxCatapsUnits <= nUnitsOut)
-			nMaxCatapsUnits = nUnitsOut - ownC;
-		if (nMaxCatapsUnits <= 0)
-			nMaxCatapsUnits = 1;
-	}
-	if (!bIsOutpost)
-		bNoCataps = true;
-	else if (enemyC <= 0)
-		bNoCataps = true;
-	else if (nMaxCatapsUnits <= 0)
-		bNoCataps = true;
-
-	state = SS_Capture;
-	if (bIsOutpost) {
-		if (ownC > enemyC * 6)
-			bNoCataps = true;
-		else if (enemyC > set.UnitsCount)//units outside
-			state = SS_KillAll;
-		else
-			state = SS_Siege;
-	}
-	else {
+		gaika.Count(AI_STAYING, aiPlayer, ownC, allyC, enemyC, enemyHiddenC);
+		enemyC -= enemyHiddenC;
+		if (bIsStronghold)
+			enemyC -= set.GetNumSentries();
+		else if (bIsOutpost)
+			enemyC += gaika.Count(AI_ENEMY, aiPlayer, "Peasant");
+		gaika.Eval(AI_STAYING, aiPlayer, own, ally, enemy, enemy_hidden);
+		enemy -= enemy_hidden;
+		if (bIsOutpost)
+			own += gaika.ApproachingSquads(aiPlayer, 1600);//important: approach distance value must be like in "GetGAIKAStrat.vs"!
 		if (enemy * 8 > own + ally)
-			if (gaika.AllEnemiesInHolder(AIPlayer))
-				state = SS_Siege;
-			else
+			if (!gaika.AllEnemiesInHolder(aiPlayer))
 				break;
-		if (state == SS_Capture)
-			if (own + ally < 2000)
-				if (ownC + allyC < 5)
-					if (!set.IsIndependent)
-						break;
-	}
-	if (state == SS_Capture)
-		if (nEnemyInsidePerc < 50)
-			if (ownC < enemyC * 8)
-				state = SS_KillAll;
 
-	{
-		SquadList SL;
-		Squad squad;
-		int squadState;
-		gaika.GetSquads(SL, AI_STAYING, AIPlayer, AI_OWN);
-		SL.Lock;
-		for (0; !SL.EOL; SL.Next) {
-			squad = SL.Cur;
-			if (squad.TestFlags(SF_PEACEFUL))
-				continue;
-			if (squad.TestFlags(SF_NOAI))
-				continue;
-
-			squadState = squad.State;
-			if (squadState != SS_IDLE)
-				if (squadState != SS_Wait)
-					if (squadState != SS_Approach)
-						if (squadState != SS_Flee)
-							if (squadState != SS_Capture)
-								if (squadState != SS_Siege)
-									if (squadState != SS_KillAll)
-										if (squadState != SS_Catapult)
-											continue;
-
-			if (squadState == SS_Approach)
-				if (squad.pos.Dist(gaika.Center) > nApproachDist)
-					continue;
-
-			if (state == SS_KillAll) {
-				if (bNoCataps) {
-					if (squadState != SS_KillAll)
-						squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
-				}
-				else {
-					i = squad.Count("Military");
-					if (i > 0)
-						if (squadState == SS_Catapult)
-							nMilInCataps += i;
-						else if (squadState != SS_KillAll)
-							squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
-				}
-			}
-			else if (state == SS_Capture) {
-				if (squadState != SS_Capture)
-					squad.SetCmd(SS_Capture, 0, SF_ADVCHOOSER, "capture", hall);
-			}
-			else if (state == SS_Siege) {
-				if (squadState != SS_Catapult)
-					if (!squad.Leader.IsHeirOf("GTridentWarrior"))
-						if (!squad.Leader.IsHeirOf("BVikingLord"))
-							if (!squad.Leader.IsHeirOf("CWarElephant"))
-								squad.Siege(hall, MAX(1, squad.Count("Military") / 15), SS_Catapult, SS_Siege);
-			}
-			else if (state == SS_IDLE)
-				squad.ClrCmd(SS_IDLE, 0, SF_ADVCHOOSER);
+		if (enemyC > 0)
+			nEnemyInsidePerc = set.UnitsCount * 100 / enemyC;
+		else
+			nEnemyInsidePerc = 0;
+		if (ownC <= 1)
+			nMaxCatapsUnits = 0;
+		else {
+			nMaxCatapsUnits = ownC * MAX(30, nEnemyInsidePerc) / 100;
+			i = MAX(0, enemyC - set.UnitsCount);//invisible units can exist
+			if (ownC - nMaxCatapsUnits <= i)
+				nMaxCatapsUnits = i - ownC;
+			if (nMaxCatapsUnits <= 0)
+				nMaxCatapsUnits = 1;
 		}
+		if (!bIsOutpost)
+			bNoCataps = true;
+		else if (enemyC <= 0)
+			bNoCataps = true;
+		else if (nMaxCatapsUnits <= 0)
+			bNoCataps = true;
+		else
+			bNoCataps = false;
 
-		//adjust units in the catapults
-		if (!bNoCataps)
-			if (state == SS_KillAll)
-				if (nMilInCataps < nMaxCatapsUnits) {//add more units to siege
-					SL.Rewind;
-					for (0; !SL.EOL && nMilInCataps < nMaxCatapsUnits; SL.Next) {
-						ObjList ol;
-						Squad squad;
-						squad = SL.Cur;
-						if (squad.State != SS_KillAll)
-							continue;
-						if (squad.Leader.IsHeirOf("GTridentWarrior"))
-							continue;
-						if (squad.Leader.IsHeirOf("BVikingLord"))
-							continue;
-						if (squad.Leader.IsHeirOf("CWarElephant"))
-							continue;
-						ol = squad.Units;
-						squad.Siege(hall, (nMaxCatapsUnits - nMilInCataps + 9) / 10, SS_Catapult, SS_Siege);
-						nMilInCataps += ol.count - squad.Units.count;
-						if (nMilInCataps > nMaxCatapsUnits) {//return some of the units to the fight
-							SquadList sl;
-							ObjList olSg;
-							olSg = ol;
-							olSg.RemoveList(squad.Units);
-							for (i = nMilInCataps - nMaxCatapsUnits; i > 0; i -= 1)
-								if (olSg.count > 0)
-									olSg.Remove(olSg[0]);
-							Squadize(olSg, sl, SS_KillAll);
-							sl.Rewind;
-							sl.Lock;
-							for (0; !sl.EOL; sl.Next)
-								sl.Cur.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
-							sl.Unlock;
+		state = SS_Capture;
+		if (bIsOutpost) {
+			if (ownC > enemyC * 6)
+				bNoCataps = true;
+			else if (enemyC > set.UnitsCount)//units outside
+				state = SS_KillAll;
+			else
+				state = SS_Siege;
+		}
+		else {
+			if (enemy * 8 > own + ally)
+				if (gaika.AllEnemiesInHolder(aiPlayer))
+					state = SS_Siege;
+				else
+					break;
+			if (state == SS_Capture)
+				if (own + ally < 2000)
+					if (ownC + allyC < 5)
+						if (!set.IsIndependent)
+							break;
+		}
+		if (state == SS_Capture)
+			if (nEnemyInsidePerc < 50)
+				if (ownC < enemyC * 8)
+					state = SS_KillAll;
+
+		{
+			SquadList SL;
+			gaika.GetSquads(SL, AI_STAYING, aiPlayer, AI_OWN);
+			SL.Lock();
+			for (0; !SL.EOL; SL.Next()) {
+				squad = SL.Cur;
+				if (!squad.TestFlags(SF_PEACEFUL))
+					if (!squad.TestFlags(SF_NOAI)) {
+						squadState = squad.State;
+						if (squadState == SS_Approach) {
+							if (squad.pos.Dist(gaikaCenter) > 1600)//important: approach distance value must be like in "GetGAIKAStrat.vs"!
+								continue;
 						}
-						squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
-					}
-				}
-				else if (nMilInCataps > nMaxCatapsUnits) {//unload some units from the catapults
-					ObjList ol, olOut;
-					SL.Rewind;
-					for (0; !SL.EOL && nMilInCataps > nMaxCatapsUnits; SL.Next) {
-						Squad squad;
-						squad = SL.Cur;
-						if (squad.State != SS_Catapult)
-							continue;
-						for (i = 0; i < squad.Size; i += 1) {
-							Catapult cat;
-							Unit u;
-							u = squad.Units[i].AsUnit();
-							if (u.IsValid)
-								if (!u.InHolder) {
-									olOut.Add(u);
-									nMilInCataps -= 1;
-									if (nMilInCataps <= nMaxCatapsUnits)
-										break;
-								}
-								else {
-									cat = u.GetHolderSett().GetCentralBuilding().AsCatapult();
-									if (cat.IsValid)
-										ol.Add(cat);
-								}
+						else if (squadState != SS_IDLE)
+							if (squadState != SS_Wait)
+								if (squadState != SS_Flee)
+									if (squadState != SS_Capture)
+										if (squadState != SS_Siege)
+											if (squadState != SS_KillAll)
+												if (squadState != SS_Catapult)
+													continue;
+
+						if (state == SS_KillAll)
+							if (bNoCataps) {
+								if (squadState != SS_KillAll)
+									squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
+							}
+							else {
+								i = squad.Count("Military");
+								if (i > 0)
+									if (squadState == SS_Catapult)
+										nMilInCataps += i;
+									else if (squadState != SS_KillAll)
+										squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
+							}
+						else if (state == SS_Capture) {
+							if (squadState != SS_Capture)
+								squad.SetCmd(SS_Capture, 0, SF_ADVCHOOSER, "capture", hall);
 						}
-					}
-					if (nMilInCataps > nMaxCatapsUnits)
-						for (i = 0; i < ol.count; i += 1) {
-							Catapult cat;
-							cat = ol[i].AsCatapult();
-							if (cat.IsValid) {
-								Unit u;
-								int nCount;
-								nCount = cat.settlement.Units.count;
-								for (i = 1; i < nCount && nMilInCataps > nMaxCatapsUnits; i += 1) {
-									u = cat.settlement.Units[i].AsUnit();
-									if (u.IsValid) {
-										olOut.Add(u);
-										nMilInCataps -= 1;
-									}
-								}
+						else if (state == SS_Siege) {
+							if (squadState != SS_Catapult) {
+								u = squad.Leader;
+								if (!u.IsHeirOf("GTridentWarrior"))
+									if (!u.IsHeirOf("BVikingLord"))
+										if (!u.IsHeirOf("CWarElephant"))
+											if (!u.IsHeirOf("TValkyrie"))
+												squad.Siege(hall, MAX(1, squad.Count("Military") / 15), SS_Catapult, SS_Siege);
 							}
 						}
-					if (olOut.count > 0) {
-						SquadList sl;
-						Squadize(olOut, sl, SS_KillAll);
-						sl.Rewind;
-						sl.Lock;
-						for (0; !sl.EOL; sl.Next)
-							sl.Cur.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
-						sl.Unlock;
+						else if (state == SS_IDLE)
+							squad.ClrCmd(SS_IDLE, 0, SF_ADVCHOOSER);
 					}
-				}
-		SL.Unlock;
+			}
+
+			//adjust units in the catapults
+			if (!bNoCataps)
+				if (state == SS_KillAll)
+					if (nMilInCataps < nMaxCatapsUnits) {//add more units to siege
+						for (SL.Rewind(); !SL.EOL; SL.Next()) {
+							if (nMilInCataps >= nMaxCatapsUnits)
+								break;
+							squad = SL.Cur;
+							if (squad.State == SS_KillAll) {
+								u = squad.Leader;
+								if (!u.IsHeirOf("GTridentWarrior"))
+									if (!u.IsHeirOf("BVikingLord"))
+										if (!u.IsHeirOf("CWarElephant"))
+											if (!u.IsHeirOf("TValkyrie")) {
+												ol = squad.Units;
+												squad.Siege(hall, (nMaxCatapsUnits - nMilInCataps + 9) / 10, SS_Catapult, SS_Siege);
+												nMilInCataps += ol.count - squad.Units.count;
+												if (nMilInCataps > nMaxCatapsUnits) {//return some of the units to the fight
+													SquadList sl;
+													olSg = ol;
+													olSg.RemoveList(squad.Units);
+													for (i = nMilInCataps - nMaxCatapsUnits; i > 0; i -= 1)
+														if (olSg.count > 0)
+															olSg.Remove(olSg[0]);
+													Squadize(olSg, sl, SS_KillAll);
+													sl.Lock();
+													for (sl.Rewind(); !sl.EOL; sl.Next())
+														sl.Cur.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
+													sl.Unlock();
+												}
+												squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
+											}
+							}
+						}
+					}
+					else if (nMilInCataps > nMaxCatapsUnits) {//unload some units from the catapults
+						ObjList olCataps, olOut;
+						for (SL.Rewind(); !SL.EOL; SL.Next()) {
+							if (nMilInCataps <= nMaxCatapsUnits)
+								break;
+							squad = SL.Cur;
+							if (squad.State == SS_Catapult)
+								for (i = 0; i < squad.Size; i += 1) {
+									u = squad.Units[i].AsUnit();
+									if (u.IsValid)
+										if (!u.InHolder) {
+											olOut.Add(u);
+											nMilInCataps -= 1;
+											if (nMilInCataps <= nMaxCatapsUnits)
+												break;
+										}
+										else {
+											catap = u.GetHolderSett().GetCentralBuilding().AsCatapult();
+											if (catap.IsValid)
+												olCataps.Add(catap);
+										}
+								}
+						}
+						if (nMilInCataps > nMaxCatapsUnits)
+							for (i = 0; i < olCataps.count; i += 1) {
+								catap = olCataps[i].AsCatapult();
+								if (catap.IsValid)
+									for (i = catap.settlement.Units.count - 1; i >= 1; i -= 1) {
+										if (nMilInCataps <= nMaxCatapsUnits)
+											break;
+										u = catap.settlement.Units[i].AsUnit();
+										if (u.IsValid) {
+											olOut.Add(u);
+											nMilInCataps -= 1;
+										}
+									}
+							}
+						if (olOut.count > 0) {
+							SquadList sl;
+							Squadize(olOut, sl, SS_KillAll);
+							sl.Lock();
+							for (sl.Rewind(); !sl.EOL; sl.Next())
+								sl.Cur.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
+							sl.Unlock();
+						}
+					}
+			SL.Unlock();
+		}
+		Sleep(nSleepGS);
 	}
-	Sleep(AIVar(AIPlayer, AIV_Sleep_GS));
 }
 
 {
 	SquadList SL;
-	Squad squad;
-	int nextStrat, squadState;
-	nextStrat = gaika.GetStrat(AIPlayer);
-	gaika.GetSquads(SL, AI_ALL, AIPlayer, AI_OWN);
-	SL.Rewind;
-	SL.Lock;
-	for (0; !SL.EOL; SL.Next) {
-		bool bKillOrClear = false;
+	int nextStrat;
+	bool bKillOrClear;
+	nextStrat = gaika.GetStrat(aiPlayer);
+	gaika.GetSquads(SL, AI_ALL, aiPlayer, AI_OWN);
+	SL.Lock();
+	while (!SL.EOL) {
+		bKillOrClear = false;
 		squad = SL.Cur;
 		squadState = squad.State;
 		if (squadState == SS_Capture)
@@ -304,7 +312,7 @@ while (set.IsEnemy(AIPlayer) && gaika.GetStrat(AIPlayer) == GS_Capture) {
 			if (nextStrat == GS_KillEnemies)
 				squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
 			else if (nextStrat == GS_Capture)//this should manage the case where there are generated units in a tent (currently it can happen only with a human player)
-				if (set.IsTTent)
+				if (bIsTTent)
 					squad.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "ai_killall");
 				else {
 					squad.SetState(SS_IDLE);
@@ -314,6 +322,7 @@ while (set.IsEnemy(AIPlayer) && gaika.GetStrat(AIPlayer) == GS_Capture) {
 				squad.SetState(SS_IDLE);
 				squad.SendTo(gaika, 1);
 			}
+		SL.Next();
 	}
-	SL.Unlock;
+	SL.Unlock();
 }

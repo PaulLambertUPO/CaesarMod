@@ -1,14 +1,15 @@
 //void, Settlement set, int num, ObjList ol
 
 //called by specific tactic scripts (TS_...Tactic), this script manages the recruitment of magic units (temple)
+//IMPORTANT: do not assign directly to ol because it references the original list (only use Add/Remove to update it)
 
-ObjList ol1, ol2;
-int Greece, nRace, i;
+ObjList ol1;
+int nRace, i;
 str class, cmd;
 
-Greece = ImperialRome;
 nRace = set.GetCentralBuilding().race;
-if (nRace == Greece)
+
+if (nRace == ImperialRome)//Greece
 	class = "HPriest";
 else if (nRace == RepublicanRome) {
 	if (IsResearched(set, "ChoosePunicRome"))
@@ -18,27 +19,28 @@ else if (nRace == RepublicanRome) {
 }
 else
 	class = TempleUType(nRace);
-cmd = "train" + class;//do not use TempleUTrain(nRace) because it is a bugged function: it causes a game crash for Germany, while for Egypt and Britain it returns the wrong class...
+cmd = "train" + class;//do not use TempleUTrain(nRace) because it is a bugged function: it causes a game crash for Germany, while for Egypt and Britain it returns the wrong class
 
-if (num) {//steal from the AI
+if (num > 0) {//steal from the AI
+	ObjList ol2;
 	Unit u;
-	ol1 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, true);
-	for (i = 0; i < ol1.count; i += 1) {
-		u = ol1[i].AsUnit();
+	ol2 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, true);
+	for (i = 0; i < ol2.count; i += 1) {
+		u = ol2[i].AsUnit();
 		if (u.IsAlive) {
 			if (u.hero.IsValid)
 				u.DetachFrom(u.hero);
-			ol2.Add(u);
+			ol1.Add(u);
 		}
 	}
-	num -= ol2.count;
+	num -= ol1.count;
 }
 
-if (num) {//count how many are queued
+if (num > 0) {//count how many are queued
 	ObjList temples;
-	if (nRace == Greece) {
+	if (nRace == ImperialRome) {//Greece
 		ObjList buildings;
-		buildings = set.Buildings();
+		buildings = set.Buildings;
 		for (i = 0; i < buildings.count; i += 1)
 			if (buildings[i].class == "HTemple")
 				temples.Add(buildings[i]);
@@ -49,38 +51,45 @@ if (num) {//count how many are queued
 		num -= temples[i].CmdCount(cmd);
 }
 
-if (num) {//issue commands
-	Building b;
+if (num > 0) {//issue commands
+	Building temple;
 	int gold, food;
 	point ptDummy;
 	Obj objDummy;
 	for (i = 0; i < num; i += 1) {
-		if (nRace == Greece) {
+		if (nRace == ImperialRome) {//Greece
 			ObjList buildings;
+			Building b;
 			int j, min;
 			bool first_time = true;
-			buildings = set.Buildings();
-			for (j = 0; j < buildings.count; j += 1)
-				if (buildings[j].class == "HTemple")
-					if (first_time || buildings[j].CmdCount < min) {
-						first_time = false;
-						min = buildings[j].CmdCount;
-						b = buildings[j];
-					}
+			buildings = set.Buildings;
+			for (j = 0; j < buildings.count; j += 1) {
+				b = buildings[j];
+				if (b.IsHeirOf("HTemple"))//using IsHeirOf is better than a direct class check because it manages winter variants
+					if (!b.IsBroken)
+						if (first_time) {
+							first_time = false;
+							min = b.CmdCount;
+							temple = b;
+						}
+						else if (b.CmdCount < min) {
+							min = b.CmdCount;
+							temple = b;
+						}
+			}
 		}
 		else
-			b = set.BestTemple();
-		if (b.IsValid)
-			if (GetCmdCost(cmd, gold, food)) {
-				if (set.gold < gold)
-					break;
-				if (set.food < food)
-					break;
-				set.SpentGoldOnArmy(gold + food / 2);
-				b.ExecCmd(cmd, ptDummy, objDummy, false);
-			}
+			temple = set.BestTemple();
+		if (temple.IsValid)
+			if (!temple.IsBroken)
+				if (GetCmdCost(cmd, gold, food)) {
+					if (!set.CanAfford(cmd))
+						break;
+					set.SpentGoldOnArmy(gold + food / 2);
+					temple.ExecCmd(cmd, ptDummy, objDummy, false);
+				}
 	}
 }
 
-SetNoAIFlag(ol2, true);
-ol.AddList(ol2);
+SetNoAIFlag(ol1, true);
+ol.AddList(ol1);

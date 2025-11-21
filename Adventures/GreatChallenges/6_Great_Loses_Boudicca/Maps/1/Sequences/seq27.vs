@@ -2,7 +2,7 @@ ObjList ol;
 int i;
 
 IceniTown.obj.AsBuilding().Research("Britain Swords");
-IceniTown.obj.AsBuilding().Research("Britain Fights");
+IceniTown.obj.AsBuilding().Research("Challenges");
 IceniTown.obj.AsBuilding().Research("Britain chamber");
 
 SetShortcutSel(1, 1, Natasha.GetObjList());

@@ -81,6 +81,36 @@
 		rollover="Create Egyptian Ship">
 		<src obj="BaseShipyard" />
 	</cmd>
+	<!-- used only by AI (since it cheats for the cost, this avoids the exploit where a human player with shared control stops the command to get free resources) -->
+	<cmd name="buildshipAi"
+		method="build_ship"
+		traincommand="yes"
+		queueicon="gameres/icons/Ship.bmp"
+		param="ShipL"
+		execdelay="20000"
+		transpicon="1">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<!-- used only by AI (since it cheats for the cost, this avoids the exploit where a human player with shared control stops the command to get free resources) -->
+	<cmd name="buildshipRomeAi"
+		method="build_ship"
+		traincommand="yes"
+		queueicon="gameres/icons/ShipRome.bmp"
+		param="ShipRome"
+		execdelay="20000"
+		transpicon="1">
+		<src obj="BaseShipyard" />
+	</cmd>
+	<!-- used only by AI (since it cheats for the cost, this avoids the exploit where a human player with shared control stops the command to get free resources) -->
+	<cmd name="buildshipEgyptAi"
+		method="build_ship"
+		traincommand="yes"
+		queueicon="gameres/icons/ShipEgypt.bmp"
+		param="ShipEgypt"
+		execdelay="20000"
+		transpicon="1">
+		<src obj="BaseShipyard" />
+	</cmd>
 	<cmd name="deployFishermen" priority="15"
 		button="actions/call Fisherman.bmp"
 		queueicon="gameres/icons/Fisherman.bmp"

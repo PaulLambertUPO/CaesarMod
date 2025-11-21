@@ -1,189 +1,190 @@
 //void
 
-bool bAllSatisfied = false;
+int aiPlayer, nSleepRecruit, nMaxAttentionPoints, nLastGaika;
+int nMilEval, nAvail, nAttentionPoints, nHomeGaikaId, gLsa, nMinNeed, nMaxNeed, nSent, own, ally, enemy, enemy_hidden, i;
+bool bAssUnderFire, bStrongholdGaika, bNotSatisfied, bAllSatisfied = false;
+GAIKA g;
+Settlement set;
 
-Sleep(rand(1000) + 300);
+Sleep(rand(1001) + 500);
+
+aiPlayer = AIGetPlayer();
+nSleepRecruit = AIVar(aiPlayer, AIV_Sleep_Recruit);
+nMaxAttentionPoints = MAX(1, AIVar(aiPlayer, AIV_MaxAttentionPoints));
+nLastGaika = GAIKACount - 1;
+
+while (!GetGAIKA(nLastGaika).Prioritized(aiPlayer))
+	Sleep(2000);
 
 while (1) {
-	bool bFindNewHome = false, bNotSatisfied = false;
-	int AIPlayer, nHomeGaikaID, i, nAvail, nMilEval, nAttentionPoints, nMaxAttentionPoints;
+	nMilEval = MilEval(aiPlayer);//this is without sentries
 
-	AIPlayer = AIGetPlayer();
-	nMaxAttentionPoints = MAX(1, AIVar(AIPlayer, AIV_MaxAttentionPoints));
+	if (nMilEval >= 1) {
+		nAttentionPoints = 0;
+		bNotSatisfied = false;
 
-	nMilEval = MilEval(AIPlayer);//this is without sentries
-	if (nMilEval < 1) {
-		Sleep(2000);
-		continue;
-	}
-	nAvail = nMilEval;
+		nAvail = nMilEval;
 
-	if (!GetGAIKA(GAIKACount - 1).Prioritized(AIPlayer)) {
-		Sleep(1000);
-		continue;
-	}
-
-	//check home and try to find another one if lost
-	nHomeGaikaID = EnvReadInt(AIPlayer, "HomeGaika");
-	if (nHomeGaikaID > 0)
-		if (!GetGAIKA(nHomeGaikaID).settlement.IsOwn(AIPlayer))
-			bFindNewHome = true;
-	if (bFindNewHome || nHomeGaikaID <= 0) {
-		Settlement set;
-		point pt;
-		set = NearestStronghold(pt, AIPlayer);
-		if (set.IsValid) {
-			nHomeGaikaID = set.GetGaika().ID;
-			EnvWriteInt(AIPlayer, "HomeGaika", nHomeGaikaID);
+		nHomeGaikaId = EnvReadInt(aiPlayer, "HomeGaika");//check home and try to find another one if lost
+		if (nHomeGaikaId <= 0) {
+			Settlement s;
+			point pt;
+			s = NearestStronghold(pt, aiPlayer);
+			if (s.IsValid) {
+				nHomeGaikaId = s.GetGaika().ID;
+				EnvWriteInt(aiPlayer, "HomeGaika", nHomeGaikaId);
+			}
 		}
-	}
-
-	for (i = 0; i < GAIKACount; i += 1) {
-		GAIKA g;
-		Settlement set;
-		int own, ally, enemy, enemy_hidden;
-		int nMinNeed, nMaxNeed, nSent;
-		bool bAssUnderFire = false, bAttention = false, bStrongholdGaika;
-
-		//always check the home GAIKA first (no matter the priority)
-		if (i == 0) {
-			if (nHomeGaikaID <= 0)
-				continue;
-			g = GetGAIKA(nHomeGaikaID);
+		else if (!GetGAIKA(nHomeGaikaId).settlement.IsOwn(aiPlayer)) {//home settlement is always valid
+			Settlement s;
+			point pt;
+			s = NearestStronghold(pt, aiPlayer);
+			if (s.IsValid) {
+				nHomeGaikaId = s.GetGaika().ID;
+				EnvWriteInt(aiPlayer, "HomeGaika", nHomeGaikaId);
+			}
 		}
-		else {
-			g = LAIKA(AIPlayer, i);
-			if (g.ID == nHomeGaikaID)
-				continue;
-		}
-		set = g.settlement;
 
-		bStrongholdGaika = set.IsStronghold;
+		for (i = 0; i <= nLastGaika; i += 1) {
+			bAssUnderFire = false;
 
-		if (nAttentionPoints >= nMaxAttentionPoints)
-			if (g.ID != nHomeGaikaID)
-				if (!bStrongholdGaika)//check for allied strongholds
+			if (i == 0) {//always check the home GAIKA first
+				if (nHomeGaikaId <= 0)
 					continue;
-
-		if (g.ID != nHomeGaikaID)
-			if (!g.Explored(AIPlayer))
-				if (!g.CanExplore(AIPlayer))
+				g = GetGAIKA(nHomeGaikaId);
+			}
+			else {
+				g = LAIKA(aiPlayer, i);
+				if (g.ID == nHomeGaikaId)
 					continue;
+			}
+			set = g.settlement;
 
-		if (!set.IsValid)
-			if (g.Empty)
-				if (g.Explored(AIPlayer))
-					continue;
+			if (set.IsValid)
+				bStrongholdGaika = set.IsStronghold;
+			else
+				bStrongholdGaika = false;
 
-		g.Eval(AI_COMING + AI_STAYING, AIPlayer, own, ally, enemy, enemy_hidden);
-
-		//calc army needs
-		if (bStrongholdGaika)
-			if (own + ally < enemy)
-				if (set.IsOwn(AIPlayer))
-					bAssUnderFire = true;
-				else if (set.IsAlly(AIPlayer))
-					bAssUnderFire = true;
-
-		if (!bAssUnderFire)
-			if (nAttentionPoints >= nMaxAttentionPoints)
-				continue;
-
-		//count "attention points"
-		if (own > 0)
-			if (enemy > 0)
-				bAttention = true;
-			else if (set.IsEnemy(AIPlayer))
-				if (!set.IsIndependent)
-					bAttention = true;
-		if (!bAttention)
-			if (enemy > 0)
-				if (set.IsOwn(AIPlayer))
-					if (g.Eval(AI_STAYING, AIPlayer, AI_ENEMY) > 0)
-						bAttention = true;
-		if (bAttention)
-			if (!bStrongholdGaika)
-				nAttentionPoints += 1;
-
-		nMinNeed = g.MinNeed(AIPlayer, own, ally, enemy);
-		nMaxNeed = g.MaxNeed(AIPlayer, own, ally, enemy);
-
-		if (own + ally >= nMinNeed) {
-			if (!bAllSatisfied)
-				continue;
+			if (g.ID != nHomeGaikaId) {
+				if (!bStrongholdGaika)
+					if (nAttentionPoints >= nMaxAttentionPoints)//check for allied strongholds
+						continue;
+				if (!g.Explored(aiPlayer))
+					if (!g.CanExplore(aiPlayer))
+						continue;
+			}
 			if (!set.IsValid)
-				continue;
-			if (set.IsAlly(AIPlayer))
-				continue;
-		}
-
-		if (!bStrongholdGaika)
-			if (enemy < 1000)
-				if (set.IsValid)
-					if (set.IsAlly(AIPlayer))
+				if (g.Empty)
+					if (g.Explored(aiPlayer))
 						continue;
 
-		if (bAssUnderFire)
-			nMinNeed = 1;
+			g.Eval(AI_COMING + AI_STAYING, aiPlayer, own, ally, enemy, enemy_hidden);
 
-		//quick "no chance" filter
-		if (!bAssUnderFire)
-			if (nAvail < nMinNeed - (own + ally))
-				continue;
-		if (IsWaterLsa(g.LSA))
-			if (Ships(AIPlayer, g.LSA) == 0) {
-				IncShipNeeds(AIPlayer, g.LSA);
-				continue;
+			if (bStrongholdGaika)//calculate army needs
+				if (own + ally < enemy)
+					if (set.IsOwn(aiPlayer))//validity check is already done through bStrongholdGaika
+						bAssUnderFire = true;
+					else if (set.IsAlly(aiPlayer))
+						bAssUnderFire = true;
+
+			if (!bAssUnderFire)
+				if (nAttentionPoints >= nMaxAttentionPoints)
+					continue;
+
+			if (!bStrongholdGaika)//count "attention points"
+				if (enemy > 0) {
+					if (own > 0)
+						nAttentionPoints += 1;
+					else if (set.IsValid)
+						if (set.IsOwn(aiPlayer))
+							if (g.Eval(AI_STAYING, aiPlayer, AI_ENEMY) > 0)
+								nAttentionPoints += 1;
+				}
+				else if (own > 0)
+					if (set.IsValid)
+						if (set.IsEnemy(aiPlayer))
+							if (!set.IsIndependent)
+								nAttentionPoints += 1;
+
+			nMinNeed = g.MinNeed(aiPlayer, own, ally, enemy);
+			nMaxNeed = g.MaxNeed(aiPlayer, own, ally, enemy);
+
+			if (own + ally >= nMinNeed) {
+				if (!bAllSatisfied)
+					continue;
+				if (!set.IsValid)
+					continue;
+				if (set.IsAlly(aiPlayer))
+					continue;
 			}
 
-		//LAIKA flags filters
-		if (g.NoRecruit(AIPlayer))
-			continue;
-		if (g.NoAttack(AIPlayer)) {
-			if (set.IsEnemy(AIPlayer))
+			if (bAssUnderFire)
+				nMinNeed = 1;
+			else if (nAvail < nMinNeed - (own + ally))//quick "no chance" filter
 				continue;
-			if (!set.IsValid)
-				if (enemy > 0)
-					if (own == 0)
-						if (ally == 0)
+
+			if (!bStrongholdGaika)
+				if (enemy < 1000)
+					if (set.IsValid)
+						if (set.IsAlly(aiPlayer))
 							continue;
-		}
 
-		if (bAllSatisfied)
-			nMaxNeed = 10000000;
+			gLsa = g.LSA;
+			if (IsWaterLsa(gLsa))
+				if (Ships(aiPlayer, gLsa) <= 0) {
+					IncShipNeeds(aiPlayer, gLsa);
+					continue;
+				}
 
-		bAllSatisfied = false;
-		bNotSatisfied = true;
+			//LAIKA flag filters
+			if (g.NoRecruit(aiPlayer))
+				continue;
+			if (g.NoAttack(aiPlayer))
+				if (set.IsValid) {
+					if (set.IsEnemy(aiPlayer))
+						continue;
+				}
+				else if (enemy > 0)
+					if (own <= 0)
+						if (ally <= 0)
+							continue;
 
-		//recruit
-		if (bAssUnderFire) {
-			EnvWriteInt(AIPlayer, "AssUnderFireGaika", g.ID);
-			nSent = g.Recruit(AIPlayer, 1, nMaxNeed - own, nAvail);
-			EnvWriteInt(AIPlayer, "AssUnderFireGaika", 0);
-		}
-		else
-			nSent = g.Recruit(AIPlayer, nMinNeed - (own + ally), nMaxNeed - own, nAvail);
+			if (bAllSatisfied)
+				nMaxNeed = 10000000;
 
-		if (nSent == 0) {
-			int me;
-			if (IsWaterLsa(g.LSA))
-				if (g.Explored(AIPlayer))
-					IncShipNeeds(AIPlayer, g.LSA);
-			if (nAvail == 0)
-				break;
-			Sleep(AIVar(AIPlayer, AIV_Sleep_Recruit));
-			me = MilEval(AIPlayer);
-			if (me > nMilEval) {
-				nAvail += me - nMilEval;
-				nMilEval = me;
+			bAllSatisfied = false;
+			bNotSatisfied = true;
+
+			//recruit (send army)
+			if (bAssUnderFire) {
+				EnvWriteInt(aiPlayer, "AssUnderFireGaika", g.ID);
+				nSent = g.Recruit(aiPlayer, 1, nMaxNeed - own, nAvail);
+				EnvWriteInt(aiPlayer, "AssUnderFireGaika", 0);
 			}
-			continue;
+			else
+				nSent = g.Recruit(aiPlayer, nMinNeed - (own + ally), nMaxNeed - own, nAvail);
+
+			if (nSent <= 0) {
+				int me;
+				if (IsWaterLsa(gLsa))
+					if (g.Explored(aiPlayer))
+						IncShipNeeds(aiPlayer, gLsa);
+				if (nAvail <= 0)
+					break;
+				Sleep(nSleepRecruit);
+				me = MilEval(aiPlayer);//military power can change during the sleep
+				if (me > nMilEval) {
+					nAvail += me - nMilEval;
+					nMilEval = me;
+				}
+				continue;
+			}
+
+			break;
 		}
 
-		break;
+		bAllSatisfied = !bNotSatisfied;
 	}
 
-	bAllSatisfied = !bNotSatisfied;
-
-	Sleep(AIVar(AIPlayer, AIV_Sleep_Recruit));
+	Sleep(nSleepRecruit);
 }

@@ -505,7 +505,7 @@ Símbolo de orden y civilización, Roma tiene a su disposición un ejército de 
 
 Para ganar, de hecho, Roma confía en las excelentes estadísticas básicas de sus tropas, mejoradas aún más por las características especiales de los héroes, y en la exploración del territorio.
 
-Al inicio del juego, desde el foro, hay que elegir con qué tipo de Roma se quiere jugar: republicana, imperial o púnica, cada una con sus particularidades.
+Al inicio del juego, hay que elegir con qué tipo de Roma se quiere jugar: republicana, imperial o púnica, cada una con sus particularidades.
 				</entry>
 				<entry />
 				<entry hcenter="1">Puntos fuertes</entry>
@@ -680,7 +680,7 @@ A diferencia de otros pueblos, Germania utiliza los víveres para reclutar a sus
 				</entry>
 				<entry hcenter="1">Puntos débiles</entry>
 				<entry>
-- Tropas con defensa casi inexistente
+- Tropas con defensa casi inexistente y disponibles en número limitado
 
 - Para empezar a ser realmente eficaces, los héroes deben ser de alto nivel
 
@@ -1039,7 +1039,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry />
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Se recluta en el Templo de Morrigan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Depende de Juegos de circo</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Depende de Desafíos</entry>
 			</topic>
 			<topic id="EHero">
 				<entry hcenter="1" font="large">Héroe egipcio</entry>
@@ -2091,7 +2091,7 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry />
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Se recluta en el Templo de Morrigan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Requiere Juegos de circo</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Requiere Desafíos</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Shrine of Thor.bmp" link="/contents/buildings/BArena">Depende de Erigir altar de Thor</entry>
 			</topic>
 			<topic id="BDruid">
@@ -2500,7 +2500,7 @@ El asaltador teutón cambia equipos y se convierte en jinete teutón (solo en es
 				<entry />
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/TSanctuaryOfVotan.bmp" link="/contents/buildings/TArena">Se recluta en el Santuario de Wotan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Fights.bmp" link="/contents/buildings/TArena">Requiere Juegos de circo</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsT.bmp" link="/contents/buildings/TArena">Requiere Combates tribales</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Legendary Valkyries.bmp" link="/contents/buildings/TArena">Depende de Leyenda de las valquirias</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Tales of Heroes1.bmp" link="/contents/buildings/TArena">Depende de Poemas bárbaros</entry>
 			</topic>
@@ -4762,7 +4762,7 @@ Coste: 800 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Upgrades/FightsB.bmp">
-Juegos de circo
+Desafíos
 Hace a los nuevos héroes de nivel 6.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4898,8 +4898,8 @@ Reclutar héroe
 Coste: 800 oro
 Tiempo: 20 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Fights.bmp">
-Juegos de circo
+				<entry vcenter="1" image="UI/Help/TCmdBar/Upgrades/FightsT.bmp">
+Combates tribales
 Recauda 4000 víveres.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -5404,8 +5404,8 @@ Compra 800 víveres en el mercado por 400 oro.
 Coste: 400 oro
 Tiempo: 10 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Grain Trade.bmp">
-Comerciar con víveres
+				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Grain Trade T.bmp">
+Venta de víveres
 Recauda 1000 oro.
 Coste: 2000 víveres
 Tiempo: 20 segundos
@@ -6352,7 +6352,7 @@ Se genera en las ruinas.
 			<entry image="UI/Icons/Items/Blood Stone.bmp">
 Piedra sanguinaria
 Aumenta la experiencia en 50 puntos.
-Si se utiliza, restablece la salud del poseedor sustrayéndola de un enemigo a elección (con una recarga de 20 segundos).
+Si se utiliza, restablece la salud del poseedor sustrayéndola de un enemigo a elección (con una recarga de 30 segundos).
 Se genera en el esqueleto cada 30 minutos.
 			</entry>
 			<entry image="UI/Icons/Items/Snake Skin.bmp">

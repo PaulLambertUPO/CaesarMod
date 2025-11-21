@@ -178,7 +178,7 @@
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Mass heal"
 		description="Heals nearby allies (at the cost of life)"
-		param="Mass Heal, Temple of Thor">
+		param="Mass Heal">
 		<src obj="BDruid" />
 		<src obj="TEnchantress" />
 	</cmd>

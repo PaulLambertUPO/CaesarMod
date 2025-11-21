@@ -1,23 +1,22 @@
-// void
-int         nSetIdx, nMaxSet;
-Settlement  Set;
-int         AIPlayer;
-int         script;
+//void
 
-Sleep(rand(800) + 200);
+Settlement set;
+int aiPlayer, nMaxSetIdx, script, i;
 
-AIPlayer = AIGetPlayer();
-nMaxSet = MaxSetIdx();
-while( true )
-{
-	for( nSetIdx = 0; nSetIdx < nMaxSet; nSetIdx += 1 )
-	{
-		Set = IdxToSet( nSetIdx );
-		if (!Set.IsOwn(AIPlayer)) continue;
-		if( Set.EconomyScript != ES_NONE ) continue;
-		script = Set.GetEconomyScript( AIPlayer );
-		if( script != ES_NONE )
-			Set.RunEconomyScript( script );
+Sleep(500 + rand(501));
+
+aiPlayer = AIGetPlayer();
+nMaxSetIdx = MaxSetIdx;
+
+while (1) {
+	for (i = 0; i < nMaxSetIdx; i += 1) {
+		set = IdxToSet(i);
+		if (set.IsOwn(aiPlayer))
+			if (set.EconomyScript == ES_NONE) {
+				script = set.GetEconomyScript(aiPlayer);
+				if (script != ES_NONE)
+					set.RunEconomyScript(script);
+			}
 	}
 	Sleep(1000);
 }

@@ -16,17 +16,14 @@ if (.IsValid) {
 	.SetNoAIFlag(true);
 
 	if (!.IsSentry) {
-		int player, exp = 1;
+		int player;
 
 		player = .player;
 
 		if (.AsHero().IsValid) {
-			exp = 10;
 			if (.inherentlevel > EnvReadInt(player, "BestHeroLevel"))
 				EnvWriteInt(player, "BestHeroLevel", .inherentlevel);
 		}
-		else if (.IsHeirOf("GTridentWarrior"))
-			exp = 5;
 		else if (.IsHeirOf("IMountaineer")) {
 			if (.inherentlevel > EnvReadInt(player, "BestMountaineerLevel"))
 				EnvWriteInt(player, "BestMountaineerLevel", .inherentlevel);
@@ -45,16 +42,26 @@ if (.IsValid) {
 
 		if (IsResearched(player, "Warrior Tales"))
 			if (!.InHolder) {
-				int chance = 3;
+				int i, exp;
 
-				if (exp > 1)
-					chance = 1;
-				if (rand(chance) == 0) {
+				if (.AsHero().IsValid) {
+					i = 1;
+					exp = 10;
+				}
+				else if (.IsHeirOf("GTridentWarrior")) {
+					i = 1;
+					exp = 5;
+				}
+				else {
+					i = 3;
+					exp = 1;
+				}
+
+				if (rand(i) == 0) {
 					Unit u;
 					ObjList ol;
-					int i;
 
-					ol = ObjsInRange(this, "Military", 500).GetObjList();
+					ol = ObjsInCircle(.pos, 500, "Military").GetObjList();
 
 					for (i = 0; i < ol.count; i += 1) {
 						u = ol[i].AsUnit();

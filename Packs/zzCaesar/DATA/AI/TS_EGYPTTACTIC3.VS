@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olAnubisWarriors, olSwordsmen, olArchers;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsQuickMarch;
 aSkills[1] = hsHealing;
@@ -25,7 +25,7 @@ aSkillLevels[1] = 8;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGrainTrade || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGrainTrade || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bGrainTrade)
@@ -33,10 +33,11 @@ aSkillLevels[1] = 8;
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -54,7 +55,7 @@ aSkillLevels[1] = 8;
 //cult of Anubis + buy slaves
 {
 	bool bAnubisCult = false, bSlaves = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bAnubisCult || !bSlaves)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bAnubisCult || !bSlaves)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bAnubisCult)
@@ -68,7 +69,7 @@ aSkillLevels[1] = 8;
 //path of the dead 1 + barrack level 1
 {
 	bool bPathDead1 = false, bBarrack1 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bPathDead1 || !bBarrack1)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bPathDead1 || !bBarrack1)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bPathDead1)
@@ -82,7 +83,7 @@ aSkillLevels[1] = 8;
 //path of the dead 2 + buy slaves
 {
 	bool bPathDead2 = false, bSlaves = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bPathDead2 || !bSlaves)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bPathDead2 || !bSlaves)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bPathDead2)
@@ -102,7 +103,7 @@ aSkillLevels[1] = 8;
 	charms[1] = "Charm of Thoth";
 	charms[2] = "Charm of Ra";
 	charms[3] = "Charm of Isis";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bPathDead3 || olAnubisWarriors.count < nAnubisWarriors || olSwordsmen.count < nSwordsmen || olArchers.count < nArchers)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bPathDead3 || olAnubisWarriors.count < nAnubisWarriors || olSwordsmen.count < nSwordsmen || olArchers.count < nArchers)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bPathDead3)
@@ -126,7 +127,7 @@ aSkillLevels[1] = 8;
 		olArchers.SetCommand("enter", set.GetCentralBuilding());
 		Sleep(4100 + rand(15) * 100);
 	}
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && !bCharm) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && !bCharm) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		bCharm = set.TSResearch(charms[rand(4)]);
@@ -139,13 +140,19 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olAnubisWarriors.SetCommand("attach", hero);
 		olSwordsmen.SetCommand("attach", hero);
 		olArchers.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olAnubisWarriors.ClearDead();
@@ -155,4 +162,4 @@ SetNoAIFlag(olAnubisWarriors, false);
 SetNoAIFlag(olSwordsmen, false);
 SetNoAIFlag(olArchers, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

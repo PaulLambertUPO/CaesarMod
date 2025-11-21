@@ -15,7 +15,6 @@
 
 	<method sig="idle" vs="data/subai/bdruid_idle.vs" />
 	<method sig="stand_position" vs="data/subai/bdruid_stand_position.vs" />
-	<method sig="advance" vs="data/subai/unit_advance.vs" />
 
 	<method sig="hide" vs="data/subai/druid_hide_unit.vs" verify="data/subai/druid_hide_verify.vs" />
 	<method sig="hide" vs="data/subai/druid_hide_ground.vs" />

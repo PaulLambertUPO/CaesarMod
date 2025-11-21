@@ -5,13 +5,13 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olCavalry, olEnchantresses;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 point ptTeaching;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[1] = hsTeamDefense;
 aSkills[0] = hsHealing;
@@ -29,7 +29,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 	point ptDummy;
 	Obj objDummy;
 	Barrack barrack;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseshoes || olEnchantresses.count < nEnchantresses || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseshoes || olEnchantresses.count < nEnchantresses || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		else {
@@ -48,10 +48,11 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -62,7 +63,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 {
 	olEnchantresses.SetCommand("move", ptTeaching);
 	olEnchantresses.AddCommand(false, "teach", hero);
-	if (set.player == AIPlayer)
+	if (set.player == aiPlayer)
 		set.Research("autotrain_start");
 	Sleep(4100 + rand(15) * 100);
 }
@@ -70,7 +71,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 //barrack level 1 + tame horses
 {
 	bool bBarrack1 = false, bTameHorses = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bTameHorses)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bTameHorses)) {
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		if (!bTameHorses)
@@ -79,11 +80,12 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 	}
 }
 
-//30 cavalry
+//barrack level 2 + 30 cavalry
 {
 	int nCount, nCavalry = 30;
+	bool bBarrack2 = false;
 	str supportCmd = "Sell food";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && olCavalry.count < nCavalry) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olCavalry.count < nCavalry)) {
 		if (hero.IsValid) {
 			if (!bHeroScript)
 				if (hero.inherentlevel >= 4) {
@@ -97,10 +99,13 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 				}
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		}
-		if (olCavalry.count < nCavalry) {
-			nCount = nCavalry - olCavalry.count;
-			olCavalry.AddList(set.TSRecruitArmy("ICavalry", nCount));
-		}
+		if (!bBarrack2)
+			bBarrack2 = set.TSResearch("Barrack Level 2");
+		if (bBarrack2)
+			if (olCavalry.count < nCavalry) {
+				nCount = nCavalry - olCavalry.count;
+				olCavalry.AddList(set.TSRecruitArmy("ICavalry", nCount));
+			}
 		if (set.CanAfford(supportCmd))
 			set.TSResearch(supportCmd);
 		olCavalry.SetCommand("enter", set.GetCentralBuilding());
@@ -113,11 +118,17 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olCavalry.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 		//enchantresses remain in the fortress to train other units
 	}
 
@@ -126,4 +137,4 @@ olEnchantresses.ClearDead();
 SetNoAIFlag(olCavalry, false);
 SetNoAIFlag(olEnchantresses, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

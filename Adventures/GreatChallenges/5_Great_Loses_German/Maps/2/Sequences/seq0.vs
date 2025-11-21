@@ -58,8 +58,8 @@ GetSettlement("S_UpOutpost").AllowCapture(false);
 EnvWriteInt(1, "MaxMacemen", 10);
 EnvWriteString(1, "Increase Mace production", "researched");
 
-NO_Smith.obj.CmdDisable("Strenghten Stronghold Defences I");
-NO_Smith.obj.CmdDisable("Strenghten Stronghold Defences II");
+NO_Smith.obj.CmdDisable("Strengthen Stronghold Defences I");
+NO_Smith.obj.CmdDisable("Strengthen Stronghold Defences II");
 
 NO_Arena.obj.CmdDisable("hireheroT");
 NO_Arena.obj.CmdDisable("Legendary Valkyries");

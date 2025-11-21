@@ -52,7 +52,7 @@ if (.IsValid) {
 			if (IsResearched(.player, "Mass Heal")) {
 				int health_to_distribute = 1000, give;
 
-				ol = ObjsInSight(this, "Unit").GetObjList();
+				ol = ObjsInCircle(.pos, .sight, "Unit").GetObjList();
 
 				for (i = 0; i < ol.count && health_to_distribute > 0; i += 1) {
 					u = ol[i].AsUnit();
@@ -72,7 +72,7 @@ if (.IsValid) {
 			if (IsResearched(.player, "Restoration")) {
 				int nRestored;
 
-				ol = ObjsInSight(this, "Unit").GetObjList();
+				ol = ObjsInCircle(.pos, .sight, "Unit").GetObjList();
 
 				for (i = 0; i < ol.count && nRestored < 5; i += 1) {
 					u = ol[i].AsUnit();

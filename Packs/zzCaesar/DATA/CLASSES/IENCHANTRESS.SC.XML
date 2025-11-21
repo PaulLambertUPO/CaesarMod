@@ -14,6 +14,7 @@
 	<method sig="idle" vs="data/subai/enchantress_idle.vs" />
 	<method sig="stand_position" vs="data/subai/enchantress_stand_position.vs" />
 	<method sig="advance" vs="data/subai/enchantress_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/enchantress_advance.vs" />
 
 	<method sig="teach" vs="data/subai/enchantress_teach.vs" verify="data/subai/enchantress_teach_verify.vs" />
 	<method sig="coverofmercy" vs="data/subai/enchantress_coverofmercy.vs" />

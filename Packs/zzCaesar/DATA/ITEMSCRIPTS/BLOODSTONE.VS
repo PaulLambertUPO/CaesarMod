@@ -23,13 +23,21 @@ if (GetUseCount() <= 0) {
 								health_taken = target.health;
 
 							if (health_taken > 0) {
-								int heal_damage;
-								heal_damage = MIN(health_taken, missing_health);
+								Item item;
+								int i;
+
+								i = MIN(health_taken, missing_health);
 								CreateFeedback("Damage1", target.AsUnit());
-								target.Damage(heal_damage);
+								target.Damage(i);
 								CreateFeedback("Heal", this);
-								.Heal(heal_damage);
-								SetUseCount(20);
+								.Heal(i);
+
+								for (i = .item_count; i >= 1; i -= 1) {
+									item = .GetItem(i);
+									if (item.IsValid)
+										if (item.name == "Bloodstone")
+											item.SetUseCount(30);
+								}
 							}
 						}
 					}

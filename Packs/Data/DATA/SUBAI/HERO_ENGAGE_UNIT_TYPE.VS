@@ -4,9 +4,13 @@ Hero this;
 Obj u;
 int a;
 str class;
-this = me.AsHero();
-class = target.class;
+bool melee;
 
+this = me.AsHero();
+
+melee = !.IsRanged;
+
+class = target.class;
 
 //.pr("hero::engage: looking for enemies");
 .army.SetCommand("engage_unit_type", target);
@@ -28,7 +32,14 @@ if(u.IsAlive() && .IsValidTarget(u))
 		//.pr("hero::engage: fighting");
 		if (u.IsAlive && .IsValidTarget(u)) 
 		{
-			while(.Attack(u));
+			if (u.AsCatapult().IsValid) {
+				while (.Attack(u))
+					if (melee)
+						if (.HasSpecial(trample))
+							u.Damage(.damage);
+			}
+			else while (.Attack(u))
+				;
 		}
 		u = .BestTargetInSquadSight(class);
 	}

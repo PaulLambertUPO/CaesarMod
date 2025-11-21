@@ -1,4 +1,4 @@
-<class id="EPriest" cpp_class="CVXDruid" parent="BaseMage" entity="Units/EPriest/EPriest.ent.xml">
+<class id="EPriest" parent="BaseMage" cpp_class="CVXDruid" entity="Units/EPriest/EPriest.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="200" />
@@ -14,6 +14,7 @@
 	<method sig="idle" vs="data/subai/epriest_idle.vs" />
 	<method sig="stand_position" vs="data/subai/epriest_stand_position.vs" />
 	<method sig="advance" vs="data/subai/epriest_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/epriest_advance.vs" />
 
 	<method sig="cripple" vs="data/subai/epriest_cripple.vs" verify="data/subai/epriest_cripple_verify.vs" />
 	<method sig="zombify" vs="data/subai/druid_ghoul_summoning.vs" />

@@ -50,7 +50,7 @@
 		rollover="Zombify"
 		description="Allows priests to transform into a Ghoul that drains the health of all nearby enemies for about 10 seconds.\nThe same effect also applies every time that a priest dies, but for about 5 seconds"
 		method="research"
-		param="ReqSet, Cult of Osiris, default, NamePlr, Zombify, default">
+		param="ReqSet, Cult of Osiris, default, NamePlr, EZombify, default, NamePlr, Zombify">
 		<src obj="ETempleOfOsiris" />
 	</cmd>
 	<cmd name="ECloud of Plague" priority="5"
@@ -64,7 +64,7 @@
 		rollover="Cloud of Plague"
 		description="Allows priests to sacrifice themselves to create a cloud of plague which deals 45 damage to all units periodically for about 12 seconds"
 		method="research"
-		param="ReqSet, Cult of Osiris, default, NamePlr, Cloud of Plague, default">
+		param="ReqSet, Cult of Osiris, default, NamePlr, ECloud of Plague, default, NamePlr, Cloud of Plague">
 		<src obj="ETempleOfOsiris" />
 	</cmd>
 	<cmd name="Mumification" priority="6"

@@ -5,24 +5,47 @@ Settlement set;
 Unit new_unit;
 ObjList ol;
 str class;
-int build_number, player, level;
+int player, build_number, level;
 point exit_point;
+bool valid_exit_point = true;
 
 this = This.AsBuilding();
 
 set = .settlement;
 hall = set.GetCentralBuilding();
+player = .player;
 
-Sleep(rand(1000) + 500);
+exit_point = .GetExitPoint(hall.pos, false);
+if (exit_point.x == -1) {
+	exit_point.Set(0, 0);
+	valid_exit_point = false;
+}
+else if (exit_point.y == -1) {
+	exit_point.Set(0, 0);
+	valid_exit_point = false;
+}
+
+Sleep(rand(501) + 500);
 
 while (1) {
-	class = EnvReadString(this, "Build");
-	build_number = EnvReadInt(this, "Build/" + class);
+	if (player != .player) {
+		class = EnvReadString(this, "Build");
+		build_number = EnvReadInt(this, "Build/" + class);
+		if (build_number > 0) {
+			EnvWriteInt(player, "QueuedBuild/" + class, MAX(0, EnvReadInt(player, "QueuedBuild/" + class) - build_number));
+			EnvWriteInt(this, "Build/" + class, 0);
+			build_number = 0;
+		}
+	}
+	else {
+		class = EnvReadString(this, "Build");
+		build_number = EnvReadInt(this, "Build/" + class);
+	}
+
+	player = .player;
 
 	if (build_number > 0) {
-		player = .player;
 		level = EnvReadInt(set, "levels/" + class);
-		exit_point = .GetExitPoint(hall.pos, false);
 
 		if (build_number == 10) {
 			if (class == "RLiberatus" || class == "RLiberatusPunic")
@@ -113,14 +136,12 @@ while (1) {
 
 		level = MAX(level, EnvReadInt(player, "standard_spawn_level"));
 
-		if (exit_point.x == -1 && exit_point.y == -1) {
-			new_unit = Place(class, Point(0, 0), player);
-			set.AddUnit(new_unit);
-		}
-		else {
-			new_unit = Place(class, exit_point, player);
+		new_unit = Place(class, exit_point, player);
+		if (valid_exit_point)
 			new_unit.SetCommand("advanceenter", hall);
-		}
+		else
+			set.AddUnit(new_unit);
+
 		new_unit.SetLevel(level);
 
 		if (class == "Caesar")
@@ -145,7 +166,9 @@ while (1) {
 					new_unit.AddItem("Veteran Guild");
 			}
 
-		EnvWriteInt(this, "Build/" + class, build_number - 1);
+		EnvWriteInt(this, "Build/" + class, MAX(0, build_number - 1));
+		EnvWriteInt(player, "QueuedBuild/" + class, MAX(0, EnvReadInt(player, "QueuedBuild/" + class) - 1));
 	}
+
 	Sleep(1000);
 }

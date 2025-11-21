@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olGuardians, olAxethrowers;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsQuickMarch;
 aSkills[1] = hsHealing;
@@ -25,7 +25,7 @@ aSkillLevels[1] = 8;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGrainTrade || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGrainTrade || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bGrainTrade)
@@ -33,10 +33,11 @@ aSkillLevels[1] = 8;
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -54,7 +55,7 @@ aSkillLevels[1] = 8;
 //barrack level 1 + buy slaves
 {
 	bool bBarrack1 = false, bSlaves = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bSlaves)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bSlaves)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack1)
@@ -74,7 +75,7 @@ aSkillLevels[1] = 8;
 	charms[1] = "Charm of Thoth";
 	charms[2] = "Charm of Ra";
 	charms[3] = "Charm of Isis";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (olGuardians.count < nGuardians || olAxethrowers.count < nAxethrowers)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (olGuardians.count < nGuardians || olAxethrowers.count < nAxethrowers)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olGuardians.count < nGuardians) {
@@ -91,7 +92,7 @@ aSkillLevels[1] = 8;
 		olAxethrowers.SetCommand("enter", set.GetCentralBuilding());
 		Sleep(4100 + rand(15) * 100);
 	}
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && !bCharm) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && !bCharm) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		bCharm = set.TSResearch(charms[rand(4)]);
@@ -104,12 +105,18 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olGuardians.SetCommand("attach", hero);
 		olAxethrowers.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olGuardians.ClearDead();
@@ -117,4 +124,4 @@ olAxethrowers.ClearDead();
 SetNoAIFlag(olGuardians, false);
 SetNoAIFlag(olAxethrowers, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

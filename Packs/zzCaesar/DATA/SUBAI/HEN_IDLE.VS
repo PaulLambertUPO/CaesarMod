@@ -16,7 +16,7 @@ if (.IsValid) {
 		Building hall, bld;
 		int j, dist, min = 2000000;
 
-		j = MaxSetIdx();
+		j = MaxSetIdx;
 		for (i = 0; i < j; i += 1) {
 			set = IdxToSet(i);
 			if (set.IsValid)

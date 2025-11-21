@@ -3,7 +3,7 @@
 if (l.Rewind()) {
 	Squad sq;
 	l.Lock();
-	while (1) {
+	while (!l.EOL) {
 		sq = l.Cur;
 		if (sq.GAIKAIn == g)
 			if (sq.State != SS_Flee)
@@ -14,16 +14,14 @@ if (l.Rewind()) {
 				sq.SetCmd(SS_Enter, 0, SF_ADVCHOOSER, "enter", g.settlement.GetCentralBuilding());
 		else {
 			Obj teleport;
-			int sqPlayer, LsaPathLen;
+			int sqPlayer, LsaPathLen = 1;
 
 			sqPlayer = sq.Player;
 
 			if (AIVar(sqPlayer, AIV_UseTeleports) != 0)
 				teleport = FindTeleport(sqPlayer, sq.pos, g.Center);
 
-			if (teleport.IsValid)
-				LsaPathLen = 1;
-			else
+			if (!teleport.IsValid)
 				LsaPathLen = CheckLsaPath(sq.GAIKAIn.LSA, g.LSA, sqPlayer);
 
 			if (LsaPathLen == 1) {
@@ -33,16 +31,13 @@ if (l.Rewind()) {
 					cmd = "move";
 					state = SS_Flee;
 				}
-				else if (sq.Leader.AsHero().IsValid) {
-					cmd = "sneak";
-					state = SS_Approach;
-				}
-				else if (GetTime() < 10 * 60000) {//independent outsposts are quite dangerous in early game
-					cmd = "move";
-					state = SS_Approach;
-				}
 				else {
-					cmd = "advance";
+					if (sq.Leader.AsHero().IsValid)
+						cmd = "sneak";
+					else if (GetTime() < 600000)//independent outsposts are quite dangerous in early game
+						cmd = "move";
+					else
+						cmd = "advance";
 					state = SS_Approach;
 				}
 				if (teleport.IsValid)
@@ -61,17 +56,17 @@ if (l.Rewind()) {
 				else {
 					if (sq.Leader.AsHero().IsValid)
 						cmd = "sneak";
-					else if (GetTime() < 600000)
+					else if (GetTime() < 600000)//independent outsposts are quite dangerous in early game
 						cmd = "move";
 					else
 						cmd = "advance";
 					state = SS_Approach;
 				}
 				ship = PrepareAiTransportShip(sq.GAIKAIn.LSA, g.LSA, sqPlayer, cmd, g.Center);
-				if (!ship.IsValid())
-					return;
-				else if (ship.GetFlags(UNITFLAG_NOAI))
-					return;
+				if (!ship.IsValid)
+					break;
+				if (ship.GetFlags(UNITFLAG_NOAI))
+					break;
 				ship.GetSquad().DelOrder();
 				if (sq.Leader.AsHero().IsValid)
 					sq.SetCmd(state, 0, 0, "boardshiphero", ship);
@@ -79,8 +74,7 @@ if (l.Rewind()) {
 					sq.SetCmd(state, 0, 0, "boardship", ship);
 			}
 		}
-		if (!l.Next())
-			break;
+		l.Next();
 	}
 	l.Unlock();
 }

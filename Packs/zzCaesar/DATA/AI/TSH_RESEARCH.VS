@@ -8,6 +8,8 @@ if (IsResearched(set.player, tech))
 	return true;
 if (IsResearching(set, tech))
 	return true;
+if (IsResearching(set.player, tech))
+	return true;
 
 if (set.CanResearch(tech))
 	if (set.CanAfford(tech)) {

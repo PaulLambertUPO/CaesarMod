@@ -1,44 +1,49 @@
 //void, Obj This
 
-Building this;
+;//this empty instruction avoids problems due to starting the script with a scope
 
-this = This.AsBuilding();
-
-.CmdDisable("hireheroR");
-.CmdDisable("RGladiator Shows");
-.CmdDisable("Rome Training 1");
-.CmdDisable("Rome Training 2");
-.CmdDisable("Veteran Offence");
-.CmdDisable("Veteran Defence");
-.CmdDisable("Veteran Health");
-.CmdDisable("RNobility");
-.CmdDisable("Transition to Empire");
-.CmdDisable("Hire Caesar");
-.CmdDisable("hireheroRImperial");
-.CmdDisable("RGladiator Shows2");
-.CmdDisable("Standartization I");
-.CmdDisable("Standartization II");
-.CmdDisable("Flexibility");
-.CmdDisable("Hire Liberati");
-.CmdDisable("Liberati guild");
-.CmdDisable("Liberati triumph");
-.CmdDisable("Organize tournament");
-.CmdDisable("Military Academy");
-.CmdDisable("hireheroRPunic");
-.CmdDisable("Gladiator Shows");
-.CmdDisable("Training");
-.CmdDisable("Advanced Training");
-.CmdDisable("Special training");
-.CmdDisable("Hire Liberati Punic");
-
-//use a scope to remove settlement variable when the final loop is reached
+//use a scope to remove variables when the final loop is reached
 {
+	Building this;
 	Settlement set;
+
+	this = This.AsBuilding();
+
+	.CmdDisable("hireheroR");
+	.CmdDisable("RGladiator Shows");
+	.CmdDisable("Rome Training 1");
+	.CmdDisable("Rome Training 2");
+	.CmdDisable("Veteran Offence");
+	.CmdDisable("Veteran Defence");
+	.CmdDisable("Veteran Health");
+	.CmdDisable("RNobility");
+	.CmdDisable("Transition to Empire");
+	.CmdDisable("Hire Caesar");
+	.CmdDisable("hireheroRImperial");
+	.CmdDisable("RGladiator Shows2");
+	.CmdDisable("Standartization I");
+	.CmdDisable("Standartization II");
+	.CmdDisable("Flexibility");
+	.CmdDisable("Hire Liberati");
+	.CmdDisable("Liberati guild");
+	.CmdDisable("Liberati triumph");
+	.CmdDisable("Organize tournament");
+	.CmdDisable("Military Academy");
+	.CmdDisable("hireheroRPunic");
+	.CmdDisable("Gladiator Shows");
+	.CmdDisable("Training");
+	.CmdDisable("Advanced Training");
+	.CmdDisable("Special training");
+	.CmdDisable("Hire Liberati Punic");
 
 	set = .settlement;
 
 	while (EnvReadInt(set, "ChooseRomanRace") != 1)
 		Sleep(250);
+
+	.CmdDisable("ChooseRepublicanRome");
+	.CmdDisable("ChooseImperialRome");
+	.CmdDisable("ChoosePunicRome");
 
 	if (IsResearched(set, "ChooseRepublicanRome")) {
 		.CmdEnable("hireheroR");
@@ -76,5 +81,6 @@ this = This.AsBuilding();
 	}
 }
 
+//without this instruction, the game crashes
 while (1)
 	Sleep(3600000);

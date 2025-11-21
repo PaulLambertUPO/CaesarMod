@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olPeltasts, olArchers, olPriests;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsWisdom;
 aSkills[1] = hsTeamDefense;
@@ -23,26 +23,35 @@ aSkillLevels[1] = 10;
 	bool bOlympicGames = false, first_time = true;
 	str cmd = "trainHPeltast";
 	Barrack barrack;
+	Building b;
 	point ptDummy;
 	Obj objDummy;
 	ObjList buildings;
-	buildings = set.Buildings();
-	for (j = 0; j < buildings.count; j += 1)
-		if (buildings[j].class == "HBarracks")
-			if (first_time || buildings[j].CmdCount < min) {
-				first_time = false;
-				min = buildings[j].CmdCount;
-				barrack = buildings[j];
-			}
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bOlympicGames || i < nExploringUnits)) {
+	buildings = set.Buildings;
+	for (j = 0; j < buildings.count; j += 1) {
+		b = buildings[j];
+		if (b.IsHeirOf("HBarracks"))//using IsHeirOf is better than a direct class check because it manages winter variants
+			if (!b.IsBroken)
+				if (first_time) {
+					first_time = false;
+					min = b.CmdCount;
+					barrack = b;
+				}
+				else if (b.CmdCount < min) {
+					min = b.CmdCount;
+					barrack = b;
+				}
+	}
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bOlympicGames || i < nExploringUnits)) {
 		if (!bOlympicGames)
 			bOlympicGames = set.TSResearch("Olympic Games");
 		if (i < nExploringUnits) {
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -52,7 +61,7 @@ aSkillLevels[1] = 10;
 //spartan training + barrack level 1
 {
 	bool bSpartanTraining = false, bBarrack1 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bSpartanTraining || !bBarrack1)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bSpartanTraining || !bBarrack1)) {
 		if (!bSpartanTraining)
 			bSpartanTraining = set.TSResearch("Spartan Training");
 		if (!bBarrack1)
@@ -64,7 +73,7 @@ aSkillLevels[1] = 10;
 //military preparation + arrows
 {
 	bool bMilitaryPreparation = false, bArrows = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bMilitaryPreparation || !bArrows)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bMilitaryPreparation || !bArrows)) {
 		if (!bMilitaryPreparation)
 			bMilitaryPreparation = set.TSResearch("Military Preparation");
 		if (!bArrows)
@@ -78,7 +87,7 @@ aSkillLevels[1] = 10;
 	bool bBarrack1 = false;
 	int nCount, nPeltasts = 15, nArchers = 10, nPriests = 5;
 	str supportCmd = "HAddPop";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || olPeltasts.count < nPeltasts || olPriests.count < nPriests)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || olPeltasts.count < nPeltasts || olPriests.count < nPriests)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		else {
@@ -118,13 +127,19 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olPeltasts.SetCommand("attach", hero);
 		olArchers.SetCommand("attach", hero);
 		olPriests.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olPeltasts.ClearDead();
@@ -134,4 +149,4 @@ SetNoAIFlag(olPeltasts, false);
 SetNoAIFlag(olArchers, false);
 SetNoAIFlag(olPriests, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

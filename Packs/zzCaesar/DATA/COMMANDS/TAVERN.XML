@@ -160,7 +160,7 @@
 		execdelay="20000"
 		researchcommand="yes"
 		groupverifier="data/subai/verify_research.vs"
-		param="ReqSet, Free Beer, default, NameSet, Food Tax, default">
+		param="ReqSet, Free Beer, default, NameSet, Food Tax, default, NameSet, TFoodTax">
 		<src obj="GTavern" />
 	</cmd>
 	<cmd name="Nordic trade routes" priority="5"
@@ -287,6 +287,7 @@
 		groupverifier="data/subai/verify_research.vs"
 		button="research/Capture Horses.bmp"
 		key="t"
+		researchcommand="yes"
 		costgold="1000"
 		rollover="Tame horses"
 		execdelay="20000"
@@ -300,6 +301,7 @@
 		groupverifier="data/subai/verify_research.vs"
 		button="research/Housing.bmp"
 		key="h"
+		researchcommand="yes"
 		costgold="750"
 		rollover="Housing"
 		execdelay="30000"
@@ -313,6 +315,7 @@
 		groupverifier="data/subai/verify_research.vs"
 		button="research/More Housing.bmp"
 		key="h"
+		researchcommand="yes"
 		costgold="750"
 		rollover="More housing"
 		execdelay="30000"
@@ -325,7 +328,7 @@
 		queueicon="gameres/icons/upgrades/call to arms.bmp"
 		button="actions/call to arms.bmp"
 		key="a"
-		researchcommand="yes"
+		traincommand="yes"
 		groupverifier="data/subai/verify_research.vs"
 		method="calltoarms"
 		costgold="800"
@@ -443,7 +446,7 @@
 		costgold="2000"
 		execdelay="30000"
 		button="Actions/CHeal.bmp"
-		param="ReqSet, Free Trade, default, ReqPlr, Mercenary pact, default, NamePlr, Mercenary heal, default"
+		param="ReqPlr, Mercenary pact, default, ReqSet, Free Trade, default, NamePlr, Mercenary heal, default"
 		description="Every time that a mercenary dies, all nearby allies are healed by 2% of his maximum health"
 		rollover="Mercenary heal">
 		<src obj="CTavern" />
@@ -458,7 +461,7 @@
 		costfood="3000"
 		execdelay="60000"
 		method="hireforeignmercenaries"
-		param="ReqSet, Free Trade, default, ReqPlr, Mercenary heal, default"
+		param="ReqPlr, Mercenary heal, default, ReqPlr, Mercenary pact, default, ReqSet, Free Trade, default"
 		description="Hires a mercenary group of 10 Gaul Horsemen, 20 Hoplites and 20 Slingers"
 		rollover="Hire foreign mercenaries">
 		<src obj="CTavern" />
@@ -600,7 +603,7 @@
 		execdelay="20000"
 		researchcommand="yes"
 		method="research"
-		param="NameSet, Grain Trade, default, SetsSet, FoodTrade, 1"
+		param="NameSet, Grain Trade, default"
 		description="Slowly exchanges the food in the stronghold for gold"
 		rollover="Grain Trade">
 		<src obj="EMarket" />
@@ -614,7 +617,7 @@
 		costfood="1500"
 		execdelay="30000"
 		method="research"
-		param="ReqSet, Grain Trade, default, NameSet, Religious Feast, default"
+		param="ReqSet, Grain Trade, default, NameSet, Religious Feast, default, NameSet, TReligiousFeast, , NameSet, HReligiousFeast"
 		description="Heals 5 warriors around the townhall by 30 every 2 seconds"
 		rollover="Religious Feast">
 		<src obj="EMarket" />
@@ -688,18 +691,18 @@
 		rollover="Increase population">
 		<src obj="TTavern" />
 	</cmd>
-	<cmd name="TGrainTrade" priority="4"
-		queueicon="gameres/icons/upgrades/grain trade.bmp"
+	<cmd name="Food sale" priority="4"
+		queueicon="gameres/icons/upgrades/grain trade T.bmp"
 		key="g"
 		groupverifier="data/subai/verify_research.vs"
-		button="research/grain trade.bmp"
+		button="research/grain trade T.bmp"
 		costfood="2000"
 		execdelay="20000"
 		researchcommand="yes"
 		method="research"
-		param="NameSet, Grain Trade, default, NameSet, TGrainTrade"
+		param="NameSet, Food sale, default"
 		description="Gathers 1000 gold"
-		rollover="Grain Trade">
+		rollover="Food sale">
 		<src obj="TTavern" />
 	</cmd>
 	<cmd name="TFoodTax" priority="5"
@@ -711,7 +714,7 @@
 		execdelay="20000"
 		researchcommand="yes"
 		method="research"
-		param="ReqSet, Grain Trade, default, NameSet, Food Tax, default"
+		param="ReqSet, Food sale, default, NameSet, TFoodTax, default, NameSet, Food Tax"
 		description="Imposes the stronghold population to produce food over time"
 		rollover="Food Tax">
 		<src obj="TTavern" />
@@ -725,7 +728,7 @@
 		costgold="1500"
 		execdelay="30000"
 		method="research"
-		param="ReqSet, Grain Trade, default, NameSet, Religious Feast, default"
+		param="ReqSet, Food sale, default, NameSet, TReligiousFeast, default, NameSet, Religious Feast, , NameSet, HReligiousFeast"
 		description="Heals 5 warriors around the townhall by 30 every 2 seconds"
 		rollover="Religious Feast">
 		<src obj="TTavern" />
@@ -740,7 +743,7 @@
 		researchcommand="yes"
 		plrresearch="yes"
 		button="actions/tribute.bmp"
-		param="ReqSet, Grain Trade, default, NamePlr, Tribute, default"
+		param="ReqSet, Food sale, default, NamePlr, Tribute, default"
 		description="Gathers %s1 gold in each outpost you own (the amount increases by 500 every 10 minutes, up to 2000)"
 		rollover="Tribute (once per game)">
 		<src obj="TTavern" />

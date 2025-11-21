@@ -17,4 +17,10 @@
 	<defaultcmd target="">
 		<cmd name="move" />
 	</defaultcmd>
+	<defaultcmd target="Unit">
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="approach" />
+	</defaultcmd>
 </class>

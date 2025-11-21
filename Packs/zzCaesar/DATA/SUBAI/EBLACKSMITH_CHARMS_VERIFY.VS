@@ -16,7 +16,7 @@ if (.IsValid)
 			int i, count_units;
 
 			ol = set.ObjectsAround("Military");
-			for (i = 0; i < ol.count && count_units < 5; i += 1) {
+			for (i = 0; i < ol.count; i += 1) {
 				u = ol[i].AsUnit();
 				if (u.IsValid)
 					if (u.IsAlive)
@@ -24,24 +24,24 @@ if (.IsValid)
 							if (u.free_item_slots > 0)
 								if (!u.HasItem(cmdparam))
 									if (!u.IsSentry)
-										if (!u.IsHeirOf("Hero"))
+										if (!u.IsHeirOf("Hero")) {
 											count_units += 1;
-			}
+											if (count_units >= 5) {
+												bool unaffordable = false;
 
-			if (count_units >= 5) {
-				bool unaffordable = false;
+												if (cmdcost_gold > set.gold)
+													unaffordable = true;
+												else if (cmdcost_food > set.food)
+													unaffordable = true;
+												else if (cmdcost_pop > 0)
+													if (set.population - cmdcost_pop < GetConst("MinPopulation"))
+														unaffordable = true;
 
-				if (cmdcost_gold > set.gold)
-					unaffordable = true;
-				else if (cmdcost_food > set.food)
-					unaffordable = true;
-				else if (cmdcost_pop > 0)
-					if (set.population - cmdcost_pop < GetConst("MinPopulation"))
-						unaffordable = true;
+												reasonText = rollover(this, unaffordable);
 
-				reasonText = rollover(this, unaffordable);
-
-				return true;
+												return true;
+											}
+										}
 			}
 
 			reasonText = rollover(this, false) + "\n<color 255 0 0 >" + Translate("Requires at least 5 warriors without that charm around the Townhall");

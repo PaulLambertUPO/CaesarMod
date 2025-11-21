@@ -36,7 +36,7 @@
 		rollover="Ritual Chamber"
 		description="Allows enchantresses to gain experience by learning from more experienced allies"
 		method="research"
-		param="NamePlr, Ritual Chamber, default">
+		param="NamePlr, German chamber, default, NamePlr, Ritual Chamber, , NamePlr, Britain chamber">
 		<src obj="TTempleOfNeptus" />
 	</cmd>
 	<cmd name="Wolf Summoning" priority="4"
@@ -78,7 +78,7 @@
 		rollover="Mass Heal"
 		description="Allows enchantresses to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that an enchantress dies"
 		method="research"
-		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default">
+		param="ReqPlr, Ritual Chamber, default, NamePlr, German Mass Heal, default, NamePlr, Mass Heal">
 		<src obj="TTempleOfNeptus" />
 	</cmd>
 </commands>

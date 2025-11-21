@@ -64,7 +64,7 @@ if (.IsValid) {
 						CreateFeedback("Experience", me);
 					}
 				if (vict_not_sentry)
-					if (IsResearched(p, "Statue of Isis, mother of Anubis"))
+					if (IsResearched(p, "Statue of Isis"))
 						me.SetFood(MIN(me.food + 2, me.maxfood));
 
 				//Carthage

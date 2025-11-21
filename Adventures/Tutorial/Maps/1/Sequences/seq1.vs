@@ -1,4 +1,5 @@
 Instructor2.obj.SetVisible(false);
+Instructor2.SetCommand("hold_position");
 
 WaitUnitsInArea(Caesar, "A_Items", -1);
 Sleep(2000);

@@ -2,7 +2,7 @@
 
 Sleep(rand(800) + 200);
 
-if (MapSize() >= 32000)//if map is huge, there might be too much lag
+if (MapSize >= 32000)//if map is huge, there might be too much lag
 	while (1)
 		Sleep(3600000);
 else if (!This.AsBuilding().IsValid)

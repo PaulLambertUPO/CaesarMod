@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olBerberAssassins;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsWisdom;
 aSkills[1] = hsAdministration;
@@ -20,7 +20,7 @@ aSkillLevels[1] = 10;
 //hero + swords + dark rituals + free trade + barrack level 1
 {
 	bool bSwords = false, bDarkRituals = false, bFreeTrade = false, bBarrack1 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSwords || !bDarkRituals || !bFreeTrade || !bBarrack1)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSwords || !bDarkRituals || !bFreeTrade || !bBarrack1)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bSwords)
@@ -47,7 +47,7 @@ aSkillLevels[1] = 10;
 //slavery + people assembly
 {
 	bool bSlavery = false, bAssembly = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bSlavery || !bAssembly)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bSlavery || !bAssembly)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bSlavery)
@@ -61,7 +61,7 @@ aSkillLevels[1] = 10;
 //mercenary pact + spoils of war
 {
 	bool bMercenaryPact = false, bWarSpoils = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bMercenaryPact || !bWarSpoils)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bMercenaryPact || !bWarSpoils)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bMercenaryPact)
@@ -77,7 +77,7 @@ aSkillLevels[1] = 10;
 	int nCount, nBerberAssassins = 30;
 	bool bBarrack2 = false, bSlavery = false;
 	str supportCmd = "CSellFood";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olBerberAssassins.count < nBerberAssassins)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olBerberAssassins.count < nBerberAssassins)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack2)
@@ -101,14 +101,20 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olBerberAssassins.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olBerberAssassins.ClearDead();
 SetNoAIFlag(olBerberAssassins, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

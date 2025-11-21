@@ -1,5 +1,15 @@
 // void, Obj me
 
+Hero  this;
+
+this = me.AsHero();
+
+.army.SetCommand("hold_position");
+
+.SetCommand("hold_position");
+
+
+/*
 Hero this;
 Unit u;
 Building b;
@@ -46,3 +56,4 @@ while(1)
 		u = .BestTargetForPos();
 	}
 }
+*/

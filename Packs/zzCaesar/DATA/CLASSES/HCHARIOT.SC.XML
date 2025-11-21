@@ -1,4 +1,4 @@
-<class id="HChariot" cpp_class="CVXUnit" parent="Melee" entity="units/HChariot/HChariot.ent.xml">
+<class id="HChariot" parent="Melee" cpp_class="CVXUnit" entity="units/HChariot/HChariot.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="700" />
@@ -15,8 +15,6 @@
 	<properties icon="gameres/icons/HChariot.bmp" />
 	<properties help="contents/units/HChariot" />
 	<properties edittree_pos="Units/Greece/Chariot" />
-
-	<!--<behavior script="data/subai/Trample_HChariot.vs" />-->
 
 	<sounds walk="HorseWalk" command="VoiceHChariot" attack="UnitSpearFight" die="HorseUnitDeath" />
 </class>

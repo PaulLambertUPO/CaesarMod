@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olSpearmen, olArchers, olDruids;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsEpicAttack;
 aSkillLevels[0] = 10;
@@ -23,7 +23,7 @@ aSkillLevels[0] = 10;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSpears1 || !bFreeBeer || olDruids.count < nDruids || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSpears1 || !bFreeBeer || olDruids.count < nDruids || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bSpears1)
@@ -37,10 +37,11 @@ aSkillLevels[0] = 10;
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -58,7 +59,7 @@ aSkillLevels[0] = 10;
 //barrack level 1 + bear teeth
 {
 	bool bBarrack1 = false, bBearTeeth = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bBearTeeth)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bBearTeeth)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack1)
@@ -73,7 +74,7 @@ aSkillLevels[0] = 10;
 {
 	bool bSpears2 = false;
 	int nCount, nDruids = 5;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bSpears2 || olDruids.count < nDruids)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bSpears2 || olDruids.count < nDruids)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bSpears2)
@@ -86,20 +87,25 @@ aSkillLevels[0] = 10;
 	}
 }
 
-//25 spearmen + 20 archers
+//barrack level 2 + 25 spearmen + 20 archers
 {
 	int nCount, nSpearmen = 20, nArchers = 15;
+	bool bBarrack2 = false;
 	str supportCmd = "GAddPop";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (olSpearmen.count < nSpearmen || olArchers.count < nArchers)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olSpearmen.count < nSpearmen || olArchers.count < nArchers)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		if (olSpearmen.count < nSpearmen) {
-			nCount = nSpearmen - olSpearmen.count;
-			olSpearmen.AddList(set.TSRecruitArmy("GSpearman", nCount));
-		}
-		if (olArchers.count < nArchers) {
-			nCount = nArchers - olArchers.count;
-			olArchers.AddList(set.TSRecruitArmy("GArcher", nCount));
+		if (!bBarrack2)
+			bBarrack2 = set.TSResearch("Barrack Level 2");
+		if (bBarrack2) {
+			if (olSpearmen.count < nSpearmen) {
+				nCount = nSpearmen - olSpearmen.count;
+				olSpearmen.AddList(set.TSRecruitArmy("GSpearman", nCount));
+			}
+			if (olArchers.count < nArchers) {
+				nCount = nArchers - olArchers.count;
+				olArchers.AddList(set.TSRecruitArmy("GArcher", nCount));
+			}
 		}
 		if (set.CanAfford(supportCmd))
 			set.TSResearch(supportCmd);
@@ -114,13 +120,19 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olSpearmen.SetCommand("attach", hero);
 		olArchers.SetCommand("attach", hero);
 		olDruids.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olSpearmen.ClearDead();
@@ -130,4 +142,4 @@ SetNoAIFlag(olSpearmen, false);
 SetNoAIFlag(olArchers, false);
 SetNoAIFlag(olDruids, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

@@ -1,5 +1,5 @@
 //bool, ObjList objs, str OUT reasonText
-//cmdparam: [ReqSet, <research>, <explanation>, ReqPlr, <research>, <explanation>, NamePlr, <research>, NameSet, <research>, <value>, SetsPlr, <env>, <value>, SetsSet, <env>, <value>]
+//cmdparam: [ReqSet, <research>, <explanation>, ReqPlr, <research>, <explanation>, SetsSet, <env>, <value>, SetsPlr, <env>, <value>, NameSet, <research>, <value>, NamePlr, <research>, <value>]
 
 Building this;
 Settlement set;
@@ -19,11 +19,10 @@ while (dest != "") {
 	if (token == "NameSet") {
 		name = ParseStr(dest, dest);
 		value = ParseStr(dest, dest);
-
 		if (name == "Transition to Empire") {
 			bool not_researchable = true;
 			if (GetTime() >= 2400000)
-				if (IsResearched(player, "Advanced Training"))
+				if (IsResearched(player, "Rome Training 2"))
 					if (IsResearched(player, "Veteran Offence"))
 						if (IsResearched(player, "Veteran Defence"))
 							if (IsResearched(player, "Veteran Health"))
@@ -37,7 +36,7 @@ while (dest != "") {
 		else if (name == "Legendary Heroes") {
 			bool not_researchable = true;
 			if (GetTime() >= 2700000)
-				if (IsResearched(player, "Special training"))
+				if (IsResearched(player, "Gaul Training 3"))
 					if (IsResearched(set, "Trident Warrior Exp3"))
 						if (IsResearched(player, "Warrior Tales"))
 							if (IsResearched(player, "Battle tactics"))
@@ -55,8 +54,10 @@ while (dest != "") {
 
 		if (EnvReadString(set, name) == "researched") {//do not use IsResearched here because there might be some commands with a name/token that would not comply
 			if (value == "default")
-				reasonText = rollover(this, "Already available");
-			else
+				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available");
+			else if (value == "spec")
+				reasonText = rollover(this, true);
+			else if (value != "")
 				reasonText = Translate(value);
 			return false;
 		}
@@ -64,11 +65,17 @@ while (dest != "") {
 			reasonText = rollover(this, true);
 			return false;
 		}
+		if (EnvReadString(set, name) == "researching") {//do not use IsResearching here because there might be some commands with a name/token that would not comply
+			if (value == "spec")
+				reasonText = rollover(this, true);
+			else
+				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already researching");
+			return false;
+		}
 	}
 	else if (token == "NamePlr") {
 		name = ParseStr(dest, dest);
 		value = ParseStr(dest, dest);
-
 		if (name == "Statue of Amon-Ra") {
 			bool not_researchable = true;
 			if (IsResearched(set, "Cult of Anubis"))
@@ -81,15 +88,14 @@ while (dest != "") {
 		}
 		else if (name == "Tribute") {
 			if (EnvReadString(player, name) != "researched") {//do not use IsResearched here because all tribute commands have a prefix in their name based on race
-				int i, delay, time, gold;
+				int i, time, gold;
 				str times, values;
 
 				is_tribute = true;
 				times = GetConstStr("TributeTimes");
 				values = GetConstStr("TributeGold");
-				delay = GetConst("TributeDuration") * 1000;
 
-				i = GetTime() + delay;
+				i = GetTime() + GetConst("TributeDuration") * 1000;
 
 				while (times != "") {
 					int old_gold;
@@ -103,25 +109,29 @@ while (dest != "") {
 				}
 
 				reasonText = Translatef(rollover(this, true), gold);
-
-				if (EnvReadString(player, name) == "researching")
-					return false;
 			}
 			else {
-				reasonText = rollover_desc(this, "Already collected", false);
+				reasonText = rollover_desc(this, "<color 0 255 0>" + Translate("Already collected"), false);
 				return false;
 			}
 		}
+
 		if (EnvReadString(player, name) == "researched") {//do not use IsResearched here because there might be some commands with a name/token that would not comply
 			if (value == "default")
-				reasonText = rollover(this, "Already available");
-			else
+				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available");
+			else if (value != "")
 				reasonText = Translate(value);
 			return false;
 		}
 		if (EnvReadString(this, "researching") == "yes") {
 			if (!is_tribute)
 				reasonText = rollover(this, true);
+			return false;
+		}
+		if (EnvReadString(player, name) == "researching") {//do not use IsResearching here because there might be some commands with a name/token that would not comply
+			if (!is_tribute)
+				reasonText = rollover(this, false);
+			reasonText = reasonText + "\n<color 0 255 0>" + Translate("Already researching");
 			return false;
 		}
 	}
@@ -136,14 +146,13 @@ while (dest != "") {
 					n = ParseStr(dest, dest);
 					if (t == "NamePlr")
 						if (n == "Tribute") {
-							int i, delay, time, gold;
+							int i, time, gold;
 							str times, values;
 
 							times = GetConstStr("TributeTimes");
 							values = GetConstStr("TributeGold");
-							delay = GetConst("TributeDuration") * 1000;
 
-							i = GetTime() + delay;
+							i = GetTime() + GetConst("TributeDuration") * 1000;
 
 							while (times != "") {
 								int old_gold;
@@ -159,9 +168,9 @@ while (dest != "") {
 							return false;
 						}
 				}
-				reasonText = Translate(rollover(this, false)) + "\n<color 255 0 0>" + Translatef("Requires %s1", name);
+				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", name);
 			}
-			else
+			else if (value != "")
 				reasonText = Translate(value);
 			return false;
 		}
@@ -172,27 +181,12 @@ while (dest != "") {
 		if (EnvReadString(player, name) != "researched") {//do not use IsResearched here because there might be some commands with a name/token that would not comply
 			if (value == "default")
 				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", name);
-			else
+			else if (value != "")
 				reasonText = Translate(value);
 			return false;
 		}
 	}
-	else if (token == "NReqSet") {
-		name = ParseStr(dest, dest);
-		value = ParseStr(dest, dest);
-		if (EnvReadString(set, name) == "researched") {//do not use IsResearched here because there might be some commands with a name/token that would not comply
-			if (value == "default") {
-				if (.race == Carthage && name == "Specialization")
-					reasonText = rollover(this, true);
-				else
-					reasonText = rollover(this, "Already available");
-			}
-			else
-				reasonText = Translate(value);
-			return false;
-		}
-	}
-	else if (token == "break")//used only by Spartan Training to manage the unlock of Training and Advanced Training
+	else if (token == "break")//used only by Spartan/Special Training
 		break;
 }
 

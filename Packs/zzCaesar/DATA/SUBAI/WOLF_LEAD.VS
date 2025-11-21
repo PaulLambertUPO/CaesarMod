@@ -6,7 +6,7 @@ this = This.AsUnit();
 
 if (.IsValid) {
 	ObjList pack;
-	Unit u;
+	Obj lead_target;
 	point pt_move;
 	rect rc;
 	bool flee = false;
@@ -43,9 +43,9 @@ if (.IsValid) {
 						if (rand(5) == 0) {
 							pack = Intersect(ObjsInRange(this, "Wolf", .sight / 2), FriendlyObjs(.player, "Wolf")).GetObjList();
 							if (pack.count > 7) {
-								u = pack[0];
-								u.SetCommand("lead");	 
-								pack.Remove(u);
+								lead_target = pack[0];
+								lead_target.SetCommand("lead");	 
+								pack.Remove(lead_target);
 								pack.SetCommand("idle");
 							}
 						}
@@ -56,9 +56,9 @@ if (.IsValid) {
 							if (!.HasPath())
 								break;
 							if (!flee) {
-								u = .BestTargetInSquadSight();
-								if (u.IsValid)
-									if (.DistTo(u) < .sight * 2 / 3) {
+								lead_target = .BestTargetInSquadSight();
+								if (lead_target.IsValid)
+									if (.DistTo(lead_target) < .sight * 2 / 3) {
 										.AddCommand(true, "engage");
 										return;
 									}

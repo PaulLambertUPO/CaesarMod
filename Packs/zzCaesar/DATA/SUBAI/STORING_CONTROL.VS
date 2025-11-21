@@ -1,20 +1,23 @@
 //void, Obj This
 
-Building this;
+if (This.AsBuilding().IsValid) {
+	Settlement this;
 
-this = This.AsBuilding();
+	this = This.AsBuilding().settlement;
 
-if (.IsValid) {
-	Settlement set;
+	if (.IsValid)
+		while (1) {
+			if (EnvReadInt(this, "IsStoring") == 1)
+				if (EnvReadInt(this, "FoodStorage") < 100000000)
+					if (.food > 0) {
+						EnvWriteInt(this, "FoodStorage", EnvReadInt(this, "FoodStorage") + MIN(10, .food));
+						.SetFood(MAX(0, .food - 10));
+					}
 
-	set = .settlement;
-
-	if (EnvReadInt(set, "IsStoring") == 1)
-		if (EnvReadInt(set, "FoodStorage") < 100000000)
-			if (set.food > 0) {
-				EnvWriteInt(set, "FoodStorage", EnvReadInt(set, "FoodStorage") + MIN(10, set.food));
-				set.SetFood(MAX(0, set.food - 10));
-			}
+			Sleep(2000);
+		}
 }
 
-Sleep(2000);
+//without this instruction, the game crashes
+while (1)
+	Sleep(3600000);

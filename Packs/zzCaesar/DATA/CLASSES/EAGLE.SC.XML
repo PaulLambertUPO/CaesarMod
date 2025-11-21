@@ -1,4 +1,4 @@
-<class id="Eagle" cpp_class="CVXFlyingUnit" parent="Animal" entity="Units/Eagle/Eagle.ent.xml">
+<class id="Eagle" parent="Animal" cpp_class="CVXFlyingUnit" entity="Units/Eagle/Eagle.ent.xml">
 
 	<properties maxhealth="50" />
 	<properties sight="1000" />
@@ -16,6 +16,8 @@
 
 	<method sig="idle" vs="data/subai/eagle_idle.vs" />
 	<method sig="move" vs="data/subai/eagle_move.vs" />
+	<method sig="approach" vs="data/subai/eagle_approach.vs" />
+	<method sig="approach_hero" vs="data/subai/eagle_approach.vs" />
 	<method sig="hover" vs="data/subai/eagle_hover.vs" />
 	<method sig="lesser_hover" vs="data/subai/eagle_lesser_hover.vs" /><!-- this command was originally used only in Celtic Kings adventure -->
 

@@ -1,31 +1,36 @@
-// void
-int   i;
-bool bFirstTime = true;
-int nMaxPriority;
+//void
 
-int AIPlayer; AIPlayer = AIGetPlayer();
-nMaxPriority = MaxGAIKAPriority;
-while (1)
-{
-//  pr("Starting GAIKA Prioritization for player " + AIPlayer);
-  for (i = 1; i < GAIKACount; i += 1) {
-    int nOld, nNew;
-    GAIKA g; g = GetGAIKA(i);
-    nOld = g.GetPriority(AIPlayer);
-		if (nOld >= nMaxPriority)
-			continue; // adventure boosted
-    nNew = g.CalcPriority(AIPlayer);
-    if (nOld != nNew) {
-      if (nOld != 0) {
-        int nStep; nStep = (nNew - nOld) / 10;
-        if (nStep == 0) if (nNew > nOld) nStep = 1; else nStep = -1;
-        nNew = nOld + nStep;
-      }
-      g.SetPriority(AIPlayer, nNew);
-      //if (!bFirstTime) pr("Player " + AIPlayer + " GAIKA " + g.ID + " priority changed from " + nOld + " to " + nNew);
-    }
-    if (bFirstTime) Sleep(1); else Sleep(200);
-  }
-  bFirstTime = false;
-//  pr("Done GAIKA Prioritization for player " + AIPlayer);
+GAIKA g;
+int aiPlayer, gaikas, nOld, nNew, i;
+bool afterFirstTime = false;
+
+Sleep(rand(51) + 100);
+
+aiPlayer = AIGetPlayer();
+gaikas = GAIKACount;
+
+while (1) {
+	for (i = 1; i < gaikas; i += 1) {
+		g = GetGAIKA(i);
+		nOld = g.GetPriority(aiPlayer);
+		if (nOld < MaxGAIKAPriority) {//priority can reach/exceed the max with adventure sequences
+			nNew = g.CalcPriority(aiPlayer);
+			if (nOld != nNew) {
+				if (nOld != 0) {
+					int nStep;
+					nStep = (nNew - nOld) / 10;
+					if (nStep == 0)
+						if (nNew > nOld)
+							nStep = 1;
+						else
+							nStep = -1;
+					nNew = nOld + nStep;
+				}
+				g.SetPriority(aiPlayer, nNew);
+			}
+		}
+		if (afterFirstTime)
+			Sleep(250);
+	}
+	afterFirstTime = true;
 }

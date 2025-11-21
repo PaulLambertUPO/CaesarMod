@@ -1,7 +1,11 @@
 // void, Obj u
 
 Unit this;
+bool melee;
+
 this = u.AsUnit;
+
+melee = !.IsRanged;
 
 while (1)
 {
@@ -15,7 +19,15 @@ while (1)
 	if (enemy.IsAlive)
 	{
 		if (.GotoAttack(enemy, 1500, true, 15000))
-			while (.Attack(enemy));
+			if (enemy.AsCatapult().IsValid) {
+				while (.Attack(enemy))
+					if (melee)
+						if (.HasSpecial(trample))
+							enemy.Damage(.damage);
+			}
+			else
+				while (.Attack(enemy))
+					;
 		continue;
 	}
 

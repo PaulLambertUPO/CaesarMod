@@ -2,7 +2,11 @@
 Hero this;
 point pt;
 int i;
+bool melee;
+
 this = This.AsHero;
+
+melee = !.IsRanged;
 
 if (!target.IsValid)
 	return;
@@ -50,10 +54,16 @@ while (target.IsAlive)
 	if (.GotoAttack(target, 5000, true, 2500))
 	{
 		//.pr("hero::attack: fighting");
-		while (target.IsAlive)
+		if (target.IsAlive && .IsValidTarget(target)) 
 		{
-			if (!.Attack(target)) break;
-			Sleep(19);
+			if (target.AsCatapult().IsValid) {
+				while (.Attack(target))
+					if (melee)
+						if (.HasSpecial(trample))
+							target.Damage(.damage);
+			}
+			else while (.Attack(target))
+				;
 		}
 	}
 

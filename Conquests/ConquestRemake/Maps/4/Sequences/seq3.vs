@@ -29,9 +29,9 @@ difficulty = GetDifficulty();
 	b.Research("Free Drinks");
 
 	b = NO_Town6.obj.AsBuilding();
-	b.Research("TFights");
+	b.Research("Tribal fights");
 	b.Research("German chamber");
-	b.Research("TGrainTrade");
+	b.Research("Food sale");
 }
 
 set2 = GetSettlement("S_Town2");

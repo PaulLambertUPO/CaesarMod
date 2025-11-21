@@ -1,4 +1,4 @@
-<class id="CShaman" cpp_class="CVXDruid" parent="BaseMage" entity="Units/CShaman/CShaman.ent.xml">
+<class id="CShaman" parent="BaseMage" cpp_class="CVXDruid" entity="Units/CShaman/CShaman.ent.xml">
 
 	<properties race="Carthage" />
 	<properties maxhealth="140" />
@@ -16,6 +16,7 @@
 	<method sig="idle" vs="data/subai/shaman_idle.vs" />
 	<method sig="stand_position" vs="data/subai/shaman_stand_position.vs" />
 	<method sig="advance" vs="data/subai/shaman_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/shaman_advance.vs" />
 
 	<method sig="curse" vs="data/subai/shaman_curse.vs" verify="data/subai/shaman_curse_verify.vs" />
 	<method sig="zombify" vs="data/subai/druid_ghoul_summoning.vs" />

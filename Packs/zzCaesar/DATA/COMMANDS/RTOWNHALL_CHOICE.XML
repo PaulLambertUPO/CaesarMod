@@ -11,6 +11,11 @@
 		researchcommand="yes"
 		param="NameSet, ChooseRepublicanRome, default, SetsSet, ChooseRomanRace, 1">
 		<src obj="RTownhall" />
+		<src obj="RBarracks" />
+		<src obj="RBlacksmith" />
+		<src obj="RArena" />
+		<src obj="RTavern" />
+		<src obj="RTemple" />
 	</cmd>
 	<cmd name="ChooseImperialRome" priority="2"
 		button="research/Imperial.bmp"
@@ -24,6 +29,11 @@
 		researchcommand="yes"
 		param="NameSet, ChooseImperialRome, default, SetsSet, ChooseRomanRace, 1">
 		<src obj="RTownhall" />
+		<src obj="RBarracks" />
+		<src obj="RBlacksmith" />
+		<src obj="RArena" />
+		<src obj="RTavern" />
+		<src obj="RTemple" />
 	</cmd>
 	<cmd name="ChoosePunicRome" priority="3"
 		button="research/OldRome.bmp"
@@ -37,5 +47,10 @@
 		researchcommand="yes"
 		param="NameSet, ChoosePunicRome, default, SetsSet, ChooseRomanRace, 1">
 		<src obj="RTownhall" />
+		<src obj="RBarracks" />
+		<src obj="RBlacksmith" />
+		<src obj="RArena" />
+		<src obj="RTavern" />
+		<src obj="RTemple" />
 	</cmd>
 </commands>

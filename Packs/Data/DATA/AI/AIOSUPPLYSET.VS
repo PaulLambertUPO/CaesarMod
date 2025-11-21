@@ -1,3 +1,3 @@
-// void, int nSetSrc, int nSetDst
+//void, int nSetSrc, int nSetDst
 
-//pr( "AI exec: Supply settlement (not implemented)" );
+//this script is not used but, since it is present in the exe, it is better not to remove it

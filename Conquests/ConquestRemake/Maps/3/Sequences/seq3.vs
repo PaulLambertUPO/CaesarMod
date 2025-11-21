@@ -10,14 +10,14 @@ difficulty = GetDifficulty();
 	b.Research("Path of the dead I");
 	b.Research("Path of the dead II");
 	b.Research("Path of the dead III");
-	b.Research("Statue of Isis, mother of Anubis");
+	b.Research("Statue of Isis");
 	b.Research("Mumification");
 
 	b = NO_Town3.obj.AsBuilding();
 	b.Research("Light of Horus I");
 	b.Research("Light of Horus II");
 	b.Research("Light of Horus III");
-	b.Research("Statue of Osiris, father of Horus");
+	b.Research("Statue of Osiris");
 	b.Research("Mumification");
 
 	//keep this research order to make sure population is optimized

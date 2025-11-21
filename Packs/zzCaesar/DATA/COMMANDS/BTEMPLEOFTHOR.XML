@@ -36,7 +36,7 @@
 		rollover="Ritual Chamber"
 		description="Allows druids to gain experience by learning from more experienced allies"
 		method="research"
-		param="NamePlr, Ritual Chamber, default">
+		param="NamePlr, Britain chamber, default, NamePlr, Ritual Chamber, , NamePlr, German chamber">
 		<src obj="BTempleOfThor" />
 	</cmd>
 	<cmd name="Britain Ghoul Summoning" priority="4"
@@ -50,7 +50,7 @@
 		rollover="Ghoul summoning"
 		description="Allows druids to sacrifice themselves to summon a Ghoul that drains the health of all nearby enemies for about 10 seconds"
 		method="research"
-		param="ReqPlr, Ritual Chamber, default, NamePlr, Ghoul Summoning, default">
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Britain Ghoul Summoning, default, NamePlr, Ghoul Summoning">
 		<src obj="BTempleOfThor" />
 	</cmd>
 	<cmd name="Crow Summoning" priority="5"
@@ -78,7 +78,7 @@
 		rollover="Mass heal"
 		description="Allows druids to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that a druid dies"
 		method="research"
-		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default">
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default, NamePlr, German Mass Heal">
 		<src obj="BTempleOfThor" />
 	</cmd>
 	<cmd name="Mass Concealment" priority="7"

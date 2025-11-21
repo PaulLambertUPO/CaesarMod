@@ -1,13 +1,13 @@
 //void, Settlement set, int num, ObjList ol
 
 //called by specific tactic scripts (TS_...Tactic), this script manages the recruitment of special units (arena)
+//IMPORTANT: do not assign directly to ol because it references the original list (only use Add/Remove to update it)
 
-ObjList ol1, ol2;
-int Greece, nRace, i, nUnitsPerCommand = 1;
+ObjList ol1;
+int nRace, nUnitsPerCommand, i;
 bool nRaceIsImperialRome = false, nRaceIsPunicRome = false;
 str cmd, tech, class;
 
-Greece = ImperialRome;
 nRace = set.GetCentralBuilding().race;
 
 if (nRace == RepublicanRome)
@@ -18,51 +18,61 @@ if (nRace == RepublicanRome)
 
 if (nRaceIsImperialRome) {
 	cmd = "Hire Liberati";
-	tech = "Gladiator Shows";
+	tech = "RGladiator Shows2";
 	class = "RLiberatus";
+	nUnitsPerCommand = 10;
 }
 else if (nRaceIsPunicRome) {
 	cmd = "Hire Liberati Punic";
 	tech = "Gladiator Shows";
 	class = "RLiberatus";//do not use RLiberatusPunic otherwise GetAIControlledUnits below might give a wrong result
+	nUnitsPerCommand = 10;
 }
-else if (nRace == Greece) {
+else if (nRace == ImperialRome) {//Greece
 	cmd = "trainHMyrmidon";
 	tech = "Olympic Games";
 	class = "HMyrmidon_Javelin";
+	nUnitsPerCommand = 1;
+}
+else if (nRace == Britain) {
+	cmd = "Hire Viking Lord";
+	tech = "Challenges";
+	class = "BVikingLord";
+	nUnitsPerCommand = 1;
+}
+else if (nRace == Germany) {
+	cmd = "Call Valkyries";
+	tech = "Tribal fights";
+	class = "TValkyrie";
+	nUnitsPerCommand = 5;
 }
 else {
 	cmd = ArenaTrainCmd(nRace);
 	tech = ArenaUTech(nRace);
 	class = ArenaUType(nRace);
+	nUnitsPerCommand = 1;
 }
 
-if (nRaceIsImperialRome)
-	nUnitsPerCommand = 10;
-else if (nRaceIsPunicRome)
-	nUnitsPerCommand = 10;
-else if (nRace == Germany)
-	nUnitsPerCommand = 5;
-
-if (num) {//steal from the AI
+if (num > 0) {//steal from the AI
+	ObjList ol2;
 	Unit u;
-	ol1 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, false);
-	for (i = 0; i < ol1.count; i += 1) {
-		u = ol1[i].AsUnit;
+	ol2 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, false);
+	for (i = 0; i < ol2.count; i += 1) {
+		u = ol2[i].AsUnit();
 		if (u.IsAlive) {
 			if (u.hero.IsValid)
 				u.DetachFrom(u.hero);
-			ol2.Add(u);
+			ol1.Add(u);
 		}
 	}
-	num -= ol2.count;
+	num -= ol1.count;
 }
 
-if (num) {//count how many are queued
+if (num > 0) {//count how many are queued
 	ObjList arenae;
-	if (nRace == Greece) {
+	if (nRace == ImperialRome) {//Greece
 		ObjList buildings;
-		buildings = set.Buildings();
+		buildings = set.Buildings;
 		for (i = 0; i < buildings.count; i += 1)
 			if (buildings[i].class == "HGymnasium")
 				arenae.Add(buildings[i]);
@@ -73,39 +83,47 @@ if (num) {//count how many are queued
 		num -= arenae[i].CmdCount(cmd) * nUnitsPerCommand;
 }
 
-if (tech != "" && IsResearched(set, tech)) {//issue commands
-	Building b;
-	int gold, food;
-	point ptDummy;
-	Obj objDummy;
-	num = (num + nUnitsPerCommand - 1) / nUnitsPerCommand;
-	for (i = 0; i < num; i += 1) {
-		if (nRace == Greece) {
-			ObjList buildings;
-			int j, min;
-			bool first_time = true;
-			buildings = set.Buildings();
-			for (j = 0; j < buildings.count; j += 1)
-				if (buildings[j].class == "HGymnasium")
-					if (first_time || buildings[j].CmdCount < min) {
-						first_time = false;
-						min = buildings[j].CmdCount;
-						b = buildings[j];
+if (tech != "")
+	if (IsResearched(set, tech)) {//issue commands
+		Building arena;
+		int gold, food;
+		point ptDummy;
+		Obj objDummy;
+		num = (num + nUnitsPerCommand - 1) / nUnitsPerCommand;
+		for (i = 0; i < num; i += 1) {
+			if (nRace == ImperialRome) {//Greece
+				ObjList buildings;
+				Building b;
+				int j, min;
+				bool first_time = true;
+				buildings = set.Buildings;
+				for (j = 0; j < buildings.count; j += 1) {
+					b = buildings[j];
+					if (b.IsHeirOf("HGymnasium"))//using IsHeirOf is better than a direct class check because it manages winter variants
+						if (!b.IsBroken)
+							if (first_time) {
+								first_time = false;
+								min = b.CmdCount;
+								arena = b;
+							}
+							else if (b.CmdCount < min) {
+								min = b.CmdCount;
+								arena = b;
+							}
+				}
+			}
+			else
+				arena = set.BestArena();
+			if (arena.IsValid)
+				if (!arena.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						if (!set.CanAfford(cmd))
+							break;
+						set.SpentGoldOnArmy(gold + food / 2);
+						arena.ExecCmd(cmd, ptDummy, objDummy, false);
 					}
 		}
-		else
-			b = set.BestArena();
-		if (b.IsValid)
-			if (GetCmdCost(cmd, gold, food)) {
-				if (set.gold < gold)
-					break;
-				if (set.food < food)
-					break;
-				set.SpentGoldOnArmy(gold + food / 2);
-				b.ExecCmd(cmd, ptDummy, objDummy, false);
-			}
 	}
-}
 
-SetNoAIFlag(ol2, true);
-ol.AddList(ol2);
+SetNoAIFlag(ol1, true);
+ol.AddList(ol1);

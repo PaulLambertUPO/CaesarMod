@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olTuaregs, olElephants;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsRecovery;
 aSkills[1] = hsWisdom;
@@ -20,7 +20,7 @@ aSkillLevels[1] = 10;
 //hero + pikes + dark rituals + free trade + barrack level 1
 {
 	bool bPikes = false, bDarkRituals = false, bFreeTrade = false, bBarrack1 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bPikes || !bDarkRituals || !bFreeTrade || !bBarrack1)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bPikes || !bDarkRituals || !bFreeTrade || !bBarrack1)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bPikes)
@@ -47,7 +47,7 @@ aSkillLevels[1] = 10;
 //slavery + people assembly
 {
 	bool bSlavery = false, bAssembly = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bSlavery || !bAssembly)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bSlavery || !bAssembly)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bSlavery)
@@ -61,7 +61,7 @@ aSkillLevels[1] = 10;
 //spoils of war + barrack level 2
 {
 	bool bWarSpoils = false, bBarrack2 = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bWarSpoils || !bBarrack2)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bWarSpoils || !bBarrack2)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bWarSpoils)
@@ -76,7 +76,7 @@ aSkillLevels[1] = 10;
 {
 	int nCount, nTuaregs = 25, nElephants = 1;
 	bool bSlavery = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (olTuaregs.count < nTuaregs || olElephants.count < nElephants)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (olTuaregs.count < nTuaregs || olElephants.count < nElephants)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olTuaregs.count < nTuaregs) {
@@ -102,11 +102,17 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olTuaregs.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olTuaregs.ClearDead();
@@ -114,4 +120,4 @@ olElephants.ClearDead();
 SetNoAIFlag(olTuaregs, false);
 SetNoAIFlag(olElephants, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

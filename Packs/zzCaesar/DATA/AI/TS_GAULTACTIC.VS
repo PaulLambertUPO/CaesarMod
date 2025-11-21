@@ -5,12 +5,12 @@
 Hero hero;
 IntArray aSkills, aSkillLevels;
 ObjList olHorsemen;
-int AIPlayer, heroScriptId;
+int aiPlayer, heroScriptId;
 bool bHeroScript = false;
 
-AIPlayer = set.player;
+aiPlayer = set.player;
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 1);
+SetAIVar(aiPlayer, AIV_WaitTactic, 1);
 
 aSkills[0] = hsDefensiveCry;
 aSkillLevels[0] = 10;
@@ -23,7 +23,7 @@ aSkillLevels[0] = 10;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseshoes1 || !bFreeBeer || i < nExploringUnits)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseshoes1 || !bFreeBeer || i < nExploringUnits)) {
 		if (!hero.IsValid)
 			hero = set.TSRecruitHero();
 		if (!bHorseshoes1)
@@ -33,10 +33,11 @@ aSkillLevels[0] = 10;
 		if (i < nExploringUnits) {
 			barrack = set.BestBarrack(5);
 			if (barrack.IsValid)
-				if (GetCmdCost(cmd, gold, food)) {
-					set.SpentGoldOnArmy(gold + food / 2);
-					barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-				}
+				if (!barrack.IsBroken)
+					if (GetCmdCost(cmd, gold, food)) {
+						set.SpentGoldOnArmy(gold + food / 2);
+						barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+					}
 			i += 1;
 		}
 		Sleep(4100 + rand(15) * 100);
@@ -54,7 +55,7 @@ aSkillLevels[0] = 10;
 //exceptional horseshoes + barrack level 1 + bear teeth
 {
 	bool bHorseshoes2 = false, bBarrack1 = false, bBearTeeth = false;
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && (!bHorseshoes2 || !bBarrack1 || !bBearTeeth)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bHorseshoes2 || !bBarrack1 || !bBearTeeth)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bHorseshoes2)
@@ -67,17 +68,21 @@ aSkillLevels[0] = 10;
 	}
 }
 
-//30 horsemen
+//barrack level 2 + 30 horsemen
 {
 	int nCount, nHorsemen = 30;
+	bool bBarrack2 = false;
 	str supportCmd = "GAddPop";
-	while (AIVar(AIPlayer, AIV_WaitTactic) == 1 && olHorsemen.count < nHorsemen) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olHorsemen.count < nHorsemen)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		if (olHorsemen.count < nHorsemen) {
-			nCount = nHorsemen - olHorsemen.count;
-			olHorsemen.AddList(set.TSRecruitArmy("GHorseman", nCount));
-		}
+		if (!bBarrack2)
+			bBarrack2 = set.TSResearch("Barrack Level 2");
+		if (bBarrack2)
+			if (olHorsemen.count < nHorsemen) {
+				nCount = nHorsemen - olHorsemen.count;
+				olHorsemen.AddList(set.TSRecruitArmy("GHorseman", nCount));
+			}
 		if (set.CanAfford(supportCmd))
 			set.TSResearch(supportCmd);
 		olHorsemen.SetCommand("enter", set.GetCentralBuilding());
@@ -90,14 +95,20 @@ if (bHeroScript)
 	AIBreakScript(heroScriptId);
 if (hero.IsValid)
 	if (hero.IsAlive) {
+		int i, attached;
 		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		hero.SetCommand("enter", set.GetCentralBuilding());
 		hero.SetNoAIFlag(false);
 		olHorsemen.SetCommand("attach", hero);
-		Sleep(5000);
+		attached = hero.army.count;
+		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+			Sleep(10000);
+			if (hero.army.count > attached)
+				break;
+		}
 	}
 
 olHorsemen.ClearDead();
 SetNoAIFlag(olHorsemen, false);
 
-SetAIVar(AIPlayer, AIV_WaitTactic, 0);
+SetAIVar(aiPlayer, AIV_WaitTactic, 0);

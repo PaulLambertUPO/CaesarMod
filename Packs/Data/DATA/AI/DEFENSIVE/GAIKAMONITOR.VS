@@ -1,41 +1,37 @@
-// void
-int  i, AIPlayer, Strat;
+//void
 
-Sleep(rand(1000) + 300);
+GAIKA gaika;
+int aiPlayer, nLastGaika, strat, i;
+bool interruptPassing, synchApproach;
 
-AIPlayer = AIGetPlayer();
-while ( ! LAIKA( AIPlayer, GAIKACount() - 1 ).Prioritized( AIPlayer ))
-{
-  Sleep( 2000 );
-}
+Sleep(500 + rand(501));
 
-while( true )
-{
-  bool bIP, bSA;
-  bIP = (AIVar(AIPlayer, AIV_InterruptPassing) != 0);
-  bSA = (AIVar(AIPlayer, AIV_SynchApproach) != 0);
+aiPlayer = AIGetPlayer();
+nLastGaika = GAIKACount - 1;
 
-	for (i = 1; i < GAIKACount(); i += 1)	{
-		GAIKA gaika; gaika = LAIKA( AIPlayer, i );
+interruptPassing = AIVar(aiPlayer, AIV_InterruptPassing) != 0;
+synchApproach = AIVar(aiPlayer, AIV_SynchApproach) != 0;
 
-		if (gaika.settlement.IsOwn(AIPlayer))
-			gaika.SetControlFlag(AIPlayer, true);
+while (!LAIKA(aiPlayer, nLastGaika).Prioritized(aiPlayer))
+	Sleep(2000);
 
-		if (i%15==0) Sleep(100); // Don't think too much
-		if (!gaika.MilitaryPresence(AIPlayer)) continue;
-
-    if (bIP) gaika.AIRun("GSH_InterruptPassing.vs", AIPlayer);
-    if (bSA) gaika.AIRun("GSH_SynchApproach.vs", AIPlayer);
-
-		if (gaika.StratRunning(AIPlayer) != GS_NONE) continue;
-
-		Strat = gaika.GetStrat(AIPlayer);
-		if (Strat != 0) {
-			//pr( "> GAIKA " + i + " without STRATEGY found and we found that it may run " + Strat );
-			gaika.RunStrat( AIPlayer, Strat );
-      Sleep( 500 );
- 		}
-		Sleep( 100 );
+while (1) {
+	for (i = 1; i <= nLastGaika; i += 1) {
+		gaika = LAIKA(aiPlayer, i);
+		if (gaika.settlement.IsValid)
+			if (gaika.settlement.IsOwn(aiPlayer))
+				gaika.SetControlFlag(aiPlayer, true);
+		if (gaika.MilitaryPresence(aiPlayer)) {
+			if (interruptPassing)
+				gaika.AIRun("GSH_InterruptPassing.vs", aiPlayer);
+			if (synchApproach)
+				gaika.AIRun("GSH_SynchApproach.vs", aiPlayer);
+			if (gaika.StratRunning(aiPlayer) == GS_NONE) {
+				strat = gaika.GetStrat(aiPlayer);
+				if (strat != GS_NONE)
+					gaika.RunStrat(aiPlayer, strat);
+			}
+		}
+		Sleep(250);
 	}
-  Sleep(100);
 }

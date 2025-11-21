@@ -35,7 +35,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, Gladiator Shows, default, NameSet, RGladiator Shows, , SetsSet, levels/Hero, 4, SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, RGladiator Shows, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows2, , SetsSet, levels/Hero, 4, SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Rome Training 1" priority="4"
@@ -49,7 +49,7 @@
 		description="Allows warriors to train up to level 4"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, default, SetsPlr, maxtrainlevel, 4, NamePlr, Training">
+		param="ReqSet, Gladiator Shows, default, NamePlr, Rome Training 1, , SetsPlr, maxtrainlevel, 4, NamePlr, Training, , NamePlr, Gaul Training 1">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Rome Training 2" priority="4"
@@ -63,7 +63,7 @@
 		description="Allows warriors to train up to level 8"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, , ReqPlr, Training, , SetsPlr, maxtrainlevel, 8, NamePlr, Advanced Training, default">
+		param="ReqSet, Gladiator Shows, , ReqPlr, Training, , NamePlr, Rome Training 2, default, SetsPlr, maxtrainlevel, 8, NamePlr, Advanced Training, , NamePlr, Gaul Training 2">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Veteran Offence" priority="5"
@@ -119,7 +119,7 @@
 		description="All warriors who reach level 8 become level 12"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, default, NamePlr, Nobility, default, NamePlr, RNobility, , NamePlr, BNobility">
+		param="ReqSet, Gladiator Shows, default, NamePlr, RNobility, default, NamePlr, Nobility, , NamePlr, BNobility">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Transition to Empire" priority="9"
@@ -177,7 +177,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, Gladiator Shows, default, NameSet, RGladiator Shows2, SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, RGladiator Shows2, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Standartization I" priority="4"
@@ -320,7 +320,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, Gladiator Shows, default, SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, Gladiator Shows, default, NameSet, RGladiator Shows, , NameSet, RGladiator Shows2, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Training" priority="4"
@@ -334,7 +334,7 @@
 		description="Allows warriors to train up to level 4"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, default, SetsPlr, maxtrainlevel, 4, NamePlr, Training">
+		param="ReqSet, Gladiator Shows, default, NamePlr, Training, , SetsPlr, maxtrainlevel, 4, NamePlr, Rome Training 1, , NamePlr, Gaul Training 1">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Advanced Training" priority="4"
@@ -348,7 +348,7 @@
 		description="Allows warriors to train up to level 8"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, , ReqPlr, Training, , SetsPlr, maxtrainlevel, 8, NamePlr, Advanced Training">
+		param="ReqSet, Gladiator Shows, , ReqPlr, Training, , NamePlr, Advanced Training, , SetsPlr, maxtrainlevel, 8, NamePlr, Rome Training 2, , NamePlr, Gaul Training 2">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Special training" priority="4"
@@ -362,7 +362,7 @@
 		description="Allows warriors to train up to level 12"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, , ReqPlr, Advanced Training, , SetsPlr, maxtrainlevel, 12, NamePlr, Special training, default">
+		param="ReqSet, Gladiator Shows, , ReqPlr, Advanced Training, , NamePlr, Special training, default, NamePlr, Gaul Training 3, , break, SetsPlr, maxtrainlevel, 12, NamePlr, Spartan Training"><!-- break token must stay between Gaul Training 3 and Spartan Training -->
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Hire Liberati Punic" priority="5"
@@ -422,7 +422,7 @@
 		description="Allows warriors to train up to level 4"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, SetsPlr, maxtrainlevel, 4, NamePlr, Training">
+		param="ReqSet, Fights, default, NamePlr, Gaul Training 1, , SetsPlr, maxtrainlevel, 4, NamePlr, Training, , NamePlr, Rome Training 1">
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -437,7 +437,7 @@
 		description="Allows warriors to train up to level 8"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, , ReqPlr, Training, , SetsPlr, maxtrainlevel, 8, NamePlr, Advanced Training">
+		param="ReqSet, Fights, , ReqPlr, Training, , NamePlr, Gaul Training 2, , SetsPlr, maxtrainlevel, 8, NamePlr, Advanced Training, , NamePlr, Rome Training 2">
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -452,7 +452,7 @@
 		description="Allows warriors to train up to level 12"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, , ReqPlr, Advanced Training, , SetsPlr, maxtrainlevel, 12, NamePlr, Special training, default">
+		param="ReqSet, Fights, , ReqPlr, Advanced Training, , NamePlr, Gaul Training 3, default, NamePlr, Special training, , break, SetsPlr, maxtrainlevel, 12, NamePlr, Spartan Training"><!-- break token must stay between Special training and Spartan Training -->
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -849,7 +849,7 @@
 		rollover="Hire hero">
 		<src obj="BMorrigansMonument" />
 	</cmd>
-	<cmd name="Britain Fights" priority="3"
+	<cmd name="Challenges" priority="3"
 		button="Upgrades/FightsB.bmp"
 		key="f"
 		queueicon="gameres/icons/upgrades/FightsB.bmp"
@@ -858,9 +858,9 @@
 		researchcommand="yes"
 		groupverifier="data/subai/verify_research.vs"
 		description="Makes new heroes level 6"
-		rollover="Fights"
+		rollover="Challenges"
 		method="research"
-		param="NameSet, Fights, default, NameSet, Britain Fights, , SetsSet, levels/Hero, 6">
+		param="NameSet, Challenges, default, SetsSet, levels/Hero, 6">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<cmd name="BNobility" priority="4"
@@ -874,7 +874,7 @@
 		description="All warriors who reach level 8 become level 12"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NamePlr, Nobility, default, NamePlr, BNobility, , NamePlr, RNobility">
+		param="ReqSet, Challenges, default, NamePlr, BNobility, default, NamePlr, Nobility, , NamePlr, RNobility">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<cmd name="Noble Offence" priority="5"
@@ -888,7 +888,7 @@
 		description="Makes all warriors level 12 and above receive a Noble offence artifact (+8 damage) at the first kill"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, ReqPlr, Nobility, default, NamePlr, Noble Offence, default">
+		param="ReqPlr, Nobility, default, ReqSet, Challenges, default, NamePlr, Noble Offence, default">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<cmd name="Noble Defence" priority="6"
@@ -902,7 +902,7 @@
 		description="Makes all warriors level 12 and above receive a Noble defence artifact (+8 armor) at the first kill"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, ReqPlr, Nobility, default, NamePlr, Noble Defence, default">
+		param="ReqPlr, Nobility, default, ReqSet, Challenges, default, NamePlr, Noble Defence, default">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<cmd name="Hire Viking Lord" priority="7"
@@ -917,7 +917,7 @@
 		execdelay="20000"
 		rollover="Hire Viking Lord"
 		method="trainex"
-		param="1, 6, BVikingLord, Fights">
+		param="1, 6, BVikingLord, Challenges">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<cmd name="Shrine of Thor" priority="8"
@@ -931,7 +931,7 @@
 		rollover="Shrine of Thor"
 		description="Makes new Viking Lords 2 levels higher than the last (up to level 24)"
 		method="research"
-		param="ReqSet, Fights, default, NameSet, Shrine of Thor, default, SetsSet, levels/BVikingLord, 4">
+		param="ReqSet, Challenges, default, NameSet, Shrine of Thor, default, SetsSet, levels/BVikingLord, 4">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<!-- EGYPT -->
@@ -962,7 +962,7 @@
 		param="NameSet, Cult of Anubis, default">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
-	<cmd name="Statue of Isis, mother of Anubis" priority="4"
+	<cmd name="Statue of Isis" priority="4"
 		button="research/statue of isis.bmp"
 		key="i"
 		queueicon="gameres/icons/upgrades/statue of isis.bmp"
@@ -1032,7 +1032,7 @@
 		param="NameSet, Cult of Horus, default">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
-	<cmd name="Statue of Osiris, father of Horus" priority="7"
+	<cmd name="Statue of Osiris" priority="7"
 		button="research/statue of osiris.bmp"
 		key="o"
 		queueicon="gameres/icons/upgrades/statue of osiris.bmp"
@@ -1116,18 +1116,18 @@
 		rollover="Hire hero">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
-	<cmd name="TFights" priority="3"
-		button="Upgrades/Fights.bmp"
+	<cmd name="Tribal fights" priority="3"
+		button="Upgrades/FightsT.bmp"
 		key="f"
-		queueicon="gameres/icons/upgrades/Fights.bmp"
+		queueicon="gameres/icons/upgrades/FightsT.bmp"
 		costgold="2000"
 		execdelay="30000"
 		researchcommand="yes"
 		groupverifier="data/subai/verify_research.vs"
 		description="Gathers 4000 food"
-		rollover="Fights"
+		rollover="Tribal fights"
 		method="research"
-		param="NameSet, Fights, default, NameSet, TFights">
+		param="NameSet, Tribal fights, default">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 	<cmd name="Call Valkyries" priority="4"
@@ -1143,7 +1143,7 @@
 		rollover="Call Valkyries"
 		description="Calls 5 Valkyries"
 		method="trainex"
-		param="5, 10, TValkyrie, Fights">
+		param="5, 10, TValkyrie, Tribal fights">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 	<cmd name="Legendary Valkyries" priority="5"
@@ -1157,7 +1157,7 @@
 		description="Makes new Valkyries one level higher than the most experienced you've had"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NameSet, Legendary Valkyries, default">
+		param="ReqSet, Tribal fights, default, NameSet, Legendary Valkyries, default">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 	<cmd name="Learning" priority="6"
@@ -1171,7 +1171,7 @@
 		description="Makes all warriors gain 1 experience every time that they damage a more experienced enemy"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NamePlr, Learning, default">
+		param="ReqSet, Tribal fights, default, NamePlr, Learning, default">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 	<cmd name="Attack focus" priority="7"
@@ -1185,7 +1185,7 @@
 		description="The warriors' damage is not reduced when fighting more experienced enemies"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NamePlr, Attack focus, default">
+		param="ReqSet, Tribal fights, default, NamePlr, Attack focus, default">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 	<cmd name="Teuton Master" priority="8"
@@ -1199,7 +1199,7 @@
 		description="Allows Teuton Riders to transform into Teuton Archers, Archers into Wolves and Wolves into Riders (only in buildings and ships)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NamePlr, Teuton Master, default">
+		param="ReqSet, Tribal fights, default, NamePlr, Teuton Master, default">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 	<cmd name="Barbaric Tales" priority="9"
@@ -1213,7 +1213,7 @@
 		description="Every time that your Heroes and Valkyries kill an enemy that is at least 3 levels higher, they and all nearby allies gain 15 bonus experience"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NamePlr, Barbaric Tales, default">
+		param="ReqSet, Tribal fights, default, NamePlr, Barbaric Tales, default">
 		<src obj="TSanctuaryOfVotan" />
 	</cmd>
 </commands>

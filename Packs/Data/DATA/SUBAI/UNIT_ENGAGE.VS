@@ -2,8 +2,10 @@
 
 	Unit this;
 	Obj u;
+	bool melee;
 
 	this = me.AsUnit();
+	melee = !.IsRanged;
 
 	if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
 		.SetParryMode(false);
@@ -25,7 +27,15 @@
 			//pr("engage: attacking target!");
 			if (u.IsAlive() && .IsValidTarget(u))
 			{
-				while (.Attack(u));
+				if (u.AsCatapult().IsValid) {
+					while (.Attack(u))
+						if (melee)
+							if (.HasSpecial(trample))
+								u.Damage(.damage);
+				}
+				else
+					while (.Attack(u))
+						;
 			}
 			u = .BestTargetInSquadSight();
 		}

@@ -2,21 +2,20 @@
 
 GAIKA gCurDest;
 Unit sqLeader;
-Obj teleport;
-int idPlayer, nStateTime, lsaPathLen, nEval;
+int aiPlayer, lsaPathLen, nEval;
 bool bAssUnderFire;
 
-idPlayer = sq.Player;
-bAssUnderFire = g.ID == EnvReadInt(idPlayer, "AssUnderFireGaika");
+aiPlayer = sq.Player;
+bAssUnderFire = g.ID == EnvReadInt(aiPlayer, "AssUnderFireGaika");
 
 if (!bAssUnderFire) {
-	int nSqState;
-	nSqState = sq.State;
-	if (nSqState != SS_IDLE)
-		if (nSqState != SS_Approach)
-			if (nSqState != SS_Wait)
-				if (nSqState != SS_ApproachWait)
-					if (nSqState != SS_Enter)
+	int sqState;
+	sqState = sq.State;
+	if (sqState != SS_IDLE)
+		if (sqState != SS_Approach)
+			if (sqState != SS_Wait)
+				if (sqState != SS_ApproachWait)
+					if (sqState != SS_Enter)
 						return 0;
 }
 
@@ -24,17 +23,9 @@ gCurDest = sq.AIDest;
 if (gCurDest == g)
 	return 0;
 
-//do not give tasks too often
-nStateTime = sq.StateTime;
-if (GetTime() < 180000)
-	nStateTime = 10000000;
-if (!bAssUnderFire)
-	if (nStateTime < 1000 * AIVar(idPlayer, AIV_SquadRecruitWait))
-		return 0;
-
 sqLeader = sq.Leader;
-if (sqLeader.AsShip().IsValid()) {
-	if (sqLeader.AsShip().HasAiTransport())
+if (sqLeader.AsShip().IsValid) {
+	if (sqLeader.AsShip().HasAiTransport)
 		return 0;
 	if (!IsWaterLsa(g.LSA))
 		return 0;
@@ -42,22 +33,27 @@ if (sqLeader.AsShip().IsValid()) {
 else if (IsWaterLsa(g.LSA))
 	return 0;
 
-if (AIVar(idPlayer, AIV_UseTeleports) != 0)
-	teleport = FindTeleport(idPlayer, sq.pos, g.Center);
-if (teleport.IsValid)
+if (AIVar(aiPlayer, AIV_UseTeleports) == 0) {
+	lsaPathLen = CheckLsaPath(sq.GAIKAIn.LSA, g.LSA, aiPlayer);
+	if (lsaPathLen == 0)
+		return 0;
+}
+else if (FindTeleport(aiPlayer, sq.pos, g.Center).IsValid)
 	lsaPathLen = 1;
-else
-	lsaPathLen = CheckLsaPath(sq.GAIKAIn.LSA, g.LSA, idPlayer);
-if (lsaPathLen == 0)
-	return 0;
+else {
+	lsaPathLen = CheckLsaPath(sq.GAIKAIn.LSA, g.LSA, aiPlayer);
+	if (lsaPathLen == 0)
+		return 0;
+}
 
-//defensive AI addition - do not attack GAIKAs that are not marked for an attack
-if (!g.GetControlFlag(idPlayer))
-	if (GetTime() > 300000)
-		if (g.Explored(idPlayer))
+//defensive AI quirk - do not attack GAIKAs that are not marked for an attack
+if (!g.GetControlFlag(aiPlayer))
+	if (GetTime() > 300000) {
+		if (g.Explored(aiPlayer))
 			return 0;
-		else if (sq.Size > 5)
+		if (sq.Size > 5)
 			return 0;
+	}
 
 if (!bAssUnderFire) {
 	Settlement set, s;
@@ -66,59 +62,82 @@ if (!bAssUnderFire) {
 	set = g.settlement;
 
 	//do not explore with Trident Warriors, Viking Lords or Elephants
-	if (sqLeader.HasFreedom()) {
-		if (sqLeader.IsHeirOf("GTridentWarrior") || sqLeader.IsHeirOf("BVikingLord") || sqLeader.IsHeirOf("CWarElephant"))
-			if (g.Eval(AI_STAYING, idPlayer, AI_ENEMY) < 500)
+	if (sqLeader.HasFreedom) {
+		if (sqLeader.IsHeirOf("GTridentWarrior")) {
+			if (g.Eval(AI_STAYING, aiPlayer, AI_ENEMY) < 500)
 				return 0;
-		if (set.IsIndependent)
-			if (set.IsStronghold)
+		}
+		else if (sqLeader.IsHeirOf("BVikingLord")) {
+			if (g.Eval(AI_STAYING, aiPlayer, AI_ENEMY) < 500)
 				return 0;
-		if (!g.Explored(idPlayer))
+		}
+		else if (sqLeader.IsHeirOf("CWarElephant"))
+			if (g.Eval(AI_STAYING, aiPlayer, AI_ENEMY) < 500)
+				return 0;
+		if (set.IsValid)
+			if (set.IsIndependent)
+				if (set.IsStronghold)
+					return 0;
+		if (!g.Explored(aiPlayer))
 			return 0;
 	}
 
 	s = sq.GAIKAIn.settlement;
 
-	if (set.IsVillage)
-		if (s.IsStronghold)
-			if (s.food < 100)
-				bFightForFood = true;
+	if (set.IsValid)
+		if (set.IsVillage)
+			if (s.IsValid)
+				if (s.IsStronghold)
+					if (s.food < 100)
+						bFightForFood = true;
 
 	if (!bFightForFood)
 		if (sqLeader.AsHero().IsValid) {
-			if (s.IsStronghold) {
-				int time, min;
-				time = GetTime() / 60000;
-				if (time < 10)
-					min = 15;
-				else if (time < 20)
-					min = 20;
-				else if (time < 30)
-					min = 31;
-				else
-					min = 41;
-				if (sq.Size < min)
-					return 0;
+			if (s.IsValid) {
+				if (s.IsStronghold) {
+					int time, min;
+					time = GetTime() / 60000;
+					if (time < 10)
+						min = 15;
+					else if (time < 20)
+						min = 20;
+					else if (time < 30)
+						min = 31;
+					else
+						min = 41;
+					if (sq.Size < min)
+						return 0;
+				}
+				if (s.food >= 100)
+					if (set.IsValid)
+						if (!set.IsOwn(aiPlayer)) {
+							if (sq.health < sq.maxhealth * 4 / 5)
+								return 0;//heal first
+						}
+						else if (!set.IsStronghold)
+							if (sq.health < sq.maxhealth * 4 / 5)
+								return 0;//heal first
 			}
-			if (!set.IsOwn(idPlayer) || !set.IsStronghold)
-				if (sq.health < sq.maxhealth * 4 / 5)
-					if (s.IsValid)
-						if (s.food > 100)
-							return 0;//heal first
 		}
 		else {
-			if (sq.Units.count < 10)
-				if (sqLeader.GetHolderSett().IsTTent)
-					return 0;
-			if (g.Explored(idPlayer))
-				if (!set.IsIndependent)
-					if (s.IsStronghold)
-						if (!sq.HasFreedom())
-							if (s.IsOwn(idPlayer))
-								return 0;//wait to attach before sending
+			if (sq.Units.count < 10) {
+				Settlement hs;
+				hs = sqLeader.GetHolderSett();
+				if (hs.IsValid)
+					if (hs.IsTTent)
+						return 0;
+			}
+			if (g.Explored(aiPlayer))
+				if (set.IsValid)
+					if (!set.IsIndependent)
+						if (s.IsValid)
+							if (s.IsStronghold)
+								if (s.IsOwn(aiPlayer))
+									if (!sq.HasFreedom)
+										return 0;//wait to attach before sending
 		}
 
-	if (gCurDest.GetPriority(idPlayer) >= g.GetPriority(idPlayer))
+	if (gCurDest.GetPriority(aiPlayer) >= g.GetPriority(aiPlayer))
 		gDepend = gCurDest;//remember that gDepend is a reference variable, it is not used directly here but it is important not to remove it
 }
 
@@ -127,9 +146,10 @@ nEval = 100000 - sq.pos.Dist(g.Center) * lsaPathLen;
 //do not give tasks too often
 {
 	int nWeightTime;
-	nWeightTime = AIVar(idPlayer, AIV_SquadRecruitWeight);
+	nWeightTime = AIVar(aiPlayer, AIV_SquadRecruitWeight);
 	if (nWeightTime > 0) {
-		nStateTime = nStateTime / 1000;
+		int nStateTime;
+		nStateTime = sq.StateTime / 1000;
 		if (nStateTime < nWeightTime)
 			nEval = MAX(1, nEval * nStateTime / nWeightTime);
 	}

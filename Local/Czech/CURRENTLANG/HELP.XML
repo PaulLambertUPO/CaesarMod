@@ -505,7 +505,7 @@ Symbol of order and civilization, Rome has at its disposal an army of profession
 
 To win, in fact, Rome relies on the excellent basic stats of its troops, further improved by the skills of the heroes, and on the exploration of the territory.
 
-At the start of the game, from the townhall, you must choose which type of Rome you want to play as: Republican, Imperial or Punic, each with its own peculiarities.
+At the start of the game, you must choose which type of Rome you want to play as: Republican, Imperial or Punic, each with its own peculiarities.
 				</entry>
 				<entry />
 				<entry hcenter="1">Strengths</entry>
@@ -680,7 +680,7 @@ Unlike other nations, Germany uses food to recruit its troops, while gold is onl
 				</entry>
 				<entry hcenter="1">Weaknesses</entry>
 				<entry>
-- Troops with almost non-existent armor
+- Troops with almost non-existent armor and available in limited numbers
 
 - To start becoming truly effective, heroes need to be high level
 
@@ -1039,7 +1039,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Hired in Morrigan's monument</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Depends on Fights</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Depends on Challenges</entry>
 			</topic>
 			<topic id="EHero">
 				<entry hcenter="1" font="large">Egyptian hero</entry>
@@ -2091,7 +2091,7 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Hired in Morrigan's monument</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Requires Fights</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Requires Challenges</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Shrine of Thor.bmp" link="/contents/buildings/BArena">Depends on Shrine of Thor</entry>
 			</topic>
 			<topic id="BDruid">
@@ -2500,7 +2500,7 @@ The Teuton wolf changes equipment and transforms into a Teuton rider (only in bu
 				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/TSanctuaryOfVotan.bmp" link="/contents/buildings/TArena">Called in the Sanctuary of Wotan</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Fights.bmp" link="/contents/buildings/TArena">Requires Fights</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/FightsT.bmp" link="/contents/buildings/TArena">Requires Tribal fights</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Legendary Valkyries.bmp" link="/contents/buildings/TArena">Depends on Legendary valkyries</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Tales of Heroes1.bmp" link="/contents/buildings/TArena">Depends on Barbaric tales</entry>
 			</topic>
@@ -4762,7 +4762,7 @@ Cost: 800 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Upgrades/FightsB.bmp">
-Fights
+Challenges
 Makes new heroes level 6.
 Cost: 2000 gold
 Time: 30 seconds
@@ -4898,8 +4898,8 @@ Hire hero
 Cost: 800 gold
 Time: 20 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Fights.bmp">
-Fights
+				<entry vcenter="1" image="UI/Help/TCmdBar/Upgrades/FightsT.bmp">
+Tribal fights
 Gathers 4000 food.
 Cost: 2000 gold
 Time: 30 seconds
@@ -5404,8 +5404,8 @@ Buys 800 food at the market for 400 gold.
 Cost: 400 gold
 Time: 10 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Grain Trade.bmp">
-Grain trade
+				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Grain Trade T.bmp">
+Food sale
 Gathers 1000 gold.
 Cost: 2000 food
 Time: 20 seconds
@@ -6352,7 +6352,7 @@ It is generated in the ruins.
 			<entry image="UI/Icons/Items/Blood Stone.bmp">
 Blood stone
 Adds 50 experience.
-If used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 20 seconds).
+If used, it restores the health of the owner by taking it from an enemy of choice (with a cooldown of 30 seconds).
 It is generated in the rib cage every 30 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Snake Skin.bmp">

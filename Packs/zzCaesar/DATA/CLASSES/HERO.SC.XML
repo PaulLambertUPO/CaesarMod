@@ -25,6 +25,7 @@
 	<method sig="uimove" vs="data/subai/hero_smartmove.vs" />
 	<method sig="patrol" vs="data/subai/hero_patrol.vs" />
 	<method sig="advance" vs="data/subai/hero_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/hero_advance_aggressive.vs" />
 	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/unit_attack_verify.vs" />
 	<method sig="attack" vs="data/subai/hero_advance.vs" />
 	<method sig="smartmove" vs="data/subai/hero_smartmove.vs" />

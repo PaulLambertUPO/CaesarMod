@@ -1,143 +1,141 @@
-// int, GAIKA g, int idPlayer, bool bMin, int own, int ally, int enemy
+//int, GAIKA g, int idPlayer, bool bMin, int own, int ally, int enemy
 
-bool bCap = true;
-int nEval = 0;
-int own1, ally1, enemy1;
-int vikings;
-bool bEnemySet = false;
-Settlement Set;
+Settlement set;
+int nEval, time, enemySt;
+bool bValidSet, bEnemySet = false, bIsStronghold = false, bCap = true;
 
-Set = g.settlement;
+set = g.settlement;
+bValidSet = set.IsValid;
 
-if (Set.IsValid)
-if (Set.IsEnemy(idPlayer))
-	bEnemySet = true;
+if (bValidSet) {
+	if (set.IsEnemy(idPlayer))
+		bEnemySet = true;
+	if (set.IsStronghold)
+		bIsStronghold = true;
+	if (!bIsStronghold)
+		if (set.IsIndependent)
+			if (!set.IsIndependentGuarded)
+				if (!set.IsTTent)
+					return 1;
+}
 
-if (!g.Explored(idPlayer))
-if (!Set.IsTeutonTent || GetTime > 600000)
-	return 1;
+time = GetTime();
 
-if (Set.IsIndependent)
-if (!Set.IsIndependentGuarded)
-if (!Set.IsTeutonTent)
-if (!Set.IsStronghold)
-	return 1;
+if (!g.Explored(idPlayer)) {
+	if (!bValidSet)
+		return 1;
+	if (!set.IsTTent)
+		return 1;
+	if (time > 600000)
+		return 1;
+}
 
 if (!g.Revealed(idPlayer))
-if (!Set.IsStronghold)
-if (GetTime - g.LastSeen(idPlayer) >= 600000)
-	enemy = 1; // expect only few enemies if non-stronghold GIAKA not visited for 10 min
+	if (!bIsStronghold)
+		if (time - g.LastSeen(idPlayer) >= 600000)
+			enemy = 1;//expect few enemies if non-stronghold GAIKA not visited for 10 minutes
 
-// Add enemies from adjacent revealed GAIKA
-if (enemy > 0) {
-	g.EvalNeighbors(AI_STAYING, idPlayer, own1, ally1, enemy1, true); // 'true' == revealed GAIKA only
-	if (enemy1 > own1)
-		enemy += (enemy1 - own1) * 2 / 3;
+if (enemy > 0) {//add enemies from adjacent revealed GAIKAs
+	int ownSt, allySt;
+	g.EvalNeighbors(AI_STAYING, idPlayer, ownSt, allySt, enemySt, true);//true = revealed gaikas only
+	if (enemySt > ownSt)
+		enemy += (enemySt - ownSt) * 2 / 3;
 }
-if (Set.IsValid)
-	if (Set.IsOwn(idPlayer))
-	{ // own settlement
-		if (enemy == 0)
-		{ // protect unattacked settlements
-			if (Set.IsOutpost)
-			if (Set.supplied.IsValid) // trading outpost, some protection
-			if (Set.gold > 1000 || Set.food > 500)
-				if (bMin)
-					nEval = 6000;
-				else
-					nEval = 10000;
-			return nEval; 
-		}
-		if (enemy > 500)
-			bCap = false; // no minimum when defending our settlements
-	}
-	else
-		if (!Set.IsStronghold && !Set.IsVillage && !Set.IsOutpost && !Set.IsShipyard)
-		{
-			if (enemy == 0)
-				return 0;
-		}
-		else
-			if (Set.IsIndependent)
-			{
-				if (Set.IsStronghold)
-					return 1500;
-				if (enemy == 0)
-					return 1;
-			}
-			else
-				if (Set.IsEnemy(idPlayer))
-				{	// enemy settlement
-					nEval += 1;
-					if (Set.IsStronghold)
-					{ // strongholds are tough :)
+
+if (bValidSet)
+	if (set.IsOwn(idPlayer)) {
+		if (enemy <= 0) {//protect unattacked settlements
+			if (set.IsOutpost)
+				if (set.supplied.IsValid) {//trade and gold outposts need protection
+					if (set.gold >= 1000)
 						if (bMin)
-							nEval += 5000;
+							return 4000;
 						else
-							nEval += 15000;
-						enemy += enemy1 / 2;
-						vikings = EvalGroup("Player" + idPlayer + "BVikingLord");
-					}
-					else
-						if (Set.IsVillage)
-						{
-							Settlement s; s = NearestStronghold(Set.GetCentralBuilding.pos, idPlayer);
-							if (s.IsValid)
-							if (s.food < 100)
-								bCap = false; // no minimum for enemy villages if starving
-						}
+							return 8000;
+					if (set.food >= 500)
+						if (bMin)
+							return 6000;
+						else
+							return 10000;
 				}
+			return 0;
+		}
+		if (enemy >= 500)
+			bCap = false;//no minimum when defending owned settlements
+	}
+	else if (bIsStronghold) {
+		if (set.IsIndependent)
+			return 1500;
+		if (bEnemySet) {
+			if (bMin)
+				nEval = 5001;
+			else
+				nEval = 15001;
+			enemy += enemySt / 2;
+		}
+	}
+	else if (set.IsVillage) {
+		if (set.IsIndependent) {
+			if (enemy <= 0)
+				return 1;
+		}
+		else if (bEnemySet) {
+			Settlement s;
+			s = NearestStronghold(set.GetCentralBuilding().pos, idPlayer);
+			if (s.IsValid)
+				if (s.food <= 100)
+					bCap = false;//no minimum for enemy villages if starving
+			nEval = 1;
+		}
+	}
+	else if (set.IsOutpost) {
+		if (set.IsIndependent) {
+			if (enemy <= 0)
+				return 1;
+		}
+		else if (bEnemySet)
+			nEval = 1;
+	}
+	else if (set.IsShipyard) {
+		if (set.IsIndependent) {
+			if (enemy <= 0)
+				return 1;
+		}
+		else if (bEnemySet)
+			nEval = 1;
+	}
+	else if (enemy <= 0)
+		return 0;
 
-// enemies
 if (bMin)
-{
-	int min;
-	if (!bCap) min = 0;
-	else if (GetTime < 600000) min = 2000;
-	else if (GetTime < 120000) min = 3000;
-	else if (GetTime < 180000) min = 5000;
-	else min = 6000;
-
-	if (Set.IsStronghold)
-	if (Set.IsEnemy(idPlayer))
-	if (!bCap)
-	if (min < vikings + 3000)
-		min = vikings + 3000; // Do not attack strongholds with viking lords only
-
-	if (GetTime < 900000) // Be more careful at game start
-		nEval += enemy * 15 / 10;
+	if (time < 900000)
+		nEval += enemy * 3 / 2;
 	else
 		nEval += enemy * 11 / 10;
-	if (nEval > 0 || bEnemySet)
-	if (nEval < min)
-		nEval = min;
-}
 else
-{
-	int min;
-	if (!bCap) min = 0;
-	else if (GetTime < 600000) min = 4000;
-	else if (GetTime < 120000) min = 6000;
-	else if (GetTime < 180000) min = 10000;
-	else min = 12000;
-
-	if (Set.IsStronghold)
-	if (Set.IsEnemy(idPlayer))
-	if (!bCap)
-	if (min < vikings + 3000)
-		min = vikings + 6000; // Do not attack strongholds with viking lords only
-
 	nEval += enemy * 4;
-	if (nEval > 0 || bEnemySet)
+
+if (bEnemySet || nEval > 0) {
+	int min;
+
+	if (bCap)
+		if (time < 600000)
+			min = 4000;
+		else if (time < 120000)
+			min = 6000;
+		else if (time < 180000)
+			min = 10000;
+		else
+			min = 12000;
+	else if (bIsStronghold)
+		if (bEnemySet)
+			min = 6000;
+
+	if (bMin)
+		min = min / 2;
+
 	if (nEval < min)
 		nEval = min;
 }
-
-/*
-if (!g.Revealed(idPlayer))
-if (nEval == 0)
-if (GetTime - g.LastSeen(idPlayer) >= 300000)
-	nEval = 1; // wish to check out GAIKA's not visited for 5 min
-*/
 
 return nEval;

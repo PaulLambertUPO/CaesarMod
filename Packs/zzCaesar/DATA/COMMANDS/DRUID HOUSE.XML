@@ -36,7 +36,7 @@
 		rollover="Ritual Chamber"
 		description="Allows druids to gain experience by learning from more experienced allies"
 		method="research"
-		param="NamePlr, Ritual Chamber, default">
+		param="NamePlr, Ritual Chamber, default, NamePlr, Britain chamber, , NamePlr, German chamber">
 		<src obj="DruidHouse" />
 	</cmd>
 	<cmd name="Ghoul Summoning" priority="4"
@@ -50,7 +50,7 @@
 		rollover="Ghoul summoning"
 		description="Allows druids to sacrifice themselves to summon a Ghoul that drains the health of all nearby enemies for about 10 seconds"
 		method="research"
-		param="ReqPlr, Ritual Chamber, default, NamePlr, Ghoul Summoning, default">
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Ghoul Summoning, default, NamePlr, Britain Ghoul Summoning">
 		<src obj="DruidHouse" />
 	</cmd>
 	<cmd name="Eagle Summoning" priority="5"
@@ -78,7 +78,7 @@
 		rollover="Restoration"
 		description="Allows druids to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a druid dies"
 		method="research"
-		param="ReqPlr, Ritual Chamber, default, NamePlr, Restoration, default">
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Restoration, default, NamePlr, IRestoration, , NamePlr, HRestoration">
 		<src obj="DruidHouse" />
 	</cmd>
 	<cmd name="Reincarnation Ritual" priority="7"

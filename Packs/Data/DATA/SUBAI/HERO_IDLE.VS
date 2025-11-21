@@ -3,8 +3,11 @@
 Hero this;
 int i;
 Obj u;
+bool melee;
 
 this = This.AsHero;
+
+melee = !.IsRanged;
 
 //.army.SetCommand("idle");
 for (i = 0; i<.army.count; i+=1)
@@ -28,10 +31,20 @@ while(1) {
 				if (!.IsVisible) break;
 				u = .BestTargetInSquadSightMisZeroDamage;
 				if (!.IsValidTarget(u)) break;
-				while (.Attack(u)) {
-					if (!.IsValidTarget(u)) break;
-					if (!.IsVisible) break;
+				if (u.AsCatapult().IsValid) {
+					while (.Attack(u)) {
+						if (!.IsValidTarget(u)) break;
+						if (!.IsVisible) break;
+						if (melee)
+							if (.HasSpecial(trample))
+								u.Damage(.damage);
+					}
 				}
+				else
+					while (.Attack(u)) {
+						if (!.IsValidTarget(u)) break;
+						if (!.IsVisible) break;
+					}
 				if (!.IsVisible) break;
 				u = .BestTargetInSquadSightMisZeroDamage;
 				if (!.IsValidTarget(u)) break;

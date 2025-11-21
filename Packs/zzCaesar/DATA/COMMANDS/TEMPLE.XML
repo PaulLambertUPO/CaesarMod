@@ -65,7 +65,7 @@
 		rollover="Cloud of Plague"
 		description="Allows priests to sacrifice themselves to create a cloud of plague which deals 45 damage to all units periodically for about 12 seconds"
 		method="research"
-		param="ReqSet, Altar of Jupiter, default, NamePlr, Cloud of Plague, default">
+		param="ReqSet, Altar of Jupiter, default, NamePlr, Cloud of Plague, default, NamePlr, ECloud of Plague">
 		<src obj="RTemple" />
 	</cmd>
 	<cmd name="Wrath of Jupiter" priority="5"
