@@ -1,16 +1,12 @@
-<class id="GTavern" altid="Tavern" cpp_class="CVXTavern" parent="BaseTavern"
-entity="Buildings/GTavern/Tavern_as.ent.xml"
-entity_autumn="Buildings/GTavern/Tavern_as.ent.xml"
-entity_spring="Buildings/GTavern/Tavern_as.ent.xml"
-entity_winter="Buildings/GTavern/Tavern_w.ent.xml">
-	<properties race="Gaul"/>
-	<properties display_name="Tavern"/>
-	<properties radius="170" selection_radius="180"/>
-	<properties edittree_pos="Structures/Stronghold (Gaul)/Tavern"/>
-	<properties auto_repair="no"/>
-	<properties icon="gameres/icons/GTavern.bmp"/>
-	<properties help="/contents/buildings/GTavern"/>
+<class id="GTavern" altid="Tavern" parent="BaseTavern" cpp_class="CVXTavern" entity="Buildings/GTavern/Tavern_as.ent.xml" entity_winter="Buildings/GTavern/Tavern_w.ent.xml">
 
-	
+	<properties race="Gaul" />
+	<properties radius="170" selection_radius="180" />
+
+	<properties icon="gameres/icons/GTavern.bmp" />
+	<properties help="contents/buildings/GTavern" />
+	<properties edittree_pos="Structures/Stronghold (Gaul)/Tavern" />
+
+	<method sig="getloan" vs="data/subai/tavern_getloan.vs" />
+	<method sig="repayloan" vs="data/subai/tavern_repayloan.vs" />
 </class>
-

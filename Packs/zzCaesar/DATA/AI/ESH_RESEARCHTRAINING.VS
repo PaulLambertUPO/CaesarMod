@@ -433,14 +433,14 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 		}
 
 		if (strTech1 == "")
-			strTech2 = "Offer to Gods";
+			strTech2 = "Cult of Osiris";
 		else if (set.gold >= AIVar(aiPlayer, AIV_ExcessGold))
-			strTech2 = "Offer to Gods";
+			strTech2 = "Cult of Osiris";
 		else if (rand(6) == 0)
 			if (IsResearched(aiPlayer, "Statue of Amon-Ra"))
 				strTech2 = "Cult of Osiris";
 
-		if (strTech1 != "")
+		if (strTech2 != "")
 			if (IsResearched(set, strTech2)) {
 				strTech2 = "Mumification";
 				if (IsResearched(aiPlayer, strTech2))

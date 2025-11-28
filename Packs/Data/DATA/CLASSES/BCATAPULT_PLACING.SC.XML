@@ -1,7 +1,2 @@
-<class
-	id="bcatapult_placing"
-	cpp_class="CVXMapObj"
-	parent="catapult_placing"
-	entity="Visuals/BCatapult_Placing/BCatapult_Placing.ent.xml">
-
+<class id="bcatapult_placing" parent="catapult_placing" cpp_class="CVXMapObj" entity="Visuals/BCatapult_Placing/BCatapult_Placing.ent.xml">
 </class>

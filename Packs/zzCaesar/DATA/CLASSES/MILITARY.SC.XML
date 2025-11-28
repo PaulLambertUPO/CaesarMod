@@ -1,4 +1,4 @@
-<class id="Military" cpp_class="CVXUnit" parent="Unit" entity="">
+<class id="Military" parent="Unit" cpp_class="CVXUnit" entity="">
 
 	<properties healthbar_type="2" />
 

@@ -1,4 +1,4 @@
-<class id="RPriestPunic" cpp_class="CVXDruid" parent="RPriest" entity="Units/RPriest/RPriest.ent.xml">
+<class id="RPriestPunic" parent="RPriest" cpp_class="CVXDruid" entity="Units/RPriest/RPriest.ent.xml">
 	<properties unit_specials="Active, Healing, Toughness" />
 	<properties icon="gameres/icons/zpwPriest.bmp" />
 	<properties edittree_pos="Units/Roman/Priest (Punic)" />

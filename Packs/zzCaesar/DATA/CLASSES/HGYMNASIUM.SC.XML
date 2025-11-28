@@ -1,11 +1,11 @@
-<class id="HGymnasium" cpp_class="CVXBuilding" parent="BaseArena" entity="Buildings/HGymnasium/HGymnasium.ent.xml">
+<class id="HGymnasium" parent="BaseArena" cpp_class="CVXBuilding" entity="Buildings/HGymnasium/HGymnasium.ent.xml">
 
 	<properties race="ImperialRome" />
-
 	<properties radius="350" selection_radius="355" />
 
-	<properties display_name="Gymnasium" icon="gameres/icons/HGymnasium.bmp" />
-	<properties help="/contents/buildings/HGymnasium" />
+	<properties display_name="Gymnasium" />
+	<properties icon="gameres/icons/HGymnasium.bmp" />
+	<properties help="contents/buildings/HGymnasium" />
 	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Gymnasium" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
 
 	<behavior script="data/subai/government_form.vs" />

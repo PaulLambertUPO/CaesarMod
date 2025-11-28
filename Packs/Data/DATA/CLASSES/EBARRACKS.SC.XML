@@ -1,11 +1,9 @@
-<class id="EBarracks" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/EBarracks/EBarracks.ent.xml">
-	<properties race="Egypt"/>
-	<properties icon="gameres/icons/EBarracks.bmp"/>
-	<properties display_name="Barracks" display_name_plural="Barracks"/>
-	<properties radius="190" selection_radius="220"/>
-	<properties help="/contents/buildings/EBarracks"/>
+<class id="EBarracks" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/EBarracks/EBarracks.ent.xml">
 
-	<properties edittree_pos="Structures/Stronghold (Egypt)/Barracks"/>
-	<properties auto_repair="no"/>
-	
+	<properties race="Egypt" />
+	<properties radius="190" selection_radius="220" />
+
+	<properties icon="gameres/icons/EBarracks.bmp" />
+	<properties help="contents/buildings/EBarracks" />
+	<properties edittree_pos="Structures/Stronghold (Egypt)/Barracks" />
 </class>

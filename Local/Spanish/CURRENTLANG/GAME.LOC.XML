@@ -548,7 +548,6 @@
 <translationtableentry text="Gold outpost" result="Fortín del oro" />
 <translationtableentry text="Gold outpost (Roman)" result="Fortín del oro (romano)" />
 <translationtableentry text="Gold outpost (Egyptian)" result="Fortín del oro (egipcio)" />
-<translationtableentry text="Stone Outpost" result="Fortín del oro" />
 <translationtableentry text="Trade outpost" result="Fortín de comercio" />
 <translationtableentry text="Trade outpost (Gaul)" result="Fortín de comercio (galo)" />
 <translationtableentry text="Trade outpost (German)" result="Fortín de comercio (germano)" />
@@ -594,7 +593,6 @@
 <translationtableentry text="Allows heroes of the specified level to enter and obtain the item inside. Upon exiting, their health is always 20% of the maximum" result="Permite a los héroes del nivel indicado entrar y obtener el objeto en su interior. Al salir, el héroe tendrá un 20% de la salud máxima" />
 <translationtableentry text="Heroes of the same player visiting the grave will benefit from the experience of the dead hero.\nWarriors of the same player visiting the grave will receive charms that improve their combat skills until they kill an enemy" result="Los héroes del mismo jugador que visiten la tumba se beneficiaran de la experiencia del héroe fallecido.\nLos guerreros del mismo jugador recibirán talismanes mágicos que mejoran sus capacidades de combate hasta el primer asesinato" />
 <translationtableentry text="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Stonehenge, to ensure that it accumulates enough power for such rituals" result="Permite lanzar hechizos que tienen efecto en todo el mapa. Para poder lanzar tales hechizos, debe haber alguna unidad espiritual cerca del altar, para asegurar que acumule suficiente poder para rituales así" />
-<translationtableentry text="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Shrine, to ensure that it accumulates enough power for such rituals" result="Permite lanzar hechizos que tienen efecto en todo el mapa. Para poder lanzar tales hechizos, debe haber alguna unidad espiritual cerca del altar, para asegurar que acumule suficiente poder para rituales así" />
 <translationtableentry text="Allows armies to go from one cave entrance to the other instantly" result="Permite a los ejércitos ir de la entrada de una cueva a la otra al instante" />
 <translationtableentry text="Restores the health of any nearby injured unit (animals excluded) by 100 every 0.5 seconds" result="Restablece la salud de cualquier unidad herida cercana (animales excluidos) en 100 puntos cada 0,5 segundos" />
 <!-- end building descriptions -->
@@ -1231,6 +1229,7 @@
 <translationtableentry text="Click to attack this building" result="Haz clic para atacar esta estructura" />
 <translationtableentry text="Right-click to attack this building" result="Haz clic con el botón derecho para atacar esta estructura" />
 <translationtableentry text="Click to advance to this position" result="Haz clic para avanzar hasta esta posición" />
+<translationtableentry text="Right-click to advance to this position" result="Haz clic con el botón derecho para avanzar hasta esta posición" />
 <translationtableentry text="Right-click to attack this type of enemy" result="Haz clic con el botón derecho para atacar a este tipo de enemigo" />
 <translationtableentry text="Capture" result="Conquistar" />
 <translationtableentry text="Walls cannot be captured, only attacked" result="No se pueden conquistar los muros, solo atacarlos" />

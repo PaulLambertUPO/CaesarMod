@@ -1,4 +1,4 @@
-<class id="BaseVillage" cpp_class="CVXTownHall" parent="BaseBuilding">
+<class id="BaseVillage" parent="BaseBuilding" cpp_class="CVXTownHall">
 	<properties
 		is_central_building="1"
 		can_be_captured="1"
@@ -21,6 +21,7 @@
 	<properties auto_repair="yes" repair_rate="250" />
 	<properties minimap_icon_type="color" />
 	<properties display_name="Village Hall" />
+	<properties help="contents/buildings/Village"/>
 
 	<behavior script="data/subai/settlement_behavior_ambient.vs" />
 	<behavior script="data/subai/village_supply_and_give_food.vs" />

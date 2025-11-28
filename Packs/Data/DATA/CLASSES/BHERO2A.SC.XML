@@ -1,6 +1,3 @@
-<class id="BHero2a" cpp_class="CVXHero" parent="BritonHero" entity="Units/BHero2/BHero2.ent.xml">
-
-	<properties display_name="Edric" display_name_plural="Heroes"/>
-	<properties icon="gameres/icons/BHero2.bmp"/>
-
+<class id="BHero2a" parent="BHero2" cpp_class="CVXHero" entity="Units/BHero2/BHero2.ent.xml">
+	<properties display_name="Edric" edittree_pos="" />
 </class>

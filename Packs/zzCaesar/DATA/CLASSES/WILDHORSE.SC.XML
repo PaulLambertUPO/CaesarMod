@@ -1,4 +1,4 @@
-<class id="WildHorse" cpp_class="CVXUnit" parent="UntamableHorse" entity="Units/WildHorse/WildHorse.ent.xml">
+<class id="WildHorse" parent="UntamableHorse" cpp_class="CVXUnit" entity="Units/WildHorse/WildHorse.ent.xml">
 
 	<properties speed="100" /><!-- the speed is changed in the scripts -->
 	<properties edittree_pos="Units/Animals/Horse (wild)" />

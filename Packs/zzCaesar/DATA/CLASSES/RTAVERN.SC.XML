@@ -3,12 +3,13 @@
 	<properties race="RepublicanRome" />
 	<properties radius="190" selection_radius="195" />
 
-	<properties display_name="Tavern" />
 	<properties icon="gameres/icons/RTavern.bmp" />
+	<properties help="contents/buildings/RTavern" />
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Tavern SW" />
-	<properties help="/contents/buildings/RTavern" />
 
 	<behavior script="data/subai/RTavern_Enable_Or_Disable_Cmd.vs" />
 	
 	<method sig="buyfoodforgold" vs="data/subai/tavern_buyfood.vs" />
+	<method sig="scoutarea" vs="data/subai/explore_area_no_reveal.vs" />
+	<method sig="invest" vs="data/subai/tavern_investment.vs" />
 </class>

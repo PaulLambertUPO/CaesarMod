@@ -1,8 +1,7 @@
-<class id="GWallsW" altid="GWallS4" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/GWalls/WallW/WallW.ent.xml">
-	<properties race="Gaul"/>
-	<properties icon="gameres/icons/GWalls.bmp"/>
-	<properties radius="80" selection_radius="80"/>
-	<properties wall_set="Gaul walls"/>
-	<properties num_sentry_slots="4"/>
-	<properties sentry_class_name="GSentry"/>
+<class id="GWallsW" altid="GWallS4" parent="Wall" cpp_class="CVXBuilding" entity="Buildings/GWalls/WallW/WallW.ent.xml">
+	<properties race="Gaul" />
+	<properties num_sentry_slots="4" />
+	<properties sentry_class_name="GSentry" />
+	<properties wall_set="Gaul walls" />
+	<properties icon="gameres/icons/GWalls.bmp" />
 </class>

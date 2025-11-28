@@ -1,5 +1,3 @@
-<class id="TBarrackHorse5" cpp_class="CVXScriptObj" parent="Object" entity="Buildings/TBarracks/Horse5.ent.xml">
-
-	<method sig="idle" vs="data/subai/horse_anim.vs"/>
-
+<class id="TBarrackHorse5" parent="Object" cpp_class="CVXScriptObj" entity="Buildings/TBarracks/Horse5.ent.xml">
+	<method sig="idle" vs="data/subai/horse_anim.vs" />
 </class>

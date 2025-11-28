@@ -1,10 +1,10 @@
-<class id="BOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/BOutpost/BOutpost.ent.xml">
+<class id="BOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/BOutpost/BOutpost.ent.xml">
 	<properties race="Britain" />
 	<properties maxhealth="10000" />
 	<properties radius="345" selection_radius="350" />
 	<properties display_name="Training outpost" />
 	<properties icon="gameres/icons/BOutpost.bmp" />
-	<properties help="/contents/buildings/TrainingOutpost" />
+	<properties help="contents/buildings/TrainingOutpost" />
 	<properties edittree_pos="Structures/Outposts/Training outpost (Britain)" />
 	<properties description="Gradually increases the experience of units inside up to level 8" />
 	<properties

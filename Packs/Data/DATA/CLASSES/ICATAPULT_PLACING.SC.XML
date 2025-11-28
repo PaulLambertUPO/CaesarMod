@@ -1,6 +1,2 @@
-<class
-	id="icatapult_placing"
-	cpp_class="CVXMapObj"
-	parent="catapult_placing"
-	entity="Visuals/ICatapult_Placing/ICatapult_Placing.ent.xml">
+<class id="icatapult_placing" parent="catapult_placing" cpp_class="CVXMapObj" entity="Visuals/ICatapult_Placing/ICatapult_Placing.ent.xml">
 </class>

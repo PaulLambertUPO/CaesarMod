@@ -1,6 +1,4 @@
-<class id="PeasantFemale" cpp_class="CVXUnit" parent="Peasant" entity="">
-
-	<properties display_name="Peasant" display_name_plural="Peasants"/>
-	<sounds die="data/sound entities/UNITDEATHFEMALE.xml"/>
-
+<class id="PeasantFemale" parent="Peasant" cpp_class="CVXUnit" entity="">
+	<properties display_name="Peasant" display_name_plural="Peasants" /><!-- do not move these values to Peasant class to avoid wrong translations -->
+	<sounds die="UnitDeathFemale" />
 </class>

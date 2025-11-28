@@ -1,18 +1,12 @@
-<class id="GDruidHouse" altid="DruidHouse" cpp_class="CVXBarrack" parent="BaseBarracks"
-	entity="Buildings/GDruidHouse/GDruidHouse_as.ent.xml"
-	entity_autumn="Buildings/GDruidHouse/GDruidHouse_as.ent.xml"
-	entity_spring="Buildings/GDruidHouse/GDruidHouse_as.ent.xml"
-	entity_winter="Buildings/GDruidHouse/GDruidHouse_w.ent.xml"
->
-	<properties race="Gaul"/>
-	<properties display_name="Druid House"/>
-	<properties radius="190" selection_radius="220"/>
-	<properties help="/contents/buildings/GDruidHouse"/>
+<class id="GDruidHouse" altid="DruidHouse" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/GDruidHouse/GDruidHouse_as.ent.xml" entity_winter="Buildings/GDruidHouse/GDruidHouse_w.ent.xml">
 
-	<properties edittree_pos="Structures/Stronghold (Gaul)/Druid House"/>
-	<properties auto_repair="no"/>
-	<properties icon="gameres/icons/Gdruidhouse.bmp"/>
+	<properties race="Gaul" />
+	<properties radius="190" selection_radius="220" />
 
-	<sounds select="TempleSelect"/>
+	<properties display_name="Druid House" />
+	<properties icon="gameres/icons/GDruidHouse.bmp" />
+	<properties help="contents/buildings/GDruidHouse" />
+	<properties edittree_pos="Structures/Stronghold (Gaul)/Druid House" />
 
+	<sounds select="TempleSelect" />
 </class>

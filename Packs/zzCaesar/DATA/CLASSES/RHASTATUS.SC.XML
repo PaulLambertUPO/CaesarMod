@@ -1,4 +1,4 @@
-<class id="RHastatus" altid="RSwordsman" cpp_class="CVXUnit" parent="Melee" entity="Units/RHastatus/RHastatus.ent.xml">
+<class id="RHastatus" altid="RSwordsman" parent="Melee" cpp_class="CVXUnit" entity="Units/RHastatus/RHastatus.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="200" />

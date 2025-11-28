@@ -1,4 +1,4 @@
-<class id="RCatapult" cpp_class="CVXCatapult" parent="Catapult" entity="Buildings/RCatapult/RCatapult.ent.xml">
+<class id="RCatapult" parent="Catapult" cpp_class="CVXCatapult" entity="Buildings/RCatapult/RCatapult.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties range="725" min_range="150" />

@@ -1,3 +1,3 @@
-<class id="Empty" cpp_class="CVXScriptObj" parent="Object" entity="">
+<class id="Empty" parent="Object" cpp_class="CVXScriptObj" entity="">
 	<properties interface="empty" />
 </class>

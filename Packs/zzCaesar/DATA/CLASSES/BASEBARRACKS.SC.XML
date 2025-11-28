@@ -1,7 +1,7 @@
-<class id="BaseBarracks" cpp_class="CVXBarrack" parent="BaseTownBuilding" entity="">
+<class id="BaseBarracks" parent="BaseTownBuilding" cpp_class="CVXBarrack" entity="">
 
-	<properties radius="245" selection_radius="250" />
 	<properties interface="thumb,building,queue" />
+	<properties display_name="Barracks" />
 
 	<behavior script="data/subai/arena_behavior.vs" />
 

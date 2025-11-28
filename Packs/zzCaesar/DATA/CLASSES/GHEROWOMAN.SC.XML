@@ -1,4 +1,4 @@
-<class id="GHeroWoman" cpp_class="CVXHero" parent="GaulHero" entity="Units/GHeroWoman/GHeroWoman.ent.xml">
+<class id="GHeroWoman" parent="GaulHero" cpp_class="CVXHero" entity="Units/GHeroWoman/GHeroWoman.ent.xml">
 
 	<properties race="Gaul"/>
 

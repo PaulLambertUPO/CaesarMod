@@ -4,11 +4,12 @@
 
 Building hall, bestVillage, otherOutpost, bldVil, bldVilOutpost, invalid;
 ObjList olVillages;
-int aiPlayer, hallLsa, nDistWeight, i, nBest = 100000000;
+int aiPlayer, hallLsa, nSleepES, nDistWeight, i, nBest = 100000000;
 
 aiPlayer = set.player;
 hall = set.GetCentralBuilding();
 hallLsa = hall.LSA;
+nSleepES = AIVar(aiPlayer, AIV_Sleep_ES);
 
 while (set.player == aiPlayer) {
 	olVillages = GetSettlements("BaseVillage", aiPlayer);
@@ -40,5 +41,24 @@ while (set.player == aiPlayer) {
 	if (bestVillage.IsValid)
 		EnvWriteObj(bestVillage.settlement, "ES_SuppliedOutpost", hall);
 
-	Sleep(15000);
+	for (i = 0; i < 5; i += 1) {
+		if (set.gold >= 100 || set.food >= 100) {
+			Settlement stronghold;
+			stronghold = set.BestToSupply;//it returns the nearest owned stronghold
+			if (stronghold.IsValid) {
+				Wagon mule;
+				if (set.gold >= 100) {
+					mule = set.CreateMuleGold(set.gold);
+					if (mule.IsValid)
+						mule.SetCommand("unload", stronghold.GetCentralBuilding());
+				}
+				if (set.food >= 100) {
+					mule = set.CreateMuleFood(set.food);
+					if (mule.IsValid)
+						mule.SetCommand("unload", stronghold.GetCentralBuilding());
+				}
+			}
+		}
+		Sleep(nSleepES);
+	}
 }

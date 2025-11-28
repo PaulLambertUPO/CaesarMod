@@ -1,8 +1,3 @@
-<class
-	cpp_class = "CVXOutpost"
-	entity = "Buildings/GOutpost/GOutpost_w.ent.XML"
-	id = "GOutpostWinter"
-	parent = "GOutpost"
->
-	<properties edittree_pos = "Structures/Interactive/Winter/Trade Outpost"/>
+<class id="GOutpostWinter" parent="GOutpost" cpp_class="CVXOutpost" entity="Buildings/GOutpost/GOutpost_w.ent.xml">
+	<properties edittree_pos="Structures/Interactive/Winter/Trade Outpost" />
 </class>

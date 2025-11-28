@@ -1,4 +1,4 @@
-<class id="Multi" cpp_class="CVXScriptObj" parent="Object" entity="">
+<class id="Multi" parent="Object" cpp_class="CVXScriptObj" entity="">
 
 	<properties icon="gameres/icons/multi.bmp" />
 	<properties help="contents/units" />
@@ -6,22 +6,22 @@
 
 	<value0 icon="gameres/infobar/common/level ico.bmp"
 		script="return SelAvgLevel();"
-		help="/contents/stats/level"
+		help="contents/stats/level"
 		rollover="Level"
 	/>
 	<value1 icon="gameres/infobar/common/stamina ico.bmp"
 		script="return SelAvgStamina();"
-		help="/contents/feeding"
+		help="contents/feeding"
 		rollover="Stamina"
 	/>
 	<value2 icon="gameres/infobar/common/health ico.bmp"
 		script="return SelHealth() * 100 / SelMaxHealth() + '%';"
-		help="/contents/feeding"
+		help="contents/feeding"
 		rollover="Health"
 	/>
 	<value3 icon="gameres/infobar/common/food ico.bmp"
 		script="return SelAvgFood();"
-		help="/contents/feeding"
+		help="contents/feeding"
 		rollover="Food"
 	/>
 </class>

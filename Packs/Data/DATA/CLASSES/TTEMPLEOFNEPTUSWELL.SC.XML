@@ -1,5 +1,3 @@
-<class id="TTempleofNeptusWell" cpp_class="CVXDecor" parent="Object" entity="Buildings/TTempleofNeptus/TTempleofNeptusWell.ent.xml">
-
-	<method sig="idle" vs="data/subai/anim.vs"/>
-
+<class id="TTempleofNeptusWell" parent="Object" cpp_class="CVXDecor" entity="Buildings/TTempleofNeptus/TTempleofNeptusWell.ent.xml">
+	<method sig="idle" vs="data/subai/anim.vs" />
 </class>

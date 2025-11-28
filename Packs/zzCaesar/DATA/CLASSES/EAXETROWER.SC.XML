@@ -1,4 +1,4 @@
-<class id="EAxetrower" cpp_class="CVXUnit" parent="ShortRanged" entity="units/EAxetrower/EAxetrower.ent.xml">
+<class id="EAxetrower" parent="ShortRanged" cpp_class="CVXUnit" entity="units/EAxetrower/EAxetrower.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="240" />

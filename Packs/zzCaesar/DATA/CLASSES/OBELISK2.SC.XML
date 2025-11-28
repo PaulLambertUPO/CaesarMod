@@ -1,5 +1,4 @@
-<class id="Obelisk2" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/Obelisk2/Obelisk2.ent.xml">
-	<properties sight="0" />
+<class id="Obelisk2" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/Obelisk2/Obelisk2.ent.xml">
 	<properties radius="30" selection_radius="30" />
 	<properties display_name="Obelisk" />
 	<properties icon="gameres/icons/Obelisk2.bmp" />

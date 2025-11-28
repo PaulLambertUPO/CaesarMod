@@ -1,6 +1,3 @@
-<class id="EHero2c" cpp_class="CVXHero" parent="EgyptianHero" entity="Units/EHero2/EHero2.ent.xml">
-
-	<properties display_name="Hekatef" display_name_plural="Heroes"/>
-	<properties icon="gameres/icons/EHero2.bmp"/>
-
+<class id="EHero2c" parent="EHero2" cpp_class="CVXHero" entity="Units/EHero2/EHero2.ent.xml">
+	<properties display_name="Hekatef" edittree_pos="" />
 </class>

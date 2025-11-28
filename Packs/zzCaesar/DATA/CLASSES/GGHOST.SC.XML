@@ -34,7 +34,7 @@
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
 		script="return Translate('No') + '|' + .AsUnit().range;"
-		help="/contents/stats/attack"
+		help="contents/stats/attack"
 		rollover="Damage|Range"
 	/>
 

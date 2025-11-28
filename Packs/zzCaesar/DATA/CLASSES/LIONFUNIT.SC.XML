@@ -1,4 +1,4 @@
-<class id="LionFUnit" cpp_class="CVXUnit" parent="AttackAnimal" entity="units/LionF/LionF.ent.xml">
+<class id="LionFUnit" parent="AttackAnimal" cpp_class="CVXUnit" entity="units/LionF/LionF.ent.xml">
 
 	<properties maxhealth="280" />
 	<properties damage="22" armor_slash="4" armor_pierce="4" />

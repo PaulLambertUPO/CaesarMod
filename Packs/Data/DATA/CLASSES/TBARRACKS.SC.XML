@@ -1,14 +1,11 @@
-<class id="TBarracks" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/TBarracks/TBarracks.ent.xml">
-	<properties race="Germany"/>
-	<properties icon="gameres/icons/TBarracks.bmp"/>
-	<properties display_name="Barracks" display_name_plural="Barracks"/>
-	<properties radius="190" selection_radius="220"/>
-	<properties help="/contents/buildings/TBarracks"/>
+<class id="TBarracks" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/TBarracks/TBarracks.ent.xml">
 
-	<properties edittree_pos="Structures/Stronghold (Germany)/Barracks"/>
-	<properties auto_repair="no"/>
-	
-	
-	<behavior script="data/subai/TBarracks_anim.vs"/>
-	
+	<properties race="Germany" />
+	<properties radius="190" selection_radius="220" />
+
+	<properties icon="gameres/icons/TBarracks.bmp" />
+	<properties help="contents/buildings/TBarracks" />
+	<properties edittree_pos="Structures/Stronghold (Germany)/Barracks" />
+
+	<behavior script="data/subai/TBarracks_anim.vs" />
 </class>

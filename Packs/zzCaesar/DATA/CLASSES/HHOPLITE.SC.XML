@@ -1,4 +1,4 @@
-<class id="HHoplite" cpp_class="CVXUnit" parent="Melee" entity="Units/HHoplite/HHoplite.ent.xml">
+<class id="HHoplite" parent="Melee" cpp_class="CVXUnit" entity="Units/HHoplite/HHoplite.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="320" />

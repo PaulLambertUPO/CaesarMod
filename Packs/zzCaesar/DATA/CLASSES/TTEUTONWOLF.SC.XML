@@ -1,4 +1,4 @@
-<class id="TTeutonWolf" cpp_class="CVXUnit" parent="Horse" entity="Units/TTeutonWolf/TTeutonWolf.ent.xml">
+<class id="TTeutonWolf" parent="Horse" cpp_class="CVXUnit" entity="Units/TTeutonWolf/TTeutonWolf.ent.xml">
 
 	<properties race="Germany" />
 	<properties maxhealth="320" />

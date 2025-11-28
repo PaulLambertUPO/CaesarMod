@@ -1,5 +1,4 @@
-<class id="Ruin_Door02" cpp_class="CVXScriptObj" parent="Object"
-entity="MapObjects/Ruin_Door02/Ruin_Door02_asw.ent.xml">
-<properties health="100" maxhealth="100"/>
-	<properties edittree_pos="Structures/Others/Ruins/Ruin Door 2"/>
+<class id="Ruin_Door02" parent="Object" cpp_class="CVXScriptObj" entity="MapObjects/Ruin_Door02/Ruin_Door02_asw.ent.xml">
+	<properties health="100" maxhealth="100" />
+	<properties edittree_pos="Structures/Others/Ruins/Ruin Door 2" />
 </class>

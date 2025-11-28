@@ -1,6 +1,3 @@
-<class id="CHero3c" cpp_class="CVXHero" parent="CarthaginianHero" entity="Units/CHero3/CHero3.ent.xml">
-
-	<properties display_name="Barka" display_name_plural="Heroes"/>
-	<properties icon="gameres/icons/CHero3.bmp"/>
-
+<class id="CHero3c" parent="CHero3" cpp_class="CVXHero" entity="Units/CHero3/CHero3.ent.xml">
+	<properties display_name="Barka" edittree_pos="" />
 </class>

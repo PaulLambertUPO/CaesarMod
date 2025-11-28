@@ -1,3 +1,2 @@
-<class id="Fire_Arrow" cpp_class="CVXScriptObj" parent="Object"
-entity="Visuals/arrow/Fire_arrow.ent.xml">
+<class id="Fire_Arrow" parent="Object" cpp_class="CVXScriptObj" entity="Visuals/arrow/Fire_arrow.ent.xml">
 </class>

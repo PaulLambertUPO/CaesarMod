@@ -3,9 +3,8 @@
 	<properties race="RepublicanRome" />
 	<properties radius="245" selection_radius="250" />
 
-	<properties display_name="Barracks" />
 	<properties icon="gameres/icons/RBarracks.bmp" />
-	<properties help="/contents/buildings/RBarracks" />
+	<properties help="contents/buildings/RBarracks" />
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Barracks" />
 
 	<behavior script="data/subai/RBarracks_Enable_Or_Disable_Cmd.vs" />

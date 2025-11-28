@@ -1,4 +1,4 @@
-<class id="BSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/BBowman/BSentry.ent.xml">
+<class id="BSentry" parent="Sentry" cpp_class="CVXUnit" entity="Units/BBowman/BSentry.ent.xml">
 
 	<properties race="Britain" />
 	<properties maxhealth="200" />

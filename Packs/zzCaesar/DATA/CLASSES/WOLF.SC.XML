@@ -1,4 +1,4 @@
-<class id="Wolf" cpp_class="CVXUnit" parent="WolfUnit" entity="Units/Wolf/Wolf.ent.xml">
+<class id="Wolf" parent="WolfUnit" cpp_class="CVXUnit" entity="Units/Wolf/Wolf.ent.xml">
 	<properties edittree_pos="Units/Animals/Wolf (wild)" />
 	<method sig="idle" vs="data/subai/wolf_idle.vs" />
 	<method sig="engage" vs="data/subai/wolf_engage.vs" />

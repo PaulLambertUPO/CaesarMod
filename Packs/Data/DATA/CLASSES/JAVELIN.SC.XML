@@ -1,3 +1,2 @@
-<class id="Javelin" cpp_class="CVXScriptObj" parent="Object"
-entity="Visuals/arrow/javelin.ent.xml">
+<class id="Javelin" parent="Object" cpp_class="CVXScriptObj" entity="Visuals/arrow/javelin.ent.xml">
 </class>

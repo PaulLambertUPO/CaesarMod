@@ -1,4 +1,4 @@
-<class id="WolfSummoned" cpp_class="CVXUnit" parent="WolfUnit" entity="Units/Wolf/Wolf.ent.xml">
+<class id="WolfSummoned" parent="WolfUnit" cpp_class="CVXUnit" entity="Units/Wolf/Wolf.ent.xml">
 	<properties unit_specials="Combat skill, Drain, Ferocity, Freedom, Keen sight" />
 	<properties does_not_regenerate="1" />
 	<properties stamina_dec_time="20000" />

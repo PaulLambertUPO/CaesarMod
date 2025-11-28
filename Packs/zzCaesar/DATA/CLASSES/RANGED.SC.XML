@@ -1,4 +1,4 @@
-<class id="Ranged" cpp_class="CVXUnit" parent="Military" entity="">
+<class id="Ranged" parent="Military" cpp_class="CVXUnit" entity="">
 
 	<properties maxhealth="150" />
 	<properties sight="600" range="500" min_range="2" damage_type="pierce" />
@@ -9,7 +9,7 @@
 
 	<value1 icon="gameres/infobar/common/piercing ico.bmp"
 		script="return .AsUnit().damage + '|' + .AsUnit().range;"
-		help="/contents/stats/attack"
+		help="contents/stats/attack"
 		rollover="Damage|Range"
 	/>
 

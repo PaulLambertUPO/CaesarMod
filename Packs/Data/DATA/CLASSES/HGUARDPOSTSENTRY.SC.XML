@@ -1,2 +1,2 @@
-<class id="HGuardPostSentry" cpp_class="CVXUnit" parent="HSentry" entity="Units/HTOXOTES/HGuardPostSentry.ent.xml">
+<class id="HGuardPostSentry" parent="HSentry" cpp_class="CVXUnit" entity="Units/HToxotes/HGuardPostSentry.ent.xml">
 </class>

@@ -1,2 +1,2 @@
-<class id="test" cpp_class="CVXBuilding" parent="Building" entity="Buildings/village/test/test.ent.xml">
+<class id="test" parent="Building" cpp_class="CVXBuilding" entity="Buildings/village/test/test.ent.xml">
 </class>

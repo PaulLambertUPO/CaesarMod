@@ -218,10 +218,12 @@ if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) + nCal
 		EnvWriteString(set, "strTech", strHire);
 		set.AIRun("ESH_NeedTech.vs");
 	}
-	return;
+	if (nRace != Gaul)
+		if (!nRaceIsRepublicanRome)
+			return;
 }
 
-//this part is executed only when all upgrades have been researched (unless AIV_ArenaUpgradeHires is 0) and the unit limit has been reached
+//this part is executed either for Gaul/Rome (supreme heroes) or when all upgrades have been researched (unless AIV_ArenaUpgradeHires is 0) and the unit limit has been reached
 if (nArenaResearchLevel == 2) {
 	//upgrades to either further improve units (Imperial Rome) or increase their limit (Carthage and Greece)
 	if (upgrade_units != 0)

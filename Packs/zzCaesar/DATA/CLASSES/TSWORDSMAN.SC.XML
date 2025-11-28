@@ -1,4 +1,4 @@
-<class id="TSwordsman" cpp_class="CVXUnit" parent="Melee" entity="Units/TSwordsman/TSwordsman.ent.xml">
+<class id="TSwordsman" parent="Melee" cpp_class="CVXUnit" entity="Units/TSwordsman/TSwordsman.ent.xml">
 
 	<properties race="Germany" />
 	<properties maxhealth="200" />

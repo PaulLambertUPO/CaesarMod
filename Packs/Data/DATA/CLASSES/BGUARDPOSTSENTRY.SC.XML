@@ -1,3 +1,2 @@
-<class id="BGuardPostSentry" cpp_class="CVXUnit" parent="BSentry" entity="Units/BBowman/BGuardPostSentry.ent.xml">
-
+<class id="BGuardPostSentry" parent="BSentry" cpp_class="CVXUnit" entity="Units/BBowman/BGuardPostSentry.ent.xml">
 </class>

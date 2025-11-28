@@ -20,10 +20,11 @@
 	/>
 	<properties minimap_icon_type="black" />
 	<properties hides_units="1" />
+	<properties radius="250" selection_radius="255"/>
 
 	<properties display_name="Stonehenge" />
-	<properties icon="gameres/icons/stonehenge.bmp" />
-	<properties help="/contents/buildings/Stonehenge" />
+	<properties icon="gameres/icons/Stonehenge.bmp" />
+	<properties help="contents/buildings/Stonehenge" />
 	<properties description="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Stonehenge, to ensure that it accumulates enough power for such rituals" />
 
 	<method sig="idle" vs="data/subai/stonehenge_idle.vs" />
@@ -41,7 +42,7 @@
 
 	<value0 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .stamina;"
-		help="/contents/capturing"
+		help="contents/capturing"
 		rollover="Energy"
 	/>
 </class>

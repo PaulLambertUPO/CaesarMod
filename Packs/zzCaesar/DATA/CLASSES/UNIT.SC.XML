@@ -21,7 +21,7 @@
 
 	<properties icon="gameres/icons/multi.bmp" />
 	<properties display_name="Unit" display_name_plural="Units" />
-	<properties help="/contents/units" />
+	<properties help="contents/units" />
 
 	<behavior script="data/subai/keensight_sneak_freedom_behavior.vs" />
 
@@ -87,34 +87,36 @@
 	<method sig="enter_parry_mode" vs="data/subai/unit_enter_parry_mode.vs" />
 	<method sig="leave_parry_mode" vs="data/subai/unit_leave_parry_mode.vs" />
 
+	<method sig="hero_set_final_party_orientation" vs="data/subai/hero_set_final_party_orientation.vs" />
+
 	<value0 icon="gameres/infobar/common/level ico.bmp"
 		script="return .AsUnit().level;"
-		help="/contents/stats/level"
+		help="contents/stats/level"
 		rollover="Level"
 	/>
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
 		script="return .AsUnit().damage;"
-		help="/contents/stats/attack"
+		help="contents/stats/attack"
 		rollover="Damage"
 	/>
 	<value2 icon="gameres/infobar/common/stamina ico.bmp"
 		script="return .AsUnit().stamina + '|' + .AsUnit().speed;"
-		help="/contents/stats/stamina"
+		help="contents/stats/stamina"
 		rollover="Stamina|Speed"
 	/>
 	<value3 icon="gameres/infobar/common/defence ico.bmp"
 		script="return .AsUnit().armor_slash + '|' + .AsUnit().sight;"
-		help="/contents/stats/defense"
+		help="contents/stats/defense"
 		rollover="Armor|Sight"
 	/>
 	<value4 icon="gameres/infobar/common/health ico.bmp"
 		script="return .AsUnit().health + '/' + .AsUnit().maxhealth;"
-		help="/contents/stats/health"
+		help="contents/stats/health"
 		rollover="Health"
 	/>
 	<value5 icon="gameres/infobar/common/food ico.bmp"
 		script="return .AsUnit().food + '/' + .AsUnit().maxfood;"
-		help="/contents/feeding"
+		help="contents/feeding"
 		rollover="Food"
 	/>
 

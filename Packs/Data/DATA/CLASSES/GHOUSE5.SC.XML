@@ -1,10 +1,6 @@
-<class id="GHouse5" altid="House5" cpp_class="CVXBuilding" parent="BaseHouse"
-	entity="Buildings/GHouse5/House 05 as.ent.xml"
-	entity_winter="Buildings/GHouse5/House 05 w.ent.xml"
->
-	<properties race="Gaul"/>
-	<properties display_name="House"/>
-	<properties icon="gameres/icons/ghouse.bmp"/>
-	<properties radius="112" selection_radius="115"/>
-	<properties edittree_pos="Structures/Village (Gaul)/House 5"/>
+<class id="GHouse5" altid="House5" parent="BaseHouse" cpp_class="CVXBuilding" entity="Buildings/GHouse5/House 05 as.ent.xml" entity_winter="Buildings/GHouse5/House 05 w.ent.xml">
+	<properties race="Gaul" />
+	<properties radius="112" selection_radius="115" />
+	<properties icon="gameres/icons/GHouse.bmp" />
+	<properties edittree_pos="Structures/Village (Gaul)/House 5" />
 </class>

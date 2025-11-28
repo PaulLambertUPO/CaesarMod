@@ -1,11 +1,9 @@
-<class id="BBarracks" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/BBarracks/BBarracks.ent.xml">
-	<properties race="Britain"/>
-	<properties icon="gameres/icons/BBarracks.bmp"/>
-	<properties display_name="Barracks" display_name_plural="Barracks"/>
-	<properties radius="190" selection_radius="220"/>
-	<properties help="/contents/buildings/BBarracks"/>
+<class id="BBarracks" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/BBarracks/BBarracks.ent.xml">
 
-	<properties edittree_pos="Structures/Stronghold (Britain)/Barracks"/>
-	<properties auto_repair="no"/>
-	
+	<properties race="Britain" />
+	<properties radius="190" selection_radius="220" />
+
+	<properties icon="gameres/icons/BBarracks.bmp" />
+	<properties help="contents/buildings/BBarracks" />
+	<properties edittree_pos="Structures/Stronghold (Britain)/Barracks" />
 </class>

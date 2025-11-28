@@ -1,4 +1,4 @@
-<class id="RPrinciplePunic" cpp_class="CVXUnit" parent="RPrinciple" entity="Units/RPrinciple/RPrinciple.ent.xml">
+<class id="RPrinciplePunic" parent="RPrinciple" cpp_class="CVXUnit" entity="Units/RPrinciple/RPrinciple.ent.xml">
 	<properties unit_specials="Attack skill, Defense skill, Determination, Toughness" />
 	<properties icon="gameres/icons/zpwRSpearman.bmp" />
 	<properties edittree_pos="Units/Roman/Principle (Punic)" />

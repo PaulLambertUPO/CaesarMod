@@ -1,5 +1,3 @@
-<class id="IBlacksmithAnim" cpp_class="CVXDecor" parent="Object" entity="Buildings/IBlacksmith/IBlacksmithAnim.ent.xml">
-
-	<method sig="idle" vs="data/subai/anim.vs"/>
-
+<class id="IBlacksmithAnim" parent="Object" cpp_class="CVXDecor" entity="Buildings/IBlacksmith/IBlacksmithAnim.ent.xml">
+	<method sig="idle" vs="data/subai/anim.vs" />
 </class>

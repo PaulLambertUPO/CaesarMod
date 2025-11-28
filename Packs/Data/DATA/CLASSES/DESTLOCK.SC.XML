@@ -1,2 +1,2 @@
-<class id="DestLock" cpp_class="CVXDestLock" parent="Object" entity="UI/Debug/DestLock.ent.xml">
-</class>
+<class id="DestLock" parent="Object" cpp_class="CVXDestLock" entity="UI/Debug/DestLock.ent.xml">
+</class><!-- this class is a yellow square that marks the destination point of any unit when VisibleDestLocks is set to 1 in Config.ini -->

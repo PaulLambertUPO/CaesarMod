@@ -1,4 +1,4 @@
-<class id="Keltill" cpp_class="CVXHero" parent="HeroMounted" entity="Units/Keltill/Keltill.ent.xml">
+<class id="Keltill" parent="HeroMounted" cpp_class="CVXHero" entity="Units/Keltill/Keltill.ent.xml">
 
 	<properties race="Gaul" />
 	<properties maxhealth="1300" />

@@ -1,8 +1,3 @@
-<class
-	cpp_class = "CVXBuilding"
-	entity = "Buildings/GBlacksmith/GBlacksmith w.ent.xml"
-	id = "GBlacksmithWinter"
-	parent = "GBlacksmith"
->
-	<properties edittree_pos = "Structures/Stronghold (Gaul)/Winter/Blacksmith"/>
+<class id="GBlacksmithWinter" parent="GBlacksmith" cpp_class="CVXBuilding" entity="Buildings/GBlacksmith/GBlacksmith w.ent.xml">
+	<properties edittree_pos="Structures/Stronghold (Gaul)/Winter/Blacksmith" />
 </class>

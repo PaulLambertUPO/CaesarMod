@@ -1,15 +1,9 @@
-<class id="BaseTavern" cpp_class="CVXTavern" parent="BaseTownBuilding" entity="">
+<class id="BaseTavern" parent="BaseTownBuilding" cpp_class="CVXTavern" entity="">
 
 	<properties interface="thumb,building,queue" />
+	<properties display_name="Tavern" />
 
 	<method sig="addpop" vs="data/subai/townhall_addpop.vs" />
-	<method sig="buywarslaves" vs="data/subai/buy_war_slaves.vs"/>
-	<method sig="buyslaves" vs="data/subai/emarket_buyslaves.vs" />
-	<method sig="invest" vs="data/subai/tavern_investment.vs" />
-	<method sig="getloan" vs="data/subai/tavern_getloan.vs" />
-	<method sig="repayloan" vs="data/subai/tavern_repayloan.vs" />
-	<method sig="scoutarea" vs="data/subai/explore_area_no_reveal.vs" />
-	<method sig="gossip" vs="data/subai/explore_area.vs" />
 
 	<sounds select="TavernSelect" />
 </class>

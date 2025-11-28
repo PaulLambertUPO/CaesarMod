@@ -1,4 +1,4 @@
-<class id="RTribune" cpp_class="CVXUnit" parent="Melee" entity="Units/RTribune/RTribune.ent.xml">
+<class id="RTribune" parent="Melee" cpp_class="CVXUnit" entity="Units/RTribune/RTribune.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="600" />

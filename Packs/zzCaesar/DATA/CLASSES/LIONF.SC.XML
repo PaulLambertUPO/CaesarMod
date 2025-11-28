@@ -1,4 +1,4 @@
-<class id="LionF" cpp_class="CVXUnit" parent="LionFUnit" entity="units/LionF/LionF.ent.xml">
+<class id="LionF" parent="LionFUnit" cpp_class="CVXUnit" entity="units/LionF/LionF.ent.xml">
 	<properties edittree_pos="Units/Animals/Lioness (wild)" />
 	<method sig="idle" vs="data/subai/lion_idle.vs" />
 	<method sig="engage" vs="data/subai/lion_engage.vs" />

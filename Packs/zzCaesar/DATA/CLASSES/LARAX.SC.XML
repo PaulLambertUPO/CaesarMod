@@ -1,4 +1,4 @@
-<class id="Larax" cpp_class="CVXHero" parent="HeroMounted" entity="Units/Larax/Larax.ent.xml">
+<class id="Larax" parent="HeroMounted" cpp_class="CVXHero" entity="Units/Larax/Larax.ent.xml">
 
 	<properties race="Gaul" />
 	<properties maxhealth="1400" />

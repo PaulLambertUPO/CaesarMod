@@ -1,2 +1,2 @@
-<class id="AdvArea" cpp_class="CVXAdvArea" parent="Area" entity="">
+<class id="AdvArea" parent="Area" cpp_class="CVXAdvArea" entity="">
 </class>

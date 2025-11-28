@@ -1,3 +1,3 @@
-<class id="RHero1c" cpp_class="CVXHero" parent="RHero1" entity="Units/RHero1/RHero1.ent.xml">
+<class id="RHero1c" parent="RHero1" cpp_class="CVXHero" entity="Units/RHero1/RHero1.ent.xml">
 	<properties display_name="Durio" edittree_pos="" />
 </class>

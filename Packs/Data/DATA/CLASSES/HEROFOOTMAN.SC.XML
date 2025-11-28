@@ -1,6 +1,4 @@
-<class id="HeroFootman" cpp_class="CVXHero" parent="Hero" entity="">
-
-	<properties radius="20" selection_radius="20"/>
-
-	<sounds attack="UnitSwordFight" die="UnitDeath"/>
+<class id="HeroFootman" parent="Hero" cpp_class="CVXHero" entity="">
+	<properties radius="20" selection_radius="22" />
+	<sounds walk="UnitWalk" attack="UnitSwordFight" die="UnitDeath" />
 </class>

@@ -1,4 +1,4 @@
-<class id="CBerberAssassin" cpp_class="CVXUnit" parent="Melee" entity="Units/CBerberAssassin/CBerberAssassin.ent.xml">
+<class id="CBerberAssassin" parent="Melee" cpp_class="CVXUnit" entity="Units/CBerberAssassin/CBerberAssassin.ent.xml">
 
 	<properties race="Carthage" />
 	<properties maxhealth="280" />

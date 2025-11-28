@@ -1,7 +1,6 @@
-<class id="TGate6" cpp_class="CVXGate" parent="Gate" entity="Buildings/TWalls/GateSW/GateSW.ent.xml">
-	<properties race="Germany"/>
-	<properties icon="gameres/icons/TGates.bmp"/>
-	<properties radius="170" selection_radius="170"/>
-	<properties wall_set="German walls"/>
-	<properties sentry_class_name="TSentry1"/>
+<class id="TGate6" parent="Gate" cpp_class="CVXGate" entity="Buildings/TWalls/GateSW/GateSW.ent.xml">
+	<properties race="Germany" />
+	<properties sentry_class_name="TSentry1" />
+	<properties wall_set="German walls" />
+	<properties icon="gameres/icons/TGates.bmp" />
 </class>

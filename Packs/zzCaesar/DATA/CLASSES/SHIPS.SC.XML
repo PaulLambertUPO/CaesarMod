@@ -1,4 +1,4 @@
-<class id="ShipS" cpp_class="CVXWagon" parent="Wagon" entity="Units/Ships/ShipS/ShipS.ent.xml">
+<class id="ShipS" parent="Wagon" cpp_class="CVXWagon" entity="Units/Ships/ShipS/ShipS.ent.xml">
 
 	<properties sight="400" />
 	<properties speed="100" />
@@ -8,7 +8,7 @@
 
 	<properties display_name="Boat" display_name_plural="Boats" />
 	<properties icon="gameres/icons/Boat.bmp" />
-	<properties help="/contents/units/Boat" />
+	<properties help="contents/units/Boat" />
 	<properties edittree_pos="Units/Others/Boat" />
 
 	<sounds walk="ShipWalk" />

@@ -1,13 +1,11 @@
-<class id="CArena" cpp_class="CVXBuilding" parent="BaseArena" entity="Buildings/CArena/CArena.ent.xml">
+<class id="CArena" parent="BaseArena" cpp_class="CVXBuilding" entity="Buildings/CArena/CArena.ent.xml">
 
-	<properties race="Carthage"/>
-	<properties icon="gameres/icons/carena.bmp"/>
-	<properties display_name="Arena"/>
-	<properties radius="360" selection_radius="365"/>
-	<properties edittree_pos="Structures/Stronghold (Carthage)/Arena"/>
-	<properties help="/contents/buildings/CArena"/>
+	<properties race="Carthage" />
+	<properties radius="360" selection_radius="365" />
 
-	<method sig="mahout_school" vs="data/subai/mahout_school.vs"/>
+	<properties icon="gameres/icons/CArena.bmp" />
+	<properties help="contents/buildings/CArena" />
+	<properties edittree_pos="Structures/Stronghold (Carthage)/Arena" />
 
-	
+	<method sig="mahout_school" vs="data/subai/mahout_school.vs" />
 </class>

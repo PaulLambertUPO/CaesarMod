@@ -87,8 +87,8 @@ if (strTech != "") {
 			if (EnvReadString(set, "ReserveFor" + (aiPlayer - 1)) == strTech) {
 				set.StopReserving();
 				EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
+				EnvWriteInt(set, "FreezeArmyBuild", 0);
 			}
-			EnvWriteInt(set, "FreezeArmyBuild", 0);
 			return;
 		}
 
@@ -156,11 +156,10 @@ if (strTech != "") {
 				else
 					set.SpentGoldOnTech(gold + food / 2);
 
-				EnvWriteInt(set, "FreezeArmyBuild", 0);
-
 				if (bReserving) {//remove the reservation for the needed tech
 					set.StopReserving();
 					EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
+					EnvWriteInt(set, "FreezeArmyBuild", 0);
 				}
 
 				set.Research(strTech);

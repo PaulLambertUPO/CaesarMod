@@ -1,9 +1,6 @@
-<class id="BVillager" cpp_class="CVXUnit" parent="Peasant" entity="units/BVillager/BVillager.ent.xml">
-
-	<properties race="Britain"/>
-	<properties icon="gameres/icons/BVillager.bmp"/>
-
-	<properties edittree_pos="Units/Britain/Peasant (male)"/>
-	<sounds command="data/sound entities/VoiceBMaleVillager.xml"/>
-
+<class id="BVillager" parent="Peasant" cpp_class="CVXUnit" entity="units/BVillager/BVillager.ent.xml">
+	<properties race="Britain" />
+	<properties icon="gameres/icons/BVillager.bmp" />
+	<properties edittree_pos="Units/Britain/Peasant (male)" />
+	<sounds command="VoiceBMaleVillager" />
 </class>

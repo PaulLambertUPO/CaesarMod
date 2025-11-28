@@ -1,6 +1,6 @@
-<class id="RPraetorian" altid="RPretorian" cpp_class="CVXUnit" parent="Melee" entity="Units/RPraetorian/RPraetorian.ent.xml">
+<class id="RPraetorian" altid="RPretorian" parent="Melee" cpp_class="CVXUnit" entity="Units/RPraetorian/RPraetorian.ent.xml">
 
-	<properties race="ImperialRome" />
+	<properties race="RepublicanRome" />
 	<properties maxhealth="620" />
 	<properties damage="40" armor_slash="18" armor_pierce="18" />
 	<properties speed="70" />

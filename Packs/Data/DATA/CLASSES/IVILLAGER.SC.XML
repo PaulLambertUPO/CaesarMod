@@ -1,9 +1,6 @@
-<class id="IVillager" cpp_class="CVXUnit" parent="Peasant" entity="Units/IMalePeasant/IMalePeasant.ent.xml">
-
-	<properties race="Iberia"/>
-	<properties icon="gameres/icons/IVillager.bmp"/>
-
-	<properties edittree_pos="Units/Iberia/Peasant (male)"/>
-	<sounds command="data/sound entities/VoiceIMaleVillager.xml"/>
-
+<class id="IVillager" parent="Peasant" cpp_class="CVXUnit" entity="Units/IMalePeasant/IMalePeasant.ent.xml">
+	<properties race="Iberia" />
+	<properties icon="gameres/icons/IVillager.bmp" />
+	<properties edittree_pos="Units/Iberia/Peasant (male)" />
+	<sounds command="VoiceIMaleVillager" />
 </class>

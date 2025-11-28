@@ -1,2 +1,2 @@
-<class id="TSentry1" cpp_class="CVXUnit" parent="TSentry" entity="Units/TArcher/TSentry1.ent.xml">
+<class id="TSentry1" parent="TSentry" cpp_class="CVXUnit" entity="Units/TArcher/TSentry1.ent.xml">
 </class>

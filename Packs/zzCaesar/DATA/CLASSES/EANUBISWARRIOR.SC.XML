@@ -1,4 +1,4 @@
-<class id="EAnubisWarrior" cpp_class="CVXUnit" parent="Melee" entity="units/EAnubisWarrior/EAnubisWarrior.ent.xml">
+<class id="EAnubisWarrior" parent="Melee" cpp_class="CVXUnit" entity="units/EAnubisWarrior/EAnubisWarrior.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="340" />

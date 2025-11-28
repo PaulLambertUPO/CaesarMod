@@ -1,10 +1,10 @@
-<class id="TOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/TOutpost/TOutpost.ent.xml">
+<class id="TOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/TOutpost/TOutpost.ent.xml">
 	<properties race="German" />
 	<properties maxhealth="10000" />
 	<properties radius="345" selection_radius="350" />
 	<properties display_name="Trade outpost" />
 	<properties icon="gameres/icons/TOutpost.bmp" />
-	<properties help="/contents/buildings/TradeOutpost" />
+	<properties help="contents/buildings/TradeOutpost" />
 	<properties edittree_pos="Structures/Outposts/Trade outpost (German)" />
 	<properties description="Allows to exchange food for gold or vice versa" />
 	<properties

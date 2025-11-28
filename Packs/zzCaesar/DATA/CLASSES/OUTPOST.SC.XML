@@ -1,4 +1,4 @@
-<class id="Outpost" cpp_class="CVXTownHall" parent="Building">
+<class id="Outpost" parent="Building" cpp_class="CVXTownHall">
 	<properties
 		is_central_building="1"
 		can_be_captured="1"
@@ -35,27 +35,27 @@
 	<method sig="creategoldmulebig" vs="data/subai/create_gold_mule_big.vs" />
 	
 	<value0 icon="gameres/infobar/common/Loyality.bmp"
-		script="return .AsBuilding.settlement.loyalty;"
+		script="return .AsBuilding().settlement.loyalty;"
 		flags="-1"
-		help="/contents/capturing"
+		help="contents/capturing"
 		rollover="Loyalty"
 	/>
 	<value2 icon="gameres/infobar/common/gold ico.bmp"
-		script="Settlement set; set=.AsBuilding.settlement; if(set.loan > 0)return set.gold + '(' + Translate('Debt') + ':' + set.loan +')'; else return set.gold; return '';"
+		script="Settlement set; set = .AsBuilding().settlement; if (set.loan > 0) return set.gold + '(' + Translate('Debt') + ':' + set.loan +')'; return set.gold;"
 		flags="5"
-		help="/contents/resources"
+		help="contents/resources"
 		rollover="Gold"
 	/>
 	<value3 icon="gameres/infobar/common/food ico.bmp"
-		script="return .AsBuilding.settlement.food;"
+		script="return .AsBuilding().settlement.food;"
 		flags="5"
-		help="/contents/resources"
+		help="contents/resources"
 		rollover="Food"
 	/>
 	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		flags="-1"
-		help="/contents/stats/health"
+		help="contents/stats/health"
 		rollover="Health"
 	/>
 	

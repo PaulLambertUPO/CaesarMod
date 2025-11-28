@@ -1,4 +1,4 @@
-<class id="RChariot" cpp_class="CVXUnit" parent="MediumRanged" entity="units/RChariot/RChariot.ent.xml">
+<class id="RChariot" parent="MediumRanged" cpp_class="CVXUnit" entity="units/RChariot/RChariot.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="600" />

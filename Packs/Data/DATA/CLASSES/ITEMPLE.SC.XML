@@ -1,16 +1,14 @@
-<class id="ITemple" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/ITemple/ITemple.ent.xml">
+<class id="ITemple" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/ITemple/ITemple.ent.xml">
 
-	<properties race="Iberia"/>
-	<properties display_name="Sanctuary"/>
-	<properties radius="190" selection_radius="220"/>
-	<properties help="/contents/buildings/ISanctuary"/>
+	<properties race="Iberia" />
+	<properties radius="190" selection_radius="220" />
 
-	<properties edittree_pos="Structures/Stronghold (Iberia)/Sanctuary"/>
-	<properties auto_repair="no"/>
-	<properties icon="gameres/icons/ISanctuary.bmp"/>
+	<properties display_name="Sanctuary" />
+	<properties icon="gameres/icons/ISanctuary.bmp" />
+	<properties help="contents/buildings/ISanctuary" />
+	<properties edittree_pos="Structures/Stronghold (Iberia)/Sanctuary" />
 
-	<sounds select="TempleSelect"/>
-
-	<behavior script="data/subai/itemple_anim.vs"/>
-
+	<behavior script="data/subai/itemple_anim.vs" />
+	
+	<sounds select="TempleSelect" />
 </class>

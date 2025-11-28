@@ -1,6 +1,3 @@
-<class id="GHero3a" cpp_class="CVXHero" parent="GaulHero" entity="Units/GHero3/GHero3.ent.xml">
-
-	<properties display_name="Darhinnox" display_name_plural="Heroes"/>
-	<properties icon="gameres/icons/GHero3.bmp"/>
-
+<class id="GHero3a" parent="GHero3" cpp_class="CVXHero" entity="Units/GHero3/GHero3.ent.xml">
+	<properties display_name="Darhinnox" edittree_pos="" />
 </class>

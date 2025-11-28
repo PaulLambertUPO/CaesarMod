@@ -1,4 +1,3 @@
-<class id="Death_Magic2" cpp_class="CVXFeedback" parent="Object"
-entity="Visuals/Death_Magic/Death_Magic2.ent.xml">
-	<properties desync_hash="0"/>
+<class id="Death_Magic2" parent="Object" cpp_class="CVXFeedback" entity="Visuals/Death_Magic/Death_Magic2.ent.xml">
+	<properties desync_hash="0" />
 </class>

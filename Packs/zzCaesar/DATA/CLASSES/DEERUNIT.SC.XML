@@ -1,4 +1,4 @@
-<class id="DeerUnit" cpp_class="CVXUnit" parent="Animal" entity="Units/Deer/Deer.ent.xml">
+<class id="DeerUnit" parent="Animal" cpp_class="CVXUnit" entity="Units/Deer/Deer.ent.xml">
 
 	<properties speed="200" />
 	<properties sight="650" />

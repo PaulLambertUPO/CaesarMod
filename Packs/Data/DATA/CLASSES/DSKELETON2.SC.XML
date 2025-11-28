@@ -1,4 +1,3 @@
-<class id="DSkeleton2" cpp_class="CVXDecor" parent="Object" entity="MapObjects/DSkeleton2/DSkeleton2.ent.xml">
-
-<properties edittree_pos="Structures/Others/Desert/Skeleton 2"/>
+<class id="DSkeleton2" parent="Object" cpp_class="CVXDecor" entity="MapObjects/DSkeleton2/DSkeleton2.ent.xml">
+	<properties edittree_pos="Structures/Others/Desert/Skeleton 2" />
 </class>

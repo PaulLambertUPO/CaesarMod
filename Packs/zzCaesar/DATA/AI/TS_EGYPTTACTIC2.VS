@@ -66,25 +66,29 @@ aSkillLevels[1] = 8;
 	}
 }
 
-//20 guardians + 20 axe throwers + optional religious feast + 1 random charm
+//barrack level 2 + 20 guardians + 20 axe throwers + optional religious feast + 1 random charm
 {
 	int nCount, nGuardians = 20, nAxethrowers = 20;
-	bool bReligiousFeast = false, bCharm = false;
+	bool bBarrack2 = false, bReligiousFeast = false, bCharm = false;
 	StrArray charms;
 	charms[0] = "Charm of Seth";
 	charms[1] = "Charm of Thoth";
 	charms[2] = "Charm of Ra";
 	charms[3] = "Charm of Isis";
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (olGuardians.count < nGuardians || olAxethrowers.count < nAxethrowers)) {
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olGuardians.count < nGuardians || olAxethrowers.count < nAxethrowers)) {
 		if (hero.IsValid)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		if (olGuardians.count < nGuardians) {
-			nCount = nGuardians - olGuardians.count;
-			olGuardians.AddList(set.TSRecruitArmy("EGuardian", nCount));
-		}
-		if (olAxethrowers.count < nAxethrowers) {
-			nCount = nAxethrowers - olAxethrowers.count;
-			olAxethrowers.AddList(set.TSRecruitArmy("EAxetrower", nCount));
+		if (!bBarrack2)
+			bBarrack2 = set.TSResearch("Barrack Level 2");
+		if (bBarrack2) {
+			if (olGuardians.count < nGuardians) {
+				nCount = nGuardians - olGuardians.count;
+				olGuardians.AddList(set.TSRecruitArmy("EGuardian", nCount));
+			}
+			if (olAxethrowers.count < nAxethrowers) {
+				nCount = nAxethrowers - olAxethrowers.count;
+				olAxethrowers.AddList(set.TSRecruitArmy("EAxetrower", nCount));
+			}
 		}
 		if (!bReligiousFeast)
 			bReligiousFeast = set.TSResearch("Religious Feast");

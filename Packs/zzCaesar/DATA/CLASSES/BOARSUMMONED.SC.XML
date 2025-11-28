@@ -1,4 +1,4 @@
-<class id="BoarSummoned" cpp_class="CVXUnit" parent="BoarUnit" entity="Units/Boar/Boar.ent.xml">
+<class id="BoarSummoned" parent="BoarUnit" cpp_class="CVXUnit" entity="Units/Boar/Boar.ent.xml">
 	<properties unit_specials="Defense skill, Determination, Freedom" />
 	<properties does_not_regenerate="1" />
 	<properties stamina_dec_time="3000" />

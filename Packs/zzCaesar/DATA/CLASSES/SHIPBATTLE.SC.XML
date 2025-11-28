@@ -1,4 +1,4 @@
-<class id="ShipBattle" cpp_class="CVXShip" parent="Ranged" entity="">
+<class id="ShipBattle" parent="Ranged" cpp_class="CVXShip" entity="">
 
 	<properties maxhealth="3000" />
 	<properties damage="100" armor_slash="20" armor_pierce="20" />
@@ -19,7 +19,7 @@
 	<properties display_name="Ship" display_name_plural="Ships" />
 	<properties icon="gameres/icons/Ship.bmp" />
 	<properties interface="thumb,holder,items" /><!-- with this setup there is no vertical bar and no special skill is showed, but items are visible and usable -->
-	<properties help="/contents/units/Ship" />
+	<properties help="contents/units/Ship" />
 
 	<method sig="boardunit" vs="data/subai/ship_board.vs" verify="data/subai/ship_board_verify.vs" onfinish="data/subai/ship_board_onfinish.vs" />
 	<method sig="unboard" vs="data/subai/ship_unboard.vs" />

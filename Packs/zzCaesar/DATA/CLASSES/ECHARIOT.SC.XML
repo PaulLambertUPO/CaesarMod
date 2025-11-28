@@ -1,4 +1,4 @@
-<class id="EChariot" cpp_class="CVXUnit" parent="Ranged" entity="units/EChariot/EChariot.ent.xml">
+<class id="EChariot" parent="Ranged" cpp_class="CVXUnit" entity="units/EChariot/EChariot.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="620" />

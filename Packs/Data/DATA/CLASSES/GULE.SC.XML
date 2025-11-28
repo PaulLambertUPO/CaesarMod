@@ -1,3 +1,2 @@
-<class id="Gule" cpp_class="CVXCatapultShot" parent="Object"
-entity="Visuals/Gule/Gule.ent.xml">
+<class id="Gule" parent="Object" cpp_class="CVXCatapultShot" entity="Visuals/Gule/Gule.ent.xml">
 </class>

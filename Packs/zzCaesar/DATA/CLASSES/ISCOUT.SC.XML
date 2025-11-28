@@ -1,4 +1,4 @@
-<class id="IScout" cpp_class="CVXUnit" parent="Horse" entity="Units/ICavalry/ICavalry.ent.xml">
+<class id="IScout" parent="Horse" cpp_class="CVXUnit" entity="Units/ICavalry/ICavalry.ent.xml">
 
 	<properties race="Iberia" />
 	<properties maxhealth="220" />

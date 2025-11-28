@@ -1,4 +1,3 @@
-<class id="CGule_explosion" cpp_class="CVXFeedback" parent="Object"
-entity="Visuals/CGule/CGule_explosion.ent.xml">
-	<properties desync_hash="0"/>
+<class id="CGule_explosion" parent="Object" cpp_class="CVXFeedback" entity="Visuals/CGule/CGule_explosion.ent.xml">
+	<properties desync_hash="0" />
 </class>

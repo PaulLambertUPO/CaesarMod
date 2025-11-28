@@ -1,4 +1,4 @@
-<class id="CHero4" cpp_class="CVXHero" parent="HeroMounted" entity="Units/CHero4/CHero4.ent.xml">
+<class id="CHero4" parent="HeroMounted" cpp_class="CVXHero" entity="Units/CHero4/CHero4.ent.xml">
 
 	<properties race="Carthage" />
 	<properties HeroSkills="Vigor, Frenzy, Rush, Egoism, Wisdom" />

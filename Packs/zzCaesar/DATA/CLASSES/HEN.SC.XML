@@ -1,5 +1,5 @@
-<class id="Hen" cpp_class="CVXUnit" parent="HenUnit" entity="Units/Hen/Hen.ent.xml">
-	<properties maxhealth="1" maxstamina="1" />
+<class id="Hen" parent="HenUnit" cpp_class="CVXUnit" entity="Units/Hen/Hen.ent.xml">
+	<properties maxhealth="1" maxstamina="0" />
 	<properties healthbar_type="0" />
 	<properties no_transparent_draw="1" always_visible_on_minimap="0" />
 	<properties edittree_pos="" />

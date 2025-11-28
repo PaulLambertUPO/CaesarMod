@@ -1,9 +1,6 @@
-<class id="CWVillager" cpp_class="CVXUnit" parent="PeasantFemale" entity="Units/CFemalePeasant/CFemalePeasant.ent.xml">
-
-	<properties race="Carthage"/>
-	<properties icon="gameres/icons/CWVillager.bmp"/>
-
-	<properties edittree_pos="Units/Carthage/Peasant (female)"/>
-	<sounds command="data/sound entities/VoiceCFemaleVillager.xml"/>
-
+<class id="CWVillager" parent="PeasantFemale" cpp_class="CVXUnit" entity="Units/CFemalePeasant/CFemalePeasant.ent.xml">
+	<properties race="Carthage" />
+	<properties icon="gameres/icons/CWVillager.bmp" />
+	<properties edittree_pos="Units/Carthage/Peasant (female)" />
+	<sounds command="VoiceCFemaleVillager" />
 </class>

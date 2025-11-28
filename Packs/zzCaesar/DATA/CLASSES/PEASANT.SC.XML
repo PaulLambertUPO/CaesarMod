@@ -1,4 +1,4 @@
-<class id="Peasant" cpp_class="CVXUnit" parent="Peaceful">
+<class id="Peasant" parent="Peaceful" cpp_class="CVXUnit">
 
 	<properties maxhealth="100" />
 	<properties sight="150" />

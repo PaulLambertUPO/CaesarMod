@@ -5,7 +5,7 @@
 	<properties interface="thumb,building,holder" />
 	<properties display_name="Teuton Tent" />
 	<properties icon="gameres/icons/TTent.bmp" />
-	<properties help="/contents/buildings/TTent" />
+	<properties help="contents/buildings/TTent" />
 	<properties edittree_pos="Structures/Interactive/Teuton Tent" />
 	<properties description="Keeps up to 40 neutral Teutons that attack any enemy in sight.\nAllows to equip Teutons by spending food" />
 	<properties
@@ -35,7 +35,7 @@
 
 	<value0 icon="gameres/infobar/common/food ico.bmp"
 		script="return .AsBuilding().settlement.food;"
-		help="/contents/feeding"
+		help="contents/feeding"
 		rollover="Food"
 	/>
 	<defaultcmd target="">

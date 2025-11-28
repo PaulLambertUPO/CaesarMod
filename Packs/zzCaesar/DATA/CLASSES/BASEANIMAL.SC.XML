@@ -1,4 +1,4 @@
-<class id="BaseAnimal" cpp_class="CVXUnit" parent="Unit" entity="">
+<class id="BaseAnimal" parent="Unit" cpp_class="CVXUnit" entity="">
 
 	<properties damage="0" />
 	<properties damage_type="none" />

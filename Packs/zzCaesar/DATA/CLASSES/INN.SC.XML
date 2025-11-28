@@ -1,4 +1,4 @@
-<class id="Inn" cpp_class="CVXTownHall" parent="Building" entity="Buildings/Inn/Inn_as.ent.xml" entity_winter="Buildings/Inn/Inn_w.ent.xml">
+<class id="Inn" parent="Building" cpp_class="CVXTownHall" entity="Buildings/Inn/Inn_as.ent.xml" entity_winter="Buildings/Inn/Inn_w.ent.xml">
 
 	<properties maxhealth="15000" sight="900" />
 	<properties
@@ -22,7 +22,7 @@
 
 	<properties display_name="Inn" />
 	<properties icon="gameres/icons/inn.bmp" />
-	<properties help="/contents/buildings/Inn" />
+	<properties help="contents/buildings/Inn" />
 	<properties edittree_pos="Structures/Interactive/Inn" />
 
 	<behavior script="data/subai/inn_behavior.vs" />
@@ -31,12 +31,12 @@
 
 	<value0 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
-		help="/contents/stats/health"
+		help="contents/stats/health"
 		rollover="Health"
 	/>
 	<value1 icon="gameres/infobar/common/pop ico.bmp"
 		script="Settlement set; set=.AsBuilding.settlement; return set.population + '/' + set.max_population;"
-		help="/contents/resources"
+		help="contents/resources"
 		rollover="Population"
 	/>
 

@@ -1,0 +1,3 @@
+<class id="WatchEyeBig" parent="WatchEye" cpp_class="CVXScriptObj" entity="">
+	<properties sight="1000" />
+</class>

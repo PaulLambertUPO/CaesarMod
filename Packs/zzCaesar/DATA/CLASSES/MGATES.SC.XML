@@ -1,7 +1,6 @@
-<class id="MGate4" cpp_class="CVXGate" parent="Gate" entity="Buildings/MWalls/GateS/GateS.ent.xml">
+<class id="MGate4" parent="Gate" cpp_class="CVXGate" entity="Buildings/MWalls/GateS/GateS.ent.xml">
 	<properties race="ImperialRome" />
-	<properties icon="gameres/icons/HGates.bmp" />
-	<properties radius="170" selection_radius="170" />
-	<properties wall_set="Imperial Roman walls" />
 	<properties sentry_class_name="HSentry1" />
+	<properties wall_set="Imperial Roman walls" />
+	<properties icon="gameres/icons/HGates.bmp" />
 </class>

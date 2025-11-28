@@ -673,10 +673,10 @@ while (1) {
 										}
 									}
 
-							Sleep(45);//without this instruction, the game crashes
+							Sleep(48);//without this instruction, the game crashes
 						}
 		}
-		Sleep(5);
+		Sleep(2);
 	}
 	Sleep(nSleepSquadMonitor);
 }

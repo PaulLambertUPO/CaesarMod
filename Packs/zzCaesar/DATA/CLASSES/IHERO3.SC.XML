@@ -1,4 +1,4 @@
-<class id="IHero3" cpp_class="CVXHero" parent="IberianHero" entity="Units/IHero3/IHero3.ent.xml">
+<class id="IHero3" parent="IberianHero" cpp_class="CVXHero" entity="Units/IHero3/IHero3.ent.xml">
 	<properties display_name="Baraeco" display_name_plural="Heroes" />
 	<properties icon="gameres/icons/IHero3.bmp" />
 	<properties edittree_pos="Units/Iberia/Hero 3" />

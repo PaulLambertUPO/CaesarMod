@@ -7,7 +7,6 @@
 	<properties range="40" min_range="0" />
 
 	<properties target_factor="200" />
-	<properties radius="20" selection_radius="32" />
 	<properties formation_priority="1100" formation_radius="45" />
 	<properties max_army="50" />
 	<properties heroarmyexpgain="40" />
@@ -31,7 +30,6 @@
 	<method sig="smartmove" vs="data/subai/hero_smartmove.vs" />
 	<method sig="move" vs="data/subai/hero_move.vs" />
 	<method sig="enter" vs="data/subai/hero_enter.vs" verify="data/subai/unit_enter_verify.vs" />
-	<method sig="hero_set_final_party_orientation" vs="data/subai/hero_set_final_party_orientation.vs" />
 
 	<method sig="formation" vs="data/subai/hero_formation.vs" />
 	<method sig="approach" vs="data/subai/hero_approach.vs" />
@@ -134,6 +132,4 @@
 		<cmd name="getitems" />
 		<cmd name="approach" />
 	</defaultcmd>
-
-	<sounds walk="HorseWalk" attack="HorseUnitSwordFight" die="HorseUnitDeath" />
 </class>

@@ -1,4 +1,4 @@
-<class id="GWomanWarrior" cpp_class="CVXUnit" parent="Melee" entity="Units/GWomanWarrior/GWomanWarrior.ent.xml">
+<class id="GWomanWarrior" parent="Melee" cpp_class="CVXUnit" entity="Units/GWomanWarrior/GWomanWarrior.ent.xml">
 
 	<properties race="Gaul" />
 	<properties maxhealth="215" />

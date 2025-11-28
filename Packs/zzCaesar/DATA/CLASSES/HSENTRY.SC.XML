@@ -1,4 +1,4 @@
-<class id="HSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/HToxotes/HSentry.ent.xml">
+<class id="HSentry" parent="Sentry" cpp_class="CVXUnit" entity="Units/HToxotes/HSentry.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="200" />

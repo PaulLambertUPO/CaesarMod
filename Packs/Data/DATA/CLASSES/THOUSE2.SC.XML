@@ -1,9 +1,6 @@
-<class id="THouse2" cpp_class="CVXBuilding" parent="BaseHouse" entity="Buildings/THouse2/THouse2.ent.xml">
-
-	<properties race="Germany"/>
-	<properties radius="60" selection_radius="60"/>
-	<properties icon="gameres/icons/Thouse.bmp"/>
-	<properties edittree_pos="Structures/Village (Germany)/House 2"/>
-	<properties display_name="House"/>
-
+<class id="THouse2" parent="BaseHouse" cpp_class="CVXBuilding" entity="Buildings/THouse2/THouse2.ent.xml">
+	<properties race="Germany" />
+	<properties radius="60" selection_radius="60" />
+	<properties icon="gameres/icons/THouse.bmp" />
+	<properties edittree_pos="Structures/Village (Germany)/House 2" />
 </class>

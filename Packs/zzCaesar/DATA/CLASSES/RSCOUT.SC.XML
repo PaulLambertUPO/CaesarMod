@@ -1,4 +1,4 @@
-<class id="RScout" altid="RHorseman" cpp_class="CVXUnit" parent="Horse" entity="Units/RScout/RScout.ent.xml">
+<class id="RScout" altid="RHorseman" parent="Horse" cpp_class="CVXUnit" entity="Units/RScout/RScout.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="240" />

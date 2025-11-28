@@ -1,4 +1,4 @@
-<class id="ScullTree" cpp_class="CVXItemHolder" parent="ItemHolder" entity="MapObjects/ItemHolders/Scull_tree.ent.xml">
+<class id="ScullTree" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/Scull_tree.ent.xml">
 	<properties radius="28" selection_radius="30"/>
 	<properties display_name="Skull tree"/>
 	<properties icon="gameres/icons/Scull tree.bmp"/>

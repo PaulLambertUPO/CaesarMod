@@ -1,7 +1,3 @@
-<class id="IHero4d" cpp_class="CVXHero" parent="IberianHero" entity="Units/IHero4/IHero4.ent.xml">
-    
-	<properties race="Iberia"/>
-	<properties display_name="Mandonio" display_name_plural="Heroes"/>
-	<properties icon="gameres/icons/IHero4.bmp"/>
-
+<class id="IHero4d" parent="IHero4a" cpp_class="CVXHero" entity="Units/IHero4/IHero4.ent.xml">
+	<properties display_name="Mandonio" edittree_pos="" />
 </class>

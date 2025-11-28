@@ -1,4 +1,3 @@
-<class id="Fire" cpp_class="CVXDecor" parent="Object"
-entity="Visuals/fire/fire.ent.xml">
-	<sounds walk="Fire"/>
+<class id="Fire" parent="Object" cpp_class="CVXDecor" entity="Visuals/fire/fire.ent.xml">
+	<sounds walk="Fire" />
 </class>

@@ -1,4 +1,3 @@
-<class id="Damage2" cpp_class="CVXFeedback" parent="Object"
-entity="Visuals/Damage/Damage2.ent.xml">
-	<properties desync_hash="0"/>
+<class id="Damage2" parent="Object" cpp_class="CVXFeedback" entity="Visuals/Damage/Damage2.ent.xml">
+	<properties desync_hash="0" />
 </class>

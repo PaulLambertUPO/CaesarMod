@@ -1,17 +1,9 @@
-<class id="GBarracks" altid="Barrack" cpp_class="CVXBarrack" parent="BaseBarracks"
-	entity="Buildings/GBarracks/GBarracks_as.ent.xml"
-	entity_autumn="Buildings/GBarracks/GBarracks_as.ent.xml"
-	entity_spring="Buildings/GBarracks/GBarracks_as.ent.xml"
-	entity_winter="Buildings/GBarracks/GBarracks_w.ent.xml"
->
-	<properties race="Gaul"/>
-	<properties icon="gameres/icons/Gbarracks.bmp"/>
-	<properties display_name="Barracks" display_name_plural="Barracks"/>
-	<properties radius="190" selection_radius="220"/>
-	<properties help="/contents/buildings/GBarracks"/>
+<class id="GBarracks" altid="Barrack" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/GBarracks/GBarracks_as.ent.xml" entity_winter="Buildings/GBarracks/GBarracks_w.ent.xml">
 
-	<properties edittree_pos="Structures/Stronghold (Gaul)/Barracks"/>
-	<properties auto_repair="no"/>
+	<properties race="Gaul" />
+	<properties radius="190" selection_radius="220" />
 	
-
+	<properties icon="gameres/icons/Gbarracks.bmp" />
+	<properties help="contents/buildings/GBarracks" />
+	<properties edittree_pos="Structures/Stronghold (Gaul)/Barracks" />
 </class>

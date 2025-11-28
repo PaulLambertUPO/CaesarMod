@@ -1,4 +1,4 @@
-<class id="BearUnit" cpp_class="CVXUnit" parent="AttackAnimal" entity="units/Bear/Bear.ent.xml">
+<class id="BearUnit" parent="AttackAnimal" cpp_class="CVXUnit" entity="units/Bear/Bear.ent.xml">
 	<properties maxhealth="360" />
 	<properties damage="24" armor_slash="8" armor_pierce="8" />
 	<properties sight="500" />

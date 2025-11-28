@@ -1,12 +1,9 @@
 <class id="ETownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/ETownhall/ETownhall.ent.xml">
-
 	<properties race="Egypt" />
 	<properties foodperpop="100" />
-
 	<properties radius="170" selection_radius="175" />
-
 	<properties display_name="Egyptian Townhall" />
 	<properties icon="gameres/icons/ETownhall.bmp" />
-	<properties help="/contents/buildings/ETownhall" />
+	<properties help="contents/buildings/ETownhall" />
 	<properties edittree_pos="Structures/Stronghold (Egypt)/Townhall" />
 </class>

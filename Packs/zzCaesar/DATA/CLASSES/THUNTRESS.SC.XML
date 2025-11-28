@@ -1,4 +1,4 @@
-<class id="THuntress" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/THuntress/THuntress.ent.xml">
+<class id="THuntress" parent="MediumRanged" cpp_class="CVXUnit" entity="Units/THuntress/THuntress.ent.xml">
 
 	<properties race="Germany" />
 	<properties maxhealth="260" />

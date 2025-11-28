@@ -1,4 +1,4 @@
-<class id="Ruins1" cpp_class="CVXBuilding" parent="BaseRuins" entity="MapObjects/Oracul/oracul.ent.xml">
+<class id="Ruins1" parent="BaseRuins" cpp_class="CVXBuilding" entity="MapObjects/Oracul/oracul.ent.xml">
 
 	<properties hides_units="0" />
 	<properties minimap_icon_type="black" />

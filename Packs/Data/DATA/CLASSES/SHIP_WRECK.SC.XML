@@ -1,5 +1,4 @@
-<class id="ship_wreck" cpp_class="CVXDecor" parent="Object"
-entity="MapObjects/ship_wreck/ship_wreck.ent.xml">
-	<properties edittree_pos="Structures/Water/Ship wreck (large)"/>
-	<properties water_unit="1"/>
+<class id="ship_wreck" parent="Object" cpp_class="CVXDecor" entity="MapObjects/ship_wreck/ship_wreck.ent.xml">
+	<properties edittree_pos="Structures/Water/Ship wreck (large)" />
+	<properties water_unit="1" />
 </class>

@@ -1,10 +1,10 @@
-<class id="EOutpost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/EOutpost/EOutpost.ent.xml">
+<class id="EOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/EOutpost/EOutpost.ent.xml">
 	<properties race="Egypt" />
 	<properties maxhealth="10000" />
 	<properties icon="gameres/icons/EOutpost.bmp" />
 	<properties display_name="Gold outpost" />
 	<properties radius="345" selection_radius="350" />
-	<properties help="/contents/buildings/GoldOutpost" />
+	<properties help="contents/buildings/GoldOutpost" />
 	<properties edittree_pos="Structures/Outposts/Gold outpost (Egyptian)" />
 	<properties description="Produces additional gold as long as there is at least 2000 gold stored inside" />
 	<properties

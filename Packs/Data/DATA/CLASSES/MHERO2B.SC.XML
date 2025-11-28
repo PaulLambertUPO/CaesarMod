@@ -1,6 +1,3 @@
-<class id="MHero2b" cpp_class="CVXHero" parent="ImperialRomanHero" entity="Units/RHero5/RHero5.ent.xml">
-
-	<properties display_name="Bruttius" display_name_plural="Heroes"/>
-	<properties icon="gameres/icons/MHero2.bmp"/>
-
+<class id="MHero2b" parent="MHero2" cpp_class="CVXHero" entity="Units/RHero5/RHero5.ent.xml">
+	<properties display_name="Bruttius" edittree_pos="" />
 </class>

@@ -1,4 +1,4 @@
-<class id="TTeutonArcher" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/TTeutonArcher/TTeutonArcher.ent.xml">
+<class id="TTeutonArcher" parent="MediumRanged" cpp_class="CVXUnit" entity="Units/TTeutonArcher/TTeutonArcher.ent.xml">
 
 	<properties race="Germany" />
 	<properties maxhealth="300" />

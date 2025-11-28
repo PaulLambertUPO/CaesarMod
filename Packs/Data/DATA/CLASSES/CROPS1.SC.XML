@@ -1,7 +1,3 @@
-<class id="Crops1" cpp_class="CVXDecor" parent="Object"
-entity_autumn="MapObjects/Decors/CornSmall/Corn_Small_s1.ent.xml"
-entity_spring="MapObjects/Decors/CornSmall/Corn_Small_s1.ent.xml"
-entity_winter="MapObjects/Decors/CornSmall/Corn_Small_s1.ent.xml">
-
-	<properties edittree_pos="Structures/Others/Fields/Crops 1"/>
+<class id="Crops1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Decors/CornSmall/Corn_Small_s1.ent.xml">
+	<properties edittree_pos="Structures/Others/Fields/Crops 1" />
 </class>

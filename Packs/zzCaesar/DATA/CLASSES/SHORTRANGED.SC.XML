@@ -1,4 +1,4 @@
-<class id="ShortRanged" cpp_class="CVXUnit" parent="Ranged" entity="">
+<class id="ShortRanged" parent="Ranged" cpp_class="CVXUnit" entity="">
 	<properties sight="500" range="300" />
 	<properties formation_priority="500" />
 </class>

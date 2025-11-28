@@ -1,4 +1,4 @@
-<class id="HMyrmidon_Javelin" cpp_class="CVXUnit" parent="Ranged" entity="Units/HMyrmidon/Javelin/HMyrmidon.ent.xml">
+<class id="HMyrmidon_Javelin" parent="Ranged" cpp_class="CVXUnit" entity="Units/HMyrmidon/Javelin/HMyrmidon.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="320" />

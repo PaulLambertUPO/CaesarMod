@@ -1,8 +1,3 @@
-<class
-	cpp_class = "CVXTavern"
-	entity = "Buildings/GTavern/Tavern_w.ent.xml"
-	id = "GTavernWinter"
-	parent = "GTavern"
->
-	<properties edittree_pos = "Structures/Stronghold (Gaul)/Winter/Tavern"/>
+<class id="GTavernWinter" parent="GTavern" cpp_class="CVXTavern" entity="Buildings/GTavern/Tavern_w.ent.xml">
+	<properties edittree_pos="Structures/Stronghold (Gaul)/Winter/Tavern" />
 </class>

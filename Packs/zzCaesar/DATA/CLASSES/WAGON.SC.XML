@@ -1,4 +1,4 @@
-<class id="Wagon" cpp_class="CVXUnit" parent="Peaceful" entity="">
+<class id="Wagon" parent="Peaceful" cpp_class="CVXUnit" entity="">
 
 	<properties select_class="Wagon" />
 	<properties maxhealth="400" />
@@ -8,7 +8,7 @@
 	<properties feeds="0" />
 	<properties healthbar_type="1" />
 	<properties icon="gameres/icons/Wagon.bmp" />
-	<properties help="/contents/units/Mule" />
+	<properties help="contents/units/Mule" />
 
 	<method sig="follow" vs="data/subai/wagon_follow.vs" />
 	<method sig="loadgoldbig" vs="data/subai/wagon_loadgoldbig.vs" />

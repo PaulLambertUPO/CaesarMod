@@ -1,4 +1,4 @@
-<class id="PunicRomanHero" cpp_class="CVXHero" parent="HeroMounted" entity="">
+<class id="PunicRomanHero" parent="HeroMounted" cpp_class="CVXHero" entity="">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="1200" />
@@ -6,7 +6,7 @@
 	<properties unit_specials="Toughness" />
 	<properties HeroSkills="Administration, Battle cry, Quick March, Team attack, Team defense" />
 
-	<properties help="/contents/units/PunicHero" />
+	<properties help="contents/units/PunicHero" />
 
 	<sounds command="VoiceRPunicHero" />
 </class>

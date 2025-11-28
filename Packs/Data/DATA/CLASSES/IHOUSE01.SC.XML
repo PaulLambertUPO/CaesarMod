@@ -1,10 +1,6 @@
-<class id="IHouse1" cpp_class="CVXBuilding" parent="BaseHouse"
-	entity="Buildings/IHouse1/IHouse1.ent.xml"
->
-	<properties race="Iberia"/>
-	<properties display_name="House"/>
-	<properties icon="gameres/icons/ihouse.bmp"/>
-	<properties radius="110" selection_radius="112"/>
-	<properties edittree_pos="Structures/Village (Iberia)/House 1"/>
-	
+<class id="IHouse1" parent="BaseHouse" cpp_class="CVXBuilding" entity="Buildings/IHouse1/IHouse1.ent.xml">
+	<properties race="Iberia" />
+	<properties radius="110" selection_radius="112" />
+	<properties icon="gameres/icons/IHouse.bmp" />
+	<properties edittree_pos="Structures/Village (Iberia)/House 1" />
 </class>

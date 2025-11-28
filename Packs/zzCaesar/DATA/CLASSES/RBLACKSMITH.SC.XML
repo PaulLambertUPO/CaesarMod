@@ -3,9 +3,8 @@
 	<properties race="RepublicanRome" />
 	<properties radius="255" selection_radius="260" />
 
-	<properties display_name="Blacksmith" />
 	<properties icon="gameres/icons/RBlacksmith.bmp" />
-	<properties help="/contents/buildings/RBlacksmith" />
+	<properties help="contents/buildings/RBlacksmith" />
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Blacksmith" />
 
 	<behavior script="data/subai/RBlacksmith_Enable_Or_Disable_Cmd.vs" />

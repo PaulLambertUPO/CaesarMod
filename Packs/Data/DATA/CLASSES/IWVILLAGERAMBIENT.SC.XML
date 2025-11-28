@@ -1,6 +1,3 @@
-<class id="IWVillagerAmbient" cpp_class="CVXUnit" parent="PeasantAmbient" entity="Units/IFemalePeasant/IFemalePeasant.ent.xml">
-
-	<properties race="Iberia"/>
-	<properties icon="gameres/icons/IWVillager.bmp"/>
-
+<class id="IWVillagerAmbient" parent="PeasantAmbient" cpp_class="CVXUnit" entity="Units/IFemalePeasant/IFemalePeasant.ent.xml">
+	<properties race="Iberia" />
 </class>

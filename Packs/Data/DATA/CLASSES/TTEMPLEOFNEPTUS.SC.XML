@@ -1,15 +1,14 @@
-<class id="TTempleOfNeptus" cpp_class="CVXBarrack" parent="BaseBarracks" entity="Buildings/TTempleOfNeptus/TTempleOfNeptus.ent.xml">
+<class id="TTempleOfNeptus" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/TTempleOfNeptus/TTempleOfNeptus.ent.xml">
 
-	<properties race="Germany"/>
-	<properties display_name="Temple of Neptus"/>
-	<properties radius="165" selection_radius="170"/>
+	<properties race="Germany" />
+	<properties radius="165" selection_radius="170" />
 
-	<properties auto_repair="no"/>
-	<properties icon="gameres/icons/TTempleOfNeptus.bmp"/>
-	<properties help="/contents/buildings/TTemple"/>
-	<properties edittree_pos="Structures/Stronghold (Germany)/Temple of Neptus"/>
-	<sounds select="TempleSelect"/>
+	<properties display_name="Temple of Neptus" />
+	<properties icon="gameres/icons/TTempleOfNeptus.bmp" />
+	<properties help="contents/buildings/TTemple" />
+	<properties edittree_pos="Structures/Stronghold (Germany)/Temple of Neptus" />
 
-	<behavior script="data/subai/TTempleofNeptus_anim.vs"/>
-
+	<behavior script="data/subai/TTempleofNeptus_anim.vs" />
+	
+	<sounds select="TempleSelect" />
 </class>

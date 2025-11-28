@@ -1,8 +1,7 @@
-<class id="BaseTownBuilding" cpp_class="CVXBuilding" parent="BaseBuilding">
+<class id="BaseTownBuilding" parent="BaseBuilding" cpp_class="CVXBuilding">
 	<properties auto_repair="no" />
 	<properties interface="thumb,building" />
 
 	<method sig="research" vs="data/subai/research.vs" onfinish="data/subai/onfinish_research.vs" />
 	<method sig="immediate_research" vs="data/subai/immediate_research.vs" onfinish="data/subai/onfinish_research.vs" />
-	<method sig="getcharm" vs="data/subai/eblacksmith_charms.vs" onfinish="data/subai/onfinish_research.vs" />
 </class>

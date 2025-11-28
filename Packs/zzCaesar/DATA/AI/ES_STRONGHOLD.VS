@@ -3,7 +3,7 @@
 GAIKA g;
 int aiPlayer, nSquanderGoldAmount, nTradeGold, nTradeFood, nTrainStart, nArenaHire, nSleepES;
 int nMilUnits, nMinEnemyEval, nMaxEnemyEval, nAvgEnemyEval, nFreezeArmyBuild, nOwn, nAlly, nEnemy, enemy_hidden;
-str maxUpgradeBarracks;
+str maxUpgradeBarracks, reservedStrTech;
 bool bAssUnderFire, bResearchTrainingComplete, nRaceIsGreece = false;
 
 Sleep(2500 + rand(501));//sleep must be higher than tactic script initial sleep (1000) and max allowed time (2000)
@@ -73,6 +73,19 @@ while (set.player == aiPlayer) {
 	EnemyPlayersEval(aiPlayer, nMinEnemyEval, nMaxEnemyEval, nAvgEnemyEval);
 
 	EnvWriteInt(set, "nFoodReserve", 15 * MAX(set.Units.count, nMilUnits / Strongholds(aiPlayer)));//used in ESH_Market and ESH_ArenaUnits
+
+	reservedStrTech = EnvReadString(set, "ReserveFor" + (aiPlayer - 1));//unlock army recruitment in case a reserved tech is researched by another stronghold
+	if (reservedStrTech != "")//do not use IsResearched here because there might be some commands with a name/token that would not comply (e.g. tribute)
+		if (EnvReadString(set, reservedStrTech) == "researched") {
+			set.StopReserving();
+			EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
+			EnvWriteInt(set, "FreezeArmyBuild", 0);
+		}
+		else if (EnvReadString(aiPlayer, reservedStrTech) == "researched") {
+			set.StopReserving();
+			EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
+			EnvWriteInt(set, "FreezeArmyBuild", 0);
+		}
 
 	nFreezeArmyBuild = EnvReadInt(set, "FreezeArmyBuild");
 	if (nFreezeArmyBuild > 0) {

@@ -1,10 +1,10 @@
-<class id="GGuardPost" cpp_class="CVXOutpost" parent="Outpost" entity="Buildings/GGuardPost/GGuardPost_AS.ent.xml" entity_winter="Buildings/GGuardPost/GGuardPost_W.ent.xml">
+<class id="GGuardPost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/GGuardPost/GGuardPost_AS.ent.xml" entity_winter="Buildings/GGuardPost/GGuardPost_W.ent.xml">
 	<properties race="Gaul" />
 	<properties maxhealth="10000" />
 	<properties auto_repair="no" />
 	<properties display_name="Guard Post" />
 	<properties icon="gameres/icons/GGuardPost.bmp" />
-	<properties help="/contents/buildings/GGuardPost" />
+	<properties help="contents/buildings/GGuardPost" />
 	<properties edittree_pos="Structures/Outposts/Guard Post" />
 	<properties description="Guards the area with sentries and raises the alarm every time that it spots enemy warriors" />
 	<properties

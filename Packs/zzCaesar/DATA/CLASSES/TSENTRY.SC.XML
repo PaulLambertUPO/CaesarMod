@@ -1,4 +1,4 @@
-<class id="TSentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/TArcher/TSentry.ent.xml">
+<class id="TSentry" parent="Sentry" cpp_class="CVXUnit" entity="Units/TArcher/TSentry.ent.xml">
 
 	<properties race="Germany" />
 	<properties maxhealth="180" />

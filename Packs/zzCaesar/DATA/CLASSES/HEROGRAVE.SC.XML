@@ -12,7 +12,7 @@
 
 	<value0 icon="gameres/infobar/common/level ico.bmp"
 		script="return .maxstamina;"
-		help="/contents/stats/level"
+		help="contents/stats/level"
 		rollover="The level of the hero lying in the grave"
 	/>
 	<value1 icon="gameres/infobar/common/army ico.bmp"

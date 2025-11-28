@@ -5,7 +5,7 @@
 
 	<properties display_name="Temple" />
 	<properties icon="gameres/icons/RTemple.bmp" />
-	<properties help="/contents/buildings/RTemple" />
+	<properties help="contents/buildings/RTemple" />
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Temple" />
 
 	<behavior script="data/subai/RTemple_Enable_Or_Disable_Cmd.vs" />

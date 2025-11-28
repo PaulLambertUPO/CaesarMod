@@ -1,4 +1,4 @@
-<class id="RepublicanRomeFlag" cpp_class="CVXUnit" parent="Object" entity="Units/Rome Flags/RepublicanRomeFlag.ent.xml">
+<class id="RepublicanRomeFlag" parent="Object" cpp_class="CVXUnit" entity="Units/Rome Flags/RepublicanRomeFlag.ent.xml">
 	<properties target_factor="-1" />
 	<properties feeds="0" max_food="0" />
 	<method sig="idle" vs="data/subai/flagging.vs" />

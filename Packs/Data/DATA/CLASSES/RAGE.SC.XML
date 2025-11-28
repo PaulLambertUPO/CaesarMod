@@ -1,4 +1,3 @@
-<class id="Rage" cpp_class="CVXFeedback" parent="Object"
-entity="Visuals/Rage/Rage.ent.xml">
-	<properties desync_hash="0"/>
+<class id="Rage" parent="Object" cpp_class="CVXFeedback" entity="Visuals/Rage/Rage.ent.xml">
+	<properties desync_hash="0" />
 </class>

@@ -550,7 +550,6 @@
 <translationtableentry text="Gold outpost" result="Forte dell'oro" />
 <translationtableentry text="Gold outpost (Roman)" result="Forte dell'oro (romano)" />
 <translationtableentry text="Gold outpost (Egyptian)" result="Forte dell'oro (egizio)" />
-<translationtableentry text="Stone Outpost" result="Forte dell'oro" />
 <translationtableentry text="Trade outpost" result="Forte commerciale" />
 <translationtableentry text="Trade outpost (Gaul)" result="Forte commerciale (gallico)" />
 <translationtableentry text="Trade outpost (German)" result="Forte commerciale (germanico)" />
@@ -597,7 +596,6 @@
 <translationtableentry text="Allows heroes of the specified level to enter and obtain the item inside. Upon exiting, their health is always 20% of the maximum" result="Consente agli eroi del livello specificato di entrare e ottenere l'oggetto all'interno. All'uscita, la loro salute è sempre il 20% di quella massima" />
 <translationtableentry text="Heroes of the same player visiting the grave will benefit from the experience of the dead hero.\nWarriors of the same player visiting the grave will receive charms that improve their combat skills until they kill an enemy" result="Gli eroi dello stesso giocatore che visitano la tomba beneficeranno dall'esperienza dell'eroe defunto.\nI guerrieri dello stesso giocatore riceveranno talismani magici che migliorano le loro abilità di combattimento finché non uccidono un nemico" />
 <translationtableentry text="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Stonehenge, to ensure that it accumulates enough power for such rituals" result="Consente di lanciare incantesimi che hanno un effetto sull'intera mappa. Per lanciare tali incantesimi, dev'esserci un'unità spirituale vicino all'altare, per assicurare che accumuli abbastanza potenza per simili rituali" />
-<translationtableentry text="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Shrine, to ensure that it accumulates enough power for such rituals" result="Consente di lanciare incantesimi che hanno un effetto sull'intera mappa. Per lanciare tali incantesimi, dev'esserci un'unità spirituale vicino all'altare, per assicurare che accumuli abbastanza potenza per simili rituali" />
 <translationtableentry text="Allows armies to go from one cave entrance to the other instantly" result="Consente agli eserciti di andare dall'entrata di una grotta all'altra all'istante" />
 <translationtableentry text="Restores the health of any nearby injured unit (animals excluded) by 100 every 0.5 seconds" result="Ripristina la salute di qualunque unità ferita vicina (animali esclusi) di 100 punti ogni 0,5 secondi" />
 <!-- end building descriptions -->
@@ -1234,6 +1232,7 @@
 <translationtableentry text="Click to attack this building" result="Clicca per attaccare questa struttura" />
 <translationtableentry text="Right-click to attack this building" result="Clicca col tasto destro per attaccare questa struttura" />
 <translationtableentry text="Click to advance to this position" result="Clicca per avanzare fino a questa posizione" />
+<translationtableentry text="Right-click to advance to this position" result="Clicca col tasto destro per avanzare fino a questa posizione" />
 <translationtableentry text="Right-click to attack this type of enemy" result="Clicca col tasto destro per attaccare questo tipo di nemico" />
 <translationtableentry text="Capture" result="Conquista" />
 <translationtableentry text="Walls cannot be captured, only attacked" result="Non si possono conquistare i muri, solo attaccarli" />

@@ -1,4 +1,4 @@
-<class id="Melee" cpp_class="CVXUnit" parent="Military" entity="">
+<class id="Melee" parent="Military" cpp_class="CVXUnit" entity="">
 
 	<properties damage_type="slash" />
 	<properties range="40" min_range="0" />

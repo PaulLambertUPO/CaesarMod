@@ -1,3 +1,2 @@
-<class id="IGule_shadow" cpp_class="CVXMapObj" parent="Object"
-entity="Visuals/IGule/IGule_shadow.ent.xml">
+<class id="IGule_shadow" parent="Object" cpp_class="CVXMapObj" entity="Visuals/IGule/IGule_shadow.ent.xml">
 </class>

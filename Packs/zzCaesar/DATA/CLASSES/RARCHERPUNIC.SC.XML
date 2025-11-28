@@ -1,4 +1,4 @@
-<class id="RArcherPunic" cpp_class="CVXUnit" parent="RArcher" entity="Units/RArcher/RArcher.ent.xml">
+<class id="RArcherPunic" parent="RArcher" cpp_class="CVXUnit" entity="Units/RArcher/RArcher.ent.xml">
 	<properties unit_specials="Defense skill, Toughness" />
 	<properties icon="gameres/icons/zpwRArcher.bmp" />
 	<properties edittree_pos="Units/Roman/Archer (Punic)" />

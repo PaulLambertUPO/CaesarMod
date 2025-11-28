@@ -1,3 +1,2 @@
-<class id="Gule_shadow" cpp_class="CVXMapObj" parent="Object"
-entity="Visuals/Gule/Gule_shadow.ent.xml">
+<class id="Gule_shadow" parent="Object" cpp_class="CVXMapObj" entity="Visuals/Gule/Gule_shadow.ent.xml">
 </class>

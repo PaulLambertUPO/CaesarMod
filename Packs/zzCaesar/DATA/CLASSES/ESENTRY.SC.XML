@@ -1,4 +1,4 @@
-<class id="ESentry" cpp_class="CVXUnit" parent="Sentry" entity="Units/EArcher/ESentry.ent.xml">
+<class id="ESentry" parent="Sentry" cpp_class="CVXUnit" entity="Units/EArcher/ESentry.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="180" />

@@ -1,4 +1,6 @@
-<class id="Teleport" cpp_class="CVXTeleport" parent="Building" entity="">
+<class id="Teleport" parent="Building" cpp_class="CVXTeleport" entity="">
+	<properties maxhealth="100" />
+	<properties radius="200" selection_radius="210" />
 	<properties
 		is_central_building="1"
 		can_be_captured="0"
@@ -16,14 +18,14 @@
 		max_units="10000"
 		settlement_icon_name=""
 	/>
+	<properties can_be_cloned="0" />
+	<properties minimap_icon_type="black" />
+	<properties display_name="Cave" />
+	<properties icon="gameres/icons/Teleport.bmp" />
+	<properties help="contents/buildings/Caves" />
+	<properties description="Allows armies to go from one cave entrance to the other instantly" />
 
-	<properties can_be_cloned="0"/>
-	<properties icon="gameres/icons/Teleport.bmp"/>
-	<properties display_name="Cave"/>
-	<properties minimap_icon_type="black"/>
-	<properties help="/contents/buildings/Caves"/>
-	<properties description="Allows armies to go from one cave entrance to the other instantly"/>
-	<behavior script="data/subai/teleport_force_exit.vs"/>
+	<behavior script="data/subai/teleport_force_exit.vs" />
 
-	<sounds select="Sounds/selection/cave.wav"/>
+	<sounds select="Sounds/Selection/Cave.wav" />
 </class>

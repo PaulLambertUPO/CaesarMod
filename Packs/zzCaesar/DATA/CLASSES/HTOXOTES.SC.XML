@@ -1,4 +1,4 @@
-<class id="HToxotes" cpp_class="CVXUnit" parent="Ranged" entity="units/HToxotes/HToxotes.ent.xml">
+<class id="HToxotes" parent="Ranged" cpp_class="CVXUnit" entity="units/HToxotes/HToxotes.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="180" />

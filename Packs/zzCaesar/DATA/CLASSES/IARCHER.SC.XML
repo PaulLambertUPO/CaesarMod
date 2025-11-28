@@ -1,4 +1,4 @@
-<class id="IArcher" cpp_class="CVXUnit" parent="Ranged" entity="Units/IArcher/IArcher.ent.xml">
+<class id="IArcher" parent="Ranged" cpp_class="CVXUnit" entity="Units/IArcher/IArcher.ent.xml">
 
 	<properties race="Iberia" />
 	<properties maxhealth="200" />

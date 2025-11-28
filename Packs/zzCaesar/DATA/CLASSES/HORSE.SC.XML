@@ -1,4 +1,4 @@
-<class id="Horse" cpp_class="CVXUnit" parent="Melee" entity="">
+<class id="Horse" parent="Melee" cpp_class="CVXUnit" entity="">
 
 	<properties maxhealth="300" />
 

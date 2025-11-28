@@ -3,9 +3,8 @@
 	<properties race="RepublicanRome" />
 	<properties radius="360" selection_radius="365" />
 
-	<properties display_name="Arena" />
 	<properties icon="gameres/icons/RArena.bmp" />
-	<properties help="/contents/buildings/RArena" />
+	<properties help="contents/buildings/RArena" />
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Arena" />
 
 	<behavior script="data/subai/RArena_Enable_Or_Disable_Cmd.vs" />

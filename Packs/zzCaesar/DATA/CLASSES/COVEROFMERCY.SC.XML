@@ -1,4 +1,4 @@
-<class id="CoverOfMercy" cpp_class="CVXAreaEffect" parent="SummoningObj" entity="Visuals/fogs/com.ent.xml">
+<class id="CoverOfMercy" parent="SummoningObj" cpp_class="CVXAreaEffect" entity="Visuals/fogs/com.ent.xml">
 	<properties radius="325" />
 	<properties range="200" />
 	<properties stamina_dec_time="2500" />

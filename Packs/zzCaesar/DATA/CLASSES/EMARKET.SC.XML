@@ -1,11 +1,14 @@
-<class id="EMarket" cpp_class="CVXTavern" parent="BaseTavern" entity="Buildings/EMarket/EMarket.ent.xml">
+<class id="EMarket" parent="BaseTavern" cpp_class="CVXTavern" entity="Buildings/EMarket/EMarket.ent.xml">
 
 	<properties race="Egypt" />
-
 	<properties radius="190" selection_radius="195" />
 
 	<properties display_name="Market" />
 	<properties icon="gameres/icons/EMarket.bmp" />
-	<properties help="/contents/buildings/ETavern" />
+	<properties help="contents/buildings/ETavern" />
 	<properties edittree_pos="Structures/Stronghold (Egypt)/Market" />
+
+	<method sig="buywarslaves" vs="data/subai/buy_war_slaves.vs"/>
+	<method sig="gossip" vs="data/subai/explore_area.vs" />
+	<method sig="buyslaves" vs="data/subai/emarket_buyslaves.vs" />
 </class>

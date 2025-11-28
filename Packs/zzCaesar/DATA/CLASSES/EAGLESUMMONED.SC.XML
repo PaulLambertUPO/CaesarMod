@@ -1,4 +1,4 @@
-<class id="EagleSummoned" cpp_class="CVXFlyingUnit" parent="Eagle" entity="Units/Eagle/Eagle.ent.xml">
+<class id="EagleSummoned" parent="Eagle" cpp_class="CVXFlyingUnit" entity="Units/Eagle/Eagle.ent.xml">
 	<properties unit_specials="Freedom, Keen sight" />
 	<properties does_not_regenerate="1" />
 	<properties stamina_dec_time="12000" />

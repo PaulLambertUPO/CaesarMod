@@ -1,6 +1,6 @@
-<class id="RVelit" cpp_class="CVXUnit" parent="MediumRanged" entity="Units/RVelit/RVelit.ent.xml">
+<class id="RVelit" parent="MediumRanged" cpp_class="CVXUnit" entity="Units/RVelit/RVelit.ent.xml">
 
-	<properties race="ImperialRome" />
+	<properties race="RepublicanRome" />
 	<properties maxhealth="220" />
 	<properties damage="18" armor_slash="8" armor_pierce="8" />
 	<properties speed="70" />

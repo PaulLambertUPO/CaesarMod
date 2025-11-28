@@ -1,9 +1,6 @@
-<class id="BWVillager" cpp_class="CVXUnit" parent="PeasantFemale" entity="units/BWVillager/BWVillager.ent.xml">
-
-	<properties race="Britain"/>
-	<properties icon="gameres/icons/BWVillager.bmp"/>
-
-	<properties edittree_pos="Units/Britain/Peasant (female)"/>
-	<sounds command="data/sound entities/VoiceBFemaleVillager.xml"/>
-
+<class id="BWVillager" parent="PeasantFemale" cpp_class="CVXUnit" entity="units/BWVillager/BWVillager.ent.xml">
+	<properties race="Britain" />
+	<properties icon="gameres/icons/BWVillager.bmp" />
+	<properties edittree_pos="Units/Britain/Peasant (female)" />
+	<sounds command="VoiceBFemaleVillager" />
 </class>

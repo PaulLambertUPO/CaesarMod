@@ -10,8 +10,7 @@ EnvWriteString(set, "Expedition", "researching");
 
 .Progress();
 
-new_expedition_watch_eye = Place("WatchEye", pt, .player);
-new_expedition_watch_eye.SetSight(1000);
+new_expedition_watch_eye = Place("WatchEyeBig", pt, .player);
 new_expedition_watch_eye.SetCommand("infinite_spy");
 
 old_expedition_watch_eye = EnvReadObj(set, "ExpeditionWatchEye");

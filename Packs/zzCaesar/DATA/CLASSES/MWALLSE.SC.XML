@@ -1,8 +1,7 @@
-<class id="MWallsE" cpp_class="CVXBuilding" parent="Wall" entity="Buildings/MWalls/WallE/WallE.ent.xml">
+<class id="MWallsE" parent="Wall" cpp_class="CVXBuilding" entity="Buildings/MWalls/WallE/WallE.ent.xml">
 	<properties race="ImperialRome" />
-	<properties icon="gameres/icons/HWalls.bmp" />
-	<properties radius="110" selection_radius="110" />
-	<properties wall_set="Imperial Roman walls" />
 	<properties num_sentry_slots="4" />
 	<properties sentry_class_name="HSentry" />
+	<properties wall_set="Imperial Roman walls" />
+	<properties icon="gameres/icons/HWalls.bmp" />
 </class>

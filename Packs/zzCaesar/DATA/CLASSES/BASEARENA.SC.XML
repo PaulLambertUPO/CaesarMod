@@ -1,6 +1,7 @@
-<class id="BaseArena" cpp_class="CVXBuilding" parent="BaseTownBuilding" entity="">
+<class id="BaseArena" parent="BaseTownBuilding" cpp_class="CVXBuilding" entity="">
 
 	<properties interface="thumb,building,queue" />
+	<properties display_name="Arena" />
 
 	<behavior script="data/subai/arena_behavior.vs" />
 

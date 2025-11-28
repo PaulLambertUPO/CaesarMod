@@ -1,19 +1,14 @@
-<class id="HeroRTribune" altid="RTribune" cpp_class="CVXHero" parent="Hero" entity="Units/RTribune/RTribune.ent.xml">
+<class id="HeroRTribune" parent="HeroFootman" cpp_class="CVXHero" entity="Units/RTribune/RTribune.ent.xml">
 
-	<properties race="RepublicanRome"/>
-	<properties maxhealth="1000"/>
-	<properties damage="40" armor_slash="16" armor_pierce="16"/>
-	<properties speed="60"/>
-	<properties HeroSkills="Administration, Team attack, Team defense, Quick March, Epic endurance"/>
+	<properties race="RepublicanRome" />
+	<properties maxhealth="1000" />
+	<properties damage="40" armor_slash="16" armor_pierce="16" />
+	<properties speed="70" />
+	<properties HeroSkills="Administration, Team attack, Team defense, Quick March, Epic endurance" />
 
-	<properties formation_priority="1000"/>
-	<properties formation_radius="26"/>
+	<properties display_name="Tribune" display_name_plural="Tribunes" />
+	<properties icon="gameres/icons/RTribune.bmp" />
+	<properties help="contents/heroes" />
 
-	<properties icon="gameres/icons/RTribune.bmp"/>
-	<properties display_name="Tribune" display_name_plural="Tribunes"/>
-	<properties help="contents/units/RTribune"/>
-	
-	<sounds attack="UnitPikeFight" 
-			command="data/sound entities/VoiceRTribune.xml"/>
-
+	<sounds command="VoiceRTribune" attack="UnitSpearFight" />
 </class>

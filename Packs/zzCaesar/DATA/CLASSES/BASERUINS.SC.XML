@@ -20,7 +20,7 @@
 
 	<properties interface="thumb,building,items" />
 	<properties icon="gameres/icons/Oracul.bmp" />
-	<properties help="/contents/buildings/Ruins" />
+	<properties help="contents/buildings/Ruins" />
 	<properties	description="Allows heroes of the specified level to enter and obtain the item inside. Upon exiting, their health is always 20% of the maximum" />
 
 	<properties inventory_size="1" />
@@ -50,7 +50,7 @@
 
 	<value0 icon="gameres/infobar/common/level ico.bmp"
 		script="return EnvReadInt(.AsBuilding(), 'minlevel');"
-		help="/contents/stats/level"
+		help="contents/stats/level"
 		rollover="Hero level"
 	/>
 

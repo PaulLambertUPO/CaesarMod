@@ -1,4 +1,4 @@
-<class id="TArcher" cpp_class="CVXUnit" parent="Ranged" entity="Units/TArcher/TArcher.ent.xml">
+<class id="TArcher" parent="Ranged" cpp_class="CVXUnit" entity="Units/TArcher/TArcher.ent.xml">
 
 	<properties race="Germany" />
 	<properties maxhealth="180" />

@@ -1,4 +1,4 @@
-<class id="GAxeman" cpp_class="CVXUnit" parent="Melee" entity="Units/GAxeman/GAxeman.ent.xml">
+<class id="GAxeman" parent="Melee" cpp_class="CVXUnit" entity="Units/GAxeman/GAxeman.ent.xml">
 
 	<properties race="Gaul" />
 	<properties maxhealth="240" />

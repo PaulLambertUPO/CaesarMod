@@ -1,5 +1,4 @@
-<class id="Heal" cpp_class="CVXFeedback" parent="Object"
-entity="Visuals/Heal/Heal.ent.xml">
-	<properties desync_hash="0"/>
-	<sounds walk="Sounds/effects/healing.wav"/>
+<class id="Heal" parent="Object" cpp_class="CVXFeedback" entity="Visuals/Heal/Heal.ent.xml">
+	<properties desync_hash="0" />
+	<sounds walk="Sounds/effects/healing.wav" />
 </class>

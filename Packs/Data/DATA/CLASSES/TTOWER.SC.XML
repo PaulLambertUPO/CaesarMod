@@ -1,5 +1,5 @@
-<class id="TTower" cpp_class="CVXBuilding" parent="Tower" entity="Buildings/TWalls/Tower/Tower.ent.xml">
-	<properties race="Germany"/>
-	<properties wall_set="German walls"/>
-	<properties icon="gameres/icons/TTower.bmp"/>
+<class id="TTower" parent="Tower" cpp_class="CVXBuilding" entity="Buildings/TWalls/Tower/Tower.ent.xml">
+	<properties race="Germany" />
+	<properties wall_set="German walls" />
+	<properties icon="gameres/icons/TTower.bmp" />
 </class>

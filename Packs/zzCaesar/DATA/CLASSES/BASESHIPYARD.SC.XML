@@ -1,11 +1,11 @@
-<class id="BaseShipyard" cpp_class="CVXTownHall" parent="Building" entity="Buildings/GShipyard1/GShipyard1_as.ent.xml" entity_winter="Buildings/GShipyard1/GShipyard1_w.ent.xml">
+<class id="BaseShipyard" parent="Building" cpp_class="CVXTownHall" entity="Buildings/GShipyard1/GShipyard1_as.ent.xml" entity_winter="Buildings/GShipyard1/GShipyard1_w.ent.xml">
 	<!-- the entity value is necessary otherwise the game crashes with random maps -->
 	<properties maxhealth="5000" sight="900" />
 	<properties auto_repair="yes" repair_rate="250" />
 	<properties interface="thumb,building,queue" />
 	<properties minimap_icon_type="color" />
 	<properties display_name="Shipyard" />
-	<properties help="/contents/buildings/Shipyard" />
+	<properties help="contents/buildings/Shipyard" />
 	<properties
 		is_central_building="1"
 		can_be_captured="1"
@@ -42,27 +42,27 @@
 
 	<value0 icon="gameres/infobar/common/Fisherman.bmp"
 		script="return EnvReadInt(.AsBuilding().settlement, 'Fishermen') + '/50';"
-		help="/contents/resources"
+		help="contents/resources"
 		rollover="Fishermen"
 	/>
 	<value1 icon="gameres/infobar/common/gold ico.bmp"
 		script="return .AsBuilding().settlement.gold;"
-		help="/contents/resources"
+		help="contents/resources"
 		rollover="Gold"
 	/>
 	<value2 icon="gameres/infobar/common/fish.bmp"
 		script="return .AsBuilding().settlement.food;"
-		help="/contents/resources"
+		help="contents/resources"
 		rollover="Fish"
 	/>
 	<value3 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
-		help="/contents/capturing"
+		help="contents/capturing"
 		rollover="Loyalty"
 	/>
 	<value4 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
-		help="/contents/stats/health"
+		help="contents/stats/health"
 		rollover="Health"
 	/>
 
