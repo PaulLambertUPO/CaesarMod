@@ -220,7 +220,7 @@ while (dest != "") {
 			}
 			else if (name == "Olympic Games")
 				EnvWriteInt(player, "MaxMyrmidons", MAX(10, EnvReadInt(player, "MaxMyrmidons")));
-			else if (name == "RGladiator Shows2")
+			else if (name == "GladiatorShowsFood")
 				set.SetFood(set.food + 800);
 			else if (name == "Food sale") {
 				set.SetGold(set.gold + 1000);

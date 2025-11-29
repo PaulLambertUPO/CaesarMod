@@ -177,7 +177,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, RGladiator Shows2, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, RGladiator Shows2, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows, , NameSet, GladiatorShowsFood, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Standartization I" priority="4"
