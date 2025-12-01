@@ -1,6 +1,6 @@
 <translationtable>
 <translationtableentry
-	text="I want to help you but currently you don't have enough gold. Please bring at least 2000 gold in the townhall of Londinium before you ask for help."
+	text="I'd like to help you but currently you don't have enough gold. Please bring at least 2000 gold in the townhall of Londinium before you ask for help."
 	result="Quiero ayudarte, pero ahora no dispones de oro suficiente. Por favor, antes de pedirme algo, recauda al menos 2000 piezas de oro y tráelas al foro de Londinium."
 	sound="3/conversations/cnv6_phrase0.wav"/>
 <translationtableentry
