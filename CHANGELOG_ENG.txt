@@ -16,6 +16,74 @@ My passion for Imperivm is so great that it's almost impossible to express in wo
 If another person decides to use the Caesar Mod as a starting point for a new project, they are more than welcome to do so: the only courtesy I ask is that they do as I did and keep all the original names, specifying that they started from my mod and releasing the new project under the same CC BY-SA license, whose details can be found in the LICENSE.txt file included in the package.
 ______________________________________
 
+[1.0.4] - 6 December 2025
+
+This new version of the Caesar Mod focuses mainly on the game stability by improving the AI and the management of upgrades as well as fixing numerous issues; it took much more time than the previous versions because the changes were particularly difficult to test and verify.
+As for the AI, all scripts have been revised and optimized to strengthen it even more, resulting particularly in higher performance and far fewer crashes: before the changes, in fact, a huge-map single player game with 7 AIs could suddenly crash very easily and it was difficult to reach 1 hour of gameplay without problems, while now it is possible to reach up to 10 consecutive hours without even experiencing performance drops. This does not mean that the game is perfect and it's still wise to save often, since freezes or crashes can still occur, but it is certainly a huge improvement compared to before.
+The changes related to upgrades are mostly intended for large maps where multiple strongholds are controlled, but also for custom scenarios where a stronghold may have hybrid or multiple buildings: if an upgrade is being researched by a building, it is no longer possible to start it by another and the tooltip displays a green indicator at the bottom (thus immediately visible and consistent with the red indicators) showing that it is already in progress; the same applies to completed upgrades and it is always possible to review their costs without relying on the help guide. Besides, a very important change is the addition of the Rome choice through secondary buildings (no longer only with the townhall), allowing for example a stronghold to have a Gaul townhall and an operative Roman arena.
+Among the various general issues that have been fixed, the most important is undoubtedly the problem of "trample" against siege machines because the dedicated script responsible for it has been removed as it caused lag and crashes: not only has the same behavior been preserved with better performance, but it has even been extended to all melee units in the game rather than exclusively war elephants, allowing the creation of custom scenarios where sequences can dynamically give or remove "trample".
+Finally, a purely decorative well (without healing effects) has been added to the editor structures: it already existed in the original game but for some reason it had never been used.
+
+
+ARTIFICIAL INTELLIGENCE
+
+- fixed the issue where it left supply units inside buildings instead of making them unload resources
+- fixed the issue where it generated multiple supply units upon capturing neutral outposts that granted food as a reward
+- fixed the issue where it sent heroes with full inventory to collect items from ruins
+- fixed the issue where it could permanently block unit recruitment in a stronghold if it aimed at a research and that was completed in another
+- fixed the issue where it attempted to execute certain commands even if the buildings able to perform them were damaged
+- fixed the exploit where it was possible to get free resources from an ally by canceling the ship construction command via shared control
+- greatly improved all scripts to increase overall game stability
+- defensive: time needed to become more aggressive reduced to 35 minutes, frequency time for deciding which places to attack reduced to 5 minutes
+- easy: added use of the nearest trade outpost to sell food for gold (requires 4500 food in the stronghold)
+- initial tactic: added capture of neutral villages with the hero, it is interrupted if enemy units are near the townhall
+- increased priority for capturing neutral settlements
+- number of gold outposts used increased to 1, 4 or 8 based on difficulty
+- changed creation of supply units to 250 ones when a gold outpost loses loyalty, it is also done during the gold accumulation phase
+- added use of the "repopulate" command for damaged/uninhabited villages if no enemy units are within a 1500 radius
+- added research of blacksmith upgrades to unlock advanced units after completing all others and not only when resources are in excess
+- increased priority for recruiting legendary heroes without waiting to reach the maximum limit of special units
+- removed ranged units limit relative to the total number of military units
+- Iberia: reduced use of "desperate defence" to increase the chance of using "call to arms"
+- tributes: optimized use to avoid them at all when there are no outposts and to gain the highest possible profit based on game time and owned outposts
+- added use of "stop storing food" once at least 1000 food has been stored (to prevent certain exploits)
+
+
+UPGRADES MANAGEMENT
+
+- fixed the issue/exploit where it was possible to exceed the maximum unit limit when owning multiple identical buildings
+- fixed the issue/exploit where different units could be specialized when owning multiple Carthaginian blacksmiths
+- fixed the issue where "tame horses" and "housing" canceled all other queued commands
+- fixed the issue where the same upgrade could be researched by multiple buildings at the same time leading to a waste of resources
+- added green indicator "already available" or "already researching" to every upgrade tooltip while keeping the cost always visible
+- Rome: added choice commands also to buildings other than the townhall
+- call to arms: priority reduced to training-command level, with placing at the end of the queue but allowing multiple executions in a row
+- dark rituals: changed to a player upgrade (to manage the case of a stronghold captured with the upgrade already completed)
+- German food trade: renamed to "food sale" (no longer making the choice exclusive with the Egyptian version)
+- fights: renamed to "challenges" for Britain and to "tribal fights" for Germany (with updated icon)
+- special training: also completes "Spartan training"
+- unit recruitment commands with maximum limit: added number of owned units to the tooltip even when exceeding the limit
+
+
+GENERAL - MISCELLANEOUS
+
+- fixed the issue where the script to make siege machines take damage from "trample" led to lag and crashes when the game speed was increased
+- fixed the issue where only war elephants could damage siege machines through "trample"
+- fixed the issue where "mercenary heal", "restoration" and "mass heal" no longer worked
+- fixed the issue where the hero grave tried to give charms even to units that already had them or with full inventory
+- fixed the issue where the formation deployment command (the arrow) with selected non-hero units was not managed (it generated an error message in the logs)
+- fixed the issue where the patrol command for detached units did not correctly track starting/destination points
+- Boudicca's rebellion: fixed the issue where summoned crows triggered the druids' dialogue at the cave entrance and the ambush at the hidden rib cage
+- editor: added decorative well ("Structures -> Others -> Europe" section) and Roman winter village buildings
+- mercenary pact gold: can be removed by double click if equal to 0
+- blood stone: cooldown increased to 30 seconds, the use puts all blood stones in the inventory on cooldown
+- ram: can no longer attack allied buildings (same behavior of the Roman tower)
+- peaceful animals: added tooltip for the approach command toward units/buildings
+- crow: can now perch on buildings
+- uncontrollable peasants/chickens: stamina reduced to 0
+- greatly increased aggressiveness of guard units in adventures (they also attack peasants and supply units)
+______________________________________
+
 [1.0.3] - 20 September 2025
 
 This new version of the Caesar Mod fixes several issues, focuses on various graphical aspects and adds some very useful new features.
@@ -30,7 +98,7 @@ CHANGES
 - fixed the issue where hoplites and macemen generated by the recruitment outpost did not move if it was damaged
 - fixed the issue where "religious feast" did not work if the townhall was not Egyptian/German/Greek
 - fixed the issue where "grain trade" did not work if the townhall was not Egyptian
-- fixed the issue where also units with the inventory full were counted for the Egyptian talismans
+- fixed the issue where also units with the inventory full were counted for the Egyptian charms
 - fixed the issue where the capture command on terrain was not managed (it generated an error message in the logs)
 - fixed the issue where units stopped the hero attachment command at the end of a siege machine construction
 - fixed the issue where AI heroes sometimes remained permanently stuck in ruins
@@ -188,7 +256,7 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - guard post: stationable units increased to 85, can use supply routes, added variable timer (3-6-9-12 seconds) to the death of each sentinel, added description to the interface
 - training: probability of gaining experience increased to 95%
 - water sources: healing reduced to 100, waiting time reduced to 1 second, radius increased to 400, excludes all animals for healing, added description to the interface
-- hero's grave: level threshold changed to 4/5, all nearby heroes gain levels (same player only), level waiting time increased to 4 seconds, level threshold for talismans removed, added remaining time
+- hero grave: level threshold changed to 4/5, all nearby heroes gain levels (same player only), level waiting time increased to 4 seconds, level threshold for charms removed, added remaining time
 - fixed the issue where "trample" activated "spike armor" and "revenge" from dead units
 - fixed the issue where "trample" did not work against siege machines
 - fixed the issue where hiring a hero from a non-Roman arena from a Roman stronghold spawned a Roman hero instead of the correct people's hero
@@ -1311,10 +1379,10 @@ Since a complete revision of almost all the scripts has been made, the changes a
 - added Numidian horseman recruitment for Carthage
 - added supreme heroes recruitment for Rome and Gaul (hard AI only)
 - increased the variety of units recruited for each people, all units are always enabled and without maximum number/power limits (special units limit increased for easy AI to about 50% of the maximum possible)
-- improved hero skills usage
+- improved hero skills use
 - managed construction of common, Roman or Egyptian ship based on the played people
 - added transport of resources stored in shipyards and Teuton/Numidian tents towards strongholds
-- added usage of the nearest trade outpost to sell food for gold (disabled for easy AI)
+- added use of the nearest trade outpost to sell food for gold (disabled for easy AI)
 - added desperate defence system: the AI ​​recruits as many basic units as possible (Numidian footmen or javelin throwers for Carthage depending on specialization) to defend the stronghold from enemies who have entered
 - added decision system for the best barracks for Greece (less commands in queue, although without considering their actual duration, change intended for scenarios/adventures where there are more identical buildings)
 

@@ -16,6 +16,74 @@ La mia passione per Imperivm è così grande che è pressoché impossibile da es
 Se un'altra persona decide di usare la Caesar Mod come punto di partenza per un nuovo progetto, per me è ben più che libera di farlo: l'unica cortesia che chiedo è quella di fare come ho fatto io e di tenere tutti i nomi originali, specificando di aver cominciato dalla mia mod e rilasciando il nuovo progetto sotto la stessa licenza CC BY-SA, i cui dettagli sono indicati nel file LICENSE.txt incluso nel pacchetto.
 ______________________________________
 
+[1.0.4] - 6 dicembre 2025
+
+Questa nuova versione della Caesar Mod si focalizza principalmente sulla stabilità del gioco migliorando l'IA e la gestione dei potenziamenti e risolvendo numerosi problemi; ha richiesto molto più tempo rispetto alle versioni precedenti in quanto le modifiche erano particolarmente difficili da testare e verificare.
+Per quanto riguarda l'IA, tutti quanti gli script sono stati revisionati e ottimizzati in modo da potenziarla ancora di più, portando soprattutto a prestazioni superiori e a molti meno crash: prima delle modifiche, infatti, una partita di strategia in mappa grande con 7 IA poteva crashare molto facilmente all'improvviso ed era difficile riuscire ad arrivare a 1 ora di gioco senza problemi, mentre adesso è possibile arrivare anche a 10 ore consecutive senza nemmeno avere cali di prestazioni. Questo non significa che il gioco sia perfetto e conviene sempre salvare spesso dato che può comunque ancora capitare che si verifichino blocchi o crash, ma è sicuramente un enorme passo avanti rispetto a prima.
+Le modifiche legate ai potenziamenti sono pensate per lo più per mappe grandi dove si controllano più fortezze, ma anche per scenari personalizzati dove una fortezza può avere strutture ibride o multiple: se un potenziamento sta venendo ricercato da una struttura, non è più possibile avviarlo da un'altra e nel tooltip c'è un'indicazione in verde in basso (quindi immediatamente visibile e consistente rispetto a quelle rosse) per indicare che è già in corso; lo stesso vale per i potenziamenti già completati e si può sempre rivedere quanto costavano senza dover ricorrere alla guida. Inoltre, un cambio molto importante è l'aggiunta della scelta di Roma tramite le strutture secondarie (non più solo col foro), permettendo quindi di creare, ad esempio, una fortezza con un foro gallico e un colosseo romano operativo.
+Tra i vari problemi generali risolti, il più importante è senza dubbio quello di "danno espansivo" contro le macchine d'assedio dato che lo script dedicato a tal scopo è stato rimosso in quanto causa di lag e crash: non solo è stato mantenuto lo stesso comportamento con prestazioni migliori, ma è stato perfino esteso a tutte quante le unità da mischia del gioco anziché essere esclusivamente per gli elefanti da guerra, il che permette di creare scenari personalizzati dove le sequenze possono dare/togliere "danno espansivo" in maniera dinamica.
+Infine, è stato aggiunto un pozzo puramente decorativo (senza effetti di guarigione) alle strutture dell'editor: era già presente nel gioco originale ma per qualche motivo non era mai stato utilizzato.
+
+
+INTELLIGENZA ARTIFICIALE
+
+- risolto il problema per cui lasciava unità di rifornimento all'interno delle strutture anziché far scaricar loro le risorse
+- risolto il problema per cui generava unità di rifornimento multiple alla conquista di forti neutrali che fornivano viveri come ricompensa
+- risolto il problema per cui mandava eroi con l'inventario pieno a raccogliere oggetti dalle rovine
+- risolto il problema per cui poteva bloccare in maniera permanente il reclutamento di unità in una fortezza se puntava a una ricerca e questa veniva completata in un'altra
+- risolto il problema per cui provava a eseguire certi comandi anche se le strutture in grado di eseguirli erano danneggiate
+- risolto l'exploit per cui si potevano ottenere risorse gratuite da un alleato annullando il comando di costruzione della nave da guerra tramite controllo condiviso
+- migliorati enormemente tutti gli script per aumentare la stabilità generale del gioco
+- difensivo: tempo per diventare più aggressivo ridotto a 35 minuti, tempo di frequenza per decidere quali luoghi attaccare ridotto a 5 minuti
+- facile: aggiunto uso del forte commerciale più vicino per vendere viveri in cambio d'oro (richiede 4500 viveri nella fortezza)
+- tattica iniziale: aggiunta conquista dei villaggi neutrali con l'eroe, viene interrotta se ci sono unità nemiche vicino al foro
+- aumentata priorità per la conquista di insediamenti neutrali
+- numero di forti dell'oro utilizzati aumentato a 1, 4 o 8 in base alla difficoltà
+- cambiata la creazione di unità di rifornimento con quelle da 250 alla diminuzione di lealtà di un forte dell'oro, viene fatto anche durante la fase di accumulo oro
+- aggiunto uso del comando "ripopola" per villaggi danneggiati/disabitati se non ci sono unità nemiche in un raggio di 1500
+- aggiunta ricerca dei potenziamenti della fucina per lo sblocco di unità avanzate dopo aver completato tutti gli altri e non solo in caso di risorse in eccesso
+- aumentata la priorità per il reclutamento degli eroi leggendari senza aspettare di aver raggiunto il limite massimo di unità speciali
+- rimosso il limite di unità a distanza rispetto al numero totale di unità militari
+- Iberia: ridotto l'uso della "difesa disperata" per aumentare la probabilità di usare "chiamata alle armi"
+- tributi: ottimizzato l'uso in modo da evitarli proprio quando non ci sono forti e per ottenere il maggior profitto possibile in base a tempo di partita e forti posseduti
+- aggiunto uso di "ferma stoccaggio viveri" una volta immagazzinati almeno 1000 viveri (per evitare alcuni exploit)
+
+
+GESTIONE POTENZIAMENTI
+
+- risolto il problema/exploit per cui era possibile superare il limite massimo di unità se si possedevano più strutture uguali
+- risolto il problema/exploit per cui si potevano specializzare diverse unità se si possedevano più fucine cartaginesi
+- risolto il problema per cui "doma cavalli" e "costruisci alloggi" annullavano tutti gli altri comandi in coda
+- risolto il problema per cui lo stesso potenziamento poteva essere ricercato da più strutture contemporaneamente portando a uno spreco di risorse
+- aggiunto indicatore verde "già disponibile" o "già in ricerca" al tootip di ogni potenziamento lasciando sempre visibile il costo
+- Roma: aggiunti comandi di scelta anche alle strutture diverse dal foro
+- chiamata alle armi: priorità ridotta a comando di addestramento, con inserimento in fondo alla coda ma permettendo più esecuzioni di fila
+- rituali arcani: cambiati a potenziamento per il giocatore (per gestire il caso di una fortezza conquistata col potenziamento già completato)
+- commercio di viveri germanico: rinominato in "vendita di viveri" (non rendendo più esclusiva la scelta con la versione egizia)
+- giochi circensi: rinominato in "sfide" per Britannia e in "combattimenti tribali" per Germania (con icona aggiornata)
+- addestramento speciale: completa anche "addestramento spartano"
+- comandi di reclutamento unità con limite massimo: aggiunto numero di unità possedute al tooltip anche quando si sfora il limite
+
+
+GENERALE - VARIE
+
+- risolto il problema per cui lo script per far danneggiare le macchine d'assedio tramite "danno espansivo" portava a lag e crash se veniva aumentata la velocità del gioco
+- risolto il problema per cui solo gli elefanti da guerra potevano danneggiare le macchine d'assedio tramite "danno espansivo"
+- risolto il problema per cui "cura dei mercenari", "sacrificio rigenerante" e "guarigione di massa" non funzionavano più
+- risolto il problema per cui la tomba dell'eroe cercava di dare talismani anche a unità che li possedevano già o con l'inventario pieno
+- risolto il problema per cui non era gestito il comando di schieramento della formazione (la freccia) con unità diverse da eroi nella selezione (generava un messaggio di errore nei log)
+- risolto il problema per cui il comando di pattuglia per unità non vincolate non teneva traccia correttamente dei punti di partenza/destinazione
+- la ribellione di Boadicea: risolto il problema per cui i corvi evocati attivavano il dialogo dei druidi all'ingresso della caverna e l'imboscata allo scheletro nascosto
+- editor: aggiunto pozzo decorativo (sezione "Strutture -> Altre -> Europa") e strutture romane invernali del villaggio
+- oro del patto dei mercenari: può essere rimosso tramite doppio click se pari a 0
+- pietra sanguinaria: ricarica aumentata a 30 secondi, l'utilizzo mette in ricarica tutte le pietre sanguinarie nell'inventario
+- ariete: non può attaccare strutture alleate (come già fa la torre romana)
+- animali pacifici: aggiunto tooltip per il comando di avvicinamento a unità/strutture
+- corvo: può appoggiarsi sulle strutture
+- contadini/galline non controllabili: energia ridotta a 0
+- aumentata notevolmente l'aggressività delle unità di guardia delle avventure (attaccano anche contadini e unità di rifornimento)
+______________________________________
+
 [1.0.3] - 20 settembre 2025
 
 Questa nuova versione della Caesar Mod risolve diversi problemi, si concentra su svariati aspetti grafici e aggiunge alcune nuove funzionalità molto utili.

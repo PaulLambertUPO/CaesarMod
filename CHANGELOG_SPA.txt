@@ -16,6 +16,74 @@ Mi pasión por Imperivm es tan grande que es casi imposible de expresar con pala
 Si otra persona decide usar el Caesar Mod como punto de partida para un nuevo proyecto, es más que libre de hacerlo: lo único que pido es que haga como yo y mantenga todos los nombres originales, especificando que ha comenzado desde mi mod y publicando el nuevo proyecto bajo la misma licencia CC BY-SA, cuyos detalles están indicados en el archivo LICENSE.txt incluido el paquete.
 ______________________________________
 
+[1.0.4] - 6 diciembre 2025
+
+Esta nueva versión del Caesar Mod se centra principalmente en la estabilidad del juego, mejorando la IA y la gestión de las mejoras, además de resolver numerosos problemas; ha requerido mucho más tiempo que las versiones anteriores porque los cambios eran especialmente difíciles de probar y verificar.
+En cuanto a la IA, todos los scripts han sido revisados y optimizados para potenciarla aún más, resultando sobre todo en un rendimiento superior y muchos menos fallos: antes de los cambios, de hecho, una partida de estrategia en mapa grande con 7 IAs podía crashearse muy fácilmente de repente y era difícil conseguir llegar a 1 hora de juego sin problemas, mientras ahora es posible alcanzar hasta 10 horas consecutivas sin siquiera experimentar caídas de rendimiento. Esto no significa que el juego sea perfecto y siempre conviene guardar a menudo ya que aún pueden producirse bloqueos o fallos, pero sin duda es un enorme avance respecto a antes.
+Los cambios relacionados con las mejoras están pensados principalmente para mapas grandes donde se controlan varias fortalezas, pero también para escenarios personalizados donde una fortaleza puede tener estructuras híbridas o múltiples: si una estructura está investigando una mejora, ya no es posible iniciarla desde otra y en el tooltip hay un indicador verde en la parte inferior (por lo tanto, inmediatamente visible y coherente con los indicadores rojos) que señala que ya está en curso; lo mismo ocurre con las mejoras ya completadas, y siempre es posible consultar su coste sin recurrir a la guía de ayuda. Además, un cambio muy importante es la incorporación de la elección de Roma mediante estructuras secundarias (ya no solo con el foro), permitiendo así, por ejemplo, que una fortaleza tenga un foro galo y un coliseo romano operante.
+Entre los diversos problemas generales resueltos, el más importante es sin duda el de "daño expansivo" contra las máquinas de asedio dado que el script dedicado a ello ha sido eliminado siendo causa de lag y fallos: no solo se ha mantenido el mismo comportamiento con un mejor rendimiento, sino que incluso se ha ampliado a todas las unidades cuerpo a cuerpo del juego en lugar de limitarse exclusivamente a los elefantes de guerra, lo que permite crear escenarios personalizados donde las secuencias pueden otorgar o remover "daño expansivo" de forma dinámica.
+Por último, se ha añadido un pozo puramente decorativo (sin efectos de curación) a las estructuras del editor: ya existía en el juego original pero por alguna razón nunca había sido utilizado.
+
+
+INTELIGENCIA ARTIFICIAL
+
+- resuelto el problema por el cual dejaba unidades de suministro dentro de las estructuras en lugar de hacer que descargaran los recursos
+- resuelto el problema por el cual generaba múltiples unidades de suministro al conquistar fortines neutrales que otorgaban víveres como recompensa
+- resuelto el problema por el cual enviaba héroes con el inventario lleno a recoger objetos de las ruinas
+- resuelto el problema por el cual podía bloquear permanentemente el reclutamiento de unidades en una fortaleza si apuntaba a una investigación y ésta era completada en otra
+- resuelto el problema por el cual intentaba ejecutar ciertas órdenes incluso si las estructuras capaces de realizarlas estaban dañadas
+- resuelto el exploit por el cual se podían obtener recursos gratuitos de un aliado cancelando la orden de construcción del navío de guerra a través del control compartido
+- mejorados enormemente todos los scripts para aumentar la estabilidad general del juego
+- defensivo: tiempo necesario para hacerse más agresivo reducido a 35 minutos, tiempo de frecuencia para decidir qué lugares atacar reducido a 5 minutos
+- fácil: añadido uso del fortín de comercio más cercano para vender víveres en cambio de oro (requiere 4500 víveres en la fortaleza)
+- táctica inicial: añadida la conquista de aldeas neutrales con el héroe, es interrumpida si hay unidades enemigas cerca del foro
+- aumentada prioridad para la conquista de asentamientos neutrales
+- número de fortines del oro utilizados aumentado a 1, 4 o 8 según la dificultad
+- cambiada la creación de unidades de suministro con las de 250 cuando disminuye la lealtad de un fortín del oro, también es hecho durante la fase de acumulación de oro
+- añadido el uso de la orden "repoblar" en aldeas dañadas/deshabitadas si no hay unidades enemigas en un radio de 1500
+- añadida la investigación de las mejoras de la herrería para desbloquear unidades avanzadas después de completar todas las demás y no solo en caso de recursos en exceso
+- aumentada la prioridad para el reclutamiento de los héroes legendarios sin esperar a alcanzar el límite máximo de unidades especiales
+- removido el límite de unidades a distancia respecto al número total de unidades militares
+- Iberia: reducido el uso de la "defensa desesperada" para aumentar la probabilidad de usar "llamada a las armas"
+- tributos: optimizado el uso para evitarlos cuando no hay fortines y para obtener el mayor beneficio posible según el tiempo de partida y los fortines poseídos
+- añadido el uso de "detener almacenamiento víveres" una vez almacenados al menos 1000 víveres (para evitar ciertos exploits)
+
+
+GESTIÓN MEJORAS
+
+- resuelto el problema/exploit por el cual era posible superar el límite máximo de unidades al poseer más estructuras iguales
+- resuelto el problema/exploit por el cual se podían especializar distintas unidades al poseer múltiples herrerías cartaginesas
+- resuelto el problema por el cual "domar caballos" y "construir alojamientos" anulaban todas las demás órdenes en cola
+- resuelto el problema por el cual la misma mejora podía ser investigada desde varias estructuras al mismo tiempo provocando un desperdicio de recursos
+- añadido indicador verde "ya disponible" o "ya investigando" a cada tooltip de mejora manteniendo siempre visible el coste
+- Roma: añadidas órdenes de elección también a las estructuras distintas del foro
+- llamada a las armas: prioridad reducida al nivel de orden de entrenamiento, con colocación al final de la cola pero permitiendo múltiples ejecuciones seguidas
+- rituales arcanos: cambiados a mejora del jugador (para gestionar el caso de una fortaleza conquistada con la mejora ya completada)
+- comerciar con víveres germano: renombrado a "venta de víveres" (dejando de ser una opción exclusiva con la versión egipcia)
+- juegos de circo: renombrado a "desafíos" para Britania y a "combates tribales" para Germania (con icono actualizado)
+- adiestramiento especial: también completa "adiestramiento espartano"
+- órdenes de reclutamiento unidades con límite máximo: añadido número de unidades poseídas al tooltip incluso cuando se supera el límite
+
+
+GENERAL - VARIOS
+
+- resuelto el problema por el cual el script que permitía dañar las máquinas de asedio mediante "daño expansivo" causaba lag y fallos al aumentar la velocidad del juego
+- resuelto el problema por el cual solo los elefantes de guerra podían dañar las máquinas de asedio mediante "daño expansivo"
+- resuelto el problema por el cual "cura de los mercenarios", "sacrificio revitalizador" y "curación masiva" ya no funcionaban
+- resuelto el problema por el cual la tumba del héroe intentaba dar talismanes a unidades que ya los tenían o con el inventario lleno
+- resuelto el problema por el cual la orden de despliegue de formación (la flecha) no era gestionada con había unidades diferentes de héroes en la selección (generaba un mensaje de error en los logs)
+- resuelto el problema por el cual la orden de patrulla para unidades no vinculadas no registraba correctamente los puntos de inicio/destino
+- la rebelión de Boadicea: resuelto el problema por el cual los cuervos invocados activaban el diálogo de los druidas en la entrada de la cueva y la emboscada al esqueleto escondido
+- editor: añadido pozo decorativo (sección "Estructuras -> Otras -> Europa") y estructuras romanas invernales de la aldea
+- oro del pacto de los mercenarios: puede ser removido haciendo doble clic si es igual a 0
+- piedra sanguinaria: recarga aumentada a 30 segundos, el uso pone en recarga todas las piedras sanguinarias en el inventario
+- ariete: no puede atacar estructuras aliadas (igual que la torre romana)
+- animales pacíficos: añadido tooltip para la orden de acercamiento a unidades/estructuras
+- cuervo: puede posarse en las estructuras
+- campesinos/gallinas no controlables: energía reducida a 0
+- aumentada considerablemente la agresividad de las unidades de guardia en las aventuras (también atacan campesinos y unidades de suministro)
+______________________________________
+
 [1.0.3] - 20 septiembre 2025
 
 Esta nueva versión del Caesar Mod resuelve varios problemas, se centra en diversos aspectos gráficos y añade algunas funciones nuevas muy útiles.
@@ -60,7 +128,7 @@ CAMBIOS
 - aldea: removida la orden "repoblar" si la población máxima es inferior al mínimo posible (10)
 - anciano: salud aumentada a 100 para la versión no "decorativa"
 - editor: añadidas estructuras romanas alternativas e invernales faltantes
-- guía: añadidos costes de energía de las características especiales, añadidas aclaraciones en varios puntos
+- guía de ayuda: añadidos costes de energía de las características especiales, añadidas aclaraciones en varios puntos
 - añadidos fondos faltantes a botones e iconos de las nuevas mejoras creadas con la versión 1.0.0
 - removidos píxeles verdes presentes en los iconos de pescador, botín de guerra y unidades griegas
 ______________________________________
@@ -910,8 +978,8 @@ Juicio de duración con pruebas en difícil después de los cambios: media/larga
 - fortines del oro: oro inicial aumentado a 1000
 - Vercingétorix: nivel aumentado a 50, sustituidas "maestría" y "proeza" con "defensa heroica" y "movimiento evasivo", añadida "euforia", añadidos 10 puntos a todas las habilidades
 - Julio César: nivel aumentado a 15, sustituida "maestría" con "liderazgo", añadida "movimiento evasivo"
-- Glario: renombrado como "Gaius Trebonius", nivel aumentado a 10, actualizado icono
-- Baetius: renombrado como "Titus Labienus", nivel aumentado a 10, sustituida "veteranía" con "movimiento evasivo", actualizado icono
+- Glario: renombrado a "Gaius Trebonius", nivel aumentado a 10, actualizado icono
+- Baetius: renombrado a "Titus Labienus", nivel aumentado a 10, sustituida "veteranía" con "movimiento evasivo", actualizado icono
 
 
 AUGUSTO EN EL NILO
