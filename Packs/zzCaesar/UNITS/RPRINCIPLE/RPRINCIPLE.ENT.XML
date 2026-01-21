@@ -27,7 +27,7 @@
 		<state idx="2" name="fight" image_idx="0" image_row="0" offsetx="0" offsety="0" />
 	</states>
 	<anims>
-		<anim idx="1" name="walk" startstate="1" endstate="1" frames="16" duration="770" default_duration="55" action_time="0" step="46">
+		<anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="770" default_duration="55" action_time="0" step="46">
 			<replace layer="1" image="3" offsetx="-90" offsety="-118" />
 			<replace layer="2" image="10" offsetx="-90" offsety="-118" />
 			<frame idx="1" duration="0" />
@@ -47,7 +47,7 @@
 			<frame idx="15" duration="55" />
 			<frame idx="16" duration="0" />
 		</anim>
-		<anim idx="5" name="attack" startstate="2" endstate="2" frames="9" duration="840" default_duration="120" action_time="240" step="0">
+		<anim idx="5" name="Attack" startstate="2" endstate="2" frames="9" duration="840" default_duration="120" action_time="240" step="0">
 			<replace layer="1" image="4" offsetx="-90" offsety="-118" />
 			<replace layer="2" image="11" offsetx="-90" offsety="-118" />
 			<frame idx="1" duration="0" />
@@ -60,7 +60,7 @@
 			<frame idx="8" duration="120" />
 			<frame idx="9" duration="0" />
 		</anim>
-		<anim idx="9" name="die" startstate="1" endstate="1" frames="20" duration="6440" default_duration="80" action_time="0" step="0">
+		<anim idx="9" name="Die" startstate="1" endstate="1" frames="20" duration="8080" default_duration="0" action_time="0" step="0">
 			<replace layer="1" image="5" offsetx="-90" offsety="-118" />
 			<replace layer="2" image="12" offsetx="-90" offsety="-118" />
 			<frame idx="1" duration="0" />
