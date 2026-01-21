@@ -26,10 +26,8 @@ if (.IsValid) {
 			reasonText = rollover(this, unit, unaffordable);
 			return true;
 		}
-		return false;
 	}
-
-	if (specialization == "non-spec") {
+	else if (specialization == "non-spec") {
 		Settlement set;
 		set = .settlement;
 		if (EnvReadString(set, unit) != "researched") {//do not use IsResearched here because there are no commands with unit name
@@ -44,11 +42,7 @@ if (.IsValid) {
 			reasonText = rollover(this, unit, unaffordable);
 			return true;
 		}
-		return false;
 	}
-
-	reasonText = "Invalid command param: " + cmdparam;
-	return true;
 }
 
 return false;

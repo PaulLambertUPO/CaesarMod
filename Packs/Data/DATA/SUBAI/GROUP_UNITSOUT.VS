@@ -1,31 +1,28 @@
 //void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
-Building this;
-ObjList lst;
-ObjList l;
-int i;
+ObjList units;
 Unit u;
+int i;
 
+units = objs[0].AsBuilding().settlement.Units;
 
-if(objs.count() != 1) return;
-this = objs[0].AsBuilding();
-lst = .settlement.Units();
-
-for(i = 0; i < lst.count(); i = i + 1) {
-	u = lst[i].AsUnit();
-	if(u.IsValid()) if (DiplGetShareControl(u.player, player))
-	{
-		if(!u.hero().IsValid()) {
-			l.Add(u);
-		}
-	}
+for (i = units.count - 1; i >= 0; i -= 1) {
+	u = units[i].AsUnit();
+	if (!u.IsValid)
+		units.Remove(u);
+	else if (u.IsDead)
+		units.Remove(u);
+	else if (!DiplGetShareControl(player, u.player))
+		units.Remove(u);
+	else if (u.hero.IsValid)
+		units.Remove(u);
 }
 
-ClearSelection(.player);
-for(i = 0; i < l.count(); i = i + 1) {
-	l[i].Select(.player);
+if (units.count > 0) {
+	ClearSelection(player);
+
+	for (i = 0; i < units.count; i += 1)
+		units[i].Select(player);
+
+	units.ExecDefaultCmd(pt, obj, bReplace, bModifier);
 }
-
-l.ExecDefaultCmd(pt,obj,bReplace,bModifier);
-
-

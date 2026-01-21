@@ -1,22 +1,18 @@
-//void, Obj This
+//void, int player
 
-ObjList units;
-Unit u;
-str gov_form;
-int player, i, j;
+if (EnvReadString(player, "GovernmentForm") == "Democracy") {
+	ObjList units;
+	Unit u;
+	int i, j;
 
-while (1) {
-	player = This.player;
-	gov_form = EnvReadString(player, "GovernmentForm");
-
-	if (gov_form == "Democracy")
+	while (1) {
 		for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 			units = GetPlayerUnits(i, "Military");
 			for (j = 0; j < units.count; j += 1) {
 				u = units[j].AsUnit();
 				if (u.IsValid)
-					if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-						if (u.IsAlive) {
+					if (u.IsAlive)
+						if (u.player == player) {//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
 							if (u.HasItem("Emblem of Oligarchy"))
 								u.RemoveItem("Emblem of Oligarchy");
 							if (u.free_item_slots > 0)
@@ -27,14 +23,22 @@ while (1) {
 						}
 			}
 		}
-	else if (gov_form == "Oligarchy")
+		Sleep(1000);
+	}
+}
+else if (EnvReadString(player, "GovernmentForm") == "Oligarchy") {
+	ObjList units;
+	Unit u;
+	int i, j;
+
+	while (1) {
 		for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 			units = GetPlayerUnits(i, "Military");
 			for (j = 0; j < units.count; j += 1) {
 				u = units[j].AsUnit();
 				if (u.IsValid)
-					if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-						if (u.IsAlive) {
+					if (u.IsAlive)
+						if (u.player == player) {//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
 							if (u.HasItem("Emblem of Democracy"))
 								u.RemoveItem("Emblem of Democracy");
 							if (u.inherentlevel >= 6)
@@ -46,6 +50,6 @@ while (1) {
 						}
 			}
 		}
-
-	Sleep(1000);
+		Sleep(1000);
+	}
 }

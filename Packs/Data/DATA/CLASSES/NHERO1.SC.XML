@@ -3,7 +3,7 @@
 	<properties race="Gaul" />
 	<properties HeroSkills="Leadership, Epic attack, Epic endurance, Defensive cry, Battle cry" />
 	
-	<properties display_name="Heardred" display_name_plural="Heroes" />
+	<properties display_name="Heardred" />
 	<properties icon="gameres/icons/NHero1.bmp" />
 	<properties edittree_pos="Units/Heroes/Heardred" />
 

@@ -167,7 +167,7 @@
 		param="NameSet, Greek Chariot Wheels, default, NameSet, Scythed Chariot Wheels">
 		<src obj="HBlacksmith" />
 	</cmd>
-	<cmd name="Strengthen Stronghold Gates" priority="7"
+	<cmd name="Strengthen Stronghold Walls" priority="7"
 		queueicon="gameres/icons/upgrades/Stronghold Walls.bmp"
 		key="g"
 		button="Upgrades/Stronghold Walls.bmp"
@@ -175,10 +175,10 @@
 		groupverifier="data/subai/verify_research.vs"
 		costgold="1000"
 		execdelay="30000"
-		rollover="Strengthen Stronghold Gates"
-		description="Makes the stronghold walls more resistant to damage"
+		rollover="Strengthen Stronghold Walls"
+		description="Adds 50% health to gates, walls and towers"
 		method="research"
-		param="NameSet, Strengthen Stronghold Gates, default">
+		param="NameSet, Strengthen Stronghold Walls, default">
 		<src obj="HBlacksmith" />
 	</cmd>
 	<!-- ARENA -->
@@ -273,12 +273,12 @@
 		key="d"
 		costgold="1000"
 		execdelay="10000"
-		groupverifier="data/subai/democracy_verify.vs"
+		groupverifier="data/subai/government_form_verify.vs"
 		rollover="Democracy"
-		onaddremovescript="data/subai/government_form_onaddremove.vs"
 		description="Gives all warriors an Emblem of Democracy (+80 health, not contemporary to Oligarchy)"
-		method="democracy"
-		researchcommand="yes">
+		researchcommand="yes"
+		method="government_form"
+		param="Democracy">
 		<src obj="HGymnasium" />
 	</cmd>
 	<cmd name="Oligarchy" priority="8"
@@ -287,12 +287,12 @@
 		key="o"
 		costgold="1000"
 		execdelay="10000"
-		groupverifier="data/subai/oligarchy_verify.vs"
+		groupverifier="data/subai/government_form_verify.vs"
 		rollover="Oligarchy"
-		onaddremovescript="data/subai/government_form_onaddremove.vs"
 		description="Gives all warriors level 6 and above an Emblem of Oligarchy (+6 attack and +2 armor, not contemporary to Democracy)"
-		method="oligarchy"
-		researchcommand="yes">
+		researchcommand="yes"
+		method="government_form"
+		param="Oligarchy">
 		<src obj="HGymnasium" />
 	</cmd>
 	<cmd name="Charm of Athena" priority="9"
@@ -466,7 +466,7 @@
 		queueicon="gameres/icons/upgrades/repair.bmp"
 		groupverifier="data/subai/verify_cmdcost_building.vs"
 		rollover="Repair"
-		costgold="500"
+		costgold="100"
 		execdelay="60000">
 		<src obj="HTemple" />
 	</cmd>
@@ -502,13 +502,15 @@
 	<cmd name="Protection of Apollo" priority="4"
 		button="Research/Apollo Protection.bmp"
 		queueicon="gameres/icons/upgrades/Apollo Protection.bmp"
-		groupverifier="data/subai/apollo_protection_verify.vs"
-		key="i"
+		groupverifier="data/subai/verify_research.vs"
+		key="a"
+		researchcommand="yes"
 		costgold="2000"
-		immediate="yes"
-		rollover="Invoke the protection of Apollo"
-		description="Makes stronghold gates indestructible for 2 minutes"
-		method="apollo_protection">
+		execdelay="15000"
+		rollover="Protection of Apollo (once per game)"
+		description="Makes all your strongholds indestructible for 2 minutes"
+		method="research"
+		param="ReqSet, Offer to Gods, default, NamePlr, Protection of Apollo, default">
 		<src obj="HTemple" />
 	</cmd>
 	<cmd name="HRestoration" priority="5"

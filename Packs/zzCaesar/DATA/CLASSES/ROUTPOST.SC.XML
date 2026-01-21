@@ -1,7 +1,6 @@
 <class id="ROutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/ROutpost/ROutpost_as.ent.xml" entity_winter="Buildings/ROutpost/ROutpost_w.ent.xml">
 	<properties race="RepublicanRome" />
 	<properties maxhealth="10000" />
-	<properties radius="345" selection_radius="350" />
 	<properties display_name="Gold outpost" />
 	<properties icon="gameres/icons/ROutpost.bmp" />
 	<properties help="contents/buildings/GoldOutpost" />

@@ -1,6 +1,5 @@
 <class id="CTownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/CTownhall/CTownhall.ent.xml">
 	<properties race="Carthage" />
-	<properties foodperpop="100" />
 	<properties radius="170" selection_radius="175" />
 	<properties display_name="Carthaginian Townhall" />
 	<properties icon="gameres/icons/CTownhall.bmp" />

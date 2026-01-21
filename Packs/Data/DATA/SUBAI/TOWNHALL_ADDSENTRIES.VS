@@ -1,9 +1,5 @@
-//void, Obj This 
+//void, Obj this
 
-Building this;
+.Progress();
 
-this = This.AsBuilding();
-
-.Progress(.cmddelay);
-
-.settlement.AddSentries(10);
+.AsBuilding().settlement.AddSentries(10);

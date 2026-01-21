@@ -1,7 +1,6 @@
 <class id="GGuardPost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/GGuardPost/GGuardPost_AS.ent.xml" entity_winter="Buildings/GGuardPost/GGuardPost_W.ent.xml">
 	<properties race="Gaul" />
 	<properties maxhealth="10000" />
-	<properties auto_repair="no" />
 	<properties display_name="Guard Post" />
 	<properties icon="gameres/icons/GGuardPost.bmp" />
 	<properties help="contents/buildings/GGuardPost" />
@@ -12,7 +11,6 @@
 		range="1000"
 		settlement_food="200"
 		settlement_gold="0"
-		max_units="85"
 		defender_cls_1="GArcher"
 		defenders_max_1="24"
 		defenders_out_1="14"
@@ -25,5 +23,4 @@
 		end_level_2="18"
 	/>
 	<behavior script="data/subai/GGuardPost_Sentries.vs" />
-	<method sig="repair" vs="data/subai/building_repair.vs" />
 </class>

@@ -1,5 +1,5 @@
 <class id="RHero1" parent="RepublicanRomanHero" cpp_class="CVXHero" entity="Units/RHero1/RHero1.ent.xml">
-	<properties display_name="Anteros" display_name_plural="Heroes" />
+	<properties display_name="Anteros" />
 	<properties icon="gameres/icons/RHero1.bmp" />
 	<properties edittree_pos="Units/Roman/Hero (Republican) 1" />
 	<sounds attack="UnitSpearFight" />

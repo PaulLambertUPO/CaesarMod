@@ -4,28 +4,17 @@ GAIKA g;
 int aiPlayer, nSquanderGoldAmount, nTradeGold, nTradeFood, nTrainStart, nArenaHire, nSleepES;
 int nMilUnits, nMinEnemyEval, nMaxEnemyEval, nAvgEnemyEval, nFreezeArmyBuild, nOwn, nAlly, nEnemy, enemy_hidden;
 str maxUpgradeBarracks, reservedStrTech;
-bool bAssUnderFire, bResearchTrainingComplete, nRaceIsGreece = false;
+bool bAssUnderFire, bResearchTrainingComplete, bCanResearchSentryUpgrades = false, nRaceIsGreece = false;
 
 Sleep(2500 + rand(501));//sleep must be higher than tactic script initial sleep (1000) and max allowed time (2000)
 
+aiPlayer = set.player;
+
 g = set.GetGaika();
 
-aiPlayer = set.player;
 EnvWriteInt(set, "nArmyBuilds", 0);//the amount of times ESH_BuildArmy has been called
 EnvWriteInt(set, "ResearchTechTime", GetTime());//time of the next allowed research for ESH_NeedTech
 EnvWriteInt(set, "ResearchTrainingComplete", 0);//flag used by ESH_ResearchTraining to research upgrades (reset here to prevent a new owner from ignoring player upgrades)
-
-if (EnvReadInt(set, "ChooseRomanRace") != 1) {
-	int nRome;
-	nRome = rand(3);
-	if (nRome == 0)
-		set.Research("ChooseRepublicanRome");
-	else if (nRome == 1)
-		set.Research("ChooseImperialRome");
-	else
-		set.Research("ChoosePunicRome");
-	Sleep(500);//give some time to the settlement to register the chosen Rome
-}
 
 //store these values because they are constant and it is not good to retrieve them from AI variables every time
 nSquanderGoldAmount = AIVar(aiPlayer, AIV_SquanderGoldAmount);
@@ -40,6 +29,43 @@ nSleepES = AIVar(aiPlayer, AIV_Sleep_ES);
 if (nTradeFood > 0)
 	if (nTradeFood < 1100)
 		nTradeFood = 1100;
+
+{
+	ObjList buildings;
+	Building b;
+	int i;
+
+	buildings = set.Buildings;
+
+	for (i = buildings.count - 1; i >= 0; i -= 1) {
+		b = buildings[i].AsBuilding();
+		if (b.IsValid)
+			if (b.IsHeirOf("Wall")) {
+				bCanResearchSentryUpgrades = true;
+				break;
+			}
+			else if (b.IsHeirOf("Gate")) {
+				bCanResearchSentryUpgrades = true;
+				break;
+			}
+	}
+}
+
+if (EnvReadInt(set, "ChooseRomanRace") != 1) {//no check on townhall race is to manage possible Roman buildings in hybrid settlements (although they are not managed)
+	int nRome;
+	nRome = rand(3);
+	if (nRome == 0) {
+		if (set.CanResearch("ChooseRepublicanRome"))
+			set.Research("ChooseRepublicanRome");
+	}
+	else if (nRome == 1) {
+		if (set.CanResearch("ChooseImperialRome"))
+			set.Research("ChooseImperialRome");
+	}
+	else if (set.CanResearch("ChoosePunicRome"))
+		set.Research("ChoosePunicRome");
+	Sleep(500);//give some time to the settlement to register the chosen Rome
+}
 
 {
 	Building hall;
@@ -120,26 +146,41 @@ while (set.player == aiPlayer) {
 	if (set.gold >= nSquanderGoldAmount)
 		set.AIRun("ESH_SquanderGoldTechs.vs");
 
-	//improve stronghold defences/gates
-	if (!IsResearched(set, "Strengthen Stronghold Defences II"))
-		if (GetTime() >= 60000 * AIVar(aiPlayer, AIV_TimeStrongholdDefences)) {
-			EnvWriteString(set, "strTech", "Strengthen Stronghold Defences II");
-			set.AIRun("ESH_NeedTech.vs");
-		}
-		else if (set.gold >= nSquanderGoldAmount) {
-			EnvWriteString(set, "strTech", "Strengthen Stronghold Defences II");
-			set.AIRun("ESH_NeedTech.vs");
-		}
-	if (nRaceIsGreece)
-		if (!IsResearched(set, "Strengthen Stronghold Gates"))
-			if (GetTime() >= 60000 * AIVar(aiPlayer, AIV_TimeStrongholdGates)) {
-				EnvWriteString(set, "strTech", "Strengthen Stronghold Gates");
+	//improve stronghold defences/walls and hire sentries (Greece)
+	if (bCanResearchSentryUpgrades) {
+		if (!IsResearched(set, "Strengthen Stronghold Defences II"))
+			if (GetTime() >= 60000 * AIVar(aiPlayer, AIV_TimeStrongholdDefences)) {//no constant to avoid wasting memory after the research
+				EnvWriteString(set, "strTech", "Strengthen Stronghold Defences II");
 				set.AIRun("ESH_NeedTech.vs");
 			}
 			else if (set.gold >= nSquanderGoldAmount) {
-				EnvWriteString(set, "strTech", "Strengthen Stronghold Gates");
+				EnvWriteString(set, "strTech", "Strengthen Stronghold Defences II");
 				set.AIRun("ESH_NeedTech.vs");
 			}
+		if (nRaceIsGreece) {
+			if (!IsResearched(set, "Strengthen Stronghold Walls"))
+				if (GetTime() >= 60000 * AIVar(aiPlayer, AIV_TimeStrongholdWalls)) {//no constant to avoid wasting memory after the research
+					EnvWriteString(set, "strTech", "Strengthen Stronghold Walls");
+					set.AIRun("ESH_NeedTech.vs");
+				}
+				else if (set.gold >= nSquanderGoldAmount) {
+					EnvWriteString(set, "strTech", "Strengthen Stronghold Walls");
+					set.AIRun("ESH_NeedTech.vs");
+				}
+			if (bAssUnderFire)
+				if (rand(2) == 0)
+					if (GetTime() >= 300000)//avoid hiring sentries as soon as the game starts
+						if (set.GetNumSentries() <= set.GetMaxSentries() / 3)//total max = InitialStrongholdSentries + 1 per wall + 4 per gate (usually 50-52)
+							if (set.CanResearch("hire_sentries"))
+								if (set.CanAfford("hire_sentries")) {
+									int gold, food;
+									if (GetCmdCost("hire_sentries", gold, food)) {
+										set.SpentGoldOnArmy(gold + food / 2);
+										set.Research("hire_sentries");
+									}
+								}
+		}
+	}
 
 	//barrack upgrades
 	if (!bAssUnderFire)

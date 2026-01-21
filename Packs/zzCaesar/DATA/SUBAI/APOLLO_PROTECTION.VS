@@ -1,41 +1,36 @@
-//void, Obj This
+//void, int player
 
-Building this;
-Settlement set;
+ObjList strongholds, buildings;
+Building b;
 str announcement;
-int timer;
+int i, j, timer = 120;
 
-this = This.AsBuilding();
-set = .settlement;
-announcement = "ApolloProtectionS" + set.GetGaika().ID;
+strongholds = GetSettlements("BaseTownhall", 0);
 
-while (1) {
-	timer = EnvReadInt(set, "ApolloProtectionTimer");
+announcement = "ApolloProtectionP" + player;
 
-	if (timer > 0) {
-		ObjList gates;
-		Gate g;
-		str zero_sec_marker;
-		int i, secs;
-
-		gates = set.ObjectsAround("Gate");
-		for (i = 0; i < gates.count; i += 1) {
-			g = gates[i].AsGate();
-			if (g.IsValid)
-				if (!g.IsBroken)
-					g.SetHealth(gates[i].maxhealth);
-		}
-
-		secs = timer % 60;
-		if (secs < 10)
-			zero_sec_marker = "0";
-
-		ShowAnnouncement(announcement, Translatef("Player %s1 - protected for %s2", .player, timer / 60 + ":" + zero_sec_marker + secs));
-
-		EnvWriteInt(set, "ApolloProtectionTimer", timer - 1);
-	}
+while (timer > 0) {
+	i = timer % 60;
+	if (i < 10)
+		ShowAnnouncement(announcement, Translatef("Player %s1 - protected for %s2:0%s3", player, timer / 60, i));
 	else
-		HideAnnouncement(announcement);
+		ShowAnnouncement(announcement, Translatef("Player %s1 - protected for %s2:%s3", player, timer / 60, i));
 
+	for (i = strongholds.count - 1; i >= 0; i -= 1) {
+		b = strongholds[i].AsBuilding();
+		if (b.player == player) {
+			buildings = b.settlement.Buildings;
+			for (j = buildings.count - 1; j >= 0; j -= 1) {
+				b = buildings[j].AsBuilding();
+				if (b.IsBroken)
+					b.RRepair();
+				b.SetHealth(b.maxhealth);
+			}
+		}
+	}
+
+	timer -= 1;
 	Sleep(1000);
 }
+
+HideAnnouncement(announcement);

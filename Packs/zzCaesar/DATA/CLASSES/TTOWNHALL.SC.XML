@@ -1,7 +1,6 @@
 <class id="TTownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/TTownhall/TTownhall.ent.xml">
 	<properties race="Germany" />
-	<properties produces_gold="1" produces_food="1" />
-	<properties foodperpop="45" />
+	<properties produces_food="1" />
 	<properties radius="160" selection_radius="190" />
 	<properties display_name="German Townhall" />
 	<properties icon="gameres/icons/TTownhall.bmp" />

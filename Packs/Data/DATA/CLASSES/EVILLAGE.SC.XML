@@ -1,6 +1,5 @@
 <class id="EVillage" parent="BaseVillage" cpp_class="CVXTownHall" entity="Buildings/EVillage/EVillage.ent.xml">
 	<properties race="Egypt" />
-	<properties foodperpop="100" />
 	<properties icon="gameres/icons/EVillage.bmp" />
 	<properties edittree_pos="Structures/Village (Egypt)/Village hall" />
 </class>

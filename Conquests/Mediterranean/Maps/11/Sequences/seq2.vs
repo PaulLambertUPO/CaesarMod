@@ -28,15 +28,16 @@ difficulty = GetDifficulty();
 	b = NO_Town2.obj.AsBuilding();
 	b.Research("Greek Royal Armor");
 	b.Research("Greek Chariot Wheels");
-	b.Research("Strengthen Stronghold Gates");
+	b.Research("Strengthen Stronghold Walls");
+	EnvWriteString(2, "GovernmentForm", "Oligarchy");
+	StartPlayerScript(2, "Data/Subai/Government_Form.vs");
 
 	b = NO_Town3.obj.AsBuilding();
 	b.Research("Greek Horse Armor");
 	b.Research("Greek Chariot Wheels");
-	b.Research("Strengthen Stronghold Gates");
-
-	EnvWriteString(2, "GovernmentForm", "Oligarchy");
+	b.Research("Strengthen Stronghold Walls");
 	EnvWriteString(3, "GovernmentForm", "Democracy");
+	StartPlayerScript(3, "Data/Subai/Government_Form.vs");
 }
 
 set2 = GetSettlement("S_Town2");

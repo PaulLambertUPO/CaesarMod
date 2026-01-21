@@ -10,7 +10,9 @@
 
 	<properties radius="80" selection_radius="80" />
 
-	<properties display_name="Ram" />
+	<properties select_class="RamUnit" />
+
+	<properties display_name="Ram" display_name_plural="Rams" />
 	<properties help="contents/units/Catapult" />
 
 	<method sig="idle" vs="data/subai/ram_idle.vs" />

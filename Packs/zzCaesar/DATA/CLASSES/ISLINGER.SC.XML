@@ -8,6 +8,8 @@
 
 	<properties projectile_class="Slingstone" building_projectile_class="Slingstone" />
 
+	<properties select_class="ISlinger" />
+
 	<properties icon="gameres/icons/ISlinger.bmp" />
 	<properties display_name="Slinger" display_name_plural="Slingers" />
 	<properties help="contents/units/ISlinger" />

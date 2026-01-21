@@ -13,7 +13,7 @@ number_to_train = Str2Int(ParseStr(dest, dest));
 max_param = ParseStr(dest, dest);
 class = ParseStr(dest, dest);
 
-.Progress(.cmddelay);
+.Progress();
 
 EnvWriteString(this, "Build", class);
 EnvWriteInt(this, "Build/" + class, EnvReadInt(this, "Build/" + class) + number_to_train);

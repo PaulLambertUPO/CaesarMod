@@ -23,17 +23,19 @@
 	<properties display_name="Outpost" />
 
 	<behavior script="data/subai/outpost_behavior.vs" />
-	
+
 	<method sig="idle" vs="data/subai/outpost_idle.vs" />
 	<method sig="attack" vs="data/subai/outpost_attack.vs" verify="data/subai/outpost_attack_verify.vs" />
-	<method sig="tribute" vs="data/subai/village_tributefood.vs" />
-	<method sig="tribute_default" vs="data/subai/village_tributefood.vs" />
+	<method sig="outpost_advance" vs="data/subai/do_nothing_point.vs" />
+	<method sig="tribute" vs="data/subai/do_nothing_point.vs" />
+	<method sig="tribute" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />
+	<method sig="tribute_default" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />
 	<method sig="stoptribute" vs="data/subai/village_stoptribute.vs" />
-	<method sig="createfoodmulesmall" vs="data/subai/create_food_mule_small.vs" />
-	<method sig="createfoodmulebig" vs="data/subai/create_food_mule_big.vs" />
-	<method sig="creategoldmulesmall" vs="data/subai/create_gold_mule_small.vs" />
-	<method sig="creategoldmulebig" vs="data/subai/create_gold_mule_big.vs" />
-	
+	<method sig="createfoodmulesmall" vs="data/subai/do_nothing_void.vs" />
+	<method sig="createfoodmulebig" vs="data/subai/do_nothing_void.vs" />
+	<method sig="creategoldmulesmall" vs="data/subai/do_nothing_void.vs" />
+	<method sig="creategoldmulebig" vs="data/subai/do_nothing_void.vs" />
+
 	<value0 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
 		flags="-1"
@@ -58,10 +60,7 @@
 		help="contents/stats/health"
 		rollover="Health"
 	/>
-	
-	<defaultcmd target="">
-		<cmd name="unitsout" />
-	</defaultcmd>
+
 	<defaultcmd target="Unit">
 		<cmd name="outpost_attack" />
 	</defaultcmd>
@@ -77,6 +76,6 @@
 	<defaultcmd target="BaseShipyard">
 		<cmd name="tribute_default" />
 	</defaultcmd>
-	
-	<sounds select="Sounds/selection/outpost.wav" />
+
+	<sounds select="Sounds/Selection/Outpost.wav" />
 </class>

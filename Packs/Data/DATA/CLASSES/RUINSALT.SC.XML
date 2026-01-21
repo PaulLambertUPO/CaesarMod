@@ -1,0 +1,3 @@
+<class id="ruins_alt" parent="Object" cpp_class="CVXDecor" entity="MapObjects/ruins/ruins.ent.xml">
+	<properties edittree_pos="Structures/Others/Ruins/Old ruins (alternative)" />
+</class>

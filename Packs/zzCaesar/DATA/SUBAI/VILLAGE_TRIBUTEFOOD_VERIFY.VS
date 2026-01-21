@@ -4,7 +4,7 @@
 
 if (.AsBuilding().IsValid)
 	if (other.AsBuilding().IsValid)
-		if (DiplGetShareSupport(.player, other.player))
+		if (!.IsEnemy(other))
 			return true;
 
 return false;

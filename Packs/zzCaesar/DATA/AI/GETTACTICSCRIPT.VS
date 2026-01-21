@@ -78,7 +78,7 @@ if (set.IsStronghold)
 				else if (IsResearched(set, "ChoosePunicRome"))
 					nRome = 2;
 				else
-					nRome = -1;
+					nRome = -1;//this should never happen
 				if (nRome == 0) {
 					if (rnd < 1)
 						return TS_RRomeTactic;

@@ -9,6 +9,8 @@ int player, build_number, level;
 point exit_point;
 bool valid_exit_point = true;
 
+Sleep(rand(501) + 500);
+
 this = This.AsBuilding();
 
 set = .settlement;
@@ -25,8 +27,6 @@ else if (exit_point.y == -1) {
 	valid_exit_point = false;
 }
 
-Sleep(rand(501) + 500);
-
 while (1) {
 	if (player != .player) {
 		class = EnvReadString(this, "Build");
@@ -36,13 +36,12 @@ while (1) {
 			EnvWriteInt(this, "Build/" + class, 0);
 			build_number = 0;
 		}
+		player = .player;
 	}
 	else {
 		class = EnvReadString(this, "Build");
 		build_number = EnvReadInt(this, "Build/" + class);
 	}
-
-	player = .player;
 
 	if (build_number > 0) {
 		level = EnvReadInt(set, "levels/" + class);

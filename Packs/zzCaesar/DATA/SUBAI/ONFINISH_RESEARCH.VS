@@ -30,6 +30,8 @@ while (dest != "") {
 				if (th.IsValid)
 					th.GlobalSpellStop();
 			}
+			else if (name == "Protection of Apollo")
+				HideAnnouncement("ApolloProtectionP" + player);
 		}
 		else {
 			EnvWriteString(player, name, "researched");
@@ -42,9 +44,9 @@ while (dest != "") {
 					for (j = 0; j < ol.count; j += 1) {
 						u = ol[j].AsUnit();
 						if (u.IsValid)
-							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-								if (u.inherentlevel < 8)
-									if (u.IsAlive)
+							if (u.IsAlive)
+								if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
+									if (u.inherentlevel < 8)
 										if (u.IsHeirOf("IEnchantress")) {
 											u.SetLevel(8);
 											if (!u.InHolder)
@@ -56,9 +58,13 @@ while (dest != "") {
 			else if (name == "Battle tactics")
 				SetExperienceModifier(player, GetConst("BattleTacticsExpModifier"));
 			else if (name == "Heroes' Wisdom")
-				StartPlayerScript(player, "Data/subai/player_heroes_wisdom.vs");
+				StartPlayerScript(player, "Data/Subai/Player_Heroes_Wisdom.vs");
 			else if (name == "Warriors' Wisdom")
-				StartPlayerScript(player, "Data/subai/player_warriors_wisdom.vs");
+				StartPlayerScript(player, "Data/Subai/Player_Warriors_Wisdom.vs");
+			else if (name == "Supplies")
+				StartPlayerScript(player, "Data/Subai/Greek_Supplies.vs");
+			else if (name == "Protection of Apollo")
+				StartPlayerScript(player, "Data/Subai/Apollo_Protection.vs");
 			else if (name == "Nobility") {
 				ObjList ol;
 				Unit u;
@@ -68,10 +74,10 @@ while (dest != "") {
 					for (j = 0; j < ol.count; j += 1) {
 						u = ol[j].AsUnit();
 						if (u.IsValid)
-							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-								if (u.inherentlevel >= 8)
-									if (u.inherentlevel < 12)
-										if (u.IsAlive) {
+							if (u.IsAlive)
+								if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
+									if (u.inherentlevel >= 8)
+										if (u.inherentlevel < 12) {
 											u.SetLevel(12);
 											if (!u.InHolder)
 												CreateFeedback("Experience", u);
@@ -79,8 +85,6 @@ while (dest != "") {
 					}
 				}
 			}
-			else if (name == "Supplies")
-				StartPlayerScript(player, "Data/subai/greek_supplies.vs");
 			else if (name == "Tribute") {
 				Building bld;
 				Settlement s;
@@ -125,8 +129,8 @@ while (dest != "") {
 					for (j = 0; j < ol.count; j += 1) {
 						u = ol[j].AsUnit();
 						if (u.IsValid)
-							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-								if (u.IsAlive)
+							if (u.IsAlive)
+								if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
 									u.RecalcBonuses();
 					}
 				}
@@ -267,18 +271,29 @@ while (dest != "") {
 				}
 				EnvWriteString(set, name, "");//re-enable research
 			}
-			else if (name == "Strengthen Stronghold Gates") {
-				ObjList gates;
-				Gate g;
+			else if (name == "Strengthen Stronghold Walls") {
+				ObjList buildings;
+				Building b;
 				int i;
-				gates = set.ObjectsAround("Gate");
-				for (i = 0; i < gates.count; i += 1) {
-					g = gates[i].AsGate();
-					if (g.IsValid) {
-						g.SetMaxHealth(g.maxhealth + g.maxhealth / 2);
-						if (!g.IsBroken)
-							g.SetHealth(g.maxhealth);
-					}
+				buildings = set.Buildings;
+				for (i = 0; i < buildings.count; i += 1) {
+					b = buildings[i].AsBuilding();
+					if (b.IsValid)
+						if (b.IsHeirOf("Tower")) {
+							b.SetMaxHealth(b.maxhealth + b.maxhealth / 2);
+							if (!b.IsBroken)
+								b.SetHealth(b.maxhealth);
+						}
+						else if (b.IsHeirOf("Wall")) {
+							b.SetMaxHealth(b.maxhealth + b.maxhealth / 2);
+							if (!b.IsBroken)
+								b.SetHealth(b.maxhealth);
+						}
+						else if (b.IsHeirOf("Gate")) {
+							b.SetMaxHealth(b.maxhealth + b.maxhealth / 2);
+							if (!b.IsBroken)
+								b.SetHealth(b.maxhealth);
+						}
 				}
 			}
 			else if (name == "Slavery") {

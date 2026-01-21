@@ -3,5 +3,5 @@
 	entity_autumn="MapObjects/ruins/ruins_a.ent.xml"
 	entity_winter="MapObjects/ruins/ruins_w.ent.xml"
 >
-	<properties edittree_pos="Structures/Others/Ruins" />
+	<properties edittree_pos="Structures/Others/Ruins/Old ruins" />
 </class>

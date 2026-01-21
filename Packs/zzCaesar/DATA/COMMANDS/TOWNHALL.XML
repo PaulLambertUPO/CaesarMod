@@ -11,7 +11,7 @@
 		queueicon="gameres/icons/upgrades/repair.bmp"
 		groupverifier="data/subai/verify_cmdcost_building.vs"
 		rollover="Repair"
-		costgold="500"
+		costgold="100"
 		execdelay="60000">
 		<src obj="BaseTownhall" />
 	</cmd>

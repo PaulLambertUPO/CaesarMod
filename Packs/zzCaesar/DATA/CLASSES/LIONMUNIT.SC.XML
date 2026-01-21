@@ -8,6 +8,8 @@
 
 	<properties radius="40" selection_radius="41" />
 
+	<properties select_class="LionMUnit" />
+
 	<properties display_name="Lion" display_name_plural="Lions" />
 	<properties icon="gameres/icons/lionM.bmp" />
 	<properties help="contents/units/Animals/LionM" />

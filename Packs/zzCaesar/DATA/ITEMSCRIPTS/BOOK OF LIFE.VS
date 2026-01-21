@@ -1,4 +1,4 @@
-//void, Obj owner, Obj attached
+//void, Obj owner, Obj attached, Obj victim
 
 if (owner.AsHero().IsValid) {
 	Unit this;

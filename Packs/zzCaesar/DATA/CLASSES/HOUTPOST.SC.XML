@@ -1,7 +1,6 @@
 <class id="HOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/HOutpost/HOutpost.ent.xml">
 	<properties race="ImperialRome" />
 	<properties maxhealth="10000" />
-	<properties radius="345" selection_radius="350" />
 	<properties display_name="Recruitment outpost" />
 	<properties icon="gameres/icons/houtpost.bmp" />
 	<properties help="contents/buildings/RecruitmentOutpost" />

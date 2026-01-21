@@ -1,13 +1,13 @@
 //void, Obj This
 
-Obj this;
+ItemHolder this;
 ObjList list;
 Unit u;
 point pos;
 int player, range, dead_hero_level, grave_lifetime, units_blessed, counter, i, k;
 bool items_given;
 
-this = This;
+this = This.AsItemHolder();
 
 pos = .pos;
 range = .range;
@@ -22,7 +22,8 @@ grave_lifetime = 61 + 20 * dead_hero_level;
 Sleep(rand(1000) + .TimeToAnimFinish());
 
 while (1) {
-	Sleep(1000);
+	if (player != .player)
+		break;
 
 	grave_lifetime -= 1;
 	.SetHealth(grave_lifetime + 1);
@@ -53,46 +54,47 @@ while (1) {
 	if (counter % 5 == 0)
 		.SetStamina(.stamina + 1);
 
-	if (.stamina == 0)
-		continue;
-
-	list = Intersect(ObjsInCircle(pos, range, "Military"), ClassPlayerObjs("Military", player)).GetObjList();
-	k = list.count;
-	i = rand(k);
-	units_blessed = 0;
-	while (k > 0) {
-		u = list[i].AsUnit();
-		if (u.IsValid)
-			if (u.IsAlive)
-				if (!u.AsHero().IsValid)
-					if (u.free_item_slots > 0) {
-						items_given = false;
-						if (!u.HasItem("Damage charm"))
-							if (u.AddItem("Damage charm"))
-								items_given = true;
-						if (!u.HasItem("Armor charm"))
-							if (u.AddItem("Armor charm"))
-								items_given = true;
-						if (!u.HasItem("Health charm"))
-							if (u.AddItem("Health charm"))
-								items_given = true;
-						if (!u.HasItem("Knowledge charm"))
-							if (u.AddItem("Knowledge charm"))
-								items_given = true;
-						if (items_given) {
-							.SetStamina(.stamina - 1);
-							if (.stamina <= 0)
-								break;
-							units_blessed += 1;
-							if (units_blessed >= 5)
-								break;
+	if (.stamina > 0) {
+		list = Intersect(ObjsInCircle(pos, range, "Military"), ClassPlayerObjs("Military", player)).GetObjList();
+		k = list.count;
+		i = rand(k);
+		units_blessed = 0;
+		while (k > 0) {
+			u = list[i].AsUnit();
+			if (u.IsValid)
+				if (u.IsAlive)
+					if (!u.AsHero().IsValid)
+						if (u.free_item_slots > 0) {
+							items_given = false;
+							if (!u.HasItem("Damage charm"))
+								if (u.AddItem("Damage charm"))
+									items_given = true;
+							if (!u.HasItem("Armor charm"))
+								if (u.AddItem("Armor charm"))
+									items_given = true;
+							if (!u.HasItem("Health charm"))
+								if (u.AddItem("Health charm"))
+									items_given = true;
+							if (!u.HasItem("Knowledge charm"))
+								if (u.AddItem("Knowledge charm"))
+									items_given = true;
+							if (items_given) {
+								.SetStamina(.stamina - 1);
+								if (.stamina <= 0)
+									break;
+								units_blessed += 1;
+								if (units_blessed >= 5)
+									break;
+							}
 						}
-					}
-		i += 1;
-		if (i >= list.count)
-			i = 0;
-		k -= 1;
+			i += 1;
+			if (i >= list.count)
+				i = 0;
+			k -= 1;
+		}
 	}
+
+	Sleep(1000);
 }
 
 .StartAnim(9, pos);

@@ -26,27 +26,27 @@
 		<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0" />
 	</states>
 	<anims>
-		<anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="1568" default_duration="112" action_time="0" step="37">
+		<anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="1008" default_duration="72" action_time="0" step="37">
 			<replace layer="1" image="8" offsetx="-62" offsety="-84" />
 			<replace layer="2" image="15" offsetx="-62" offsety="-84" />
 			<frame idx="1" duration="0" />
-			<frame idx="2" duration="112" />
-			<frame idx="3" duration="112" />
-			<frame idx="4" duration="112" />
-			<frame idx="5" duration="112" />
-			<frame idx="6" duration="112" />
-			<frame idx="7" duration="112" />
-			<frame idx="8" duration="112" />
-			<frame idx="9" duration="112" />
-			<frame idx="10" duration="112" />
-			<frame idx="11" duration="112" />
-			<frame idx="12" duration="112" />
-			<frame idx="13" duration="112" />
-			<frame idx="14" duration="112" />
-			<frame idx="15" duration="112" />
+			<frame idx="2" duration="72" />
+			<frame idx="3" duration="72" />
+			<frame idx="4" duration="72" />
+			<frame idx="5" duration="72" />
+			<frame idx="6" duration="72" />
+			<frame idx="7" duration="72" />
+			<frame idx="8" duration="72" />
+			<frame idx="9" duration="72" />
+			<frame idx="10" duration="72" />
+			<frame idx="11" duration="72" />
+			<frame idx="12" duration="72" />
+			<frame idx="13" duration="72" />
+			<frame idx="14" duration="72" />
+			<frame idx="15" duration="72" />
 			<frame idx="16" duration="0" />
 		</anim>
-		<anim idx="5" name="Defence" startstate="1" endstate="1" frames="9" duration="770" default_duration="70" action_time="350" step="0">
+		<anim idx="5" name="Defence" startstate="1" endstate="1" frames="9" duration="770" default_duration="0" action_time="350" step="0">
 			<replace layer="1" image="7" offsetx="-62" offsety="-84" />
 			<replace layer="2" image="14" offsetx="-62" offsety="-84" />
 			<frame idx="1" duration="0" />
@@ -59,7 +59,7 @@
 			<frame idx="8" duration="350" />
 			<frame idx="9" duration="0" />
 		</anim>
-		<anim idx="9" name="die" startstate="1" endstate="1" frames="22" duration="8800" default_duration="80" action_time="0" step="0">
+		<anim idx="9" name="Die" startstate="1" endstate="1" frames="22" duration="8700" default_duration="0" action_time="0" step="0">
 			<replace layer="1" image="5" offsetx="-62" offsety="-84" />
 			<replace layer="2" image="12" offsetx="-62" offsety="-84" />
 			<frame idx="1" duration="0" />
@@ -77,12 +77,12 @@
 			<frame idx="13" duration="80" />
 			<frame idx="14" duration="80" />
 			<frame idx="15" duration="80" />
-			<frame idx="16" duration="180" />
+			<frame idx="16" duration="80" />
 			<frame idx="17" duration="500" />
 			<frame idx="18" duration="1000" />
-			<frame idx="19" duration="1000" />
-			<frame idx="20" duration="2000" />
-			<frame idx="21" duration="3000" />
+			<frame idx="19" duration="1500" />
+			<frame idx="20" duration="2500" />
+			<frame idx="21" duration="2000" />
 			<frame idx="22" duration="0" />
 		</anim>
 		<anim idx="13" name="Idle" startstate="1" endstate="1" frames="9" duration="385" default_duration="55" action_time="0" step="0">

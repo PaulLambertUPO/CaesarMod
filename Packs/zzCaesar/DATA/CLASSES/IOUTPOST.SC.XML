@@ -1,7 +1,6 @@
 <class id="IOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/IOutpost/IOutpost.ent.xml">
 	<properties race="Iberia" />
 	<properties maxhealth="10000" />
-	<properties radius="345" selection_radius="350" />
 	<properties display_name="Training outpost" />
 	<properties icon="gameres/icons/ioutpost.bmp" />
 	<properties help="contents/buildings/TrainingOutpost" />

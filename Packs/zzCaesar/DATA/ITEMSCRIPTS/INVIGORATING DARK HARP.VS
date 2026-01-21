@@ -16,7 +16,7 @@ if (.IsValid)
 		if (.stamina < .maxstamina) {
 			.HealStamina(4);
 			if (!.InHolder)
-				CreateFeedback("StaminaBoostHarp", this);
+				CreateFeedback("StaminaBoost", this);
 		}
 
 		allies_revitalized = 0;
@@ -24,8 +24,10 @@ if (.IsValid)
 			ol = .GetUnitsInSameHolder();
 			ol.Remove(this);
 		}
-		else
+		else {
+			.PlaySound("Data/Sound Entities/ItemUse_DarkChant.xml");
 			ol = ObjsInSight(this, "Unit").GetObjList();
+		}
 
 		//make 25 attempts to revitalize 8 random allies, then in order
 		for (i = 0; ol.count > 0 && i < 25 && allies_revitalized < 8; i += 1) {
@@ -37,7 +39,7 @@ if (.IsValid)
 							allies_revitalized += 1;
 							u.HealStamina(4);
 							if (!u.InHolder)
-								CreateFeedback("StaminaBoostHarp", u);
+								CreateFeedback("StaminaBoost", u);
 							ol.Remove(u);//avoid revitalizing the same unit more than once
 						}
 		}
@@ -50,7 +52,7 @@ if (.IsValid)
 							allies_revitalized += 1;
 							u.HealStamina(4);
 							if (!u.InHolder)
-								CreateFeedback("StaminaBoostHarp", u);
+								CreateFeedback("StaminaBoost", u);
 						}
 		}
 

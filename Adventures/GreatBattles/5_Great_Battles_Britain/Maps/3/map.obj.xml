@@ -21803,7 +21803,7 @@
 	dir.x="531"
 	dir.y="775"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1583"
 	Level="19"
 	UnitFlags="262144"
@@ -21845,7 +21845,7 @@
 	dir.x="829"
 	dir.y="569"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1586"
 	Level="19"
 	UnitFlags="262144"
@@ -21859,7 +21859,7 @@
 	dir.x="225"
 	dir.y="298"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1587"
 	Level="19"
 	UnitFlags="262144"
@@ -22277,7 +22277,7 @@
 	dir.x="-176"
 	dir.y="202"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1616"
 	Level="19"
 	UnitFlags="262144"
@@ -22638,7 +22638,7 @@
 	dir.x="1048"
 	dir.y="17"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1641"
 	Level="19"
 	UnitFlags="262144"
@@ -22652,7 +22652,7 @@
 	dir.x="192"
 	dir.y="-18"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1642"
 	Level="19"
 	UnitFlags="262144"
@@ -22666,7 +22666,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1643"
 	Level="19"
 	UnitFlags="262144"
@@ -22697,7 +22697,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1645"
 	Level="19"
 	UnitFlags="262144"
@@ -22711,7 +22711,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1646"
 	Level="19"
 	UnitFlags="262144"
@@ -22725,7 +22725,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1647"
 	Level="19"
 	UnitFlags="262144"
@@ -22739,7 +22739,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1648"
 	Level="19"
 	UnitFlags="262144"
@@ -22753,7 +22753,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1649"
 	Level="19"
 	UnitFlags="262144"
@@ -22767,7 +22767,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1650"
 	Level="19"
 	UnitFlags="262144"
@@ -22781,7 +22781,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1651"
 	Level="19"
 	UnitFlags="262144"
@@ -22795,7 +22795,7 @@
 	dir.x="18"
 	dir.y="276"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1652"
 	Level="19"
 	UnitFlags="262144"
@@ -24360,7 +24360,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1763"
 	Level="19"
 	UnitFlags="262144"
@@ -24388,7 +24388,7 @@
 	dir.x="366"
 	dir.y="-580"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1765"
 	Level="19"
 	UnitFlags="262144"
@@ -24416,7 +24416,7 @@
 	dir.x="291"
 	dir.y="-598"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1767"
 	Level="19"
 	UnitFlags="262144"
@@ -24982,7 +24982,7 @@
 	dir.x="153"
 	dir.y="-654"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1807"
 	Level="19"
 	UnitFlags="262144"
@@ -25010,7 +25010,7 @@
 	dir.x="-419"
 	dir.y="-748"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="1809"
 	Level="19"
 	UnitFlags="262144"
@@ -26843,7 +26843,7 @@
 	hsHealing="0"
 	hsCeasefire="0"
 	hsVigor="0"
-	hsWisdom="0"
+	hsLeadership="0"
 	Level="19"
 	UnitFlags="393216"
 	player="1"

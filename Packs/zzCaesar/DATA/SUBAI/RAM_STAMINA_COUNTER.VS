@@ -1,16 +1,15 @@
 //void, Obj This
 
-while (!This.IsValid)
-	Sleep(1000);
+if (This.IsRam) {
+	This.AsUnit().SetNoAIFlag(true);
 
-This.AsUnit().SetNoAIFlag(true);
+	while (This.stamina > 0) {
+		Sleep(5000);
+		This.SetStamina(This.stamina - 1);
+	}
 
-while (This.stamina > 0) {
-	Sleep(5000);
-	This.SetStamina(This.stamina - 1);
+	This.Damage(This.health);
 }
-
-This.Damage(This.health);
 
 //without this instruction, the game crashes
 while (1)

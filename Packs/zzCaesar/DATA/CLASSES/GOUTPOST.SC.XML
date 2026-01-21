@@ -1,7 +1,6 @@
 <class id="GOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/GOutpost/GOutpost_as.ent.xml" entity_winter="Buildings/GOutpost/GOutpost_w.ent.xml">
 	<properties race="Gaul" />
 	<properties maxhealth="10000" />
-	<properties radius="345" selection_radius="350" />
 	<properties display_name="Trade outpost" />
 	<properties icon="gameres/icons/goutpost.bmp" />
 	<properties help="contents/buildings/TradeOutpost" />

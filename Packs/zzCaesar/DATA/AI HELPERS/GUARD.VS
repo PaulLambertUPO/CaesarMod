@@ -29,7 +29,7 @@ if (set.IsValid) {
 				if (ol_guards[0].IsEnemy(main_target))
 					return;
 				enemies = Intersect(
-					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhost"), ObjsInRange(main_target, "Catapult", 1200)),
+					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhostUnit"), ObjsInRange(main_target, "Catapult", 1200)),
 					Union(EnemyObjs(main_target.player, "Unit"), EnemyObjs(main_target.player, "Catapult"))
 				).GetObjList();
 				for (i = 0; i < ol_guards.count; i += 1) {
@@ -76,7 +76,7 @@ if (set.IsValid) {
 				if (ol_guards[0].IsEnemy(main_target))
 					return;
 				enemies = Intersect(
-					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhost"), ObjsInRange(main_target, "Catapult", 1200)),
+					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhostUnit"), ObjsInRange(main_target, "Catapult", 1200)),
 					Union(EnemyObjs(main_target.player, "Unit"), EnemyObjs(main_target.player, "Catapult"))
 				).GetObjList();
 				for (i = 0; i < ol_guards.count; i += 1) {
@@ -123,7 +123,7 @@ if (set.IsValid) {
 				if (ol_guards[0].IsEnemy(main_target))
 					return;
 				enemies = Intersect(
-					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhost"), ObjsInRange(main_target, "Catapult", 1200)),
+					Union(VisibleObjsInSight(main_target, "Military,Peaceful,AttackAnimal,GGhostUnit"), ObjsInRange(main_target, "Catapult", 1200)),
 					Union(EnemyObjs(main_target.player, "Unit"), EnemyObjs(main_target.player, "Catapult"))
 				).GetObjList();
 				for (i = 0; i < ol_guards.count; i += 1) {

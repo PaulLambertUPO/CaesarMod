@@ -62,7 +62,7 @@ if (.IsValid) {
 								if (target_catapult)
 									if (.HasSpecial(trample))
 										target.Damage(.damage);
-								if (rand(3) == 0)
+								if (rand(5) == 0)
 									if (.health < .maxhealth / 2) {
 										ObjList enemies;
 

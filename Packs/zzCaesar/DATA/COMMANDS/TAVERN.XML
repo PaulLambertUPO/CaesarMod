@@ -5,7 +5,7 @@
 		key="r"
 		queueicon="gameres/icons/upgrades/repair.bmp"
 		rollover="Repair"
-		costgold="500"
+		costgold="100"
 		execdelay="60000">
 		<src obj="BaseTavern" />
 	</cmd>
@@ -17,7 +17,6 @@
 		key="f"
 		costgold="400"
 		execdelay="10000"
-		param="800"
 		rollover="Buy food"
 		description="Buys 800 food at the market for 400 gold">
 		<src obj="RTavern" />

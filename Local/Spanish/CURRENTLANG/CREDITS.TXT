@@ -31,6 +31,7 @@ INTELIGENCIA ARTIFICIAL
 ACTUALIZACIÓN GRANDES BATALLAS Y CONQUISTAS
 MEJORA TEXTOS Y GUÍA DE AYUDA
 DOBLAJE
+ARTE
 
 Paolo Lamberto
 
@@ -39,6 +40,10 @@ TESTING
 
 Paolo Lamberto
 Matteo Lamberto
+
+
+AYUDA ARTE
+Nicoghiro31
 
 
 Copyright (c) 2025 Paolo Lamberto

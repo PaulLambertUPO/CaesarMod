@@ -8,6 +8,8 @@
 
 	<properties radius="40" selection_radius="41" />
 
+	<properties select_class="BoarUnit" />
+
 	<properties display_name="Boar" display_name_plural="Boars" />
 	<properties icon="gameres/icons/Boar.bmp" />
 	<properties help="contents/units/Animals/Boar" />

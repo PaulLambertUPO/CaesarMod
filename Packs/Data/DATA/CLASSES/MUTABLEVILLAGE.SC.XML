@@ -1,6 +1,5 @@
 <class id="MutableVillage" parent="BaseVillage" cpp_class="CVXTownHall" entity="Buildings/MutableVillage/MutableVillage.ent.xml">
 	<properties race="Mutable" />
-	<properties foodperpop="45" />
 	<properties radius="650" selection_radius="650" />
 	<properties display_name="Any Race Village" />
 	<properties edittree_pos="Structures/Any Race Village" />

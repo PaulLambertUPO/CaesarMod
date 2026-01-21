@@ -5,6 +5,8 @@
 
 	<properties radius="20" selection_radius="20" />
 
+	<properties select_class="DeerUnit" />
+
 	<properties display_name="Deer" display_name_plural="Deer" />
 	<properties icon="gameres/icons/deer.bmp" />
 	<properties help="contents/units/Animals/Deer" />

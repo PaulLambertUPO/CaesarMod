@@ -1,6 +1,5 @@
-<class id="GTownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/GTownhall/Townhall_as.ent.xml" entity_winter="Buildings/GTownhall/Townhall_w.ent.xml">
+<class id="GTownhall" altid="Townhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/GTownhall/Townhall_as.ent.xml" entity_winter="Buildings/GTownhall/Townhall_w.ent.xml">
 	<properties race="Gaul" />
-	<properties foodperpop="45" />
 	<properties radius="160" selection_radius="165" />
 	<properties display_name="Gaul Townhall" />
 	<properties icon="gameres/icons/GTownhall.bmp" />

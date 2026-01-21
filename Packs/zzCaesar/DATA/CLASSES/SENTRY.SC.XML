@@ -20,7 +20,7 @@
 	<method sig="guard" vs="data/subai/sentry_guard.vs" />
 	<method sig="attack" vs="data/subai/sentry_attack.vs" />
 	<method sig="disappear" vs="data/subai/sentry_disappear.vs" />
-	<method sig="idle" vs="data/subai/do_nothing_void.vs" />
+	<method sig="idle" vs="data/subai/do_nothing_void_loop.vs" />
 
 	<nodefcmdinherit />
 

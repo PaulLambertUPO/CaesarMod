@@ -6,7 +6,7 @@
 	<properties sight="720" />
 	<properties range="700" />
 	<properties speed="240" />
-	<properties unit_specials="Combat skill, Penetration" />
+	<properties unit_specials="Active, Combat skill, Determination, Ferocity, Freedom, Penetration" />
 
 	<properties projectile_class="Big_Arrow" building_projectile_class="Big_Arrow" />
 
@@ -15,6 +15,8 @@
 	<properties healthbaroffset="-120" />
 	<properties water_unit="1" />
 	<properties max_units_to_board="120" /><!-- if this value is changed, sequences in "The conquest of Britain" adventure must be changed, too -->
+
+	<properties select_class="ShipBattle" />
 
 	<properties display_name="Ship" display_name_plural="Ships" />
 	<properties icon="gameres/icons/Ship.bmp" />

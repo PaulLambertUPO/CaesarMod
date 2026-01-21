@@ -8,6 +8,8 @@
 
 	<properties radius="40" selection_radius="41" />
 
+	<properties select_class="LionFUnit" />
+
 	<properties display_name="Lioness" display_name_plural="Lionesses" />
 	<properties icon="gameres/icons/lionF.bmp" />
 	<properties help="contents/units/Animals/LionF" />

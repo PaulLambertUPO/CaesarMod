@@ -9,7 +9,7 @@ if (GetConst("NoSentries") == 0)
 		this = This.AsBuilding().settlement;
 
 		if (.IsValid) {
-			int player, add_interval, add_count, curr, max;
+			int player, add_interval, add_count, missing_sentries;
 
 			while (.IsIndependent)
 				Sleep(5000);
@@ -19,18 +19,22 @@ if (GetConst("NoSentries") == 0)
 			add_interval = GetConst("SentriesAddTime");
 			add_count = GetConst("SentriesAddCount");
 
+			Sleep(add_interval);
+
 			while (1) {
-				player = .player;
-				Sleep(add_interval);
 				if (player == .player) {
-					curr = .GetNumSentries();
-					max = .GetMaxSentries();
-					if (curr < max)
-						.AddSentries(MIN(add_count, max - curr));
+					missing_sentries = .GetMaxSentries() - .GetNumSentries();
+					if (missing_sentries > 0)
+						.AddSentries(MIN(add_count, missing_sentries));
 				}
+				else
+					player = .player;
+
+				Sleep(add_interval);
 			}
 		}
 	}
 
+//without this instruction, the game crashes
 while (1)
 	Sleep(3600000);

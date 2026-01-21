@@ -1,4 +1,4 @@
-<class id="TTavern" altid="Tavern" parent="BaseTavern" cpp_class="CVXTavern" entity="Buildings/TTavern/TTavern.ent.xml">
+<class id="TTavern" parent="BaseTavern" cpp_class="CVXTavern" entity="Buildings/TTavern/TTavern.ent.xml">
 
 	<properties race="Germany" />
 	<properties radius="170" selection_radius="180" />

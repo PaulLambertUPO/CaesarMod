@@ -8,9 +8,6 @@
 	<properties help="contents/buildings/HGymnasium" />
 	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Gymnasium" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
 
-	<behavior script="data/subai/government_form.vs" />
-
-	<method sig="democracy" vs="data/subai/democracy.vs" />
-	<method sig="oligarchy" vs="data/subai/oligarchy.vs" />
 	<method sig="myrmidon_school" vs="data/subai/myrmidons_school.vs" />
+	<method sig="government_form" vs="data/subai/government_form_research.vs" onfinish="data/subai/government_form_onfinish.vs" />
 </class>

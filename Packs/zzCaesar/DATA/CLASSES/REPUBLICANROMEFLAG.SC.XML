@@ -1,5 +1,3 @@
-<class id="RepublicanRomeFlag" parent="Object" cpp_class="CVXUnit" entity="Units/Rome Flags/RepublicanRomeFlag.ent.xml">
-	<properties target_factor="-1" />
-	<properties feeds="0" max_food="0" />
-	<method sig="idle" vs="data/subai/flagging.vs" />
+<class id="RepublicanRomeFlag" parent="Object" cpp_class="CVXScriptObj" entity="Units/Rome Flags/RepublicanRomeFlag.ent.xml">
+	<method sig="idle" vs="data/subai/anim.vs" />
 </class>

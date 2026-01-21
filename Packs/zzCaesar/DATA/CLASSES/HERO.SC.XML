@@ -15,6 +15,8 @@
 	<properties interface="thumb,hero,items,holder" />
 	<properties inventory_size="5" />
 
+	<properties display_name="Hero" display_name_plural="Heroes" />
+
 	<behavior script="data/subai/hero_skill_behaviour.vs" />
 
 	<method sig="sleep" vs="data/subai/hero_sleep.vs" />

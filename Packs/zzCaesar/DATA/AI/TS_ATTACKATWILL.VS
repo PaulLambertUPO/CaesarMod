@@ -15,13 +15,13 @@ hall_pos = hall.pos;
 
 wolves = Intersect(ObjsInCircle(hall_pos, 2000, "WolfUnit"), EnemyObjs(set.player, "WolfUnit"));
 slow_lvl_10_animals = Intersect(ObjsInCircle(hall_pos, 2000, "BearUnit,BoarUnit,LionMUnit,LionFUnit"), EnemyObjs(set.player, "AttackAnimal"));
-slow_animals = Union(Intersect(ObjsInCircle(hall_pos, 2000, "UntamableHorse"), EnemyObjs(set.player, "UntamableHorse")), slow_lvl_10_animals);
+slow_animals = Union(Intersect(ObjsInCircle(hall_pos, 2000, "WildHorseUnit"), EnemyObjs(set.player, "WildHorseUnit")), slow_lvl_10_animals);
 fast_animals = Union(wolves, Intersect(ObjsInCircle(hall_pos, 2000, "DeerUnit"), EnemyObjs(set.player, "DeerUnit")));
 
-wells = ObjsInCircle(hall_pos, 4000, "BaseWell").GetObjList();
-villages = ObjsInCircle(hall_pos, 4500, "BaseVillage").GetObjList();
-c_outposts = ObjsInCircle(hall_pos, 4000, "COutpost").GetObjList();
-training_outposts = ObjsInCircle(hall_pos, 4500, "IOutpost,BOutpost").GetObjList();
+wells = ObjsInCircle(hall_pos, 3000, "BaseWell").GetObjList();
+villages = ObjsInCircle(hall_pos, 3000, "BaseVillage").GetObjList();
+c_outposts = ObjsInCircle(hall_pos, 3000, "COutpost").GetObjList();
+training_outposts = ObjsInCircle(hall_pos, 4000, "IOutpost,BOutpost").GetObjList();
 
 use_ruins = AIVar(set.player, AIV_UseRuins) != 0;
 
@@ -112,7 +112,7 @@ while (ol.count > 0) {
 			if (u.GetSquad().TakeNearbyItems(u.sight))
 				continue;
 		if (u.command != "idle")
-			if (u.DistTo(hall) < 5000)//avoid going too far away
+			if (u.DistTo(hall) < 4000)//avoid going too far away
 				continue;
 
 		//try to get maximum profit with spoils of war

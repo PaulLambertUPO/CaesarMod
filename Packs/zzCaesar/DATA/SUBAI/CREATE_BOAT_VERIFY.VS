@@ -5,19 +5,21 @@ Building this;
 this = objs[0].AsBuilding();
 
 if (.IsValid) {
+	str ship_class;
 	int race;
 
+	ship_class = cmdparam;
 	race = GetPlayerRace(.player);
 
 	if (race == RepublicanRome) {
-		if (cmdparam != "ShipRome")
+		if (ship_class != "ShipRome")
 			return false;
 	}
 	else if (race == Egypt) {
-		if (cmdparam != "ShipEgypt")
+		if (ship_class != "ShipEgypt")
 			return false;
 	}
-	else if (cmdparam != "ShipL")
+	else if (ship_class != "ShipL")
 		return false;
 
 	{
@@ -34,7 +36,7 @@ if (.IsValid) {
 			if (set.population - cmdcost_pop < GetConst("MinPopulation"))
 				unaffordable = true;
 
-		reasonText = rollover(this, cmdparam, unaffordable);//cmdparam must be equal to the ship class
+		reasonText = rollover(this, ship_class, unaffordable);
 		return true;
 	}
 }

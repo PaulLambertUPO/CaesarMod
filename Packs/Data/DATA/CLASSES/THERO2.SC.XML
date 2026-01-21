@@ -1,5 +1,5 @@
 <class id="THero2" parent="GermanHero" cpp_class="CVXHero" entity="Units/THero2/THero2.ent.xml">
-	<properties display_name="Eidhart" edittree_pos="" />
+	<properties display_name="Eidhart" />
 	<properties icon="gameres/icons/THero2.bmp" />
 	<properties edittree_pos="Units/Germany/Hero 2" />
 </class>

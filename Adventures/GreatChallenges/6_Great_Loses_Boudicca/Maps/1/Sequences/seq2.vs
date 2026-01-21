@@ -8,6 +8,8 @@ int i, j, range, player, old_level_1, old_level_2, end_level_1, end_level_2, sta
 int defenders_max_1, defenders_max_2, defenders_out_1, defenders_out_2;
 str defenders_class_1, defenders_class_2;
 
+Sleep(rand(1001) + 500);
+
 this = RomanOutpost3.obj.AsBuilding();
 
 set = .settlement;
@@ -43,7 +45,7 @@ start_time_1 = GetTime();
 start_time_2 = start_time_1;
 
 for (i = 0; i < defenders_max_1; i += 1) {
-	u = Place(defenders_class_1, pos, player);
+	u = Place(defenders_class_1, pos, player).AsUnit();
 	set.ForceAddUnit(u);
 	u.SetFeeding(false);
 	u.SetLevel(old_level_1);
@@ -51,7 +53,7 @@ for (i = 0; i < defenders_max_1; i += 1) {
 	all_defenders_1.Add(u);
 }
 for (i = 0; i < defenders_max_2; i += 1) {
-	u = Place(defenders_class_2, pos, player);
+	u = Place(defenders_class_2, pos, player).AsUnit();
 	set.ForceAddUnit(u);
 	u.SetFeeding(false);
 	u.SetLevel(old_level_2);
@@ -195,17 +197,38 @@ while (player == .player) {
 				}
 		}
 
-		//handle the capturing
+		//handle the capturing (the new owner will be chosen randomly among the players with most units nearby)
 		all_defenders_1.ClearDead();
 		if (all_defenders_1.count <= 0) {
 			all_defenders_2.ClearDead();
 			if (all_defenders_2.count <= 0) {
 				enemies.ClearDead();
 				i = enemies.count;
-				if (i > 0)
-					.SetPlayer(enemies[rand(i)].player);
+				if (i > 0) {
+					IntArray player_units, players;
+					int max, p;
+					for (j = 0; j < i; j += 1)
+						player_units[enemies[j].player] += 1;//count units per player
+					for (i = 1; i <= 16; i += 1) {
+						j = player_units[i];
+						if (j > 0)
+							if (j > max) {//new max found, reset the players to choose from
+								max = j;
+								players.resize(0);
+								players[0] = i;
+								p = 1;
+							}
+							else if (j == max) {//add one more player to choose from
+								players[p] = i;
+								p += 1;
+							}
+					}
+					if (p > 0)
+						.SetPlayer(players[rand(p)]);
+				}
 			}
 		}
 	}
+
 	Sleep(1000);
 }

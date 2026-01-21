@@ -1,9 +1,8 @@
 <class id="COutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/COutpost/COutpost.ent.xml">
 	<properties race="Carthage" />
 	<properties maxhealth="10000" />
-	<properties icon="gameres/icons/COutpost.bmp" />
 	<properties display_name="Recruitment outpost" />
-	<properties radius="333" selection_radius="350" />
+	<properties icon="gameres/icons/COutpost.bmp" />
 	<properties help="contents/buildings/RecruitmentOutpost" />
 	<properties edittree_pos="Structures/Outposts/Recruitment outpost (Carthaginian)" />
 	<properties description="Converts peasants to Macemen" />

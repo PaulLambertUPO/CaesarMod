@@ -1,6 +1,6 @@
 <class id="ShipRome" parent="ShipBattle" cpp_class="CVXShip" entity="units/Ships/ShipRome/Ship.ent.xml">
 	<properties race="RepublicanRome" />
-	<properties display_name="Rome Ship" />
+	<properties display_name="Rome Ship" display_name_plural="Rome Ships" />
 	<properties icon="gameres/icons/ShipRome.bmp" />
 	<properties edittree_pos="Units/Others/Rome Ship" />
 </class>

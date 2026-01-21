@@ -2738,7 +2738,7 @@ Maggiore è il numero di contadini che popolano una fortezza o un villaggio, mag
 			<topic id="Fisherman">
 				<entry hcenter="1" font="large">Pescatore</entry>
 				<entry vcenter="1" image="UI/Icons/Fisherman.bmp">
-Il pescatore è un contadino specializzato nella cattura di pesci.
+Il pescatore è un civile specializzato nella cattura di pesci.
 Per svolgere il suo lavoro, deve entrare in un porto: una volta lì, inizierà a produrre viveri (pesci) nel corso del tempo.
 				</entry>
 				<entry />
@@ -2794,7 +2794,11 @@ La sua funzione è la stessa delle unità di rifornimento su terra.
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 1000 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tempo di costruzione 20 secondi</entry>
 				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalità</entry>
 				<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Rianimazione</entry>
+				<entry image="UI/InfoBar/Unit Specials/Determination.bmp" link="/contents/specials/determination">Determinazione</entry>
+				<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp" link="/contents/specials/ferocity">Ferocia</entry>
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertà</entry>
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Perforazione</entry>
 				<entry />
 				<entry font="large">Vedi anche</entry>
@@ -3144,7 +3148,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3172,7 +3176,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3200,7 +3204,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3228,7 +3232,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3256,7 +3260,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3284,7 +3288,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3312,7 +3316,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3340,7 +3344,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3420,7 +3424,7 @@ Tempo: 30 - 15 - 7,5 - 3,75 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3482,7 +3486,7 @@ Tempo: 18 - 9 - 4,5 - 2,25 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3544,7 +3548,7 @@ Tempo: 22 - 11 - 5,5 - 2,75 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3606,7 +3610,7 @@ Tempo: 18 - 9 - 4,5 - 2,25 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3668,7 +3672,7 @@ Tempo: 22 - 11 - 5,5 - 2,75 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3730,7 +3734,7 @@ Tempo: 16 - 8 - 4 - 2 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3792,7 +3796,7 @@ Tempo: 22 - 11 - 5,5 - 2,75 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3854,7 +3858,7 @@ Tempo: 30 - 15 - 7,5 - 3,75 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -3930,7 +3934,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4004,7 +4008,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4054,7 +4058,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4121,7 +4125,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4177,7 +4181,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4224,7 +4228,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4274,7 +4278,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4314,9 +4318,9 @@ Consente di equipaggiare i carri da guerra nella caserma.
 Costo: 3000 oro
 Tempo: 30 secondi
 				</entry>
-				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Stronghold Walls.bmp">
-Rinforza porte
-Rende le porte della fortezza più resistenti ai danni.
+				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Stronghold Walls.bmp" link="/contents/buildings/Fortification">
+Rinforza mura
+Aumenta la salute di porte, mura e torri del 50%.
 Costo: 1000 oro
 Tempo: 30 secondi
 				</entry>
@@ -4335,7 +4339,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4520,7 +4524,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4617,7 +4621,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4684,7 +4688,7 @@ Tempo: 60 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4745,7 +4749,7 @@ Tempo: 20 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4800,7 +4804,7 @@ Tempo: 20 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4882,7 +4886,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -4943,7 +4947,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5022,7 +5026,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5083,7 +5087,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5148,7 +5152,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5207,7 +5211,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5278,7 +5282,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5331,7 +5335,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5384,7 +5388,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5431,7 +5435,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5496,7 +5500,7 @@ Tempo: 90 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5541,7 +5545,7 @@ Tempo: 20 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5590,7 +5594,7 @@ Tempo: 20 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5633,7 +5637,7 @@ Tempo: 20 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5681,7 +5685,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5730,7 +5734,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5779,7 +5783,7 @@ Tempo: 30 - 15 - 7,5 - 3,75 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5822,7 +5826,7 @@ Tempo: 20 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5845,8 +5849,8 @@ Costo: 1500 oro
 Tempo: 30 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
-Invoca la protezione di Apollo
-Rende le porte della fortezza indistruttibili per 2 minuti.
+Protezione di Apollo
+Rende indistruttibili tutte le tue fortezze per 2 minuti. Si può impartire questo comando solo una volta in tutta la partita.
 Costo: 2000 oro
 Tempo: istantaneo
 				</entry>
@@ -5865,7 +5869,7 @@ Tempo: 30 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripara
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5929,7 +5933,7 @@ Tempo: istantaneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripopola
 Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata e/o ripristina la popolazione minima del villaggio se non ci sono abbastanza abitanti per produrre viveri.
-Costo: 500 oro
+Costo: 100 oro
 Tempo: 60 secondi
 				</entry>
 			</topic>
@@ -5953,6 +5957,10 @@ Produce oro aggiuntivo se c'è almeno 2000 oro immagazzinato all'interno (10 oro
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attacca
 Concentra il fuoco su un bersaglio specifico.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Effettua sortita
+Fa avanzare le unità verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
@@ -5978,6 +5986,10 @@ Consente di scambiare viveri con oro o viceversa (20 viveri in cambio di 10 oro 
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attacca
 Concentra il fuoco su un bersaglio specifico.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Effettua sortita
+Fa avanzare le unità verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Sell Food.bmp">
 Vendi viveri
@@ -6014,6 +6026,10 @@ Aumenta gradualmente l'esperienza delle unità all'interno fino al livello 8 (1 
 Attacca
 Concentra il fuoco su un bersaglio specifico.
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Effettua sortita
+Fa avanzare le unità verso la posizione specificata.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
 Invia costantemente risorse a un altro insediamento.
@@ -6039,6 +6055,10 @@ La variante cartaginese trasforma i contadini in guerrieri con mazza (1 ogni 30 
 Attacca
 Concentra il fuoco su un bersaglio specifico.
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Effettua sortita
+Fa avanzare le unità verso la posizione specificata.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
 Invia costantemente risorse a un altro insediamento.
@@ -6059,6 +6079,10 @@ Il livello delle sentinelle aumenta di 1 punto ogni minuto fino ad arrivare a 36
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">24 arcieri (livello 8 - 18)</entry>
 				<entry vcenter="1" image="UI/Icons/GSpearman.bmp" link="/contents/units/GSpearman">24 lancieri (livello 8 - 18)</entry>
 				<entry font="large">Comandi</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Effettua sortita
+Fa avanzare le unità verso la posizione specificata.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
 Invia costantemente risorse a un altro insediamento.
@@ -6067,12 +6091,6 @@ Invia costantemente risorse a un altro insediamento.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold Small.bmp" link="/contents/units/Mule">Carica unità di rifornimento (fino a 250 oro)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Food.bmp" link="/contents/units/Mule">Carica unità di rifornimento (fino a 1000 viveri)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Carica unità di rifornimento (fino a 1000 oro)</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
-Ripara
-Ripara la struttura per renderla di nuovo operativa se è troppo danneggiata.
-Costo: 500 oro
-Tempo: 60 secondi
-				</entry>
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/RArcher.bmp" link="/contents/units/RArcher">Sentinella romana</entry>
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">Sentinella gallica</entry>

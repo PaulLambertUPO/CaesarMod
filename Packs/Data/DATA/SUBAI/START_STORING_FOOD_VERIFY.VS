@@ -1,31 +1,27 @@
 //bool, ObjList objs, str OUT reasonText
 
 Building this;
+Settlement set;
+
 this = objs[0].AsBuilding();
+set = .settlement;
 
-reasonText = "";
+if (EnvReadInt(set, "IsStoring") != 1)
+	if (IsResearched(set, "Trade Routes")) {
+		bool unaffordable = false;
 
-if(.IsValid){
-	if(EnvReadString(this.AsBuilding,"researching")=="yes"){
-		reasonText = Translate(rollover(this,false));
-		reasonText = reasonText + "\n<color 255 0 0>";
-		reasonText = reasonText + Translatef("Requires %s1", "Trade Routes");
-		return false;
+		if (cmdcost_gold > set.gold)
+			unaffordable = true;
+		else if (cmdcost_food > set.food)
+			unaffordable = true;
+		else if (cmdcost_pop > 0)
+			if (set.population - cmdcost_pop < GetConst("MinPopulation"))
+				unaffordable = true;
+
+		reasonText = rollover(this, unaffordable);
+		return true;
 	}
-	if(EnvReadInt(.settlement,"IsStoring")==1) {
-		return false;
-	}
-	if(EnvReadString(.settlement,"Trade Routes")!="researched"){
-		reasonText = Translate(rollover(this,false));
-		reasonText = reasonText + "\n<color 255 0 0>";
-		reasonText = reasonText + Translatef("Requires %s1", "Trade Routes");
-		return false;
-	}
-	if(.settlement.gold<800){
-		reasonText = Translate(rollover(this,false));
-		reasonText = reasonText + "\n<color 255 0 0>";
-		reasonText = reasonText + Translate("Not enough gold");
-	}
-	return true;
-}
+	else
+		reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", "Trade Routes");
+
 return false;

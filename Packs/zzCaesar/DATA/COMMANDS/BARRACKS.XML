@@ -5,7 +5,7 @@
 		key="r"
 		queueicon="gameres/icons/upgrades/repair.bmp"
 		rollover="Repair"
-		costgold="500"
+		costgold="100"
 		groupverifier="data/subai/verify_cmdcost_building.vs"
 		execdelay="60000">
 		<src obj="GBarracks" />

@@ -6,7 +6,7 @@ point pos;
 int i, radius;
 bool first_time_independent;
 
-Sleep(rand(1000) + 500);
+Sleep(rand(1001) + 500);
 
 this = This.AsBuilding();
 set = .settlement;
@@ -59,7 +59,7 @@ if (set.IsIndependent) {
 
 	if (defenders_class_1 != "")
 		for (i = 0; i < defenders_max_1; i += 1) {
-			u = Place(defenders_class_1, pos, player);
+			u = Place(defenders_class_1, pos, player).AsUnit();
 			set.ForceAddUnit(u);
 			u.SetFeeding(false);
 			u.SetLevel(old_level_1);
@@ -68,7 +68,7 @@ if (set.IsIndependent) {
 		}
 	if (defenders_class_2 != "")
 		for (i = 0; i < defenders_max_2; i += 1) {
-			u = Place(defenders_class_2, pos, player);
+			u = Place(defenders_class_2, pos, player).AsUnit();
 			set.ForceAddUnit(u);
 			u.SetFeeding(false);
 			u.SetLevel(old_level_2);
@@ -215,15 +215,35 @@ if (set.IsIndependent) {
 					}
 			}
 
-			//handle the capturing
+			//handle the capturing (the new owner will be chosen randomly among the players with most units nearby)
 			all_defenders_1.ClearDead();
 			if (all_defenders_1.count <= 0) {
 				all_defenders_2.ClearDead();
 				if (all_defenders_2.count <= 0) {
 					enemies.ClearDead();
 					i = enemies.count;
-					if (i > 0)
-						.SetPlayer(enemies[rand(i)].player);
+					if (i > 0) {
+						IntArray player_units, players;
+						int max, p;
+						for (j = 0; j < i; j += 1)
+							player_units[enemies[j].player] += 1;//count units per player
+						for (i = 1; i <= 16; i += 1) {
+							j = player_units[i];
+							if (j > 0)
+								if (j > max) {//new max found, reset the players to choose from
+									max = j;
+									players.resize(0);
+									players[0] = i;
+									p = 1;
+								}
+								else if (j == max) {//add one more player to choose from
+									players[p] = i;
+									p += 1;
+								}
+						}
+						if (p > 0)
+							.SetPlayer(players[rand(p)]);
+					}
 				}
 			}
 		}
@@ -235,17 +255,12 @@ if (set.IsIndependent) {
 		if (!set.IsIndependent) {//avoid giving peasants to possible neutral units coming from other outposts
 			j = .player;
 			if (.class == "COutpost") {
-				for (i = 0; i < 20; i += 1) {
-					u = Place("CVillager", pos, j);
-					set.ForceAddUnit(u);
-				}
+				for (i = 0; i < 20; i += 1)
+					set.ForceAddUnit(Place("CVillager", pos, j).AsUnit());
 			}
-			else if (.class == "HOutpost") {
-				for (i = 0; i < 20; i += 1) {
-					u = Place("HVillager", pos, j);
-					set.ForceAddUnit(u);
-				}
-			}
+			else if (.class == "HOutpost")
+				for (i = 0; i < 20; i += 1)
+					set.ForceAddUnit(Place("HVillager", pos, j).AsUnit());
 			EnvWriteInt(set, "FirstCaptureReward", 1);
 		}
 }

@@ -1,0 +1,4 @@
+<class id="Mule" parent="Wagon" cpp_class="CVXWagon" entity="">
+	<properties select_class="Mule" />
+	<properties help="contents/units/Mule" />
+</class>

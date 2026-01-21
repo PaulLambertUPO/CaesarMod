@@ -93,6 +93,14 @@
 		activetime="2500"
 		duration="2500"
 	/>
+	<notification id="target not in range"
+		title="Target out of range"
+		category="military"
+		icon="gameres/infobar/common/tutorial.bmp"
+		sound="Sounds/Notifications/not enough.wav"
+		activetime="2500"
+		duration="2500"
+	/>
 	<notification id="inn spotted"
 		title="Inn found"
 		category="military"

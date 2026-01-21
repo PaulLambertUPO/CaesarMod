@@ -8,6 +8,8 @@
 
 	<properties formation_priority="1200" />
 
+	<properties select_class="RHastatus" />
+
 	<properties display_name="Hastatus" display_name_plural="Hastati" />
 	<properties icon="gameres/icons/RHastatus.bmp" />
 	<properties help="contents/units/RHastatus" />

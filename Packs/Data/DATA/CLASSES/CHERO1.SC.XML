@@ -1,5 +1,5 @@
 <class id="CHero1" parent="CarthaginianHero" cpp_class="CVXHero" entity="Units/CHero1/CHero1.ent.xml">
-	<properties display_name="Mago" display_name_plural="Heroes" />
+	<properties display_name="Mago" />
 	<properties icon="gameres/icons/CHero1.bmp" />
 	<properties edittree_pos="Units/Carthage/Hero 1" />
 </class>

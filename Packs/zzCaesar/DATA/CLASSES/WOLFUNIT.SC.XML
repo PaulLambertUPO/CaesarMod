@@ -6,6 +6,8 @@
 	<properties speed="140" />
 	<properties unit_specials="Drain, Ferocity, Freedom" />
 
+	<properties select_class="WolfUnit" />
+
 	<properties healthbar_type="2" />
 	<properties radius="20" selection_radius="21" />
 

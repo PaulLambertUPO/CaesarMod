@@ -4,9 +4,9 @@ Building this;
 
 this = objs[0].AsBuilding();
 
-if (.IsValid)
-	if (EnvReadString(this, "researching") != "yes")
-		if (EnvReadInt(.settlement, "IsStoring") == 1)
-			return true;
+if (EnvReadInt(.settlement, "IsStoring") == 1) {
+	reasonText = rollover(this, false);
+	return true;
+}
 
 return false;

@@ -7,6 +7,8 @@
 	<properties radius="10" selection_radius="20" />
 	<properties healthbar_type="0" />
 
+	<properties select_class="CrowUnit" />
+
 	<properties display_name="Crow" display_name_plural="Crows" />
 	<properties icon="gameres/icons/crow.bmp" />
 	<properties help="contents/units/Animals/Crow" />

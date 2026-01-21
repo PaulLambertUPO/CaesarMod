@@ -3,7 +3,7 @@
 	<properties race="Iberia" />
 	<properties HeroSkills="Ceasefire, Epic endurance, Euphoria, Healing, Team defense" />
 
-	<properties display_name="Zurfah" display_name_plural="Heroes" />
+	<properties display_name="Zurfah" />
 	<properties icon="gameres/icons/IHero4.bmp" />
 	<properties help="contents/units/IHero" />
 	<properties edittree_pos="Units/Heroes/Zurfah (Iberian)" />

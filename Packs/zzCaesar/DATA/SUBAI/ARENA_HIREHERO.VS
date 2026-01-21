@@ -1,6 +1,6 @@
 //void, Obj This
 
-Barrack this;
+Building this;
 Settlement set;
 Unit new_unit;
 point exit_point;
@@ -10,11 +10,7 @@ this = This.AsBuilding();
 set = .settlement;
 player = .player;
 
-while (set.IsFull())
-	Sleep(500);
 .Progress();
-while (set.IsFull())
-	Sleep(500);
 
 level = EnvReadInt(set, "levels/Hero");
 

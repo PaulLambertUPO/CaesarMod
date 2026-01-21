@@ -65,7 +65,7 @@ if (.IsValid) {
 								if (target_catapult)
 									if (.HasSpecial(trample))
 										target.Damage(.damage);
-								if (rand(3) == 0)
+								if (rand(5) == 0)
 									if (.health < .maxhealth / 2) {
 										ObjList enemies;
 
@@ -82,7 +82,7 @@ if (.IsValid) {
 											pt_flee.SetLen(.sight * 2);
 											pt_flee = (pt_flee + .pos).ClampToMap();
 
-											if (rand(3) == 0)
+											if (rand(4) == 0)
 												Intersect(ObjsInSight(this, "Wolf"), FriendlyObjs(.player, "Wolf")).SetCommandOffset("move", pt_flee);
 											.AddCommand(true, "move", pt_flee);
 											return;

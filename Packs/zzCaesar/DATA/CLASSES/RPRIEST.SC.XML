@@ -6,6 +6,8 @@
 	<properties speed="60" />
 	<properties unit_specials="Active, Healing" />
 
+	<properties select_class="RPriest" />
+
 	<properties display_name="Priest" display_name_plural="Priests" />
 	<properties icon="gameres/icons/RPriest.bmp" />
 	<properties help="contents/units/RPriest" />

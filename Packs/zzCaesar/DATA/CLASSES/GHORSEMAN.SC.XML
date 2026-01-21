@@ -8,6 +8,8 @@
 
 	<properties healthbar_type="3" />
 
+	<properties select_class="GHorseman" />
+
 	<properties display_name="Horseman" display_name_plural="Horsemen" />
 	<properties icon="gameres/icons/GHorseman.bmp" />
 	<properties help="contents/units/GHorseman" />

@@ -8,6 +8,8 @@
 
 	<properties formation_priority="1200" />
 
+	<properties select_class="HHoplite" />
+
 	<properties display_name="Hoplite" display_name_plural="Hoplites" />
 	<properties icon="gameres/icons/HHoplite.bmp" />
 	<properties help="contents/units/HHoplite" />

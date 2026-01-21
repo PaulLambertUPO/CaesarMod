@@ -27,27 +27,27 @@
 		<state idx="2" name="attack" image_idx="0" image_row="1" offsetx="-68" offsety="-90" anim_idx="5" anim_frame="1" />
 	</states>
 	<anims>
-		<anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="1386" default_duration="0" action_time="0" step="76">
+		<anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="1036" default_duration="74" action_time="0" step="76">
 			<replace layer="1" image="11" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="12" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
-			<frame idx="2" duration="99" />
-			<frame idx="3" duration="99" />
-			<frame idx="4" duration="99" />
-			<frame idx="5" duration="99" />
-			<frame idx="6" duration="99" />
-			<frame idx="7" duration="99" />
-			<frame idx="8" duration="99" />
-			<frame idx="9" duration="99" />
-			<frame idx="10" duration="99" />
-			<frame idx="11" duration="99" />
-			<frame idx="12" duration="99" />
-			<frame idx="13" duration="99" />
-			<frame idx="14" duration="99" />
-			<frame idx="15" duration="99" />
+			<frame idx="2" duration="74" />
+			<frame idx="3" duration="74" />
+			<frame idx="4" duration="74" />
+			<frame idx="5" duration="74" />
+			<frame idx="6" duration="74" />
+			<frame idx="7" duration="74" />
+			<frame idx="8" duration="74" />
+			<frame idx="9" duration="74" />
+			<frame idx="10" duration="74" />
+			<frame idx="11" duration="74" />
+			<frame idx="12" duration="74" />
+			<frame idx="13" duration="74" />
+			<frame idx="14" duration="74" />
+			<frame idx="15" duration="74" />
 			<frame idx="16" duration="0" />
 		</anim>
-		<anim idx="5" name="Attack" startstate="2" endstate="2" frames="20" duration="1160" default_duration="0" action_time="480" step="0">
+		<anim idx="5" name="Attack" startstate="2" endstate="2" frames="20" duration="1160" default_duration="0" action_time="470" step="0">
 			<replace layer="1" image="1" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="2" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
@@ -71,7 +71,7 @@
 			<frame idx="19" duration="70" />
 			<frame idx="20" duration="0" />
 		</anim>
-		<anim idx="9" name="Die" startstate="1" endstate="1" frames="20" duration="9400" default_duration="0" action_time="0" step="0">
+		<anim idx="9" name="Die" startstate="1" endstate="1" frames="20" duration="10200" default_duration="0" action_time="0" step="0">
 			<replace layer="1" image="3" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="4" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
@@ -86,16 +86,16 @@
 			<frame idx="10" duration="100" />
 			<frame idx="11" duration="100" />
 			<frame idx="12" duration="100" />
-			<frame idx="13" duration="200" />
+			<frame idx="13" duration="100" />
 			<frame idx="14" duration="500" />
-			<frame idx="15" duration="800" />
-			<frame idx="16" duration="800" />
-			<frame idx="17" duration="1000" />
-			<frame idx="18" duration="2000" />
-			<frame idx="19" duration="3000" />
+			<frame idx="15" duration="1000" />
+			<frame idx="16" duration="1000" />
+			<frame idx="17" duration="2000" />
+			<frame idx="18" duration="2500" />
+			<frame idx="19" duration="2000" />
 			<frame idx="20" duration="0" />
 		</anim>
-		<anim idx="13" name="Idle" startstate="1" endstate="1" frames="10" duration="800" default_duration="0" action_time="0" step="0">
+		<anim idx="13" name="Idle" startstate="1" endstate="1" frames="10" duration="800" default_duration="100" action_time="0" step="0">
 			<replace layer="1" image="5" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="6" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
@@ -109,7 +109,7 @@
 			<frame idx="9" duration="100" />
 			<frame idx="10" duration="0" />
 		</anim>
-		<anim idx="18" name="ToIdle" startstate="2" endstate="1" frames="9" duration="504" default_duration="0" action_time="0" step="0">
+		<anim idx="18" name="ToIdle" startstate="2" endstate="1" frames="9" duration="504" default_duration="72" action_time="0" step="0">
 			<replace layer="1" image="13" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="14" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
@@ -122,7 +122,7 @@
 			<frame idx="8" duration="72" />
 			<frame idx="9" duration="0" />
 		</anim>
-		<anim idx="19" name="ToAttack" startstate="1" endstate="2" frames="9" duration="672" default_duration="0" action_time="0" step="0">
+		<anim idx="19" name="ToAttack" startstate="1" endstate="2" frames="9" duration="672" default_duration="96" action_time="0" step="0">
 			<replace layer="1" image="9" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="10" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
@@ -135,18 +135,18 @@
 			<frame idx="8" duration="96" />
 			<frame idx="9" duration="0" />
 		</anim>
-		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="10" duration="1136" default_duration="0" action_time="0" step="0">
+		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="10" duration="1008" default_duration="126" action_time="630" step="0">
 			<replace layer="1" image="7" offsetx="-68" offsety="-90" />
 			<replace layer="2" image="8" offsetx="-68" offsety="-90" />
 			<frame idx="1" duration="0" />
-			<frame idx="2" duration="142" />
-			<frame idx="3" duration="142" />
-			<frame idx="4" duration="142" />
-			<frame idx="5" duration="142" />
-			<frame idx="6" duration="142" />
-			<frame idx="7" duration="142" />
-			<frame idx="8" duration="142" />
-			<frame idx="9" duration="142" />
+			<frame idx="2" duration="126" />
+			<frame idx="3" duration="126" />
+			<frame idx="4" duration="126" />
+			<frame idx="5" duration="126" />
+			<frame idx="6" duration="126" />
+			<frame idx="7" duration="126" />
+			<frame idx="8" duration="126" />
+			<frame idx="9" duration="126" />
 			<frame idx="10" duration="0" />
 		</anim>
 	</anims>

@@ -8,7 +8,7 @@ if (GetUseCount() <= 0) {
 	if (.IsValid)
 		if (!.InHolder)
 			if (target.AsUnit().IsValid)
-				if (.IsEnemy(target)) {
+				if (.IsEnemy(target))
 					if (.DistTo(target) <= .sight) {
 						int missing_health;
 
@@ -41,7 +41,8 @@ if (GetUseCount() <= 0) {
 							}
 						}
 					}
-				}
+					else
+						UserNotification("target not in range", "", .posRH, .player);
 				else
 					UserNotification("enemy target only", "", .posRH, .player);
 			else

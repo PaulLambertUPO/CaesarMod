@@ -1,7 +1,6 @@
 <class id="BOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/BOutpost/BOutpost.ent.xml">
 	<properties race="Britain" />
 	<properties maxhealth="10000" />
-	<properties radius="345" selection_radius="350" />
 	<properties display_name="Training outpost" />
 	<properties icon="gameres/icons/BOutpost.bmp" />
 	<properties help="contents/buildings/TrainingOutpost" />

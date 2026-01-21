@@ -27,30 +27,33 @@ difficulty = GetDifficulty();
 
 	b = NO_Town2.obj.AsBuilding();
 	b.Research("Greek Spears");
-	b.Research("Strengthen Stronghold Gates");
+	b.Research("Strengthen Stronghold Walls");
 	b.Research("Charm of Athena");
+	EnvWriteString(2, "GovernmentForm", "Democracy");
+	StartPlayerScript(2, "Data/Subai/Government_Form.vs");
 
 	b = NO_Town3.obj.AsBuilding();
 	b.Research("Greek Horse Armor");
-	b.Research("Strengthen Stronghold Gates");
+	b.Research("Strengthen Stronghold Walls");
 	b.Research("Charm of Aegle");
+	EnvWriteString(3, "GovernmentForm", "Oligarchy");
+	StartPlayerScript(3, "Data/Subai/Government_Form.vs");
 
 	b = NO_Town4.obj.AsBuilding();
 	b.Research("Greek Royal Armor");
-	b.Research("Strengthen Stronghold Gates");
+	b.Research("Strengthen Stronghold Walls");
 	b.Research("Spartan Training");
 	b.Research("Tribute to Heracles");
+	EnvWriteString(7, "GovernmentForm", "Oligarchy");
+	StartPlayerScript(7, "Data/Subai/Government_Form.vs");
 
 	b = NO_Town5.obj.AsBuilding();
 	b.Research("Greek Chariot Wheels");
-	b.Research("Strengthen Stronghold Gates");
+	b.Research("Strengthen Stronghold Walls");
 	b.Research("Supplies");
 	b.Research("Statue of Zeus");
-
-	EnvWriteString(2, "GovernmentForm", "Democracy");
-	EnvWriteString(3, "GovernmentForm", "Oligarchy");
-	EnvWriteString(7, "GovernmentForm", "Oligarchy");
 	EnvWriteString(8, "GovernmentForm", "Democracy");
+	StartPlayerScript(8, "Data/Subai/Government_Form.vs");
 }
 
 set2 = GetSettlement("S_Town2");

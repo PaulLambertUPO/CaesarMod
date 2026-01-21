@@ -25,11 +25,11 @@
 	<behavior script="data/subai/townhall_autotrain.vs" />
 	<behavior script="data/subai/townhall_sentries_control.vs" />
 
-	<method sig="unitsout" vs="data/subai/townhall_unitsout.vs" />
-	<method sig="createfoodmulesmall" vs="data/subai/create_food_mule_small.vs" />
-	<method sig="createfoodmulebig" vs="data/subai/create_food_mule_big.vs" />
-	<method sig="creategoldmulesmall" vs="data/subai/create_gold_mule_small.vs" />
-	<method sig="creategoldmulebig" vs="data/subai/create_gold_mule_big.vs" />
+	<method sig="unitsout" vs="data/subai/do_nothing_point.vs" />
+	<method sig="createfoodmulesmall" vs="data/subai/do_nothing_void.vs" />
+	<method sig="createfoodmulebig" vs="data/subai/do_nothing_void.vs" />
+	<method sig="creategoldmulesmall" vs="data/subai/do_nothing_void.vs" />
+	<method sig="creategoldmulebig" vs="data/subai/do_nothing_void.vs" />
 	<method sig="autotrain_start" vs="data/subai/townhall_autotrain_start.vs" />
 	<method sig="autotrain_stop" vs="data/subai/townhall_autotrain_stop.vs" />
 	<method sig="military_training" vs="data/subai/townhall_military_training.vs" />

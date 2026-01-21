@@ -6,6 +6,8 @@
 	<properties speed="80" />
 	<properties unit_specials="Attack skill, Defense skill, Determination" />
 
+	<properties select_class="RPrinciple" />
+
 	<properties display_name="Principle" display_name_plural="Principles" />
 	<properties icon="gameres/icons/RPrinciple.bmp" />
 	<properties help="contents/units/RPrinciple" />

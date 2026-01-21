@@ -1,3 +1,3 @@
 <class id="ROutpostWinter" parent="ROutpost" cpp_class="CVXOutpost" entity="Buildings/ROutpost/ROutpost_w.ent.xml">
-	<properties edittree_pos="Structures/Interactive/Winter/Gold outpost" />
+	<properties edittree_pos="Structures/Outposts/Winter/Gold outpost (Roman)" />
 </class>

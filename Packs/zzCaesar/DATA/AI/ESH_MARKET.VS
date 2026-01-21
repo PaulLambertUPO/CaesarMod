@@ -68,89 +68,73 @@ if (rand(2) == 0) {
 	else if (nRace == Britain)
 		if (nAssUnderFire >= 10)
 			b = set.GetCentralBuilding();
-	if (b.IsValid) {
-		ObjList olMilInRange;
-		int i;
-		i = b.sight * 3 / 2;
-		olMilInRange = ObjsInRange(b, "Military", i).GetObjList();
-		if (olMilInRange.count > 0) {
-			ObjList olEnemy;
-			olEnemy = olMilInRange.ObjEnemy(aiPlayer);
-			if (olEnemy.count > 0) {
-				olMilInRange.RemoveList(olEnemy);
-				if (olMilInRange.count > 0) {
-					int ownEval, allyEval, enemyEval;
-					Eval(aiPlayer, b.pos, i, ownEval, allyEval, enemyEval);
-					i = ownEval + allyEval;//this cannot be negative (reason for the specific -1 check below)
-					if (i < enemyEval * 2)
-						i = -1;
-					else {
-						i -= enemyEval;
-						if (i >= -500)
-							if (i <= 500)
-								i = -1;
-					}
-					if (i == -1) {
-						Unit u;
-						int nHealth, nMaxHealth, nStamina, nMaxStamina;
-						str cmd;
-						for (i = 0; i < olMilInRange.count; i += 1) {
-							u = olMilInRange[i].AsUnit();
-							if (u.IsValid)
-								if (u.IsAlive) {
-									nHealth += u.health;
-									nMaxHealth += u.maxhealth;
-									nStamina += u.stamina;
-									nMaxStamina += u.maxstamina;
-								}
+	if (b.IsValid)
+		if (!b.IsBroken) {
+			ObjList olMilInRange;
+			int i;
+			i = b.sight * 3 / 2;
+			olMilInRange = ObjsInRange(b, "Military", i).GetObjList();
+			if (olMilInRange.count > 0) {
+				ObjList olEnemy;
+				olEnemy = olMilInRange.ObjEnemy(aiPlayer);
+				if (olEnemy.count > 0) {
+					olMilInRange.RemoveList(olEnemy);
+					if (olMilInRange.count > 0) {
+						int ownEval, allyEval, enemyEval;
+						Eval(aiPlayer, b.pos, i, ownEval, allyEval, enemyEval);
+						i = ownEval + allyEval;//this cannot be negative (reason for the specific -1 check below)
+						if (i < enemyEval * 2)
+							i = -1;
+						else {
+							i -= enemyEval;
+							if (i >= -500)
+								if (i <= 500)
+									i = -1;
 						}
-						if (nRace == Iberia) {
-							if (nHealth <= nMaxHealth * 2 / 3)
-								cmd = "heal";
-						}
-						else if (nRace == Egypt) {
-							if (nHealth <= nMaxHealth / 2)//with Religious Feast and other bonuses/skills, healing for Egypt is much easier than for Iberia
-								cmd = "heal";
-						}
-						else if (nRace == Britain) {
-							if (nStamina <= nMaxStamina / 2)
-								cmd = "refreshment";
-						}
-						else if (nRace == Gaul)
-							if (nStamina <= nMaxStamina / 3)//Gaul units generally benefit less from stamina than Britain ones
-								cmd = "refreshment";
-						if (cmd != "")
-							if (set.CanResearch(cmd))
-								if (set.CanAfford(cmd)) {
-									int gold, food;
-									if (GetCmdCost(cmd, gold, food)) {
-										set.SpentGoldOnTech(gold + food / 2);
-										set.Research(cmd);
+						if (i == -1) {
+							Unit u;
+							int nHealth, nMaxHealth, nStamina, nMaxStamina;
+							str cmd;
+							for (i = 0; i < olMilInRange.count; i += 1) {
+								u = olMilInRange[i].AsUnit();
+								if (u.IsValid)
+									if (u.IsAlive) {
+										nHealth += u.health;
+										nMaxHealth += u.maxhealth;
+										nStamina += u.stamina;
+										nMaxStamina += u.maxstamina;
 									}
-								}
+							}
+							if (nRace == Iberia) {
+								if (nHealth <= nMaxHealth * 2 / 3)
+									cmd = "heal";
+							}
+							else if (nRace == Egypt) {
+								if (nHealth <= nMaxHealth / 2)//with Religious Feast and other bonuses/skills, healing for Egypt is much easier than for Iberia
+									cmd = "heal";
+							}
+							else if (nRace == Britain) {
+								if (nStamina <= nMaxStamina / 2)
+									cmd = "refreshment";
+							}
+							else if (nRace == Gaul)
+								if (nStamina <= nMaxStamina / 3)//Gaul units generally benefit less from stamina than Britain ones
+									cmd = "refreshment";
+							if (cmd != "")
+								if (set.CanResearch(cmd))
+									if (set.CanAfford(cmd)) {
+										int gold, food;
+										if (GetCmdCost(cmd, gold, food)) {
+											set.SpentGoldOnTech(gold + food / 2);
+											set.Research(cmd);
+										}
+									}
+						}
 					}
 				}
 			}
 		}
-	}
 }
-
-//townhall - hire sentries (Greece)
-if (nRace == ImperialRome)
-	if (nAssUnderFire >= 10)
-		if (rand(2) == 0)
-			if (set.gold >= 1600)
-				if (GetTime() >= 300000)//avoid hiring sentries as soon as the game starts
-					if (set.GetNumSentries() <= set.GetMaxSentries() / 3)//total max = InitialStrongholdSentries + 1 per wall + 4 per gate (usually 50-52)
-						if (set.CanResearch("hire_sentries"))
-							if (set.CanAfford("hire_sentries")) {
-								int gold, food;
-								if (GetCmdCost("hire_sentries", gold, food))
-									if (!Intersect(VisibleObjsInSight(set.GetCentralBuilding(), "Military"), EnemyObjs(aiPlayer, "Military")).IsEmpty) {
-										set.SpentGoldOnTech(gold + food / 2);
-										set.Research("hire_sentries");
-									}
-							}
 
 //tribute
 if (strTech == "")
@@ -262,8 +246,19 @@ if (nRace == RepublicanRome) {
 										i = 15;
 									else if (nAssUnderFire >= 10)
 										i = 10;
-									else if (set.SupplyCount("BaseVillage") >= 3)
-										i = 5;
+									else {
+										ObjList ownedVillages;
+										int j;
+										ownedVillages = GetSettlements("BaseVillage", aiPlayer);
+										for (i = ownedVillages.count - 1; i >= 0; i -= 1)
+											if (ownedVillages[i].AsBuilding().settlement.supplied == set) {
+												j += 1;
+												if (j >= 3) {
+													i = 5;
+													break;
+												}
+											}
+									}
 									if (i > 0) {
 										if (IsResearched(aiPlayer, "Flexibility"))
 											i += 65;
@@ -412,12 +407,28 @@ if (nRace == Carthage)
 				}
 				else if (rand(2) == 0)
 					if (set.population >= set.max_population + 10) {
-						if (set.SupplyCount("BaseVillage") >= 1)
-							cmd = "Slavery";
+						ObjList ownedVillages;
+						int i;
+						ownedVillages = GetSettlements("BaseVillage", aiPlayer);
+						for (i = ownedVillages.count - 1; i >= 0; i -= 1)
+							if (ownedVillages[i].AsBuilding().settlement.supplied == set) {
+								cmd = "Slavery";
+								break;
+							}
 					}
-					else if (set.population >= set.max_population * 9 / 10)
-						if (set.SupplyCount("BaseVillage") >= 3)
-							cmd = "Slavery";
+					else if (set.population >= set.max_population * 9 / 10) {
+						ObjList ownedVillages;
+						int i, j;
+						ownedVillages = GetSettlements("BaseVillage", aiPlayer);
+						for (i = ownedVillages.count - 1; i >= 0; i -= 1)
+							if (ownedVillages[i].AsBuilding().settlement.supplied == set) {
+								j += 1;
+								if (j >= 3) {
+									cmd = "Slavery";
+									break;
+								}
+							}
+					}
 				if (cmd != "")
 					if (set.CanResearch(cmd))
 						if (set.CanAfford(cmd)) {
@@ -488,13 +499,28 @@ if (nRace == Egypt)
 							}
 						}
 			}
-		if (strTech == "")
-			if (bEgyptGreeceSlaves)
-				if (rand(2) == 0)
-					if (set.gold >= 2500)
-						if (set.population <= set.max_population * 2 / 3)
-							if (set.SupplyCount("BaseVillage") >= 3)
-								strTech = "Slavery investment";
+		if (bEgyptGreeceSlaves)
+			if (rand(3) == 0)
+				if (set.population <= set.max_population * 2 / 3)
+					if (set.CanResearch("Slavery investment"))
+						if (set.CanAfford("Slavery investment")) {
+							int gold, food;
+							if (GetCmdCost("Slavery investment", gold, food)) {
+								ObjList ownedVillages;
+								int i, j;
+								ownedVillages = GetSettlements("BaseVillage", aiPlayer);
+								for (i = ownedVillages.count - 1; i >= 0; i -= 1)
+									if (ownedVillages[i].AsBuilding().settlement.supplied == set) {
+										j += 1;
+										if (j >= 3) {
+											set.SpentGoldOnTech(gold + food / 2);
+											set.Research("Slavery investment");
+											bEgyptGreeceSlaves = false;
+											break;
+										}
+									}
+							}
+						}
 	}
 
 //simple commands - buy slaves (Greece and Egypt) | IMPORTANT: this part must stay between "hecatomb and slavery investment" and "add population"

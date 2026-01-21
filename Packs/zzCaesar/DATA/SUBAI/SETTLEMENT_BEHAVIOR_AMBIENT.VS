@@ -47,10 +47,13 @@ else {
 			for (j = 0; j < 5; j += 1) {
 				pt1.Set(pos.x + 600 - rand(1200), pos.y + 600 - rand(1200));
 				if (IsPassable3x3(pt1)) {
-					u = Place("Hen", pt1, 15);
-					u.SetNoselectFlag(true);
-					u.SetMinimapFlag(true);
-					break;
+					u = Place("Hen", pt1, 15).AsUnit();
+					if (u.IsValid) {
+						u.SetNoAIFlag(true);
+						u.SetNoselectFlag(true);
+						u.SetMinimapFlag(true);
+						break;
+					}
 				}
 			}
 	}
@@ -126,10 +129,13 @@ else {
 						if (pt1.x != -1)
 							if (pt1.y != -1) {
 								pt2.Set(pt1.x * 2 - bld1.pos.x + 50 - rand(100), pt1.y * 2 - bld1.pos.y + 50 - rand(100));
-								u = Place(villager_classes[rand(villager_classes.size)], pt1, player);
-								u.SetNoselectFlag(true);
-								u.SetMinimapFlag(true);
-								u.SetCommand("walkanddie", pt2);
+								u = Place(villager_classes[rand(villager_classes.size)], pt1, player).AsUnit();
+								if (u.IsValid) {
+									u.SetNoAIFlag(true);
+									u.SetNoselectFlag(true);
+									u.SetMinimapFlag(true);
+									u.SetCommand("walkanddie", pt2);
+								}
 							}
 				}
 		}
@@ -205,16 +211,19 @@ else {
 											i = rand(6);
 											if (!found_idle_peasant) {
 												if (i == 0)
-													u = Place(villager_classes[1], pt1, player);
+													u = Place(villager_classes[1], pt1, player).AsUnit();
 												else if (i <= 2)
-													u = Place(villager_classes[rand(2)], pt1, player);
+													u = Place(villager_classes[rand(2)], pt1, player).AsUnit();
 												else
-													u = Place(villager_classes[rand(villager_classes.size)], pt1, player);
-												u.SetEntering(true);
-												u.SetMessengerStatus(true);
-												u.SetNoselectFlag(true);
-												u.SetMinimapFlag(true);
-												peasants.Add(u);
+													u = Place(villager_classes[rand(villager_classes.size)], pt1, player).AsUnit();
+												if (u.IsValid) {
+													u.SetEntering(true);
+													u.SetNoAIFlag(true);
+													u.SetNoselectFlag(true);
+													u.SetMinimapFlag(true);
+													u.SetMessengerStatus(true);
+													peasants.Add(u);
+												}
 											}
 											if (u.IsValid) {
 												u.SetCommand("moveenter", pt2);

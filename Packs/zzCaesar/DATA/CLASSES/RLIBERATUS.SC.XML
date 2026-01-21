@@ -6,6 +6,8 @@
 	<properties speed="90" />
 	<properties unit_specials="Bleeding attack, Freedom, Learning" />
 
+	<properties select_class="RLiberatus" />
+
 	<properties display_name="Liberatus" display_name_plural="Liberati" />
 	<properties icon="gameres/icons/RLiberatus.bmp" />
 	<properties help="contents/units/RLiberatus" />

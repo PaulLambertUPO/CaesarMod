@@ -337,35 +337,45 @@
 	</item>
 	<item id="Veteran Offence"
 		image="gameres/icons/items/Veteran Offence.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
+		cursed="1"
 		name="Veteran offence"
 		description="Adds 25% damage">
 		<bonus damage_percent="25" />
 	</item>
 	<item id="Veteran Defence"
 		image="gameres/icons/items/Veteran Defence.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
+		cursed="1"
 		name="Veteran defence"
 		description="Adds 25% armor">
 		<bonus armor_slash_percent="25" armor_pierce_percent="25" />
 	</item>
 	<item id="Veteran Health"
 		image="gameres/icons/items/Veteran Health.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
+		cursed="1"
 		name="Veteran health"
 		description="Adds 25% health">
 		<bonus health_percent="25" />
 	</item>
 	<item id="Noble Offence"
 		image="gameres/icons/items/Noble Offence.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
+		cursed="1"
 		name="Noble offence"
 		description="Adds 8 damage">
 		<bonus damage="8" />
 	</item>
 	<item id="Noble Defence"
 		image="gameres/icons/items/Noble Defence.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
+		cursed="1"
 		name="Noble defence"
 		description="Adds 8 armor">
 		<bonus armor_slash="8" armor_pierce="8" />
@@ -424,6 +434,7 @@
 	</item>
 	<item id="Charm of Athena"
 		image="gameres/icons/items/Charm of Athena.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		name="Charm of Athena"
 		important="no"
 		cursed="1"
@@ -433,6 +444,7 @@
 	</item>
 	<item id="Charm of Aegle"
 		image="gameres/icons/items/Charm of Aegle.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		name="Charm of Aegle"
 		important="no"
 		cursed="1"

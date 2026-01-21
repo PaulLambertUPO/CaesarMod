@@ -1,17 +1,17 @@
-//void, Obj This
+//void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
 Building this;
 Wagon boat;
 
-this = This.AsBuilding();
+this = objs[0].AsBuilding();
 
-boat = .settlement.CreateBoatGold(1000);
+boat = .settlement.CreateBoatGold(1000).AsWagon();
 
 if (boat.IsValid) {
 	point pt_exit;
 
-	ClearSelection(boat.player);
-	boat.Select(boat.player);
+	ClearSelection(player);
+	boat.Select(player);
 
 	pt_exit = .GetExitVector();
 	pt_exit.Rot(rand(91) - 45);//randomly rotate the destination to reduce the risk of boats getting stuck in the shipyard (they can be moved manually, but it's not nice to look at)

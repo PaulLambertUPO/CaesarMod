@@ -616,7 +616,7 @@ while (1) {
 									}
 							}
 
-							if (sq.TestFlags(SF_PEACEFUL)) {//go around with peaceful units
+							if (sq.TestFlags(SF_PEACEFUL)) {//make peaceful units go around if endangered or enter a stronghold if idle
 								if (sqGkAiDest != sqGkIn)
 									if (sqGkAiDest != sq.SrcGAIKA)
 										if (sq.DestGAIKA == sqGkAiDest)

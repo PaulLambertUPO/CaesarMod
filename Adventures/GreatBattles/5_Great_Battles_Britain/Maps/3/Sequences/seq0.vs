@@ -20,9 +20,10 @@ while (1) {
 					).IsEmpty()) {
 				if (IsAIHelperRunning(ai_helper))
 					StopAIHelper(ai_helper);
-				if (!bld.IsHeirOf("BaseVillage"))
-					if (guards.InHolder(set_name) < guards.count)
-						guards.SetCommand("enter", bld);
+				if (bld.IsHeirOf("BaseVillage"))
+					guards.SetCommand("approach", bld);
+				else if (guards.InHolder(set_name) < guards.count)
+					guards.SetCommand("enter", bld);
 			}
 			else if (!IsAIHelperRunning(ai_helper))
 				RunAIHelper(ai_helper, "guard area", set_guards, area_name);

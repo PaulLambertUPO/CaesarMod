@@ -28,9 +28,9 @@
 	/>
 	<behavior script="data/subai/ttent_behavior.vs" />
 
-	<method sig="createfoodmulesmall" vs="data/subai/create_food_mule_small.vs" />
-	<method sig="createfoodmulebig" vs="data/subai/create_food_mule_big.vs" />
-	<method sig="creategoldmulebig" vs="data/subai/create_gold_mule_big.vs" />
+	<method sig="unitsout" vs="data/subai/do_nothing_point.vs" />
+	<method sig="createfoodmulesmall" vs="data/subai/do_nothing_void.vs" />
+	<method sig="createfoodmulebig" vs="data/subai/do_nothing_void.vs" />
 	<method sig="tentproduction" vs="data/subai/tent_production.vs" />
 
 	<value0 icon="gameres/infobar/common/food ico.bmp"
@@ -38,6 +38,7 @@
 		help="contents/feeding"
 		rollover="Food"
 	/>
+
 	<defaultcmd target="">
 		<cmd name="unitsout" />
 	</defaultcmd>

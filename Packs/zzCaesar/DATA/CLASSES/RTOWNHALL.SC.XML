@@ -1,6 +1,5 @@
 <class id="RTownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/RTownhall/RTownhall_as.ent.xml" entity_winter="Buildings/RTownhall/RTownhall_w.ent.xml">
 	<properties race="RepublicanRome" />
-	<properties foodperpop="100" />
 	<properties radius="170" selection_radius="175" />
 	<properties display_name="Roman Townhall" />
 	<properties icon="gameres/icons/Rtownhall.bmp" />

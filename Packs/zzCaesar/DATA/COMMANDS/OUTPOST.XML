@@ -1,16 +1,5 @@
 <commands>
-	<cmd name="repair guard post" priority="1"
-		method="repair"
-		button="actions/repair.bmp"
-		key="r"
-		queueicon="gameres/icons/upgrades/repair.bmp"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
-		rollover="Repair"
-		costgold="500"
-		execdelay="60000">
-		<src obj="GGuardPost" />
-	</cmd>
-	<cmd name="outpost_attack" priority="2"
+	<cmd name="outpost_attack" priority="1"
 		method="attack"
 		button="Actions/Attack Arrows.bmp"
 		key="a"
@@ -19,5 +8,13 @@
 		<cmdtext target="Unit" text="Click to attack this enemy" default-text="Right-click to attack this enemy" />
 		<src obj="Outpost" />
 		<nsrc obj="GGuardPost" />
+	</cmd>
+	<cmd name="outpost_advance" priority="2"
+		button="Actions/Advance.bmp"
+		key="e"
+		groupdispatch="data/subai/outpost_advance.vs"
+		rollover="Launch sortie">
+		<cmdtext target="" text="Click to make all units advance to this position" />
+		<src obj="Outpost" />
 	</cmd>
 </commands>

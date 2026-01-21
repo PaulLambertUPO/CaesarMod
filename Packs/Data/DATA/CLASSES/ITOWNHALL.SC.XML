@@ -1,6 +1,5 @@
 <class id="ITownhall" parent="BaseTownhall" cpp_class="CVXTownHall" entity="Buildings/ITownhall/ITownhall.ent.xml">
 	<properties race="Iberia" />
-	<properties foodperpop="45" />
 	<properties radius="160" selection_radius="165" />
 	<properties display_name="Iberian Townhall" />
 	<properties icon="gameres/icons/Itownhall.bmp" />

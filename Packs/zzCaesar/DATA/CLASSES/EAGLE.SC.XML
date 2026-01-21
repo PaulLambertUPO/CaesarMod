@@ -9,6 +9,8 @@
 	<properties initial_z="200" />
 	<properties no_transparent_draw="1" />
 
+	<properties select_class="Eagle" />
+
 	<properties display_name="Eagle" display_name_plural="Eagles" />
 	<properties icon="gameres/icons/eagle.bmp" />
 	<properties help="contents/units/Animals/Eagle" />

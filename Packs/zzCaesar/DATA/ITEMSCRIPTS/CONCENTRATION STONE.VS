@@ -7,7 +7,7 @@ this = owner.AsUnit();
 if (.IsValid)
 	if (!.InHolder)
 		if (target.AsUnit().IsValid)
-			if (!.IsEnemy(target)) {
+			if (!.IsEnemy(target))
 				if (.DistTo(target) <= .sight * 3 / 2) {//more range because it targets allies
 					int missing_health;
 
@@ -31,7 +31,8 @@ if (.IsValid)
 						}
 					}
 				}
-			}
+				else
+					UserNotification("target not in range", "", .posRH, .player);
 			else
 				UserNotification("friendly target only", "", .posRH, .player);
 		else

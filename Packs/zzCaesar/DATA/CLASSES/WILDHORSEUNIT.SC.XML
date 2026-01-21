@@ -1,9 +1,11 @@
-<class id="UntamableHorse" parent="Animal" cpp_class="CVXUnit" entity="Units/WildHorse/WildHorse.ent.xml">
+<class id="WildHorseUnit" parent="Animal" cpp_class="CVXUnit" entity="Units/WildHorse/WildHorse.ent.xml">
 
 	<properties maxhealth="200" />
 	<properties armor_slash="2" armor_pierce="2" />
 	<properties speed="150" />
 	<properties radius="20" selection_radius="40" />
+
+	<properties select_class="WildHorseUnit" />
 
 	<properties display_name="Horse" display_name_plural="Horses" />
 	<properties icon="gameres/icons/horse.bmp" />

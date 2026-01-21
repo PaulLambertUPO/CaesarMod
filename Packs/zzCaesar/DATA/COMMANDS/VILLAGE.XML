@@ -25,7 +25,7 @@
 		groupverifier="data/subai/village_repopulate_verify.vs"
 		rollover="Repopulate"
 		description="Repairs the village hall and/or restores its minimum population"
-		costgold="500"
+		costgold="100"
 		execdelay="60000">
 		<src obj="BaseVillage" />
 	</cmd>
@@ -35,7 +35,7 @@
 		key="t"
 		rollover="Supply"
 		description="Constantly sends resources to another settlement"
-		failtext="Click on a townhall, village, outpost or shipyard to start sending resources">
+		failtext="Click on an allied townhall, village, outpost or shipyard to start sending resources">
 		<cmdtext target="BaseTownhall" text="Click on this Townhall to start sending resources" />
 		<cmdtext target="BaseVillage" text="Click on this Village to start sending resources" />
 		<cmdtext target="Outpost" text="Click on this Outpost to start sending resources" />
@@ -179,11 +179,11 @@
 	<cmd name="createfoodmule1" priority="6"
 		method="createfoodmulesmall"
 		groupverifier="data/subai/create_food_boat_verify.vs"
+		groupdispatch="data/subai/create_food_mule_small.vs"
 		button="actions/Create Mule Food Small.bmp"
 		queueicon="gameres/icons/wagon.bmp"
 		transpicon="1"
 		key="d"
-		immediate="yes"
 		rollover="Load a caravan with 250 food">
 		<src obj="BaseVillage" />
 		<src obj="BaseTownhall" />
@@ -194,11 +194,11 @@
 	<cmd name="creategoldmule1" priority="7"
 		method="creategoldmulesmall"
 		groupverifier="data/subai/create_gold_boat_verify.vs"
+		groupdispatch="data/subai/create_gold_mule_small.vs"
 		button="actions/Create Mule Gold Small.bmp"
 		queueicon="gameres/icons/wagon.bmp"
 		transpicon="1"
 		key="h"
-		immediate="yes"
 		rollover="Load a caravan with 250 gold">
 		<src obj="BaseVillage" />
 		<src obj="BaseTownhall" />
@@ -208,11 +208,11 @@
 	<cmd name="createfoodmule2" priority="8"
 		method="createfoodmulebig"
 		groupverifier="data/subai/create_food_boat_verify.vs"
+		groupdispatch="data/subai/create_food_mule_big.vs"
 		button="actions/Create Mule Food.bmp"
 		queueicon="gameres/icons/wagon.bmp"
 		transpicon="1"
 		key="f"
-		immediate="yes"
 		rollover="Load a caravan with 1000 food">
 		<src obj="BaseVillage" />
 		<src obj="BaseTownhall" />
@@ -223,11 +223,11 @@
 	<cmd name="creategoldmule2" priority="9"
 		method="creategoldmulebig"
 		groupverifier="data/subai/create_gold_boat_verify.vs"
+		groupdispatch="data/subai/create_gold_mule_big.vs"
 		button="actions/Create Mule Gold.bmp"
 		queueicon="gameres/icons/wagon.bmp"
 		transpicon="1"
 		key="g"
-		immediate="yes"
 		rollover="Load a caravan with 1000 gold">
 		<src obj="BaseVillage" />
 		<src obj="BaseTownhall" />

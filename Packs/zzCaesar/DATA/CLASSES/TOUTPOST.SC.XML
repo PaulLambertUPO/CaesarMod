@@ -1,7 +1,6 @@
 <class id="TOutpost" parent="Outpost" cpp_class="CVXOutpost" entity="Buildings/TOutpost/TOutpost.ent.xml">
 	<properties race="German" />
 	<properties maxhealth="10000" />
-	<properties radius="345" selection_radius="350" />
 	<properties display_name="Trade outpost" />
 	<properties icon="gameres/icons/TOutpost.bmp" />
 	<properties help="contents/buildings/TradeOutpost" />

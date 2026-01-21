@@ -1,11 +1,9 @@
-//void, Obj This
+//void, Obj this
 
-Building this;
 Settlement set;
 
-this = This.AsBuilding();
-set = .settlement;
+set = .AsBuilding().settlement;
 
-.Progress(.cmddelay);
+.Progress();
 
-set.SetFood(set.food + Str2Int(cmdparam));
+set.SetFood(set.food + 800);

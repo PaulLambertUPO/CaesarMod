@@ -11,8 +11,8 @@ while (1) {
 		for (j = 0; j < c; j += 1) {
 			u = ol[j].AsUnit();
 			if (u.IsValid)
-				if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-					if (u.IsAlive)
+				if (u.IsAlive)
+					if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
 						if (!u.AsHero().IsValid) {
 							u.SetExperience(u.experience + 1);
 							if (!u.InHolder)

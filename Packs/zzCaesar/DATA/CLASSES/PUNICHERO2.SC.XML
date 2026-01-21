@@ -1,5 +1,5 @@
 <class id="PunicHero2" parent="PunicRomanHero" cpp_class="CVXHero" entity="Units/RHero2/RHero2.ent.xml">
-	<properties display_name="Pavonius" display_name_plural="Heroes" />
+	<properties display_name="Pavonius" />
 	<properties icon="gameres/icons/zpwRHero11.bmp" />
 	<properties edittree_pos="Units/Roman/Hero (Punic) 2" />
 </class>

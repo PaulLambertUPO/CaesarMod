@@ -564,7 +564,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="66"
 	Level="7"
 	UnitFlags="0"
@@ -618,7 +618,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="72"
 	Level="7"
 	UnitFlags="0"
@@ -699,7 +699,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="81"
 	Level="7"
 	UnitFlags="0"
@@ -724,7 +724,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="83"
 	Level="7"
 	UnitFlags="0"
@@ -738,7 +738,7 @@
 	dir.x="-203"
 	dir.y="299"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="84"
 	Level="7"
 	UnitFlags="0"
@@ -752,7 +752,7 @@
 	dir.x="-388"
 	dir.y="330"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="85"
 	Level="7"
 	UnitFlags="0"
@@ -766,7 +766,7 @@
 	dir.x="-280"
 	dir.y="255"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="86"
 	Level="7"
 	UnitFlags="0"
@@ -823,7 +823,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="92"
 	Level="7"
 	UnitFlags="0"
@@ -869,7 +869,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="97"
 	Level="22"
 	UnitFlags="0"
@@ -936,7 +936,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="104"
 	Level="22"
 	UnitFlags="0"
@@ -950,7 +950,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="105"
 	Level="22"
 	UnitFlags="0"
@@ -2119,7 +2119,7 @@
 	dir.x="51"
 	dir.y="64"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="242"
 	Level="9"
 	UnitFlags="0"
@@ -2163,7 +2163,7 @@
 	dir.x="-62"
 	dir.y="-61"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="246"
 	Level="9"
 	UnitFlags="0"
@@ -3005,7 +3005,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="348"
 	Level="9"
 	UnitFlags="0"
@@ -3142,7 +3142,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="361"
 	Level="9"
 	UnitFlags="0"
@@ -3846,7 +3846,7 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="444"
 	Level="19"
 	UnitFlags="0"
@@ -3860,7 +3860,7 @@
 	dir.x="-67"
 	dir.y="-23"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="445"
 	Level="19"
 	UnitFlags="0"
@@ -3874,7 +3874,7 @@
 	dir.x="-6"
 	dir.y="-138"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="446"
 	Level="19"
 	UnitFlags="0"
@@ -3888,7 +3888,7 @@
 	dir.x="103"
 	dir.y="-36"/>
 	<scriptobj
-		class="GGhostUnlimited"
+		class="GGhostUnit"
 		num="447"
 	Level="19"
 	UnitFlags="0"

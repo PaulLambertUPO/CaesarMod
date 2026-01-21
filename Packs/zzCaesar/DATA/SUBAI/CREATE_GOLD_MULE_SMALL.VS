@@ -1,17 +1,17 @@
-//void, Obj This
+//void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
 Building this;
 Wagon mule;
 
-this = This.AsBuilding();
+this = objs[0].AsBuilding();
 
-mule = .settlement.CreateMuleGold(250);
+mule = .settlement.CreateMuleGold(250).AsWagon();
 
 if (mule.IsValid) {
 	point pt_exit;
 
-	ClearSelection(mule.player);
-	mule.Select(mule.player);
+	ClearSelection(player);
+	mule.Select(player);
 
 	if (.IsHeirOf("RomanShipyard")) {
 		pt_exit = .GetExitVector();

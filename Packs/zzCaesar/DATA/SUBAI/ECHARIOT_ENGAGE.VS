@@ -17,8 +17,6 @@ if (.IsValid) {
 		enemy = .BestTargetInSquadSight();
 
 	while (enemy.IsValid) {
-		Sleep(20 + rand(31));//disperse the times
-
 		if (!enemy.IsAlive)
 			break;
 		if (!.IsEnemy(enemy))

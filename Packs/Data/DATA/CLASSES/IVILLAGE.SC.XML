@@ -1,6 +1,5 @@
 <class id="IVillage" parent="BaseVillage" cpp_class="CVXTownHall" entity="Buildings/IStorage/IStorage.ent.xml">
 	<properties race="Iberia" />
-	<properties foodperpop="45" />
 	<properties icon="gameres/icons/IStorage.bmp" />
 	<properties edittree_pos="Structures/Village (Iberia)/Village hall" />
 

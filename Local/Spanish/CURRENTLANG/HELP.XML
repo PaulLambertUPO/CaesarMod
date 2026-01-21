@@ -2738,7 +2738,7 @@ Cuanto mayor sea el número de campesinos que pueblan una fortaleza o una aldea,
 			<topic id="Fisherman">
 				<entry hcenter="1" font="large">Pescador</entry>
 				<entry vcenter="1" image="UI/Icons/Fisherman.bmp">
-El pescador es un campesino especializado en la captura de peces.
+El pescador es un civil especializado en la captura de peces.
 Para hacer su trabajo, tiene que entrar en un puerto: una vez allí, empezará a producir víveres (peces) con el tiempo.
 				</entry>
 				<entry />
@@ -2794,7 +2794,11 @@ Su función es la misma que la de las unidades de suministro en tierra.
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 1000 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de construcción 20 segundos</entry>
 				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Reanimación</entry>
+				<entry image="UI/InfoBar/Unit Specials/Determination.bmp" link="/contents/specials/determination">Determinación</entry>
+				<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp" link="/contents/specials/ferocity">Ferocidad</entry>
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Penetración</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
@@ -3144,7 +3148,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3172,7 +3176,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3200,7 +3204,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3228,7 +3232,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3256,7 +3260,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3284,7 +3288,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3312,7 +3316,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3340,7 +3344,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3420,7 +3424,7 @@ Tiempo: 30 - 15 - 7,5 - 3,75 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3482,7 +3486,7 @@ Tiempo: 18 - 9 - 4,5 - 2,25 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3544,7 +3548,7 @@ Tiempo: 22 - 11 - 5,5 - 2,75 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3606,7 +3610,7 @@ Tiempo: 18 - 9 - 4,5 - 2,25 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3668,7 +3672,7 @@ Tiempo: 22 - 11 - 5,5 - 2,75 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3730,7 +3734,7 @@ Tiempo: 16 - 8 - 4 - 2 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3792,7 +3796,7 @@ Tiempo: 22 - 11 - 5,5 - 2,75 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3854,7 +3858,7 @@ Tiempo: 30 - 15 - 7,5 - 3,75 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -3930,7 +3934,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4004,7 +4008,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4054,7 +4058,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4121,7 +4125,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4177,7 +4181,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4224,7 +4228,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4274,7 +4278,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4314,9 +4318,9 @@ Permite equipar a los carros de guerra en el cuartel.
 Coste: 3000 oro
 Tiempo: 30 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Stronghold Walls.bmp">
-Reforzar puertas
-Hace las puertas de la fortaleza más resistentes a los daños.
+				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Stronghold Walls.bmp" link="/contents/buildings/Fortification">
+Reforzar murallas
+Aumenta la salud de puertas, murallas y torres en un 50%.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
@@ -4335,7 +4339,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4520,7 +4524,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4617,7 +4621,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4684,7 +4688,7 @@ Tiempo: 60 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4745,7 +4749,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4800,7 +4804,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4882,7 +4886,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -4943,7 +4947,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5022,7 +5026,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5083,7 +5087,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5148,7 +5152,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5207,7 +5211,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5278,7 +5282,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5331,7 +5335,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5384,7 +5388,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5431,7 +5435,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5496,7 +5500,7 @@ Tiempo: 90 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5541,7 +5545,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5590,7 +5594,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5633,7 +5637,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5681,7 +5685,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5730,7 +5734,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5779,7 +5783,7 @@ Tiempo: 30 - 15 - 7,5 - 3,75 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5822,7 +5826,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5845,8 +5849,8 @@ Coste: 1500 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
-Invocar la protección de Apolo
-Hace indestructibles a las puertas de la fortaleza durante 2 minutos.
+Protección de Apolo
+Hace indestructibles todas tus fortalezas durante 2 minutos. Solo se puede ejecutar esta orden una vez en toda la partida.
 Coste: 2000 oro
 Tiempo: instantáneo
 				</entry>
@@ -5865,7 +5869,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5929,7 +5933,7 @@ Tiempo: instantáneo
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repoblar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada y/o restablece la población mínima de la aldea si no hay suficientes habitantes para producir víveres.
-Coste: 500 oro
+Coste: 100 oro
 Tiempo: 60 segundos
 				</entry>
 			</topic>
@@ -5953,6 +5957,10 @@ Produce oro adicional si hay al menos 2000 oro almacenado en su interior (10 oro
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Atacar
 Concentra el fuego en un objetivo específico.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Lanzar salida
+Hace avanzar a todas las unidades hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
@@ -5978,6 +5986,10 @@ Permite intercambiar víveres por oro o viceversa (20 víveres por 10 oro o vice
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Atacar
 Concentra el fuego en un objetivo específico.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Lanzar salida
+Hace avanzar a todas las unidades hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Sell Food.bmp">
 Vender víveres
@@ -6014,6 +6026,10 @@ Aumenta gradualmente la experiencia de las unidades en su interior hasta el nive
 Atacar
 Concentra el fuego en un objetivo específico.
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Lanzar salida
+Hace avanzar a todas las unidades hacia la posición especificada.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
 Envía constantemente recursos a otro asentamiento.
@@ -6039,6 +6055,10 @@ La variante cartaginesa transforma a los campesinos en guerreros con maza (1 cad
 Atacar
 Concentra el fuego en un objetivo específico.
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Lanzar salida
+Hace avanzar a todas las unidades hacia la posición especificada.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
 Envía constantemente recursos a otro asentamiento.
@@ -6059,6 +6079,10 @@ El nivel de los centinelas aumenta en 1 punto cada minuto hasta que alcance 36, 
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">24 arqueros (nivel 8 - 18)</entry>
 				<entry vcenter="1" image="UI/Icons/GSpearman.bmp" link="/contents/units/GSpearman">24 lanceros (nivel 8 - 18)</entry>
 				<entry font="large">Órdenes</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Lanzar salida
+Hace avanzar a todas las unidades hacia la posición especificada.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
 Envía constantemente recursos a otro asentamiento.
@@ -6067,12 +6091,6 @@ Envía constantemente recursos a otro asentamiento.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold Small.bmp" link="/contents/units/Mule">Cargar unidad de suministro (hasta 250 oro)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Food.bmp" link="/contents/units/Mule">Cargar unidad de suministro (hasta 1000 víveres)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Cargar unidad de suministro (hasta 1000 oro)</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
-Reparar
-Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
-Coste: 500 oro
-Tiempo: 60 segundos
-				</entry>
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/RArcher.bmp" link="/contents/units/RArcher">Centinela romano</entry>
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">Centinela galo</entry>

@@ -1,6 +1,5 @@
 <class id="GVillage" altid="Village" parent="BaseVillage" cpp_class="CVXTownHall" entity="Buildings/GVillage/GVillage.ent.xml" entity_winter="Buildings/GVillage/GVillage_w.ent.xml">
 	<properties race="Gaul" />
-	<properties foodperpop="45" />
 	<properties icon="gameres/icons/GWarehouse.bmp" />
 	<properties edittree_pos="Structures/Village (Gaul)/Village hall" />
 </class>

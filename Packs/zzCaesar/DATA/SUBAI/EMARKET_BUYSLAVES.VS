@@ -1,12 +1,10 @@
-//void, Obj This 
+//void, Obj this 
 
-Building this;
 Settlement set;
 
-this = This.AsBuilding();
-set = .settlement;
+set = .AsBuilding().settlement;
 
-.Progress(.cmddelay);
+.Progress();
 
 if (set.population < set.max_population)
 	set.SetPopulation(set.max_population);

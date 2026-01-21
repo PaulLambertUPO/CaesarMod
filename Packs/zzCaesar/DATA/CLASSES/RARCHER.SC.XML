@@ -8,6 +8,8 @@
 
 	<properties projectile_class="Arrow" />
 
+	<properties select_class="RArcher" />
+
 	<properties display_name="Archer" display_name_plural="Archers" />
 	<properties icon="gameres/icons/RArcher.bmp" />
 	<properties help="contents/units/RArcher" />

@@ -4,6 +4,7 @@
 Building this;
 Settlement set;
 str dest, token, name;
+int player;
 bool spec_already_done = false;
 
 this = This.AsBuilding();
@@ -11,18 +12,24 @@ set = .settlement;
 
 dest = cmdparam;
 
+player = .player;
+
 EnvWriteString(this, "researching", "yes");
 
 while (dest != "") {
 	token = ParseStr(dest, dest);
 	if (token == "NamePlr") {
 		name = ParseStr(dest, dest);
-		EnvWriteString(.player, name, "researching");
+		EnvWriteString(player, name, "researching");
 		if (name == "Tribute") {
 			Building th;
 			th = set.GetCentralBuilding();
-			th.GlobalSpellStart(gsTribute, .player);
-			EnvWriteObj(.player, "TributeBuilding", th);
+			th.GlobalSpellStart(gsTribute, player);
+			EnvWriteObj(player, "TributeBuilding", th);
+			PlaySound("Data/Sound Entities/StonehengeSpell.xml");
+		}
+		else if (name == "Protection of Apollo") {
+			ShowAnnouncement("ApolloProtectionP" + player, Translatef("Player %s1 is going to be protected!", player));
 			PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 		}
 	}
@@ -59,8 +66,8 @@ while (dest != "") {
 }
 
 if (spec_already_done)
-	.Progress(.cmddelay * 25 / 100);
+	.Progress(.cmddelay / 4);
 else
 	.Progress();
 
-PlaySound(.player, "Data/Sound Entities/UpgradeComplete.xml");
+PlaySound(player, "Data/Sound Entities/UpgradeComplete.xml");

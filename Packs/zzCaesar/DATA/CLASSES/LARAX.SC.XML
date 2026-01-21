@@ -7,7 +7,7 @@
 	<properties HeroSkills="Defensive cry, Epic attack, Epic armor, Epic endurance, Scout" />
 	<properties inventory_size="6" />
 
-	<properties display_name="Larax" display_name_plural="Heroes" />
+	<properties display_name="Larax" />
 	<properties icon="gameres/icons/Larax.bmp" />
 	<properties help="contents/units/Larax" />
 	<properties edittree_pos="Units/Heroes/Larax" />

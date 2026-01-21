@@ -13,7 +13,10 @@ if (.IsValid)
 		if (set.IsValid) {
 			ObjList ol;
 			Unit u;
+			str charm;
 			int i, count_units;
+
+			charm = cmdparam;
 
 			ol = set.ObjectsAround("Military");
 			for (i = 0; i < ol.count; i += 1) {
@@ -22,7 +25,7 @@ if (.IsValid)
 					if (u.IsAlive)
 						if (!.IsEnemy(u))
 							if (u.free_item_slots > 0)
-								if (!u.HasItem(cmdparam))
+								if (!u.HasItem(charm))
 									if (!u.IsSentry)
 										if (!u.IsHeirOf("Hero")) {
 											count_units += 1;

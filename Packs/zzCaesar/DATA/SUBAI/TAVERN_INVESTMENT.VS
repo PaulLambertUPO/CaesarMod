@@ -1,14 +1,11 @@
-//void, Obj This
+//void, Obj this
 
-Building this;
 Settlement set;
 int gain;
 
-this = This.AsBuilding();
+set = .AsBuilding().settlement;
 
-.Progress(.cmddelay);
-
-set = .settlement;
+.Progress();
 
 gain = GetConst("InvestmentGoldRevenue");
 

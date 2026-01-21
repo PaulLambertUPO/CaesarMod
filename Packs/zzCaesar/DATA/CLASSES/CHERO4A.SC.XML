@@ -1,5 +1,5 @@
 <class id="CHero4a" parent="CarthaginianHero" cpp_class="CVXHero" entity="Units/CHero4/CHero4.ent.xml">
-	<properties display_name="Adherbal" display_name_plural="Heroes" />
+	<properties display_name="Adherbal" />
 	<properties icon="gameres/icons/CHero4.bmp" />
 	<properties edittree_pos="Units/Carthage/Hero 4" />
 </class>

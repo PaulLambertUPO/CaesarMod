@@ -12,8 +12,6 @@
 <translationtableentry text="Enchantress@TEnchantress class name" result="Hechicera" />
 <translationtableentry text="Enchantresses@TEnchantress class name plural" result="Hechiceras" />
 <translationtableentry text="Enchantress@editortree/Units/Germany" result="Hechicera" />
-<translationtableentry text="Ships@ShipRome class name plural" result="Navíos romanos" />
-<translationtableentry text="Ships@ShipEgypt class name plural" result="Navíos egipcios" />
 <translationtableentry text="Caravan@Camel class name" result="Camello" />
 <translationtableentry text="Caravans@Camel class name plural" result="Camellos" />
 <translationtableentry text="Caravan@CartTrader class name" result="Carro" />
@@ -24,7 +22,7 @@
 <translationtableentry text="Caravans@Trader class name plural" result="Mulas" />
 <translationtableentry text="Peasant@PeasantFemale class name" result="Campesina" />
 <translationtableentry text="Peasants@PeasantFemale class name plural" result="Campesinas" />
-<translationtableentry text="Deer@Deer class name plural" result="Ciervos" />
+<translationtableentry text="Deer@DeerUnit class name plural" result="Ciervos" />
 <translationtableentry text="Equip Archer@trainTArcher" result="Equipar arquera" />
 <translationtableentry text="Call Enchantress@trainTEnchantress" result="Convocar hechicera" />
 <translationtableentry text="Charge@UnitSpecials" result="Carga" />
@@ -341,10 +339,13 @@
 <translationtableentry text="Sentry" result="Centinela" />
 <translationtableentry text="Sentries" result="Centinelas" />
 <translationtableentry text="Ram" result="Ariete" />
+<translationtableentry text="Rams" result="Arietes" />
 <translationtableentry text="Ship" result="Navío de guerra" />
 <translationtableentry text="Ships" result="Navíos de guerra" />
 <translationtableentry text="Rome Ship" result="Navío romano" />
+<translationtableentry text="Rome Ships" result="Navíos romanos" />
 <translationtableentry text="Egypt Ship" result="Navío egipcio" />
+<translationtableentry text="Egypt Ships" result="Navíos egipcios" />
 <translationtableentry text="Boat" result="Bote" />
 <translationtableentry text="Boats" result="Botes" />
 <translationtableentry text="Caravan Camel" result="Camello" />
@@ -791,8 +792,8 @@
 <translationtableentry text="Royal Armor" result="Forjar armaduras reales" />
 <translationtableentry text="Allows Hypaspists to be equipped in the Barracks" result="Permite equipar a los hipaspistas en el cuartel" />
 <translationtableentry text="Scythed Chariot Wheels" result="Producir ruedas falcadas" />
-<translationtableentry text="Strengthen Stronghold Gates" result="Reforzar puertas" />
-<translationtableentry text="Makes the stronghold walls more resistant to damage" result="Hace las puertas de la fortaleza más resistentes a los daños" />
+<translationtableentry text="Strengthen Stronghold Walls" result="Reforzar murallas" />
+<translationtableentry text="Adds 50% health to gates, walls and towers" result="Aumenta la salud de puertas, murallas y torres en un 50%" />
 <!-- end blacksmith commands -->
 <!-- start arena commands -->
 <translationtableentry text="Hire hero" result="Reclutar héroe" />
@@ -932,10 +933,8 @@
 <translationtableentry text="Makes all new Myrmidons the same level of the most experienced you've had.\nAll Myrmidons gain 2 bonus experience every time that they kill a higher level enemy" result="Hace a todos los nuevos mirmidones del mismo nivel del más experimentado tenido durante la partida.\nTodos los mirmidones ganan 2 puntos de experiencia adicionales cada vez que matan a un enemigo de nivel superior" />
 <translationtableentry text="Democracy" result="Democracia" />
 <translationtableentry text="Gives all warriors an Emblem of Democracy (+80 health, not contemporary to Oligarchy)" result="Proporciona a todos los guerreros un Emblema de Democracia, que aumenta la salud en 80 puntos (no contemporáneo a Oligarquía)" />
-<translationtableentry text="(Democracy already in force)" result="(Actualmente en vigor Democracia)" />
 <translationtableentry text="Oligarchy" result="Oligarquía" />
 <translationtableentry text="Gives all warriors level 6 and above an Emblem of Oligarchy (+6 attack and +2 armor, not contemporary to Democracy)" result="Proporciona a todos los guerreros un Emblema de Oligarquía, que aumenta el ataque en 6 puntos y la defensa en 2 puntos (no contemporáneo a Democracia)" />
-<translationtableentry text="(Oligarchy already in force)" result="(Actualmente en vigor Oligarquía)" />
 <translationtableentry text="Makes all warriors receive a Charm of Athena (+40% movement and attack speed) at the first kill" result="Con el primer asesinato los guerreros reciben el Amuleto de Atenea, que aumenta la velocidad de movimiento y de ataque en un 40%" />
 <translationtableentry text="Makes all warriors receive a Charm of Aegle (+10% health and +2 health regeneration per second) at the first kill" result="Con el primer asesinato los guerreros reciben el Amuleto de Aegle, que aumenta la salud en un 10% y restablece 2 puntos de salud cada segundo" />
 <translationtableentry text="Military Preparation" result="Preparación militar" />
@@ -1089,8 +1088,8 @@
 <translationtableentry text="Allows enchantresses to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that an enchantress dies" result="Permite a las hechiceras sacrificarse para distribuir hasta 1000 puntos de salud entre los aliados cercanos.\nEl mismo efecto también se activa cada vez que una hechicera muere" />
 <translationtableentry text="Offer to Gods" result="Ofrenda a los Dioses" />
 <translationtableentry text="Makes new priests level 5" result="Hace a los nuevos sacerdotes de nivel 5" />
-<translationtableentry text="Invoke the protection of Apollo" result="Invocar la protección de Apolo" />
-<translationtableentry text="Makes stronghold gates indestructible for 2 minutes" result="Hace indestructibles a las puertas de la fortaleza durante 2 minutos" />
+<translationtableentry text="Protection of Apollo (once per game)" result="Protección de Apolo (una vez por partida)" />
+<translationtableentry text="Makes all your strongholds indestructible for 2 minutes" result="Hace indestructibles todas tus fortalezas durante 2 minutos" />
 <translationtableentry text="One or more gates are broken" result="Una o más puertas están rotas" />
 <translationtableentry text="Player %s1 - protected for %s2" result="Jugador %s1 - protegido por %s2" />
 <translationtableentry text="Allows priests to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a priest dies" result="Permite a los sacerdotes sacrificarse para restablecer completamente la energía de 5 aliados cercanos.\nEl mismo efecto también se activa cada vez que un sacerdote muere" />
@@ -1112,7 +1111,7 @@
 <translationtableentry text="Repairs the village hall and/or restores its minimum population" result="Repara el centro de la aldea y/o restablece su población mínima" />
 <translationtableentry text="Supply" result="Establecer ruta de suministro" />
 <translationtableentry text="Constantly sends resources to another settlement" result="Envía constantemente recursos a otro asentamiento" />
-<translationtableentry text="Click on a townhall, village, outpost or shipyard to start sending resources" result="Haz clic en un foro, aldea, fortín o puerto para empezar a enviar recursos" />
+<translationtableentry text="Click on an allied townhall, village, outpost or shipyard to start sending resources" result="Haz clic en un foro, aldea, fortín o puerto aliado para empezar a enviar recursos" />
 <translationtableentry text="Click on this Townhall to start sending resources" result="Haz clic en este foro para empezar a enviar recursos" />
 <translationtableentry text="Right-click on this Townhall to start sending resources" result="Haz clic con el botón derecho en este foro para empezar a enviar recursos" />
 <translationtableentry text="Click on this Village to start sending resources" result="Haz clic en esta aldea para empezar a enviar recursos" />
@@ -1136,6 +1135,8 @@
 <translationtableentry text="Requires one horse in the village" result="Requiere un caballo en la aldea" />
 <!-- end village commands -->
 <!-- start outpost commands -->
+<translationtableentry text="Launch sortie" result="Lanzar salida" />
+<translationtableentry text="Click to make all units advance to this position" result="Haz clic para hacer avanzar a todas las unidades hasta esta posición" />
 <translationtableentry text="Slowly exchanges stored food for gold" result="Intercambia lentamente los víveres almacenados por oro" />
 <translationtableentry text="Stop selling food" result="Dejar de vender víveres" />
 <translationtableentry text="Sell gold" result="Vender oro" />
@@ -1490,7 +1491,7 @@
 <translationtableentry text="Teaching" result="Iniciación" />
 <translationtableentry text="The unit gives experience to the allies" result="La unidad proporciona experiencia a los aliados" />
 <translationtableentry text="Toughness" result="Resistencia" />
-<translationtableentry text="The unit increases the maximum health by 5 every time that it levels up" result="L'unità aumenta la salute massima di 5 punti ogni volta che aumenta di livello" />
+<translationtableentry text="The unit increases the maximum health by 5 every time that it levels up" result="La unidad aumenta su salud máxima en 5 puntos cada vez que aumenta de nivel" />
 <translationtableentry text="Trample" result="Daño expansivo" />
 <translationtableentry text="The unit deals damage to all surrounding enemies" result="La unidad inflige daño a todos los enemigos a su alrededor" />
 <translationtableentry text="Triple strike" result="Golpe triple" />
@@ -1715,6 +1716,8 @@
 <translationtableentry text="Elephant Skeleton 1" result="Esqueleto de elefante 1" />
 <translationtableentry text="Elephant Skeleton 2" result="Esqueleto de elefante 2" />
 <translationtableentry text="Elephant Skeleton 3" result="Esqueleto de elefante 3" />
+<translationtableentry text="Old ruins" result="Viejas ruinas" />
+<translationtableentry text="Old ruins (alternative)" result="Viejas ruinas (alternativas)" />
 <translationtableentry text="Ruins 1" result="Ruinas 1" />
 <translationtableentry text="Ruins 2" result="Ruinas 2" />
 <translationtableentry text="Ruins 3" result="Ruinas 3" />
@@ -1753,7 +1756,7 @@
 <translationtableentry text="Ruin 1" result="Ruina 1" />
 <translationtableentry text="Ruin 2" result="Ruina 2" />
 <translationtableentry text="Ruin 3" result="Ruina 3" />
-<translationtableentry text="Ruin04" result="Ruina 4" />
+<translationtableentry text="Ruin 4" result="Ruina 4" />
 <translationtableentry text="Fields" result="Campos" />
 <translationtableentry text="Crops 1" result="Cultivo 1" />
 <translationtableentry text="Crops 2" result="Cultivo 2" />
@@ -3027,17 +3030,16 @@
 <translationtableentry text="Unit under attack" result="Unidad bajo ataque" />
 <translationtableentry text="Building under attack" result="Estructura bajo ataque" />
 <translationtableentry text="Army starving" result="Ejército sin víveres" />
-<translationtableentry text="Hero level up" result="Aumento de nivel del héroe" />
 <translationtableentry text="Your hero %s1 has reached new level" result="Tu héroe %s1 ha alcanzado un nuevo nivel" />
 <translationtableentry text="Your hero %s1 has reached level %d2" result="Tu héroe %s1 ha alcanzado el nivel %d2" />
 <translationtableentry text="Guard post spotted an enemy" result="El puesto de guardia ha detectado a un enemigo" />
 <translationtableentry text="Horse captured" result="Caballo capturado" />
-<translationtableentry text="Settlement captured" result="Asentamiento conquistado" />
 <translationtableentry text="Unable to train warriors - enemies around" result="Imposible entrenar a los guerreros - enemigos en los alrededores" />
 <translationtableentry text="Unable to use this item while sheltered" result="Imposible usar este objeto mientras se esté a cubierto" />
 <translationtableentry text="Can target units only" result="Solo se puede apuntar a las unidades" />
 <translationtableentry text="Can target allies only" result="Solo se puede apuntar a los aliados" />
 <translationtableentry text="Can target enemies only" result="Solo se puede apuntar a los enemigos" />
+<translationtableentry text="Target out of range" result="Objetivo fuera de alcance" />
 <translationtableentry text="Inn found" result="Posada encontrada" />
 <translationtableentry text="Location message" result="Posición del mensaje" />
 <translationtableentry text="Training completed" result="Reclutamiento completato" />

@@ -29,6 +29,7 @@ ARTIFICIAL INTELLIGENCE
 GREAT BATTLES AND CONQUESTS UPDATE
 TEXTS AND HELP GUIDE IMPROVEMENT
 DUBBING
+GRAPHICS
 
 Paolo Lamberto
 
@@ -37,6 +38,11 @@ TESTING
 
 Paolo Lamberto
 Matteo Lamberto
+
+
+GRAPHICS HELP
+
+Nicoghiro31
 
 
 Copyright (c) 2025 Paolo Lamberto

@@ -8,6 +8,8 @@
 
 	<properties healthbar_type="3" />
 
+	<properties select_class="RScout" />
+
 	<properties display_name="Scout" display_name_plural="Scouts" />
 	<properties icon="gameres/icons/RScout.bmp" />
 	<properties help="contents/units/RScout" />

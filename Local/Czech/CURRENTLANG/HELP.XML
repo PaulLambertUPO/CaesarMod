@@ -2738,7 +2738,7 @@ The greater the number of peasants populating a stronghold or village is, the gr
 			<topic id="Fisherman">
 				<entry hcenter="1" font="large">Fisherman</entry>
 				<entry vcenter="1" image="UI/Icons/Fisherman.bmp">
-The fisherman is a peasant specialized in catching fish.
+The fisherman is a civilian specialized in catching fish.
 To do his job, he has to enter a shipyard: once there, he will start producing food (fish) over time.
 				</entry>
 				<entry />
@@ -2794,7 +2794,11 @@ Its function is the same as that of land-based caravans.
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 1000 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Creation time 20 seconds</entry>
 				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Combat skill</entry>
+				<entry image="UI/InfoBar/Unit Specials/Determination.bmp" link="/contents/specials/determination">Determination</entry>
+				<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp" link="/contents/specials/ferocity">Ferocity</entry>
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Penetration</entry>
 				<entry />
 				<entry font="large">See also</entry>
@@ -3144,7 +3148,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3172,7 +3176,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3200,7 +3204,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3228,7 +3232,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3256,7 +3260,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3284,7 +3288,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3312,7 +3316,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3340,7 +3344,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3420,7 +3424,7 @@ Time: 30 - 15 - 7.5 - 3.75 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3482,7 +3486,7 @@ Time: 18 - 9 - 4.5 - 2.25 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3544,7 +3548,7 @@ Time: 22 - 11 - 5.5 - 2.75 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3606,7 +3610,7 @@ Time: 18 - 9 - 4.5 - 2.25 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3668,7 +3672,7 @@ Time: 22 - 11 - 5.5 - 2.75 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3730,7 +3734,7 @@ Time: 16 - 8 - 4 - 2 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3792,7 +3796,7 @@ Time: 22 - 11 - 5.5 - 2.75 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3854,7 +3858,7 @@ Time: 30 - 15 - 7.5 - 3.75 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -3930,7 +3934,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4004,7 +4008,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4054,7 +4058,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4121,7 +4125,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4177,7 +4181,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4224,7 +4228,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4274,7 +4278,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4314,9 +4318,9 @@ Allows chariots to be equipped in the barracks.
 Cost: 3000 gold
 Time: 30 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Stronghold Walls.bmp">
-Strengthen stronghold gates
-Makes the stronghold walls more resistant to damage.
+				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Stronghold Walls.bmp" link="/contents/buildings/Fortification">
+Strengthen stronghold walls
+Adds 50% health to gates, walls and towers.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
@@ -4335,7 +4339,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4520,7 +4524,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4617,7 +4621,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4684,7 +4688,7 @@ Time: 60 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4745,7 +4749,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4800,7 +4804,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4882,7 +4886,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -4943,7 +4947,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5022,7 +5026,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5076,14 +5080,14 @@ Time: 300 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5141,14 +5145,14 @@ Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5200,14 +5204,14 @@ Time: 15 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5271,14 +5275,14 @@ Time: 60 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5324,14 +5328,14 @@ Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5377,14 +5381,14 @@ Time: 25 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5424,14 +5428,14 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5489,14 +5493,14 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Tribute.bmp">
 Tribute
-Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once in the entire game.
+Gathers 500 gold in each outpost you own and the gold amount increases by 500 every 10 minutes (up to 2000). This command can be issued only once per game.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5541,7 +5545,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5590,7 +5594,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5633,7 +5637,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5681,7 +5685,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5730,7 +5734,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5779,7 +5783,7 @@ Time: 30 - 15 - 7.5 - 3.75 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5822,7 +5826,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5845,8 +5849,8 @@ Cost: 1500 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
-Invoke the protection of Apollo
-Makes stronghold gates indestructible for 2 minutes.
+Protection of Apollo
+Makes all your strongholds indestructible for 2 minutes. This command can be issued only once per game.
 Cost: 2000 gold
 Time: instantaneous
 				</entry>
@@ -5865,7 +5869,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5929,7 +5933,7 @@ Time: instantaneous
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repopulate
 Repairs the building to make it operational again if it is too damaged and/or restores the minimum population of the village if there are not enough inhabitants to produce food.
-Cost: 500 gold
+Cost: 100 gold
 Time: 60 seconds
 				</entry>
 			</topic>
@@ -5953,6 +5957,10 @@ It produces additional gold as long as there is at least 2000 gold stored inside
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attack
 Focuses fire on a specific target.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Launch sortie
+Makes all units advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
@@ -5978,6 +5986,10 @@ It allows to exchange food for gold or vice versa (20 food for 10 gold o vice ve
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Attack Arrows.bmp">
 Attack
 Focuses fire on a specific target.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Launch sortie
+Makes all units advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Sell Food.bmp">
 Sell food
@@ -6014,6 +6026,10 @@ It gradually increases the experience of units inside up to level 8 (1 experienc
 Attack
 Focuses fire on a specific target.
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Launch sortie
+Makes all units advance towards the specified position.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
 Constantly sends resources to another settlement.
@@ -6039,6 +6055,10 @@ The Carthaginian variant converts peasants to macemen (1 every 30 seconds), the 
 Attack
 Focuses fire on a specific target.
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Launch sortie
+Makes all units advance towards the specified position.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
 Constantly sends resources to another settlement.
@@ -6059,6 +6079,10 @@ The level of the sentries increases by 1 every minute until reaching 36, startin
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">24 archers (level 8 - 18)</entry>
 				<entry vcenter="1" image="UI/Icons/GSpearman.bmp" link="/contents/units/GSpearman">24 spearmen (level 8 - 18)</entry>
 				<entry font="large">Commands</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
+Launch sortie
+Makes all units advance towards the specified position.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
 Constantly sends resources to another settlement.
@@ -6067,12 +6091,6 @@ Constantly sends resources to another settlement.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold Small.bmp" link="/contents/units/Mule">Load caravan (up to 250 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Food.bmp" link="/contents/units/Mule">Load caravan (up to 1000 food)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
-				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
-Repair
-Repairs the building to make it operational again if it is too damaged.
-Cost: 500 gold
-Time: 60 seconds
-				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/RArcher.bmp" link="/contents/units/RArcher">Roman sentry</entry>
 				<entry vcenter="1" image="UI/Icons/GArcher.bmp" link="/contents/units/GArcher">Gaul sentry</entry>
