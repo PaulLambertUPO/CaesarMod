@@ -29,7 +29,7 @@ while (dest != "") {
 			PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 		}
 		else if (name == "Protection of Apollo") {
-			ShowAnnouncement("ApolloProtectionP" + player, Translatef("Player %s1 is going to be protected!", player));
+			ShowAnnouncement("ApolloProtectionP" + player, Translatef("Player %s1 - soon protected", player));
 			PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 		}
 	}

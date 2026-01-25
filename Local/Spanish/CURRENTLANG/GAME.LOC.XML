@@ -1090,8 +1090,9 @@
 <translationtableentry text="Makes new priests level 5" result="Hace a los nuevos sacerdotes de nivel 5" />
 <translationtableentry text="Protection of Apollo (once per game)" result="Protección de Apolo (una vez por partida)" />
 <translationtableentry text="Makes all your strongholds indestructible for 2 minutes" result="Hace indestructibles todas tus fortalezas durante 2 minutos" />
-<translationtableentry text="One or more gates are broken" result="Una o más puertas están rotas" />
-<translationtableentry text="Player %s1 - protected for %s2" result="Jugador %s1 - protegido por %s2" />
+<translationtableentry text="Player %s1 - soon protected" result="Jugador %s1 - pronto protegido" />
+<translationtableentry text="Player %s1 - protected for %s2:0%s3" result="Jugador %s1 - protegido por %s2:0%s3" />
+<translationtableentry text="Player %s1 - protected for %s2:%s3" result="Jugador %s1 - protegido por %s2:%s3" />
 <translationtableentry text="Allows priests to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a priest dies" result="Permite a los sacerdotes sacrificarse para restablecer completamente la energía de 5 aliados cercanos.\nEl mismo efecto también se activa cada vez que un sacerdote muere" />
 <translationtableentry text="Statue of Zeus" result="Erigir estatua de Zeus" />
 <translationtableentry text="Gives all warriors below 20% health a 50% chance to completely restore their health at every kill" result="Proporciona a todos los guerreros cuya salud esté por debajo del 20% una probabilidad del 50% de restablecer completamente la salud con cada asesinato" />
