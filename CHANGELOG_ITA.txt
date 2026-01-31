@@ -16,6 +16,62 @@ La mia passione per Imperivm è così grande che è pressoché impossibile da es
 Se un'altra persona decide di usare la Caesar Mod come punto di partenza per un nuovo progetto, per me è ben più che libera di farlo: l'unica cortesia che chiedo è quella di fare come ho fatto io e di tenere tutti i nomi originali, specificando di aver cominciato dalla mia mod e rilasciando il nuovo progetto sotto la stessa licenza CC BY-SA, i cui dettagli sono indicati nel file LICENSE.txt incluso nel pacchetto.
 ______________________________________
 
+[1.0.5] - 31 gennaio 2026
+
+Questa nuova versione della Caesar Mod risolve numerosi problemi, rendendo più piacevole l'esperienza di gioco e migliorando diversi aspetti generali.
+Tra i cambiamenti più importanti c'è la nuova modalità di assegnazione dei forti neutrali alla sconfitta della guarnigione: in precedenza, il risultato era completamente casuale e poteva capitare che una singola unità di passaggio conquistasse il forte senza sforzo, generando frustrazione per chi aveva combattuto per eliminare le guardie. Ora il comportamento è deterministico e il forte viene assegnato al giocatore con il maggior numero di unità vicine; solo in caso di parità la scelta è casuale, ma è un'evenienza piuttosto rara.
+È stata inoltre risolta una fonte di frustrazione nelle partite a squadre, dove l'interazione tramite controllo condiviso con le strutture di un alleato poteva modificare l'interfaccia di selezione di quest'ultimo, compromettendo potenzialmente l'esito di una battaglia.
+La conquista "Mare Nostrum" è ora giocabile senza blocchi causati dai limiti di unità del posto di guardia e le sentinelle attaccano correttamente i nemici senza interruzioni.
+I forti dispongono di un nuovo comando per l'invio di unità verso l'esterno: non è stato impostato con un semplice click destro per evitare errori accidentali col comando già esistente di attacco tramite le torri.
+È stata effettuata un'importante revisione delle animazioni di tutti gli eroi per uniformare la velocità d'attacco di quelli dello stesso popolo (nel caso di Cartagine, le differenze erano davvero evidenti).
+La Protezione di Apollo è stata completamente rivista: ora può essere usata solo una volta in tutta la partita (come i tributi), ma rende inviolabili tutte le fortezze possedute (riparando perfino le strutture danneggiate) e richiede un breve tempo per attivarsi, il che ne permette l'annullamento in caso di avvio accidentale (prima era impossibile e generava altra frustrazione) e dà al nemico il tempo per uscire dalla fortezza prima di venire chiuso dentro.
+Sono stati anche migliorati i colori dei giocatori per una maggiore distinzione visiva e si è tentato di agire sull'audio per ridurre suoni e frasi duplicate: a causa di limitazioni tecniche legate al sorgente e alla deprecazione di DirectSound e DirectMusic non è possibile eliminare completamente il problema, ma è possibile attenuarlo tramite il file "Config.ini".
+Si ringrazia infine Nicoghiro31, autore e gestore della Legacy Mod, per l'aiuto con le sentinelle egizie e per il contributo apportato di sua iniziativa alla sistemazione delle texture dell'acqua nella visuale di mappa strategica.
+
+
+MODIFICHE
+
+- risolto il problema per cui cliccare col destro per far uscire le unità dal foro di un alleato tramite controllo condiviso le faceva selezionare a quest'ultimo anziché a chi cliccava
+- risolto il problema per cui creare unità di rifornimento dalle strutture di un alleato tramite controllo condiviso le faceva selezionare a quest'ultimo anziché a chi le creava
+- risolto il problema per cui non era gestito il comando di impostazione della rotta di rifornimento al click sul terreno (generava un messaggio di errore nei log)
+- risolto il problema per cui era possibile distruggere la bandiera del foro romano (con macchine d'assedio o "danno espansivo")
+- risolto il problema per cui i timer di eliminazione nelle partite di strategia non venivano resettati correttamente alla riconquista di una fortezza
+- risolto il problema per cui "ripara" restituiva le risorse al completamento
+- risolto il problema per cui le torri potevano essere riparate solo dall'IA
+- risolto il problema per cui l'IA provava a ricercare i potenziamenti per le porte/sentinelle in insediamenti senza porte/mura
+- risolto il problema per cui "rinforza porte" aveva effetto anche su porte di altre fortezze se troppo vicine
+- risolto il problema per cui le sentinelle del posto di guardia smettevano di attaccare i nemici per spostarsi o guardare altrove
+- risolto il problema per cui le sentinelle egizie delle mura rivolte verso nord diventavano trasparenti in combattimento (grazie a Nicoghiro31)
+- risolto il problema per cui "democrazia/oligarchia" poteva essere ricercata da più strutture contemporaneamente portando a uno spreco di risorse
+- la conquista della Britannia: risolto il problema per cui le guardie dei villaggi inseguivano i nemici anziché tornare indietro se questi si allontavano, corrette le abilità dell'eroe iberico
+- posto di guardia: numero di unità stanziabili aumentato a 10000 (per evitare blocchi del gioco), tempo di rigenerazione di ogni sentinella fissato a 12 secondi, riparazione uniformata agli altri forti
+- forti neutrali e accampamenti: assegnazione cambiata da casuale assoluta tra i giocatori delle unità vicine a casuale tra quelli con più unità nelle vicinanze (100% se il massimo è unico)
+- forti: aggiunto comando "effettua sortita" per mandare le unità all'interno verso il punto selezionato attaccando i nemici in vista
+- accampamenti: aggiunta possibilità di cliccare col destro per impartire ordini alle unità all'interno (come col foro)
+- altare dei sacrifici: tempo generazione energia ridotto a 2-16 secondi (2s + 14s / unità spirituali)
+- invoca la protezione di Apollo: effetto esteso a tutte le strutture (anche rotte) di tutte le fortezze possedute, tempo di ricerca 15 secondi, si può usare solo una volta a partita
+- immagazzina viveri: reso utilizzabile anche durante la ricerca di altri potenziamenti
+- rinforza porte: rinominato in "rinforza mura", aumenta anche la vita di mura e torri
+- ripara e ripopola: costo fissato a 100 oro per tutte le strutture
+- eroi: standardizzata la velocità d'attacco di quelli appartenenti allo stesso popolo
+- eroe britannico: migliorata coordinazione attacchi per ridurre il rischio di sparare inutilmente a nemici già morti
+- guerriero con ascia germanico: corretta la sincronia del danno con l'animazione di attacco
+- unità greche: corretta la sincronia del danno con l'animazione di attacco e migliorata l'animazione di morte
+- nave da guerra: aggiunte "vitalità", "determinazione" e "ferocia"
+- animali pericolosi: ridotta lievemente la probabilità di fuga se feriti
+- torre: vita ridotta a 1500
+- insegne di Roma Repubblicana: non possono essere date ad altre unità, possono essere rimosse tramite doppio click
+- spada e scudo della nobiltà, amuleti di Atena e Aegle: possono essere rimossi tramite doppio click
+- pietra di fuoco e pietra sanguinaria: aggiunta notifica di bersaglio fuori gittata
+- arpa oscura rinvigorente: ridotto il volume dell'effetto sonoro
+- editor: aggiunte 2 rovine decorative (sezione "Strutture -> Altre -> Rovine") e posto di guardia invernale
+- resi più distinti i colori dei giocatori
+- aggiunta selezione multipla tramite doppio click di unità diverse con lo stesso aspetto (es. unità romane normali e puniche)
+- corretto il nome di molte unità in caso di selezione multipla
+- migliorato l'audio generale del gioco con riduzione degli "sdoppiamenti" di voci e suoni
+- migliorate le texture dell'acqua nella mappa strategica (grazie a Nicoghiro31)
+______________________________________
+
 [1.0.4] - 6 dicembre 2025
 
 Questa nuova versione della Caesar Mod si focalizza principalmente sulla stabilità del gioco migliorando l'IA e la gestione dei potenziamenti e risolvendo numerosi problemi; ha richiesto molto più tempo rispetto alle versioni precedenti in quanto le modifiche erano particolarmente difficili da testare e verificare.
@@ -198,7 +254,7 @@ MODIFICHE
 - risolto il problema per cui "guarigione eroica" era bloccata se il primo di diversi eroi selezionati non aveva abbastanza energia
 - risolto il problema per cui fare doppio click sul ritratto di un'abilità attivabile nel menù apposito in alto consumava energia nonostante l'abilità fosse già in uso
 - risolto il problema per cui il comando di pattuglia faceva crashare il gioco se c'era un'aquila tra le unità selezionate
-- risolto il problema per cui il comando di pattuglia per le unità normali (non eroi) non le faceva tornare indietro se erano in una struttura 
+- risolto il problema per cui il comando di pattuglia per le unità normali (non eroi) non le faceva tornare indietro se erano in una struttura
 - risolto il problema per cui le unità cercavano di conquistare un'unità di rifornimento che era entrata in una struttura tramite il comando di seguire un alleato
 - risolto il problema per cui a volte la lealtà di un insediamento che era stato appena conquistato diminuiva anche se nessun'unità lo stava conquistando
 - risolto il problema per cui le unità in fase di conquista contavano come unità in combattimento e quindi facevano attivare le abilità speciali degli eroi con auto-attivazione abilitata
@@ -495,7 +551,7 @@ Le più grandi modifiche per l'Iberia in generale consistono nel grande aumento 
 - doma cavalli: i nuovi cavalieri sono di livello 6
 - costruisci alloggi: costo ridotto a 750 oro, incremento popolazione massima ridotto a 15, aggiunge anche 5 popolazione attuale
 - costruisci più alloggi: nuovo potenziamento ricercabile nella taverna, richiede "costruisci alloggi", costo 750 oro, aumenta la popolazione massima di 15 e aggiunge 5 alla popolazione attuale
-- chiamata alle armi: tempo di ricerca ridotto a 15 secondi, i miliziani non sono più denutriti e dal minuto 10 in poi sono di livello 8 
+- chiamata alle armi: tempo di ricerca ridotto a 15 secondi, i miliziani non sono più denutriti e dal minuto 10 in poi sono di livello 8
 - rituale di Ainé: costo ridotto a 1000 oro, aggiunto effetto grafico di esperienza alle sacerdotesse che aumentano di livello
 - conoscenze ancestrali: costo ridotto a 2000 oro
 - manto della misericordia: raggio ridotto a 325, durata totale aumentata a 25 secondi
@@ -820,7 +876,7 @@ L'obiettivo di queste modifiche è semplicemente migliorare l'esperienza di gioc
 - Italia - Grande: risolto il problema per cui grotte e animali pacifici cambiavano giocatore, livello animali pericolosi aumentato a 10
 - Creta - Grande: livello animali pericolosi aumentato a 10
 - Creta - Medio: sostituito forte di addestramento con forte dell'oro egizio, livello animali pericolosi aumentato a 10
-- Il dono degli dei: risolto il problema per cui solo fino a 3 giocatori umani potevano partecipare, risolto il problema per cui le rovine cambiavano giocatore, aggiunti guanti della salute nell'albero secco 
+- Il dono degli dei: risolto il problema per cui solo fino a 3 giocatori umani potevano partecipare, risolto il problema per cui le rovine cambiavano giocatore, aggiunti guanti della salute nell'albero secco
 - Mediterraneo: risolto il problema per cui villaggi e porti non venivano automaticamente conquistati da chi vi passava vicino, risolto il problema per cui le rovine cambiavano giocatore, aggiunti leoni e leonesse in Africa
 - Campo di battaglia: aggiunto 1 altare dei sacrifici a ovest, aggiunte 2 rovine (a nord e al centro), aggiunti 3 accampamenti teutonici e 40 lupi al centro
 - Passi di montagna: risolto il problema per cui le grotte cambiavano giocatore, livello lupi aumentato a 10, sostituita cintura di forza con corno della vittoria nella borsa di cuoio a sud-ovest
@@ -879,7 +935,7 @@ SBARCO IN AFRICA
 
 Lo sbarco in Africa rimane la grande battaglia più semplice del gioco, i ritocchi hanno come obiettivo sistemare vari problemi e rendere più avvincenti le battaglie con Syphax e Annibale.
 Lo scontro con Syphax costringerà il giocatore a fare attenzione a non far morire Massinissa dato che senza di lui i Numidi non parteciperanno alla battaglia finale (questo succedeva già nella versione originale ma non era specificato), che grazie alle abilità e ai nuovi oggetti forniti ad Annibale sarà molto più impegnativa e richiederà una maggiore capacità di "micro-gestione" dell'esercito di Scipione.
-Il giocatore può ancora decidere di stazionare a Utica prima della battaglia di Zama e trivializzare le cose reclutando un enorme esercito di mercenari, ma non essendoci più porte adesso non si può più ingannare facilmente l'IA e farle perdere tempo continuamente danneggiandola pesantemente con le sentinelle, che tra l'altro non sono più potenziabili. 
+Il giocatore può ancora decidere di stazionare a Utica prima della battaglia di Zama e trivializzare le cose reclutando un enorme esercito di mercenari, ma non essendoci più porte adesso non si può più ingannare facilmente l'IA e farle perdere tempo continuamente danneggiandola pesantemente con le sentinelle, che tra l'altro non sono più potenziabili.
 
 Giudizio di difficoltà con test in difficile dopo le modifiche: facile
 Giudizio di durata con test in difficile dopo le modifiche: breve
@@ -1476,6 +1532,7 @@ DA INVESTIGARE PIÙ A FONDO
 
 NON RISOLVIBILI
 - la funzione "Erase" fa partire gli effetti legati alla morte delle unità (come "poemi epici") e fa aumentare il contatore di unità perse (le sentinelle che rientrano nelle torri sono la causa principale)
+- il foro germanico produce oro nella stessa quantità di viveri se il popolo del proprietario all'inizio della partita non è Germania
 - il cambio di fattore velocità per un eroe funziona solo in fase di combattimento e non di movimento
 - le unità con fattore velocità modificato rallentano tutto l'esercito quando sono vincolate a un eroe
 - le unità morte in possesso di "fortuna divina" che vengono colpite da "danno espansivo" possono generare lo stesso bug di "resurrezione" che si verificava con "ira di Giove"

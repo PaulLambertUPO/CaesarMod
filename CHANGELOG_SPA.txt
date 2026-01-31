@@ -16,6 +16,62 @@ Mi pasión por Imperivm es tan grande que es casi imposible de expresar con pala
 Si otra persona decide usar el Caesar Mod como punto de partida para un nuevo proyecto, es más que libre de hacerlo: lo único que pido es que haga como yo y mantenga todos los nombres originales, especificando que ha comenzado desde mi mod y publicando el nuevo proyecto bajo la misma licencia CC BY-SA, cuyos detalles están indicados en el archivo LICENSE.txt incluido el paquete.
 ______________________________________
 
+[1.0.5] - 31 enero 2026
+
+Esta nueva versión del Caesar Mod resuelve numerosos problemas, haciendo más agradable la experiencia de juego y mejorando varios aspectos generales.
+Uno de los cambios más importantes es el nuevo sistema de asignación de los fortines neutrales tras la derrota de la guarnición: anteriormente, el resultado era completamente aleatorio y una sola unidad de paso podía conquistar el fortín sin esfuerzo, generando frustración en quienes habían luchado para eliminar a los guardias. Ahora el comportamiento es determinista y el fortín es asignado al jugador con el mayor número de unidades cercanas; solo en caso de empate la elección es aleatoria, per es algo poco frecuente.
+También se ha resuelto una fuente de frustración en las partidas por equipos, donde la interacción con estructuras aliadas mediante control compartido podía modificar la interfaz de selección del aliado, comprometiendo potencialmente el resultado de una batalla.
+La conquista "Mare Nostrum" ahora puede ser jugada sin bloqueos causados por los límites de unidades del puesto de guardia y los centinelas atacan correctamente a los enemigos sin interrupciones.
+Los fortines disponen de una nueva orden para enviar unidades al exterior: no ha sido asignada a un simple clic derecho para evitar errores accidentales con el comando ya existente de ataque mediante las torres.
+Se ha realizado una revisión importante de las animaciones de todos los héroes para uniformar la velocidad de ataque entre los del mismo pueblo (en el caso de Cartago, las diferencias eran realmente evidentes).
+La Protección de Apolo ha sido completamente revisada: ahora solo puede ser usada una vez por partida (al igual que los tributos), pero hace inviolables todas las fortalezas poseídas (reparando incluso las estructuras dañadas) y requiere un breve tiempo de activación, lo que permite cancelarla en caso de activación accidental (antes era imposible y generaba aún más frustración) y da tiempo al enemigo para salir de la fortaleza antes de quedar encerrado.
+También se han mejorado los colores de los jugadores para una mayor distinción visual y se ha intentado actuar sobre el audio para reducir sonidos y frases duplicadas: debido a limitaciones técnicas relacionadas con el código fuente y la obsolescencia de DirectSound y DirectMusic, no es posible eliminar completamente el problema, pero puede ser atenuada mediante el archivo "Config.ini".
+Por último, se agradece a Nicoghiro31, autor y gestor del Legacy Mod, por su ayuda con los centinelas egipcios y por su contribución espontánea a la corrección de las texturas del agua en la vista del mapa estratégico.
+
+
+CAMBIOS
+
+- resuelto el problema por el cual hacer clic derecho para hacer salir a las unidades del foro de un aliado mediante control compartido las hacia seleccionar para el aliado en lugar de para quien hacía clic
+- resuelto el problema por el cual crear unidades de suministro a partir de las estructuras de un aliado mediante control compartido las hacia seleccionar para el aliado en lugar de para quien las creaba
+- resuelto el problema por el cual la orden de establecimiento de la ruta de suministro no era gestionada al hacer clic en el terreno (generaba un mensaje de error en los logs)
+- resuelto el problema por el cual era posible destruir la bandera del foro romano (con máquinas de asedio o "daño expansivo")
+- resuelto el problema por el cual los temporizadores de eliminación en las partidas de estrategia no se reiniciaban correctamente al reconquistar una fortaleza
+- resuelto el problema por el cual "reparar" devolvía recursos al finalizar
+- resuelto el problema por el cual las torres solo podían ser reparadas por la IA
+- resuelto el problema por el cual la IA intentaba buscar mejoras para las puertas/centinelas en asentamientos sin puertas/murallas
+- resuelto el problema por el cual "reforzar puertas" también afectaba a las puertas de otras fortalezas si estaban demasiado cerca
+- resuelto el problema por el cual los centinelas del puesto de guardia dejaban de atacar a los enemigos para moverse o mirar en otro lugar
+- resuelto el problema por el cual los centinelas egipcios en los muros orientados al norte se volvían transparentes en combate (gracias a Nicoghiro31)
+- resuelto el problema por el cual "democracia/oligarquía" podía ser investigada desde varias estructuras al mismo tiempo provocando un desperdicio de recursos
+- la conquista de Britania: resuelto el problema por el cual los guardias de las aldeas perseguían a los enemigos en lugar de regresar si se alejaban, corrigidas las habilidades del héroe ibero
+- puesto de guardia: número de unidades estacionables aumentado a 10000 (para evitar bloqueos del juego), tiempo de regeneración de cada centinela fijado en 12 segundos, reparación uniformada a los demás fortines
+- fortines neutrales y campamentos: asignación cambiada de totalmente aleatoria entre los jugadores de las unidades cercanas a aleatoria entre los con el mayor número de unidades cercanas (100% si el máximo es único)
+- fortines: añadida orden "lanzar salida" para enviar las unidades al interior hacia el punto seleccionado atacando a los enemigos a la vista
+- campamentos: añadida posibilidad de hacer clic derecho para dar órdenes a las unidades al interior (al igual que con el foro)
+- altar de sacrificios: tiempo generación energía reducido a 2–16 segundos (2s + 14s / unidades espirituales)
+- invocar la protección de Apolo: efecto extendido a todas las estructuras (rotas inclusas) en todas las fortalezas propias, tiempo de investigación 15 segundos, solo se puede usar una vez por partida
+- almacenar víveres: hecho utilizable incluso cuando se buscan otras mejoras
+- reforzar puertas: renombrado a "reforzar murallas", también aumenta la salud de murallas y torres
+- reparar y repoblar: coste fijado en 100 oro para todas las estructuras
+- héroes: estandarizada la velocidad de ataque de los que pertenecen al mismo pueblo
+- héroe britano: mejorada coordinación ataques para reducir el riesgo de disparar inútilmente a enemigos ya muertos
+- guerrero con hacha germano: corregida la sincronización del daño con la animación de ataque
+- unidades griegas: corregida la sincronización del daño con la animación de ataque y mejorada la animación de muerte
+- navío de guerra: añadidas "vitalidad", "determinación" y "ferocidad"
+- animales peligrosos: reducida ligeramente la probabilidad de escapar si heridos
+- torre: salud reducida a 1500
+- insignias de Roma Republicana: no pueden ser dadas a otras unidades, pueden ser removidas haciendo doble clic
+- espada y escudo de la nobleza, amuletos de Atenea y Aegle: pueden ser removidos haciendo doble clic
+- piedra de fuego y piedra sanguinaria: añadida notificación de objetivo fuera de alcance
+- arpa oscura vigorizante: reducido el volumen del efecto de sonido
+- editor: añadidas 2 ruinas decorativas (sección "Estructuras -> Otras -> Ruinas") y puesto de guardia invernal
+- hechos más distintos los colores de los jugadores
+- añadida selección múltiple haciendo doble clic de unidades diferentes con el mismo aspecto (ej. unidades romanas normales y púnicas)
+- corregido el nombre de muchas unidades en caso de selección múltiple
+- mejorado el audio general del juego con reducción de la "duplicación" de voces y sonidos
+- mejoradas las texturas del agua en el mapa estratégico (gracias a Nicoghiro31)
+______________________________________
+
 [1.0.4] - 6 diciembre 2025
 
 Esta nueva versión del Caesar Mod se centra principalmente en la estabilidad del juego, mejorando la IA y la gestión de las mejoras, además de resolver numerosos problemas; ha requerido mucho más tiempo que las versiones anteriores porque los cambios eran especialmente difíciles de probar y verificar.
@@ -286,7 +342,7 @@ La guía de ayuda actualizada permite una consulta completa de casi todos los as
 - formación de escaramuza: bonus alcance reducido a 50%, sustituido bonus nivel con bonus ataque 2
 - formación en columna: aumentada ligeramente la anchura del ejército, bonus defenso aumentada a 0, bonus alcance reducido a 50%, añadido bonus nivel 2
 - espíritu: el del editor ya no es el invocado y por tanto no morirá automáticamente si la energía baja a 0
-- campesino/a: corregido el icono de campesinos griegos multiples, añadida orden para desvincularse de un héroe (útil cuando se desarman milicianos vinculados), mejorados los tooltips basados en el puntero del mouse
+- campesino/a: corregido el icono de campesinos griegos múltiples, añadida orden para desvincularse de un héroe (útil cuando se desarman milicianos vinculados), mejorados los tooltips basados en el puntero del mouse
 - pescador: coste reducido a 100 víveres, tiempo de reclutamiento reducido a 5 segundos, mejorados los tooltips basados en el puntero del mouse, añadido tooltip dedicado al apuntar sobre un puerto
 - navío de guerra: vista aumentada a 720, añadidas "penetración" y "reanimación", añadida toda la información (excepto las habilidades) y objetos a la interfaz, mejorados los tooltips basados en el puntero del mouse
 - Keltill: salud aumentada a 1300, ataque aumentado a 60, defensa reducida a 18, vista aumentada a 650, velocidad aumentada a 130, "llamada a la defensa"-"ataque heroico"-"resistencia heroica"-"curación"-"marcha forzada"
@@ -1369,7 +1425,7 @@ Dado que se ha hecho una revisión completa de casi todos los scripts, los cambi
 
 - resueltos varios problemas relacionados con los tipos y nombres de las mejoras (asentamiento/jugador) así como partes obsoletas aún vinculadas a funcionamientos de los juegos anteriores
 - resuelto el problema por el cual los costes de varias investigaciones completadas no se sumaban a las estadísticas de recursos gastados
-- resuelto el problema por el que la IA no atacaba en absoluto (o lo hacía de forma "errática") los campamentos teutones o numidas
+- resuelto el problema por el cual la IA no atacaba en absoluto (o lo hacía de forma "errática") los campamentos teutones o numidas
 - resuelto el problema por el cual la IA no conseguía conquistar estructuras si usaba grupos sin héroes debido al reinicio constante de la orden
 - los héroes ahora usan las setas venenosas incluso cuando poseen el colmillo de elefante, el anillo del poder, las cenizas del druida o suficiente agua curativa para recuperar al menos la mitad de su vida
 - caballos añadidos a los animales cazados para aumentar el nivel de los héroes, prioridad a animales de nivel 10 si se completa "experiencia de los dioses", honderos neutrales excluidos de las unidades para ganar experiencia
@@ -1476,6 +1532,7 @@ NECESITAN INVESTIGACIÓN MÁS PROFUNDA
 
 NO RESOLVIBLES
 - la función "Erase" activa los efectos relacionados con la muerte de las unidades (como los "poemas épicos") y aumenta el contador de unidades perdidas (los centinelas que regresan a las torres son la causa principal)
+- el foro germano produce oro en la misma cantidad de víveres si el pueblo del propietario al comienzo de la partida no es Germania
 - el cambio de factor velocidad para un héroe solo se aplica durante el combate y no durante el movimiento
 - las unidades con factor velocidad modificado ralentizan a todo el ejército cuando están vinculadas a un héroe
 - las unidades muertas en posesión de "fortuna de los dioses" que son golpeadas por "daño expansivo" pueden generar el mismo bug de "resurrección" que ocurría con "ira de Júpiter"

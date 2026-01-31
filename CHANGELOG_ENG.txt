@@ -11,9 +11,65 @@ However, despite my great passion for Imperivm, I never paid attention to what t
 It was only by chance, out of curiosity, while searching for any DLC I might have missed, that I discovered a mod introducing Greece, a civilization I had never understood the original developers' decision to exclude. I greatly appreciated the efforts of everyone who worked on it and, in my opinion, the definitive version of Imperivm GBR is this one, with all the major ancient civilizations (if we don't include the Parthians, too).
 At the same time, however, just as I discovered the wonder of the Greek Mod, I sadly realized that, in general, the great Imperivm GBR has been almost forgotten by everyone: there is an HD version on Steam, but it's inferior to the Greek Mod and hasn't been updated in years.
 Even the Greek Mod itself, despite all its merits, had some issues and could have been further improved. That's why I decided to step up and use all my knowledge and developer skills to contribute and make Imperivm a better game, hoping that someday the franchise will be rediscovered and appreciated by more and more people.
-I then started working as a self-taught modder, beginning with the Greek Mod to create a new one, the Caesar Mod, aiming to improve every aspect of the game in order to offer everyone a product that provides a pleasant and memorable game experience, whether solo or with others, as well as offering a starting point to help others passionate about Imperivm with the same intentions as mine (it wasn't easy at all working on a code base that was poorly optimized, very messy, and clearly amateurish in many areas, so I want to prevent others from wasting time fixing things like I had to do).
+I then started working as a self-taught modder, beginning with the Greek Mod to create a new one, the Caesar Mod, aiming to improve every aspect of the game in order to offer everyone a product that provides a pleasant and memorable gameplay experience, whether solo or with others, as well as offering a starting point to help others passionate about Imperivm with the same intentions as mine (it wasn't easy at all working on a code base that was poorly optimized, very messy, and clearly amateurish in many areas, so I want to prevent others from wasting time fixing things like I had to do).
 My passion for Imperivm is so great that it's almost impossible to express in words and I also want to clarify that I have no intention of "stealing" what the creators of Greek Mod did. In fact, I've included a thank-you to them in the main menu credits and haven't hidden any of their names, I've simply added my name alongside theirs.
 If another person decides to use the Caesar Mod as a starting point for a new project, they are more than welcome to do so: the only courtesy I ask is that they do as I did and keep all the original names, specifying that they started from my mod and releasing the new project under the same CC BY-SA license, whose details can be found in the LICENSE.txt file included in the package.
+______________________________________
+
+[1.0.5] - 31 January 2026
+
+This new version of the Caesar Mod fixes several issues, making the gameplay experience more enjoyable and improving various general aspects.
+One of the most important changes is the new system for assigning neutral outposts after the garrison is defeated: previously, the outcome was completely random and a single passing unit could take the outpost effortlessly, causing frustration for whom had fought to eliminate the guards. The behaviour is now deterministic and the outpost is assigned to the player with the highest number of nearby units; only in the case of a tie is the choice random, but it is a fairly rare occurrence.
+Another source of frustration in team games has also been resolved, where the interaction with allied buildings via shared control could alter the ally's selection interface, potentially compromising the outcome of a battle.
+The "Mare Nostrum" conquest can now be played without freezes caused by guard post unit limits and sentries correctly attack enemies without interruptions.
+Outposts feature a new command for sending units outside; it was not bound to a simple right-click in order to avoid accidental mistakes with the already existing attack command with the towers.
+A major revision has been carried out on the animations of all heroes to standardize attack speed among those of the same nation (with Carthage being a particularly noticeable case).
+The Protection of Apollo has been completely revised: it can now be used only once per game (just like the tribute), but it makes all owned strongholds inviolable (even repairing damaged buildings) and it requires a short activation time, allowing it to be canceled in case of accidental use (previously impossible and a further source of frustration) and giving the enemy enough time to exit the stronghold before being sealed inside.
+Player colours have also been improved for better visual distinction and efforts have been made to reduce duplicated sounds and voice lines: due to technical limitations related to the source code and the deprecation of DirectSound and DirectMusic, the issue cannot be fully eliminated but it can be mitigated by modifying the "Config.ini" file.
+Finally, special thanks go to Nicoghiro31, author and maintainer of the Legacy Mod, for his help with the Egyptian sentries and for his spontaneous contribution to fixing the water textures in the minimap view.
+
+
+CHANGES
+
+- fixed the issue where right-clicking to move units out of the townhall of an ally via shared control selected them for the ally instead of the clicking player
+- fixed the issue where creating caravans from the buildings of an ally via shared control selected them for the ally instead of the creating player
+- fixed the issue where the supply command on terrain was not managed (it generated an error message in the logs)
+- fixed the issue where it was possible to destroy the Roman townhall flag (with siege machines or "trample")
+- fixed the issue where elimination timers in single player games were not correctly reset upon retaking a stronghold
+- fixed the issue where "repair" returned resources on completion
+- fixed the issue where towers could be repaired by AI only
+- fixed the issue where the AI tried to research gate/sentry upgrades in settlements without gates/walls
+- fixed the issue where "strengthen stronghold gates" also affected gates of other strongholds if too close
+- fixed the issue where guard post sentries stopped attacking enemies to move or look elsewhere
+- fixed the issue where Egyptian sentries on north-facing walls became transparent in combat (thanks to Nicoghiro31)
+- fixed the issue where "democracy/oligarchy" could be researched by multiple buildings at the same time leading to a waste of resources
+- the conquest of Britain: fixed the issue where village guards chased enemies instead of going back if they moved away, corrected the Iberian hero's skills
+- guard post: stationable units increased to 10000 (to avoid game freezes), respawn time of each sentinel fixed to 12 seconds, repair aligned with the other outposts
+- neutral outposts and tents: assignment changed from fully random among players of nearby units to random among those with the highest number of nearby units (100% if the maximum is unique)
+- outposts: added "launch sortie" command to send units inside towards the selected point attacking all enemies in sight
+- tents: added the ability to right-click to give orders to the units inside (just like with the townhall)
+- stonehenge: energy generation time increased to 2–16 seconds (2s + 14s / sages)
+- invoke the protection of Apollo: effect extended to all buildings (broken too) in all owned fortresses, research time 15 seconds, can only be used once per game
+- store food: made usable also when researching other upgrades
+- strengthen stronghold gates: renamed to "strengthen stronghold walls", also increases health of walls and towers
+- repair and repopulate: cost fixed to 100 gold for all buildings
+- heroes: standardized attack speed of those belonging to the same people
+- British hero: improved attack coordination to reduce the risk of shooting already dead enemies
+- German axeman: corrected damage sync with attack animation
+- Greek units: corrected damage sync with attack animation and improved death animation
+- ship: added "active", "determination" and "ferocity"
+- dangerous animals: slightly reduced flee chance if injured
+- tower: health reduced to 1500
+- Republican Rome veteran upgrade items: cannot be given to other units, can be removed by double click
+- noble offence and defence, charms of Athena and Aegle: can be removed by double click
+- concentration stone and blood stone: added out-of-range target notification
+- invigorating dark harp: reduced the volume of the sound effect
+- editor: added 2 decorative ruins ("Structures -> Others -> Ruins" section) and winter guard post
+- made player colours more distinct
+- added multiple selection by double click of different units with the same appearance (e.g. standard and Punic Roman units)
+- corrected the name of many units in case of multiple selection
+- improved the overall game audio with reduction of "doubling" of voices and sounds
+- improved water textures in the minimap (thanks to Nicoghiro31)
 ______________________________________
 
 [1.0.4] - 6 December 2025
@@ -21,7 +77,7 @@ ______________________________________
 This new version of the Caesar Mod focuses mainly on the game stability by improving the AI and the management of upgrades as well as fixing numerous issues; it took much more time than the previous versions because the changes were particularly difficult to test and verify.
 As for the AI, all scripts have been revised and optimized to strengthen it even more, resulting particularly in higher performance and far fewer crashes: before the changes, in fact, a huge-map single player game with 7 AIs could suddenly crash very easily and it was difficult to reach 1 hour of gameplay without problems, while now it is possible to reach up to 10 consecutive hours without even experiencing performance drops. This does not mean that the game is perfect and it's still wise to save often, since freezes or crashes can still occur, but it is certainly a huge improvement compared to before.
 The changes related to upgrades are mostly intended for large maps where multiple strongholds are controlled, but also for custom scenarios where a stronghold may have hybrid or multiple buildings: if an upgrade is being researched by a building, it is no longer possible to start it by another and the tooltip displays a green indicator at the bottom (thus immediately visible and consistent with the red indicators) showing that it is already in progress; the same applies to completed upgrades and it is always possible to review their costs without relying on the help guide. Besides, a very important change is the addition of the Rome choice through secondary buildings (no longer only with the townhall), allowing for example a stronghold to have a Gaul townhall and an operative Roman arena.
-Among the various general issues that have been fixed, the most important is undoubtedly the problem of "trample" against siege machines because the dedicated script responsible for it has been removed as it caused lag and crashes: not only has the same behavior been preserved with better performance, but it has even been extended to all melee units in the game rather than exclusively war elephants, allowing the creation of custom scenarios where sequences can dynamically give or remove "trample".
+Among the various general issues that have been fixed, the most important is undoubtedly the problem of "trample" against siege machines because the dedicated script responsible for it has been removed as it caused lag and crashes: not only has the same behaviour been preserved with better performance, but it has even been extended to all melee units in the game rather than exclusively war elephants, allowing the creation of custom scenarios where sequences can dynamically give or remove "trample".
 Finally, a purely decorative well (without healing effects) has been added to the editor structures: it already existed in the original game but for some reason it had never been used.
 
 
@@ -77,7 +133,7 @@ GENERAL - MISCELLANEOUS
 - editor: added decorative well ("Structures -> Others -> Europe" section) and Roman winter village buildings
 - mercenary pact gold: can be removed by double click if equal to 0
 - blood stone: cooldown increased to 30 seconds, the use puts all blood stones in the inventory on cooldown
-- ram: can no longer attack allied buildings (same behavior of the Roman tower)
+- ram: can no longer attack allied buildings (same behaviour of the Roman tower)
 - peaceful animals: added tooltip for the approach command toward units/buildings
 - crow: can now perch on buildings
 - uncontrollable peasants/chickens: stamina reduced to 0
@@ -88,8 +144,8 @@ ______________________________________
 
 This new version of the Caesar Mod fixes several issues, focuses on various graphical aspects and adds some very useful new features.
 Among the problems solved, one of the most important is that certain upgrades available in some taverns (such as "religious feast" of Egypt, Germany and Greece) didn't work if the townhall didn't match the people of those buildings: now that they work with any townhall, it is possible to create custom maps where buildings of different peoples can be mixed. Another interesting aspect for custom maps is that the garrison of an outpost now respawns if it becomes neutral again: this allows the creation of dynamic maps with special conditions/mechanics (similar to the uprisings of the Teuton tents in the conquest maps of Germany).
-Regarding the numerous graphical improvements, a background has been added to all the commands introduced in the first version of the Caesar Mod, since it was previously white and it clashed with the existing ones; to make things clearer for the player, the recruitment command for a Carthaginian mercenary whose weapon production has been specialized now has a green background that stands out from the others, so that the unit can be instantly recognized if the player doesn't want to spend twice as much gold and the same principle applies to Imperial Rome's praetorians after researching the second upgrade in the blacksmith. Speaking of Rome, there is now the possibility that the townhall, the arena and the temple will be generated with the alternative look used in the original version 1.40 of the game for Imperial Rome, while in the editor, in addition to these three structures, all of the Roman buildings with the winter appearance have been added.
-Finally, the new features include the ability to attack units with catapults (following their movements if they move), an improved behavior for ghouls so that they automatically move among enemies to inflict as much damage as possible, but, above all, 3 new commands in the unit interface: automatic activation of hero skills (very useful with many armies in different parts of the map), global selection of special units (also very useful if they are scattered across a huge map), and the collection of items from the nearest visible holder (very useful if a unit dies behind buildings that block visibility). It is important to clarify that the last two features are similar to and partly inspired by those present in the Legacy Mod: the implementation is very different, but the basic idea is the same and therefore it is right to credit and thank it for this addition.
+Regarding the numerous graphical improvements, a background has been added to all the commands introduced in the first version of the Caesar Mod, since it was previously white and it clashed with the existing ones; to make things clearer for the player, the recruitment command for a Carthaginian mercenary whose weapon production has been specialized now has a green background that stands out from the others, so that the unit can be instantly recognized if the player doesn't want to spend twice as much gold and the same principle applies to Imperial Rome's praetorians after researching the second upgrade in the blacksmith. Speaking of Rome, there is now the possibility that the townhall, the arena and the temple will be generated with the alternative look used in the original version 1.40 of the game for Imperial Rome, while in the editor, in addition to these three buildings, all of the Roman buildings with the winter appearance have been added.
+Finally, the new features include the ability to attack units with catapults (following their movements if they move), an improved behaviour for ghouls so that they automatically move among enemies to inflict as much damage as possible, but, above all, 3 new commands in the unit interface: automatic activation of hero skills (very useful with many armies in different parts of the map), global selection of special units (also very useful if they are scattered across a huge map), and the collection of items from the nearest visible holder (very useful if a unit dies behind buildings that block visibility). It is important to clarify that the last two features are similar to and partly inspired by those present in the Legacy Mod: the implementation is very different, but the basic idea is the same and therefore it is right to credit and thank it for this addition.
 
 
 CHANGES
@@ -137,7 +193,7 @@ ______________________________________
 
 This new version of the Caesar Mod greatly improves two aspects of the game: shipyards and animals.
 A new command is now available at the shipyard to allow the player to send fishermen away so that they can be moved elsewhere, the exit path of all vessels has been improved (in the case of ships, if the water area around the shipyard was very small, they could end up on land and then move like regular units without being able to return to the water) as well as that of supply units in general; since it was possible to accumulate huge amounts of food with fishermen, a maximum limit of 50 has been added to every shipyard and the indicator now updates correctly.
-The changes to animals significantly improve their behavior, especially on random maps: they flee when injured (for example, the horse now gallops away instead of walking as if nothing happened), while the dangerous ones are generally more aggressive than before and, in the case of wolves and lions, they now gather in larger packs, becoming a serious threat to vulnerable units such as peasants or sages; since it is harder to chase them when they flee, "gambler's day" now has a 100% chance to grant the level bonus in the case of non-summoned animals, making the gameplay experience as Britain more deterministic and less frustrating.
+The changes to animals significantly improve their behaviour, especially on random maps: they flee when injured (for example, the horse now gallops away instead of walking as if nothing happened), while the dangerous ones are generally more aggressive than before and, in the case of wolves and lions, they now gather in larger packs, becoming a serious threat to vulnerable units such as peasants or sages; since it is harder to chase them when they flee, "gambler's day" now has a 100% chance to grant the level bonus in the case of non-summoned animals, making the gameplay experience as Britain more deterministic and less frustrating.
 Besides, in the editor, the distinction between wild and controllable animals has been added, which can be very useful for creating new adventures; finally, the "bloodlust" power has been rebalanced as it was too strong with ranged units (especially with Egypt) and several bugs and exploits have been fixed.
 
 
@@ -159,7 +215,7 @@ ANIMALS
 - fixed the issue where they could become invisible but still in sight and unclickable if the fog of war was disabled
 - fixed the issue where horses interrupted the command queue if it included the movement one
 - fixed the issue/exploit where wild horses and deer got stuck on the northern edge of the map or in spaces with little free space
-- wild animals: improved general behavior, removed the periodic healing, reduced the excessive audio amount when idle
+- wild animals: improved general behaviour, removed the periodic healing, reduced the excessive audio amount when idle
 - controllable wild animals: removed chance to flee when they are given the direct attack order (they can still flee if they engage an enemy on their own)
 - eagle: split "hover" command into 2 modes (radius 1800 and 800)
 - editor: added wild/controllable category distinction for each animal (excluding eagle, hen and fish)
@@ -186,7 +242,7 @@ ______________________________________
 
 [1.0.1] - 15 July 2025
 
-This new version of the Caesar Mod fixes several bugs and exploits in order to make the game experience more enjoyable and to prevent some unfair behaviours in multiplayer games. During the development, I investigated why the endgame statistics related to lost and killed units are always inaccurate compared to the actual course of the match and, unfortunately, I found yet another issue related to the source code: the details are listed at the end of the file, in the section on not fixable bugs ("Erase" function).
+This new version of the Caesar Mod fixes several bugs and exploits in order to make the gameplay experience more enjoyable and to prevent some unfair behaviours in multiplayer games. During the development, I investigated why the endgame statistics related to lost and killed units are always inaccurate compared to the actual course of the match and, unfortunately, I found yet another issue related to the source code: the details are listed at the end of the file, in the section on not fixable bugs ("Erase" function).
 Additionally, the scripts related to sieges and guard units in adventures have been completely overhauled in order to make the behaviour of the involved units smarter (they kept getting distracted by sentries) and to reduce the large amount of exploits that could be used to counter the enemies: besides improving the existing great battles/challenges, this change also lays the groundwork for the new adventures that will be introduced in the next versions of the mod.
 
 
@@ -292,7 +348,7 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - Keltill: health increased to 1300, damage increased to 60, armor reduced to 18, sight increased to 650, speed increased to 130, skills "defensive cry", "epic attack", "epic endurance", "healing", "quick march"
 - Larax: health increased to 1400, damage increased to 70, sight increased to 700, speed increased to 140, inventory increased to 6, skills "defensive cry", "epic attack", "epic endurance", "epic armor", "scout"
 - Julius Caesar: health increased to 1250, damage increased to 42, sight increased to 675, speed increased to 125, skills "administration", "battle cry", "quick march", "team defense", "team attack", "vigor"
-- players: enhanced existing colors, replaced greenish with silver, replaced dark red with brown, replaced yellowish with gold
+- players: enhanced existing colours, replaced greenish with silver, replaced dark red with brown, replaced yellowish with gold
 - ranks: added new honorary titles up to an average of 400 points
 - audio and voices: updated and reviewed the sound effects of each unit to match the type of weapon used, completed missing lines for each unit (Italian, English, and Spanish)
 - main menu: added "Tips" section (total sentences increased to 80), removed "Online (BETA)" button
@@ -597,7 +653,7 @@ To summarize, the focus of Republican Rome now lies in the raw stats of the unit
 - sentry: health increased to 180, damage increased to 26, armor increased to 6
 - gladiator: health increased to 340, damage reduced to 28, replaced "expertise" with "offensive tactics", recruitment time increased to 12 seconds
 - velit: health increased to 220, range increased to 400, speed increased to 70, added "defensive tactics", cost increased to 150 gold, recruitment time reduced to 12 seconds
-- principle: health increased to 320, damage increased to 24, armor reduced to 16, added "determination", cost increased to 220 gold, recruitment time reduced to 16 seconds, increased death animation duration 
+- principle: health increased to 320, damage increased to 24, armor reduced to 16, added "determination", cost increased to 220 gold, recruitment time reduced to 16 seconds, increased death animation duration
 - scout: health reduced to 240, damage increased to 22, speed reduced to 160, added "keen sight", cost increased to 150 gold, recruitment time increased to 12 seconds
 - tribune: speed increased to 70, added "ferocity", cost increased to 340 gold
 - praetorian: health increased to 620, armor increased to 18, speed increased to 70, cost increased to 480 gold for Imperial Rome and to 420 gold for Punic Rome, recruitment time increased to 24 seconds
@@ -667,7 +723,7 @@ Charm costs have also been reduced and the unit cap to equip them has been incre
 - light of Horus 1: level for Horus warriors increased to 4
 - light of Horus 2: level for Horus warriors increased to 6
 - light of Horus 3: level for Horus warriors increased to 8
-- statue of Amon-Ra: cost increased to 3000 gold, effect extended to all units at research completion 
+- statue of Amon-Ra: cost increased to 3000 gold, effect extended to all units at research completion
 - buy slaves: cost reduced to 400 gold, adds 20 population
 - grain trade: cost reduced to 1500 gold
 - religious feast: cost increased to 1500 food
@@ -816,7 +872,7 @@ The goal of these changes is simply to improve the gameplay experience in single
 - Island chaos: added 2 stonehenges, replaced belt of might with king's belt in the leather bag on the central island
 - Island troubles: neutral scattered units' player changed to 15
 - Island War: fixed the issue where shipyards were not automatically captured by those passing by, added description, added 1 gold outpost to the northwest peninsula
-- Island battle: wolves level increased to 10, removed eagle feather from the oak stump in the centre 
+- Island battle: wolves level increased to 10, removed eagle feather from the oak stump in the centre
 - Italy - Huge: fixed the issue where caves and peaceful animals changed player, dangerous animals level increased to 10
 - Crete - Huge: dangerous animals level increased to 10
 - Crete - Normal: replaced training outpost with Egyptian gold outpost, dangerous animals level increased to 10
@@ -867,7 +923,7 @@ The tutorial has remained very similar to the original and the only changes made
 
 GREAT BATTLES AND GREAT CHALLENGES OF ROME
 
-Tons of changes have been made to all the missions to make them more engaging to play and more memorable, as well as to fix various issues that could be annoying or ruin the game experience. Additionally, countless spelling and grammar mistakes have been corrected, and the English version of each game has been aligned with the Italian and Spanish versions (the only thing still missing is the conversation audio). The details are listed in a distinct section for each scenario, as they are too numerous to include in one place, along with a difficulty and duration rating based on some tests at maximum difficulty after the changes were made (this is subjective and may vary from player to player, but it can still be useful for giving a general idea of what to expect).
+Tons of changes have been made to all the missions to make them more engaging to play and more memorable, as well as to fix various issues that could be annoying or ruin the gameplay experience. Additionally, countless spelling and grammar mistakes have been corrected, and the English version of each game has been aligned with the Italian and Spanish versions (the only thing still missing is the conversation audio). The details are listed in a distinct section for each scenario, as they are too numerous to include in one place, along with a difficulty and duration rating based on some tests at maximum difficulty after the changes were made (this is subjective and may vary from player to player, but it can still be useful for giving a general idea of what to expect).
 
 - corrected countless spelling and grammar mistakes
 - corrected player interface based on the played people
@@ -1009,7 +1065,7 @@ Duration rating with tests at hard after the changes: long
 - Alexandria: initial gold increased to 6000, maximum population increased to 160, when it is occupied by the Egyptians it gains 5, 15 or 25 gold and 20, 35 or 50 food every 2 seconds based on difficulty
 - Pelusio garrison: added 10 swordsmen, moved inside the townhall
 - Memphis garrison: added more units, level increased to 25 for units and to 30 for heroes, improved hero skills, outposts replaced with southeast village as recapture target
-- Alexandria garrison: added more units, hero replaced with Cleopatra and Mark Antony, level increased to 30, removed stand ground command, added Egyptian charms to all units 
+- Alexandria garrison: added more units, hero replaced with Cleopatra and Mark Antony, level increased to 30, removed stand ground command, added Egyptian charms to all units
 - Alexandria shipyard: added 2 level 30 ships with 120 units aboard and with concentration stone, fur gloves of health, elephant tusk and charm of Athena
 - Cleopatra: placed to defend Alexandria with 40 Horus warriors and 40 Anubis warriors, level 40, with "administration", "concealment", "team defense" and "healing" (10 points), with golden ankh and silver ankh
 - Mark Antony: placed to defend Alexandria with 50 praetorians, level 40, with "vigor", "epic attack", "team attack" and "assault cry" (10 points), with scroll of life and scroll of death
@@ -1026,7 +1082,7 @@ Duration rating with tests at hard after the changes: long
 THE CONQUEST OF BRITAIN
 
 The conquest of Britain has been revisited with the goal of providing an engaging large-scale single player game with some special mechanics.
-Various bugs related to strange behaviors of both enemies and allies have been fixed, as the latter often interrupted the siege of Lindum or Dumnorium to enter certain buildings and do nothing.
+Various bugs related to strange behaviours of both enemies and allies have been fixed, as the latter often interrupted the siege of Lindum or Dumnorium to enter certain buildings and do nothing.
 The real revolution of the scenario is actually due to the changes made to the AI, which is now much more dangerous than before (see the dedicated section) and much more active in retaking the strongholds and villages that the player will capture during the great battle.
 The allied support groups have been diversified and improved by introducing even some Greek units while the ancient Stonehenge, thanks to general modifications made to the stonehenges, will be a very useful tool in the player's hands (provided they can capture and hold it), especially with "gold rain" and "Teuton horde" which, despite the limit of only one use, will allow the player to fully exploit their potential once many cities have been conquered.
 In particular, "Teuton horde" will be essential to win the final battle against Calgacus's army, as it has been greatly strengthened and will no longer be easily eliminated already at the Lindum stronghold, since all the gates and part of the northern walls have been removed (the army tended to get stuck while continuing to eliminate the sentries and did not capture the townhall).
@@ -1170,7 +1226,7 @@ Duration rating with tests at hard after the changes: short/medium
 EGYPT TO ARMS
 
 Egypt to arms has been revamped to fix multiple bugs and to become more logical in terms of difficulty progression.
-The Roman armies are initially weaker than before but they become more and more powerful, still maintaining a random generation factor but that makes more sense than the previous version: there was too much discrepancy between the units attached to the heroes, sometimes after two attacks praetorians and/or tribunes would come and they were nearly impossible to stop in the early game, while other times very weak units would show up even in the last attacks, making the game experience inconsistent.
+The Roman armies are initially weaker than before but they become more and more powerful, still maintaining a random generation factor but that makes more sense than the previous version: there was too much discrepancy between the units attached to the heroes, sometimes after two attacks praetorians and/or tribunes would come and they were nearly impossible to stop in the early game, while other times very weak units would show up even in the last attacks, making the gameplay experience inconsistent.
 The player will have to make great use of divine warriors and war elephants to defend against the final attacks: luckily, summoning the divine warriors has been simplified by the addition of the new upgrade "slavery investment", which helps quickly recover the population of the villages, while the Carthaginian market and the gold outposts (including the mercenary fort itself) can provide the wealth needed for the elephants.
 Priests can prove to be a very effective weapon against the enemy thanks to the use of the plague mist and to the presence of a shrine with which they can cast some powers: the most useful of these is undoubtedly "wind of wisdom" to increase the heroes' level.
 
@@ -1301,7 +1357,7 @@ Duration rating with tests at hard after the changes: long
 - Iceni: initial gold increased to 10000, initial food increased to 6000, maximum population increased to 140, automatically researched "swords", "fights" and "ritual chamber"
 - Boudicca: level increased to 10
 - Wuffa: replaced with Alvin, updated icon
-- initial druid: assigned to the second quick selection icon and consequently to the "ctrl-2" group 
+- initial druid: assigned to the second quick selection icon and consequently to the "ctrl-2" group
 - ruins in center of map: moved north along with the other ruins
 - added an obelisk, a fountain, a face pillar and a boulder to the Iceni stronghold
 - added a hidden rib cage with some guarding units
@@ -1355,11 +1411,11 @@ Thanks to these improvements, the player can now truly experience the feeling of
 - neutral strongholds: initial gold increased to 4000, initial food increased to 1000
 - Rome map: changed caves, added 4 enemy camps, removed 4 stonehenges, added 4 Roman gold outposts and 2 guard posts
 - Gaul map: removed caves, added 3 Teuton tents, 1 shipyard, 1 Iberian training outpost, 3 Gaul trade outposts, 1 guard post, 10 ruins and 3 stonehenges
-- Iberia map: swapped 2 enemy colors, Gaul neutral stronghold changed to Iberian, changed caves, added 3 enemy camps, removed 3 stonehenges, added 6 Iberian training outposts
-- Carthage map: swapped 3 enemy colors, added 6 oases, disabled sentry upgrades in the neutral stronghold, added 8 Carthaginian recruitment outposts, 2 ruins, 1 shrine and 12 Numidian tents
+- Iberia map: swapped 2 enemy colours, Gaul neutral stronghold changed to Iberian, changed caves, added 3 enemy camps, removed 3 stonehenges, added 6 Iberian training outposts
+- Carthage map: swapped 3 enemy colours, added 6 oases, disabled sentry upgrades in the neutral stronghold, added 8 Carthaginian recruitment outposts, 2 ruins, 1 shrine and 12 Numidian tents
 - Britain map: stonehenge moved to northern enemy stronghold, added 4 British training outposts, 2 ruins and 2 Teuton camps
 - Egypt map: added 1 enemy in the northeast (without alliances), added 5 contaminated areas, removed caves, added 4 Egyptian gold outposts, 2 Carthaginian recruitment outposts, 6 Numidian camps and 1 shrine
-- Germany map: swapped 2 enemy colors, changed caves, removed southwest stonehenge, added 11 Teuton tents and 4 German trade outposts
+- Germany map: swapped 2 enemy colours, changed caves, removed southwest stonehenge, added 11 Teuton tents and 4 German trade outposts
 - Greece map: enemy teams changed to 2 in the center (allied) and 2 in the north and south (without alliances), changed caves, removed 3 stonehenges, added 13 Greek recruitment outposts, 1 guard post and 5 ruins
 
 
@@ -1476,6 +1532,7 @@ TO BE INVESTIGATED FURTHER
 
 NOT FIXABLE
 - the "Erase" function triggers the effects related to the death of units (such as "warrior tales") and increases the lost units counter (sentries returning to towers are the main cause)
+- the German townhall produces gold in the same amount of food if the owner's nation at the start of the game is not Germany
 - the speed factor change for a hero only works in fight phase and not in movement phase
 - units with modified speed factor slow down the entire army when they are attached to a hero
 - dead units with "gambler's luck" that are hit by "trample" can generate the same "resurrection" bug that occurred with "wrath of Jupiter"
