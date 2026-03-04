@@ -4,8 +4,13 @@ Ship this;
 
 this = This.AsShip();
 
-while (!.Goto(pt, 0, 1000, true, -1))
-	if (.TimeWithoutWalking > 0)
-		break;
+if (.IsValid)
+	if (.IsAlive) {
+		while (!.Goto(pt, 0, 2000, true, -1))//use -1 with the inner check because there is something strange with ships
+			if (.TimeWithoutWalking > 0)
+				break;
 
-.UnboardAllUnits();
+		.UnboardAllUnits();//this function does not cause a crash if someone dies during the travel (not like UnboardUnits)
+	}
+
+Sleep(15);//prevent possible loops with other commands

@@ -1,8 +1,6 @@
 //void, Obj this
 
-int duration;
-
-duration = GetConst("ScoutAreaDuration");
+int duration = 10000;
 
 while (duration > 0) {
 	Sleep(1000);

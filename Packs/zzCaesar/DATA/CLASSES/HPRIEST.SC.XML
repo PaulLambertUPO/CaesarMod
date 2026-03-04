@@ -15,13 +15,17 @@
 	<method sig="stand_position" vs="data/subai/rpriest_stand_position.vs" />
 	<method sig="advance" vs="data/subai/rpriest_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/rpriest_advance.vs" />
+	<method sig="engage" vs="data/subai/rpriest_engage.vs" />
 
 	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
-	<method sig="restoration" vs="data/subai/druid_restoration.vs" />
+	<method sig="restoration" vs="data/subai/druid_selfdestroy.vs" />
+
+	<method sig="ondie" vs="data/subai/ienchantress_hpriest_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="heal" />
+		<cmd name="learn" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />

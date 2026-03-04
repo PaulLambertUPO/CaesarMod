@@ -17,18 +17,24 @@
 	<method sig="stand_position" vs="data/subai/shaman_stand_position.vs" />
 	<method sig="advance" vs="data/subai/shaman_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/shaman_advance.vs" />
+	<method sig="engage" vs="data/subai/shaman_engage.vs" />
 
 	<method sig="curse" vs="data/subai/shaman_curse.vs" verify="data/subai/shaman_curse_verify.vs" />
+	<method sig="curse" vs="data/subai/shaman_curse_ground.vs" />
 	<method sig="zombify" vs="data/subai/druid_ghoul_summoning.vs" />
 
-	<defaultcmd target="Military">
+	<method sig="ondie" vs="data/subai/cshaman_epriest_ondie.vs" />
+
+	<defaultcmd target="Unit">
 		<cmd name="curse" />
+		<cmd name="learn" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />
 	</defaultcmd>
 	<defaultcmd target="ShipBattle">
 		<cmd name="boardship" />
+		<cmd name="curse" />
 		<cmd name="approach" />
 	</defaultcmd>
 

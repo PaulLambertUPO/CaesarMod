@@ -11,19 +11,23 @@
 	<properties help="contents/units/BDruid" />
 	<properties edittree_pos="Units/Britain/Druid" />
 
-	<behavior script="data/subai/bdruid_hide_close_allies.vs" />
-
 	<method sig="idle" vs="data/subai/bdruid_idle.vs" />
 	<method sig="stand_position" vs="data/subai/bdruid_stand_position.vs" />
+	<method sig="advance" vs="data/subai/druid_hide_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/druid_hide_advance.vs" />
+	<method sig="engage" vs="data/subai/bdruid_engage.vs" />
 
 	<method sig="hide" vs="data/subai/druid_hide_unit.vs" verify="data/subai/druid_hide_verify.vs" />
 	<method sig="hide" vs="data/subai/druid_hide_ground.vs" />
 	<method sig="ghoul_summoning" vs="data/subai/druid_ghoul_summoning.vs" />
 	<method sig="crow_summoning" vs="data/subai/druid_crow_summoning.vs" />
-	<method sig="mass_heal" vs="data/subai/druid_massheal.vs" />
+	<method sig="mass_heal" vs="data/subai/druid_selfdestroy.vs" />
+
+	<method sig="ondie" vs="data/subai/bdruid_tenchantress_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="hide" />
+		<cmd name="learn" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />

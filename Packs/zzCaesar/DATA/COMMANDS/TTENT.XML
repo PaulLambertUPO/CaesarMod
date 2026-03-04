@@ -2,7 +2,7 @@
 	<cmd name="StartTTeutonRiderTrain" priority="1"
 		method="tentproduction"
 		button="actions/train TTeutonRider.bmp"
-		groupverifier="data/subai/start_trider_verify.vs"
+		groupverifier="data/subai/tent_production_start_verify.vs"
 		transpicon="1"
 		key="r"
 		immediate="yes"
@@ -15,19 +15,19 @@
 	<cmd name="StopTTeutonRiderTrain" priority="1"
 		method="tentproduction"
 		button="actions/Stop TTeutonRider.bmp"
-		groupverifier="data/subai/stop_trider_verify.vs"
+		groupverifier="data/subai/tent_production_stop_verify.vs"
 		transpicon="1"
 		key="r"
 		immediate="yes"
 		rollover="Stop training Teuton Riders"
-		param="Nothing">
+		param="TTeutonRider">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
 	<cmd name="StartTTeutonArcherTrain" priority="2"
 		method="tentproduction"
 		button="actions/train TTeutonArcher.bmp"
-		groupverifier="data/subai/start_tarcher_verify.vs"
+		groupverifier="data/subai/tent_production_start_verify.vs"
 		transpicon="1"
 		key="a"
 		immediate="yes"
@@ -40,19 +40,19 @@
 	<cmd name="StopTTeutonArcherTrain" priority="2"
 		method="tentproduction"
 		button="actions/Stop TTeutonArcher.bmp"
-		groupverifier="data/subai/stop_tarcher_verify.vs"
+		groupverifier="data/subai/tent_production_stop_verify.vs"
 		transpicon="1"
 		key="a"
 		immediate="yes"
 		rollover="Stop training Teuton Archers"
-		param="Nothing">
+		param="TTeutonArcher">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
 	<cmd name="StartTTeutonWolfTrain" priority="3"
 		method="tentproduction"
 		button="actions/train TTeutonWolf.bmp"
-		groupverifier="data/subai/start_twolf_verify.vs"
+		groupverifier="data/subai/tent_production_start_verify.vs"
 		transpicon="1"
 		key="w"
 		immediate="yes"
@@ -65,12 +65,12 @@
 	<cmd name="StopTTeutonWolfTrain" priority="3"
 		method="tentproduction"
 		button="actions/Stop TTeutonWolf.bmp"
-		groupverifier="data/subai/stop_twolf_verify.vs"
+		groupverifier="data/subai/tent_production_stop_verify.vs"
 		transpicon="1"
 		key="w"
 		immediate="yes"
 		rollover="Stop training Teuton Wolves"
-		param="Nothing">
+		param="TTeutonWolf">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>

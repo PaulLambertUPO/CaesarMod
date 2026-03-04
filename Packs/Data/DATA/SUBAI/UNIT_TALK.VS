@@ -1,20 +1,21 @@
-// void, Obj obj, Obj other
+//void, Obj This, Obj other
 
 Unit this;
 
-this = obj.AsUnit;
+this = This.AsUnit();
 
-if( other.IsAlive())
-{
-	while( ! .Stop( 1000 ));
-	while( ! .Goto( other, 20, 2000, false, 0 ))
-	{
-		if( ! other.IsAlive()) break;
-		//.pr("walking");
-	}
-}
-if( other.IsAlive())
-{
-	.Face( other.posRH );
-	.Idle( 3000 + rand( 200 ));
-}
+if (.IsValid)
+	if (.IsAlive)
+		if (other != this)
+			if (other.AsUnit().IsValid)
+				if (other.IsAlive) {
+					while (!.Stop(1000))
+						;
+					while (!.Goto(other, 20, 2000, false, 0))
+						if (other.IsDead)
+							break;
+					if (other.IsAlive) {
+						.Face(other.posRH);
+						.Idle(2000 + rand(1001));
+					}
+				}

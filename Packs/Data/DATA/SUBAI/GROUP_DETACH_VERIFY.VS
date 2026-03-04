@@ -1,15 +1,21 @@
 //bool, ObjList objs, str OUT reasonText
-int i;
 
-if (objs.count == 0) 
-	return false;
+Unit u;
+int i, c, f;
 
-for(i = 0; i < objs.count(); i += 1)
-{
-	if(objs[i].AsUnit.IsValid)
-		if(objs[i].AsUnit.hero.IsValid)
+c = objs.count;
+
+for (i = 0; i < c; i += 1) {
+	u = objs[i].AsUnit();
+	if (u.IsAlive) {
+		if (u.hero.IsValid)
 			return true;
+		if (u.HasFreedom)
+			f += 1;
+	}
 }
-reasonText = rollover(objs[0], true) + "\n<color 255 0 0>" + Translate("Not attached to hero");
+
+if (f != c)
+	reasonText = rollover(objs[0], true) + "\n<color 255 0 0>" + Translate("Not attached to a hero");
 
 return false;

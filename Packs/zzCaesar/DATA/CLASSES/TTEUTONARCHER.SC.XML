@@ -16,7 +16,5 @@
 	<properties help="contents/units/TTeutonArcher" />
 	<properties edittree_pos="Units/Germany/Teuton Archer" />
 
-	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" /><!-- given by the behaviour script -->
-
 	<sounds walk="HorseWalk" command="VoiceTTeutonArcher" die="HorseUnitDeath" />
 </class>

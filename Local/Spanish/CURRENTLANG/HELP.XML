@@ -1712,7 +1712,7 @@ El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 160</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
-				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento instantáneo</entry>
+				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 15 segundos</entry>
 				<entry image="UI/Help/Items Ico.bmp">Capacidad inventario 1</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Charge.bmp" link="/contents/specials/ucharge">Carga</entry>
@@ -5922,13 +5922,14 @@ Tiempo: 25 segundos
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Cargar unidad de suministro (hasta 1000 oro)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Call Fisherman.bmp" link="/contents/units/Fisherman">
 Alistar pescador
+Alista a un pescador que puede ser enviado a un puerto para producir víveres (peces) con el tiempo.
 Coste: 100 víveres y 1 población
 Tiempo: 5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IScout.bmp" link="/contents/units/IScout">
 Equipar explorador (solo aldea ibera)
 Coste: 1 población
-Tiempo: instantáneo
+Tiempo: 15 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repoblar

@@ -1,11 +1,13 @@
-//void, Obj This
+//void, Obj this
 
-int player;
+.Progress();
 
-This.AsBuilding().Progress();
+{
+	int plr;
 
-player = This.player;
+	plr = .player;
 
-EnvWriteInt(player, "MaxHuntresses", EnvReadInt(player, "MaxHuntresses") + 10);
+	EnvWriteInt(plr, "MaxHuntresses", EnvReadInt(plr, "MaxHuntresses") + 10);
 
-EnvWriteString(player, "Increase Javelin production", "researched");
+	EnvWriteString(plr, "Increase Javelin production", "researched");
+}

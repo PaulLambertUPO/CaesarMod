@@ -7,16 +7,27 @@
 	<properties formation_radius="26" />
 	<properties target_factor="1000" />
 
-	<method sig="advance" vs="data/subai/peaceful_move.vs" />
-	<method sig="advance_aggressive" vs="data/subai/peaceful_move.vs" />
-	<method sig="attack" vs="data/subai/peaceful_attack.vs" />
-	<method sig="attack" vs="data/subai/peaceful_move.vs" />
-	<method sig="move" vs="data/subai/peaceful_move.vs" />
 	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
+	<method sig="attack" vs="data/subai/unit_approach.vs" />
+	<method sig="attack" vs="data/subai/unit_move.vs" />
+	<method sig="advance" vs="data/subai/unit_move.vs" />
+	<method sig="advance_aggressive" vs="data/subai/unit_move.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
 		script="return Translate('No');"
 		help="contents/stats/attack"
 		rollover="Damage"
 	/>
+
+	<defaultcmd target="Building">
+		<cmd name="enter" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
+		<cmd name="approach" />
+	</defaultcmd>
 </class>

@@ -1,16 +1,16 @@
 //void, Obj This, point pt
 
-Unit this;
+Ghost this;
 
 this = This.AsGhost();
 
-if (.IsValid) {
-	if (.GetAnim() == 17)//spawn
-		Sleep(.TimeToAnimFinish);
+if (.IsValid)
+	if (.IsAlive) {
+		if (.GetAnim() == 17)//spawn
+			Sleep(.TimeToAnimFinish);
 
-	while (!.Goto(pt, 0, 2000, false, 0))
-		if (!.HasPath())
-			break;
+		while (!.Goto(pt, 0, 2000, false, 0))
+			;
+	}
 
-	Sleep(15);//this reduces the risk of a move-idle loop
-}
+Sleep(15);//prevent possible loops with other commands

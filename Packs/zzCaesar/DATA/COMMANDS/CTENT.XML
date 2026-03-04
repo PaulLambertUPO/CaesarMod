@@ -2,7 +2,7 @@
 	<cmd name="StartCLibyanFootmanTrain" priority="1"
 		method="tentproduction"
 		button="actions/Hire CLibyanFootman.bmp"
-		groupverifier="data/subai/start_cfootman_verify.vs"
+		groupverifier="data/subai/tent_production_start_verify.vs"
 		transpicon="1"
 		key="l"
 		immediate="yes"
@@ -14,18 +14,18 @@
 	<cmd name="StopCLibyanFootmanTrain" priority="1"
 		method="tentproduction"
 		button="actions/Stop_CLibyanFootman.bmp"
-		groupverifier="data/subai/stop_cfootman_verify.vs"
+		groupverifier="data/subai/tent_production_stop_verify.vs"
 		transpicon="1"
 		key="l"
 		immediate="yes"
 		rollover="Stop training Numidian Footmen"
-		param="Nothing">
+		param="CLibyanFootman">
 		<src obj="CTent" />
 	</cmd>
 	<cmd name="StartCHorsemanTrain" priority="2"
 		method="tentproduction"
 		button="actions/Hire CHorseman.bmp"
-		groupverifier="data/subai/start_chorseman_verify.vs"
+		groupverifier="data/subai/tent_production_start_verify.vs"
 		transpicon="1"
 		key="c"
 		immediate="yes"
@@ -37,12 +37,12 @@
 	<cmd name="StopCHorsemanTrain" priority="2"
 		method="tentproduction"
 		button="actions/Stop_CHorseman.bmp"
-		groupverifier="data/subai/stop_chorseman_verify.vs"
+		groupverifier="data/subai/tent_production_stop_verify.vs"
 		transpicon="1"
 		key="c"
 		immediate="yes"
 		rollover="Stop training Numidian Horsemen"
-		param="Nothing">
+		param="CHorseman">
 		<src obj="CTent" />
 	</cmd>
 </commands>

@@ -1,133 +1,113 @@
-// void, Obj This
+//void, Obj This
 
 Druid this;
-Unit tgt;
-int  amount, heal_stamina_cost, learn_stamina_cost;
-int action;//1 - HEAL, 3 - LEARN
-int i;
-bool bSuccess;
-int learntimes;
-bool bCanHeal, bCanLearn;
-Obj hInvalid;
 
 this = This.AsDruid();
 
-heal_stamina_cost = GetCmdStaminaCost("heal");
-learn_stamina_cost = GetCmdStaminaCost("learn");
+if (.IsValid)
+	if (.IsAlive) {
+		Unit u;
+		int heal_amount, stamina_cost, learnings;
+		bool can_learn, use_healing;
 
-bCanHeal = .HasSpecial(healing);
-bCanLearn = true;
-if (.race == Gaul || .race == Britain || .race == Germany) if (EnvReadString(.player, "Ritual Chamber") != "researched")
-	bCanLearn = false;
+		if (!.InHolder)
+			while (!.Stop(1000))
+				;
 
-while (!.Stop(1000));
+		Sleep(50 + rand(451));
 
-action = 1;//HEAL
-tgt = .FindUnitToHeal.AsUnit();
+		heal_amount = GetConst("HealAmount");
+		stamina_cost = GetCmdStaminaCost("heal");
 
-while (true) 
-{
-	if (tgt.IsDead) tgt = hInvalid; /// avoid handle reuse problems
+		if (.race != Gaul)
+			can_learn = true;
+		else
+			can_learn = IsResearched(.player, "Ritual Chamber");
 
-	if(.InHolder)
-	{
-		Sleep(2000);
-		continue;
-	}
-	if (!.IsVisible) //if (.IsEnemyInSquadSight)
-	{	// do not show up in stand ground
-		Sleep(2000);
-		continue;
-	}
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				if (.IsVisible) {
+					u.Clear();
+					if (.stamina >= stamina_cost)
+						if (.HasSpecial(healing)) {
+							use_healing = true;
+							u = .FindUnitToHeal();
+						}
+					if (u.IsDead) {
+						use_healing = false;
+						if (can_learn)
+							u = .FindUnitToLearn();
+						else if (IsResearched(.player, "Ritual Chamber")) {
+							can_learn = true;
+							u = .FindUnitToLearn();
+						}
+					}
 
-	bSuccess = false;
-	learntimes = 0;
-	while (tgt.IsAlive() && learntimes < 10) 
-	{
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (.IsEnemy(tgt)) break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible) if (.IsEnemyInSquadSight) break; // do not show up if enemies around
-		if(!.InRange(tgt)) break;
+					if (u.IsAlive)
+						if (u != this) {
+							learnings = 0;
+							while (u.IsAlive) {
+								if (.IsVisible)
+									if (!.IsEnemy(u))
+										if (!u.InHolder)
+											if (.CanSee(u))
+												if (.InRange(u))
+													if (use_healing) {
+														if (u.health < u.maxhealth)
+															if (.stamina >= stamina_cost) {
+																.StartAnim(17, u.pos);
 
-		if (action == 1)
-		{//HEAL
-			if (!bCanHeal) break;
-			if (tgt.health >= tgt.maxhealth) break;
-			if (.stamina < heal_stamina_cost) break;
-			
-			.StartAnim(17, tgt.pos);
-			Sleep(.TimeToActionMoment());
+																Sleep(.TimeToActionMoment);
 
-			if (tgt.IsAlive)
-			if (tgt.health < tgt.maxhealth)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (.stamina >= heal_stamina_cost)
-			{
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - heal_stamina_cost);
-				amount = GetConst("HealAmount") + .level;
-				tgt.Heal(amount);
-				CreateFeedback("Heal", tgt);
+																if (u.IsAlive)
+																	if (u.health < u.maxhealth)
+																		if (!.IsEnemy(u))
+																			if (!u.InHolder)
+																				if (.CanSee(u))
+																					if (.stamina >= stamina_cost) {
+																						.SetLastAttackTime();
+																						if (!.IsVisible)
+																							.SetVisible(true);
+																						.SetStamina(.stamina - stamina_cost);
+																						u.Heal(heal_amount + .level);
+																						CreateFeedback("Heal", u);
+																					}
+
+																Sleep(.TimeToAnimFinish);
+																continue;
+															}
+													}
+													else if (.experience < u.experience) {
+														.StartAnim(19, u.pos);
+
+														Sleep(.TimeToActionMoment);
+
+														if (u.IsAlive)
+															if (.experience < u.experience)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u)) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																			CreateFeedback("Experience", this);
+																		}
+
+														Sleep(.TimeToAnimFinish);
+														learnings += 1;
+														if (learnings < 12)
+															continue;
+													}
+								break;
+							}
+						}
+				}
+
+				.Idle(1000);
 			}
-			Sleep(.TimeToAnimFinish());
-			bSuccess = true;
-			continue;
-		}
-		else if (action == 3)
-		{//LEARN
-			if (!bCanLearn) break;
-			if (tgt.experience <= .experience) break;
-			if (.stamina < learn_stamina_cost) break;
-
-			.StartAnim(19, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (tgt.experience > .experience)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (.stamina >= learn_stamina_cost)
-			{
-				int exp; exp = .experience + (.inherentlevel + 3) / 4;
-				if (exp > tgt.experience) exp = tgt.experience;
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - learn_stamina_cost);
-				.SetExperience(exp);
-				CreateFeedback("Experience", this);
-			}
-			Sleep(.TimeToAnimFinish());
-			learntimes += 1;
-			bSuccess = true;
-			continue;
-		}
-		break;
 	}
 
-	.Idle(1000);
-	if (.IsEnemyInSquadSight && bCanHeal)
-		action = 1;
-	else if (!bSuccess || action == 3)
-		action = 4 - action;
-	for (i = 0; i < 2; i += 1) {
-		if (action == 1 && !bCanHeal) action = 3;
-		if (action == 3) {
-			if (!bCanLearn) if (EnvReadString(.player, "Ritual Chamber") == "researched" && (.race==Gaul || .race==Britain || .race==Germany))
-				bCanLearn = true;
-			if (!bCanLearn)
-				action = 1;
-		}
-		if (tgt.IsValid) break;
-		if (!bCanHeal || !bCanLearn) break;
-		action = 4 - action;
-	}
-
-	if (action == 1)
-		tgt = .FindUnitToHeal.AsUnit();
-	else
-		tgt = .FindUnitToLearn.AsUnit();
-}
+Sleep(15);//prevent possible loops with other commands

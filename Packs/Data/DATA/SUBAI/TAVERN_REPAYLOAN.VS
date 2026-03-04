@@ -1,14 +1,11 @@
-//void, Obj This 
+//void, Obj This
 
 Settlement this;
+int remaining_gold;
 
 this = This.AsBuilding().settlement;
 
-if (.gold > .loan) {
-	.SetGold(.gold - .loan);
-	.SetLoan(0);
-}
-else {
-	.SetLoan(.loan - .gold);
-	.SetGold(0);
-}
+remaining_gold = .gold - .loan;
+
+.SetGold(MAX(0, remaining_gold));
+.SetLoan(MAX(0, -remaining_gold));

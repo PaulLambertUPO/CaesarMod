@@ -1,38 +1,38 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Druid this;
-Unit tgt;
-int  time, retries;
-int	 timeStart;
 
-this = This.AsDruid;
-if (!.IsAlive)             return;
-if (!.HasSpecial(healing)) return;
+this = This.AsDruid();
 
-time = GetConst("RetryWait");
-retries = GetConst("RetryCount");
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(healing)) {
+			Unit u;
+			int i = 10;
 
-timeStart = GetTime();
+			if (!.InHolder)
+				u = .FindUnitToHeal();
+			while (!.Goto(pt, 0, 2000, false, -1)) {
+				u = .FindUnitToHeal();
+				if (u.IsAlive)
+					if (.DistTo(pt) < .sight)
+						break;
+				if (.TimeWithoutWalking >= 2500)
+					break;
+			}
 
-tgt = .FindUnitToHeal;
-while (!.Goto(pt, 0, 2000, true, -1))
-{
-	if (tgt.IsValid) if (.DistTo(pt) < .sight)
-		break;
-	tgt = .FindUnitToHeal;
-	if (.TimeWithoutWalking() > 2500)
-		break;
-}
-while (!tgt.IsValid && retries > 0)
-{
-	Sleep(time);
-	tgt = .FindUnitToHeal;
-	retries -= 1;
-}
-if (tgt.IsAlive) if (.IsAlive)
-{
-	if (timeStart == GetTime())
-		Sleep(75);
-	.AddCommand(true, "heal", pt);
-	.AddCommand(true, "heal", tgt);
-}
+			while (i > 0) {
+				if (u.IsAlive)
+					break;
+				Sleep(500);
+				u = .FindUnitToHeal();
+				i -= 1;
+			}
+
+			if (u.IsAlive) {
+				.AddCommand(true, "heal", pt);
+				.AddCommand(true, "heal", u);
+			}
+		}
+
+Sleep(15);//prevent possible loops with other commands

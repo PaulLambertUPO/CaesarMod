@@ -1,54 +1,62 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
 
 Druid this;
-Unit tgt;
-bool bSleep = true;
-int cripple_stamina_cost;
 
 this = This.AsDruid();
-tgt = target.AsUnit();
-if (tgt.IsHeirOf("RamUnit"))
-	return;
 
-cripple_stamina_cost = GetCmdStaminaCost("cripple");
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(cripple))
+			if (target != this) {
+				Unit u;
 
-while (1)
-{
-	if (!.IsAlive)      break;
-	if (!tgt.IsAlive()) break;
-	if (!.IsEnemy(tgt)) break;
-	if (tgt.InHolder)   break;
-	if (!.CanSee(tgt))  break;
-	if (tgt.stamina <= 0) break;
+				u = target.AsUnit();
 
-	bSleep = false;
-	if (!.InRange(tgt)) {
-		.GotoAttack(tgt, 2000, false, 2500);
-		continue;
-	}
-	if (.stamina < cripple_stamina_cost) {
-		Sleep(200);
-		continue;
-	}
-	.SetLastAttackTime();
-	if (!.IsVisible)
-		.SetVisible(true);
-	.StartAnim(17, tgt.pos);
-	Sleep(.TimeToActionMoment());
+				if (u.IsValid)
+					if (!target.AsHero().IsValid)
+						if (!u.AsShip().IsValid)
+							if (!u.IsRam) {
+								int stamina_cost;
 
-	if (tgt.IsAlive())
-	if (.IsEnemy(tgt))
-	if (!tgt.InHolder)
-	if (.CanSee(tgt))
-	if (.stamina >= cripple_stamina_cost)
-	{
-		.SetVisible(true); .SetLastAttackTime();
-		.SetStamina(.stamina - cripple_stamina_cost);
-		tgt.SetStamina(0);
-		CreateFeedback("StaminaLoss", tgt);
-	}
-	Sleep(.TimeToAnimFinish());
-}
+								stamina_cost = GetCmdStaminaCost("cripple");
 
-if (bSleep)
-	Sleep(17); // otherwise can cycle: Advance->Cripple->Advance->Cripple...
+								while (u.IsAlive) {
+									if (u.stamina > 0)
+										if (.IsEnemy(u))
+											if (!u.InHolder)
+												if (.CanSee(u)) {
+													if (.InRange(u))
+														if (.stamina >= stamina_cost) {
+															.StartAnim(17, u.pos);
+
+															Sleep(.TimeToActionMoment);
+
+															if (u.IsAlive)
+																if (u.stamina > 0)
+																	if (.IsEnemy(u))
+																		if (!u.InHolder)
+																			if (.CanSee(u))
+																				if (.stamina >= stamina_cost) {
+																					.SetLastAttackTime();
+																					if (!.IsVisible)
+																						.SetVisible(true);
+																					.SetStamina(.stamina - stamina_cost);
+																					u.SetStamina(0);
+																					CreateFeedback("StaminaLoss", u);
+																				}
+
+															Sleep(.TimeToAnimFinish);
+														}
+														else
+															Sleep(500);
+													else
+														.GotoAttack(u, 2000, false, 2500);
+
+													continue;
+												}
+									break;
+								}
+							}
+			}
+
+Sleep(15);//prevent possible loops with other commands

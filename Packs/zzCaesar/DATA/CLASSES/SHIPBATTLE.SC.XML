@@ -23,13 +23,13 @@
 	<properties interface="thumb,holder,items" /><!-- with this setup there is no vertical bar and no special skill is showed, but items are visible and usable -->
 	<properties help="contents/units/Ship" />
 
+	<method sig="idle" vs="data/subai/ship_idle.vs" />
+	<method sig="move" vs="data/subai/ship_move.vs" />
+	<method sig="enter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="aitransport" vs="data/subai/ship_aitransport.vs" />
 	<method sig="boardunit" vs="data/subai/ship_board.vs" verify="data/subai/ship_board_verify.vs" onfinish="data/subai/ship_board_onfinish.vs" />
 	<method sig="unboard" vs="data/subai/ship_unboard.vs" />
 	<method sig="unboardall" vs="data/subai/ship_unboard_all.vs" verify="data/subai/ship_unboard_all_verify.vs" />
-	<method sig="idle" vs="data/subai/ship_idle.vs" />
-	<method sig="aitransport" vs="data/subai/ship_aitransport.vs" />
-	<method sig="enter" vs="data/subai/ship_enter.vs" verify="data/subai/ship_enter_verify.vs" />
-	<method sig="move" vs="data/subai/ship_move.vs" />
 
 	<defaultcmd target="ShipBattle">
 		<cmd name="attack" />

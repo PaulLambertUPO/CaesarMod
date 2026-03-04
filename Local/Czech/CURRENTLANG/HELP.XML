@@ -379,7 +379,7 @@ Every time that a hero levels up, an intermittent '+' symbol appears in his sele
 			<entry image="UI/InfoBar/Skills/Vigor.bmp">Vigor - gives the hero and all attached units the ability to restore 1 more stamina with a 10% chance per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Wisdom.bmp">Wisdom - gives the hero the ability to gain 1 experience every time that an attached unit dies with a 10% chance per skill point.</entry>
 			<entry hcenter="1" font="large">Activable skills</entry>
-			<entry image="UI/InfoBar/Skills/Assault.bmp">Assault cry (cost 6) - if used, it makes the hero and all attached units ignore enemy armor for 2 seconds plus 0.6 additional seconds per skill point.</entry>
+			<entry image="UI/InfoBar/Skills/Assault.bmp">Assault (cost 6) - if used, it makes the hero and all attached units ignore enemy armor for 2 seconds plus 0.6 additional seconds per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/BattleCry.bmp">Battle cry (cost 6) - if used, it increases the level of all attached units for 8 seconds by 1 per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Ceasefire.bmp">Ceasefire (cost 6) - if used, it makes the hero and all attached units unable to deal or suffer damage for 1 second plus 0.7 additional seconds per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Charge.bmp">Charge (cost 6) - if used, it restores the stamina of all attached units by 1 per skill point.</entry>
@@ -394,7 +394,7 @@ Every time that a hero levels up, an intermittent '+' symbol appears in his sele
 				<entry image="UI/InfoBar/Skills/Administration.bmp">Administration - increases the maximum number of attachable units by 3 per skill point.</entry>
 			</topic>
 			<topic id="assault">
-				<entry image="UI/InfoBar/Skills/Assault.bmp">Assault cry (cost 6) - if used, it makes the hero and all attached units ignore enemy armor for 2 seconds plus 0.6 additional seconds per skill point.</entry>
+				<entry image="UI/InfoBar/Skills/Assault.bmp">Assault (cost 6) - if used, it makes the hero and all attached units ignore enemy armor for 2 seconds plus 0.6 additional seconds per skill point.</entry>
 			</topic>
 			<topic id="battlecry">
 				<entry image="UI/InfoBar/Skills/BattleCry.bmp">Battle cry (cost 6) - if used, it increases the level of all attached units for 8 seconds by 1 per skill point.</entry>
@@ -520,7 +520,7 @@ At the start of the game, you must choose which type of Rome you want to play as
 				<entry>
 - Very high costs
 
-- Vulnerable to "Penetration" and "Assault cry"
+- Vulnerable to "Penetration" and "Assault"
 
 - Difficult population recovery via tavern
 				</entry>
@@ -711,7 +711,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 
 - Requires time to reach its real potential
 
-- Extremely vulnerable to "Penetration" and "Assault cry"
+- Extremely vulnerable to "Penetration" and "Assault"
 				</entry>
 			</topic>
 		</topic>
@@ -1031,7 +1031,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 800 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
-				<entry link="/contents/heroskills/assault">Assault cry</entry>
+				<entry link="/contents/heroskills/assault">Assault</entry>
 				<entry link="/contents/heroskills/hcharge">Charge</entry>
 				<entry link="/contents/heroskills/concealment">Concealment</entry>
 				<entry link="/contents/heroskills/euphoria">Euphoria</entry>
@@ -1071,7 +1071,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 800 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
-				<entry link="/contents/heroskills/assault">Assault cry</entry>
+				<entry link="/contents/heroskills/assault">Assault</entry>
 				<entry link="/contents/heroskills/concealment">Concealment</entry>
 				<entry link="/contents/heroskills/frenzy">Frenzy</entry>
 				<entry link="/contents/heroskills/quickmarch">Quick march</entry>
@@ -1712,7 +1712,7 @@ The militiaman leaves his weapons and becomes a peasant (only in buildings and s
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 160</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
-				<entry image="UI/Help/Train Ico.bmp">Training time instantaneous</entry>
+				<entry image="UI/Help/Train Ico.bmp">Training time 15 seconds</entry>
 				<entry image="UI/Help/Items Ico.bmp">Inventory capacity 1</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Charge.bmp" link="/contents/specials/ucharge">Charge</entry>
@@ -5922,13 +5922,14 @@ Time: 25 seconds
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Call Fisherman.bmp" link="/contents/units/Fisherman">
 Call fisherman
+Calls a fisherman who can be sent to a shipyard to produce food (fish) over time.
 Cost: 100 food and 1 population
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IScout.bmp" link="/contents/units/IScout">
 Call scout (only Iberian village)
 Cost: 1 population
-Time: instantaneous
+Time: 15 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repopulate

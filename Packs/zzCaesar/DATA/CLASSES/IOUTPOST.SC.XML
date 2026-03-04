@@ -7,7 +7,6 @@
 	<properties edittree_pos="Structures/Outposts/Training outpost (Iberian)" />
 	<properties description="Gradually increases the experience of units inside up to level 8" />
 	<properties
-		range="1000"
 		settlement_food="0"
 		settlement_gold="1000"
 		defender_cls_1="IDefender"

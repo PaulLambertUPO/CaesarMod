@@ -3,8 +3,10 @@
 		button="actions/Learn.bmp"
 		key="l"
 		rollover="Learn from ally"
-		description="Gains knowledge from a more experienced ally">
+		description="Gains knowledge from a more experienced ally"
+		cursor="do_something">
 		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
+		<cmdtext target="" text="Click to learn from all allies around this position" />
 		<src obj="RPriest" sticky="yes" />
 		<src obj="IEnchantress" sticky="yes" />
 		<src obj="CShaman" sticky="yes" />
@@ -18,8 +20,10 @@
 		key="k"
 		rollover="Learn from ally"
 		description="Gains knowledge from a more experienced ally"
+		cursor="do_something"
 		param="Ritual Chamber">
 		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
+		<cmdtext target="" text="Click to learn from all allies around this position" />
 		<src obj="GDruid" sticky="yes" />
 		<src obj="BDruid" sticky="yes" />
 		<src obj="TEnchantress" sticky="yes" />
@@ -32,6 +36,7 @@
 		cursor="do_something"
 		coststamina="1">
 		<cmdtext target="Unit" text="Click to heal this ally" default-text="Right-click to heal this ally" />
+		<cmdtext target="" text="Click to heal all allies around this position" />
 		<src obj="RPriest" sticky="yes" />
 		<src obj="HPriest" sticky="yes" />
 		<src obj="GDruid" sticky="yes" />
@@ -44,6 +49,7 @@
 		cursor="do_something"
 		coststamina="1">
 		<cmdtext target="Unit" text="Click to teach this ally" default-text="Right-click to teach this ally" />
+		<cmdtext target="" text="Click to teach all allies around this position" />
 		<src obj="IEnchantress" sticky="yes" />
 	</cmd>
 	<cmd name="hide" priority="20"
@@ -54,6 +60,7 @@
 		cursor="do_something"
 		coststamina="2">
 		<cmdtext target="Unit" text="Click to hide this ally" default-text="Right-click to hide this ally" />
+		<cmdtext target="" text="Click to hide all allies around this position" />
 		<src obj="BDruid" sticky="yes" />
 	</cmd>
 	<cmd name="curse" priority="21"
@@ -64,6 +71,7 @@
 		cursor="do_something"
 		coststamina="3">
 		<cmdtext target="Unit" text="Click to curse this enemy" default-text="Right-click to curse this enemy" />
+		<cmdtext target="" text="Click to curse all enemies around this position" />
 		<src obj="CShaman" sticky="yes" />
 		<src obj="TEnchantress" sticky="yes" />
 	</cmd>
@@ -75,6 +83,7 @@
 		cursor="do_something"
 		coststamina="3">
 		<cmdtext target="Unit" text="Click to cripple this enemy" default-text="Right-click to cripple this enemy" />
+		<cmdtext target="" text="Click to cripple all enemies around this position" />
 		<src obj="EPriest" sticky="yes" />
 	</cmd>
 	<cmd name="mist" priority="23"
@@ -83,7 +92,9 @@
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Create Cloud of Plague"
 		description="Creates a cloud of plague that damages all units (at the cost of life)"
+		cursor="do_something"
 		param="Cloud of Plague">
+		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="RPriest" sticky="yes" />
 		<src obj="EPriest" sticky="yes" />
 	</cmd>
@@ -93,7 +104,9 @@
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Create Cover of Mercy"
 		description="Creates a cloud that reduces all combat damage allies receive by half (at the cost of life)"
+		cursor="do_something"
 		param="Cover of Mercy">
+		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="IEnchantress" sticky="yes" />
 	</cmd>
 	<cmd name="zombify" priority="25"
@@ -122,7 +135,9 @@
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Wrath of Jupiter"
 		description="Channels the Wrath of Jupiter hurting the target (at the cost of life)"
+		cursor="do_something"
 		param="Wrath of Jupiter">
+		<cmdtext target="Unit" text="Click to hurt this unit" />
 		<src obj="RPriest" />
 	</cmd>
 	<cmd name="eagle_summoning" priority="27"

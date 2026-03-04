@@ -1,9 +1,9 @@
-<class id="BaseTavern" parent="BaseTownBuilding" cpp_class="CVXTavern" entity="">
+<class id="BaseTavern" parent="BaseTownBuilding" cpp_class="CVXTavern">
 
 	<properties interface="thumb,building,queue" />
 	<properties display_name="Tavern" />
 
-	<method sig="addpop" vs="data/subai/townhall_addpop.vs" />
+	<method sig="addpop" vs="data/subai/tavern_addpop.vs" />
 
 	<sounds select="TavernSelect" />
 </class>

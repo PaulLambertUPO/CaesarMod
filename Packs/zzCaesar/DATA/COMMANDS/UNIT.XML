@@ -131,14 +131,6 @@
 		<nsrc obj="Hero" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />
-		<nsrc obj="BVikingLord" />
-		<nsrc obj="CWarElephant" />
-		<nsrc obj="EChariot" />
-		<nsrc obj="GTridentWarrior" />
-		<nsrc obj="IMountaineer" />
-		<nsrc obj="RChariot" />
-		<nsrc obj="RLiberatus" />
-		<nsrc obj="HChariot" />
 	</cmd>
 	<cmd name="reveal" priority="11"
 		button="Actions/reveal.bmp"
@@ -153,7 +145,6 @@
 		offset="1"
 		button="actions/Build Catapult.bmp"
 		key="c"
-		groupverifier="data/subai/build_catapult_verify.vs"
 		groupdispatch="data/subai/build_catapult.vs"
 		rollover="Build siege machine">
 		<cmdtext target="" text="Select a place to build the machine" />

@@ -1,219 +1,196 @@
-// void, Obj This
+//void, Obj This
 
-Building this;
-str sentry_class_name;
-point wp;
-point ae, aa1, aa2; // exit, attack1, attack2
-point be, ba1, ba2; // exit, attack1, attack2
-bool slot_a1, slot_a2;
-bool slot_b1, slot_b2;
-Obj sent_a1, sent_a2;
-Obj sent_b1, sent_b2;
-Obj invalid_handle;
-point observation_point;
-int player;
-int level, new_level;
-int k, l, m;
+Sleep(500 + rand(1001));
 
-Sleep(rand(1000) + 500);
+if (GetConst("NoSentries") == 0) {
+	Gate this;
 
-if (GetConst("NoSentries") != 0)
-{	// disable sentries
-	while (1)
-		Sleep(100000);
-}
+	this = This.AsGate();
 
-if (!This.IsValid()) {
-	//pr("Ivalid gate!");
-	while(1) Sleep(100000);  // fixme!!
-}
+	if (.IsValid) {
+		Settlement set;
+		point exit_1, exit_2, pt_outer_1, pt_outer_2, pt_inner_1, pt_inner_2;
 
-this = This.AsBuilding();
-sentry_class_name = .GetSentryClassName();
+		{
+			exit_1 = .GetPoint(2, 0);
 
+			if (exit_1.x != -32768) {//check if gate exit point 1 is defined
+				exit_2 = .GetPoint(2, 1);
 
-{
-	IntArray inds, dists;
-	point tp;
-	ae = .GetPoint(2, 0);
-	be = .GetPoint(2, 1);
-	if (ae.x == -32768 || be.x == -32768) {
-		//pr("Gate exit point not defined!");
-		while(1) Sleep(100000);  // fixme!!
-	}
-	for (k = 0; k < 4; k += 1) {
-		tp = .GetPoint(3, k);
-		if (tp.x == -32768) {
-			//pr("Gate attack point not defined!");
-			while(1) Sleep(100000);  // fixme!!
+				if (exit_2.x != -32768) {//check if gate exit point 2 is defined
+					IntArray dists, indxs;
+					point pt;
+					int i;
+
+					for (i = 0; i < 4; i += 1) {//check if gate attack points are defined
+						pt = .GetPoint(3, i);
+						if (pt.x == -32768)
+							break;
+						pt = pt - exit_1;
+						dists[i] = pt.x * pt.x + pt.y * pt.y;//use square to sort points with every gate orientation
+						indxs[i] = i;
+					}
+
+					if (pt.x != -32768) {//if all attack points are defined, sort them by the shortest to highest distance from exit point 1
+						int j, k, l;
+
+						for (i = 0; i < 3; i += 1)
+							for (j = i + 1; j < 4; j += 1) {
+								k = indxs[i];
+								l = indxs[j];
+								if (dists[k] > dists[l]) {//do not sort distances but only indexes
+									indxs[i] = l;
+									indxs[j] = k;
+								}
+							}
+
+						pt = .pos;
+						exit_1 = pt + exit_1;
+						pt_outer_1 = pt + .GetPoint(3, indxs[0]);
+						pt_inner_1 = pt + .GetPoint(3, indxs[1]);
+						pt_inner_2 = pt + .GetPoint(3, indxs[2]);
+						pt_outer_2 = pt + .GetPoint(3, indxs[3]);
+						exit_2 = pt + exit_2;
+
+						set = .settlement;
+					}
+				}
+			}
 		}
-		tp = tp - ae;
-		dists[k] = tp.x*tp.x + tp.y*tp.y;
-		inds[k] = k;
+
+		if (set.IsValid) {
+			while (set.IsIndependent)
+				Sleep(5000);
+
+			{
+				Unit sentry_outer_1, sentry_inner_1, sentry_inner_2, sentry_outer_2;
+				str sentry_class_name;
+				int plr, sentry_level;
+
+				set.AddMaxSentries(4);
+
+				sentry_class_name = .GetSentryClassName();
+				plr = .player;
+
+				while (1) {
+					if (.IsVeryBroken || plr != .player) {
+						if (sentry_outer_1.IsValid) {
+							if (sentry_outer_1.IsAlive) {
+								sentry_outer_1.Damage(sentry_outer_1.health);
+								if (plr == .player)
+									set.DelSentry();
+							}
+							sentry_outer_1.Clear();
+						}
+						if (sentry_inner_1.IsValid) {
+							if (sentry_inner_1.IsAlive) {
+								sentry_inner_1.Damage(sentry_inner_1.health);
+								if (plr == .player)
+									set.DelSentry();
+							}
+							sentry_inner_1.Clear();
+						}
+						if (sentry_inner_2.IsValid) {
+							if (sentry_inner_2.IsAlive) {
+								sentry_inner_2.Damage(sentry_inner_2.health);
+								if (plr == .player)
+									set.DelSentry();
+							}
+							sentry_inner_2.Clear();
+						}
+						if (sentry_outer_2.IsValid) {
+							if (sentry_outer_2.IsAlive) {
+								sentry_outer_2.Damage(sentry_outer_2.health);
+								if (plr == .player)
+									set.DelSentry();
+							}
+							sentry_outer_2.Clear();
+						}
+						plr = .player;
+					}
+					else {
+						sentry_level = MAX(1, EnvReadInt(set, "SentriesLevel"));
+
+						if (sentry_outer_1.IsValid)
+							if (sentry_outer_1.IsAlive) {
+								if (sentry_outer_1.inherentlevel < sentry_level)
+									sentry_outer_1.SetLevel(sentry_level);
+								if (sentry_outer_1.command == "idle")
+									sentry_outer_1.SetCommand("guard", this);
+							}
+							else {
+								set.DelSentry();
+								sentry_outer_1.Clear();
+							}
+						else if (set.GetSentry()) {
+							sentry_outer_1 = Place(sentry_class_name, exit_1, plr).AsUnit();
+							sentry_outer_1.SetLevel(sentry_level);
+							sentry_outer_1.SetCommand("goto", pt_outer_1);
+							sentry_outer_1.AddCommand(false, "guard", this);
+						}
+
+						if (sentry_inner_1.IsValid)
+							if (sentry_inner_1.IsAlive) {
+								if (sentry_inner_1.inherentlevel < sentry_level)
+									sentry_inner_1.SetLevel(sentry_level);
+								if (sentry_inner_1.command == "idle")
+									sentry_inner_1.SetCommand("guard", this);
+							}
+							else {
+								set.DelSentry();
+								sentry_inner_1.Clear();
+							}
+						else if (sentry_outer_1.IsValid) {
+							sentry_outer_1.SetCommand("goto", pt_inner_1);
+							sentry_outer_1.AddCommand(false, "guard", this);
+							sentry_inner_1 = sentry_outer_1;
+							sentry_outer_1.Clear();
+						}
+
+						if (sentry_outer_2.IsValid)
+							if (sentry_outer_2.IsAlive) {
+								if (sentry_outer_2.inherentlevel < sentry_level)
+									sentry_outer_2.SetLevel(sentry_level);
+								if (sentry_outer_2.command == "idle")
+									sentry_outer_2.SetCommand("guard", this);
+							}
+							else {
+								set.DelSentry();
+								sentry_outer_2.Clear();
+							}
+						else if (set.GetSentry()) {
+							sentry_outer_2 = Place(sentry_class_name, exit_2, plr).AsUnit();
+							sentry_outer_2.SetLevel(sentry_level);
+							sentry_outer_2.SetCommand("goto", pt_outer_2);
+							sentry_outer_2.AddCommand(false, "guard", this);
+						}
+
+						if (sentry_inner_2.IsValid)
+							if (sentry_inner_2.IsAlive) {
+								if (sentry_inner_2.inherentlevel < sentry_level)
+									sentry_inner_2.SetLevel(sentry_level);
+								if (sentry_inner_2.command == "idle")
+									sentry_inner_2.SetCommand("guard", this);
+							}
+							else {
+								set.DelSentry();
+								sentry_inner_2.Clear();
+							}
+						else if (sentry_outer_2.IsValid) {
+							sentry_outer_2.SetCommand("goto", pt_inner_2);
+							sentry_outer_2.AddCommand(false, "guard", this);
+							sentry_inner_2 = sentry_outer_2;
+							sentry_outer_2.Clear();
+						}
+					}
+
+					Sleep(1000);
+				}
+			}
+		}
 	}
-	for (k = 0; k < 3; k += 1)
-	for (l = k + 1; l < 4; l += 1)
-	if (dists[inds[k]] > dists[inds[l]]) {
-		m = inds[k];
-		inds[k] = inds[l];
-		inds[l] = m;
-	}
-	ae = .pos + ae;
-	aa1 = .pos + .GetPoint(3, inds[0]);
-	aa2 = .pos + .GetPoint(3, inds[1]);
-	ba2 = .pos + .GetPoint(3, inds[2]);
-	ba1 = .pos + .GetPoint(3, inds[3]);
-	be = .pos + be;
-	
-	observation_point = (aa1 + ba1) / 2;
 }
 
-
-//Place("Feedback", ae, .player);
-//Place("Feedback", aa1, .player);
-//Place("Feedback", aa2, .player);
-//Place("Feedback", ba2, .player);
-//Place("Feedback", ba1, .player);
-//Place("Feedback", be, .player);
-
-slot_a1 = false;
-slot_a2 = false;
-slot_b2 = false;
-slot_b1 = false;
-
-while (!.settlement().IsValid()) Sleep(1000);
-.settlement().AddMaxSentries(4);
-
-level = 1;
-player = .player;
+//without this instruction, the game crashes
 while (1)
-{
-	new_level = EnvReadInt(.settlement, "SentriesLevel");
-	if (new_level > level) {
-		if (slot_a1)
-		if (sent_a1.IsAlive())
-			sent_a1.AsUnit().SetLevel(new_level);
-		if (slot_a2)
-		if (sent_a2.IsAlive())
-			sent_a2.AsUnit().SetLevel(new_level);
-		if (slot_b2)
-		if (sent_b2.IsAlive())
-			sent_b2.AsUnit().SetLevel(new_level);
-		if (slot_b1)
-		if (sent_b1.IsAlive())
-			sent_b1.AsUnit().SetLevel(new_level);
-		level = new_level;
-	}
-
-	if (.IsVeryBroken() || (player != .player)) {
-		if (slot_a1)
-		if (!sent_a1.IsDead()) {
-			Sleep(rand(200) + 300);
-			sent_a1.Damage(10000);
-			if (player == .player) .settlement().DelSentry();
-		}
-		if (slot_a2)
-		if (!sent_a2.IsDead()) {
-			Sleep(rand(200) + 300);
-			sent_a2.Damage(10000);
-			if (player == .player) .settlement().DelSentry();
-		}
-		if (slot_b1)
-		if (!sent_b1.IsDead()) {
-			Sleep(rand(200) + 300);
-			sent_b1.Damage(10000);
-			if (player == .player) .settlement().DelSentry();
-		}
-		if (slot_b2)
-		if (!sent_b2.IsDead()) {
-			sent_b2.Damage(10000);
-			if (player == .player) .settlement().DelSentry();
-		}
-		slot_a1 = false;
-		slot_a2 = false;
-		slot_b2 = false;
-		slot_b1 = false;
-		player = .player;
-	} else {
-	
-		// process first half
-		if (slot_a1) {
-			if (sent_a1.IsDead()) {
-				.settlement().DelSentry();
-				sent_a1 = invalid_handle;
-				slot_a1 = false;
-			} else if (sent_a1.command() == "idle")
-				sent_a1.SetCommand("guard", This);
-		}
-		if (!slot_a1) {
-			if (.settlement().GetSentry()) {
-				sent_a1 = Place(sentry_class_name, ae, .player);
-				sent_a1.AsUnit().SetLevel(level);
-				sent_a1.SetCommand("goto", aa1);
-				sent_a1.AddCommand(false, "guard", This);
-				slot_a1 = true;
-			}
-		}
-		if (slot_a2) {
-			if (sent_a2.IsDead()) {
-				.settlement().DelSentry();
-				sent_a2 = invalid_handle;
-				slot_a2 = false;
-			} else if (sent_a2.command() == "idle")
-				sent_a2.SetCommand("guard", This);
-		}
-		if (!slot_a2) {
-			if (slot_a1) {
-				sent_a1.SetCommand("goto", aa2);
-				sent_a1.AddCommand(false, "guard", This);
-				sent_a2 = sent_a1;
-				sent_a1 = invalid_handle;
-				slot_a1 = false;
-				slot_a2 = true;
-			}
-		}
-
-
-		// process second half
-		if (slot_b1) {
-			if (sent_b1.IsDead()) {
-				.settlement().DelSentry();
-				sent_b1 = invalid_handle;
-				slot_b1 = false;
-			} else if (sent_b1.command() == "idle")
-				sent_b1.SetCommand("guard", This);
-		}
-		if (!slot_b1) {
-			if (.settlement().GetSentry()) {
-				sent_b1 = Place(sentry_class_name, be, .player);
-				sent_b1.AsUnit().SetLevel(level);
-				sent_b1.SetCommand("goto", ba1);
-				sent_b1.AddCommand(false, "guard", This);
-				slot_b1 = true;
-			}
-		}
-		if (slot_b2) {
-			if (sent_b2.IsDead()) {
-				.settlement().DelSentry();
-				sent_b2 = invalid_handle;
-				slot_b2 = false;
-			} else if (sent_b2.command() == "idle")
-				sent_b2.SetCommand("guard", This);
-		}
-		if (!slot_b2) {
-			if (slot_b1) {
-				sent_b1.SetCommand("goto", ba2);
-				sent_b1.AddCommand(false, "guard", This);
-				sent_b2 = sent_b1;
-				sent_b1 = invalid_handle;
-				slot_b1 = false;
-				slot_b2 = true;
-			}
-		}
-	}
-
-	if (slot_a1 || slot_a2 || slot_b2 || slot_b1)
-		RevealHiddenEnemyUnits(observation_point, 570, .player);
-
-	Sleep(1000);	
-}
+	Sleep(3600000);

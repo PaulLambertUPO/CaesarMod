@@ -1,5 +1,10 @@
-// void, Obj me, point pt
+//void, Obj me, point pt
 
-//me.AsUnit().GotoStraight(pt);
+Unit this;
 
-while (!me.AsUnit().Goto(pt, 0, 2000, true, 0));
+this = me.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive)
+		while (!.Goto(pt, 0, 2000, false, 0))
+			;

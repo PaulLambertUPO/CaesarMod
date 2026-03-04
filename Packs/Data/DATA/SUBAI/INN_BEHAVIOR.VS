@@ -1,22 +1,14 @@
-// void, Obj This
+//void, Obj This
 
+Sleep(500 + rand(501));//give other scripts a chance to make the inn known to avoid displaying the discovery notification
 
-Building this;
-Query qPartyInSight;
-str note;
-
-this = This.AsBuilding();
-
-Sleep(rand(200) + 300); //give chance to other scripts to make this inn known, so the notification wouldn't come
-
-while (1)
-{
-	while (GetInnState(this) != 3)
+while (1) {
+	while (GetInnState(This) != 3)
 		Sleep(5000);
-	qPartyInSight = Intersect(ObjsInSight(this,"Unit"), PartyQuery());
 
-	WaitNonEmptyQuery(qPartyInSight, -1);
-	note = Translatef("Inn found: %s1, %s2", .name, MapName());
-	UserNotification("inn spotted",note, .pos(), Party()[0].player);
-	SetInnState(this, 1);
+	WaitNonEmptyQuery(Intersect(ObjsInSight(This, "Unit"), PartyQuery), -1);
+
+	UserNotification("inn spotted", Translatef("Inn found: %s1, %s2", This.name, MapName), This.pos, Party[0].player);
+
+	SetInnState(This, 1);
 }

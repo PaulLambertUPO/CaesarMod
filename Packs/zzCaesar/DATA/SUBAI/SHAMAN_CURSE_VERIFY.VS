@@ -1,6 +1,6 @@
 //bool, Obj This, Obj target
 
-Unit this;
+Druid this;
 
 this = This.AsDruid();
 
@@ -8,11 +8,12 @@ if (.IsValid)
 	if (.IsAlive)
 		if (.HasSpecial(curse))
 			if (target != this)
-				if (target.IsAlive)
-					if (.IsEnemy(target))
+				if (target.AsUnit().IsValid)
+					if (target.IsAlive)
 						if (!target.AsUnit().IsCursed)
-							if (!target.AsUnit().InHolder)
-								if (.CanSee(target))
-									return true;
+							if (.IsEnemy(target))
+								if (!target.AsUnit().InHolder)
+									if (.CanSee(target))
+										return true;
 
 return false;

@@ -1,61 +1,89 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Druid this;
-Unit tgt;
-int  time, retries, try, j;
-ObjList ol;
 
-this = This.AsDruid;
+this = This.AsDruid();
 
-time = GetConst("RetryWait");
-retries = GetConst("RetryCount");
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(curse)) {//do not use GetBestCurseTarget because it is a bugged function: it does not work for mages but only for warriors
+			ObjList ol;
+			Obj o, target;
+			int i, d, plr, j = 4, best_dist = 10000000;
 
-//tgt = .GetBestCurseTarget(); //THIS SCRIPT DOESN'T WORK!
-ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-for(j=0; j<ol.count; j+=1) {
-	if (ol[j].AsUnit.IsCursed)
-		continue;
-	if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-		tgt = ol[j].AsUnit();
-	}
-}
+			plr = .player;
 
-if (!tgt.IsAlive)
-	while (!.Goto(pt, 0, 2000, true, -1))
-	{
-//		tgt = .GetBestCurseTarget();
-		ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-		for(j=0; j<ol.count; j+=1) {
-			if (ol[j].AsUnit.IsCursed)
-				continue;
-			if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-				tgt = ol[j].AsUnit();
+			if (!.InHolder) {
+				ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
+				for (i = ol.count - 1; i >= 0; i -= 1) {
+					o = ol[i];
+					if (o.IsAlive)
+						if (!o.AsUnit().IsCursed) {
+							d = .DistTo(o);
+							if (target.IsDead) {
+								target = o;
+								best_dist = d;
+							}
+							else if (d < best_dist) {
+								target = o;
+								best_dist = d;
+							}
+						}
+				}
+			}
+			if (target.IsDead)
+				while (!.Goto(pt, 0, 2000, false, -1)) {
+					best_dist = 10000000;
+					ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
+					for (i = ol.count - 1; i >= 0; i -= 1) {
+						o = ol[i];
+						if (o.IsAlive)
+							if (!o.AsUnit().IsCursed) {
+								d = .DistTo(o);
+								if (target.IsDead) {
+									target = o;
+									best_dist = d;
+								}
+								else if (d < best_dist) {
+									target = o;
+									best_dist = d;
+								}
+							}
+					}
+					if (target.IsAlive)
+						break;
+					if (.TimeWithoutWalking >= 2500)
+						break;
+				}
+
+			while (j > 0) {//total loop duration must be lower than the curse effect (CurseTimeout)
+				if (target.IsAlive)
+					break;
+				Sleep(750);
+				best_dist = 10000000;
+				ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
+				for (i = ol.count - 1; i >= 0; i -= 1) {
+					o = ol[i];
+					if (o.IsAlive)
+						if (!o.AsUnit().IsCursed) {
+							d = .DistTo(o);
+							if (target.IsDead) {
+								target = o;
+								best_dist = d;
+							}
+							else if (d < best_dist) {
+								target = o;
+								best_dist = d;
+							}
+						}
+				}
+				j -= 1;
+			}
+
+			if (target.IsAlive) {
+				.AddCommand(true, "advance", pt);
+				.AddCommand(true, "curse", target);
 			}
 		}
-		if (tgt.IsAlive) break;
-		if (.TimeWithoutWalking() > 2500) break;
-	}
 
-if (!tgt.IsAlive)
-{
-//	tgt = .GetBestCurseTarget();
-	ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-	for(j=0; j<ol.count; j+=1) {
-		if (ol[j].AsUnit.IsCursed)
-			continue;
-		if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-			tgt = ol[j].AsUnit();
-		}
-	}
-	while (try < retries && !tgt.IsAlive)
-	{
-		Sleep(time);
-		tgt = .GetBestCurseTarget();
-		try += 1;
-	}
-}
-if (tgt.IsAlive)
-{
-	.AddCommand(true, "advance", pt);
-	.AddCommand(true, "curse", tgt);
-}
+Sleep(15);//prevent possible loops with other commands

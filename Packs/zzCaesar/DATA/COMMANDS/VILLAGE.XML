@@ -246,6 +246,7 @@
 		execdelay="5000"
 		method="trainfisherman"
 		rollover="Call fisherman"
+		description="Calls a fisherman who can be sent to a shipyard to produce food (fish) over time"
 		sclass="Fisherman">
 		<src obj="BaseVillage" />
 	</cmd>
@@ -257,7 +258,7 @@
 		traincommand="yes"
 		key="s"
 		costpop="1"
-		execdelay="1"
+		execdelay="15000"
 		method="trainIScout"
 		rollover="Call scout"
 		param="IScout"

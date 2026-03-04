@@ -90,7 +90,7 @@
 		costgold="2000"
 		execdelay="30000"
 		rollover="Mass invisibility"
-		description="Allows druids to automatically hide thmeselves and your nearby warriors"
+		description="Allows druids to automatically hide themselves and your nearby warriors"
 		method="research"
 		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Concealment, default">
 		<src obj="BTempleOfThor" />

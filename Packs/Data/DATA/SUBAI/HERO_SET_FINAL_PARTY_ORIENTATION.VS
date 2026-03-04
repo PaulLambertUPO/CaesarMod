@@ -5,4 +5,5 @@ Hero this;
 this = This.AsHero();
 
 if (.IsValid)
-	.SetFinalPartyOrientation(pt);
+	if (.IsAlive)
+		.SetFinalPartyOrientation(pt);

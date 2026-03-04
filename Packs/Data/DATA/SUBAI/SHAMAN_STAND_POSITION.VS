@@ -1,153 +1,132 @@
-// void, Obj This
-
-// this script is used by CShaman and TEnchantress!!!
+//void, Obj This
 
 Druid this;
-Unit tgt;
-int learntimes;
-int action;//2 - CURSE, 3 - LEARN
-int i, j;
-bool bSuccess;
-int curse_stamina_cost, learn_stamina_cost;
-bool bCanCurse, bCanLearn;
-Obj hInvalid;
-ObjList ol;
 
 this = This.AsDruid();
-if (!.IsValid)
-	return;
 
-curse_stamina_cost = GetCmdStaminaCost("curse");
-learn_stamina_cost = GetCmdStaminaCost("learn");
+if (.IsValid)
+	if (.IsAlive) {
+		ObjList ol;
+		Unit u, u_ol;
+		int i, d, plr, rng, best_dist, stamina_cost;
+		bool can_learn, use_curse;
 
-bCanCurse = .HasSpecial(curse);
-bCanLearn = true;
-if (.race == Gaul || .race == Britain || .race==Germany) if (EnvReadString(.player, "Ritual Chamber") != "researched")
-	bCanLearn = false;
+		if (!.InHolder)
+			while (!.Stop(1000))
+				;
 
-while (!.Stop(1000));
+		Sleep(50 + rand(451));
 
-action = 2;
-//tgt = .GetBestCurseTarget.AsUnit; //THIS SCRIPT DOESN'T WORK
-ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-for(j=0; j<ol.count; j+=1) {
-	if (ol[j].AsUnit.IsCursed)
-		continue;
-	if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-		tgt = ol[j].AsUnit();
-	}
-}
+		plr = .player;
+		rng = .range;
+		stamina_cost = GetCmdStaminaCost("curse");
 
-while (true) 
-{
-	if (tgt.IsDead) tgt = hInvalid; /// avoid handle reuse problems
-
-	if(.InHolder || !.IsVisible)
-	{
-		Sleep(2000);
-		continue;
-	}
-
-	bSuccess = false;
-	learntimes = 0;
-	while (learntimes < 10) 
-	{
-		//BAD POTENTIALITIES
-		if (action == 2) if (!bCanCurse) break;
-		if (action == 3) if (!bCanLearn) break;
-
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible)   break;
-		if (!.InRange(tgt)) break;
-
-		//EARLY BREAK IF TEACH CAN NOT BE DONE, AND TEACH IS THE CURRENT ACTION
-		if (action == 2) {
-			if (tgt.IsCursed) break;
-			if (!.IsEnemy(tgt)) break;
-			if (.stamina < curse_stamina_cost) break;
-		}
-
-		//EARLY BREAK IF LEARNING CAN NOT BE DONE AND LEARN IS THE CURRENT ACTION
-		if (action == 3) {
-			if (tgt.experience <= .experience) break;
-			if (.IsEnemy(tgt)) break;
-			if (.stamina < learn_stamina_cost) break;
-		}
-
-		if (action == 2)
-		{	//CURSE
-			.StartAnim(17, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (.IsEnemy(tgt))
-			if (.CanSee(tgt))
-			if (.stamina >= curse_stamina_cost)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			{
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - curse_stamina_cost);
-				tgt.Curse();
-			}
-			Sleep(.TimeToAnimFinish());
-			bSuccess = true;
-			continue;
-		}
-		if (action == 3)
-		{	//LEARN
-			.StartAnim(19, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (tgt.experience > .experience)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (.stamina >= learn_stamina_cost)
-			if (!.IsEnemy(tgt))
-			{
-				int exp;
-				exp = .experience + (.inherentlevel + 3) / 4;
-				if (exp > tgt.experience) exp = tgt.experience;
-				.SetStamina(.stamina - learn_stamina_cost);
-				.SetExperience(exp);
-				CreateFeedback("Experience", this);
-			}
-			Sleep(.TimeToAnimFinish());
-			learntimes += 1;
-			bSuccess = true;
-			continue;
-		}
-		break;
-	}
-
-	.Idle(1000);
-	if (.IsEnemyInSquadSight)
-		action = 2;//CURSE
-	else if (!bSuccess || action == 3)
-		action = 5 - action;
-	for (i = 0; i < 2; i += 1) {
-		if (action == 2 && !bCanCurse) action = 5;
-		if (action == 5 && !bCanLearn) action = 2;
-		if (action == 2){
-//			tgt = .GetBestCurseTarget.AsUnit;
-			ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-			for(j=0; j<ol.count; j+=1) {
-				if (ol[j].AsUnit.IsCursed)
-					continue;
-				if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-					tgt = ol[j].AsUnit();
-				}
-			}
-		}
+		if (.race == Carthage)
+			can_learn = true;
 		else
-			tgt = .FindUnitToLearn.AsUnit;
-		if (tgt.IsValid) break;
-		if (!bCanCurse || !bCanLearn) break;
-		action = 5 - action;
+			can_learn = IsResearched(plr, "Ritual Chamber");
+
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				if (.IsVisible) {
+					u.Clear();
+					if (.stamina >= stamina_cost)
+						if (.HasSpecial(curse)) {//do not use GetBestCurseTarget because it is a bugged function: it does not work for mages but only for warriors
+							use_curse = true;
+							best_dist = 10000000;
+							ol = Intersect(Union(ObjsInRange(this, "Military", rng), ObjsInRange(this, "AttackAnimal", rng)), EnemyObjs(plr, "Unit")).GetObjList();
+							for (i = ol.count - 1; i >= 0; i -= 1) {
+								u_ol = ol[i].AsUnit();
+								if (u_ol.IsAlive)
+									if (!u_ol.IsCursed)
+										if (u_ol.IsVisible) {
+											d = .DistTo(u_ol);
+											if (u.IsDead) {
+												u = u_ol;
+												best_dist = d;
+											}
+											else if (d < best_dist) {
+												u = u_ol;
+												best_dist = d;
+											}
+										}
+							}
+						}
+					if (u.IsDead) {
+						use_curse = false;
+						if (can_learn)
+							u = .FindUnitToLearn();
+						else if (IsResearched(plr, "Ritual Chamber")) {
+							can_learn = true;
+							u = .FindUnitToLearn();
+						}
+					}
+
+					if (u.IsAlive)
+						if (u != this) {
+							i = 0;
+							while (u.IsAlive) {
+								if (.IsVisible)
+									if (!u.InHolder)
+										if (.CanSee(u))
+											if (.InRange(u))
+												if (use_curse) {
+													if (!u.IsCursed)
+														if (.IsEnemy(u))
+															if (.stamina >= stamina_cost) {
+																.StartAnim(17, u.pos);
+
+																Sleep(.TimeToActionMoment);
+
+																if (u.IsAlive)
+																	if (!u.IsCursed)
+																		if (.IsEnemy(u))
+																			if (!u.InHolder)
+																				if (.CanSee(u))
+																					if (.stamina >= stamina_cost) {
+																						.SetLastAttackTime();
+																						if (!.IsVisible)
+																							.SetVisible(true);
+																						.SetStamina(.stamina - stamina_cost);
+																						u.Curse();
+																					}
+
+																Sleep(.TimeToAnimFinish);
+																continue;
+															}
+												}
+												else if (.experience < u.experience)
+													if (!.IsEnemy(u)) {
+														.StartAnim(19, u.pos);
+
+														Sleep(.TimeToActionMoment);
+
+														if (u.IsAlive)
+															if (.experience < u.experience)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u)) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																			CreateFeedback("Experience", this);
+																		}
+
+														Sleep(.TimeToAnimFinish);
+														i += 1;
+														if (i < 12)
+															continue;
+													}
+								break;
+							}
+						}
+				}
+
+				.Idle(1000);
+			}
 	}
-}
+
+Sleep(15);//prevent possible loops with other commands

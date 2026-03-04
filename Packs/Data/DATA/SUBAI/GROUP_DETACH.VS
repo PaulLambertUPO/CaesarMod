@@ -4,16 +4,17 @@ Unit u;
 Hero h;
 int i;
 
-for (i = 0; i < objs.count; i += 1) {
+for (i = objs.count - 1; i >= 0; i -= 1) {
 	u = objs[i].AsUnit();
-	if (u.IsValid) {
+	if (u.IsAlive) {
 		h = u.hero;
 		if (h.IsValid) {
 			if (h.command == "teleport")
 				u.SetCommand("idle");
 			else if (h.InHolder)
-				if (h.GetHolderSett().GetCentralBuilding().IsHeirOf("Teleport"))
-					u.SetCommand("idle");
+				if (!h.InShip)
+					if (h.GetHolderSett().GetCentralBuilding().AsTeleport().IsValid)
+						u.SetCommand("idle");
 			u.DetachFrom(h);
 		}
 	}

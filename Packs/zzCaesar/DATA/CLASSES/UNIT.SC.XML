@@ -38,7 +38,6 @@
 	<method sig="enter" vs="data/subai/unit_enter.vs" verify="data/subai/unit_enter_verify.vs" />
 	<method sig="enteralone" vs="data/subai/unit_enter.vs" verify="data/subai/unit_enter_verify.vs" />
 	<method sig="move" vs="data/subai/unit_move.vs" />
-	<method sig="smartmove" vs="data/subai/unit_smartmove.vs" />
 	<method sig="form_move" vs="data/subai/unit_form_move.vs" />
 	<method sig="patrol" vs="data/subai/unit_patrol.vs" />
 	<method sig="protect" vs="data/subai/unit_protect.vs" />
@@ -53,7 +52,6 @@
 	<method sig="take_nearby_items" vs="data/subai/unit_take_nearby_items.vs" />
 	<method sig="build_catapult" vs="data/subai/unit_build_catapult.vs" />
 	<method sig="hold_position" vs="data/subai/unit_hold_position.vs" />
-	<method sig="selfdestroy" vs="data/subai/unit_selfdestroy.vs" />
 	<method sig="wander" vs="data/subai/unit_wander.vs" />
 	<method sig="explore" vs="data/subai/unit_explore.vs" />
 	<method sig="teleport" vs="data/subai/unit_teleport.vs" />
@@ -79,7 +77,6 @@
 	<method sig="engage_unit_type" vs="data/subai/unit_engage_unit_type.vs" verify="data/subai/unit_attack_verify.vs" />
 	<method sig="engage_unit_type_exclusive" vs="data/subai/unit_engage_unit_type_exclusive.vs" verify="data/subai/unit_attack_verify.vs" />
 	<method sig="go_talk" vs="data/subai/unit_go_talk.vs" />
-	<method sig="boar_tooth_use" vs="data/subai/boar_tooth_use.vs" />
 	<method sig="onkill" vs="data/subai/unit_on_kill.vs" />
 	<method sig="onenter" vs="data/subai/unit_on_enter.vs" />
 	<method sig="convert" vs="data/subai/unit_convert.vs" />

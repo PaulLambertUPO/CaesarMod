@@ -1,20 +1,25 @@
-//void, Obj this, point pt
+//void, Obj This, point pt
 
+Building this;
 Settlement set;
-Obj new_expedition_watch_eye, old_expedition_watch_eye;
 
-set = .AsBuilding().settlement;
+this = This.AsBuilding();
+set = .settlement;
 
-EnvWriteString(.AsBuilding(), "researching", "yes");
+EnvWriteString(this, "researching", "yes");
 EnvWriteString(set, "Expedition", "researching");
 
 .Progress();
 
-new_expedition_watch_eye = Place("WatchEyeBig", pt, .player);
-new_expedition_watch_eye.SetCommand("infinite_spy");
+{
+	Obj expedition_watch_eye;
 
-old_expedition_watch_eye = EnvReadObj(set, "ExpeditionWatchEye");
-if (old_expedition_watch_eye.IsValid)
-	old_expedition_watch_eye.Erase();
+	expedition_watch_eye = EnvReadObj(set, "ExpeditionWatchEye");
+	if (expedition_watch_eye.IsValid)
+		expedition_watch_eye.Erase();
 
-EnvWriteObj(set, "ExpeditionWatchEye", new_expedition_watch_eye);
+	expedition_watch_eye = Place("WatchEyeBig", pt, .player);
+	expedition_watch_eye.SetCommand("infinite_spy");
+
+	EnvWriteObj(set, "ExpeditionWatchEye", expedition_watch_eye);
+}

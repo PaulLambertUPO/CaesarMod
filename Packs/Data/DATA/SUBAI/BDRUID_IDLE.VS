@@ -1,179 +1,210 @@
-// void, Obj This
+//void, Obj This
 
 Druid this;
-Unit tgt;
-int  learn_stamina_cost;
-point ptStart;
-Building bldEnter;
-bool bSuccess;
-int learntimes;
-bool  bCanLearn;
 
 this = This.AsDruid();
 
-ptStart = .posRH;
-if (!.InShip && .InHolder) 
-	bldEnter = .GetHolderSett.GetCentralBuilding;
+if (.IsValid)
+	if (.IsAlive) {
+		ObjList ol;
+		Hero h;
+		Unit u, u_ol;
+		point pt, pt_start;
+		str cmd;
+		int i, d, best_dist, plr, rng, stamina_cost;
+		bool can_learn, can_hide, go_back, use_invisibility;
 
-learn_stamina_cost = GetCmdStaminaCost("learn");
-
-bCanLearn = true;
-if (.race == Gaul || .race == Britain || .race == Germany) if (EnvReadString(.player, "Ritual Chamber") != "researched")
-	bCanLearn = false;
-
-tgt = .FindUnitToLearn.AsUnit();
-
-while (true) 
-{
-	//SLEEP 2000 IF INACTIVE
-	if (.hero.IsValid) if (.hero.command=="teleport")
-	{
-		Sleep(2000);
-		continue;
-	}
-	if (!.AI) if(.InHolder)
-	{
-		Sleep(2000);
-		continue;
-	}
-
-	bSuccess = false;
-	if (.hero.IsValid) if (!.hero.InHolder)
-	{//GO NEAR HERO IF TOO FAR
-		if (.DistTo(.hero) > 250)
-		{
-			.Goto(.hero, 250, 2000, false, -1);
-			ptStart = .pos;
-			continue;
-		}
-	}
-	else
-	{//GO NEAR STARTPOINT IF TOO FAR
-		if (.DistTo(ptStart) > .sight)
-		{
-			.Goto(ptStart, .sight, 2000, false, -1);
-			continue;
-		}
-	}
-
-	learntimes = 0;
-	while (learntimes < 10) 
-	{
-		//BAD POTENTIALITIES
-		if (!bCanLearn) break;
-
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (.IsEnemy(tgt)) break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible)   break;
-		if (tgt.DistTo(ptStart) > .range + .sight) if (!.hero.IsValid || .hero != tgt.hero) break;
-
-		//EARLY BREAK IF LEARNING CAN NOT BE DONE AND LEARN IS THE CURRENT ACTION
-		if (tgt.experience <= .experience) break;
-		if (.stamina < learn_stamina_cost) break;
-
-		//GOING NEAR TARGET
-		if (!.InRange(tgt) || .InHolder)
-		{
-			if (!.hero.IsValid) if (.DistTo(ptStart) > .sight)
-				break;
-			.GotoAttack(tgt, 2000, false, 2500);
-			continue;
-		}
-
-		//LEARN
-		.StartAnim(19, tgt.pos);
-		Sleep(.TimeToActionMoment());
-			
-		if (tgt.IsAlive)
-		if (tgt.experience > .experience)
-		if (!tgt.InHolder)
-		if (.CanSee(tgt))
-		if (.stamina >= learn_stamina_cost)
-		{
-			int exp; exp = .experience + (.inherentlevel + 3) / 4;
-			if (exp > tgt.experience) exp = tgt.experience;
-			.SetVisible(true); .SetLastAttackTime();
-			.SetStamina(.stamina - learn_stamina_cost);
-			.SetExperience(exp);
-			CreateFeedback("Experience", this);
-		}
-		Sleep(.TimeToAnimFinish());
-		learntimes += 1;
-		bSuccess = true;
-		
-		Sleep(1000);//just in case something went wrong
-	}
-
-	//INACTIVE -> SLEEP
-	if (.InHolder) {
-		Sleep(2000);
-		continue;
-	}
-
-	if (.hero.IsValid)
-	{//GO NEAR HERO
-		if (.DistTo(.hero.dest) > 250)
-		{
-			if (.Goto(.hero.dest, 200, 2000, false, -1))
-				.Idle(1000);
-		}
-		else
-			.Idle(1000);
-	}
-	else
-	{
-		.Idle(1000);
-	}
-
-
-	while (1)
-	{	//FIND NEW TARGET AND RETURN TO THE STARTPOS
-		if (!bCanLearn) if (EnvReadString(.player, "Ritual Chamber") == "researched")
-			bCanLearn = true;
-		
-		tgt = .FindUnitToLearn.AsUnit();
-		if(tgt.IsAlive()) if(tgt.DistTo(ptStart) < .sight + .range)
-		{
-			.GotoAttack(tgt, 2000, false, 2500);
-			break;
-		}
-		if (.hero.IsValid)
-			break;
-		if (bldEnter.IsValid) {
-			if (!.IsEnemy(bldEnter)) {
-				point pt;
-				pt = bldEnter.GetEnterPoint(this);
-				if (!.GotoEnter(pt, 0, 1000, true, 5000))
-					continue;
-				.AddCommand(true, "enter", bldEnter);
-				return;
-			} else {
-				bldEnter.Clear;
-				ptStart = .posRH;
-			}
-		}
-
-		if (.AI)
-		if (!.hero.IsValid)
 		if (!.InHolder)
-		if (IsWaterLsa(ptStart.GetGAIKA.LSA))
-		{	/// leave the coast
-			point pt;
-			pt.Set(.pos.x + (128 - rand(256)), .pos.y + (128 - rand(256)));
-			if (pt.InRect(GetMapRect))
-			if (IsPassable3x3(pt))
-			if (!IsWaterLsa(pt.GetGAIKA.LSA))
-				ptStart = pt;
-		}
+			while (!.Stop(1000))
+				;
 
-		if(.Goto(ptStart, 0, 2000, true, 1000))
-		{
-			.Idle(2000);
-			break;
-		}
+		Sleep(50 + rand(451));
+
+		pt_start = .posRH;
+
+		plr = .player;
+		rng = .range;
+		stamina_cost = GetCmdStaminaCost("hide");
+
+		can_learn = IsResearched(plr, "Ritual Chamber");
+		can_hide = IsResearched(plr, "Mass Concealment");
+
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				h = .hero;
+				if (h.IsValid)
+					if (h.command == "teleport") {
+						Sleep(2000);
+						continue;
+					}
+
+				go_back = true;
+
+				u.Clear();
+				if (can_hide) {
+					if (.stamina >= stamina_cost)
+						if (.HasSpecial(invisibility)) {//do not use FindUnitToHide because it is a bugged function: it always returns an invalid unit
+							use_invisibility = true;
+							if (.IsVisible)
+								u = this;
+							else if (!.IsEnemyInSquadSight) {
+								best_dist = 10000000;
+								ol = Intersect(VisibleObjsInSight(this, "Military"), FriendlyObjs(plr, "Military")).GetObjList();
+								for (i = ol.count - 1; i >= 0; i -= 1) {
+									u_ol = ol[i].AsUnit();
+									if (u_ol.IsAlive)
+										if (u_ol.player == plr)
+											if (u_ol.IsVisible) {
+												cmd = u_ol.command;
+												if (cmd != "engage")
+													if (cmd != "attack")
+														if (cmd != "capture")
+															if (!u_ol.IsSentry)
+																if (!u_ol.IsRam)
+																	if (!u_ol.AsShip().IsValid)
+																		if (!u_ol.IsEnemyInSquadSight) {
+																			d = .DistTo(u_ol);
+																			if (u.IsDead) {
+																				u = u_ol;
+																				best_dist = d;
+																			}
+																			else if (d < best_dist) {
+																				u = u_ol;
+																				best_dist = d;
+																			}
+																		}
+											}
+								}
+							}
+						}
+				}
+				else if (IsResearched(plr, "Mass Concealment"))//find a unit in the next iteration to avoid repeating the code above
+					can_hide = true;
+
+				if (u.IsDead)
+					if (.IsVisible) {
+						use_invisibility = false;
+						if (can_learn)
+							u = .FindUnitToLearn();
+						else if (IsResearched(plr, "Ritual Chamber")) {
+							can_learn = true;
+							u = .FindUnitToLearn();
+						}
+					}
+
+				if (u.IsAlive)
+					if (u.DistTo(pt_start) <= rng + .sight) {
+						go_back = false;
+						i = 0;
+						while (u.IsAlive) {
+							if (!.IsEnemy(u))
+								if (!u.InHolder)
+									if (.CanSee(u))
+										if (use_invisibility) {
+											if (u.IsVisible)
+												if (.InRange(u)) {
+													if (.stamina >= stamina_cost) {
+														.StartAnim(17, u.pos);
+
+														Sleep(.TimeToActionMoment);
+
+														if (u.IsAlive)
+															if (u.IsVisible)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u))
+																			if (.stamina >= stamina_cost) {
+																				.SetLastAttackTime();
+																				.SetStamina(.stamina - stamina_cost);
+																				u.SetVisible(false);
+																				if (u.IsMilitary) {
+																					cmd = u.command;
+																					if (cmd == "engage")
+																						u.KillCommand();
+																					else if (cmd == "attack")
+																						u.KillCommand();
+																					else if (cmd != "capture")
+																						if (u.TimeWithoutAttack < 2000)//other fight commands
+																							u.KillCommand();
+																				}
+																			}
+
+														Sleep(.TimeToAnimFinish);
+														continue;
+													}
+												}
+												else if (u.DistTo(pt_start) <= rng + .sight) {
+													.GotoAttack(u, 2000, false, 2500);
+													continue;
+												}
+										}
+										else if (u != this)
+											if (.experience < u.experience)
+												if (.IsVisible)
+													if (.InRange(u)) {
+														.StartAnim(19, u.pos);
+
+														Sleep(.TimeToActionMoment);
+
+														if (u.IsAlive)
+															if (.experience < u.experience)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u)) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																			CreateFeedback("Experience", this);
+																		}
+
+														Sleep(.TimeToAnimFinish);
+														i += 1;
+														if (i < 6)
+															continue;
+													}
+													else if (u.DistTo(pt_start) <= rng + .sight) {
+														.GotoAttack(u, 2000, false, 2500);
+														continue;
+													}
+							break;
+						}
+					}
+
+				if (go_back) {
+					h = .hero;
+					if (h.IsValid) {
+						if (!h.InHolder)
+							if (.DistTo(h) >= 200)
+								if (.IsEnemyInSquadSight) {
+									.Goto(h, 175, 2000, false, -1);
+									pt_start = .pos;
+									continue;
+								}
+					}
+					else if (.AI)
+						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
+							pt = .pos;
+							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
+							if (pt.InRect(GetMapRect()))
+								if (IsPassable3x3(pt))
+									if (!IsWaterLsa(pt.GetGAIKA().LSA))
+										pt_start = pt;
+						}
+
+					if (.Goto(pt_start, 0, 2000, false, 1000))
+						if (rand(10) == 0) {
+							pt = .GetDir();
+							pt.SetLen(100);
+							pt.Rot(30 - rand(61));
+							.Face(pt + .pos);
+						}
+				}
+
+				.Idle(1000);
+			}
 	}
-}
+
+Sleep(15);//prevent possible loops with other commands

@@ -7,7 +7,6 @@
 	<properties edittree_pos="Structures/Outposts/Gold outpost (Egyptian)" />
 	<properties description="Produces additional gold as long as there is at least 2000 gold stored inside" />
 	<properties
-		range="1000"
 		settlement_food="500"
 		settlement_gold="500"
 		defender_cls_1="EAxetrower"

@@ -1,14 +1,13 @@
 //void, Obj this
 
-Settlement set;
-int gain;
-
-set = .AsBuilding().settlement;
-
 .Progress();
 
-gain = GetConst("InvestmentGoldRevenue");
+{
+	Settlement set;
 
-set.GoldSpent(-4000);
-set.SetGold(set.gold + gain);
-set.GoldConverted(gain - 4000);
+	set = .AsBuilding().settlement;
+
+	set.GoldSpent(-4000);
+	set.SetGold(set.gold + 6000);
+	set.GoldConverted(2000);
+}

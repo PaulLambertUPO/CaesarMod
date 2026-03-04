@@ -1,16 +1,21 @@
-//bool, Obj this, Obj other
+//bool, Obj This, Obj other
 
-Ship me;
+Ship this;
 
-me = .AsShip();
+this = This.AsShip();
 
-if (me.IsValid)
-	if (me.UnitsCount < me.UnitsMax)
-		if (!me.IsEnemy(other))
-			if (!other.IsWaterUnit)
-				if (!other.IsSentry)
-					if (!other.IsRam)
-						if (!other.AsBuilding().IsValid)
-							return true;
+if (.IsValid)
+	if (.IsAlive)
+		if (.UnitsCount < .UnitsMax)
+			if (other != this)
+				if (other.AsUnit().IsValid)
+					if (other.IsAlive)
+						if (!.IsEnemy(other))
+							if (!other.AsFlying().IsValid)
+								if (!other.IsWaterUnit)
+									if (!other.IsSentry)
+										if (!other.IsPeasantAmbient)
+											if (!other.IsRam)
+												return true;
 
 return false;

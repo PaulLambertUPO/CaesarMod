@@ -1,33 +1,26 @@
-// bool, Obj This, Obj target
+//bool, Obj This, Obj target
 
-Unit this;
-Druid d;
-Unit tgt;
-int level, level1, level2;
+Druid this;
 
-this = This.AsUnit();
-if (!.IsAlive)              return false;
-if (!.HasSpecial(teaching)) return false;
+this = This.AsDruid();
 
-tgt = target.AsUnit();
-if (!tgt.IsAlive)  return false;
-if (.IsEnemy(tgt)) return false;
-if (tgt.InHolder)  return false;
-if (!.CanSee(tgt)) return false;
-if (tgt == this)   return false;
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(teaching))
+			if (target != this)
+				if (target.AsUnit().IsValid)
+					if (target.IsAlive)
+						if (!.IsEnemy(target))
+							if (!target.AsUnit().InHolder)
+								if (!target.IsWaterUnit)
+									if (!target.IsPeasantAmbient)
+										if (!target.IsRam)
+											if (.CanSee(target))
+												if (IsResearched(.player, "Ancestral Knowledge")) {
+													if (target.AsUnit().inherentlevel < GetConst("TeachingLevel2"))
+														return true;
+												}
+												else if (target.AsUnit().inherentlevel < GetConst("TeachingLevel1"))
+													return true;
 
-
-//TO WHAT LEVEL SHOULD WE TRAIN UNITS?
-level1 = GetConst("TeachingLevel1");
-level2 = GetConst("TeachingLevel2");
-
-level = level1;
-if (EnvReadString(.player, "Ancestral Knowledge") == "researched")
-	level = level2;
-
-if (tgt.inherentlevel >= level)
-	return false;
-
-//if (.stamina < cmdcost_stamina) return false;
-
-return true;
+return false;

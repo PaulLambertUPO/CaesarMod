@@ -1,74 +1,116 @@
-// void, Obj This
+//void, Obj This
 
 Hero this;
-int i;
-Obj u;
-bool melee;
 
-this = This.AsHero;
+this = This.AsHero();
 
-melee = !.IsRanged;
+if (.IsValid)
+	if (.IsAlive) {
+		Obj o;
+		point pt, pt_start;
+		bool melee, go_back;
 
-//.army.SetCommand("idle");
-for (i = 0; i<.army.count; i+=1)
-	if (.army[i].command == "form_move")
-		.army[i].SetCommand("idle");
+		melee = !.IsRanged;
 
-while(!.Stop(1000));
-//.pr("Hero::Idle");
+		{
+			ObjList army;
+			int i;
 
-while(1) {
+			army = .army;
 
-	if (.IsVisible) {
-		u = .BestTargetInSquadSightMisZeroDamage;
-		if (.IsValidTarget(u)) {
-			while (1) {
-				while(!.GotoAttack(u, 1500, false, 15000)) {
-					if (!.IsVisible) break;
-					u = .BestTargetInSquadSightMisZeroDamage;
-					if (!.IsValidTarget(u)) break;
-				}
-				if (!.IsVisible) break;
-				u = .BestTargetInSquadSightMisZeroDamage;
-				if (!.IsValidTarget(u)) break;
-				if (u.AsCatapult().IsValid) {
-					while (.Attack(u)) {
-						if (!.IsValidTarget(u)) break;
-						if (!.IsVisible) break;
-						if (melee)
-							if (.HasSpecial(trample))
-								u.Damage(.damage);
-					}
-				}
-				else
-					while (.Attack(u)) {
-						if (!.IsValidTarget(u)) break;
-						if (!.IsVisible) break;
-					}
-				if (!.IsVisible) break;
-				u = .BestTargetInSquadSightMisZeroDamage;
-				if (!.IsValidTarget(u)) break;
+			for (i = army.count - 1; i >= 0; i -= 1) {
+				o = army[i];
+				if (o.IsAlive)
+					if (o.command == "form_move")
+						o.SetCommand("idle");
 			}
-			.FormSetupAndMoveTo(.pos, 0, 0, true);
-			.FormKeepMoving(1000);
-			continue;
 		}
+
+		if (!.InHolder)
+			while (!.Stop(1000))
+				;
+
+		pt_start = .posRH;
+
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				if (.IsVisible) {//do not use the engage/advance command otherwise the entire army will fight (capturing a building may become almost impossible)
+					o = .BestTargetInSquadSightMisZeroDamage;
+					while (.IsValidTarget(o)) {
+						go_back = false;
+						while (!.GotoAttack(o, 1500, false, 15000)) {
+							if (!.IsVisible)
+								break;
+							o = .BestTargetInSquadSightMisZeroDamage;
+							if (!.IsValidTarget(o))
+								break;
+						}
+						if (!.IsValidTarget(o))
+							go_back = true;
+						else if (!.IsVisible)
+							go_back = true;
+						if (!go_back) {
+							if (o.AsCatapult().IsValid)
+								while (.Attack(o)) {
+									if (!.IsValidTarget(o))
+										break;
+									if (!.IsVisible)
+										break;
+									if (melee)
+										if (.HasSpecial(trample))
+											o.Damage(.damage);
+								}
+							else
+								while (.Attack(o)) {
+									if (!.IsValidTarget(o))
+										break;
+									if (!.IsVisible)
+										break;
+								}
+							if (!.IsVisible)
+								go_back = true;
+							else {
+								o = .BestTargetInSquadSightMisZeroDamage;
+								if (!.IsValidTarget(o))
+									go_back = true;
+							}
+						}
+						if (go_back) {
+							o.Clear();
+							while (!.Goto(pt_start, 0, 1500, false, 2500))
+								if (.IsVisible) {
+									o = .BestTargetInSquadSightMisZeroDamage;
+									if (.IsValidTarget(o))
+										break;
+								}
+						}
+					}
+				}
+
+				if (.Stop(2000)) {
+					if (.AI)
+						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
+							pt = .pos;
+							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
+							if (pt.InRect(GetMapRect()))
+								if (IsPassable3x3(pt))
+									if (!IsWaterLsa(pt.GetGAIKA().LSA)) {
+										.AddCommand(true, "move", pt);
+										break;
+									}
+						}
+
+					.Idle(2000);
+					if (rand(10) == 0) {
+						pt = .GetDir();
+						pt.SetLen(100);
+						pt.Rot(30 - rand(61));
+						.Face(pt + .pos);
+					}
+				}
+			}
 	}
 
-	if (.AI)
-	if (!.GetHolderSett.IsValid)
-	if (IsWaterLsa(GetGAIKA(this).LSA))	{
-		/// leave the coast
-		point pt;
-		pt.Set(.pos.x + (150 - rand(300)), .pos.y + (150 - rand(300)));
-		if (pt.InRect(GetMapRect))
-		if (IsPassable3x3(pt))
-		if (!IsWaterLsa(pt.GetGAIKA.LSA)) {
-			.AddCommand(true, "move", pt);
-			return;
-		}
-	}
-
-	if(.Stop(2000))
-		.Idle(2000);
-}
+Sleep(15);//prevent possible loops with other commands

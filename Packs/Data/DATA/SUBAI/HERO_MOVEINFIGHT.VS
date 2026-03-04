@@ -1,12 +1,19 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
-Unit this;
-this = This.AsUnit();
+Hero this;
 
-if (.AsHero().HasFinalPartyOrientationRequest()) {
-	.AddCommand(true, "move", pt);
-	return;
-}
+this = This.AsHero();
 
-while (!.Goto(pt, 0, 2000, true, 0));
-Sleep(7000);
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasFinalPartyOrientationRequest)
+			.AddCommand(true, "move", pt);
+		else {
+			while (!.Goto(pt, 0, 2000, false, 0))
+				;
+
+			if (.HasArmy)
+				Sleep(7000);
+			else
+				.AddCommand(true, "stand_position");
+		}

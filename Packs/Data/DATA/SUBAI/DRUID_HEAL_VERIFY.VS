@@ -1,18 +1,21 @@
-// bool, Obj This, Obj target
+//bool, Obj This, Obj target
 
-Unit this;
-this = This.AsUnit();
+Druid this;
 
-if (!.IsAlive())          return false;
-if (!.HasSpecial(healing)) return false;
+this = This.AsDruid();
 
-if (!target.IsAlive()) return false;
-if (target == this)    return false;
-if (target.health >= target.maxhealth) return false;
-if (.IsEnemy(target))  return false;
-if (target.AsUnit)
-	if (target.AsUnit.InHolder)   return false;
-if (!.CanSee(target))  return false;
-if (target.AsShip.IsValid) return false;
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(healing))
+			if (target != this)
+				if (target.AsUnit().IsValid)
+					if (target.IsAlive)
+						if (target.health < target.maxhealth)
+							if (!.IsEnemy(target))
+								if (!target.AsUnit().InHolder)
+									if (!target.AsShip().IsValid)
+										if (!target.IsRam)
+											if (.CanSee(target))
+												return true;
 
-return true;
+return false;

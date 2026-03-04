@@ -15,7 +15,7 @@
 		max_population="0"
 		max_units="10000"
 	/>
-	<properties maxhealth="10000" sight="1400" />
+	<properties maxhealth="10000" sight="1400" range="1000" />
 	<properties radius="345" selection_radius="350" />
 	<properties interface="thumb,building,holder" />
 	<properties capture_health_percent="50" />

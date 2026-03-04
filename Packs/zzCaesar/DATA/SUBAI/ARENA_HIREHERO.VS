@@ -1,42 +1,50 @@
 //void, Obj This
 
 Building this;
-Settlement set;
-Unit new_unit;
-point exit_point;
-int player, level;
 
 this = This.AsBuilding();
-set = .settlement;
-player = .player;
 
 .Progress();
 
-level = EnvReadInt(set, "levels/Hero");
-
-if (IsResearched(player, "Mumification")) {
-	ObjList ol;
+{
+	Settlement set;
+	Building hall;
 	Hero h;
-	int i;
+	point exit_point;
+	int plr, h_level = 1;
 
-	level = EnvReadInt(player, "BestHeroLevel");
-	ol = GetPlayerUnits(player, "Hero");
-	for (i = 0; i < ol.count; i += 1) {
-		h = ol[i].AsHero();
-		if (h.IsValid)
-			if (h.inherentlevel > level)
-				level = h.inherentlevel;
+	set = .settlement;
+	hall = set.GetCentralBuilding();
+	plr = .player;
+
+	if (IsResearched(plr, "Mumification")) {
+		ObjList ol;
+		int i;
+
+		h_level = EnvReadInt(plr, "BestHeroLevel");
+		ol = GetPlayerUnits(plr, "Hero");
+		for (i = 0; i < ol.count; i += 1) {
+			h = ol[i].AsHero();
+			if (h.IsValid)
+				if (h.inherentlevel > h_level)
+					h_level = h.inherentlevel;
+		}
+		h_level = MAX(1, h_level * 2 / 3);
 	}
-	level = MAX(1, level * 2 / 3);
-}
 
-exit_point = .GetExitPoint(set.GetCentralBuilding().pos, false);
-if (exit_point.x == -1 && exit_point.y == -1) {
-	new_unit = Place(GetRandomHeroClass(cmdparam, player), Point(0, 0), player);
-	set.AddUnit(new_unit);
+	exit_point = .GetExitPoint(hall.pos, false);
+	if (exit_point.x == -1) {
+		h = Place(GetRandomHeroClass(cmdparam, plr), Point(0, 0), plr).AsHero();
+		set.AddUnit(h);
+	}
+	else if (exit_point.y == -1) {
+		h = Place(GetRandomHeroClass(cmdparam, plr), Point(0, 0), plr).AsHero();
+		set.AddUnit(h);
+	}
+	else {
+		h = Place(GetRandomHeroClass(cmdparam, plr), exit_point, plr).AsHero();
+		h.SetCommand("advanceenter", hall);
+	}
+
+	h.SetLevel(MAX(h_level, EnvReadInt(set, "levels/Hero")));
 }
-else {
-	new_unit = Place(GetRandomHeroClass(cmdparam, player), exit_point, player);
-	new_unit.SetCommand("advanceenter", set.GetCentralBuilding());
-}
-new_unit.SetLevel(level);

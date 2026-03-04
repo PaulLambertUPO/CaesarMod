@@ -1,11 +1,13 @@
-//void, Obj This
+//void, Obj this
 
-int player;
+.Progress();
 
-This.AsBuilding().Progress();
+{
+	int plr;
 
-player = This.player;
+	plr = .player;
 
-EnvWriteInt(player, "MaxMacemen", EnvReadInt(player, "MaxMacemen") + 10);
+	EnvWriteInt(plr, "MaxMacemen", EnvReadInt(plr, "MaxMacemen") + 10);
 
-EnvWriteString(player, "Increase Mace production", "researched");
+	EnvWriteString(plr, "Increase Mace production", "researched");
+}

@@ -1,64 +1,70 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
 
 Druid this;
-Unit tgt;
-bool bSleep = true;
-int hide_stamina_cost;
 
-this = This.AsDruid;
-if (!.IsAlive)
-	return;
-if (!.HasSpecial(invisibility))
-	return;
+this = This.AsDruid();
 
-tgt = target.AsUnit;
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(invisibility)) {
+			Unit u;
 
-hide_stamina_cost = GetCmdStaminaCost("hide");
+			u = target.AsUnit();
 
-while (1)
-{
-	if (!.IsAlive)     break;
-	if (!tgt.IsAlive)  break;
-	if (!tgt.IsVisible) {
-		tgt = .FindUnitToHide;
-		if (!tgt.IsAlive)  break;
-	}
-	if (!tgt.IsVisible) break;
-	if (.IsEnemy(tgt)) break;
-	if (tgt.InHolder)  break;
-	if (!.CanSee(tgt)) break;
-	if (tgt.IsSentry)  break;
-	if (tgt.IsPeasantAmbient) break;
-	if (tgt.IsRam) break;
+			if (u.IsValid)
+				if (!u.IsWaterUnit)
+					if (!u.IsSentry)
+						if (!u.IsPeasantAmbient)
+							if (!u.IsRam) {
+								str cmd;
+								int stamina_cost;
 
-	bSleep = false;
-	if (this != tgt && !.InRange(tgt)) {
-		.GotoAttack(tgt, 2000, false, 2500);
-		continue;
-	}
-	if (.stamina < hide_stamina_cost) {
-		Sleep(200);
-		continue;
-	}
-	.SetLastAttackTime();
-	.StartAnim(17, tgt.pos);
-	Sleep(.TimeToActionMoment);
+								stamina_cost = GetCmdStaminaCost("hide");
 
-	if (tgt.IsAlive)
-	if (tgt.IsVisible)
-	if (!.IsEnemy(tgt))
-	if (!tgt.InHolder)
-	if (.CanSee(tgt))
-	if (.stamina >= hide_stamina_cost)
-	{
-		.SetLastAttackTime();
-		.SetStamina(.stamina - hide_stamina_cost);
-		tgt.SetVisible(false);
-		if (tgt.command == "engage" || tgt.command == "attack")
-			tgt.KillCommand();
-	}
-	Sleep(.TimeToAnimFinish);
-}
+								while (u.IsAlive) {
+									if (u.IsVisible)
+										if (!.IsEnemy(u))
+											if (!u.InHolder)
+												if (.CanSee(u)) {
+													if (.InRange(u))
+														if (.stamina >= stamina_cost) {
+															.StartAnim(17, u.pos);
 
-if (bSleep)
-	Sleep(17); // otherwise can cycle: Advance->Hide->Advance->Hide...
+															Sleep(.TimeToActionMoment);
+
+															if (u.IsAlive)
+																if (u.IsVisible)
+																	if (!.IsEnemy(u))
+																		if (!u.InHolder)
+																			if (.CanSee(u))
+																				if (.stamina >= stamina_cost) {
+																					.SetLastAttackTime();
+																					.SetStamina(.stamina - stamina_cost);
+																					u.SetVisible(false);
+																					if (u.IsMilitary) {
+																						cmd = u.command;
+																						if (cmd == "engage")
+																							u.KillCommand();
+																						else if (cmd == "attack")
+																							u.KillCommand();
+																						else if (cmd != "capture")
+																							if (u.TimeWithoutAttack < 2000)//other fight commands
+																								u.KillCommand();
+																					}
+																				}
+
+															Sleep(.TimeToAnimFinish);
+														}
+														else
+															Sleep(500);
+													else
+														.GotoAttack(u, 2000, false, 2500);
+
+													continue;
+												}
+									break;
+								}
+							}
+		}
+
+Sleep(15);//prevent possible loops with other commands

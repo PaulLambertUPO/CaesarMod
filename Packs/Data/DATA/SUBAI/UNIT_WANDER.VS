@@ -1,14 +1,17 @@
-// void, Obj me, point pt
+//void, Obj me, point pt
 
-point where;
 Unit this;
+
 this = me.AsUnit();
-while (1) {
-  where.Set(0, rand(.sight));
-  where.Rot(rand(360));
-  if (.Goto(pt + where, 0, 20000, false, 0))
-  Sleep(rand(5000) + 5000);
-}
-//.AddCommand(false, "attack", pt + where);
-//Sleep(rand(5000) + 5000);
-//.AddCommand(false, "wander", pt);
+
+if (.IsValid)
+	if (.IsAlive) {
+		point where;
+
+		while (.CmdCount == 1) {//avoid blocking pending commands forever
+			where.SetLen(50 + rand(.sight));
+			where.Rot(rand(360));
+			if (.Goto(pt + where, 0, 10000, false, -1))
+				Sleep(2000 + rand(3001));
+		}
+	}

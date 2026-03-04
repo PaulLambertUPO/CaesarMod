@@ -92,7 +92,7 @@ aSkillLevels[0] = 10;
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		if (bBarrack1)
-			if(olHypaspists.count < nHypaspists) {
+			if (olHypaspists.count < nHypaspists) {
 				nCount = nHypaspists - olHypaspists.count;
 				olHypaspists.AddList(set.TSRecruitArmy("HHypaspista", nCount));
 			}

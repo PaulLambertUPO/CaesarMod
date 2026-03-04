@@ -1,29 +1,32 @@
-// void, Obj This,Obj bld
-
-/*
-As the teuton tents cannot be "enter"-ed  the behaviour script uses THIS command 
-*/
-
+//void, Obj This, Obj other
 
 Unit this;
-point pt;   
-Building building;
-bool error;
-           
+
 this = This.AsUnit();
-building = bld.AsBuilding();
 
-if (!building.IsValid)
-	return;
-if (this.IsEnemy(building))
-	if (!building.AsTeleport().IsValid())
-		return;
+if (.IsValid)
+	if (.IsAlive) {
+		Building bld;
 
-.SetEntering(true);
-if (!building.settlement.Units().Contains(this))
-  {
-    pt = building.GetEnterPoint(this);
-    while(!.GotoEnter(pt, 0, 1000, true, 5000));
-    building.settlement.ForceAddUnit(this);
-  }
-	
+		bld = other.AsBuilding();
+
+		if (bld.IsValid)
+			if (!.IsEnemy(bld)) {
+				Settlement set;
+
+				set = bld.settlement;
+
+				if (!set.Units.Contains(this)) {
+					point pt;
+
+					pt = bld.GetEnterPoint(this);
+
+					.SetEntering(true);
+
+					while (!.GotoEnter(pt, 0, 1000, false, 5000))
+						;
+
+					set.ForceAddUnit(this);
+				}
+			}
+	}

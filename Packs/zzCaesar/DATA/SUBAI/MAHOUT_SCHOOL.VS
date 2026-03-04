@@ -1,9 +1,11 @@
-//void, Obj This
+//void, Obj this
 
-int player;
+.Progress();
 
-This.AsBuilding().Progress();
+{
+	int plr;
 
-player = This.player;
+	plr = .player;
 
-EnvWriteInt(player, "MaxElephants", EnvReadInt(player, "MaxElephants") + 1);
+	EnvWriteInt(plr, "MaxElephants", EnvReadInt(plr, "MaxElephants") + 1);
+}

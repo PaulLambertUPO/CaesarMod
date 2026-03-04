@@ -1,14 +1,17 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Druid this;
-Obj obj;
 
 this = This.AsDruid();
-if (!.IsValid()) return;
 
-while (!.Goto(pt, .sight, 2000, false, 2500));
+if (.IsValid)
+	if (.IsAlive) {
+		while (!.Goto(pt, .sight, 2000, false, 2500))
+			;
 
-.PlayAnim(18, .pos);
-obj = Place("Mist", pt, .player);
-obj.SetStamina(10);
-.Damage(.health);
+		.PlayAnim(18, .pos);
+
+		Place("Mist", pt, .player).SetStamina(10);
+
+		.Damage(.health);
+	}

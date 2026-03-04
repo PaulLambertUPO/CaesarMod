@@ -4,6 +4,8 @@ Unit this;
 
 this = This.AsUnit();
 
-.Goto(pt, 0, 3000, true, -1);
-
-.AddCommand(false, "selfdestroy");
+if (.IsValid)
+	if (.IsAlive) {
+		.Goto(pt, 0, 3000, false, -1);
+		.Damage(.health);
+	}

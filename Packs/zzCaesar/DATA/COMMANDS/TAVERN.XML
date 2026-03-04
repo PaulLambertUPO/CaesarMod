@@ -73,8 +73,10 @@
 		rollover="Scout area"
 		method="scoutarea"
 		description="Temporarily removes the fog of war around the chosen point"
+		cursor="do_something"
 		immediate="yes"
 		param="ReqSet, Free Wine, default">
+		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="RTavern" />
 	</cmd>
 	<cmd name="Buy map" priority="7"
@@ -404,8 +406,10 @@
 		queueicon="gameres/icons/upgrades/Expedition.bmp"
 		rollover="Expedition"
 		description="Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per stronghold)"
+		cursor="do_something"
 		researchcommand="yes"
 		param="ReqSet, Free Trade, default, NameSet, Expedition, default">
+		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="CTavern" />
 	</cmd>
 	<cmd name="Slavery" priority="7"
@@ -629,8 +633,10 @@
 		rollover="Gossip"
 		method="gossip"
 		description="Temporarily removes the fog of war around the chosen point and reveals any hidden enemies there"
+		cursor="do_something"
 		immediate="yes"
 		param="ReqSet, Grain Trade, default">
+		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="EMarket" />
 	</cmd>
 	<cmd name="Hecatomb" priority="6"

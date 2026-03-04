@@ -19,7 +19,7 @@
 		immediate="yes"
 		key="a"
 		method="autotrain_start"
-		groupverifier="data/subai/autotrain_start_verify.vs"
+		groupverifier="data/subai/townhall_autotrain_start_verify.vs"
 		button="actions/autotrainingStart.bmp"
 		description="Starts the automatic training of warriors in the stronghold"
 		rollover="Automatic training">
@@ -29,7 +29,7 @@
 		immediate="yes"
 		key="a"
 		method="autotrain_stop"
-		groupverifier="data/subai/autotrain_stop_verify.vs"
+		groupverifier="data/subai/townhall_autotrain_stop_verify.vs"
 		button="actions/autotrainingStop.bmp"
 		description="Stops the automatic training of warriors in the stronghold"
 		rollover="Stop automatic training">

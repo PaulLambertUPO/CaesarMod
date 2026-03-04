@@ -7,7 +7,6 @@
 	<properties edittree_pos="Structures/Outposts/Recruitment outpost (Greek)" />
 	<properties description="Converts peasants to Hoplites" />
 	<properties
-		range="1000"
 		settlement_food="2000"
 		settlement_gold="0"
 		defender_cls_1="HHoplite"

@@ -1,3 +1,9 @@
 //void, Obj This
 
-This.AsUnit().SetWalkAnim();
+Unit this;
+
+this = This.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive)
+		.SetWalkAnim();

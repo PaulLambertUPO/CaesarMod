@@ -8,39 +8,42 @@ this = This.AsBuilding();
 
 {
 	Settlement set, supplied;
-	Unit u;
-	point pos, pt_inverted_exit_vec, pt_dest;
-	int i, j, radius, player;
+	Obj o;
+	point pt_pos, pt_inverted_exit_vec, pt_dest;
+	int i, j, plr, rad;
 
 	set = .settlement;
-	pos = .pos;
-	radius = .radius;
-	player = .player;
+	pt_pos = .pos;
+	plr = .player;
+	rad = .radius + 120;
 
 	pt_inverted_exit_vec = .GetExitVector() * -1;
 
-	for (i = EnvReadInt(set, "Fishermen"); i > 0 && j < 5; i -= 1) {
-		pt_dest = pt_inverted_exit_vec;
-		pt_dest.SetLen(radius + 120 + rand(41));
-		pt_dest.Rot(rand(31) - 15);
-		pt_dest = pt_dest + pos;
+	for (i = EnvReadInt(set, "Fishermen"); i > 0; i -= 1) {
+		if (j >= 5)
+			return;
 
-		u = Place("Fisherman", .GetExitPoint(pt_dest, false), player);
+		pt_dest = pt_inverted_exit_vec;
+		pt_dest.SetLen(rad + rand(41));
+		pt_dest.Rot(rand(31) - 15);
+		pt_dest = pt_dest + pt_pos;
+
+		o = Place("Fisherman", .GetExitPoint(pt_dest, false), plr);
 
 		EnvWriteInt(set, "Fishermen", i - 1);
 		j += 1;
 
-		supplied = .settlement.supplied;
+		supplied = set.supplied;//reassign every time because it can change during the sleeps
 
 		if (supplied.IsValid)
 			if (supplied.IsShipyard)
-				if (!supplied.IsEnemy(player)) {
-					u.SetCommand("enter", supplied.GetCentralBuilding());
+				if (!supplied.IsEnemy(plr)) {
+					o.SetCommand("enter", supplied.GetCentralBuilding());
 					Sleep(100);
 					continue;
 				}
 
-		u.SetCommand("move", pt_dest);
+		o.SetCommand("move", pt_dest);
 		Sleep(100);
 	}
 }

@@ -1,35 +1,38 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Druid this;
-Unit tgt;
-int  time, retries, try;
 
-this = This.AsDruid;
+this = This.AsDruid();
 
-time = GetConst("RetryWait");
-retries = GetConst("RetryCount");
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(healing)) {
+			Unit u;
+			int i = 10;
 
-tgt = .FindUnitToHeal;
-if (!tgt.IsAlive)
-	while (!.Goto(pt, 0, 2000, true, -1))
-	{
-		tgt = .FindUnitToHeal;
-		if (tgt.IsAlive) break;
-		if (.TimeWithoutWalking() > 2500) break;
-	}
+			if (!.InHolder)
+				u = .FindUnitToHeal();
+			if (u.IsDead)
+				while (!.Goto(pt, 0, 2000, false, -1)) {
+					u = .FindUnitToHeal();
+					if (u.IsAlive)
+						break;
+					if (.TimeWithoutWalking >= 2500)
+						break;
+				}
 
-if (!tgt.IsAlive)
-{
-	tgt = .FindUnitToHeal;
-	while (try < retries && !tgt.IsAlive)
-	{
-		Sleep(time);
-		tgt = .FindUnitToHeal;
-		try += 1;
-	}
-}
-if (tgt.IsAlive)
-{
-	.AddCommand(true, "advance", pt);
-	.AddCommand(true, "heal", tgt);
-}
+			while (i > 0) {
+				if (u.IsAlive)
+					break;
+				Sleep(500);
+				u = .FindUnitToHeal();
+				i -= 1;
+			}
+
+			if (u.IsAlive) {
+				.AddCommand(true, "advance", pt);
+				.AddCommand(true, "heal", u);
+			}
+		}
+
+Sleep(15);//prevent possible loops with other commands

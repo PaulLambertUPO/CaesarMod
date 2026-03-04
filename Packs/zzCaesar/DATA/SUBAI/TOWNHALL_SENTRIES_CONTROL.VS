@@ -8,27 +8,22 @@ if (GetConst("NoSentries") == 0)
 
 		this = This.AsBuilding().settlement;
 
-		if (.IsValid) {
-			int player, add_interval, add_count, missing_sentries;
+		while (.IsIndependent)
+			Sleep(5000);
 
-			while (.IsIndependent)
-				Sleep(5000);
+		{
+			int plr, add_interval, add_count;
 
 			.AddMaxSentries(GetConst("InitialStrongholdSentries"));//total max = const + 1 per wall + 4 per gate (with const = 20, total max is usually 50-52)
 
 			add_interval = GetConst("SentriesAddTime");
 			add_count = GetConst("SentriesAddCount");
 
-			Sleep(add_interval);
-
 			while (1) {
-				if (player == .player) {
-					missing_sentries = .GetMaxSentries() - .GetNumSentries();
-					if (missing_sentries > 0)
-						.AddSentries(MIN(add_count, missing_sentries));
-				}
+				if (plr == .player)
+					.AddSentries(CLAMP(.GetMaxSentries() - .GetNumSentries(), 0, add_count));
 				else
-					player = .player;
+					plr = .player;
 
 				Sleep(add_interval);
 			}

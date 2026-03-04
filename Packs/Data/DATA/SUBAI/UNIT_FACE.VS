@@ -1,5 +1,11 @@
 //void, Obj This, point pt
 
-This.AsUnit().Face(pt);
+Unit this;
 
-Sleep(1000);
+this = This.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive) {
+		.Face(pt);
+		Sleep(1000 + rand(1001));
+	}

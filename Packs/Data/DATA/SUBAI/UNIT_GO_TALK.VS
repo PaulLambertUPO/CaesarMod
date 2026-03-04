@@ -1,23 +1,23 @@
-// void, Obj This, Obj other
+//void, Obj This, Obj other
 
 Unit this;
-int range;
+
 this = This.AsUnit();
 
-if (this.sight > 200)
-{
-	range = this.sight - 100;
-}
-else
-{
-	range = 100;
-}
+if (.IsValid)
+	if (.IsAlive)
+		if (other != this)
+			if (other.AsUnit().IsValid)
+				if (other.IsAlive) {
+					int talk_dist;
+					bool isMilitary;
 
-if (other.IsAlive())
-{
-	while (!.Goto(other,range,5000,true,15000));
-	if (.IsAlive() && other.IsAlive())
-	{
-		EndConvSetup(This,other);
-	}
-}
+					talk_dist = MAX(100, .sight - 100);
+					isMilitary = .IsMilitary;
+
+					while (!.Goto(other, talk_dist, 5000, isMilitary, 15000))
+						;
+
+					if (other.IsAlive)
+						EndConvSetup(This, other);
+				}

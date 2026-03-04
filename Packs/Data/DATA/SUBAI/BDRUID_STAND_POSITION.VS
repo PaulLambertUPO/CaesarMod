@@ -1,71 +1,155 @@
-// void, Obj This
+//void, Obj This
 
 Druid this;
-Unit tgt;
-int learn_stamina_cost;
-bool bSuccess;
-int learntimes;
-bool bCanLearn;
 
 this = This.AsDruid();
 
-learn_stamina_cost = GetCmdStaminaCost("learn");
+if (.IsValid)
+	if (.IsAlive) {
+		ObjList ol;
+		Unit u, u_ol;
+		str cmd;
+		int i, d, best_dist, plr, rng, stamina_cost;
+		bool can_learn, can_hide, use_invisibility;
 
-bCanLearn = true;
-if (.race == Gaul || .race == Britain || .race == Germany) if (EnvReadString(.player, "Ritual Chamber") != "researched")
-	bCanLearn = false;
+		if (!.InHolder)
+			while (!.Stop(1000))
+				;
 
-while (!.Stop(1000));
+		Sleep(50 + rand(451));
 
-tgt = .FindUnitToLearn.AsUnit();
-while (true) 
-{
-	if(.InHolder || !.IsVisible)
-	{
-		Sleep(2000);
-		continue;
+		plr = .player;
+		rng = .range;
+		stamina_cost = GetCmdStaminaCost("hide");
+
+		can_learn = IsResearched(plr, "Ritual Chamber");
+		can_hide = IsResearched(plr, "Mass Concealment");
+
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				u.Clear();
+				if (can_hide) {
+					if (.stamina >= stamina_cost)
+						if (.HasSpecial(invisibility)) {//do not use FindUnitToHide because it is a bugged function: it always returns an invalid unit
+							use_invisibility = true;
+							if (.IsVisible)
+								u = this;
+							else if (!.IsEnemyInSquadSight) {
+								best_dist = 10000000;
+								ol = Intersect(ObjsInRange(this, "Military", rng), FriendlyObjs(plr, "Military")).GetObjList();
+								for (i = ol.count - 1; i >= 0; i -= 1) {
+									u_ol = ol[i].AsUnit();
+									if (u_ol.IsAlive)
+										if (u_ol.player == plr)
+											if (u_ol.IsVisible) {
+												cmd = u_ol.command;
+												if (cmd != "engage")
+													if (cmd != "attack")
+														if (cmd != "capture")
+															if (!u_ol.IsSentry)
+																if (!u_ol.IsRam)
+																	if (!u_ol.AsShip().IsValid)
+																		if (!u_ol.IsEnemyInSquadSight) {
+																			d = .DistTo(u_ol);
+																			if (u.IsDead) {
+																				u = u_ol;
+																				best_dist = d;
+																			}
+																			else if (d < best_dist) {
+																				u = u_ol;
+																				best_dist = d;
+																			}
+																		}
+											}
+								}
+							}
+						}
+				}
+				else if (IsResearched(plr, "Mass Concealment"))//find a unit in the next iteration to avoid repeating the code above
+					can_hide = true;
+
+				if (u.IsDead)
+					if (.IsVisible) {
+						use_invisibility = false;
+						if (can_learn)
+							u = .FindUnitToLearn();
+						else if (IsResearched(plr, "Ritual Chamber")) {
+							can_learn = true;
+							u = .FindUnitToLearn();
+						}
+					}
+
+				if (u.IsAlive) {
+					i = 0;
+					while (u.IsAlive) {
+						if (!.IsEnemy(u))
+							if (!u.InHolder)
+								if (.CanSee(u))
+									if (.InRange(u))
+										if (use_invisibility) {
+											if (u.IsVisible)
+												if (.stamina >= stamina_cost) {
+													.StartAnim(17, u.pos);
+
+													Sleep(.TimeToActionMoment);
+
+													if (u.IsAlive)
+														if (u.IsVisible)
+															if (!.IsEnemy(u))
+																if (!u.InHolder)
+																	if (.CanSee(u))
+																		if (.stamina >= stamina_cost) {
+																			.SetLastAttackTime();
+																			.SetStamina(.stamina - stamina_cost);
+																			u.SetVisible(false);
+																			if (u.IsMilitary) {
+																				cmd = u.command;
+																				if (cmd == "engage")
+																					u.KillCommand();
+																				else if (cmd == "attack")
+																					u.KillCommand();
+																				else if (cmd != "capture")
+																					if (u.TimeWithoutAttack < 2000)//other fight commands
+																						u.KillCommand();
+																			}
+																		}
+
+													Sleep(.TimeToAnimFinish);
+													continue;
+												}
+										}
+										else if (u != this)
+											if (.experience < u.experience)
+												if (.IsVisible) {
+													.StartAnim(19, u.pos);
+
+													Sleep(.TimeToActionMoment);
+
+													if (u.IsAlive)
+														if (.experience < u.experience)
+															if (!.IsEnemy(u))
+																if (!u.InHolder)
+																	if (.CanSee(u)) {
+																		.SetLastAttackTime();
+																		if (!.IsVisible)
+																			.SetVisible(true);
+																		.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																		CreateFeedback("Experience", this);
+																	}
+
+													Sleep(.TimeToAnimFinish);
+													i += 1;
+													if (i < 12)
+														continue;
+												}
+						break;
+					}
+				}
+
+				.Idle(1000);
+			}
 	}
-	bSuccess = false;
-	learntimes = 0;
-	while (tgt.IsAlive() && learntimes < 10) 
-	{
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (.IsEnemy(tgt)) break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible)   break;
-		if(!.InRange(tgt)) break;
 
-		//LEARN
-		if (!bCanLearn) break;
-		if (tgt.experience <= .experience) break;
-		if (.stamina < learn_stamina_cost) break;
-
-		.StartAnim(19, tgt.pos);
-		Sleep(.TimeToActionMoment());
-
-		if (tgt.IsAlive)
-		if (tgt.experience > .experience)
-		if (!tgt.InHolder)
-		if (.CanSee(tgt))
-		if (.stamina >= learn_stamina_cost)
-		{
-			int exp; exp = .experience + (.inherentlevel + 3) / 4;
-			if (exp > tgt.experience) exp = tgt.experience;
-			.SetVisible(true); .SetLastAttackTime();
-			.SetStamina(.stamina - learn_stamina_cost);
-			.SetExperience(exp);
-			CreateFeedback("Experience", this);
-		}
-		Sleep(.TimeToAnimFinish());
-		learntimes += 1;
-		bSuccess = true;
-	}
-
-	.Idle(1000);
-	if (!bCanLearn) if (EnvReadString(.player, "Ritual Chamber") == "researched")
-		bCanLearn = true;
-	tgt = .FindUnitToLearn.AsUnit();
-}
+Sleep(15);//prevent possible loops with other commands

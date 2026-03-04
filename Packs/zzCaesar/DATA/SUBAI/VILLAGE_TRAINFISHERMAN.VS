@@ -8,28 +8,27 @@ this = This.AsBuilding();
 
 {
 	Settlement supplied;
-	Unit u;
+	Obj o;
 	point pt_dest;
-	int radius, player;
+	int i;
 
-	radius = .radius;
-	player = .player;
+	i = .radius;
 
-	pt_dest.Set(1, 1);
-	pt_dest.SetLen(rand(GetConst("VillageTrainPeasantRadius") - radius) + radius);
+	pt_dest.SetLen(rand(GetConst("VillageTrainPeasantRadius") - i) + i);
 	pt_dest.Rot(rand(360));
 	pt_dest = pt_dest + .pos;
 
-	u = Place("Fisherman", .GetExitPoint(pt_dest, false), player);
+	i = .player;
+	o = Place("Fisherman", .GetExitPoint(pt_dest, false), i);
 
 	supplied = .settlement.supplied;
 
 	if (supplied.IsValid)
 		if (supplied.IsShipyard)
-			if (!supplied.IsEnemy(player)) {
-				u.SetCommand("enter", supplied.GetCentralBuilding());
+			if (!supplied.IsEnemy(i)) {
+				o.SetCommand("enter", supplied.GetCentralBuilding());
 				return;
 			}
 
-	u.SetCommand("move", pt_dest);
+	o.SetCommand("move", pt_dest);
 }

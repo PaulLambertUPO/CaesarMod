@@ -1,20 +1,21 @@
 //bool, ObjList objs, str OUT reasonText
 
 Building this;
+str dest;
 
 this = objs[0].AsBuilding();
+dest = cmdparam;
 
-if (.IsValid) {
-	str dest;
+if (IsResearched(.player, "Tame horses")) {
+	Settlement set;
+	int horses;
 
-	dest = cmdparam;
+	set = .settlement;
 
-	if (IsResearched(.player, "Tame horses")) {
-		Settlement set;
+	horses = EnvReadInt(set, "EEE_IVillageNumberHorses");
 
-		set = .settlement;
-
-		if (EnvReadInt(set, "EEE_IVillageNumberHorses") >= 1) {
+	if (horses > 0) {
+		if (horses - .CmdCount("callIScout") > 0) {
 			bool unaffordable = false;
 
 			if (cmdcost_gold > set.gold)
@@ -28,11 +29,12 @@ if (.IsValid) {
 			reasonText = rollover(this, ParseStr(dest, dest), unaffordable);
 			return true;
 		}
-		else
-			reasonText = rollover(this, ParseStr(dest, dest), false) + "\n<color 255 0 0>" + Translate("Requires one horse in the village");
+		reasonText = rollover(this, ParseStr(dest, dest), false) + "\n<color 255 0 0>" + Translate("There are already enough queued commands to use all horses");
 	}
 	else
-		reasonText = rollover(this, ParseStr(dest, dest), false) + "\n<color 255 0 0>" + Translate("Requires Tame horses");
+		reasonText = rollover(this, ParseStr(dest, dest), false) + "\n<color 255 0 0>" + Translate("Requires 1 horse");
 }
+else
+	reasonText = rollover(this, ParseStr(dest, dest), false) + "\n<color 255 0 0>" + Translatef("Requires %s1", "Tame horses");
 
 return false;

@@ -1,19 +1,21 @@
 //void, Obj This
-//cmdparam: "number_to_train, max_param, class, research, research_building"
+//cmdparam: "number_to_train, max_param, unit_class, research, research_building"
 
-Building this;
-str dest, max_param;
-int number_to_train;
-str class;
+Building this;//do not use Barrack to manage arenas
 
 this = This.AsBuilding();
 
-dest = cmdparam;
-number_to_train = Str2Int(ParseStr(dest, dest));
-max_param = ParseStr(dest, dest);
-class = ParseStr(dest, dest);
-
 .Progress();
 
-EnvWriteString(this, "Build", class);
-EnvWriteInt(this, "Build/" + class, EnvReadInt(this, "Build/" + class) + number_to_train);
+{
+	str dest, unit_class;
+	int number_to_train;
+
+	dest = cmdparam;
+	number_to_train = Str2Int(ParseStr(dest, dest));
+	ParseStr(dest, dest);//max_param is not used here
+	unit_class = ParseStr(dest, dest);
+
+	EnvWriteString(this, "Build", unit_class);
+	EnvWriteInt(this, "Build/" + unit_class, EnvReadInt(this, "Build/" + unit_class) + number_to_train);
+}

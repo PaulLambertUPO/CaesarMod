@@ -15,13 +15,18 @@
 	<method sig="stand_position" vs="data/subai/enchantress_stand_position.vs" />
 	<method sig="advance" vs="data/subai/enchantress_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/enchantress_advance.vs" />
+	<method sig="engage" vs="data/subai/enchantress_engage.vs" />
 
 	<method sig="teach" vs="data/subai/enchantress_teach.vs" verify="data/subai/enchantress_teach_verify.vs" />
+	<method sig="teach" vs="data/subai/enchantress_teach_ground.vs" />
 	<method sig="coverofmercy" vs="data/subai/enchantress_coverofmercy.vs" />
-	<method sig="restoration" vs="data/subai/druid_restoration.vs" />
+	<method sig="restoration" vs="data/subai/druid_selfdestroy.vs" />
+
+	<method sig="ondie" vs="data/subai/ienchantress_hpriest_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="teach" />
+		<cmd name="learn" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />

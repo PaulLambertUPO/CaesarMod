@@ -1,34 +1,31 @@
 //void, Obj This
 
-Teleport this;
+Sleep(200 + rand(301));
 
-this = This.AsTeleport();
-
-if (!.IsValid)
-	while (1)
-		Sleep(3600000);
-else {
-	ObjList lost_units;
+if (This.AsTeleport().IsValid) {
+	Settlement this;
+	ObjList trapped_units;
 	Unit u;
 	int i;
 
+	this = This.AsTeleport().settlement;
+
 	while (1) {
-		Sleep(1000);
+		trapped_units = .Units;
 
-		lost_units = .settlement.Units;
-
-		for (i = 0; i < lost_units.count; i += 1) {
-			u = lost_units[i].AsUnit();
-			if (u.IsValid)
-				if (u.IsAlive)
-					if (!u.IsHeirOf("Hero"))
-						if (!u.hero.IsValid)
-							if (u.InHolder)
-								if (u.GetHolderSett().GetCentralBuilding().IsHeirOf("Teleport"))
-									if (u.command =="idle") {
-										u.SetCommand("teleport", this);
-										u.AddCommand(false, "idle");
-									}
+		for (i = trapped_units.count - 1; i >= 0; i -= 1) {
+			u = trapped_units[i].AsUnit();
+			if (u.IsAlive)
+				if (u.command == "idle")
+					if (!u.hero.IsValid)
+						if (u.GetHolderSett() == this)
+							u.SetCommand("teleport", This);
 		}
+
+		Sleep(1000);
 	}
 }
+
+//without this instruction, the game crashes
+while (1)
+	Sleep(3600000);

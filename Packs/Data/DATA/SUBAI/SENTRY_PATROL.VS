@@ -1,72 +1,80 @@
-// void, Obj me, Obj wall1
+//void, Obj me, Obj wall_target
 
-Unit this, u;
-Building wall;
-point route0, route1, dirpt, dirpt1;
-int state = 4;
-int k;
+Unit this;
+
 this = me.AsUnit();
-wall = wall1.AsBuilding();
 
-// calc the patroling route
-{
-	point a, b, p, q, d, d1, w;
-	int s, k;
-	a = wall.GetPoint(2, 0);
-	b = wall.GetPoint(2, 1);
-	w = wall.GetPoint(17, 0);
-	if (w.x != -32768) {
-		d = a - w;
-		d1 = b - w;
-		if (d.x*d.x + d.y*d.y < d1.x*d1.x + d1.y*d1.y) a = w;
-		else b = w;
+if (.IsValid)
+	if (.IsAlive) {
+		Building wall;
+
+		wall = wall_target.AsBuilding();
+
+		if (wall.IsValid) {
+			point route_1, route_2, dir_wall, dir_sentry;
+			int i;
+			bool go_forward;
+
+			{
+				point pt_pos, exit_1, exit_2, front_1, front_2, waypoint, exit_dist_1, exit_dist_2;//point validity checks have already been made by "wall_patrol.vs"
+
+				exit_1 = wall.GetPoint(2, 0);
+				exit_2 = wall.GetPoint(2, 1);
+				front_1 = wall.GetPoint(3, 0);
+				front_2 = wall.GetPoint(3, 1);
+				waypoint = wall.GetPoint(17, 0);
+
+				if (waypoint.x != -32768) {
+					exit_dist_1 = exit_1 - waypoint;
+					exit_dist_2 = exit_2 - waypoint;
+					if (exit_dist_1.x * exit_dist_1.x + exit_dist_1.y * exit_dist_1.y < exit_dist_2.x * exit_dist_2.x + exit_dist_2.y * exit_dist_2.y)
+						exit_1 = waypoint;
+					else
+						exit_2 = waypoint;
+				}
+
+				pt_pos = wall.pos + exit_1;
+				exit_dist_1 = exit_2 - exit_1;
+				i = exit_dist_1.x * exit_dist_1.x + exit_dist_1.y * exit_dist_1.y;
+
+				exit_dist_2 = front_1 - exit_1;
+				route_1 = pt_pos + exit_dist_1 * (exit_dist_1.x * exit_dist_2.x + exit_dist_1.y * exit_dist_2.y) * 100 / i / 100;
+
+				exit_dist_2 = front_2 - exit_1;
+				route_2 = pt_pos + exit_dist_1 * (exit_dist_1.x * exit_dist_2.x + exit_dist_1.y * exit_dist_2.y) * 100 / i / 100;
+
+				pt_pos = .pos;
+				exit_dist_1 = pt_pos - route_1;
+				exit_dist_2 = pt_pos - route_2;
+				go_forward = exit_dist_1.x * exit_dist_1.x + exit_dist_1.y * exit_dist_1.y <= exit_dist_2.x * exit_dist_2.x + exit_dist_2.y * exit_dist_2.y;
+
+				exit_dist_1 = (route_2 * 4 + route_1) / 5;
+				exit_dist_2 = (route_1 * 4 + route_2) / 5;
+				route_1 = exit_dist_1;
+				route_2 = exit_dist_2;
+			}
+
+			dir_wall = wall.GetPoint(8, 0);
+
+			while (!.Stop(1000))
+				;
+
+			while (1) {
+				if (go_forward)
+					while (!.Goto(route_1, 0, 2000, true, 0))
+						;
+				else
+					while (!.Goto(route_2, 0, 2000, true, 0))
+						;
+				go_forward = !go_forward;
+
+				.Face(.pos - dir_wall);
+				dir_sentry = dir_wall;
+				for (i = 2 + rand(13); i >= 0; i -= 1) {
+					Sleep(200 + rand(101));
+					dir_sentry = dir_sentry + Point(rand(81) - 40, rand(81) - 40);
+					.Face(.pos - dir_sentry);
+				}
+			}
+		}
 	}
-	d = b - a;
-	s = d.x*d.x + d.y*d.y;
-	p = wall.GetPoint(3, 0);
-	q = wall.GetPoint(3, 1);
-
-	d1 = p - a;
-	k = (100*(d.x*d1.x + d.y*d1.y))/s;
-	route0 = wall.pos + a + ((b - a)*k)/100;
-
-	d1 = q - a;
-	k = (100*(d.x*d1.x + d.y*d1.y))/s;
-	route1 = wall.pos + a + ((b - a)*k)/100;
-
-	d = .pos - route0;
-	d1 = .pos - route1;
-	s = d.x*d.x + d.y*d.y;
-	k = d1.x*d1.x + d1.y*d1.y;
-	if (k < s) state = 2;
-}
-
-
-// for debug
-//Place("Feedback", route0, .player);
-//Place("Feedback", route1, .player);
-
-dirpt = wall.GetPoint(8, 0);
-
-while (!.Stop(1000));
-
-while(1) {
-	if (state == 2) {
-		while (!.Goto((route1*4 + route0)/5, 0, 2000, true, 0));
-		state = 4;
-	} else if (state == 4) {
-		while (!.Goto((route0*4 + route1)/5, 0, 2000, true, 0));
-		state = 2;
-	}
-
-	.Face(.pos - dirpt);
-	dirpt1 = dirpt;
-	k = rand(13)+2;
-	while (k > 0) {
-		Sleep(rand(200) + 100);
-		dirpt1 = dirpt1 + Point(rand(81)-40, rand(81)-40);
-		.Face(.pos - dirpt1);
-		k = k - 1;
-	}
-}
-

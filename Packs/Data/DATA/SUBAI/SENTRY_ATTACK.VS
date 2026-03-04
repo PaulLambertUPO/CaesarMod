@@ -1,13 +1,13 @@
-// void, Obj me, Obj u
+//void, Obj This, Obj target
 
 Unit this;
-Obj target;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
-while (1) {
-	if (!.IsValidTarget(u)) break;
-	if (!.InRange(u)) break;
-	.Attack(u);
-}
-
+if (.IsValid)
+	if (.IsAlive)
+		while (.IsValidTarget(target)) {
+			if (!.InRange(target))
+				break;
+			.Attack(target);
+		}

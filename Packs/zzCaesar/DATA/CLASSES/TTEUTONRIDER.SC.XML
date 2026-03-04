@@ -13,7 +13,5 @@
 	<properties help="contents/units/TTeutonRider" />
 	<properties edittree_pos="Units/Germany/Teuton Rider" />
 
-	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" /><!-- given by the behaviour script -->
-
 	<sounds command="VoiceTTeutonRider" attack="UnitMaceFight" />
 </class>

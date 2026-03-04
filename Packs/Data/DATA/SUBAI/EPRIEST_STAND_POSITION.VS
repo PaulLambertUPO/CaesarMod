@@ -1,137 +1,103 @@
-// void, Obj This
-
-// this script is used by CShaman and TEnchantress!!!
+//void, Obj This
 
 Druid this;
-Unit tgt;
-int learntimes;
-int action;//2 - Cripple, 3 - LEARN
-int i;
-bool bSuccess;
-int cripple_stamina_cost, learn_stamina_cost;
-bool bCanCripple, bCanLearn;
-Obj hInvalid;
 
 this = This.AsDruid();
-if (!.IsValid)
-	return;
 
-cripple_stamina_cost = GetCmdStaminaCost("cripple");
-learn_stamina_cost = GetCmdStaminaCost("learn");
+if (.IsValid)
+	if (.IsAlive) {
+		Unit u;
+		int stamina_cost, learnings;
+		bool use_cripple;
 
-bCanCripple = .HasSpecial(cripple);
-bCanLearn = true;
-if (.race == Gaul || .race == Britain || .race == Germany) if (EnvReadString(.player, "Ritual Chamber") != "researched")
-	bCanLearn = false;
+		if (!.InHolder)
+			while (!.Stop(1000))
+				;
 
-while (!.Stop(1000));
+		Sleep(50 + rand(451));
 
-action = 2;
-tgt = .GetBestCrippleTarget.AsUnit;
+		stamina_cost = GetCmdStaminaCost("cripple");
 
-while (true) 
-{
-	if (tgt.IsDead) tgt = hInvalid; /// avoid handle reuse problems
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				if (.IsVisible) {
+					u.Clear();
+					if (.stamina >= stamina_cost)
+						if (.HasSpecial(cripple)) {
+							use_cripple = true;
+							u = .GetBestCrippleTarget();
+						}
+					if (u.IsDead) {
+						use_cripple = false;
+						u = .FindUnitToLearn();
+					}
 
-	if(.InHolder || !.IsVisible)
-	{
-		Sleep(2000);
-		continue;
-	}
+					if (u.IsAlive)
+						if (u != this) {
+							learnings = 0;
+							while (u.IsAlive) {
+								if (.IsVisible)
+									if (!u.InHolder)
+										if (.CanSee(u))
+											if (.InRange(u))
+												if (use_cripple) {
+													if (u.stamina > 0)
+														if (.IsEnemy(u))
+															if (.stamina >= stamina_cost) {
+																.StartAnim(17, u.pos);
 
-	bSuccess = false;
-	learntimes = 0;
-	while (learntimes < 10) 
-	{
-		//BAD POTENTIALITIES
-		if (action == 2) if (!bCanCripple) break;
-		if (action == 3) if (!bCanLearn) break;
+																Sleep(.TimeToActionMoment);
 
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible)   break;
-		if (!.InRange(tgt)) break;
+																if (u.IsAlive)
+																	if (u.stamina > 0)
+																		if (.IsEnemy(u))
+																			if (!u.InHolder)
+																				if (.CanSee(u))
+																					if (.stamina >= stamina_cost) {
+																						.SetLastAttackTime();
+																						if (!.IsVisible)
+																							.SetVisible(true);
+																						.SetStamina(.stamina - stamina_cost);
+																						u.SetStamina(0);
+																						CreateFeedback("StaminaLoss", u);
+																					}
 
-		//EARLY BREAK IF TEACH CAN NOT BE DONE, AND TEACH IS THE CURRENT ACTION
-		if (action == 2) {
-			if (tgt.stamina <= 0) break;
-			if (!.IsEnemy(tgt)) break;
-			if (.stamina < cripple_stamina_cost) break;
-		}
+																Sleep(.TimeToAnimFinish);
+																continue;
+															}
+												}
+												else if (.experience < u.experience)
+													if (!.IsEnemy(u)) {
+														.StartAnim(19, u.pos);
 
-		//EARLY BREAK IF LEARNING CAN NOT BE DONE AND LEARN IS THE CURRENT ACTION
-		if (action == 3) {
-			if (tgt.experience <= .experience) break;
-			if (.IsEnemy(tgt)) break;
-			if (.stamina < learn_stamina_cost) break;
-		}
+														Sleep(.TimeToActionMoment);
 
-		if (action == 2)
-		{	//cripple
-			.StartAnim(17, tgt.pos);
-			Sleep(.TimeToActionMoment());
+														if (u.IsAlive)
+															if (.experience < u.experience)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u)) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																			CreateFeedback("Experience", this);
+																		}
 
-			if (tgt.IsAlive)
-			if (.IsEnemy(tgt))
-			if (.CanSee(tgt))
-			if (.stamina >= cripple_stamina_cost)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			{
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - cripple_stamina_cost);
-				tgt.SetStamina(0);
-				CreateFeedback("StaminaLoss", tgt);
+														Sleep(.TimeToAnimFinish);
+														learnings += 1;
+														if (learnings < 12)
+															continue;
+													}
+								break;
+							}
+						}
+				}
+
+				.Idle(1000);
 			}
-			Sleep(.TimeToAnimFinish());
-			bSuccess = true;
-			continue;
-		}
-		if (action == 3)
-		{	//LEARN
-			.StartAnim(19, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (tgt.experience > .experience)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (.stamina >= learn_stamina_cost)
-			if (!.IsEnemy(tgt))
-			{
-				int exp;
-				exp = .experience + (.inherentlevel + 3) / 4;
-				if (exp > tgt.experience) exp = tgt.experience;
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - learn_stamina_cost);
-				.SetExperience(exp);
-				CreateFeedback("Experience", this);
-			}
-			Sleep(.TimeToAnimFinish());
-			learntimes += 1;
-			bSuccess = true;
-			continue;
-		}
-		break;
 	}
 
-	.Idle(1000);
-	if (.IsEnemyInSquadSight)
-		action = 2;//Cripple
-	else if (!bSuccess || action == 3)
-		action = 5 - action;
-	for (i = 0; i < 2; i += 1) {
-		if (action == 2 && !bCanCripple) action = 5;
-		if (action == 5 && !bCanLearn) action = 2;
-		if (action == 2)
-			tgt = .GetBestCrippleTarget.AsUnit;
-		else
-			tgt = .FindUnitToLearn.AsUnit;
-		if (tgt.IsValid) break;
-		if (!bCanCripple || !bCanLearn) break;
-		action = 5 - action;
-	}
-}
+Sleep(15);//prevent possible loops with other commands

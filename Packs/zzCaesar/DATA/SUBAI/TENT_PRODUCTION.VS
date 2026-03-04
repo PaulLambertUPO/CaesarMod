@@ -1,14 +1,16 @@
 //void, Obj This
 
-Building this;
+Settlement this;
 
-this = This.AsBuilding();
+this = This.AsBuilding().settlement;
 
-if (.IsValid)
-	if (!.settlement.IsIndependent) {
-		str class, dest;
+if (!.IsIndependent) {
+	str unit_class, s;
 
-		class = ParseStr(cmdparam, dest);
+	unit_class = ParseStr(cmdparam, s);
 
-		EnvWriteString(.settlement, "ENV_TProd", class);
-	}
+	if (EnvReadString(this, "ENV_TProd") == unit_class)
+		unit_class = "";
+
+	EnvWriteString(this, "ENV_TProd", unit_class);
+}

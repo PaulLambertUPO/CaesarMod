@@ -1,8 +1,3 @@
-//void, Obj This
+//void, Obj this
 
-Settlement this;
-
-this = This.AsBuilding().settlement;
-
-if (.IsValid)
-	EnvWriteString(this, "autotrain", "on");
+EnvWriteString(.AsBuilding().settlement, "autotrain", "on");

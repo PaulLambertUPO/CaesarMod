@@ -6,7 +6,6 @@
 	<properties target_factor="-1" />
 
 	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
-	<method sig="move" vs="data/subai/peaceful_move.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
 		script="return Translate('No');"

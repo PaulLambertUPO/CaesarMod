@@ -1712,7 +1712,7 @@ Il miliziano lascia le armi e diventa un contadino (solo in strutture e navi).
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 2</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 160</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Costo 1 popolazione</entry>
-				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento istantaneo</entry>
+				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 15 secondi</entry>
 				<entry image="UI/Help/Items Ico.bmp">Capacità inventario 1</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Charge.bmp" link="/contents/specials/ucharge">Carica</entry>
@@ -5921,14 +5921,15 @@ Tempo: 25 secondi
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Food.bmp" link="/contents/units/Mule">Carica unità di rifornimento (fino a 1000 viveri)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Carica unità di rifornimento (fino a 1000 oro)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Call Fisherman.bmp" link="/contents/units/Fisherman">
-Arruola un pescatore
+Arruola pescatore
+Arruola un pescatore che può essere mandato in un porto per produrre viveri (pesci) nel corso del tempo.
 Costo: 100 viveri e 1 popolazione
 Tempo: 5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IScout.bmp" link="/contents/units/IScout">
 Equipaggia esploratore (solo villaggio iberico)
 Costo: 1 popolazione
-Tempo: istantaneo
+Tempo: 15 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Ripopola

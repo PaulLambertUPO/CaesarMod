@@ -1,6 +1,6 @@
 <class id="TTent" parent="Building" cpp_class="CVXTownHall" entity="Buildings/Teuton_camp/Teuton_camp_as.ent.xml" entity_winter="Buildings/Teuton_camp/Teuton_camp_w.ent.xml">
 	<properties race="Germany" />
-	<properties maxhealth="15000" sight="900" />
+	<properties maxhealth="15000" sight="900" range="900" />
 	<properties radius="190" selection_radius="195" />
 	<properties interface="thumb,building,holder" />
 	<properties display_name="Teuton Tent" />

@@ -1131,9 +1131,10 @@
 <translationtableentry text="Call peasants" result="Convocar campesinos" />
 <translationtableentry text="Calls 5 peasants of the population" result="Convoca a 5 campesinos de la población" />
 <translationtableentry text="Call fisherman" result="Alistar pescador" />
+<translationtableentry text="Calls a fisherman who can be sent to a shipyard to produce food (fish) over time" result="Alista a un pescador que puede ser enviado a un puerto para producir víveres (peces) con el tiempo" />
 <translationtableentry text="Call scout" result="Equipar explorador" />
-<translationtableentry text="Requires Tame horses" result="Requiere Domar caballos" />
-<translationtableentry text="Requires one horse in the village" result="Requiere un caballo en la aldea" />
+<translationtableentry text="Requires 1 horse" result="Requiere 1 caballo" />
+<translationtableentry text="There are already enough queued commands to use all horses" result="Ya hay suficientes órdenes en cola para desplegar a todos los caballos" />
 <!-- end village commands -->
 <!-- start outpost commands -->
 <translationtableentry text="Launch sortie" result="Lanzar salida" />
@@ -1211,9 +1212,10 @@
 <translationtableentry text="Select an inn to visit or right-click to cancel" result="Selecciona una posada para visitarla o haz clic con el botón derecho para cancelar" />
 <translationtableentry text="Click to visit this inn (%s1)" result="Haz clic para visitar la posada (%s1)" />
 <translationtableentry text="Click this inn (%s1) to cancel" result="Haz clic en esta posada (%s1) para cancelar" />
-<translationtableentry text="Gather your party before traveling" result="Reúne a tu grupo antes de viajar" />
+<translationtableentry text="This inn must be repaired" result="Esta posada tiene que ser reparada" />
 <translationtableentry text="This inn is closed" result="Esta posada está cerrada" />
 <translationtableentry text="This inn (%s1) is closed" result="Esta posada (%s1) está cerrada" />
+<translationtableentry text="Gather your party before traveling" result="Reúne a tu grupo antes de viajar" />
 <!-- end inn commands -->
 <!-- start generic unit commands -->
 <translationtableentry text="Cancel Command" result="Anular orden" />
@@ -1253,7 +1255,7 @@
 <translationtableentry text="Train" result="Adiestrar" />
 <translationtableentry text="Cannot train warriors" result="Imposible entrenar a los guerreros" />
 <translationtableentry text="Detach from hero" result="Desvincular del héroe" />
-<translationtableentry text="Not attached to hero" result="No vinculado a un héroe" />
+<translationtableentry text="Not attached to a hero" result="No vinculado a un héroe" />
 <translationtableentry text="Reveal" result="Revelar" />
 <translationtableentry text="Give item to this unit" result="Da el objeto a esta unidad" />
 <translationtableentry text="Drop item on the ground" result="Deja el objeto en el suelo" />
@@ -1284,9 +1286,8 @@
 <!-- end generic unit commands -->
 <!-- start hero commands -->
 <translationtableentry text="Right-click to move the hero to this point" result="Haz clic con el botón derecho para mover al héroe hasta este punto" />
-<translationtableentry text="Select Formation" result="Seleccionar formación" />
-<translationtableentry text="Select new formation" result="Seleccionar nueva formación" />
 <translationtableentry text="%s1 formation" result="Formación %s1" />
+<translationtableentry text="Select new formation" result="Seleccionar nueva formación" />
 <translationtableentry text="Front" result="en bloque" />
 <translationtableentry text="Select Front formation" result="Seleccionar formación en bloque" />
 <translationtableentry text="Line" result="en línea" />
@@ -1314,7 +1315,6 @@
 <translationtableentry text="Activates the Rush skill" result="Activa la habilidad Acometida" />
 <translationtableentry text="You need at least 1 point to use this skill" result="Debes tener al menos 1 punto para usar esta habilidad" />
 <translationtableentry text="Not enough stamina" result="Energía insuficiente" />
-<translationtableentry text="Insufficient stamina" result="Energía insuficiente" />
 <translationtableentry text="Skill already in effect" result="Habilidad ya activa" />
 <!-- end hero commands -->
 <!-- start sage commands -->
@@ -1322,31 +1322,38 @@
 <translationtableentry text="Gains knowledge from a more experienced ally" result="Obtiene conocimientos de un aliado más experimentado" />
 <translationtableentry text="Click to learn from this ally" result="Haz clic para aprender de este aliado" />
 <translationtableentry text="Right-click to learn from this ally" result="Haz clic con el botón derecho para aprender de este aliado" />
+<translationtableentry text="Click to learn from all allies around this position" result="Haz clic para aprender de todos los aliados alrededor de esta posición" />
 <translationtableentry text="Heal" result="Curar" />
 <translationtableentry text="Heals an ally by 20 plus the level" result="Cura a un aliado por una cantidad de puntos de salud igual a 20 más el nivel" />
 <translationtableentry text="Click to heal this ally" result="Haz clic para curar a este aliado" />
 <translationtableentry text="Right-click to heal this ally" result="Haz clic con el botón derecho para curar a este aliado" />
+<translationtableentry text="Click to heal all allies around this position" result="Haz clic para curar a todos los aliados alrededor de esta posición" />
 <translationtableentry text="Teach" result="Instruir" />
 <translationtableentry text="Teaches an ally" result="Instruye a un aliado" />
 <translationtableentry text="Click to teach this ally" result="Haz clic para instruir a este aliado" />
 <translationtableentry text="Right-click to teach this ally" result="Haz clic con el botón derecho para instruir a este aliado" />
+<translationtableentry text="Click to teach all allies around this position" result="Haz clic para instruir a todos los aliados alrededor de esta posición" />
 <translationtableentry text="Curse" result="Maldecir" />
 <translationtableentry text="Curses the target warrior to make him miss his next attack" result="Hace que falle el siguiente ataque del guerrero objetivo" />
 <translationtableentry text="Click to curse this enemy" result="Haz clic para maldecir a este enemigo" />
 <translationtableentry text="Right-click to curse this enemy" result="Haz clic con el botón derecho para maldecir a este enemigo" />
+<translationtableentry text="Click to curse all enemies around this position" result="Haz clic para maldecir a todos los enemigos alrededor de esta posición" />
 <translationtableentry text="Invisibility" result="Encubrir" />
 <translationtableentry text="Makes the target ally invisible" result="Hace invisible al aliado objetivo" />
 <translationtableentry text="Click to hide this ally" result="Haz clic para hacer invisible a este aliado" />
 <translationtableentry text="Right-click to hide this ally" result="Haz clic con el botón derecho para hacer invisible a este aliado" />
+<translationtableentry text="Click to hide all allies around this position" result="Haz clic para hacer invisibles a todos los aliados alrededor de esta posición" />
 <translationtableentry text="Cripple" result="Desvanecer" />
 <translationtableentry text="Drains all of the target's stamina" result="Drena toda la energía del objetivo" />
 <translationtableentry text="Click to cripple this enemy" result="Haz clic para drenar la energía de este enemigo" />
 <translationtableentry text="Right-click to cripple this enemy" result="Haz clic con el botón derecho para drenar la energía de este enemigo" />
+<translationtableentry text="Click to cripple all enemies around this position" result="Haz clic para drenar la energía a todos los enemigos alrededor de esta posición" />
 <translationtableentry text="Create Cloud of Plague" result="Plaga" />
 <translationtableentry text="Creates a cloud of plague that damages all units (at the cost of life)" result="Crea una nube venenosa che daña a todas las unidades (al costo de la vida)" />
 <translationtableentry text="Create Cover of Mercy" result="Manto de la misericordia" />
 <translationtableentry text="Creates a cloud that reduces all combat damage allies receive by half (at the cost of life)" result="Crea una nube protectora que reduce a la mitad el daño sufrido por los aliados (al costo de la vida)" />
 <translationtableentry text="Channels the Wrath of Jupiter hurting the target (at the cost of life)" result="Canaliza la ira de Júpiter dañando al objetivo (al costo de la vida)" />
+<translationtableentry text="Click to hurt this unit" result="Haz clic para dañar a esta unidad" />
 <translationtableentry text="Transform to zombie" result="Transformar en espíritu" />
 <translationtableentry text="Summon Ghoul" result="Invocar espíritu" />
 <translationtableentry text="Summons a ghoul that could be controlled (at the cost of life)" result="Invoca a un espíritu que puedes controlar (al costo de la vida)" />
@@ -1383,7 +1390,7 @@
 <translationtableentry text="Skill 6" result="Habilidad 6" />
 <translationtableentry text="Administration" result="Liderazgo" />
 <translationtableentry text="Increases the maximum number of attachable units by 3 per skill point" result="Aumenta el número máximo de unidades vinculables en 3 por punto de habilidad" />
-<translationtableentry text="Assault Cry" result="Gesta" />
+<translationtableentry text="Assault" result="Gesta" />
 <translationtableentry text="If used, it makes the hero and all attached units ignore enemy armor for 2 seconds plus 0.6 additional seconds per skill point" result="Si se utiliza, el héroe y las unidades vinculadas ignoran la defensa enemiga durante 2 segundos más 0,6 segundos adicionales" />
 <translationtableentry text="Battle Cry" result="Proeza" />
 <translationtableentry text="If used, it increases the level of all attached units for 8 seconds by 1 per skill point" result="Si se utiliza, aumenta el nivel de las unidades vinculadas durante 8 segundos en 1 punto por punto de habilidad" />
@@ -1410,7 +1417,7 @@
 <translationtableentry text="Frenzy" result="Osadía" />
 <translationtableentry text="If used, it halves the health and doubles the damage of all attached units for 2 seconds plus 0.6 additional seconds per skill point" result="Si se utiliza, reduce a la mitad la salud y dobla el daño de todas las unidades vinculadas durante 2 segundos más 0,6 segundos adicionales por punto de habilidad" />
 <translationtableentry text="Divine Grace" result="Sanación heroica" />
-<translationtableentry text="Restores 100 of the hero's health" result="Restablece 100 puntos de salud del héroe" />
+<translationtableentry text="Restores the hero's health by 100" result="Restablece 100 puntos de salud del héroe" />
 <translationtableentry text="If used, it restores the health of the hero and all attached units by 10 per skill point" result="Si se utiliza, restablece la salud del héroe y de las unidades vinculadas en 10 puntos por punto de habilidad" />
 <translationtableentry text="Leadership" result="Maestría" />
 <translationtableentry text="Increases the experience provided by the hero to all attached units by 2% per skill point" result="Aumenta la experiencia proporcionada por el héroe a las unidades vinculadas en un 2% por punto de habilidad" />

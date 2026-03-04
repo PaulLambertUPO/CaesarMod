@@ -6,8 +6,8 @@
 	<properties speed="60" />
 	<properties unit_specials="Healing, Sneak" />
 
-	<properties icon="gameres/icons/GDruid.bmp" />
 	<properties display_name="Druid" display_name_plural="Druids" />
+	<properties icon="gameres/icons/GDruid.bmp" />
 	<properties help="contents/units/GDruid" />
 	<properties edittree_pos="Units/Gaul/Druid" />
 
@@ -15,15 +15,19 @@
 	<method sig="stand_position" vs="data/subai/rpriest_stand_position.vs" />
 	<method sig="advance" vs="data/subai/rpriest_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/rpriest_advance.vs" />
+	<method sig="engage" vs="data/subai/rpriest_engage.vs" />
 
 	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
 	<method sig="ghoul_summoning" vs="data/subai/druid_ghoul_summoning.vs" />
 	<method sig="eagle_summoning" vs="data/subai/druid_eagle_summoning.vs" />
-	<method sig="restoration" vs="data/subai/druid_restoration.vs" />
+	<method sig="restoration" vs="data/subai/druid_selfdestroy.vs" />
+
+	<method sig="ondie" vs="data/subai/gdruid_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="heal" />
+		<cmd name="learn" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />

@@ -4,53 +4,52 @@ Building this;
 
 this = objs[0].AsBuilding();
 
-if (.IsValid)
-	if (EnvReadString(this, "researching") != "yes") {
-		Settlement set;
+if (EnvReadString(this, "researching") != "yes") {
+	Settlement set;
 
-		set = .settlement;
+	set = .settlement;
 
-		if (set.IsValid) {
-			ObjList ol;
-			Unit u;
-			str charm;
-			int i, count_units;
+	if (set.IsValid) {
+		ObjList ol;
+		Unit u;
+		str charm;
+		int i, count_units;
 
-			charm = cmdparam;
+		charm = cmdparam;
 
-			ol = set.ObjectsAround("Military");
-			for (i = 0; i < ol.count; i += 1) {
-				u = ol[i].AsUnit();
-				if (u.IsValid)
-					if (u.IsAlive)
-						if (!.IsEnemy(u))
-							if (u.free_item_slots > 0)
-								if (!u.HasItem(charm))
-									if (!u.IsSentry)
-										if (!u.IsHeirOf("Hero")) {
-											count_units += 1;
-											if (count_units >= 5) {
-												bool unaffordable = false;
+		ol = set.ObjectsAround("Military");
 
-												if (cmdcost_gold > set.gold)
-													unaffordable = true;
-												else if (cmdcost_food > set.food)
-													unaffordable = true;
-												else if (cmdcost_pop > 0)
-													if (set.population - cmdcost_pop < GetConst("MinPopulation"))
-														unaffordable = true;
+		for (i = ol.count - 1; i >= 0; i -= 1) {
+			u = ol[i].AsUnit();
+			if (u.IsAlive)
+				if (!.IsEnemy(u))
+					if (u.free_item_slots > 0)
+						if (!u.HasItem(charm))
+							if (!u.IsSentry)
+								if (!u.IsHeirOf("Hero")) {
+									count_units += 1;
+									if (count_units >= 5) {
+										bool unaffordable = false;
 
-												reasonText = rollover(this, unaffordable);
+										if (cmdcost_gold > set.gold)
+											unaffordable = true;
+										else if (cmdcost_food > set.food)
+											unaffordable = true;
+										else if (cmdcost_pop > 0)
+											if (set.population - cmdcost_pop < GetConst("MinPopulation"))
+												unaffordable = true;
 
-												return true;
-											}
-										}
-			}
+										reasonText = rollover(this, unaffordable);
 
-			reasonText = rollover(this, false) + "\n<color 255 0 0 >" + Translate("Requires at least 5 warriors without that charm around the Townhall");
+										return true;
+									}
+								}
 		}
+
+		reasonText = rollover(this, false) + "\n<color 255 0 0 >" + Translate("Requires at least 5 warriors without that charm around the Townhall");
 	}
-	else
-		reasonText = rollover(this, true);
+}
+else
+	reasonText = rollover(this, true);
 
 return false;

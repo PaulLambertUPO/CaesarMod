@@ -8,7 +8,6 @@
 	<properties description="Guards the area with sentries and raises the alarm every time that it spots enemy warriors" />
 	<properties
 		sight="2000"
-		range="1000"
 		settlement_food="200"
 		settlement_gold="0"
 		defender_cls_1="GArcher"

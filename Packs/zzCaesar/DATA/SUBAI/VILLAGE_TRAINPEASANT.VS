@@ -1,61 +1,63 @@
 //void, Obj This
 
 Building this;
-Settlement supplied;
-Unit unit;
-StrArray villager_classes;
-point pos, pt_dest, pt_place;
-int i, radius, player, villager_train_radius, pop_group;
 
 this = This.AsBuilding();
 
 .Progress();
 
-pos = .pos;
-radius = .radius;
-player = .player;
-villager_train_radius = GetConst("VillageTrainPeasantRadius");
-pop_group = GetConst("PopGroup");
+{
+	Settlement set, supplied;
+	Obj o;
+	StrArray villager_classes;
+	point pt_pos, pt_dest, pt_place;
+	int i, plr, rad;
 
-if (.race == ImperialRome) {
-	villager_classes[0] = "HVillager";
-	villager_classes[1] = "HWVillager";
-}
-else {
-	villager_classes[0] = .raceStrPref + "Villager";
-	villager_classes[1] = .raceStrPref + "WVillager";
-}
+	set = .settlement;
+	pt_pos = .pos;
+	plr = .player;
+	rad = GetConst("VillageTrainPeasantRadius") - .radius;
 
-for (i = 0; i < pop_group; i += 1) {
-	pt_dest.Set(1, 1);
-	pt_dest.SetLen(rand(villager_train_radius - radius) + radius);
-	pt_dest.Rot(rand(360));
-	pt_dest = pt_dest + pos;
+	if (.race == ImperialRome) {
+		villager_classes[0] = "HVillager";
+		villager_classes[1] = "HWVillager";
+	}
+	else {
+		villager_classes[0] = .raceStrPref + "Villager";
+		villager_classes[1] = .raceStrPref + "WVillager";
+	}
 
-	pt_place = .GetExitPoint(pt_dest, false);
+	for (i = GetConst("PopGroup"); i > 0; i -= 1) {
+		pt_dest.Set(1, 1);
+		pt_dest.SetLen(rad + rand(rad));
+		pt_dest.Rot(rand(360));
+		pt_dest = pt_dest + pt_pos;
 
-	if (i == 0)
-		pt_place.Set(pt_place.x + 10, pt_place.y + 10);
-	else if (i == 1)
-		pt_place.Set(pt_place.x - 10, pt_place.y - 10);
-	else if (i == 2)
-		pt_place.Set(pt_place.x - 10, pt_place.y + 10);
-	else if (i == 3)
-		pt_place.Set(pt_place.x + 10, pt_place.y - 10);
+		pt_place = .GetExitPoint(pt_dest, false);
 
-	unit = Place(villager_classes[rand(2)], pt_place, player);
+		if (i == 5)
+			pt_place.Set(pt_place.x + 10, pt_place.y + 10);
+		else if (i == 4)
+			pt_place.Set(pt_place.x - 10, pt_place.y - 10);
+		else if (i == 3)
+			pt_place.Set(pt_place.x - 10, pt_place.y + 10);
+		else if (i == 2)
+			pt_place.Set(pt_place.x + 10, pt_place.y - 10);
 
-	supplied = .settlement.supplied;
+		o = Place(villager_classes[rand(2)], pt_place, plr);
 
-	if (supplied.IsValid)
-		if (!supplied.IsTTent)
-			if (!supplied.IsShipyard)
-				if (!supplied.IsEnemy(player)) {
-					unit.SetCommand("enter", supplied.GetCentralBuilding());
-					Sleep(100);
-					continue;
-				}
+		supplied = set.supplied;//reassign every time because it can change during the sleeps
 
-	unit.SetCommand("move", pt_dest);
-	Sleep(100);
+		if (supplied.IsValid)
+			if (!supplied.IsTTent)
+				if (!supplied.IsShipyard)
+					if (!supplied.IsEnemy(plr)) {
+						o.SetCommand("enter", supplied.GetCentralBuilding());
+						Sleep(100);
+						continue;
+					}
+
+		o.SetCommand("move", pt_dest);
+		Sleep(100);
+	}
 }

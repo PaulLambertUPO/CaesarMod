@@ -1,3 +1,9 @@
 //void, Obj This
 
-This.AsUnit().SetCarryGoodsAnim();
+Unit this;
+
+this = This.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive)
+		.SetCarryGoodsAnim();

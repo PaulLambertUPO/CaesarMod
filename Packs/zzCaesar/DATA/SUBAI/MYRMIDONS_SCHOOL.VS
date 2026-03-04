@@ -1,16 +1,15 @@
-//void, Obj This
-
-Building this;
-int player;
-
-this = This.AsBuilding();
+//void, Obj this
 
 .Progress();
 
-player = .player;
+{
+	int plr;
 
-EnvWriteString(this, "researching", "no");
+	plr = .player;
 
-EnvWriteInt(player, "MaxMyrmidons", MIN(GetConst("MaxMyrmidonsValue"), EnvReadInt(player, "MaxMyrmidons") + 10));
+	EnvWriteString(.AsBuilding(), "researching", "no");
 
-PlaySound(player, "Data/Sounds Entities/UpgradeComplete.xml");
+	EnvWriteInt(plr, "MaxMyrmidons", MIN(GetConst("MaxMyrmidonsValue"), EnvReadInt(plr, "MaxMyrmidons") + 10));
+
+	PlaySound(plr, "Data/Sounds Entities/UpgradeComplete.xml");
+}

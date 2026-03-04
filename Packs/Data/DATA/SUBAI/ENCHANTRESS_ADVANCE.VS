@@ -1,43 +1,43 @@
-// void, Obj This, point pt
-
+//void, Obj This, point pt
 
 Druid this;
-Unit tgt;
-int  time, retries, try;
-int level;
 
-this = This.AsDruid;
+this = This.AsDruid();
 
-time = GetConst("RetryWait");
-retries = GetConst("RetryCount");
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(teaching)) {
+			Unit u;
+			int teaching_level, i = 10;
 
-if (EnvReadString(.player, "Ancestral Knowledge") == "researched") {
-	level = 10;
-}
-else {
-	level = 4;
-}
+			if (IsResearched(.player, "Ancestral Knowledge"))
+				teaching_level = GetConst("TeachingLevel2");
+			else
+				teaching_level = GetConst("TeachingLevel1");
 
-tgt = .FindUnitBelowILevel(level);
-while (!.Goto(pt, 0, 2000, true, -1))
-	{
-		if(tgt.IsValid)
-		if(.DistTo(pt) < .sight)
-			break;
-		tgt = .FindUnitBelowILevel(level);
-		if (.TimeWithoutWalking() > 2500) break;
-	}
+			if (!.InHolder)
+				u = .FindUnitBelowILevel(teaching_level);
+			if (u.IsDead)
+				while (!.Goto(pt, 0, 2000, false, -1)) {
+					u = .FindUnitBelowILevel(teaching_level);
+					if (u.IsAlive)
+						break;
+					if (.TimeWithoutWalking >= 2500)
+						break;
+				}
 
-if(!tgt.IsValid)
-{
-	tgt = .FindUnitBelowILevel(level);
-	while (try < retries && !tgt.IsValid()) {
-		Sleep(time);
-		tgt = .FindUnitBelowILevel(level);
-		try += 1;
-	}
-}
-if(tgt.IsValid) {
-	.AddCommand(true, "advance", pt);
-	.AddCommand(true, "teach", tgt);
-}
+			while (i > 0) {
+				if (u.IsAlive)
+					break;
+				Sleep(500);
+				u = .FindUnitBelowILevel(teaching_level);
+				i -= 1;
+			}
+
+			if (u.IsAlive) {
+				.AddCommand(true, "advance", pt);
+				.AddCommand(true, "teach", u);
+			}
+		}
+
+Sleep(15);//prevent possible loops with other commands

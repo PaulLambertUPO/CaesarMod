@@ -1,9 +1,16 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
-Unit this;
-this = This.AsUnit();
+Ship this;
 
-if (.IsValid) // leave parry mode at new command
- .SetParryMode(false);
+this = This.AsShip();
 
-while (!.Goto(pt, 0, 50, true, 0));
+if (.IsValid)
+	if (.IsAlive) {
+		.SetParryMode(false);
+
+		while (!.Goto(pt, 0, 2000, false, -1))//use -1 with the inner check because there is something strange with ships
+			if (.TimeWithoutWalking > 0)
+				break;
+	}
+
+Sleep(15);//prevent possible loops with other commands

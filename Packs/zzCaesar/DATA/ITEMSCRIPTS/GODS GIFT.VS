@@ -10,6 +10,6 @@ if (victim.AsUnit().IsValid) {
 			.Heal(.maxhealth);
 			CreateFeedback("Heal", this);
 		}
-		.RemoveItem("God's Gift");
+		.RemoveItem(.GetItemIndex(GetThis()));
 	}
 }

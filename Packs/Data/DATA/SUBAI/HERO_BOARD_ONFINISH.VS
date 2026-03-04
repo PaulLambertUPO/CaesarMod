@@ -1,3 +1,11 @@
-// void, Obj This, bool bCanceled
-if( ! bCanceled ) return;
-This.AsHero.CancelArmyBoard;
+//void, Obj This, bool bCanceled
+
+if (bCanceled) {
+	Hero this;
+
+	this = This.AsHero();
+
+	if (.IsValid)
+		if (.IsAlive)
+			.CancelArmyBoard();
+}

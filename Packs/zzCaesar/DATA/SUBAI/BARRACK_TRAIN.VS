@@ -2,73 +2,76 @@
 
 Barrack this;
 Settlement set;
-Unit new_unit;
-point exit_point;
-int player, level = 1;
-str class, s;
 
 this = This.AsBarrack();
-
 set = .settlement;
-
-player = .player;
-
-class = ParseStr(cmdparam, s);
 
 .Progress(.cmddelay * (1000 - EnvReadInt(set, "BarrackTrainTimeDecrease")) / 1000);
 
-exit_point = .GetExitPoint(set.GetCentralBuilding().pos, false);
-if (exit_point.x == -1 && exit_point.y == -1) {
-	new_unit = Place(class, Point(0, 0), player);
-	set.AddUnit(new_unit);
-}
-else {
-	new_unit = Place(class, exit_point, player);
-	new_unit.SetCommand("advanceenter", set.GetCentralBuilding());
-}
+{
+	Building hall;
+	Unit u;
+	point exit_point;
+	str u_class, s;
+	int plr, u_level = 1;
 
-//Carthage arena upgrades
-if (GetClassRace(class) == Carthage)
-	if (!new_unit.IsHeirOf("BaseMage")) {
-		if (IsResearched(set, "Shared Strength"))
-			if (Count(player, class) > 10)
-				level = 6;
-		if (IsResearched(set, "Shared Triumph"))
-			if (Count(player, class) > 20)
-				level = 12;
+	hall = set.GetCentralBuilding();
+	u_class = ParseStr(cmdparam, s);
+	plr = .player;
+
+	exit_point = .GetExitPoint(hall.pos, false);
+	if (exit_point.x == -1) {
+		u = Place(u_class, Point(0, 0), plr).AsUnit();
+		set.AddUnit(u);
+	}
+	else if (exit_point.y == -1) {
+		u = Place(u_class, Point(0, 0), plr).AsUnit();
+		set.AddUnit(u);
+	}
+	else {
+		u = Place(u_class, exit_point, plr).AsUnit();
+		u.SetCommand("advanceenter", hall);
 	}
 
-//blacksmith and arena upgrades
-level = MAX(level, EnvReadInt(set, "levels/" + class));
+	if (!u.IsHeirOf("BaseMage")) {
+		u_level = MAX(1, EnvReadInt(plr, "standard_spawn_level"));
 
-//standardization (Imperial Rome)
-if (!new_unit.IsHeirOf("BaseMage"))
-	level = MAX(level, EnvReadInt(player, "standard_spawn_level"));
+		if (u_level < 12)
+			if (IsResearched(set, "Shared Triumph")) {
+				int c;
+				c = Count(plr, u_class);
+				if (c > 20)
+					u_level = 12;
+				else if (c > 10)
+					if (u_level < 6)
+						if (IsResearched(set, "Shared Strength"))
+							u_level = 6;
+			}
+			else if (u_level < 6)
+				if (IsResearched(set, "Shared Strength"))
+					if (Count(plr, u_class) > 10)
+						u_level = 6;
 
-//Olympic Games (Greece)
-if (level < 5)
-	if (!new_unit.IsHeirOf("BaseMage"))
-		if (IsResearched(set, "Olympic Games"))
-			level = 5;
+		if (u_level < 6)
+			if (u.IsHeirOf("ICavalry"))
+				if (IsResearched(plr, "Tame horses"))
+					u_level = 6;
 
-//Tame horses (Iberia)
-if (level < 6)
-	if (new_unit.IsHeirOf("ICavalry"))
-		if (IsResearched(player, "Tame horses"))
-			level = 6;
+		if (u_level < 5)
+			if (IsResearched(set, "Olympic Games"))
+				u_level = 5;
 
-new_unit.SetLevel(level);
+		if (EnvReadInt(set, "items/Bear teeth amulet") == 1)
+			u.AddItem("Bear teeth amulet");
+		if (EnvReadInt(set, "items/Belt of might") == 1)
+			u.AddItem("Belt of might");
+		if (EnvReadInt(set, "items/Herb amulet of luck") == 1)
+			u.AddItem("Herb amulet of luck");
+		if (EnvReadInt(set, "items/God's Gift") == 1)
+			u.AddItem("God's Gift");
+		if (EnvReadInt(set, "items/Veteran Guild") == 1)
+			u.AddItem("Veteran Guild");
+	}
 
-//give items based on respective upgrades
-if (!new_unit.IsHeirOf("BaseMage")) {
-	if (EnvReadInt(set, "items/Bear teeth amulet") == 1)
-		new_unit.AddItem("Bear teeth amulet");
-	if (EnvReadInt(set, "items/Belt of might") == 1)
-		new_unit.AddItem("Belt of might");
-	if (EnvReadInt(set, "items/Herb amulet of luck") == 1)
-		new_unit.AddItem("Herb amulet of luck");
-	if (EnvReadInt(set, "items/God's Gift") == 1)
-		new_unit.AddItem("God's Gift");
-	if (EnvReadInt(set, "items/Veteran Guild") == 1)
-		new_unit.AddItem("Veteran Guild");
+	u.SetLevel(MAX(u_level, EnvReadInt(set, "levels/" + u_class)));
 }

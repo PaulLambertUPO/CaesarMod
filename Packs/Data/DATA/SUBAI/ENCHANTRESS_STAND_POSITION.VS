@@ -1,149 +1,110 @@
-// void, Obj This
+//void, Obj This
 
 Druid this;
-Unit tgt;
-int level, level1, level2;
-int learntimes;
-int action;//2 - TEACH, 3 - LEARN
-int i;
-bool bSuccess;
-int teach_stamina_cost, learn_stamina_cost;
-bool bCanTeach, bCanLearn;
-int chance, k;
-Obj hInvalid;
 
 this = This.AsDruid();
-if (!.IsValid)
-	return;
-action = 2;
 
-teach_stamina_cost = GetCmdStaminaCost("teach");
-learn_stamina_cost = GetCmdStaminaCost("learn");
+if (.IsValid)
+	if (.IsAlive) {
+		Unit u;
+		int teaching_level, teaching_level_max, stamina_cost, teach_percent, learnings;
+		bool use_teaching;
 
-chance = GetConst("EnchantressTeachPercent");
-if (IsResearched(.player, "Code of Valor"))
-	chance += .level * GetConst("EnchantressTeachIncrease");
-k = chance / 100;
-chance = chance % 100;
+		if (!.InHolder)
+			while (!.Stop(1000))
+				;
 
-bCanTeach = .HasSpecial(teaching);
-bCanLearn = true;
+		Sleep(50 + rand(451));
 
-//TO WHAT LEVEL SHOULD WE TRAIN UNITS?
-level1 = GetConst("TeachingLevel1");
-level2 = GetConst("TeachingLevel2");
+		teaching_level = GetConst("TeachingLevel1");
+		teaching_level_max = GetConst("TeachingLevel2");
+		stamina_cost = GetCmdStaminaCost("teach");
 
-while (!.Stop(1000));
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				if (.IsVisible) {
+					u.Clear();
+					if (.stamina >= stamina_cost)
+						if (.HasSpecial(teaching)) {
+							if (teach_percent <= 0)
+								if (IsResearched(.player, "Code of Valor"))
+									teach_percent = GetConst("TeachingBonusPercent");
+							if (teaching_level < teaching_level_max)
+								if (IsResearched(.player, "Ancestral Knowledge"))
+									teaching_level = teaching_level_max;
+							use_teaching = true;
+							u = .FindUnitBelowILevel(teaching_level);
+						}
+					if (u.IsDead) {
+						use_teaching = false;
+						u = .FindUnitToLearn();
+					}
 
-level = level1;
-if (EnvReadString(.player, "Ancestral Knowledge") == "researched")
-	level = level2;
-tgt = .FindUnitBelowILevel(level).AsUnit;
+					if (u.IsAlive)
+						if (u != this) {
+							learnings = 0;
+							while (u.IsAlive) {
+								if (.IsVisible)
+									if (!.IsEnemy(u))
+										if (!u.InHolder)
+											if (.CanSee(u))
+												if (.InRange(u))
+													if (use_teaching) {
+														if (u.inherentlevel < teaching_level)
+															if (.stamina >= stamina_cost) {
+																.StartAnim(17, u.pos);
 
-while (true) 
-{
-	if (tgt.IsDead) tgt = hInvalid; /// avoid handle reuse problems
-	if(.InHolder || !.IsVisible)
-	{
-		Sleep(2000);
-		continue;
-	}
+																Sleep(.TimeToActionMoment);
 
-	//TO WHAT LEVEL SHOULD WE TRAIN UNITS?
-	if (level < level2) if (EnvReadString(.player, "Ancestral Knowledge") == "researched")
-		level = level2;
+																if (u.IsAlive)
+																	if (u.inherentlevel < teaching_level)
+																		if (!.IsEnemy(u))
+																			if (!u.InHolder)
+																				if (.CanSee(u))
+																					if (.stamina >= stamina_cost) {
+																						.SetLastAttackTime();
+																						if (!.IsVisible)
+																							.SetVisible(true);
+																						.SetStamina(.stamina - stamina_cost);
+																						u.SetExperience(u.experience + MIN(6, 1 + .level * teach_percent / 100));
+																						CreateFeedback("Experience", u);
+																					}
 
-	bSuccess = false;
-	learntimes = 0;
-	while (learntimes < 10)
-	{
-		//BAD POTENTIALITIES
-		if (action == 2) if (!bCanTeach) break;
-		if (action == 3) if (!bCanLearn) break;
-		
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (.IsEnemy(tgt)) break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible)   break;
-		if (!.InRange(tgt)) break;
+																Sleep(.TimeToAnimFinish);
+																continue;
+															}
+													}
+													else if (.experience < u.experience) {
+														.StartAnim(19, u.pos);
 
-		//EARLY BREAK IF TEACH CAN NOT BE DONE, AND TEACH IS THE CURRENT ACTION
-		if (action == 2) {
-			if (tgt.inherentlevel >= level) break;
-			if (.stamina < teach_stamina_cost) break;
-		}
+														Sleep(.TimeToActionMoment);
 
-		//EARLY BREAK IF LEARNING CAN NOT BE DONE AND LEARN IS THE CURRENT ACTION
-		if (action == 3) {
-			if (tgt.experience <= .experience) break;
-			if (.stamina < learn_stamina_cost) break;
-		}
+														if (u.IsAlive)
+															if (.experience < u.experience)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u)) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																			CreateFeedback("Experience", this);
+																		}
 
-		if (action == 2)
-		{	//TEACH
-			.StartAnim(17, tgt.pos);
-			Sleep(.TimeToActionMoment());
-			
-			if (tgt.IsAlive)
-			if (tgt.inherentlevel < level)
-			if (.stamina >= teach_stamina_cost)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (!.IsEnemy(tgt))
-			{
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - teach_stamina_cost);
-				tgt.SetExperience(tgt.experience + k + (chance > rand(99)));
-				CreateFeedback("Experience", tgt);
+														Sleep(.TimeToAnimFinish);
+														learnings += 1;
+														if (learnings < 12)
+															continue;
+													}
+								break;
+							}
+						}
+				}
+
+				.Idle(1000);
 			}
-			Sleep(.TimeToAnimFinish());
-			bSuccess = true;
-			continue;
-		}
-		if (action == 3)
-		{	//LEARN
-			.StartAnim(19, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (tgt.experience > .experience)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (.stamina >= learn_stamina_cost)
-			if (!.IsEnemy(tgt))
-			{
-				int exp; exp = .experience + (.inherentlevel + 3) / 4;
-				if (exp > tgt.experience) exp = tgt.experience;
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - learn_stamina_cost);
-				.SetExperience(exp);
-				CreateFeedback("Experience", this);
-			}
-			Sleep(.TimeToAnimFinish());
-			learntimes += 1;
-			bSuccess = true;
-			continue;
-		}
-		break;
 	}
 
-	.Idle(1000);
-	if (.IsEnemyInSquadSight)
-		action = 2;
-	else if (!bSuccess || action == 3)
-		action = 5 - action;
-	for (i = 0; i < 2; i += 1) {
-		if (action == 2 && !bCanTeach) action = 5;
-		if (action == 5 && !bCanLearn) action = 2;
-		if (action == 2)
-			tgt = .FindUnitBelowILevel(level).AsUnit;
-		else
-			tgt = .FindUnitToLearn.AsUnit;
-		if (tgt.IsValid) break;
-		if (!bCanTeach || !bCanLearn) break;
-		action = 5 - action;
-	}
-}
+Sleep(15);//prevent possible loops with other commands

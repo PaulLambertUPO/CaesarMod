@@ -19,7 +19,6 @@
 		method="move"
 		button="states/line form.bmp"
 		key="f"
-		rollover="Select Formation"
 		param="Line"
 		groupverifier="data/subai/hero_formation_menu_verify.vs"
 		menu="1">
@@ -29,7 +28,6 @@
 		method="move"
 		button="states/front form.bmp"
 		key="f"
-		rollover="Select Formation"
 		param="Front"
 		groupverifier="data/subai/hero_formation_menu_verify.vs"
 		menu="1">
@@ -39,7 +37,6 @@
 		method="move"
 		button="states/block form.bmp"
 		key="f"
-		rollover="Select Formation"
 		param="Block"
 		groupverifier="data/subai/hero_formation_menu_verify.vs"
 		menu="1">
@@ -49,7 +46,6 @@
 		method="move"
 		button="states/horse wing form.bmp"
 		key="f"
-		rollover="Select Formation"
 		param="Cavalry core"
 		groupverifier="data/subai/hero_formation_menu_verify.vs"
 		menu="1">
@@ -59,7 +55,6 @@
 		method="move"
 		button="states/skirmish.bmp"
 		key="f"
-		rollover="Select Formation"
 		param="Skirmish"
 		groupverifier="data/subai/hero_formation_menu_verify.vs"
 		menu="1">
@@ -69,7 +64,6 @@
 		method="move"
 		button="states/column.bmp"
 		key="f"
-		rollover="Select Formation"
 		param="Column"
 		groupverifier="data/subai/hero_formation_menu_verify.vs"
 		menu="1">
@@ -161,17 +155,17 @@
 		button="Skills/DivineGrace.bmp"
 		key="g"
 		rollover="Divine Grace"
-		description="Restores 100 of the hero's health"
+		description="Restores the hero's health by 100"
 		coststamina="4"
 		immediate="yes"
-		groupverifier="data/subai/verify_cmdcost_unit.vs">
+		groupverifier="data/subai/verify_cmdcost_stamina.vs">
 		<src obj="Hero" />
 	</cmd>
 	<!-- Skills -->
 	<cmd name="skill_assault" priority="19"
 		button="skills/Assault.bmp"
 		key="x"
-		rollover="Assault Cry"
+		rollover="Assault"
 		description="Activates the Assault skill"
 		coststamina="6"
 		groupverifier="data/subai/verify_hero_skill.vs"

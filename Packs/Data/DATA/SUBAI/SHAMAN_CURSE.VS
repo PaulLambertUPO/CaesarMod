@@ -1,51 +1,58 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
 
 Druid this;
-Unit tgt;
-bool bSleep = true;
-int curse_stamina_cost;
 
 this = This.AsDruid();
-tgt = target.AsUnit();
 
-curse_stamina_cost = GetCmdStaminaCost("curse");
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(curse))
+			if (target != this) {
+				Unit u;
 
-while (1)
-{
-	if (!.IsAlive)      break;
-	if (!tgt.IsAlive()) break;
-	if (!.IsEnemy(tgt)) break;
-	if (tgt.InHolder)   break;
-	if (!.CanSee(tgt))  break;
-	if (tgt.IsCursed()) break;
+				u = target.AsUnit();
 
-	bSleep = false;
-	if (!.InRange(tgt)) {
-		.GotoAttack(tgt, 2000, false, 2500);
-		continue;
-	}
-	if (.stamina < curse_stamina_cost) {
-		Sleep(200);
-		continue;
-	}
-	.SetLastAttackTime();
-	if (!.IsVisible)
-		.SetVisible(true);
-	.StartAnim(17, tgt.pos);
-	Sleep(.TimeToActionMoment());
+				if (u.IsValid) {
+					int stamina_cost;
 
-	if (tgt.IsAlive())
-	if (.IsEnemy(tgt))
-	if (!tgt.InHolder)
-	if (.CanSee(tgt))
-	if (.stamina >= curse_stamina_cost)
-	{
-		.SetVisible(true); .SetLastAttackTime();
-		.SetStamina(.stamina - curse_stamina_cost);
-		tgt.Curse();
-	}
-	Sleep(.TimeToAnimFinish());
-}
+					stamina_cost = GetCmdStaminaCost("curse");
 
-if (bSleep)
-	Sleep(17); // otherwise can cycle: Advance->Curse->Advance->Curse...
+					while (u.IsAlive) {
+						if (!u.IsCursed)
+							if (.IsEnemy(u))
+								if (!u.InHolder)
+									if (.CanSee(u)) {
+										if (.InRange(u))
+											if (.stamina >= stamina_cost) {
+												.StartAnim(17, u.pos);
+
+												Sleep(.TimeToActionMoment);
+
+												if (u.IsAlive)
+													if (!u.IsCursed)
+														if (.IsEnemy(u))
+															if (!u.InHolder)
+																if (.CanSee(u))
+																	if (.stamina >= stamina_cost) {
+																		.SetLastAttackTime();
+																		if (!.IsVisible)
+																			.SetVisible(true);
+																		.SetStamina(.stamina - stamina_cost);
+																		u.Curse();
+																	}
+
+												Sleep(.TimeToAnimFinish);
+											}
+											else
+												Sleep(500);
+										else
+											.GotoAttack(u, 2000, false, 2500);
+
+										continue;
+									}
+						break;
+					}
+				}
+			}
+
+Sleep(15);//prevent possible loops with other commands

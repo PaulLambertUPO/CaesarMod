@@ -4,9 +4,13 @@ Hero this;
 
 this = This.AsHero();
 
-.FormSetupAndMoveTo(other, other.sight / 3, other.radius, true);
+if (.IsValid)
+	if (.IsAlive)
+		if (other.IsHeirOf("Inn")) {
+			.FormSetupAndMoveTo(other, other.sight / 3, other.radius, true);
 
-while (.HasPath())
-  .FormKeepMoving (1497);
+			while (.HasPath())
+				.FormKeepMoving(1500);
 
-other.SetCommand("transport_request");
+			other.SetCommand("transport_request");
+		}

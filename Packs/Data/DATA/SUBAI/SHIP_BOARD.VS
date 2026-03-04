@@ -1,70 +1,82 @@
-// void, Obj This, Obj ToBoard
+//void, Obj This, Obj ToBoard
 
-Ship  this;
-Unit  u1;
-Unit  u2;
-bool  bMoved;
-point pos, p1;
+Ship this;
 
-int   s1,s2,s3;
-int   vs,vu;
+this = This.AsShip();
 
-this = This.AsShip;
+if (.IsValid)
+	if (.IsAlive) {
+		Unit u, u_other;
+		point pt;
+		int rad, spd, dist;
+		bool ship_moved;
 
-u1 = ToBoard.AsUnit;
-if( u1.IsValid )
-{
-	.NotifyBoardUnit( u1 );
-	if( u1.AsHero.IsValid )
-		u1.SetCommand( "boardshiphero", this );
-	else
-		u1.SetCommand( "boardship", this );
-}
-while( .AreUnitsToBoard )
-{
-	u1 = .BestCandidateToBoard;
-	bMoved = false;
+		rad = .radius;
+		spd = .speed;
 
-	pos = u1.PathDestFound;
-	if( pos.x != -1 )
-	{
-		s1 = .DistTo( u1.pos ) + .radius;
-		s2 = .DistTo( pos ) + .radius;
-		s3 = u1.DistTo( pos ) + u1.radius;
-		vs = .speed;
-		vu = u1.speed;
-		if( (s1 * vu) < (s3 * vs) || s1 < s2 ) pos = u1.pos;
-	}
-	else
-		pos = u1.pos;
+		u = ToBoard.AsUnit();
+		if (u.IsValid)
+			if (u.IsAlive)
+				if (!u.AsFlying().IsValid) {
+					.NotifyBoardUnit(u);
+					if (u.AsHero().IsValid)
+						u.SetCommand("boardshiphero", this);
+					else
+						u.SetCommand("boardship", this);
+				}
 
-	while( ! .GotoEnter( pos, 0, 1200, true, -1 ))
-	{
-		bMoved = true;
-		u2 = .BestCandidateToBoard;
-		if( u2 != u1 && u2.IsValid ) u1 = u2;
-		if( ! u1.IsAlive ) break;
-		if( .TimeWithoutWalking() > 0 ) break;
-		if( .NumUnitsToBoard() == 0 ) return;
-		pos = u1.PathDestFound;
-		if( pos.x != -1 )
-		{
-			s1 = .DistTo( u1.pos ) + .radius;
-			s2 = .DistTo( pos ) + .radius;
-			s3 = u1.DistTo( pos ) + u1.radius;
-			vs = .speed;
-			vu = u1.speed;
-			if( (s1 * vu) < (s3 * vs) || s1 < s2 ) pos = u1.pos;
+		while (.AreUnitsToBoard) {
+			u = .BestCandidateToBoard;
+			ship_moved = false;
+
+			pt = u.PathDestFound;
+			if (pt.x != -1) {
+				dist = .DistTo(u.pos);
+				if (dist < .DistTo(pt))
+					pt = u.pos;
+				else if ((dist + rad) * u.speed < (u.DistTo(pt) + u.radius) * spd)
+					pt = u.pos;
+			}
+			else
+				pt = u.pos;
+
+			while (!.GotoEnter(pt, 0, 1200, true, -1)) {
+				ship_moved = true;
+				u_other = .BestCandidateToBoard;
+				if (u_other != u)
+					if (u_other.IsAlive)
+						u = u_other;
+				if (u.IsDead)
+					break;
+				if (.TimeWithoutWalking > 0)
+					break;
+				if (.NumUnitsToBoard <= 0) {
+					Sleep(15);//prevent possible loops with other commands
+					return;
+				}
+				pt = u.PathDestFound;
+				if (pt.x != -1) {
+					dist = .DistTo(u.pos);
+					if (dist < .DistTo(pt))
+						pt = u.pos;
+					else if ((dist + rad) * u.speed < (u.DistTo(pt) + u.radius) * spd)
+						pt = u.pos;
+				}
+				else
+					pt = u.pos;
+			}
+
+			while (1) {
+				if (u.IsDead)
+					break;
+				if (ship_moved)
+					if (.DistTo(u.pos) > 500)
+						break;
+				Sleep(100);
+			}
+
+			Sleep(100);
 		}
-		else
-			pos = u1.pos;
 	}
-	while( 1 )
-	{
-//		u1 = .BestCandidateToBoard;
-		if( ! u1.IsAlive ) break;
-		if( .DistTo( u1.pos ) > 500 && bMoved ) break;
-		Sleep( 100 );
-	}
-	Sleep( 100 );
-}
+
+Sleep(15);//prevent possible loops with other commands

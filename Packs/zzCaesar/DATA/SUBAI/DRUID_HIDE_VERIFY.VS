@@ -1,18 +1,22 @@
 //bool, Obj This, Obj target
 
-Unit this;
+Druid this;
 
 this = This.AsDruid();
 
 if (.IsValid)
 	if (.IsAlive)
 		if (.HasSpecial(invisibility))
-			if (target.IsAlive)
-				if (!.IsEnemy(target))
-					if (!target.IsSentry)
-						if (target.IsVisible)
+			if (target.AsUnit().IsValid)
+				if (target.IsAlive)
+					if (target.IsVisible)
+						if (!.IsEnemy(target))
 							if (!target.AsUnit().InHolder)
-								if (.CanSee(target))
-									return true;
+								if (!target.IsWaterUnit)
+									if (!target.IsSentry)
+										if (!target.IsPeasantAmbient)
+											if (!target.IsRam)
+												if (.CanSee(target))
+													return true;
 
 return false;

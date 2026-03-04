@@ -10,8 +10,8 @@
 	- void: when a function returns void, it means that it does not return any direct value
 	- int: an integer number (no dot) that can be either positive or negative (e.g. -5)
 	- float: a floating point number (with dot) that can be either positive or negative (e.g. 3.14)
-	- bool: a boolean value (true/false)
-	- str: a string, which is a series of characters included between "" (e.g. "this is an example"), it can also be given an int value that will be converted automatically
+	- bool: a boolean/binary value that can only be true or false
+	- str: a string, which is a series of characters included between "" (e.g. "an example"), it can also be given an int value that will be converted automatically
 	- pstr: probably a string pointer, but since it is never used in the game scripts, its real meaning/use is unknown
 	- point: a point with x-y int coordinates; the higher x becomes, the further it goes to the right; the higher y becomes, the further it goes down
 	- rect: a rectangle made of 2 points, one for the top-left corner and the other for the bottom-right corner
@@ -32,11 +32,12 @@
 	- Gate: an entity corresponding to a gate in the game, able to use Building functions
 	- Catapult: an entity corresponding to a static siege machine (not a fully-built ram) in the game, able to use Building functions
 	- Tower: an entity corresponding to a tower in the game, able to use Building functions
+	- Teleport: an entity corresponding to a cave in the game, able to use Building functions
 	- ItemHolder: an entity corresponding to an item holder in the game, able to use Obj functions
 	- Item: an entity corresponding to an equippable item in the game
 	- Settlement: an entity corresponding to a full settlement in the game, defined by a main building that can also have other buildings with it
 	- ObjList: a list (array) of Obj entities that can be accessed with [] and their index (starting from 0) (e.g. list[0] = object)
-	- Query: a particular operator that defines a dynamic way to get a set of objects, it can be seen as a function pointer because it is executed every time it is reached
+	- Query: an operator that defines a dynamic way to get a set of objects, it can be seen as a function pointer because it is executed every time it is reached
 	- NamedObj: an entity with a script name set from the editor, able to use Query functions, it is mainly used for the sequences of custom maps
 	- Conversation: an entity containing phrases pronounced by actors, it is mainly used for the sequences of custom maps
 	- GAIKA: an entity that represents a "Game AI Knowledge Area" defined by a settlement, it is mainly used for the AI scripts
@@ -55,6 +56,7 @@
 		- 6|E = Egypt
 		- 7|T = Germany
 		- -1 = None
+		- 9 = Mutable
 	- hero skills are int values referenced by taking their display/class names and removing spaces and prepending "hs"
 		- 0 = hsAdministration
 		- 1 = hsTeamAttack
@@ -845,7 +847,7 @@
 <func name="Obj::SetSight" returns="void">
 	<param type="int" /><!-- sight to set -->
 </func>
-<!-- Returns the "stamina_dec_time" property value of the object class, that is how many milliseconds it takes for its stamina to drop by 1 (0 means that stamina does not decay over time) -->
+<!-- Returns the "stamina_dec_time" property value of the object class, that is how many milliseconds it takes for its stamina to drop by 1 (0 means that stamina does not decay over time) | WARNING: using this function on an invalid object causes a crash -->
 <func name="Obj::GetStaminaDecTime" returns="int">
 </func>
 <func name="Obj::CmdCount" returns="int">
@@ -1638,8 +1640,16 @@
 <func name="Unit::SetFeeding" returns="void">
 	<param type="bool" />
 </func>
+<!-- Makes the unit perform the walk animation specified for the index 1 in its entity file in order to move it toward a destination point and returns whether the unit is within the distance specified by the first integer before/when the time limit specified by the second integer elapses; if the unit is stuck and cannot move, the boolean value makes it perform the animation specified for the index 20 in its entity file; if the unit has not been walking for the time specified by the last integer when the function starts, the entire script will be terminated unless the value is negative (useful for loops) -->
 <func name="Unit::Goto" returns="bool" latent="1">
-	<param type="point" />
+	<param type="point" /><!-- destination -->
+	<param type="int" /><!-- distance from the destination for success check -->
+	<param type="int" /><!-- time limit for distance evaluation -->
+	<param type="bool" /><!-- use of animation 20 if stuck -->
+	<param type="int" /><!-- time limit to kill the script when the function starts (equivalent to TimeWithoutWalking) | negative values will not kill the script -->
+</func>
+<func name="Unit::Goto" returns="bool" latent="1">
+	<param type="Obj" />
 	<param type="int" />
 	<param type="int" />
 	<param type="bool" />
@@ -1647,13 +1657,6 @@
 </func>
 <func name="Unit::GotoEnter" returns="bool" latent="1">
 	<param type="point" />
-	<param type="int" />
-	<param type="int" />
-	<param type="bool" />
-	<param type="int" />
-</func>
-<func name="Unit::Goto" returns="bool" latent="1">
-	<param type="Obj" />
 	<param type="int" />
 	<param type="int" />
 	<param type="bool" />
@@ -1714,14 +1717,14 @@
 </func>
 <func name="Unit::SetLastAttackTime" returns="void">
 </func>
-<!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
+<!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found or if the unit is in a building, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 </func>
 <!-- Works like BestTargetInSquadSight, but it uses the specified class hierarchy string as a preference filter | WARNING: it does not really overwrite the standard priority order (e.g. specifying "Military" can still return a sage if it is closer than a warrior) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 	<param type="str" />
 </func>
-<!-- Works like BestTargetInSquadSight, but it completely excludes all enemy targets with 0 damage (note that sages have 1 damage, so they are considered by the function) | WARNING: it seems that it gives more priority to sages that to military units, maybe it is specifically because they have a damage closer to 0 -->
+<!-- Works like BestTargetInSquadSight, but it completely excludes all enemy targets with 0 damage (note that sages have 1 damage, so they are considered by the function) | WARNING: it seems that it gives more priority to sages than military units, maybe specifically because they have a damage closer to 0 -->
 <func name="Unit::BestTargetInSquadSightMisZeroDamage" returns="Obj">
 </func>
 <func name="Unit::BestNoIndependentTargetInSquadSight" returns="Obj">

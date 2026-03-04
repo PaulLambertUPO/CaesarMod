@@ -1,3 +1,9 @@
 //void, Obj This
 
-This.AsUnit.SetCarryWaterAnim();
+Unit this;
+
+this = This.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive)
+		.SetCarryWaterAnim();

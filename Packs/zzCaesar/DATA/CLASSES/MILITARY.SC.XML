@@ -1,7 +1,8 @@
-<class id="Military" parent="Unit" cpp_class="CVXUnit" entity="">
+<class id="Military" parent="Unit" cpp_class="CVXUnit">
 
 	<properties healthbar_type="2" />
 
+	<method sig="taunt" vs="data/subai/unit_taunt.vs" />
 	<method sig="train" vs="data/subai/unit_train.vs" onfinish="data/subai/unit_train_onfinish.vs" />
 	<method sig="ondie" vs="data/subai/military_ondie.vs" />
 

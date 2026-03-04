@@ -7,7 +7,6 @@
 	<properties edittree_pos="Structures/Outposts/Recruitment outpost (Carthaginian)" />
 	<properties description="Converts peasants to Macemen" />
 	<properties
-		range="1000"
 		settlement_food="2000"
 		settlement_gold="0"
 		defender_cls_1="CMaceman"

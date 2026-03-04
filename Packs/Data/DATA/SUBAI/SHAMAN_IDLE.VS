@@ -1,269 +1,192 @@
-// void, Obj This
+//void, Obj This
 
 Druid this;
-Unit tgt;
-point ptStart;
-Building bldEnter;
-bool bSuccess;
-int action;
-int i, j;
-int learntimes;
-int curse_stamina_cost, learn_stamina_cost;
-bool bCanCurse, bCanLearn;
-Obj hInvalid;
-ObjList ol;
 
 this = This.AsDruid();
-if (!.IsValid) return;
-while (!.Stop(1000));
 
-action = 2;
-ptStart = .posRH;
-if (!.InShip && .InHolder) 
-	bldEnter = .GetHolderSett.GetCentralBuilding;
+if (.IsValid)
+	if (.IsAlive) {
+		ObjList ol;
+		Hero h;
+		Unit u, u_ol;
+		point pt, pt_start;
+		int i, d, plr, rng, best_dist, stamina_cost;
+		bool can_learn, go_back, use_curse;
 
-curse_stamina_cost = GetCmdStaminaCost("curse");
-learn_stamina_cost = GetCmdStaminaCost("learn");
-
-bCanCurse = .HasSpecial(curse);
-bCanLearn = true;
-if (.race == Gaul || .race == Britain  || .race==Germany) if (EnvReadString(.player, "Ritual Chamber") != "researched")
-	bCanLearn = false;
-
-//tgt = .GetBestCurseTarget.AsUnit; // THIS SCRIPT DOESN'T WORK!
-ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-
-for(j=0; j<ol.count; j+=1) {
-	if (ol[j].AsUnit.IsCursed)
-		continue;
-	if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-		tgt = ol[j].AsUnit();
-	}
-}
-
-while (true)
-{
-	if (tgt.IsDead) tgt = hInvalid; /// avoid handle reuse problems
-
-	//SLEEP 2000 IF INACTIVE
-	if (.hero.IsValid) if (.hero.command=="teleport")
-	{
-		Sleep(2000);
-		continue;
-	}
-	if (!.AI) if(.InHolder)
-	{
-		Sleep(2000);
-		continue;
-	}
-	if (!.IsVisible)
-	{
-		bool bStayHidden = true;
-		if (.hero.IsValid) if (.hero.command == "attack" || .hero.command == "engage")
-			bStayHidden = false;
-		if (bStayHidden) {
-			Sleep(2000);
-			continue;
-		}
-	}
-
-	bSuccess = false;
-	if (.hero.IsValid) if (!.hero.InHolder)
-	{//GO NEAR HERO IF TOO FAR
-		if (.DistTo(.hero) > 250)
-		{
-			.Goto(.hero, 250, 2000, false, -1);
-			ptStart = .pos;
-			continue;
-		}
-	}
-	else
-	{//GO NEAR STARTPOINT IF TOO FAR
-		if (.DistTo(ptStart) > .sight)
-		{
-			.Goto(ptStart, .sight, 2000, false, -1);
-			continue;
-		}
-	}
-
-	//CURSE/LEARN
-	learntimes = 0;
-	while (learntimes < 10)
-	{
-		//BAD POTENTIALITIES
-		if (action == 2) if (!bCanCurse) break;
-		if (action == 3) if (!bCanLearn) break;
-		
-		//BAD TARGETS
-		if (!tgt.IsAlive)  break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
-		if (!.IsVisible)
-		{
-			if (!.hero.IsValid) break;
-			if (.hero.command != "attack" && .hero.command != "engage") break;
-		}
-		if (tgt.DistTo(ptStart) > .range + .sight) break;
-
-		//EARLY BREAK IF TEACH CAN NOT BE DONE, AND TEACH IS THE CURRENT ACTION
-		if (action == 2) {
-			if (tgt.IsCursed) break;
-			if (!.IsEnemy(tgt)) break;
-			if (.stamina < curse_stamina_cost) break;
-		}
-
-		//EARLY BREAK IF LEARNING CAN NOT BE DONE AND LEARN IS THE CURRENT ACTION
-		if (action == 3) {
-			if (tgt.experience <= .experience) break;
-			if (.IsEnemy(tgt)) break;
-			if (.stamina < learn_stamina_cost) break;
-		}
-
-		//GOING NEAR TARGET
-		if (!.InRange(tgt) || .InHolder) 
-		{
-			if (!.hero.IsValid) if(.DistTo(ptStart) > .sight)
-				break;
-			.GotoAttack(tgt, 2000, false, 2500);
-			continue;
-		}
-
-		if (action == 2)
-		{	//CURSE
-			.StartAnim(17, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (.IsEnemy(tgt))
-			if (.CanSee(tgt))
-			if (.stamina >= curse_stamina_cost)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			{
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - curse_stamina_cost);
-				tgt.Curse();
-			}
-			Sleep(.TimeToAnimFinish());
-			bSuccess = true;
-			continue;
-		}
-		if (action == 3)
-		{	//LEARN
-			.StartAnim(19, tgt.pos);
-			Sleep(.TimeToActionMoment());
-
-			if (tgt.IsAlive)
-			if (tgt.experience > .experience)
-			if (!tgt.InHolder)
-			if (.CanSee(tgt))
-			if (.stamina >= learn_stamina_cost)
-			if (!.IsEnemy(tgt))
-			{
-				int exp;
-				exp = .experience + (.inherentlevel + 3) / 4;
-				if (exp > tgt.experience) exp = tgt.experience;
-				.SetVisible(true); .SetLastAttackTime();
-				.SetStamina(.stamina - learn_stamina_cost);
-				.SetExperience(exp);
-				CreateFeedback("Experience", this);
-			}
-			Sleep(.TimeToAnimFinish());
-			learntimes += 1;
-			bSuccess = true;
-			continue;
-		}
-		Sleep(1000);//just in case something went wrong
-	}
-
-	if (.InHolder) {
-		Sleep(2113);
-		continue;
-	}
-
-	if (.hero.IsValid)
-	{
-		if (.DistTo(.hero.dest)>250)
-		{
-			if (.Goto(.hero.dest, 200, 2000, false, -1))
-				.Idle(1000);
-		}
-		else
-			.Idle(1000);
-	}
-	else
-	{
-		.Idle(1000);
-	}
-			
-	while (1)
-	{
-		if (.IsEnemyInSquadSight)
-			action = 2;//CURSE
-		else if (!bSuccess|| action == 3) {
-			action = 5 - action;//2, 3, 2, 3, .....
-		}
-		for (i = 0; i < 2; i += 1) {
-			if (action == 2 && !bCanCurse) action = 5;
-			if (action == 5 && !bCanLearn) action = 2;
-			if (action == 2){
-//				tgt = .GetBestCurseTarget.AsUnit; //THIS SCRIPT DOESN'T WORK
-				ol = Intersect( EnemyObjs(.player,"Unit") , VisibleObjsInSight(.AsUnit, "Military") ).GetObjList;
-
-				for(j=0; j<ol.count; j+=1) {
-					if (ol[j].AsUnit.IsCursed)
-						continue;
-					if(ol[j].pos.Dist(.pos) <= tgt.pos.Dist(.pos) || !tgt.IsValid){
-				    		tgt = ol[j].AsUnit();
-				  	}
-				}
-			}
-			else
-				tgt = .FindUnitToLearn.AsUnit;
-			if (tgt.IsValid) break;
-			if (!bCanCurse || !bCanLearn) break;
-			action = 5 - action;
-		}
-
-		if(tgt.IsAlive()) if(tgt.DistTo(ptStart) - .range < .sight)
-		{
-			.GotoAttack(tgt, 2000, false, 2500);
-			break;
-		}
-		
-		if (.hero.IsValid)
-			break;
-		if (bldEnter.IsValid) {
-			if (!.IsEnemy(bldEnter)) {
-				point pt; pt = bldEnter.GetEnterPoint(this);
-				if (!.GotoEnter(pt, 0, 1000, true, 5000))
-					continue;
-				.AddCommand(true, "enter", bldEnter);
-				return;
-			} else {
-				bldEnter.Clear;
-				ptStart = .posRH;
-			}
-		}
-
-		if (.AI)
-		if (!.hero.IsValid)
 		if (!.InHolder)
-		if (IsWaterLsa(ptStart.GetGAIKA.LSA))
-		{	/// leave the coast
-			point pt;
-			pt.Set(.pos.x + (128 - rand(256)), .pos.y + (128 - rand(256)));
-			if (pt.InRect(GetMapRect))
-			if (IsPassable3x3(pt))
-			if (!IsWaterLsa(pt.GetGAIKA.LSA))
-				ptStart = pt;
-		}
+			while (!.Stop(1000))
+				;
 
-		if(.Goto(ptStart, 0, 2000, true, 1000))
-		{
-			.Idle(2000);
-			break;
-		}
+		Sleep(50 + rand(451));
+
+		plr = .player;
+		rng = .range;
+		pt_start = .posRH;
+
+		stamina_cost = GetCmdStaminaCost("curse");
+
+		if (.race == Carthage)
+			can_learn = true;
+		else
+			can_learn = IsResearched(plr, "Ritual Chamber");
+
+		while (.CmdCount == 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
+			else {
+				h = .hero;
+				if (h.IsValid)
+					if (h.command == "teleport") {
+						Sleep(2000);
+						continue;
+					}
+
+				go_back = true;
+
+				u.Clear();
+				if (.stamina >= stamina_cost)
+					if (.HasSpecial(curse)) {//do not use GetBestCurseTarget because it is a bugged function: it does not work for mages but only for warriors
+						if (.IsVisible)
+							use_curse = true;
+						else if (.IsEnemyInSquadSight)
+							use_curse = h.IsValid;
+						else
+							use_curse = false;
+						if (use_curse) {
+							best_dist = 10000000;
+							ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
+							for (i = ol.count - 1; i >= 0; i -= 1) {
+								u_ol = ol[i].AsUnit();
+								if (u_ol.IsAlive)
+									if (!u_ol.IsCursed) {
+										d = .DistTo(u_ol);
+										if (u.IsDead) {
+											u = u_ol;
+											best_dist = d;
+										}
+										else if (d < best_dist) {
+											u = u_ol;
+											best_dist = d;
+										}
+									}
+							}
+						}
+					}
+				if (u.IsDead)
+					if (.IsVisible) {
+						use_curse = false;
+						if (can_learn)
+							u = .FindUnitToLearn();
+						else if (IsResearched(plr, "Ritual Chamber")) {
+							can_learn = true;
+							u = .FindUnitToLearn();
+						}
+					}
+
+				if (u.IsAlive)
+					if (u != this)
+						if (u.DistTo(pt_start) <= rng + .sight) {
+							go_back = false;
+							i = 0;
+							while (u.IsAlive) {
+								if (!u.InHolder)
+									if (.CanSee(u))
+										if (use_curse) {
+											if (!u.IsCursed)
+												if (.IsEnemy(u))
+													if (.InRange(u)) {
+														if (.stamina >= stamina_cost) {
+															.StartAnim(17, u.pos);
+
+															Sleep(.TimeToActionMoment);
+
+															if (u.IsAlive)
+																if (!u.IsCursed)
+																	if (.IsEnemy(u))
+																		if (!u.InHolder)
+																			if (.CanSee(u))
+																				if (.stamina >= stamina_cost) {
+																					.SetLastAttackTime();
+																					if (!.IsVisible)
+																						.SetVisible(true);
+																					.SetStamina(.stamina - stamina_cost);
+																					u.Curse();
+																				}
+
+															Sleep(.TimeToAnimFinish);
+															continue;
+														}
+													}
+													else if (u.DistTo(pt_start) <= rng + .sight) {
+														.GotoAttack(u, 2000, false, 2500);
+														continue;
+													}
+										}
+										else if (.experience < u.experience)
+											if (.IsVisible)
+												if (!.IsEnemy(u))
+													if (.InRange(u)) {
+														.StartAnim(19, u.pos);
+
+														Sleep(.TimeToActionMoment);
+
+														if (u.IsAlive)
+															if (.experience < u.experience)
+																if (!.IsEnemy(u))
+																	if (!u.InHolder)
+																		if (.CanSee(u)) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetExperience(MIN(u.experience, .experience + (.inherentlevel + 4) / 4));
+																			CreateFeedback("Experience", this);
+																		}
+
+														Sleep(.TimeToAnimFinish);
+														i += 1;
+														if (i < 6)
+															continue;
+													}
+													else if (u.DistTo(pt_start) <= rng + .sight) {
+														.GotoAttack(u, 2000, false, 2500);
+														continue;
+													}
+								break;
+							}
+						}
+
+				if (go_back) {
+					h = .hero;
+					if (h.IsValid) {
+						if (!h.InHolder)
+							if (.DistTo(h) >= 200)
+								if (.IsEnemyInSquadSight) {
+									.Goto(h, 175, 2000, false, -1);
+									pt_start = .pos;
+									continue;
+								}
+					}
+					else if (.AI)
+						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
+							pt = .pos;
+							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
+							if (pt.InRect(GetMapRect()))
+								if (IsPassable3x3(pt))
+									if (!IsWaterLsa(pt.GetGAIKA().LSA))
+										pt_start = pt;
+						}
+
+					if (.Goto(pt_start, 0, 2000, false, 1000))
+						if (rand(10) == 0) {
+							pt = .GetDir();
+							pt.SetLen(100);
+							pt.Rot(30 - rand(61));
+							.Face(pt + .pos);
+						}
+				}
+
+				.Idle(1000);
+			}
 	}
-}
+
+Sleep(15);//prevent possible loops with other commands

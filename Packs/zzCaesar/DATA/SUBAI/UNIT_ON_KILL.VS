@@ -1,84 +1,148 @@
-//void, Obj this, Obj Victim
+//void, Obj This, Obj Victim
 
-if (.IsValid) {
-	Unit me;
+Unit this;
 
-	me = .AsUnit();
+this = This.AsUnit();
 
-	if (.IsValid)
-		if (.IsAlive) {
-			Unit vict;
+if (.IsValid)
+	if (.IsAlive) {
+		Unit vict;
 
-			vict = Victim.AsUnit();
+		vict = Victim.AsUnit();
 
-			if (vict.IsValid) {
-				bool me_hero, vict_not_sentry;
-				int p;
+		if (vict.IsValid) {
+			int plr;
+			bool this_is_hero;
 
-				me_hero = .AsHero().IsValid;
-				vict_not_sentry = !vict.IsSentry;
+			plr = .player;
 
-				p = .player;
+			this_is_hero = .AsHero().IsValid;
 
-				//statistics
-				me.IncKills(1);
+			.IncKills(1);
 
-				//Egypt
-				me.RemoveItemsOfType("Damage charm");
-				me.RemoveItemsOfType("Armor charm");
-				me.RemoveItemsOfType("Health charm");
-				me.RemoveItemsOfType("Knowledge charm");
-				if (IsResearched(p, "Path of the dead III")) {
-					if (me.IsHeirOf("EAnubisWarrior")) {
-						if (me.inherentlevel < 14) {
-							me.SetLevel(14);
-							CreateFeedback("Experience", me);
-						}
-					}
-					else if (me.inherentlevel < 12) {
-						me.SetLevel(12);
-						CreateFeedback("Experience", me);
+			//removing items with their on_kill script messes up the givings below because this script is executed before
+			.RemoveItemsOfType("Damage charm");
+			.RemoveItemsOfType("Armor charm");
+			.RemoveItemsOfType("Health charm");
+			.RemoveItemsOfType("Knowledge charm");
+
+			if (.free_item_slots > 0) {
+				if (!this_is_hero) {
+					if (IsResearched(plr, "Veteran Offence"))
+						if (!.HasItem("Veteran Offence"))
+							.AddItem("Veteran Offence");
+
+					if (IsResearched(plr, "Veteran Defence"))
+						if (!.HasItem("Veteran Defence"))
+							.AddItem("Veteran Defence");
+
+					if (IsResearched(plr, "Veteran Health"))
+						if (!.HasItem("Veteran Health"))
+							.AddItem("Veteran Health");
+
+					if (IsResearched(plr, "Charm of Athena"))
+						if (!.HasItem("Charm of Athena"))
+							.AddItem("Charm of Athena");
+
+					if (IsResearched(plr, "Charm of Aegle"))
+						if (!.HasItem("Charm of Aegle"))
+							.AddItem("Charm of Aegle");
+
+					if (.inherentlevel >= 12) {
+						if (IsResearched(plr, "Noble Offence"))
+							if (!.HasItem("Noble Offence"))
+								.AddItem("Noble Offence");
+
+						if (IsResearched(plr, "Noble Defence"))
+							if (!.HasItem("Noble Defence"))
+								.AddItem("Noble Defence");
 					}
 				}
-				else if (IsResearched(p, "Path of the dead II")) {
-					if (me.IsHeirOf("EAnubisWarrior")) {
-						if (me.inherentlevel < 10) {
-							me.SetLevel(10);
-							CreateFeedback("Experience", me);
-						}
-					}
-					else if (me.inherentlevel < 8) {
-						me.SetLevel(8);
-						CreateFeedback("Experience", me);
-					}
-				}
-				else if (IsResearched(p, "Path of the dead I"))
-					if (me.IsHeirOf("EAnubisWarrior")) {
-						if (me.inherentlevel < 6) {
-							me.SetLevel(6);
-							CreateFeedback("Experience", me);
-						}
-					}
-					else if (me.inherentlevel < 4) {
-						me.SetLevel(4);
-						CreateFeedback("Experience", me);
-					}
-				if (vict_not_sentry)
-					if (IsResearched(p, "Statue of Isis"))
-						me.SetFood(MIN(me.food + 2, me.maxfood));
 
-				//Carthage
-				if (IsResearched(p, "Spoils of war"))
+				if (IsResearched(plr, "Spoils of war"))//spoils of war are not unique items so they have lower priority
 					.AddItem("Spoils of War");
-				if (IsResearched(p, "Ferocity"))
-					if (me.IsHeirOf("CNoble")) {
+			}
+
+			if (IsResearched(plr, "Path of the dead III")) {
+				if (.IsHeirOf("EAnubisWarrior")) {
+					if (.inherentlevel < 14) {
+						.SetLevel(14);
+						CreateFeedback("Experience", this);
+					}
+				}
+				else if (.inherentlevel < 12) {
+					.SetLevel(12);
+					CreateFeedback("Experience", this);
+				}
+			}
+			else if (IsResearched(plr, "Path of the dead II")) {
+				if (.IsHeirOf("EAnubisWarrior")) {
+					if (.inherentlevel < 10) {
+						.SetLevel(10);
+						CreateFeedback("Experience", this);
+					}
+				}
+				else if (.inherentlevel < 8) {
+					.SetLevel(8);
+					CreateFeedback("Experience", this);
+				}
+			}
+			else if (IsResearched(plr, "Path of the dead I"))
+				if (.IsHeirOf("EAnubisWarrior")) {
+					if (.inherentlevel < 6) {
+						.SetLevel(6);
+						CreateFeedback("Experience", this);
+					}
+				}
+				else if (.inherentlevel < 4) {
+					.SetLevel(4);
+					CreateFeedback("Experience", this);
+				}
+
+			if (!vict.IsSentry) {
+				if (rand(2) == 0)
+					if (.health <= .maxhealth / 5)
+						if (IsResearched(plr, "Statue of Zeus")) {
+							.Heal(.maxhealth);
+							CreateFeedback("Heal", this);
+						}
+
+				if (IsResearched(plr, "Statue of Isis"))
+					.SetFood(MIN(.food + 2, .maxfood));
+
+				if (this_is_hero || .IsHeirOf("TValkyrie")) {
+					if (.inherentlevel + 3 <= vict.inherentlevel)
+						if (IsResearched(plr, "Barbaric Tales")) {
+							ObjList ol;
+							Unit u;
+							int i;
+
+							ol = ObjsInCircle(.posRH, 500, "Military").GetObjList();
+
+							for (i = ol.count - 1; i >= 0; i -= 1) {
+								u = ol[i].AsUnit();
+								if (u.IsAlive)
+									if (u.player == plr) {
+										u.SetExperience(u.experience + 15);
+										CreateFeedback("Experience", u);
+									}
+							}
+						}
+				}
+				else if (.IsHeirOf("CNoble")) {
+					if (IsResearched(plr, "Ferocity")) {
 						Hero h;
-						h = me.hero;
+
+						h = .hero;
+
 						if (h.IsValid) {
 							Item item;
 							int gold;
+
 							gold = GetConst("NobleFerocityGold");
+
 							item = h.FindItem("Gold");
+
 							if (item.IsValid)
 								item.SetUseCount(item.use_count + gold);
 							else if (h.AddItem("Gold")) {
@@ -87,102 +151,71 @@ if (.IsValid) {
 							}
 						}
 					}
-
-				//Rome
-				if (!me_hero) {
-					if (IsResearched(p, "Veteran Offence"))
-						if (!.HasItem("Veteran Offence"))
-							.AddItem("Veteran Offence");
-					if (IsResearched(p, "Veteran Defence"))
-						if (!.HasItem("Veteran Defence"))
-							.AddItem("Veteran Defence");
-					if (IsResearched(p, "Veteran Health"))
-						if (!.HasItem("Veteran Health"))
-							.AddItem("Veteran Health");
 				}
-				if (vict_not_sentry)
-					if (me.IsHeirOf("RLiberatus"))
-						if (IsResearched(p, "Liberati triumph"))
-							if (vict.IsHeirOf("RLiberatus") || vict.IsHeirOf("RChariot") || vict.IsHeirOf("GTridentWarrior")
-									|| vict.IsHeirOf("BVikingLord") || vict.IsHeirOf("CWarElephant") || vict.IsHeirOf("TValkyrie")
-									|| vict.IsHeirOf("EChariot") || vict.IsHeirOf("HMyrmidon_Javelin") || vict.IsHeirOf("IMountaineer")) {
-								me.Heal(me.maxhealth / 2);
-								CreateFeedback("Heal", me);
-								me.SetExperience(me.experience + 3);
-								CreateFeedback("Experience", me);
-							}
+				else if (.IsHeirOf("RLiberatus")) {
+					if (IsResearched(plr, "Liberati triumph")) {
+						bool vict_is_special = false;
 
-				//Britain
-				if (!me_hero)
-					if (me.inherentlevel >= 12) {
-						if (IsResearched(p, "Noble Offence"))
-							if (!.HasItem("Noble Offence"))
-								.AddItem("Noble Offence");
-						if (IsResearched(p, "Noble Defence"))
-							if (!.HasItem("Noble Defence"))
-								.AddItem("Noble Defence");
+						if (vict.IsHeirOf("RLiberatus"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("RChariot"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("GTridentWarrior"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("BVikingLord"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("IMountaineer"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("CWarElephant"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("EChariot"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("TValkyrie"))
+							vict_is_special = true;
+						else if (vict.IsHeirOf("HMyrmidon_Javelin"))
+							vict_is_special = true;
+
+						if (vict_is_special) {
+							.Heal(.maxhealth / 2);
+							CreateFeedback("Heal", this);
+							.SetExperience(.experience + 3);
+							CreateFeedback("Experience", this);
+						}
 					}
-				if (vict_not_sentry)
-					if (me.inherentlevel < vict.inherentlevel)
-						if (IsResearched(p, "Gambler's Day"))
-							if (vict.IsHeirOf("BaseAnimal")) {
-								if (vict.GetStaminaDecTime() <= 0) {//exclude summoned animals because they can have a really high level (especially bears and boars for Gaul)
-									me.SetLevel(vict.inherentlevel);
-									CreateFeedback("Experience", me);
-								}
-								else if (rand(100) < EnvReadInt(p, "GamblersDayChance")) {
-									me.SetLevel(vict.inherentlevel);
-									CreateFeedback("Experience", me);
-								}
-							}
-							else if (rand(100) < EnvReadInt(p, "GamblersDayChance")) {
-								me.SetLevel(vict.inherentlevel);
-								CreateFeedback("Experience", me);
-							}
-
-				//Germany
-				if (vict_not_sentry)
-					if (me_hero || me.IsHeirOf("TValkyrie"))
-						if (me.inherentlevel + 3 <= vict.inherentlevel)
-							if (IsResearched(p, "Barbaric Tales")) {
-								ObjList ol;
-								Unit u;
-								int i;
-								ol = ObjsInCircle(me.pos, 500, "Military").GetObjList();
-								for (i = 0; i < ol.count; i += 1) {
-									u = ol[i].AsUnit();
-									if (u.IsValid)
-										if (u.player == p) {
-											u.SetExperience(u.experience + 15);
-											CreateFeedback("Experience", u);
-										}
-								}
-							}
-
-				//Greece
-				if (!me_hero)
-					if (me.free_item_slots > 0) {
-						if (IsResearched(p, "Charm of Athena"))
-							if (!.HasItem("Charm of Athena"))
-								.AddItem("Charm of Athena");
-						if (IsResearched(p, "Charm of Aegle"))
-							if (!.HasItem("Charm of Aegle"))
-								.AddItem("Charm of Aegle");
-					}
-				if (vict_not_sentry) {
-					if (me.health <= me.maxhealth / 5)
-						if (rand(2) == 0)
-							if (IsResearched(p, "Statue of Zeus")) {
-								me.Heal(me.maxhealth);
-								CreateFeedback("Heal", me);
-							}
-					if (me.IsHeirOf("HMyrmidon_Javelin"))
-						if (me.experience < vict.experience)
-							if (IsResearched(p, "Tribute to Heracles")) {
-								me.SetExperience(me.experience + 2);
-								CreateFeedback("Experience", me);
-							}
 				}
+				else if (.IsHeirOf("HMyrmidon_Javelin"))
+					if (.experience < vict.experience)
+						if (IsResearched(plr, "Tribute to Heracles")) {
+							.SetExperience(.experience + 2);
+							CreateFeedback("Experience", this);
+						}
+
+				if (.inherentlevel < vict.inherentlevel)
+					if (IsResearched(plr, "Gambler's Day"))
+						if (vict.IsHeirOf("BaseAnimal")) {
+							if (vict.GetStaminaDecTime() <= 0) {//exclude summoned animals because they can have a really high level (especially Gaul bears/boars)
+								.SetLevel(vict.inherentlevel);
+								CreateFeedback("Experience", this);
+							}
+							else if (rand(100) < EnvReadInt(plr, "GamblersDayChance")) {
+								.SetLevel(vict.inherentlevel);
+								CreateFeedback("Experience", this);
+							}
+						}
+						else if (rand(100) < EnvReadInt(plr, "GamblersDayChance")) {
+							.SetLevel(vict.inherentlevel);
+							CreateFeedback("Experience", this);
+						}
+
+				//this part must be the last for the damage and it replaces the "GetJupiterAngerTarget" function because of its memory leaks
+				if (vict.IsHeirOf("RPriest"))
+					if (IsResearched(vict.player, "Wrath of Jupiter")) {//do not kill to avoid the "resurrection bug" that occurs when a unit is healed upon dying
+						CreateFeedback("Lightning3", this);
+						if (this_is_hero)
+							.Damage(MIN(40, .health - 1));
+						else
+							.Damage(MIN(250, .health - 1));
+					}
 			}
 		}
-}
+	}

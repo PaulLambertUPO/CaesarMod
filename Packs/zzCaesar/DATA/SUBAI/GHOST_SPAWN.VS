@@ -1,3 +1,11 @@
-//void, Obj me
+//void, Obj This
 
-me.PlayAnim(17, me.pos);
+Ghost this;
+
+this = This.AsGhost();
+
+if (.IsValid)
+	if (.IsAlive)
+		.PlayAnim(17, .pos);
+
+Sleep(15);//prevent possible loops with other commands

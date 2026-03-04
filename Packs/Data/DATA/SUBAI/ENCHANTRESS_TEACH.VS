@@ -1,94 +1,71 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
 
 Druid this;
-Unit tgt;
-int level, level1, level2;
-int teach_stamina_cost;
-bool bSuccess;
-bool bSleep = true;
-int chance, k;
 
 this = This.AsDruid();
-if (!.IsAlive)
-	return;
-if (!.HasSpecial(teaching))
-	return;
 
-tgt = target.AsUnit();
-if (tgt == this)
-	return;
-if (!tgt.IsAlive)
-	return;
-if (target.AsShip.IsValid)
-	return;
+if (.IsValid)
+	if (.IsAlive)
+		if (.HasSpecial(teaching))
+			if (target != this) {
+				Unit u;
 
-teach_stamina_cost = GetCmdStaminaCost("teach");
-chance = GetConst("EnchantressTeachPercent");
-if (IsResearched(.player, "Code of Valor"))
-	chance += .level * GetConst("EnchantressTeachIncrease");
-k = chance / 100;
-chance = chance % 100;
+				u = target.AsUnit();
 
-//TO WHAT LEVEL SHOULD WE TRAIN UNITS?
-level1 = GetConst("TeachingLevel1");
-level2 = GetConst("TeachingLevel2");
+				if (u.IsValid)
+					if (!u.IsPeasantAmbient)
+						if (!u.IsWaterUnit)
+							if (!u.IsRam) {
+								int teaching_level, teaching_level_max, stamina_cost, teach_percent;
 
-level = level1;
-if (EnvReadString(.player, "Ancestral Knowledge") == "researched")
-	level = level2;
+								teaching_level = GetConst("TeachingLevel1");
+								teaching_level_max = GetConst("TeachingLevel2");
+								stamina_cost = GetCmdStaminaCost("teach");
 
-while (.IsAlive && tgt.IsAlive)
-{
-	while (1)
-	{
-		bSuccess = false;
+								while (u.IsAlive) {
+									if (teach_percent <= 0)
+										if (IsResearched(.player, "Code of Valor"))
+											teach_percent = GetConst("TeachingBonusPercent");
+									if (teaching_level < teaching_level_max)
+										if (IsResearched(.player, "Ancestral Knowledge"))
+											teaching_level = teaching_level_max;
 
-		if (!.IsAlive)     break;
-		if (!tgt.IsAlive)  break;
-		if (.IsEnemy(tgt)) break;
-		if (tgt.InHolder)  break;
-		if (!.CanSee(tgt)) break;
-		if (tgt == this)   break;
+									if (u.inherentlevel < teaching_level)
+										if (!.IsEnemy(u))
+											if (!u.InHolder)
+												if (.CanSee(u)) {
+													if (.InRange(u))
+														if (.stamina >= stamina_cost) {
+															.StartAnim(17, u.pos);
 
-		if (level < level2) if (EnvReadString(.player, "Ancestral Knowledge") == "researched")
-			level = level2;
-		if (tgt.inherentlevel >= level) break;
+															Sleep(.TimeToActionMoment);
 
-		bSleep = false;
-		if (!.InRange(tgt))	{
-			.GotoAttack(tgt, 5000, false, 2500);
-			continue;
-		}
-		if (.stamina < teach_stamina_cost) {
-			Sleep(200);
-			continue;
-		}
-		.SetLastAttackTime();
-		if (!.IsVisible)
-			.SetVisible(true);
-		
-		.StartAnim(17, tgt.pos);
-		Sleep(.TimeToActionMoment());
+															if (u.IsAlive)
+																if (u.inherentlevel < teaching_level)
+																	if (!.IsEnemy(u))
+																		if (!u.InHolder)
+																			if (.CanSee(u))
+																				if (.stamina >= stamina_cost) {
+																					.SetLastAttackTime();
+																					if (!.IsVisible)
+																						.SetVisible(true);
+																					.SetStamina(.stamina - stamina_cost);
+																					u.SetExperience(u.experience + MIN(6, 1 + .level * teach_percent / 100));
+																					CreateFeedback("Experience", u);
+																				}
 
-		if (tgt.IsAlive)
-		if (tgt.inherentlevel < level)
-		if (.stamina >= teach_stamina_cost)
-		if (!tgt.InHolder)
-		if (.CanSee(tgt))
-		if (!.IsEnemy(tgt))
-		{
-			.SetVisible(true); .SetLastAttackTime();
-			.SetStamina(.stamina - teach_stamina_cost);
-			tgt.SetExperience(tgt.experience + k + (chance > rand(99)));
-			CreateFeedback("Experience", tgt);
-		}
-		Sleep(.TimeToAnimFinish());
-		bSuccess = true;
-	}
-	if (!bSuccess)
-		Sleep(1103);
-	tgt = .FindUnitBelowILevel(level);
-}
+															Sleep(.TimeToAnimFinish);
+														}
+														else
+															Sleep(500);
+													else
+														.GotoAttack(u, 2000, false, 2500);
 
-if (bSleep)
-	Sleep(17); // otherwise can cycle: Advance->Teach->Advance->Teach...
+													continue;
+												}
+									break;
+								}
+							}
+			}
+
+Sleep(15);//prevent possible loops with other commands
