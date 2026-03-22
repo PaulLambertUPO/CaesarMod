@@ -8,9 +8,8 @@
 	</cmd>
 	<cmd name="attack_independent" cursor="do_something">
 		<cmdtext target="Building" default-text="Right-click to attack this building" />
-		<cmdtext target="TTent" default-text="Right-click to attack this building" />
 	</cmd>
-	<cmd name="attack_unit_type" cursor="attack">
+	<cmd name="attack_unit_type_exclusive" cursor="attack">
 		<cmdtext target="Unit" default-text="Right-click to attack this type of enemy" />
 	</cmd>
 	<cmd name="attach" cursor="do_something">
@@ -40,7 +39,7 @@
 		button="Actions/Move.bmp"
 		rollover="Move"
 		key="m">
-		<cmdtext target="" text="Click to move to this point" />
+		<cmdtext target="" text="Click to move to this position" />
 		<src obj="Unit" sticky="yes" />
 		<nsrc obj="Sentry" />
 	</cmd>
@@ -102,7 +101,7 @@
 		button="Actions/explore.bmp"
 		rollover="Explore"
 		key="e">
-		<cmdtext target="" text="Click to explore from this point" />
+		<cmdtext target="" text="Click to explore from this position" />
 		<src obj="Military" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />

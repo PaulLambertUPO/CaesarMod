@@ -1,63 +1,57 @@
-// void, Obj This,Obj bld
+//void, Obj This, Obj other
 
-Unit this,u;
-point pt;
-Building building;
-bool error;
+if (!other.AsCatapult().IsValid)
+	if (!other.AsTeleport().IsValid) {
+		Unit this;
 
-this = This.AsUnit();
-building = bld.AsBuilding();
+		this = This.AsUnit();
 
-if (!building.IsValid() || this.IsEnemy(building) || building.settlement.max_units==0)
-  return;
+		if (.IsValid)
+			if (.IsAlive) {
+				Building bld;
 
-if (.AsHero.IsValid) {
-	int k;
-	ObjList ol;
-	Unit u;
-	ol = .AsHero.army();
-	for (k = 0; k < ol.count; k += 1) {
-		u = ol[k].AsUnit();
-		if (u.IsAlive())
-			u.SetCommand("advanceenter", bld);
-	}
-}
+				if (IsAIPlayer(.player))
+					.SetParryMode(false);
 
-.SetEntering(true);
-if (!building.settlement.Units().Contains(this))
-  {
-    pt = building.GetEnterPoint(this);
-	while (1) {
-		u = .BestTargetInSquadSight().AsUnit();
-		if(u.IsAlive())
-		if(u.attack > 0)	
-		{
-			//pr("Best target found");
-			while (u.IsAlive() && .IsValidTarget(u)) {
-				//pr("Going to target");
-				if(.HasSpecial(26) ) {
-					.SetVisible(true);
-				}
-				while(!.GotoAttack(u, 1500, true, 15000)) {
-					u = .BestTargetInSquadSight().AsUnit();
-					if(!u.IsAlive() || !.IsValidTarget(u)) break;
-				}
-				//pr("attacking target");
-				if (u.IsAlive() && .IsValidTarget(u))
-				{
-					while (.Attack(u));
-				}
-				u = .BestTargetInSquadSight().AsUnit();
+				bld = other.AsBuilding();
+
+				if (bld.IsValid)
+					if (!bld.IsHeirOf("BaseRuins"))
+						if (bld.IsCentralBuliding)
+							if (!.IsEnemy(bld))
+								if (DiplGetShareView(bld.player, .player)) {
+									Settlement set;
+
+									set = bld.settlement;
+
+									if (set.max_units > 0) {
+										if (.AsHero().IsValid)
+											.AsHero().army.SetCommand("advanceenter", bld);
+
+										if (!set.Units.Contains(this)) {
+											point pt;
+
+											pt = bld.GetEnterPoint(this);
+
+											.SetEntering(true);
+
+											while (1) {
+												if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
+													.AddCommand(true, "advanceenter", bld);
+													.AddCommand(true, "engage");
+													break;
+												}
+												if (.GotoEnter(pt, 0, 1000, false, 2500)) {
+													if (!.IsEnemy(bld))
+														if (DiplGetShareView(bld.player, .player))
+															set.AddUnit(this);
+													break;
+												}
+											}
+										}
+									}
+								}
 			}
-			continue;
-		} 
-
-		//pr("entering");
-		if (.GotoEnter(pt, 0, 2000, true, 2500)) break;
-		
 	}
 
-    //.pr("unit::enter: entering");
-    building.settlement.AddUnit(this);
-  }
-
+Sleep(15);//prevent possible loops with other commands

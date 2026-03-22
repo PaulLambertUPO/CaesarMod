@@ -206,7 +206,7 @@
 		rollover="Olympic Games"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, Olympic Games, default, SetsSet, levels/HPeltast, 5, SetsSet, levels/HToxotes, 5, SetsSet, levels/HHoplite, 5, SetsSet, levels/HCataphract, 5, SetsSet, levels/HHypaspista, 5, SetsSet, levels/HChariot, 5, SetsSet, levels/HMyrmidon_Javelin, 5">
+		param="NameSet, Olympic Games, default, SetsSet, levels/Warrior, 5">
 		<src obj="HGymnasium" />
 	</cmd>
 	<cmd name="Spartan Training" priority="3"
@@ -459,17 +459,6 @@
 		<src obj="HAgora" />
 	</cmd>
 	<!-- TEMPLE -->
-	<cmd name="repairHtemple" priority="1"
-		method="repair"
-		button="actions/repair.bmp"
-		key="r"
-		queueicon="gameres/icons/upgrades/repair.bmp"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
-		rollover="Repair"
-		costgold="100"
-		execdelay="60000">
-		<src obj="HTemple" />
-	</cmd>
 	<cmd name="trainHPriest" priority="2"
 		button="actions/train HPriest.bmp"
 		queueicon="gameres/icons/HPriest.bmp"

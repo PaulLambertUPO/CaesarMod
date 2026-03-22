@@ -1,74 +1,82 @@
-// void, Obj This,Obj bld
+//void, Obj This, Obj other
 
 Unit this;
-point pt;   
-Building building;
-bool error;
-bool bEnterCatapult;
 
 this = This.AsUnit();
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
 
-building = bld.AsBuilding();
+if (.IsValid)
+	if (.IsAlive) {
+		Building bld;
 
-if (!building.IsValid() )
-	{ Sleep(10); return; }
+		if (IsAIPlayer(.player))
+			.SetParryMode(false);
 
-if( .IsEnemy(building) && !building.AsTeleport.IsValid) 
-	{ Sleep(10); return; }
+		bld = other.AsBuilding();
 
-if( !building.settlement.IsValid )
-	{ Sleep(10); return; }
+		if (bld.IsValid)
+			if (bld.AsTeleport().IsValid) {
+				Settlement set;
 
-if (building.settlement.max_units==0)
-	{ Sleep(10); return; }
+				set = bld.settlement;
 
-if( !.AsHero.IsValid && building.IsHeirOf("BaseRuins")) 
-	{ Sleep(10); return; }
+				if (!set.Units.Contains(this)) {
+					point pt;
 
-bEnterCatapult = building.IsHeirOf( "Catapult" );
+					pt = bld.GetEnterPoint(this);
 
-if( ! bEnterCatapult ) 
-	.SetEntering(true);
-else
-	if(.hero.IsValid) 
-		.DetachFrom(.hero);
+					.SetEntering(true);
 
-if (!building.settlement.Units().Contains(this))
-{
-    pt = building.GetEnterPoint(this);
-    //.pr("unit::enter: going");
-	if( bEnterCatapult )
-	{
-		while(!.Goto(pt, 0, 1000, true, 5000));
+					while (!.GotoEnter(pt, 0, 1000, false, 2500))
+						;
+
+					set.AddUnit(this);
+				}
+			}
+			else if (!bld.IsHeirOf("BaseRuins"))
+				if (bld.IsCentralBuliding)
+					if (!.IsEnemy(bld))
+						if (DiplGetShareView(bld.player, .player)) {
+							Settlement set;
+
+							set = bld.settlement;
+
+							if (set.max_units > 0)
+								if (set.Units.Contains(this)) {
+									if (bld.AsCatapult().IsValid)
+										if (.hero.IsValid)
+											.DetachFrom(.hero);
+								}
+								else {
+									point pt;
+
+									pt = bld.GetEnterPoint(this);
+
+									.SetEntering(true);
+
+									if (bld.AsCatapult().IsValid) {
+										while (!.GotoEnter(pt, 0, 1000, false, 2500))
+											if (bld.IsDead)
+												break;
+
+										if (bld.IsAlive)
+											if (!.IsEnemy(bld))
+												if (DiplGetShareView(bld.player, .player))
+													if (set.AddUnit(this))
+														if (.hero.IsValid) {
+															.Deselect();
+															.DetachFrom(.hero);
+														}
+									}
+									else {
+										while (!.GotoEnter(pt, 0, 1000, false, 2500))
+											;
+
+										if (!.IsEnemy(bld))
+											if (DiplGetShareView(bld.player, .player))
+												set.AddUnit(this);
+									}
+								}
+						}
 	}
-	else
-	{
-	    while(!.GotoEnter(pt, 0, 1000, true, 5000));
-	}
 
-    //.pr("unit::enter: entering");
-	{	bool bStop=false;
-		if (building.IsDead() && !bEnterCatapult) {
-			bStop = true;
-		} else if( building.IsDead() && bEnterCatapult ) {
-			.Goto(pt, 200, 1000, true, 5000);
-			return;
-		} else if ( (this.IsEnemy(building) && !building.AsTeleport().IsValid()) ||
-					building.settlement.max_units==0) {
-			bStop = true;
-		}
-		if (bStop) {
-			.Stop(10000); 
-			.SetEntering(false); 
-			return;
-		}
-	}
-	if(.IsValid() == true) // leave parry mode at new command
-		.SetParryMode(false);
-	building.settlement.AddUnit(this);
-}
-
-if( ! bEnterCatapult ) 
-	.SetEntering(false);
+Sleep(15);//prevent possible loops with other commands

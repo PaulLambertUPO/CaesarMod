@@ -26,7 +26,6 @@
 	<behavior script="data/subai/settlement_behavior_ambient.vs" />
 	<behavior script="data/subai/village_supply_and_give_food.vs" />
 
-	<method sig="idle" vs="data/subai/village_idle.vs" />
 	<method sig="repopulate" vs="data/subai/village_repopulate.vs" />
 	<method sig="tribute" vs="data/subai/do_nothing_point.vs" />
 	<method sig="tribute" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />

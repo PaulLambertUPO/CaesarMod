@@ -17,7 +17,7 @@ if (.IsValid)
 		u = ToBoard.AsUnit();
 		if (u.IsValid)
 			if (u.IsAlive)
-				if (!u.AsFlying().IsValid) {
+				if (!u.AsFlying().IsValid) {//flying units cause a crash
 					.NotifyBoardUnit(u);
 					if (u.AsHero().IsValid)
 						u.SetCommand("boardshiphero", this);
@@ -27,33 +27,10 @@ if (.IsValid)
 
 		while (.AreUnitsToBoard) {
 			u = .BestCandidateToBoard;
-			ship_moved = false;
 
-			pt = u.PathDestFound;
-			if (pt.x != -1) {
-				dist = .DistTo(u.pos);
-				if (dist < .DistTo(pt))
-					pt = u.pos;
-				else if ((dist + rad) * u.speed < (u.DistTo(pt) + u.radius) * spd)
-					pt = u.pos;
-			}
-			else
-				pt = u.pos;
+			if (!u.AsFlying().IsValid) {//flying units cause a crash
+				ship_moved = false;
 
-			while (!.GotoEnter(pt, 0, 1200, true, -1)) {
-				ship_moved = true;
-				u_other = .BestCandidateToBoard;
-				if (u_other != u)
-					if (u_other.IsAlive)
-						u = u_other;
-				if (u.IsDead)
-					break;
-				if (.TimeWithoutWalking > 0)
-					break;
-				if (.NumUnitsToBoard <= 0) {
-					Sleep(15);//prevent possible loops with other commands
-					return;
-				}
 				pt = u.PathDestFound;
 				if (pt.x != -1) {
 					dist = .DistTo(u.pos);
@@ -64,15 +41,42 @@ if (.IsValid)
 				}
 				else
 					pt = u.pos;
-			}
 
-			while (1) {
-				if (u.IsDead)
-					break;
-				if (ship_moved)
-					if (.DistTo(u.pos) > 500)
+				while (!.GotoEnter(pt, 0, 1200, true, -1)) {
+					ship_moved = true;
+					u_other = .BestCandidateToBoard;
+					if (u_other != u)
+						if (u_other.IsAlive)
+							if (!u_other.AsFlying().IsValid)//flying units cause a crash
+								u = u_other;
+					if (u.IsDead)
 						break;
-				Sleep(100);
+					if (.TimeWithoutWalking > 0)
+						break;
+					if (.NumUnitsToBoard <= 0) {
+						Sleep(15);//prevent possible loops with other commands
+						return;
+					}
+					pt = u.PathDestFound;
+					if (pt.x != -1) {
+						dist = .DistTo(u.pos);
+						if (dist < .DistTo(pt))
+							pt = u.pos;
+						else if ((dist + rad) * u.speed < (u.DistTo(pt) + u.radius) * spd)
+							pt = u.pos;
+					}
+					else
+						pt = u.pos;
+				}
+
+				while (1) {
+					if (u.IsDead)
+						break;
+					if (ship_moved)
+						if (.DistTo(u.pos) > 500)
+							break;
+					Sleep(100);
+				}
 			}
 
 			Sleep(100);

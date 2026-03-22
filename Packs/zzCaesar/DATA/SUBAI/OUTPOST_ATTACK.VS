@@ -1,18 +1,18 @@
 //void, Obj This, Obj target
 
-Settlement this;
+if (target.AsUnit().IsValid) {
+	Settlement this;
 
-this = This.AsBuilding().settlement;
+	this = This.AsBuilding().settlement;
 
-if (!.IsIndependent)
-	if (target.AsUnit().IsValid) {
+	if (!.IsIndependent) {
 		ObjList blds;
 		Tower t;
 		int i;
 
 		blds = .Buildings;
 
-		for (i = 0; i < blds.count; i += 1) {
+		for (i = blds.count - 1; i >= 0; i -= 1) {
 			t = blds[i].AsTower();
 			if (t.IsValid)
 				if (t.IsHeirOf("FakeTower"))
@@ -20,3 +20,4 @@ if (!.IsIndependent)
 						t.SetCommand("attack", target);
 		}
 	}
+}

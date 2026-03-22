@@ -1,7 +1,7 @@
 <commands>
 	<!-- DEFAULT COMMANDS (NO INTERFACE BUTTON AND ONLY USED BY CLASSES WITH THE CORRESPONDING METHOD) -->
 	<cmd name="moveinfight" offset="1" cursor="move_in_fight">
-		<cmdtext target="" default-text="Right-click to move the hero to this point" />
+		<cmdtext target="" default-text="Right-click to move the hero to this position" />
 	</cmd>
 	<cmd name="boardshiphero" cursor="do_something">
 		<cmdtext target="ShipBattle" default-text="Right-click to board this ship" />

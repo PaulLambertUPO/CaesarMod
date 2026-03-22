@@ -4,11 +4,11 @@ Unit this;
 
 this = This.AsUnit();
 
-if (.IsValid) {
-	.SetSpeedFactor(150);
-	.SetWalkAnim(1);
+if (.IsValid)
+	if (.IsAlive) {
+		.SetSpeedFactor(150);
+		.SetWalkAnim(1);
 
-	while (!.Goto(pt, 0, 2000, true, 0))
-		if (!.HasPath())
-			break;
-}
+		while (!.Goto(pt, 0, 2500, false, 0))
+			;
+	}

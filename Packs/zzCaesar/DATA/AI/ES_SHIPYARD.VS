@@ -34,7 +34,11 @@ while (set.player == aiPlayer) {
 			}
 		}
 	}
-	if (ShipNeeds(aiPlayer, waterLsa) - Ships(aiPlayer, waterLsa) >= 100)
+
+	if (rand(200) == 0)//extremely low chance because the AI player can have many shipyards
+		IncShipNeeds(aiPlayer, waterLsa);
+
+	if (ShipNeeds(aiPlayer, waterLsa) - Ships(aiPlayer, waterLsa) >= 50)
 		if (set.CanResearch(cmd)) {
 			int gold, food;
 			if (GetCmdCost(cmd, gold, food)) {//save the original command costs, but use the cheating one
@@ -43,5 +47,6 @@ while (set.player == aiPlayer) {
 				ClrShipNeeds(aiPlayer, waterLsa);
 			}
 		}
+
 	Sleep(nSleepES);
 }

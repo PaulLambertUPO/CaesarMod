@@ -1,20 +1,20 @@
 //void, Obj This
 
 ObjList damaged_units;
-Unit u;
-point pos;
+Obj o;
+point pt_pos;
 
-Sleep(rand(501) + 500);
+Sleep(500 + rand(501));
 
-pos = This.pos;
+pt_pos = This.pos;
 
 while (1) {
-	damaged_units = ObjsInCircle(pos, 400, "Military,Peaceful").GetObjList().ObjInjured();//exclude animals
+	damaged_units = ObjsInCircle(pt_pos, 400, "Military,Peaceful").GetObjList().ObjInjured();
 	if (damaged_units.count > 0) {
-		u = damaged_units[rand(damaged_units.count)].AsUnit();
-		if (u.IsValid) {
-			u.Heal(100);
-			CreateFeedback("Heal", u);
+		o = damaged_units[rand(damaged_units.count)];
+		if (o.IsAlive) {
+			o.Heal(100);
+			CreateFeedback("Heal", o.AsUnit());
 		}
 	}
 	Sleep(1000);

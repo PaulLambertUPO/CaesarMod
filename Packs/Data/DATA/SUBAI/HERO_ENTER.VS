@@ -1,61 +1,94 @@
-// void, Obj This, Obj bld
+//void, Obj This, Obj other
 
-Hero this;
-Building building;
-point pt;
+if (!other.AsCatapult().IsValid) {
+	Hero this;
 
-this = This.AsHero;
-building = bld.AsBuilding;
-//.pr("Hero::enter");
+	this = This.AsHero();
 
-if (!.IsValid)
-	return;
-if (!building.IsValid)
-	return;
-if (building.IsHeirOf("Catapult"))
-	return;
-if (.IsEnemy(building))
-if (!building.IsHeirOf("BaseRuins"))
-	return;
+	if (.IsValid)
+		if (.IsAlive)
+			if (other.AsTeleport().IsValid)
+				.AddCommand(true, "teleport", other);
+			else {
+				Building bld;
 
-.SetEntering(true);
+				bld = other.AsBuilding();
 
-if (!building.settlement.Units.Contains(this))
-{
-	pt = building.GetEnterPoint(this);
-	.FormSetupAndMoveTo (pt, 0, 0, false);
-	while (.HasPath && building.IsAlive)
-	{
-		if (.FormPathLeft < .FormRadius  + 150)
-			break;
-		if (.DistTo(building) < .FormRadius)
-			break;
-		.FormKeepMoving (500);
-	}
-	if (!building.IsAlive)
-	{
-		.army.SetCommand("idle");
-		.Stop(10000);
-		return;
-	}
-	if (!building.IsHeirOf("BaseRuins"))
-		.army.SetCommand("enter", building);
-	else
-		.army.SetCommand("idle");
-	while(!.GotoEnter(pt, 0, 1000, false, 2500));
+				if (bld.IsValid)
+					if (bld.IsHeirOf("BaseRuins")) {
+						Settlement set;
 
-	if (!building.IsValid || (.IsEnemy(building) && !building.IsHeirOf("BaseRuins")))
-		{ .Stop(10000); .SetEntering(false); return; }
+						set = bld.settlement;
 
-	building.settlement.AddUnit(this);
-	if (building.IsHeirOf("BaseRuins"))
-		.AddCommand(true, "sleep");
+						if (set.Units.Contains(this))
+							.army.SetCommand("idle");
+						else {
+							point pt;
+
+							pt = bld.GetEnterPoint(this);
+
+							.FormSetupAndMoveTo(pt, 0, 0, false);
+
+							while (.HasPath) {
+								if (.FormPathLeft < .FormRadius + 150)
+									break;
+								if (.DistTo(bld) < .FormRadius)
+									break;
+								.FormKeepMoving(1500);
+							}
+
+							.army.SetCommand("idle");
+							
+							.SetEntering(true);
+
+							while (!.GotoEnter(pt, 0, 1000, false, 2500))
+								;
+
+							if (set.AddUnit(this))
+								.AddCommand(true, "sleep");
+						}
+					}
+					else if (bld.IsCentralBuliding)
+						if (!.IsEnemy(bld))
+							if (DiplGetShareView(bld.player, .player)) {
+								Settlement set;
+
+								set = bld.settlement;
+
+								if (set.max_units > 0)
+									if (set.Units.Contains(this))
+										.army.SetCommand("enter", bld);
+									else {
+										point pt;
+
+										pt = bld.GetEnterPoint(this);
+
+										.FormSetupAndMoveTo(pt, 0, 0, false);
+
+										while (.HasPath) {
+											if (.FormPathLeft < .FormRadius + 150)
+												break;
+											if (.DistTo(bld) < .FormRadius)
+												break;
+											.FormKeepMoving(1500);
+										}
+
+										if (!.IsEnemy(bld))
+											if (DiplGetShareView(bld.player, .player)) {
+												.army.SetCommand("enter", bld);
+
+												.SetEntering(true);
+
+												while (!.GotoEnter(pt, 0, 1000, false, 2500))
+													;
+
+												if (!.IsEnemy(bld))
+													if (DiplGetShareView(bld.player, .player))
+														set.AddUnit(this);
+											}
+									}
+							}
+			}
 }
-else
-	if (!building.IsHeirOf("BaseRuins"))
-		.army.SetCommand("enter", building);
-	else
-		.army.SetCommand("idle");
 
-
-.SetEntering(false);
+Sleep(15);//prevent possible loops with other commands

@@ -219,17 +219,18 @@ if (set.IsIndependent) {
 					}
 			}
 
-			if (all_defenders_1.count <= 0)//handle the capturing (the new player will be chosen randomly among those with most units nearby)
+			if (all_defenders_1.count <= 0)//handle the capturing (the new player will be chosen randomly among those with most warriors nearby)
 				if (all_defenders_2.count <= 0) {
+					enemies = enemies.ObjClass("Military");
 					enemies.ClearDead();
 					i = enemies.count;
 					if (i > 0) {
-						IntArray player_units, players;
+						IntArray player_warriors, players;
 						int max, p;
 						for (j = 0; j < i; j += 1)
-							player_units[enemies[j].player] += 1;//count units per player
+							player_warriors[enemies[j].player] += 1;//count warriors per player
 						for (i = 1; i <= 16; i += 1) {
-							j = player_units[i];
+							j = player_warriors[i];
 							if (j > 0)
 								if (j > max) {//new max found, reset the players to choose from
 									max = j;
@@ -330,6 +331,17 @@ else
 				if (!set.IsEnemy(supplied.player)) {
 					suppliedHall = supplied.GetCentralBuilding();
 
+					if (!is_selling_food) {
+						if (set.UnitsCount > 0)//keep some food for the units inside
+							i = min_resource;
+						else
+							i = 0;
+						if (set.food >= min_resource + i) {
+							wagon = set.CreateMuleFood(MIN(1000, set.food - i));
+							wagon.SetCommand("unload", suppliedHall);
+							wagon.AddCommand(false, "unload", this);//come back if the destination becomes invalid during the travel
+						}
+					}
 					if (!is_selling_gold)
 						if (set.gold >= min_resource) {
 							i = 1000;
@@ -343,17 +355,6 @@ else
 								wagon.AddCommand(false, "unload", this);//come back if the destination becomes invalid during the travel
 							}
 						}
-					if (!is_selling_food) {
-						if (set.UnitsCount > 0)//keep some food for the units inside
-							i = min_resource;
-						else
-							i = 0;
-						if (set.food >= min_resource + i) {
-							wagon = set.CreateMuleFood(MIN(1000, set.food - i));
-							wagon.SetCommand("unload", suppliedHall);
-							wagon.AddCommand(false, "unload", this);//come back if the destination becomes invalid during the travel
-						}
-					}
 
 					macemen.Clear();
 					hoplites.Clear();

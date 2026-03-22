@@ -10,29 +10,25 @@ if (GetUseCount() <= 0) {
 			if (target.AsUnit().IsValid)
 				if (.IsEnemy(target))
 					if (.DistTo(target) <= .sight) {
-						int missing_health;
+						int i;
 
-						missing_health = .maxhealth - .health;
+						i = .maxhealth - .health;
 
-						if (missing_health > 0) {
-							int health_taken;
-
+						if (i > 0) {
 							if (target.AsHero().IsValid)
-								health_taken = target.health - target.maxhealth / 2;//enemy heroes cannot go below 50%
+								i = MIN(i, target.health - target.maxhealth / 2);//enemy heroes cannot go below 50%
 							else
-								health_taken = target.health;
+								i = MIN(i, target.health);
 
-							if (health_taken > 0) {
+							if (i > 0) {
 								Item item;
-								int i;
 
-								i = MIN(health_taken, missing_health);
-								CreateFeedback("Damage1", target.AsUnit());
 								target.Damage(i);
-								CreateFeedback("Heal", this);
+								CreateFeedback("Damage1", target.AsUnit());
 								.Heal(i);
+								CreateFeedback("Heal", this);
 
-								for (i = .item_count; i >= 1; i -= 1) {
+								for (i = .items_count; i >= 1; i -= 1) {
 									item = .GetItem(i);
 									if (item.IsValid)
 										if (item.name == "Bloodstone")
@@ -42,11 +38,11 @@ if (GetUseCount() <= 0) {
 						}
 					}
 					else
-						UserNotification("target not in range", "", .posRH, .player);
+						UserNotification("target not in range", "", .pos, .player);
 				else
-					UserNotification("enemy target only", "", .posRH, .player);
+					UserNotification("enemy target only", "", .pos, .player);
 			else
-				UserNotification("unit target only", "", .posRH, .player);
+				UserNotification("unit target only", "", .pos, .player);
 		else
 			UserNotification("item cannot use in holder", "", .posRH, .player);
 }

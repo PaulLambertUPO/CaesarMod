@@ -7,7 +7,7 @@ this = This.AsDruid();
 if (.IsValid)
 	if (.IsAlive) {
 		if (.AI) {
-			Sleep(200 + rand(301));
+			Sleep(500 + rand(501));
 			if (IsProtected(.player, .pos, "CoverOfMercy"))
 				return;
 			if (IsProtected(.player, pt, "CoverOfMercy"))

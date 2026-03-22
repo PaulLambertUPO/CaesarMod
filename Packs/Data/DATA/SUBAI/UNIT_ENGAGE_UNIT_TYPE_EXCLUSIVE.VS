@@ -1,39 +1,37 @@
-// void, Obj me, Obj tgt
+//void, Obj This, Obj target
 
 Unit this;
-Obj u;
-str class;
-bool melee;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
-class = tgt.class;
+if (.IsValid)
+	if (.IsAlive) {
+		if (!.InHolder) {
+			Unit u;
 
-melee = !.IsRanged;
+			if (IsAIPlayer(.player))
+				.SetParryMode(false);
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+			u = target.AsUnit();
 
-u = .BestTargetInSquadSightExclusive(class);
+			if (u.IsValid) {
+				str u_class;
 
-while (.IsValidTarget(u)) 
-{
-	while(!.GotoAttack(u, 1500, true, 15000)) 
-	{
-		u = .BestTargetInSquadSightExclusive(class);
-		if(!.IsValidTarget(u)) break;
-	}
+				u_class = u.class;
 
-	if (.IsValidTarget(u)) {
-		if (u.AsCatapult().IsValid) {
-			while (.Attack(u))
-				if (melee)
-					if (.HasSpecial(trample))
-						u.Damage(.damage);
+				u = .BestTargetInSquadSightExclusive(u_class).AsUnit();
+
+				while (.IsValidTarget(u)) {
+					if (.GotoAttack(u, 1500, true, 15000))
+						if (.IsValidTarget(u))
+							while (.Attack(u))
+								;
+					u = .BestTargetInSquadSightExclusive(u_class).AsUnit();
+				}
+			}
 		}
-		else while (.Attack(u))
-			;
+
+		.AddCommand(true, "engage");
 	}
 
-	u = .BestTargetInSquadSightExclusive(class);
-}
+Sleep(15);//prevent possible loops with other commands

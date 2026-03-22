@@ -246,7 +246,7 @@ while (1) {
 														}
 													}
 
-							if (sqLeader.item_count > 0)//use items
+							if (sqLeader.items_count > 0)//use items
 								if (sqLeaderHero.IsValid) {
 									if (sqLeader.HasItem("Poison Mushroom"))
 										if (sqLeader.HasItem("Healing herbs"))

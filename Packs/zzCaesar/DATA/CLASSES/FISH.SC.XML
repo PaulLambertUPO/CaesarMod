@@ -3,6 +3,7 @@
 	<properties maxhealth="100" />
 	<properties sight="300" />
 	<properties speed="110" />
+	<properties inventory_size="0" />
 
 	<properties radius="20" selection_radius="100" />
 	<properties healthbar_type="0" />

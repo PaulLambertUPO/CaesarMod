@@ -5,45 +5,39 @@ Building this;
 this = This.AsBuilding();
 
 if (.IsValid) {
-	ObjList buildings;
+	ObjList strongholds, buildings;
 	Building b;
-	int duration, time_step, base_damage, owning_player, secs, damage_to_take, i, j, c;
-	str zero_sec_marker;
-
-	duration = GetConst("StonehengeEarthquakeTime");
-	time_step = GetConst("StonehengeEarthquakeTimeStep");
-	base_damage = GetConst("StonehengeEarthquakeDamage");
+	int i, owning_player, duration = 10;
+	str announcement;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
+	announcement = "Earthquake_" + owning_player + "_" + .pos.x + "_" + .pos.y;
+
+	strongholds = GetSettlements("BaseTownhall", 0);
+	for (i = strongholds.count - 1; i >= 0; i -= 1)
+		buildings.AddList(strongholds[i].AsBuilding().settlement.Buildings);
 
 	PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 
 	while (duration > 0) {
-		secs = duration % 60000 / 1000;
-		if (secs < 10)
-			zero_sec_marker = "0";
+		i = duration % 60;
+		if (i < 10)
+			ShowAnnouncement(announcement, Translatef("Player %s1 - Earthquake - %s2:0%s3", owning_player, duration / 60, i));
 		else
-			zero_sec_marker = "";
-		ShowAnnouncement("Earthquake", Translatef("Player %s1 - Earthquake - %s2", owning_player, duration / 60000 + ":" + zero_sec_marker + secs));
+			ShowAnnouncement(announcement, Translatef("Player %s1 - Earthquake - %s2:%s3", owning_player, duration / 60, i));
 
-		if (duration % time_step == 0)
-			for (i = 1; i <= 16; i += 1) {
-				if (i == owning_player)
-					damage_to_take = base_damage * 3 / 4;
+		for (i = buildings.count - 1; i >= 0; i -= 1) {
+			b = buildings[i].AsBuilding();
+			if (b.health > 0)
+				if (b.player == owning_player)
+					b.Damage(225);
 				else
-					damage_to_take = base_damage;
-				buildings = Union(Union(ClassPlayerObjs("Wall", i), ClassPlayerObjs("Gate", i)), Union(ClassPlayerObjs("Tower", i), ClassPlayerObjs("BaseTownBuilding", i))).GetObjList();
-				c = buildings.count;
-				for (j = 0; j < c; j += 1) {
-					b = buildings[j].AsBuilding();
-					if (b.health > 0)
-						b.Damage(damage_to_take);
-				}
-			}
+					b.Damage(300);
+		}
 
-		duration -= 1000;
+		duration -= 1;
 		Sleep(1000);
 	}
 
-	HideAnnouncement("Earthquake");
+	HideAnnouncement(announcement);
 }

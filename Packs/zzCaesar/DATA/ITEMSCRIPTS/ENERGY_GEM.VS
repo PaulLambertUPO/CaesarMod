@@ -6,15 +6,16 @@ this = owner.AsHero();
 
 if (.IsValid) {
 	ObjList army;
-	int i, interval;
-
-	interval = GetConst("HealthDropIvl");
+	Obj o;
+	int i;
 
 	while (1) {
-		Sleep(interval);
-
+		Sleep(15000);
 		army = .army;
-		for (i = 0; i < army.count; i += 1)
-			army[i].HealStamina(1);
+		for (i = army.count - 1; i >= 0; i -= 1) {
+			o = army[i];
+			if (o.IsAlive)
+				o.HealStamina(1);
+		}
 	}
 }

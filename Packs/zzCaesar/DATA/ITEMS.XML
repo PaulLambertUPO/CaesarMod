@@ -58,8 +58,8 @@
 		image="gameres/icons/items/Battle Drums of Rage.bmp"
 		sound="ItemUse_ThrillerDrum"
 		name="Battle drums of rage"
-		description="If used, they add 30 damage to the owner and nearby allies for 5 seconds"
-		usecount="5"
+		description="If used, they add 30 damage to the owner and nearby allies for 10 seconds"
+		usecount="1"
 		use_script="file://Data/ItemScripts/Battle Drums of Rage.vs"
 		important="yes">
 	</item>
@@ -224,7 +224,7 @@
 	<item id="Stamina Diamond"
 		image="gameres/icons/items/Blue Diamond.bmp"
 		name="Stamina diamond"
-		description="Restores the stamina of the owner's attached units more quickly"
+		description="Restores the stamina of the owner's attached units by 1 every 15 seconds"
 		equip_script="file://Data/ItemScripts/energy_gem.vs"
 		important="yes">
 	</item>
@@ -248,7 +248,7 @@
 	<item id="Gem of Wisdom"
 		image="gameres/icons/items/Gem of Wisdom.bmp"
 		name="Gem of wisdom"
-		description="Gives a 33% chance to gain 2 experience every time that an attached unit dies"
+		description="Gives a 33% chance to gain 2 experience every time that an attached unit dies (only if the owner is not sheltered)"
 		attacheddie_script="file://Data/ItemScripts/gem of wisdom.vs"
 		important="yes">
 	</item>
@@ -291,9 +291,7 @@
 	<item id="God's Gift"
 		image="gameres/icons/items/Gods Gift.bmp"
 		name="God's gift"
-		description="Increases the owner's movement and attack speed by 10%.\nIt completely restores the health of the owner at the first kill, then it disappears"
-		equip_script="file://Data/ItemScripts/gods gift equipping.vs"
-		remove_script="file://Data/ItemScripts/gods gift removing.vs"
+		description="Completely restores the health of the owner at the first kill, then it disappears"
 		kill_script="file://Data/ItemScripts/gods gift.vs"
 		cursed="1"
 		important="no">

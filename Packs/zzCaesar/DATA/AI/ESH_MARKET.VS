@@ -441,7 +441,7 @@ if (nRace == Carthage)
 			}
 	}
 
-//useful researches/commands - housing 1-2 and call to arms (Iberia)
+//useful researches/commands - housing 1-2 (Iberia)
 if (nRace == Iberia) {
 	if (strTech == "")
 		if (set.population >= set.max_population * 4 / 5)
@@ -457,26 +457,6 @@ if (nRace == Iberia) {
 									bForceResearch = true;
 							}
 					}
-	//IMPORTANT: this part must stay after the other Iberian researches to override strTech (see final inner instruction below)
-	if (nAssUnderFire > 0)
-		if (IsResearched(set, "Free Drinks"))
-			if (set.CanAfford("Call to arms")) {
-				Building b;
-				b = set.FindResearchLab("Call to arms");
-				if (b.IsValid)
-					if (!b.IsBroken)
-						if (b.CmdCount("Call to arms") < 1) {
-							int gold, food;
-							if (GetCmdCost("Call to arms", gold, food))
-								if (!Intersect(VisibleObjsInSight(set.GetCentralBuilding(), "Military"), EnemyObjs(aiPlayer, "Military")).IsEmpty) {
-									point ptDummy;
-									Obj objDummy;
-									set.SpentGoldOnArmy(gold + food / 2);
-									b.ExecCmd("Call to arms", ptDummy, objDummy, false);
-									strTech = "";//this is to avoid researching something and delaying the command
-								}
-						}
-			}
 }
 
 //useful researches/commands - hecatomb and slavery investment (Egypt) | IMPORTANT: this part must stay before "buy slaves"

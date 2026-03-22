@@ -3,6 +3,7 @@
 	<properties maxhealth="1" maxstamina="0" />
 	<properties sight="150" />
 	<properties speed="60" />
+	<properties inventory_size="0" />
 	<properties feeds="0" max_food="0" />
 
 	<properties select_class="PeasantAmbient" />

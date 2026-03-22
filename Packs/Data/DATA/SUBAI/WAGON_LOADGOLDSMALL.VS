@@ -5,4 +5,5 @@ Wagon this;
 this = This.AsWagon();
 
 if (.IsValid)
-	.LoadGold(250);
+	if (.IsAlive)
+		.LoadGold(250);

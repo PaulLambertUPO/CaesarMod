@@ -1,6 +1,6 @@
 //void, Obj This
 
-Sleep(rand(301) + 300);
+Sleep(300 + rand(701));
 
 if (GetConst("NoSentries") == 0)
 	if (This.AsBuilding().IsValid) {
@@ -12,20 +12,20 @@ if (GetConst("NoSentries") == 0)
 			Sleep(5000);
 
 		{
-			int plr, add_interval, add_count;
+			int plr, missing_sentries;
 
-			.AddMaxSentries(GetConst("InitialStrongholdSentries"));//total max = const + 1 per wall + 4 per gate (with const = 20, total max is usually 50-52)
-
-			add_interval = GetConst("SentriesAddTime");
-			add_count = GetConst("SentriesAddCount");
+			.AddMaxSentries(20);//total max = 20 + 1 per wall + 4 per gate (total max is usually 50-52)
 
 			while (1) {
-				if (plr == .player)
-					.AddSentries(CLAMP(.GetMaxSentries() - .GetNumSentries(), 0, add_count));
+				if (plr == .player) {
+					missing_sentries = .GetMaxSentries() - .GetNumSentries();
+					if (missing_sentries > 0)
+						.AddSentries(MIN(4, missing_sentries));
+				}
 				else
 					plr = .player;
 
-				Sleep(add_interval);
+				Sleep(30000);
 			}
 		}
 	}

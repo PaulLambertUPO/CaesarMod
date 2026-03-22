@@ -434,7 +434,7 @@
 	<param type="int" /><!-- starting index of the substring (inclusive) -->
 	<param type="int" /><!-- maximum length of the substring (number of characters to take) -->
 </func>
-<!-- Returns the integer corresponding to the string, which must be a series of numeric characters -->
+<!-- Returns the integer corresponding to the string, which must be a series of numeric characters, otherwise returns 0 -->
 <func name="Str2Int" returns="int">
 	<param type="str" /><!-- string to convert -->
 </func>
@@ -696,7 +696,7 @@
 <!-- Returns a Ghost reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsGhost" returns="Ghost">
 </func>
-<!-- Returns a Tower reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
+<!-- Returns a Tower reference/handle from the object; the validity depends on the cpp_class value of the object itself | WARNING: all buildings are considered as towers, which means that the only way to distinguish them is by using the IsHeirOf function -->
 <func name="Obj::AsTower" returns="Tower">
 </func>
 <!-- Returns a Wagon reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
@@ -809,7 +809,7 @@
 <!-- Checks if the object class is a ram, that is a descendant of the class hierarchy starting from the "RamUnit" class id -->
 <func name="Obj::IsRam" returns="bool">
 </func>
-<!-- Checks if the object class is a ranged unit, that is a unit whose projectile values are set in its class, not a descendant of the class hierarchy starting from the "Ranged" class id (for example, British heroes have a different class hierarchy) -->
+<!-- Checks if the object class is able to attack from a distance by having projectile values set in its class, not by being descendant of the class hierarchy starting from the "Ranged" class id (e.g. British heroes) | WARNING: catapults return true, but Roman towers return false -->
 <func name="Obj::IsRanged" returns="bool">
 </func>
 <!-- Checks if the object class is a warrior, that is a descendant of the class hierarchy starting from the "Military" class id -->
@@ -818,7 +818,7 @@
 <!-- Checks if the object class is a sage, that is a descendant of the class hierarchy starting from the "BaseMage" class id (it is the same of using obj.AsDruid().IsValid) -->
 <func name="Obj::IsReligious" returns="bool">
 </func>
-<!-- Checks if the object class is harmless, that is a descendant of the class hierarchy starting from the "Peaceful" class id -->
+<!-- Checks if the object class is harmless, that is a descendant of the class hierarchy starting from the "Peaceful"/"Animal" class id -->
 <func name="Obj::IsPeaceful" returns="bool">
 </func>
 <!-- Checks if the object class is a peasant, that is a descendant of the class hierarchy starting from the "Peasant" class id -->
@@ -1720,18 +1720,21 @@
 <!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found or if the unit is in a building, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 </func>
-<!-- Works like BestTargetInSquadSight, but it uses the specified class hierarchy string as a preference filter | WARNING: it does not really overwrite the standard priority order (e.g. specifying "Military" can still return a sage if it is closer than a warrior) -->
+<!-- Works like BestTargetInSquadSight, but it uses the specified class id (not the hierarchy) as a preference filter for the priority order | WARNING: it can still return a target of a different class even if there are still some of the specified one in sight -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
-	<param type="str" />
+	<param type="str" /><!-- class id for the search filter -->
 </func>
-<!-- Works like BestTargetInSquadSight, but it completely excludes all enemy targets with 0 damage (note that sages have 1 damage, so they are considered by the function) | WARNING: it seems that it gives more priority to sages than military units, maybe specifically because they have a damage closer to 0 -->
+<!-- Works like a strict version of the filtered BestTargetInSquadSight because it only considers targets of the specified class id (not the hierarchy) -->
+<func name="Unit::BestTargetInSquadSightExclusive" returns="Obj">
+	<param type="str" /><!-- class id for the search filter -->
+</func>
+<!-- Works like BestTargetInSquadSight, but it completely excludes all enemy targets with 0 damage (note that sages have 1 damage, so they are considered by the function) | WARNING: it seems to give more priority to sages than military units, maybe specifically because they have a damage value closer to 0 -->
 <func name="Unit::BestTargetInSquadSightMisZeroDamage" returns="Obj">
 </func>
+<!-- Works like BestTargetInSquadSight, but it excludes everything belonging to the neutral/independent player 15 -->
 <func name="Unit::BestNoIndependentTargetInSquadSight" returns="Obj">
 </func>
-<func name="Unit::BestTargetInSquadSightExclusive" returns="Obj">
-	<param type="str" />
-</func>
+<!-- Works like BestTargetInSquadSight, but it gives more priority to units that have not been poisoned by either the disease_attack special or the Disease function | WARNING: it can still return a target who is diseased even if there are still some that are not -->
 <func name="Unit::BestTargetInSquadSight_PreferUndiseased" returns="Obj">
 </func>
 <func name="Unit::BestTargetForPos" returns="Obj">
@@ -2819,8 +2822,9 @@
 </func>
 <func name="NoTents" returns="bool">
 </func>
+<!-- Returns a point whose x-y coordinates have a random value in the negative/positive range specified (inclusive) (e.g. RandomOffset(20) -> (13,-20)) -->
 <func name="RandomOffset" returns="point">
-	<param type="int" />
+	<param type="int" /><!-- maximum negative/positive value for the x-y coordinates -->
 </func>
 <func name="RandomPointInCircle" returns="point">
 	<param type="point" />
@@ -4488,6 +4492,7 @@
 	<param type="int" />
 	<param type="int" />
 </func>
+<!-- Generates a file named "dump_try.xml" that contains a list of all available functions along with their return and parameter types, but with no explanation: this entire documentation file is derived from the output of the function itself -->
 <func name="DumpFuncToXML" returns="void">
 </func>
 <func name="USR" returns="void">

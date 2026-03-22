@@ -9,10 +9,6 @@ if (.IsValid)
 		Settlement set;
 		point pt;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
 		while (.CmdCount == 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);

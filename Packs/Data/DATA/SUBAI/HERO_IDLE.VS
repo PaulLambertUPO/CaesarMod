@@ -13,22 +13,18 @@ if (.IsValid)
 		melee = !.IsRanged;
 
 		{
-			ObjList army;
+			ObjList h_army;
 			int i;
 
-			army = .army;
+			h_army = .army;
 
-			for (i = army.count - 1; i >= 0; i -= 1) {
-				o = army[i];
+			for (i = h_army.count - 1; i >= 0; i -= 1) {
+				o = h_army[i];
 				if (o.IsAlive)
 					if (o.command == "form_move")
 						o.SetCommand("idle");
 			}
 		}
-
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
 
 		pt_start = .posRH;
 
@@ -54,21 +50,16 @@ if (.IsValid)
 						if (!go_back) {
 							if (o.AsCatapult().IsValid)
 								while (.Attack(o)) {
-									if (!.IsValidTarget(o))
-										break;
-									if (!.IsVisible)
-										break;
 									if (melee)
 										if (.HasSpecial(trample))
 											o.Damage(.damage);
-								}
-							else
-								while (.Attack(o)) {
-									if (!.IsValidTarget(o))
-										break;
 									if (!.IsVisible)
 										break;
 								}
+							else
+								while (.Attack(o))
+									if (!.IsVisible)
+										break;
 							if (!.IsVisible)
 								go_back = true;
 							else {

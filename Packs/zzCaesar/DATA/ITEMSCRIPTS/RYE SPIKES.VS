@@ -5,14 +5,14 @@ Unit this;
 this = owner.AsUnit();
 
 if (.IsValid) {
-	int food_to_distribute, give;
+	int food_given, food_to_distribute;
 
 	food_to_distribute = GetUseCount();
 
 	if (.food < .maxfood) {
-		give = MIN(food_to_distribute, .maxfood - .food);
-		food_to_distribute -= give;
-		.SetFood(.food + give);
+		food_given = MIN(food_to_distribute, .maxfood - .food);
+		food_to_distribute -= food_given;
+		.SetFood(.food + food_given);
 	}
 
 	if (food_to_distribute > 0) {
@@ -27,16 +27,17 @@ if (.IsValid) {
 		else
 			ol = ObjsInSight(this, "Unit").GetObjList();
 
-		for (i = 0; i < ol.count && food_to_distribute > 0; i += 1) {
+		for (i = ol.count - 1; i >= 0; i -= 1) {
 			u = ol[i].AsUnit();
-			if (u.IsValid)
-				if (u.IsAlive)
-					if (u.food < u.maxfood)
-						if (!.IsEnemy(u)) {
-							give = MIN(food_to_distribute, u.maxfood - u.food);
-							food_to_distribute -= give;
-							u.SetFood(u.food + give);
-						}
+			if (u.IsAlive)
+				if (u.food < u.maxfood)
+					if (!.IsEnemy(u)) {
+						food_given = MIN(food_to_distribute, u.maxfood - u.food);
+						food_to_distribute -= food_given;
+						u.SetFood(u.food + food_given);
+						if (food_to_distribute <= 0)
+							break;
+					}
 		}
 	}
 

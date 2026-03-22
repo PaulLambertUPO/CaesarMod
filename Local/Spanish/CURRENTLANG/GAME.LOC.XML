@@ -64,7 +64,7 @@
 <translationtableentry text="If used, it completely restores the health of the owner and 8 nearby allies" result="Si se utilizan, restablecen completamente la salud del poseedor y de 8 aliados cercanos" />
 <translationtableentry text="Battle drums of rage" result="Tambores de batalla de la furia" />
 <translationtableentry text="Battle Drums of rage" result="Tambores de batalla de la furia" />
-<translationtableentry text="If used, they add 30 damage to the owner and nearby allies for 5 seconds" result="Si se utilizan, aumentan el ataque del poseedor y de los aliados cercanos en 30 puntos durante 5 segundos" />
+<translationtableentry text="If used, they add 30 damage to the owner and nearby allies for 10 seconds" result="Si se utilizan, aumentan el ataque del poseedor y de los aliados cercanos en 30 puntos durante 10 segundos" />
 <translationtableentry text="Horn of victory" result="Cuerno de la victoria" />
 <translationtableentry text="If used, it deals 75 damage to 15 nearby enemies" result="Si se utiliza, inflige 75 puntos de daño a 15 enemigos cercanos" />
 <translationtableentry text="Finger of death" result="Dedo de la morte" />
@@ -115,14 +115,14 @@
 <translationtableentry text="Adds 4 damage to the owner's attached units" result="Aumenta el ataque de las unidades vinculadas al poseedor en 4 puntos" />
 <translationtableentry text="Stamina diamond" result="Diamante energético" />
 <translationtableentry text="Stamina Diamond" result="Diamante energético" />
-<translationtableentry text="Restores the stamina of the owner's attached units more quickly" result="Restablece la energía de las unidades vinculadas al poseedor más rápidamente" />
+<translationtableentry text="Restores the stamina of the owner's attached units by 1 every 15 seconds" result="Restablece la energía de las unidades vinculadas al poseedor en 1 punto cada 15 segundos" />
 <translationtableentry text="Invigorating dark harp" result="Arpa oscura vigorizante" />
 <translationtableentry text="Adds 300 health and 6 armor.\nIt restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds" result="Aumenta la salud en 300 puntos y la defensa en 6 puntos.\nRestablece la energía del poseedor y de 8 aliados cercanos en 4 puntos cada 10 segundos" />
 <translationtableentry text="Travel boots" result="Botas de viaje" />
 <translationtableentry text="Add 300 health and 2 levels.\nThey restore the health of the owner and all attached units by 1 every 0.5 seconds" result="Aumentan la defensa en 4 puntos y el nivel en 2 puntos.\nRestablecen la salud del poseedor y de todas las unidades vinculadas en 1 punto cada 0,5 segundos" />
 <translationtableentry text="Gem of wisdom" result="Gema de la sabiduría" />
 <translationtableentry text="Gem of Wisdom" result="Gema de la sabiduría" />
-<translationtableentry text="Gives a 33% chance to gain 2 experience every time that an attached unit dies" result="Proporciona una probabilidad del 33% de ganar 2 puntos de experiencia cada vez que una unidad vinculada muere" />
+<translationtableentry text="Gives a 33% chance to gain 2 experience every time that an attached unit dies (only if the owner is not sheltered)" result="Proporciona una probabilidad del 33% de ganar 2 puntos de experiencia cada vez que una unidad vinculada muere (solo si el poseedor no está a cubierto)" />
 <translationtableentry text="Scroll of death" result="Papiro de la muerte" />
 <translationtableentry text="Scroll of Death" result="Papiro de la muerte" />
 <translationtableentry text="Restores the health of the owner by 5 every time that an attached unit dies.\nIt gives to every attached unit a 10% chance to spawn a ghoul upon death" result="Restablece la salud del poseedor en 5 puntos cada vez que una unidad vinculada muere.\nProporciona a cada unidad vinculada una probabilidad del 10% de generar un espíritu al morir" />
@@ -137,7 +137,7 @@
 <translationtableentry text="Adds 30 health" result="Aumenta la salud en 30 puntos" />
 <translationtableentry text="God's gift" result="Regalo de los dioses" />
 <translationtableentry text="God's Gift" result="Regalo de los dioses" />
-<translationtableentry text="Increases the owner's movement and attack speed by 10%.\nIt completely restores the health of the owner at the first kill, then it disappears" result="Aumenta la velocidad de movimiento y de ataque en un 10%.\nRestablece completamente la salud del poseedor con el primer asesinato, luego desaparece" />
+<translationtableentry text="Completely restores the health of the owner at the first kill, then it disappears" result="Restablece completamente la salud del poseedor con el primer asesinato, luego desaparece" />
 <translationtableentry text="Spoils of war" result="Botín de guerra" />
 <translationtableentry text="Spoils of War" result="Botín de guerra" />
 <translationtableentry text="Add 100 gold to the settlement the owner enters, then they disappear" result="Añade 100 oro al asentamiento en el que entra el poseedor, luego desaparece" />
@@ -824,6 +824,7 @@
 <translationtableentry text="Hires a group of 10 Liberati" result="Recluta a un grupo de 10 liberati" />
 <translationtableentry text="Liberati guild" result="Gremio de liberati" />
 <translationtableentry text="Makes new Liberati one level higher than the most experienced you've had" result="Hace a los nuevos liberati de un nivel más que el más experimentado tenido durante la partida" />
+<translationtableentry text="Current best level: %s1" result="Mejor nivel actual: %s1" />
 <translationtableentry text="Liberati triumph" result="Triunfo de los liberati" />
 <translationtableentry text="Makes all Liberati restore 50% maximum health and gain 3 more experience every time that they kill a special unit" result="Todos los liberati restablecen el 50% de la salud máxima y ganan 3 puntos de experiencia adicionales cada vez que eliminan a una unidad especial" />
 <translationtableentry text="Organize tournament" result="Organizar torneo" />
@@ -1038,7 +1039,7 @@
 <translationtableentry text="Allows priests to sacrifice themselves to create a cloud of plague which deals 45 damage to all units periodically for about 12 seconds" result="Permite a los sacerdotes sacrificarse para crear una nube venenosa que inflige periódicamente 45 puntos de daño a todas las unidades durante unos 12 segundos" />
 <translationtableentry text="Wrath of Jupiter" result="Ritual de la ira de Júpiter" />
 <translationtableentry text="Allows priests to sacrifice themselves to strike the chosen unit with a non-lethal lightning, dealing up to 250 damage (40 if it is a hero).\nThe same effect also applies to the units that kill the priests" result="Permite a los sacerdotes sacrificarse para hacer caer un rayo no letal sobre la unidad seleccionada, infligiéndole hasta 250 puntos de daño (40 si es un héroe).\nEl mismo efecto también se activa en las unidades que matan a los sacerdotes" />
-<translationtableentry text="Equips new warriors with a God's gift, which increases the owner's movement and attack speed by 10%, heals him at the first kill and then disappears" result="Equipa a los nuevos guerreros con el Regalo de los dioses, que aumenta la velocidad de movimiento y de ataque en un 10%, sana con el primer asesinato y luego desaparece" />
+<translationtableentry text="Equips new warriors with a God's gift, which heals the owner at the first kill and then disappears" result="Equipa a los nuevos guerreros con el Regalo de los dioses, que cura al poseedor con el primer asesinato y luego desaparece" />
 <translationtableentry text="Call Druid" result="Convocar druida" />
 <translationtableentry text="Ritual Chamber" result="Cámara de los rituales" />
 <translationtableentry text="Allows druids to gain experience by learning from more experienced allies" result="Permite a los druidas ganar experiencia aprendiendo de aliados más experimentados" />
@@ -1102,7 +1103,7 @@
 <translationtableentry text="Close Gate" result="Cerrar puerta" />
 <translationtableentry text="Open Gate Permanent" result="Abrir puerta permanentemente" />
 <translationtableentry text="Close Gate Permanent" result="Cerrar puerta permanentemente" />
-<translationtableentry text="Right-click to move the hero to this point" result="Haz clic con el botón derecho para atacar este punto" />
+<translationtableentry text="Right-click to attack this position" result="Haz clic con el botón derecho para atacar esta posición" />
 <translationtableentry text="Fire at will" result="Fuego a voluntad" />
 <translationtableentry text="Stop firing" result="Alto el fuego" />
 <translationtableentry text="Dismantle" result="Desmantelar" />
@@ -1138,6 +1139,7 @@
 <!-- end village commands -->
 <!-- start outpost commands -->
 <translationtableentry text="Launch sortie" result="Lanzar salida" />
+<translationtableentry text="Makes all units advance towards the specified position" result="Hace avanzar a todas las unidades hacia la posición especificada" />
 <translationtableentry text="Click to make all units advance to this position" result="Haz clic para hacer avanzar a todas las unidades hasta esta posición" />
 <translationtableentry text="Slowly exchanges stored food for gold" result="Intercambia lentamente los víveres almacenados por oro" />
 <translationtableentry text="Stop selling food" result="Dejar de vender víveres" />
@@ -1196,11 +1198,16 @@
 <translationtableentry text="Every second deals 300 damage to all strongholds (225 to the caster's).\nIt lasts 10 seconds" result="Cada segundo inflige 300 puntos de daño a todas la fortalezas (225 a las del lanzador).\nDura 10 segundos" />
 <translationtableentry text="Teuton horde" result="Horda teutona" />
 <translationtableentry text="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes" result="Reúne a una horda de 100 teutones (40 jinetes, 40 arqueros y 20 asaltadores) de nivel 12 (18 para los del lanzador) en todas la fortalezas, vaciando la población.\nRequiere 3 minutos" />
-<translationtableentry text="Player %s1 - Foraging - %s2" result="Jugador %s1 - Nutrición - %s2" />
-<translationtableentry text="Player %s1 - Gold rain - %s2" result="Jugador %s1 - Lluvia de oro - %s2" />
-<translationtableentry text="Player %s1 - Plague - %s2" result="Jugador %s1 - Peste - %s2" />
-<translationtableentry text="Player %s1 - Earthquake - %s2" result="Jugador %s1 - Terremoto - %s2" />
-<translationtableentry text="Player %s1 - Teuton horde - %s2" result="Jugador %s1 - Horda teutona - %s2" />
+<translationtableentry text="Player %s1 - Foraging - %s2:0%s3" result="Jugador %s1 - Nutrición - %s2:0%s3" />
+<translationtableentry text="Player %s1 - Foraging - %s2:%s3" result="Jugador %s1 - Nutrición - %s2:%s3" />
+<translationtableentry text="Player %s1 - Gold rain - %s2:0%s3" result="Jugador %s1 - Lluvia de oro - %s2:0%s3" />
+<translationtableentry text="Player %s1 - Gold rain - %s2:%s3" result="Jugador %s1 - Lluvia de oro - %s2:%s3" />
+<translationtableentry text="Player %s1 - Plague - %s2:0%s3" result="Jugador %s1 - Peste - %s2:0%s3" />
+<translationtableentry text="Player %s1 - Plague - %s2:%s3" result="Jugador %s1 - Peste - %s2:%s3" />
+<translationtableentry text="Player %s1 - Earthquake - %s2:0%s3" result="Jugador %s1 - Terremoto - %s2:0%s3" />
+<translationtableentry text="Player %s1 - Earthquake - %s2:%s3" result="Jugador %s1 - Terremoto - %s2:%s3" />
+<translationtableentry text="Player %s1 - Teuton horde - %s2:0%s3" result="Jugador %s1 - Horda teutona - %s2:0%s3" />
+<translationtableentry text="Player %s1 - Teuton horde - %s2:%s3" result="Jugador %s1 - Horda teutona - %s2:%s3" />
 <translationtableentry text="You must wait for the current spell to be completed" result="Debes esperar a que se complete el hechizo actual" />
 <translationtableentry text="Stonehenge isn't under your control" result="El altar no está bajo tu control" />
 <translationtableentry text="Stonehenge is insufficiently charged" result="El altar no está suficientemente cargado" />
@@ -1220,10 +1227,10 @@
 <!-- start generic unit commands -->
 <translationtableentry text="Cancel Command" result="Anular orden" />
 <translationtableentry text="Move" result="Mover" />
-<translationtableentry text="Click to move to this point" result="Haz clic para moverte hasta este punto" />
+<translationtableentry text="Click to move to this position" result="Haz clic para moverte hasta esta posición" />
 <translationtableentry text="Hover" result="Sobrevolar" />
 <translationtableentry text="Hover (tight)" result="Sobrevolar (cerca)" />
-<translationtableentry text="Click to hover around this point" result="Haz clic para sobrevolar alrededor de este punto" />
+<translationtableentry text="Click to hover around this position" result="Haz clic para sobrevolar alrededor de esta posición" />
 <translationtableentry text="Stand ground" result="Mantener posición" />
 <translationtableentry text="Right-click to transport from this Inn" result="Haz clic con el botón derecho para el transporte desde esta posada" />
 <translationtableentry text="Right-click to approach" result="Haz clic con el botón derecho para aproximarte" />
@@ -1246,7 +1253,7 @@
 <translationtableentry text="Click to tame this horse" result="Haz clic para domar a este caballo" />
 <translationtableentry text="Right-click to tame this horse" result="Haz clic con el botón derecho para domar a este caballo" />
 <translationtableentry text="Explore" result="Explorar" />
-<translationtableentry text="Click to explore from this point" result="Haz clic para explorar desde este punto" />
+<translationtableentry text="Click to explore from this position" result="Haz clic para explorar desde esta posición" />
 <translationtableentry text="Right-click to attach to this hero" result="Haz clic con el botón derecho para vincular a este héroe" />
 <translationtableentry text="Right-click to enter this cave" result="Haz clic con el botón derecho para entrar en esta cueva" />
 <translationtableentry text="Right-click to enter this building" result="Haz clic con el botón derecho para entrar en esta estructura" />
@@ -1264,7 +1271,7 @@
 <translationtableentry text="Select an object to use the item with" result="Selecciona un objetivo con el que utilizar el objeto" />
 <translationtableentry text="Select a location to use the item on" result="Selecciona un lugar en el que utilizar el objeto" />
 <translationtableentry text="Patrol" result="Patrullar" />
-<translationtableentry text="Click to patrol this position" result="Haz clic para patrullar hasta este punto" />
+<translationtableentry text="Click to patrol this position" result="Haz clic para patrullar esta posición" />
 <translationtableentry text="Build siege machine" result="Construir máquina de asedio" />
 <translationtableentry text="Select a place to build the machine" result="Selecciona un lugar donde construir la máquina" />
 <translationtableentry text="You need to select more units to build the machine" result="Tienes que seleccionar más unidades para construir la máquina" />
@@ -1285,7 +1292,7 @@
 <translationtableentry text="Requires Teuton Master from Sanctuary of Wotan" result="Requiere Maestro de teutones (Santuario de Wotan)" />
 <!-- end generic unit commands -->
 <!-- start hero commands -->
-<translationtableentry text="Right-click to move the hero to this point" result="Haz clic con el botón derecho para mover al héroe hasta este punto" />
+<translationtableentry text="Right-click to move the hero to this position" result="Haz clic con el botón derecho para mover al héroe hasta esta posición" />
 <translationtableentry text="%s1 formation" result="Formación %s1" />
 <translationtableentry text="Select new formation" result="Seleccionar nueva formación" />
 <translationtableentry text="Front" result="en bloque" />
@@ -1349,36 +1356,37 @@
 <translationtableentry text="Right-click to cripple this enemy" result="Haz clic con el botón derecho para drenar la energía de este enemigo" />
 <translationtableentry text="Click to cripple all enemies around this position" result="Haz clic para drenar la energía a todos los enemigos alrededor de esta posición" />
 <translationtableentry text="Create Cloud of Plague" result="Plaga" />
-<translationtableentry text="Creates a cloud of plague that damages all units (at the cost of life)" result="Crea una nube venenosa che daña a todas las unidades (al costo de la vida)" />
+<translationtableentry text="Creates a cloud of plague that deals 45 damage to all units periodically for about 12 seconds (at the cost of life)" result="Crea una nube venenosa che inflige periódicamente 45 puntos de daño a todas las unidades durante unos 12 segundos (a costa de la vida)" />
 <translationtableentry text="Create Cover of Mercy" result="Manto de la misericordia" />
-<translationtableentry text="Creates a cloud that reduces all combat damage allies receive by half (at the cost of life)" result="Crea una nube protectora que reduce a la mitad el daño sufrido por los aliados (al costo de la vida)" />
-<translationtableentry text="Channels the Wrath of Jupiter hurting the target (at the cost of life)" result="Canaliza la ira de Júpiter dañando al objetivo (al costo de la vida)" />
+<translationtableentry text="Creates a cloud that reduces all combat damage allies receive by 50% for about 25 seconds (at the cost of life)" result="Crea una nube protectora que reduce en un 50% el daño sufrido por los aliados durante unos 25 segundos (a costa de la vida)" />
+<translationtableentry text="Channels the Wrath of Jupiter to strike the target with a non-lethal lightning, dealing up to 40 damage to heroes and up to 250 to all other units (at the cost of life)" result="Canaliza la ira de Júpiter para golpear al objetivo con un rayo no letal, infligiendo hasta 40 puntos de daño si es un héroe y hasta 250 a todas las demás unidades (a costa de la vida)" />
 <translationtableentry text="Click to hurt this unit" result="Haz clic para dañar a esta unidad" />
-<translationtableentry text="Transform to zombie" result="Transformar en espíritu" />
+<translationtableentry text="Transform into ghoul" result="Transformar en espíritu" />
+<translationtableentry text="The unit transforms into a ghoul that remains under your control for about 10 seconds" result="La unidad se transforma en un espíritu que permanece bajo tu control durante unos 10 segundos" />
 <translationtableentry text="Summon Ghoul" result="Invocar espíritu" />
-<translationtableentry text="Summons a ghoul that could be controlled (at the cost of life)" result="Invoca a un espíritu que puedes controlar (al costo de la vida)" />
+<translationtableentry text="Summons a ghoul tthat remains under your control for about 10 seconds (at the cost of life)" result="Invoca a un espíritu que permanece bajo tu control durante unos 10 segundos (a costa de la vida)" />
 <translationtableentry text="Summon Eagle" result="Invocar águila" />
-<translationtableentry text="Summons an eagle that could be controlled (at the cost of life)" result="Invoca a un águila que puedes controlar (al costo de la vida)" />
+<translationtableentry text="Summons an eagle that remains under your control for about 2 minutes (at the cost of life)" result="Invoca a un águila que permanece bajo tu control durante unos 2 minutos (a costa de la vida)" />
 <translationtableentry text="Summon Crow" result="Invocar cuervo" />
-<translationtableentry text="Summons a crow that could be controlled (at the cost of life)" result="Invoca a un cuervo que puedes controlar (al costo de la vida)" />
+<translationtableentry text="Summons a crow that remains under your control for about 4 minutes (at the cost of life)" result="Invoca a un cuervo que permanece bajo tu control durante unos 4 minutos (a costa de la vida)" />
 <translationtableentry text="Summon Wolf" result="Invocar lobo" />
-<translationtableentry text="Summons a wolf that could be controlled (at the cost of life)" result="Invoca a un lobo que puedes controlar (al costo de la vida)" />
+<translationtableentry text="Summons a wolf that remains under your control for about 200 seconds (at the cost of life)" result="Invoca a un lobo que permanece bajo tu control durante unos 200 segundos (a costa de la vida)" />
 <translationtableentry text="Summon Deer" result="Invocar ciervo" />
-<translationtableentry text="Summons a deer that could be controlled (at the cost of life)" result="Invoca a un ciervo que puedes controlar (al costo de la vida)" />
-<translationtableentry text="Restores the stamina of up to 5 nearby allies (at the cost of life)" result="Restablece la energía de hasta 5 aliados cercanos (al costo de la vida)" />
-<translationtableentry text="Heals nearby allies (at the cost of life)" result="Cura a los aliados cercanos (al costo de la vida)" />
+<translationtableentry text="Summons a deer that remains under your control for about 3 minutes (at the cost of life)" result="Invoca a un ciervo que permanece bajo tu control durante unos 3 minutos (a costa de la vida)" />
+<translationtableentry text="Restores the stamina of up to 5 nearby allies (at the cost of life)" result="Restablece la energía de hasta 5 aliados cercanos (a costa de la vida)" />
+<translationtableentry text="Distributes up to 1000 health among nearby allies (at the cost of life)" result="Distribuye hasta 1000 puntos de salud entre los aliados cercanos (al costo de la vida)" />
 <!-- end sage commands -->
 <!-- start caravan and ship commands -->
 <translationtableentry text="Load 1000 gold" result="Cargar 1000 oro" />
 <translationtableentry text="Load 250 gold" result="Cargar 250 oro" />
 <translationtableentry text="Load 1000 food" result="Cargar 1000 víveres" />
 <translationtableentry text="Load 250 food" result="Cargar 250 víveres" />
-<translationtableentry text="Unload caravan" result="Descargar unidad de suministro" />
+<translationtableentry text="Right-click to unload the resources in this settlement" result="Haz clic con el botón derecho para descargar los recursos en este asentamiento" />
 <translationtableentry text="Right-click to follow this unit" result="Haz clic con el botón derecho para seguir a esta unidad" />
 <translationtableentry text="Right-click to board this ship" result="Haz clic con el botón derecho para abordar este navío" />
 <translationtableentry text="Right-click to board this ally" result="Haz clic con el botón derecho para abordar a este aliado" />
 <translationtableentry text="Unboard units" result="Desembarcar unidades" />
-<translationtableentry text="Click to unboard all units here" result="Haz clic para desembarcar todas las unidades aquí" />
+<translationtableentry text="Click to unboard all units at this position" result="Haz clic para desembarcar todas las unidades en esta posición" />
 <!-- end caravan and ship commands -->
 <!-- start hero skills (names and descriptions) -->
 <translationtableentry text="Skills" result="Habilidades" />

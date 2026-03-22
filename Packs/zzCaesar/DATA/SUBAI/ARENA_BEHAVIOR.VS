@@ -2,20 +2,21 @@
 
 Building this, hall;
 Settlement set;
-Unit new_unit;
+Unit u;
 ObjList ol;
-str class;
-int player, build_number, level;
+str u_class;
+int i, j, plr, build_number, u_level;
 point exit_point;
-bool valid_exit_point = true;
+bool is_village, valid_exit_point = true;
 
-Sleep(rand(501) + 500);
+Sleep(500 + rand(501));
 
 this = This.AsBuilding();
 
 set = .settlement;
 hall = set.GetCentralBuilding();
-player = .player;
+is_village = set.IsVillage;
+plr = .player;
 
 exit_point = .GetExitPoint(hall.pos, false);
 if (exit_point.x == -1) {
@@ -28,145 +29,153 @@ else if (exit_point.y == -1) {
 }
 
 while (1) {
-	if (player != .player) {
-		class = EnvReadString(this, "Build");
-		build_number = EnvReadInt(this, "Build/" + class);
+	u_class = EnvReadString(this, "Build");
+	build_number = EnvReadInt(this, "Build/" + u_class);
+
+	if (plr != .player) {
 		if (build_number > 0) {
-			EnvWriteInt(player, "QueuedBuild/" + class, MAX(0, EnvReadInt(player, "QueuedBuild/" + class) - build_number));
-			EnvWriteInt(this, "Build/" + class, 0);
+			EnvWriteInt(plr, "QueuedBuild/" + u_class, MAX(0, EnvReadInt(plr, "QueuedBuild/" + u_class) - build_number));
+			EnvWriteInt(this, "Build/" + u_class, 0);
 			build_number = 0;
 		}
-		player = .player;
-	}
-	else {
-		class = EnvReadString(this, "Build");
-		build_number = EnvReadInt(this, "Build/" + class);
+		plr = .player;
 	}
 
 	if (build_number > 0) {
-		level = EnvReadInt(set, "levels/" + class);
+		u_level = MAX(EnvReadInt(plr, "standard_spawn_level"), MAX(EnvReadInt(set, "levels/Warrior"), EnvReadInt(set, "levels/" + u_class)));
 
-		if (build_number == 10) {
-			if (class == "RLiberatus" || class == "RLiberatusPunic")
-				if (IsResearched(set, "Liberati guild")) {
-					Unit u;
-					int best_level, i;
-					best_level = EnvReadInt(player, "BestLiberatusLevel");
-					ol = GetPlayerUnits(player, "RLiberatus");
-					for (i = 0; i < ol.count; i += 1) {
+		if (u_class == "RLiberatus" || u_class == "RLiberatusPunic") {
+			if (IsResearched(set, "Liberati guild"))
+				if (build_number % 10 == 0) {
+					u_level = MAX(u_level - 1, EnvReadInt(plr, "BestLiberatusLevel"));//-1 is to manage the first recruitment with no units ever owned
+					ol = GetPlayerUnits(plr, "RLiberatus");
+					for (i = ol.count - 1; i >= 0; i -= 1) {
 						u = ol[i].AsUnit();
-						if (u.IsValid)
-							if (u.inherentlevel > best_level)
-								best_level = u.inherentlevel;
+						if (u.inherentlevel > u_level)
+							u_level = u.inherentlevel;
 					}
-					level = MAX(best_level, level) + 1;
-					EnvWriteInt(set, "levels/" + class, level);
-					EnvWriteInt(player, "BestLiberatusLevel", level);
+					u_level += 1;
+					EnvWriteInt(plr, "BestLiberatusLevel", u_level);
+				}
+				else {
+					i = EnvReadInt(plr, "BestLiberatusLevel");
+					if (i > u_level)
+						u_level = i;
 				}
 		}
-		else if (build_number == 5) {
-			if (class == "TValkyrie")
-				if (IsResearched(set, "Legendary Valkyries")) {
-					Unit u;
-					int best_level, i, j;
-					best_level = EnvReadInt(player, "BestValkyrieLevel");
+		else if (u_class == "TValkyrie") {
+			if (IsResearched(set, "Legendary Valkyries"))
+				if (build_number % 5 == 0) {
+					u_level = MAX(u_level - 1, EnvReadInt(plr, "BestValkyrieLevel"));//-1 is to manage the first recruitment with no units ever owned
 					for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
-						ol = GetPlayerUnits(i);//filtering here with "TValkyrie" does not always return the units (it happens when player i has no valkyries independently from whom they are attached to)
-						for (j = 0; j < ol.count; j += 1) {
+						ol = GetPlayerUnits(i, "Military");//filtering here with "TValkyrie" does not always return the units (it happens when player i has no valkyries independently from whom they are attached to)
+						for (j = ol.count - 1; j >= 0; j -= 1) {
 							u = ol[j].AsUnit();
-							if (u.IsValid)
-								if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-									if (u.inherentlevel > best_level)
-										if (u.IsHeirOf("TValkyrie"))
-											best_level = u.inherentlevel;
+							if (u.player == plr)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
+								if (u.inherentlevel > u_level)
+									if (u.IsHeirOf("TValkyrie"))
+										u_level = u.inherentlevel;
 						}
 					}
-					level = MAX(best_level, level) + 1;
-					EnvWriteInt(set, "levels/TValkyrie", level);
-					EnvWriteInt(player, "BestValkyrieLevel", level);
+					u_level += 1;
+					EnvWriteInt(plr, "BestValkyrieLevel", u_level);
+				}
+				else {
+					i = EnvReadInt(plr, "BestValkyrieLevel");
+					if (i > u_level)
+						u_level = i;
 				}
 		}
-		else if (class == "IMountaineer") {
-			if (IsResearched(player, "Mountain Clan Legacy")) {
-				Unit u;
-				int best_level, i;
-				best_level = EnvReadInt(player, "BestMountaineerLevel");
-				ol = GetPlayerUnits(player, "IMountaineer");
-				for (i = 0; i < ol.count; i += 1) {
+		else if (u_class == "IMountaineer") {
+			if (IsResearched(plr, "Mountain Clan Legacy")) {
+				i = EnvReadInt(plr, "BestMountaineerLevel");
+				if (i > u_level)
+					u_level = i;
+				ol = GetPlayerUnits(plr, "IMountaineer");
+				for (i = ol.count - 1; i >= 0; i -= 1) {
 					u = ol[i].AsUnit();
-					if (u.IsValid)
-						if (u.inherentlevel > best_level)
-							best_level = u.inherentlevel;
+					if (u.inherentlevel > u_level)
+						u_level = u.inherentlevel;
 				}
-				level = MAX(best_level, level);
-				EnvWriteInt(set, "levels/IMountaineer", level);
-				EnvWriteInt(player, "BestMountaineerLevel", level);
+				EnvWriteInt(plr, "BestMountaineerLevel", u_level);
 			}
 		}
-		else if (class == "HMyrmidon_Javelin") {
-			if (IsResearched(player, "Tribute to Heracles")) {
-				Unit u;
-				int best_level, i, j;
-				best_level = EnvReadInt(player, "BestMyrmidonLevel");
+		else if (u_class == "HMyrmidon_Javelin") {
+			if (IsResearched(plr, "Tribute to Heracles")) {
+				i = EnvReadInt(plr, "BestMyrmidonLevel");
+				if (i > u_level)
+					u_level = i;
 				for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
-					ol = GetPlayerUnits(i);//filtering here with "HMyrmidon_Javelin" does not always return the units (it happens when player i has no myrmidons independently from whom they are attached to)
-					for (j = 0; j < ol.count; j += 1) {
+					ol = GetPlayerUnits(i, "Military");//filtering here with "HMyrmidon_Javelin" does not always return the units (it happens when player i has no myrmidons independently from whom they are attached to)
+					for (j = ol.count - 1; j >= 0; j -= 1) {
 						u = ol[j].AsUnit();
-						if (u.IsValid)
-							if (u.player == player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-								if (u.inherentlevel > best_level)
-									if (u.IsHeirOf("HMyrmidon_Javelin"))
-										best_level = u.inherentlevel;
+						if (u.player == plr)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
+							if (u.inherentlevel > u_level)
+								if (u.IsHeirOf("HMyrmidon_Javelin"))
+									u_level = u.inherentlevel;
 					}
 				}
-				level = MAX(best_level, level);
-				EnvWriteInt(set, "levels/HMyrmidon_Javelin", level);
-				EnvWriteInt(player, "BestMyrmidonLevel", level);
+				EnvWriteInt(plr, "BestMyrmidonLevel", u_level);
 			}
 		}
-		else if (class == "BVikingLord")
+		else if (u_class == "BVikingLord")
 			if (IsResearched(set, "Shrine of Thor")) {
-				level = MAX(level, EnvReadInt(player, "BVikingLordLevel"));
-				if (level < 24) {
-					EnvWriteInt(set, "levels/BVikingLord", level + 2);
-					EnvWriteInt(player, "BVikingLordLevel", level + 2);
+				u_level = MAX(u_level, EnvReadInt(plr, "BestVikingLordLevel"));
+				if (u_level < 24) {
+					EnvWriteInt(set, "levels/BVikingLord", u_level + 2);
+					EnvWriteInt(plr, "BestVikingLordLevel", u_level + 2);
 				}
 			}
 
-		level = MAX(level, EnvReadInt(player, "standard_spawn_level"));
-
-		new_unit = Place(class, exit_point, player);
+		u = Place(u_class, exit_point, plr).AsUnit();
 		if (valid_exit_point)
-			new_unit.SetCommand("advanceenter", hall);
+			if (is_village)
+				u.SetCommand("advance", hall.GetEnterPoint(u));
+			else
+				u.SetCommand("advanceenter", hall);
 		else
-			set.AddUnit(new_unit);
+			set.AddUnit(u);
 
-		new_unit.SetLevel(level);
+		if (u_level < 12)
+			if (IsResearched(set, "Shared Triumph")) {
+				i = Count(plr, u_class);
+				if (i > 20)
+					u_level = 12;
+				else if (i > 10)
+					if (u_level < 6)
+						if (IsResearched(set, "Shared Strength"))
+							u_level = 6;
+			}
+			else if (u_level < 6)
+				if (IsResearched(set, "Shared Strength"))
+					if (Count(plr, u_class) > 10)
+						u_level = 6;
 
-		if (class == "Caesar")
+		u.SetLevel(MAX(1, u_level));
+
+		if (u_class == "Caesar")
 			PlaySound("Data/Sound Entities/Completed_Caesar.xml");
-		else if (class == "Keltill")
+		else if (u_class == "Keltill")
 			PlaySound("Data/Sound Entities/Completed_Keltill.xml");
-		else if (class == "Larax") {
-			new_unit.AddItem("Chosen One's Gem");
+		else if (u_class == "Larax") {
+			u.AddItem("Chosen One's Gem");
 			PlaySound("Data/Sound Entities/Completed_Larax.xml");
 		}
-		else if (!new_unit.IsHeirOf("BaseMage"))
-			if (!new_unit.IsHeirOf("Hero")) {
-				if (EnvReadInt(set, "items/Bear teeth amulet") == 1)
-					new_unit.AddItem("Bear teeth amulet");
-				if (EnvReadInt(set, "items/Belt of might") == 1)
-					new_unit.AddItem("Belt of might");
-				if (EnvReadInt(set, "items/Herb amulet of luck") == 1)
-					new_unit.AddItem("Herb amulet of luck");
-				if (EnvReadInt(set, "items/God's Gift") == 1)
-					new_unit.AddItem("God's Gift");
-				if (EnvReadInt(set, "items/Veteran Guild") == 1)
-					new_unit.AddItem("Veteran Guild");
-			}
+		else {
+			if (EnvReadInt(set, "items/Bear teeth amulet") != 0)
+				u.AddItem("Bear teeth amulet");
+			if (EnvReadInt(set, "items/Belt of might") != 0)
+				u.AddItem("Belt of might");
+			if (EnvReadInt(set, "items/Herb amulet of luck") != 0)
+				u.AddItem("Herb amulet of luck");
+			if (EnvReadInt(set, "items/God's Gift") != 0)
+				u.AddItem("God's Gift");
+			if (EnvReadInt(set, "items/Veteran Guild") != 0)
+				u.AddItem("Veteran Guild");
+		}
 
-		EnvWriteInt(this, "Build/" + class, MAX(0, build_number - 1));
-		EnvWriteInt(player, "QueuedBuild/" + class, MAX(0, EnvReadInt(player, "QueuedBuild/" + class) - 1));
+		EnvWriteInt(this, "Build/" + u_class, MAX(0, build_number - 1));
+		EnvWriteInt(plr, "QueuedBuild/" + u_class, MAX(0, EnvReadInt(plr, "QueuedBuild/" + u_class) - 1));
 	}
 
 	Sleep(1000);

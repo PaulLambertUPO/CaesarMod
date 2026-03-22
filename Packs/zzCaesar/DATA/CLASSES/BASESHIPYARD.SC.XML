@@ -24,8 +24,7 @@
 	/>
 
 	<behavior script="data/subai/shipyard_supply_and_fishermen.vs" />
-	
-	<method sig="idle" vs="data/subai/shipyard_idle.vs" />
+
 	<method sig="tribute" vs="data/subai/do_nothing_point.vs" />
 	<method sig="tribute" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />
 	<method sig="tribute_default" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />

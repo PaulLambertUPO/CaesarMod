@@ -11,7 +11,7 @@ if (.IsValid)
 		.PlayAnim(19, .pos);
 
 		u = Place("WolfSummoned", .posRH, .player).AsUnit();
-		u.SetLevel(.inherentlevel);
+		u.SetLevel(.level);
 		u.SetNoAIFlag(true);
 		u.SetCommand("engage");
 

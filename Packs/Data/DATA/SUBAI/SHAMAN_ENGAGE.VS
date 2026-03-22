@@ -5,31 +5,23 @@ Druid this;
 this = This.AsDruid();
 
 if (.IsValid)
-	if (.IsAlive) {
-		ObjList ol;
-		Hero h;
-		Unit u, u_ol;
-		int i, d, plr, best_dist, stamina_cost;
-		bool can_learn, go_to_hero, use_curse;
+	if (.IsAlive)
+		if (!.InHolder) {
+			ObjList ol;
+			Hero h;
+			Unit u, u_ol;
+			int i, d, plr, best_dist, stamina_cost;
+			bool can_learn, go_to_hero, use_curse;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
+			plr = .player;
+			stamina_cost = GetCmdStaminaCost("curse");
 
-		Sleep(50 + rand(451));
+			if (.race == Carthage)
+				can_learn = true;
+			else
+				can_learn = IsResearched(plr, "Ritual Chamber");
 
-		plr = .player;
-		stamina_cost = GetCmdStaminaCost("curse");
-
-		if (.race == Carthage)
-			can_learn = true;
-		else
-			can_learn = IsResearched(plr, "Ritual Chamber");
-
-		while (.IsEnemyInSquadSight)
-			if (.InHolder)
-				Sleep(2500);
-			else {
+			while (.IsEnemyInSquadSight) {
 				go_to_hero = true;
 
 				u.Clear();
@@ -146,6 +138,6 @@ if (.IsValid)
 
 				Sleep(500);
 			}
-	}
+		}
 
 Sleep(15);//prevent possible loops with other commands

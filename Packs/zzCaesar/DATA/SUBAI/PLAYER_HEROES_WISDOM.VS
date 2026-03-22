@@ -2,19 +2,16 @@
 
 ObjList ol;
 Hero h;
-int i, c;
+int i;
 
 while (1) {
 	ol = GetPlayerUnits(player, "Hero");
-	c = ol.count;
-	for (i = 0; i < c; i += 1) {
+	for (i = ol.count - 1; i >= 0; i -= 1) {
 		h = ol[i].AsHero();
-		if (h.IsValid)
-			if (h.IsAlive) {
-				h.SetExperience(h.experience + 1);
-				if (!h.InHolder)
-					CreateFeedback("Experience", h);
-			}
+		if (h.IsAlive) {
+			h.SetExperience(h.experience + 1);
+			CreateFeedback("Experience", h);
+		}
 	}
 	Sleep(30000);
 }

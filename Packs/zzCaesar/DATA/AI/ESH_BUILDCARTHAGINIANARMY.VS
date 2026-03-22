@@ -101,7 +101,11 @@ if (nAssUnderFire > 0 || set.gold >= 800) {
 		if (EnvReadInt(set, "nSpecTime") <= 0)//this check is used to avoid a specialization change right after specific tactic scripts
 			EnvWriteInt(set, "nSpecTime", GetTime() + 300000 + rand(300001));
 		if (GetTime() >= EnvReadInt(set, "nSpecTime"))
-			if (rand(nType + 1) > 0)
+			if (nType == 0) {
+				set.Research("StopSpecialization");
+				return;
+			}
+			else if (rand(nType + 4) > 0)
 				EnvWriteInt(set, "nSpecTime", GetTime() + 300000 + rand(300001));
 			else {
 				set.Research("StopSpecialization");

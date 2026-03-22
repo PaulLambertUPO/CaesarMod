@@ -11,7 +11,7 @@
 	<properties projectile_class="Big_Arrow" building_projectile_class="Big_Arrow" />
 
 	<properties radius="90" selection_radius="90" />
-	<properties healthbar_type="3" />
+	<properties healthbar_type="1" />
 	<properties healthbaroffset="-120" />
 	<properties water_unit="1" />
 	<properties max_units_to_board="120" /><!-- if this value is changed, sequences in "The conquest of Britain" adventure must be changed, too -->

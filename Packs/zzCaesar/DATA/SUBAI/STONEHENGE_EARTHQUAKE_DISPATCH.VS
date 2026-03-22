@@ -8,11 +8,12 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("earthquake");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
-		.SetCommand("earthquake");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("earthquake");
 	}
 }

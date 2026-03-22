@@ -8,13 +8,14 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("soothing");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
 		.GlobalSpellStart(gsSoothingRain, player);
 
-		.SetCommand("soothing");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("soothing");
 	}
 }

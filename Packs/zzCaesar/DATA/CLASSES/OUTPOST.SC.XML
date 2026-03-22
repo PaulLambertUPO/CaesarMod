@@ -24,7 +24,6 @@
 
 	<behavior script="data/subai/outpost_behavior.vs" />
 
-	<method sig="idle" vs="data/subai/outpost_idle.vs" />
 	<method sig="attack" vs="data/subai/outpost_attack.vs" verify="data/subai/outpost_attack_verify.vs" />
 	<method sig="outpost_advance" vs="data/subai/do_nothing_point.vs" />
 	<method sig="tribute" vs="data/subai/do_nothing_point.vs" />

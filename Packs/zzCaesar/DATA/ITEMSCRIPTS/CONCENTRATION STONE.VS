@@ -9,33 +9,29 @@ if (.IsValid)
 		if (target.AsUnit().IsValid)
 			if (!.IsEnemy(target))
 				if (.DistTo(target) <= .sight * 3 / 2) {//more range because it targets allies
-					int missing_health;
+					int i;
 
-					missing_health = .maxhealth - .health;
+					i = .maxhealth - .health;
 
-					if (missing_health > 0) {
-						int health_taken;
-
+					if (i > 0) {
 						if (target.AsHero().IsValid)
-							health_taken = target.health - target.maxhealth / 5;//allied heroes cannot go below 20%
+							i = MIN(i, target.health - target.maxhealth / 5);//allied heroes cannot go below 20%
 						else
-							health_taken = target.health;
+							i = MIN(i, target.health);
 
-						if (health_taken > 0) {
-							int heal_damage;
-							heal_damage = MIN(health_taken, missing_health);
+						if (i > 0) {
+							target.Damage(i);
 							CreateFeedback("Damage1", target.AsUnit());
-							target.Damage(heal_damage);
+							.Heal(i);
 							CreateFeedback("Heal", this);
-							.Heal(heal_damage);
 						}
 					}
 				}
 				else
-					UserNotification("target not in range", "", .posRH, .player);
+					UserNotification("target not in range", "", .pos, .player);
 			else
-				UserNotification("friendly target only", "", .posRH, .player);
+				UserNotification("friendly target only", "", .pos, .player);
 		else
-			UserNotification("unit target only", "", .posRH, .player);
+			UserNotification("unit target only", "", .pos, .player);
 	else
 		UserNotification("item cannot use in holder", "", .posRH, .player);

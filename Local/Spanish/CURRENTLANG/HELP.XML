@@ -5538,7 +5538,7 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Gift of God.bmp">
 Regalo de los dioses
-Equipa a los nuevos guerreros con el Regalo de los dioses, que aumenta la velocidad de movimiento y de ataque en un 10%, sana con el primer asesinato y luego desaparece.
+Equipa a los nuevos guerreros con el Regalo de los dioses, que cura al poseedor con el primer asesinato y luego desaparece.
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
@@ -6337,7 +6337,7 @@ Se generan en la columna cada 15 minutos.
 			</entry>
 			<entry image="UI/Icons/Items/Battle Drums of Rage.bmp">
 Tambores de batalla de la furia
-Si se utilizan, aumentan el ataque del poseedor y de los aliados cercanos en 30 puntos durante 5 segundos.
+Si se utilizan, aumentan el ataque del poseedor y de los aliados cercanos en 30 puntos durante 10 segundos.
 Se generan en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Horn of Victory.bmp">
@@ -6446,7 +6446,7 @@ Se genera en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Blue Diamond.bmp">
 Diamante energético
-Restablece la energía de las unidades vinculadas al poseedor más rápidamente.
+Restablece la energía de las unidades vinculadas al poseedor en 1 punto cada 15 segundos.
 Se genera en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Harp.bmp">
@@ -6463,7 +6463,7 @@ Se generan en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Gem of Wisdom.bmp">
 Gema de la sabiduría
-Proporciona una probabilidad del 33% de ganar 2 puntos de experiencia cada vez que una unidad vinculada muere.
+Proporciona una probabilidad del 33% de ganar 2 puntos de experiencia cada vez que una unidad vinculada muere (solo si el poseedor no está a cubierto).
 Se genera en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Scroll of Death.bmp">
@@ -6495,7 +6495,6 @@ Se genera a través de la mejora "Amuleto de hierbas" de la taberna gala.
 			</entry>
 			<entry image="UI/Icons/Items/Gods Gift.bmp">
 Regalo de los dioses
-Aumenta la velocidad de movimiento y de ataque en un 10%.
 Restablece completamente la salud del poseedor con el primer asesinato, luego desaparece.
 Se genera a través de la mejora "Regalo de los dioses" del templo romano.
 			</entry>
@@ -6623,6 +6622,7 @@ Se genera a través de la orden "Convocar a Lárax" del coliseo galo.
 			<entry>\ - Hace que los árboles sean transparentes para ver detrás de ellos</entry>
 			<entry>TAB - Muestra la ubicación de la última notificación</entry>
 			<entry>Ñ - Muestra gráficamente la salud y la energía de cada unidad</entry>
+			<entry>Ç - Muestra los datos y las puntuaciones de la partida</entry>
 			<entry>ALT - Desplega/Oculta las rutas de suministro en el mapa estratégico</entry>
 			<entry>ESC - Desactiva la selección / Abre el menú principal</entry>
 			<entry>F1 - Activa la guía de ayuda durante el juego</entry>

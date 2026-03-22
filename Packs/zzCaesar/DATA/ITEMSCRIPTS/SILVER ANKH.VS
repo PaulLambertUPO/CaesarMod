@@ -6,23 +6,31 @@ this = owner.AsHero();
 
 if (.IsValid) {
 	ObjList army, army_added;
+	Obj o;
 	int i;
 
 	while (1) {
 		army = .army;
-		for (i = 0; i < army.count; i += 1)
-			if (!army_added.Contains(army[i])) {
-				army[i].AsUnit().AddBonus(0, 4, 4, 0, 0);
-				army_added.Add(army[i]);
-			}
+		for (i = army.count - 1; i >= 0; i -= 1) {
+			o = army[i];
+			if (o.IsAlive)
+				if (!army_added.Contains(o)) {
+					o.AsUnit().AddBonus(0, 4, 4, 0, 0);
+					CreateFeedback("DefensiveStand", o.AsUnit());
+					army_added.Add(o);
+				}
+		}
 
-		army_added.ClearDead();
-		for (i = army_added.count - 1; i >= 0; i -= 1)//remove bonus from detached units
-			if (army_added[i].AsUnit().hero != this) {
-				army_added[i].AsUnit().RemoveBonus(0, 4, 4, 0, 0);
-				army_added.Remove(army_added[i]);
+		for (i = army_added.count - 1; i >= 0; i -= 1) {//remove bonus from detached units
+			o = army_added[i];
+			if (o.IsDead)
+				army_added.Remove(o);
+			else if (o.AsUnit().hero != this) {
+				o.AsUnit().RemoveBonus(0, 4, 4, 0, 0);
+				army_added.Remove(o);
 			}
+		}
 
-		Sleep(50);
+		Sleep(500);
 	}
 }

@@ -30,7 +30,7 @@
 	<method sig="advance" vs="data/subai/unit_advance.vs" />
 	<method sig="advancealone" vs="data/subai/unit_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/unit_advance_aggressive.vs" />
-	<method sig="advanceenter" vs="data/subai/unit_advance_enter.vs" verify="data/subai/unit_enter_verify.vs" />
+	<method sig="advanceenter" vs="data/subai/unit_advance_enter.vs" />
 	<method sig="attach" vs="data/subai/unit_attach.vs" verify="data/subai/unit_attach_verify.vs" />
 	<method sig="attack" vs="data/subai/unit_attack.vs" verify="data/subai/unit_attack_verify.vs" />
 	<method sig="engage" vs="data/subai/unit_engage.vs" />
@@ -73,9 +73,8 @@
 	<method sig="walkanddie" vs="data/subai/unit_walk_and_die.vs" />
 	<method sig="moveenter" vs="data/subai/unit_move_enter.vs" />
 	<method sig="stand_position" vs="data/subai/unit_stand_position.vs" />
-	<method sig="attack_unit_type" vs="data/subai/unit_attack_unit_type.vs" verify="data/subai/unit_attack_verify.vs" />
-	<method sig="engage_unit_type" vs="data/subai/unit_engage_unit_type.vs" verify="data/subai/unit_attack_verify.vs" />
-	<method sig="engage_unit_type_exclusive" vs="data/subai/unit_engage_unit_type_exclusive.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="attack_unit_type_exclusive" vs="data/subai/unit_attack_unit_type_exclusive.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="engage_unit_type_exclusive" vs="data/subai/unit_engage_unit_type_exclusive.vs" />
 	<method sig="go_talk" vs="data/subai/unit_go_talk.vs" />
 	<method sig="onkill" vs="data/subai/unit_on_kill.vs" />
 	<method sig="onenter" vs="data/subai/unit_on_enter.vs" />
@@ -128,7 +127,7 @@
 	<defaultcmd target="Unit">
 		<cmd name="attack" />
 		<cmd name="approach" />
-		<cmd name="attack_unit_type" ctrl="1" />
+		<cmd name="attack_unit_type_exclusive" ctrl="1" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />
@@ -153,7 +152,6 @@
 	</defaultcmd>
 	<defaultcmd target="Gate">
 		<cmd name="attack" />
-		<cmd name="enter" />
 		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Wall">

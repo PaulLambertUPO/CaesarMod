@@ -8,11 +8,12 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("plague");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
-		.SetCommand("plague");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("plague");
 	}
 }

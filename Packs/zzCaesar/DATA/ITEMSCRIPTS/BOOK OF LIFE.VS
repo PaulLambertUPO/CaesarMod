@@ -1,13 +1,13 @@
 //void, Obj owner, Obj attached, Obj victim
 
-if (owner.AsHero().IsValid) {
-	Unit this;
+if (victim.AsUnit().IsValid)
+	if (owner.AsHero().IsValid) {
+		Unit this;
 
-	this = attached.AsUnit();
+		this = attached.AsUnit();
 
-	if (.IsValid)
-		if (!.AsHero().IsValid)//it seems that the script is triggered even when the owner kills a unit
-			if (!.InHolder) {
+		if (.IsValid)
+			if (!.AsHero().IsValid) {//this script seems to be triggered even when the owner kills a unit
 				owner.Heal(5);
 				if (rand(10) == 0) {
 					Unit u;
@@ -18,4 +18,4 @@ if (owner.AsHero().IsValid) {
 					SwapSelectedObj(victim, u);
 				}
 			}
-}
+	}

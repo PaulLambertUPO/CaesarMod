@@ -8,11 +8,12 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("gold_rain");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
-		.SetCommand("gold_rain");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("gold_rain");
 	}
 }

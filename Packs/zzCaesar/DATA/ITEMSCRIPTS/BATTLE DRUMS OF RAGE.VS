@@ -6,45 +6,42 @@ this = owner.AsUnit();
 
 if (.IsValid)
 	if (!.InHolder) {
-		ObjList units_in_sight, units_enraged;
-		Unit u;
+		ObjList units_enraged;
+		Obj o;
 		int i, time;
 
 		ItemUsed(1);
 
-		units_in_sight = ObjsInCircle(.pos, .sight, "Military").GetObjList();//do not use ObjsInSight to avoid having to add the owner manually
+		units_enraged = ObjsInCircle(.pos, .sight, "Military").GetObjList();//do not use ObjsInSight to avoid having to add the owner manually
 
-		for (i = 0; i < units_in_sight.count; i += 1) {
-			u = units_in_sight[i].AsUnit();
-			if (u.IsValid)
-				if (u.IsAlive)
-					if (!.IsEnemy(u)) {
-						u.AddBonus(30, 0, 0, 0, 0);
-						units_enraged.Add(u);
-					}
+		for (i = units_enraged.count - 1; i >= 0; i -= 1) {
+			o = units_enraged[i];
+			if (o.IsDead)
+				units_enraged.Remove(o);
+			else if (.IsEnemy(o))
+				units_enraged.Remove(o);
+			else
+				o.AsUnit().AddBonus(30, 0, 0, 0, 0);
 		}
 
-		while (time < 5000) {
-			for (i = 0; i < units_enraged.count; i += 1) {
-				u = units_enraged[i].AsUnit();
-				if (u.IsValid)
-					if (u.IsAlive)
-						if (!u.InHolder)//units in sight are not in holder, but they might enter a building during the bonus time
-							if (u.radius < 30)
-								CreateFeedback("Frenzy", u);
-							else
-								CreateFeedback("Frenzy2", u);
+		while (time < 10000) {
+			for (i = units_enraged.count - 1; i >= 0; i -= 1) {
+				o = units_enraged[i];
+				if (o.IsAlive)
+					if (o.radius < 30)
+						CreateFeedback("Frenzy", o.AsUnit());
+					else
+						CreateFeedback("Frenzy2", o.AsUnit());
 			}
 			time += 250;
 			Sleep(250);
 		}
 
-		for (i = 0; i < units_enraged.count; i += 1) {
-			u = units_enraged[i].AsUnit();
-			if (u.IsValid)
-				if (u.IsAlive)
-					u.RemoveBonus(30, 0, 0, 0, 0);
+		for (i = units_enraged.count - 1; i >= 0; i -= 1) {
+			o = units_enraged[i];
+			if (o.IsAlive)
+				o.AsUnit().RemoveBonus(30, 0, 0, 0, 0);
 		}
 	}
 	else
-		UserNotification("item cannot use in holder", "", owner.posRH, owner.player);
+		UserNotification("item cannot use in holder", "", .posRH, .player);

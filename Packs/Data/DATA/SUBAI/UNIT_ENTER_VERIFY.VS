@@ -1,27 +1,26 @@
-// bool, Obj this, Obj other
+//bool, Obj This, Obj other
 
-Unit me;
-Building it;
+Unit this;
 
-me = this.AsUnit();
-it = other.AsBuilding();
+this = This.AsUnit();
 
-if( other.IsHeirOf("BaseRuins"))
-	return .AsHero().IsValid;
+if (.IsValid)
+	if (.IsAlive) {
+		Building bld;
 
+		bld = other.AsBuilding();
 
-if(!me.IsValid()) return false;
-if(!it.IsValid()) return false;
-if(!it.IsCentralBuliding()) return false;
+		if (bld.IsValid) {
+			if (bld.AsTeleport().IsValid)
+				return true;
 
-if (it.IsHeirOf("Catapult")) {
-	//see build_catapult command in commands.xml
-	if (!me.IsHeirOf("Military")) return false;
-	//if (me.IsHeirOf("ShipL")) return false; doesnt use this verifier
-	if (me.IsHeirOf("Hero")) return false;
-}
+			if (!bld.IsHeirOf("BaseRuins"))
+				if (bld.IsCentralBuliding)
+					if (!.IsEnemy(bld))
+						if (bld.settlement.max_units > 0)
+							if (DiplGetShareView(bld.player, .player))
+								return true;
+		}
+	}
 
-if(it.settlement.max_units==0) return false;
-if(!DiplGetShareView(it.player, me.player)) return false;
-
-return (!me.IsEnemy(it));
+return false;

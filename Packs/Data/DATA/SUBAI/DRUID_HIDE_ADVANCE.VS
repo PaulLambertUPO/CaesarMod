@@ -15,7 +15,7 @@ if (.IsValid)
 				ObjList ol;
 				Obj o, target;
 				str cmd;
-				int i, d, j = 4, best_dist = 10000000;
+				int i, d, best_dist = 10000000;
 
 				if (!.InHolder) {
 					ol = Intersect(VisibleObjsInSight(this, "Military"), FriendlyObjs(plr, "Military")).GetObjList();
@@ -79,40 +79,6 @@ if (.IsValid)
 						if (.TimeWithoutWalking >= 2500)
 							break;
 					}
-
-				while (j > 0) {
-					if (target.IsAlive)
-						break;
-					Sleep(750);
-					best_dist = 10000000;
-					ol = Intersect(VisibleObjsInSight(this, "Military"), FriendlyObjs(plr, "Military")).GetObjList();
-					for (i = ol.count - 1; i >= 0; i -= 1) {
-						o = ol[i];
-						if (o.IsAlive)
-							if (o.player == plr)
-								if (o.IsVisible) {
-									cmd = o.command;
-									if (cmd != "engage")
-										if (cmd != "attack")
-											if (cmd != "capture")
-												if (!o.IsSentry)
-													if (!o.IsRam)
-														if (!o.AsShip().IsValid)
-															if (!o.AsUnit().IsEnemyInSquadSight) {
-																d = .DistTo(o);
-																if (target.IsDead) {
-																	target = o;
-																	best_dist = d;
-																}
-																else if (d < best_dist) {
-																	target = o;
-																	best_dist = d;
-																}
-															}
-								}
-					}
-					j -= 1;
-				}
 
 				if (target.IsAlive) {
 					.AddCommand(true, "advance", pt);

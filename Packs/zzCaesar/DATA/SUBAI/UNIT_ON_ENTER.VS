@@ -2,34 +2,19 @@
 
 if (.AsUnit().IsValid)
 	if (sett.IsValid)
-		if (sett.max_gold > 0) {//exclude catapults, ruins, teleports and tents
+		if (sett.max_gold > 0) {
 			Item item;
 			int i;
 
-			i = .RemoveItemsOfType("Spoils of War");
-
-			if (i > 0) {
-				int gold;
-
-				gold = GetConst("SpoilsOfWarGold");
-
-				sett.SetGold(sett.gold + i * gold);
-				sett.GoldConverted(i * gold);
-			}
-
-			for (i = .item_count; i >= 1; i -= 1) {
+			for (i = .items_count; i >= 1; i -= 1) {
 				item = .GetItem(i);
 				if (item.IsValid)
-					if (item.name == "Gold") {
-						sett.SetGold(sett.gold + item.use_count);
-						sett.GoldConverted(item.use_count);
-						item.SetUseCount(0);
+					if (item.name == "Spoils of War") {
+						sett.SetGold(sett.gold + 100);
+						sett.GoldConverted(100);
+						.RemoveItem(i);
 					}
-			}
-			for (i = .item_count; i >= 1; i -= 1) {
-				item = .GetItem(i);
-				if (item.IsValid)
-					if (item.name == "Gold") {
+					else if (item.name == "Gold") {
 						sett.SetGold(sett.gold + item.use_count);
 						sett.GoldConverted(item.use_count);
 						item.SetUseCount(0);

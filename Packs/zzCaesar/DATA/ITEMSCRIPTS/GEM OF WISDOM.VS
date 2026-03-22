@@ -1,12 +1,13 @@
 //void, Obj owner, Obj attached
 
-Hero this;
+if (rand(3) == 0) {
+	Hero this;
 
-this = owner.AsHero();
+	this = owner.AsHero();
 
-if (.IsValid)
-	if (rand(3) == 0) {
-		.SetExperience(.experience + 2);
-		if (!.InHolder)
+	if (.IsValid)
+		if (!.InHolder) {
+			.SetExperience(.experience + 2);
 			CreateFeedback("Experience", this);
-	}
+		}
+}

@@ -1,42 +1,37 @@
-// void, Obj me
+//void, Obj This
 
-	Unit this;
-	Obj u;
-	bool melee;
+Unit this;
 
-	this = me.AsUnit();
-	melee = !.IsRanged;
+this = This.AsUnit();
 
-	if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-		.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InHolder) {
+			Obj o;
+			bool melee;
 
-	//pr("engage: searching for new enemy");
-	u = .BestTargetInSquadSight();
-	if(u.IsAlive())	
-	{
-		//pr("engage: target found!");
-		while (u.IsAlive() && .IsValidTarget(u)) 
-		{
-			Sleep(rand(80) + 20); // Disperse the times
-			while(!.GotoAttack(u, 1500, true, 15000)) 
-			{
-				//pr("engage: approaching target!");
-				u = .BestTargetInSquadSight();
-				if(!u.IsAlive() || !.IsValidTarget(u)) break;
+			melee = !.IsRanged;
+
+			if (IsAIPlayer(.player))
+				.SetParryMode(false);
+
+			o = .BestTargetInSquadSight;
+
+			while (.IsValidTarget(o)) {
+				if (.GotoAttack(o, 1500, true, 15000))
+					if (.IsValidTarget(o))
+						if (o.AsCatapult().IsValid) {
+							while (.Attack(o))
+								if (melee)
+									if (.HasSpecial(trample))
+										o.Damage(.damage);
+						}
+						else
+							while (.Attack(o))
+								;
+
+				o = .BestTargetInSquadSight;
 			}
-			//pr("engage: attacking target!");
-			if (u.IsAlive() && .IsValidTarget(u))
-			{
-				if (u.AsCatapult().IsValid) {
-					while (.Attack(u))
-						if (melee)
-							if (.HasSpecial(trample))
-								u.Damage(.damage);
-				}
-				else
-					while (.Attack(u))
-						;
-			}
-			u = .BestTargetInSquadSight();
 		}
-	} 
+
+Sleep(15);//prevent possible loops with other commands

@@ -11,7 +11,7 @@ if (.IsValid)
 		.PlayAnim(19, .pos);
 
 		u = Place("CrowSummoned", .posRH, .player).AsUnit();
-		u.SetLevel(.inherentlevel);
+		u.SetLevel(.level);
 		u.SetNoAIFlag(true);
 
 		SwapSelectedObj(this, u);

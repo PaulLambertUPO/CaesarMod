@@ -22,6 +22,6 @@ SPFIncreaseConnect();
 Sleep(250);
 
 while (SPFIncreaseConnect_Quant())
-    Sleep(35);
+	Sleep(35);
 
 SPFDone();

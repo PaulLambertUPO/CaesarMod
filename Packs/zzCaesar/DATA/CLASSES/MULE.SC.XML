@@ -1,4 +1,28 @@
-<class id="Mule" parent="Wagon" cpp_class="CVXWagon" entity="">
+<class id="Mule" parent="Wagon" cpp_class="CVXWagon">
+
 	<properties select_class="Mule" />
 	<properties help="contents/units/Mule" />
+
+	<method sig="follow" vs="data/subai/wagon_mule_follow.vs" verify="data/subai/wagon_mule_follow_verify.vs" />
+	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
+	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
+
+	<defaultcmd target="Unit">
+		<cmd name="follow" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="unload" />
+		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
+	</defaultcmd>
 </class>

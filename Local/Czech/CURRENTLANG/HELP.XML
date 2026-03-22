@@ -5538,7 +5538,7 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Gift of God.bmp">
 God's gift
-Equips new warriors with a God's gift, which increases the owner's movement and attack speed by 10%, heals him at the first kill and then disappears.
+Equips new warriors with a God's gift, which heals the owner at the first kill and then disappears.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
@@ -6337,7 +6337,7 @@ It is generated in the face pillar every 15 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Battle Drums of Rage.bmp">
 Battle drums of rage
-If used, they add 30 damage to the owner and nearby allies for 5 seconds.
+If used, they add 30 damage to the owner and nearby allies for 10 seconds.
 They are generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Horn of Victory.bmp">
@@ -6446,7 +6446,7 @@ It is generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Blue Diamond.bmp">
 Stamina diamond
-Restores the stamina of the owner's attached units more quickly.
+Restores the stamina of the owner's attached units by 1 every 15 seconds.
 It is generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Harp.bmp">
@@ -6463,7 +6463,7 @@ They are generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Gem of Wisdom.bmp">
 Gem of wisdom
-Gives a 33% chance to gain 2 experience every time that an attached unit dies.
+Gives a 33% chance to gain 2 experience every time that an attached unit dies (only if the owner is not sheltered).
 It is generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Scroll of Death.bmp">
@@ -6495,8 +6495,7 @@ It is generated with the upgrade "Herb amulet of luck" of the Gaul tavern.
 			</entry>
 			<entry image="UI/Icons/Items/Gods Gift.bmp">
 God's gift
-Increases the owner's movement and attack speed by 10%.
-It completely restores the health of the owner at the first kill, then it disappears.
+Completely restores the health of the owner at the first kill, then it disappears.
 It is generated with the upgrade "God's gift" of the Roman temple.
 			</entry>
 			<entry image="UI/Icons/Items/Spoils of War.bmp">
@@ -6623,6 +6622,7 @@ It is generated with the upgrade "Hire Larax" of the Gaul arena.
 			<entry>\ - Makes the trees tansparent to see behind them</entry>
 			<entry>TAB - Shows the location of the last notification</entry>
 			<entry>; - Graphically displays every unit's health and stamina</entry>
+			<entry># - Shows game data and scores</entry>
 			<entry>ALT - Toggles supply routes on the minimap</entry>
 			<entry>ESC - Deactivates the selection / Opens the main menu</entry>
 			<entry>F1 - Opens the help guide during the game</entry>

@@ -1,76 +1,80 @@
-// void, Obj This
+//void, Obj This
 
 Hero this;
-Obj u, u2;
-point ptStart;
-bool melee, bSquadTarget;
-int i;
 
-this = This.AsHero;
-melee = !.IsRanged;
-ptStart = .pos;
+this = This.AsHero();
 
-//.pr("hero::engage: looking for enemies");
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InHolder) {
+			ObjList h_army;
+			Obj o;
+			int i;
+			bool melee, enemy_to_fight = true;
 
-while (1)
-{
-	bSquadTarget = false;
-	if (.IsEnemyInSquadSight())
-	{
-		u = .BestTargetInSquadSight();
-		if (u.IsAlive())
-			bSquadTarget = true;
-		for (i = 0; !bSquadTarget && i < .army.count; i += 1) {
-			u2 = .army[i].AsUnit.BestTargetInSquadSight();
-			if (u2.IsAlive())
-				bSquadTarget = true;
-		}		
-	}
-	if (!bSquadTarget)
-		break; // there is no enemy we could fight
-	for (i = 0; i < .army.count; i += 1) {
-		if (.army[i].command != "engage")
-			.army[i].SetCommand("engage");
-	}
-	if (!u.IsAlive()) {
-		Sleep(217);
-	}
-	while (u.IsAlive())
-	{
-		//.pr("hero::engage: chasing");
-		while (!.GotoAttack(u, 1500, false, 15000))
-		{
-			u = .BestTargetInSquadSight;
-			if (!u.IsAlive) break;
-			if (!.IsValidTarget(u)) break;
-			if (.DistTo(ptStart) > 1000)
-				break;
+			melee = !.IsRanged;
+
+			{
+				str cmd;
+
+				h_army = .army;
+				for (i = h_army.count - 1; i >= 0; i -= 1) {
+					o = h_army[i];
+					if (o.IsAlive) {
+						cmd = o.command;
+						if (cmd != "engage")
+							if (cmd != "attack")
+								if (cmd != "engage_unit_type_exclusive")
+									if (cmd != "attack_unit_type_exclusive")
+										o.SetCommand("engage");
+					}
+				}
+			}
+
+			while (enemy_to_fight) {
+				enemy_to_fight = false;
+
+				if (.IsEnemyInSquadSight) {
+					o = .BestTargetInSquadSight;
+					if (.IsValidTarget(o))
+						enemy_to_fight = true;
+					else {
+						h_army = .army;
+						for (i = h_army.count - 1; i >= 0; i -= 1) {
+							o = h_army[i];
+							if (o.IsAlive) {
+								o = o.AsUnit().BestTargetInSquadSight;
+								if (o.IsAlive) {
+									enemy_to_fight = true;
+									break;
+								}
+							}
+						}
+					}
+				}
+				else
+					break;
+
+				while (.IsValidTarget(o)) {
+					if (.GotoAttack(o, 1500, true, 15000))
+						if (.IsValidTarget(o))
+							if (o.AsCatapult().IsValid) {
+								while (.Attack(o))
+									if (melee)
+										if (.HasSpecial(trample))
+											o.Damage(.damage);
+							}
+							else
+								while (.Attack(o))
+									;
+
+					o = .BestTargetInSquadSight;
+				}
+
+				.Stop(500);
+
+				Sleep(500);
+			}
 		}
 
-		//.pr("hero::engage: fighting");
-		if (u.IsAlive)
-		if (.IsValidTarget(u))
-			if (u.AsCatapult().IsValid) {
-				while (.Attack(u))
-					if (melee)
-						if (.HasSpecial(trample))
-							u.Damage(.damage);
-			}
-			else
-				while (.Attack(u))
-					;
-
-		//if (GetTime - nStartTime > 1000) break;
-
-		u = .BestTargetInSquadSight;
-		if (!u.IsAlive)	break;
-		if (!.IsValidTarget(u))	break;
-		if (.DistTo(ptStart) > 1000)
-			break;
-	}
-	
-	while (!.Stop(1000));
-	//.pr("hero::engage: enemies killed");
-}
-
-Sleep(500); // Else the sneak command cycles, because of the delayed update of enemies in 'BestTargetInSquadSight'
+Sleep(15);//prevent possible loops with other commands

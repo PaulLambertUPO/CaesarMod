@@ -8,7 +8,7 @@
 		button="actions/Unl Ship.bmp"
 		key="u"
 		rollover="Unboard units">
-		<cmdtext target="" text="Click to unboard all units here" />
+		<cmdtext target="" text="Click to unboard all units at this position" />
 		<src obj="ShipBattle" />
 	</cmd>
 </commands>

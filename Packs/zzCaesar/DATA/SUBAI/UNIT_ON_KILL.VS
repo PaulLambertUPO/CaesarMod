@@ -135,19 +135,16 @@ if (.IsValid)
 
 						h = .hero;
 
-						if (h.IsValid) {
+						if (h.IsAlive) {
 							Item item;
-							int gold;
-
-							gold = GetConst("NobleFerocityGold");
 
 							item = h.FindItem("Gold");
 
 							if (item.IsValid)
-								item.SetUseCount(item.use_count + gold);
+								item.SetUseCount(item.use_count + 10);
 							else if (h.AddItem("Gold")) {
 								item = h.FindItem("Gold");
-								item.SetUseCount(gold);
+								item.SetUseCount(10);
 							}
 						}
 					}

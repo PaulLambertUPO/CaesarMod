@@ -8,7 +8,6 @@ if (.IsValid)
 	if (.IsAlive)
 		if (.HasSpecial(healing)) {
 			Unit u;
-			int i = 10;
 
 			if (!.InHolder)
 				u = .FindUnitToHeal();
@@ -20,14 +19,6 @@ if (.IsValid)
 					if (.TimeWithoutWalking >= 2500)
 						break;
 				}
-
-			while (i > 0) {
-				if (u.IsAlive)
-					break;
-				Sleep(500);
-				u = .FindUnitToHeal();
-				i -= 1;
-			}
 
 			if (u.IsAlive) {
 				.AddCommand(true, "advance", pt);

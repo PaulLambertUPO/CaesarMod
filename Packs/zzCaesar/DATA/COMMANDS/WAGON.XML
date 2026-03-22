@@ -4,7 +4,7 @@
 		<cmdtext target="Unit" default-text="Right-click to follow this unit" />
 	</cmd>
 	<cmd name="unload" cursor="do_something">
-		<cmdtext target="Building" default-text="Unload caravan" />
+		<cmdtext target="Building" default-text="Right-click to unload the resources in this settlement" />
 	</cmd>
 	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
 	<cmd name="loadfood1" priority="3"

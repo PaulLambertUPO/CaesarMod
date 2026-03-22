@@ -6,45 +6,44 @@ this = This.AsBuilding();
 
 if (.IsValid) {
 	ObjList settlements;
-	Settlement settle;
-	int duration, time_step, base_gold_amount, caster_gold_amount, owning_player, secs, gold_increase, i, c;
-	str zero_sec_marker;
-
-	duration = GetConst("StonehengeGoldRainTime");
-	time_step = GetConst("StonehengeGoldRainTimeStep");
-	base_gold_amount = GetConst("StonehengeGoldRainBaseAmount");
-	caster_gold_amount = GetConst("StonehengeGoldRainCasterAmount");
+	Settlement set;
+	int i, owning_player, duration = 120;
+	str announcement;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
+	announcement = "GoldRain_" + owning_player + "_" + .pos.x + "_" + .pos.y;
+
+	settlements.AddList(GetSettlements("BaseTownhall", 0));
+	settlements.AddList(GetSettlements("BaseVillage", 0));
+	settlements.AddList(GetSettlements("BaseShipyard", 0));
+	settlements.AddList(GetSettlements("Outpost", 0));
 
 	PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 	EnvWriteInt("/GoldRainStonehenge", 1);//used in "The conquest of Britain" adventure
 
 	while (duration > 0) {
-		secs = duration % 60000 / 1000;
-		if (secs < 10)
-			zero_sec_marker = "0";
+		i = duration % 60;
+		if (i < 10)
+			ShowAnnouncement(announcement, Translatef("Player %s1 - Gold rain - %s2:0%s3", owning_player, duration / 60, i));
 		else
-			zero_sec_marker = "";
-		ShowAnnouncement("GoldRain", Translatef("Player %s1 - Gold rain - %s2", owning_player, duration / 60000 + ":" + zero_sec_marker + secs));
+			ShowAnnouncement(announcement, Translatef("Player %s1 - Gold rain - %s2:%s3", owning_player, duration / 60, i));
 
-		if (duration % time_step == 0) {
-			settlements = GetSettlements("Building", 0);
-			c = settlements.count;
-			for (i = 0; i < c; i += 1) {
-				settle = settlements[i].AsBuilding().settlement;
-				if (settle.player == owning_player)
-					gold_increase = caster_gold_amount;
-				else
-					gold_increase = base_gold_amount;
-				settle.SetGold(settle.gold + gold_increase);
-				settle.GoldConverted(gold_increase);
+		if (duration % 3 == 0)
+			for (i = settlements.count - 1; i >= 0; i -= 1) {
+				set = settlements[i].AsBuilding().settlement;
+				if (set.player == owning_player) {
+					set.SetGold(set.gold + 15);
+					set.GoldConverted(15);
+				}
+				else {
+					set.SetGold(set.gold + 10);
+					set.GoldConverted(10);
+				}
 			}
-		}
 
-		duration -= 1000;
+		duration -= 1;
 		Sleep(1000);
 	}
 
-	HideAnnouncement("GoldRain");
+	HideAnnouncement(announcement);
 }

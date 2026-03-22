@@ -1,12 +1,8 @@
 //void, Obj owner
 
-Unit this;
-
-this = owner.AsUnit();
-
-if (.IsValid)
+if (owner.AsUnit().IsValid)
 	while (1) {
 		Sleep(1000);
-		if (.health < .maxhealth)
-			.Heal(2);
+		if (owner.health < owner.maxhealth)
+			owner.Heal(2);
 	}

@@ -10,7 +10,8 @@ if (.IsValid)
 			Unit u;
 			int i = 10;
 
-			u = .GetBestCrippleTarget();
+			if (!.InHolder)
+				u = .GetBestCrippleTarget();
 			while (!.Goto(pt, 0, 2000, false, -1)) {
 				u = .GetBestCrippleTarget();
 				if (u.IsAlive)

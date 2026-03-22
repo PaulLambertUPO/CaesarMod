@@ -23,11 +23,10 @@ this = This.AsBuilding();
 
 		h_level = EnvReadInt(plr, "BestHeroLevel");
 		ol = GetPlayerUnits(plr, "Hero");
-		for (i = 0; i < ol.count; i += 1) {
+		for (i = ol.count - 1; i >= 0; i -= 1) {
 			h = ol[i].AsHero();
-			if (h.IsValid)
-				if (h.inherentlevel > h_level)
-					h_level = h.inherentlevel;
+			if (h.inherentlevel > h_level)
+				h_level = h.inherentlevel;
 		}
 		h_level = MAX(1, h_level * 2 / 3);
 	}
@@ -43,7 +42,10 @@ this = This.AsBuilding();
 	}
 	else {
 		h = Place(GetRandomHeroClass(cmdparam, plr), exit_point, plr).AsHero();
-		h.SetCommand("advanceenter", hall);
+		if (set.IsVillage)
+			h.SetCommand("advance", hall.GetEnterPoint(h));
+		else
+			h.SetCommand("advanceenter", hall);
 	}
 
 	h.SetLevel(MAX(h_level, EnvReadInt(set, "levels/Hero")));

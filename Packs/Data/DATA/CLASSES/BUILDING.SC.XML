@@ -11,5 +11,5 @@
 	<properties interface="thumb, building" />
 
 	<method sig="repair" vs="data/subai/building_repair.vs" />
-	<method sig="broken" vs="data/subai/object_idle.vs" />
+	<method sig="broken" vs="data/subai/do_nothing_void_loop.vs" />
 </class>

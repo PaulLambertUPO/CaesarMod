@@ -1,24 +1,26 @@
 //bool, ObjList objs, str OUT reasonText
 
 Building this;
-str class, dest;
+Settlement set;
+str unit_class, dest;
 bool unaffordable = false;
 
-dest = cmdparam;
-class = ParseStr(dest, dest);
-
 this = objs[0].AsBuilding();
+set = .settlement;
 
-if (cmdcost_gold > .settlement.gold)
+dest = cmdparam;
+unit_class = ParseStr(dest, dest);
+
+if (cmdcost_gold > set.gold)
 	unaffordable = true;
-else if (cmdcost_food > .settlement.food)
+else if (cmdcost_food > set.food)
 	unaffordable = true;
 else if (cmdcost_pop > 0)
-	if (.settlement.population - cmdcost_pop < GetConst("MinPopulation"))
+	if (set.population - cmdcost_pop < GetConst("MinPopulation"))
 		unaffordable = true;
 
-if (class != "")
-	reasonText = rollover(this, class, unaffordable);
+if (unit_class != "")
+	reasonText = rollover(this, unit_class, unaffordable);
 else
 	reasonText = rollover(this, unaffordable);
 

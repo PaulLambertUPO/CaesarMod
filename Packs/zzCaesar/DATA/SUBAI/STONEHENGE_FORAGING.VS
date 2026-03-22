@@ -7,47 +7,38 @@ this = This.AsBuilding();
 if (.IsValid) {
 	ObjList player_units;
 	Unit u;
-	int duration, time_step, base_food, caster_food, owning_player, secs, food_increase, i, j, c;
-	str zero_sec_marker;
-
-	duration = GetConst("StonehengeForagingTime");
-	time_step = GetConst("StonehengeForagingTimeStep");
-	base_food = GetConst("StonehengeForagingBaseAmount");
-	caster_food = GetConst("StonehengeForagingCasterAmount");
+	int i, j, owning_player, duration = 45;
+	str announcement;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
+	announcement = "Foraging_" + owning_player + "_" + .pos.x + "_" + .pos.y;
 
 	PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 
 	while (duration > 0) {
-		secs = duration % 60000 / 1000;
-		if (secs < 10)
-			zero_sec_marker = "0";
+		i = duration % 60;
+		if (i < 10)
+			ShowAnnouncement(announcement, Translatef("Player %s1 - Foraging - %s2:0%s3", owning_player, duration / 60, i));
 		else
-			zero_sec_marker = "";
-		ShowAnnouncement("Foraging", Translatef("Player %s1 - Foraging - %s2", owning_player, duration / 60000 + ":" + zero_sec_marker + secs));
+			ShowAnnouncement(announcement, Translatef("Player %s1 - Foraging - %s2:%s3", owning_player, duration / 60, i));
 
-		if (duration % time_step == 0)
+		if (duration % 15 == 0)
 			for (i = 1; i <= 16; i += 1) {
 				player_units = GetPlayerUnits(i);
-				c = player_units.count;
-				for (j = 0; j < c; j += 1) {
+				for (j = player_units.count - 1; j >= 0; j -= 1) {
 					u = player_units[j].AsUnit();
-					if (u.IsValid)
-						if (u.IsAlive)
-							if (u.food <= u.maxfood) {
-								if (u.player == owning_player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
-									food_increase = caster_food;
-								else
-									food_increase = base_food;
-								u.SetFood(MIN(u.food + food_increase, u.maxfood));
-							}
+					if (u.IsAlive)
+						if (u.food <= u.maxfood)
+							if (u.player == owning_player)//check unit player because GetPlayerUnits takes units from other players that are attached to player i's heroes
+								u.SetFood(MIN(u.food + 3, u.maxfood));
+							else
+								u.SetFood(MIN(u.food + 2, u.maxfood));
 				}
 			}
 
-		duration -= 1000;
+		duration -= 1;
 		Sleep(1000);
 	}
 
-	HideAnnouncement("Foraging");
+	HideAnnouncement(announcement);
 }

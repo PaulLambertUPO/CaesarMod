@@ -1,73 +1,90 @@
-// void, Obj This, Obj target
+//void, Obj This, Obj target
+
 Hero this;
-point pt;
-int i;
-bool melee;
 
-this = This.AsHero;
+this = This.AsHero();
 
-melee = !.IsRanged;
+if (.IsValid)
+	if (.IsAlive) {
+		if (target.IsAlive) {
+			Unit u;
 
-if (!target.IsValid)
-	return;
+			u = target.AsUnit();
 
-if (.InHolder || .PathTo(target, .FormRadius, 0) > .sight) {
-	.FormSetupAndMoveTo(target, 0, 0, true);
-	while (1)
-	{
-		if (!.HasPath) break;
-		if (!target.IsAlive) break;
-		if (.DistTo(target) <= .sight * 2 / 3) break;
-		.FormKeepMoving(1500);	
-	}
-}
+			if (u.IsValid)
+				if (u.InHolder) {
+					.AddCommand(true, "engage");
+					Sleep(15);//prevent possible loops with other commands
+					return;
+				}
 
-while (!.IsArmyOutside)
-	.FormKeepMoving(500);
+			.FormSetupAndMoveTo(target, 0, 0, true);
 
-//.pr("hero::attack: target locked!!!");
+			while (!.IsArmyOutside)
+				.FormKeepMoving(500);
 
-if (!target.IsValid)
-	return;
-if (target.AsBuilding)
-{
-	for (i = 0; i < .army.count; i += 1)
-		if (.army[i].IsValidTarget(target))
-			.army[i].SetCommand("attack", target);
-		else
-			.army[i].SetCommand("idle");
-	if (!.IsValidTarget(target))
-		return;
-} else {
-	// attack the target with all ranged units
-	for (i = 0; i < .army.count; i += 1)
-		if (.army[i].IsRanged())
-			.army[i].SetCommand("attack", target);
-		else
-			.army[i].SetCommand("engage");
-}
-while (target.IsAlive)
-{
-	if (!.IsEnemy(target))
-		return;
-	//.pr("hero::attack: going to enemy");
-	if (.GotoAttack(target, 5000, true, 2500))
-	{
-		//.pr("hero::attack: fighting");
-		if (target.IsAlive && .IsValidTarget(target)) 
-		{
-			if (target.AsCatapult().IsValid) {
-				while (.Attack(target))
-					if (melee)
-						if (.HasSpecial(trample))
-							target.Damage(.damage);
+			while (target.IsAlive) {
+				if (u.IsValid)
+					if (u.InHolder) {
+						.AddCommand(true, "engage");
+						Sleep(15);//prevent possible loops with other commands
+						return;
+					}
+				if (!.HasPath)
+					break;
+				if (.DistTo(target) < .sight + 100)
+					break;
+				.FormKeepMoving(1500);
 			}
-			else while (.Attack(target))
-				;
+
+			if (target.IsAlive) {
+				bool melee;
+
+				if (u.IsValid)
+					if (u.InHolder) {
+						.AddCommand(true, "engage");
+						Sleep(15);//prevent possible loops with other commands
+						return;
+					}
+
+				melee = !.IsRanged;
+
+				{
+					ObjList h_army;
+					Obj o;
+					int i;
+
+					h_army = .army;
+					for (i = h_army.count - 1; i >= 0; i -= 1) {
+						o = h_army[i];
+						if (o.IsAlive)
+							if (o.IsRanged)
+								o.SetCommand("attack", target);
+							else
+								o.SetCommand("engage");
+					}
+				}
+
+				while (.IsValidTarget(target)) {
+					if (u.IsValid)
+						if (u.InHolder)
+							break;
+					if (.GotoAttack(target, 1500, true, 3000))
+						if (.IsValidTarget(target))
+							if (target.AsCatapult().IsValid) {
+								while (.Attack(target))
+									if (melee)
+										if (.HasSpecial(trample))
+											target.Damage(.damage);
+							}
+							else
+								while (.Attack(target))
+									;
+				}
+			}
 		}
+
+		.AddCommand(true, "engage");
 	}
 
-	Sleep(17);
-}
-
-.AddCommand(true, "engage");
+Sleep(15);//prevent possible loops with other commands

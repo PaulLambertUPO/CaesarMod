@@ -1,25 +1,21 @@
-// void, Obj This 
+//void, Obj this
 
-Building bld;
-Settlement this;
+Settlement set;
+ObjList ol;
+Obj o;
+int i;
 
-bld = This.AsBuilding();
-if (bld.IsValid) {
-	this = bld.settlement;
-	if (.IsValid) {
-		ObjList l;
-		int i;
-		Unit u;
+set = .AsBuilding().settlement;
 
-		l = .ObjectsAround("Military");
-		l.AddList(.ObjectsAround("BaseMage"));
-		for (i = l.count; i > 0;) {
-			i -= 1;
-			u = l[i].AsUnit();
-			if (!bld.IsEnemy(u)) {
-				u.SetStamina(u.maxstamina);
-				CreateFeedback("StaminaBoost", u);
+ol = set.ObjectsAround("Military");
+ol.AddList(set.ObjectsAround("BaseMage"));
+
+for (i = ol.count - 1; i >= 0; i -= 1) {
+	o = ol[i];
+	if (o.IsAlive)
+		if (o.stamina < o.maxstamina)
+			if (!.IsEnemy(o)) {
+				o.SetStamina(o.maxstamina);
+				CreateFeedback("StaminaBoost", o.AsUnit());
 			}
-		}	
-	}
 }

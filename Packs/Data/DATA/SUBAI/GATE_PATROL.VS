@@ -115,8 +115,11 @@ if (GetConst("NoSentries") == 0) {
 							if (sentry_outer_1.IsAlive) {
 								if (sentry_outer_1.inherentlevel < sentry_level)
 									sentry_outer_1.SetLevel(sentry_level);
-								if (sentry_outer_1.command == "idle")
-									sentry_outer_1.SetCommand("guard", this);
+								if (sentry_outer_1.command != "guard")
+									if (sentry_outer_1.command != "attack") {
+										sentry_outer_1.SetCommand("goto", pt_outer_1);
+										sentry_outer_1.AddCommand(false, "guard", this);
+									}
 							}
 							else {
 								set.DelSentry();
@@ -133,8 +136,11 @@ if (GetConst("NoSentries") == 0) {
 							if (sentry_inner_1.IsAlive) {
 								if (sentry_inner_1.inherentlevel < sentry_level)
 									sentry_inner_1.SetLevel(sentry_level);
-								if (sentry_inner_1.command == "idle")
-									sentry_inner_1.SetCommand("guard", this);
+								if (sentry_inner_1.command != "guard")
+									if (sentry_inner_1.command != "attack") {
+										sentry_inner_1.SetCommand("goto", pt_inner_1);
+										sentry_inner_1.AddCommand(false, "guard", this);
+									}
 							}
 							else {
 								set.DelSentry();
@@ -151,8 +157,11 @@ if (GetConst("NoSentries") == 0) {
 							if (sentry_outer_2.IsAlive) {
 								if (sentry_outer_2.inherentlevel < sentry_level)
 									sentry_outer_2.SetLevel(sentry_level);
-								if (sentry_outer_2.command == "idle")
-									sentry_outer_2.SetCommand("guard", this);
+								if (sentry_outer_2.command != "guard")
+									if (sentry_outer_2.command != "attack") {
+										sentry_outer_2.SetCommand("goto", pt_outer_2);
+										sentry_outer_2.AddCommand(false, "guard", this);
+									}
 							}
 							else {
 								set.DelSentry();
@@ -169,8 +178,11 @@ if (GetConst("NoSentries") == 0) {
 							if (sentry_inner_2.IsAlive) {
 								if (sentry_inner_2.inherentlevel < sentry_level)
 									sentry_inner_2.SetLevel(sentry_level);
-								if (sentry_inner_2.command == "idle")
-									sentry_inner_2.SetCommand("guard", this);
+								if (sentry_inner_2.command != "guard")
+									if (sentry_inner_2.command != "attack") {
+										sentry_inner_2.SetCommand("goto", pt_inner_2);
+										sentry_inner_2.AddCommand(false, "guard", this);
+									}
 							}
 							else {
 								set.DelSentry();

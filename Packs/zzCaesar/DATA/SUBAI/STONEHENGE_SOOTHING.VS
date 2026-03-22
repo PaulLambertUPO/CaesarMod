@@ -6,35 +6,28 @@ this = This.AsBuilding();
 
 if (.IsValid) {
 	ObjList player_units;
-	Unit u;
-	int duration, time_step, owning_player, stamina_increase, interval, k, l, c;
-
-	duration = GetConst("StonehengeSoothingTime");
-	time_step = GetConst("StonehengeSoothingTimeStep");
+	Obj o;
+	int i, j, k, owning_player;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
 
 	PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 
-	for (interval = duration / time_step; interval > 0; interval -= 1) {
-		for (k = 1; k <= 16; k += 1) {
-			player_units = GetPlayerUnits(k);
-			c = player_units.count;
-			for (l = 0; l < c; l += 1) {
-				u = player_units[l].AsUnit();
-				if (u.IsValid)
-					if (u.IsAlive)
-						if (u.stamina < u.maxstamina) {
-							if (u.player == owning_player)//check unit player instead of k because GetPlayerUnits takes units from other players that are attached to player k's heroes
-								stamina_increase = 10;
-							else
-								stamina_increase = 5;
-							u.HealStamina(stamina_increase);
-							if (!u.InHolder)
-								CreateFeedback("StaminaBoost", u);
-						}
+	for (i = GetConst("StonehengeSoothingTime") / 5000; i > 0; i -= 1) {
+		for (j = 1; j <= 16; j += 1) {
+			player_units = GetPlayerUnits(j);
+			for (k = player_units.count - 1; k >= 0; k -= 1) {
+				o = player_units[k];
+				if (o.IsAlive)
+					if (o.stamina < o.maxstamina) {
+						if (o.player == owning_player)//check unit player instead of k because GetPlayerUnits takes units from other players that are attached to player k's heroes
+							o.HealStamina(10);
+						else
+							o.HealStamina(5);
+						CreateFeedback("StaminaBoost", o.AsUnit());
+					}
 			}
 		}
-		Sleep(time_step);
+		Sleep(5000);
 	}
 }

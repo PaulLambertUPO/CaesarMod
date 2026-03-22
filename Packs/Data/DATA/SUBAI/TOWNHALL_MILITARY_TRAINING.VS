@@ -1,28 +1,23 @@
-//void, Obj This
+//void, Obj this
 
-Building bld;
-Settlement this;
+Settlement set;
+ObjList ol;
+Unit u;
+int i;
 
-bld = This.AsBuilding();
-if (bld.IsValid) {
-	this = bld.settlement;
-	if (.IsValid) {
-		ObjList l;
-		int i;
-		Unit u;
+set = .AsBuilding().settlement;
 
-		l = .ObjectsAround("Military");
-		l.AddList(.ObjectsAround("BaseMage"));
-		for (i = l.count; i > 0;) {
-			i -= 1;
-			u = l[i].AsUnit();
-			if (bld.IsEnemy(u))
-				continue;
-			if (u.inherentlevel >= 10)
-				continue;
-			u.SetLevel(u.inherentlevel + 1);
-			CreateFeedback("Experience", u);
-		}	
-		bld.PlaySound("Data/Sound Entities/TownhallMilitaryTraining.xml");
-	}
+ol = set.ObjectsAround("Military");
+ol.AddList(set.ObjectsAround("BaseMage"));
+
+for (i = ol.count - 1; i >= 0; i -= 1) {
+	u = ol[i].AsUnit();
+	if (u.IsAlive)
+		if (u.inherentlevel < 10)
+			if (!.IsEnemy(u)) {
+				u.SetLevel(u.inherentlevel + 1);
+				CreateFeedback("Experience", u);
+			}
 }
+
+.PlaySound("Data/Sound Entities/TownhallMilitaryTraining.xml");

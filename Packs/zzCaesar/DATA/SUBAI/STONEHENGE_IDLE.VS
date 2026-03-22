@@ -1,22 +1,27 @@
 //void, Obj This
 
-Building this;
+Sleep(500 + rand(501));
 
-this = This.AsBuilding();
+//use a scope to remove variables when the final loop is reached
+{
+	Building this;
 
-if (.IsValid) {
-	int count;
+	this = This.AsBuilding();
 
-	while (1) {
-		Sleep(2000);
+	if (.IsValid) {
+		int count;
 
-		count = .StonehengeNumControllingMages();
+		while (1) {
+			Sleep(2000);
 
-		if (count > 0) {
-			if (.stamina < 100)
-				.SetStamina(.stamina + 1);
-			if (count < 50)
-				Sleep(14000 / count);
+			count = .StonehengeNumControllingMages;
+
+			if (count > 0) {
+				if (.stamina < 100)
+					.SetStamina(.stamina + 1);
+				if (count < 50)
+					Sleep(14000 / count);
+			}
 		}
 	}
 }

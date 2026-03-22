@@ -1,22 +1,4 @@
 <commands>
-	<cmd name="repair barracks" priority="1"
-		method="repair"
-		button="actions/repair.bmp"
-		key="r"
-		queueicon="gameres/icons/upgrades/repair.bmp"
-		rollover="Repair"
-		costgold="100"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
-		execdelay="60000">
-		<src obj="GBarracks" />
-		<src obj="RBarracks" />
-		<src obj="CBarracks" />
-		<src obj="IBarracks" />
-		<src obj="BBarracks" />
-		<src obj="TBarracks" />
-		<src obj="EBarracks" />
-		<src obj="HBarracks" />
-	</cmd>
 	<cmd name="Barrack Level 1" priority="2"
 		researchcommand="yes"
 		groupverifier="data/subai/verify_research.vs"

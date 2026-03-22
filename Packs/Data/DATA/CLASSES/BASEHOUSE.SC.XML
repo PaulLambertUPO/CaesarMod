@@ -1,6 +1,5 @@
 <class id="BaseHouse" cpp_class="CVXBuilding" parent="BaseBuilding">
 	<properties maxhealth="1000" />
-	<properties house_pop_bonus="10" />
 	<properties auto_repair="yes" />
 	<properties interface="thumb,building" />
 	<properties display_name="House" />

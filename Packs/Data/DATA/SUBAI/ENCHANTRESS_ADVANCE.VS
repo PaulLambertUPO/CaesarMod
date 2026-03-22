@@ -8,7 +8,7 @@ if (.IsValid)
 	if (.IsAlive)
 		if (.HasSpecial(teaching)) {
 			Unit u;
-			int teaching_level, i = 10;
+			int teaching_level;
 
 			if (IsResearched(.player, "Ancestral Knowledge"))
 				teaching_level = GetConst("TeachingLevel2");
@@ -25,14 +25,6 @@ if (.IsValid)
 					if (.TimeWithoutWalking >= 2500)
 						break;
 				}
-
-			while (i > 0) {
-				if (u.IsAlive)
-					break;
-				Sleep(500);
-				u = .FindUnitBelowILevel(teaching_level);
-				i -= 1;
-			}
 
 			if (u.IsAlive) {
 				.AddCommand(true, "advance", pt);

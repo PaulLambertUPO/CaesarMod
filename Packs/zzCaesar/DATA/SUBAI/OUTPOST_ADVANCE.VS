@@ -10,9 +10,11 @@ for (i = units.count - 1; i >= 0; i -= 1) {
 	o = units[i];
 	if (o.IsDead)
 		units.Remove(o);
-	else if (!DiplGetShareControl(o.player, player))
-		units.Remove(o);
 	else if (o.AsUnit().hero.IsValid)
+		units.Remove(o);
+	else if (o.command == "follow")
+		units.Remove(o);
+	else if (!DiplGetShareControl(o.player, player))
 		units.Remove(o);
 }
 

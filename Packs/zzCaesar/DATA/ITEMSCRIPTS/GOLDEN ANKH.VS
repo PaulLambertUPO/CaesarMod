@@ -9,7 +9,6 @@ if (.IsValid)
 		Sleep(1000);
 		if (.health < .maxhealth / 4) {
 			.Heal(10);
-			if (!.InHolder)
-				CreateFeedback("Heal", this);
+			CreateFeedback("Heal", this);
 		}
 	}

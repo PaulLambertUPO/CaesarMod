@@ -5,53 +5,46 @@ Building this;
 this = This.AsBuilding();
 
 if (.IsValid) {
-	ObjList things;
-	Settlement settle;
+	ObjList settlements, player_wagons;
+	Settlement set;
 	Wagon wagon;
-	int duration, time_step, base_percent, base_additional, owning_player, interval, percent, additional, c, l, k;
-
-	duration = GetConst("StonehengeStarvationTime");
-	time_step = GetConst("StonehengeStarvationTimeStep");
-	base_percent = GetConst("StonehengeStarvationPercentFood");
-	base_additional = GetConst("StonehengeStarvationAdditionalFood");
+	int i, j, k, owning_player, percent, additional;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
+	
+	settlements.AddList(GetSettlements("BaseTownhall", 0));
+	settlements.AddList(GetSettlements("BaseVillage", 0));
+	settlements.AddList(GetSettlements("BaseShipyard", 0));
+	settlements.AddList(GetSettlements("Outpost", 0));
+	settlements.AddList(GetSettlements("TTent", 0));
 
 	PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 
-	for (interval = duration / time_step; interval > 0; interval -= 1) {
-		things = GetSettlements("Building", 0);
-		c = things.count;
-		for (l = 0; l < c; l += 1) {
-			settle = things[l].AsBuilding().settlement;
-			if (settle.player == owning_player) {
-				percent = base_percent / 2;
-				additional = base_additional / 2;
-			}
-			else {
-				percent = base_percent;
-				additional = base_additional;
-			}
-			settle.SetFood(MAX(0, settle.food * (100 - percent) / 100 - additional));
+	for (i = GetConst("StonehengeStarvationTime") / 5000; i > 0; i -= 1) {
+		for (j = settlements.count - 1; j >= 0; j -= 1) {
+			set = settlements[j].AsBuilding().settlement;
+			if (set.player == owning_player)
+				set.SetFood(MAX(0, set.food * 99 / 100 - 10));
+			else
+				set.SetFood(MAX(0, set.food * 98 / 100 - 20));
 		}
-		for (k = 1; k <= 16; k += 1) {
-			if (k == owning_player) {
-				percent = base_percent / 2;
-				additional = base_additional / 2;
+		for (j = 1; j <= 16; j += 1) {
+			if (j == owning_player) {
+				percent = 99;
+				additional = 10;
 			}
 			else {
-				percent = base_percent;
-				additional = base_additional;
+				percent = 98;
+				additional = 20;
 			}
-			things = GetPlayerUnits(k, "Wagon");
-			c = things.count;
-			for (l = 0; l < c; l += 1) {
-				wagon = things[l].AsWagon();
+			player_wagons = GetPlayerUnits(j, "Wagon");
+			for (k = player_wagons.count - 1; k >= 0; k -= 1) {
+				wagon = player_wagons[k].AsWagon();
 				if (wagon.IsAlive)
-					if (wagon.restype == 1)//0 = gold, 1 = food
-						wagon.SetFood(MAX(0, wagon.amount * (100 - percent) / 100 - additional));
+					if (wagon.restype == 1)
+						wagon.SetFood(MAX(0, wagon.amount * percent / 100 - additional));
 			}
 		}
-		Sleep(time_step);
+		Sleep(5000);
 	}
 }

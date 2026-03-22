@@ -5,10 +5,10 @@ if (owner.AsHero().IsValid) {
 
 	this = attached.AsUnit();
 
-	if (.IsValid)
-		if (!.InHolder) {
-			owner.Heal(5);
-			if (rand(10) == 0) {
+	if (.IsValid) {
+		owner.Heal(5);
+		if (rand(10) == 0)
+			if (!.InHolder) {
 				Unit u;
 				u = Place("GGhost", .pos, .player);
 				u.SetStamina(5);
@@ -16,5 +16,5 @@ if (owner.AsHero().IsValid) {
 				u.SetCommand("spawn");
 				SwapSelectedObj(this, u);
 			}
-		}
+	}
 }

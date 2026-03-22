@@ -21,7 +21,7 @@
 	<properties display_name="Object" display_name_plural="Objects" />
 	<properties interface="thumb" />
 
-	<method sig="idle" vs="data/subai/object_idle.vs" />
+	<method sig="idle" vs="data/subai/do_nothing_void_loop.vs" />
 	<method sig="wait" vs="data/subai/object_wait.vs" />
 
 	<sounds select="" command="" />

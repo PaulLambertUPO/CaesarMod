@@ -11,14 +11,11 @@
 	<properties help="contents/units/Boat" />
 	<properties edittree_pos="Units/Others/Boat" />
 
+	<method sig="follow" vs="data/subai/wagon_boat_follow.vs" verify="data/subai/wagon_boat_follow_verify.vs" />
+
 	<defaultcmd target="Unit">
+		<cmd name="follow" />
 		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="ShipBattle">
-		<cmd name="follow" />
-	</defaultcmd>
-	<defaultcmd target="ShipS">
-		<cmd name="follow" />
 	</defaultcmd>
 	<defaultcmd target="Building">
 		<cmd name="approach" />

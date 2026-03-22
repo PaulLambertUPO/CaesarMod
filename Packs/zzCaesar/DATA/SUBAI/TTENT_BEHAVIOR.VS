@@ -7,7 +7,7 @@ Unit u;
 point pt_pos, pt_1, pt_2;
 rect rc;
 str unit_class_1, unit_class_2;
-int i, j, plr, rad, rng, rng_half, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain = 1;
+int i, j, plr, rad, rng, rng_half, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain;
 bool first_time_independent;
 
 Sleep(500 + rand(501));
@@ -120,18 +120,21 @@ while (1) {
 
 	for (i = all_defenders.count - 1; i >= 0; i -= 1) {//set feeding of commanded units
 		u = all_defenders[i].AsUnit();
-		if (u.IsAlive)
-			if (u.GetCommanded()) {
-				u.SetFeeding(true);
-				all_defenders.Remove(u);
-			}
+		if (u.IsDead)
+			all_defenders.Remove(u);
+		else if (u.GetCommanded()) {
+			u.SetFeeding(true);
+			all_defenders.Remove(u);
+		}
 	}
 
-	exp_gain = GetTime() / 60000 - 3;//start gaining experience after 5 minutes
+	exp_gain = GetTime() / 60000 - 4;//start gaining experience after 5 minutes
 	if (exp_gain > old_exp_gain) {
 		for (i = all_defenders.count - 1; i >= 0; i -= 1) {
 			u = all_defenders[i].AsUnit();
-			if (u.IsAlive)
+			if (u.IsDead)
+				all_defenders.Remove(u);
+			else
 				u.SetExperience(u.experience + exp_gain - old_exp_gain);
 		}
 		old_exp_gain = exp_gain;
@@ -190,17 +193,18 @@ while (1) {
 				}
 		}
 
-		if (all_defenders.count <= 0) {//handle the capturing (the new player will be chosen randomly among those with most units nearby)
+		if (all_defenders.count <= 0) {//handle the capturing (the new player will be chosen randomly among those with most warriors nearby)
+			enemies = enemies.ObjClass("Military");
 			enemies.ClearDead();
 			i = enemies.count;
 			if (i > 0)
-				if (Intersect(VisibleObjsInSight(this, "Unit"), FriendlyObjs(plr, "Military")).IsEmpty()) {//exclude hidden allies (just like with capturable buildings)
-					IntArray player_units, players;
+				if (Intersect(VisibleObjsInSight(this, "Unit"), FriendlyObjs(plr, "Military")).IsEmpty) {//exclude hidden allies (just like with capturable buildings)
+					IntArray player_warriors, players;
 					int max, p;
 					for (j = 0; j < i; j += 1)
-						player_units[enemies[j].player] += 1;//count units per player
+						player_warriors[enemies[j].player] += 1;//count warriors per player
 					for (i = 1; i <= 16; i += 1) {
-						j = player_units[i];
+						j = player_warriors[i];
 						if (j > 0)
 							if (j > max) {//new max found, reset the players to choose from
 								max = j;

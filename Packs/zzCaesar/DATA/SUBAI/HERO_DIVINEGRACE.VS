@@ -1,14 +1,15 @@
-//void, Obj me
+//void, Obj this
 
-Hero this;
-
-this = me.AsHero();
-
-if (.IsValid)
-	if (.stamina >= cmdcost_stamina)
+if (.AsHero().IsValid)
+	if (.IsAlive)
 		if (.health < .maxhealth) {
-			if (!.InHolder)
-				CreateFeedback("Heal", this);
-			.SetStamina(.stamina - cmdcost_stamina);
-			.Heal(100);
+			int cost;
+
+			cost = cmdcost_stamina;
+
+			if (.stamina >= cost) {
+				.SetStamina(.stamina - cost);
+				.Heal(100);
+				CreateFeedback("Heal", .AsUnit());
+			}
 		}

@@ -1,15 +1,4 @@
 <commands>
-	<cmd name="repair arena" priority="1"
-		method="repair"
-		button="actions/repair.bmp"
-		key="r"
-		queueicon="gameres/icons/upgrades/repair.bmp"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
-		rollover="Repair"
-		costgold="100"
-		execdelay="60000">
-		<src obj="BaseArena" />
-	</cmd>
 	<!-- REPUBLICAN ROME -->
 	<cmd name="hireheroR" priority="2"
 		button="actions/hire heroR.bmp"
@@ -1057,7 +1046,7 @@
 		description="Makes new warriors level 2 (4 for Horus warriors)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Cult of Horus, default, SetsSet, levels/ESwordsman, 2, SetsSet, levels/EArcher, 2, SetsSet, levels/EAxetrower, 2, SetsSet, levels/EAnubisWarrior, 2, SetsSet, levels/EHorusWarrior, 4, SetsSet, levels/EGuardian, 2, SetsSet, levels/EChariot, 2, NameSet, Light of Horus I">
+		param="ReqSet, Cult of Horus, default, NameSet, Light of Horus I, , SetsSet, levels/Warrior, 2, SetsSet, levels/EHorusWarrior, 4">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<cmd name="Light of Horus II" priority="8"
@@ -1071,7 +1060,7 @@
 		description="Makes new warriors level 4 (6 for Horus warriors)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus I, , SetsSet, levels/ESwordsman, 4, SetsSet, levels/EArcher, 4, SetsSet, levels/EAxetrower, 4, SetsSet, levels/EAnubisWarrior, 4, SetsSet, levels/EHorusWarrior, 6, SetsSet,levels/EGuardian, 4, SetsSet, levels/EChariot, 4, NameSet, Light of Horus II">
+		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus I, , NameSet, Light of Horus II, , SetsSet, levels/Warrior, 4, SetsSet, levels/EHorusWarrior, 6">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<cmd name="Light of Horus III" priority="8"
@@ -1085,7 +1074,7 @@
 		description="Makes new warriors level 6 (8 for Horus warriors)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus II, , SetsSet, levels/ESwordsman, 6, SetsSet, levels/EArcher, 6, SetsSet, levels/EAxetrower, 6, SetsSet, levels/EAnubisWarrior, 6, SetsSet, levels/EHorusWarrior, 8, SetsSet, levels/EGuardian, 6, SetsSet, levels/EChariot, 6, NameSet, Light of Horus III, default">
+		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus II, , NameSet, Light of Horus III, default, SetsSet, levels/Warrior, 6, SetsSet, levels/EHorusWarrior, 8">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<cmd name="Statue of Amon-Ra" priority="9"

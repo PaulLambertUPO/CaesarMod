@@ -8,11 +8,12 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("teuton_horde");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
-		.SetCommand("teuton_horde");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("teuton_horde");
 	}
 }

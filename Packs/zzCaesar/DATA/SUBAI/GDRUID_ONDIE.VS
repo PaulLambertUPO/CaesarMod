@@ -46,7 +46,7 @@ if (.IsValid)
 				else
 					u = Place("BoarSummoned", .pos, .player).AsUnit();
 
-				u.SetLevel(.inherentlevel);
+				u.SetLevel(.level);
 				u.SetNoAIFlag(true);
 				u.SetCommand("engage");
 

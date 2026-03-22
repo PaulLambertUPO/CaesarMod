@@ -1,15 +1,4 @@
 <commands>
-	<cmd name="repairTTempleOfNeptus" priority="1"
-		method="repair"
-		button="actions/repair.bmp"
-		key="r"
-		queueicon="gameres/icons/upgrades/repair.bmp"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
-		rollover="Repair"
-		costgold="100"
-		execdelay="60000">
-		<src obj="TTempleOfNeptus" />
-	</cmd>
 	<cmd name="trainTEnchantress" priority="2"
 		button="actions/train TEnchantress.bmp"
 		queueicon="gameres/icons/TEnchantress.bmp"

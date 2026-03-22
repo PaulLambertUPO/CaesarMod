@@ -8,13 +8,14 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("sacrifice");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
 		.GlobalSpellStart(gsDivineSacrifice, player);
 
-		.SetCommand("sacrifice");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("sacrifice");
 	}
 }

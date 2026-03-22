@@ -8,13 +8,14 @@ if (.IsValid) {
 	int cost;
 
 	cost = GetCmdStaminaCost("wisdom");
+
 	if (.stamina >= cost) {
 		.SetStamina(.stamina - cost);
 
 		.GlobalSpellStart(gsWindOfWisdom, player);
 
-		.SetCommand("wisdom");
-
 		EnvWriteInt(this, "OwningPlayer", player);
+
+		.SetCommand("wisdom");
 	}
 }

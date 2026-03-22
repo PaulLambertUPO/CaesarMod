@@ -13,7 +13,7 @@ set = .settlement;
 	Unit u;
 	point exit_point;
 	str u_class, s;
-	int plr, u_level = 1;
+	int plr, u_level;
 
 	hall = set.GetCentralBuilding();
 	u_class = ParseStr(cmdparam, s);
@@ -30,11 +30,14 @@ set = .settlement;
 	}
 	else {
 		u = Place(u_class, exit_point, plr).AsUnit();
-		u.SetCommand("advanceenter", hall);
+		if (set.IsVillage)
+			u.SetCommand("advance", hall.GetEnterPoint(u));
+		else
+			u.SetCommand("advanceenter", hall);
 	}
 
 	if (!u.IsHeirOf("BaseMage")) {
-		u_level = MAX(1, EnvReadInt(plr, "standard_spawn_level"));
+		u_level = MAX(EnvReadInt(plr, "standard_spawn_level"), MAX(EnvReadInt(set, "levels/Warrior"), EnvReadInt(set, "levels/" + u_class)));
 
 		if (u_level < 12)
 			if (IsResearched(set, "Shared Triumph")) {
@@ -57,21 +60,17 @@ set = .settlement;
 				if (IsResearched(plr, "Tame horses"))
 					u_level = 6;
 
-		if (u_level < 5)
-			if (IsResearched(set, "Olympic Games"))
-				u_level = 5;
-
-		if (EnvReadInt(set, "items/Bear teeth amulet") == 1)
+		if (EnvReadInt(set, "items/Bear teeth amulet") != 0)
 			u.AddItem("Bear teeth amulet");
-		if (EnvReadInt(set, "items/Belt of might") == 1)
+		if (EnvReadInt(set, "items/Belt of might") != 0)
 			u.AddItem("Belt of might");
-		if (EnvReadInt(set, "items/Herb amulet of luck") == 1)
+		if (EnvReadInt(set, "items/Herb amulet of luck") != 0)
 			u.AddItem("Herb amulet of luck");
-		if (EnvReadInt(set, "items/God's Gift") == 1)
+		if (EnvReadInt(set, "items/God's Gift") != 0)
 			u.AddItem("God's Gift");
-		if (EnvReadInt(set, "items/Veteran Guild") == 1)
+		if (EnvReadInt(set, "items/Veteran Guild") != 0)
 			u.AddItem("Veteran Guild");
 	}
 
-	u.SetLevel(MAX(u_level, EnvReadInt(set, "levels/" + u_class)));
+	u.SetLevel(MAX(1, u_level));
 }

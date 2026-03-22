@@ -5,24 +5,16 @@ Druid this;
 this = This.AsDruid();
 
 if (.IsValid)
-	if (.IsAlive) {
-		Hero h;
-		Unit u;
-		int stamina_cost, learnings;
-		bool go_to_hero, use_cripple;
+	if (.IsAlive)
+		if (!.InHolder) {
+			Hero h;
+			Unit u;
+			int stamina_cost, learnings;
+			bool go_to_hero, use_cripple;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
+			stamina_cost = GetCmdStaminaCost("cripple");
 
-		Sleep(50 + rand(451));
-
-		stamina_cost = GetCmdStaminaCost("cripple");
-
-		while (.IsEnemyInSquadSight)
-			if (.InHolder)
-				Sleep(2500);
-			else {
+			while (.IsEnemyInSquadSight) {
 				go_to_hero = true;
 
 				u.Clear();
@@ -119,6 +111,6 @@ if (.IsValid)
 
 				Sleep(500);
 			}
-	}
+		}
 
 Sleep(15);//prevent possible loops with other commands

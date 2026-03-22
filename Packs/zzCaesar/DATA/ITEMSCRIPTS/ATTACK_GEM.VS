@@ -6,28 +6,40 @@ this = owner.AsHero();
 
 if (.IsValid) {
 	ObjList army, army_added;
+	Obj o;
 	int i;
 
 	while (1) {
 		army = .army;
-		for (i = 0; i < army.count; i += 1)
-			if (army[i].IsMilitary)//do not give the bonus to other units to avoid displaying a value if they are selected
-				if (!army_added.Contains(army[i])) {
-					army[i].AsUnit().AddBonus(4, 0, 0, 0, 0);
-					army_added.Add(army[i]);
+		for (i = army.count - 1; i >= 0; i -= 1) {
+			o = army[i];
+			if (o.IsAlive)
+				if (!army_added.Contains(o)) {
+					if (o.IsMilitary) {//do not give the bonus to other units to avoid displaying a damage value in the interface if they are selected
+						o.AsUnit().AddBonus(4, 0, 0, 0, 0);
+						CreateFeedback("OffensiveTactics", o.AsUnit());
+					}
+					army_added.Add(o);
 				}
+		}
 
-		army_added.ClearDead();
-		for (i = army_added.count - 1; i >= 0; i -= 1)
-			if (army_added[i].AsUnit().hero != this) {//remove bonus from detached units
-				army_added[i].AsUnit().RemoveBonus(4, 0, 0, 0, 0);
-				army_added.Remove(army_added[i]);
+		for (i = army_added.count - 1; i >= 0; i -= 1) {//remove bonus from detached units and militiamen converted to peasants
+			o = army_added[i];
+			if (o.IsDead)
+				army_added.Remove(o);
+			else if (o.AsUnit().hero != this) {
+				if (o.IsMilitary)
+					o.AsUnit().RemoveBonus(4, 0, 0, 0, 0);
+				else if (o.IsPeasant)
+					o.AsUnit().RemoveBonus(4, 0, 0, 0, 0);
+				army_added.Remove(o);
 			}
-			else if (!army_added[i].IsMilitary) {//remove bonus from militiamen converted to peasants
-				army_added[i].AsUnit().RemoveBonus(4, 0, 0, 0, 0);
-				army_added.Remove(army_added[i]);
+			else if (o.IsPeasant) {
+				o.AsUnit().RemoveBonus(4, 0, 0, 0, 0);
+				army_added.Remove(o);
 			}
+		}
 
-		Sleep(50);
+		Sleep(500);
 	}
 }

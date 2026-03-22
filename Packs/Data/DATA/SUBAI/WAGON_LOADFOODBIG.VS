@@ -5,4 +5,5 @@ Wagon this;
 this = This.AsWagon();
 
 if (.IsValid)
-	.LoadFood(1000);
+	if (.IsAlive)
+		.LoadFood(1000);

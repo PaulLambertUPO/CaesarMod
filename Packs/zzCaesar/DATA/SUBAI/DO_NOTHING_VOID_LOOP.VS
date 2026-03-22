@@ -1,4 +1,4 @@
 //void, Obj this
 
-while (1)
+while (true)
 	Sleep(3600000);

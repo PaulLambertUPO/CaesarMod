@@ -1,15 +1,4 @@
 <commands>
-	<cmd name="repair blacksmith" priority="1"
-		method="repair"
-		button="actions/repair.bmp"
-		key="r"
-		queueicon="gameres/icons/upgrades/repair.bmp"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
-		rollover="Repair"
-		costgold="100"
-		execdelay="60000">
-		<src obj="BaseBlacksmith" />
-	</cmd>
 	<cmd name="Strengthen Stronghold Defences I" priority="10"
 		queueicon="gameres/icons/upgrades/Stronghold Defense.bmp"
 		key="d"
@@ -553,7 +542,7 @@
 		rollover="Steel Weapons"
 		description="Makes new warriors level 6"
 		method="research"
-		param="NameSet, Steel Weapons, default, SetsSet, levels/BSwordsman, 6, SetsSet, levels/BBowman, 6, SetsSet, levels/BBronzeSpearman, 6, SetsSet, levels/BShieldBearer, 6, SetsSet, levels/BJavelineer, 6, SetsSet, levels/BHighlander, 6">
+		param="NameSet, Steel Weapons, default, SetsSet, levels/Warrior, 6">
 		<src obj="BBlacksmith" />
 	</cmd>
 	<!-- EGYPT -->

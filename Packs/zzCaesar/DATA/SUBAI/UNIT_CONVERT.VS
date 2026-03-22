@@ -4,12 +4,15 @@ Unit this;
 
 this = This.AsUnit();
 
-if (.InHolder)
-	if (.IsHeirOf("IMilitiaman"))
-		.Mutate("IVillager");
-	else if (.IsHeirOf("TTeutonRider"))
-		.Mutate("TTeutonArcher");
-	else if (.IsHeirOf("TTeutonArcher"))
-		.Mutate("TTeutonWolf");
-	else if (.IsHeirOf("TTeutonWolf"))
-		.Mutate("TTeutonRider");
+if (.IsValid)
+	if (.IsAlive)
+		if (.InHolder)
+			if (.IsHeirOf("TTeutonRider"))
+				.Mutate("TTeutonArcher");
+			else if (.IsHeirOf("TTeutonArcher"))
+				.Mutate("TTeutonWolf");
+			else if (.IsHeirOf("TTeutonWolf"))
+				.Mutate("TTeutonRider");
+			else if (.IsHeirOf("IMilitiaman"))
+				if (!.GetHolderSett().GetCentralBuilding().AsCatapult().IsValid)
+					.Mutate("IVillager");

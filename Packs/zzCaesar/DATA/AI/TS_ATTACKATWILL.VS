@@ -108,7 +108,7 @@ while (ol.count > 0) {
 
 		if (u.command == "getitem")
 			continue;
-		if (u.item_count < u.max_items)
+		if (u.items_count < u.max_items)
 			if (u.GetSquad().TakeNearbyItems(u.sight))
 				continue;
 		if (u.command != "idle")
@@ -125,7 +125,7 @@ while (ol.count > 0) {
 				u.SetCommand("enter", hall);
 				continue;
 			}
-			else if (u.item_count == u.max_items) {
+			else if (u.items_count == u.max_items) {
 				u.SetCommand("enter", hall);
 				continue;
 			}

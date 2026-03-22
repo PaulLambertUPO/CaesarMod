@@ -1,4 +1,4 @@
-<class id="Peaceful" parent="Unit" cpp_class="CVXUnit" entity="">
+<class id="Peaceful" parent="Unit" cpp_class="CVXUnit">
 
 	<properties damage="0" damage_type="none" />
 	<properties range="17" min_range="2" />
@@ -10,8 +10,14 @@
 	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
 	<method sig="attack" vs="data/subai/unit_approach.vs" />
 	<method sig="attack" vs="data/subai/unit_move.vs" />
+	<method sig="engage" vs="data/subai/do_nothing_void.vs" />
+	<method sig="attack_unit_type_exclusive" vs="data/subai/unit_approach.vs" />
+	<method sig="engage_unit_type_exclusive" vs="data/subai/do_nothing_void.vs" />
 	<method sig="advance" vs="data/subai/unit_move.vs" />
 	<method sig="advance_aggressive" vs="data/subai/unit_move.vs" />
+	<method sig="advanceenter" vs="data/subai/peaceful_enter.vs" />
+	<method sig="enter" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
 		script="return Translate('No');"

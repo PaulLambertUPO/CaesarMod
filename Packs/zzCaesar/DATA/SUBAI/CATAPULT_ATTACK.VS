@@ -1,6 +1,6 @@
 //void, Obj me, Obj target
 
-Catapult  this;
+Catapult this;
 
 this = me.AsCatapult();
 

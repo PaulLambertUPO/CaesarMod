@@ -15,6 +15,8 @@
 	<properties interface="thumb,hero,items,holder" />
 	<properties inventory_size="5" />
 
+	<properties select_class="Hero" />
+
 	<properties display_name="Hero" display_name_plural="Heroes" />
 
 	<behavior script="data/subai/hero_skill_behaviour.vs" />
@@ -24,10 +26,10 @@
 	<method sig="patrol" vs="data/subai/hero_patrol.vs" />
 	<method sig="advance" vs="data/subai/hero_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/hero_advance_aggressive.vs" />
-	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/hero_attack_verify.vs" />
 	<method sig="attack" vs="data/subai/hero_advance.vs" />
 	<method sig="move" vs="data/subai/hero_move.vs" />
-	<method sig="enter" vs="data/subai/hero_enter.vs" verify="data/subai/unit_enter_verify.vs" />
+	<method sig="enter" vs="data/subai/hero_enter.vs" verify="data/subai/hero_enter_verify.vs" />
 
 	<method sig="formation" vs="data/subai/hero_formation.vs" />
 	<method sig="approach" vs="data/subai/hero_approach.vs" />
@@ -38,7 +40,7 @@
 	<method sig="explore" vs="data/subai/unit_explore.vs" />
 	<method sig="teleport" vs="data/subai/hero_teleport.vs" />
 
-	<method sig="sneak" vs="data/subai/hero_sneak.vs" verify="data/subai/hero_sneak_verify.vs" />
+	<method sig="sneak" vs="data/subai/hero_sneak.vs" />
 	<method sig="moveinfight" vs="data/subai/hero_moveinfight.vs" verify="data/subai/hero_moveinfight_verify.vs" />
 	<method sig="engage" vs="data/subai/hero_engage.vs" />
 
@@ -57,8 +59,8 @@
 
 	<method sig="capture" vs="data/subai/hero_capture.vs" verify="data/subai/unit_capture_verify.vs" />
 	<method sig="attack_independent" vs="data/subai/hero_capture.vs" verify="data/subai/attack_independent_verify.vs" />
-	<method sig="attack_unit_type" vs="data/subai/hero_attack_unit_type.vs" />
-	<method sig="engage_unit_type" vs="data/subai/hero_engage_unit_type.vs" />
+	<method sig="attack_unit_type_exclusive" vs="data/subai/hero_attack_unit_type_exclusive.vs" verify="data/subai/hero_attack_verify.vs" />
+	<method sig="engage_unit_type_exclusive" vs="data/subai/hero_engage_unit_type_exclusive.vs" />
 	<method sig="divine_grace" vs="data/subai/hero_divinegrace.vs" />
 	<method sig="enter_autocast_mode" vs="data/subai/hero_enter_autocast_mode.vs" />
 	<method sig="leave_autocast_mode" vs="data/subai/hero_leave_autocast_mode.vs" />
@@ -75,7 +77,7 @@
 	<defaultcmd target="Unit">
 		<cmd name="attack" />
 		<cmd name="approach" />
-		<cmd name="attack_unit_type" ctrl="1" />
+		<cmd name="attack_unit_type_exclusive" ctrl="1" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />

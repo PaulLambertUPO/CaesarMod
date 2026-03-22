@@ -9,7 +9,7 @@ if (.IsValid)
 		if (.HasSpecial(curse)) {//do not use GetBestCurseTarget because it is a bugged function: it does not work for mages but only for warriors
 			ObjList ol;
 			Obj o, target;
-			int i, d, plr, j = 4, best_dist = 10000000;
+			int i, d, plr, best_dist = 10000000;
 
 			plr = .player;
 
@@ -55,30 +55,6 @@ if (.IsValid)
 					if (.TimeWithoutWalking >= 2500)
 						break;
 				}
-
-			while (j > 0) {//total loop duration must be lower than the curse effect (CurseTimeout)
-				if (target.IsAlive)
-					break;
-				Sleep(750);
-				best_dist = 10000000;
-				ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
-				for (i = ol.count - 1; i >= 0; i -= 1) {
-					o = ol[i];
-					if (o.IsAlive)
-						if (!o.AsUnit().IsCursed) {
-							d = .DistTo(o);
-							if (target.IsDead) {
-								target = o;
-								best_dist = d;
-							}
-							else if (d < best_dist) {
-								target = o;
-								best_dist = d;
-							}
-						}
-				}
-				j -= 1;
-			}
 
 			if (target.IsAlive) {
 				.AddCommand(true, "advance", pt);

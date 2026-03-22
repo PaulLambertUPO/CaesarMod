@@ -5,7 +5,7 @@
 		<cmdtext target="Unit" default-text="Right-click to attack this enemy" />
 	</cmd>
 	<cmd name="attack_ground" cursor="attack" traincommand="yes">
-		<cmdtext target="" default-text="Right-click to attack this point" />
+		<cmdtext target="" default-text="Right-click to attack this position" />
 	</cmd>
 	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
 	<cmd name="autofire"

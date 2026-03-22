@@ -44,7 +44,7 @@ if (nTradeFood > 0)
 				bCanResearchSentryUpgrades = true;
 				break;
 			}
-			else if (b.IsHeirOf("Gate")) {
+			else if (b.AsGate().IsValid) {
 				bCanResearchSentryUpgrades = true;
 				break;
 			}
@@ -135,8 +135,8 @@ while (set.player == aiPlayer) {
 		EnvWriteInt(set, "AssUnderFire", 0);
 	}
 
-	//chance to give higher priority to arena units based on the upgrade level reached (0 -> 1/70, 1 -> 1/40, 2 -> 1/10)
-	if (rand(70 - EnvReadInt(set, "ArenaResearchLevel") * 30) == 0)
+	//chance to give higher priority to arena units based on the upgrade level reached (0 -> 1/100, 1 -> 1/65, 2 -> 1/30)
+	if (rand(100 - EnvReadInt(set, "ArenaResearchLevel") * 35) == 0)
 		set.AIRun("ESH_ArenaUnits.vs");
 
 	//recruit heroes and/or military units
@@ -170,7 +170,7 @@ while (set.player == aiPlayer) {
 			if (bAssUnderFire)
 				if (rand(2) == 0)
 					if (GetTime() >= 300000)//avoid hiring sentries as soon as the game starts
-						if (set.GetNumSentries() <= set.GetMaxSentries() / 3)//total max = InitialStrongholdSentries + 1 per wall + 4 per gate (usually 50-52)
+						if (set.GetNumSentries() <= set.GetMaxSentries() / 3)//total max = 20 for townhall + 1 per wall + 4 per gate (usually 50-52)
 							if (set.CanResearch("hire_sentries"))
 								if (set.CanAfford("hire_sentries")) {
 									int gold, food;

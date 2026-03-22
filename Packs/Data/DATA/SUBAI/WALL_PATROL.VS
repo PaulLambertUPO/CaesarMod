@@ -143,8 +143,9 @@ if (GetConst("NoSentries") == 0) {
 									set.DelSentry();
 									sentries.Remove(sentry);
 								}
-								else if (sentry.command != "patrol")
-									sentry.SetCommand("patrol", this);
+								else if (sentry.command != "attack")
+									if (sentry.command != "patrol")
+										sentry.SetCommand("patrol", this);
 							}
 						c = sentries.count;
 

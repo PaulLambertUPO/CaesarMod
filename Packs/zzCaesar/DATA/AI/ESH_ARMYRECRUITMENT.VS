@@ -52,12 +52,6 @@ else if (set.gold < 600)
 else if (nRace != Carthage)
 	if (set.population <= GetConst("MinPopulation"))
 		bDesperateDefence = false;
-	else if (nRace == Iberia)
-		if (IsResearched(set, "Free Drinks"))
-			if (set.CanAfford("Call to arms"))
-				bDesperateDefence = false;
-			else if (rand(2) == 0)
-				bDesperateDefence = false;
 if (bDesperateDefence)
 	if (Intersect(VisibleObjsInSight(set.GetCentralBuilding(), "Military"), EnemyObjs(aiPlayer, "Military")).IsEmpty)
 		bDesperateDefence = false;
@@ -71,7 +65,7 @@ if (bDesperateDefence)
 		else if (nRace == ImperialRome)//Greece
 			cmd = imperialOrPunicOrGreekTrainCmds[0];
 		else if (nRace == Carthage) {
-			i = EnvReadInt(set, "SpecializedUnit") - 1;//0-4 or 6 (5 is for CNoble in the temple)
+			i = EnvReadInt(set, "SpecializedUnit") - 1;//-1, 0-4 or 6 (5 is for CNoble in the temple)
 			if (i == 1)
 				cmd = UTrainCmd(i, nRace);//CJavelinThrower
 			else if (i == 0)
@@ -79,8 +73,25 @@ if (bDesperateDefence)
 			else
 				cmd = UTrainCmd(0, nRace) + "NonSpec";//CLibyanFootman
 		}
-		else
+		else {
 			cmd = UTrainCmd(0, nRace);
+			if (nRace == Iberia) {
+				if (IsResearched(set, "Free Drinks"))
+					if (set.CanAfford("Call to arms")) {
+						Building b;
+						b = set.FindResearchLab("Call to arms");
+						if (b.IsValid)
+							if (!b.IsBroken)
+								if (b.CmdCount("Call to arms") < 1)
+									if (GetCmdCost("Call to arms", gold, food)) {
+										point ptDummy;
+										Obj objDummy;
+										set.SpentGoldOnArmy(gold + food / 2);
+										b.ExecCmd("Call to arms", ptDummy, objDummy, false);
+									}
+					}
+			}
+		}
 		if (GetCmdCost(cmd, gold, food)) {
 			Barrack barrack;
 			if (nRace == ImperialRome) {//Greece

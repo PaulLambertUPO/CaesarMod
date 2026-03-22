@@ -4,76 +4,68 @@ Unit this;
 
 this = This.AsUnit();
 
-if (.IsValid) {
-	ObjList pack;
-	Obj lead_target;
-	point pt_move;
-	rect rc;
-	bool flee = false;
+if (.IsValid)
+	if (.IsAlive) {
+		ObjList pack;
+		Obj target;
+		point pt_move;
+		rect rc;
+		bool flee = false;
 
-	rc = GetMapRect();
+		rc = GetMapRect();
 
-	.SetSpeedFactor(100);
+		while (1)
+			if (.InHolder)
+				Sleep(2500);
+			else if (rand(5) == 0)
+				.Idle(1500);
+			else {
+				Sleep(500);
 
-	while (!.Stop(1000))
-		;
+				pt_move.SetLen(200 + rand(.sight));
+				pt_move.Rot(rand(360));
+				pt_move = .pos + pt_move;
 
-	.Idle(500);
-
-	while (1) {
-		Sleep(500);
-
-		if (rand(5) == 0)
-			.Idle(1500);
-		else {
-			pt_move.SetLen(200 + rand(.sight));
-			pt_move.Rot(rand(360));
-			pt_move = .pos + pt_move;
-
-			if (pt_move.InRect(rc))
-				if (IsPassable3x3(pt_move))
-					if (!IsPointInWater(pt_move)) {
-						if (rand(3) == 0) {
-							if (ObjsInCircle(pt_move, .sight, "Building").count > 0)
-								continue;
-							if (Intersect(ObjsInCircle(pt_move, .sight, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).count > 0)
-								continue;
-						}
-
-						if (rand(5) == 0) {
-							pack = Intersect(
-								Union(ObjsInRange(this, "LionM", .sight / 2), ObjsInRange(this, "LionF", .sight / 2)),
-								Union(FriendlyObjs(.player, "LionM"), FriendlyObjs(.player, "LionF"))
-							).GetObjList();
-							if (pack.count > 7) {
-								lead_target = pack[0];
-								lead_target.SetCommand("lead");	 
-								pack.Remove(lead_target);
-								pack.SetCommand("idle");
+				if (pt_move.InRect(rc))
+					if (IsPassable3x3(pt_move))
+						if (!IsPointInWater(pt_move)) {
+							if (rand(3) == 0) {
+								if (!ObjsInCircle(pt_move, .sight, "Building").IsEmpty)
+									continue;
+								if (!Intersect(ObjsInCircle(pt_move, .sight, "Military,FakeTower"), Union(EnemyObjs(.player, "Military"), EnemyObjs(.player, "FakeTower"))).IsEmpty)
+									continue;
 							}
-						}
 
-						flee = false;
-
-						while (!.Goto(pt_move, 0, 1000, true, 0)) {
-							if (!.HasPath())
-								break;
-							if (!flee) {
-								lead_target = .BestTargetInSquadSight();
-								if (lead_target.IsValid)
-									if (.DistTo(lead_target) < .sight * 2 / 3) {
-										.AddCommand(true, "engage");
-										return;
-									}
-									else if (.health < .maxhealth * 9 / 10) {
-										.AddCommand(true, "engage");
-										return;
-									}
-									else
-										flee = true;
+							if (rand(5) == 0) {
+								pack = Intersect(
+									Union(ObjsInRange(this, "LionM", .sight / 2), ObjsInRange(this, "LionF", .sight / 2)),
+									Union(FriendlyObjs(.player, "LionM"), FriendlyObjs(.player, "LionF"))
+								).GetObjList();
+								if (pack.count > 7) {
+									target = pack[rand(pack.count)];
+									target.SetCommand("lead");
+									pack.Remove(target);
+									pack.SetCommand("idle");
+								}
 							}
+
+							flee = false;
+
+							while (!.Goto(pt_move, 0, 2000, false, 0))
+								if (!flee) {
+									target = .BestTargetInSquadSight;
+									if (target.IsAlive)
+										if (.DistTo(target) < .sight * 2 / 3) {
+											.AddCommand(true, "engage");
+											return;
+										}
+										else if (.health < .maxhealth * 9 / 10) {
+											.AddCommand(true, "engage");
+											return;
+										}
+										else
+											flee = true;
+								}
 						}
-					}
-		}
+			}
 	}
-}

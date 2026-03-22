@@ -6,14 +6,14 @@ this = objs[0].AsBuilding();
 
 if (.IsValid)
 	if (.command == "idle")
-		if (.IsStonehengeControlable())
+		if (.IsStonehengeControlable)
 			if (.stamina >= GetCmdStaminaCost("gold_rain"))
 				return true;
 			else
-				reasonText = rollover(this, true) + "<color 255 0 0>\n" + Translate("Stonehenge is insufficiently charged");
+				reasonText = rollover(this, true) + "\n<color 255 0 0>" + Translate("Stonehenge is insufficiently charged");
 		else
-			reasonText = rollover(this, true) + "<color 255 0 0>\n" + Translate("Stonehenge isn't under your control");
+			reasonText = rollover(this, true) + "\n<color 255 0 0>" + Translate("Stonehenge isn't under your control");
 	else
-		reasonText = rollover(this, true) + "<color 255 0 0>\n" + Translate("You must wait for the current spell to be completed");
+		reasonText = rollover(this, true) + "\n<color 255 0 0>" + Translate("You must wait for the current spell to be completed");
 
 return false;

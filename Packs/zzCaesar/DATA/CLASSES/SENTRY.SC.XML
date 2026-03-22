@@ -15,12 +15,13 @@
 
 	<properties display_name="Sentry" display_name_plural="Sentries" />
 
+	<method sig="idle" vs="data/subai/do_nothing_void_loop.vs" />
 	<method sig="goto" vs="data/subai/sentry_goto.vs" />
 	<method sig="patrol" vs="data/subai/sentry_patrol.vs" />
 	<method sig="guard" vs="data/subai/sentry_guard.vs" />
 	<method sig="attack" vs="data/subai/sentry_attack.vs" />
 	<method sig="disappear" vs="data/subai/sentry_disappear.vs" />
-	<method sig="idle" vs="data/subai/do_nothing_void_loop.vs" />
+	<method sig="ondie" vs="data/subai/sentry_ondie.vs" />
 
 	<nodefcmdinherit />
 

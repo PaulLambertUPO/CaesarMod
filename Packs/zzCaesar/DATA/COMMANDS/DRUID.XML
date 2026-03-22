@@ -91,7 +91,7 @@
 		key="y"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Create Cloud of Plague"
-		description="Creates a cloud of plague that damages all units (at the cost of life)"
+		description="Creates a cloud of plague that deals 45 damage to all units periodically for about 12 seconds (at the cost of life)"
 		cursor="do_something"
 		param="Cloud of Plague">
 		<cmdtext target="" text="" /><!-- needed to change the cursor -->
@@ -103,7 +103,7 @@
 		key="c"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Create Cover of Mercy"
-		description="Creates a cloud that reduces all combat damage allies receive by half (at the cost of life)"
+		description="Creates a cloud that reduces all combat damage allies receive by 50% for about 25 seconds (at the cost of life)"
 		cursor="do_something"
 		param="Cover of Mercy">
 		<cmdtext target="" text="" /><!-- needed to change the cursor -->
@@ -113,8 +113,8 @@
 		button="research/Zombify.bmp"
 		key="f"
 		groupverifier="data/subai/verify_isresearched.vs"
-		rollover="Zombify"
-		description="Transform to zombie"
+		rollover="Transform into ghoul"
+		description="The unit transforms into a ghoul that remains under your control for about 10 seconds"
 		param="Zombify">
 		<src obj="CShaman" sticky="yes" />
 		<src obj="EPriest" sticky="yes" />
@@ -124,7 +124,7 @@
 		key="g"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Summon Ghoul"
-		description="Summons a ghoul that could be controlled (at the cost of life)"
+		description="Summons a ghoul that remains under your control for about 10 seconds (at the cost of life)"
 		param="Ghoul Summoning">
 		<src obj="GDruid" sticky="yes" />
 		<src obj="BDruid" sticky="yes" />
@@ -134,7 +134,7 @@
 		key="j"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Wrath of Jupiter"
-		description="Channels the Wrath of Jupiter hurting the target (at the cost of life)"
+		description="Channels the Wrath of Jupiter to strike the target with a non-lethal lightning, dealing up to 40 damage to heroes and up to 250 to all other units (at the cost of life)"
 		cursor="do_something"
 		param="Wrath of Jupiter">
 		<cmdtext target="Unit" text="Click to hurt this unit" />
@@ -145,7 +145,7 @@
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Summon Eagle"
-		description="Summons an eagle that could be controlled (at the cost of life)"
+		description="Summons an eagle that remains under your control for about 2 minutes (at the cost of life)"
 		param="Eagle Summoning">
 		<src obj="GDruid" />
 	</cmd>
@@ -154,7 +154,7 @@
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Summon Crow"
-		description="Summons a crow that could be controlled (at the cost of life)"
+		description="Summons a crow that remains under your control for about 4 minutes (at the cost of life)"
 		param="Crow Summoning">
 		<src obj="BDruid" />
 	</cmd>
@@ -163,7 +163,7 @@
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Summon Wolf"
-		description="Summons a wolf that could be controlled (at the cost of life)"
+		description="Summons a wolf that remains under your control for about 200 seconds (at the cost of life)"
 		param="Wolf Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
@@ -172,7 +172,7 @@
 		key="j"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Summon Deer"
-		description="Summons a deer that could be controlled (at the cost of life)"
+		description="Summons a deer that remains under your control for about 3 minutes (at the cost of life)"
 		param="Deer Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
@@ -192,7 +192,7 @@
 		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Mass heal"
-		description="Heals nearby allies (at the cost of life)"
+		description="Distributes up to 1000 health among nearby allies (at the cost of life)"
 		param="Mass Heal">
 		<src obj="BDruid" />
 		<src obj="TEnchantress" />

@@ -1,17 +1,16 @@
-//bool, Obj this, Obj other
-Unit me,him;
-Building bld;
-me = this.AsUnit();
-him = other.AsUnit();  
+//bool, Obj This, Obj target
 
-if (!me.IsValid())
-	return false;
-if (him.IsValid()) 
-	return me.IsEnemy(him) && me.IsValidTarget(him);
-	         
-bld = other.AsBuilding();
-if (bld.IsValid())
-	return me.IsEnemy(bld) && me.IsValidTarget(bld);
-	
-return false; //in all other cases	
-	
+if (target.IsValid) {
+	Unit this;
+
+	this = This.AsUnit();
+
+	if (.IsValid)
+		if (.IsAlive)
+			if (target != this)
+				if (.IsEnemy(target))
+					if (.IsValidTarget(target))
+						return true;
+}
+
+return false;

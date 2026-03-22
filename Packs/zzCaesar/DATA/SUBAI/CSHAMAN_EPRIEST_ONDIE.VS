@@ -23,7 +23,7 @@ if (.IsValid)
 				u = Place("GGhost", .pos, .player);
 
 				u.SetStamina(5);
-				u.SetLevel(.inherentlevel);
+				u.SetLevel(.level);
 				u.SetNoAIFlag(true);
 				u.SetCommand("spawn");
 

@@ -5,30 +5,22 @@ Druid this;
 this = This.AsDruid();
 
 if (.IsValid)
-	if (.IsAlive) {
-		Hero h;
-		Unit u;
-		int heal_amount, stamina_cost, learnings;
-		bool can_learn, go_to_hero, use_healing;
+	if (.IsAlive)
+		if (!.InHolder) {
+			Hero h;
+			Unit u;
+			int heal_amount, stamina_cost, learnings;
+			bool can_learn, go_to_hero, use_healing;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
+			heal_amount = GetConst("HealAmount");
+			stamina_cost = GetCmdStaminaCost("heal");
 
-		Sleep(50 + rand(451));
+			if (.race != Gaul)
+				can_learn = true;
+			else
+				can_learn = IsResearched(.player, "Ritual Chamber");
 
-		heal_amount = GetConst("HealAmount");
-		stamina_cost = GetCmdStaminaCost("heal");
-
-		if (.race != Gaul)
-			can_learn = true;
-		else
-			can_learn = IsResearched(.player, "Ritual Chamber");
-
-		while (.IsEnemyInSquadSight)
-			if (.InHolder)
-				Sleep(2500);
-			else {
+			while (.IsEnemyInSquadSight) {
 				go_to_hero = true;
 
 				u.Clear();
@@ -129,6 +121,6 @@ if (.IsValid)
 
 				Sleep(500);
 			}
-	}
+		}
 
 Sleep(15);//prevent possible loops with other commands

@@ -14,16 +14,14 @@ if (.IsValid)
 
 		rc = GetMapRect();
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
 		while (1)
 			if (.InHolder)
 				Sleep(2500);
 			else if (rand(5) == 0)
 				.Idle(1500);
 			else {
+				Sleep(500);
+
 				if (fast_walk)
 					pt_move.SetLen(200 + rand(.sight));
 				else
@@ -74,7 +72,5 @@ if (.IsValid)
 					}
 					else
 						i += 1;//this is to avoid getting stuck when there is not much space and the walk speed is low
-
-				Sleep(500);
 			}
 	}

@@ -4,8 +4,7 @@
 		<cmdtext target="" />
 	</cmd>
 	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
-	<cmd name="repair townhall" priority="1"
-		method="repair"
+	<cmd name="repair" priority="1"
 		button="actions/repair.bmp"
 		key="r"
 		queueicon="gameres/icons/upgrades/repair.bmp"
@@ -13,7 +12,7 @@
 		rollover="Repair"
 		costgold="100"
 		execdelay="60000">
-		<src obj="BaseTownhall" />
+		<src obj="BaseTownBuilding" />
 	</cmd>
 	<cmd name="autotrain_start" priority="10"
 		immediate="yes"

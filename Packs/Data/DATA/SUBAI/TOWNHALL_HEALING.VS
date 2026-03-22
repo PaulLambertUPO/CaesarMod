@@ -1,38 +1,25 @@
-// void, Obj This 
+//void, Obj this
 
-Building bld;
-Settlement this;
+Settlement set;
+ObjList ol;
+Obj o;
+int i, health_given, health_to_distribute = 2000;
 
+set = .AsBuilding().settlement;
 
-bld = This.AsBuilding();
-if (bld.IsValid) 
-{
-	this = bld.settlement;
-	if (.IsValid) 
-	{
-		ObjList l;
-		int i;
-		Unit u;
-		int nHealth, nGive;
-        
-		nHealth = 2000;
-		nGive   = 0;
-		l = .ObjectsAround("Military");
-		l.AddList(.ObjectsAround("BaseMage"));
-		for (i = l.count; i > 0;) 
-		{
-			i -= 1;
-			u = l[i].AsUnit();
-			if (!bld.IsEnemy(u)) 
-				if (u.health < u.maxhealth) 
-				{
-					CreateFeedback("Heal", u);
-					nGive = u.maxhealth - u.health;
-					if (nGive > nHealth) nGive = nHealth;
-					nHealth -= nGive;
-					u.Heal(nGive);
-					if (nHealth == 0) break;
-				}
-		}	
-	}
+ol = set.ObjectsAround("Military");
+ol.AddList(set.ObjectsAround("BaseMage"));
+
+for (i = ol.count - 1; i >= 0; i -= 1) {
+	o = ol[i];
+	if (o.IsAlive)
+		if (o.health < o.maxhealth)
+			if (!.IsEnemy(o)) {
+				health_given = MIN(health_to_distribute, o.maxhealth - o.health);
+				health_to_distribute -= health_given;
+				o.Heal(health_given);
+				CreateFeedback("Heal", o.AsUnit());
+				if (health_to_distribute <= 0)
+					break;
+			}
 }

@@ -1,3 +1,3 @@
 //void, Obj this, Obj other
 
-return;
+Sleep(15);//prevent possible loops with other commands
