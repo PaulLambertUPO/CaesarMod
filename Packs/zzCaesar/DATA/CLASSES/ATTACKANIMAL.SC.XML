@@ -3,16 +3,14 @@
 	<properties damage_type="slash" />
 	<properties healthbar_type="3" />
 
-	<defaultcmd target="">
-		<cmd name="move" />
-		<cmd name="advance" ctrl="1" />
-	</defaultcmd>
 	<defaultcmd target="Unit">
 		<cmd name="attack" />
-		<cmd name="approach" />
+		<cmd name="attack_unit_type_exclusive" ctrl="1" />
 	</defaultcmd>
-	<defaultcmd target="Building">
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+	</defaultcmd>
+	<defaultcmd target="Catapult">
 		<cmd name="attack" />
-		<cmd name="approach" />
 	</defaultcmd>
 </class>

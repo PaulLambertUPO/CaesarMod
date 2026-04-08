@@ -6,11 +6,4 @@
 		<cmdtext target="" text="Click to hover around this position" />
 		<src obj="Eagle" />
 	</cmd>
-	<cmd name="lesser_hover" priority="4"
-		button="Actions/Lesser_Hover.bmp"
-		key="j"
-		rollover="Hover (tight)">
-		<cmdtext target="" text="Click to hover around this position" />
-		<src obj="Eagle" />
-	</cmd>
 </commands>

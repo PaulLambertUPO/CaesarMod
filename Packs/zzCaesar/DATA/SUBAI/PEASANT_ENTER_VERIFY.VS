@@ -1,20 +1,27 @@
 //bool, Obj this, Obj other
 
-if (.AsUnit().IsValid) {
-	Building it;
+if (!other.AsCatapult().IsValid)
+	if (.AsUnit().IsValid)
+		if (.IsAlive) {
+			Building bld;
 
-	it = other.AsBuilding();
+			bld = other.AsBuilding();
 
-	if (it.IsValid)
-		if (it.IsCentralBuliding())
-			if (!.IsEnemy(it)) {
-				if (it.settlement.max_population > 0)
+			if (bld.IsValid) {
+				if (bld.AsTeleport().IsValid)
 					return true;
-				if (it.settlement.max_units > 0)
-					if (!it.IsHeirOf("BaseRuins"))
-						if (!it.IsHeirOf("Catapult"))
-							return true;
+
+				if (!bld.IsHeirOf("BaseRuins"))
+					if (bld.IsCentralBuliding)
+						if (!.IsEnemy(bld)) {
+							if (bld.settlement.max_population > 0)
+								return true;
+
+							if (bld.settlement.max_units > 0)
+								if (DiplGetShareView(bld.player, .player))
+									return true;
+						}
 			}
-}
+		}
 
 return false;

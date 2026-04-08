@@ -1,37 +1,32 @@
 //void, Obj This
 
-if (This.IsValid)
-	if (This.IsAlive) {
-		int time;
+if (This.IsAlive) {
+	int time;
 
-		time = This.GetStaminaDecTime();
+	time = This.GetStaminaDecTime();
 
-		if (time <= 0)
-			This.Damage(This.health);
+	if (time <= 0)
+		This.Damage(This.health);
 
-		while (This.IsValid) {
-			Sleep(time);
-			if (This.IsValid)
-				if (This.IsAlive) {
-					This.SetStamina(This.stamina - 1);
-					if (This.stamina <= 0)
-						break;
-				}
-				else
-					break;
+	while (This.IsAlive) {
+		Sleep(time);
+		if (This.IsAlive) {
+			This.SetStamina(This.stamina - 1);
+			if (This.stamina <= 0)
+				break;
 		}
-
-		if (This.IsValid)
-			if (This.IsAlive) {
-				if (This.IsHeirOf("GGhostUnit"))
-					This.MagicActionEnd();
-				else if (This.IsHeirOf("Mist"))
-					This.MagicActionEnd();
-
-				This.Damage(This.health);
-			}
 	}
 
+	if (This.IsAlive) {
+		if (This.AsGhost().IsValid)
+			This.MagicActionEnd();
+		else if (This.IsHeirOf("Mist"))
+			This.MagicActionEnd();
+
+		This.Damage(This.health);
+	}
+}
+
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

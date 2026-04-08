@@ -1,38 +1,56 @@
-//void, Obj This, Obj bld
+//void, Obj This, Obj other
 
 Unit this;
 
 this = This.AsUnit();
 
-if (.IsValid) {
-	Building b;
+if (.IsValid)
+	if (.IsAlive) {
+		Building bld;
 
-	b = bld.AsBuilding();
+		bld = other.AsBuilding();
 
-	if (b.IsValid)
-		if (bld.IsHeirOf("IVillage"))
-			if (!.IsEnemy(bld)) {
+		if (bld.IsValid)
+			if (other.AsTeleport().IsValid) {
 				Settlement set;
 
-				set = b.settlement;
+				set = bld.settlement;
 
-				if (set.IsValid) {
+				if (!set.Units.Contains(this)) {
+					point pt;
+
+					pt = bld.GetEnterPoint(this);
+
+					.SetEntering(true);
+
+					while (!.GotoEnter(pt, 0, 1000, false, 2500))
+						;
+
+					set.AddUnit(this);
+				}
+			}
+			else if (bld.IsHeirOf("IVillage"))
+				if (!.IsEnemy(bld)) {
+					point pt;
+
+					pt = bld.GetEnterPoint(this);
+
 					.SetSpeedFactor(150);
 					.SetWalkAnim(1);
 					.SetEntering(true);
 
-					if (!set.Units.Contains(this)) {
-						point pt;
+					while (!.GotoEnter(pt, 0, 1000, false, 2500))
+						;
 
-						pt = b.GetEnterPoint(this);
+					if (!.IsEnemy(bld)) {
+						Settlement set;
 
-						while (!.GotoEnter(pt, 0, 1000, true, 5000))
-							if (.IsEnemy(b))
-								return;
+						set = bld.settlement;
+
+						EnvWriteInt(set, "EEE_IVillageNumberHorses", EnvReadInt(set, "EEE_IVillageNumberHorses") + 1);
+						.Erase();
 					}
-
-					EnvWriteInt(set, "EEE_IVillageNumberHorses", EnvReadInt(set, "EEE_IVillageNumberHorses") + 1);
-					.Erase();
 				}
-			}
-}
+	}
+
+Sleep(15);//prevent possible loops with other commands

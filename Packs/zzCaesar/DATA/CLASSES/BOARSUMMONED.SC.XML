@@ -1,6 +1,7 @@
 <class id="BoarSummoned" parent="BoarUnit" cpp_class="CVXUnit" entity="Units/Boar/Boar.ent.xml">
 	<properties unit_specials="Defense skill, Determination, Freedom" />
 	<properties does_not_regenerate="1" />
+	<properties inventory_size="0" />
 	<properties stamina_dec_time="3000" />
 	<properties edittree_pos="" />
 	<behavior script="data/subai/summoning_behavior.vs" />

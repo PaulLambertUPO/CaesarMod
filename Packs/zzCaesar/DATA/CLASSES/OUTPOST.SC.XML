@@ -26,9 +26,8 @@
 
 	<method sig="attack" vs="data/subai/outpost_attack.vs" verify="data/subai/outpost_attack_verify.vs" />
 	<method sig="outpost_advance" vs="data/subai/do_nothing_point.vs" />
-	<method sig="tribute" vs="data/subai/do_nothing_point.vs" />
 	<method sig="tribute" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />
-	<method sig="tribute_default" vs="data/subai/village_tributefood.vs" verify="data/subai/village_tributefood_verify.vs" />
+	<method sig="tribute" vs="data/subai/do_nothing_point.vs" />
 	<method sig="stoptribute" vs="data/subai/village_stoptribute.vs" />
 	<method sig="createfoodmulesmall" vs="data/subai/do_nothing_void.vs" />
 	<method sig="createfoodmulebig" vs="data/subai/do_nothing_void.vs" />
@@ -64,16 +63,25 @@
 		<cmd name="outpost_attack" />
 	</defaultcmd>
 	<defaultcmd target="BaseTownhall">
-		<cmd name="tribute_default" />
+		<cmd name="tribute" />
 	</defaultcmd>
 	<defaultcmd target="BaseVillage">
-		<cmd name="tribute_default" />
-	</defaultcmd>
-	<defaultcmd target="Outpost">
-		<cmd name="tribute_default" />
+		<cmd name="tribute" />
 	</defaultcmd>
 	<defaultcmd target="BaseShipyard">
-		<cmd name="tribute_default" />
+		<cmd name="tribute" />
+	</defaultcmd>
+	<defaultcmd target="Outpost">
+		<cmd name="tribute" />
+	</defaultcmd>
+	<defaultcmd target="GGuardPost">
+		<cmd name="tribute" />
+	</defaultcmd>
+	<defaultcmd target="TTent">
+		<cmd name="tribute" />
+	</defaultcmd>
+	<defaultcmd target="CTent">
+		<cmd name="tribute" />
 	</defaultcmd>
 
 	<sounds select="Sounds/Selection/Outpost.wav" />

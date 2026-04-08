@@ -21,8 +21,8 @@ if (.IsValid)
 				if (.AI)
 					if (AIVar(plr, AIV_CombatMagic) != 0)
 						if (IsResearched(plr, "Cover of Mercy")) {
-							Sleep(500 + rand(501));
-							u = .BestProtPos(150, 0, 1000, 50).AsUnit();
+							Sleep(100 + rand(401));
+							u = .BestProtPos(150, 0, 325, 50).AsUnit();
 							if (u.IsValid)
 								if (!IsProtected(plr, u.posRH, "CoverOfMercy")) {
 									.AddCommand(true, "coverofmercy", u.posRH);

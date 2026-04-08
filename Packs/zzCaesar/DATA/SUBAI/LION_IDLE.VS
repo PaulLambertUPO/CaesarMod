@@ -16,7 +16,7 @@ if (.IsValid)
 		if (.IsHeirOf("LionF"))
 			Sleep(25);
 
-		while (1)
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
 			else {
@@ -28,6 +28,7 @@ if (.IsValid)
 					if (o.IsAlive) {
 						if (o.command == "engage") {
 							.AddCommand(true, "engage");
+							Sleep(15);//prevent possible loops with other commands
 							return;
 						}
 						if (o.command == "lead") {
@@ -44,6 +45,7 @@ if (.IsValid)
 						if (o.IsAlive) {
 							if (o.command == "engage") {
 								.AddCommand(true, "engage");
+								Sleep(15);//prevent possible loops with other commands
 								return;
 							}
 							if (o.command == "lead") {
@@ -56,12 +58,13 @@ if (.IsValid)
 
 				if (!pack_leader.IsValid) {
 					.AddCommand(true, "lead");
-					return;
+					break;
 				}
 
 				while (pack_leader.IsAlive) {
 					if (pack_leader.command == "engage") {
 						.AddCommand(true, "engage");
+						Sleep(15);//prevent possible loops with other commands
 						return;
 					}
 
@@ -76,3 +79,5 @@ if (.IsValid)
 				pack_leader.Clear();
 			}
 	}
+
+Sleep(15);//prevent possible loops with other commands

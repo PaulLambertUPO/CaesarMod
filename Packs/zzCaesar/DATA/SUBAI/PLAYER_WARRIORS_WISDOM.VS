@@ -4,7 +4,7 @@ ObjList ol;
 Unit u;
 int i, j;
 
-while (1) {
+while (true) {
 	for (i = 1; i <= 16; i += 1) {//check all players because GetPlayerUnits does not return units attached to other players' heroes
 		ol = GetPlayerUnits(i, "Military");
 		for (j = ol.count - 1; j >= 0; j -= 1) {

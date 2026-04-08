@@ -3,6 +3,7 @@
 	<properties maxhealth="25" />
 	<properties sight="950" />
 	<properties speed="180" />
+	<properties inventory_size="0" />
 
 	<properties radius="10" selection_radius="20" />
 	<properties healthbar_type="0" />
@@ -16,7 +17,15 @@
 
 	<method sig="move" vs="data/subai/crow_move.vs" />
 	<method sig="approach" vs="data/subai/crow_approach.vs" />
-	<method sig="approach_hero" vs="data/subai/crow_approach.vs" />
+
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+	</defaultcmd>
+	<defaultcmd target="Object">
+		<cmd name="approach" />
+	</defaultcmd>
 
 	<sounds walk="Crow_Idle" command="Sounds/Animals/Crow/Crow_Command.wav" die="Sounds/Animals/Crow/Crow_Death.wav" />
 </class>

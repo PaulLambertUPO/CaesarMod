@@ -1,8 +1,8 @@
 //void, Obj This
 
-Sleep(rand(10) + 1);
+Sleep(1 + rand(10));
 
-while (1) {
+while (true) {
 	This.StartAnim(1, This.pos);
 	Sleep(This.TimeToAnimFinish);
 }

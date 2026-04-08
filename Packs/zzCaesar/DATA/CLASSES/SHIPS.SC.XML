@@ -15,10 +15,6 @@
 
 	<defaultcmd target="Unit">
 		<cmd name="follow" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Building">
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="BaseShipyard">
 		<cmd name="unload" />

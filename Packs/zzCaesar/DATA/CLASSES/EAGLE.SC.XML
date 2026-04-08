@@ -3,6 +3,7 @@
 	<properties maxhealth="50" />
 	<properties sight="1000" />
 	<properties speed="200" />
+	<properties inventory_size="0" />
 
 	<properties radius="25" selection_radius="25" />
 	<properties healthbar_type="0" />
@@ -18,10 +19,20 @@
 
 	<method sig="idle" vs="data/subai/eagle_idle.vs" />
 	<method sig="move" vs="data/subai/eagle_move.vs" />
+	<method sig="advance" vs="data/subai/eagle_move.vs" />
+	<method sig="advance_aggressive" vs="data/subai/eagle_move.vs" />
 	<method sig="approach" vs="data/subai/eagle_approach.vs" />
-	<method sig="approach_hero" vs="data/subai/eagle_approach.vs" />
 	<method sig="hover" vs="data/subai/eagle_hover.vs" />
 	<method sig="lesser_hover" vs="data/subai/eagle_lesser_hover.vs" /><!-- this command was originally used only in Celtic Kings adventure -->
+
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+	</defaultcmd>
+	<defaultcmd target="Object">
+		<cmd name="approach" />
+	</defaultcmd>
 
 	<sounds walk="Eagle_Idle" command="Sounds/Animals/Eagle/Eagle_Command.wav" die="Sounds/Animals/Eagle/Eagle_Death.wav" />
 </class>

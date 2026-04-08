@@ -18,10 +18,10 @@ if (.IsValid)
 		rc = GetMapRect();
 		rad = .radius + 5;
 
-		while (1) {
+		while (.CmdCount <= 1) {//avoid blocking pending commands forever
 			pt_move.SetLen(300 + rand(351));
 			pt_move.Rot(rand(360));
-			pt_move = pt_move + .pos;
+			pt_move = pt_move + .posRH;
 			if (pt_move.InRect(rc))
 				if (IsPointInWater(pt_move))
 					while (!.Goto(pt_move, rad, 10000, false, -1))
@@ -30,3 +30,5 @@ if (.IsValid)
 			.Idle(500);
 		}
 	}
+
+Sleep(15);//prevent possible loops with other commands

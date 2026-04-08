@@ -1,6 +1,7 @@
 <class id="DeerSummoned" parent="DeerUnit" cpp_class="CVXUnit" entity="Units/Deer/Deer.ent.xml">
 	<properties unit_specials="Freedom, Keen sight" />
 	<properties does_not_regenerate="1" />
+	<properties inventory_size="0" />
 	<properties stamina_dec_time="18000" />
 	<properties edittree_pos="" />
 	<behavior script="data/subai/summoning_behavior.vs" />

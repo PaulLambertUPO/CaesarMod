@@ -56,25 +56,25 @@ if (.IsValid)
 
 			dir_wall = wall.GetPoint(8, 0);
 
-			while (!.Stop(1000))
-				;
-
-			while (1) {
+			while (.CmdCount <= 1) {//avoid blocking pending commands forever
 				if (go_forward)
-					while (!.Goto(route_1, 0, 2000, true, 0))
+					while (!.Goto(route_1, 0, 2000, false, 0))
 						;
 				else
-					while (!.Goto(route_2, 0, 2000, true, 0))
+					while (!.Goto(route_2, 0, 2000, false, 0))
 						;
+
 				go_forward = !go_forward;
 
 				.Face(.pos - dir_wall);
 				dir_sentry = dir_wall;
-				for (i = 2 + rand(13); i >= 0; i -= 1) {
-					Sleep(200 + rand(101));
-					dir_sentry = dir_sentry + Point(rand(81) - 40, rand(81) - 40);
+				for (i = 2 + rand(14); i >= 0; i -= 1) {
+					dir_sentry = dir_sentry + RandomOffset(40);
 					.Face(.pos - dir_sentry);
+					Sleep(200 + rand(101));
 				}
 			}
 		}
 	}
+
+Sleep(15);//prevent possible loops with other commands

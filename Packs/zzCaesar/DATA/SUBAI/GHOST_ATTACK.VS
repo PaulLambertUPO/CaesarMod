@@ -1,8 +1,8 @@
-//void, Obj me, Obj tgt
+//void, Obj This, Obj target
 
 Ghost this;
 
-this = me.AsGhost();
+this = This.AsGhost();
 
 if (.IsValid)
 	if (.IsAlive) {
@@ -11,7 +11,7 @@ if (.IsValid)
 		if (.GetAnim() == 17)//spawn
 			Sleep(.TimeToAnimFinish);
 
-		u = tgt.AsUnit();
+		u = target.AsUnit();
 
 		if (u.IsValid)
 			if (u.IsAlive)

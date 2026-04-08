@@ -11,4 +11,15 @@
 	<properties unit_specials="Freedom" />
 
 	<properties help="contents/units/Animals" />
+
+	<method sig="capture" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
+
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
+	</defaultcmd>
 </class>

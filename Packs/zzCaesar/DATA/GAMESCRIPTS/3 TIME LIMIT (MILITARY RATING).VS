@@ -27,7 +27,7 @@ EnvWriteInt(player, "elimination", 0);
 
 SetPlayerStatus(player, 0, Translatef("Time limit (%s1 minutes) - Military rating", time_limit / 60), false);
 
-while (1) {
+while (true) {
 	//hide upper right corner messages
 	SetPlayerStatus(player, 0, false);//game mode
 	SetPlayerStatus(player, 1, false);//game conditions

@@ -2749,6 +2749,9 @@ Per svolgere il suo lavoro, deve entrare in un porto: una volta lì, inizierà a
 				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Costo 100 viveri</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Costo 1 popolazione</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 5 secondi</entry>
+				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertà</entry>
+				<entry />
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/RStorage.bmp" link="/contents/buildings/Village">Si arruola nel Centro del villaggio</entry>
 				<entry vcenter="1" image="UI/Icons/RShipyard.bmp" link="/contents/buildings/Shipyard">Si usa nel Porto</entry>
@@ -2852,6 +2855,9 @@ Viene invocato tramite il sacrificio di unità spirituali o con l'attivazione di
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 4</entry>
 				<entry image="UI/Help/Special Ico.bmp">Gittata 250</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 60</entry>
+				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertà</entry>
+				<entry />
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/GDruid.bmp" link="/contents/units/GDruid">Generabile col Druido gallico</entry>
 				<entry vcenter="1" image="UI/Icons/BDruid.bmp" link="/contents/units/BDruid">Generabile col Druido britannico</entry>

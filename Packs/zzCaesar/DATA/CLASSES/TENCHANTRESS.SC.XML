@@ -27,15 +27,12 @@
 
 	<defaultcmd target="Unit">
 		<cmd name="curse" />
-		<cmd name="learn" />
 	</defaultcmd>
 	<defaultcmd target="Hero">
 		<cmd name="attach" />
 	</defaultcmd>
 	<defaultcmd target="ShipBattle">
 		<cmd name="boardship" />
-		<cmd name="curse" />
-		<cmd name="approach" />
 	</defaultcmd>
 
 	<sounds command="VoiceTEnchantress" die="UnitDeathFemale" />

@@ -1,9 +1,30 @@
-// void, Obj This, Obj other
+//void, Obj This, Obj target
 
-Unit this;
-this = This.AsUnit();
+if (target.IsAlive) {
+	Unit this;
 
-while (other.IsAlive())
-	if(.Goto(other,20,5000,false,20000))
-		break;
+	this = This.AsUnit();
 
+	if (.IsValid)
+		if (.IsAlive) {
+			Unit u;
+
+			u = target.AsUnit();
+
+			if (u.IsValid)
+				if (u.InHolder) {
+					Sleep(15);//prevent possible loops with other commands
+					return;
+				}
+
+			while (!.Goto(target, 20, 2500, false, 10000)) {
+				if (target.IsDead)
+					break;
+				if (u.IsValid)
+					if (u.InHolder)
+						break;
+			}
+		}
+}
+
+Sleep(15);//prevent possible loops with other commands

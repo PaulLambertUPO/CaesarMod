@@ -14,12 +14,6 @@ if (.IsValid)
 		int i, d, best_dist, plr, rng, stamina_cost;
 		bool can_learn, can_hide, go_back, use_invisibility;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
-		Sleep(50 + rand(451));
-
 		pt_start = .posRH;
 
 		plr = .player;
@@ -29,10 +23,10 @@ if (.IsValid)
 		can_learn = IsResearched(plr, "Ritual Chamber");
 		can_hide = IsResearched(plr, "Mass Concealment");
 
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
-			else {
+			else if (.Stop(2000)) {
 				h = .hero;
 				if (h.IsValid)
 					if (h.command == "teleport") {
@@ -126,8 +120,10 @@ if (.IsValid)
 																					else if (cmd == "attack")
 																						u.KillCommand();
 																					else if (cmd != "capture")
-																						if (u.TimeWithoutAttack < 2000)//other fight commands
-																							u.KillCommand();
+																						if (cmd != "stand_position")
+																							if (cmd != "hold_position")
+																								if (u.TimeWithoutAttack < 1000)//other fight commands
+																									u.KillCommand();
 																				}
 																			}
 

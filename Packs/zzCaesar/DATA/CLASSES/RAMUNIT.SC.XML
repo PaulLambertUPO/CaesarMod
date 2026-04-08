@@ -6,6 +6,7 @@
 	<properties sight="650" range="80" min_range="0" />
 	<properties speed="35" />
 	<properties max_food="0" feeds="0" does_not_regenerate="1" />
+	<properties stamina_dec_time="5000" />
 	<properties inventory_size="0" />
 
 	<properties radius="80" selection_radius="80" />
@@ -16,34 +17,30 @@
 	<properties help="contents/units/Catapult" />
 
 	<method sig="idle" vs="data/subai/ram_idle.vs" />
-	<method sig="attack" vs="data/subai/ram_attack.vs" />
+	<method sig="attack" vs="data/subai/ram_attack.vs" verify="data/subai/unit_attack_verify.vs" />
+	<method sig="advance" vs="data/subai/ram_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/ram_advance.vs" />
+	<method sig="capture" vs="data/subai/do_nothing_obj.vs" />
 
-	<behavior script="data/subai/ram_stamina_counter.vs" />
+	<behavior script="data/subai/summoning_behavior.vs" />
 
 	<value0 flags="0" />
 	<value5 flags="0" />
 
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+		<cmd name="advance" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Object">
+		<cmd name="approach" />
+	</defaultcmd>
 	<defaultcmd target="Building">
 		<cmd name="attack" />
-		<cmd name="approach" />
 	</defaultcmd>
-	<defaultcmd target="Inn">
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="ShipBattle">
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Wagon">
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Unit">
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Hero">
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="ItemHolder">
-		<cmd name="approach" />
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
 	</defaultcmd>
 
 	<sounds walk="TaranWalk" command="TaranWalk" attack="TaranAttack" die="Sounds/Effects/Catapult_Die.wav" />

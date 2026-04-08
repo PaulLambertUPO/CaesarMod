@@ -2,5 +2,5 @@
 
 gate.AsGate().CloseNow();
 
-while (1)
-	Sleep(10000);
+while (true)
+	Sleep(3600000);

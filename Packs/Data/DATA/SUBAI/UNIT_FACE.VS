@@ -1,11 +1,9 @@
-//void, Obj This, point pt
+//void, Obj this, point pt
 
-Unit this;
-
-this = This.AsUnit();
-
-if (.IsValid)
+if (.AsUnit().IsValid)
 	if (.IsAlive) {
 		.Face(pt);
 		Sleep(1000 + rand(1001));
 	}
+
+Sleep(15);//prevent possible loops with other commands

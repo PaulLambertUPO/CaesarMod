@@ -2,30 +2,29 @@
 
 Sleep(500 + rand(501));
 
-//use a scope to remove variables when the final loop is reached
 {
 	Building this;
 
 	this = This.AsBuilding();
 
 	if (.IsValid) {
-		int count;
+		int mages;
 
-		while (1) {
-			Sleep(2000);
+		while (true) {
+			mages = .StonehengeNumControllingMages;
 
-			count = .StonehengeNumControllingMages;
-
-			if (count > 0) {
+			if (mages > 0) {
 				if (.stamina < 100)
 					.SetStamina(.stamina + 1);
-				if (count < 50)
-					Sleep(14000 / count);
+				if (mages < 50)
+					Sleep(14000 / mages);
 			}
+
+			Sleep(2000);
 		}
 	}
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

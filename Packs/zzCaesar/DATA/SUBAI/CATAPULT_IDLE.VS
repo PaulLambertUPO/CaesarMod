@@ -8,18 +8,23 @@ if (.IsValid)
 	if (.IsAlive)
 		if (.IsBuilt) {
 			if (.settlement.UnitsCount <= 0) {
-				if (.race == Britain || .race == Germany) {
+				int r;
+
+				r = .race;
+
+				if (r == Britain || r == Germany) {
 					Unit ram;
 					str ram_class;
 
-					if (.race == Britain)
+					if (r == Britain)
 						ram_class = "BCatapultUnit";
 					else
 						ram_class = "TCatapultUnit";
 
-					ram = Place(ram_class, .pos, .player);
+					ram = Place(ram_class, .pos, .player).AsUnit();
 					ram.SetHealth(.health);
 					ram.Face(ram.pos + Point(-3, -2));
+					ram.SetNoAIFlag(true);
 
 					SwapSelectedObj(this, ram);
 
@@ -32,7 +37,7 @@ if (.IsValid)
 		}
 		else {
 			Settlement set;
-			int original_sight, build_speed, decay_speed, empty_time_to_decay, health_left, builders, empty_time, build_heal_perc, decay_damage_perc;
+			int i, original_sight, health_to_build, empty_time;
 
 			set = .settlement;
 
@@ -40,11 +45,7 @@ if (.IsValid)
 
 			.SetSight(GetConst("CatapultBuildSight"));
 
-			build_speed = GetConst("CatapultBuildSpeed");
-			decay_speed = GetConst("CatapultDecaySpeed");
-			empty_time_to_decay = GetConst("CatapultBuildOnEmptyStartDamageTime");
-
-			health_left = .maxhealth - .health;
+			health_to_build = .maxhealth - .health;
 
 			.StartDelayedAnim(1, .pos, -1);
 
@@ -52,29 +53,29 @@ if (.IsValid)
 				if (.IsBuilt)
 					break;
 
-				builders = set.UnitsCount;
+				i = set.UnitsCount;
 
-				if (builders >= 1) {
+				if (i >= 1) {
 					empty_time = 0;
-					build_heal_perc = .maxhealth * build_speed * builders / 2000;
+					i = .maxhealth * 15 * i / 2000;
 
-					if (health_left > build_heal_perc) {
-						.Heal(build_heal_perc);
-						health_left -= build_heal_perc;
-						.SetBuildFrame(health_left);
+					if (health_to_build > i) {
+						.Heal(i);
+						health_to_build -= i;
+						.SetBuildFrame(health_to_build);
 					}
 					else {
-						.Heal(health_left);
+						.Heal(health_to_build);
 						.SetBuilt();
 					}
 				}
 				else {
-					.SetBuildFrame(health_left);
+					.SetBuildFrame(health_to_build);
 					empty_time += 500;
-					if (empty_time > empty_time_to_decay) {
-						decay_damage_perc = .maxhealth * decay_speed * 500 / 100000;
-						.Damage(decay_damage_perc);
-						health_left = MIN(.maxhealth, health_left + decay_damage_perc);
+					if (empty_time > 14000) {
+						i = MAX(1, .maxhealth / 20);
+						.Damage(i);
+						health_to_build = MIN(.maxhealth, health_to_build + i);
 					}
 				}
 

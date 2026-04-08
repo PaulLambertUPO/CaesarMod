@@ -6,7 +6,7 @@ point pt_pos;
 int i, rad;
 bool first_time_independent;
 
-Sleep(500 + rand(1001));
+Sleep(750 + rand(751));
 
 this = This.AsBuilding();
 set = .settlement;
@@ -289,7 +289,7 @@ else
 	else if (.IsHeirOf("EOutpost"))
 		is_gold_outpost = true;
 
-	while (1) {
+	while (true) {
 		pt.Set(rad, 0);
 		pt.Rot(rand(360));
 		set.Units.ObjEnemy(.player).SetCommand("advance", pt + pt_pos);//send away enemy units inside

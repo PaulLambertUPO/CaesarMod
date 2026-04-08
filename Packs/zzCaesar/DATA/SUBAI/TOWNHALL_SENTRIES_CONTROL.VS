@@ -1,6 +1,6 @@
 //void, Obj This
 
-Sleep(300 + rand(701));
+Sleep(1000 + rand(1001));
 
 if (GetConst("NoSentries") == 0)
 	if (This.AsBuilding().IsValid) {
@@ -16,7 +16,7 @@ if (GetConst("NoSentries") == 0)
 
 			.AddMaxSentries(20);//total max = 20 + 1 per wall + 4 per gate (total max is usually 50-52)
 
-			while (1) {
+			while (true) {
 				if (plr == .player) {
 					missing_sentries = .GetMaxSentries() - .GetNumSentries();
 					if (missing_sentries > 0)
@@ -31,5 +31,5 @@ if (GetConst("NoSentries") == 0)
 	}
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

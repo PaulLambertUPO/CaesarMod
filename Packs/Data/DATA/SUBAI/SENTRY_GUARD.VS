@@ -13,7 +13,7 @@ if (.IsValid)
 		dir_gate = wall_gate.AsBuilding().GetPoint(8, 0);
 		dir_sentry = dir_gate;
 
-		while (1) {
+		while (.CmdCount <= 1) {//avoid blocking pending commands forever
 			target = .BestTargetForPos;
 			if (.IsValidTarget(target)) {
 				dir_sentry = dir_gate;
@@ -28,7 +28,7 @@ if (.IsValid)
 			.Stop(1000);
 			.Face(.pos - dir_sentry);
 			if (i < 10) {
-				dir_sentry = dir_sentry + Point(rand(51) - 25, rand(51) - 25);
+				dir_sentry = dir_sentry + RandomOffset(25);
 				i += 1;
 			}
 			else {
@@ -39,3 +39,5 @@ if (.IsValid)
 			Sleep(400 + rand(101));
 		}
 	}
+
+Sleep(15);//prevent possible loops with other commands

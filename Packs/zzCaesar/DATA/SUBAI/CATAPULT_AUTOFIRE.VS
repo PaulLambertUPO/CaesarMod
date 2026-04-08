@@ -25,7 +25,7 @@ if (.IsValid)
 				if (target.IsValid) {
 					Building target_bld;
 					point pt_attack;
-					bool target_is_building, rotated = false;
+					bool target_is_building, rotate = true;
 
 					target_bld = target.AsBuilding();
 					target_is_building = target_bld.IsValid;
@@ -66,9 +66,10 @@ if (.IsValid)
 							break;
 						pt_attack = GetCatapultAttackPoint(pt_attack);
 
-						if (!rotated) {
+						if (rotate) {
 							.RotateTo(pt_attack);
-							rotated = target_is_building;//units will probably move around the catapult
+							if (target_is_building)//units will probably move around the catapult
+								rotate = false;
 							if (.IsDead)
 								break;
 							if (.CmdCount > 1)

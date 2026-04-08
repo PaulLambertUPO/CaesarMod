@@ -7,7 +7,7 @@ this = This.AsHero();
 if (.IsValid)
 	if (.IsAlive)
 		if (.EnemiesInSight)
-			if (pt.Dist(.posRH) < 300)
+			if (.DistTo(pt) < 320)
 				return true;
 
 return false;

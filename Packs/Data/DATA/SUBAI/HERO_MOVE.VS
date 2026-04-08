@@ -1,48 +1,28 @@
-// void, Obj This, point pt
-Hero this;
-point dpt;
+//void, Obj This, point pt
 
-//.pr("hero::move");
+Hero this;
+
 this = This.AsHero();
 
-if(.IsValid() == false)
-{
-	return;
-}
-if(.InShip() == true)
-{
-	Ship s;
-	s = .GetShip();
-	
-	if(s.IsValid() == true && s.IsAlive() == true)
-	{
-		if(s.player() != .player() && DiplGetShareControl(s.player(), .player()) == false)
-		{
-			s.SetCommand("unboardall", s.pos());
-			return;
-		}	//Fine if.
-	}	//Fine if.
-	else
-	{
-		return;
-	}	//Fine else.
-}	//Fine if.
+if (.IsValid)
+	if (.IsAlive) {
+		point pt_dir;
 
-// Ivko: Always walk in formation, so newly attached units automatically enter formation
-.FormSetupAndMoveTo (pt, 0, 0, true);
-while (.HasPath ())
-{
-  .FormKeepMoving (1500);
-}
+		.FormSetupAndMoveTo(pt, 0, 0, true);
 
-dpt = .GetFinalPartyOrientation() - Point(1024, 1024);
-if (dpt.x != 0 || dpt.y != 0)
-	.Face(.pos + dpt);
+		while (.HasPath)
+			.FormKeepMoving(1500);
 
-if (.IsAlive)
-if (.HasArmy)
-if (.CmdCount == 1)
-{
-	.army.SetCommand("stand_position");
-	.AddCommand(false, "stand_position");
-}
+		pt_dir = .GetFinalPartyOrientation() - Point(1024, 1024);
+
+		if (pt_dir.x != 0)
+			.Face(.pos + pt_dir);
+		else if (pt_dir.y != 0)
+			.Face(.pos + pt_dir);
+
+		if (.HasArmy)
+			if (.CmdCount <= 1)
+				.AddCommand(true, "stand_position");
+	}
+
+Sleep(15);//prevent possible loops with other commands

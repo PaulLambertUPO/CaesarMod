@@ -1,17 +1,17 @@
-//void, Obj me, Obj target
+//void, Obj This, Obj target
 
-Catapult this;
+if (target.IsValid) {
+	Catapult this;
 
-this = me.AsCatapult();
+	this = This.AsCatapult();
 
-if (.IsValid)
-	if (.IsAlive)
-		if (.IsBuilt)
-			if (target.IsValid) {
+	if (.IsValid)
+		if (.IsAlive)
+			if (.IsBuilt) {
 				Settlement set;
 				Building target_bld;
 				point pt_attack;
-				bool target_is_building, rotated = false;
+				bool target_is_building, rotate = true;
 
 				set = .settlement;
 
@@ -54,9 +54,10 @@ if (.IsValid)
 						break;
 					pt_attack = GetCatapultAttackPoint(pt_attack);
 
-					if (!rotated) {
+					if (rotate) {
 						.RotateTo(pt_attack);
-						rotated = target_is_building;//units will probably move around the catapult
+						if (target_is_building)//units will probably move around the catapult
+							rotate = false;
 						if (.IsDead)
 							break;
 						if (.CmdCount > 1)
@@ -70,3 +71,4 @@ if (.IsValid)
 
 				.ClearTarget();
 			}
+}

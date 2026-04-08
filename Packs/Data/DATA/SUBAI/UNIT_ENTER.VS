@@ -61,11 +61,11 @@ if (.IsValid)
 										if (bld.IsAlive)
 											if (!.IsEnemy(bld))
 												if (DiplGetShareView(bld.player, .player))
-													if (set.AddUnit(this))
-														if (.hero.IsValid) {
-															.Deselect();
+													if (set.AddUnit(this)) {
+														.Deselect();
+														if (.hero.IsValid)
 															.DetachFrom(.hero);
-														}
+													}
 									}
 									else {
 										while (!.GotoEnter(pt, 0, 1000, false, 2500))

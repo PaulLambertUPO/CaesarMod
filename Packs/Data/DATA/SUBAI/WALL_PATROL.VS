@@ -1,6 +1,6 @@
 //void, Obj This
 
-Sleep(500 + rand(1001));
+Sleep(1000 + rand(1001));
 
 if (GetConst("NoSentries") == 0) {
 	Building this;
@@ -94,8 +94,8 @@ if (GetConst("NoSentries") == 0) {
 				pt_route_diff = route_1 + route_2 / num_slots_double;
 				plr = .player;
 
-				while (1) {
-					if (.IsVeryBroken || plr != .player) {
+				while (true) {
+					if (.IsBroken || plr != .player) {
 						for (i = sentries.count - 1; i >= 0; i -= 1) {
 							sentry = sentries[i];
 							if (sentry.IsAlive) {
@@ -318,5 +318,5 @@ if (GetConst("NoSentries") == 0) {
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

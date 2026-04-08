@@ -26,9 +26,7 @@ if (.IsValid)
 
 				change_target = false;
 
-				if (!target.IsValid)
-					change_target = true;
-				else if (target.IsDead)
+				if (target.IsDead)
 					change_target = true;
 				else if (!.IsEnemy(target))
 					change_target = true;

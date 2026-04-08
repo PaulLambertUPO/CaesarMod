@@ -5,7 +5,7 @@ Unit this;
 this = owner.AsUnit();
 
 if (.IsValid)
-	while (1) {
+	while (true) {
 		Sleep(1000);
 		if (.health < .maxhealth / 4) {
 			.Heal(10);

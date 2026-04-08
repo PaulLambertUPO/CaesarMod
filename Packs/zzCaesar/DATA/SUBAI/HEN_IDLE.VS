@@ -35,41 +35,46 @@ if (.IsValid)
 			if (hall.IsValid)
 				centre = hall.pos;
 			else
-				centre = .pos;//this should never happen because hens are spawned by villages
+				centre = .posRH;//this should never happen because hens are spawned by villages
 		}
 
-		while (1) {
-			if (walked) {
-				walked = false;
-				pt = .pos + RandomOffset(10);
-				.Face(pt);
-				.ForceIdle();
-				.Idle(2000);
-			}
-			else if (rand(5) > 0) {
-				pt = .pos + RandomOffset(15);
-				.Face(pt);
-				.ForceIdle();
-				.Idle(2000);
-			}
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
+			if (.InHolder)
+				Sleep(2500);
 			else {
-				if (.DistTo(centre) > 600)
-					pt = GetVecByDir(.pos - centre, 500) + centre;
-				else
-					pt = .pos;
-				for (i = 0; i < 5; i += 1) {
-					pt_walk = pt + RandomOffset(200);
-					if (IsPassable3x3(pt_walk))
-						break;
+				if (walked) {
+					walked = false;
+					pt = .pos + RandomOffset(10);
+					.Face(pt);
+					.ForceIdle();
+					.Idle(2000);
 				}
-				wait = true;
-				if (i < 5)
-					while (!.Goto(pt_walk, 0, 2500, false, -1))
-						wait = false;
-				if (wait)
-					Sleep(2500);
-				walked = true;
+				else if (rand(5) > 0) {
+					pt = .pos + RandomOffset(15);
+					.Face(pt);
+					.ForceIdle();
+					.Idle(2000);
+				}
+				else {
+					if (.DistTo(centre) > 600)
+						pt = GetVecByDir(.pos - centre, 500) + centre;
+					else
+						pt = .pos;
+					for (i = 0; i < 5; i += 1) {
+						pt_walk = pt + RandomOffset(200);
+						if (IsPassable3x3(pt_walk))
+							break;
+					}
+					wait = true;
+					if (i < 5)
+						while (!.Goto(pt_walk, 0, 2500, false, -1))
+							wait = false;
+					if (wait)
+						Sleep(2500);
+					walked = true;
+				}
+				Sleep(500);
 			}
-			Sleep(500);
-		}
 	}
+
+Sleep(15);//prevent possible loops with other commands

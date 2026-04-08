@@ -14,7 +14,7 @@ this = This.AsBuilding();
 
 	i = .radius;
 
-	pt_dest.SetLen(rand(GetConst("VillageTrainPeasantRadius") - i) + i);
+	pt_dest.SetLen(i + rand(GetConst("VillageTrainPeasantRadius") - i));
 	pt_dest.Rot(rand(360));
 	pt_dest = pt_dest + .pos;
 

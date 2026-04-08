@@ -10,6 +10,6 @@
 
 	<method sig="buyfoodforgold" vs="data/subai/tavern_buyfood.vs" />
 	<method sig="sellfoodforgold" vs="data/subai/itavern_sell_food.vs"/>
-	<method sig="expedition" vs="data/subai/tavern_expedition.vs" onfinish="data/subai/tavern_onfinish_expedition.vs" />
+	<method sig="expedition" vs="data/subai/tavern_expedition.vs" onfinish="data/subai/tavern_expedition_onfinish.vs" />
 	<method sig="hireforeignmercenaries" vs="data/subai/hire_foreign_mercenaries.vs" />
 </class>

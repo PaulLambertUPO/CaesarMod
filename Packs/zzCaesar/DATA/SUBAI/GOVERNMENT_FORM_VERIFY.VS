@@ -10,13 +10,13 @@ set = .settlement;
 if (IsResearched(set, "Olympic Games"))
 	if (EnvReadString(this, "researching") != "yes") {
 		str gov_form;
-		int player;
+		int plr;
 
 		gov_form = cmdparam;
-		player = .player;
+		plr = .player;
 
-		if (EnvReadString(player, gov_form + "_researching") != "yes")
-			if (EnvReadString(player, "GovernmentForm") != gov_form) {
+		if (EnvReadString(plr, gov_form + "_researching") != "yes")
+			if (EnvReadString(plr, "GovernmentForm") != gov_form) {
 				bool unaffordable = false;
 
 				if (cmdcost_gold > set.gold)

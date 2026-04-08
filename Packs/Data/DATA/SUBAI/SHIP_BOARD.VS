@@ -1,4 +1,4 @@
-//void, Obj This, Obj ToBoard
+//void, Obj This, Obj target
 
 Ship this;
 
@@ -14,7 +14,7 @@ if (.IsValid)
 		rad = .radius;
 		spd = .speed;
 
-		u = ToBoard.AsUnit();
+		u = target.AsUnit();
 		if (u.IsValid)
 			if (u.IsAlive)
 				if (!u.AsFlying().IsValid) {//flying units cause a crash
@@ -42,7 +42,7 @@ if (.IsValid)
 				else
 					pt = u.pos;
 
-				while (!.GotoEnter(pt, 0, 1200, true, -1)) {
+				while (!.GotoEnter(pt, 0, 1000, false, -1)) {
 					ship_moved = true;
 					u_other = .BestCandidateToBoard;
 					if (u_other != u)
@@ -69,7 +69,7 @@ if (.IsValid)
 						pt = u.pos;
 				}
 
-				while (1) {
+				while (true) {
 					if (u.IsDead)
 						break;
 					if (ship_moved)

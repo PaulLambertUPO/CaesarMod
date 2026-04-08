@@ -12,21 +12,15 @@ if (.IsValid)
 		int rng, stamina_cost, learnings;
 		bool go_back, use_cripple;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
-		Sleep(50 + rand(451));
-
 		pt_start = .posRH;
 
 		rng = .range;
 		stamina_cost = GetCmdStaminaCost("cripple");
 
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
-			else {
+			else if (.Stop(2000)) {
 				h = .hero;
 				if (h.IsValid)
 					if (h.command == "teleport") {

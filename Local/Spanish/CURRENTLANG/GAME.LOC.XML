@@ -1229,7 +1229,6 @@
 <translationtableentry text="Move" result="Mover" />
 <translationtableentry text="Click to move to this position" result="Haz clic para moverte hasta esta posición" />
 <translationtableentry text="Hover" result="Sobrevolar" />
-<translationtableentry text="Hover (tight)" result="Sobrevolar (cerca)" />
 <translationtableentry text="Click to hover around this position" result="Haz clic para sobrevolar alrededor de esta posición" />
 <translationtableentry text="Stand ground" result="Mantener posición" />
 <translationtableentry text="Right-click to transport from this Inn" result="Haz clic con el botón derecho para el transporte desde esta posada" />
@@ -1259,6 +1258,7 @@
 <translationtableentry text="Right-click to enter this building" result="Haz clic con el botón derecho para entrar en esta estructura" />
 <translationtableentry text="Click to enter this shipyard and start fishing" result="Haz clic para entrar en este puerto y empezar a pescar" />
 <translationtableentry text="Right-click to enter this shipyard and start fishing" result="Haz clic con el botón derecho para entrar en este puerto y empezar a pescar" />
+<translationtableentry text="Right-click to enter this village and provide a mount for scouts" result="Haz clic con el botón derecho para entrar en esta aldea y proporcionar una montura para exploradores" />
 <translationtableentry text="Train" result="Adiestrar" />
 <translationtableentry text="Cannot train warriors" result="Imposible entrenar a los guerreros" />
 <translationtableentry text="Detach from hero" result="Desvincular del héroe" />

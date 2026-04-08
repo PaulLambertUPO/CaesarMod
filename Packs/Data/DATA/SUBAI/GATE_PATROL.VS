@@ -1,6 +1,6 @@
 //void, Obj This
 
-Sleep(500 + rand(1001));
+Sleep(1000 + rand(1001));
 
 if (GetConst("NoSentries") == 0) {
 	Gate this;
@@ -72,8 +72,8 @@ if (GetConst("NoSentries") == 0) {
 				sentry_class_name = .GetSentryClassName();
 				plr = .player;
 
-				while (1) {
-					if (.IsVeryBroken || plr != .player) {
+				while (true) {
+					if (.IsBroken || plr != .player) {
 						if (sentry_outer_1.IsValid) {
 							if (sentry_outer_1.IsAlive) {
 								sentry_outer_1.Damage(sentry_outer_1.health);
@@ -204,5 +204,5 @@ if (GetConst("NoSentries") == 0) {
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

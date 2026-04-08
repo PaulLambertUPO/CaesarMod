@@ -43,7 +43,6 @@
 	<method sig="protect" vs="data/subai/unit_protect.vs" />
 	<method sig="follow" vs="data/subai/unit_follow.vs" />
 	<method sig="approach" vs="data/subai/unit_approach.vs" />
-	<method sig="approach_hero" vs="data/subai/unit_approach_hero.vs" />
 	<method sig="giveitem" vs="data/subai/unit_giveitem.vs" />
 	<method sig="putitem" vs="data/subai/unit_putitem.vs" />
 	<method sig="dropitem" vs="data/subai/unit_dropitem.vs" />
@@ -61,8 +60,7 @@
 	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
 	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
 	<method sig="capture" vs="data/subai/unit_capture.vs" verify="data/subai/unit_capture_verify.vs" />
-	<method sig="capture" vs="data/subai/unit_advance.vs" />
-	<method sig="attack_independent" vs="data/subai/unit_capture.vs" verify="data/subai/attack_independent_verify.vs" />
+	<method sig="capture" vs="data/subai/do_nothing_point.vs" />
 	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
 	<method sig="disappear" vs="data/subai/unit_disappear.vs" />
 	<method sig="dismiss" vs="data/subai/unit_dismiss.vs" />
@@ -120,61 +118,10 @@
 		<cmd name="move" />
 		<cmd name="advance" ctrl="1" />
 	</defaultcmd>
-	<defaultcmd target="Inn">
-		<cmd name="transport" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Unit">
-		<cmd name="attack" />
-		<cmd name="approach" />
-		<cmd name="attack_unit_type_exclusive" ctrl="1" />
-	</defaultcmd>
-	<defaultcmd target="Hero">
-		<cmd name="attach" />
-		<cmd name="attack" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="ShipBattle">
-		<cmd name="boardship" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Wagon">
-		<cmd name="capture" />
-	</defaultcmd>
-	<defaultcmd target="WildHorse">
-		<cmd name="capture" />
-	</defaultcmd>
-	<!-- no capture for towers, gates and walls -->
-	<defaultcmd target="Tower">
-		<cmd name="attack" />
-		<cmd name="enter" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Gate">
-		<cmd name="attack" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Wall">
-		<cmd name="attack" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Building">
-		<cmd name="attack_independent" />
-		<cmd name="capture" />
-		<cmd name="attack" />
-		<cmd name="enter" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="TTent">
-		<cmd name="attack_independent" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Teleport">
-		<cmd name="teleport" />
+	<defaultcmd target="Object">
 		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="ItemHolder">
 		<cmd name="getitems" />
-		<cmd name="approach" />
 	</defaultcmd>
 </class>

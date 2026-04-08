@@ -4,7 +4,7 @@ ObjList ol;
 Hero h;
 int i;
 
-while (1) {
+while (true) {
 	ol = GetPlayerUnits(player, "Hero");
 	for (i = ol.count - 1; i >= 0; i -= 1) {
 		h = ol[i].AsHero();

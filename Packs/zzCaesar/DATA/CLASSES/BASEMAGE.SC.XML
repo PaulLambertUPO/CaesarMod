@@ -16,5 +16,9 @@
 		rollover="Damage|Range"
 	/>
 
+	<defaultcmd target="Unit">
+		<cmd name="learn" />
+	</defaultcmd>
+
 	<sounds walk="UnarmoredUnitWalk" />
 </class>

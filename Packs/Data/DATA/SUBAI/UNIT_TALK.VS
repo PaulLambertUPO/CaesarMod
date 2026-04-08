@@ -1,16 +1,14 @@
 //void, Obj This, Obj other
 
-Unit this;
+if (other.AsUnit().IsValid) {
+	Unit this;
 
-this = This.AsUnit();
+	this = This.AsUnit();
 
-if (.IsValid)
-	if (.IsAlive)
-		if (other != this)
-			if (other.AsUnit().IsValid)
+	if (.IsValid)
+		if (.IsAlive)
+			if (other != this)
 				if (other.IsAlive) {
-					while (!.Stop(1000))
-						;
 					while (!.Goto(other, 20, 2000, false, 0))
 						if (other.IsDead)
 							break;
@@ -19,3 +17,6 @@ if (.IsValid)
 						.Idle(2000 + rand(1001));
 					}
 				}
+}
+
+Sleep(15);//prevent possible loops with other commands

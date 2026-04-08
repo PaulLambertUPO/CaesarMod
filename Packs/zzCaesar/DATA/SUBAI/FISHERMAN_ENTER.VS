@@ -1,4 +1,4 @@
-//void, Obj This, Obj bld
+//void, Obj This, Obj other
 
 Unit this;
 
@@ -6,36 +6,54 @@ this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
-		Building building;
+		Building bld;
 
-		building = bld.AsBuilding();
+		bld = other.AsBuilding();
 
-		if (building.IsValid)
-			if (!.IsEnemy(building))
-				if (building.IsHeirOf("BaseShipyard")) {
-					Settlement set;
+		if (bld.IsValid)
+			if (other.AsTeleport().IsValid) {
+				Settlement set;
 
-					set = building.settlement;
+				set = bld.settlement;
 
-					if (set.IsValid) {
-						point pt_dummy;
-						Obj o_dummy;
+				if (!set.Units.Contains(this)) {
+					point pt;
+
+					pt = bld.GetEnterPoint(this);
+
+					.SetEntering(true);
+
+					while (!.GotoEnter(pt, 0, 1000, false, 2500))
+						;
+
+					set.AddUnit(this);
+				}
+			}
+			else {
+				if (.hero.IsValid)
+					.DetachFrom(.hero);
+
+				if (bld.IsHeirOf("BaseShipyard"))
+					if (!.IsEnemy(bld)) {
+						point pt;
+
+						pt = bld.GetEnterPoint(this);
 
 						.SetEntering(true);
 
-						if (!set.Units.Contains(this)) {//this should always happen
-							point pt;
+						while (!.GotoEnter(pt, 0, 1000, false, 2500))
+							;
 
-							pt = building.GetEnterPoint(this);
+						if (!.IsEnemy(bld)) {
+							Settlement set;
 
-							while (!.GotoEnter(pt, 0, 1000, true, 5000))
-								if (.IsEnemy(building))
-									return;
+							set = bld.settlement;
+
+							EnvWriteInt(set, "Fishermen", EnvReadInt(set, "Fishermen") + 1);
+							.Erase();
 						}
-
-						.ExecCmd("detach", pt_dummy, o_dummy, false);
-						EnvWriteInt(set, "Fishermen", EnvReadInt(set, "Fishermen") + 1);
-						.Erase();
 					}
-				}
+			}
 	}
+
+Sleep(15);//prevent possible loops with other commands

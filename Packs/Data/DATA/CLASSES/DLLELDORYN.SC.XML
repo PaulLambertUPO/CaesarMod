@@ -10,10 +10,9 @@
 	<properties icon="gameres/icons/Lleo.bmp" />
 	<properties display_name="Lleldoryn" display_name_plural="Druids" />
 	<properties edittree_pos="Units/Heroes/Lleldoryn (Druid)" />
-	
+
 	<defaultcmd target="ShipBattle">
 		<cmd name="boardship" />
-		<cmd name="approach" />
 	</defaultcmd>
 
 	<sounds command="data/sound entities/VoiceGDruid.xml" />

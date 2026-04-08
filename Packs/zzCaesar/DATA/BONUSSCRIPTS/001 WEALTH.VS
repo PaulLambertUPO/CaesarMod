@@ -7,7 +7,7 @@ EnvWriteString(set, "StartingBonusP" + playerid, "BonusGold20");//for AI scripts
 set.SetGold(set.gold + 2000);
 set.GoldConverted(2000);
 
-while (1) {
+while (true) {
 	Sleep(2000);
 	if (set.IsValid)
 		if (set.player == playerid) {

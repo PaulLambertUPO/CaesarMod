@@ -1,8 +1,19 @@
 <class id="Hen" parent="HenUnit" cpp_class="CVXUnit" entity="Units/Hen/Hen.ent.xml">
+
 	<properties maxhealth="1" maxstamina="0" />
 	<properties inventory_size="0" />
 	<properties healthbar_type="0" />
 	<properties no_transparent_draw="1" always_visible_on_minimap="0" />
 	<properties edittree_pos="" />
+
 	<method sig="idle" vs="data/subai/hen_idle.vs" />
+
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+	</defaultcmd>
+	<defaultcmd target="Object">
+		<cmd name="approach" />
+	</defaultcmd>
 </class>

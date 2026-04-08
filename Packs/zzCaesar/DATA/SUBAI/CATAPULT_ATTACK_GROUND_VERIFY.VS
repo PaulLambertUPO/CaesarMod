@@ -1,8 +1,8 @@
-//bool, Obj me, point pt
+//bool, Obj This, point pt
 
 Catapult this;
 
-this = me.AsCatapult();
+this = This.AsCatapult();
 
 if (.IsValid)
 	if (.IsAlive)

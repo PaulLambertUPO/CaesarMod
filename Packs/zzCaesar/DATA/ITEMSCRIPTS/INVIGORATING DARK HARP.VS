@@ -9,7 +9,7 @@ if (.IsValid) {
 	Obj o;
 	int i, allies_revitalized;
 
-	while (1) {
+	while (true) {
 		while (GetUseCount() > 0) {
 			Sleep(1000);
 			SetUseCount(GetUseCount() - 1);

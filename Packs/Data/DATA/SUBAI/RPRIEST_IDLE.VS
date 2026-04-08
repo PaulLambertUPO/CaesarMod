@@ -12,12 +12,6 @@ if (.IsValid)
 		int rng, heal_amount, stamina_cost, learnings;
 		bool can_learn, go_back, use_healing;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
-		Sleep(50 + rand(451));
-
 		pt_start = .posRH;
 
 		rng = .range;
@@ -29,10 +23,10 @@ if (.IsValid)
 		else
 			can_learn = IsResearched(.player, "Ritual Chamber");
 
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
-			else {
+			else if (.Stop(2000)) {
 				h = .hero;
 				if (h.IsValid)
 					if (h.command == "teleport") {

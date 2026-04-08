@@ -8,8 +8,6 @@
 	<properties help="contents/buildings/HAgora" />
 	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Agora" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
 
-	<behavior script="data/subai/storing_control.vs" />
-
 	<method sig="buywarslaves" vs="data/subai/buy_war_slaves.vs"/>
 	<method sig="sellfoodforgold" vs="data/subai/itavern_sell_food.vs"/>
 	<method sig="startstoringfood" vs="data/subai/start_storing_food.vs" />

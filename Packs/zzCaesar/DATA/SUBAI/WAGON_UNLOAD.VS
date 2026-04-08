@@ -23,27 +23,30 @@ if (.IsValid)
 						if (set.max_food > 0)
 							can_enter = true;
 					}
-					else if (set.max_gold > 0)//note that tents have 0 so it is not needed to use IsHeirOf/IsTTent
+					else if (set.max_gold > 0)
 						can_enter = true;
 
 					if (can_enter) {
 						point pt;
 
+						pt = bld.GetEnterPoint(this);
+
 						.SetEntering(true);
 
-						pt = bld.GetEnterPoint(this);
-						while (!.GotoEnter(pt, 0, 2000, false, 2500))
+						while (!.GotoEnter(pt, 0, 1000, false, 2500))
 							if (.IsEnemy(bld))
 								break;
 
-						if (carry_food)
-							set.SetFood(set.food + .amount);
-						else
-							set.SetGold(set.gold + .amount);
+						if (!.IsEnemy(bld)) {
+							if (carry_food)
+								set.SetFood(set.food + .amount);
+							else
+								set.SetGold(set.gold + .amount);
 
-						.SetFood(0);
-						.SetGold(0);
-						.Erase();
+							.SetFood(0);
+							.SetGold(0);
+							.Erase();
+						}
 					}
 				}
 	}

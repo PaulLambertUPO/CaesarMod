@@ -35,7 +35,7 @@ if (!other.AsCatapult().IsValid)
 
 											.SetEntering(true);
 
-											while (1) {
+											while (true) {
 												if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
 													.AddCommand(true, "advanceenter", bld);
 													.AddCommand(true, "engage");

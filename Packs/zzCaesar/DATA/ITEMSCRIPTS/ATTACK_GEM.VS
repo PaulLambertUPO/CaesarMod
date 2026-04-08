@@ -9,7 +9,7 @@ if (.IsValid) {
 	Obj o;
 	int i;
 
-	while (1) {
+	while (true) {
 		army = .army;
 		for (i = army.count - 1; i >= 0; i -= 1) {
 			o = army[i];

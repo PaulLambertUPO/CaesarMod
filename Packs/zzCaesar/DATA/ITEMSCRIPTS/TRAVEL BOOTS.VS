@@ -14,7 +14,7 @@ if (.IsValid) {
 	h = .AsHero();
 	is_hero = h.IsValid;
 
-	while (1) {
+	while (true) {
 		Sleep(500);
 
 		.Heal(1);

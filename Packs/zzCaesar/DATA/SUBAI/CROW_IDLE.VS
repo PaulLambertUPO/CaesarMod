@@ -20,14 +20,14 @@ if (.IsValid)
 
 		Sleep(500 + rand(2001));
 
-		while (1)
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
 			else {
 				if (!.IsInAir) {
 					j = 0;
 					fly = false;
-					while (1) {//join other flying crows or fly away from other units
+					while (true) {//join other flying crows or fly away from other units
 						j += 1;
 						.Idle(1300);
 
@@ -81,7 +81,7 @@ if (.IsValid)
 				else
 					j = 0;
 
-				while (1) {
+				while (true) {
 					j += 1;
 
 					pt_fly = .GetDir();

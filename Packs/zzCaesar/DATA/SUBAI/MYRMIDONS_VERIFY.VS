@@ -4,7 +4,6 @@ Building this;
 Settlement set;
 
 this = objs[0].AsBuilding();
-
 set = .settlement;
 
 if (IsResearched(set, "Olympic Games")) {
@@ -16,7 +15,6 @@ if (IsResearched(set, "Olympic Games")) {
 	reasonText = rollover(this, false) + Translatef(" (currently %s1)", player_max_myrmidons);
 
 	if (player_max_myrmidons < global_max_myrmidons) {
-
 		if (cmdcost_gold > set.gold)
 			reasonText = reasonText + "\n<color 255 0 0>" + Translate("Not enough gold");
 		if (cmdcost_food > set.food)

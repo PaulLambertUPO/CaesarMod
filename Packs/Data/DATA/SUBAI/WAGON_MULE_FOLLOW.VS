@@ -51,12 +51,12 @@ if (.IsValid)
 												Sleep(1500);
 												continue;
 											}
-											if (hall.IsHeirOf("Catapult")) {
+											if (hall.AsCatapult().IsValid) {
 												Sleep(1500);
 												continue;
 											}
 											enter_point = hall.GetEnterPoint(this);
-											while (1) {
+											while (true) {
 												if (followed_unit.IsDead)
 													break;
 												if (.IsEnemy(followed_unit))

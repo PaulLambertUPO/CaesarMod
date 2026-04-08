@@ -1,8 +1,9 @@
-//void, Obj me
+//void, Obj This
 
 Hero this;
 
-this = me.AsHero();
+this = This.AsHero();
 
 if (.IsValid)
-	.SetAutocast(true);
+	if (.IsAlive)
+		.SetAutocast(true);

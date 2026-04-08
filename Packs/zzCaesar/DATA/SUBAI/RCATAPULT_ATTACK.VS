@@ -1,8 +1,8 @@
-//void, Obj me, Obj target
+//void, Obj This, Obj target
 
 Catapult this;
 
-this = me.AsCatapult();
+this = This.AsCatapult();
 
 if (.IsValid)
 	if (.IsAlive)

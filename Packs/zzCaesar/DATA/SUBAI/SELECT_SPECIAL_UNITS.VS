@@ -2,52 +2,50 @@
 
 StrArray classes;
 IntArray players;
-Unit u;
-str class;
+Obj o;
+str o_class;
 int i, j, k, p;
 bool add_class_player;
 
-for (i = 0; i < objs.count; i += 1) {
-	u = objs[i].AsUnit();
-	if (u.IsValid)
-		if (u.IsAlive) {
-			class = u.class;
-			if (class == "RLiberatusPunic")
-				class = "RLiberatus";
+for (i = objs.count - 1; i >= 0; i -= 1) {
+	o = objs[i];
+	if (o.IsAlive) {
+		o_class = o.class;
+		if (o_class == "RLiberatusPunic")
+			o_class = "RLiberatus";
 
-			p = u.player;
+		p = o.player;
 
-			add_class_player = true;
+		add_class_player = true;
 
-			for (j = 0; j <= k; j += 1)
-				if (classes[j] == class)
-					if (players[j] == p) {
-						add_class_player = false;
-						break;
-					}
+		for (j = 0; j <= k; j += 1)
+			if (classes[j] == o_class)
+				if (players[j] == p) {
+					add_class_player = false;
+					break;
+				}
 
-			if (add_class_player) {
-				classes[k] = class;
-				players[k] = p;
-				k += 1;
-			}
+		if (add_class_player) {
+			classes[k] = o_class;
+			players[k] = p;
+			k += 1;
 		}
+	}
 }
 
 if (k > 0) {
 	ObjList selected_units;
 
 	for (i = 0; i <= k; i += 1)
-		selected_units.AddList(GetPlayerUnits(players[i], classes[i]));//hero-attached units are excluded to avoid problems (see GetPlayerUnits comments in other scripts)
+		selected_units.AddList(GetPlayerUnits(players[i], classes[i]));//attached units are excluded to avoid problems (see GetPlayerUnits comments in other scripts)
 
-	selected_units.RemoveList(_GetSelection());//this removes a lot of lag caused by the Select function when there are many units and the command keyboard shortcut is held down
+	selected_units.RemoveList(_GetSelection());//this reduces the lag caused by holding down the hotkey
 
-	for (i = 0; i < selected_units.count; i += 1) {
-		u = selected_units[i].AsUnit();
-		if (u.IsValid)
-			if (u.IsAlive)
-				if (!u.hero.IsValid)
-					if (players.find(u.player) > 0)
-						u.Select(player);
+	for (i = selected_units.count - 1; i >= 0; i -= 1) {
+		o = selected_units[i];
+		if (o.IsAlive)
+			if (!o.AsUnit().hero.IsValid)
+				if (players.find(o.player) > 0)
+					o.Select(player);
 	}
 }

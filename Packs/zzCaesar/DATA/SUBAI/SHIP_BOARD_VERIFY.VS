@@ -11,7 +11,7 @@ if (.IsValid)
 				if (other.AsUnit().IsValid)
 					if (other.IsAlive)
 						if (!.IsEnemy(other))
-							if (!other.AsFlying().IsValid)
+							if (!other.AsFlying().IsValid)//flying units cause a crash
 								if (!other.IsWaterUnit)
 									if (!other.IsSentry)
 										if (!other.IsPeasantAmbient)

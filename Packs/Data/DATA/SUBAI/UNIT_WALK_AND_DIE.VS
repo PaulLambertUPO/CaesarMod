@@ -9,3 +9,5 @@ if (.IsValid)
 		.Goto(pt, 0, 3000, false, -1);
 		.Damage(.health);
 	}
+
+Sleep(15);//prevent possible loops with other commands

@@ -10,8 +10,8 @@ if (.IsValid) {
 	Settlement set;
 	Unit u;
 	point pt_pos;
-	int i, j, k, u_level, owning_player, d = 180;
 	str announcement;
+	int i, j, k, u_level, owning_player, d = 180;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
 	pt_pos = .pos;

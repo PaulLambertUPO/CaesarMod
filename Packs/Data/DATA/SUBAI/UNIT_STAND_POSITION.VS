@@ -1,76 +1,64 @@
-// void, Obj me
+//void, Obj This
 
-Unit  this, u;
-point pt;
-int   range;
-bool  bSleeped;
+Unit this;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InHolder) {
+			Obj o;
+			point pt_pos;
+			int rng;
+			bool melee;
 
-while( ! .Stop( 1 ));
-pt = .posRH;
-range = 120;
+			if (IsAIPlayer(.player))
+				.SetParryMode(false);
 
-while(.IsAlive)
-{
-	if (.CmdCount() > 1)
-		break;
-	if( .IsRanged )
-	{
-		u = .BestTargetInRange( pt, .range );
-		while( u.IsAlive && .IsValidTarget( u ) && .IsVisible)
-		{
-			bSleeped = false;
-			while( .Attack( u ))
-			{
-				if( ! .IsVisible ) break;
-				bSleeped = true;
+			pt_pos = .pos;
+
+			if (.IsRanged) {
+				rng = .range;
+				melee = false;
 			}
-			if( ! bSleeped ) Sleep( 50 );
-			u = .BestTargetInRange( pt, .range );
-		}
-	}
-	else
-	{
-		u = .BestTargetInRange( pt, range );
-		while( u.IsAlive && .IsValidTarget( u ) && .IsVisible)
-		{
-			bSleeped = false;
-			while( ! .GotoAttack( u, 1500, true, 15000))
-			{
-				bSleeped = true;
-				u = .BestTargetInRange( pt, range );
-				if( !u.IsAlive || ! .IsValidTarget( u )) break;
-				if( !.IsVisible ) break;
+			else {
+				rng = 120;
+				melee = true;
 			}
-			if( u.IsAlive && .IsValidTarget( u ) && .IsVisible)
-			{
-				if (u.AsCatapult().IsValid)
-					while( .Attack( u ))
-					{
-						if (.HasSpecial(trample))
-							u.Damage(.damage);
-						if( ! .IsVisible ) break;
-						bSleeped = true;
+
+			if (.AsHero().IsValid)
+				.AsHero().army.SetCommand("stand_position");
+
+			while (.CmdCount <= 1) {//avoid blocking pending commands forever
+				if (.IsVisible) {
+					o = .BestTargetInRange(pt_pos, rng);
+					while (.IsValidTarget(o)) {
+						if (.GotoAttack(o, 1500, true, 15000)) {
+							if (!.IsVisible)
+								break;
+							if (.IsValidTarget(o))
+								if (o.AsCatapult().IsValid)
+									while (.Attack(o)) {
+										if (melee)
+											if (.HasSpecial(trample))
+												o.Damage(.damage);
+										if (!.IsVisible)
+											break;
+									}
+								else
+									while (.Attack(o))
+										if (!.IsVisible)
+											break;
+						}
+						if (!.IsVisible)
+							break;
+						o = .BestTargetInRange(pt_pos, rng);
 					}
-				else
-					while( .Attack( u ))
-					{
-						if( ! .IsVisible ) break;
-						bSleeped = true;
-					}
+				}
+				if (.Goto(pt_pos, 0, 500, false, -1))
+					if (.Stop(2000))
+						Sleep(500);
 			}
-			if( ! bSleeped ) Sleep( 50 );
-			u = .BestTargetInRange( pt, range );
 		}
-	}
-	if( ! u.IsAlive && ( pt.x != .posRH.x || pt.y != .posRH.y ))
-	{
-		while( ! .Goto( pt, 0, 100, false, -1 ));
-	}
-	else
-		.Idle(1);
-}
+
+Sleep(15);//prevent possible loops with other commands

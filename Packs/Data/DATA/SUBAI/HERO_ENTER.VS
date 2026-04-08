@@ -84,7 +84,8 @@ if (!other.AsCatapult().IsValid) {
 
 												if (!.IsEnemy(bld))
 													if (DiplGetShareView(bld.player, .player))
-														set.AddUnit(this);
+														if (set.AddUnit(this))
+															.army.SetCommand("enter", bld);
 											}
 									}
 							}

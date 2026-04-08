@@ -2,7 +2,6 @@
 
 	<properties non_selectable="1" />
 	<properties num_sentry_slots="5" />
-	<properties sentry_class_name="RSentry" />
 	<properties radius="110" selection_radius="110" />
 	<properties display_name="Wall" />
 	<properties help="contents/buildings/Fortification" />

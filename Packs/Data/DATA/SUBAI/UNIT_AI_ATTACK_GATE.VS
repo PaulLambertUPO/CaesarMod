@@ -1,45 +1,33 @@
-// void, Obj u, Obj g
-Unit this;
-Gate gate;
-Unit enemy;
+//void, Obj u, Obj g
 
-//pr("unit_ai_attack_gate.vs started!");
-this = u.AsUnit();
-gate = g.AsGate();
+if (g.AsGate().IsValid) {
+	Unit this;
 
-if( ! .IsValidTarget( gate )) return;
+	this = u.AsUnit();
 
-// --- advance (copied)
-while (1) 
-{
-/*
-	u = .BestTargetInSquadSight();
-	if(u.IsAlive())	
-	{
-		while (u.IsAlive() && .IsValidTarget(u)) 
-		{
-			while(!.GotoAttack(u, 1500, true, 15000)) 
-			{
-				u = .BestTargetInSquadSight().AsUnit();
-				if(!u.IsAlive() || !.IsValidTarget(u)) break;
+	if (.IsValid)
+		if (.IsAlive)
+			if (.IsValidTarget(g)) {
+				.SetParryMode(false);
+
+				while (!.GotoAttack(g, 2000, true, 2500))
+					;
+
+				{
+					Obj o;
+
+					while (true) {
+						o = .BestTargetInSquadSightMisZeroDamage;
+						if (.IsValidTarget(o)) {
+							if (!.Attack(o))
+								if (!.Attack(g))
+									Sleep(2000);
+						}
+						else if (!.Attack(g))
+							Sleep(2000);
+					}
+				}
 			}
-			if (u.IsAlive() && .IsValidTarget(u))
-				while (.Attack(u));
-			u = .BestTargetInSquadSight();
-		}
-	}
-	else
-*/
-		if (.GotoAttack(gate, 2000, true, 2500)) break;
 }
-// --- stand ground and attack gate/enemies(if any)
-while( 1 )
-{
-	enemy = .BestTargetInSquadSight().AsUnit();
-	if( enemy.IsAlive && .IsValidTarget( enemy ))
-	{
-		if( !.Attack( enemy ))  // long live complete evaluation!
-			{ if( ! .Attack( gate )) Sleep( 2000 ); }
-	}
-	else if(!.Attack(gate)) Sleep( 2000 );
-}
+
+Sleep(15);//prevent possible loops with other commands

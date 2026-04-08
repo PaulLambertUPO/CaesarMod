@@ -40,7 +40,7 @@ Unit flag;
 		flag = Place("ImperialRomeFlag", .pos + Point(65, -448), .player);
 }
 
-while (1) {
+while (true) {
 	if (This.player != flag.player)
 		flag.SetPlayer(This.player);
 	Sleep(500);

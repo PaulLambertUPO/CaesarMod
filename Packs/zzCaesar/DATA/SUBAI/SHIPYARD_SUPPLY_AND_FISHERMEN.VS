@@ -1,43 +1,44 @@
 //void, Obj This
 
-Settlement this, supplied;
+Settlement this, supp;
 Building shipyard;
 Wagon wagon;
-int min_resource, fishermen;
+int min_resource, wLsa, fishermen;
+
+Sleep(250 + rand(251));
 
 shipyard = This.AsBuilding();
 this = shipyard.settlement;
 min_resource = GetConst("MinResQtyToTransport");
+wLsa = .WaterLsa;
 
-while (1) {
-	Sleep(3000);
-
+while (true) {
 	if (.supplied == this)
 		.StopSupply();
 
-	supplied = .supplied;
+	supp = .supplied;
 
-	if (supplied.IsValid)
-		if (!.IsEnemy(supplied.player)) {
+	if (supp.IsValid)
+		if (!.IsEnemy(supp.player)) {
 			if (.gold >= min_resource)
-				if (!supplied.IsTTent) {
-					if (!supplied.IsShipyard)
+				if (!supp.IsTTent) {
+					if (!supp.IsShipyard)
 						wagon = .CreateMuleGold(1000);
-					else if (supplied.WaterLsa != .WaterLsa)
+					else if (supp.WaterLsa != wLsa)
 						wagon = .CreateMuleGold(1000);
 					else
 						wagon = .CreateBoatGold(1000);
-					wagon.SetCommand("unload", supplied.GetCentralBuilding());
+					wagon.SetCommand("unload", supp.GetCentralBuilding());
 					wagon.AddCommand(false, "unload", This);//come back if the destination becomes invalid during the travel
 				}
 			if (.food >= min_resource) {
-				if (!supplied.IsShipyard)
+				if (!supp.IsShipyard)
 					wagon = .CreateMuleFood(1000);
-				else if (supplied.WaterLsa != .WaterLsa)
+				else if (supp.WaterLsa != wLsa)
 					wagon = .CreateMuleFood(1000);
 				else
 					wagon = .CreateBoatFood(1000);
-				wagon.SetCommand("unload", supplied.GetCentralBuilding());
+				wagon.SetCommand("unload", supp.GetCentralBuilding());
 				wagon.AddCommand(false, "unload", This);//come back if the destination becomes invalid during the travel
 			}
 		}
@@ -54,4 +55,6 @@ while (1) {
 			.SetFood(.food + fishermen * rand(3) / 2);//fishing requires patience and luck
 		}
 	}
+
+	Sleep(3000);
 }

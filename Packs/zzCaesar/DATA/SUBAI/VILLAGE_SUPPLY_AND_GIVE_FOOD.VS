@@ -1,75 +1,76 @@
 //void, Obj This
 
-Settlement this, supplied;
-Building hall;
-Wagon mule;
-ObjList ol;
-Unit u;
-int min_resource, min_pop, gold_to_give, food_to_give, i, f;
+Sleep(250 + rand(251));
 
-this = This.AsBuilding().settlement;
-hall = .GetCentralBuilding();
-min_resource = GetConst("MinResQtyToTransport");
-min_pop = GetConst("MinPopulation");
+{
+	Settlement this, supp;
+	Building hall;
+	Wagon mule;
+	ObjList ol;
+	Unit u;
+	int i, f, min_resource, min_pop, repopulate_cost_gold, repopulate_cost_food, gold_to_give, food_to_give;
 
-Sleep(rand(251) + 250);
+	this = This.AsBuilding().settlement;
+	hall = .GetCentralBuilding();
+	min_resource = GetConst("MinResQtyToTransport");
+	min_pop = GetConst("MinPopulation");
 
-while (1) {
-	Sleep(3000);
+	GetCmdCost("repair village", repopulate_cost_gold, repopulate_cost_food);
 
-	gold_to_give = .gold;
-	food_to_give = .food;
-	if (.population < min_pop) {//keep the minimum amount of resorces for the repopulate/repair command
-		int gold_cost, food_cost;
-		if (GetCmdCost("repair village", gold_cost, food_cost)) {
-			gold_to_give -= gold_cost;
-			food_to_give -= food_cost;
+	while (true) {
+		if (.population < min_pop) {//keep the minimum amount of resorces for the repopulate/repair command
+			gold_to_give = .gold - repopulate_cost_gold;
+			food_to_give = .food - repopulate_cost_food;
 		}
-	}
-	else if (hall.IsBroken) {//keep the minimum amount of resorces for the repopulate/repair command
-		int gold_cost, food_cost;
-		if (GetCmdCost("repair village", gold_cost, food_cost)) {
-			gold_to_give -= gold_cost;
-			food_to_give -= food_cost;
+		else if (hall.IsBroken) {//keep the minimum amount of resorces for the repopulate/repair command
+			gold_to_give = .gold - repopulate_cost_gold;
+			food_to_give = .food - repopulate_cost_food;
 		}
-	}
+		else {
+			gold_to_give = .gold;
+			food_to_give = .food;
+		}
 
-	if (.supplied == this)
-		.StopSupply();
+		if (.supplied == this)
+			.StopSupply();
 
-	supplied = .supplied;
+		supp = .supplied;
 
-	if (supplied.IsValid)
-		if (!.IsEnemy(supplied.player)) {
-			if (gold_to_give >= min_resource)
-				if (!supplied.IsTTent) {
-					mule = .CreateMuleGold(MIN(1000, gold_to_give));
-					mule.SetCommand("unload", supplied.GetCentralBuilding());
+		if (supp.IsValid)
+			if (!.IsEnemy(supp.player)) {
+				if (gold_to_give >= min_resource)
+					if (!supp.IsTTent) {
+						mule = .CreateMuleGold(MIN(1000, gold_to_give));
+						mule.SetCommand("unload", supp.GetCentralBuilding());
+						mule.AddCommand(false, "unload", hall);//come back if the destination becomes invalid during the travel
+					}
+				if (food_to_give >= min_resource) {
+					i = MIN(1000, food_to_give);
+					mule = .CreateMuleFood(i);
+					food_to_give -= i;
+					mule.SetCommand("unload", supp.GetCentralBuilding());
 					mule.AddCommand(false, "unload", hall);//come back if the destination becomes invalid during the travel
 				}
-			if (food_to_give >= min_resource) {
-				i = MIN(1000, food_to_give);
-				mule = .CreateMuleFood(i);
-				food_to_give -= i;
-				mule.SetCommand("unload", supplied.GetCentralBuilding());
-				mule.AddCommand(false, "unload", hall);//come back if the destination becomes invalid during the travel
+			}
+
+		if (food_to_give > 0) {
+			ol = ObjsInSight(This, "Military,Peaceful").GetObjList();
+			for (i = ol.count - 1; i >= 0; i -= 1) {
+				u = ol[i].AsUnit();
+				if (u.IsAlive) {
+					f = CLAMP(u.maxfood - u.food, 0, food_to_give);
+					if (f > 0)
+						if (DiplGetShareSupport(u.player, .player)) {
+							u.SetFood(u.food + f);
+							.SetFood(.food - f);
+							food_to_give -= f;
+							if (food_to_give <= 0)
+								break;
+						}
+				}
 			}
 		}
 
-	if (food_to_give > 0) {
-		ol = ObjsInSight(This, "Military,Peaceful").GetObjList();//exclude animals
-		for (i = 0; i < ol.count; i += 1)
-			if (food_to_give > 0) {
-				u = ol[i].AsUnit();
-				if (u.IsValid)
-					if (u.IsAlive)
-						if (u.food < u.maxfood)
-							if (DiplGetShareSupport(.player, u.player)) {
-								f = MIN(food_to_give, u.maxfood - u.food);
-								u.SetFood(u.food + f);
-								.SetFood(.food - f);
-								food_to_give -= f;
-							}
-			}
+		Sleep(3000);
 	}
 }

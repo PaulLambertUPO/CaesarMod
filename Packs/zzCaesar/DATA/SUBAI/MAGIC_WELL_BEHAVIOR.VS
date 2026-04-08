@@ -8,7 +8,7 @@ Sleep(500 + rand(501));
 
 pt_pos = This.pos;
 
-while (1) {
+while (true) {
 	damaged_units = ObjsInCircle(pt_pos, 400, "Military,Peaceful").GetObjList().ObjInjured();
 	if (damaged_units.count > 0) {
 		o = damaged_units[rand(damaged_units.count)];

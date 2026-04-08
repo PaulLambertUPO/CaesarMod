@@ -7,8 +7,8 @@ this = This.AsBuilding();
 if (.IsValid) {
 	ObjList strongholds, buildings;
 	Building b;
-	int i, owning_player, duration = 10;
 	str announcement;
+	int i, owning_player, duration = 10;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
 	announcement = "Earthquake_" + owning_player + "_" + .pos.x + "_" + .pos.y;

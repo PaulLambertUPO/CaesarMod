@@ -1,14 +1,14 @@
-//void, Obj me
+//void, Obj This
 
 Unit this;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
-		if (!.InHolder)
-			.Stop(2000);
-
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		.Stop(2000);
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			Sleep(1000);
 	}
+
+Sleep(15);//prevent possible loops with other commands

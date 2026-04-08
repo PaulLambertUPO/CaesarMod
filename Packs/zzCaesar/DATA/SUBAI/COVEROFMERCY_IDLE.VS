@@ -1,8 +1,8 @@
-//void, Obj This
+//void, Obj this
 
-This.PlayAnim(1, This.pos);
+.PlayAnim(1, .pos);
 
-while (This.stamina > 0) {
-	This.PlayAnim(2, This.pos);
-	This.CoverOfMercyAction();
+while (.stamina > 0) {
+	.PlayAnim(2, .pos);
+	.CoverOfMercyAction();
 }

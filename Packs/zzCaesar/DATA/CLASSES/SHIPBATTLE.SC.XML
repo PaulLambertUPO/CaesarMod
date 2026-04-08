@@ -31,22 +31,28 @@
 	<method sig="unboard" vs="data/subai/ship_unboard.vs" />
 	<method sig="unboardall" vs="data/subai/ship_unboard_all.vs" verify="data/subai/ship_unboard_all_verify.vs" />
 
-	<defaultcmd target="ShipBattle">
-		<cmd name="attack" />
-		<cmd name="approach" />
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+		<cmd name="advance" ctrl="1" />
 	</defaultcmd>
-	<defaultcmd target="ShipS">
-		<cmd name="attack" />
+	<defaultcmd target="Object">
 		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Unit">
 		<cmd name="boardunit" />
 		<cmd name="attack" />
-		<cmd name="approach" />
+		<cmd name="attack_unit_type_exclusive" ctrl="1" />
 	</defaultcmd>
 	<defaultcmd target="Building">
 		<cmd name="attack" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
 		<cmd name="approach" />
+	</defaultcmd>
+	<defaultcmd target="ItemHolder">
+		<cmd name="getitems" />
 	</defaultcmd>
 
 	<sounds walk="ShipWalk" attack="ShipAttack" die="ShipDeath" />

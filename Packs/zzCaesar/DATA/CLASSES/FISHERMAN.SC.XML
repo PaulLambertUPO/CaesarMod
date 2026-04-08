@@ -3,15 +3,16 @@
 	<properties maxhealth="100" />
 	<properties sight="150" />
 	<properties speed="60" />
+	<properties unit_specials="Freedom" />
 
 	<properties display_name="Fisherman" display_name_plural="Fishermen" />
 	<properties icon="gameres/icons/Fisherman.bmp" />
 	<properties help="contents/units/Fisherman" />
 	<properties edittree_pos="Units/Others/Fisherman" />
 
+	<method sig="idle" vs="data/subai/fisherman_idle.vs" />
 	<method sig="enter" vs="data/subai/fisherman_enter.vs" verify="data/subai/fisherman_enter_verify.vs" />
 	<method sig="enteralone" vs="data/subai/fisherman_enter.vs" verify="data/subai/fisherman_enter_verify.vs" />
-	<method sig="enterfisherman" vs="data/subai/fisherman_enter.vs" verify="data/subai/fisherman_enter_verify.vs" />
 
 	<defaultcmd target="Building">
 		<cmd name="approach" />

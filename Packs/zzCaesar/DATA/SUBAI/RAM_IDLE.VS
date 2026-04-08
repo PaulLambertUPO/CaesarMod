@@ -1,18 +1,23 @@
-//void, Obj me
+//void, Obj This
 
 Unit this;
-Obj target;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
-target = .RamBestTarget();
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InHolder) {
+			Building target;
 
-if (target.IsValid)
-	if (!target.AsBuilding().IsVeryBroken) {
-		Sleep(100);
-		.AddCommand(true, "attack", target);
-		return;
-	}
+			target = .RamBestTarget.AsBuilding();
 
-while (1)
+			if (target.IsValid)
+				if (!target.IsVeryBroken) {
+					.AddCommand(true, "attack", target);
+					Sleep(15);//prevent possible loops with other commands
+					return;
+				}
+		}
+
+while (true)
 	Sleep(3600000);

@@ -1,11 +1,7 @@
-//bool, Obj This, Obj other
+//bool, Obj this, Obj other
 
-if (!other.AsCatapult().IsValid) {
-	Unit this;
-
-	this = This.AsUnit();
-
-	if (.IsValid)
+if (!other.AsCatapult().IsValid)
+	if (.AsUnit().IsValid)
 		if (.IsAlive) {
 			Building bld;
 
@@ -23,6 +19,5 @@ if (!other.AsCatapult().IsValid) {
 									return true;
 			}
 		}
-}
 
 return false;

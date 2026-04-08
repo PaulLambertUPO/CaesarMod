@@ -18,7 +18,7 @@
 	<defaultcmd target="">
 		<cmd name="move" />
 	</defaultcmd>
-	<defaultcmd target="ItemHolder">
+	<defaultcmd target="Object">
 		<cmd name="approach" />
 	</defaultcmd>
 </class>

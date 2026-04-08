@@ -1,6 +1,6 @@
 //void, Obj This
 
-Sleep(1000 + rand(501));
+Sleep(750 + rand(751));
 
 if (GetConst("NoSentries") == 0) {
 	Building this;
@@ -48,7 +48,7 @@ if (GetConst("NoSentries") == 0) {
 
 			i = -1;//reset the level timer (-1 because there is no sleep in the first iteration)
 
-			while (1) {
+			while (true) {
 				if (.IsBroken || plr != .player) {//kill all sentries and reset level timer and sentry class
 					if (s1.IsAlive)
 						s1.Damage(s1.health);
@@ -448,5 +448,5 @@ if (GetConst("NoSentries") == 0) {
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

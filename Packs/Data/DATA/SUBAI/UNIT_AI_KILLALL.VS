@@ -1,49 +1,64 @@
-// void, Obj u
+//void, Obj u
 
 Unit this;
-bool melee;
 
-this = u.AsUnit;
+this = u.AsUnit();
 
-melee = !.IsRanged;
+if (.IsValid)
+	if (.IsAlive) {
+		Obj o;
+		Squad sq;
+		GAIKA gk_dest;
+		Settlement set;
+		bool melee, sq_to_get;
 
-while (1)
-{
-	Obj enemy;
-	Settlement set;
+		.SetParryMode(false);
 
-	enemy = .BestTargetInSquadSight;
-	if (!enemy.IsValid)
-	if (.GetSquad.AIDest == .GetSquad.GAIKAIn)
-		enemy = .BestTargetInGAIKA.AsUnit;
-	if (enemy.IsAlive)
-	{
-		if (.GotoAttack(enemy, 1500, true, 15000))
-			if (enemy.AsCatapult().IsValid) {
-				while (.Attack(enemy))
-					if (melee)
-						if (.HasSpecial(trample))
-							enemy.Damage(.damage);
+		melee = !.IsRanged;
+
+		while (true) {
+			sq_to_get = true;
+
+			o = .BestTargetInSquadSightMisZeroDamage;
+			if (o.IsDead) {
+				sq = .GetSquad();
+				if (sq.AIDest == sq.GAIKAIn)
+					o = .BestTargetInGAIKA;
+				sq_to_get = false;
 			}
-			else
-				while (.Attack(enemy))
-					;
-		continue;
+			if (o.IsAlive) {
+				if (.GotoAttack(o, 1500, true, 15000))
+					if (o.AsCatapult().IsValid) {
+						while (.Attack(o))
+							if (melee)
+								if (.HasSpecial(trample))
+									o.Damage(.damage);
+					}
+					else
+						while (.Attack(o))
+							;
+				continue;
+			}
+
+			if (sq_to_get)
+				sq = .GetSquad();
+
+			gk_dest = sq.AIDest;
+			set = gk_dest.settlement;
+
+			if (set.IsValid) {
+				.AddCommand(true, "ai_killall");
+				.AddCommand(true, "advance", set.GetCentralBuilding().pos);
+				break;
+			}
+			if (gk_dest != sq.GAIKAIn) {
+				.AddCommand(true, "ai_killall");
+				.AddCommand(true, "advance", gk_dest.Center);
+				break;
+			}
+
+			Sleep(1000);
+		}
 	}
 
-	set = .GetSquad.AIDest.settlement;
-	if (set.IsValid) {
-		.AddCommand(true, "ai_killall");
-		.AddCommand(true, "advance", set.GetCentralBuilding.pos);
-		break;
-	}
-	if (.GetSquad.AIDest != .GetSquad.GAIKAIn) {
-		.AddCommand(true, "ai_killall");
-		.AddCommand(true, "advance", .GetSquad.AIDest.Center);
-		break;
-	}
-
-	Sleep(1000);
-}
-
-Sleep(500);	// else commands "ai_killall" / "advance" cycle
+Sleep(15);//prevent possible loops with other commands

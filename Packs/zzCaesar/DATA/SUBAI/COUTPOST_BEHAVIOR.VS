@@ -2,23 +2,26 @@
 
 Settlement this;
 Building hall;
-ObjList ol;
 
 hall = This.AsBuilding();
 
 this = hall.settlement;
 
-Sleep(rand(501) + 1000);
+Sleep(1000 + rand(1001));
 
 while (.IsIndependent)
 	Sleep(2000);
 
-while (1) {
-	Sleep(30000);
-	if (!hall.IsBroken)
-		if (!.IsIndependent) {
-			ol = .Units.ObjClass("Peasant").ObjAlly(.player);
-			if (ol.count > 0)
-				ol[rand(ol.count)].AsUnit().Mutate("CMaceman");
-		}
+{
+	ObjList ol;
+
+	while (true) {
+		Sleep(30000);
+		if (!hall.IsBroken)
+			if (!.IsIndependent) {
+				ol = .Units.ObjClass("Peasant").ObjAlly(.player);
+				if (ol.count > 0)
+					ol[rand(ol.count)].AsUnit().Mutate("CMaceman");
+			}
+	}
 }

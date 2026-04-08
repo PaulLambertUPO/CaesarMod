@@ -14,5 +14,34 @@
 
 	<behavior script="data/subai/sneak_bonus_attack.vs" />
 
+	<defaultcmd target="Unit">
+		<cmd name="attack" />
+		<cmd name="attack_unit_type_exclusive" ctrl="1" />
+	</defaultcmd>
+	<defaultcmd target="Hero">
+		<cmd name="attach" />
+	</defaultcmd>
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
+	</defaultcmd>
+	<defaultcmd target="Wagon">
+		<cmd name="capture" />
+	</defaultcmd>
+	<defaultcmd target="WildHorse">
+		<cmd name="capture" />
+	</defaultcmd>
+	<defaultcmd target="Building">
+		<cmd name="capture" />
+		<cmd name="attack" />
+		<cmd name="enter" />
+	</defaultcmd>
+	<defaultcmd target="Teleport">
+		<cmd name="teleport" />
+	</defaultcmd>
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
+		<cmd name="approach" />
+	</defaultcmd>
+
 	<sounds walk="UnitWalk" />
 </class>

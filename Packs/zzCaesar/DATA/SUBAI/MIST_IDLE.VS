@@ -1,12 +1,8 @@
-//void, Obj This
+//void, Obj this
 
-int damage;
+.PlayAnim(1, .pos);
 
-damage = GetConst("MistDamage");
-
-This.PlayAnim(1, This.pos);
-
-while (This.stamina > 0) {
-	This.PlayAnim(2, This.pos);
-	This.MistAction(damage);
+while (.stamina > 0) {
+	.PlayAnim(2, .pos);
+	.MistAction(45);
 }

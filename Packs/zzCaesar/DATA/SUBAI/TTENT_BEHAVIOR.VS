@@ -10,7 +10,7 @@ str unit_class_1, unit_class_2;
 int i, j, plr, rad, rng, rng_half, initial_army, active_army, spawn_rate, last_spawn_time, delay, exp_gain, old_exp_gain;
 bool first_time_independent;
 
-Sleep(500 + rand(501));
+Sleep(750 + rand(751));
 
 this = This.AsBuilding();
 
@@ -43,7 +43,7 @@ else {
 	unit_class_2 = "TTeutonArcher";
 }
 
-while (1) {
+while (true) {
 	if (plr != .player) {//this lets the old units recapture the tent (it should happen only with adventure sequences)
 		defenders_1.Clear();
 		defenders_2.Clear();

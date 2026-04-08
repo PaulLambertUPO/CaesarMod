@@ -1,10 +1,6 @@
-//bool, Obj This, Obj other
+//bool, Obj this, Obj other
 
-Unit this;
-
-this = This.AsUnit();
-
-if (.IsValid)
+if (.AsUnit().IsValid)
 	if (.IsAlive) {
 		Building bld;
 

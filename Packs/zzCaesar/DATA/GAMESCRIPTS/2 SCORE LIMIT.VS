@@ -29,7 +29,7 @@ EnvWriteInt(player, "elimination", 0);
 
 SetPlayerStatus(player, 0, Translatef("Score limit (%s1)", score_limit), false);
 
-while (1) {
+while (true) {
 	//hide upper right corner messages
 	SetPlayerStatus(player, 0, false);//game mode
 	SetPlayerStatus(player, 1, false);//game conditions

@@ -7,8 +7,8 @@ this = This.AsBuilding();
 if (.IsValid) {
 	ObjList player_units;
 	Unit u;
-	int i, j, d, owning_player;
 	str announcement;
+	int i, j, d, owning_player;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
 	announcement = "Plague_" + owning_player + "_" + .pos.x + "_" + .pos.y;

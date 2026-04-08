@@ -6,10 +6,9 @@ this = me.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
-		Settlement set;
 		point pt;
 
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
 			else if (.Stop(2000)) {

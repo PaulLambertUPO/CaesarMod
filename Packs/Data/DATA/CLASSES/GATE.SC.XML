@@ -2,10 +2,8 @@
 
 	<properties target_priority="200" />
 	<properties auto_repair="no" />
-	<properties sentry_class_name="RSentry1" />
 	<properties radius="170" selection_radius="170" />
 	<properties display_name="Gate" />
-	<properties icon="gameres/icons/GGates.bmp" />
 	<properties help="contents/buildings/Fortification" />
 
 	<behavior script="data/subai/gate_patrol.vs" />

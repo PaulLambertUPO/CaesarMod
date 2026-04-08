@@ -1,179 +1,193 @@
-//void, Obj me, Obj u
+//void, Obj This, Obj target
 
-Unit this;
+if (target.IsValid) {
+	Unit this;
 
-this = me.AsUnit();
+	this = This.AsUnit();
 
-if (.IsValid) {
-	if (.player != u.player)
-		if (.IsMilitary) {
-			Building b;
+	if (.IsValid)
+		if (.IsAlive) {
+			int plr;
 
-			.SetParryMode(false);//leave parry mode at new command
+			plr = .player;
 
-			b = u.AsBuilding();
+			if (target.player != plr) {
+				.SetParryMode(false);
+				
+				if (target.AsBuilding().IsValid) {
+					if (.IsValidCaptureTarget(target)) {
+						Settlement set;
 
-			if (b.IsValid) {
-				if (!b.AsCatapult().IsValid) {
-					Settlement set;
-					bool is_tent_or_independent_outpost = false, is_enemy;
+						set = target.AsBuilding().settlement;
 
-					set = b.settlement;
+						if (!target.AsBuilding().IsCentralBuliding)
+							target = set.GetCentralBuilding();
 
-					if (!b.IsCentralBuliding)
-						b = set.GetCentralBuilding();
+						while (!.Goto(target, 250, 1500, false, 0))
+							;
 
-					//tents and independent outposts
-					while (.IsAlive) {
-						if (.DistTo(b.pos) <= 500)
-							break;
-						if (.Goto(b, 0, 1237, false, 0))
-							break;
-					}
-					if (.player == b.player)
-						return;
-
-					if (set.IsTTent)
-						is_tent_or_independent_outpost = true;
-					else if (set.IsOutpost())
-						if (set.IsIndependent())
-							is_tent_or_independent_outpost = true;
-
-					while (.player != b.player) {
-						if (!.IsValidCaptureTarget(b))
-							return;
-						if (.Goto(b, 250, 5000, true, 2500)) {
-							if (.player == b.player)
-								return;
-							is_enemy = .IsEnemy(b);
-							if (!is_enemy)
-								if (!b.IsEnemy(this)) {//allied players management (note that it's different from using DiplAreAllied)
-									set.SetPlayer(.player);
-									return;
+						if (target.player != plr)
+							if (.IsValidCaptureTarget(target)) {
+								if (set.IsTTent) {
+									if (target.IsEnemy(this)) {
+										if (.HasSpecial(sneak))
+											.SetLastAttackTime();
+										if (!.IsVisible)
+											.SetVisible(true);
+										.AddCommand(true, "engage");
+										Sleep(15);//prevent possible loops with other commands
+										return;
+									}
 								}
-							if (is_tent_or_independent_outpost) {
-								if (!.IsVisible)
-									.SetVisible(true);
-								if (.HasSpecial(sneak))
-									.SetLastAttackTime();
-								.AddCommand(true, "engage");
-								return;
-							}
-							while (is_enemy == .IsEnemy(b)) {
-								if (set.loyalty <= 0) {
-									set.SetPlayer(.player);
-									set.SetLoyalty(11);
-									return;
+								else if (set.IsOutpost)
+									if (set.IsIndependent) {
+										if (.HasSpecial(sneak))
+											.SetLastAttackTime();
+										if (!.IsVisible)
+											.SetVisible(true);
+										.AddCommand(true, "engage");
+										Sleep(15);//prevent possible loops with other commands
+										return;
+									}
+
+								{
+									point pt_pos;
+
+									pt_pos = target.pos;
+
+									while (target.player != plr) {
+										if (!.IsValidCaptureTarget(target))
+											break;
+										if (.Goto(target, 250, 2500, true, 2500)) {
+											if (target.player == plr)
+												break;
+											if (!.IsValidCaptureTarget(target))
+												break;
+											if (!target.IsEnemy(this)) {//non-hostile players immediately give the target
+												set.SetPlayer(plr);
+												break;
+											}
+											while (target.IsEnemy(this)) {
+												if (set.loyalty <= 0) {
+													set.SetPlayer(plr);
+													set.SetLoyalty(11);
+													break;
+												}
+												UserNotification("building attacked", "", pt_pos, target.player);
+
+												.SetLastAttackTime();
+												if (!.IsVisible)
+													.SetVisible(true);
+
+												.Face(pt_pos);
+												.Taunt(2000);
+
+												if (target.player == plr)
+													break;
+												if (!.IsValidCaptureTarget(target))
+													break;
+												if (target.IsEnemy(this))
+													set.DecreaseLoyalty(1);
+												else {
+													set.SetPlayer(plr);
+													break;
+												}
+											}
+										}
+									}
 								}
-								if (.IsEnemy(b))
-									UserNotification("building attacked", "", b.pos, b.player);
-								else if (b.IsEnemy(this))
-									UserNotification("building attacked", "", b.pos, b.player);
-
-								if (!.IsVisible)
-									.SetVisible(true);
-								if (.HasSpecial(sneak))
-									.SetLastAttackTime();
-
-								.Face(b.pos);
-								.Taunt(2000);
-								if (.IsEnemy(b))//loyalty sometimes decreases even after the capture
-									set.DecreaseLoyalty(1);
 							}
-						}
 					}
 				}
-			} 
-			else if (u.IsHeirOf("Wagon")) {
-				Wagon w;
+				else if (target.AsWagon().IsValid) {
+					Wagon w;
 
-				w = u.AsWagon();
+					w = target.AsWagon();
 
-				while (w.IsAlive) {
-					if (.player == w.player)
-						return;
-					if (w.InHolder)
-						return;
-					if (.Goto(w, 150, 5000, true, 2500)) {
-						if (!w.IsAlive)
-							return;
-						if (.player == w.player)
-							return;
+					while (w.IsAlive) {
+						if (w.player == plr)
+							break;
 						if (w.InHolder)
-							return;
-						if (!.IsEnemy(w))
-							if (!w.IsEnemy(this)) {//allied players management (note that it's different from using DiplAreAllied)
-								w.SetPlayer(.player);
-								return;
+							break;
+						if (.Goto(w, 150, 2500, true, 2500)) {
+							if (w.IsDead)
+								break;
+							if (w.player == plr)
+								break;
+							if (w.InHolder)
+								break;
+							if (!w.IsEnemy(this)) {//non-hostile players immediately give the target
+								w.SetPlayer(plr);
+								break;
 							}
-						if (w.loyalty <= 0) {
-							w.SetPlayer(.player);
-							return;
-						}
-						if (.IsEnemy(w))
-							UserNotification("unit attacked", "", w.pos, w.player);
-						else if (w.IsEnemy(this))
+							if (w.loyalty <= 0) {
+								w.SetPlayer(plr);
+								break;
+							}
 							UserNotification("unit attacked", "", w.pos, w.player);
 
-						if (!.IsVisible)
-							.SetVisible(true);
-						if (.HasSpecial(sneak))
 							.SetLastAttackTime();
-
-						.Face(w.pos);
-						.Taunt(2000);
-						if (.IsEnemy(w))//loyalty sometimes decreases even after the capture
-							w.DecreaseLoyalty(1);
-					}
-				}
-			}
-			else if (u.IsHeirOf("WildHorse"))
-				if (IsResearched(.player, "Tame horses")) {
-					Unit h;
-
-					h = u.AsUnit();
-
-					while (h.IsAlive) {
-						if (.player == h.player)
-							return;
-						if (h.InHolder)
-							return;
-						if (.Goto(h, 150, 5000, true, 2500)) {
-							if (!h.IsAlive) 
-								return;
-							if (.player == h.player) 
-								return;
-							if (h.InHolder)
-								return;
-							if (!.IsEnemy(h))
-								if (!h.IsEnemy(this)) {//allied players management (note that it's different from using DiplAreAllied)
-									h.SetPlayer(.player);
-									return;
-								}
-							if (.IsEnemy(h))
-								UserNotification("unit attacked", "", h.pos, h.player);
-							else if (h.IsEnemy(this))
-								UserNotification("unit attacked", "", h.pos, h.player);
-
 							if (!.IsVisible)
 								.SetVisible(true);
-							if (.HasSpecial(sneak))
-								.SetLastAttackTime();
-							
-							.Face(h.pos);
+
+							.Face(w.pos);
 							.Taunt(2000);
 
-							if (h.IsAlive) {
-								if (h.command != "move")
-									h.SetCommand("move", .pos);
-								if (h.player != .player) {
-									h.SetPlayer(.player);
-									UserNotification("horse captured", "", h.pos, h.player);
-								}
-							}
+							if (w.IsAlive)
+								if (w.player != plr)
+									if (!w.InHolder)
+										if (w.IsEnemy(this))
+											w.DecreaseLoyalty(1);
+										else {
+											w.SetPlayer(plr);
+											break;
+										}
 						}
 					}
 				}
+				else if (target.IsHeirOf("WildHorse"))
+					if (IsResearched(plr, "Tame horses")) {
+						Unit u;
+
+						u = target.AsUnit();
+
+						while (u.IsAlive) {
+							if (u.player == plr)
+								break;
+							if (u.InHolder)
+								break;
+							if (.Goto(u, 150, 2500, true, 2500)) {
+								if (u.IsDead)
+									break;
+								if (u.player == plr)
+									break;
+								if (u.InHolder)
+									break;
+								if (!u.IsEnemy(this)) {//non-hostile players immediately give the target
+									u.SetPlayer(plr);
+									break;
+								}
+								UserNotification("unit attacked", "", u.pos, u.player);
+
+								.SetLastAttackTime();
+								if (!.IsVisible)
+									.SetVisible(true);
+								
+								.Face(u.pos);
+								.Taunt(2000);
+
+								if (u.IsAlive)
+									if (u.player != plr)
+										if (!u.InHolder) {
+											u.SetPlayer(plr);
+											u.SetCommand("move", .pos);
+											UserNotification("horse captured", "", u.pos, plr);
+										}
+							}
+						}
+					}
+			}
 		}
-	Sleep(15);
 }
+
+Sleep(15);//prevent possible loops with other commands

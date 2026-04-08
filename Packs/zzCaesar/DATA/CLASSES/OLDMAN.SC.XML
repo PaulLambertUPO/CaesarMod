@@ -3,6 +3,7 @@
 	<properties maxhealth="100" />
 	<properties sight="150" />
 	<properties speed="60" />
+	<properties unit_specials="Freedom" />
 
 	<properties radius="20" selection_radius="20" />
 	<properties healthbaroffset="-55" />

@@ -1,8 +1,9 @@
-//void, Obj me
+//void, Obj This
 
 Unit this;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
 if (.IsValid)
-	.SetParryMode(false);
+	if (.IsAlive)
+		.SetParryMode(false);

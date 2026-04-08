@@ -1,6 +1,6 @@
 //void, Obj this
 
-while (1) {
+while (true) {
 	RevealHiddenEnemyUnits(.pos, .sight, .player);
 	Sleep(1000);
 }

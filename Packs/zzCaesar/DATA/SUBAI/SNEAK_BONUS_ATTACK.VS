@@ -1,38 +1,40 @@
 //void, Obj This
 
-Unit this;
+Sleep(250 + rand(251));
 
-this = This.AsUnit();
+{
+	Unit this;
 
-Sleep(rand(251) + 250);
+	this = This.AsUnit();
 
-if (.IsValid) {
-	bool bonus_gained = false, bonus_chance = false;
+	if (.IsValid) {
+		bool bonus_gained = false, bonus_chance = true;
 
-	while (.IsAlive) {
-		if (!.IsVisible()) {
-			if (IsResearched(.player, "Gambler's Test"))
+		while (.IsAlive) {
+			if (.IsVisible) {
 				if (!bonus_chance) {
-					if (rand(4) != 0) {
-						.AddBonus(12, 0, 0, 0, 0);
-						bonus_gained = true;
+					if (bonus_gained) {
+						Sleep(1200);//give some time to the unit to complete at least 1-2 attacks before the bonus expires
+						if (.IsAlive)
+							.RemoveBonus(12, 0, 0, 0, 0);
+						bonus_gained = false;
 					}
 					bonus_chance = true;
 				}
-		}
-		else if (bonus_chance) {
-			if (bonus_gained) {
-				bonus_gained = false;
-				Sleep(1200);//give some time to the unit to complete at least 1-2 attacks before the bonus expires
-				if (.IsAlive)
-					.RemoveBonus(12, 0, 0, 0, 0);
 			}
-			bonus_chance = false;
+			else if (bonus_chance) {
+				if (rand(4) > 0)
+					if (IsResearched(.player, "Gambler's Test")) {
+						.AddBonus(12, 0, 0, 0, 0);
+						bonus_gained = true;
+					}
+				bonus_chance = false;
+			}
+			Sleep(500);
 		}
-		Sleep(500);
 	}
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

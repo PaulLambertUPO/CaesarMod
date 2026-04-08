@@ -9,5 +9,9 @@ if (.IsValid)
 		while (.IsValidTarget(target)) {
 			if (!.InRange(target))
 				break;
+			if (!.IsEnemy(target))//for buildings that change player while under fire
+				break;
 			.Attack(target);
 		}
+
+Sleep(15);//prevent possible loops with other commands

@@ -8,11 +8,12 @@ if (.IsValid)
 	if (.IsAlive) {
 		Settlement set;
 		ObjList units;
-		point pos, pt_escape, pt_move;
-		int i;
+		Obj o;
+		point pt_pos, pt_escape, pt_move;
+		str cmd;
 
 		set = .settlement;
-		pos = .pos;
+		pt_pos = .pos;
 
 		pt_escape = .CalcEscapeDirection();
 		pt_escape.SetLen(.radius * 5);
@@ -20,14 +21,21 @@ if (.IsValid)
 		units = set.Units;
 
 		while (units.count > 0) {
-			for (i = 0; i < units.count; i += 1) {
-				pt_move = pt_escape;
-				pt_move.Rot(30 - rand(61));
-				if (units[i].command != "attach")
-					units[i].SetCommand("move", pt_move + pos);
+			o = units[0];
+			if (o.IsAlive) {
+				cmd = o.command;
+				if (cmd != "attach")
+					if (cmd != "move")
+						if (cmd != "advance")
+							if (cmd != "attack")
+								if (cmd != "engage") {
+									pt_move = pt_escape;
+									pt_move.Rot(30 - rand(61));
+									o.SetCommand("move", pt_move + pt_pos);
+								}
 			}
 
-			Sleep(1000);
+			Sleep(1000);//this must be greater than or equal to the exit_interval property of the catapult class
 
 			units = set.Units;
 		}

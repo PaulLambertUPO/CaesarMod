@@ -1,32 +1,47 @@
-// void, Obj me
+//void, Obj This
 
-Unit this, u;
-bool melee;
+Unit this;
 
-this = me.AsUnit();
-melee = !.IsRanged;
+this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InHolder) {
+			Obj o;
+			bool melee;
 
-while (!.Stop(1000));
+			if (IsAIPlayer(.player))
+				.SetParryMode(false);
 
-u = .BestTargetForPos();
-while( 1 )
-{
-	while(u.IsAlive())
-	{
-		if (u.AsCatapult().IsValid) {
-			while (.Attack(u))
-				if (melee)
-					if (.HasSpecial(trample))
-						u.Damage(.damage);
+			melee = !.IsRanged;
+
+			if (.AsHero().IsValid)
+				.AsHero().army.SetCommand("hold_position");
+
+			while (.CmdCount <= 1) {//avoid blocking pending commands forever
+				if (.IsVisible) {
+					o = .BestTargetForPos;
+					while (.IsValidTarget(o)) {
+						if (o.AsCatapult().IsValid)
+							while (.Attack(o)) {
+								if (melee)
+									if (.HasSpecial(trample))
+										o.Damage(.damage);
+								if (!.IsVisible)
+									break;
+							}
+						else
+							while (.Attack(o))
+								if (!.IsVisible)
+									break;
+						if (!.IsVisible)
+							break;
+						o = .BestTargetForPos;
+					}
+				}
+				if (.Stop(2000))
+					Sleep(500);
+			}
 		}
-		else
-			while(.Attack(u))
-				;
-		u = .BestTargetForPos();
-	}
-	.Idle(2000);
-	u = .BestTargetForPos();
-}
+
+Sleep(15);//prevent possible loops with other commands

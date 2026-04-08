@@ -9,10 +9,8 @@ if (set.IsOutpost)
 		return false;
 
 if (set.UnitsCount > 0)
-	if (other.IsValid)
-		if (other.IsAlive)
-			if (.IsValidTarget(other))
-				if (.CanAttack(other))
-					return true;
+	if (.IsValidTarget(other))
+		if (.CanAttack(other))
+			return true;
 
 return false;

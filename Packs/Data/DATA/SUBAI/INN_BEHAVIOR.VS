@@ -2,7 +2,7 @@
 
 Sleep(500 + rand(501));//give other scripts a chance to make the inn known to avoid displaying the discovery notification
 
-while (1) {
+while (true) {
 	while (GetInnState(This) != 3)
 		Sleep(5000);
 

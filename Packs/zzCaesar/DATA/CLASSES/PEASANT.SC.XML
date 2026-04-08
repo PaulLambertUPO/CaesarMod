@@ -14,7 +14,6 @@
 
 	<defaultcmd target="Building">
 		<cmd name="enter" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Teleport">
 		<cmd name="teleport" />

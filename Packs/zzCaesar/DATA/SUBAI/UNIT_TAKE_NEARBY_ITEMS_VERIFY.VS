@@ -1,11 +1,11 @@
 //bool, ObjList objs, str OUT reasonText
 
 if (objs.count == 1) {
-	Unit this;
+	Obj this;
 
-	this = objs[0].AsUnit();
+	this = objs[0];
 
-	if (.IsValid)
+	if (.IsAlive)
 		if (.max_items > 0)
 			if (.free_item_slots > 0)
 				return true;

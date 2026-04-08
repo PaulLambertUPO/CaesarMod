@@ -6,11 +6,12 @@
 	<cmd name="advance" offset="1" cursor="attack">
 		<cmdtext target="" default-text="Right-click to advance to this position" />
 	</cmd>
-	<cmd name="attack_independent" cursor="do_something">
-		<cmdtext target="Building" default-text="Right-click to attack this building" />
-	</cmd>
 	<cmd name="attack_unit_type_exclusive" cursor="attack">
 		<cmdtext target="Unit" default-text="Right-click to attack this type of enemy" />
+	</cmd>
+	<cmd name="sentry_attack" method="attack" cursor="attack">
+		<cmdtext target="Unit" default-text="Right-click to attack this enemy" />
+		<cmdtext target="Building" default-text="Right-click to attack this building" />
 	</cmd>
 	<cmd name="attach" cursor="do_something">
 		<cmdtext target="Hero" default-text="Right-click to attach to this hero" />
@@ -21,8 +22,11 @@
 	<cmd name="enter" cursor="do_something">
 		<cmdtext target="Building" default-text="Right-click to enter this building" />
 	</cmd>
-	<cmd name="enterfisherman" cursor="do_something">
+	<cmd name="enterfisherman" method="enter" cursor="do_something">
 		<cmdtext target="BaseShipyard" default-text="Right-click to enter this shipyard and start fishing" />
+	</cmd>
+	<cmd name="enterwildhorse" method="enter" cursor="do_something">
+		<cmdtext target="IVillage" default-text="Right-click to enter this village and provide a mount for scouts" />
 	</cmd>
 	<cmd name="getitems" cursor="do_something">
 		<cmdtext target="ItemHolder" default-text="Right-click to get all items" />
@@ -48,6 +52,8 @@
 		button="Actions/Stand Ground.bmp"
 		key="s"
 		rollover="Stand ground"
+		groupverifier="data/subai/stand_position_verify.vs"
+		groupdispatch="data/subai/stand_position_dispatch.vs"
 		voidgroupdispatch="1">
 		<src obj="Unit" />
 		<nsrc obj="Eagle" />
@@ -90,7 +96,6 @@
 		<cmdtext target="Building" text="Click to capture this settlement" default-text="Right-click to capture this settlement" />
 		<cmdtext target="Wagon" text="Click to capture this caravan" default-text="Right-click to capture this caravan" />
 		<cmdtext target="WildHorse" text="Click to tame this horse" default-text="Right-click to tame this horse" />
-		<cmdtext target="" text="Click to advance to this position" />
 		<src obj="Military" sticky="yes" />
 		<nsrc obj="ShipBattle" />
 		<nsrc obj="Sentry" />

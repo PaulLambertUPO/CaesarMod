@@ -1,8 +1,6 @@
 <class id="Animal" parent="BaseAnimal" cpp_class="CVXUnit">
 	<!-- this class is actually PeacefulAnimal -->
 
-	<properties unit_specials="Freedom" />
-
 	<properties target_factor="-1" />
 
 	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
@@ -13,13 +11,7 @@
 		rollover="Damage"
 	/>
 
-	<defaultcmd target="">
-		<cmd name="move" />
-	</defaultcmd>
-	<defaultcmd target="Unit">
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Building">
-		<cmd name="approach" />
+	<defaultcmd target="ShipBattle">
+		<cmd name="boardship" />
 	</defaultcmd>
 </class>

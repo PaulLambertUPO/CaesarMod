@@ -1,3 +1,5 @@
-// void, Obj This
+//void, Obj this
 
-This.Erase;
+if (.AsUnit().IsValid)
+	if (.IsAlive)
+		.Erase();

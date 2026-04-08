@@ -7,7 +7,7 @@ this = owner.AsUnit();
 if (.IsValid) {
 	int charges;
 
-	while (1) {
+	while (true) {
 		Sleep(1000);
 
 		charges = GetUseCount();

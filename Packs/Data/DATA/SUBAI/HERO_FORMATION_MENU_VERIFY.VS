@@ -16,7 +16,6 @@ if (cmdwaiting == "") {
 				return true;
 			}
 		}
-
 }
 
 return false;

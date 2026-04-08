@@ -1,6 +1,0 @@
-<commands>
-	<cmd name="sentry_attack" priority="1" method="attack" cursor="attack">
-		<cmdtext target="Unit" text="Click to attack this enemy" default-text="Right-click to attack this enemy" />
-		<cmdtext target="Building" text="Click to attack this building" default-text="Right-click to attack this building" />
-	</cmd>
-</commands>

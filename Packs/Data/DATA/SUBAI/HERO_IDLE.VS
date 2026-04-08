@@ -28,7 +28,7 @@ if (.IsValid)
 
 		pt_start = .posRH;
 
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
 			else {
@@ -36,37 +36,27 @@ if (.IsValid)
 					o = .BestTargetInSquadSightMisZeroDamage;
 					while (.IsValidTarget(o)) {
 						go_back = false;
-						while (!.GotoAttack(o, 1500, false, 15000)) {
-							if (!.IsVisible)
-								break;
+						if (.GotoAttack(o, 1500, true, 15000))
+							if (.IsVisible)
+								if (.IsValidTarget(o))
+									if (o.AsCatapult().IsValid)
+										while (.Attack(o)) {
+											if (melee)
+												if (.HasSpecial(trample))
+													o.Damage(.damage);
+											if (!.IsVisible)
+												break;
+										}
+									else
+										while (.Attack(o))
+											if (!.IsVisible)
+												break;
+						if (!.IsVisible)
+							go_back = true;
+						else {
 							o = .BestTargetInSquadSightMisZeroDamage;
 							if (!.IsValidTarget(o))
-								break;
-						}
-						if (!.IsValidTarget(o))
-							go_back = true;
-						else if (!.IsVisible)
-							go_back = true;
-						if (!go_back) {
-							if (o.AsCatapult().IsValid)
-								while (.Attack(o)) {
-									if (melee)
-										if (.HasSpecial(trample))
-											o.Damage(.damage);
-									if (!.IsVisible)
-										break;
-								}
-							else
-								while (.Attack(o))
-									if (!.IsVisible)
-										break;
-							if (!.IsVisible)
 								go_back = true;
-							else {
-								o = .BestTargetInSquadSightMisZeroDamage;
-								if (!.IsValidTarget(o))
-									go_back = true;
-							}
 						}
 						if (go_back) {
 							o.Clear();

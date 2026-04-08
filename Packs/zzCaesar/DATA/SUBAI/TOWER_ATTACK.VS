@@ -1,9 +1,9 @@
 //void, Obj This, Obj target
 
 if (target.IsValid) {
-	Building this;
+	Tower this;
 
-	this = This.AsBuilding();
+	this = This.AsTower();
 
 	if (.IsValid) {
 		if (.settlement.IsOutpost)

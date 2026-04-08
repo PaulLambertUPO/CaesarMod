@@ -1,29 +1,22 @@
-// void, Obj h, Obj g
-Hero  this;
-Gate  gate;
+//void, Obj h, Obj g
 
-this = h.AsHero;
-gate = g.AsGate;
+if (g.AsGate().IsValid) {
+	Hero this;
 
-if (!gate.IsValid || !.IsAlive)
-	return;
+	this = h.AsHero();
 
-//pr("hero_ai_attack_gate.vs");
-if (.PathTo(gate, .FormRadius, 0) > .sight)
-{
-	.FormSetupAndMoveTo(gate.pos, .sight, 0, true);
-	while (.IsAlive)
-	{
-		if (!.HasPath) break;
-		if (.DistTo(gate) <= .sight) break;
-		.FormKeepMoving(1500);
-	}
+	if (.IsValid)
+		if (.IsAlive) {
+			.FormSetupAndMoveTo(g.pos, 0, 0, true);
+
+			while (.HasPath) {
+				if (.DistTo(g) < .sight + 100)
+					break;
+				.FormKeepMoving(1500);
+			}
+
+			.army.SetCommand("ai_attack_gate", g);
+		}
 }
 
-if (!.IsAlive)
-	return;
-
-//pr("done moving in formation!");
-.army.SetCommand("ai_attack_gate", gate);
-
-.AddCommand(false, "idle");
+Sleep(15);//prevent possible loops with other commands

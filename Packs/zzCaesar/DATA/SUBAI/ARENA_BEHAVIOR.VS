@@ -28,7 +28,7 @@ else if (exit_point.y == -1) {
 	valid_exit_point = false;
 }
 
-while (1) {
+while (true) {
 	u_class = EnvReadString(this, "Build");
 	build_number = EnvReadInt(this, "Build/" + u_class);
 

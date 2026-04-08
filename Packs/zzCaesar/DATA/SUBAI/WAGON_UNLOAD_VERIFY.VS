@@ -17,7 +17,7 @@ if (.IsValid)
 						if (bld.settlement.max_food > 0)
 							return true;
 					}
-					else if (bld.settlement.max_gold > 0)//note that tents have 0 so it is not needed to use IsHeirOf/IsTTent
+					else if (bld.settlement.max_gold > 0)
 						return true;
 	}
 

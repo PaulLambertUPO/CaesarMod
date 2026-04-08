@@ -1,6 +1,6 @@
-//void, Obj This
+//void, Obj this
 
-while (1) {
-	Sleep(rand(3501) + 1500);
-	This.PlayAnim(1, This.pos);
+while (true) {
+	Sleep(1500 + rand(3501));
+	.PlayAnim(1, .pos);
 }

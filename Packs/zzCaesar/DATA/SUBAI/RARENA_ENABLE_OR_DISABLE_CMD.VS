@@ -82,5 +82,5 @@
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

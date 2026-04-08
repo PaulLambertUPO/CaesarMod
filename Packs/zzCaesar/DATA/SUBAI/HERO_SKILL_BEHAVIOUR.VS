@@ -23,7 +23,7 @@ if (.IsValid) {
 
 	while (.IsAlive) {
 		if (.AI)
-			while (1) {
+			while (true) {
 				Sleep(250);
 				i = .AvailableSkillPoints;
 				if (i <= 0)
@@ -129,7 +129,7 @@ if (.IsValid) {
 			
 			j = 0;
 			cmd_skill = "";
-			while (1) {
+			while (true) {
 				if (.health <= .maxhealth - 100) {//Divine grace -> max priority to avoid hero death
 					cmd_skill = "divine_grace";
 					if (.health <= 400) {
@@ -223,5 +223,5 @@ if (.IsValid) {
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

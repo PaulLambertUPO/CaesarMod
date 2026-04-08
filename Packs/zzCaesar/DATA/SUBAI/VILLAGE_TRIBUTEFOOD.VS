@@ -1,3 +1,3 @@
-//void, Obj this, Obj To
+//void, Obj this, Obj other
 
-.AsBuilding().settlement.StartSupplyFood(To.AsBuilding().settlement);
+.AsBuilding().settlement.StartSupplyFood(other.AsBuilding().settlement);

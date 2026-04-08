@@ -1,37 +1,42 @@
-//void, Obj This, Obj bld
+//void, Obj This, Obj other
 
 Unit this;
 
 this = This.AsUnit();
 
 if (.IsValid)
-	.SetParryMode(false);
+	if (.IsAlive) {
+		Catapult catap;
 
-if (bld.IsValid) {
-	Building building;
-	point pt;
+		catap = other.AsCatapult();
 
-	if (.hero.IsValid)
-		.DetachFrom(.hero);
+		if (catap.IsValid)
+			if (catap.IsAlive) {
+				point pt;
 
-	.SetEntering(true);
-	building = bld.AsBuilding();
-	pt = building.GetEnterPoint(this);
+				.SetParryMode(false);
 
-	while (bld.IsValid) {
-		if (bld.IsAlive) {
-			if (.GotoEnter(pt, 0, 1000, false, 0))
-				break;
-		}
-		else
-			break;
+				if (.hero.IsValid)
+					.DetachFrom(.hero);
+
+				pt = catap.GetEnterPoint(this);
+
+				.SetEntering(true);
+
+				while (!.GotoEnter(pt, 0, 1000, false, 2500))
+					if (catap.IsDead)
+						break;
+
+				if (catap.IsAlive)
+					if (!.IsEnemy(catap))
+						if (DiplGetShareView(catap.player, .player))
+							if (catap.settlement.AddUnit(this)) {
+								Sleep(15);//prevent possible loops with other commands
+								return;
+							}
+
+				.AddCommand(true, "move", pt + RandomOffset(2));//avoid moving all units to the same place
+			}
 	}
 
-	if (bld.IsValid)
-		if (bld.IsAlive) {
-			building.settlement.AddUnit(this);
-			return;
-		}
-
-	.AddCommand(false, "move", pt + Point(0, 1));//prevent moving all units to the same place
-}
+Sleep(15);//prevent possible loops with other commands

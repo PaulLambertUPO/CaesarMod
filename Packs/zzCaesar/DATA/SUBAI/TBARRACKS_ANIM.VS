@@ -1,6 +1,6 @@
 //void, Obj This
 
-Sleep(rand(10) + 1);
+Sleep(1 + rand(10));
 
 {
 	int i;
@@ -8,5 +8,5 @@ Sleep(rand(10) + 1);
 		Place("TBarrackHorse" + i, This.pos, This.player);
 }
 
-while (1)
+while (true)
 	Sleep(3600000);

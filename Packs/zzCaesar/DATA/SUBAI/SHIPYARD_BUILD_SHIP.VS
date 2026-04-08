@@ -28,7 +28,7 @@ this = This.AsBuilding();
 		if (ship.class == "ShipL")//only the original ship from Celtic Kings has the building animation
 			ship.ShowBuildAnimation(pt_exit);
 		else {
-			pt_exit.Rot(rand(91) - 45);//randomly rotate the destination to reduce the risk of ships getting stuck in the shipyard (they can be moved manually, but it's not nice to look at)
+			pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of ships getting stuck in the shipyard (they can be moved manually, but it's not nice to look at)
 
 			if (.IsHeirOf("GShipyard3"))//Gaul NE
 				ship.SetCommand("move", .pos + pt_exit * 3);

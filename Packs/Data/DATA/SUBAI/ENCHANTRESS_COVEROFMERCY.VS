@@ -6,20 +6,30 @@ this = This.AsDruid();
 
 if (.IsValid)
 	if (.IsAlive) {
-		if (.AI) {
-			Sleep(500 + rand(501));
-			if (IsProtected(.player, .pos, "CoverOfMercy"))
+		int plr;
+		bool this_ai;
+
+		plr = .player;
+		this_ai = .AI;
+
+		if (this_ai)
+			if (IsProtected(plr, pt, "CoverOfMercy"))
 				return;
-			if (IsProtected(.player, pt, "CoverOfMercy"))
-				return;
-		}
 
 		while (!.Goto(pt, .sight, 2000, false, 2500))
 			;
 
+		if (this_ai)
+			if (IsProtected(plr, pt, "CoverOfMercy"))
+				return;
+
 		.PlayAnim(18, .pos);
 
-		Place("CoverOfMercy", pt, .player).SetStamina(10);
+		if (this_ai)
+			if (IsProtected(plr, pt, "CoverOfMercy"))
+				return;
+
+		Place("CoverOfMercy", pt, plr).SetStamina(10);
 
 		.Damage(.health);
 	}

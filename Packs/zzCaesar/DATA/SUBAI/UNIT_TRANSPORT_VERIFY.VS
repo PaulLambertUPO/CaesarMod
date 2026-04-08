@@ -1,14 +1,16 @@
 //bool, Obj This, Obj other
 
-Unit this;
+if (other.IsValid)
+	if (other.IsHeirOf("Inn"))
+		if (GetInnState(other) == 1) {
+			Unit this;
 
-this = This.AsUnit();
+			this = This.AsUnit();
 
-if (.IsValid)
-	if (.IsAlive)
-		if (other.IsHeirOf("Inn"))
-			if (GetInnState(other) == 1)
-				if (.GetParty())
-					return true;
+			if (.IsValid)
+				if (.IsAlive)
+					if (.GetParty())
+						return true;
+		}
 
 return false;

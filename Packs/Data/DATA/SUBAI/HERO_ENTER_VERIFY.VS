@@ -1,11 +1,7 @@
-//bool, Obj This, Obj other
+//bool, Obj this, Obj other
 
-if (!other.AsCatapult().IsValid) {
-	Hero this;
-
-	this = This.AsHero();
-
-	if (.IsValid)
+if (!other.AsCatapult().IsValid)
+	if (.AsHero().IsValid)
 		if (.IsAlive) {
 			Building bld;
 
@@ -25,6 +21,5 @@ if (!other.AsCatapult().IsValid) {
 								return true;
 			}
 		}
-}
 
 return false;

@@ -10,7 +10,7 @@ if (This.AsTeleport().IsValid) {
 
 	this = This.AsTeleport().settlement;
 
-	while (1) {
+	while (true) {
 		trapped_units = .Units;
 
 		for (i = trapped_units.count - 1; i >= 0; i -= 1) {
@@ -27,5 +27,5 @@ if (This.AsTeleport().IsValid) {
 }
 
 //without this instruction, the game crashes
-while (1)
+while (true)
 	Sleep(3600000);

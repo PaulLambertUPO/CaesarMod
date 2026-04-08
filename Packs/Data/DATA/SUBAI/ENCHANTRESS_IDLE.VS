@@ -12,12 +12,6 @@ if (.IsValid)
 		int plr, rng, teaching_level, teaching_level_max, stamina_cost, teach_percent, learnings;
 		bool go_back, use_teaching;
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
-		Sleep(50 + rand(451));
-
 		pt_start = .posRH;
 
 		plr = .player;
@@ -26,10 +20,10 @@ if (.IsValid)
 		teaching_level_max = GetConst("TeachingLevel2");
 		stamina_cost = GetCmdStaminaCost("teach");
 
-		while (.CmdCount == 1)//avoid blocking pending commands forever
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
-			else {
+			else if (.Stop(2000)) {
 				h = .hero;
 				if (h.IsValid)
 					if (h.command == "teleport") {
@@ -40,8 +34,8 @@ if (.IsValid)
 				if (.AI)
 					if (AIVar(plr, AIV_CombatMagic) != 0)
 						if (IsResearched(plr, "Cover of Mercy")) {
-							Sleep(500 + rand(501));
-							u = .BestProtPos(150, 0, 1000, 50).AsUnit();
+							Sleep(100 + rand(401));
+							u = .BestProtPos(150, 0, 325, 50).AsUnit();
 							if (u.IsValid)
 								if (!IsProtected(plr, u.posRH, "CoverOfMercy")) {
 									.AddCommand(true, "coverofmercy", u.posRH);

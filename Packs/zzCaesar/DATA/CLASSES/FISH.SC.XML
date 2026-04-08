@@ -15,4 +15,13 @@
 	<properties edittree_pos="Units/Animals/Fish" />
 
 	<method sig="idle" vs="data/subai/fish_idle.vs" />
+
+	<nodefcmdinherit />
+
+	<defaultcmd target="">
+		<cmd name="move" />
+	</defaultcmd>
+	<defaultcmd target="Object">
+		<cmd name="approach" />
+	</defaultcmd>
 </class>

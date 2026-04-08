@@ -8,6 +8,8 @@ if (.IsValid)
 	if (.IsAlive) {
 		Building bld;
 
+		.SetParryMode(false);
+
 		bld = other.AsBuilding();
 
 		if (bld.IsValid)
@@ -23,10 +25,13 @@ if (.IsValid)
 
 					.SetEntering(true);
 
-					while (!.GotoEnter(pt, 0, 1000, false, 5000))
+					while (!.GotoEnter(pt, 0, 1000, false, 2500))
 						;
 
-					set.ForceAddUnit(this);
+					if (!.IsEnemy(bld))
+						set.ForceAddUnit(this);
 				}
 			}
 	}
+
+Sleep(15);//prevent possible loops with other commands

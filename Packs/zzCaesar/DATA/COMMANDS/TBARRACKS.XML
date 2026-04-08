@@ -44,7 +44,7 @@
 		execdelay="12000"
 		rollover="Equip Axeman"
 		method="trainex"
-		param="1, axemen, TAxeman, Increase Axe production, Blacksmith">
+		param="1, axeman, TAxeman, Increase Axe production, Blacksmith">
 		<src obj="TBarracks" />
 	</cmd>
 	<cmd name="trainTHuntress" priority="6"
@@ -92,7 +92,7 @@
 		execdelay="22000"
 		rollover="Equip Maceman"
 		method="trainex"
-		param="1, macemen, TMaceman, Increase Mace production, Blacksmith">
+		param="1, maceman, TMaceman, Increase Mace production, Blacksmith">
 		<src obj="TBarracks" />
 	</cmd>
 </commands>

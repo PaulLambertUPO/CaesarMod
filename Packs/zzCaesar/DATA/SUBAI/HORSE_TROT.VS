@@ -12,3 +12,5 @@ if (.IsValid)
 		while (!.Goto(pt, 0, 2500, false, 0))
 			;
 	}
+
+Sleep(15);//prevent possible loops with other commands

@@ -12,8 +12,8 @@
 	<value0 icon="gameres/infobar/common/Loyality.bmp" />
 
 	<defaultcmd target="IVillage">
-		<cmd name="enter" />
+		<cmd name="enterwildhorse" />
 	</defaultcmd>
-	
+
 	<sounds idle="Sounds/Animals/WHorse/Horse_Command.wav" />
 </class>

@@ -9,7 +9,7 @@ if (.IsValid)
 		if (IsAIPlayer(.player))
 			.SetParryMode(false);
 
-		while (1) {
+		while (true) {
 			if (.BestTargetInSquadSight.IsAlive) {
 				.AddCommand(true, "advance_aggressive", pt);
 				.AddCommand(true, "engage");

@@ -1,55 +1,69 @@
-//void, Obj This, Obj bld
+//void, Obj This, Obj other
 
-Unit this;
+if (!other.AsCatapult().IsValid) {
+	Unit this;
 
-this = This.AsUnit();
+	this = This.AsUnit();
 
-if (.IsValid)
-	if (.IsAlive) {
-		Building building;
+	if (.IsValid)
+		if (.IsAlive) {
+			Building bld;
 
-		building = bld.AsBuilding();
+			bld = other.AsBuilding();
 
-		if (building.IsValid)
-			if (building.IsCentralBuliding)
-				if (!.IsEnemy(building))
-					if (!building.IsHeirOf("BaseRuins")) 
-						if (!building.IsHeirOf("Catapult")) {
+			if (bld.IsValid)
+				if (other.AsTeleport().IsValid) {
+					Settlement set;
+
+					set = bld.settlement;
+
+					if (!set.Units.Contains(this)) {
+						point pt;
+
+						pt = bld.GetEnterPoint(this);
+
+						.SetEntering(true);
+
+						while (!.GotoEnter(pt, 0, 1000, false, 2500))
+							;
+
+						set.AddUnit(this);
+					}
+				}
+				else if (!bld.IsHeirOf("BaseRuins"))
+					if (bld.IsCentralBuliding)
+						if (!.IsEnemy(bld)) {
 							Settlement set;
 
-							set = building.settlement;
+							set = bld.settlement;
 
-							if (set.IsValid) {
-								.SetEntering(true);
-
-								if (!set.Units.Contains(this)) {
-									point pt;
-
-									pt = building.GetEnterPoint(this);
-
-									while (!.GotoEnter(pt, 0, 1000, true, 5000))
-										if (.IsEnemy(building))
-											return;
-
-									if (set.max_population > 0) {
-										point pt_dummy;
-										Obj o_dummy;
-
-										.ExecCmd("detach", pt_dummy, o_dummy, false);
-										set.AddToPopulation(1);
-										.Erase();
-									}
-									else if (set.max_units > 0)
-										set.AddUnit(this);
-								}
-								else if (set.max_population > 0) {
-									point pt_dummy;
-									Obj o_dummy;
-
-									.ExecCmd("detach", pt_dummy, o_dummy, false);
+							if (set.Units.Contains(this)) {
+								if (set.max_population > 0) {
 									set.AddToPopulation(1);
 									.Erase();
 								}
 							}
+							else {
+								point pt;
+
+								pt = bld.GetEnterPoint(this);
+
+								.SetEntering(true);
+
+								while (!.GotoEnter(pt, 0, 1000, false, 2500))
+									;
+
+								if (!.IsEnemy(bld))
+									if (set.max_population > 0) {
+										set.AddToPopulation(1);
+										.Erase();
+									}
+									else if (set.max_units > 0)
+										if (DiplGetShareView(bld.player, .player))
+											set.AddUnit(this);
+							}
 						}
-	}
+		}
+}
+
+Sleep(15);//prevent possible loops with other commands

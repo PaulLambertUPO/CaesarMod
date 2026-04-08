@@ -10,14 +10,12 @@
 
 	<defaultcmd target="Unit">
 		<cmd name="follow" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="ShipBattle">
 		<cmd name="boardship" />
 	</defaultcmd>
 	<defaultcmd target="Building">
 		<cmd name="unload" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Teleport">
 		<cmd name="teleport" />

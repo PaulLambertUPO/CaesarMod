@@ -2749,6 +2749,9 @@ To do his job, he has to enter a shipyard: once there, he will start producing f
 				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Cost 100 food</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 5 seconds</entry>
+				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
+				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/RStorage.bmp" link="/contents/buildings/Village">Called in the Village hall</entry>
 				<entry vcenter="1" image="UI/Icons/RShipyard.bmp" link="/contents/buildings/Shipyard">Used in the Shipyard</entry>
@@ -2852,6 +2855,9 @@ It is summoned through the sacrifice of sages or with the activation of magic it
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 250</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
+				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
+				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/GDruid.bmp" link="/contents/units/GDruid">Generable with the Gaul druid</entry>
 				<entry vcenter="1" image="UI/Icons/BDruid.bmp" link="/contents/units/BDruid">Generable with the British druid</entry>

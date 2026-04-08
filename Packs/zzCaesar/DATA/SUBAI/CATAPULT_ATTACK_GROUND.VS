@@ -1,15 +1,15 @@
-//void, Obj me, point pt
+//void, Obj This, point pt
 
 Catapult this;
 
-this = me.AsCatapult();
+this = This.AsCatapult();
 
 if (.IsValid)
 	if (.IsAlive)
 		if (.IsBuilt)
 			if (.InRange(pt)) {
 				Settlement set;
-				bool rotated = false;
+				bool rotate = true;
 
 				set = .settlement;
 
@@ -30,9 +30,9 @@ if (.IsValid)
 					if (set.UnitsCount <= 0)
 						break;
 
-					if (!rotated) {
+					if (rotate) {
 						.RotateTo(pt);
-						rotated = true;
+						rotate = false;
 						if (.IsDead)
 							break;
 						if (.CmdCount > 1)

@@ -7,8 +7,8 @@ this = This.AsBuilding();
 if (.IsValid) {
 	ObjList settlements;
 	Settlement set;
-	int i, owning_player, duration = 120;
 	str announcement;
+	int i, owning_player, duration = 120;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
 	announcement = "GoldRain_" + owning_player + "_" + .pos.x + "_" + .pos.y;

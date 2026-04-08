@@ -1,13 +1,17 @@
 //void, Obj This, Obj other
 
-Unit this;
+if (other.IsValid)
+	if (other.IsHeirOf("Inn")) {
+		Unit this;
 
-this = This.AsUnit();
+		this = This.AsUnit();
 
-if (.IsValid)
-	if (.IsAlive)
-		if (other.IsHeirOf("Inn")) {
-			while (!.Goto(other, other.sight / 3, 2500, false, 0))
-				;
-			other.SetCommand("transport_request");
-		}
+		if (.IsValid)
+			if (.IsAlive) {
+				while (!.Goto(other, 300, 2500, false, 0))
+					;
+				other.SetCommand("transport_request");
+			}
+	}
+
+Sleep(15);//prevent possible loops with other commands

@@ -477,9 +477,9 @@ if (nRace == Egypt) {
 			if (set.gold >= 2000)
 				getCharms = true;
 	if (getCharms) {
-		ObjList l;
 		Building b;
-		Unit u;
+		ObjList l;
+		Obj o;
 		StrArray items, techs;
 		int i, j, count_units;
 		str charm;
@@ -498,21 +498,20 @@ if (nRace == Egypt) {
 		l = set.ObjectsAround("Military");
 		j = rand(4);
 		charm = items[j];
-		for (i = 0; i < l.count; i += 1) {
-			u = l[i].AsUnit();
-			if (u.IsValid)
-				if (u.IsAlive)
-					if (!b.IsEnemy(u))
-						if (u.free_item_slots > 0)
-							if (!u.HasItem(charm))
-								if (!u.IsSentry)
-									if (!u.IsHeirOf("Hero")) {
-										count_units += 1;
-										if (count_units >= 30) {
-											strTech1 = techs[j];
-											break;
-										}
+		for (i = l.count - 1; i >= 0; i -= 1) {
+			o = l[i];
+			if (o.IsAlive)
+				if (!b.IsEnemy(o))
+					if (o.free_item_slots > 0)
+						if (!o.HasItem(charm))
+							if (!o.IsSentry)
+								if (!o.AsHero().IsValid) {
+									count_units += 1;
+									if (count_units >= 30) {
+										strTech1 = techs[j];
+										break;
 									}
+								}
 		}
 	}
 }
@@ -527,18 +526,18 @@ else if (nRace == RepublicanRome || nRace == Carthage || nRace == Germany) {
 	if (townTraining) {
 		Building b;
 		ObjList l;
-		Unit u;
+		Obj o;
 		int i, count_units;
 
 		b = set.GetCentralBuilding();
 		l = set.ObjectsAround("Military");
-		for (i = 0; i < l.count; i += 1) {
-			u = l[i].AsUnit();
-			if (!b.IsEnemy(u))
-				if (!u.IsSentry)
-					if (u.inherentlevel < 10) {
+		for (i = l.count - 1; i >= 0; i -= 1) {
+			o = l[i];
+			if (!b.IsEnemy(o))
+				if (!o.IsSentry)
+					if (o.AsUnit().inherentlevel < 10) {
 						count_units += 1;
-						if (u.AsHero().IsValid)//heroes count as 10 units
+						if (o.AsHero().IsValid)//heroes count as 10 units
 							count_units += 9;
 						if (count_units >= 40) {
 							strTech1 = "townhall_military_training";

@@ -26,7 +26,7 @@ while (!holder.HasItem("Bloodstone")) {
 			talked = true;
 		}
 	for (i = 50 - Group("Ghouls").count; i > 0; i -= 1) {
-		u = Place(cGGhostUnlimited, pos, 2);
+		u = Place(cGGhostUnit, pos, 2);
 		u.AddToGroup("Ghouls");
 		pt1.Set(0, 1600);
 		pt1.Rot(rand(360));

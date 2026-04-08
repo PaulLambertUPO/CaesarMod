@@ -23,7 +23,6 @@
 
 	<method sig="sleep" vs="data/subai/hero_sleep.vs" />
 	<method sig="idle" vs="data/subai/hero_idle.vs" />
-	<method sig="patrol" vs="data/subai/hero_patrol.vs" />
 	<method sig="advance" vs="data/subai/hero_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/hero_advance_aggressive.vs" />
 	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/hero_attack_verify.vs" />
@@ -50,15 +49,12 @@
 	<method sig="dropitem" vs="data/subai/hero_dropitem.vs" />
 
 	<method sig="leavearmy" vs="data/subai/hero_leave_army.vs" />
-	<method sig="hold_position" vs="data/subai/hero_hold_position.vs" />
-	<method sig="stand_position" vs="data/subai/hero_stand_ground.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/hero_ai_attack_gate.vs" />
 	<method sig="ai_killall" vs="data/subai/hero_ai_killall.vs" />
 	<method sig="boardshiphero" vs="data/subai/hero_board.vs" verify="data/subai/unit_board_verify.vs" onfinish="data/subai/hero_board_onfinish.vs" />
 	<method sig="transport" vs="data/subai/hero_transport.vs" verify="data/subai/unit_transport_verify.vs" />
 
 	<method sig="capture" vs="data/subai/hero_capture.vs" verify="data/subai/unit_capture_verify.vs" />
-	<method sig="attack_independent" vs="data/subai/hero_capture.vs" verify="data/subai/attack_independent_verify.vs" />
 	<method sig="attack_unit_type_exclusive" vs="data/subai/hero_attack_unit_type_exclusive.vs" verify="data/subai/hero_attack_verify.vs" />
 	<method sig="engage_unit_type_exclusive" vs="data/subai/hero_engage_unit_type_exclusive.vs" />
 	<method sig="divine_grace" vs="data/subai/hero_divinegrace.vs" />
@@ -67,26 +63,13 @@
 
 	<defaultcmd target="">
 		<cmd name="moveinfight" />
-		<cmd name="move" />
-		<cmd name="advance" ctrl="1" />
-	</defaultcmd>
-	<defaultcmd target="Inn">
-		<cmd name="transport" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Unit">
 		<cmd name="attack" />
-		<cmd name="approach" />
 		<cmd name="attack_unit_type_exclusive" ctrl="1" />
-	</defaultcmd>
-	<defaultcmd target="Hero">
-		<cmd name="attach" />
-		<cmd name="attack" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="ShipBattle">
 		<cmd name="boardshiphero" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Wagon">
 		<cmd name="capture" />
@@ -94,39 +77,16 @@
 	<defaultcmd target="WildHorse">
 		<cmd name="capture" />
 	</defaultcmd>
-	<!-- no capture for towers, gates and walls -->
-	<defaultcmd target="Tower">
-		<cmd name="attack" />
-		<cmd name="enter" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Gate">
-		<cmd name="attack" />
-		<cmd name="enter" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="Wall">
-		<cmd name="attack" />
-		<cmd name="enter" />
-		<cmd name="approach" />
-	</defaultcmd>
-	<defaultcmd target="TTent">
-		<cmd name="attack_independent" />
-		<cmd name="approach" />
-	</defaultcmd>
 	<defaultcmd target="Building">
-		<cmd name="attack_independent" />
 		<cmd name="capture" />
 		<cmd name="attack" />
 		<cmd name="enter" />
-		<cmd name="approach" />
 	</defaultcmd>
 	<defaultcmd target="Teleport">
 		<cmd name="teleport" />
-		<cmd name="approach" />
 	</defaultcmd>
-	<defaultcmd target="ItemHolder">
-		<cmd name="getitems" />
+	<defaultcmd target="Inn">
+		<cmd name="transport" />
 		<cmd name="approach" />
 	</defaultcmd>
 </class>

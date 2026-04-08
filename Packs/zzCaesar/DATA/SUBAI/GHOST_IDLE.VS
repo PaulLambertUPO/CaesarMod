@@ -1,8 +1,8 @@
-//void, Obj me
+//void, Obj This
 
 Ghost this;
 
-this = me.AsGhost();
+this = This.AsGhost();
 
 if (.IsValid)
 	if (.IsAlive) {
@@ -11,16 +11,10 @@ if (.IsValid)
 		if (.GetAnim() == 17)//spawn
 			Sleep(.TimeToAnimFinish);
 
-		if (!.InHolder)
-			while (!.Stop(1000))
-				;
-
-		Sleep(250 + rand(251));
-
-		while (1)
+		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(2500);
-			else {
+			else if (.Stop(2000)) {
 				ol_enemies = Intersect(VisibleObjsInSight(this, "Military,Peaceful"), EnemyObjs(.player, "Unit")).GetObjList();
 
 				if (ol_enemies.count > 0) {//move to the central point among enemies that can be damaged
@@ -46,7 +40,7 @@ if (.IsValid)
 					}
 				}
 
-				.Idle(1000);
+				.Idle(1500);
 			}
 	}
 

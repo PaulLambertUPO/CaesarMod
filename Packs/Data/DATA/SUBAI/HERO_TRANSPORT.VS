@@ -1,16 +1,24 @@
 //void, Obj This, Obj other
 
-Hero this;
+if (other.IsValid)
+	if (other.IsHeirOf("Inn")) {
+		Hero this;
 
-this = This.AsHero();
+		this = This.AsHero();
 
-if (.IsValid)
-	if (.IsAlive)
-		if (other.IsHeirOf("Inn")) {
-			.FormSetupAndMoveTo(other, other.sight / 3, other.radius, true);
+		if (.IsValid)
+			if (.IsAlive) {
+				.FormSetupAndMoveTo(other, 0, 0, true);
 
-			while (.HasPath())
-				.FormKeepMoving(1500);
+				while (.HasPath) {
+					if (.DistTo(other) < 300)
+						break;
+					.FormKeepMoving(1500);
+				}
 
-			other.SetCommand("transport_request");
-		}
+				if (.DistTo(other) < 300)
+					other.SetCommand("transport_request");
+			}
+	}
+
+Sleep(15);//prevent possible loops with other commands
