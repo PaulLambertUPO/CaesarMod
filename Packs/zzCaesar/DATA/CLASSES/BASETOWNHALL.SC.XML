@@ -32,10 +32,6 @@
 	<method sig="creategoldmulebig" vs="data/subai/do_nothing_void.vs" />
 	<method sig="autotrain_start" vs="data/subai/townhall_autotrain_start.vs" />
 	<method sig="autotrain_stop" vs="data/subai/townhall_autotrain_stop.vs" />
-	<method sig="military_training" vs="data/subai/townhall_military_training.vs" />
-	<method sig="refreshment" vs="data/subai/townhall_refreshment.vs" />
-	<method sig="healing" vs="data/subai/townhall_healing.vs" />
-	<method sig="hiresentries" vs="data/subai/townhall_addsentries.vs" />
 
 	<defaultcmd target="">
 		<cmd name="unitsout" />

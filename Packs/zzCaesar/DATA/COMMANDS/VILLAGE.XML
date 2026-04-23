@@ -1,4 +1,14 @@
 <commands>
+	<!-- DEFAULT COMMANDS (NO INTERFACE BUTTON AND ONLY USED BY CLASSES WITH THE CORRESPONDING METHOD) -->
+	<cmd name="tribute_default" method="tribute" immediate="yes" cursor="do_something">
+		<cmdtext target="BaseTownhall" default-text="Right-click on this Townhall to start sending resources" />
+		<cmdtext target="BaseVillage" default-text="Right-click on this Village to start sending resources" />
+		<cmdtext target="Outpost" default-text="Right-click on this Outpost to start sending resources" />
+		<cmdtext target="GGuardPost" default-text="Right-click on this Guard Post to start sending resources" />
+		<cmdtext target="TTent" default-text="Right-click on this Teuton Tent to start sending resources" />
+		<cmdtext target="CTent" default-text="Right-click on this Numidian Tent to start sending resources" />
+		<cmdtext target="BaseShipyard" default-text="Right-click on this Shipyard to start sending resources" />
+	</cmd>
 	<!-- used only by AI (since it cheats for the cost, this avoids the exploit where a human player with shared control stops the command to get free resources) -->
 	<cmd name="repair village ai"
 		method="repopulate"
@@ -27,13 +37,13 @@
 		rollover="Supply"
 		description="Constantly sends resources to another settlement"
 		failtext="Click on an allied townhall, village, outpost or shipyard to start sending resources">
-		<cmdtext target="BaseTownhall" text="Click on this Townhall to start sending resources" default-text="Right-click on this Townhall to start sending resources" />
-		<cmdtext target="BaseVillage" text="Click on this Village to start sending resources" default-text="Right-click on this Village to start sending resources" />
-		<cmdtext target="Outpost" text="Click on this Outpost to start sending resources" default-text="Right-click on this Outpost to start sending resources" />
-		<cmdtext target="GGuardPost" text="Click on this Guard Post to start sending resources" default-text="Right-click on this Guard Post to start sending resources" />
-		<cmdtext target="TTent" text="Click on this Teuton Tent to start sending resources" default-text="Right-click on this Teuton Tent to start sending resources" />
-		<cmdtext target="CTent" text="Click on this Numidian Tent to start sending resources" default-text="Right-click on this Numidian Tent to start sending resources" />
-		<cmdtext target="BaseShipyard" text="Click on this Shipyard to start sending resources" default-text="Right-click on this Shipyard to start sending resources" />
+		<cmdtext target="BaseTownhall" text="Click on this Townhall to start sending resources" />
+		<cmdtext target="BaseVillage" text="Click on this Village to start sending resources" />
+		<cmdtext target="Outpost" text="Click on this Outpost to start sending resources" />
+		<cmdtext target="GGuardPost" text="Click on this Guard Post to start sending resources" />
+		<cmdtext target="TTent" text="Click on this Teuton Tent to start sending resources" />
+		<cmdtext target="CTent" text="Click on this Numidian Tent to start sending resources" />
+		<cmdtext target="BaseShipyard" text="Click on this Shipyard to start sending resources" />
 		<src obj="BaseVillage" />
 		<src obj="Outpost" />
 		<src obj="BaseShipyard" />

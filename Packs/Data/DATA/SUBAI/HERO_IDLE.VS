@@ -71,17 +71,25 @@ if (.IsValid)
 				}
 
 				if (.Stop(2000)) {
-					if (.AI)
+					if (.AI) {
+						if (rand(3) == 0)
+							if (.IsEnemyInSquadSight) {
+								o = Intersect(ObjsInSight(this, "BaseTownBuilding"), EnemyObjs(.player, "BaseTownBuilding")).GetObjList()[0];
+								if (o.IsValid) {
+									.AddCommand(true, "capture", o);
+									break;
+								}
+							}
 						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
-							pt = .pos;
-							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
+							pt = .pos + RandomOffset(500);
 							if (pt.InRect(GetMapRect()))
 								if (IsPassable3x3(pt))
 									if (!IsWaterLsa(pt.GetGAIKA().LSA)) {
-										.AddCommand(true, "move", pt);
+										.AddCommand(true, "advance", pt);
 										break;
 									}
 						}
+					}
 
 					.Idle(2000);
 					if (rand(10) == 0) {

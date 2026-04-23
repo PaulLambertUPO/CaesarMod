@@ -8,16 +8,15 @@ if (other.IsValid)
 
 		if (.IsValid)
 			if (.IsAlive) {
-				.FormSetupAndMoveTo(other, 0, 0, true);
-
-				while (.HasPath) {
-					if (.DistTo(other) < 300)
-						break;
-					.FormKeepMoving(1500);
+				if (other.DistTo(.posRH) >= 300) {
+					.FormSetupAndMoveTo(other.pos, 0, 0, true);
+					while (.HasPath) {
+						if (.DistTo(other) < 300)
+							break;
+						.FormKeepMoving(1500);
+					}
 				}
-
-				if (.DistTo(other) < 300)
-					other.SetCommand("transport_request");
+				other.SetCommand("transport_request");
 			}
 	}
 

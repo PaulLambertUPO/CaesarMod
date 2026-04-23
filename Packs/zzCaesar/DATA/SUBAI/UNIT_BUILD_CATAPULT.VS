@@ -23,19 +23,32 @@ if (.IsValid)
 
 				.SetEntering(true);
 
-				while (!.GotoEnter(pt, 0, 1000, false, 2500))
+				while (!.GotoEnter(pt, 0, 1000, false, 2500)) {
 					if (catap.IsDead)
 						break;
+					if (.IsEnemy(catap))
+						break;
+				}
 
 				if (catap.IsAlive)
 					if (!.IsEnemy(catap))
-						if (DiplGetShareView(catap.player, .player))
-							if (catap.settlement.AddUnit(this)) {
-								Sleep(15);//prevent possible loops with other commands
-								return;
-							}
+						if (DiplGetShareView(catap.player, .player)) {
+							bool add = true;
 
-				.AddCommand(true, "move", pt + RandomOffset(2));//avoid moving all units to the same place
+							if (catap.IsBuilt)//avoid entering rams that have already been built
+								if (catap.race == Britain)
+									add = false;
+								else if (catap.race == Germany)
+									add = false;
+
+							if (add)
+								if (catap.settlement.AddUnit(this)) {
+									Sleep(15);//prevent possible loops with other commands
+									return;
+								}
+						}
+
+				.AddCommand(true, "move", pt + RandomOffset(20));//avoid moving all units to the same place
 			}
 	}
 

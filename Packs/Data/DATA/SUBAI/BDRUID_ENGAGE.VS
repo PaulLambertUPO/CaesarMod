@@ -12,6 +12,8 @@ if (.IsValid)
 			int stamina_cost, learnings;
 			bool can_learn, go_to_hero;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			stamina_cost = GetCmdStaminaCost("hide");
 
 			can_learn = IsResearched(.player, "Ritual Chamber");

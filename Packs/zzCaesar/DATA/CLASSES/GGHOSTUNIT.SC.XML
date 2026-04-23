@@ -2,7 +2,7 @@
 
 	<properties race="Gaul" />
 	<properties maxhealth="600" />
-	<properties damage="0" damage_type="none" />
+	<properties damage="1" damage_type="none" />
 	<properties armor_slash="4" armor_pierce="4" />
 	<properties range="250" />
 	<properties speed="60" />

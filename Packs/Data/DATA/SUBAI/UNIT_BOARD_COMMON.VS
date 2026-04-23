@@ -1,37 +1,48 @@
-// void, Obj This, Obj Other
+//void, Obj This, Obj other
 
-Unit  this;
-Ship  ship;
-point pt;
-int   time;
-int   dist;
+Unit this;
 
-this = This.AsUnit;
+this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InShip) {
+			Ship sh;
 
-ship = Other.AsShip;
-pt = ship.pos;
-time = 0;
-while( 1 )
-{
-	if( .DistTo(pt) > 500)
-		{ if( .Goto( pt, 120, 2000, true, -1 )) Sleep( 100 ); }
-	else
-		{ if( .GotoEnter( pt, 120, 2000, true, -1 )) Sleep( 100 ); }
-  if (!ship.IsAlive) return;
-	time += 2000;
-	dist = Dist( .posRH, ship.pos );
-	if( ( dist > 4000 && time > 12000 ) ||
-		( dist > 2000 && time > 8000 ) ||
-		( dist > 1000 && time > 4000 ) ||
-		( dist < 500 ))
-	{
-		pt = ship.pos;
-		time = 0;
-	}
-	if( ship.BoardUnit( this )) return;
-	if( ship.UnitsCount == ship.UnitsMax ) return;
-	if( ship.NumUnitsToBoard == 0 ) return;
-}
+			sh = other.AsShip();
+
+			if (sh.IsValid) {
+				int plr, max_units, ai_time_stuck;
+
+				plr = .player;
+				max_units = sh.UnitsMax;
+
+				if (IsAIPlayer(plr))
+					.SetParryMode(false);
+
+				while (sh.IsAlive) {
+					if (.GotoEnter(sh.pos, 120, 2000, false, -1))
+						Sleep(250);
+					if (sh.IsDead)
+						break;
+					if (!DiplGetShareControl(sh.player, plr))
+						break;
+					if (sh.UnitsCount >= max_units)
+						break;
+					if (sh.NumUnitsToBoard <= 0)
+						break;
+					if (sh.BoardUnit(this))
+						break;
+					if (.AI) {
+						if (.DistTo(sh.pos) < 500)
+							ai_time_stuck += 1;
+						if (ai_time_stuck >= 10) {
+							sh.NotifyBoardUnitCancel(this);//the function used in the onfinish script does not seem to be triggered by the AI and the ship gets stuck
+							break;
+						}
+					}
+				}
+			}
+		}
+
+Sleep(15);//prevent possible loops with other commands

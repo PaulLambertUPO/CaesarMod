@@ -12,6 +12,8 @@ if (.IsValid)
 			int stamina_cost, learnings;
 			bool go_to_hero, use_cripple;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			stamina_cost = GetCmdStaminaCost("cripple");
 
 			while (.IsEnemyInSquadSight) {

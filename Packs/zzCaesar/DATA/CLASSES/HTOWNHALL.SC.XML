@@ -5,4 +5,5 @@
 	<properties icon="gameres/icons/HTownhall.bmp" />
 	<properties help="contents/buildings/HTownhall" />
 	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Townhall" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
+	<method sig="hire_sentries" vs="data/subai/townhall_hire_sentries.vs" />
 </class>

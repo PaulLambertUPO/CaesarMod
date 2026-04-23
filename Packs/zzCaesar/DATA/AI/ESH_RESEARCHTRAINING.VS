@@ -540,7 +540,7 @@ else if (nRace == RepublicanRome || nRace == Carthage || nRace == Germany) {
 						if (o.AsHero().IsValid)//heroes count as 10 units
 							count_units += 9;
 						if (count_units >= 40) {
-							strTech1 = "townhall_military_training";
+							strTech1 = "military_training";
 							break;
 						}
 					}

@@ -1,3 +1,9 @@
 //void, Obj This, bool bCanceled
 
-This.AsUnit().StopTraining();
+Unit this;
+
+this = This.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive)
+		.StopTraining();

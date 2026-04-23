@@ -23,7 +23,9 @@
 	<method sig="advance_aggressive" vs="data/subai/eagle_move.vs" />
 	<method sig="approach" vs="data/subai/eagle_approach.vs" />
 	<method sig="hover" vs="data/subai/eagle_hover.vs" />
-	<method sig="lesser_hover" vs="data/subai/eagle_lesser_hover.vs" /><!-- this command was originally used only in Celtic Kings adventure -->
+	<method sig="lesser_hover" vs="data/subai/eagle_lesser_hover.vs" />
+	<method sig="stand_position" vs="data/subai/do_nothing_void.vs" />
+	<method sig="explore" vs="data/subai/do_nothing_point.vs" />
 
 	<nodefcmdinherit />
 

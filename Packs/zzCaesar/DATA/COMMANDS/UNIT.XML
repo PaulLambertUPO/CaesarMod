@@ -55,10 +55,10 @@
 		groupverifier="data/subai/stand_position_verify.vs"
 		groupdispatch="data/subai/stand_position_dispatch.vs"
 		voidgroupdispatch="1">
-		<src obj="Unit" />
+		<src obj="Unit" sticky="yes" />
+		<nsrc obj="Sentry" />
 		<nsrc obj="Eagle" />
 		<nsrc obj="CrowUnit" />
-		<nsrc obj="Sentry" />
 	</cmd>
 	<cmd name="patrol" priority="3"
 		offset="1"
@@ -107,9 +107,11 @@
 		rollover="Explore"
 		key="e">
 		<cmdtext target="" text="Click to explore from this position" />
-		<src obj="Military" />
+		<src obj="Unit" sticky="yes" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />
+		<nsrc obj="Eagle" />
+		<nsrc obj="CrowUnit" />
 	</cmd>
 	<cmd name="train" priority="7"
 		button="actions/training.bmp"
@@ -164,7 +166,6 @@
 		groupverifier="data/subai/unit_take_nearby_items_verify.vs"
 		rollover="Take nearby items">
 		<src obj="Unit" />
-		<nsrc obj="BaseAnimal" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="ShipBattle" />
 		<nsrc obj="RamUnit" />
@@ -173,8 +174,9 @@
 	<cmd name="enter_parry_mode" priority="14"
 		button="actions/Parry Mode.bmp"
 		key="z"
-		groupverifier="data/subai/unit_enter_parry_mode_verify.vs"
-		immediate="yes"
+		groupverifier="data/subai/unit_parry_mode_enter_verify.vs"
+		groupdispatch="data/subai/unit_parry_mode_enter.vs"
+		voidgroupdispatch="1"
 		rollover="Enter parry mode">
 		<src obj="Unit" sticky="yes" />
 		<nsrc obj="Sentry" />
@@ -182,8 +184,9 @@
 	<cmd name="leave_parry_mode" priority="15"
 		button="actions/Leave Parry Mode.bmp"
 		key="x"
-		groupverifier="data/subai/unit_leave_parry_mode_verify.vs"
-		immediate="yes"
+		groupverifier="data/subai/unit_parry_mode_leave_verify.vs"
+		groupdispatch="data/subai/unit_parry_mode_leave.vs"
+		voidgroupdispatch="1"
 		rollover="Leave parry mode">
 		<src obj="Unit" />
 	</cmd>

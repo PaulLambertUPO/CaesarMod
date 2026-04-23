@@ -28,7 +28,6 @@
 							}
 							return false
 						}
-						
 						function a_click() {
 							e = window.event.srcElement;
 							while (e.parentElement) {

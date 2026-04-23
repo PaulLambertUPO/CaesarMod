@@ -121,6 +121,14 @@ if (GetConst("NoSentries") == 0) {
 										slots[j] = -1;
 										set.DelSentry();
 									}
+									else if (sentry.command == "disappear") {
+										slots[j] = -1;
+										set.DelSentry();
+									}
+									else if (sentry.command == "dismiss") {
+										slots[j] = -1;
+										set.DelSentry();
+									}
 									else {
 										ol.Add(sentry);
 										slots[j] = i;
@@ -140,15 +148,23 @@ if (GetConst("NoSentries") == 0) {
 							for (i = sentries.count - 1; i >= 0; i -= 1) {
 								sentry = sentries[i];
 								if (sentry.IsDead) {
-									set.DelSentry();
 									sentries.Remove(sentry);
+									set.DelSentry();
+								}
+								else if (sentry.command == "disappear") {
+									sentries.Remove(sentry);
+									set.DelSentry();
+								}
+								else if (sentry.command == "dismiss") {
+									sentries.Remove(sentry);
+									set.DelSentry();
 								}
 								else if (sentry.command != "attack")
 									if (sentry.command != "patrol")
 										sentry.SetCommand("patrol", this);
 							}
-						c = sentries.count;
 
+						c = sentries.count;
 						enemies_around = false;
 						sentry_level = MAX(1, EnvReadInt(set, "SentriesLevel"));
 						for (i = 0; i < c; i += 1) {

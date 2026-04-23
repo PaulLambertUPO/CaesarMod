@@ -13,7 +13,7 @@ if (target.IsValid) {
 
 			if (target.player != plr) {
 				.SetParryMode(false);
-				
+
 				if (target.AsBuilding().IsValid) {
 					if (.IsValidCaptureTarget(target)) {
 						Settlement set;
@@ -172,7 +172,7 @@ if (target.IsValid) {
 								.SetLastAttackTime();
 								if (!.IsVisible)
 									.SetVisible(true);
-								
+
 								.Face(u.pos);
 								.Taunt(2000);
 

@@ -1,17 +1,34 @@
-// void, Obj me, Item item, Obj h
+//void, Obj This, Item item, Obj other
 
 Unit this;
-ItemHolder holder;
 
-this = me.AsUnit();
-holder = h.AsItemHolder();
+this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive) {
+		ItemHolder holder;
 
-while(!.Goto(holder, GetConst("GiveDistance"), 1500, true, 5000));
-if(!.IsVisible)
-	.SetVisible(true);
-if (.HasSpecial(sneak)) .SetLastAttackTime(); // mountaineer patch
+		holder = other.AsItemHolder();
 
-.PutItem(item, holder); // Ako stane - stane :)
+		if (holder.IsValid) {
+			if (IsAIPlayer(.player))
+				.SetParryMode(false);
+
+			while (!.Goto(holder, 25, 2500, false, 5000)) {
+				if (!holder.IsValid)
+					break;
+				if (.GetItemIndex(item) == -1)
+					break;
+			}
+
+			if (holder.IsValid)
+				if (.PutItem(item, holder)) {
+					if (.HasSpecial(sneak))
+						.SetLastAttackTime();
+					if (!.IsVisible)
+						.SetVisible(true);
+				}
+		}
+	}
+
+Sleep(15);//prevent possible loops with other commands

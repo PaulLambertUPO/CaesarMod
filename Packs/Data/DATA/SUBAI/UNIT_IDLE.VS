@@ -6,7 +6,7 @@ this = me.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
-		Settlement set;
+		Obj o;
 		point pt;
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
@@ -20,31 +20,26 @@ if (.IsValid)
 					}
 
 				if (.Stop(2000)) {
-					if (.hero.IsValid) {
-						set = .hero.GetHolderSett();
-						if (set.IsValid)
-							if (!set.GetCentralBuilding().IsHeirOf("BaseRuins")) {
-								if (EnvReadString(set, "autotrain") != "on") {
-									.AddCommand(true, "enter", set.GetCentralBuilding());
-									break;
-								}
-								if (.inherentlevel >= EnvReadInt(set, "MaxAutotrainLevel")) {
-									.AddCommand(true, "enter", set.GetCentralBuilding());
+					if (.AI) {
+						if (rand(6) == 0)
+							if (.IsEnemyInSquadSight) {
+								o = Intersect(ObjsInSight(this, "BaseTownBuilding"), EnemyObjs(.player, "BaseTownBuilding")).GetObjList()[0];
+								if (o.IsValid) {
+									.AddCommand(true, "capture", o);
 									break;
 								}
 							}
+						if (!.hero.IsValid)
+							if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
+								pt = .pos + RandomOffset(500);
+								if (pt.InRect(GetMapRect()))
+									if (IsPassable3x3(pt))
+										if (!IsWaterLsa(pt.GetGAIKA().LSA)) {
+											.AddCommand(true, "advance", pt);
+											break;
+										}
+							}
 					}
-					else if (.AI)
-						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
-							pt = .pos;
-							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
-							if (pt.InRect(GetMapRect()))
-								if (IsPassable3x3(pt))
-									if (!IsWaterLsa(pt.GetGAIKA().LSA)) {
-										.AddCommand(true, "move", pt);
-										break;
-									}
-						}
 
 					.Idle(2000);
 					if (rand(10) == 0) {

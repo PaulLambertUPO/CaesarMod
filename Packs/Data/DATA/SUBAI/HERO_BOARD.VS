@@ -1,34 +1,36 @@
-// void, Obj This, Obj obj
+//void, Obj This, Obj other
 
-Hero  this;
-Ship  ship;
-bool  bThere;
+Hero this;
 
-this = This.AsHero;
-ship = obj.AsShip;
+this = This.AsHero();
 
-if (.IsValid() == false || ship.IsValid() == false)
-{
-	return;
-}	//Fine if.
+if (.IsValid)
+	if (.IsAlive) {
+		Ship sh;
 
-//La nave si avvicina all'eroe solo se appartengono allo stesso giocatore o solo se sono alleati con "condividi controllo" attivo:
-if(ship.player() == .player() || DiplGetShareControl(ship.player(), .player()) == true)
-{
-	ship.NotifyBoardUnit(this);
-}	//Fine if.
-else
-{
-	.AddCommand(false, "boardshiphero", ship);
-}	//Fine else.
+		sh = other.AsShip();
 
-if( Dist( ship.pos, .pos ) > 700 )
-{
-	.FormSetupAndMoveTo( ship, 0, 0, false );
-	while( .HasPath() && Dist( ship.pos, .pos ) > 700 )
-	{
-		.FormKeepMoving( 1500 );
+		if (sh.IsValid)
+			if (sh.IsAlive)
+				if (DiplGetShareControl(sh.player, .player))
+					if (sh.UnitsCount < sh.UnitsMax) {
+						if (!.InShip) {
+							sh.NotifyBoardUnit(this);
+							if (sh.DistTo(.posRH) >= 600) {
+								.FormSetupAndMoveTo(sh.pos, 0, 0, false);
+								while (.HasPath) {
+									.FormKeepMoving(1500);
+									if (sh.IsDead)
+										break;
+									if (.DistTo(sh) < 600)
+										break;
+									.FormSetupAndMoveTo(sh.pos, 0, 0, false);
+								}
+							}
+							.AddCommand(true, "boardshipcommon", sh);
+						}
+						.army.SetCommand("boardship", sh);
+					}
 	}
-}
-.army.SetCommand( "boardship", ship );
-.AddCommand( true, "boardshipcommon", ship );
+
+Sleep(15);//prevent possible loops with other commands

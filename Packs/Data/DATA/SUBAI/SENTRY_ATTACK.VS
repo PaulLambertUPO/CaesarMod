@@ -5,7 +5,7 @@ Unit this;
 this = This.AsUnit();
 
 if (.IsValid)
-	if (.IsAlive)
+	if (.IsAlive) {
 		while (.IsValidTarget(target)) {
 			if (!.InRange(target))
 				break;
@@ -13,5 +13,7 @@ if (.IsValid)
 				break;
 			.Attack(target);
 		}
+		.Stop(500);//for stationary guard post sentries
+	}
 
 Sleep(15);//prevent possible loops with other commands

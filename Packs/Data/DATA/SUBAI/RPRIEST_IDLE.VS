@@ -12,6 +12,8 @@ if (.IsValid)
 		int rng, heal_amount, stamina_cost, learnings;
 		bool can_learn, go_back, use_healing;
 
+		Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 		pt_start = .posRH;
 
 		rng = .range;
@@ -149,8 +151,7 @@ if (.IsValid)
 					}
 					else if (.AI)
 						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
-							pt = .pos;
-							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
+							pt = .pos + RandomOffset(500);
 							if (pt.InRect(GetMapRect()))
 								if (IsPassable3x3(pt))
 									if (!IsWaterLsa(pt.GetGAIKA().LSA))

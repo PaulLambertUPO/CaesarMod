@@ -11,7 +11,7 @@ if (.IsValid) {
 	int i, j, k, owning_player, percent, additional;
 
 	owning_player = EnvReadInt(this, "OwningPlayer");
-	
+
 	settlements.AddList(GetSettlements("BaseTownhall", 0));
 	settlements.AddList(GetSettlements("BaseVillage", 0));
 	settlements.AddList(GetSettlements("BaseShipyard", 0));

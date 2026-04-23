@@ -11,6 +11,8 @@ if (.IsValid)
 			int heal_amount, stamina_cost, learnings;
 			bool can_learn, use_healing;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			heal_amount = GetConst("HealAmount");
 			stamina_cost = GetCmdStaminaCost("heal");
 

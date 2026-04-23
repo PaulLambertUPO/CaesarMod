@@ -141,7 +141,7 @@ while (true) {
 	}
 
 	enemies = Intersect(
-		VisibleObjsInSight(this, "Unit"),
+		VisibleObjsInSight(this, "Military,BaseMage"),
 		Subtract(
 			Union(EnemyObjs(plr, "Military"), EnemyObjs(plr, "BaseMage")),
 			EnemyObjs(plr, "Sentry")

@@ -40,25 +40,25 @@
 	<method sig="trainfisherman" vs="data/subai/village_trainfisherman.vs" />
 
 	<defaultcmd target="BaseTownhall">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 	<defaultcmd target="BaseVillage">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 	<defaultcmd target="BaseShipyard">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 	<defaultcmd target="Outpost">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 	<defaultcmd target="GGuardPost">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 	<defaultcmd target="TTent">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 	<defaultcmd target="CTent">
-		<cmd name="tribute" />
+		<cmd name="tribute_default" />
 	</defaultcmd>
 
 	<sounds select="VillageSelect" />

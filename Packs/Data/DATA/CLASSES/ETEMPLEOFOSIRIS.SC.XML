@@ -9,6 +9,6 @@
 	<properties edittree_pos="Structures/Stronghold (Egypt)/Temple of Osiris" />
 
 	<behavior script="data/subai/ETempleofOsiris_anim.vs" />
-	
+
 	<sounds select="TempleSelect" />
 </class>

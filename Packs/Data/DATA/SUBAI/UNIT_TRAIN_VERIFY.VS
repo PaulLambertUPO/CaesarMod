@@ -1,23 +1,33 @@
 //bool, ObjList objs, str OUT reasonText
-int i, level;
-ObjList army;
 
-if (objs.count == 0) return false;
-level = EnvReadInt(objs[0].player, "maxtrainlevel");
-for(i = 0; i < objs.count(); i += 1)
-{
-	if(objs[i].AsUnit().inherentlevel < level)
-		return true;
-	if(objs[i].AsHero().IsValid)
-	{
-		int j;
-		army = objs[i].AsHero().army;
-		for(j = 0; j < army.count(); j += 1)
-		{
-			if(army[j].AsUnit().inherentlevel < level)
+ObjList h_army;
+Obj o;
+int i, j, max_train_level;
+
+o = objs[0];
+if (o.IsValid)
+	max_train_level = EnvReadInt(o.player, "maxtrainlevel");
+
+reasonText = rollover() + "\n<color 255 255 255>" + Translatef("Maximum training level: %s1", max_train_level);
+
+if (max_train_level > 0)
+	for (i = objs.count - 1; i >= 0; i -= 1) {
+		o = objs[i];
+		if (o.IsAlive) {
+			if (o.AsUnit().inherentlevel < max_train_level)
 				return true;
+			if (o.AsHero().IsValid) {
+				h_army = o.AsHero().army;
+				for (j = h_army.count - 1; j >= 0; j -= 1) {
+					o = h_army[j];
+					if (o.IsAlive)
+						if (o.AsUnit().inherentlevel < max_train_level)
+							return true;
+				}
+			}
 		}
 	}
-}
-reasonText = Translate("Cannot train warriors");
+
+reasonText = reasonText + "\n<color 255 0 0>" + Translate("Cannot train warriors");
+
 return false;

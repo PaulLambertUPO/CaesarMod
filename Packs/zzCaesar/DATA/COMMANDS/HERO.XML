@@ -1,18 +1,23 @@
 <commands>
 	<!-- DEFAULT COMMANDS (NO INTERFACE BUTTON AND ONLY USED BY CLASSES WITH THE CORRESPONDING METHOD) -->
-	<cmd name="moveinfight" offset="1" cursor="move_in_fight">
+	<cmd name="moveinfight" cursor="move_in_fight">
 		<cmdtext target="" default-text="Right-click to move the hero to this position" />
+	</cmd>
+	<cmd name="enter_ruins" method="enter" cursor="do_something">
+		<cmdtext target="BaseRuins" default-text="Right-click to enter these ruins and face danger for a chance to earn a reward" />
 	</cmd>
 	<cmd name="boardshiphero" cursor="do_something">
 		<cmdtext target="ShipBattle" default-text="Right-click to board this ship" />
 	</cmd>
-	<cmd name="hero_set_final_party_orientation" method="hero_set_final_party_orientation" /><!-- this command is a hack -->
+	<cmd name="hero_set_final_party_orientation" groupdispatch="data/subai/hero_set_final_party_orientation.vs" /><!-- this command is a hack -->
 	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
 	<cmd name="leavearmy" priority="9"
 		button="actions/leave army.bmp"
 		key="v"
+		immediate="yes"
+		groupverifier="data/subai/hero_leave_army_verify.vs"
 		rollover="Leave army"
-		description="Leaves the attached allies on their own">
+		description="Detaches all units">
 		<src obj="Hero" />
 	</cmd>
 	<cmd name="form-line-menu" priority="10"
@@ -138,16 +143,18 @@
 	<cmd name="enter_autocast_mode" priority="16"
 		button="actions/Autocast Mode.bmp"
 		key="d"
-		groupverifier="data/subai/hero_enter_autocast_mode_verify.vs"
-		immediate="yes"
+		groupverifier="data/subai/hero_autocast_mode_enter_verify.vs"
+		groupdispatch="data/subai/hero_autocast_mode_enter.vs"
+		voidgroupdispatch="1"
 		rollover="Start automatic skill activation">
 		<src obj="Hero" />
 	</cmd>
 	<cmd name="leave_autocast_mode" priority="17"
 		button="actions/Leave Autocast Mode.bmp"
 		key="c"
-		groupverifier="data/subai/hero_leave_autocast_mode_verify.vs"
-		immediate="yes"
+		groupverifier="data/subai/hero_autocast_mode_leave_verify.vs"
+		groupdispatch="data/subai/hero_autocast_mode_leave.vs"
+		voidgroupdispatch="1"
 		rollover="Stop automatic skill activation">
 		<src obj="Hero" />
 	</cmd>
@@ -157,8 +164,9 @@
 		rollover="Divine Grace"
 		description="Restores the hero's health by 100"
 		coststamina="4"
-		immediate="yes"
-		groupverifier="data/subai/verify_cmdcost_stamina.vs">
+		groupverifier="data/subai/verify_cmdcost_stamina.vs"
+		groupdispatch="data/subai/hero_divine_grace.vs"
+		voidgroupdispatch="1">
 		<src obj="Hero" />
 	</cmd>
 	<!-- Skills -->

@@ -15,6 +15,7 @@ if (.IsValid)
 			if (IsAIPlayer(.player))
 				.SetParryMode(false);
 
+			.Stop(500);
 			pt_pos = .pos;
 
 			if (.IsRanged) {
@@ -56,7 +57,7 @@ if (.IsValid)
 					}
 				}
 				if (.Goto(pt_pos, 0, 500, false, -1))
-					if (.Stop(2000))
+					if (.Stop(500))
 						Sleep(500);
 			}
 		}

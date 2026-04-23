@@ -5,4 +5,5 @@
 	<properties icon="gameres/icons/CTownhall.bmp" />
 	<properties help="contents/buildings/CTownhall" />
 	<properties edittree_pos="Structures/Stronghold (Carthage)/Townhall" />
+	<method sig="military_training" vs="data/subai/townhall_military_training.vs" />
 </class>

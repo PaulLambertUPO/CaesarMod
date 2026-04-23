@@ -9,6 +9,6 @@
 	<properties edittree_pos="Structures/Stronghold (Germany)/Temple of Neptus" />
 
 	<behavior script="data/subai/TTempleofNeptus_anim.vs" />
-	
+
 	<sounds select="TempleSelect" />
 </class>

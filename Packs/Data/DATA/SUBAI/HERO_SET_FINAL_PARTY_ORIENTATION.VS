@@ -1,9 +1,15 @@
-//void, Obj This, point pt
+//void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
-Hero this;
+Unit u;
+int i;
 
-this = This.AsHero();
-
-if (.IsValid)
-	if (.IsAlive)
-		.SetFinalPartyOrientation(pt);
+for (i = objs.count - 1; i >= 0; i -= 1) {
+	u = objs[i].AsUnit();
+	if (u.IsValid)
+		if (u.IsAlive)
+			if (DiplGetShareControl(u.player, player)) {
+				if (u.AsHero().IsValid)
+					u.AsHero().SetFinalPartyOrientation(pt);
+				u.SetCommand("arrow_helper");
+			}
+}

@@ -17,7 +17,6 @@
 	<cmd name="autotrain_start" priority="10"
 		immediate="yes"
 		key="a"
-		method="autotrain_start"
 		groupverifier="data/subai/townhall_autotrain_start_verify.vs"
 		button="actions/autotrainingStart.bmp"
 		description="Starts the automatic training of warriors in the stronghold"
@@ -27,7 +26,6 @@
 	<cmd name="autotrain_stop" priority="10"
 		immediate="yes"
 		key="a"
-		method="autotrain_stop"
 		groupverifier="data/subai/townhall_autotrain_stop_verify.vs"
 		button="actions/autotrainingStop.bmp"
 		description="Stops the automatic training of warriors in the stronghold"
@@ -35,12 +33,11 @@
 		<src obj="BaseTownhall" />
 	</cmd>
 	<cmd name="refreshment" priority="11"
-		immediate="yes"
 		key="r"
 		costgold="600"
-		method="refreshment"
+		immediate="yes"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
+		groupverifier="data/subai/townhall_refreshment_verify.vs"
 		button="actions/refreshment.bmp"
 		rollover="Refreshment"
 		description="Completely restores the stamina of all nearby allies">
@@ -48,44 +45,39 @@
 		<src obj="BTownhall" />
 	</cmd>
 	<cmd name="healing" priority="11"
-		immediate="yes"
 		key="c"
 		costgold="1000"
-		method="healing"
+		immediate="yes"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
+		groupverifier="data/subai/townhall_healing_verify.vs"
 		button="actions/heal.bmp"
 		rollover="Healing"
 		description="Distributes up to 2000 health among nearby allies">
 		<src obj="ITownhall" />
 		<src obj="ETownhall" />
 	</cmd>
-	<cmd name="townhall_military_training" priority="11"
-		method="military_training"
+	<cmd name="military_training" priority="11"
 		key="m"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
 		costgold="800"
+		immediate="yes"
+		researchcommand="yes"
+		groupverifier="data/subai/townhall_military_training_verify.vs"
 		button="actions/Military training.bmp"
 		rollover="Military training"
-		description="Adds 1 level to all nearby allies (up to level 10)"
-		immediate="yes"
-		researchcommand="yes">
+		description="Adds 1 level to all nearby allies (up to level 10)">
 		<src obj="RTownhall" />
-		<src obj="MTownhall" />
 		<src obj="CTownhall" />
 		<src obj="TTownhall" />
 	</cmd>
 	<cmd name="hire_sentries" priority="11"
-		method="hiresentries"
 		key="s"
-		groupverifier="data/subai/verify_cmdcost_building.vs"
 		costgold="1000"
+		immediate="yes"
+		researchcommand="yes"
+		groupverifier="data/subai/townhall_hire_sentries_verify.vs"
 		button="Upgrades/Hire Sentries.bmp"
-		queueicon="gameres/icons/upgrades/Hire Sentries.bmp"
 		rollover="Hire Sentries"
-		description="Hires 10 Sentries to help protect the stronghold"
-		execdelay="1"
-		researchcommand="yes">
+		description="Hires up to 10 sentries to help protect the stronghold">
 		<src obj="HTownhall" />
 	</cmd>
 </commands>

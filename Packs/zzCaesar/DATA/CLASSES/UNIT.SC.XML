@@ -40,14 +40,13 @@
 	<method sig="move" vs="data/subai/unit_move.vs" />
 	<method sig="form_move" vs="data/subai/unit_form_move.vs" />
 	<method sig="patrol" vs="data/subai/unit_patrol.vs" />
-	<method sig="protect" vs="data/subai/unit_protect.vs" />
 	<method sig="follow" vs="data/subai/unit_follow.vs" />
-	<method sig="approach" vs="data/subai/unit_approach.vs" />
-	<method sig="giveitem" vs="data/subai/unit_giveitem.vs" />
-	<method sig="putitem" vs="data/subai/unit_putitem.vs" />
-	<method sig="dropitem" vs="data/subai/unit_dropitem.vs" />
+	<method sig="approach" vs="data/subai/unit_approach.vs" verify="data/subai/unit_approach_verify.vs" />
 	<method sig="getitems" vs="data/subai/unit_getitems.vs" />
 	<method sig="getitem" vs="data/subai/unit_getitem.vs" />
+	<method sig="putitem" vs="data/subai/unit_putitem.vs" />
+	<method sig="giveitem" vs="data/subai/unit_giveitem.vs" />
+	<method sig="dropitem" vs="data/subai/unit_dropitem.vs" />
 	<method sig="take_nearby_items" vs="data/subai/unit_take_nearby_items.vs" />
 	<method sig="build_catapult" vs="data/subai/unit_build_catapult.vs" />
 	<method sig="hold_position" vs="data/subai/unit_hold_position.vs" />
@@ -57,8 +56,8 @@
 	<method sig="face" vs="data/subai/unit_face.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/unit_ai_attack_gate.vs" />
 	<method sig="ai_killall" vs="data/subai/unit_ai_killall.vs" />
-	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
-	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
+	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" onfinish="data/subai/unit_board_onfinish.vs" />
+	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_onfinish.vs" />
 	<method sig="capture" vs="data/subai/unit_capture.vs" verify="data/subai/unit_capture_verify.vs" />
 	<method sig="capture" vs="data/subai/do_nothing_point.vs" />
 	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
@@ -69,7 +68,6 @@
 	<method sig="grab_free" vs="data/subai/unit_grab_free.vs" />
 	<method sig="talk" vs="data/subai/unit_talk.vs" />
 	<method sig="walkanddie" vs="data/subai/unit_walk_and_die.vs" />
-	<method sig="moveenter" vs="data/subai/unit_move_enter.vs" />
 	<method sig="stand_position" vs="data/subai/unit_stand_position.vs" />
 	<method sig="attack_unit_type_exclusive" vs="data/subai/unit_attack_unit_type_exclusive.vs" verify="data/subai/unit_attack_verify.vs" />
 	<method sig="engage_unit_type_exclusive" vs="data/subai/unit_engage_unit_type_exclusive.vs" />
@@ -78,10 +76,7 @@
 	<method sig="onenter" vs="data/subai/unit_on_enter.vs" />
 	<method sig="convert" vs="data/subai/unit_convert.vs" />
 
-	<method sig="enter_parry_mode" vs="data/subai/unit_enter_parry_mode.vs" />
-	<method sig="leave_parry_mode" vs="data/subai/unit_leave_parry_mode.vs" />
-
-	<method sig="hero_set_final_party_orientation" vs="data/subai/hero_set_final_party_orientation.vs" />
+	<method sig="arrow_helper" vs="data/subai/arrow_helper.vs" />
 
 	<value0 icon="gameres/infobar/common/level ico.bmp"
 		script="return .AsUnit().level;"

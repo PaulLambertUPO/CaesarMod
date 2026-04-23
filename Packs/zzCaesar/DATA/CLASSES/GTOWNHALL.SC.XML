@@ -5,4 +5,5 @@
 	<properties icon="gameres/icons/GTownhall.bmp" />
 	<properties help="contents/buildings/GTownhall" />
 	<properties edittree_pos="Structures/Stronghold (Gaul)/Townhall" />
+	<method sig="refreshment" vs="data/subai/townhall_refreshment.vs" />
 </class>

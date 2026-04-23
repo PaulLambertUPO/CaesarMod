@@ -3343,7 +3343,7 @@ Starts the automatic training of warriors in the stronghold.
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Hire Sentries.bmp" link="/contents/units/HToxotes">
 Hire sentries
-Hires 10 sentries to help protect the stronghold.
+Hires up to 10 sentries to help protect the stronghold.
 Cost: 1000 gold
 Time: instantaneous
 				</entry>
@@ -5967,7 +5967,7 @@ Focuses fire on a specific target.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Launch sortie
-Makes all units advance towards the specified position.
+Orders units inside the building to advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
@@ -5996,7 +5996,7 @@ Focuses fire on a specific target.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Launch sortie
-Makes all units advance towards the specified position.
+Orders units inside the building to advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Sell Food.bmp">
 Sell food
@@ -6035,7 +6035,7 @@ Focuses fire on a specific target.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Launch sortie
-Makes all units advance towards the specified position.
+Orders units inside the building to advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
@@ -6064,7 +6064,7 @@ Focuses fire on a specific target.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Launch sortie
-Makes all units advance towards the specified position.
+Orders units inside the building to advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply
@@ -6088,7 +6088,7 @@ The level of the sentries increases by 1 every minute until reaching 36, startin
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Launch sortie
-Makes all units advance towards the specified position.
+Orders units inside the building to advance towards the specified position.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Supply

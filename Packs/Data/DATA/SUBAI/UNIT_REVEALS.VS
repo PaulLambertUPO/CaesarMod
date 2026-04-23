@@ -1,31 +1,28 @@
 //void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
-int i,j;
-Unit u;
+ObjList h_army;
+Obj o;
+int i, j;
 
-for(i = 0; i < objs.count(); i += 1)
-{
-	u = objs[i].AsUnit;
-	if (u.IsValid)
-		if (!u.IsVisible) {
-			if(u.IsHeirOf("Hero")) {
-				ObjList armies;
-
-				armies=u.AsHero().army;
-				u.SetVisible(true);
-				u.SetLastAttackTime();
-				for(j = 0; j < armies.count(); j += 1)
-				{
-					Unit w;
-
-					w=armies[j].AsUnit();
-					w.SetVisible(true);
-					w.SetLastAttackTime();
-				}
-			}
-			else {
-				u.SetVisible(true);
-				u.SetLastAttackTime();
+for (i = objs.count - 1; i >= 0; i -= 1) {
+	o = objs[i];
+	if (o.IsAlive) {
+		if (!o.IsVisible) {
+			if (o.AsUnit().HasSpecial(sneak))
+				o.AsUnit().SetLastAttackTime();
+			o.SetVisible(true);
+		}
+		if (o.AsHero().IsValid) {
+			h_army = o.AsHero().army;
+			for (j = h_army.count - 1; j >= 0; j -= 1) {
+				o = h_army[j];
+				if (o.IsAlive)
+					if (!o.IsVisible) {
+						if (o.AsUnit().HasSpecial(sneak))
+							o.AsUnit().SetLastAttackTime();
+						o.SetVisible(true);
+					}
 			}
 		}
+	}
 }

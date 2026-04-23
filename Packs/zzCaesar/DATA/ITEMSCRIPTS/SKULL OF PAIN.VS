@@ -17,7 +17,7 @@ if (.IsValid)
 
 				self_damage = MIN(.health - .maxhealth / 5, .maxhealth / 10);
 				out_damage = MAX(1, self_damage / 2);
-				
+
 				while (ol.count > 0) {
 					o = ol[rand(ol.count)];
 					if (o.IsAlive)

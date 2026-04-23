@@ -12,6 +12,8 @@ if (.IsValid)
 			int i, d, plr, rng, best_dist, stamina_cost;
 			bool can_learn, use_curse;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			plr = .player;
 			rng = .range;
 			stamina_cost = GetCmdStaminaCost("curse");

@@ -1,0 +1,18 @@
+<class id="SentryDismiss" parent="Object" cpp_class="CVXUnit">
+	<!-- this class is used to avoid increasing the lost units counter for endgame stats when wall sentries go back to the towers -->
+	<properties maxhealth="1" />
+	<properties feeds="0" max_food="0" />
+	<properties does_not_regenerate="1" />
+	<properties target_factor="-1" />
+	<properties desync_hash="0" />
+	<properties damaged_by_ghost="0" />
+	<properties can_be_cloned="0" />
+	<properties can_be_attacked="0" />
+	<properties can_be_invisible="1" />
+	<properties ignore_passability="1" />
+	<properties no_transparent_draw="1" />
+	<properties non_selectable="1" />
+
+	<method sig="idle" vs="data/subai/unit_dismiss.vs" />
+	<method sig="dismiss" vs="data/subai/unit_dismiss.vs" />
+</class>

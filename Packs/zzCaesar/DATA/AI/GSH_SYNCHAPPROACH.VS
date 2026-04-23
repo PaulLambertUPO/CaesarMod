@@ -63,7 +63,7 @@ if (!SL.EOL) {
 									}
 								}
 				}
-				
+
 				for (SL.Rewind(); !SL.EOL; SL.Next()) {
 					sq = SL.Cur;
 					if (sq.Player == aiPlayer) {

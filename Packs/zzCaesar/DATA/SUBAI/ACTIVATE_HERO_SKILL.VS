@@ -1,7 +1,7 @@
 //void, ObjList objs, point pt, Obj obj, bool bReplace, bool bModifier, int player
 
 if (objs.count == 1)
-	if (!ControllableObjs(player, "Hero").Contains(objs[0]))//prevent a player from activating another's hero skill from the UI top menu
+	if (!DiplGetShareControl(objs[0].player, player))//prevent a player from activating another's hero skill from the UI top menu
 		return;
 
 {

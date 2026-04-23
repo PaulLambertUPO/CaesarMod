@@ -2,7 +2,7 @@
 
 	<properties race="Carthage" />
 	<properties radius="165" selection_radius="170" />
-	
+
 	<properties display_name="Temple" />
 	<properties icon="gameres/icons/CTemple.bmp" />
 	<properties help="contents/buildings/CTemple" />

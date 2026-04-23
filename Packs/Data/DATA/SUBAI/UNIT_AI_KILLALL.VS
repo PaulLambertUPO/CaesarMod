@@ -8,7 +8,7 @@ if (.IsValid)
 	if (.IsAlive) {
 		Obj o;
 		Squad sq;
-		GAIKA gk_dest;
+		GAIKA gk_dest, gk_in;
 		Settlement set;
 		bool melee, sq_to_get;
 
@@ -22,6 +22,8 @@ if (.IsValid)
 			o = .BestTargetInSquadSightMisZeroDamage;
 			if (o.IsDead) {
 				sq = .GetSquad();
+				gk_dest = sq.AIDest;
+				gk_in = sq.GAIKAIn;
 				if (sq.AIDest == sq.GAIKAIn)
 					o = .BestTargetInGAIKA;
 				sq_to_get = false;
@@ -40,20 +42,22 @@ if (.IsValid)
 				continue;
 			}
 
-			if (sq_to_get)
+			if (sq_to_get) {
 				sq = .GetSquad();
+				gk_dest = sq.AIDest;
+				gk_in = sq.GAIKAIn;
+			}
 
-			gk_dest = sq.AIDest;
 			set = gk_dest.settlement;
 
 			if (set.IsValid) {
 				.AddCommand(true, "ai_killall");
-				.AddCommand(true, "advance", set.GetCentralBuilding().pos);
+				.AddCommand(true, "advance", set.GetCentralBuilding().pos + RandomOffset(100 + set.GetCentralBuilding().radius));
 				break;
 			}
-			if (gk_dest != sq.GAIKAIn) {
+			if (gk_dest != gk_in) {
 				.AddCommand(true, "ai_killall");
-				.AddCommand(true, "advance", gk_dest.Center);
+				.AddCommand(true, "advance", gk_dest.Center + RandomOffset(100));
 				break;
 			}
 

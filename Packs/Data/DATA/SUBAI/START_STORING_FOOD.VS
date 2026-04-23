@@ -1,3 +1,3 @@
-//void, Obj This
+//void, Obj this
 
-EnvWriteInt(This.AsBuilding().settlement, "IsStoring", 1);
+EnvWriteInt(.AsBuilding().settlement, "IsStoring", 1);

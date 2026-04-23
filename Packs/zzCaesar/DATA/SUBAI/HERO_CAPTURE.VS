@@ -24,12 +24,13 @@ if (target.IsValid) {
 
 						pt_pos = target.pos;
 
-						.FormSetupAndMoveTo(pt_pos, 0, 0, false);
-
-						while (.HasPath) {
-							if (.DistTo(target) <= 350)
-								break;
-							.FormKeepMoving(1500);
+						if (target.DistTo(.posRH) > 350) {
+							.FormSetupAndMoveTo(pt_pos, 0, 0, true);
+							while (.HasPath) {
+								if (.DistTo(target) <= 350)
+									break;
+								.FormKeepMoving(1500);
+							}
 						}
 
 						if (target.player != plr)
@@ -122,16 +123,18 @@ if (target.IsValid) {
 
 					if (w.IsAlive)
 						if (!w.InHolder) {
-							.FormSetupAndMoveTo(w, 0, 0, false);
-
-							while (w.IsAlive) {
-								if (w.InHolder)
-									break;
-								if (!.HasPath)
-									break;
-								if (.DistTo(w) <= 300)
-									break;
-								.FormKeepMoving(1500);
+							if (.DistTo(w) >= 300) {
+								.FormSetupAndMoveTo(w.pos, 0, 0, true);
+								while (.HasPath) {
+									.FormKeepMoving(1500);
+									if (w.IsDead)
+										break;
+									if (w.InHolder)
+										break;
+									if (.DistTo(w) < 300)
+										break;
+									.FormSetupAndMoveTo(w.pos, 0, 0, true);
+								}
 							}
 
 							if (w.IsAlive)
@@ -201,16 +204,18 @@ if (target.IsValid) {
 
 						if (u.IsAlive)
 							if (!u.InHolder) {
-								.FormSetupAndMoveTo(u, 0, 0, false);
-
-								while (u.IsAlive) {
-									if (u.InHolder)
-										break;
-									if (!.HasPath)
-										break;
-									if (.DistTo(u) <= 300)
-										break;
-									.FormKeepMoving(1500);
+								if (.DistTo(u) >= 300) {
+									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+									while (.HasPath) {
+										.FormKeepMoving(1500);
+										if (u.IsDead)
+											break;
+										if (u.InHolder)
+											break;
+										if (.DistTo(u) < 300)
+											break;
+										.FormSetupAndMoveTo(u.pos, 0, 0, true);
+									}
 								}
 
 								if (u.IsAlive)

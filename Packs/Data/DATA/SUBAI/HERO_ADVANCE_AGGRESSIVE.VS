@@ -13,10 +13,13 @@ if (.IsValid)
 
 		.FormSetupAndMoveTo(pt, 0, 0, true);
 
-		while (!.IsArmyOutside)
+		for (i = 0; i < 3; i += 1) {
+			if (.IsArmyOutside)
+				break;
 			.FormKeepMoving(500);
+		}
 
-		while (.HasPath) {
+		while (true) {
 			if (.IsEnemyInSquadSight) {
 				if (.BestTargetInSquadSight.IsAlive) {
 					.AddCommand(true, "advance_aggressive", pt);
@@ -36,6 +39,8 @@ if (.IsValid)
 						}
 				}
 			}
+			if (!.HasPath)
+				break;
 			.FormKeepMoving(1500);
 		}
 

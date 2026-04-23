@@ -9,14 +9,9 @@ if (.IsValid)
 		if (.IsBuilding) {
 			while (.IsBuilding)
 				Sleep(200);
-			while (!.Goto(.FindPointToStay(), 0, 2000, false, -1))//use -1 with the inner check because there is something strange with ships
+			while (!.Goto(.FindPointToStay(), 0, 1000, false, -1))//use -1 with the inner check because there is something strange with ships
 				if (.TimeWithoutWalking > 0)
 					break;
-		}
-		else {
-			while (!.Stop(2000))
-				;
-			Sleep(100 + rand(101));
 		}
 
 		while (true) {

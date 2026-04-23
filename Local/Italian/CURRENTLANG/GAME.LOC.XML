@@ -634,12 +634,16 @@
 <translationtableentry text="Load a caravan with 1000 gold" result="Carica unità rifornimento con 1000 oro" />
 <translationtableentry text="Refreshment" result="Ristoro" />
 <translationtableentry text="Completely restores the stamina of all nearby allies" result="Ripristina completamente l'energia di tutti gli alleati vicini" />
+<translationtableentry text="There are no allies to revitalize around the settlement" result="Non ci sono alleati da rinvigorire intorno all'insediamento" />
 <translationtableentry text="Healing" result="Guarigione" />
 <translationtableentry text="Distributes up to 2000 health among nearby allies" result="Distribuisce fino a 2000 punti di salute tra gli alleati vicini" />
+<translationtableentry text="There are no allies to heal around the settlement" result="Non ci sono alleati da guarire intorno all'insediamento" />
 <translationtableentry text="Military training" result="Addestramento forzato" />
 <translationtableentry text="Adds 1 level to all nearby allies (up to level 10)" result="Aumenta di 1 punto il livello di tutti gli alleati vicini (fino al livello 10)" />
+<translationtableentry text="There are no allies to train around the settlement" result="Non ci sono alleati da addestrare intorno all'insediamento" />
 <translationtableentry text="Hire Sentries" result="Assolda sentinelle" />
-<translationtableentry text="Hires 10 Sentries to help protect the stronghold" result="Assolda 10 sentinelle per aiutare a difendere la fortezza" />
+<translationtableentry text="Hires up to 10 sentries to help protect the stronghold" result="Assolda fino a 10 sentinelle per aiutare a difendere la fortezza" />
+<translationtableentry text="No additional sentries can be hired" result="Impossibile assoldare sentinelle aggiuntive" />
 <!-- end townhall commands -->
 <!-- start barracks commands -->
 <translationtableentry text="Fast warrior equipment" result="Equipaggiamento rapido dei guerrieri I" />
@@ -1142,7 +1146,7 @@
 <!-- end village commands -->
 <!-- start outpost commands -->
 <translationtableentry text="Launch sortie" result="Effettua sortita" />
-<translationtableentry text="Makes all units advance towards the specified position" result="Fa avanzare le unità verso la posizione specificata" />
+<translationtableentry text="Orders units inside the building to advance towards the specified position" result="Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata" />
 <translationtableentry text="Click to make all units advance to this position" result="Clicca per far avanzare tutte le unità fino a questa posizione" />
 <translationtableentry text="Slowly exchanges stored food for gold" result="Scambia lentamente i viveri immagazzinati con oro" />
 <translationtableentry text="Stop selling food" result="Smetti di vendere viveri" />
@@ -1259,9 +1263,11 @@
 <translationtableentry text="Right-click to attach to this hero" result="Clicca col tasto destro per vincolare a questo eroe" />
 <translationtableentry text="Right-click to enter this cave" result="Clicca col tasto destro per entrare in questa grotta" />
 <translationtableentry text="Right-click to enter this building" result="Clicca col tasto destro per entrare in questa struttura" />
+<translationtableentry text="Right-click to enter these ruins and face danger for a chance to earn a reward" result="Clicca col tasto destro per entrare nelle rovine e affrontare i pericoli per avere una possibilità di ottenere una ricompensa" />
 <translationtableentry text="Right-click to enter this shipyard and start fishing" result="Clicca col tasto destro per entrare in questo porto e iniziare a pescare" />
 <translationtableentry text="Right-click to enter this village and provide a mount for scouts" result="Clicca col tasto destro per entrare in questo villaggio e fornire una cavalcatura per esploratori" />
 <translationtableentry text="Train" result="Addestra" />
+<translationtableentry text="Maximum training level: %s1" result="Livello di addestramento massimo: %s1" />
 <translationtableentry text="Cannot train warriors" result="Impossibile addestrare i guerrieri" />
 <translationtableentry text="Detach from hero" result="Svincola dall'eroe" />
 <translationtableentry text="Not attached to a hero" result="Non vincolato a un eroe" />
@@ -1311,7 +1317,8 @@
 <translationtableentry text="Select Column formation" result="Seleziona formazione in colonna" />
 <translationtableentry text="Army bonus during stand ground" result="Bonus per l'esercito se gli si ordina di mantenere la posizione" />
 <translationtableentry text="Leave army" result="Sciogli esercito" />
-<translationtableentry text="Leaves the attached allies on their own" result="Svincola tutte le unità" />
+<translationtableentry text="Detaches all units" result="Svincola tutte le unità" />
+<translationtableentry text="No attached units" result="Nessuna unità vincolata" />
 <translationtableentry text="Start automatic skill activation" result="Avvia attivazione automatica delle abilità" />
 <translationtableentry text="Stop automatic skill activation" result="Ferma attivazione automatica delle abilità" />
 <translationtableentry text="Activates the Assault skill" result="Attiva l'abilità Gesta" />

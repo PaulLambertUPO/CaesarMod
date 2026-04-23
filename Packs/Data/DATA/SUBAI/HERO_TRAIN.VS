@@ -1,11 +1,13 @@
-// void, Obj This
+//void, Obj This
 
 Hero this;
-int i;
-bool bfinish;
-bfinish = false;
+
 this = This.AsHero();
-.army.AddCommand(true, "train");
-.army.KillCommand();
-//.AddCommand(true, "waitarmytrain");
-.AddCommand(true, "unittrain");
+
+if (.IsValid)
+	if (.IsAlive) {
+		.army.SetCommand("train");
+		.SetCommand("unittrain");
+	}
+
+Sleep(15);//prevent possible loops with other commands

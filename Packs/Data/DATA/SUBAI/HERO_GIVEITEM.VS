@@ -1,50 +1,69 @@
-// void, Obj me, Item item, Obj h
+//void, Obj This, Item item, Obj other
 
-Hero  this;
-Unit  unit;
-point pt;
-bool  bRunAway;
-int   nDist;
+Hero this;
 
-this = me.AsHero;
-unit = h.AsUnit;
+this = This.AsHero();
 
-nDist = .PathTo(unit, .FormRadius, 0);
-if (nDist == -1)
-	return;
+if (.IsValid)
+	if (.IsAlive) {
+		Unit u;
 
-if (nDist > .sight)
-{
-	.FormSetupAndMoveTo(unit, 0, 0,true);
-	while (.HasPath)
-		.FormKeepMoving(1500);
-}
-else
-	.army.SetCommand("idle");
+		u = other.AsUnit();
 
-pt = .posRH;
-while (!.Goto(unit, GetConst("GiveDistance"), 1500, false, 5000))
-{
-	if (.PathTo(pt, 0, 0) > .FormRadius + 50)
-	{
-		pt.Set(.posRH.x + 1, .posRH.y + 1);
-		.FormSetupAndMoveTo(pt, 0, 0, true);
-		while (.HasPath)
-			.FormKeepMoving(1500);
-		if (.PathTo(unit, .FormRadius, 0) > 50)
-		{
-			.FormSetupAndMoveTo(unit, 0, 0, true);
-			while (.HasPath)
-				.FormKeepMoving(1000);
-			pt = .posRH;
-		}
+		if (u.IsValid)
+			if (u.IsAlive)
+				if (u.max_items > 0)
+					if (!.IsEnemy(u))
+						if (!u.InHolder) {
+							point pt_army_follow;
+
+							if (u.DistTo(.posRH) >= 1000) {
+								.FormSetupAndMoveTo(u.pos, 0, 0, true);
+								while (.HasPath) {
+									.FormKeepMoving(1500);
+									if (u.IsDead)
+										break;
+									if (.IsEnemy(u))
+										break;
+									if (u.InHolder)
+										break;
+									if (.GetItemIndex(item) == -1)
+										break;
+									if (.DistTo(u) < 1000)
+										break;
+									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+								}
+							}
+
+							.army.SetCommand("idle");
+
+							pt_army_follow = .posRH;
+
+							while (!.Goto(u, 25, 2500, false, 5000)) {
+								if (u.IsDead)
+									break;
+								if (.IsEnemy(u))
+									break;
+								if (u.InHolder)
+									break;
+								if (.GetItemIndex(item) == -1)
+									break;
+								if (.DistTo(pt_army_follow) >= 1000) {
+									pt_army_follow = .pos;
+									.army.SetCommand("advance", pt_army_follow);
+								}
+							}
+
+							if (u.IsAlive)
+								if (!.IsEnemy(u))
+									if (!u.InHolder)
+										if (.GiveItem(item, u)) {
+											if (.HasSpecial(sneak))
+												.SetLastAttackTime();
+											if (!.IsVisible)
+												.SetVisible(true);
+										}
+						}
 	}
-	if (!unit.IsAlive)
-		return;
-	if (unit.InHolder)
-		return;
-}
-.GiveItem(item, unit);
 
-if (.HasArmy) 
-	while (!.Goto(pt, 0, 1500, false, 5000));
+Sleep(15);//prevent possible loops with other commands

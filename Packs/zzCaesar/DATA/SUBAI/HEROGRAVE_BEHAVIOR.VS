@@ -27,7 +27,7 @@
 		.StartAnim(1, pt_pos);
 		Sleep(.TimeToAnimFinish + rand(1001));
 
-		while (plr != .player) {
+		while (plr == .player) {
 			grave_lifetime -= 1;
 			.SetHealth(grave_lifetime + 1);
 			if (grave_lifetime == 120)

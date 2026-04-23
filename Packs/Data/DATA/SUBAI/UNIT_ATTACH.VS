@@ -1,80 +1,100 @@
-// void, Obj me, Obj h
+//void, Obj This, Obj other
 
 Unit this;
-Hero hero;
-point ptoffset, ptEnter;
-Obj teleport;
 
-hero = h.AsHero();
-this = me.AsUnit();
+this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive) {
+		Hero h;
 
-Breakpoint();
+		h = other.AsHero();
 
-if (me == h) return;
-if (!hero.IsValid()) return;
-if (!hero.IsAlive()) return;
-if (this.IsEnemy(hero)) return;
-if (.HasFreedom) return;
-if (.IsHeirOf("Wagon") || .IsHeirOf("ShipBattle") || .IsHeirOf("Peasant")) return;
-//if (this.AsHero.IsValid()) return; 
+		if (h.IsValid) {
+			Settlement set_h;
+			Building hall;
+			Obj teleport;
+			point enter_point;
+			int plr;
 
-ptoffset.Set(rand(600) - 300, rand(600) - 300);
+			plr = .player;
 
-//.pr("attaching to hero");
+			if (IsAIPlayer(plr))
+				.SetParryMode(false);
 
-while(1)
-{
-	if(!hero.IsAlive()) break;//fail
-	if(.IsEnemy(hero)) break;//fail
-	if(hero.IsEnemy(this)) break;//fail
+			while (h.IsAlive) {
+				if (.HasFreedom)
+					break;
+				if (h == .hero)
+					break;
+				if (h.IsHeroArmyFull)
+					break;
+				if (.IsEnemy(h))
+					break;
+				if (h.IsEnemy(this))
+					break;
 
-	if( .SameHolderAs( hero ))
-		if( .AttachTo( hero ))
-			break; // success
+				if (.SameHolderAs(h))
+					if (Dist(.posRH, h.posRH) < 1500)
+						if (.AttachTo(h))
+							break;
 
-	if( .InShip ) break; // fail
-	if( hero.InShip ) break; // fail
-	if( !.InHolder && !hero.InHolder && .posRH.Dist(hero.posRH) < 1500 )
-		if(.AttachTo(hero)) break;//success
-	
-	teleport = FindTeleport(.player, .posRH, hero.posRH);
-	if (!.AI) if (teleport.IsValid) if (.posRH.Dist(teleport.pos) > 1000) teleport.Clear;
-	if (teleport.IsValid) {
-	  	.AddCommand(true, "attach", hero);
-  		.AddCommand(true, "teleport", teleport);
-		return;
-	}
-	
-	if( hero.InHolder ) 
-		if( !hero.GetHolderSett.GetCentralBuilding.IsHeirOf("BaseRuins"))
-		{
-			Building bld;
-			bld = hero.GetHolderSett().GetCentralBuilding();
-			if (!bld.IsValid()) break;//fail
-			ptEnter = bld.GetEnterPoint(this);
-			.SetEntering(true);
-			while(!.GotoEnter(ptEnter, 0, 1500, true, 2500) && hero.InHolder());
-			.SetEntering(false);
-			if(hero.InHolder())
-			{
-				hero.GetHolderSett().AddUnit(this);
-				if(hero.IsHeroArmyFull()) break;//fail
-				continue;
+				if (h.InShip)
+					break;
+
+				teleport = FindTeleport(plr, .posRH, h.posRH);
+				if (teleport.IsValid) {
+					if (.AI) {
+						.AddCommand(true, "attach", h);
+						.AddCommand(true, "teleport", teleport);
+						break;
+					}
+					if (Dist(.posRH, teleport.pos) <= 1000) {
+						.AddCommand(true, "attach", h);
+						.AddCommand(true, "teleport", teleport);
+						break;
+					}
+				}
+
+				if (h.InHolder) {
+					set_h = h.GetHolderSett();
+					if (set_h.IsValid) {
+						hall = set_h.GetCentralBuilding();
+						if (hall.IsValid) {
+							if (hall.IsHeirOf("BaseRuins")) {
+								Sleep(1500);
+								continue;
+							}
+							enter_point = hall.GetEnterPoint(this);
+							.SetEntering(true);
+							while (h.IsAlive) {//full army is not checked here to avoid having only some units outside the building
+								if (.HasFreedom)
+									break;
+								if (h == .hero)
+									break;
+								if (.IsEnemy(h))
+									break;
+								if (h.IsEnemy(this))
+									break;
+								if (h.InHolder) {
+									if (.GotoEnter(enter_point, 0, 1000, false, 2500)) {
+										set_h.AddUnit(this);
+										break;
+									}
+								}
+								else
+									break;
+							}
+							.SetEntering(false);
+						}
+					}
+					else
+						break;
+				}
+				else if (.Goto(h.posRH, 200, 1500, false, 5000))
+					Sleep(1000);
 			}
 		}
-		else
-			Sleep( 100 );
-	if(hero.IsHeroArmyFull()) {
-		.AddCommand(true, "protect", hero);
-		.AddCommand(true, "approach", hero);
-		break;//fail
 	}
-	if(.Goto(hero.posRH + ptoffset, 1, 1500, true, 5000))
-	{
-		ptoffset.Set(0, 0);
-	}
-}
-while(!.Stop(1000));
+
+Sleep(15);//prevent possible loops with other commands

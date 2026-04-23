@@ -27,18 +27,17 @@ if (!other.AsCatapult().IsValid) {
 
 							pt = bld.GetEnterPoint(this);
 
-							.FormSetupAndMoveTo(pt, 0, 0, false);
-
-							while (.HasPath) {
-								if (.FormPathLeft < .FormRadius + 150)
-									break;
-								if (.DistTo(bld) < .FormRadius)
-									break;
-								.FormKeepMoving(1500);
+							if (bld.DistTo(.posRH) >= 400) {
+								.FormSetupAndMoveTo(pt, 0, 0, false);
+								while (.HasPath) {
+									if (.DistTo(bld) < 400)
+										break;
+									.FormKeepMoving(1500);
+								}
 							}
 
 							.army.SetCommand("idle");
-							
+
 							.SetEntering(true);
 
 							while (!.GotoEnter(pt, 0, 1000, false, 2500))
@@ -63,14 +62,13 @@ if (!other.AsCatapult().IsValid) {
 
 										pt = bld.GetEnterPoint(this);
 
-										.FormSetupAndMoveTo(pt, 0, 0, false);
-
-										while (.HasPath) {
-											if (.FormPathLeft < .FormRadius + 150)
-												break;
-											if (.DistTo(bld) < .FormRadius)
-												break;
-											.FormKeepMoving(1500);
+										if (bld.DistTo(.posRH) >= 400) {
+											.FormSetupAndMoveTo(pt, 0, 0, false);
+											while (.HasPath) {
+												if (.DistTo(bld) < 400)
+													break;
+												.FormKeepMoving(1500);
+											}
 										}
 
 										if (!.IsEnemy(bld))
@@ -80,12 +78,25 @@ if (!other.AsCatapult().IsValid) {
 												.SetEntering(true);
 
 												while (!.GotoEnter(pt, 0, 1000, false, 2500))
-													;
+													if (.IsEnemy(bld))
+														break;
 
 												if (!.IsEnemy(bld))
 													if (DiplGetShareView(bld.player, .player))
-														if (set.AddUnit(this))
-															.army.SetCommand("enter", bld);
+														if (set.AddUnit(this)) {
+															ObjList h_army;
+															Obj o;
+															int i;
+
+															h_army = .army;
+
+															for (i = h_army.count - 1; i >= 0; i -= 1) {
+																o = h_army[i];
+																if (o.IsAlive)
+																	if (o.command == "idle")
+																		o.SetCommand("enter", bld);
+															}
+														}
 											}
 									}
 							}

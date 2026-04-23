@@ -54,22 +54,36 @@ if (.IsValid)
 									.SetEntering(true);
 
 									if (bld.AsCatapult().IsValid) {
-										while (!.GotoEnter(pt, 0, 1000, false, 2500))
+										while (!.GotoEnter(pt, 0, 1000, false, 2500)) {
 											if (bld.IsDead)
 												break;
+											if (.IsEnemy(bld))
+												break;
+										}
 
 										if (bld.IsAlive)
 											if (!.IsEnemy(bld))
-												if (DiplGetShareView(bld.player, .player))
-													if (set.AddUnit(this)) {
-														.Deselect();
-														if (.hero.IsValid)
-															.DetachFrom(.hero);
-													}
+												if (DiplGetShareView(bld.player, .player)) {
+													bool add = true;
+
+													if (bld.AsCatapult().IsBuilt)//avoid entering rams that have already been built
+														if (bld.race == Britain)
+															add = false;
+														else if (bld.race == Germany)
+															add = false;
+
+													if (add)
+														if (set.AddUnit(this)) {
+															.Deselect();
+															if (.hero.IsValid)
+																.DetachFrom(.hero);
+														}
+												}
 									}
 									else {
 										while (!.GotoEnter(pt, 0, 1000, false, 2500))
-											;
+											if (.IsEnemy(bld))
+												break;
 
 										if (!.IsEnemy(bld))
 											if (DiplGetShareView(bld.player, .player))

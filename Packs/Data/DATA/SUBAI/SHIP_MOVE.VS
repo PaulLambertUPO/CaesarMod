@@ -8,7 +8,7 @@ if (.IsValid)
 	if (.IsAlive) {
 		.SetParryMode(false);
 
-		while (!.Goto(pt, 0, 2000, false, -1))//use -1 with the inner check because there is something strange with ships
+		while (!.Goto(pt, 0, 1000, false, -1))//use -1 with the inner check because there is something strange with ships
 			if (.TimeWithoutWalking > 0)
 				break;
 	}

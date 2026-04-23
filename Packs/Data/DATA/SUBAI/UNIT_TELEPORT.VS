@@ -1,39 +1,45 @@
-// void, Obj This, Obj bld
+//void, Obj This, Obj other
 
 Unit this;
-Teleport tel;
-point pt, ptGoto;
-int len, angle;
-int nMinDist, nFOV;
-
-
-nMinDist = GetConst("TelMinDist");
-nFOV = GetConst("TelFOV");
 
 this = This.AsUnit();
-tel = bld.AsTeleport();
 
-if (!.IsValid() || !tel.IsValid()) return;
+if (.IsValid)
+	if (.IsAlive) {
+		Teleport telep_enter;
 
-.SetEntering(true);
-if (!tel.settlement.Units().Contains(this)) {
-    pt = tel.GetEnterPoint(this);
-    while(!.GotoEnter(pt, 0, 1000, false, 2500));
-}
-    //ptGoto = tel.destination.pos + Point(200,200);
-    len = tel.destination.radius + tel.destination.exit_vector.Len() * (nMinDist + rand(100-nMinDist)) / 100;
-    angle = rand(nFOV) - nFOV/2;
-    ptGoto = tel.destination.exit_vector;
-    ptGoto.SetLen(len);
-    ptGoto.Rot(angle);
-    ptGoto = ptGoto + tel.destination.pos;
-	ptGoto = ptGoto.ClampToMap();
-    pt = tel.destination.GetExitPoint(ptGoto, false);
-    .SetPos(pt);
-//////while (!.Goto(ptGoto, 0, 1000, false));
-	//.JustExited();
-	tel.Traverse(.player);
-	tel.destination.Traverse(.player);
-	tel.destination.settlement.AddUnit(this);
-	.AddCommand(true, "move", ptGoto);
+		telep_enter = other.AsTeleport();
 
+		if (telep_enter.IsValid) {
+			Teleport telep_exit;
+			point pt_exit;
+
+			telep_exit = telep_enter.destination;
+
+			pt_exit = telep_exit.exit_vector;
+			pt_exit.SetLen(telep_exit.radius + pt_exit.Len * (20 + rand(81)) / 100);
+			pt_exit.Rot(60 - rand(121));
+			pt_exit = pt_exit + telep_exit.pos;
+			pt_exit = pt_exit.ClampToMap();
+
+			if (!telep_enter.settlement.Units.Contains(this)) {
+				point pt_enter;
+
+				pt_enter = telep_enter.GetEnterPoint(this);
+
+				.SetEntering(true);
+
+				while (!.GotoEnter(pt_enter, 0, 1000, false, 2500))
+					;
+			}
+
+			telep_enter.Traverse(.player);
+			telep_exit.Traverse(.player);
+
+			telep_exit.settlement.ForceAddUnit(this);
+
+			.AddCommand(true, "advance", pt_exit);
+		}
+	}
+
+Sleep(15);//prevent possible loops with other commands

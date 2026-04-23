@@ -1,28 +1,25 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
 Unit this;
-Unit u;
+
 this = This.AsUnit();
 
-if(!.InHolder)
-	.AddCommand(false, "guardpatrol", .pos);
-while(1) {
-	u = .BestTargetInSquadSight();
-	if(u.IsAlive() && .IsValidTarget(u))
-	{
-		if(u.IsMilitary() || u.IsHeirOf("BaseMage"))
-		{
-			.AddCommand(true, "guardpatrol", pt);
-			.AddCommand(true, "guardengage");
-			return;
+if (.IsValid)
+	if (.IsAlive) {
+		.SetParryMode(false);
+
+		if (!.InHolder)
+			.AddCommand(false, "guardpatrol", .pos);
+
+		while (true) {
+			if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
+				.AddCommand(true, "guardpatrol", pt);
+				.AddCommand(true, "guardengage");
+				break;
+			}
+			if (.Goto(pt, 0, 2000, false, 0))
+				break;
 		}
 	}
-	if(.Goto (pt, 0, 2000, true, -1)) {
-		Sleep(500);  // Else when Goto returns immediately there's an infinite loop of patrol commands (the software dies)
-		break;
-	}
-	if(.TimeWithoutWalking() > 0) {
-		Sleep(500);
-		break;
-	}
-}
+
+Sleep(15);//prevent possible loops with other commands

@@ -1,45 +1,34 @@
-// void, Obj This, point pt
+//void, Obj This, point pt
 
-bool b;
 Unit this;
-point ptOld;
 
 this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive) {
+		point pt_pos;
 
+		if (IsAIPlayer(.player))
+			.SetParryMode(false);
 
-if (This.AsHero().IsValid()) {
-	if (This.AsHero().army.count() != 0) return;
-}
+		while (!.Goto(pt, 0, 2000, false, -1))
+			if (.TimeWithoutWalking > 0)
+				break;
 
-//pr("explore start");
-//if the user gives an impassable or unreachable point for goto
-while (1) {
-//	pr("goto start");
-	ptOld = .posRH;
-	b = .Goto(pt, 0, 3000, true, -1);
-	if (b) break; //reached the point
-	if (.pos == ptOld) //not moved for a while
-		break; //give up and recast to a new point
-}
+		pt_pos = .pos;
+		pt = .GetUnexploredPoint(-1);
 
-//if (.pos == ptOld) pr("cannot reach the start, begin from here");
-//else pr("start reached, exploring");
+		while (pt.x != -1) {
+			while (!.Goto(pt, 0, 2000, false, -1))
+				if (.TimeWithoutWalking > 0)
+					break;
 
-while (1) {
-//	pr("recast");
-	pt = .GetUnexploredPoint(-1);
-	if (pt.x == -1) break; //cannot go anywhere
-	while (1) {
-		//pr("going...");
-		ptOld = .posRH;
-		b = .Goto(pt, 0, 5000, true, -1);
-		if (b) break;
-		if (ptOld == .posRH)
-			break; //stuck again :(
+			if (pt_pos == .pos)
+				break;
+
+			pt_pos = .pos;
+			pt = .GetUnexploredPoint(-1);
+		}
 	}
-//	if (b) pr("reached!"); else pr("stuck!");
-}
-//pr("explore end");
+
+Sleep(15);//prevent possible loops with other commands

@@ -31,23 +31,22 @@ if (nTradeFood > 0)
 		nTradeFood = 1100;
 
 {
-	ObjList buildings;
-	Building b;
+	ObjList ol;
+	Obj o;
 	int i;
 
-	buildings = set.Buildings;
+	ol = set.Buildings;
 
-	for (i = buildings.count - 1; i >= 0; i -= 1) {
-		b = buildings[i].AsBuilding();
-		if (b.IsValid)
-			if (b.IsHeirOf("Wall")) {
-				bCanResearchSentryUpgrades = true;
-				break;
-			}
-			else if (b.AsGate().IsValid) {
-				bCanResearchSentryUpgrades = true;
-				break;
-			}
+	for (i = ol.count - 1; i >= 0; i -= 1) {
+		o = ol[i];
+		if (o.AsGate().IsValid) {
+			bCanResearchSentryUpgrades = true;
+			break;
+		}
+		if (o.IsHeirOf("Wall")) {
+			bCanResearchSentryUpgrades = true;
+			break;
+		}
 	}
 }
 
@@ -170,7 +169,7 @@ while (set.player == aiPlayer) {
 			if (bAssUnderFire)
 				if (rand(2) == 0)
 					if (GetTime() >= 300000)//avoid hiring sentries as soon as the game starts
-						if (set.GetNumSentries() <= set.GetMaxSentries() / 3)//total max = 20 for townhall + 1 per wall + 4 per gate (usually 50-52)
+						if (set.GetNumSentries() < set.GetMaxSentries() / 3)//total max = 20 for townhall + 1 per wall + 4 per gate (usually 50-52)
 							if (set.CanResearch("hire_sentries"))
 								if (set.CanAfford("hire_sentries")) {
 									int gold, food;

@@ -3343,7 +3343,7 @@ Dà inizio all'addestramento delle unità alloggiate nel foro.
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Hire Sentries.bmp" link="/contents/units/HToxotes">
 Assolda sentinelle
-Assolda 10 sentinelle per aiutare a difendere la fortezza.
+Assolda fino a 10 sentinelle per aiutare a difendere la fortezza.
 Costo: 1000 oro
 Tempo: istantaneo
 				</entry>
@@ -5967,7 +5967,7 @@ Concentra il fuoco su un bersaglio specifico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Effettua sortita
-Fa avanzare le unità verso la posizione specificata.
+Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
@@ -5996,7 +5996,7 @@ Concentra il fuoco su un bersaglio specifico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Effettua sortita
-Fa avanzare le unità verso la posizione specificata.
+Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Sell Food.bmp">
 Vendi viveri
@@ -6035,7 +6035,7 @@ Concentra il fuoco su un bersaglio specifico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Effettua sortita
-Fa avanzare le unità verso la posizione specificata.
+Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
@@ -6064,7 +6064,7 @@ Concentra il fuoco su un bersaglio specifico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Effettua sortita
-Fa avanzare le unità verso la posizione specificata.
+Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento
@@ -6088,7 +6088,7 @@ Il livello delle sentinelle aumenta di 1 punto ogni minuto fino ad arrivare a 36
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Effettua sortita
-Fa avanzare le unità verso la posizione specificata.
+Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Stabilisci rotta di rifornimento

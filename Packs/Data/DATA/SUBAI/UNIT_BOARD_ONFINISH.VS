@@ -1,7 +1,17 @@
-// void, Obj This, bool bCanceled
+//void, Obj This, bool bCanceled
 
-Unit this;
-if( ! bCanceled ) return;
-this = This.AsUnit;
-if( .GetShipToBoard.IsValid )
-	.GetShipToBoard.NotifyBoardUnitCancel( this );
+if (bCanceled) {
+	Unit this;
+
+	this = This.AsUnit();
+
+	if (.IsValid)
+		if (.IsAlive) {
+			Ship sh;
+
+			sh = .GetShipToBoard();
+
+			if (sh.IsAlive)
+				sh.NotifyBoardUnitCancel(this);
+		}
+}

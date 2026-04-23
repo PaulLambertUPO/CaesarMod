@@ -1,6 +1,22 @@
-// void, Obj me, Obj wall
+//void, Obj This, Obj other
 
-if (wall.player == me.player)
-	wall.AsBuilding().settlement().PutSentry();
-me.Erase();
+Unit this;
 
+this = This.AsUnit();
+
+if (.IsValid)
+	if (.IsAlive) {
+		Building wall;
+
+		wall = other.AsBuilding();
+
+		if (wall.IsValid)
+			if (wall.player == .player)
+				wall.settlement.PutSentry();
+
+		.AddCommand(true, "dismiss");
+
+		.Disappear();
+
+		.Mutate("SentryDismiss");
+	}

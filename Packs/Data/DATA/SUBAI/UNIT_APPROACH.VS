@@ -6,25 +6,34 @@ if (target.IsAlive) {
 	this = This.AsUnit();
 
 	if (.IsValid)
-		if (.IsAlive) {
-			Unit u;
+		if (.IsAlive)
+			if (target != this) {
+				Unit u;
 
-			u = target.AsUnit();
+				u = target.AsUnit();
 
-			if (u.IsValid)
-				if (u.InHolder) {
-					Sleep(15);//prevent possible loops with other commands
-					return;
+				if (u.IsValid) {
+					if (u.InHolder) {
+						Sleep(15);//prevent possible loops with other commands
+						return;
+					}
+					if (!.CanSee(u)) {
+						Sleep(15);//prevent possible loops with other commands
+						return;
+					}
 				}
 
-			while (!.Goto(target, 20, 2500, false, 10000)) {
-				if (target.IsDead)
-					break;
-				if (u.IsValid)
-					if (u.InHolder)
+				while (!.Goto(target, 20, 2500, false, 10000)) {
+					if (target.IsDead)
 						break;
+					if (u.IsValid) {
+						if (u.InHolder)
+							break;
+						if (!.CanSee(u))
+							break;
+					}
+				}
 			}
-		}
 }
 
 Sleep(15);//prevent possible loops with other commands

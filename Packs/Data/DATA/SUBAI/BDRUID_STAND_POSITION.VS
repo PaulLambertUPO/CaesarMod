@@ -13,6 +13,8 @@ if (.IsValid)
 			int i, d, best_dist, plr, rng, stamina_cost;
 			bool can_learn, can_hide, use_invisibility;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			plr = .player;
 			rng = .range;
 			stamina_cost = GetCmdStaminaCost("hide");

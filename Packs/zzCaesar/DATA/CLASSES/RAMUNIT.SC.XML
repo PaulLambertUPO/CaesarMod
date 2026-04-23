@@ -21,6 +21,7 @@
 	<method sig="advance" vs="data/subai/ram_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/ram_advance.vs" />
 	<method sig="capture" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="explore" vs="data/subai/do_nothing_point.vs" />
 
 	<behavior script="data/subai/summoning_behavior.vs" />
 

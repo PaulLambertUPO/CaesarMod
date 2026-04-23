@@ -17,7 +17,7 @@ if (.IsValid)
 					.AddCommand(true, "attack", target);
 					break;
 				}
-			
+
 			if (.Goto(pt, 0, 2000, false, 0))
 				break;
 		}

@@ -1640,12 +1640,12 @@
 <func name="Unit::SetFeeding" returns="void">
 	<param type="bool" />
 </func>
-<!-- Makes the unit perform the walk animation specified for the index 1 in its entity file in order to move it toward a destination point and returns whether the unit is within the distance specified by the first integer before/when the time limit specified by the second integer elapses; if the unit is stuck and cannot move, the boolean value makes it perform the animation specified for the index 20 in its entity file; if the unit has not been walking for the time specified by the last integer when the function starts, the entire script will be terminated unless the value is negative (useful for loops) -->
+<!-- Makes the unit perform the walk animation specified for the index 1 in its entity file in order to move it towards a destination point and returns whether the unit is within the distance specified by the first integer before/when the time limit specified by the second integer elapses; if the unit is stuck and cannot move, the boolean value makes it perform the animation specified for the index 20 in its entity file; if the unit has not been walking for the time specified by the last integer when the function starts, the entire script will be terminated unless the value is negative (useful for loops) -->
 <func name="Unit::Goto" returns="bool" latent="1">
 	<param type="point" /><!-- destination -->
 	<param type="int" /><!-- distance from the destination for success check -->
 	<param type="int" /><!-- time limit for distance evaluation -->
-	<param type="bool" /><!-- use of animation 20 if stuck -->
+	<param type="bool" /><!-- use of animation 20 if stuck (true = yes, false = no) -->
 	<param type="int" /><!-- time limit to kill the script when the function starts (equivalent to TimeWithoutWalking) | negative values will not kill the script -->
 </func>
 <func name="Unit::Goto" returns="bool" latent="1">
@@ -1717,7 +1717,7 @@
 </func>
 <func name="Unit::SetLastAttackTime" returns="void">
 </func>
-<!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found or if the unit is in a building, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
+<!-- Returns the nearest/best attackable enemy target in sight of the unit, following a specific priority order influenced by the "target_factor" property of the classes: military units and sages, then peasants and supply units, then catapults; it does not consider peaceful animals and buildings at all and, if no target is found or if the unit is in a building, it returns an invalid object | WARNING: it highly depends on the type of the unit it is called on: for detached units, it also considers nearby units as an extension of the sight (the "squad" in a ~225 range); for heroes and attached units/sages, it considers any unit of the army (hero included) as an extension of the unit's sight (if it is called on a hero, it considers the best target from the hero position even if there is an attached unit next to a far enemy and vice versa, following the priority order); for detached sages, it only returns catapults and only considers other sages as part of the squad | WARNING: it does not always return the nearest target (for example, a warrior might prefer to attack an enemy sage instead of a warrior even if the latter is closer) -->
 <func name="Unit::BestTargetInSquadSight" returns="Obj">
 </func>
 <!-- Works like BestTargetInSquadSight, but it uses the specified class id (not the hierarchy) as a preference filter for the priority order | WARNING: it can still return a target of a different class even if there are still some of the specified one in sight -->
@@ -1737,11 +1737,16 @@
 <!-- Works like BestTargetInSquadSight, but it gives more priority to units that have not been poisoned by either the disease_attack special or the Disease function | WARNING: it can still return a target who is diseased even if there are still some that are not -->
 <func name="Unit::BestTargetInSquadSight_PreferUndiseased" returns="Obj">
 </func>
+<!-- Returns the nearest/best attackable enemy target within the range of the unit (that is, for the current position) -->
 <func name="Unit::BestTargetForPos" returns="Obj">
 </func>
+<!-- Returns the nearest/best attackable enemy target for the unit within the radius of a point (that is, the range around it) -->
 <func name="Unit::BestTargetInRange" returns="Obj">
-	<param type="point" />
-	<param type="int" />
+	<param type="point" /><!-- point to find targets in -->
+	<param type="int" /><!-- radius of the point -->
+</func>
+<!-- Returns the nearest/best attackable enemy target in the GAIKA where the unit is, considering only Military and AttackAnimal hierarchies -->
+<func name="Unit::BestTargetInGAIKA" returns="Obj">
 </func>
 <func name="Unit::IsEnemyInSquadSight" returns="bool">
 </func>
@@ -1882,10 +1887,12 @@
 <func name="Unit::SpecialName" returns="str">
 	<param type="int" />
 </func>
+<!-- Returns the current status of the 'parry' special for the unit: 1 if the special is owned and active, 0 if owned and not active, -1 if not owned regardless of its activation -->
 <func name="Unit::GetParryMode" returns="int">
 </func>
+<!-- Activates or deactivates the 'parry' status for the unit | WARNING: it does nothing if the unit does not have the special -->
 <func name="Unit::SetParryMode" returns="void">
-	<param type="bool" />
+	<param type="bool" /><!-- activation value (true = set, false = unset) -->
 </func>
 <func name="Unit::Curse" returns="void">
 </func>
@@ -1913,20 +1920,22 @@
 <func name="LevelFromExp" returns="int">
 	<param type="int" />
 </func>
+<!-- Makes the hero perform the walk animation specified for the index 1 in its entity file in order to move towards a destination point, stopping when within the distance specified by the first integer and considering collisions with other entities based on the boolean value (useful when entering buildings); this function should be used in combination with FormKeepMoving and HasPath | WARNING: this function does not consider the speed_factor -->
+<func name="Hero::FormSetupAndMoveTo" returns="void" latent="1">
+	<param type="point" /><!-- destination -->
+	<param type="int" /><!-- distance from the point -->
+	<param type="int" /><!-- UNKNOWN (it might be a radius, but it does not seem to influence anything) -->
+	<param type="bool" /><!-- consider collisions for hero and army (true = yes, false = no)  -->
+</func>
+<!-- Works like the point version, but moves the hero towards an object instead and stops when the formation/army is next to it | WARNING: it can cause a crash when combined with FormKeepMoving, a formation/army too large and a target located among the attached units, it is better to always use only the point version of this function | WARNING: if the formation/army is already next to the target when the function is called, it can happen that the hero along with the attached units turn their back on the target -->
+<func name="Hero::FormSetupAndMoveTo" returns="void" latent="1">
+	<param type="Obj" /><!-- target -->
+	<param type="int" /><!-- distance from the target -->
+	<param type="int" /><!-- UNKNOWN (it might be a radius, but it does not seem to influence anything) -->
+	<param type="bool" /><!-- consider collisions for hero and army (true = yes, false = no) -->
+</func>
 <func name="Hero::FormKeepMoving" returns="void" latent="1">
 	<param type="int" />
-</func>
-<func name="Hero::FormSetupAndMoveTo" returns="void" latent="1">
-	<param type="point" />
-	<param type="int" />
-	<param type="int" />
-	<param type="bool" />
-</func>
-<func name="Hero::FormSetupAndMoveTo" returns="void" latent="1">
-	<param type="Obj" />
-	<param type="int" />
-	<param type="int" />
-	<param type="bool" />
 </func>
 <func name="Hero::TimePastLastAttack" returns="int">
 </func>
@@ -3625,8 +3634,6 @@
 	<param type="Obj" />
 	<param type="point" />
 	<param type="int" />
-</func>
-<func name="Unit::BestTargetInGAIKA" returns="Obj">
 </func>
 <func name="Unit::AI" returns="bool">
 </func>

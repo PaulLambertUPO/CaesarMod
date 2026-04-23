@@ -6,32 +6,59 @@ if (target.IsAlive) {
 	this = This.AsHero();
 
 	if (.IsValid)
-		if (.IsAlive) {
-			Unit u;
+		if (.IsAlive)
+			if (target != this)
+				if (target.AsUnit().IsValid) {
+					Unit u;
 
-			u = target.AsUnit();
+					u = target.AsUnit();
 
-			if (u.IsValid) {
-				if (u.InHolder) {
-					Sleep(15);//prevent possible loops with other commands
-					return;
+					if (!u.InHolder)
+						if (.CanSee(u))
+							if (.army.Contains(u))
+								.AddCommand(true, "move", u.pos);
+							else {
+								if (!.InHolder)
+									if (.DistTo(u) < 100) {
+										Sleep(15);//prevent possible loops with other commands
+										return;
+									}
+
+								.FormSetupAndMoveTo(u.pos, 0, 0, true);
+
+								while (.HasPath) {
+									.FormKeepMoving(1500);
+									if (u.IsDead)
+										break;
+									if (u.InHolder)
+										break;
+									if (!.CanSee(u))
+										break;
+									if (.army.Contains(u))
+										break;
+									if (.DistTo(u) < 100)
+										break;
+									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+								}
+							}
 				}
-				.FormSetupAndMoveTo(target, 0, 0, false);
-			}
-			else
-				.FormSetupAndMoveTo(target.pos, 0, 0, false);
+				else {
+					if (!.InHolder)
+						if (.DistTo(target) < 100) {
+							Sleep(15);//prevent possible loops with other commands
+							return;
+						}
 
-			while (target.IsAlive) {
-				if (u.IsValid)
-					if (u.InHolder)
-						break;
-				if (!.HasPath)
-					break;
-				if (.DistTo(target) < 100)
-					break;
-				.FormKeepMoving(1500);
-			}
-		}
+					.FormSetupAndMoveTo(target.pos, 0, 0, true);
+
+					while (.HasPath) {
+						if (target.IsDead)
+							break;
+						if (.DistTo(target) < 100)
+							break;
+						.FormKeepMoving(1500);
+					}
+				}
 }
 
 Sleep(15);//prevent possible loops with other commands

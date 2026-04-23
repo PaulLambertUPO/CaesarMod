@@ -1,30 +1,23 @@
-// void, Obj This, Obj obj
+//void, Obj This, Obj other
 
-Unit  this;
-Ship  ship;
-ObjList ol;
+Unit this;
 
-this = This.AsUnit;
-ship = obj.AsShip;
+this = This.AsUnit();
 
-if(.IsValid() == true && IsAIPlayer(.player) == true) // leave parry mode at new command
-	.SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive)
+		if (!.InShip) {
+			Ship sh;
 
-if( ship.IsValid() == true) 
-{
-	ol = ship.GetUnitsOnBoard;
-	if(ol.Contains(this) == false) 
-	{
-		//La nave si avvicina all'unità solo se appartengono allo stesso giocatore o solo se sono alleati con "condividi controllo" attivo:
-		if(ship.player() == .player() || DiplGetShareControl(ship.player(), .player()) == true)
-		{
-			ship.NotifyBoardUnit(this);
-		}	//Fine if.
-		else
-		{
-			.AddCommand(false, "boardship", obj);
-		}	//Fine else.
-		
-		.AddCommand(true, "boardshipcommon", obj);
-	}
-}
+			sh = other.AsShip();
+
+			if (sh.IsValid)
+				if (sh.IsAlive)
+					if (DiplGetShareControl(sh.player, .player))
+						if (sh.UnitsCount < sh.UnitsMax) {
+							sh.NotifyBoardUnit(this);
+							.AddCommand(true, "boardshipcommon", sh);
+						}
+		}
+
+Sleep(15);//prevent possible loops with other commands

@@ -42,7 +42,8 @@ if (.IsValid)
 						.SetEntering(true);
 
 						while (!.GotoEnter(pt, 0, 1000, false, 2500))
-							;
+							if (.IsEnemy(bld))
+								break;
 
 						if (!.IsEnemy(bld)) {
 							Settlement set;

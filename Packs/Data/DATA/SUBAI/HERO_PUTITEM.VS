@@ -1,25 +1,48 @@
-// void, Obj me, Item item, Obj h
+//void, Obj This, Item item, Obj other
 
-Hero        this;
-ItemHolder  holder;
-point      pt;
+Hero this;
 
-this = me.AsHero ();
-holder = h.AsItemHolder ();
+this = This.AsHero();
 
-if (.PathTo (holder, .FormRadius (), 0) > .FormRadius ())
-{
-	.FormSetupAndMoveTo (holder, GetConst("GiveDistance"), 0, true);
-	while (.HasPath ())
-	{
-		.FormKeepMoving (1500);
+if (.IsValid)
+	if (.IsAlive) {
+		ItemHolder holder;
+
+		holder = other.AsItemHolder();
+
+		if (holder.IsValid) {
+			if (holder.DistTo(.posRH) >= 1000) {
+				.FormSetupAndMoveTo(holder.pos, 0, 0, true);
+				while (.HasPath) {
+					if (!holder.IsValid)
+						break;
+					if (.GetItemIndex(item) == -1)
+						break;
+					if (.DistTo(holder) < 1000)
+						break;
+					.FormKeepMoving(1500);
+				}
+			}
+
+			.army.SetCommand("idle");
+
+			if (holder.IsValid) {
+				while (!.Goto(holder, 25, 2500, false, 5000)) {
+					if (!holder.IsValid)
+						break;
+					if (.GetItemIndex(item) == -1)
+						break;
+				}
+
+				if (holder.IsValid)
+					if (.PutItem(item, holder)) {
+						if (.HasSpecial(sneak))
+							.SetLastAttackTime();
+						if (!.IsVisible)
+							.SetVisible(true);
+					}
+			}
+		}
 	}
-	pt = .pos;
-}
-else
-	pt.Set (-1, -1);
-.army.SetCommand("idle");
-while(!.Goto (holder, GetConst("GiveDistance"), 1500, false, 5000));
-.PutItem (item, holder);
-if (pt.x != -1)
-  while (!.Goto (pt, 0, 1500, false, 5000));
+
+Sleep(15);//prevent possible loops with other commands

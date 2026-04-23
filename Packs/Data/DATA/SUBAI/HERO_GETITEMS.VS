@@ -1,27 +1,43 @@
-// void, Obj This, Obj other
+//void, Obj This, Obj other
 
 Hero this;
-ItemHolder holder;
 
-this = This.AsHero;
-if (!.IsValid)
-	return;
-holder = other.AsItemHolder;
-if (!holder.IsValid)
-	return;
+this = This.AsHero();
 
-if (.PathTo(holder, .FormRadius, 0) > .sight)
-{
-	.FormSetupAndMoveTo(holder, GetConst("GiveDistance"), 0, true);
-	while (.HasPath)
-		.FormKeepMoving(1500);
-}
+if (.IsValid)
+	if (.IsAlive) {
+		ItemHolder holder;
 
-.army.SetCommand("idle");
-while (!.Goto(holder, GetConst("GiveDistance"), 1500, false, 5000));
-if (holder.IsValid)
-	.OpenItemHolder(holder);
-if (.AI)
-	return;
-if (.HasArmy) 
-	while (!.Goto(.posRH, 0, 1500, false, 5000));
+		holder = other.AsItemHolder();
+
+		if (holder.IsValid) {
+			if (holder.DistTo(.posRH) >= 600) {
+				.FormSetupAndMoveTo(holder.pos, 0, 0, true);
+				while (.HasPath) {
+					if (!holder.IsValid)
+						break;
+					if (.DistTo(holder) < 600)
+						break;
+					.FormKeepMoving(1500);
+				}
+			}
+
+			.army.SetCommand("idle");
+
+			if (holder.IsValid) {
+				while (!.Goto(holder, 25, 2500, false, 5000))
+					if (!holder.IsValid)
+						break;
+
+				if (holder.IsValid)
+					if (.OpenItemHolder(holder)) {
+						if (.HasSpecial(sneak))
+							.SetLastAttackTime();
+						if (!.IsVisible)
+							.SetVisible(true);
+					}
+			}
+		}
+	}
+
+Sleep(15);//prevent possible loops with other commands

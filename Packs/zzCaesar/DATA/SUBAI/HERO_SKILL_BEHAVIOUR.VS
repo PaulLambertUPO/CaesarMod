@@ -126,7 +126,7 @@ if (.IsValid) {
 						* (100 - (90 - army_health * 100 / army_max_health)) / 100    //80% -> no weight change, 91%+ -> higher weight, 89%- -> lower weight
 						* (100 + (30 - army_stamina * 100 / army_max_stamina)) / 100; //30% -> no weight change, 31%+ -> lower weight, 29%- -> higher weight
 			}
-			
+
 			j = 0;
 			cmd_skill = "";
 			while (true) {

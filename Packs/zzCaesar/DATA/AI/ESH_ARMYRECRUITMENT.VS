@@ -161,7 +161,7 @@ if (!bDesperateDefence) {
 									break;
 								}
 						}
-						else if (!sqLeader.HasFreedom())//unattached units
+						else if (!sqLeader.HasFreedom)//detached units
 							i += sq.Size;
 					}
 			}

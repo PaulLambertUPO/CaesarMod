@@ -9,18 +9,21 @@ if (.IsValid)
 		if (other != this) {
 			Unit followed_unit;
 
-			if (IsAIPlayer(.player))
-				.SetParryMode(false);
-
 			followed_unit = other.AsUnit();
 
 			if (followed_unit.IsValid)
 				if (!followed_unit.IsSentry)
 					if (!followed_unit.IsWaterUnit) {
-						Settlement set_this, set_followed_unit, invalid;
+						Settlement set_followed_unit;
 						Building hall;
 						Obj teleport;
 						point enter_point;
+						int plr;
+
+						plr = .player;
+
+						if (IsAIPlayer(plr))
+							.SetParryMode(false);
 
 						while (followed_unit.IsAlive) {
 							if (.IsEnemy(followed_unit))
@@ -28,26 +31,26 @@ if (.IsValid)
 							if (!.CanSee(followed_unit))
 								break;
 
-							teleport = FindTeleport(.player, .posRH, followed_unit.posRH);
+							teleport = FindTeleport(plr, .posRH, followed_unit.posRH);
 							if (teleport.IsValid) {
 								if (.AI) {
 									.AddCommand(true, "follow", followed_unit);
 									.AddCommand(true, "teleport", teleport);
 									break;
 								}
-								if (.posRH.Dist(teleport.pos) <= 1000) {
+								if (Dist(.posRH, teleport.pos) <= 1000) {
 									.AddCommand(true, "follow", followed_unit);
 									.AddCommand(true, "teleport", teleport);
 									break;
 								}
 							}
 
-							if (followed_unit.InHolder) {
-								set_followed_unit = followed_unit.GetHolderSett();
-								if (set_followed_unit.IsValid)
-									if (set_this == set_followed_unit)
-										Sleep(3000);
-									else {
+							if (followed_unit.InHolder)
+								if (.SameHolderAs(followed_unit))
+									Sleep(3000);
+								else {
+									set_followed_unit = followed_unit.GetHolderSett();
+									if (set_followed_unit.IsValid) {
 										hall = set_followed_unit.GetCentralBuilding();
 										if (hall.IsValid) {
 											if (hall.IsHeirOf("BaseRuins")) {
@@ -59,41 +62,37 @@ if (.IsValid)
 												continue;
 											}
 											enter_point = hall.GetEnterPoint(this);
-											while (true) {
-												if (followed_unit.IsDead)
-													break;
+											.SetEntering(true);
+											while (followed_unit.IsAlive) {
 												if (.IsEnemy(followed_unit))
 													break;
 												if (!.CanSee(followed_unit))
 													break;
 												if (followed_unit.InHolder) {
-													.SetEntering(true);
 													if (.GotoEnter(enter_point, 0, 1000, false, -1)) {
 														set_followed_unit.AddUnit(this);
-														set_this = set_followed_unit;
 														break;
 													}
 												}
 												else
 													break;
 											}
+											.SetEntering(false);
 										}
 									}
-								else if (!.GetShip().IsValid) {
-									Ship s;
-									s = followed_unit.GetShip();
-									if (s.IsValid)
-										if (.posRH.Dist(s.pos) <= 1200)
-											.AddCommand(true, "boardship", s);
-									break;
+									else if (.InShip)
+										break;
+									else {
+										Ship s;
+										s = followed_unit.GetShip();
+										if (s.IsValid)
+											if (Dist(.posRH, s.pos) <= 1200)
+												.AddCommand(true, "boardship", s);
+										break;
+									}
 								}
-							}
-							else {
-								set_this = invalid;
-								.SetEntering(false);
-								if (.Goto(followed_unit, 70, 1000, false, -1))
-									Sleep(1500);
-							}
+							else if (.Goto(followed_unit, 70, 1000, false, -1))
+								Sleep(1500);
 						}
 					}
 		}

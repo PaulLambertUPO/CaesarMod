@@ -17,6 +17,8 @@
 
 	<method sig="move" vs="data/subai/crow_move.vs" />
 	<method sig="approach" vs="data/subai/crow_approach.vs" />
+	<method sig="stand_position" vs="data/subai/do_nothing_void.vs" />
+	<method sig="explore" vs="data/subai/do_nothing_point.vs" />
 
 	<nodefcmdinherit />
 

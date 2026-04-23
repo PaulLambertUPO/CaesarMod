@@ -1,113 +1,55 @@
 //void, Obj This
 
-Building this;
-ObjList l, p;
-point pt;
-int i, nOldPlayer, max;
-Query ProtectiveArea;
-Query Alert;
-int traverse_ptr;
-Unit u;
+Sleep(1000 + rand(1001));
 
-Query q1, q2, q3, q4;
-Query cq1, cq2, cq3;
-Query in, out;
+if (This.AsBuilding().IsValid) {
+	Settlement this;
+	ObjList ol;
+	point pt_pos, pt;
+	int plr, rad, write_alert;
 
-this = This.AsBuilding();
+	this = This.AsBuilding().settlement;
 
-nOldPlayer = -1; //important for query init below
+	pt_pos = This.pos;
 
-Sleep(rand(1000) + 500);
+	plr = .player;
+	rad = This.radius + 10;
 
-if(!.IsValid()) {
-	Sleep(10000);//will restart after 10 seconds
-	return;
-}
+	while (true) {
+		if (.player != plr)
+			plr = .player;
 
-traverse_ptr = 0;
-while(true)
-{
-	if (.player != nOldPlayer)
-	{
-		//recalc the query, .player has changed! (or first-time run)
-		out = ObjsInSight(this,"Unit");
-		in = UnitsInSettlement(.settlement, "Unit");
-		ProtectiveArea = Union(in, out);
-		
-                //the Queries are well known among the script programmers as being very broken :)
-                //don't try to rewrite these, as you may break something!!! (sometimes complex expressions
-                //with queries don't behave correctly
+		pt.Set(rad, 0);
+		pt.Rot(rand(360));
+		.Units.ObjEnemy(plr).SetCommand("advance", pt + pt_pos);//send away enemy units inside
 
-		q1 = EnemyObjs(.player(), "Unit");
-		q2 = EnemyObjs(.player(), "Animal");
-		q3 = EnemyObjs(.player(), "Peaceful");
-		q4 = EnemyObjs(.player(), "BaseMage");
-		
+		ol = Intersect(
+			VisibleObjsInSight(This, "Military,BaseMage,AttackAnimal,GGhostUnit,Catapult"),
+			Union(EnemyObjs(plr, "Unit"), EnemyObjs(plr, "Catapult"))
+		).GetObjList();
 
-		cq1 = Intersect(ProtectiveArea, q1);
-		cq2 = Union(q2, q3);
-		cq3 = Union(cq2, q4);
-		Alert = Substract(cq1, cq3);
-
-		nOldPlayer = .player; //to avoid multiple .player calls update this now
-	}
-	//wait enemies to come. Check from time to time if the player was changed
-	while (nOldPlayer == .player())
-	{
-		WaitQueryCountBetween(Alert,1,-1,2000);
-		l = Alert.GetObjList();
-		if (l.count > 0)
-			break;
-	}
-
-	//get all non-mine units out!
-	pt = Point(.radius + 10,0);
-	pt.Rot(rand(360));
-	pt = pt + .pos;
-	p = .settlement().Units();
-	p.ClearDead();
-	for (i = 0; i < p.count; i += 1)
-	{
-		u = p[i].AsUnit();
-		if (!u.IsValid()) continue;
-		if (!.IsEnemy(u)) continue;
-		if (u.hero.IsValid()) continue;
-		u.SetCommand("advance", pt);
-	}
-
-	//attack enemy
-	if ((l.count()!=0) && (.settlement.loyalty < GetConst("LoyaltyUnitsOutTreshold")))
-	{
-		Unit u;
-		int start_traverse;
-		
-		EnvWriteInt(.settlement, "EnemiesAlert", 1);
-		
-		pt = l[rand(l.count)].posRH();
-		l = .settlement().Units();
-		max = l.count();
-
-		if (max) {
-			p.Clear();
-			traverse_ptr = traverse_ptr % max;
-			start_traverse = traverse_ptr;
-			for (i = 0; i < 50; i += 1) {
-				u = l[traverse_ptr].AsUnit();
-				if (u.IsValid) if(!u.hero.IsValid()) {
-					p.Add(u);
-				}
-				traverse_ptr = (traverse_ptr + 1) % max;
-				if (start_traverse == traverse_ptr)
-					break;
+		if (ol.count > 0) {
+			if (write_alert != 1) {
+				EnvWriteInt(this, "EnemiesAlert", 1);//EnemiesAlert is used in "GS_KillEnemies.vs"
+				write_alert = 1;
 			}
-			//Command Stack
-			p.AddCommand(true,"enter",this);
-			p.AddCommand(true,"advance",pt);
-			p.KillCommand();
+
+			pt = ol[0].pos;
+
+			ol = .Units;
+
+			ol.SetCommand("advance", pt);
+			ol.AddCommand(false, "advanceenter", This);
 		}
-		Sleep(500);
-		continue;
+		else if (write_alert != 0) {
+			EnvWriteInt(this, "EnemiesAlert", 0);
+			write_alert = 0;
+		}
+
+		Sleep(2000);
 	}
-	EnvWriteInt(.settlement, "EnemiesAlert", 0);
-	Sleep(1000);
 }
+
+//without this instruction, the game crashes
+while (true)
+	Sleep(3600000);

@@ -8,7 +8,7 @@
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Tavern SW" />
 
 	<behavior script="data/subai/RTavern_Enable_Or_Disable_Cmd.vs" />
-	
+
 	<method sig="buyfoodforgold" vs="data/subai/tavern_buyfood.vs" />
 	<method sig="scoutarea" vs="data/subai/explore_area_no_reveal.vs" />
 	<method sig="invest" vs="data/subai/tavern_investment.vs" />

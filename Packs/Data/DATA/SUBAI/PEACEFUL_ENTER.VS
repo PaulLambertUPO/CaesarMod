@@ -50,7 +50,8 @@ if (!other.AsCatapult().IsValid) {
 										.SetEntering(true);
 
 										while (!.GotoEnter(pt, 0, 1000, false, 2500))
-											;
+											if (.IsEnemy(bld))
+												break;
 
 										if (!.IsEnemy(bld))
 											if (DiplGetShareView(bld.player, .player))

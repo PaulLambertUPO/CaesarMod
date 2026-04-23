@@ -8,14 +8,23 @@ if (.IsValid)
 	if (.IsAlive)
 		if (!.InHolder) {
 			Obj o;
-			bool melee;
+			bool this_ai, melee;
 
+			Sleep(rand(151));//avoid "thundering herd" for multiple units start the command simultaneously
+
+			this_ai = .AI;
 			melee = !.IsRanged;
 
 			if (IsAIPlayer(.player))
 				.SetParryMode(false);
 
-			o = .BestTargetInSquadSight;
+			if (this_ai)
+				if (rand(5) == 0)
+					o = .BestTargetInSquadSight;
+				else
+					o = .BestTargetInSquadSightMisZeroDamage;
+			else
+				o = .BestTargetInSquadSight;
 
 			while (.IsValidTarget(o)) {
 				if (.GotoAttack(o, 1500, true, 15000))
@@ -30,7 +39,13 @@ if (.IsValid)
 							while (.Attack(o))
 								;
 
-				o = .BestTargetInSquadSight;
+				if (this_ai)
+					if (rand(5) == 0)
+						o = .BestTargetInSquadSight;
+					else
+						o = .BestTargetInSquadSightMisZeroDamage;
+				else
+					o = .BestTargetInSquadSight;
 			}
 		}
 

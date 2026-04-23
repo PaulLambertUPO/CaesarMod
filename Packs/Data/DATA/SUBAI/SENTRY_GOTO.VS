@@ -1,8 +1,8 @@
-//void, Obj me, point pt
+//void, Obj This, point pt
 
 Unit this;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive)

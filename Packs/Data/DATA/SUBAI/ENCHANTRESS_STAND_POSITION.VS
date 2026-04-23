@@ -11,6 +11,8 @@ if (.IsValid)
 			int teaching_level, teaching_level_max, stamina_cost, teach_percent, learnings;
 			bool use_teaching;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			teaching_level = GetConst("TeachingLevel1");
 			teaching_level_max = GetConst("TeachingLevel2");
 			stamina_cost = GetCmdStaminaCost("teach");

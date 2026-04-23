@@ -12,6 +12,8 @@ if (.IsValid)
 			int plr, teaching_level, teaching_level_max, stamina_cost, teach_percent, learnings;
 			bool go_to_hero, use_teaching;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			plr = .player;
 			teaching_level = GetConst("TeachingLevel1");
 			teaching_level_max = GetConst("TeachingLevel2");

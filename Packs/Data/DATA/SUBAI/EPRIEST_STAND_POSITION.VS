@@ -11,6 +11,8 @@ if (.IsValid)
 			int stamina_cost, learnings;
 			bool use_cripple;
 
+			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 			stamina_cost = GetCmdStaminaCost("cripple");
 
 			while (.CmdCount <= 1)//avoid blocking pending commands forever

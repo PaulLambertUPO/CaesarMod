@@ -1,4 +1,4 @@
-<class id="BaseHouse" cpp_class="CVXBuilding" parent="BaseBuilding">
+<class id="BaseHouse" parent="BaseBuilding" cpp_class="CVXBuilding">
 	<properties maxhealth="1000" />
 	<properties auto_repair="yes" />
 	<properties interface="thumb,building" />

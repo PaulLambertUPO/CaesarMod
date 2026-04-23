@@ -6,4 +6,5 @@
 	<properties icon="gameres/icons/TTownhall.bmp" />
 	<properties help="contents/buildings/TTownhall" />
 	<properties edittree_pos="Structures/Stronghold (Germany)/Townhall" />
+	<method sig="military_training" vs="data/subai/townhall_military_training.vs" />
 </class>

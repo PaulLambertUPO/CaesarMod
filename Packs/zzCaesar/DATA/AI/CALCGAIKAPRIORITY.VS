@@ -55,6 +55,6 @@ return MAX(
 	1,
 	MIN(
 		MaxGAIKAPriority - 1,
-		nActualPerc * (MaxGAIKAPriority * (100 - nHomeDist * 100 / Point(rcMap.left, rcMap.top).Dist(Point(rcMap.right, rcMap.bottom))) / 100) / 100
+		nActualPerc * (MaxGAIKAPriority * (100 - nHomeDist * 100 / Dist(Point(rcMap.left, rcMap.top), Point(rcMap.right, rcMap.bottom))) / 100) / 100
 	)
 );//it must be greater than 0

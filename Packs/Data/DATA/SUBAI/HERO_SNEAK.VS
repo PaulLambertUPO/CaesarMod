@@ -10,8 +10,8 @@ if (.IsValid)
 
 		.FormSetupAndMoveTo(pt, 0, 0, true);
 
-		while (!.IsArmyOutside)
-			.FormKeepMoving(500);
+		if (!.IsArmyOutside)
+			.FormKeepMoving(750);
 
 		while (.HasPath) {
 			o = .BestTargetInSquadSightMisZeroDamage;

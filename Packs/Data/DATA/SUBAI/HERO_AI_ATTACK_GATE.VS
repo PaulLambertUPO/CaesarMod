@@ -7,14 +7,14 @@ if (g.AsGate().IsValid) {
 
 	if (.IsValid)
 		if (.IsAlive) {
-			.FormSetupAndMoveTo(g.pos, 0, 0, true);
-
-			while (.HasPath) {
-				if (.DistTo(g) < .sight + 100)
-					break;
-				.FormKeepMoving(1500);
+			if (g.DistTo(.posRH) >= 450) {
+				.FormSetupAndMoveTo(g.pos, 0, 0, true);
+				while (.HasPath) {
+					if (.DistTo(g) < 450)
+						break;
+					.FormKeepMoving(1500);
+				}
 			}
-
 			.army.SetCommand("ai_attack_gate", g);
 		}
 }

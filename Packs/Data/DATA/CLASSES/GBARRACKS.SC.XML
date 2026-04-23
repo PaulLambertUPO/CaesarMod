@@ -2,7 +2,7 @@
 
 	<properties race="Gaul" />
 	<properties radius="190" selection_radius="220" />
-	
+
 	<properties icon="gameres/icons/Gbarracks.bmp" />
 	<properties help="contents/buildings/GBarracks" />
 	<properties edittree_pos="Structures/Stronghold (Gaul)/Barracks" />

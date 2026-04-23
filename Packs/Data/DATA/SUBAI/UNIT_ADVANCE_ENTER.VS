@@ -24,10 +24,7 @@ if (!other.AsCatapult().IsValid)
 
 									set = bld.settlement;
 
-									if (set.max_units > 0) {
-										if (.AsHero().IsValid)
-											.AsHero().army.SetCommand("advanceenter", bld);
-
+									if (set.max_units > 0)
 										if (!set.Units.Contains(this)) {
 											point pt;
 
@@ -47,9 +44,10 @@ if (!other.AsCatapult().IsValid)
 															set.AddUnit(this);
 													break;
 												}
+												if (.IsEnemy(bld))
+													break;
 											}
 										}
-									}
 								}
 			}
 	}

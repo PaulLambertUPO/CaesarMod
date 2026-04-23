@@ -10,6 +10,8 @@ if (.IsValid)
 			Obj o;
 			int i, disease_cost;
 
+			Sleep(rand(151));//avoid "thundering herd" for multiple units start the command simultaneously
+
 			if (IsAIPlayer(.player))
 				.SetParryMode(false);
 

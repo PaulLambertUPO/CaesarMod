@@ -3343,7 +3343,7 @@ Inicia el entrenamiento de las unidades alojadas en el foro.
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Hire Sentries.bmp" link="/contents/units/HToxotes">
 Contratar centinelas
-Contrata a 10 centinelas para ayudar a defender la fortaleza.
+Contrata hasta 10 centinelas para ayudar a defender la fortaleza.
 Coste: 1000 oro
 Tiempo: instantáneo
 				</entry>
@@ -5967,7 +5967,7 @@ Concentra el fuego en un objetivo específico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Lanzar salida
-Hace avanzar a todas las unidades hacia la posición especificada.
+Ordena a las unidades dentro de la estructura avanzar hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
@@ -5996,7 +5996,7 @@ Concentra el fuego en un objetivo específico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Lanzar salida
-Hace avanzar a todas las unidades hacia la posición especificada.
+Ordena a las unidades dentro de la estructura avanzar hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Sell Food.bmp">
 Vender víveres
@@ -6035,7 +6035,7 @@ Concentra el fuego en un objetivo específico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Lanzar salida
-Hace avanzar a todas las unidades hacia la posición especificada.
+Ordena a las unidades dentro de la estructura avanzar hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
@@ -6064,7 +6064,7 @@ Concentra el fuego en un objetivo específico.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Lanzar salida
-Hace avanzar a todas las unidades hacia la posición especificada.
+Ordena a las unidades dentro de la estructura avanzar hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro
@@ -6088,7 +6088,7 @@ El nivel de los centinelas aumenta en 1 punto cada minuto hasta que alcance 36, 
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Advance.bmp">
 Lanzar salida
-Hace avanzar a todas las unidades hacia la posición especificada.
+Ordena a las unidades dentro de la estructura avanzar hacia la posición especificada.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Tribute.bmp">
 Establecer ruta de suministro

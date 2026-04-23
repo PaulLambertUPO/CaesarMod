@@ -62,7 +62,7 @@ if (set.IsIndependent) {
 				u.SetNoAIFlag(true);
 				all_defenders_1.Add(u);
 			}
-			
+
 		defenders_class = .GetDefenderCls(2);
 
 		if (defenders_class != "")
@@ -122,7 +122,7 @@ if (set.IsIndependent) {
 
 		enemies = Union(
 			Intersect(
-				VisibleObjsInSight(this, "Unit"),
+				VisibleObjsInSight(this, "Military,BaseMage"),
 				Subtract(
 					Intersect(
 						ObjsInRange(this, "Unit", rng),
@@ -302,7 +302,7 @@ else
 		else {
 			is_selling_food = EnvReadString(set, "GOutpostSellFood") == "yes";
 			is_selling_gold = EnvReadString(set, "GOutpostSellGold") == "yes";
-	
+
 			if (!.IsBroken) {
 				if (is_selling_food)
 					if (set.food >= food_sales) {

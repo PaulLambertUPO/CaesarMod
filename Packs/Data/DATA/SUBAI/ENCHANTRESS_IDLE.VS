@@ -12,6 +12,8 @@ if (.IsValid)
 		int plr, rng, teaching_level, teaching_level_max, stamina_cost, teach_percent, learnings;
 		bool go_back, use_teaching;
 
+		Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 		pt_start = .posRH;
 
 		plr = .player;
@@ -160,8 +162,7 @@ if (.IsValid)
 					}
 					else if (.AI)
 						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
-							pt = .pos;
-							pt.Set(pt.x + 250 - rand(501), pt.y + 250 - rand(501));
+							pt = .pos + RandomOffset(500);
 							if (pt.InRect(GetMapRect()))
 								if (IsPassable3x3(pt))
 									if (!IsWaterLsa(pt.GetGAIKA().LSA))

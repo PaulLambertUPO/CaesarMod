@@ -5,4 +5,5 @@
 	<properties icon="gameres/icons/Itownhall.bmp" />
 	<properties help="contents/buildings/ITownhall" />
 	<properties edittree_pos="Structures/Stronghold (Iberia)/Townhall" />
+	<method sig="healing" vs="data/subai/townhall_healing.vs" />
 </class>

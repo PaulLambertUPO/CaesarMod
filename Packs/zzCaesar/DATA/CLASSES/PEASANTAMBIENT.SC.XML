@@ -11,6 +11,7 @@
 	<properties healthbar_type="0" />
 	<properties no_transparent_draw="1" />
 
+	<method sig="move" vs="data/subai/peasant_ambient_move.vs" />
 	<method sig="enter" vs="data/subai/peasant_enter.vs" verify="data/subai/peasant_enter_verify.vs" />
 	<method sig="enteralone" vs="data/subai/peasant_enter.vs" verify="data/subai/peasant_enter_verify.vs" />
 

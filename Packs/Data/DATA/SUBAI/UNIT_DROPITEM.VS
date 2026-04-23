@@ -1,12 +1,24 @@
-// void, Obj me, Item item, point pt
+//void, Obj This, Item item, point pt
 
 Unit this;
-ItemHolder holder;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
-if (.IsValid) // leave parry mode at new command
- .SetParryMode(false);
+if (.IsValid)
+	if (.IsAlive) {
+		if (IsAIPlayer(.player))
+			.SetParryMode(false);
 
-while(!.Goto(pt, GetConst("GiveDistance"), 1500, true, 5000));
-.DropItem(item, pt); // Ako stane - stane :)
+		while (!.Goto(pt, 25, 2500, false, 5000))
+			if (.GetItemIndex(item) == -1)
+				break;
+
+		if (.DropItem(item, pt)) {
+			if (.HasSpecial(sneak))
+				.SetLastAttackTime();
+			if (!.IsVisible)
+				.SetVisible(true);
+		}
+	}
+
+Sleep(15);//prevent possible loops with other commands

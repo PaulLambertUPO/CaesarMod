@@ -2,7 +2,7 @@
 
 	<properties race="Egypt" />
 	<properties radius="165" selection_radius="170" />
-	
+
 	<properties display_name="Temple of Horus and Anubis" />
 	<properties icon="gameres/icons/ETempleOfHorusAndAnubis.bmp" />
 	<properties help="contents/buildings/ETempleOfHorusAndAnubis" />

@@ -6,4 +6,5 @@
 	<properties help="contents/buildings/RTownhall" />
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Townhall" />
 	<behavior script="data/subai/RTownhall_Enable_Or_Disable_Cmd.vs" />
+	<method sig="military_training" vs="data/subai/townhall_military_training.vs" />
 </class>

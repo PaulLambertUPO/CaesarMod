@@ -9,6 +9,6 @@
 	<properties edittree_pos="Structures/Stronghold (Iberia)/Sanctuary" />
 
 	<behavior script="data/subai/itemple_anim.vs" />
-	
+
 	<sounds select="TempleSelect" />
 </class>

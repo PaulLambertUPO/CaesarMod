@@ -22,6 +22,8 @@
 	<method sig="attack" vs="data/subai/sentry_attack.vs" />
 	<method sig="disappear" vs="data/subai/sentry_disappear.vs" />
 	<method sig="ondie" vs="data/subai/sentry_ondie.vs" />
+	<method sig="stand_position" vs="data/subai/do_nothing_void.vs" />
+	<method sig="explore" vs="data/subai/do_nothing_point.vs" />
 
 	<nodefcmdinherit />
 

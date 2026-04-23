@@ -39,7 +39,7 @@ if (.IsValid)
 						o = .BestTargetForPos;
 					}
 				}
-				if (.Stop(2000))
+				if (.Stop(500))
 					Sleep(500);
 			}
 		}

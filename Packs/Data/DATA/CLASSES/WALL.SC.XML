@@ -5,7 +5,7 @@
 	<properties radius="110" selection_radius="110" />
 	<properties display_name="Wall" />
 	<properties help="contents/buildings/Fortification" />
-	
+
 	<behavior script="data/subai/wall_patrol.vs" />
 
 	<value0 icon="gameres/infobar/common/pop ico.bmp"

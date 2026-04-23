@@ -74,8 +74,8 @@ while (1) {
 										if (bCheck) {
 											point ptBld;
 											int nDist, nSight;
-											sqLeader.SetVisible(true);
 											sqLeader.SetLastAttackTime();
+											sqLeader.SetVisible(true);
 											ptBld = setGkInCentralBuilding.pos;
 											nDist = sqLeader.DistTo(ptBld);
 											nSight = setGkInCentralBuilding.sight * 2 / 3;
@@ -125,8 +125,8 @@ while (1) {
 								if (sqLeader.command == "ai_killall" || sqLeader.command == "idle" || sqLeader.command == "stand_position") {
 									if (setGkAiDest.IsValid)
 										if (!sqLeader.IsVisible) {
-											sqLeader.SetVisible(true);
 											sqLeader.SetLastAttackTime();
+											sqLeader.SetVisible(true);
 										}
 									if (sq.StateTime > 60000)
 										if (setGkAiDest.IsValid) {

@@ -631,12 +631,16 @@
 <translationtableentry text="Load a caravan with 1000 gold" result="Cargar unidad de suministro con 1000 oro" />
 <translationtableentry text="Refreshment" result="Descanso del guerrero" />
 <translationtableentry text="Completely restores the stamina of all nearby allies" result="Restablece completamente la energía de todos los aliados cercanos" />
+<translationtableentry text="There are no allies to revitalize around the settlement" result="No hay aliados que deben revitalizarse alrededor del asentamiento" />
 <translationtableentry text="Healing" result="Curación" />
 <translationtableentry text="Distributes up to 2000 health among nearby allies" result="Distribuye hasta 2000 puntos de salud entre los aliados cercanos" />
+<translationtableentry text="There are no allies to heal around the settlement" result="No hay aliados que deben curarse alrededor del asentamiento" />
 <translationtableentry text="Military training" result="Adiestramiento forzoso" />
 <translationtableentry text="Adds 1 level to all nearby allies (up to level 10)" result="Aumenta el nivel de todos los aliados cercanos en 1 punto (hasta el nivel 10)" />
+<translationtableentry text="There are no allies to train around the settlement" result="No hay aliados que deben entrenarse alrededor del asentamiento" />
 <translationtableentry text="Hire Sentries" result="Contratar centinelas" />
-<translationtableentry text="Hires 10 Sentries to help protect the stronghold" result="Contrata a 10 centinelas para ayudar a defender la fortaleza" />
+<translationtableentry text="Hires up to 10 sentries to help protect the stronghold" result="Contrata hasta 10 centinelas para ayudar a defender la fortaleza" />
+<translationtableentry text="No additional sentries can be hired" result="Imposible contratar centinelas adicionales" />
 <!-- end townhall commands -->
 <!-- start barracks commands -->
 <translationtableentry text="Fast warrior equipment" result="Equipamiento rápido de guerreros I" />
@@ -1139,7 +1143,7 @@
 <!-- end village commands -->
 <!-- start outpost commands -->
 <translationtableentry text="Launch sortie" result="Lanzar salida" />
-<translationtableentry text="Makes all units advance towards the specified position" result="Hace avanzar a todas las unidades hacia la posición especificada" />
+<translationtableentry text="Orders units inside the building to advance towards the specified position" result="Ordena a las unidades dentro de la estructura avanzar hacia la posición especificada" />
 <translationtableentry text="Click to make all units advance to this position" result="Haz clic para hacer avanzar a todas las unidades hasta esta posición" />
 <translationtableentry text="Slowly exchanges stored food for gold" result="Intercambia lentamente los víveres almacenados por oro" />
 <translationtableentry text="Stop selling food" result="Dejar de vender víveres" />
@@ -1256,10 +1260,11 @@
 <translationtableentry text="Right-click to attach to this hero" result="Haz clic con el botón derecho para vincular a este héroe" />
 <translationtableentry text="Right-click to enter this cave" result="Haz clic con el botón derecho para entrar en esta cueva" />
 <translationtableentry text="Right-click to enter this building" result="Haz clic con el botón derecho para entrar en esta estructura" />
-<translationtableentry text="Click to enter this shipyard and start fishing" result="Haz clic para entrar en este puerto y empezar a pescar" />
+<translationtableentry text="Right-click to enter these ruins and face danger for a chance to earn a reward" result="Haz clic con el botón derecho para entrar en estas ruinas y afrontar peligros para tener la posibilidad de ganar una recompensa" />
 <translationtableentry text="Right-click to enter this shipyard and start fishing" result="Haz clic con el botón derecho para entrar en este puerto y empezar a pescar" />
 <translationtableentry text="Right-click to enter this village and provide a mount for scouts" result="Haz clic con el botón derecho para entrar en esta aldea y proporcionar una montura para exploradores" />
 <translationtableentry text="Train" result="Adiestrar" />
+<translationtableentry text="Maximum training level: %s1" result="Nivel de entrenamiento máximo: %s1" />
 <translationtableentry text="Cannot train warriors" result="Imposible entrenar a los guerreros" />
 <translationtableentry text="Detach from hero" result="Desvincular del héroe" />
 <translationtableentry text="Not attached to a hero" result="No vinculado a un héroe" />
@@ -1309,7 +1314,8 @@
 <translationtableentry text="Select Column formation" result="Seleccionar formación en columna" />
 <translationtableentry text="Army bonus during stand ground" result="Bonificación del ejército si se le ordena mantener posición" />
 <translationtableentry text="Leave army" result="Disolver ejército" />
-<translationtableentry text="Leaves the attached allies on their own" result="Desvincula todas las unidades asociadas" />
+<translationtableentry text="Detaches all units" result="Desvincula a todas las unidades" />
+<translationtableentry text="No attached units" result="Ninguna unidad vinculada" />
 <translationtableentry text="Start automatic skill activation" result="Iniciar activación automática de habilidades" />
 <translationtableentry text="Stop automatic skill activation" result="Detener activación automática de habilidades" />
 <translationtableentry text="Activates the Assault skill" result="Activa la habilidad Gesta" />

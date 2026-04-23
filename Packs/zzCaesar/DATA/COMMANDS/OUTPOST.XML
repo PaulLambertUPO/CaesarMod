@@ -14,7 +14,7 @@
 		key="e"
 		groupdispatch="data/subai/outpost_advance.vs"
 		rollover="Launch sortie"
-		description="Makes all units advance towards the specified position">
+		description="Orders units inside the building to advance towards the specified position">
 		<cmdtext target="" text="Click to make all units advance to this position" />
 		<src obj="Outpost" />
 	</cmd>
