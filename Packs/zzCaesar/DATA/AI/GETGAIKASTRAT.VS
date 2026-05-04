@@ -1,33 +1,33 @@
-//int, GAIKA gaika, int idPlayer
+//int, GAIKA gaika, int aiPlayer
 
 Settlement set;
 int nOwn, nAlly, nEnemy, enemy_hidden;
 
 set = gaika.settlement;
 
-gaika.Eval(AI_STAYING, idPlayer, nOwn, nAlly, nEnemy, enemy_hidden);
+gaika.Eval(AI_STAYING, aiPlayer, nOwn, nAlly, nEnemy, enemy_hidden);
 if (set.IsValid)
 	if (set.IsOutpost)
-		nOwn += gaika.ApproachingSquads(idPlayer, 1600);//important: approach distance value must be like in "GS_Capture.vs"!
+		nOwn += gaika.ApproachingSquads(aiPlayer, 1600);//important: approach distance value must be like in "GS_Capture.vs"!
 
 if (nOwn > 0) {
 	int nOwnC, nAllyC, nEnemyC, enemyHiddenC;
 	bool bEnemyArmy, bOwnedSet = false, bEnemySet = false, bCanEnter = false, bCanBeCaptured = false;
 
-	gaika.Count(AI_STAYING, idPlayer, nOwnC, nAllyC, nEnemyC, enemyHiddenC);
+	gaika.Count(AI_STAYING, aiPlayer, nOwnC, nAllyC, nEnemyC, enemyHiddenC);
 
 	bEnemyArmy = nEnemy > 0;
 	if (!bEnemyArmy) {
 		int nOwnLv, nAllyLv, nEnemyLv, nEnemyHiddenLv;
-		gaika.Count(AI_LEAVING, idPlayer, nOwnLv, nAllyLv, nEnemyLv, nEnemyHiddenLv);
+		gaika.Count(AI_LEAVING, aiPlayer, nOwnLv, nAllyLv, nEnemyLv, nEnemyHiddenLv);
 		bEnemyArmy = nEnemyLv > 0;
 	}
 
 	//settlement
 	if (set.IsValid) {
-		if (set.player == idPlayer)
+		if (set.player == aiPlayer)
 			bOwnedSet = true;
-		else if (!DiplGetCeaseFire(set.player, idPlayer))
+		else if (!DiplGetCeaseFire(set.player, aiPlayer))
 			bEnemySet = true;
 
 		if (bOwnedSet)
@@ -61,14 +61,14 @@ if (nOwn > 0) {
 						return GS_Capture;
 				if (nOwn + nAlly > nEnemy * 2) {
 					int nOwnSt, nAllySt, nEnemySt, nEnemyHiddenSt;
-					gaika.Count(AI_STAYING, idPlayer, nOwnSt, nAllySt, nEnemySt, nEnemyHiddenSt);
+					gaika.Count(AI_STAYING, aiPlayer, nOwnSt, nAllySt, nEnemySt, nEnemyHiddenSt);
 					if (nOwnSt + nAllySt > 10)
 						return GS_Capture;
 				}
 				else if (nEnemy > 30000)
 					if (nOwn + nAlly > nEnemy) {
 						int nOwnSt, nAllySt, nEnemySt, nEnemyHiddenSt;
-						gaika.Count(AI_STAYING, idPlayer, nOwnSt, nAllySt, nEnemySt, nEnemyHiddenSt);
+						gaika.Count(AI_STAYING, aiPlayer, nOwnSt, nAllySt, nEnemySt, nEnemyHiddenSt);
 						if (nOwnSt + nAllySt > 10)
 							return GS_Capture;
 					}
@@ -84,7 +84,7 @@ if (nOwn > 0) {
 
 	if (bEnemySet)
 		if (!bCanEnter) {
-			if (gaika.NoAttack(idPlayer))
+			if (gaika.NoAttack(aiPlayer))
 				return GS_Guard;
 			if (nOwnC + nAllyC >= 15)
 				return GS_Siege;

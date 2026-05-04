@@ -16,7 +16,7 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else if (rand(5) == 0)
 				.Idle(1500);
 			else {
@@ -60,7 +60,7 @@ if (.IsValid)
 										.AddCommand(true, "trot", (pt_move + .pos).ClampToMap());
 									}
 
-									Sleep(15);//prevent possible loops with other commands
+									Sleep(30);//prevent possible loops with other commands
 									return;
 								}
 							};
@@ -77,4 +77,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

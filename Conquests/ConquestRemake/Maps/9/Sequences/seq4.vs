@@ -6,7 +6,7 @@ town3 = NO_Town3;
 town4 = NO_Town4;
 town5 = NO_Town5;
 
-while (1) {
+while (true) {
 	Sleep(interval);
 	timer -= interval;
 	if (timer <= 0) {

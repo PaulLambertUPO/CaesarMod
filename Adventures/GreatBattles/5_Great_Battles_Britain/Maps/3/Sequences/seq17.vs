@@ -1,6 +1,6 @@
 int i, prev = 4;
 
-while (1) {
+while (true) {
 	if (NO_30.obj.player != prev) {
 		prev = NO_30.obj.player;
 		for (i = 21; i <= 26; i += 1)

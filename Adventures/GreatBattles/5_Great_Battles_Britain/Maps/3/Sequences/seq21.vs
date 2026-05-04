@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (NO_30.obj.player == 1) {
 		AreaObjs("A_S_Sett21", cSentry).Erase();
 		AreaObjs("A_S_Sett22", cSentry).Erase();

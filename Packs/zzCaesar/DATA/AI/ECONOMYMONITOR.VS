@@ -8,7 +8,7 @@ Sleep(500 + rand(501));
 aiPlayer = AIGetPlayer();
 nMaxSetIdx = MaxSetIdx;
 
-while (1) {
+while (true) {
 	for (i = 0; i < nMaxSetIdx; i += 1) {
 		set = IdxToSet(i);
 		if (set.IsOwn(aiPlayer))

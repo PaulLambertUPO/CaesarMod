@@ -1,6 +1,6 @@
 int i;
 
-while (1) {
+while (true) {
 	Sleep(500);
 	for (i = 1; i <= 5; i += 1)
 		if (GetNamedObj("NO_Village" + i).obj.player == 1)

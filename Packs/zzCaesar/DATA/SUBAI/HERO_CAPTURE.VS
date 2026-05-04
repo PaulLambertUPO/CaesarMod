@@ -42,7 +42,7 @@ if (target.IsValid) {
 										if (!.IsVisible)
 											.SetVisible(true);
 										.AddCommand(true, "engage");
-										Sleep(15);//prevent possible loops with other commands
+										Sleep(30);//prevent possible loops with other commands
 										return;
 									}
 								}
@@ -53,7 +53,7 @@ if (target.IsValid) {
 										if (!.IsVisible)
 											.SetVisible(true);
 										.AddCommand(true, "engage");
-										Sleep(15);//prevent possible loops with other commands
+										Sleep(30);//prevent possible loops with other commands
 										return;
 									}
 
@@ -274,4 +274,4 @@ if (target.IsValid) {
 		}
 }
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

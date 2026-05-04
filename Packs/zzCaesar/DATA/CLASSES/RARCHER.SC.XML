@@ -6,8 +6,6 @@
 	<properties speed="70" />
 	<properties unit_specials="Defense skill" />
 
-	<properties projectile_class="Arrow" />
-
 	<properties select_class="RArcher" />
 
 	<properties display_name="Archer" display_name_plural="Archers" />

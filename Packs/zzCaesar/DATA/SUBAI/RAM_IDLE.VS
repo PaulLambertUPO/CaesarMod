@@ -14,7 +14,7 @@ if (.IsValid)
 			if (target.IsValid)
 				if (!target.IsVeryBroken) {
 					.AddCommand(true, "attack", target);
-					Sleep(15);//prevent possible loops with other commands
+					Sleep(30);//prevent possible loops with other commands
 					return;
 				}
 		}

@@ -4,7 +4,7 @@ difficulty = GetDifficulty();
 
 Sleep(300000 - difficulty * 60000);
 
-while (1) {
+while (true) {
 	timer = 120000;
 	if (NO_OuterTown.obj.player == 4)
 		timer += 15000;

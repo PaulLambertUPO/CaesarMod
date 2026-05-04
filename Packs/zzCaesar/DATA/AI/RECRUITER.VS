@@ -16,7 +16,7 @@ nLastGaika = GAIKACount - 1;
 while (!GetGAIKA(nLastGaika).Prioritized(aiPlayer))
 	Sleep(2000);
 
-while (1) {
+while (true) {
 	nMilEval = MilEval(aiPlayer);//this is without sentries
 
 	if (nMilEval >= 1) {

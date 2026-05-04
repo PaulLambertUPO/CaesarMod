@@ -13,6 +13,6 @@ for (i = objs.count - 1; i >= 0; i -= 1) {
 			return true;
 }
 
-reasonText = rollover(o, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", research);
+reasonText = rollover() + "\n<color 255 0 0>" + Translatef("Requires %s1", research);
 
 return false;

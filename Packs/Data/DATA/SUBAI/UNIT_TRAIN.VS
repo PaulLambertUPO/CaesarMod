@@ -30,11 +30,11 @@ if (.IsValid)
 							if (!.TrainAttack(u))
 								break; 
 							if (.health <= .maxhealth / 10) {
-								Sleep(15);//prevent possible loops with other commands
+								Sleep(30);//prevent possible loops with other commands
 								return; 
 							}
 							if (.inherentlevel >= max_train_level) {
-								Sleep(15);//prevent possible loops with other commands
+								Sleep(30);//prevent possible loops with other commands
 								return;
 							}
 						}
@@ -44,4 +44,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

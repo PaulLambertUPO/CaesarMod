@@ -10,7 +10,8 @@
 	<properties help="contents/units/Villagers" />
 
 	<method sig="enter" vs="data/subai/peasant_enter.vs" verify="data/subai/peasant_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/peasant_enter.vs" verify="data/subai/peasant_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/peasant_enter.vs" />
+	<method sig="advanceenter" vs="data/subai/peasant_enter.vs" />
 
 	<defaultcmd target="Building">
 		<cmd name="enter" />

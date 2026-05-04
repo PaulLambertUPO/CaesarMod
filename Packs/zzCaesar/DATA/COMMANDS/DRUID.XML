@@ -1,7 +1,7 @@
 <commands>
 	<cmd name="learn" priority="16"
 		button="actions/Learn.bmp"
-		key="l"
+		key="x"
 		rollover="Learn from ally"
 		description="Gains knowledge from a more experienced ally"
 		cursor="do_something">

@@ -1,6 +1,6 @@
 int i;
 
-while (1) {
+while (true) {
 	Sleep(120000);
 	if (NO_OuterTown.obj.player == 4) {
 		GetSettlement("S_OuterTown").SetGold(2000);

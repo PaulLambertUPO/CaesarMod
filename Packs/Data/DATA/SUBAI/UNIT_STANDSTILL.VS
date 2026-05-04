@@ -11,4 +11,4 @@ if (.IsValid)
 			Sleep(1000);
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

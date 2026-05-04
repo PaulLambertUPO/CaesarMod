@@ -11,17 +11,21 @@
 	<properties healthbar_type="0" />
 	<properties no_transparent_draw="1" />
 
-	<method sig="move" vs="data/subai/peasant_ambient_move.vs" />
-	<method sig="enter" vs="data/subai/peasant_enter.vs" verify="data/subai/peasant_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/peasant_enter.vs" verify="data/subai/peasant_enter_verify.vs" />
+	<method sig="talk" vs="data/subai/peasant_ambient_talk.vs" />
+	<method sig="grab_free" vs="data/subai/peasant_ambient_grab_free.vs" />
+	<method sig="grab_goods" vs="data/subai/peasant_ambient_grab_goods.vs" />
+	<method sig="grab_water" vs="data/subai/peasant_ambient_grab_water.vs" />
+	<method sig="disappear" vs="data/subai/peasant_ambient_disappear.vs" />
 
-	<defaultcmd target="Building">
-		<cmd name="enter" />
-	</defaultcmd>
-	<defaultcmd target="Teleport">
-		<cmd name="teleport" />
-	</defaultcmd>
-	<defaultcmd target="Inn">
-		<cmd name="transport" />
-	</defaultcmd>
+	<method sig="move" vs="data/subai/peasant_ambient_move.vs" />
+
+	<method sig="form_move" vs="data/subai/unit_detach.vs" />
+	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />
+
+	<nodefcmdinherit />
 </class>

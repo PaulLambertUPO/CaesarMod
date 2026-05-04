@@ -1,6 +1,6 @@
 Obj o1, o2;
 
-while (1) {
+while (true) {
 	if (!GoodHero.IsEmpty())
 		WaitConvRequest(GoodHero, NO_mercenary, 1000, o1, o2);
 	else

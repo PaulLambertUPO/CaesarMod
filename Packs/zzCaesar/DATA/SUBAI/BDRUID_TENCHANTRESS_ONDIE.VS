@@ -14,8 +14,6 @@ if (.IsValid)
 		.SetSpecial(deflection, false);
 		.SetSpecial(determination, false);
 
-		.SetNoAIFlag(true);
-
 		if (IsResearched(.player, "Mass Heal")) {
 			ObjList ol;
 			Obj o;

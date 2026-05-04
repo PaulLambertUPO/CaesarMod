@@ -2,7 +2,7 @@ ObjList ol_ships, ol_units;
 Ship sh;
 int i, j;
 
-while (1) {
+while (true) {
 	while (!T_AllShips.IsEmpty()) {
 		for (i = 1; i <= 3; i += 1) {
 			if (GetNamedObj("Sh_" + i).obj.player == 1)

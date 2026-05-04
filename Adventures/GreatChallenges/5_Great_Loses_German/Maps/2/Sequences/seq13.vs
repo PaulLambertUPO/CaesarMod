@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (Q_RomanCampDef.count < 30)
 		SpawnGroup("Q_RomanCampDef");
 	if (!IsAIHelperRunning("RomanCampDef"))

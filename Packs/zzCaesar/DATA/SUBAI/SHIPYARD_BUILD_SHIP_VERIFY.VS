@@ -20,22 +20,6 @@ else if (race == Egypt) {
 else if (ship_class != "ShipL")
 	return false;
 
-{
-	Settlement set;
-	bool unaffordable = false;
+reasonText = rollover(this, ship_class, true);
 
-	set = .settlement;
-
-	if (cmdcost_gold > set.gold)
-		unaffordable = true;
-	else if (cmdcost_food > set.food)
-		unaffordable = true;
-	else if (cmdcost_pop > 0)
-		if (set.population - cmdcost_pop < GetConst("MinPopulation"))
-			unaffordable = true;
-
-	reasonText = rollover(this, ship_class, unaffordable);
-	return true;
-}
-
-return false;
+return true;

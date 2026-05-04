@@ -6,7 +6,7 @@ difficulty = GetDifficulty();
 for (i = 0; i < 8; i += 1)
 	replacements[i] = 1;
 
-while (1) {
+while (true) {
 	Sleep(10000 - difficulty * 3000);
 	if (NO_OuterTown.obj.player == 4)
 		if (!ClassPlayerAreaObjs(cMilitary, 1, "A_OuterRome").IsEmpty()) {

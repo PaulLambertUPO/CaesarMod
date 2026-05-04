@@ -8,7 +8,7 @@ NO_Hero2.SetCommand("stand_position");
 Sleep(2000);
 Q_IntroATTACH2.SetCommand("stand_position");
 Q_Reinforcements1.AddToGroup("Q_Retreat2");
-while (1) {
+while (true) {
 	if (WaitQueryCountBetween(Q_Retreat2, 0, 40, 500))
 		break;
 	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_Village1"), 1, 1000, 500))

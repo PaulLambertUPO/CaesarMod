@@ -36,7 +36,7 @@ GiveNote("B_Chieftains");
 
 Sleep(500);
 
-Senator.SetCommand("hold_position");
+Senator.SetCommand("standstill");
 SetShortcutSel(1, 1, Agricola.GetObjList());
 T_S_Sett1.SetCommand("attach", Agricola);
 T_S_Sett1.RemoveFromAllGroups();

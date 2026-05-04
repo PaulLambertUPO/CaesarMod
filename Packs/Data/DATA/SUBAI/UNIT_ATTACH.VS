@@ -19,7 +19,7 @@ if (.IsValid)
 
 			plr = .player;
 
-			if (IsAIPlayer(plr))
+			if (.AI)
 				.SetParryMode(false);
 
 			while (h.IsAlive) {
@@ -97,4 +97,4 @@ if (.IsValid)
 		}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

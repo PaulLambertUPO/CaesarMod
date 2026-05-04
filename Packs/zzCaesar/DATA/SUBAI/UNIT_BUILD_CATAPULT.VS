@@ -43,7 +43,7 @@ if (.IsValid)
 
 							if (add)
 								if (catap.settlement.AddUnit(this)) {
-									Sleep(15);//prevent possible loops with other commands
+									Sleep(30);//prevent possible loops with other commands
 									return;
 								}
 						}
@@ -52,4 +52,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

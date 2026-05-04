@@ -153,7 +153,7 @@ if (This.AsBuilding().IsValid)
 												u.SetNoAIFlag(true);
 												u.SetNoselectFlag(true);
 												u.SetMinimapFlag(true);
-												u.SetCommand("walkanddie", pt_2);
+												u.SetCommand("walk_and_die", pt_2);
 											}
 										}
 							}

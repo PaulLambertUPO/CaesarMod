@@ -14,7 +14,7 @@ set29 = GetSettlement("S_Sett29");
 
 bonus_gold = 10 + GetDifficulty() * 10;
 
-while (1) {
+while (true) {
 	if (set37.player != 1)
 		set37.SetGold(set37.gold + bonus_gold);
 	if (set29.player != 1)

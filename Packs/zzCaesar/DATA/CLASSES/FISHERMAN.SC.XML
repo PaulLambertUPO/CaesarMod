@@ -12,7 +12,8 @@
 
 	<method sig="idle" vs="data/subai/fisherman_idle.vs" />
 	<method sig="enter" vs="data/subai/fisherman_enter.vs" verify="data/subai/fisherman_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/fisherman_enter.vs" verify="data/subai/fisherman_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/fisherman_enter.vs" />
+	<method sig="advanceenter" vs="data/subai/fisherman_enter.vs" />
 
 	<defaultcmd target="Building">
 		<cmd name="approach" />

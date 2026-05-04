@@ -8,17 +8,23 @@
 	<properties target_factor="1000" />
 
 	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
-	<method sig="attack" vs="data/subai/unit_approach.vs" />
-	<method sig="attack" vs="data/subai/unit_move.vs" />
-	<method sig="engage" vs="data/subai/do_nothing_void.vs" />
-	<method sig="attack_unit_type_exclusive" vs="data/subai/unit_approach.vs" />
-	<method sig="engage_unit_type_exclusive" vs="data/subai/do_nothing_void.vs" />
+	<method sig="attack" vs="data/subai/unit_approach.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="attack_unit_type_exclusive" vs="data/subai/unit_approach.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="ai_attack_gate" vs="data/subai/unit_approach.vs" />
 	<method sig="advance" vs="data/subai/unit_move.vs" />
+	<method sig="advancealone" vs="data/subai/unit_move.vs" />
 	<method sig="advance_aggressive" vs="data/subai/unit_move.vs" />
-	<method sig="advanceenter" vs="data/subai/peaceful_enter.vs" />
 	<method sig="enter" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
-	<method sig="capture" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enteralone" vs="data/subai/peaceful_enter.vs" />
+	<method sig="advanceenter" vs="data/subai/peaceful_enter.vs" />
+	<method sig="stand_position" vs="data/subai/unit_standstill.vs" />
+	<method sig="hold_position" vs="data/subai/unit_standstill.vs" />
+
+	<method sig="engage" vs="data/subai/do_nothing_void.vs" />
+	<method sig="engage_unit_type_exclusive" vs="data/subai/do_nothing_void.vs" />
+	<method sig="capture" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="ai_killall" vs="data/subai/do_nothing_void.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
 		script="return Translate('No');"

@@ -14,11 +14,11 @@ if (target.IsAlive) {
 
 				if (u.IsValid) {
 					if (u.InHolder) {
-						Sleep(15);//prevent possible loops with other commands
+						Sleep(30);//prevent possible loops with other commands
 						return;
 					}
 					if (!.CanSee(u)) {
-						Sleep(15);//prevent possible loops with other commands
+						Sleep(30);//prevent possible loops with other commands
 						return;
 					}
 				}
@@ -36,4 +36,4 @@ if (target.IsAlive) {
 			}
 }
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

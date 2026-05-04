@@ -11,9 +11,10 @@ if (victim.AsUnit().IsValid)
 				owner.Heal(5);
 				if (rand(10) == 0) {
 					Unit u;
-					u = Place("GGhost", victim.pos, .player);
+					u = Place("GGhost", victim.pos, .player).AsUnit();
 					u.SetStamina(5);
 					u.SetLevel(.level);
+					u.SetNoAIFlag(true);
 					u.SetCommand("spawn");
 					SwapSelectedObj(victim, u);
 				}

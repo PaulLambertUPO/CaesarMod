@@ -34,7 +34,7 @@ if (.IsValid)
 							pt_flee.SetLen(.sight * 2);
 
 							.AddCommand(true, "move", (.pos + pt_flee).ClampToMap());
-							Sleep(15);//prevent possible loops with other commands
+							Sleep(30);//prevent possible loops with other commands
 							return;
 						}
 					}
@@ -66,7 +66,7 @@ if (.IsValid)
 									pt_flee.SetLen(.sight * 2);
 
 									.AddCommand(true, "move", (.pos + pt_flee).ClampToMap());
-									Sleep(15);//prevent possible loops with other commands
+									Sleep(30);//prevent possible loops with other commands
 									return;
 								}
 							}
@@ -77,4 +77,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

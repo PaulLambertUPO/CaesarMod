@@ -13,5 +13,7 @@
 	<properties help="contents/units/TTeutonRider" />
 	<properties edittree_pos="Units/Germany/Teuton Rider" />
 
+	<method sig="convert" vs="data/subai/unit_convert_tteutonrider.vs" />
+
 	<sounds command="VoiceTTeutonRider" attack="UnitMaceFight" />
 </class>

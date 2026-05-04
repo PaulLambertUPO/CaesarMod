@@ -67,7 +67,6 @@ if (.IsValid)
 							if (!(o.AsUnit().GetHolderSett() == set_enter)) {
 								wait_army = true;
 								o.SetCommand("enter", telep_enter);
-								break;
 							}
 					}
 
@@ -92,4 +91,4 @@ if (.IsValid)
 		}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

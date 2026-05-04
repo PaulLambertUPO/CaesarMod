@@ -1,5 +1,5 @@
 Instructor2.obj.SetVisible(false);
-Instructor2.SetCommand("hold_position");
+Instructor2.SetCommand("standstill");
 
 WaitUnitsInArea(Caesar, "A_Items", -1);
 Sleep(2000);
@@ -10,7 +10,7 @@ View(AreaCenter("A_Items"), false);
 RunConv("9A Get items");
 GiveNote("ItemHolders");
 
-while (1) {
+while (true) {
 	if (Caesar.obj.HasItem("Finger of death"))
 		break;
 	if (Caesar.obj.HasItem("Elephant Tusk"))

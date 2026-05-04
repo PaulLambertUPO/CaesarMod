@@ -22,7 +22,7 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else {
 				if (!.IsInAir) {
 					j = 0;

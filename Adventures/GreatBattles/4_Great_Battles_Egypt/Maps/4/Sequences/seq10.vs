@@ -5,7 +5,7 @@ ship_interval = 420000 - GetDifficulty() * 60000;
 
 timer = ship_interval;
 
-while (1) {
+while (true) {
 	Sleep(10000);
 	timer -= 10000;
 	if (timer <= 0) {

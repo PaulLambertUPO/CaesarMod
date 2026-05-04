@@ -9,7 +9,7 @@ Sleep(rand(51) + 100);
 aiPlayer = AIGetPlayer();
 gaikas = GAIKACount;
 
-while (1) {
+while (true) {
 	for (i = 1; i < gaikas; i += 1) {
 		g = GetGAIKA(i);
 		nOld = g.GetPriority(aiPlayer);

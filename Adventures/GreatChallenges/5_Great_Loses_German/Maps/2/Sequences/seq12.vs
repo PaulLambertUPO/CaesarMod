@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (Q_RoyalGuard.count < 30)
 		SpawnGroupInHolder("Q_RoyalGuard", "S_UnbreakableRomanTown");
 	if (!IsAIHelperRunning("RomanTownDef"))

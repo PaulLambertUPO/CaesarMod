@@ -8,7 +8,7 @@ set = GetSettlement("S_Town1");
 p = set.GetCentralBuilding().pos;
 p.Set(p.x, p.y - 150);
 
-while (1) {
+while (true) {
 	if (set.player == 1) {
 		int units_to_spawn, i;
 		Unit u;

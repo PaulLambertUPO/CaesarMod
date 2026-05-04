@@ -9,7 +9,7 @@ r_outposts[2] = 11;
 r_outposts[3] = 5;
 r_outposts[4] = 1;
 
-while (1) {
+while (true) {
 	Sleep(120000 + difficulty * 60000);
 	for (i = 0; i < 5; i += 1) {
 		n = r_outposts[i];

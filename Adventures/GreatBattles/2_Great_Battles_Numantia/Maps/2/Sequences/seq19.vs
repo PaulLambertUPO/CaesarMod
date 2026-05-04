@@ -25,7 +25,7 @@ Sleep(200);
 I_GaulArmy.SetCommand("advance", NO_25.obj.pos);
 I_GaulArmy.AddCommand(false, "capture", NO_25);
 
-while (1) {
+while (true) {
 	SetFog(NO_25.obj.player != 1);
 	Sleep(5000);
 }

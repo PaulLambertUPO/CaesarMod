@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	Sleep(300000);
 	if (NO_Town2.obj.player != 1)
 		if (I_Enchantresses.count < 5)

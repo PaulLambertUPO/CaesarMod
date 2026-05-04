@@ -20,7 +20,7 @@ if (target.IsAlive) {
 							else {
 								if (!.InHolder)
 									if (.DistTo(u) < 100) {
-										Sleep(15);//prevent possible loops with other commands
+										Sleep(30);//prevent possible loops with other commands
 										return;
 									}
 
@@ -45,7 +45,7 @@ if (target.IsAlive) {
 				else {
 					if (!.InHolder)
 						if (.DistTo(target) < 100) {
-							Sleep(15);//prevent possible loops with other commands
+							Sleep(30);//prevent possible loops with other commands
 							return;
 						}
 
@@ -61,4 +61,4 @@ if (target.IsAlive) {
 				}
 }
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

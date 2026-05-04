@@ -218,5 +218,5 @@ while (ol.count > 0) {
 }
 
 //this script must be terminated by the calling script (a "race_tactic" one) by using AIBreakScript
-while (1)
+while (true)
 	Sleep(3600000);

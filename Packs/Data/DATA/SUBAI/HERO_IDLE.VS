@@ -10,6 +10,8 @@ if (.IsValid)
 		point pt, pt_start;
 		bool melee, go_back;
 
+		Sleep(rand(151));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 		melee = !.IsRanged;
 
 		{
@@ -30,7 +32,7 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else {
 				if (.IsVisible) {//do not use the engage/advance command otherwise the entire army will fight (capturing a building may become almost impossible)
 					o = .BestTargetInSquadSightMisZeroDamage;
@@ -102,4 +104,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

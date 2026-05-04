@@ -4,7 +4,7 @@ bool talked = false, ai_running = false;
 carthage_interval = 480000 - GetDifficulty() * 60000;
 timer = carthage_interval;
 
-while (1) {
+while (true) {
 	Sleep(10000);
 	timer -= 10000;
 	if (timer <= 0) {

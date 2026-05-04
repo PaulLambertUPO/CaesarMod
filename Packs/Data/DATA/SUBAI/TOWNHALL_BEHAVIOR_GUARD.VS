@@ -19,7 +19,7 @@ if (This.AsBuilding().IsValid) {
 		if (.player != plr)
 			plr = .player;
 
-		pt.Set(rad, 0);
+		pt.Set(0, rad);
 		pt.Rot(rand(360));
 		.Units.ObjEnemy(plr).SetCommand("advance", pt + pt_pos);//send away enemy units inside
 

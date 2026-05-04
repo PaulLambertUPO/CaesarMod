@@ -1,6 +1,6 @@
 int i, j, sieging;
 
-while (1) {
+while (true) {
 	Sleep(10000);
 	if (!Q_LowerHelper1.IsEmpty()) {
 		if (NO_OuterTown.obj.player != 4) {

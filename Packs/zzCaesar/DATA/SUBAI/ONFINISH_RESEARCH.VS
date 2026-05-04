@@ -322,7 +322,7 @@ while (dest != "") {
 				u_level = MAX(1, EnvReadInt(plr, "standard_spawn_level"));
 				god_gift = EnvReadInt(set, "items/God's Gift") != 0;
 				for (i = 0; i < 20; i += 1) {
-					u = Place("RGladiator", pt_pos, plr);
+					u = Place("RGladiator", pt_pos, plr).AsUnit();
 					u.SetLevel(u_level);
 					if (god_gift)
 						u.AddItem("God's Gift");

@@ -8,7 +8,7 @@ if (.IsValid)
 	if (.IsAlive) {
 		point pt_pos;
 
-		if (IsAIPlayer(.player))
+		if (.AI)
 			.SetParryMode(false);
 
 		while (!.Goto(pt, 0, 2000, false, -1))
@@ -31,4 +31,4 @@ if (.IsValid)
 		}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

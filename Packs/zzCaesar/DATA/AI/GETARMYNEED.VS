@@ -1,4 +1,4 @@
-//int, GAIKA g, int idPlayer, bool bMin, int own, int ally, int enemy
+//int, GAIKA g, int aiPlayer, bool bMin, int own, int ally, int enemy
 
 Settlement set;
 int nEval, time, enemySt;
@@ -8,7 +8,7 @@ set = g.settlement;
 bValidSet = set.IsValid;
 
 if (bValidSet) {
-	if (set.IsEnemy(idPlayer))
+	if (set.IsEnemy(aiPlayer))
 		bEnemySet = true;
 	if (set.IsStronghold)
 		bIsStronghold = true;
@@ -21,7 +21,7 @@ if (bValidSet) {
 
 time = GetTime();
 
-if (!g.Explored(idPlayer)) {
+if (!g.Explored(aiPlayer)) {
 	if (!bValidSet)
 		return 1;
 	if (!set.IsTTent)
@@ -30,20 +30,20 @@ if (!g.Explored(idPlayer)) {
 		return 1;
 }
 
-if (!g.Revealed(idPlayer))
+if (!g.Revealed(aiPlayer))
 	if (!bIsStronghold)
-		if (time - g.LastSeen(idPlayer) >= 600000)
+		if (time - g.LastSeen(aiPlayer) >= 600000)
 			enemy = 1;//expect few enemies if non-stronghold GAIKA not visited for 10 minutes
 
 if (enemy > 0) {//add enemies from adjacent revealed GAIKAs
 	int ownSt, allySt;
-	g.EvalNeighbors(AI_STAYING, idPlayer, ownSt, allySt, enemySt, true);//true = revealed gaikas only
+	g.EvalNeighbors(AI_STAYING, aiPlayer, ownSt, allySt, enemySt, true);//true = revealed gaikas only
 	if (enemySt > ownSt)
 		enemy += (enemySt - ownSt) * 2 / 3;
 }
 
 if (bValidSet)
-	if (set.IsOwn(idPlayer)) {
+	if (set.IsOwn(aiPlayer)) {
 		if (enemy <= 0) {//protect unattacked settlements
 			if (set.IsOutpost)
 				if (set.supplied.IsValid) {//trade and gold outposts need protection
@@ -81,7 +81,7 @@ if (bValidSet)
 		}
 		else if (bEnemySet) {
 			Settlement s;
-			s = NearestStronghold(set.GetCentralBuilding().pos, idPlayer);
+			s = NearestStronghold(set.GetCentralBuilding().pos, aiPlayer);
 			if (s.IsValid)
 				if (s.food <= 100)
 					bCap = false;//no minimum for enemy villages if starving

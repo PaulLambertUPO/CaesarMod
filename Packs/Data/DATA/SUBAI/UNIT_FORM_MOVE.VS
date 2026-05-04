@@ -2,14 +2,13 @@
 
 Unit this;
 
-
 this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
 		Hero h;
 
-		if (IsAIPlayer(.player))
+		if (.AI)
 			.SetParryMode(false);
 
 		h = .hero;
@@ -38,4 +37,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

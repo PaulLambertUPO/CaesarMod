@@ -7,28 +7,28 @@
 		<cmdtext target="Building" default-text="Right-click to unload the resources in this settlement" />
 	</cmd>
 	<!-- INTERFACE COMMANDS (WITH BUTTON) -->
-	<cmd name="loadfood1" priority="3"
+	<cmd name="loadfood1" priority="7"
 		method="loadfoodsmall"
 		button="actions/load food small.bmp"
 		key="d"
 		rollover="Load 250 food">
 		<src obj="Wagon" />
 	</cmd>
-	<cmd name="loadgold1" priority="4"
+	<cmd name="loadgold1" priority="8"
 		method="loadgoldsmall"
 		button="actions/load gold small.bmp"
 		key="h"
 		rollover="Load 250 gold">
 		<src obj="Wagon" />
 	</cmd>
-	<cmd name="loadfood2" priority="5"
+	<cmd name="loadfood2" priority="9"
 		method="loadfoodbig"
 		button="Actions/load food.bmp"
 		key="f"
 		rollover="Load 1000 food">
 		<src obj="Wagon" />
 	</cmd>
-	<cmd name="loadgold2" priority="6"
+	<cmd name="loadgold2" priority="10"
 		method="loadgoldbig"
 		button="actions/load gold.bmp"
 		key="g"

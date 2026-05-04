@@ -30,7 +30,7 @@ NO_Scipio.SetMessengerStatus(false);
 UnblockUserInput();
 
 i = 1;
-while (1) {
+while (true) {
 	if (Q_Iberians.IsEmpty()) {
 		RunConv("IberiansDestroyed");
 		EnvWriteInt("/En_IberiansDied", 1);

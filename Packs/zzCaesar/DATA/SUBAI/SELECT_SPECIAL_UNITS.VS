@@ -18,7 +18,7 @@ for (i = objs.count - 1; i >= 0; i -= 1) {
 
 		add_class_player = true;
 
-		for (j = 0; j <= k; j += 1)
+		for (j = 0; j < k; j += 1)
 			if (classes[j] == o_class)
 				if (players[j] == p) {
 					add_class_player = false;
@@ -36,7 +36,7 @@ for (i = objs.count - 1; i >= 0; i -= 1) {
 if (k > 0) {
 	ObjList selected_units;
 
-	for (i = 0; i <= k; i += 1)
+	for (i = 0; i < k; i += 1)
 		selected_units.AddList(GetPlayerUnits(players[i], classes[i]));//attached units are excluded to avoid problems (see GetPlayerUnits comments in other scripts)
 
 	selected_units.RemoveList(_GetSelection());//this reduces the lag caused by holding down the hotkey
@@ -44,7 +44,7 @@ if (k > 0) {
 	for (i = selected_units.count - 1; i >= 0; i -= 1) {
 		o = selected_units[i];
 		if (o.IsAlive)
-			if (!o.AsUnit().hero.IsValid)
+			if (o.AsUnit().hero.IsDead)
 				if (players.find(o.player) > 0)
 					o.Select(player);
 	}

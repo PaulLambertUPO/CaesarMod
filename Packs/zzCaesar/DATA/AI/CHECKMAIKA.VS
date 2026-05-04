@@ -1,16 +1,16 @@
-//bool, int idPlayer, GAIKA gSrc, GAIKA gDst, GAIKA gMAIKA
+//bool, int aiPlayer, GAIKA gSrc, GAIKA gDst, GAIKA gMAIKA
 
 int own, ally, enemy, enemy_hidden;
 
-gMAIKA.Eval(AI_STAYING, idPlayer, own, ally, enemy, enemy_hidden);
+gMAIKA.Eval(AI_STAYING, aiPlayer, own, ally, enemy, enemy_hidden);
 
-if (own + ally < gMAIKA.MinNeed(idPlayer, own, ally, enemy)) {
+if (own + ally < gMAIKA.MinNeed(aiPlayer, own, ally, enemy)) {
 	int nDstPriority;
 
-	nDstPriority = gDst.GetPriority(idPlayer);
+	nDstPriority = gDst.GetPriority(aiPlayer);
 
-	if (gMAIKA.GetPriority(idPlayer) < nDstPriority)
-		gMAIKA.SetPriority(idPlayer, MIN(MaxGAIKAPriority, nDstPriority * 3 / 2));
+	if (gMAIKA.GetPriority(aiPlayer) < nDstPriority)
+		gMAIKA.SetPriority(aiPlayer, MIN(MaxGAIKAPriority, nDstPriority * 3 / 2));
 
 	return false;
 }

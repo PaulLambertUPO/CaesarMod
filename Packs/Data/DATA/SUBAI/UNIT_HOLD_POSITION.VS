@@ -10,7 +10,7 @@ if (.IsValid)
 			Obj o;
 			bool melee;
 
-			if (IsAIPlayer(.player))
+			if (.AI)
 				.SetParryMode(false);
 
 			melee = !.IsRanged;
@@ -44,4 +44,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

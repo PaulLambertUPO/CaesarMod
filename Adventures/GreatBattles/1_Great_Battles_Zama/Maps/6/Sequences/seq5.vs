@@ -24,7 +24,7 @@ Q_SupplyMules.SetPlayer(1);
 Q_LandingGroup.SetCommand("attach", NO_Scipio);
 Q_SupplyMules.SetCommand("follow", NO_Scipio);
 
-while (1) {
+while (true) {
 	if (WaitEnvIntBetween("/En_IberiansDied", 1, 1, 500)) {
 		int i, difficulty;
 		WaitConvRequest(NO_Scipio, NO_Masinissa, -1);

@@ -33,7 +33,7 @@ Q_MiddleDef2.SetCommand("stand_position");
 Q_LeftDef1.SetCommand("stand_position");
 Q_LeftDef2.SetCommand("stand_position");
 
-NO_Subquest.SetCommand("hold_position");
+NO_Subquest.SetCommand("standstill");
 
 _PlaceEx("WatchEye", 12862, 6727, 1);
 _PlaceEx("WatchEye", 13250, 6700, 1);

@@ -9,9 +9,11 @@ if (.IsValid)
 		Obj o;
 		point pt;
 
+		Sleep(rand(151));//avoid "thundering herd" for multiple units that start the command simultaneously
+
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else {
 				if (.IsVisible)
 					if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
@@ -29,7 +31,7 @@ if (.IsValid)
 									break;
 								}
 							}
-						if (!.hero.IsValid)
+						if (.hero.IsDead)
 							if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
 								pt = .pos + RandomOffset(500);
 								if (pt.InRect(GetMapRect()))
@@ -52,4 +54,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -1,6 +1,6 @@
 int timer = 900000;
 
-while (1) {
+while (true) {
 	Sleep(5000);
 	timer -= 5000;
 	if (timer <= 0) {

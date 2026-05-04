@@ -1,6 +1,6 @@
 int i;
 
-while (1) {
+while (true) {
 	Sleep(30000);
 	for (i = 1; i <= 7; i += 1)
 		if (GetNamedObj("NO_Village" + i).obj.player != 4)

@@ -68,8 +68,10 @@ if (.IsValid)
 									pt_target = pt_target + pt + target_pos;
 								}
 							}
-							if (j < 1)//no "etDestLock2" points
+							if (j < 1) {//no "etDestLock2" points
+								Sleep(30);//prevent possible loops with other commands
 								return;
+							}
 							pt_target = pt_target / j;
 						}
 					}
@@ -108,12 +110,16 @@ if (.IsValid)
 									pt_target = pt;
 								}
 							}
-							if (i < 1)//no enter points
+							if (i < 1) {//no enter points
+								Sleep(30);//prevent possible loops with other commands
 								return;
+							}
 						}
 					}
-					else
+					else {
+						Sleep(30);//prevent possible loops with other commands
 						return;
+					}
 
 					while (!.GotoEnter(pt_target, rng, 2000, false, 0))
 						;
@@ -128,4 +134,4 @@ if (.IsValid)
 				}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (BadGuys1.obj.player == 1)
 		if (Final.IsEmpty()) {
 			Sleep(5000);

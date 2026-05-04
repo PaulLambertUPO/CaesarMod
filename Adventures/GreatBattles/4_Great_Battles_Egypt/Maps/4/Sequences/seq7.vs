@@ -4,7 +4,7 @@ Settlement set;
 player_gold = 500 - GetDifficulty() * 100;
 enemy_gold = 300 + GetDifficulty() * 100;
 
-while (1) {
+while (true) {
 	Sleep(60000);
 	for (i = 1; i <= 9; i += 1) {
 		set = GetSettlement("S_O" + i);

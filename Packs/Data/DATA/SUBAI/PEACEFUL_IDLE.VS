@@ -1,8 +1,8 @@
-//void, Obj me
+//void, Obj This
 
 Unit this;
 
-this = me.AsUnit();
+this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
@@ -10,10 +10,10 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else if (.Stop(2000)) {
 				if (.AI)
-					if (!.hero.IsValid)
+					if (.hero.IsDead)
 						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
 							pt = .pos + RandomOffset(500);
 							if (pt.InRect(GetMapRect()))
@@ -34,4 +34,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

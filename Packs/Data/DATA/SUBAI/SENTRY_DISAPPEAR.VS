@@ -1,10 +1,6 @@
-//void, Obj This, Obj other
+//void, Obj this, Obj other
 
-Unit this;
-
-this = This.AsUnit();
-
-if (.IsValid)
+if (.AsUnit().IsValid)
 	if (.IsAlive) {
 		Building wall;
 
@@ -14,9 +10,5 @@ if (.IsValid)
 			if (wall.player == .player)
 				wall.settlement.PutSentry();
 
-		.AddCommand(true, "dismiss");
-
-		.Disappear();
-
-		.Mutate("SentryDismiss");
+		.Erase();
 	}

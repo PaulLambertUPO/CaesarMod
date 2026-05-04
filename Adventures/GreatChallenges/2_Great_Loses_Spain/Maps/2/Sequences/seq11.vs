@@ -2,7 +2,7 @@ int i, wait_timer;
 
 wait_timer = 35000 - GetDifficulty() * 10000;
 
-while (1) {
+while (true) {
 	if (Group("VaniArmy").count > 15) {
 		Settlement settle;
 		for (i = 1; i <= 12; i += 1)

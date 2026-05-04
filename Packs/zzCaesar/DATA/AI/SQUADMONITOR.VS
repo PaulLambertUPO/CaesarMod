@@ -22,7 +22,7 @@ bCoward = AIVar(aiPlayer, AIV_Coward) != 0;
 bGoAround = AIVar(aiPlayer, AIV_GoAround) != 0;
 bTakeItems = AIVar(aiPlayer, AIV_TakeItems) != 0;
 
-while (1) {
+while (true) {
 	i = GetTime() / 60000;
 	if (i >= 30)
 		min = MIN(41, MAX(41, MilUnits(aiPlayer) / 4));

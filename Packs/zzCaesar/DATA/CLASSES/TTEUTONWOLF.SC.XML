@@ -13,5 +13,7 @@
 	<properties help="contents/units/TTeutonWolf" />
 	<properties edittree_pos="Units/Germany/Teuton Wolf" />
 
+	<method sig="convert" vs="data/subai/unit_convert_tteutonwolf.vs" />
+
 	<sounds command="VoiceTTeutonWolf" />
 </class>

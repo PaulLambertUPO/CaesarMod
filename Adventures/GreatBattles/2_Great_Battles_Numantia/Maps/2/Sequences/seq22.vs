@@ -9,7 +9,7 @@ EnvWriteInt("/TakenGuardTower", 1);
 if (IsNoteActive("GuardTower"))
 	RemoveNote("GuardTower");
 
-while (1) {
+while (true) {
 	if (NO_36.obj.player == 1)
 		for (i = 1; i <= 3; i += 1)
 			ClassPlayerAreaObjs(cSentry, 4, "A_Sentry" + i).Erase();

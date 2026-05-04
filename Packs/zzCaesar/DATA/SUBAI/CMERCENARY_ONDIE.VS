@@ -18,8 +18,6 @@ if (.IsValid) {
 		.SetSpecial(deflection, false);
 		.SetSpecial(determination, false);
 
-		.SetNoAIFlag(true);
-
 		if (IsResearched(plr, "Mercenary heal")) {
 			ObjList ol;
 			Obj o;

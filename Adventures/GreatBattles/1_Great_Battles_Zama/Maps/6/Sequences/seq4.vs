@@ -4,7 +4,7 @@ int i;
 WaitEnvIntBetween("/En_SyphaxAssault", 1, 2, -1);
 
 if (EnvReadInt("/En_SyphaxAssault") == 2)
-	while (1) {
+	while (true) {
 		Sleep(2000);
 		NO_Masinissa.SetCommand("move", NO_Scipio.obj.posRH);
 		if (NO_Masinissa.obj.DistTo(NO_Scipio.obj) < 400) {

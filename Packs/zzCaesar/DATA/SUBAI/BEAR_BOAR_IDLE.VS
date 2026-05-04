@@ -17,7 +17,7 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else if (rand(5) == 0)
 				.Idle(1500);
 			else {
@@ -45,12 +45,12 @@ if (.IsValid)
 									if (enemy.IsAlive)
 										if (.DistTo(enemy) < .sight * 2 / 3) {
 											.AddCommand(true, "engage");
-											Sleep(15);//prevent possible loops with other commands
+											Sleep(30);//prevent possible loops with other commands
 											return;
 										}
 										else if (.health < .maxhealth * 9 / 10) {
 											.AddCommand(true, "engage");
-											Sleep(15);//prevent possible loops with other commands
+											Sleep(30);//prevent possible loops with other commands
 											return;
 										}
 										else
@@ -60,4 +60,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

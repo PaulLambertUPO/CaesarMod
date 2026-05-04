@@ -14,13 +14,11 @@ if (.IsValid)
 		.SetSpecial(deflection, false);
 		.SetSpecial(determination, false);
 
-		.SetNoAIFlag(true);
-
 		if (IsResearched(.player, "Zombify"))
 			if (!.IsSummoningDeath) {
 				Unit u;
 
-				u = Place("GGhost", .pos, .player);
+				u = Place("GGhost", .pos, .player).AsUnit();
 
 				u.SetStamina(5);
 				u.SetLevel(.level);

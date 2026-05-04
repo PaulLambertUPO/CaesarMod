@@ -24,7 +24,7 @@ if (.IsValid)
 				if (.BestTargetInSquadSight.IsAlive) {
 					.AddCommand(true, "advance_aggressive", pt);
 					.AddCommand(true, "engage");
-					Sleep(15);//prevent possible loops with other commands
+					Sleep(30);//prevent possible loops with other commands
 					return;
 				}
 				h_army = .army;
@@ -34,7 +34,7 @@ if (.IsValid)
 						if (o.AsUnit().BestTargetInSquadSight.IsAlive) {
 							.AddCommand(true, "advance_aggressive", pt);
 							.AddCommand(true, "engage");
-							Sleep(15);//prevent possible loops with other commands
+							Sleep(30);//prevent possible loops with other commands
 							return;
 						}
 				}
@@ -52,4 +52,4 @@ if (.IsValid)
 			.Face(.pos + pt_dir);
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

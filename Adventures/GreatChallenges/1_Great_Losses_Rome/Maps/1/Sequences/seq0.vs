@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_ChariotsCome1"), 1, 1000, 1000))
 		break;
 	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_ChariotsCome2"), 1, 1000, 1000))

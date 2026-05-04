@@ -67,4 +67,4 @@ if (!other.AsCatapult().IsValid) {
 		}
 }
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

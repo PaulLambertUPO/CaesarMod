@@ -5,7 +5,7 @@ int i;
 
 Sleep(2000);
 
-while (1) {
+while (true) {
 	for (i = 2; i <= 37; i += 1) {
 		bld = GetNamedObj("NO_" + i).obj.AsBuilding();
 		set_name = bld.settlement.name;

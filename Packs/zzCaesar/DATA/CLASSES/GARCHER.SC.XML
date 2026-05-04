@@ -6,8 +6,6 @@
 	<properties speed="80" />
 	<properties unit_specials="Attack skill, Determination" />
 
-	<properties projectile_class="Arrow" />
-
 	<properties display_name="Archer" display_name_plural="Archers" />
 	<properties icon="gameres/icons/GArcher.bmp" />
 	<properties help="contents/units/GArcher" />

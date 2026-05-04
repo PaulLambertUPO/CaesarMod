@@ -1,18 +1,18 @@
-//int, int idPlayer, GAIKA g
+//int, int aiPlayer, GAIKA g
 
 Settlement set;
 int nHomeDist, nAllyHomeDist, nEnemyHomeDist, nActualPerc = 30;
 rect rcMap;
 
-g.GetDistToPlayers(idPlayer, nHomeDist, nAllyHomeDist, nEnemyHomeDist);
+g.GetDistToPlayers(aiPlayer, nHomeDist, nAllyHomeDist, nEnemyHomeDist);
 
 set = g.settlement;
 
 if (set.IsValid) {
 	bool explored = false;
 
-	if (AIVar(idPlayer, AIV_LuckyExplore) == 0)
-		if (g.Explored(idPlayer))
+	if (AIVar(aiPlayer, AIV_LuckyExplore) == 0)
+		if (g.Explored(aiPlayer))
 			explored = true;
 
 	if (!explored)
@@ -33,7 +33,7 @@ if (set.IsValid) {
 		nActualPerc = 60;
 		if (set.IsIndependent)
 			nActualPerc += 25;
-		if (AIVar(idPlayer, AIV_TradeGold) > 0) {
+		if (AIVar(aiPlayer, AIV_TradeGold) > 0) {
 			int nRace;
 			nRace = set.GetCentralBuilding().race;
 			if (nRace == RepublicanRome)

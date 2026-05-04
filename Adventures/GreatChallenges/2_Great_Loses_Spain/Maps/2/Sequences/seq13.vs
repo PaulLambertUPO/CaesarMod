@@ -1,6 +1,6 @@
 int i;
 
-NO_SecondDruid.SetCommand("hold_position");
+NO_SecondDruid.SetCommand("standstill");
 T_CampGuards.SetCommand("stand_position");
 
 WaitQueryCountBetween(ClassPlayerAreaObjs("Unit", 1, "A_CampArea"), 1, 1000, -1);

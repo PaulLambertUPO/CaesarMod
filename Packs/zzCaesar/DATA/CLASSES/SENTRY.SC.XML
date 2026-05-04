@@ -15,15 +15,54 @@
 
 	<properties display_name="Sentry" display_name_plural="Sentries" />
 
-	<method sig="idle" vs="data/subai/do_nothing_void_loop.vs" />
 	<method sig="goto" vs="data/subai/sentry_goto.vs" />
 	<method sig="patrol" vs="data/subai/sentry_patrol.vs" />
 	<method sig="guard" vs="data/subai/sentry_guard.vs" />
 	<method sig="attack" vs="data/subai/sentry_attack.vs" />
 	<method sig="disappear" vs="data/subai/sentry_disappear.vs" />
+
 	<method sig="ondie" vs="data/subai/sentry_ondie.vs" />
+
+	<method sig="idle" vs="data/subai/do_nothing_void_loop.vs" />
+	<method sig="move" vs="data/subai/do_nothing_point.vs" />
+	<method sig="form_move" vs="data/subai/unit_detach.vs" />
+	<method sig="advance" vs="data/subai/do_nothing_point.vs" />
+	<method sig="advancealone" vs="data/subai/do_nothing_point.vs" />
+	<method sig="advance_aggressive" vs="data/subai/do_nothing_point.vs" />
+	<method sig="patrol" vs="data/subai/do_nothing_point.vs" />
+	<method sig="approach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="engage" vs="data/subai/do_nothing_void.vs" />
+	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="teleport" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="getitems" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="getitem" vs="data/subai/do_nothing_item_obj.vs" />
+	<method sig="putitem" vs="data/subai/do_nothing_item_obj.vs" />
+	<method sig="giveitem" vs="data/subai/do_nothing_item_obj.vs" />
+	<method sig="dropitem" vs="data/subai/do_nothing_item_point.vs" />
+	<method sig="take_nearby_items" vs="data/subai/do_nothing_void.vs" />
+	<method sig="standstill" vs="data/subai/do_nothing_void.vs" />
 	<method sig="stand_position" vs="data/subai/do_nothing_void.vs" />
+	<method sig="hold_position" vs="data/subai/do_nothing_void.vs" />
+	<method sig="ai_attack_gate" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="ai_killall" vs="data/subai/do_nothing_void.vs" />
+	<method sig="capture" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="transport" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="explore" vs="data/subai/do_nothing_point.vs" />
+	<method sig="wander" vs="data/subai/do_nothing_point.vs" />
+	<method sig="attack_unit_type_exclusive" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="engage_unit_type_exclusive" vs="data/subai/do_nothing_void.vs" />
+	<method sig="go_talk" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enter_tent" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="guardadvance" vs="data/subai/do_nothing_point.vs" />
+	<method sig="guardpatrol" vs="data/subai/do_nothing_point.vs" />
+	<method sig="guardengage" vs="data/subai/do_nothing_void.vs" />
+	<method sig="train" vs="data/subai/do_nothing_void.vs" />
 
 	<nodefcmdinherit />
 

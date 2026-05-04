@@ -12,6 +12,4 @@ if (.IsValid) {
 	.SetSpecial(defensive_tactics, false);
 	.SetSpecial(deflection, false);
 	.SetSpecial(determination, false);
-
-	.SetNoAIFlag(true);
 }

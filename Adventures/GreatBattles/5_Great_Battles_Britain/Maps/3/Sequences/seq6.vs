@@ -5,7 +5,7 @@ int i, j, ship_interval;
 
 ship_interval = 600000 - GetDifficulty() * 120000;
 
-while (1) {
+while (true) {
 	Sleep(ship_interval);
 	for (i = 1; i <= 3; i += 1) {
 		shipyard = GetNamedObj("Sh_" + i);

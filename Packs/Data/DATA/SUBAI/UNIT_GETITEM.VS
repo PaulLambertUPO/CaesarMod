@@ -8,7 +8,7 @@ if (holder.AsItemHolder().IsValid) {
 	if (.IsValid)
 		if (.IsAlive)
 			if (.max_items > 0) {
-				if (IsAIPlayer(.player))
+				if (.AI)
 					.SetParryMode(false);
 
 				while (!.Goto(holder, 25, 2500, false, 5000))
@@ -25,4 +25,4 @@ if (holder.AsItemHolder().IsValid) {
 			}
 }
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

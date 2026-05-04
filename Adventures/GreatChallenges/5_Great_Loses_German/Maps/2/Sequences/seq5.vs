@@ -33,7 +33,7 @@ while (Q_FinalWave.IsEmpty()) {
 					j = 1;
 			}
 			AttackArea(Q_DownTemp, "A_DownRomanDest7");
-			while (1) {
+			while (true) {
 				Sleep(500);
 				if (Q_DownTemp.IsEmpty())
 					break;

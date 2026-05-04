@@ -15,7 +15,7 @@ synchApproach = AIVar(aiPlayer, AIV_SynchApproach) != 0;
 while (!LAIKA(aiPlayer, nLastGaika).Prioritized(aiPlayer))
 	Sleep(2000);
 
-while (1) {
+while (true) {
 	for (i = 1; i <= nLastGaika; i += 1) {
 		gaika = LAIKA(aiPlayer, i);
 		if (gaika.settlement.IsValid)

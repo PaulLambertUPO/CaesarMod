@@ -31,11 +31,11 @@ if (skill_id >= 0) {
 
 	if (h_skill_owned > 0)
 		if (h_skill_level_0 == h_skill_owned)
-			reasonText = rollover(h, false) + "\n<color 255 0 0>" + Translate("You need at least 1 point to use this skill");
+			reasonText = rollover() + "\n<color 255 0 0>" + Translate("You need at least 1 point to use this skill");
 		else if (h_skill_in_effect == h_skill_leveled_up)
-			reasonText = rollover(h, false) + "\n<color 255 0 0>" + Translate("Skill already in effect");
+			reasonText = rollover() + "\n<color 255 0 0>" + Translate("Skill already in effect");
 		else
-			reasonText = rollover(h, false) + "\n<color 255 0 0>" + Translate("Not enough stamina");//using true is not good because h could be a hero with enough stamina
+			reasonText = rollover() + "\n<color 255 0 0>" + Translate("Not enough stamina");
 }
 
 return false;

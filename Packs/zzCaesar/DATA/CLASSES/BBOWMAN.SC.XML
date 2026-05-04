@@ -6,8 +6,6 @@
 	<properties speed="80" />
 	<properties unit_specials="Triple strike" />
 
-	<properties projectile_class="Arrow" />
-
 	<properties display_name="Bowman" display_name_plural="Bowmen" />
 	<properties icon="gameres/icons/BBowman.bmp" />
 	<properties help="contents/units/BBowman" />

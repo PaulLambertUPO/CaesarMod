@@ -8,15 +8,19 @@ if (.IsValid)
 	if (.IsAlive) {
 		if (target.IsAlive) {
 			Unit u;
+			bool target_catapult = false;
 
 			u = target.AsUnit();
 
-			if (u.IsValid)
+			if (u.IsValid) {
 				if (u.InHolder) {
 					.AddCommand(true, "engage");
-					Sleep(15);//prevent possible loops with other commands
+					Sleep(30);//prevent possible loops with other commands
 					return;
 				}
+			}
+			else if (target.AsCatapult().IsValid)
+				target_catapult = true;
 
 			.FormSetupAndMoveTo(target.pos, 0, 0, true);
 
@@ -27,7 +31,7 @@ if (.IsValid)
 				if (u.IsValid)
 					if (u.InHolder) {
 						.AddCommand(true, "engage");
-						Sleep(15);//prevent possible loops with other commands
+						Sleep(30);//prevent possible loops with other commands
 						return;
 					}
 
@@ -39,7 +43,7 @@ if (.IsValid)
 						if (u.IsValid)
 							if (u.InHolder) {
 								.AddCommand(true, "engage");
-								Sleep(15);//prevent possible loops with other commands
+								Sleep(30);//prevent possible loops with other commands
 								return;
 							}
 						if (.DistTo(target) < .sight + 100)
@@ -53,7 +57,7 @@ if (.IsValid)
 					if (u.IsValid)
 						if (u.InHolder) {
 							.AddCommand(true, "engage");
-							Sleep(15);//prevent possible loops with other commands
+							Sleep(30);//prevent possible loops with other commands
 							return;
 						}
 
@@ -65,10 +69,16 @@ if (.IsValid)
 						int i;
 
 						h_army = .army;
+
 						for (i = h_army.count - 1; i >= 0; i -= 1) {
 							o = h_army[i];
 							if (o.IsAlive)
-								if (o.IsRanged)
+								if (target_catapult)
+									if (o.IsMilitary)
+										o.SetCommand("attack", target);
+									else
+										o.SetCommand("engage");
+								else if (o.IsRanged)
 									o.SetCommand("attack", target);
 								else
 									o.SetCommand("engage");
@@ -81,7 +91,7 @@ if (.IsValid)
 								break;
 						if (.GotoAttack(target, 1500, true, 3000))
 							if (.IsValidTarget(target))
-								if (target.AsCatapult().IsValid) {
+								if (target_catapult) {
 									while (.Attack(target))
 										if (melee)
 											if (.HasSpecial(trample))
@@ -98,4 +108,4 @@ if (.IsValid)
 		.AddCommand(true, "engage");
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

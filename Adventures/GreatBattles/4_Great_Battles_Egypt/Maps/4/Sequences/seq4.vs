@@ -25,7 +25,7 @@ SpawnGroupInHolder("R_FlaviusPublius", set.name);
 pt = Point(0, 350);
 pt.Rot(45);
 R_FlaviusPublius.SetCommand("move", set.GetCentralBuilding().pos + pt);
-R_FlaviusPublius.AddCommand(false, "hold_position");
+R_FlaviusPublius.AddCommand(false, "standstill");
 Sleep(8000);
 
 RunConv("HoldTowns");

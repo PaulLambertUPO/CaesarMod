@@ -40,7 +40,7 @@ if (!other.AsCatapult().IsValid)
 														if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
 															.AddCommand(true, "advanceenter", bld);
 															.AddCommand(true, "engage");
-															Sleep(15);//prevent possible loops with other commands
+															Sleep(30);//prevent possible loops with other commands
 															return;
 														}
 														h_army = .army;
@@ -50,7 +50,7 @@ if (!other.AsCatapult().IsValid)
 																if (o.AsUnit().BestTargetInSquadSightMisZeroDamage.IsAlive) {
 																	.AddCommand(true, "advanceenter", bld);
 																	.AddCommand(true, "engage");
-																	Sleep(15);//prevent possible loops with other commands
+																	Sleep(30);//prevent possible loops with other commands
 																	return;
 																}
 														}
@@ -110,4 +110,4 @@ if (!other.AsCatapult().IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

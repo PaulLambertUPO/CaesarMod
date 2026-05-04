@@ -17,22 +17,11 @@ for (i = ol.count - 1; i >= 0; i -= 1) {
 	if (o.IsAlive)
 		if (o.health < o.maxhealth)
 			if (!.IsEnemy(o)) {
-				bool unaffordable = false;
-
-				if (cmdcost_gold > set.gold)
-					unaffordable = true;
-				else if (cmdcost_food > set.food)
-					unaffordable = true;
-				else if (cmdcost_pop > 0)
-					if (set.population - cmdcost_pop < GetConst("MinPopulation"))
-						unaffordable = true;
-
-				reasonText = rollover(this, unaffordable);
-
+				reasonText = rollover(this, true);
 				return true;
 			}
 }
 
-reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("There are no allies to heal around the settlement");
+reasonText = rollover() + "\n<color 255 0 0>" + Translate("There are no allies to heal around the settlement");
 
 return false;

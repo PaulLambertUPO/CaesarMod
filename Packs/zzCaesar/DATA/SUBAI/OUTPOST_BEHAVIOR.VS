@@ -77,7 +77,7 @@ if (set.IsIndependent) {
 	}
 
 	while (plr == .player) {
-		pt_1.Set(rad, 0);
+		pt_1.Set(0, rad);
 		pt_1.Rot(rand(360));
 		set.Units.ObjEnemy(plr).SetCommand("advance", pt_1 + pt_pos);//send away enemy units inside
 
@@ -290,7 +290,7 @@ else
 		is_gold_outpost = true;
 
 	while (true) {
-		pt.Set(rad, 0);
+		pt.Set(0, rad);
 		pt.Rot(rand(360));
 		set.Units.ObjEnemy(.player).SetCommand("advance", pt + pt_pos);//send away enemy units inside
 

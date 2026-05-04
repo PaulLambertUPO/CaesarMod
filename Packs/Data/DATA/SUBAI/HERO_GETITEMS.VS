@@ -11,12 +11,12 @@ if (.IsValid)
 		holder = other.AsItemHolder();
 
 		if (holder.IsValid) {
-			if (holder.DistTo(.posRH) >= 600) {
+			if (holder.DistTo(.posRH) >= 750) {
 				.FormSetupAndMoveTo(holder.pos, 0, 0, true);
 				while (.HasPath) {
 					if (!holder.IsValid)
 						break;
-					if (.DistTo(holder) < 600)
+					if (.DistTo(holder) < 750)
 						break;
 					.FormKeepMoving(1500);
 				}
@@ -40,4 +40,4 @@ if (.IsValid)
 		}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -40,7 +40,7 @@ else {
 
 AIStart(2, "DEFAULT", 2);
 
-while (1) {
+while (true) {
 	if (set.player != 1)
 		if (difficulty == 1)
 			set.SetGold(set.gold + 20);

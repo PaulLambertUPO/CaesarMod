@@ -20,7 +20,7 @@ for (i = 1; i <= 8; i += 1)
 	else
 		GetNamedObj("NO_Messenger" + i).Erase();
 
-while (1) {
+while (true) {
 	Sleep(3000);
 	if (messenger.DistTo(NO_Caesar.obj.posRH) < 700) {
 		conv.Init("Escapers");
@@ -63,7 +63,7 @@ else {
 	messenger.SetPlayer(7);
 }
 
-while (1) {
+while (true) {
 	Sleep(3000);
 	if (messenger.DistTo(NO_Caesar.obj.posRH) < 700) {
 		conv.Init("WavesGone");

@@ -1,6 +1,6 @@
 //void, Obj This
 
-Unit flag;
+Obj flag;
 
 //use a scope to remove variables when the final loop is reached
 {
@@ -15,7 +15,7 @@ Unit flag;
 	.CmdDisable("creategoldmule2");
 	.CmdDisable("autotrain_start");
 	.CmdDisable("autotrain_stop");
-	.CmdDisable("townhall_military_training");
+	.CmdDisable("military_training");
 
 	set = .settlement;
 
@@ -32,7 +32,7 @@ Unit flag;
 	.CmdEnable("creategoldmule2");
 	.CmdEnable("autotrain_start");
 	.CmdEnable("autotrain_stop");
-	.CmdEnable("townhall_military_training");
+	.CmdEnable("military_training");
 
 	if (IsResearched(set, "ChooseRepublicanRome"))
 		flag = Place("RepublicanRomeFlag", .pos + Point(65, -450), .player);

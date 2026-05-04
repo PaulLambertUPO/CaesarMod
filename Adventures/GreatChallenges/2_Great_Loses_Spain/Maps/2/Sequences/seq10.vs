@@ -18,7 +18,7 @@ EnvWriteInt("/En_LaraxFound", 0);
 
 SetShortcutSel(1, 1, NO_Viriato.GetObjList());
 
-NO_Catriona.SetCommand("hold_position");
+NO_Catriona.SetCommand("standstill");
 
 ol = T_StartArmy.GetObjList();
 for (i = 0; i < ol.count; i += 1)

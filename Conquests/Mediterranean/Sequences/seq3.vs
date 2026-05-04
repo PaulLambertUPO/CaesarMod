@@ -2,7 +2,7 @@ ObjList ol;
 Unit u;
 int i;
 
-while (1) {
+while (true) {
 	ol = GetPlayerUnits(1);
 	for (i = 0; i < ol.count; i += 1) {
 		u = ol[i].AsUnit();

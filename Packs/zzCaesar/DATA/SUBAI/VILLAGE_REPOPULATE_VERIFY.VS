@@ -5,32 +5,24 @@ Building this;
 this = objs[0].AsBuilding();
 
 if (.command != "repopulate") {
-	Settlement set;
-	int min_pop;
-	bool in_need_unaffordable = false;
-
-	set = .settlement;
-	min_pop = GetConst("MinPopulation");
+	bool in_need = false;
 
 	if (.IsBroken)
-		in_need_unaffordable = true;
-	else if (set.max_population >= min_pop)
-		if (set.population < min_pop)
-			in_need_unaffordable = true;
+		in_need = true;
+	else {
+		Settlement set;
+		int min_pop;
 
-	if (in_need_unaffordable) {
-		in_need_unaffordable = false;
+		set = .settlement;
+		min_pop = GetConst("MinPopulation");
 
-		if (cmdcost_gold > set.gold)
-			in_need_unaffordable = true;
-		else if (cmdcost_food > set.food)
-			in_need_unaffordable = true;
-		else if (cmdcost_pop > 0)
-			if (set.population - cmdcost_pop < min_pop)
-				in_need_unaffordable = true;
+		if (set.max_population >= min_pop)
+			if (set.population < min_pop)
+				in_need = true;
+	}
 
-		reasonText = rollover(this, in_need_unaffordable);
-
+	if (in_need) {
+		reasonText = rollover(this, true);
 		return true;
 	}
 }

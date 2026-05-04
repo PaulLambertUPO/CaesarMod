@@ -21,10 +21,10 @@ BritVillage2.SetCommand("tribute", IceniTown);
 
 GetSettlement("S_RomeTown").Research("ChooseImperialRome");
 
-NO_Lleldoryn.obj.SetCommand("hold_position");
-DungeonDruids.SetCommand("hold_position");
-RuinDruids.SetCommand("hold_position");
-GhoulDruid.SetCommand("hold_position");
+NO_Lleldoryn.obj.SetCommand("standstill");
+DungeonDruids.SetCommand("standstill");
+RuinDruids.SetCommand("standstill");
+GhoulDruid.SetCommand("standstill");
 
 GreenGuards.SetCommand("stand_position");
 

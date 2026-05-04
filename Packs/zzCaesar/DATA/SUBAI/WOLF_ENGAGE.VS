@@ -37,7 +37,7 @@ if (.IsValid)
 							if (rand(3) == 0)
 								Intersect(ObjsInSight(this, "Wolf"), FriendlyObjs(.player, "Wolf")).SetCommandOffset("move", pt_flee);
 							.AddCommand(true, "move", pt_flee);
-							Sleep(15);//prevent possible loops with other commands
+							Sleep(30);//prevent possible loops with other commands
 							return;
 						}
 					}
@@ -72,7 +72,7 @@ if (.IsValid)
 									if (rand(4) == 0)
 										Intersect(ObjsInSight(this, "Wolf"), FriendlyObjs(.player, "Wolf")).SetCommandOffset("move", pt_flee);
 									.AddCommand(true, "move", pt_flee);
-									Sleep(15);//prevent possible loops with other commands
+									Sleep(30);//prevent possible loops with other commands
 									return;
 								}
 							}
@@ -83,4 +83,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -1,6 +1,6 @@
 int i;
 
-while (1) {
+while (true) {
 	Sleep(30000);
 	for (i = 1; i <= 8; i += 1)
 		if (GetNamedObj("NO_FortificationPoint" + i).obj.player != 4)

@@ -3,7 +3,7 @@ int i, time;
 
 Sleep(600000);
 
-while (1) {
+while (true) {
 	time = GetTime();
 	for (i = 1; i <= 4; i += 1) {
 		set = GetSettlement("Selo" + i);

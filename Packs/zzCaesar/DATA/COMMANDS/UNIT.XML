@@ -52,8 +52,8 @@
 		button="Actions/Stand Ground.bmp"
 		key="s"
 		rollover="Stand ground"
-		groupverifier="data/subai/stand_position_verify.vs"
-		groupdispatch="data/subai/stand_position_dispatch.vs"
+		groupverifier="data/subai/unit_stand_position_verify.vs"
+		groupdispatch="data/subai/unit_stand_position_dispatch.vs"
 		voidgroupdispatch="1">
 		<src obj="Unit" sticky="yes" />
 		<nsrc obj="Sentry" />
@@ -125,16 +125,16 @@
 	</cmd>
 	<cmd name="detach" priority="8"
 		button="actions/detach.bmp"
-		groupverifier="data/subai/group_detach_verify.vs"
-		groupdispatch="data/subai/group_detach.vs"
-		voidgroupdispatch="1"
+		groupverifier="data/subai/unit_detach_verify.vs"
+		immediate="yes"
 		key="d"
 		rollover="Detach from hero">
 		<src obj="Unit" sticky="yes" />
-		<nsrc obj="BaseAnimal" />
-		<nsrc obj="ShipBattle" />
-		<nsrc obj="Wagon" />
 		<nsrc obj="Hero" />
+		<nsrc obj="Wagon" />
+		<nsrc obj="BaseAnimal" />
+		<nsrc obj="GGhostUnit" />
+		<nsrc obj="ShipBattle" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />
 	</cmd>
@@ -145,7 +145,7 @@
 		voidgroupdispatch="1"
 		key="q"
 		rollover="Reveal">
-		<src obj="Unit" sticky="yes" />
+		<src obj="Unit" />
 	</cmd>
 	<cmd name="build_catapult" priority="12"
 		offset="1"
@@ -164,26 +164,31 @@
 		button="actions/Take Nearby Items.bmp"
 		key="r"
 		groupverifier="data/subai/unit_take_nearby_items_verify.vs"
+		groupdispatch="data/subai/unit_take_nearby_items_dispatch.vs"
+		voidgroupdispatch="1"
 		rollover="Take nearby items">
 		<src obj="Unit" />
-		<nsrc obj="Sentry" />
 		<nsrc obj="ShipBattle" />
+		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />
 		<nsrc obj="Wagon" />
+		<nsrc obj="Eagle" />
+		<nsrc obj="CrowUnit" />
 	</cmd>
 	<cmd name="enter_parry_mode" priority="14"
 		button="actions/Parry Mode.bmp"
-		key="z"
+		key="k"
 		groupverifier="data/subai/unit_parry_mode_enter_verify.vs"
 		groupdispatch="data/subai/unit_parry_mode_enter.vs"
 		voidgroupdispatch="1"
 		rollover="Enter parry mode">
 		<src obj="Unit" sticky="yes" />
 		<nsrc obj="Sentry" />
+		<nsrc obj="RamUnit" />
 	</cmd>
 	<cmd name="leave_parry_mode" priority="15"
 		button="actions/Leave Parry Mode.bmp"
-		key="x"
+		key="l"
 		groupverifier="data/subai/unit_parry_mode_leave_verify.vs"
 		groupdispatch="data/subai/unit_parry_mode_leave.vs"
 		voidgroupdispatch="1"
@@ -210,7 +215,7 @@
 	<cmd name="to_peasant" priority="16"
 		button="actions/disband.bmp"
 		key="w"
-		groupdispatch="data/subai/imilitiaman_mutate_gd.vs"
+		groupdispatch="data/subai/imilitiaman_mutate_dispatch.vs"
 		voidgroupdispatch="1"
 		rollover="Demobilize"
 		description="Transforms the militiamen into peasants (only in buildings and ships)">
@@ -219,8 +224,8 @@
 	<cmd name="to_teuton_archer" priority="16"
 		button="actions/train TTeutonArcher.bmp"
 		key="w"
-		groupverifier="data/subai/teuton_mutate_gv.vs"
-		groupdispatch="data/subai/teuton_mutate_gd.vs"
+		groupverifier="data/subai/teuton_mutate_verify.vs"
+		groupdispatch="data/subai/teuton_mutate_dispatch.vs"
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Archer"
 		description="Transforms the Riders into Archers (only in buildings and ships)">
@@ -229,8 +234,8 @@
 	<cmd name="to_teuton_wolf" priority="16"
 		button="actions/train TTeutonWolf.bmp"
 		key="w"
-		groupverifier="data/subai/teuton_mutate_gv.vs"
-		groupdispatch="data/subai/teuton_mutate_gd.vs"
+		groupverifier="data/subai/teuton_mutate_verify.vs"
+		groupdispatch="data/subai/teuton_mutate_dispatch.vs"
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Wolf"
 		description="Transforms the Archers into Wolves (only in buildings and ships)">
@@ -239,8 +244,8 @@
 	<cmd name="to_teuton_rider" priority="16"
 		button="actions/train TTeutonRider.bmp"
 		key="w"
-		groupverifier="data/subai/teuton_mutate_gv.vs"
-		groupdispatch="data/subai/teuton_mutate_gd.vs"
+		groupverifier="data/subai/teuton_mutate_verify.vs"
+		groupdispatch="data/subai/teuton_mutate_dispatch.vs"
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Rider"
 		description="Transforms the Wolves into Riders (only in buildings and ships)">

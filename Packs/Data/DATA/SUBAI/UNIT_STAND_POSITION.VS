@@ -12,7 +12,7 @@ if (.IsValid)
 			int rng;
 			bool melee;
 
-			if (IsAIPlayer(.player))
+			if (.AI)
 				.SetParryMode(false);
 
 			.Stop(500);
@@ -56,10 +56,13 @@ if (.IsValid)
 						o = .BestTargetInRange(pt_pos, rng);
 					}
 				}
-				if (.Goto(pt_pos, 0, 500, false, -1))
-					if (.Stop(500))
+				if (.pos != pt_pos) {
+					if (.Goto(pt_pos, 0, 500, false, -1))
 						Sleep(500);
+				}
+				else if (.Stop(500))
+					Sleep(500);
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -4,9 +4,6 @@
 	<properties help="contents/units/Mule" />
 
 	<method sig="follow" vs="data/subai/wagon_mule_follow.vs" verify="data/subai/wagon_mule_follow_verify.vs" />
-	<method sig="transport" vs="data/subai/unit_transport.vs" verify="data/subai/unit_transport_verify.vs" />
-	<method sig="boardship" vs="data/subai/unit_board.vs" verify="data/subai/unit_board_verify.vs" />
-	<method sig="boardshipcommon" vs="data/subai/unit_board_common.vs" onfinish="data/subai/unit_board_common_onfinish.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="follow" />

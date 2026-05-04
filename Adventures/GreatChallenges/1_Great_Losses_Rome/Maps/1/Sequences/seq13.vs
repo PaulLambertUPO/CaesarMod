@@ -3,7 +3,7 @@ bool retake = false;
 
 difficulty = GetDifficulty();
 
-while (1) {
+while (true) {
 	while (timer < 50) {
 		if (!retake)
 			if (NO_Ostia.obj.player != 4) {

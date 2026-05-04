@@ -6,7 +6,7 @@ timer = event_interval;
 
 Sleep(1000);
 
-while (1) {
+while (true) {
 	if (selu.IsValid())
 		if (selu.name == "Senator") {
 			RunConv("NeedHelp");

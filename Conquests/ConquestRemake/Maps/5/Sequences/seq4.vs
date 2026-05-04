@@ -1,7 +1,7 @@
 int i;
 IntArray tents_counters;
 
-while (1) {
+while (true) {
 	Sleep(18000);
 	for (i = 0; i < 17; i += 1) {
 		Settlement set;

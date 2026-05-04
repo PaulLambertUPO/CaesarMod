@@ -3,7 +3,7 @@ Settlement set2, set3;
 set2 = GetSettlement("S_Town2");
 set3 = GetSettlement("S_Town3");
 
-while (1) {
+while (true) {
 	Sleep(480000);
 	if (set2.player != 1) {
 		SpawnGroupInHolder("C_Reinforcements1", "S_Town2");

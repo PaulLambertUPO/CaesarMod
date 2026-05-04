@@ -3,11 +3,12 @@
 	<properties speed="100" /><!-- the speed is changed in the scripts -->
 	<properties edittree_pos="Units/Animals/Horse (wild)" />
 
-	<method sig="idle" vs="data/subai/horse_idle.vs" />
-	<method sig="move" vs="data/subai/deer_horse_move.vs" />
-	<method sig="trot" vs="data/subai/horse_trot.vs" />
+	<method sig="trot" vs="data/subai/horse_trot.vs" onfinish="data/subai/deer_horse_reset_walk_anim.vs" />
+
+	<method sig="idle" vs="data/subai/horse_idle.vs" onfinish="data/subai/deer_horse_reset_walk_anim.vs" />
 	<method sig="enter" vs="data/subai/horse_enter.vs" verify="data/subai/horse_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/horse_enter.vs" verify="data/subai/horse_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/horse_enter.vs" />
+	<method sig="advanceenter" vs="data/subai/horse_enter.vs" />
 
 	<value0 icon="gameres/infobar/common/Loyality.bmp" />
 

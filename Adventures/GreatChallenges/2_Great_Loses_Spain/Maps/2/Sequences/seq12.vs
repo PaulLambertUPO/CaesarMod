@@ -3,7 +3,7 @@ int difficulty, i = 1;
 
 difficulty = GetDifficulty();
 
-while (1) {
+while (true) {
 	if (EnvReadInt("/NeedArmy") == 1) {
 		SpawnGroupInHolder("T_RomArmy" + i, "S_RomanTown");
 		SpawnGroupInHolder("T_RomeHero" + i, "S_RomanTown");

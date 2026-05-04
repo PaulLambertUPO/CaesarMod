@@ -48,17 +48,21 @@ if (EnvReadString(set, research) == "researched" || EnvReadString(plr, research)
 		curr_units = number_to_train + Count(plr, unit_class) + EnvReadInt(plr, "QueuedBuild/" + unit_class);
 
 	if (curr_units <= max_units) {
+		int pop_cost;
+
+		pop_cost = cmdcost_pop;
+
 		reasonText = rollover(this, unit_class, false) + "\n" + Translatef("(you cannot have more than %s1, currently %s2)", max_units, curr_units - number_to_train);
 
 		if (cmdcost_gold > set.gold)
 			reasonText = reasonText + "\n<color 255 0 0>" + Translate("Not enough gold");
 		if (cmdcost_food > set.food)
 			reasonText = reasonText + "\n<color 255 0 0>" + Translate("Not enough food");
-		if (cmdcost_pop > 0) {
+		if (pop_cost > 0) {
 			int min_pop;
 			min_pop = GetConst("MinPopulation");
-			if (set.population - cmdcost_pop < min_pop)
-				reasonText = reasonText + "\n<color 255 0 0>" + Translatef("The current population is under the minimum of %s1 people", min_pop + cmdcost_pop);
+			if (set.population - pop_cost < min_pop)
+				reasonText = reasonText + "\n<color 255 0 0>" + Translatef("The current population is under the minimum of %s1 people", min_pop + pop_cost);
 		}
 
 		return true;

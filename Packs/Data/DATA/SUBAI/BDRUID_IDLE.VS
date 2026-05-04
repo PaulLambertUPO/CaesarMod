@@ -16,7 +16,6 @@ if (.IsValid)
 
 		Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
 
-
 		pt_start = .posRH;
 
 		plr = .player;
@@ -28,7 +27,7 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else if (.Stop(2000)) {
 				h = .hero;
 				if (h.IsValid)
@@ -124,9 +123,8 @@ if (.IsValid)
 																						u.KillCommand();
 																					else if (cmd != "capture")
 																						if (cmd != "stand_position")
-																							if (cmd != "hold_position")
-																								if (u.TimeWithoutAttack < 1000)//other fight commands
-																									u.KillCommand();
+																							if (u.TimeWithoutAttack < 1000)//other fight commands
+																								u.KillCommand();
 																				}
 																			}
 
@@ -205,4 +203,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

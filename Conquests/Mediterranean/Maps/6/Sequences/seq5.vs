@@ -58,7 +58,7 @@ else {
 AIStart(2, "DEFAULT", 2);
 AIStart(3, "DEFAULT", 2);
 
-while (1) {
+while (true) {
 	if (difficulty == 1) {
 		if (set2.player != 1)
 			set2.SetGold(set2.gold + 20);

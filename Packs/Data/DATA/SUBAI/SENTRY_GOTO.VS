@@ -9,4 +9,4 @@ if (.IsValid)
 		while (!.Goto(pt, 0, 2000, false, 0))
 			;
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

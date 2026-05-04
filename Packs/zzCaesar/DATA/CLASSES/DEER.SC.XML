@@ -1,7 +1,6 @@
 <class id="Deer" parent="DeerUnit" cpp_class="CVXUnit" entity="Units/Deer/Deer.ent.xml">
-	<properties speed="150" /><!-- the speed is changed in the scripts -->
+	<properties speed="150" /><!-- the speed (factor) is changed in the scripts -->
 	<properties edittree_pos="Units/Animals/Deer (wild)" />
-	<method sig="idle" vs="data/subai/deer_idle.vs" />
-	<method sig="move" vs="data/subai/deer_horse_move.vs" />
+	<method sig="idle" vs="data/subai/deer_idle.vs" onfinish="data/subai/deer_horse_reset_walk_anim.vs" />
 	<sounds idle="Sounds/Animals/Deer/Deer_Select.wav" />
 </class>

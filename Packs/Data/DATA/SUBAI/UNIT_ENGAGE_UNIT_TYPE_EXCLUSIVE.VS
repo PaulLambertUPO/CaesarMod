@@ -9,7 +9,7 @@ if (.IsValid)
 		if (!.InHolder) {
 			Unit u;
 
-			if (IsAIPlayer(.player))
+			if (.AI)
 				.SetParryMode(false);
 
 			u = target.AsUnit();
@@ -34,4 +34,4 @@ if (.IsValid)
 		.AddCommand(true, "engage");
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -12,7 +12,7 @@ if (.IsValid)
 			holder = other.AsItemHolder();
 
 			if (holder.IsValid) {
-				if (IsAIPlayer(.player))
+				if (.AI)
 					.SetParryMode(false);
 
 				while (!.Goto(holder, 25, 2500, false, 5000))
@@ -31,4 +31,4 @@ if (.IsValid)
 		else
 			.AddCommand(true, "approach", other);
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

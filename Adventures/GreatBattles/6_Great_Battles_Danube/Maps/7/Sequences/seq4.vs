@@ -5,7 +5,7 @@ difficulty = GetDifficulty();
 
 Sleep(300000 - difficulty * 60000);
 
-while (1) {
+while (true) {
 	r = rand(3) + 2;
 	while (r > 0) {
 		SpawnGroup("Q_MainGoulWave" + (rand(3) + 1));

@@ -4,7 +4,7 @@ int i;
 
 NO_Town1.obj.AsBuilding().Research("Learning");
 
-while (1) {
+while (true) {
 	player_sets = ClassPlayerObjs(cBaseTownhall, 1).GetObjList();
 	for (i = 0; i < player_sets.count; i += 1) {
 		set = player_sets[i].AsBuilding().settlement;

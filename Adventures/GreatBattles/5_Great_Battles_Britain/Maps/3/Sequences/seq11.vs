@@ -2,7 +2,7 @@ Query units_to_board;
 
 units_to_board = Intersect(ClassPlayerAreaObjs("Unit", 2, "A_RomeSupportZone"), T_S_Sett1Guards);
 
-while (1) {
+while (true) {
 	Sleep(2000);
 	if (T_Sh_Sett1.IsEmpty())
 		if (!units_to_board.IsEmpty()) {

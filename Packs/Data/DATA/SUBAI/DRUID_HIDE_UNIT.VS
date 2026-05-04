@@ -49,9 +49,8 @@ if (.IsValid)
 																							u.KillCommand();
 																						else if (cmd != "capture")
 																							if (cmd != "stand_position")
-																								if (cmd != "hold_position")
-																									if (u.TimeWithoutAttack < 1000)//other fight commands
-																										u.KillCommand();
+																								if (u.TimeWithoutAttack < 1000)//other fight commands
+																									u.KillCommand();
 																					}
 																				}
 
@@ -69,4 +68,4 @@ if (.IsValid)
 							}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

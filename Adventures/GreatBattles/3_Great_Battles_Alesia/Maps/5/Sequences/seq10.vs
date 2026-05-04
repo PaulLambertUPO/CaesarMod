@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (NO_GaulCentral.obj.player == 1)
 		if (NO_GaulOuter.obj.player == 1)
 			break;

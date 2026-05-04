@@ -51,8 +51,13 @@ if (.IsValid)
 			set = gk_dest.settlement;
 
 			if (set.IsValid) {
+				point pt;
+
+				pt.Set(0, set.GetCentralBuilding().radius + rand(101));
+				pt.Rot(rand(360));
+
 				.AddCommand(true, "ai_killall");
-				.AddCommand(true, "advance", set.GetCentralBuilding().pos + RandomOffset(100 + set.GetCentralBuilding().radius));
+				.AddCommand(true, "advance", set.GetCentralBuilding().pos + pt);
 				break;
 			}
 			if (gk_dest != gk_in) {
@@ -65,4 +70,4 @@ if (.IsValid)
 		}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -3,7 +3,7 @@ ObjList ol;
 
 Sleep(10000);
 
-while (1) {
+while (true) {
 	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome1"), 1, 1000, 1000))
 		break;
 	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome2"), 1, 1000, 1000))

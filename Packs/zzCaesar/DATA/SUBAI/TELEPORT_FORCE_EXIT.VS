@@ -17,7 +17,7 @@ if (This.AsTeleport().IsValid) {
 			u = trapped_units[i].AsUnit();
 			if (u.IsAlive)
 				if (u.command == "idle")
-					if (!u.hero.IsValid)
+					if (u.hero.IsDead)
 						if (u.GetHolderSett() == this)
 							u.SetCommand("teleport", This);
 		}

@@ -16,6 +16,13 @@
 
 	<method sig="idle" vs="data/subai/fish_idle.vs" />
 
+	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="teleport" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />
+
 	<nodefcmdinherit />
 
 	<defaultcmd target="">

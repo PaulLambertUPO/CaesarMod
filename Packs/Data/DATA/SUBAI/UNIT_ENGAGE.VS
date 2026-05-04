@@ -10,19 +10,18 @@ if (.IsValid)
 			Obj o;
 			bool this_ai, melee;
 
-			Sleep(rand(151));//avoid "thundering herd" for multiple units start the command simultaneously
+			Sleep(rand(151));//avoid "thundering herd" for multiple units that start the command simultaneously
 
 			this_ai = .AI;
 			melee = !.IsRanged;
 
-			if (IsAIPlayer(.player))
+			if (this_ai) {
 				.SetParryMode(false);
-
-			if (this_ai)
-				if (rand(5) == 0)
+				if (rand(3) == 0)
 					o = .BestTargetInSquadSight;
 				else
 					o = .BestTargetInSquadSightMisZeroDamage;
+			}
 			else
 				o = .BestTargetInSquadSight;
 
@@ -40,7 +39,7 @@ if (.IsValid)
 								;
 
 				if (this_ai)
-					if (rand(5) == 0)
+					if (rand(3) == 0)
 						o = .BestTargetInSquadSight;
 					else
 						o = .BestTargetInSquadSightMisZeroDamage;
@@ -49,4 +48,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

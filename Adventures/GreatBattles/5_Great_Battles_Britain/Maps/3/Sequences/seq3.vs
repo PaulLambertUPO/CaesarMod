@@ -26,7 +26,7 @@ while (!all_captured) {
 	for (i = 0; i < ol.count; i += 1) {
 		h = ol[i].AsHero();
 		if (h.IsValid) {
-			if (h.army.count == 0) {
+			if (!h.HasArmy) {
 				Conversation conv;
 				captured_heroes += 1;
 				conv.Init("Caput" + captured_heroes);

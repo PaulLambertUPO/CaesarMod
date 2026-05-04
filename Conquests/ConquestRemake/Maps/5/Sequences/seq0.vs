@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (NO_Town2.obj.player != 1)
 		if (NO_Town2.obj.player != 7) {
 			SpawnGroupInHolder("T_Valkyries1", "S_Town2");

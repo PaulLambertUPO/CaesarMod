@@ -256,7 +256,7 @@
 	</cmd>
 	<cmd name="skill_divine_rush" priority="26"
 		button="skills/Rush.bmp"
-		key="k"
+		key="b"
 		rollover="Rush"
 		description="Activates the Rush skill"
 		coststamina="4"

@@ -16,7 +16,7 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else {
 				Sleep(500);
 
@@ -26,7 +26,7 @@ if (.IsValid)
 					if (o.IsAlive) {
 						if (o.command == "engage") {
 							.AddCommand(true, "engage");
-							Sleep(15);//prevent possible loops with other commands
+							Sleep(30);//prevent possible loops with other commands
 							return;
 						}
 						if (o.command == "lead") {
@@ -36,7 +36,7 @@ if (.IsValid)
 					}
 				}
 
-				if (!pack_leader.IsValid) {
+				if (pack_leader.IsDead) {
 					.AddCommand(true, "lead");
 					break;
 				}
@@ -44,7 +44,7 @@ if (.IsValid)
 				while (pack_leader.IsAlive) {
 					if (pack_leader.command == "engage") {
 						.AddCommand(true, "engage");
-						Sleep(15);//prevent possible loops with other commands
+						Sleep(30);//prevent possible loops with other commands
 						return;
 					}
 
@@ -60,4 +60,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

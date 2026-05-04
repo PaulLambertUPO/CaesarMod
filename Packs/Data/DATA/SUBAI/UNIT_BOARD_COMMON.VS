@@ -13,11 +13,13 @@ if (.IsValid)
 
 			if (sh.IsValid) {
 				int plr, max_units, ai_time_stuck;
+				bool this_ai;
 
 				plr = .player;
 				max_units = sh.UnitsMax;
+				this_ai = .AI;
 
-				if (IsAIPlayer(plr))
+				if (this_ai)
 					.SetParryMode(false);
 
 				while (sh.IsAlive) {
@@ -33,7 +35,7 @@ if (.IsValid)
 						break;
 					if (sh.BoardUnit(this))
 						break;
-					if (.AI) {
+					if (this_ai) {
 						if (.DistTo(sh.pos) < 500)
 							ai_time_stuck += 1;
 						if (ai_time_stuck >= 10) {
@@ -45,4 +47,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -1,6 +1,6 @@
 int i, j, sieging;
 
-while (1) {
+while (true) {
 	Sleep(10000);
 	if (!Q_EliteHelper3.IsEmpty()) {
 		if (NO_Ostia.obj.player != 4) {

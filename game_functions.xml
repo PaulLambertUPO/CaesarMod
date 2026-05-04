@@ -2863,19 +2863,23 @@
 <func name="SaveAdventure" returns="void" latent="1">
 	<param type="str" />
 </func>
+<!-- Checks if the specified player has assigned something to a group number during the current game (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
 <func name="WasSelectionAssigned" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- player -->
 </func>
+<!-- Checks if the specified player has assigned something to the specified group number during the current game (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
 <func name="WasSelectionAssigned" returns="bool">
-	<param type="int" />
+	<param type="int" /><!-- player -->
+	<param type="int" /><!-- group -->
 </func>
+<!-- Checks if the specified player currently has something assigned to a group number (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
 <func name="IsSelectionAssigned" returns="bool">
-	<param type="int" />
-	<param type="int" />
+	<param type="int" /><!-- player -->
 </func>
+<!-- Checks if the specified player currently has something assigned to the specified group number (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
 <func name="IsSelectionAssigned" returns="bool">
-	<param type="int" />
+	<param type="int" /><!-- player -->
+	<param type="int" /><!-- group -->
 </func>
 <func name="SetGlobalBloodlust" returns="void">
 	<param type="bool" />

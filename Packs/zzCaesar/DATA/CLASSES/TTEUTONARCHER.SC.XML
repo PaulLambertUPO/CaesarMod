@@ -16,5 +16,7 @@
 	<properties help="contents/units/TTeutonArcher" />
 	<properties edittree_pos="Units/Germany/Teuton Archer" />
 
+	<method sig="convert" vs="data/subai/unit_convert_tteutonarcher.vs" />
+
 	<sounds walk="HorseWalk" command="VoiceTTeutonArcher" die="HorseUnitDeath" />
 </class>

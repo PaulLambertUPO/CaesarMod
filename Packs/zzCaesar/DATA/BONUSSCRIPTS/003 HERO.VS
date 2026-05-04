@@ -1,6 +1,6 @@
 //void, Settlement set, int playerid
 
-Unit hero_unit;
+Hero hero_unit;
 ObjList hero_list;
 str hero_class;
 int Greece, r;
@@ -37,7 +37,7 @@ else if (r == Germany)
 else if (r == Greece)
 	hero_class = "GreekHero";
 
-hero_unit = Place(GetRandomHeroClass(hero_class, playerid), set.GetCentralBuilding().pos, playerid);
+hero_unit = Place(GetRandomHeroClass(hero_class, playerid), set.GetCentralBuilding().pos, playerid).AsHero();
 hero_unit.SetLevel(12);
 set.ForceAddUnit(hero_unit);
 

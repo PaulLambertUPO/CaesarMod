@@ -10,9 +10,9 @@ if (.IsValid)
 			Obj o;
 			int i, disease_cost;
 
-			Sleep(rand(151));//avoid "thundering herd" for multiple units start the command simultaneously
+			Sleep(rand(151));//avoid "thundering herd" for multiple units that start the command simultaneously
 
-			if (IsAIPlayer(.player))
+			if (.AI)
 				.SetParryMode(false);
 
 			disease_cost = GetConst("DiseaseCost");
@@ -49,4 +49,4 @@ if (.IsValid)
 			}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

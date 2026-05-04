@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	Sleep(5000);
 
 	if (Q_CarthageOutpostDefenders1.count < 15)

@@ -1,4 +1,4 @@
-<class id="AttackAnimal" parent="BaseAnimal" cpp_class="CVXUnit" entity="">
+<class id="AttackAnimal" parent="BaseAnimal" cpp_class="CVXUnit">
 
 	<properties damage_type="slash" />
 	<properties healthbar_type="3" />

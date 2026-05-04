@@ -10,10 +10,10 @@ if (.IsValid)
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
-				Sleep(2500);
+				Sleep(10000);
 			else {
 				if (.AI)
-					if (!.hero.IsValid) {//find the nearest owned reachable shipyard that can still host fishermen, otherwise convert to peasant
+					if (.hero.IsDead) {//find the nearest owned reachable shipyard that can still host fishermen, otherwise convert to peasant
 						ObjList ol;
 						Obj o;
 						int i, lsa;
@@ -49,4 +49,4 @@ if (.IsValid)
 			}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

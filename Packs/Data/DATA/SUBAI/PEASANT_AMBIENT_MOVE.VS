@@ -6,7 +6,7 @@ this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive) {
-		if (IsAIPlayer(.player))
+		if (.AI)
 			.SetParryMode(false);
 
 		.SetEntering(true);
@@ -15,4 +15,4 @@ if (.IsValid)
 			;
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

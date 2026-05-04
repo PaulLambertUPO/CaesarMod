@@ -4,7 +4,7 @@ difficulty = GetDifficulty();
 
 Sleep(420000 - difficulty * 60000);
 
-while (1) {
+while (true) {
 	Sleep(300000 - difficulty * 60000);
 	WaitEmptyQuery(Q_Destroyers1, -1);
 	WaitEmptyQuery(Q_Destroyers2, -1);

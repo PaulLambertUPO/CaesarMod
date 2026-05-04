@@ -15,7 +15,7 @@ Sleep(900000);
 aiPlayer = AIGetPlayer();
 gaikas = GAIKACount;
 
-while (1) {
+while (true) {
 	for (i = 1; i < gaikas; i += 1)//decide where to attack
 		if (rand(2) == 0) {
 			g = GetGAIKA(i);

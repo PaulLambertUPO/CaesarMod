@@ -1,4 +1,4 @@
-//int, Settlement set, int idPlayer
+//int, Settlement set, int aiPlayer
 
 if (set.IsVillage)
 	return ES_Village;

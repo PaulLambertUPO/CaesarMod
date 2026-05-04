@@ -9,7 +9,7 @@ Sleep(500);
 
 elephant_fort = GetSettlement("S_TributeFort");
 
-while (1) {
+while (true) {
 	ClassPlayerAreaObjs(cPeasant, 1, "A_Sacrifice").SetPlayer(3);
 	ol = ClassPlayerAreaObjs(cPeasant, 3, "A_Sacrifice").GetObjList();
 	ol.ClearDead();

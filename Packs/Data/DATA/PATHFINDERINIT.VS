@@ -1,7 +1,7 @@
 //void
 
 while (SPFFindAreas_Quant())
-	Sleep(30);
+	Sleep(35);
 
 SPFInitData();
 Sleep(250);
@@ -16,7 +16,7 @@ SPFInitConnectData();
 Sleep(250);
 
 while (SPFCalcConnectHighRes_Quant())
-	Sleep(23);
+	Sleep(35);
 
 SPFIncreaseConnect();
 Sleep(250);

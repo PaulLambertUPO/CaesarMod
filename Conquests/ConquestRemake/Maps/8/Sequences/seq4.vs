@@ -1,6 +1,6 @@
 int p;
 
-while (1) {
+while (true) {
 	Sleep(300000);
 	p = NO_Town2.obj.player;
 	if (p != 1)

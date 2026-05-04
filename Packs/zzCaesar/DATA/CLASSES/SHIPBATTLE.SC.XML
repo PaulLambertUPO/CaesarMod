@@ -23,13 +23,30 @@
 	<properties interface="thumb,holder,items" /><!-- with this setup there is no vertical bar and no special skill is showed, but items are visible and usable -->
 	<properties help="contents/units/Ship" />
 
-	<method sig="idle" vs="data/subai/ship_idle.vs" />
-	<method sig="move" vs="data/subai/ship_move.vs" />
-	<method sig="enter" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="aitransport" vs="data/subai/ship_aitransport.vs" />
 	<method sig="boardunit" vs="data/subai/ship_board.vs" verify="data/subai/ship_board_verify.vs" onfinish="data/subai/ship_board_onfinish.vs" />
 	<method sig="unboard" vs="data/subai/ship_unboard.vs" />
 	<method sig="unboardall" vs="data/subai/ship_unboard_all.vs" verify="data/subai/ship_unboard_all_verify.vs" />
+
+	<method sig="idle" vs="data/subai/ship_idle.vs" />
+	<method sig="move" vs="data/subai/ship_move.vs" />
+
+	<method sig="form_move" vs="data/subai/unit_detach.vs" />
+	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="teleport" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="capture" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enter_tent" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="guardadvance" vs="data/subai/do_nothing_point.vs" />
+	<method sig="guardpatrol" vs="data/subai/do_nothing_point.vs" />
+	<method sig="guardengage" vs="data/subai/do_nothing_void.vs" />
+	<method sig="taunt" vs="data/subai/do_nothing_void.vs" />
+	<method sig="train" vs="data/subai/do_nothing_void.vs" />
 
 	<nodefcmdinherit />
 

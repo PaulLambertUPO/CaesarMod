@@ -125,10 +125,6 @@ if (GetConst("NoSentries") == 0) {
 										slots[j] = -1;
 										set.DelSentry();
 									}
-									else if (sentry.command == "dismiss") {
-										slots[j] = -1;
-										set.DelSentry();
-									}
 									else {
 										ol.Add(sentry);
 										slots[j] = i;
@@ -152,10 +148,6 @@ if (GetConst("NoSentries") == 0) {
 									set.DelSentry();
 								}
 								else if (sentry.command == "disappear") {
-									sentries.Remove(sentry);
-									set.DelSentry();
-								}
-								else if (sentry.command == "dismiss") {
 									sentries.Remove(sentry);
 									set.DelSentry();
 								}

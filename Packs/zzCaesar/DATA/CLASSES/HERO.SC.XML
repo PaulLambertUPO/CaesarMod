@@ -22,46 +22,43 @@
 	<behavior script="data/subai/hero_skill_behaviour.vs" />
 
 	<method sig="sleep" vs="data/subai/hero_sleep.vs" />
-	<method sig="idle" vs="data/subai/hero_idle.vs" />
-	<method sig="advance" vs="data/subai/hero_advance.vs" />
-	<method sig="advance_aggressive" vs="data/subai/hero_advance_aggressive.vs" />
-	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/hero_attack_verify.vs" />
-	<method sig="attack" vs="data/subai/hero_advance.vs" />
-	<method sig="move" vs="data/subai/hero_move.vs" />
-	<method sig="enter" vs="data/subai/hero_enter.vs" verify="data/subai/hero_enter_verify.vs" />
-	<method sig="advanceenter" vs="data/subai/hero_advance_enter.vs" />
-
-	<method sig="formation" vs="data/subai/hero_formation.vs" />
-	<method sig="approach" vs="data/subai/hero_approach.vs" verify="data/subai/hero_approach_verify.vs" />
-
-	<method sig="unittrain" vs="data/subai/unit_train.vs" onfinish="data/subai/unit_train_onfinish.vs" />
-	<method sig="train" vs="data/subai/hero_train.vs" />
-
-	<method sig="explore" vs="data/subai/hero_explore.vs" />
-	<method sig="teleport" vs="data/subai/hero_teleport.vs" />
-
 	<method sig="sneak" vs="data/subai/hero_sneak.vs" />
 	<method sig="moveinfight" vs="data/subai/hero_moveinfight.vs" verify="data/subai/hero_moveinfight_verify.vs" />
-	<method sig="engage" vs="data/subai/hero_engage.vs" />
+	<method sig="boardshiphero" vs="data/subai/hero_board.vs" verify="data/subai/unit_board_verify.vs" onfinish="data/subai/hero_board_onfinish.vs" />
+	<method sig="formation" vs="data/subai/hero_formation.vs" />
+	<method sig="leavearmy" vs="data/subai/hero_leave_army.vs" />
+	<method sig="unittrain" vs="data/subai/unit_train.vs" onfinish="data/subai/unit_train_onfinish.vs" />
+	<method sig="hero_set_final_party_orientation" vs="data/subai/do_nothing_void.vs" />
 
+	<method sig="idle" vs="data/subai/hero_idle.vs" />
+	<method sig="move" vs="data/subai/hero_move.vs" />
+	<method sig="advance" vs="data/subai/hero_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/hero_advance_aggressive.vs" />
+	<method sig="approach" vs="data/subai/hero_approach.vs" />
+	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/hero_attack_verify.vs" />
+	<method sig="engage" vs="data/subai/hero_engage.vs" />
+	<method sig="enter" vs="data/subai/hero_enter.vs" verify="data/subai/hero_enter_verify.vs" />
+	<method sig="advanceenter" vs="data/subai/hero_advance_enter.vs" />
+	<method sig="teleport" vs="data/subai/hero_teleport.vs" />
+	<method sig="boardship" vs="data/subai/hero_board.vs" onfinish="data/subai/hero_board_onfinish.vs" />
 	<method sig="getitems" vs="data/subai/hero_getitems.vs" />
 	<method sig="getitem" vs="data/subai/hero_getitem.vs" />
 	<method sig="putitem" vs="data/subai/hero_putitem.vs" />
 	<method sig="giveitem" vs="data/subai/hero_giveitem.vs" />
 	<method sig="dropitem" vs="data/subai/hero_dropitem.vs" />
-
-	<method sig="leavearmy" vs="data/subai/hero_leave_army.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/hero_ai_attack_gate.vs" />
 	<method sig="ai_killall" vs="data/subai/hero_ai_killall.vs" />
-	<method sig="boardship" vs="data/subai/hero_board.vs" onfinish="data/subai/hero_board_onfinish.vs" />
-	<method sig="boardshiphero" vs="data/subai/hero_board.vs" verify="data/subai/unit_board_verify.vs" onfinish="data/subai/hero_board_onfinish.vs" />
-	<method sig="transport" vs="data/subai/hero_transport.vs" verify="data/subai/unit_transport_verify.vs" />
-
-	<method sig="capture" vs="data/subai/hero_capture.vs" verify="data/subai/unit_capture_verify.vs" />
+	<method sig="transport" vs="data/subai/hero_transport.vs" />
+	<method sig="explore" vs="data/subai/hero_explore.vs" />
+	<method sig="wander" vs="data/subai/hero_wander.vs" />
+	<method sig="capture" vs="data/subai/hero_capture.vs" />
 	<method sig="attack_unit_type_exclusive" vs="data/subai/hero_attack_unit_type_exclusive.vs" verify="data/subai/hero_attack_verify.vs" />
 	<method sig="engage_unit_type_exclusive" vs="data/subai/hero_engage_unit_type_exclusive.vs" />
+	<method sig="train" vs="data/subai/hero_train.vs" />
 
-	<method sig="hero_set_final_party_orientation" vs="data/subai/do_nothing_void.vs" />
+	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="form_move" vs="data/subai/unit_detach.vs" />
+	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
 
 	<defaultcmd target="">
 		<cmd name="moveinfight" />
@@ -93,5 +90,8 @@
 	</defaultcmd>
 	<defaultcmd target="BaseRuins">
 		<cmd name="enter_ruins" />
+	</defaultcmd>
+	<defaultcmd target="ItemHolder">
+		<cmd name="getitems" />
 	</defaultcmd>
 </class>

@@ -1,4 +1,4 @@
-<class id="BaseAnimal" parent="Unit" cpp_class="CVXUnit" entity="">
+<class id="BaseAnimal" parent="Unit" cpp_class="CVXUnit">
 
 	<properties damage="0" />
 	<properties damage_type="none" />
@@ -12,10 +12,16 @@
 
 	<properties help="contents/units/Animals" />
 
-	<method sig="capture" vs="data/subai/do_nothing_obj.vs" />
-	<method sig="enter" vs="data/subai/do_nothing_obj.vs" />
-	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="form_move" vs="data/subai/unit_detach.vs" />
+	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="capture" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
+	<method sig="enter" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
+	<method sig="enteralone" vs="data/subai/peaceful_enter.vs" />
+	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
 
+	<defaultcmd target="Building">
+		<cmd name="enter" />
+	</defaultcmd>
 	<defaultcmd target="Teleport">
 		<cmd name="teleport" />
 	</defaultcmd>

@@ -51,4 +51,4 @@ if (.IsValid)
 				}
 	}
 
-Sleep(15);//avoid possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

@@ -9,4 +9,4 @@ if (.IsValid)
 		if (!.InHolder)
 			.Taunt(2000);
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

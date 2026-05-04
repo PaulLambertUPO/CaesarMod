@@ -1,7 +1,7 @@
 <class id="LionM" parent="LionMUnit" cpp_class="CVXUnit" entity="units/LionM/LionM.ent.xml">
 	<properties edittree_pos="Units/Animals/Lion (wild)" />
+	<method sig="lead" vs="data/subai/lion_lead.vs" />
 	<method sig="idle" vs="data/subai/lion_idle.vs" />
 	<method sig="engage" vs="data/subai/lion_engage.vs" />
-	<method sig="lead" vs="data/subai/lion_lead.vs" />
 	<sounds idle="Sounds/Animals/Lion/Lion_Idle.wav" />
 </class>

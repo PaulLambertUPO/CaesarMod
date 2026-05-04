@@ -35,8 +35,6 @@ if (.IsValid)
 
 					pt = bld.GetEnterPoint(this);
 
-					.SetSpeedFactor(150);
-					.SetWalkAnim(1);
 					.SetEntering(true);
 
 					while (!.GotoEnter(pt, 0, 1000, false, 2500))
@@ -54,4 +52,4 @@ if (.IsValid)
 				}
 	}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

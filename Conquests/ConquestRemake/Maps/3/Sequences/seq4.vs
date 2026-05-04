@@ -2,7 +2,7 @@ ObjList units_to_disease;
 Unit u;
 int i, j;
 
-while (1) {
+while (true) {
 	for (i = 1; i <= 5; i += 1) {
 		units_to_disease = Union(
 			ClassPlayerAreaObjs(cUnit, 1, "A_Disease" + i),

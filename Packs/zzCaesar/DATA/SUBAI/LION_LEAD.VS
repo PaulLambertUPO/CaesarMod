@@ -56,12 +56,12 @@ if (.IsValid)
 										if (target.IsAlive)
 											if (.DistTo(target) < .sight * 2 / 3) {
 												.AddCommand(true, "engage");
-												Sleep(15);//prevent possible loops with other commands
+												Sleep(30);//prevent possible loops with other commands
 												return;
 											}
 											else if (.health < .maxhealth * 9 / 10) {
 												.AddCommand(true, "engage");
-												Sleep(15);//prevent possible loops with other commands
+												Sleep(30);//prevent possible loops with other commands
 												return;
 											}
 											else
@@ -71,4 +71,4 @@ if (.IsValid)
 				}
 		}
 
-Sleep(15);//prevent possible loops with other commands
+Sleep(30);//prevent possible loops with other commands

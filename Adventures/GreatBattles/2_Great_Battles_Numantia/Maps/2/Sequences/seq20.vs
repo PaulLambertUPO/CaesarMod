@@ -19,7 +19,7 @@ if (IsNoteActive("FoodStorage"))
 if (EnvReadInt("/TakenGuardTower") != 1)
 	GiveNote("GuardTower");
 
-while (1) {
+while (true) {
 	p = NO_27.obj.player;
 	NO_29.obj.SetPlayer(p);
 	NO_31.obj.SetPlayer(p);

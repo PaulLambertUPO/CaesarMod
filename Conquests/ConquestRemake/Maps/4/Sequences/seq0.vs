@@ -2,7 +2,7 @@ ObjList enemy_heroes;
 Unit u;
 int i;
 
-while (1) {
+while (true) {
 	Sleep(60000);
 	enemy_heroes = GetPlayerUnits(2, cHero);
 	enemy_heroes.AddList(GetPlayerUnits(3, cHero));

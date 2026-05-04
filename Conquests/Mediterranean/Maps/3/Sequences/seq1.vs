@@ -3,7 +3,7 @@ int player, power;
 
 spell_stone = NO_SpellStone.obj.AsBuilding();
 
-while (1) {
+while (true) {
 	Sleep(10000);
 	player = NO_Town3.obj.player;
 	if (player != 1)

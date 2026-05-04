@@ -3,7 +3,7 @@ Query group37, group29;
 group37 = Group("Take_S_Sett37");
 group29 = Group("Take_S_Sett29");
 
-while (1) {
+while (true) {
 	if (NO_37.obj.player == 2)
 		NO_37.SetPlayer(1);
 	if (NO_29.obj.player == 2)

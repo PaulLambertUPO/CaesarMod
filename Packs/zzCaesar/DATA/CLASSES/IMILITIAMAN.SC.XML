@@ -11,5 +11,7 @@
 	<properties help="contents/units/IMilitiaman" />
 	<properties edittree_pos="Units/Iberia/Militiaman" />
 
+	<method sig="convert" vs="data/subai/unit_convert_imilitiaman.vs" />
+
 	<sounds command="VoiceIMilitiaman" />
 </class>

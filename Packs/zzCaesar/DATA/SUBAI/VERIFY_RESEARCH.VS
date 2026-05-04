@@ -29,7 +29,7 @@ while (dest != "") {
 								if (IsResearched(plr, "Nobility"))
 									not_researchable = false;
 			if (not_researchable) {
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Requires Advanced training, Veteran offence, Veteran defence, Veteran health, Nobility and 40 game minutes");
+				reasonText = rollover() + "\n<color 255 0 0>" + Translate("Requires Advanced training, Veteran offence, Veteran defence, Veteran health, Nobility and 40 game minutes");
 				return false;
 			}
 		}
@@ -42,13 +42,13 @@ while (dest != "") {
 							if (IsResearched(plr, "Battle tactics"))
 								not_researchable = false;
 			if (not_researchable) {
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Requires Special training, Trident Warrior Experience III, Warrior Tales, Battle tactics and 45 game minutes");
+				reasonText = rollover() + "\n<color 255 0 0>" + Translate("Requires Special training, Trident Warrior Experience III, Warrior Tales, Battle tactics and 45 game minutes");
 				return false;
 			}
 		}
 		else if (name == "Gambler's All-in") {
 			if (GetTime() - EnvReadInt(set, "LastAllIn") < 180000) {
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("At least 3 minutes must pass between each attempt");
+				reasonText = rollover() + "\n<color 255 0 0>" + Translate("At least 3 minutes must pass between each attempt");
 				return false;
 			}
 		}
@@ -61,7 +61,7 @@ while (dest != "") {
 
 		if (EnvReadString(set, name) == "researched") {//do not use IsResearched here because there might be some commands with a name/token that would not comply
 			if (value == "default")
-				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available") + env_level;
+				reasonText = rollover() + "\n<color 0 255 0>" + Translate("Already available") + env_level;
 			else if (value == "spec")
 				reasonText = rollover(this, true) + env_level;
 			else if (value != "")
@@ -76,7 +76,7 @@ while (dest != "") {
 			if (value == "spec")
 				reasonText = rollover(this, true) + env_level;
 			else
-				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already researching") + env_level;
+				reasonText = rollover() + "\n<color 0 255 0>" + Translate("Already researching") + env_level;
 			return false;
 		}
 	}
@@ -89,7 +89,7 @@ while (dest != "") {
 				if (IsResearched(set, "Cult of Horus"))
 					not_researchable = false;
 			if (not_researchable) {
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Requires Cult of Anubis and Cult of Horus");
+				reasonText = rollover() + "\n<color 255 0 0>" + Translate("Requires Cult of Anubis and Cult of Horus");
 				return false;
 			}
 		}
@@ -127,7 +127,7 @@ while (dest != "") {
 
 		if (EnvReadString(plr, name) == "researched") {//do not use IsResearched here because there might be some commands with a name/token that would not comply
 			if (value == "default")
-				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available") + env_level;
+				reasonText = rollover() + "\n<color 0 255 0>" + Translate("Already available") + env_level;
 			else if (value != "")
 				reasonText = Translate(value);
 			return false;
@@ -139,7 +139,7 @@ while (dest != "") {
 		}
 		if (EnvReadString(plr, name) == "researching") {//do not use IsResearching here because there might be some commands with a name/token that would not comply
 			if (!is_tribute)
-				reasonText = rollover(this, false);
+				reasonText = rollover();
 			reasonText = reasonText + "\n<color 0 255 0>" + Translate("Already researching") + env_level;
 			return false;
 		}
@@ -172,7 +172,7 @@ while (dest != "") {
 									break;
 								}
 							}
-							reasonText = Translatef(rollover(this, false), gold) + "\n<color 255 0 0>" + Translatef("Requires %s1", name);
+							reasonText = Translatef(rollover(), gold) + "\n<color 255 0 0>" + Translatef("Requires %s1", name);
 							return false;
 						}
 						else if (nm == "Mountain Clan Legacy")
@@ -190,7 +190,7 @@ while (dest != "") {
 							env_level = "\n<color 255 255 255>" + Translatef("Current best level: %s1", EnvReadInt(plr, "BestVikingLordLevel"));
 					}
 				}
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", name) + env_level;
+				reasonText = rollover() + "\n<color 255 0 0>" + Translatef("Requires %s1", name) + env_level;
 			}
 			else if (value != "")
 				reasonText = Translate(value);
@@ -213,7 +213,7 @@ while (dest != "") {
 							env_level = "\n<color 255 255 255>" + Translatef("Current best level: %s1", EnvReadInt(plr, "BestMyrmidonLevel"));
 					}
 				}
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", name) + env_level;
+				reasonText = rollover() + "\n<color 255 0 0>" + Translatef("Requires %s1", name) + env_level;
 			}
 			else if (value != "")
 				reasonText = Translate(value);
@@ -224,18 +224,7 @@ while (dest != "") {
 		break;
 }
 
-if (!is_tribute) {
-	bool unaffordable = false;
-
-	if (cmdcost_gold > set.gold)
-		unaffordable = true;
-	else if (cmdcost_food > set.food)
-		unaffordable = true;
-	else if (cmdcost_pop > 0)
-		if (set.population - cmdcost_pop < GetConst("MinPopulation"))
-			unaffordable = true;
-
-	reasonText = rollover(this, unaffordable) + env_level;
-}
+if (!is_tribute)
+	reasonText = rollover(this, true) + env_level;
 
 return true;

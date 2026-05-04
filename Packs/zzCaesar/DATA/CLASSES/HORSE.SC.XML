@@ -1,9 +1,5 @@
-<class id="Horse" parent="Melee" cpp_class="CVXUnit" entity="">
-
-	<properties maxhealth="300" />
-
+<class id="Horse" parent="Melee" cpp_class="CVXUnit">
 	<properties radius="20" selection_radius="32" speed="160" />
 	<properties formation_priority="2000" formation_radius="35" />
-
 	<sounds walk="HorseWalk" attack="HorseUnitSwordFight" die="HorseUnitDeath" />
 </class>

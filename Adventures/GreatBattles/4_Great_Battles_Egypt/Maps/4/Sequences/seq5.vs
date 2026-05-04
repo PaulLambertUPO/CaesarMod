@@ -1,4 +1,4 @@
-while (1) {
+while (true) {
 	if (NO_Pelusio.obj.player != 1)
 		if (NO_Alexandria.obj.player != 1)
 			if (NO_Memphis.obj.player != 1)
