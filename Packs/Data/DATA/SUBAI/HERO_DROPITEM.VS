@@ -13,7 +13,7 @@ if (.IsValid)
 					break;
 				if (.DistTo(pt) < 1000)
 					break;
-				.FormKeepMoving(1500);
+				.FormKeepMoving(1000);
 			}
 		}
 

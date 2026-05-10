@@ -17,14 +17,21 @@ if (.IsValid)
 						if (!.InShip) {
 							sh.NotifyBoardUnit(this);
 							if (sh.DistTo(.posRH) >= 600) {
-								.FormSetupAndMoveTo(sh.pos, 0, 0, false);
+								point target_pos;
+
+								target_pos = sh.pos;
+								.FormSetupAndMoveTo(target_pos, 0, 0, false);
+
 								while (.HasPath) {
-									.FormKeepMoving(1500);
+									.FormKeepMoving(1000);
 									if (sh.IsDead)
 										break;
 									if (.DistTo(sh) < 600)
 										break;
-									.FormSetupAndMoveTo(sh.pos, 0, 0, false);
+									if (sh.DistTo(target_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+										target_pos = sh.pos;
+										.FormSetupAndMoveTo(target_pos, 0, 0, false);
+									}
 								}
 							}
 							.AddCommand(true, "boardshipcommon", sh);

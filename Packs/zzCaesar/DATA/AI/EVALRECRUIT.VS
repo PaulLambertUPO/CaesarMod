@@ -125,7 +125,7 @@ if (!bAssUnderFire) {
 			}
 		}
 		else {
-			if (sq.Units.count < 10) {
+			if (sq.Size < 10) {
 				Settlement hs;
 				hs = sqLeader.GetHolderSett();
 				if (hs.IsValid)

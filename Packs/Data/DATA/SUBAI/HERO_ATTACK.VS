@@ -8,6 +8,7 @@ if (.IsValid)
 	if (.IsAlive) {
 		if (target.IsAlive) {
 			Unit u;
+			point target_pos;
 			bool target_catapult = false;
 
 			u = target.AsUnit();
@@ -22,7 +23,8 @@ if (.IsValid)
 			else if (target.AsCatapult().IsValid)
 				target_catapult = true;
 
-			.FormSetupAndMoveTo(target.pos, 0, 0, true);
+			target_pos = target.pos;
+			.FormSetupAndMoveTo(target_pos, 0, 0, true);
 
 			if (!.IsArmyOutside)
 				.FormKeepMoving(750);
@@ -37,7 +39,7 @@ if (.IsValid)
 
 				if (.DistTo(target) >= .sight + 100)
 					while (.HasPath) {
-						.FormKeepMoving(1500);
+						.FormKeepMoving(1000);
 						if (target.IsDead)
 							break;
 						if (u.IsValid)
@@ -48,7 +50,10 @@ if (.IsValid)
 							}
 						if (.DistTo(target) < .sight + 100)
 							break;
-						.FormSetupAndMoveTo(target.pos, 0, 0, true);
+						if (target.DistTo(target_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+							target_pos = target.pos;
+							.FormSetupAndMoveTo(target_pos, 0, 0, true);
+						}
 					}
 
 				if (target.IsAlive) {

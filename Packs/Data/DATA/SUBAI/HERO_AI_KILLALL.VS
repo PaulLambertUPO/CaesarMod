@@ -32,7 +32,7 @@ if (.IsValid)
 					while (.HasPath) {
 						if (o.IsDead)
 							break;
-						.FormKeepMoving(1500);
+						.FormKeepMoving(1000);
 						if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
 							.AddCommand(true, "ai_killall");
 							.AddCommand(true, "engage");

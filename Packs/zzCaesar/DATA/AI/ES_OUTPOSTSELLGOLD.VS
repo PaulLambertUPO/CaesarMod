@@ -34,7 +34,7 @@ if (stronghold.IsValid) {//it should always be valid thanks to "ESH_GoldTrade.vs
 					bAttacked = false;
 
 					olMules = Group("ES_OutpostSellGoldMulesAI" + aiPlayer).GetObjList();
-					for (i = 0; i < olMules.count; i += 1) {
+					for (i = olMules.count - 1; i >= 0; i -= 1) {
 						mule = olMules[i].AsWagon();
 						if (mule.IsValid) {
 							muleGold += mule.amount;
@@ -117,9 +117,7 @@ if (stronghold.IsValid) {//it should always be valid thanks to "ESH_GoldTrade.vs
 		while (set.gold >= min_resource) {
 			if (set.player != aiPlayer)
 				break;
-			mule = set.CreateMuleGold(250);
-			if (mule.IsValid)
-				mule.SetCommand("unload", hall);
+			set.CreateMuleGold(250).SetCommand("unload", hall);
 			Sleep(250);
 		}
 	}

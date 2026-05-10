@@ -27,8 +27,8 @@ aSkillLevels[2] = 4;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseshoes || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bHorseshoes || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bHorseshoes)
 			bHorseshoes = set.TSResearch("Horseshoe production");
@@ -44,7 +44,7 @@ aSkillLevels[2] = 4;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -58,7 +58,7 @@ aSkillLevels[2] = 4;
 {
 	bool bTribalFights = false, bBarrack1 = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTribalFights || !bBarrack1)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bTribalFights)
 			bTribalFights = set.TSResearch("Tribal fights");
@@ -72,7 +72,7 @@ aSkillLevels[2] = 4;
 {
 	bool bLearning = false, bFoodSale = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bLearning || !bFoodSale)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bLearning)
 			bLearning = set.TSResearch("Learning");
@@ -86,7 +86,7 @@ aSkillLevels[2] = 4;
 {
 	bool bBarbaricTales = false, bHorseshoes = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarbaricTales || !bHorseshoes)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarbaricTales)
 			bBarbaricTales = set.TSResearch("Barbaric Tales");
@@ -101,7 +101,7 @@ aSkillLevels[2] = 4;
 	int nCount, nTeutonRiders = 20;
 	str supportCmd = "buyfoodforgold";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && olTeutonRiders.count < nTeutonRiders) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olTeutonRiders.count < nTeutonRiders) {
 			nCount = nTeutonRiders - olTeutonRiders.count;
@@ -117,20 +117,19 @@ aSkillLevels[2] = 4;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olTeutonRiders.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olTeutonRiders.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olTeutonRiders.ClearDead();
 SetNoAIFlag(olTeutonRiders, false);

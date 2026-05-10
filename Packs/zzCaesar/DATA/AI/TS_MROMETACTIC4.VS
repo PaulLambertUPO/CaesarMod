@@ -65,8 +65,8 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 	bool bImportHorses = false, bBarrack1 = false;
 	int nCount, nScouts = 20;
 	str supportCmd = "RAddPop";
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bImportHorses || !bBarrack1 || olScouts.count < nScouts)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bImportHorses || !bBarrack1 || olScouts.count < nScouts)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		else {
 			if (!bHeroScript) {
@@ -100,20 +100,19 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olScouts.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olScouts.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olScouts.ClearDead();
 SetNoAIFlag(olScouts, false);

@@ -13,7 +13,10 @@ if (.IsValid)
 		if (u.IsValid) {
 			if (.IsValidTarget(u))
 				if (!u.InHolder) {
-					.FormSetupAndMoveTo(u.pos, 0, 0, true);
+					point target_pos;
+
+					target_pos = u.pos;
+					.FormSetupAndMoveTo(target_pos, 0, 0, true);
 
 					if (!.IsArmyOutside)
 						.FormKeepMoving(750);
@@ -22,14 +25,17 @@ if (.IsValid)
 						if (!u.InHolder) {
 							if (.DistTo(u) >= .sight + 100)
 								while (.HasPath) {
-									.FormKeepMoving(1500);
+									.FormKeepMoving(1000);
 									if (u.IsDead)
 										break;
 									if (u.InHolder)
 										break;
 									if (.DistTo(u) < .sight + 100)
 										break;
-									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+									if (u.DistTo(target_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+										target_pos = u.pos;
+										.FormSetupAndMoveTo(target_pos, 0, 0, true);
+									}
 								}
 
 							if (u.IsAlive)

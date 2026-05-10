@@ -18,7 +18,7 @@ if (.IsValid)
 			for (i = 0; i < 10; i += 1) {
 				if (!.HasPath)
 					break;
-				.FormKeepMoving(1500);
+				.FormKeepMoving(1000);
 			}
 
 			Sleep(2000 + rand(3001));

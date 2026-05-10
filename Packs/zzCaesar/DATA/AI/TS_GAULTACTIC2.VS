@@ -23,8 +23,8 @@ aSkillLevels[0] = 10;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bSpears1 || !bFreeBeer || olDruids.count < nDruids || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bSpears1 || !bFreeBeer || olDruids.count < nDruids || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bSpears1)
 			bSpears1 = set.TSResearch("Gaul Spearman");
@@ -46,7 +46,7 @@ aSkillLevels[0] = 10;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -60,7 +60,7 @@ aSkillLevels[0] = 10;
 {
 	bool bBarrack1 = false, bBearTeeth = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || !bBearTeeth)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
@@ -75,7 +75,7 @@ aSkillLevels[0] = 10;
 	bool bSpears2 = false;
 	int nCount, nDruids = 5;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bSpears2 || olDruids.count < nDruids)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bSpears2)
 			bSpears2 = set.TSResearch("Gaul Iron Spearheads");
@@ -93,7 +93,7 @@ aSkillLevels[0] = 10;
 	bool bBarrack2 = false;
 	str supportCmd = "GAddPop";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olSpearmen.count < nSpearmen || olArchers.count < nArchers)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack2)
 			bBarrack2 = set.TSResearch("Barrack Level 2");
@@ -118,22 +118,21 @@ aSkillLevels[0] = 10;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olSpearmen.SetCommand("attach", hero);
-		olArchers.SetCommand("attach", hero);
-		olDruids.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olSpearmen.SetCommand("attach", hero);
+	olArchers.SetCommand("attach", hero);
+	olDruids.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olSpearmen.ClearDead();
 olArchers.ClearDead();

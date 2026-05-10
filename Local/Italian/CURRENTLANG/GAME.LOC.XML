@@ -178,7 +178,7 @@
 <translationtableentry text="Emblem of Oligarchy" result="Emblema di Oligarchia" />
 <translationtableentry text="Adds 6 damage and 2 armor" result="Aumenta l'attacco di 6 punti e la difesa di 2 punti" />
 <translationtableentry text="Charm of Athena" result="Amuleto di Atena" />
-<translationtableentry text="Increases the owner's movement and attack speed by 40%" result="Aumenta la velocità di movimento e d'attacco del 40%" />
+<translationtableentry text="Increases the owner's movement and attack speed by 40% in combat" result="Aumenta la velocità di movimento e d'attacco del 40% in combattimento" />
 <translationtableentry text="Charm of Aegle" result="Amuleto di Aegle" />
 <translationtableentry text="Adds 10% health.\nIt restores the health of the owner by 2 every second" result="Aumenta la salute del 10%.\nRipristina la salute del possessore di 2 punti ogni secondo" />
 <translationtableentry text="Faded gem" result="Gemma spenta" />
@@ -943,7 +943,7 @@
 <translationtableentry text="Gives all warriors an Emblem of Democracy (+80 health, not contemporary to Oligarchy)" result="Fornisce a tutti i guerrieri un Emblema di Democrazia, che aumenta la salute di 80 punti (non contemporaneo a Oligarchia)" />
 <translationtableentry text="Oligarchy" result="Oligarchia" />
 <translationtableentry text="Gives all warriors level 6 and above an Emblem of Oligarchy (+6 attack and +2 armor, not contemporary to Democracy)" result="Fornisce a tutti i guerrieri di livello 6 o superiore un Emblema di Oligarchia, che aumenta l'attacco di 6 punti e la difesa di 2 punti (non contemporaneo a Democrazia)" />
-<translationtableentry text="Makes all warriors receive a Charm of Athena (+40% movement and attack speed) at the first kill" result="Alla prima uccisione i guerrieri ricevono l'Amuleto di Atena, che aumenta la velocità di movimento e d'attacco del 40%" />
+<translationtableentry text="Makes all warriors receive a Charm of Athena (+40% movement and attack speed in combat) at the first kill" result="Alla prima uccisione i guerrieri ricevono l'Amuleto di Atena, che aumenta la velocità di movimento e d'attacco del 40% in combattimento" />
 <translationtableentry text="Makes all warriors receive a Charm of Aegle (+10% health and +2 health regeneration per second) at the first kill" result="Alla prima uccisione i guerrieri ricevono l'Amuleto di Aegle, che aumenta la salute del 10% e ripristina 2 punti di salute ogni secondo" />
 <translationtableentry text="Military Preparation" result="Preparazione militare" />
 <translationtableentry text="Makes new heroes level 15" result="Rende i nuovi eroi di livello 15" />
@@ -1010,7 +1010,7 @@
 <translationtableentry text="Gambler's Test" result="Destrezza divina" />
 <translationtableentry text="Gives every warrior a 1% chance to instantly kill a less experienced enemy and a 75% chance to gain 12 bonus damage every time that he becomes invisible" result="Fornisce a ogni guerriero una probabilità dell'1% di uccidere all'istante un nemico con meno esperienza e una probabilità del 75% di ottenere 12 punti di attacco bonus ogni volta che diventa invisibile" />
 <translationtableentry text="Gambler's Luck" result="Fortuna divina" />
-<translationtableentry text="Gives every warrior a 15% chance to completely restore the health instead of dying" result="Fornisce a ogni guerriero una probabilità del 15% di ripristinare completamente la salute anziché morire" />
+<translationtableentry text="Gives every warrior a 33% chance to completely restore the health when below 33% every time that he kills an enemy" result="Fornisce a ogni guerriero una probabilità del 33% di ripristinare completamente la salute quando è inferiore al 33% ogni volta che uccide un nemico" />
 <translationtableentry text="Gambler's All-in" result="Tutto per tutto" />
 <translationtableentry text="Increases the stronghold population by 40 and gives you a 35% chance to win 10000 gold" result="Aumenta la popolazione della fortezza di 40 unità e ti fornisce una probabilità del 35% di vincere 10000 oro" />
 <translationtableentry text="At least 3 minutes must pass between each attempt" result="Devono passare almeno 3 minuti tra ogni tentativo" />
@@ -1049,7 +1049,7 @@
 <translationtableentry text="Equips new warriors with a God's gift, which heals the owner at the first kill and then disappears" result="Equipaggia i nuovi guerrieri col Dono degli dei, che guarisce il possessore alla prima uccisione e poi scompare" />
 <translationtableentry text="Call Druid" result="Convoca druido" />
 <translationtableentry text="Ritual Chamber" result="Camera dei rituali" />
-<translationtableentry text="Allows druids to gain experience by learning from more experienced allies" result="Consente ai druidi di guadagnare esperienza imparando da alleati più esperti" />
+<translationtableentry text="Allows druids to accumulate stonehenge energy twice as fast" result="Consente ai druidi di accumulare l'energia degli altari dei sacrifici due volte più velocemente" />
 <translationtableentry text="Ghoul summoning" result="Invoca spirito" />
 <translationtableentry text="Allows druids to sacrifice themselves to summon a Ghoul that drains the health of all nearby enemies for about 10 seconds" result="Consente ai druidi di sacrificarsi per invocare uno spirito che prosciuga la salute di tutti i nemici vicini per circa 10 secondi" />
 <translationtableentry text="Eagle summoning" result="Invoca aquila" />
@@ -1088,7 +1088,7 @@
 <translationtableentry text="Mummification" result="Culto dei defunti" />
 <translationtableentry text="Makes all new heroes 2/3 the level of the most experienced you've had" result="Rende tutti i nuovi eroi di 2/3 del livello del più esperto avuto nel corso della partita" />
 <translationtableentry text="Equip Chariot of Osiris" result="Equipaggia carro di Osiris" />
-<translationtableentry text="Allows enchantresses to gain experience by learning from more experienced allies" result="Consente alle maghe di guadagnare esperienza imparando da alleati più esperti" />
+<translationtableentry text="Allows enchantresses to accumulate stonehenge energy twice as fast" result="Consente alle maghe di accumulare l'energia degli altari dei sacrifici due volte più velocemente" />
 <translationtableentry text="Wolf summoning" result="Invoca lupo" />
 <translationtableentry text="Allows enchantresses to sacrifice themselves and summon a wolf that remains under your control for about 200 seconds" result="Consente alle maghe di sacrificarsi per invocare un lupo che rimane sotto il tuo controllo per circa 200 secondi" />
 <translationtableentry text="Deer summoning" result="Invoca cervo" />
@@ -1103,7 +1103,7 @@
 <translationtableentry text="Player %s1 - protected for %s2:%s3" result="Giocatore %s1 - protetto per %s2:%s3" />
 <translationtableentry text="Allows priests to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a priest dies" result="Consente ai sacerdoti di sacrificarsi per ripristinare completamente l'energia di 5 alleati vicini.\nLo stesso effetto si attiva anche ogni volta che un sacerdote muore" />
 <translationtableentry text="Statue of Zeus" result="Erigi statua a Zeus" />
-<translationtableentry text="Gives all warriors below 20% health a 50% chance to completely restore their health at every kill" result="Fornisce a tutti i guerrieri la cui salute è inferiore al 20% una probabilità del 50% di ripristinare completamente la salute a ogni uccisione" />
+<translationtableentry text="Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage" result="Benedice i guerrieri ad ogni uccisione, facendo sì che il prossimo attacco entro 5 secondi infligga un danno supplementare pari al valore di attacco" />
 <!-- end temple commands -->
 <!-- start gate and siege machine commands -->
 <translationtableentry text="Open Gate" result="Apri porta" />

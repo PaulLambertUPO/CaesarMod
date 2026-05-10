@@ -10,17 +10,12 @@ if (.IsValid)
 			Hero h;
 			Unit u;
 			int heal_amount, stamina_cost, learnings;
-			bool can_learn, go_to_hero, use_healing;
+			bool go_to_hero, use_healing;
 
 			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
 
 			heal_amount = GetConst("HealAmount");
 			stamina_cost = GetCmdStaminaCost("heal");
-
-			if (.race != Gaul)
-				can_learn = true;
-			else
-				can_learn = IsResearched(.player, "Ritual Chamber");
 
 			while (.IsEnemyInSquadSight) {
 				go_to_hero = true;
@@ -34,12 +29,7 @@ if (.IsValid)
 				if (u.IsDead)
 					if (.IsVisible) {
 						use_healing = false;
-						if (can_learn)
-							u = .FindUnitToLearn();
-						else if (IsResearched(.player, "Ritual Chamber")) {
-							can_learn = true;
-							u = .FindUnitToLearn();
-						}
+						u = .FindUnitToLearn();
 					}
 
 				if (u.IsAlive)

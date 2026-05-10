@@ -40,8 +40,8 @@ aSkillLevels[0] = 10;
 					barrack = b;
 				}
 	}
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseArmor || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bHorseArmor || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bHorseArmor)
 			bHorseArmor = set.TSResearch("Greek Horse Armor");
@@ -56,7 +56,7 @@ aSkillLevels[0] = 10;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		Obj objDummy;
 		ObjList ol;
 		ol.Add(hero);
@@ -71,7 +71,7 @@ aSkillLevels[0] = 10;
 {
 	bool bOlympicGames = false, bArrows = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bOlympicGames || !bArrows)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bOlympicGames)
 			bOlympicGames = set.TSResearch("Olympic Games");
@@ -85,7 +85,7 @@ aSkillLevels[0] = 10;
 {
 	bool bSpartanTraining = false, bBarrack1 = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bSpartanTraining || !bBarrack1)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bSpartanTraining)
 			bSpartanTraining = set.TSResearch("Spartan Training");
@@ -100,7 +100,7 @@ aSkillLevels[0] = 10;
 	int nCount, nCataphracts = 20, nPriests = 5;
 	str supportCmd = "HAddPop";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (olCataphracts.count < nCataphracts || olPriests.count < nPriests)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olCataphracts.count < nCataphracts) {
 			nCount = nCataphracts - olCataphracts.count;
@@ -124,44 +124,41 @@ aSkillLevels[0] = 10;
 	ptTraining.SetLen(ptTraining.Len + 220);
 	if (bHeroScript)
 		AIBreakScript(heroScriptId);
-	if (hero.IsValid)
-		if (hero.IsAlive) {
-			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-			hero.SetCommand("move", ptTraining);
-			hero.AddCommand(false, "train");
-			Sleep(10000);//wait for the hero to come back so that he might train with the other units
-		}
+	if (hero.IsAlive) {
+		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+		hero.SetCommand("move", ptTraining);
+		hero.AddCommand(false, "train");
+		Sleep(10000);//wait for the hero to come back so that he might train with the other units
+	}
 	olCataphracts.SetCommand("move", ptTraining);
 	olCataphracts.AddCommand(false, "train");
 	olPriests.SetCommand("heal", ptTraining);
 	Sleep(35000);
 	olCataphracts.SetCommand("train");
-	if (hero.IsValid)
-		if (hero.IsAlive) {
-			hero.SetCommand("move", ptTraining);
-			hero.AddCommand(false, "train");
-		}
+	if (hero.IsAlive) {
+		hero.SetCommand("move", ptTraining);
+		hero.AddCommand(false, "train");
+	}
 	Sleep(30000);
 	if (set.player == aiPlayer)
 		set.Research("autotrain_start");
 }
 
 //give control back to AI
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olCataphracts.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
-		//priests would slow down the cavalry army, it's better to keep them in the stronghold to help in the training of future units
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olCataphracts.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+	//priests would slow down the cavalry army, it's better to keep them in the stronghold to help in the training of future units
+}
 
 olCataphracts.ClearDead();
 olPriests.ClearDead();

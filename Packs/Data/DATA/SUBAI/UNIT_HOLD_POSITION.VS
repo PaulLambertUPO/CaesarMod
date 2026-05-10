@@ -13,31 +13,28 @@ if (.IsValid)
 			if (.AI)
 				.SetParryMode(false);
 
-			melee = !.IsRanged;
-
 			if (.AsHero().IsValid)
 				.AsHero().army.SetCommand("hold_position");
 
+			melee = !.IsRanged;
+
 			while (.CmdCount <= 1) {//avoid blocking pending commands forever
-				if (.IsVisible) {
+				while (.IsVisible) {
 					o = .BestTargetForPos;
-					while (.IsValidTarget(o)) {
-						if (o.AsCatapult().IsValid)
-							while (.Attack(o)) {
-								if (melee)
-									if (.HasSpecial(trample))
-										o.Damage(.damage);
-								if (!.IsVisible)
-									break;
-							}
-						else
-							while (.Attack(o))
-								if (!.IsVisible)
-									break;
-						if (!.IsVisible)
-							break;
-						o = .BestTargetForPos;
-					}
+					if (!.IsValidTarget(o))
+						break;
+					if (o.AsCatapult().IsValid)
+						while (.Attack(o)) {
+							if (melee)
+								if (.HasSpecial(trample))
+									o.Damage(.damage);
+							if (!.IsVisible)
+								break;
+						}
+					else
+						while (.Attack(o))
+							if (!.IsVisible)
+								break;
 				}
 				if (.Stop(500))
 					Sleep(500);

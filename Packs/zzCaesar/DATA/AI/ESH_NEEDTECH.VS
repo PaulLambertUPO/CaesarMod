@@ -5,34 +5,9 @@ str strTech;
 strTech = EnvReadString(set, "strTech");
 
 if (strTech != "") {
-	bool bArenaHire = false;
+	bool bArenaHire;
 
-	if (strTech == "Hire Trident warrior")
-		bArenaHire = true;
-	else if (strTech == "Hire Liberati")
-		bArenaHire = true;
-	else if (strTech == "Hire Liberati Punic")
-		bArenaHire = true;
-	else if (strTech == "Equip Chariot")
-		bArenaHire = true;
-	else if (strTech == "Hire Viking Lord")
-		bArenaHire = true;
-	else if (strTech == "Call Mountaineer")
-		bArenaHire = true;
-	else if (strTech == "Chariot of Osiris")
-		bArenaHire = true;
-	else if (strTech == "Call Valkyries")
-		bArenaHire = true;
-	else if (strTech == "trainHMyrmidon")
-		bArenaHire = true;
-	else if (strTech == "Train War Elephant")
-		bArenaHire = true;
-	else if (strTech == "Hire Caesar")
-		bArenaHire = true;
-	else if (strTech == "Hire Keltill")
-		bArenaHire = true;
-	else if (strTech == "Hire Larax")
-		bArenaHire = true;
+	bArenaHire = EnvReadInt(set, "ArenaHireCmdAi") == 1;
 
 	if (bArenaHire || GetTime() >= EnvReadInt(set, "ResearchTechTime")) {
 		int aiPlayer, gold, food;

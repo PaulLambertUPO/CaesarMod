@@ -15,6 +15,7 @@ g = set.GetGaika();
 EnvWriteInt(set, "nArmyBuilds", 0);//the amount of times ESH_BuildArmy has been called
 EnvWriteInt(set, "ResearchTechTime", GetTime());//time of the next allowed research for ESH_NeedTech
 EnvWriteInt(set, "ResearchTrainingComplete", 0);//flag used by ESH_ResearchTraining to research upgrades (reset here to prevent a new owner from ignoring player upgrades)
+EnvWriteInt(set, "ArenaHireCmdAi", 0);//flag used by ESH_ArenaUnits to avoid many checks on the commands in ESH_NeedTech (reset here to stay safe when the owner changes)
 
 //store these values because they are constant and it is not good to retrieve them from AI variables every time
 nSquanderGoldAmount = AIVar(aiPlayer, AIV_SquanderGoldAmount);
@@ -97,7 +98,7 @@ while (set.player == aiPlayer) {
 	nMilUnits = MilUnits(aiPlayer);
 	EnemyPlayersEval(aiPlayer, nMinEnemyEval, nMaxEnemyEval, nAvgEnemyEval);
 
-	EnvWriteInt(set, "nFoodReserve", 15 * MAX(set.Units.count, nMilUnits / Strongholds(aiPlayer)));//used in ESH_Market and ESH_ArenaUnits
+	EnvWriteInt(set, "nFoodReserve", 15 * MAX(set.UnitsCount, nMilUnits / Strongholds(aiPlayer)));//used in ESH_Market and ESH_ArenaUnits
 
 	reservedStrTech = EnvReadString(set, "ReserveFor" + (aiPlayer - 1));//unlock army recruitment in case a reserved tech is researched by another stronghold
 	if (reservedStrTech != "")//do not use IsResearched here because there might be some commands with a name/token that would not comply (e.g. tribute)

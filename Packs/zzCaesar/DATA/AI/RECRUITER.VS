@@ -2,11 +2,11 @@
 
 int aiPlayer, nSleepRecruit, nMaxAttentionPoints, nLastGaika;
 int nMilEval, nAvail, nAttentionPoints, nHomeGaikaId, gLsa, nMinNeed, nMaxNeed, nSent, own, ally, enemy, enemy_hidden, i;
-bool bAssUnderFire, bStrongholdGaika, bNotSatisfied, bAllSatisfied = false;
+bool bAssUnderFire, bValidSet, bStrongholdGaika, bNotSatisfied, bAllSatisfied = false;
 GAIKA g;
 Settlement set;
 
-Sleep(rand(1001) + 500);
+Sleep(500 + rand(1001));
 
 aiPlayer = AIGetPlayer();
 nSleepRecruit = AIVar(aiPlayer, AIV_Sleep_Recruit);
@@ -60,10 +60,14 @@ while (true) {
 			}
 			set = g.settlement;
 
-			if (set.IsValid)
+			if (set.IsValid) {
+				bValidSet = true;
 				bStrongholdGaika = set.IsStronghold;
-			else
+			}
+			else {
+				bValidSet = false;
 				bStrongholdGaika = false;
+			}
 
 			if (g.ID != nHomeGaikaId) {
 				if (!bStrongholdGaika)
@@ -73,7 +77,7 @@ while (true) {
 					if (!g.CanExplore(aiPlayer))
 						continue;
 			}
-			if (!set.IsValid)
+			if (!bValidSet)
 				if (g.Empty)
 					if (g.Explored(aiPlayer))
 						continue;
@@ -95,13 +99,13 @@ while (true) {
 				if (enemy > 0) {
 					if (own > 0)
 						nAttentionPoints += 1;
-					else if (set.IsValid)
+					else if (bValidSet)
 						if (set.IsOwn(aiPlayer))
 							if (g.Eval(AI_STAYING, aiPlayer, AI_ENEMY) > 0)
 								nAttentionPoints += 1;
 				}
 				else if (own > 0)
-					if (set.IsValid)
+					if (bValidSet)
 						if (set.IsEnemy(aiPlayer))
 							if (!set.IsIndependent)
 								nAttentionPoints += 1;
@@ -125,7 +129,7 @@ while (true) {
 
 			if (!bStrongholdGaika)
 				if (enemy < 1000)
-					if (set.IsValid)
+					if (bValidSet)
 						if (set.IsAlly(aiPlayer))
 							continue;
 
@@ -140,7 +144,7 @@ while (true) {
 			if (g.NoRecruit(aiPlayer))
 				continue;
 			if (g.NoAttack(aiPlayer))
-				if (set.IsValid) {
+				if (bValidSet) {
 					if (set.IsEnemy(aiPlayer))
 						continue;
 				}

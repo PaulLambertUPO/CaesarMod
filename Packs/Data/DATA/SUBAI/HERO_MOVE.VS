@@ -11,7 +11,7 @@ if (.IsValid)
 		.FormSetupAndMoveTo(pt, 0, 0, true);
 
 		while (.HasPath)
-			.FormKeepMoving(1500);
+			.FormKeepMoving(1000);
 
 		pt_dir = .GetFinalPartyOrientation() - Point(1024, 1024);
 

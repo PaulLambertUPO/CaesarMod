@@ -100,12 +100,15 @@ if (.IsValid)
 				}
 
 			if (!vict.IsSentry) {
-				if (rand(2) == 0)
-					if (.health <= .maxhealth / 5)
-						if (IsResearched(plr, "Statue of Zeus")) {
+				if (rand(3) == 0)
+					if (.health < .maxhealth / 3)
+						if (IsResearched(plr, "Gambler's Luck")) {
 							.Heal(.maxhealth);
 							CreateFeedback("Heal", this);
 						}
+
+				if (IsResearched(plr, "Statue of Zeus"))
+					.Bless();
 
 				if (IsResearched(plr, "Statue of Isis"))
 					.SetFood(MIN(.food + 2, .maxfood));

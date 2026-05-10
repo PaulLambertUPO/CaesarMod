@@ -8,9 +8,9 @@ Settlement setGkIn, setGkAiDest;
 Building setGkInCentralBuilding;
 point sqPos, setGkAiDestCentralBuildingPos;
 int aiPlayer, nSleepSquadMonitor, nMagePerc, nSqState, min, own, ally, enemy, enemy_hidden, i;
-bool bUseRuins, bSynchApproach, bCoward, bGoAround, bTakeItems;
+bool bUseRuins, bSynchApproach, bCoward, bGoAround, bTakeItems, bValidSetGkIn, bSqLeaderIsHero;
 
-Sleep(rand(1001) + 500);
+Sleep(500 + rand(1001));
 
 aiPlayer = AIGetPlayer();
 nSleepSquadMonitor = AIVar(aiPlayer, AIV_Sleep_SquadMonitor);
@@ -37,7 +37,7 @@ while (true) {
 		sq = GetSquad(aiPlayer, i);
 		if (sq.Size > 0) {
 			sqLeader = sq.Leader;
-			if (sqLeader.IsValid)
+			if (sqLeader.IsAlive)
 				if (!sqLeader.AsShip().IsValid)//ships are managed internally by the game
 					if (!sqLeader.GetFlags(UNITFLAG_NOAI))
 						if (!sq.TestFlags(SF_NOAI)) {
@@ -52,8 +52,12 @@ while (true) {
 							sqPos = sq.pos;
 
 							setGkIn = sqGkIn.settlement;
-							if (setGkIn.IsValid)
+							if (setGkIn.IsValid) {
+								bValidSetGkIn = true;
 								setGkInCentralBuilding = setGkIn.GetCentralBuilding();
+							}
+							else
+								bValidSetGkIn = false;
 
 							sqGkAiDest = sq.AIDest;
 							setGkAiDest = sqGkAiDest.settlement;
@@ -61,7 +65,7 @@ while (true) {
 								setGkAiDestCentralBuildingPos = setGkAiDest.GetCentralBuilding().pos;
 
 							if (nSqState == SS_Approach || nSqState == SS_IDLE)
-								if (setGkIn.IsValid) {
+								if (bValidSetGkIn) {
 									if (setGkIn.IsIndependent) {//approach to capture a settlement when moving around it
 										bool bCheck = false;
 										if (setGkIn.IsVillage)
@@ -132,7 +136,7 @@ while (true) {
 										if (setGkAiDest.IsValid) {
 											if (setGkAiDestCentralBuildingPos.Dist(sqPos) > 500)
 												sq.SetCmd(SS_KillAll, 0, SF_ADVCHOOSER, "advance", setGkAiDestCentralBuildingPos);
-											else if (setGkIn.IsValid)
+											else if (bValidSetGkIn)
 												if (setGkIn.IsAlly(aiPlayer))
 													sq.SetCmd(SS_Enter, 0, SF_ADVCHOOSER, "enter", setGkInCentralBuilding);
 										}
@@ -152,10 +156,11 @@ while (true) {
 											if (sqGkIn.StratRunning(aiPlayer) == GS_EnterSettlement)
 												if (!sq.TestFlags(SF_PEACEFUL))
 													if (!sq.TestFlags(SF_NOAI))
-														if (setGkIn.IsValid)
+														if (bValidSetGkIn)
 															sq.SetCmd(SS_Enter, 0, SF_ADVCHOOSER, "enter", setGkInCentralBuilding);
 
 							sqLeaderHero = sqLeader.AsHero();
+							bSqLeaderIsHero = sqLeaderHero.IsValid;
 
 							if (sqLeader.command == "idle" || sqLeader.command == "stand_position") {
 								if (nSqState == SS_IDLE || nSqState == SS_Enter)
@@ -195,7 +200,7 @@ while (true) {
 															continue;
 														}
 													}
-													else if (!sqLeaderHero.IsValid)
+													else if (!bSqLeaderIsHero)
 														if (!sqLeader.HasFreedom)
 															if (!s.IsStronghold) {
 																s = NearestStronghold(sqPos, sq.Player);
@@ -210,7 +215,7 @@ while (true) {
 									if (sq.LastFightTime > GetTime() - 3000) {
 										Obj lastAttacker;
 										lastAttacker = sq.GetLastAttacker();
-										if (lastAttacker.IsValid)
+										if (lastAttacker.IsAlive)
 											if (lastAttacker.IsSentry) {
 												point pt;
 												pt = sqPos - sq.GetLastAttacker().pos;
@@ -228,10 +233,10 @@ while (true) {
 
 							if (bUseRuins)//use ruins
 								if (rand(3) == 0)
-									if (sqLeaderHero.IsValid)
+									if (bSqLeaderIsHero)
 										if (sqLeaderHero.free_item_slots > 0)
 											if (sq.InHolder)
-												if (setGkIn.IsValid)
+												if (bValidSetGkIn)
 													if (setGkIn.IsStronghold) {
 														Obj ruins;
 														if (nSqState == SS_Ruins)
@@ -247,7 +252,7 @@ while (true) {
 													}
 
 							if (sqLeader.items_count > 0)//use items
-								if (sqLeaderHero.IsValid) {
+								if (bSqLeaderIsHero) {
 									if (sqLeader.HasItem("Poison Mushroom"))
 										if (sqLeader.HasItem("Healing herbs"))
 											sqLeader.UseItem("Poison Mushroom");
@@ -336,9 +341,9 @@ while (true) {
 								else {
 									bool bCheck = false;
 
-									if (sqLeaderHero.IsValid)
+									if (bSqLeaderIsHero)
 										if (sq.food > 100)
-											if (!sqLeader.BestTargetInSquadSight.IsValid) {
+											if (sqLeader.BestTargetInSquadSight.IsDead) {
 												int healers;
 												healers = sq.Count("GDruid");
 												if (healers < 5) {
@@ -350,16 +355,16 @@ while (true) {
 													sq.SetCmd(SS_IDLE, 0, SF_ADVCHOOSER, "move", sqLeader.pos);
 											}
 
-									if (sqLeaderHero.IsValid)
+									if (bSqLeaderIsHero)
 										if (sqLeader.health < sqLeader.maxhealth / 3)
 											sqLeaderHero.DetachArmy();
 									if (sqPos.Dist(sqGkAiDest.Center) <= 1500)
 										bCheck = true;
-									else if (!sqLeader.BestTargetInSquadSight.IsValid)
+									else if (sqLeader.BestTargetInSquadSight.IsDead)
 										bCheck = true;
 									if (bCheck)
 										if (sqGkIn == sqGkAiDest) {
-											if (setGkIn.IsValid)
+											if (bValidSetGkIn)
 												if (!setGkIn.IsAlly(aiPlayer))
 													sq.ClrCmd(SS_IDLE, 0, SF_ADVCHOOSER);
 												else if (setGkIn.IsFull)
@@ -391,12 +396,12 @@ while (true) {
 										sq.SendFoodWagon(needed - food, 3000);
 								}
 								if (nSqState != SS_Ruins)//flee behaviour and collection of items
-									if (sqLeaderHero.IsValid) {
+									if (bSqLeaderIsHero) {
 										bool bHeroHurt = false, bDetachArmy = false;
 										int nFlee;//2-hero_dying, 4-army_dying, 8-losing
 
 										if (sqLeader.health < sqLeader.maxhealth / 2)
-											if (sqLeader.BestTargetInSquadSight.IsValid) {
+											if (sqLeader.BestTargetInSquadSight.IsAlive) {
 												bHeroHurt = true;
 												nFlee += 2;
 												if (sqLeader.health < sqLeader.maxhealth / 3)
@@ -411,7 +416,7 @@ while (true) {
 											if (sqGkAiDest == sqGkIn)
 												bFleeCheck = true;
 											if (!bFleeCheck)
-												if (setGkIn.IsValid)
+												if (bValidSetGkIn)
 													if (setGkIn.IsTTent)
 														if (setGkIn.IsEnemy(aiPlayer))
 															if (sqLeader.command == "engage")
@@ -443,7 +448,7 @@ while (true) {
 											sqGkIn.Eval(AI_STAYING, aiPlayer, own, ally, enemy, enemy_hidden);
 											enemy += sqGkIn.Eval(AI_LEAVING, aiPlayer, AI_ENEMY);
 											if (enemy <= 0)
-												if (setGkIn.IsValid)
+												if (bValidSetGkIn)
 													if (setGkIn.IsEnemy(aiPlayer))
 														if (setGkIn.CanBeCaptured)
 															nFlee = 0;
@@ -551,7 +556,7 @@ while (true) {
 																			if (eval > 0) {
 																				if (sqLeader.AsDruid().IsValid) {
 																					int nWant;
-																					nWant = squad.Units.count * nMagePerc / 100 - squad.Count("BaseMage");
+																					nWant = squad.Size * nMagePerc / 100 - squad.Count("BaseMage");
 																					if (nWant > 0)
 																						eval = eval * nWant;
 																					else
@@ -572,7 +577,7 @@ while (true) {
 														SL.Unlock();
 													}
 													if (bestEval > 0)
-														if (!sqLeaderHero.IsValid) {
+														if (!bSqLeaderIsHero) {
 															bool bAttached = true;
 															if (!bestHero.InHolder || sq.InHolder) {
 																if (nSqState == SS_Attach)
@@ -580,7 +585,7 @@ while (true) {
 																		bAttached = false;
 																sq.SetCmd(SS_Attach, 0, SF_ADVCHOOSER, "attach", bestHero);
 															}
-															else if (setGkIn.IsValid)
+															else if (bValidSetGkIn)
 																sq.SetCmd(SS_Attach, 0, SF_ADVCHOOSER, "enter", setGkInCentralBuilding);
 															if (bAttached) {
 																Sleep(100);
@@ -647,8 +652,8 @@ while (true) {
 											sqLeader.SetCommand("unload", sqLeader.GetHolderSett().GetCentralBuilding());
 							}
 
-							if (sqLeaderHero.IsValid)//balance mages in the hero army
-								if (setGkIn.IsValid)
+							if (bSqLeaderIsHero)//balance mages in the hero army
+								if (bValidSetGkIn)
 									if (setGkIn.IsStronghold) {
 										int nBalance;
 										nBalance = sq.Count("BaseMage") - sq.Size * nMagePerc / 100;
@@ -658,17 +663,16 @@ while (true) {
 											int j;
 
 											sqUnits = sq.Units;
-											for (j = 0; j < sqUnits.count; j += 1) {//note that i is used in the original script (which leads to strange loop behaviours)
+											for (j = sqUnits.count - 1; j >= 0; j -= 1) {//note that i is used in the original script (which vauses wrong loop iterations)
 												u = sqUnits[j].AsUnit();
-												if (u.IsValid)
-													if (u.IsAlive)
-														if (u.IsHeirOf("BaseMage"))
-															if (u.hero == sqLeaderHero) {
-																u.DetachFrom(sqLeaderHero);
-																nBalance -= 1;
-																if (nBalance <= 0)
-																	break;
-															}
+												if (u.IsAlive)
+													if (u.IsReligious)
+														if (u.hero == sqLeaderHero) {
+															u.DetachFrom(sqLeaderHero);
+															nBalance -= 1;
+															if (nBalance <= 0)
+																break;
+														}
 											}
 										}
 									}

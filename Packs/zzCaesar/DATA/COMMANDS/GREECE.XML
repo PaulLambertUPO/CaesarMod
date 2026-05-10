@@ -303,7 +303,7 @@
 		execdelay="25000"
 		groupverifier="data/subai/verify_research.vs"
 		rollover="Charm of Athena"
-		description="Makes all warriors receive a Charm of Athena (+40% movement and attack speed) at the first kill"
+		description="Makes all warriors receive a Charm of Athena (+40% movement and attack speed in combat) at the first kill"
 		method="research"
 		researchcommand="yes"
 		param="ReqSet, Olympic Games, default, NamePlr, Charm of Athena, default">
@@ -525,7 +525,7 @@
 		costgold="2500"
 		execdelay="30000"
 		rollover="Statue of Zeus"
-		description="Gives all warriors below 20% health a 50% chance to completely restore their health at every kill"
+		description="Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage"
 		method="research"
 		param="ReqSet, Offer to Gods, default, NamePlr, Statue of Zeus, default">
 		<src obj="HTemple" />

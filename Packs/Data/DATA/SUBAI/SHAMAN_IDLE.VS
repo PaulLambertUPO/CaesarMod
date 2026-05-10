@@ -11,7 +11,7 @@ if (.IsValid)
 		Unit u, u_ol;
 		point pt, pt_start;
 		int i, d, plr, rng, best_dist, stamina_cost;
-		bool can_learn, go_back, use_curse;
+		bool go_back, use_curse;
 
 		Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
 
@@ -20,11 +20,6 @@ if (.IsValid)
 		pt_start = .posRH;
 
 		stamina_cost = GetCmdStaminaCost("curse");
-
-		if (.race == Carthage)
-			can_learn = true;
-		else
-			can_learn = IsResearched(plr, "Ritual Chamber");
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
@@ -71,12 +66,7 @@ if (.IsValid)
 				if (u.IsDead)
 					if (.IsVisible) {
 						use_curse = false;
-						if (can_learn)
-							u = .FindUnitToLearn();
-						else if (IsResearched(plr, "Ritual Chamber")) {
-							can_learn = true;
-							u = .FindUnitToLearn();
-						}
+						u = .FindUnitToLearn();
 					}
 
 				if (u.IsAlive)

@@ -7,28 +7,9 @@
 		cursor="do_something">
 		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
 		<cmdtext target="" text="Click to learn from all allies around this position" />
-		<src obj="RPriest" sticky="yes" />
-		<src obj="IEnchantress" sticky="yes" />
-		<src obj="CShaman" sticky="yes" />
-		<src obj="EPriest" sticky="yes" />
-		<src obj="HPriest" sticky="yes" />
+		<src obj="BaseMage" sticky="yes" />
 	</cmd>
-	<cmd name="chamber_learn" priority="17"
-		method="learn"
-		groupverifier="data/subai/verify_isresearched.vs"
-		button="actions/Chamber Learn.bmp"
-		key="k"
-		rollover="Learn from ally"
-		description="Gains knowledge from a more experienced ally"
-		cursor="do_something"
-		param="Ritual Chamber">
-		<cmdtext target="Unit" text="Click to learn from this ally" default-text="Right-click to learn from this ally" />
-		<cmdtext target="" text="Click to learn from all allies around this position" />
-		<src obj="GDruid" sticky="yes" />
-		<src obj="BDruid" sticky="yes" />
-		<src obj="TEnchantress" sticky="yes" />
-	</cmd>
-	<cmd name="heal" priority="18"
+	<cmd name="heal" priority="17"
 		button="actions/heal.bmp"
 		key="h"
 		rollover="Heal"
@@ -41,7 +22,7 @@
 		<src obj="HPriest" sticky="yes" />
 		<src obj="GDruid" sticky="yes" />
 	</cmd>
-	<cmd name="teach" priority="19"
+	<cmd name="teach" priority="18"
 		button="actions/Teach.bmp"
 		key="o"
 		rollover="Teach"
@@ -52,7 +33,7 @@
 		<cmdtext target="" text="Click to teach all allies around this position" />
 		<src obj="IEnchantress" sticky="yes" />
 	</cmd>
-	<cmd name="hide" priority="20"
+	<cmd name="hide" priority="19"
 		button="actions/invisibility.bmp"
 		key="n"
 		rollover="Invisibility"
@@ -63,7 +44,7 @@
 		<cmdtext target="" text="Click to hide all allies around this position" />
 		<src obj="BDruid" sticky="yes" />
 	</cmd>
-	<cmd name="curse" priority="21"
+	<cmd name="curse" priority="20"
 		button="actions/curse.bmp"
 		key="b"
 		rollover="Curse"
@@ -75,7 +56,7 @@
 		<src obj="CShaman" sticky="yes" />
 		<src obj="TEnchantress" sticky="yes" />
 	</cmd>
-	<cmd name="cripple" priority="22"
+	<cmd name="cripple" priority="21"
 		button="actions/cripple.bmp"
 		key="v"
 		rollover="Cripple"
@@ -86,7 +67,7 @@
 		<cmdtext target="" text="Click to cripple all enemies around this position" />
 		<src obj="EPriest" sticky="yes" />
 	</cmd>
-	<cmd name="mist" priority="23"
+	<cmd name="mist" priority="22"
 		button="actions/mist.bmp"
 		key="y"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -98,7 +79,7 @@
 		<src obj="RPriest" sticky="yes" />
 		<src obj="EPriest" sticky="yes" />
 	</cmd>
-	<cmd name="coverofmercy" priority="24"
+	<cmd name="coverofmercy" priority="23"
 		button="actions/CoverOfMercy.bmp"
 		key="c"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -109,7 +90,7 @@
 		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="IEnchantress" sticky="yes" />
 	</cmd>
-	<cmd name="zombify" priority="25"
+	<cmd name="zombify" priority="24"
 		button="research/Zombify.bmp"
 		key="f"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -119,7 +100,7 @@
 		<src obj="CShaman" sticky="yes" />
 		<src obj="EPriest" sticky="yes" />
 	</cmd>
-	<cmd name="ghoul_summoning" priority="26"
+	<cmd name="ghoul_summoning" priority="25"
 		button="actions/ghost.bmp"
 		key="g"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -129,7 +110,7 @@
 		<src obj="GDruid" sticky="yes" />
 		<src obj="BDruid" sticky="yes" />
 	</cmd>
-	<cmd name="wrath_of_jupiter" priority="27"
+	<cmd name="wrath_of_jupiter" priority="26"
 		button="actions/jupiter.bmp"
 		key="j"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -140,7 +121,7 @@
 		<cmdtext target="Unit" text="Click to hurt this unit" />
 		<src obj="RPriest" />
 	</cmd>
-	<cmd name="eagle_summoning" priority="27"
+	<cmd name="eagle_summoning" priority="26"
 		button="actions/summon eagle.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -149,7 +130,7 @@
 		param="Eagle Summoning">
 		<src obj="GDruid" />
 	</cmd>
-	<cmd name="crow_summoning" priority="27"
+	<cmd name="crow_summoning" priority="26"
 		button="actions/summon crow.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -158,7 +139,7 @@
 		param="Crow Summoning">
 		<src obj="BDruid" />
 	</cmd>
-	<cmd name="wolf_summoning" priority="27"
+	<cmd name="wolf_summoning" priority="26"
 		button="actions/summon wolf.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -167,7 +148,7 @@
 		param="Wolf Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
-	<cmd name="deer_summoning" priority="28"
+	<cmd name="deer_summoning" priority="27"
 		button="actions/summon deer.bmp"
 		key="j"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -176,7 +157,7 @@
 		param="Deer Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
-	<cmd name="restoration" priority="28"
+	<cmd name="restoration" priority="27"
 		button="actions/restoration.bmp"
 		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -187,7 +168,7 @@
 		<src obj="IEnchantress" />
 		<src obj="HPriest" />
 	</cmd>
-	<cmd name="mass_heal" priority="29"
+	<cmd name="mass_heal" priority="28"
 		button="actions/Mass Healing.bmp"
 		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"

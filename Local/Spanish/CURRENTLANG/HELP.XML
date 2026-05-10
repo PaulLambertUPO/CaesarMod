@@ -2633,8 +2633,8 @@ La hechicera se sacrifica para distribuir hasta 1000 puntos de salud entre los a
 				<entry hcenter="1" font="large">Hipaspista</entry>
 				<entry image="UI/Icons/HHypaspista.bmp">El hipaspista tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 400</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 42</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 14</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 38</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 320 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
@@ -5013,7 +5013,7 @@ Tiempo: 10 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Charm of Athena.bmp">
 Amuleto de Atenea
-Con el primer asesinato los guerreros reciben el Amuleto de Atenea, que aumenta la velocidad de movimiento y de ataque en un 40%.
+Con el primer asesinato los guerreros reciben el Amuleto de Atenea, que aumenta la velocidad de movimiento y de ataque en un 40% en combate.
 Coste: 2000 oro
 Tiempo: 25 segundos
 				</entry>
@@ -5322,7 +5322,7 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gamblers Luck.bmp">
 Fortuna de los dioses
-Proporciona a cada guerrero una probabilidad del 15% de restablecer completamente la salud en vez de morir.
+Proporciona a cada guerrero una probabilidad del 33% de restablecer completamente la salud cuando esté por debajo del 33% cada vez que mata a un enemigo.
 Coste: 1500 oro
 Tiempo: 30 segundos
 				</entry>
@@ -5569,7 +5569,7 @@ Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
 Cámara de los rituales
-Permite a los druidas ganar experiencia aprendiendo de aliados más experimentados.
+Permite a los druidas acumular la energía de los altares de sacrificios dos veces más rápido.
 Coste: 1000 oro
 Tiempo: 40 segundos
 				</entry>
@@ -5709,7 +5709,7 @@ Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
 Cámara de los rituales
-Permite a los druidas ganar experiencia aprendiendo de aliados más experimentados.
+Permite a los druidas acumular la energía de los altares de sacrificios dos veces más rápido.
 Coste: 1000 oro
 Tiempo: 40 segundos
 				</entry>
@@ -5807,7 +5807,7 @@ Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
 Cámara de los rituales
-Permite a las hechiceras ganar experiencia aprendiendo de aliados más experimentados.
+Permite a las hechiceras acumular la energía de los altares de sacrificios dos veces más rápido.
 Coste: 1000 oro
 Tiempo: 40 segundos
 				</entry>
@@ -5868,7 +5868,7 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Statue of Zeus.bmp">
 Erigir estatua de Zeus
-Proporciona a todos los guerreros cuya salud esté por debajo del 20% una probabilidad del 50% de restablecer completamente la salud con cada asesinato.
+Bendice a los guerreros con cada asesinato, haciendo que el siguiente ataque en los próximos 5 segundos inflija un daño adicional equivalente al valor de ataque.
 Coste: 2500 oro
 Tiempo: 30 segundos
 				</entry>
@@ -6590,7 +6590,7 @@ Se genera a través de la mejora "Oligarquía" del gimnasio.
 			</entry>
 			<entry image="UI/Icons/Items/Charm of Athena.bmp">
 Amuleto de Atenea
-Aumenta la velocidad de movimiento y de ataque en un 40%.
+Aumenta la velocidad de movimiento y de ataque en un 40% en combate.
 Se genera a través de la mejora "Amuleto de Atenea" del gimnasio.
 			</entry>
 			<entry image="UI/Icons/Items/Charm of Aegle.bmp">

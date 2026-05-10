@@ -39,6 +39,10 @@ if (.IsValid)
 							}
 						}
 				}
+				else if (i < 2) {
+					i += 1;
+					Sleep(500);
+				}
 				else
 					break;
 			}

@@ -18,7 +18,7 @@ if (.IsValid)
 						break;
 					if (.DistTo(holder) < 750)
 						break;
-					.FormKeepMoving(1500);
+					.FormKeepMoving(1000);
 				}
 			}
 

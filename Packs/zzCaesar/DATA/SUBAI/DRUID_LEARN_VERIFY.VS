@@ -14,15 +14,7 @@ if (.IsValid)
 							if (!target.AsUnit().InHolder)
 								if (!target.IsWaterUnit)
 									if (!target.IsRam)
-										if (.CanSee(target)) {
-											int r;
-											r = .race;
-											if (r != Gaul)
-												if (r != Germany)
-													if (r != Britain)
-														return true;
-											if (IsResearched(.player, "Ritual Chamber"))
-												return true;
-										}
+										if (.CanSee(target))
+											return true;
 
 return false;

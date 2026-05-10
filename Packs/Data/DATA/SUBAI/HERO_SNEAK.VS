@@ -26,7 +26,7 @@ if (.IsValid)
 						.AddCommand(true, "engage");
 						break;
 					}
-			.FormKeepMoving(1500);
+			.FormKeepMoving(1000);
 		}
 	}
 

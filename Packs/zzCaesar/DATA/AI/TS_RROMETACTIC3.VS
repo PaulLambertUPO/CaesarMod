@@ -49,8 +49,8 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 //hero + arrows + barrack level 1
 {
 	bool bArrows = false, bBarrack1 = false;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bArrows || !bBarrack1)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bArrows || !bBarrack1)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bArrows)
 			bArrows = set.TSResearch("Roman Archers");//archers are researched in order to be already recruitable when the script ends
@@ -58,7 +58,7 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		Obj objDummy;
 		ObjList ol;
 		ol.Add(hero);
@@ -74,7 +74,7 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 	int nCount, nPrinciples = 20, nPriests = 5;
 	str supportCmd1 = "RAddPop", supportCmd2 = "buyfoodforgold";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (olPrinciples.count < nPrinciples || olPriests.count < nPriests)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olPrinciples.count < nPrinciples) {
 			nCount = nPrinciples - olPrinciples.count;
@@ -96,21 +96,20 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olPrinciples.SetCommand("attach", hero);
-		olPriests.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olPrinciples.SetCommand("attach", hero);
+	olPriests.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olPrinciples.ClearDead();
 olPriests.ClearDead();

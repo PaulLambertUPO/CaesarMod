@@ -32,7 +32,7 @@ if (!other.AsCatapult().IsValid) {
 								while (.HasPath) {
 									if (.DistTo(bld) < 400)
 										break;
-									.FormKeepMoving(1500);
+									.FormKeepMoving(1000);
 								}
 							}
 
@@ -67,7 +67,7 @@ if (!other.AsCatapult().IsValid) {
 											while (.HasPath) {
 												if (.DistTo(bld) < 400)
 													break;
-												.FormKeepMoving(1500);
+												.FormKeepMoving(1000);
 											}
 										}
 

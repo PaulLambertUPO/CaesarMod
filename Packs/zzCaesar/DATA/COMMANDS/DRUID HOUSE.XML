@@ -23,7 +23,7 @@
 		costgold="1000"
 		execdelay="40000"
 		rollover="Ritual Chamber"
-		description="Allows druids to gain experience by learning from more experienced allies"
+		description="Allows druids to accumulate stonehenge energy twice as fast"
 		method="research"
 		param="NamePlr, Ritual Chamber, default, NamePlr, Britain chamber, , NamePlr, German chamber">
 		<src obj="DruidHouse" />

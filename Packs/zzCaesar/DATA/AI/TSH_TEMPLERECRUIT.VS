@@ -11,12 +11,11 @@ nRace = set.GetCentralBuilding().race;
 
 if (nRace == ImperialRome)//Greece
 	class = "HPriest";
-else if (nRace == RepublicanRome) {
+else if (nRace == RepublicanRome)
 	if (IsResearched(set, "ChoosePunicRome"))
 		class = "RPriestPunic";
 	else
 		class = "RPriest";
-}
 else
 	class = TempleUType(nRace);
 cmd = "train" + class;//do not use TempleUTrain(nRace) because it is a bugged function: it causes a game crash for Germany, while for Egypt and Britain it returns the wrong class
@@ -25,7 +24,7 @@ if (num > 0) {//steal from the AI
 	ObjList ol2;
 	Unit u;
 	ol2 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, true);
-	for (i = 0; i < ol2.count; i += 1) {
+	for (i = ol2.count - 1; i >= 0; i -= 1) {
 		u = ol2[i].AsUnit();
 		if (u.IsAlive) {
 			if (u.hero.IsValid)
@@ -41,13 +40,13 @@ if (num > 0) {//count how many are queued
 	if (nRace == ImperialRome) {//Greece
 		ObjList buildings;
 		buildings = set.Buildings;
-		for (i = 0; i < buildings.count; i += 1)
-			if (buildings[i].class == "HTemple")
+		for (i = buildings.count - 1; i >= 0; i -= 1)
+			if (buildings[i].IsHeirOf("HTemple"))//using IsHeirOf is better than a direct class check because it manages winter variants
 				temples.Add(buildings[i]);
 	}
 	else
 		temples = set.TSGetAllTemples();
-	for (i = 0; i < temples.count; i += 1)
+	for (i = temples.count - 1; i >= 0; i -= 1)
 		num -= temples[i].CmdCount(cmd);
 }
 
@@ -63,7 +62,7 @@ if (num > 0) {//issue commands
 			int j, min;
 			bool first_time = true;
 			buildings = set.Buildings;
-			for (j = 0; j < buildings.count; j += 1) {
+			for (j = buildings.count - 1; j >= 0; j -= 1) {
 				b = buildings[j];
 				if (b.IsHeirOf("HTemple"))//using IsHeirOf is better than a direct class check because it manages winter variants
 					if (!b.IsBroken)

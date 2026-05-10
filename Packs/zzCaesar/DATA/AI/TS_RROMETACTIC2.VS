@@ -47,14 +47,14 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 //hero + barrack level 1
 {
 	bool bBarrack1 = false;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bBarrack1)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bBarrack1)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		Obj objDummy;
 		ObjList ol;
 		ol.Add(hero);
@@ -69,7 +69,7 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 {
 	bool bTraining1 = false, bArrows = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTraining1 || !bArrows)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bTraining1)
 			bTraining1 = set.TSResearch("Rome Training 1");
@@ -85,7 +85,7 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 	int nCount, nGladiators = 20, nPriests = 10;
 	str supportCmd1 = "RAddPop", supportCmd2 = "buyfoodforgold";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTraining2 || olGladiators.count < nGladiators || olPriests.count < nPriests)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bTraining2)
 			bTraining2 = set.TSResearch("Rome Training 2");
@@ -114,23 +114,21 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 	ptTraining.SetLen(ptTraining.Len + 220);
 	if (bHeroScript)
 		AIBreakScript(heroScriptId);
-	if (hero.IsValid)
-		if (hero.IsAlive) {
-			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-			hero.SetCommand("move", ptTraining);
-			hero.AddCommand(false, "train");
-			Sleep(10000);//wait for the hero to come back so that he might train with the other units
-		}
+	if (hero.IsAlive) {
+		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+		hero.SetCommand("move", ptTraining);
+		hero.AddCommand(false, "train");
+		Sleep(10000);//wait for the hero to come back so that he might train with the other units
+	}
 	olGladiators.SetCommand("move", ptTraining);
 	olGladiators.AddCommand(false, "train");
 	olPriests.SetCommand("heal", ptTraining);
 	Sleep(35000);
 	olGladiators.SetCommand("train");
-	if (hero.IsValid)
-		if (hero.IsAlive) {
-			hero.SetCommand("move", ptTraining);
-			hero.AddCommand(false, "train");
-		}
+	if (hero.IsAlive) {
+		hero.SetCommand("move", ptTraining);
+		hero.AddCommand(false, "train");
+	}
 	Sleep(30000);
 	if (set.player == aiPlayer)
 		set.Research("autotrain_start");
@@ -139,21 +137,20 @@ Sleep(500);//give some time to the settlement to register the chosen Rome before
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olGladiators.SetCommand("attach", hero);
-		olPriests.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olGladiators.SetCommand("attach", hero);
+	olPriests.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olGladiators.ClearDead();
 olPriests.ClearDead();

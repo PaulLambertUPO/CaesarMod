@@ -23,8 +23,8 @@ aSkillLevels[0] = 10;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bHorseshoes1 || !bFreeBeer || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bHorseshoes1 || !bFreeBeer || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bHorseshoes1)
 			bHorseshoes1 = set.TSResearch("Gaul Horseman");
@@ -42,7 +42,7 @@ aSkillLevels[0] = 10;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -56,7 +56,7 @@ aSkillLevels[0] = 10;
 {
 	bool bHorseshoes2 = false, bBarrack1 = false, bBearTeeth = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bHorseshoes2 || !bBarrack1 || !bBearTeeth)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bHorseshoes2)
 			bHorseshoes2 = set.TSResearch("Gaul Exceptional Horseshoes");
@@ -74,7 +74,7 @@ aSkillLevels[0] = 10;
 	bool bBarrack2 = false;
 	str supportCmd = "GAddPop";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olHorsemen.count < nHorsemen)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack2)
 			bBarrack2 = set.TSResearch("Barrack Level 2");
@@ -93,20 +93,19 @@ aSkillLevels[0] = 10;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olHorsemen.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olHorsemen.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olHorsemen.ClearDead();
 SetNoAIFlag(olHorsemen, false);

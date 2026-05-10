@@ -27,8 +27,8 @@ aSkillLevels[2] = 5;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bMaces || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bMaces || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bMaces)
 			bMaces = set.TSResearch("Mace production");
@@ -44,7 +44,7 @@ aSkillLevels[2] = 5;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -58,7 +58,7 @@ aSkillLevels[2] = 5;
 {
 	bool bTribalFights = false, bBarrack1 = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bTribalFights || !bBarrack1)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bTribalFights)
 			bTribalFights = set.TSResearch("Tribal fights");
@@ -72,7 +72,7 @@ aSkillLevels[2] = 5;
 {
 	bool bAttackFocus = false, bFoodSale = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bAttackFocus || !bFoodSale)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bAttackFocus)
 			bAttackFocus = set.TSResearch("Attack focus");
@@ -86,7 +86,7 @@ aSkillLevels[2] = 5;
 {
 	bool bFoodTax = false, bMaces = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bFoodTax || !bMaces)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bFoodTax)
 			bFoodTax = set.TSResearch("TFoodTax");
@@ -101,7 +101,7 @@ aSkillLevels[2] = 5;
 	int nCount, nMacemen = 20;
 	str supportCmd = "buyfoodforgold";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && olMacemen.count < nMacemen) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (olMacemen.count < nMacemen) {
 			nCount = nMacemen - olMacemen.count;
@@ -117,20 +117,19 @@ aSkillLevels[2] = 5;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olMacemen.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olMacemen.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olMacemen.ClearDead();
 SetNoAIFlag(olMacemen, false);

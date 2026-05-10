@@ -152,7 +152,7 @@ else if (set.IsTTent)
 			SquadList SL;
 			gaika.GetSquads(SL, AI_STAYING, aiPlayer, AI_OWN);
 			SL.Lock();
-			for (0; !SL.EOL; SL.Next()) {
+			for (; !SL.EOL; SL.Next()) {
 				squad = SL.Cur;
 				if (!squad.TestFlags(SF_PEACEFUL))
 					if (!squad.TestFlags(SF_NOAI)) {
@@ -218,7 +218,7 @@ else if (set.IsTTent)
 											if (!u.IsHeirOf("TValkyrie")) {
 												ol = squad.Units;
 												squad.Siege(hall, (nMaxCatapsUnits - nMilInCataps + 9) / 10, SS_Catapult, SS_Siege);
-												nMilInCataps += ol.count - squad.Units.count;
+												nMilInCataps += ol.count - squad.Size;
 												if (nMilInCataps > nMaxCatapsUnits) {//return some of the units to the fight
 													SquadList sl;
 													olSg = ol;
@@ -243,36 +243,40 @@ else if (set.IsTTent)
 							if (nMilInCataps <= nMaxCatapsUnits)
 								break;
 							squad = SL.Cur;
-							if (squad.State == SS_Catapult)
-								for (i = 0; i < squad.Size; i += 1) {
-									u = squad.Units[i].AsUnit();
-									if (u.IsValid)
-										if (!u.InHolder) {
+							if (squad.State == SS_Catapult) {
+								ol = squad.Units;
+								for (i = ol.count - 1; i >= 0; i -= 1) {
+									u = ol[i].AsUnit();
+									if (u.IsAlive)
+										if (u.InHolder) {
+											catap = u.GetHolderSett().GetCentralBuilding().AsCatapult();
+											if (catap.IsValid)
+												olCataps.Add(catap);
+										}
+										else {
 											olOut.Add(u);
 											nMilInCataps -= 1;
 											if (nMilInCataps <= nMaxCatapsUnits)
 												break;
 										}
-										else {
-											catap = u.GetHolderSett().GetCentralBuilding().AsCatapult();
-											if (catap.IsValid)
-												olCataps.Add(catap);
-										}
 								}
+							}
 						}
 						if (nMilInCataps > nMaxCatapsUnits)
-							for (i = 0; i < olCataps.count; i += 1) {
+							for (i = olCataps.count - 1; i >= 0; i -= 1) {
 								catap = olCataps[i].AsCatapult();
-								if (catap.IsValid)
-									for (i = catap.settlement.Units.count - 1; i >= 1; i -= 1) {
+								if (catap.IsAlive) {
+									ol = catap.settlement.Units;
+									for (i = ol.count - 1; i >= 1; i -= 1) {
 										if (nMilInCataps <= nMaxCatapsUnits)
 											break;
-										u = catap.settlement.Units[i].AsUnit();
-										if (u.IsValid) {
+										u = ol[i].AsUnit();
+										if (u.IsAlive) {
 											olOut.Add(u);
 											nMilInCataps -= 1;
 										}
 									}
+								}
 							}
 						if (olOut.count > 0) {
 							SquadList sl;

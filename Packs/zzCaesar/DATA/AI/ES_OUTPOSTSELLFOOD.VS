@@ -15,11 +15,7 @@ while (set.player == aiPlayer) {
 		EnvWriteString(set, "GOutpostSellFood", "yes");
 		EnvWriteString(set, "GOutpostSellGold", "no");
 	}
-	if (set.gold >= 100) {//send produced gold
-		Wagon mule;
-		mule = set.CreateMuleGold(set.gold);
-		if (mule.IsValid)
-			mule.SetCommand("unload", supplied.GetCentralBuilding());
-	}
+	if (set.gold >= 100)//send produced gold
+		set.CreateMuleGold(set.gold).SetCommand("unload", supplied.GetCentralBuilding());
 	Sleep(2000);
 }

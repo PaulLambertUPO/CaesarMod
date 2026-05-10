@@ -77,14 +77,18 @@ while (set.player == aiPlayer) {
 											supplyOutpost = true;
 								if (supplyOutpost) {
 									ObjList ol;
+									Obj o;
 									int i, peasants;
 									ol = setOutpost.Units;
-									for (i = 0; i < ol.count; i += 1)
-										if (ol[i].IsHeirOf("Peasant")) {
-											peasants += 1;
-											if (peasants >= 5)
-												break;
-										}
+									for (i = ol.count - 1; i >= 0; i -= 1) {
+										o = ol[i];
+										if (o.IsAlive)
+											if (o.IsPeasant) {
+												peasants += 1;
+												if (peasants >= 5)
+													break;
+											}
+									}
 									if (peasants < 5)
 										set.StartSupplyFood(setOutpost);
 								}

@@ -129,8 +129,6 @@ while (dest != "") {
 				InvalidateRegenConsts();
 			else if (name == "Gambler's Test")
 				InvalidateDamageFormulaParams();
-			else if (name == "Gambler's Luck")
-				InvalidateDamageFormulaParams();
 			else if (name == "Attack focus")
 				InvalidateDamageFormulaParams();
 			else if (name == "Learning")

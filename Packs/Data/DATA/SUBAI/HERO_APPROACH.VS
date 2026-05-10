@@ -18,16 +18,19 @@ if (target.IsAlive) {
 							if (.army.Contains(u))
 								.AddCommand(true, "move", u.pos);
 							else {
+								point target_pos;
+
 								if (!.InHolder)
 									if (.DistTo(u) < 100) {
 										Sleep(30);//prevent possible loops with other commands
 										return;
 									}
 
-								.FormSetupAndMoveTo(u.pos, 0, 0, true);
+								target_pos = u.pos;
+								.FormSetupAndMoveTo(target_pos, 0, 0, true);
 
 								while (.HasPath) {
-									.FormKeepMoving(1500);
+									.FormKeepMoving(1000);
 									if (u.IsDead)
 										break;
 									if (u.InHolder)
@@ -38,7 +41,10 @@ if (target.IsAlive) {
 										break;
 									if (.DistTo(u) < 100)
 										break;
-									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+									if (u.DistTo(target_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+										target_pos = u.pos;
+										.FormSetupAndMoveTo(target_pos, 0, 0, true);
+									}
 								}
 							}
 				}
@@ -56,7 +62,7 @@ if (target.IsAlive) {
 							break;
 						if (.DistTo(target) < 100)
 							break;
-						.FormKeepMoving(1500);
+						.FormKeepMoving(1000);
 					}
 				}
 }

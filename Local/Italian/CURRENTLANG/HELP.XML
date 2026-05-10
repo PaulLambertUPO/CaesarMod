@@ -2633,8 +2633,8 @@ La maga si sacrifica per distribuire fino a 1000 punti di salute tra gli alleati
 				<entry hcenter="1" font="large">Ipaspista</entry>
 				<entry image="UI/Icons/HHypaspista.bmp">L'ipaspista ha i seguenti parametri e caratteristiche:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salute 400</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 42</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 14</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 38</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 320 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Costo 1 popolazione</entry>
@@ -5013,7 +5013,7 @@ Tempo: 10 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Charm of Athena.bmp">
 Amuleto di Atena
-Alla prima uccisione i guerrieri ricevono l'Amuleto di Atena, che aumenta la velocità di movimento e d'attacco del 40%.
+Alla prima uccisione i guerrieri ricevono l'Amuleto di Atena, che aumenta la velocità di movimento e d'attacco del 40% in combattimento.
 Costo: 2000 oro
 Tempo: 25 secondi
 				</entry>
@@ -5322,7 +5322,7 @@ Tempo: 30 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gamblers Luck.bmp">
 Fortuna divina
-Fornisce a ogni guerriero una probabilità del 15% di ripristinare completamente la salute anziché morire.
+Fornisce a ogni guerriero una probabilità del 33% di ripristinare completamente la salute quando è inferiore al 33% ogni volta che uccide un nemico.
 Costo: 1500 oro
 Tempo: 30 secondi
 				</entry>
@@ -5569,7 +5569,7 @@ Tempo: 20 - 10 - 5 - 2,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
 Camera dei rituali
-Consente ai druidi di guadagnare esperienza imparando da alleati più esperti.
+Consente ai druidi di accumulare l'energia degli altari dei sacrifici due volte più velocemente.
 Costo: 1000 oro
 Tempo: 40 secondi
 				</entry>
@@ -5709,7 +5709,7 @@ Tempo: 20 - 10 - 5 - 2,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
 Camera dei rituali
-Consente ai druidi di guadagnare esperienza imparando da alleati più esperti.
+Consente ai druidi di accumulare l'energia degli altari dei sacrifici due volte più velocemente.
 Costo: 1000 oro
 Tempo: 40 secondi
 				</entry>
@@ -5807,7 +5807,7 @@ Tempo: 20 - 10 - 5 - 2,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
 Camera dei rituali
-Consente alle maghe di guadagnare esperienza imparando da alleati più esperti.
+Consente alle maghe di accumulare l'energia degli altari dei sacrifici due volte più velocemente.
 Costo: 1000 oro
 Tempo: 40 secondi
 				</entry>
@@ -5868,7 +5868,7 @@ Tempo: 20 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Statue of Zeus.bmp">
 Erigi statua a Zeus
-Fornisce a tutti i guerrieri la cui salute è inferiore al 20% una probabilità del 50% di ripristinare completamente la salute a ogni uccisione.
+Benedice i guerrieri ad ogni uccisione, facendo sì che il prossimo attacco entro 5 secondi infligga un danno supplementare pari al valore di attacco.
 Costo: 2500 oro
 Tempo: 30 secondi
 				</entry>
@@ -6590,7 +6590,7 @@ Viene generato tramite il potenziamento "Oligarchia" del ginnasio.
 			</entry>
 			<entry image="UI/Icons/Items/Charm of Athena.bmp">
 Amuleto di Atena
-Aumenta la velocità di movimento e d'attacco del 40%.
+Aumenta la velocità di movimento e d'attacco del 40% in combattimento.
 Viene generato tramite il potenziamento "Amuleto di Atena" del ginnasio.
 			</entry>
 			<entry image="UI/Icons/Items/Charm of Aegle.bmp">

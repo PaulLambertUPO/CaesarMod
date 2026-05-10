@@ -92,18 +92,17 @@ if (rand(2) == 0) {
 									i = -1;
 						}
 						if (i == -1) {
-							Unit u;
+							Obj o;
 							int nHealth, nMaxHealth, nStamina, nMaxStamina;
 							str cmd;
-							for (i = 0; i < olMilInRange.count; i += 1) {
-								u = olMilInRange[i].AsUnit();
-								if (u.IsValid)
-									if (u.IsAlive) {
-										nHealth += u.health;
-										nMaxHealth += u.maxhealth;
-										nStamina += u.stamina;
-										nMaxStamina += u.maxstamina;
-									}
+							for (i = olMilInRange.count - 1; i >= 0; i -= 1) {
+								o = olMilInRange[i];
+								if (o.IsAlive) {
+									nHealth += o.health;
+									nMaxHealth += o.maxhealth;
+									nStamina += o.stamina;
+									nMaxStamina += o.maxstamina;
+								}
 							}
 							if (nRace == Iberia) {
 								if (nHealth <= nMaxHealth * 2 / 3)

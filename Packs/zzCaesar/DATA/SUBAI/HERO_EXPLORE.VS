@@ -11,7 +11,7 @@ if (.IsValid)
 		.FormSetupAndMoveTo(pt, 0, 0, true);
 
 		while (.HasPath)
-			.FormKeepMoving(1500);
+			.FormKeepMoving(1000);
 
 		pt_pos = .pos;
 		pt = .GetUnexploredPoint(-1);
@@ -20,7 +20,7 @@ if (.IsValid)
 			.FormSetupAndMoveTo(pt, 0, 0, true);
 
 			while (.HasPath)
-				.FormKeepMoving(1500);
+				.FormKeepMoving(1000);
 
 			if (pt_pos == .pos)
 				break;

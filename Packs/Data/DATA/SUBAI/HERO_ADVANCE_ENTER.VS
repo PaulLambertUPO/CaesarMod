@@ -59,7 +59,7 @@ if (!other.AsCatapult().IsValid)
 														break;
 													if (.DistTo(bld) < 400)
 														break;
-													.FormKeepMoving(1500);
+													.FormKeepMoving(1000);
 												}
 											}
 

@@ -57,7 +57,7 @@ if (num > 0) {//steal from the AI
 	ObjList ol2;
 	Unit u;
 	ol2 = GetGAIKA(set.GetCentralBuilding()).GetAIControlledUnits(class, set.player, num, false);
-	for (i = 0; i < ol2.count; i += 1) {
+	for (i = ol2.count - 1; i >= 0; i -= 1) {
 		u = ol2[i].AsUnit();
 		if (u.IsAlive) {
 			if (u.hero.IsValid)
@@ -73,13 +73,13 @@ if (num > 0) {//count how many are queued
 	if (nRace == ImperialRome) {//Greece
 		ObjList buildings;
 		buildings = set.Buildings;
-		for (i = 0; i < buildings.count; i += 1)
+		for (i = buildings.count - 1; i >= 0; i -= 1)
 			if (buildings[i].class == "HGymnasium")
 				arenae.Add(buildings[i]);
 	}
 	else
 		arenae = set.TSGetAllArenae();
-	for (i = 0; i < arenae.count; i += 1)
+	for (i = arenae.count - 1; i >= 0; i -= 1)
 		num -= arenae[i].CmdCount(cmd) * nUnitsPerCommand;
 }
 
@@ -97,7 +97,7 @@ if (tech != "")
 				int j, min;
 				bool first_time = true;
 				buildings = set.Buildings;
-				for (j = 0; j < buildings.count; j += 1) {
+				for (j = buildings.count - 1; j >= 0; j -= 1) {
 					b = buildings[j];
 					if (b.IsHeirOf("HGymnasium"))//using IsHeirOf is better than a direct class check because it manages winter variants
 						if (!b.IsBroken)

@@ -12,7 +12,7 @@ if (g.AsGate().IsValid) {
 				while (.HasPath) {
 					if (.DistTo(g) < 450)
 						break;
-					.FormKeepMoving(1500);
+					.FormKeepMoving(1000);
 				}
 			}
 			.army.SetCommand("ai_attack_gate", g);

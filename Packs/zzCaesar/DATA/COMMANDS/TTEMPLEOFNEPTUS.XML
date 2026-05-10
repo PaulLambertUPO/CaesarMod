@@ -23,7 +23,7 @@
 		costgold="1000"
 		execdelay="40000"
 		rollover="Ritual Chamber"
-		description="Allows enchantresses to gain experience by learning from more experienced allies"
+		description="Allows enchantresses to accumulate stonehenge energy twice as fast"
 		method="research"
 		param="NamePlr, German chamber, default, NamePlr, Ritual Chamber, , NamePlr, Britain chamber">
 		<src obj="TTempleOfNeptus" />

@@ -438,7 +438,7 @@
 		cursed="1"
 		equip_script="file://Data/ItemScripts/charm of athena.vs"
 		remove_script="file://Data/ItemScripts/charm of athena removing.vs"
-		description="Increases the owner's movement and attack speed by 40%">
+		description="Increases the owner's movement and attack speed by 40% in combat">
 	</item>
 	<item id="Charm of Aegle"
 		image="gameres/icons/items/Charm of Aegle.bmp"

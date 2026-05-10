@@ -4,7 +4,7 @@ GAIKA g;
 int aiPlayer, gaikas, nOld, nNew, i;
 bool afterFirstTime = false;
 
-Sleep(rand(51) + 100);
+Sleep(100 + rand(51));
 
 aiPlayer = AIGetPlayer();
 gaikas = GAIKACount;

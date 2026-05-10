@@ -29,7 +29,7 @@ if (target.IsValid) {
 							while (.HasPath) {
 								if (.DistTo(target) <= 350)
 									break;
-								.FormKeepMoving(1500);
+								.FormKeepMoving(1000);
 							}
 						}
 
@@ -124,16 +124,23 @@ if (target.IsValid) {
 					if (w.IsAlive)
 						if (!w.InHolder) {
 							if (.DistTo(w) >= 300) {
-								.FormSetupAndMoveTo(w.pos, 0, 0, true);
+								point target_pos;
+
+								target_pos = w.pos;
+								.FormSetupAndMoveTo(target_pos, 0, 0, true);
+
 								while (.HasPath) {
-									.FormKeepMoving(1500);
+									.FormKeepMoving(1000);
 									if (w.IsDead)
 										break;
 									if (w.InHolder)
 										break;
 									if (.DistTo(w) < 300)
 										break;
-									.FormSetupAndMoveTo(w.pos, 0, 0, true);
+									if (w.DistTo(target_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+										target_pos = w.pos;
+										.FormSetupAndMoveTo(target_pos, 0, 0, true);
+									}
 								}
 							}
 
@@ -205,16 +212,23 @@ if (target.IsValid) {
 						if (u.IsAlive)
 							if (!u.InHolder) {
 								if (.DistTo(u) >= 300) {
-									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+									point target_pos;
+
+									target_pos = u.pos;
+									.FormSetupAndMoveTo(target_pos, 0, 0, true);
+
 									while (.HasPath) {
-										.FormKeepMoving(1500);
+										.FormKeepMoving(1000);
 										if (u.IsDead)
 											break;
 										if (u.InHolder)
 											break;
 										if (.DistTo(u) < 300)
 											break;
-										.FormSetupAndMoveTo(u.pos, 0, 0, true);
+										if (u.DistTo(target_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+											target_pos = u.pos;
+											.FormSetupAndMoveTo(target_pos, 0, 0, true);
+										}
 									}
 								}
 

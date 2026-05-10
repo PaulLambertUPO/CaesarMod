@@ -43,7 +43,7 @@ if (strTech != "")
 					barrack_class = GetRaceStrPref(nRace) + "Barracks";
 
 				buildings = set.Buildings;
-				for (i = 0; i < buildings.count; i += 1) {
+				for (i = buildings.count - 1; i >= 0; i -= 1) {
 					b = buildings[i];
 					if (b.IsHeirOf(barrack_class))//using IsHeirOf is better than a direct class check because it manages winter variants
 						if (!b.IsBroken)

@@ -12,7 +12,7 @@ if (.IsValid)
 		point pt, pt_start;
 		str cmd;
 		int i, d, best_dist, plr, rng, stamina_cost;
-		bool can_learn, can_hide, go_back, use_invisibility;
+		bool can_hide, go_back, use_invisibility;
 
 		Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
 
@@ -22,7 +22,6 @@ if (.IsValid)
 		rng = .range;
 		stamina_cost = GetCmdStaminaCost("hide");
 
-		can_learn = IsResearched(plr, "Ritual Chamber");
 		can_hide = IsResearched(plr, "Mass Concealment");
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
@@ -82,12 +81,7 @@ if (.IsValid)
 				if (u.IsDead)
 					if (.IsVisible) {
 						use_invisibility = false;
-						if (can_learn)
-							u = .FindUnitToLearn();
-						else if (IsResearched(plr, "Ritual Chamber")) {
-							can_learn = true;
-							u = .FindUnitToLearn();
-						}
+						u = .FindUnitToLearn();
 					}
 
 				if (u.IsAlive)

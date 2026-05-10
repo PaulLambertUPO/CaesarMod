@@ -40,8 +40,8 @@ aSkillLevels[0] = 10;
 					barrack = b;
 				}
 	}
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bRoyalArmor || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bRoyalArmor || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bRoyalArmor)
 			bRoyalArmor = set.TSResearch("Greek Royal Armor");
@@ -56,7 +56,7 @@ aSkillLevels[0] = 10;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		Obj objDummy;
 		ObjList ol;
 		ol.Add(hero);
@@ -71,7 +71,7 @@ aSkillLevels[0] = 10;
 {
 	bool bOlympicGames = false, bArrows = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bOlympicGames || !bArrows)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bOlympicGames)
 			bOlympicGames = set.TSResearch("Olympic Games");
@@ -87,7 +87,7 @@ aSkillLevels[0] = 10;
 	int nCount, nHypaspists = 20;
 	str supportCmd = "HAddPop";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack1 || olHypaspists.count < nHypaspists)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
@@ -106,20 +106,19 @@ aSkillLevels[0] = 10;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olHypaspists.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olHypaspists.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olHypaspists.ClearDead();
 SetNoAIFlag(olHypaspists, false);

@@ -25,8 +25,8 @@ aSkillLevels[1] = 8;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGrainTrade || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bGrainTrade || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bGrainTrade)
 			bGrainTrade = set.TSResearch("Grain Trade");
@@ -42,7 +42,7 @@ aSkillLevels[1] = 8;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -56,7 +56,7 @@ aSkillLevels[1] = 8;
 {
 	bool bAnubisCult = false, bSlaves = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bAnubisCult || !bSlaves)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bAnubisCult)
 			bAnubisCult = set.TSResearch("Cult of Anubis");
@@ -70,7 +70,7 @@ aSkillLevels[1] = 8;
 {
 	bool bPathDead1 = false, bBarrack1 = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bPathDead1 || !bBarrack1)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bPathDead1)
 			bPathDead1 = set.TSResearch("Path of the dead I");
@@ -84,7 +84,7 @@ aSkillLevels[1] = 8;
 {
 	bool bPathDead2 = false, bSlaves = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bPathDead2 || !bSlaves)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bPathDead2)
 			bPathDead2 = set.TSResearch("Path of the dead II");
@@ -104,7 +104,7 @@ aSkillLevels[1] = 8;
 	charms[2] = "Charm of Ra";
 	charms[3] = "Charm of Isis";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olSwordsmen.count < nSwordsmen || olArchers.count < nArchers || olAxethrowers.count < nAxethrowers)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack2)
 			bBarrack2 = set.TSResearch("Barrack Level 2");
@@ -130,7 +130,7 @@ aSkillLevels[1] = 8;
 		Sleep(4100 + rand(15) * 100);
 	}
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && !bCharm) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		bCharm = set.TSResearch(charms[rand(4)]);
 		Sleep(4100 + rand(15) * 100);
@@ -140,22 +140,21 @@ aSkillLevels[1] = 8;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olSwordsmen.SetCommand("attach", hero);
-		olArchers.SetCommand("attach", hero);
-		olAxethrowers.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olSwordsmen.SetCommand("attach", hero);
+	olArchers.SetCommand("attach", hero);
+	olAxethrowers.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olSwordsmen.ClearDead();
 olArchers.ClearDead();

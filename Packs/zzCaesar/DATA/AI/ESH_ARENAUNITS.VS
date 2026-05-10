@@ -216,7 +216,9 @@ if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) + nCal
 			if (set.food - food < MIN(500, EnvReadInt(set, "nFoodReserve") / 2))
 				return;
 		EnvWriteString(set, "strTech", strHire);
+		EnvWriteInt(set, "ArenaHireCmdAi", 1);
 		set.AIRun("ESH_NeedTech.vs");
+		EnvWriteInt(set, "ArenaHireCmdAi", 0);
 	}
 	if (nRace != Gaul)
 		if (!nRaceIsRepublicanRome)
@@ -317,7 +319,9 @@ if (nArenaResearchLevel == 2) {
 						set.StopReserving();
 						EnvWriteString(set, "ReserveFor" + (aiPlayer - 1), "");
 						EnvWriteString(set, "strTech", strHire);
+						EnvWriteInt(set, "ArenaHireCmdAi", 1);
 						set.AIRun("ESH_NeedTech.vs");
+						EnvWriteInt(set, "ArenaHireCmdAi", 0);
 						SetAIVar(aiPlayer, AIV_TechBudget, budget);//restore value
 					}
 	}

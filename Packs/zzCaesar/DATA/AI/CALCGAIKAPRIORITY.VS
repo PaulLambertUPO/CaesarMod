@@ -9,11 +9,11 @@ g.GetDistToPlayers(aiPlayer, nHomeDist, nAllyHomeDist, nEnemyHomeDist);
 set = g.settlement;
 
 if (set.IsValid) {
-	bool explored = false;
+	bool explored = true;
 
 	if (AIVar(aiPlayer, AIV_LuckyExplore) == 0)
-		if (g.Explored(aiPlayer))
-			explored = true;
+		if (!g.Explored(aiPlayer))
+			explored = false;
 
 	if (!explored)
 		nActualPerc = 70;

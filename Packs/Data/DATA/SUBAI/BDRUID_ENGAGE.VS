@@ -10,25 +10,17 @@ if (.IsValid)
 			Hero h;
 			Unit u;
 			int stamina_cost, learnings;
-			bool can_learn, go_to_hero;
+			bool go_to_hero;
 
 			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
 
 			stamina_cost = GetCmdStaminaCost("hide");
 
-			can_learn = IsResearched(.player, "Ritual Chamber");
-
 			while (.IsEnemyInSquadSight) {
 				go_to_hero = true;
 
 				if (.IsVisible) {
-					u.Clear();
-					if (can_learn)
-						u = .FindUnitToLearn();
-					else if (IsResearched(.player, "Ritual Chamber")) {
-						can_learn = true;
-						u = .FindUnitToLearn();
-					}
+					u = .FindUnitToLearn();
 
 					if (u.IsAlive)
 						if (u != this) {

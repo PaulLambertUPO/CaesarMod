@@ -9,7 +9,7 @@ if (set.IsShipyard)
 if (set.IsTTent) {
 	if (set.food >= 100)
 		return ES_OutpostSendGold;
-	else if (set.gold >= 100)//this should never happen
+	if (set.gold >= 100)//this should never happen
 		return ES_OutpostSendGold;
 }
 else if (set.IsOutpost) {

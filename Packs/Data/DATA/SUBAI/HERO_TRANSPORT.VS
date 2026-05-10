@@ -13,7 +13,7 @@ if (other.IsValid)
 					while (.HasPath) {
 						if (.DistTo(other) < 300)
 							break;
-						.FormKeepMoving(1500);
+						.FormKeepMoving(1000);
 					}
 				}
 				other.SetCommand("transport_request");

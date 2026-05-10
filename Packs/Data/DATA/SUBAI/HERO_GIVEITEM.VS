@@ -15,12 +15,13 @@ if (.IsValid)
 				if (u.max_items > 0)
 					if (!.IsEnemy(u))
 						if (!u.InHolder) {
-							point pt_army_follow;
+							point pt_pos;
 
 							if (u.DistTo(.posRH) >= 1000) {
-								.FormSetupAndMoveTo(u.pos, 0, 0, true);
+								pt_pos = u.pos;
+								.FormSetupAndMoveTo(pt_pos, 0, 0, true);
 								while (.HasPath) {
-									.FormKeepMoving(1500);
+									.FormKeepMoving(1000);
 									if (u.IsDead)
 										break;
 									if (.IsEnemy(u))
@@ -31,13 +32,16 @@ if (.IsValid)
 										break;
 									if (.DistTo(u) < 1000)
 										break;
-									.FormSetupAndMoveTo(u.pos, 0, 0, true);
+									if (u.DistTo(pt_pos) > 350) {//avoid moving the army every time or it risks messing up with obstacles nearby
+										pt_pos = u.pos;
+										.FormSetupAndMoveTo(pt_pos, 0, 0, true);
+									}
 								}
 							}
 
 							.army.SetCommand("idle");
 
-							pt_army_follow = .posRH;
+							pt_pos = .posRH;
 
 							while (!.Goto(u, 25, 2500, false, 5000)) {
 								if (u.IsDead)
@@ -48,9 +52,9 @@ if (.IsValid)
 									break;
 								if (.GetItemIndex(item) == -1)
 									break;
-								if (.DistTo(pt_army_follow) >= 1000) {
-									pt_army_follow = .pos;
-									.army.SetCommand("advance", pt_army_follow);
+								if (.DistTo(pt_pos) >= 1000) {
+									pt_pos = .pos;
+									.army.SetCommand("advance", pt_pos);
 								}
 							}
 

@@ -10,18 +10,13 @@ if (.IsValid)
 			ObjList ol;
 			Unit u, u_ol;
 			int i, d, plr, rng, best_dist, stamina_cost;
-			bool can_learn, use_curse;
+			bool use_curse;
 
 			Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
 
 			plr = .player;
 			rng = .range;
 			stamina_cost = GetCmdStaminaCost("curse");
-
-			if (.race == Carthage)
-				can_learn = true;
-			else
-				can_learn = IsResearched(plr, "Ritual Chamber");
 
 			while (.CmdCount <= 1)//avoid blocking pending commands forever
 				if (.Stop(2000)) {
@@ -51,12 +46,7 @@ if (.IsValid)
 							}
 						if (u.IsDead) {
 							use_curse = false;
-							if (can_learn)
-								u = .FindUnitToLearn();
-							else if (IsResearched(plr, "Ritual Chamber")) {
-								can_learn = true;
-								u = .FindUnitToLearn();
-							}
+							u = .FindUnitToLearn();
 						}
 
 						if (u.IsAlive)

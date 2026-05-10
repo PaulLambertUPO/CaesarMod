@@ -1,7 +1,7 @@
 //void, Settlement set
 
 int aiPlayer, waterLsa, nSleepES;
-str cmd = "buildship";
+str cmd;
 
 aiPlayer = set.player;
 waterLsa = set.WaterLsa;
@@ -14,6 +14,8 @@ nSleepES = AIVar(aiPlayer, AIV_Sleep_ES);
 		cmd = "buildshipRome";
 	else if (playerRace == Egypt)
 		cmd = "buildshipEgypt";
+	else
+		cmd = "buildship";
 }
 
 while (set.player == aiPlayer) {
@@ -21,17 +23,10 @@ while (set.player == aiPlayer) {
 		Settlement stronghold;
 		stronghold = set.BestToSupply;//it returns the nearest owned stronghold
 		if (stronghold.IsValid) {
-			Wagon mule;
-			if (set.gold >= 100) {
-				mule = set.CreateMuleGold(set.gold);
-				if (mule.IsValid)
-					mule.SetCommand("unload", stronghold.GetCentralBuilding());
-			}
-			if (set.food >= 100) {
-				mule = set.CreateMuleFood(set.food);
-				if (mule.IsValid)
-					mule.SetCommand("unload", stronghold.GetCentralBuilding());
-			}
+			if (set.gold >= 100)
+				set.CreateMuleGold(set.gold).SetCommand("unload", stronghold.GetCentralBuilding());
+			if (set.food >= 100)
+				set.CreateMuleFood(set.food).SetCommand("unload", stronghold.GetCentralBuilding());
 		}
 	}
 

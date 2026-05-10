@@ -36,7 +36,7 @@ if (.IsValid)
 					while (.HasPath) {
 						if (.DistTo(telep_enter) < 400)
 							break;
-						.FormKeepMoving(1500);
+						.FormKeepMoving(1000);
 					}
 				}
 

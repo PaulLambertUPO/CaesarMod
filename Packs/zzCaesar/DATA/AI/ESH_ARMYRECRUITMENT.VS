@@ -100,7 +100,7 @@ if (bDesperateDefence)
 				int min;
 				bool first_time = true;
 				buildings = set.Buildings;
-				for (i = 0; i < buildings.count; i += 1) {
+				for (i = buildings.count - 1; i >= 0; i -= 1) {
 					b = buildings[i];
 					if (b.IsHeirOf("HBarracks"))//using IsHeirOf is better than a direct class check because it manages winter variants
 						if (!b.IsBroken)
@@ -150,7 +150,7 @@ if (!bDesperateDefence) {
 			sq = SL.Cur;
 			if (!sq.TestFlags(SF_PEACEFUL + SF_NOAI)) {
 				sqLeader = sq.Leader;
-				if (sqLeader.IsValid)
+				if (sqLeader.IsAlive)
 					if (!sqLeader.GetFlags(UNITFLAG_NOAI)) {
 						h = sqLeader.AsHero();
 						if (h.IsValid) {
@@ -218,7 +218,7 @@ if (!bDesperateDefence) {
 			int min;
 			bool first_time = true;
 			buildings = set.Buildings;
-			for (i = 0; i < buildings.count; i += 1) {
+			for (i = buildings.count - 1; i >= 0; i -= 1) {
 				b = buildings[i];
 				if (b.IsHeirOf("HBarracks"))//using IsHeirOf is better than a direct class check because it manages winter variants
 					if (!b.IsBroken)
@@ -268,7 +268,7 @@ if (!bDesperateDefence) {
 								int gold, food;
 								str cmd;
 
-								if (nRaceIsImperialRome) {
+								if (nRaceIsImperialRome)
 									if (nBuildType == 5)
 										if (IsResearched(set, "Improve Praetorian Equipment"))
 											cmd = "trainRPraetorianDiscounted";
@@ -276,7 +276,6 @@ if (!bDesperateDefence) {
 											cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 									else
 										cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
-								}
 								else if (nRaceIsPunicRome)
 									cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 								else if (nRace == ImperialRome)//Greece

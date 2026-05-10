@@ -5,4 +5,4 @@ Unit this;
 this = owner.AsUnit();
 
 if (.IsValid)
-	.SetSpeedFactor(.speed_factor - 40);
+	.SetSpeedFactor(100);

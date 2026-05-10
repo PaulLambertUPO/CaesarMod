@@ -25,8 +25,8 @@ aSkillLevels[1] = 8;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGrainTrade || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bGrainTrade || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bGrainTrade)
 			bGrainTrade = set.TSResearch("Grain Trade");
@@ -42,7 +42,7 @@ aSkillLevels[1] = 8;
 		}
 		Sleep(4100 + rand(15) * 100);
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -56,7 +56,7 @@ aSkillLevels[1] = 8;
 {
 	bool bHorusCult = false, bSlaves = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bHorusCult || !bSlaves)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bHorusCult)
 			bHorusCult = set.TSResearch("Cult of Horus");
@@ -70,7 +70,7 @@ aSkillLevels[1] = 8;
 {
 	bool bHorusLight1 = false, bBarrack1 = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bHorusLight1 || !bBarrack1)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bHorusLight1)
 			bHorusLight1 = set.TSResearch("Light of Horus I");
@@ -84,7 +84,7 @@ aSkillLevels[1] = 8;
 {
 	bool bHorusLight2 = false, bSlaves = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bHorusLight2 || !bSlaves)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bHorusLight2)
 			bHorusLight2 = set.TSResearch("Light of Horus II");
@@ -104,7 +104,7 @@ aSkillLevels[1] = 8;
 	charms[2] = "Charm of Ra";
 	charms[3] = "Charm of Isis";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bHorusLight3 || olHorusWarriors.count < nHorusWarriors || olSwordsmen.count < nSwordsmen || olArchers.count < nArchers)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bHorusLight3)
 			bHorusLight3 = set.TSResearch("Light of Horus III");
@@ -129,7 +129,7 @@ aSkillLevels[1] = 8;
 		Sleep(4100 + rand(15) * 100);
 	}
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && !bCharm) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		bCharm = set.TSResearch(charms[rand(4)]);
 		Sleep(4100 + rand(15) * 100);
@@ -139,22 +139,21 @@ aSkillLevels[1] = 8;
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olHorusWarriors.SetCommand("attach", hero);
-		olSwordsmen.SetCommand("attach", hero);
-		olArchers.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olHorusWarriors.SetCommand("attach", hero);
+	olSwordsmen.SetCommand("attach", hero);
+	olArchers.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olHorusWarriors.ClearDead();
 olSwordsmen.ClearDead();

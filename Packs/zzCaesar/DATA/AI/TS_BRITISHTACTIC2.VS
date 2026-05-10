@@ -26,8 +26,8 @@ aSkillLevels[1] = 10;
 	Barrack barrack;
 	point ptDummy;
 	Obj objDummy;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bGambling || !bLargeShields || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bGambling || !bLargeShields || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		if (!bGambling)
 			bGambling = set.TSResearch("Gambling");
@@ -45,7 +45,7 @@ aSkillLevels[1] = 10;
 		}
 		Sleep(4100 + rand(15) * 100);//this interval combined with hero recruitment time makes sure that we can safely check settlement lucky environment variable
 	}
-	if (hero.IsValid) {
+	if (hero.IsAlive) {
 		ObjList ol;
 		ol.Add(hero);
 		hero.KillCommand();
@@ -65,7 +65,7 @@ else
 {
 	bool bGamblerDay = false, bBarrack1 = false, bJavelins = false;
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bGamblerDay || !bBarrack1 || !bJavelins)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bGamblerDay)
 			bGamblerDay = set.TSResearch("Gambler's Day");
@@ -86,7 +86,7 @@ else
 	bool bBarrack2 = false;
 	str supportCmd = "BAddPop";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bBarrack2 || olShieldBearers.count < nShieldBearers || olRangedUnits.count < nRangedUnits)) {
-		if (hero.IsValid)
+		if (hero.IsAlive)
 			hero.TSAdvHeroSkills(aSkills, aSkillLevels);
 		if (!bBarrack2)
 			if (!bLuckyGambling)
@@ -114,21 +114,20 @@ else
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olShieldBearers.SetCommand("attach", hero);
-		olRangedUnits.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olShieldBearers.SetCommand("attach", hero);
+	olRangedUnits.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+}
 
 olShieldBearers.ClearDead();
 olRangedUnits.ClearDead();

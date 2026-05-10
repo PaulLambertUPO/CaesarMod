@@ -63,7 +63,7 @@ if (l.Rewind()) {
 					state = SS_Approach;
 				}
 				ship = PrepareAiTransportShip(sq.GAIKAIn.LSA, g.LSA, sqPlayer, cmd, g.Center);
-				if (!ship.IsValid)
+				if (ship.IsDead)
 					break;
 				if (ship.GetFlags(UNITFLAG_NOAI))
 					break;

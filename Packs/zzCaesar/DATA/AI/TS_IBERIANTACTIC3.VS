@@ -29,8 +29,8 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 	point ptDummy;
 	Obj objDummy;
 	Barrack barrack;
-	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!hero.IsValid || !bAxes || olEnchantresses.count < nEnchantresses || i < nExploringUnits)) {
-		if (!hero.IsValid)
+	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (hero.IsDead || !bAxes || olEnchantresses.count < nEnchantresses || i < nExploringUnits)) {
+		if (hero.IsDead)
 			hero = set.TSRecruitHero();
 		else {
 			hero.SetNoAIFlag(true);
@@ -84,7 +84,7 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 	int nCount, nArchers = 10, nGuards = 10;
 	str supportCmd = "IAddPop";
 	while (AIVar(aiPlayer, AIV_WaitTactic) == 1 && (!bVeteranGuild || olArchers.count < nArchers || olEliteGuards.count < nGuards)) {
-		if (hero.IsValid) {
+		if (hero.IsAlive) {
 			if (!bHeroScript)
 				if (hero.inherentlevel >= 4) {
 					Obj objDummy;
@@ -120,22 +120,21 @@ ptTeaching.SetLen(ptTeaching.Len + 220);
 //give control back to AI
 if (bHeroScript)
 	AIBreakScript(heroScriptId);
-if (hero.IsValid)
-	if (hero.IsAlive) {
-		int i, attached;
-		hero.TSAdvHeroSkills(aSkills, aSkillLevels);
-		hero.SetCommand("enter", set.GetCentralBuilding());
-		hero.SetNoAIFlag(false);
-		olEliteGuards.SetCommand("attach", hero);
-		olArchers.SetCommand("attach", hero);
-		attached = hero.army.count;
-		for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
-			Sleep(10000);
-			if (hero.army.count > attached)
-				break;
-		}
-		//enchantresses remain in the fortress to train other units
+if (hero.IsAlive) {
+	int i, attached;
+	hero.TSAdvHeroSkills(aSkills, aSkillLevels);
+	hero.SetCommand("enter", set.GetCentralBuilding());
+	hero.SetNoAIFlag(false);
+	olEliteGuards.SetCommand("attach", hero);
+	olArchers.SetCommand("attach", hero);
+	attached = hero.army.count;
+	for (i = 0; i < 2; i += 1) {//wait for units to attach to the hero (2 attempts)
+		Sleep(10000);
+		if (hero.army.count > attached)
+			break;
 	}
+	//enchantresses remain in the fortress to train other units
+}
 
 olEliteGuards.ClearDead();
 olArchers.ClearDead();

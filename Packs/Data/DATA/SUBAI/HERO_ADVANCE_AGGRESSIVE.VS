@@ -41,7 +41,7 @@ if (.IsValid)
 			}
 			if (!.HasPath)
 				break;
-			.FormKeepMoving(1500);
+			.FormKeepMoving(1000);
 		}
 
 		pt_dir = .GetFinalPartyOrientation() - Point(1024, 1024);
