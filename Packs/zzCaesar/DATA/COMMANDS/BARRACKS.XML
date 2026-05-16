@@ -1,7 +1,7 @@
 <commands>
 	<cmd name="Barrack Level 1" priority="2"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		queueicon="gameres/icons/upgrades/Barrack1.bmp"
 		button="upgrades/barrack1.bmp"
 		key="f"
@@ -22,7 +22,7 @@
 	</cmd>
 	<cmd name="Barrack Level 2" priority="2"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		queueicon="gameres/icons/upgrades/Barrack2.bmp"
 		button="upgrades/barrack2.bmp"
 		key="f"
@@ -43,7 +43,7 @@
 	</cmd>
 	<cmd name="Barrack Level 3" priority="2"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		queueicon="gameres/icons/upgrades/Barrack3.bmp"
 		button="upgrades/barrack3.bmp"
 		key="f"

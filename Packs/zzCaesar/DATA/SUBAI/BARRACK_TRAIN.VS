@@ -33,7 +33,7 @@ set = .settlement;
 		if (set.IsVillage)
 			u.SetCommand("advance", hall.GetEnterPoint(u));
 		else
-			u.SetCommand("advanceenter", hall);
+			u.SetCommand("advance_enter", hall);
 	}
 
 	if (!u.IsHeirOf("BaseMage")) {

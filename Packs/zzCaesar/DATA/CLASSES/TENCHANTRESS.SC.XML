@@ -11,20 +11,20 @@
 	<properties help="contents/units/TEnchantress" />
 	<properties edittree_pos="Units/Germany/Enchantress" />
 
-	<method sig="curse" vs="data/subai/shaman_curse.vs" verify="data/subai/shaman_curse_verify.vs" />
-	<method sig="curse" vs="data/subai/shaman_curse_ground.vs" />
+	<method sig="curse" vs="data/subai/druid_curse_unit.vs" verify="data/subai/druid_curse_verify.vs" />
+	<method sig="curse" vs="data/subai/druid_curse_ground.vs" />
 	<method sig="wolf_summoning" vs="data/subai/druid_wolf_summoning.vs" />
 	<method sig="deer_summoning" vs="data/subai/druid_deer_summoning.vs" />
 	<method sig="mass_heal" vs="data/subai/druid_selfdestroy.vs" />
 
-	<method sig="idle" vs="data/subai/shaman_idle.vs" />
-	<method sig="stand_position" vs="data/subai/shaman_stand_position.vs" />
-	<method sig="hold_position" vs="data/subai/shaman_stand_position.vs" />
-	<method sig="advance" vs="data/subai/shaman_advance.vs" />
-	<method sig="advancealone" vs="data/subai/shaman_advance.vs" />
-	<method sig="advance_aggressive" vs="data/subai/shaman_advance.vs" />
-	<method sig="engage" vs="data/subai/shaman_engage.vs" />
-	<method sig="ai_killall" vs="data/subai/shaman_engage.vs" />
+	<method sig="idle" vs="data/subai/druid_curse_idle.vs" />
+	<method sig="stand_position" vs="data/subai/druid_curse_stand_position.vs" />
+	<method sig="hold_position" vs="data/subai/druid_curse_stand_position.vs" />
+	<method sig="advance" vs="data/subai/druid_curse_advance.vs" />
+	<method sig="advance_alone" vs="data/subai/druid_curse_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/druid_curse_advance.vs" />
+	<method sig="engage" vs="data/subai/druid_curse_engage.vs" />
+	<method sig="ai_killall" vs="data/subai/druid_curse_engage.vs" />
 
 	<method sig="ondie" vs="data/subai/bdruid_tenchantress_ondie.vs" />
 

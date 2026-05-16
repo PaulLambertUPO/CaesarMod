@@ -3,8 +3,6 @@
 	<properties select_class="Mule" />
 	<properties help="contents/units/Mule" />
 
-	<method sig="follow" vs="data/subai/wagon_mule_follow.vs" verify="data/subai/wagon_mule_follow_verify.vs" />
-
 	<defaultcmd target="Unit">
 		<cmd name="follow" />
 	</defaultcmd>

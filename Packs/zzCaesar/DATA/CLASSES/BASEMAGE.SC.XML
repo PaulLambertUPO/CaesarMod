@@ -7,7 +7,7 @@
 	<properties healthbar_type="2" />
 
 	<method sig="train" vs="data/subai/do_nothing_void.vs" />
-	<method sig="learn" vs="data/subai/druid_learn.vs" verify="data/subai/druid_learn_verify.vs" />
+	<method sig="learn" vs="data/subai/druid_learn_unit.vs" verify="data/subai/druid_learn_verify.vs" />
 	<method sig="learn" vs="data/subai/druid_learn_ground.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"

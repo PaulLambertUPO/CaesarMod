@@ -39,7 +39,7 @@ if (This.AsBuilding().IsValid) {
 			ol = .Units;
 
 			ol.SetCommand("advance", pt);
-			ol.AddCommand(false, "advanceenter", This);
+			ol.AddCommand(false, "advance_enter", This);
 		}
 		else if (write_alert != 0) {
 			EnvWriteInt(this, "EnemiesAlert", 0);

@@ -18,13 +18,13 @@ if (IsResearched(.settlement, "Olympic Games"))
 				return true;
 			}
 			else
-				reasonText = rollover() + "\n<color 0 255 0>" + Translate("Already available");
+				reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already available");
 		else
-			reasonText = rollover() + "\n<color 0 255 0>" + Translate("Already researching");
+			reasonText = rollover(this, false) + "\n<color 0 255 0>" + Translate("Already researching");
 	}
 	else
 		reasonText = rollover(this, true);
 else
-	reasonText = rollover() + "\n<color 255 0 0>" + Translatef("Requires %s1", "Olympic Games");
+	reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", "Olympic Games");
 
 return false;

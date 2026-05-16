@@ -23,7 +23,7 @@ if (!other.AsCatapult().IsValid)
 
 									if (set.max_units > 0) 
 										if (set.Units.Contains(this))
-											.army.SetCommand("advanceenter", bld);
+											.army.SetCommand("advance_enter", bld);
 										else {
 											ObjList h_army;
 											Obj o;
@@ -38,7 +38,7 @@ if (!other.AsCatapult().IsValid)
 												while (true) {
 													if (.IsEnemyInSquadSight) {
 														if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
-															.AddCommand(true, "advanceenter", bld);
+															.AddCommand(true, "advance_enter", bld);
 															.AddCommand(true, "engage");
 															Sleep(30);//prevent possible loops with other commands
 															return;
@@ -48,7 +48,7 @@ if (!other.AsCatapult().IsValid)
 															o = h_army[i];
 															if (o.IsAlive)
 																if (o.AsUnit().BestTargetInSquadSightMisZeroDamage.IsAlive) {
-																	.AddCommand(true, "advanceenter", bld);
+																	.AddCommand(true, "advance_enter", bld);
 																	.AddCommand(true, "engage");
 																	Sleep(30);//prevent possible loops with other commands
 																	return;
@@ -65,14 +65,14 @@ if (!other.AsCatapult().IsValid)
 
 											if (!.IsEnemy(bld))
 												if (DiplGetShareView(bld.player, .player)) {
-													.army.SetCommand("advanceenter", bld);
+													.army.SetCommand("advance_enter", bld);
 
 													.SetEntering(true);
 
 													while (true) {
 														if (.IsEnemyInSquadSight) {
 															if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
-																.AddCommand(true, "advanceenter", bld);
+																.AddCommand(true, "advance_enter", bld);
 																.AddCommand(true, "engage");
 																break;
 															}
@@ -81,7 +81,7 @@ if (!other.AsCatapult().IsValid)
 																o = h_army[i];
 																if (o.IsAlive)
 																	if (o.AsUnit().BestTargetInSquadSightMisZeroDamage.IsAlive) {
-																		.AddCommand(true, "advanceenter", bld);
+																		.AddCommand(true, "advance_enter", bld);
 																		.AddCommand(true, "engage");
 																		break;
 																	}
@@ -96,7 +96,7 @@ if (!other.AsCatapult().IsValid)
 																			o = h_army[i];
 																			if (o.IsAlive)
 																				if (o.command == "idle")
-																					o.SetCommand("advanceenter", bld);
+																					o.SetCommand("advance_enter", bld);
 																		}
 																	}
 															break;

@@ -8,7 +8,7 @@ this = objs[0].AsBuilding();
 set = .settlement;
 pop_cost = cmdcost_pop;
 
-reasonText = rollover() + Translatef(" (currently %s1)", EnvReadInt(.player, "MaxElephants"));
+reasonText = rollover(this, false) + Translatef(" (currently %s1)", EnvReadInt(.player, "MaxElephants"));
 
 if (IsResearched(set, "People's Assembly")) {
 	if (cmdcost_gold > set.gold)

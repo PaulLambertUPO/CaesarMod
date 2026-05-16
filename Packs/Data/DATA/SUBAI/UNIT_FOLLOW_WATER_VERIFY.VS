@@ -1,8 +1,8 @@
 //bool, Obj This, Obj other
 
-Wagon this;
+Unit this;
 
-this = This.AsWagon();
+this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive)

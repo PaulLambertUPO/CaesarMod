@@ -6,6 +6,7 @@ this = This.AsHero();
 
 if (.IsValid)
 	if (.IsAlive) {
+		Settlement set;
 		Obj o;
 		point pt, pt_start;
 		bool melee, go_back;
@@ -76,11 +77,14 @@ if (.IsValid)
 					if (.AI) {
 						if (rand(3) == 0)
 							if (.IsEnemyInSquadSight) {
-								o = Intersect(ObjsInSight(this, "BaseTownBuilding"), EnemyObjs(.player, "BaseTownBuilding")).GetObjList()[0];
-								if (o.IsValid) {
-									.AddCommand(true, "capture", o);
-									break;
-								}
+								set = GetGAIKA(this).settlement;
+								if (set.IsValid)
+									if (set.IsStronghold)
+										if (set.IsEnemy(.player))
+											if (.DistTo(set.GetCentralBuilding()) < 700) {
+												.AddCommand(true, "capture", set.GetCentralBuilding());
+												break;
+											}
 							}
 						if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
 							pt = .pos + RandomOffset(500);

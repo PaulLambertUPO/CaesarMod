@@ -30,15 +30,15 @@
 	<method sig="idle" vs="data/subai/ghost_idle.vs" />
 	<method sig="move" vs="data/subai/ghost_move.vs" />
 	<method sig="advance" vs="data/subai/ghost_move.vs" />
-	<method sig="advancealone" vs="data/subai/ghost_move.vs" />
+	<method sig="advance_alone" vs="data/subai/ghost_move.vs" />
 	<method sig="advance_aggressive" vs="data/subai/ghost_move.vs" />
 	<method sig="attack" vs="data/subai/ghost_attack.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="attack_unit_type_exclusive" vs="data/subai/ghost_attack.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/ghost_attack.vs" />
 	
 	<method sig="enter" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/peaceful_enter.vs" />
-	<method sig="advanceenter" vs="data/subai/peaceful_enter.vs" />
+	<method sig="enter_alone" vs="data/subai/peaceful_enter.vs" />
+	<method sig="advance_enter" vs="data/subai/peaceful_enter.vs" />
 	<method sig="stand_position" vs="data/subai/unit_standstill.vs" />
 	<method sig="hold_position" vs="data/subai/unit_standstill.vs" />
 

@@ -29,7 +29,7 @@
 	<method sig="move" vs="data/subai/unit_move.vs" />
 	<method sig="form_move" vs="data/subai/unit_form_move.vs" />
 	<method sig="advance" vs="data/subai/unit_advance.vs" />
-	<method sig="advancealone" vs="data/subai/unit_advance.vs" />
+	<method sig="advance_alone" vs="data/subai/unit_advance.vs" />
 	<method sig="advance_aggressive" vs="data/subai/unit_advance_aggressive.vs" />
 	<method sig="detach" vs="data/subai/unit_detach.vs" />
 	<method sig="attach" vs="data/subai/unit_attach.vs" verify="data/subai/unit_attach_verify.vs" />
@@ -37,10 +37,11 @@
 	<method sig="attack" vs="data/subai/unit_attack_ground.vs" />
 	<method sig="engage" vs="data/subai/unit_engage.vs" />
 	<method sig="enter" vs="data/subai/unit_enter.vs" verify="data/subai/unit_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/unit_enter.vs" />
-	<method sig="advanceenter" vs="data/subai/unit_advance_enter.vs" />
+	<method sig="enter_alone" vs="data/subai/unit_enter.vs" />
+	<method sig="advance_enter" vs="data/subai/unit_advance_enter.vs" />
 	<method sig="patrol" vs="data/subai/unit_patrol.vs" />
 	<method sig="approach" vs="data/subai/unit_approach.vs" verify="data/subai/unit_approach_verify.vs" />
+	<method sig="follow" vs="data/subai/unit_follow.vs" verify="data/subai/unit_follow_verify.vs" />
 	<method sig="getitems" vs="data/subai/unit_getitems.vs" />
 	<method sig="getitem" vs="data/subai/unit_getitem.vs" />
 	<method sig="putitem" vs="data/subai/unit_putitem.vs" />

@@ -2,6 +2,6 @@
 	<properties auto_repair="no" />
 	<properties interface="thumb,building" />
 
-	<method sig="research" vs="data/subai/research.vs" onfinish="data/subai/onfinish_research.vs" />
-	<method sig="immediate_research" vs="data/subai/immediate_research.vs" onfinish="data/subai/onfinish_research.vs" />
+	<method sig="research" vs="data/subai/research.vs" onfinish="data/subai/research_onfinish.vs" />
+	<method sig="research_immediate" vs="data/subai/research_immediate.vs" onfinish="data/subai/research_onfinish.vs" />
 </class>

@@ -18,7 +18,7 @@
 		button="research/ritual chamber.bmp"
 		queueicon="gameres/icons/upgrades/ritual chamber.bmp"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="c"
 		costgold="1000"
 		execdelay="40000"
@@ -33,7 +33,7 @@
 		button="research/Ghost.bmp"
 		key="g"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		costgold="1500"
 		execdelay="30000"
 		rollover="Ghoul summoning"
@@ -47,7 +47,7 @@
 		button="actions/summon crow.bmp"
 		key="w"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		costgold="800"
 		execdelay="30000"
 		rollover="Crow summoning"
@@ -61,7 +61,7 @@
 		button="research/Mass Healing.bmp"
 		key="h"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		costgold="1500"
 		execdelay="30000"
 		rollover="Mass heal"
@@ -70,18 +70,18 @@
 		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default, NamePlr, German Mass Heal">
 		<src obj="BTempleOfThor" />
 	</cmd>
-	<cmd name="Mass Concealment" priority="7"
+	<cmd name="Mass Invisibility" priority="7"
 		queueicon="gameres/icons/upgrades/hide.bmp"
 		button="research/hide.bmp"
 		key="i"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		costgold="2000"
 		execdelay="30000"
 		rollover="Mass invisibility"
 		description="Allows druids to automatically hide themselves and your nearby warriors"
 		method="research"
-		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Concealment, default">
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Invisibility, default">
 		<src obj="BTempleOfThor" />
 	</cmd>
 </commands>

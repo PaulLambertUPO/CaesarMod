@@ -147,7 +147,7 @@
 		button="actions/hire RChariot.bmp"
 		queueicon="gameres/icons/RChariot.bmp"
 		transpicon="1"
-		groupverifier="data/subai/verify_trainex.vs"
+		groupverifier="data/subai/trainex_verify.vs"
 		onaddremovescript="data/subai/trainex_onaddremove.vs"
 		traincommand="yes"
 		key="c"

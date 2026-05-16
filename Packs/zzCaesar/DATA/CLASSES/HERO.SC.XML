@@ -19,7 +19,7 @@
 
 	<properties display_name="Hero" />
 
-	<behavior script="data/subai/hero_skill_behaviour.vs" />
+	<behavior script="data/subai/hero_skill_behavior.vs" />
 
 	<method sig="sleep" vs="data/subai/hero_sleep.vs" />
 	<method sig="sneak" vs="data/subai/hero_sneak.vs" />
@@ -28,6 +28,7 @@
 	<method sig="formation" vs="data/subai/hero_formation.vs" />
 	<method sig="leavearmy" vs="data/subai/hero_leave_army.vs" />
 	<method sig="unittrain" vs="data/subai/unit_train.vs" onfinish="data/subai/unit_train_onfinish.vs" />
+	<method sig="waitarmytrain" vs="data/subai/do_nothing_void.vs" /><!-- never used but present in the exe -->
 	<method sig="hero_set_final_party_orientation" vs="data/subai/do_nothing_void.vs" />
 
 	<method sig="idle" vs="data/subai/hero_idle.vs" />
@@ -38,9 +39,10 @@
 	<method sig="attack" vs="data/subai/hero_attack.vs" verify="data/subai/hero_attack_verify.vs" />
 	<method sig="engage" vs="data/subai/hero_engage.vs" />
 	<method sig="enter" vs="data/subai/hero_enter.vs" verify="data/subai/hero_enter_verify.vs" />
-	<method sig="advanceenter" vs="data/subai/hero_advance_enter.vs" />
+	<method sig="advance_enter" vs="data/subai/hero_advance_enter.vs" />
 	<method sig="teleport" vs="data/subai/hero_teleport.vs" />
 	<method sig="boardship" vs="data/subai/hero_board.vs" onfinish="data/subai/hero_board_onfinish.vs" />
+	<method sig="follow" vs="data/subai/hero_follow.vs" />
 	<method sig="getitems" vs="data/subai/hero_getitems.vs" />
 	<method sig="getitem" vs="data/subai/hero_getitem.vs" />
 	<method sig="putitem" vs="data/subai/hero_putitem.vs" />

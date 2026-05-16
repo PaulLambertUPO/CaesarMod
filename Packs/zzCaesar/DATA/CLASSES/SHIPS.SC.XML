@@ -11,11 +11,11 @@
 	<properties help="contents/units/Boat" />
 	<properties edittree_pos="Units/Others/Boat" />
 
-	<method sig="follow" vs="data/subai/wagon_boat_follow.vs" verify="data/subai/wagon_boat_follow_verify.vs" />
+	<method sig="follow" vs="data/subai/unit_follow_water.vs" verify="data/subai/unit_follow_water_verify.vs" />
 
 	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
-	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
-	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enter_alone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advance_enter" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="teleport" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />

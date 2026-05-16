@@ -5,11 +5,11 @@
 
 	<method sig="idle" vs="data/subai/peaceful_idle.vs" />
 	<method sig="advance" vs="data/subai/unit_move.vs" />
-	<method sig="advancealone" vs="data/subai/unit_move.vs" />
+	<method sig="advance_alone" vs="data/subai/unit_move.vs" />
 	<method sig="advance_aggressive" vs="data/subai/unit_move.vs" />
 	<method sig="attack" vs="data/subai/unit_approach.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="engage" vs="data/subai/do_nothing_void.vs" />
-	<method sig="advanceenter" vs="data/subai/peaceful_enter.vs" />
+	<method sig="advance_enter" vs="data/subai/peaceful_enter.vs" />
 	<method sig="stand_position" vs="data/subai/unit_standstill.vs" />
 	<method sig="hold_position" vs="data/subai/unit_standstill.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/unit_approach.vs" />

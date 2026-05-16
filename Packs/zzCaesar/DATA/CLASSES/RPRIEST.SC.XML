@@ -13,20 +13,20 @@
 	<properties help="contents/units/RPriest" />
 	<properties edittree_pos="Units/Roman/Priest" />
 
-	<method sig="heal" vs="data/subai/druid_heal.vs" verify="data/subai/druid_heal_verify.vs" />
+	<method sig="heal" vs="data/subai/druid_heal_unit.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
 	<method sig="mist" vs="data/subai/druid_mist.vs" />
-	<method sig="wrath_of_jupiter" vs="data/subai/priest_jupiter_anger.vs" verify="data/subai/priest_jupiter_anger_verify.vs" />
+	<method sig="wrath_of_jupiter" vs="data/subai/druid_jupiter_anger.vs" verify="data/subai/druid_jupiter_anger_verify.vs" />
 	<method sig="wrath_of_jupiter" vs="data/subai/do_nothing_point.vs" />
 
-	<method sig="idle" vs="data/subai/rpriest_idle.vs" />
-	<method sig="stand_position" vs="data/subai/rpriest_stand_position.vs" />
-	<method sig="hold_position" vs="data/subai/rpriest_stand_position.vs" />
-	<method sig="advance" vs="data/subai/rpriest_advance.vs" />
-	<method sig="advancealone" vs="data/subai/rpriest_advance.vs" />
-	<method sig="advance_aggressive" vs="data/subai/rpriest_advance.vs" />
-	<method sig="engage" vs="data/subai/rpriest_engage.vs" />
-	<method sig="ai_killall" vs="data/subai/rpriest_engage.vs" />
+	<method sig="idle" vs="data/subai/druid_heal_idle.vs" />
+	<method sig="stand_position" vs="data/subai/druid_heal_stand_position.vs" />
+	<method sig="hold_position" vs="data/subai/druid_heal_stand_position.vs" />
+	<method sig="advance" vs="data/subai/druid_heal_advance.vs" />
+	<method sig="advance_alone" vs="data/subai/druid_heal_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/druid_heal_advance.vs" />
+	<method sig="engage" vs="data/subai/druid_heal_engage.vs" />
+	<method sig="ai_killall" vs="data/subai/druid_heal_engage.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="heal" />

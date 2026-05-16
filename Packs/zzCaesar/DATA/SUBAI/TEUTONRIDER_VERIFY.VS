@@ -8,7 +8,7 @@ this = objs[0].AsBuilding();
 set = .settlement;
 pop_cost = cmdcost_pop;
 
-reasonText = rollover() + Translatef(" (currently %s1)", EnvReadInt(.player, "MaxTeutonRiders"));
+reasonText = rollover(this, false) + Translatef(" (currently %s1)", EnvReadInt(.player, "MaxTeutonRiders"));
 
 if (cmdcost_gold > set.gold)
 	reasonText = reasonText + "\n<color 255 0 0>" + Translate("Not enough gold");

@@ -7,10 +7,10 @@
 	<method sig="ondie" vs="data/subai/military_ondie.vs" />
 
 	<!-- for outpost/tent defenders -->
-	<method sig="enter_tent" vs="data/subai/teuton_enter_tent.vs" />
-	<method sig="guardadvance" vs="data/subai/unit_guard_advance.vs" />
-	<method sig="guardpatrol" vs="data/subai/unit_guard_patrol.vs" />
-	<method sig="guardengage" vs="data/subai/unit_guard_engage.vs" />
+	<method sig="guard_enter" vs="data/subai/unit_guard_enter.vs" />
+	<method sig="guard_advance" vs="data/subai/unit_guard_advance.vs" />
+	<method sig="guard_patrol" vs="data/subai/unit_guard_patrol.vs" />
+	<method sig="guard_engage" vs="data/subai/unit_guard_engage.vs" />
 
 	<behavior script="data/subai/sneak_bonus_attack.vs" />
 

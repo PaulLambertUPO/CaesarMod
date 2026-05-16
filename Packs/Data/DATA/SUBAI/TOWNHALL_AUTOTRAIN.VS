@@ -410,12 +410,12 @@ while (true) {
 
 					ol_outside.RemoveList(ol_training_new);//ol_outside and ol_training_new contain all old and new units outside respectively
 					ol_outside.ClearDead();
-					ol_outside.SetCommand("enteralone", this);//non-training units
+					ol_outside.SetCommand("enter_alone", this);//non-training units
 
 					ol = ol_inside;
 					ol.RemoveList(ol_training_new);
 					ol_inside.RemoveList(ol);
-					ol_inside.SetCommand("advancealone", pt_exit);
+					ol_inside.SetCommand("advance_alone", pt_exit);
 
 					ol = ol_to_train;
 					ol.RemoveList(ol_inside);

@@ -149,7 +149,7 @@ while (true) {
 	).GetObjList();
 
 	if (enemies.count <= 0) {//no threat around, command all units that are out to come back in
-		defenders_outside.SetCommand("enter_tent", this);
+		defenders_outside.SetCommand("guard_enter", this);
 		defenders_outside.Clear();
 	}
 	else {
@@ -167,7 +167,7 @@ while (true) {
 					pt_1.Rot(90);
 					pt_2 = pt_1 + pt_pos;
 					pt_2.IntoRect(rc);
-					u.AddCommand(false, "guardpatrol", pt_2);
+					u.AddCommand(false, "guard_patrol", pt_2);
 				}
 			}
 		}
@@ -183,12 +183,12 @@ while (true) {
 					pt_1.Rot(rand(360));
 					pt_2 = pt_1 + pt_pos;
 					pt_2.IntoRect(rc);
-					u.SetCommand("guardadvance", pt_2);
+					u.SetCommand("guard_advance", pt_2);
 					for (j = 0; j < 4; j += 1) {
 						pt_1.Rot(90);
 						pt_2 = pt_1 + pt_pos;
 						pt_2.IntoRect(rc);
-						u.AddCommand(false, "guardpatrol", pt_2);
+						u.AddCommand(false, "guard_patrol", pt_2);
 					}
 				}
 		}

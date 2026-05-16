@@ -10,7 +10,7 @@ set = .settlement;
 i = set.GetMaxSentries();
 j = set.GetNumSentries();
 
-reasonText = rollover() + "\n" + Translatef("(you cannot have more than %s1, currently %s2)", i, j);
+reasonText = rollover(this, false) + "\n" + Translatef("(you cannot have more than %s1, currently %s2)", i, j);
 
 if (i - j > 0) {
 	i = cmdcost_pop;

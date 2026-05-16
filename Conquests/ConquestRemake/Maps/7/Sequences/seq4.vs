@@ -46,13 +46,11 @@ while (true) {
 			}
 		if (town.player == 2) {
 			H_Reinforcements1.SetPlayer(town.player);
-			H_Reinforcements1.SetCommand("advance", town.pos);
-			H_Reinforcements1.AddCommand(false, "enter", town);
+			H_Reinforcements1.SetCommand("advance_enter", town);
 		}
 		else if (town.player == 3) {
 			H_Reinforcements1.SetPlayer(town.player);
-			H_Reinforcements1.SetCommand("advance", town.pos);
-			H_Reinforcements1.AddCommand(false, "enter", town);
+			H_Reinforcements1.SetCommand("advance_enter", town);
 		}
 
 		town = NO_Town3;
@@ -73,13 +71,11 @@ while (true) {
 			}
 		if (town.player == 2) {
 			H_Reinforcements2.SetPlayer(town.player);
-			H_Reinforcements2.SetCommand("advance", town.pos);
-			H_Reinforcements2.AddCommand(false, "enter", town);
+			H_Reinforcements2.SetCommand("advance_enter", town);
 		}
 		else if (town.player == 3) {
 			H_Reinforcements2.SetPlayer(town.player);
-			H_Reinforcements2.SetCommand("advance", town.pos);
-			H_Reinforcements2.AddCommand(false, "enter", town);
+			H_Reinforcements2.SetCommand("advance_enter", town);
 		}
 
 		SetNoAIFlag(H_Reinforcements.GetObjList(), false);

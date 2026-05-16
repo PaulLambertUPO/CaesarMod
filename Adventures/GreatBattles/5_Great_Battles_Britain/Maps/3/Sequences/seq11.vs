@@ -58,7 +58,7 @@ while (true) {
 			if (!T_S_Sett1.IsEmpty()) {
 				T_S_Sett1.SetPlayer(1);
 				T_S_Sett1.SetFeeding(true);
-				T_S_Sett1.SetCommand("advanceenter", NO_1);
+				T_S_Sett1.SetCommand("advance_enter", NO_1);
 				T_S_Sett1.RemoveFromAllGroups();
 			}
 		}

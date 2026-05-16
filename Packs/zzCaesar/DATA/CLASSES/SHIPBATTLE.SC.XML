@@ -30,21 +30,22 @@
 
 	<method sig="idle" vs="data/subai/ship_idle.vs" />
 	<method sig="move" vs="data/subai/ship_move.vs" />
+	<method sig="follow" vs="data/subai/unit_follow_water.vs" verify="data/subai/unit_follow_water_verify.vs" />
 
 	<method sig="form_move" vs="data/subai/unit_detach.vs" />
 	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
-	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
-	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enter_alone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advance_enter" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="teleport" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="capture" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
-	<method sig="enter_tent" vs="data/subai/do_nothing_obj.vs" />
-	<method sig="guardadvance" vs="data/subai/do_nothing_point.vs" />
-	<method sig="guardpatrol" vs="data/subai/do_nothing_point.vs" />
-	<method sig="guardengage" vs="data/subai/do_nothing_void.vs" />
+	<method sig="guard_enter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="guard_advance" vs="data/subai/do_nothing_point.vs" />
+	<method sig="guard_patrol" vs="data/subai/do_nothing_point.vs" />
+	<method sig="guard_engage" vs="data/subai/do_nothing_void.vs" />
 	<method sig="taunt" vs="data/subai/do_nothing_void.vs" />
 	<method sig="train" vs="data/subai/do_nothing_void.vs" />
 

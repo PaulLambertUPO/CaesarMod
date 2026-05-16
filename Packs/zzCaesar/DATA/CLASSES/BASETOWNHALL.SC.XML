@@ -19,11 +19,11 @@
 	<properties interface="thumb,building,holder" />
 	<properties minimap_icon_type="color" />
 
-	<behavior script="data/subai/settlement_behavior_ambient.vs" />
-	<behavior script="data/subai/townhall_behavior_guard.vs" />
-	<behavior script="data/subai/townhall_behavior_upgrades.vs" />
 	<behavior script="data/subai/townhall_autotrain.vs" />
-	<behavior script="data/subai/townhall_sentries_control.vs" />
+	<behavior script="data/subai/townhall_behavior_guard.vs" />
+	<behavior script="data/subai/settlement_behavior_ambient.vs" />
+	<behavior script="data/subai/settlement_behavior_upgrades.vs" />
+	<behavior script="data/subai/settlement_sentries_control.vs" />
 
 	<method sig="unitsout" vs="data/subai/do_nothing_point.vs" />
 	<method sig="createfoodmulesmall" vs="data/subai/do_nothing_void.vs" />

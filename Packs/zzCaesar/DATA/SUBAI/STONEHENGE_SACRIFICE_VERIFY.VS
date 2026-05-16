@@ -10,10 +10,10 @@ if (.IsValid)
 			if (.stamina >= GetCmdStaminaCost("sacrifice"))
 				return true;
 			else
-				reasonText = rollover() + "\n<color 255 0 0>" + Translate("Stonehenge is insufficiently charged");
+				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Stonehenge is insufficiently charged");
 		else
-			reasonText = rollover() + "\n<color 255 0 0>" + Translate("Stonehenge isn't under your control");
+			reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Stonehenge isn't under your control");
 	else
-		reasonText = rollover() + "\n<color 255 0 0>" + Translate("You must wait for the current spell to be completed");
+		reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("You must wait for the current spell to be completed");
 
 return false;

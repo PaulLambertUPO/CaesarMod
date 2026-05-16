@@ -12,7 +12,7 @@ if (IsResearched(.player, "Tame horses")) {
 	horses = EnvReadInt(.settlement, "EEE_IVillageNumberHorses");
 
 	if (horses > 0) {
-		if (horses - .CmdCount("callIScout") > 0) {
+		if (horses - .CmdCount("trainIScout") > 0) {
 			reasonText = rollover(this, ParseStr(dest, dest), true);
 			return true;
 		}

@@ -45,7 +45,7 @@ this = This.AsBuilding();
 		if (set.IsVillage)
 			h.SetCommand("advance", hall.GetEnterPoint(h));
 		else
-			h.SetCommand("advanceenter", hall);
+			h.SetCommand("advance_enter", hall);
 	}
 
 	h.SetLevel(MAX(h_level, EnvReadInt(set, "levels/Hero")));

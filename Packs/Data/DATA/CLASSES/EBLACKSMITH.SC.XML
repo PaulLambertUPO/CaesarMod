@@ -9,5 +9,5 @@
 
 	<behavior script="data/subai/EBlacksmith_anim.vs" />
 
-	<method sig="getcharm" vs="data/subai/eblacksmith_charms.vs" onfinish="data/subai/onfinish_research.vs" />
+	<method sig="getcharm" vs="data/subai/eblacksmith_charms.vs" onfinish="data/subai/research_onfinish.vs" />
 </class>

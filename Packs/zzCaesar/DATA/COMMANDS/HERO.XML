@@ -176,8 +176,8 @@
 		rollover="Assault"
 		description="Activates the Assault skill"
 		coststamina="6"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Assault">
 		<src obj="Hero" />
@@ -188,8 +188,8 @@
 		rollover="Battle Cry"
 		description="Activates the Battle Cry skill"
 		coststamina="6"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Battle cry">
 		<src obj="Hero" />
@@ -200,8 +200,8 @@
 		rollover="Ceasefire"
 		description="Activates the Ceasefire skill"
 		coststamina="6"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Ceasefire">
 		<src obj="Hero" />
@@ -212,8 +212,8 @@
 		rollover="Charge"
 		description="Activates the Charge skill"
 		coststamina="6"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Charge">
 		<src obj="Hero" />
@@ -224,8 +224,8 @@
 		rollover="Defensive Cry"
 		description="Activates the Defensive Cry skill"
 		coststamina="4"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Defensive cry">
 		<src obj="Hero" />
@@ -236,8 +236,8 @@
 		rollover="Frenzy"
 		description="Activates the Frenzy skill"
 		coststamina="4"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Frenzy">
 		<src obj="Hero" />
@@ -248,8 +248,8 @@
 		rollover="Healing"
 		description="Activates the Healing skill"
 		coststamina="6"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Healing">
 		<src obj="Hero" />
@@ -260,8 +260,8 @@
 		rollover="Rush"
 		description="Activates the Rush skill"
 		coststamina="4"
-		groupverifier="data/subai/verify_hero_skill.vs"
-		groupdispatch="data/subai/activate_hero_skill.vs"
+		groupverifier="data/subai/hero_skill_verify.vs"
+		groupdispatch="data/subai/hero_skill_dispatch.vs"
 		voidgroupdispatch="1"
 		param="Rush">
 		<src obj="Hero" />

@@ -14,7 +14,7 @@ difficulty = GetDifficulty();
 	b = NO_Town3.obj.AsBuilding();
 	b.Research("Britain Swords");
 	b.Research("Shrine of Thor");
-	b.Research("Mass Concealment");
+	b.Research("Mass Invisibility");
 
 	b = NO_Town4.obj.AsBuilding();
 	b.Research("Fights");

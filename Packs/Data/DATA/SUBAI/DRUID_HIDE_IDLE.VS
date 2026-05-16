@@ -22,7 +22,7 @@ if (.IsValid)
 		rng = .range;
 		stamina_cost = GetCmdStaminaCost("hide");
 
-		can_hide = IsResearched(plr, "Mass Concealment");
+		can_hide = IsResearched(plr, "Mass Invisibility");
 
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
@@ -75,7 +75,7 @@ if (.IsValid)
 							}
 						}
 				}
-				else if (IsResearched(plr, "Mass Concealment"))//find a unit in the next iteration to avoid repeating the code above
+				else if (IsResearched(plr, "Mass Invisibility"))//find a unit in the next iteration to avoid repeating the code above
 					can_hide = true;
 
 				if (u.IsDead)

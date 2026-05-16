@@ -30,7 +30,7 @@
 	<cmd name="Free Wine" priority="4"
 		key="w"
 		queueicon="gameres/icons/upgrades/free wine.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/free wine.bmp"
 		costgold="1500"
 		execdelay="20000"
@@ -44,7 +44,7 @@
 	<cmd name="Import horses" priority="5"
 		key="h"
 		queueicon="gameres/icons/upgrades/Horses.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="upgrades/Import horses.bmp"
 		costgold="1000"
 		execdelay="20000"
@@ -56,7 +56,7 @@
 		<src obj="RTavern" />
 	</cmd>
 	<cmd name="Scout Area" priority="6"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="actions/scouts.bmp"
 		key="s"
 		costgold="200"
@@ -71,7 +71,7 @@
 	</cmd>
 	<cmd name="Buy map" priority="7"
 		queueicon="gameres/icons/upgrades/Buy Maps.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="actions/buy maps.bmp"
 		costgold="2000"
 		execdelay="90000"
@@ -89,7 +89,7 @@
 		costgold="4000"
 		button="actions/invest.bmp"
 		queueicon="gameres/icons/upgrades/Invest.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		rollover="Investment"
 		description="Gathers 6000 gold"
 		method="invest"
@@ -99,7 +99,7 @@
 	</cmd>
 	<cmd name="RTribute" priority="9"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="u"
 		method="research"
 		costgold="2000"
@@ -129,7 +129,7 @@
 	<cmd name="Free Beer" priority="3"
 		key="b"
 		queueicon="gameres/icons/upgrades/free beer.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/free beer.bmp"
 		costgold="2000"
 		execdelay="20000"
@@ -150,7 +150,7 @@
 		costgold="2000"
 		execdelay="20000"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		param="ReqSet, Free Beer, default, NameSet, Food Tax, default, NameSet, TFoodTax">
 		<src obj="GTavern" />
 	</cmd>
@@ -164,7 +164,7 @@
 		costgold="1000"
 		execdelay="30000"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		param="ReqSet, Free Beer, default, NameSet, Nordic trade routes, , SetsSet, items/Bear teeth amulet, 1">
 		<src obj="GTavern" />
 	</cmd>
@@ -178,7 +178,7 @@
 		costgold="1000"
 		execdelay="30000"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		param="ReqSet, Free Beer, , ReqSet, Nordic trade routes, , NameSet, Belts of Might, , SetsSet, items/Belt of might, 1">
 		<src obj="GTavern" />
 	</cmd>
@@ -192,7 +192,7 @@
 		costgold="1000"
 		execdelay="30000"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		param="ReqSet, Free Beer, , ReqSet, Belts of Might, , NameSet, Herb amulets, default, SetsSet, items/Herb amulet of luck, 1">
 		<src obj="GTavern" />
 	</cmd>
@@ -200,7 +200,7 @@
 		method="getloan"
 		button="actions/get loan.bmp"
 		key="l"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		rollover="Get Loan"
 		description="Borrows 4000 gold at 10% interest"
 		immediate="yes"
@@ -218,7 +218,7 @@
 	</cmd>
 	<cmd name="GTribute" priority="7"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="u"
 		method="research"
 		costgold="2000"
@@ -248,7 +248,7 @@
 	<cmd name="Free Drinks" priority="3"
 		key="d"
 		queueicon="gameres/icons/upgrades/free beer.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/free beer.bmp"
 		costgold="1500"
 		execdelay="20000"
@@ -261,7 +261,7 @@
 	</cmd>
 	<cmd name="Sell food" priority="4"
 		traincommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="states/sell food.bmp"
 		queueicon="gameres/icons/upgrades/Food tax.bmp"
 		key="s"
@@ -275,7 +275,7 @@
 	</cmd>
 	<cmd name="Tame horses" priority="5"
 		queueicon="gameres/icons/upgrades/Capture Horses.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/Capture Horses.bmp"
 		key="t"
 		researchcommand="yes"
@@ -289,7 +289,7 @@
 	</cmd>
 	<cmd name="Housing" priority="6"
 		queueicon="gameres/icons/upgrades/Housing.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/Housing.bmp"
 		key="h"
 		researchcommand="yes"
@@ -303,7 +303,7 @@
 	</cmd>
 	<cmd name="More Housing" priority="6"
 		queueicon="gameres/icons/upgrades/More Housing.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/More Housing.bmp"
 		key="h"
 		researchcommand="yes"
@@ -320,7 +320,7 @@
 		button="actions/call to arms.bmp"
 		key="a"
 		traincommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		method="calltoarms"
 		costgold="800"
 		costpop="50"
@@ -332,7 +332,7 @@
 	</cmd>
 	<cmd name="ITribute" priority="8"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="u"
 		method="research"
 		costgold="2000"
@@ -375,7 +375,7 @@
 	<cmd name="Free Trade" priority="5"
 		key="t"
 		queueicon="gameres/icons/upgrades/free trade.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/free trade.bmp"
 		costgold="2000"
 		execdelay="20000"
@@ -387,7 +387,7 @@
 		<src obj="CTavern" />
 	</cmd>
 	<cmd name="Expedition" priority="6"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		method="expedition"
 		button="actions/Expedition.bmp"
 		key="e"
@@ -407,7 +407,7 @@
 		button="actions/Slavery.bmp"
 		key="s"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		method="research"
 		costpop="40"
 		execdelay="10000"
@@ -419,7 +419,7 @@
 	<cmd name="Mercenary pact" priority="8"
 		queueicon="gameres/icons/upgrades/Mercenary Pact.bmp"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		method="research"
 		key="g"
 		costgold="2500"
@@ -433,7 +433,7 @@
 	<cmd name="Mercenary heal" priority="9"
 		queueicon="gameres/icons/upgrades/Heal.bmp"
 		researchcommand="yes"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		method="research"
 		key="h"
 		costgold="2000"
@@ -447,7 +447,7 @@
 	<cmd name="Hire foreign mercenaries" priority="10"
 		queueicon="gameres/icons/upgrades/Hire Mercenary.bmp"
 		button="Actions/Hire Mercenary.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		traincommand="yes"
 		key="m"
 		costgold="6000"
@@ -461,7 +461,7 @@
 	</cmd>
 	<cmd name="CTribute" priority="11"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="u"
 		method="research"
 		costgold="2000"
@@ -491,7 +491,7 @@
 	<cmd name="Gambling" priority="3"
 		queueicon="gameres/icons/upgrades/gambling.bmp"
 		key="g"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/gambling.bmp"
 		costgold="2000"
 		execdelay="20000"
@@ -503,7 +503,7 @@
 		<src obj="BTavern" />
 	</cmd>
 	<cmd name="Gambler's Day" priority="4"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="d"
 		method="research"
 		button="research/gamblers day.bmp"
@@ -517,7 +517,7 @@
 		<src obj="BTavern" />
 	</cmd>
 	<cmd name="Gambler's Test" priority="5"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="t"
 		method="research"
 		button="research/gamblers test.bmp"
@@ -531,7 +531,7 @@
 		<src obj="BTavern" />
 	</cmd>
 	<cmd name="Gambler's Luck" priority="6"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="l"
 		method="research"
 		button="research/gamblers luck.bmp"
@@ -547,7 +547,7 @@
 	<cmd name="Gambler's All-in" priority="7"
 		queueicon="gameres/icons/upgrades/all-in.bmp"
 		key="a"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/all-in.bmp"
 		costgold="4000"
 		execdelay="5000"
@@ -560,7 +560,7 @@
 	</cmd>
 	<cmd name="BTribute" priority="8"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="actions/tribute.bmp"
 		key="u"
 		method="research"
@@ -590,7 +590,7 @@
 	<cmd name="Grain Trade" priority="3"
 		queueicon="gameres/icons/upgrades/grain trade.bmp"
 		key="g"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/grain trade.bmp"
 		costgold="1500"
 		execdelay="20000"
@@ -605,7 +605,7 @@
 		queueicon="gameres/icons/upgrades/religious feast.bmp"
 		key="r"
 		button="research/religious feast.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		researchcommand="yes"
 		costfood="1500"
 		execdelay="30000"
@@ -616,7 +616,7 @@
 		<src obj="EMarket" />
 	</cmd>
 	<cmd name="Gossip" priority="5"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="actions/gossip.bmp"
 		key="s"
 		costfood="800"
@@ -632,7 +632,7 @@
 	<cmd name="Hecatomb" priority="6"
 		queueicon="gameres/icons/upgrades/Hecatomb.bmp"
 		key="h"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="actions/Hecatomb.bmp"
 		traincommand="yes"
 		costfood="2000"
@@ -647,7 +647,7 @@
 		queueicon="gameres/icons/upgrades/buy slaves.bmp"
 		key="i"
 		button="actions/buy slaves.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		researchcommand="yes"
 		costgold="1000"
 		execdelay="25000"
@@ -659,7 +659,7 @@
 	</cmd>
 	<cmd name="ETribute" priority="8"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="u"
 		method="research"
 		costgold="2000"
@@ -689,7 +689,7 @@
 	<cmd name="Food sale" priority="4"
 		queueicon="gameres/icons/upgrades/grain trade T.bmp"
 		key="g"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="research/grain trade T.bmp"
 		costfood="2000"
 		execdelay="20000"
@@ -703,7 +703,7 @@
 	<cmd name="TFoodTax" priority="5"
 		queueicon="gameres/icons/upgrades/food tax.bmp"
 		key="t"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		button="upgrades/food tax.bmp"
 		costgold="2000"
 		execdelay="20000"
@@ -718,7 +718,7 @@
 		queueicon="gameres/icons/upgrades/religious feast.bmp"
 		key="r"
 		button="research/religious feast.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		researchcommand="yes"
 		costgold="1500"
 		execdelay="30000"
@@ -730,7 +730,7 @@
 	</cmd>
 	<cmd name="TTribute" priority="7"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
-		groupverifier="data/subai/verify_research.vs"
+		groupverifier="data/subai/research_verify.vs"
 		key="u"
 		method="research"
 		costgold="2000"

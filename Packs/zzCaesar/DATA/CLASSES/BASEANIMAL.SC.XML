@@ -16,7 +16,7 @@
 	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="capture" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="enter" vs="data/subai/peaceful_enter.vs" verify="data/subai/peaceful_enter_verify.vs" />
-	<method sig="enteralone" vs="data/subai/peaceful_enter.vs" />
+	<method sig="enter_alone" vs="data/subai/peaceful_enter.vs" />
 	<method sig="build_catapult" vs="data/subai/do_nothing_obj.vs" />
 
 	<defaultcmd target="Building">

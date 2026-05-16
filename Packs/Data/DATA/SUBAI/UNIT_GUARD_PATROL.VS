@@ -9,12 +9,12 @@ if (.IsValid)
 		.SetParryMode(false);
 
 		if (!.InHolder)
-			.AddCommand(false, "guardpatrol", .pos);
+			.AddCommand(false, "guard_patrol", .pos);
 
 		while (true) {
 			if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
-				.AddCommand(true, "guardpatrol", pt);
-				.AddCommand(true, "guardengage");
+				.AddCommand(true, "guard_patrol", pt);
+				.AddCommand(true, "guard_engage");
 				break;
 			}
 			if (.Goto(pt, 0, 2000, false, 0))

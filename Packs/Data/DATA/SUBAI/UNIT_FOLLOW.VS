@@ -1,8 +1,8 @@
 //void, Obj This, Obj other
 
-Wagon this;
+Unit this;
 
-this = This.AsWagon();
+this = This.AsUnit();
 
 if (.IsValid)
 	if (.IsAlive)
@@ -21,6 +21,9 @@ if (.IsValid)
 						int plr;
 
 						plr = .player;
+
+						if (.AI)
+							.SetParryMode(false);
 
 						while (followed_unit.IsAlive) {
 							if (.IsEnemy(followed_unit))

@@ -11,7 +11,7 @@ if (.IsValid)
 
 			plr = .player;
 
-			if (IsResearched(plr, "Mass Concealment")) {//do not use FindUnitToHide because it is a bugged function: it always returns an invalid unit
+			if (IsResearched(plr, "Mass Invisibility")) {//do not use FindUnitToHide because it is a bugged function: it always returns an invalid unit
 				ObjList ol;
 				Obj o, target;
 				str cmd;

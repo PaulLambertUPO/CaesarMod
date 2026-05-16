@@ -101,7 +101,7 @@ if (strTech == "") {
 		if (IsResearched(aiPlayer, strTech)) {
 			strTech = "Mass Heal";
 			if (IsResearched(aiPlayer, strTech)) {
-				strTech = "Mass Concealment";
+				strTech = "Mass Invisibility";
 				if (IsResearched(aiPlayer, strTech))
 					return;
 			}

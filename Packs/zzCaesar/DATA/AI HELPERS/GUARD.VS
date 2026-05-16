@@ -46,20 +46,20 @@ if (set.IsValid) {
 								else if (j >= 750) {
 									if (cmd != "enter")
 										if (cmd != "advance_aggressive")
-											if (cmd != "advanceenter")
+											if (cmd != "advance_enter")
 												if (cmd != "engage")
 													if (enemies.count > 0)
 														u.SetCommand("advance_aggressive", enemies[0].posRH);
 													else
-														u.SetCommand("advanceenter", main_target);
+														u.SetCommand("advance_enter", main_target);
 								}
-								else if (cmd != "advanceenter")
+								else if (cmd != "advance_enter")
 									if (cmd != "advance_aggressive")
 										if (cmd != "engage")
 											if (enemies.count > 0)
 												u.SetCommand("advance_aggressive", enemies[0].posRH);
 											else
-												u.SetCommand("advanceenter", main_target);
+												u.SetCommand("advance_enter", main_target);
 							}
 			}
 			Sleep(3000);
@@ -94,20 +94,20 @@ if (set.IsValid) {
 								else if (j >= 1050) {
 									if (cmd != "enter")
 										if (cmd != "advance_aggressive")
-											if (cmd != "advanceenter")
+											if (cmd != "advance_enter")
 												if (cmd != "engage")
 													if (enemies.count > 0)
 														u.SetCommand("advance_aggressive", enemies[0].posRH);
 													else
-														u.SetCommand("advanceenter", main_target);
+														u.SetCommand("advance_enter", main_target);
 								}
-								else if (cmd != "advanceenter")
+								else if (cmd != "advance_enter")
 									if (cmd != "advance_aggressive")
 										if (cmd != "engage")
 											if (enemies.count > 0)
 												u.SetCommand("advance_aggressive", enemies[0].posRH);
 											else
-												u.SetCommand("advanceenter", main_target);
+												u.SetCommand("advance_enter", main_target);
 							}
 			}
 			Sleep(3000);

@@ -132,7 +132,7 @@ while (true) {
 			if (is_village)
 				u.SetCommand("advance", hall.GetEnterPoint(u));
 			else
-				u.SetCommand("advanceenter", hall);
+				u.SetCommand("advance_enter", hall);
 		else
 			set.AddUnit(u);
 

@@ -30,7 +30,7 @@ if (EnvReadString(this, "researching") != "yes") {
 							}
 	}
 
-	reasonText = rollover() + "\n<color 255 0 0 >" + Translate("Requires at least 5 warriors without that charm around the Townhall");
+	reasonText = rollover(this, false) + "\n<color 255 0 0 >" + Translate("Requires at least 5 warriors without that charm around the Townhall");
 }
 else
 	reasonText = rollover(this, true);

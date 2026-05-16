@@ -22,6 +22,6 @@ for (i = ol.count - 1; i >= 0; i -= 1) {
 			}
 }
 
-reasonText = rollover() + "\n<color 255 0 0>" + Translate("There are no allies to revitalize around the settlement");
+reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("There are no allies to revitalize around the settlement");
 
 return false;

@@ -5,7 +5,7 @@ I_Patrolers4.SetCommand("patrol", AreaCenter("A_P4"));
 
 WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_LastStand"), 1, 1000, -1);
 
-I_NumantiaDefence.SetCommand("advanceenter", NO_40);
+I_NumantiaDefence.SetCommand("advance_enter", NO_40);
 
 {
 	ObjList last_units;

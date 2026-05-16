@@ -11,19 +11,19 @@
 	<properties help="contents/units/EPriest" />
 	<properties edittree_pos="Units/Egypt/Priest" />
 
-	<method sig="cripple" vs="data/subai/epriest_cripple.vs" verify="data/subai/epriest_cripple_verify.vs" />
-	<method sig="cripple" vs="data/subai/epriest_cripple_ground.vs" />
+	<method sig="cripple" vs="data/subai/druid_cripple_unit.vs" verify="data/subai/druid_cripple_verify.vs" />
+	<method sig="cripple" vs="data/subai/druid_cripple_ground.vs" />
 	<method sig="zombify" vs="data/subai/druid_ghoul_summoning.vs" />
 	<method sig="mist" vs="data/subai/druid_mist.vs" />
 
-	<method sig="idle" vs="data/subai/epriest_idle.vs" />
-	<method sig="stand_position" vs="data/subai/epriest_stand_position.vs" />
-	<method sig="hold_position" vs="data/subai/epriest_stand_position.vs" />
-	<method sig="advance" vs="data/subai/epriest_advance.vs" />
-	<method sig="advancealone" vs="data/subai/epriest_advance.vs" />
-	<method sig="advance_aggressive" vs="data/subai/epriest_advance.vs" />
-	<method sig="engage" vs="data/subai/epriest_engage.vs" />
-	<method sig="ai_killall" vs="data/subai/epriest_engage.vs" />
+	<method sig="idle" vs="data/subai/druid_cripple_idle.vs" />
+	<method sig="stand_position" vs="data/subai/druid_cripple_stand_position.vs" />
+	<method sig="hold_position" vs="data/subai/druid_cripple_stand_position.vs" />
+	<method sig="advance" vs="data/subai/druid_cripple_advance.vs" />
+	<method sig="advance_alone" vs="data/subai/druid_cripple_advance.vs" />
+	<method sig="advance_aggressive" vs="data/subai/druid_cripple_advance.vs" />
+	<method sig="engage" vs="data/subai/druid_cripple_engage.vs" />
+	<method sig="ai_killall" vs="data/subai/druid_cripple_engage.vs" />
 
 	<method sig="ondie" vs="data/subai/cshaman_epriest_ondie.vs" />
 

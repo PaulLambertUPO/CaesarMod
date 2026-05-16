@@ -251,16 +251,15 @@
 		sclass="Fisherman">
 		<src obj="BaseVillage" />
 	</cmd>
-	<cmd name="callIScout" priority="11"
+	<cmd name="trainIScout" priority="11"
 		button="actions/train IScout.bmp"
 		queueicon="gameres/icons/zPWICavalry.bmp"
-		groupverifier="data/subai/verify_scout_train.vs"
+		groupverifier="data/subai/iberian_village_trainIScout_verify.vs"
 		transpicon="1"
 		traincommand="yes"
 		key="s"
 		costpop="1"
 		execdelay="15000"
-		method="trainIScout"
 		rollover="Call scout"
 		param="IScout"
 		sclass="IScout">

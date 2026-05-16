@@ -10,11 +10,10 @@ if (.IsValid)
 			ObjList h_army;
 			Obj o;
 			int i;
-			bool this_ai, melee, enemy_to_fight = true;
+			bool melee, enemy_to_fight = true;
 
 			Sleep(rand(151));//avoid "thundering herd" for multiple units that start the command simultaneously
 
-			this_ai = .AI;
 			melee = !.IsRanged;
 
 			{
@@ -38,13 +37,7 @@ if (.IsValid)
 				enemy_to_fight = false;
 
 				if (.IsEnemyInSquadSight) {
-					if (this_ai)
-						if (rand(3) == 0)
-							o = .BestTargetInSquadSight;
-						else
-							o = .BestTargetInSquadSightMisZeroDamage;
-					else
-						o = .BestTargetInSquadSight;
+					o = .BestTargetInSquadSight;
 					if (.IsValidTarget(o))
 						enemy_to_fight = true;
 					else {
@@ -52,13 +45,7 @@ if (.IsValid)
 						for (i = h_army.count - 1; i >= 0; i -= 1) {
 							o = h_army[i];
 							if (o.IsAlive) {
-								if (this_ai)
-									if (rand(3) == 0)
-										o = o.AsUnit().BestTargetInSquadSight;
-									else
-										o = o.AsUnit().BestTargetInSquadSightMisZeroDamage;
-								else
-									o = o.AsUnit().BestTargetInSquadSight;
+								o = o.AsUnit().BestTargetInSquadSight;
 								if (o.IsAlive) {
 									enemy_to_fight = true;
 									break;
@@ -82,14 +69,7 @@ if (.IsValid)
 							else
 								while (.Attack(o))
 									;
-
-					if (this_ai)
-						if (rand(3) == 0)
-							o = .BestTargetInSquadSight;
-						else
-							o = .BestTargetInSquadSightMisZeroDamage;
-					else
-						o = .BestTargetInSquadSight;
+					o = .BestTargetInSquadSight;
 				}
 
 				if (.Stop(500))

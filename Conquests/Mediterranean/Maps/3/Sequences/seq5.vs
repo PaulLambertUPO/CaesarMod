@@ -9,12 +9,12 @@ difficulty = GetDifficulty();
 	b = NO_Town2.obj.AsBuilding();
 	b.Research("Britain Spears");
 	b.Research("BNobility");
-	b.Research("Mass Concealment");
+	b.Research("Mass Invisibility");
 
 	b = NO_Town3.obj.AsBuilding();
 	b.Research("Britain Large Shields");
 	b.Research("BNobility");
-	b.Research("Mass Concealment");
+	b.Research("Mass Invisibility");
 }
 
 set2 = GetSettlement("S_Town2");

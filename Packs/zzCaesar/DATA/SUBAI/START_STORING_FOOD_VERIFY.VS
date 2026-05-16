@@ -12,6 +12,6 @@ if (EnvReadInt(set, "IsStoring") != 1)
 		return true;
 	}
 	else
-		reasonText = rollover() + "\n<color 255 0 0>" + Translatef("Requires %s1", "Trade Routes");
+		reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translatef("Requires %s1", "Trade Routes");
 
 return false;

@@ -31,4 +31,4 @@ while (Q_FinalWave.IsEmpty()) {
 }
 
 if (!IsAIHelperRunning("UpperCampAssault"))
-	Q_UpperCampAssault.SetCommand("advanceenter", NO_EnemyTown);
+	Q_UpperCampAssault.SetCommand("advance_enter", NO_EnemyTown);

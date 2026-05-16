@@ -40,7 +40,7 @@
 	- Query: an operator that defines a dynamic way to get a set of objects, it can be seen as a function pointer because it is executed every time it is reached
 	- NamedObj: an entity with a script name set from the editor, able to use Query functions, it is mainly used for the sequences of custom maps
 	- Conversation: an entity containing phrases pronounced by actors, it is mainly used for the sequences of custom maps
-	- GAIKA: an entity that represents a "Game AI Knowledge Area" defined by a settlement, it is mainly used for the AI scripts
+	- GAIKA: an entity that represents a "Game AI Knowledge Area" defined by either an empty area or a settlement, it is mainly used for the AI scripts
 	- Squad: an entity consisting of a group of units (or the army of a hero), it is mainly used for the AI scripts
 	- SquadList: a list of Squad entities that works like the iterator pattern (able to be scrolled forward only), it is mainly used for the AI scripts
 -->
@@ -1294,7 +1294,7 @@
 	<param type="int" />
 	<param type="str" />
 </func>
-<!-- Gets all units of the specified class hierarchy that can be controlled by the specified player, that is the owned ones and the allied ones via shared control | WARNING: it does not consider units in a holder | WARNING: it considers units inside a holder if immediately followed by other functions, for example "Contains" (see hero skill activation script) -->
+<!-- Gets all units of the specified class hierarchy that can be controlled by the specified player, that is the owned ones and the allied ones via shared control | WARNING: it does not consider units in a holder, unless it is immediately followed by some other functions, for example "Contains" -->
 <func name="ControllableObjs" returns="Query">
 	<param type="int" /><!-- player -->
 	<param type="str" /><!-- class hierarchy | multiple class support: NO -->

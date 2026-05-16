@@ -530,7 +530,7 @@ while (true) {
 														bCheck = true;
 													else if (IsResearched(aiPlayer, "Mass Heal"))
 														bCheck = true;
-													else if (IsResearched(aiPlayer, "Mass Concealment"))
+													else if (IsResearched(aiPlayer, "Mass Invisibility"))
 														bCheck = true;
 												}
 												else if (IsResearched(aiPlayer, "Cover of Mercy"))

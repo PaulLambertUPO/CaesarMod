@@ -6,7 +6,7 @@
 	<behavior script="data/subai/arena_behavior.vs" />
 
 	<method sig="train" vs="data/subai/barrack_train.vs" />
-	<method sig="trainex" vs="data/subai/barrack_train_ex.vs" />
+	<method sig="trainex" vs="data/subai/barrack_trainex.vs" />
 
 	<sounds select="BarracksSelect" />
 </class>

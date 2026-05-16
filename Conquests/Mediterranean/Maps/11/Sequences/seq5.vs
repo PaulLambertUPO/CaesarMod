@@ -28,7 +28,7 @@ while (true) {
 				town = NO_Town1;
 		}
 		H_Reinforcements1.SetPlayer(town.player);
-		H_Reinforcements1.SetCommand("advanceenter", town);
+		H_Reinforcements1.SetCommand("advance_enter", town);
 
 		town = NO_Town3;
 		if (town.player == 1) {
@@ -37,7 +37,7 @@ while (true) {
 				town = NO_Town1;
 		}
 		H_Reinforcements2.SetPlayer(town.player);
-		H_Reinforcements2.SetCommand("advanceenter", town);
+		H_Reinforcements2.SetCommand("advance_enter", town);
 
 		SetNoAIFlag(H_Reinforcements.GetObjList(), false);
 		H_Reinforcements.RemoveFromAllGroups();

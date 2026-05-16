@@ -24,7 +24,7 @@ while (true) {
 		}
 		if (!C_Army.IsEmpty()) {
 			SetNoAIFlag(C_Army.GetObjList(), false);
-			C_Army.SetCommand("advanceenter", ClassPlayerObjs(cBaseTownhall, 5).GetObjList()[0]);
+			C_Army.SetCommand("advance_enter", ClassPlayerObjs(cBaseTownhall, 5).GetObjList()[0]);
 			C_Army.RemoveFromAllGroups();
 		}
 	}

@@ -1,69 +1,67 @@
-Building this;
-Query enemies;
 ObjList defenders;
 IntArray houses;
-Unit u;
-point pos, pt1, pt2;
+Obj this, o;
+point pt_pos, pt_1, pt_2;
 rect rc;
-int i, j, k, range, player, conquered_houses;
+int i, j, k, plr, rng, conquered_houses;
 
 rc = GetMapRect();
 
 while (conquered_houses < 32) {
 	for (i = 1; i <= 32; i += 1)
 		if (houses[i] != 1) {
-			this = GetNamedObj("House" + i).obj.AsBuilding();
-			range = .range;
-			player = .player;
-			pos = .pos;
-			if (player != 13) {
+			this = GetNamedObj("House" + i).obj;
+			pt_pos = .pos;
+			plr = .player;
+			rng = .range;
+			if (plr != 13) {
 				houses[i] = 1;
 				conquered_houses += 1;
 			}
 			else {
 				defenders = Group("DefH" + i).GetObjList();
 				defenders.ClearDead();
-				if (defenders.count > 0) {
-					enemies = Union(
+				if (defenders.count > 0)
+					if (Union(
 						Intersect(
-							VisibleObjsInSight(this, "Unit"),
+							VisibleObjsInSight(this, "Military,BaseMage"),
 							Subtract(
 								Intersect(
-									ObjsInRange(this, "Unit", range),
-									Union(EnemyObjs(player, "Military"), EnemyObjs(player, "BaseMage"))
+									ObjsInRange(this, "Unit", rng),
+									Union(EnemyObjs(plr, "Military"), EnemyObjs(plr, "BaseMage"))
 								),
-								EnemyObjs(player, "Sentry")
+								EnemyObjs(plr, "Sentry")
 							)
 						),
-						Intersect(ObjsInRange(this, "Building", range), EnemyObjs(player, "Catapult"))
-					);
-					if (enemies.IsEmpty())
-						defenders.SetCommand("enter_tent", this);
+						Intersect(ObjsInRange(this, "Catapult", rng), EnemyObjs(plr, "Catapult"))
+					).IsEmpty)
+						defenders.SetCommand("guard_enter", this);
 					else
-						for (j = 0; j < defenders.count; j += 1) {
-							u = defenders[j].AsUnit();
-							if (u.InHolder) {
-								pt1.Set(0, range / 2);
-								pt1.Rot(rand(360));
-								pt2 = pt1 + pos;
-								pt2.IntoRect(rc);
-								u.SetCommand("guardadvance", pt2);
-							}
-							else if (.DistTo(u) > range) {
-								pt1 = u.pos - pos;
-								pt1.SetLen(range / 2);
-								pt2 = pt1 + pos;
-								pt2.IntoRect(rc);
-								u.SetCommand("move", pt2);
-							}
-							for (k = 0; k < 4; k += 1) {
-								pt1.Rot(90);
-								pt2 = pt1 + pos;
-								pt2.IntoRect(rc);
-								u.AddCommand(false, "guardpatrol", pt2);
+						for (j = defenders.count - 1; j >= 0; j -= 1) {
+							o = defenders[j];
+							if (o.IsAlive) {
+								if (o.AsUnit().InHolder) {
+									pt_1.Set(0, rng / 2);
+									pt_1.Rot(rand(360));
+									pt_2 = pt_1 + pt_pos;
+									pt_2.IntoRect(rc);
+									o.SetCommand("guard_advance", pt_2);
+								}
+								else if (.DistTo(o) > rng) {
+									pt_1 = o.pos - pt_pos;
+									pt_1.SetLen(rng / 2);
+									pt_2 = pt_1 + pt_pos;
+									pt_2.IntoRect(rc);
+									o.SetCommand("move", pt_2);
+								}
+								for (k = 0; k < 4; k += 1) {
+									pt_1.Rot(90);
+									pt_2 = pt_1 + pt_pos;
+									pt_2.IntoRect(rc);
+									o.AddCommand(false, "guard_patrol", pt_2);
+								}
 							}
 						}
-				}
 			}
 		}
 	Sleep(1000);

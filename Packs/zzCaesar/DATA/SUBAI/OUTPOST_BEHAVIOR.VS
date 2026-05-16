@@ -135,9 +135,9 @@ if (set.IsIndependent) {
 		).GetObjList();
 
 		if (enemies.count <= 0) {//no threat around, command all units that are out to come back in
-			defenders_outside_1.SetCommand("enter_tent", this);
+			defenders_outside_1.SetCommand("guard_enter", this);
 			defenders_outside_1.Clear();
-			defenders_outside_2.SetCommand("enter_tent", this);
+			defenders_outside_2.SetCommand("guard_enter", this);
 			defenders_outside_2.Clear();
 		}
 		else {
@@ -155,11 +155,11 @@ if (set.IsIndependent) {
 						pt_1.Rot(90);
 						pt_2 = pt_1 + pt_pos;
 						pt_2.IntoRect(rc);
-						u.AddCommand(false, "guardpatrol", pt_2);
+						u.AddCommand(false, "guard_patrol", pt_2);
 					}
 				}
 			}
-			for (i = defenders_outside_2.count - 1; i >= 0; i -= 1) {
+			for (i = defenders_outside_2.count - 1; i >= 0; i -= 1) {//do not allow units to wander too far
 				u = defenders_outside_2[i].AsUnit();
 				if (u.IsDead)
 					defenders_outside_2.Remove(u);
@@ -173,7 +173,7 @@ if (set.IsIndependent) {
 						pt_1.Rot(90);
 						pt_2 = pt_1 + pt_pos;
 						pt_2.IntoRect(rc);
-						u.AddCommand(false, "guardpatrol", pt_2);
+						u.AddCommand(false, "guard_patrol", pt_2);
 					}
 				}
 			}
@@ -189,12 +189,12 @@ if (set.IsIndependent) {
 						pt_1.Rot(rand(360));
 						pt_2 = pt_1 + pt_pos;
 						pt_2.IntoRect(rc);
-						u.SetCommand("guardadvance", pt_2);
+						u.SetCommand("guard_advance", pt_2);
 						for (j = 0; j < 4; j += 1) {
 							pt_1.Rot(90);
 							pt_2 = pt_1 + pt_pos;
 							pt_2.IntoRect(rc);
-							u.AddCommand(false, "guardpatrol", pt_2);
+							u.AddCommand(false, "guard_patrol", pt_2);
 						}
 					}
 			}
@@ -209,12 +209,12 @@ if (set.IsIndependent) {
 						pt_1.Rot(rand(360));
 						pt_2 = pt_1 + pt_pos;
 						pt_2.IntoRect(rc);
-						u.SetCommand("guardadvance", pt_2);
+						u.SetCommand("guard_advance", pt_2);
 						for (j = 0; j < 4; j += 1) {
 							pt_1.Rot(90);
 							pt_2 = pt_1 + pt_pos;
 							pt_2.IntoRect(rc);
-							u.AddCommand(false, "guardpatrol", pt_2);
+							u.AddCommand(false, "guard_patrol", pt_2);
 						}
 					}
 			}
@@ -274,10 +274,9 @@ else
 	ObjList macemen, hoplites, units_in;
 	Obj o;
 	point pt;
-	int refresh, food_sales, food_income, gold_income, required_gold, min_resource;
+	int food_sales, food_income, gold_income, required_gold, min_resource;
 	bool is_selling_food, is_selling_gold, is_gold_outpost = false;
 
-	refresh = GetConst("OutpostRefresh");
 	food_sales = GetConst("GOutpostFoodSales");
 	food_income = GetConst("GOutpostGoldReturn");
 	gold_income = GetConst("ROutpostGoldReturn");
@@ -383,6 +382,6 @@ else
 				}
 		}
 
-		Sleep(refresh);
+		Sleep(2000);
 	}
 }

@@ -23,9 +23,10 @@
 	<method sig="idle" vs="data/subai/eagle_idle.vs" />
 	<method sig="move" vs="data/subai/eagle_move.vs" />
 	<method sig="advance" vs="data/subai/eagle_move.vs" />
-	<method sig="advancealone" vs="data/subai/eagle_move.vs" />
+	<method sig="advance_alone" vs="data/subai/eagle_move.vs" />
 	<method sig="advance_aggressive" vs="data/subai/eagle_move.vs" />
 	<method sig="approach" vs="data/subai/unit_approach_flying.vs" />
+	<method sig="follow" vs="data/subai/unit_approach_flying.vs" />
 	<method sig="attack" vs="data/subai/unit_approach_flying.vs" />
 	<method sig="ai_attack_gate" vs="data/subai/unit_approach_flying.vs" />
 	<method sig="transport" vs="data/subai/unit_approach_flying.vs" />
@@ -39,8 +40,8 @@
 	<method sig="explore" vs="data/subai/do_nothing_point.vs" />
 	<method sig="wander" vs="data/subai/do_nothing_point.vs" />
 	<method sig="enter" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
-	<method sig="enteralone" vs="data/subai/do_nothing_obj.vs" />
-	<method sig="advanceenter" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="enter_alone" vs="data/subai/do_nothing_obj.vs" />
+	<method sig="advance_enter" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="teleport" vs="data/subai/do_nothing_obj.vs" />
 	<method sig="boardship" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 	<method sig="boardshipcommon" vs="data/subai/do_nothing_obj.vs" />

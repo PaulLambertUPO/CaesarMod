@@ -10,8 +10,8 @@ if (.IsValid)
 
 		while (true) {
 			if (.BestTargetInSquadSightMisZeroDamage.IsAlive) {
-				.AddCommand(true, "guardadvance", pt);
-				.AddCommand(true, "guardengage");
+				.AddCommand(true, "guard_advance", pt);
+				.AddCommand(true, "guard_engage");
 				break;
 			}
 			if (.Goto(pt, 0, 2000, false, 0))
