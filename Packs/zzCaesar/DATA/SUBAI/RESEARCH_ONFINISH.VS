@@ -133,8 +133,6 @@ while (dest != "") {
 				InvalidateDamageFormulaParams();
 			else if (name == "Learning")
 				InvalidateDamageFormulaParams();
-			else if (name == "Ferocity")
-				InvalidateDamageFormulaParams();
 			else if (name == "Mumification") {
 				ObjList ol;
 				Hero h;

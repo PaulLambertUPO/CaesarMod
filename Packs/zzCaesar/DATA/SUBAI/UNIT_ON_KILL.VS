@@ -20,6 +20,44 @@ if (.IsValid)
 
 			.IncKills(1);
 
+			if (rand(3) == 0)
+				if (.health < .maxhealth / 3)
+					if (IsResearched(plr, "Gambler's Fortune")) {
+						.Heal(.maxhealth);
+						CreateFeedback("Heal", this);
+					}
+
+			if (IsResearched(plr, "FerocityResearch")) {
+				if (.stamina < .maxstamina) {
+					.HealStamina(3);
+					CreateFeedback("StaminaBoost", this);
+				}
+				if (.IsHeirOf("CNoble")) {
+					Hero h;
+
+					h = .hero;
+
+					if (h.IsAlive) {
+						Item item;
+
+						item = h.FindItem("Gold");
+
+						if (item.IsValid)
+							item.SetUseCount(item.use_count + 10);
+						else if (h.AddItem("Gold")) {
+							item = h.FindItem("Gold");
+							item.SetUseCount(10);
+						}
+					}
+				}
+			}
+
+			if (IsResearched(plr, "Statue of Zeus"))
+				.Bless();
+
+			if (IsResearched(plr, "Statue of Isis"))
+				.SetFood(MIN(.food + 2, .maxfood));
+
 			//removing items with their on_kill script messes up the givings below because this script is executed before
 			.RemoveItemsOfType("Damage charm");
 			.RemoveItemsOfType("Armor charm");
@@ -100,19 +138,6 @@ if (.IsValid)
 				}
 
 			if (!vict.IsSentry) {
-				if (rand(3) == 0)
-					if (.health < .maxhealth / 3)
-						if (IsResearched(plr, "Gambler's Luck")) {
-							.Heal(.maxhealth);
-							CreateFeedback("Heal", this);
-						}
-
-				if (IsResearched(plr, "Statue of Zeus"))
-					.Bless();
-
-				if (IsResearched(plr, "Statue of Isis"))
-					.SetFood(MIN(.food + 2, .maxfood));
-
 				if (this_is_hero || .IsHeirOf("TValkyrie")) {
 					if (.inherentlevel + 3 <= vict.inherentlevel)
 						if (IsResearched(plr, "Barbaric Tales")) {
@@ -131,26 +156,6 @@ if (.IsValid)
 									}
 							}
 						}
-				}
-				else if (.IsHeirOf("CNoble")) {
-					if (IsResearched(plr, "Ferocity")) {
-						Hero h;
-
-						h = .hero;
-
-						if (h.IsAlive) {
-							Item item;
-
-							item = h.FindItem("Gold");
-
-							if (item.IsValid)
-								item.SetUseCount(item.use_count + 10);
-							else if (h.AddItem("Gold")) {
-								item = h.FindItem("Gold");
-								item.SetUseCount(10);
-							}
-						}
-					}
 				}
 				else if (.IsHeirOf("RLiberatus")) {
 					if (IsResearched(plr, "Liberati triumph")) {

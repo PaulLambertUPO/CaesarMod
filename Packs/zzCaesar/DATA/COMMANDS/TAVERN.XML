@@ -530,7 +530,7 @@
 		param="ReqSet, Gambling, default, SetsPlr, GamblersTestChance, 1, NamePlr, Gambler's Test, default">
 		<src obj="BTavern" />
 	</cmd>
-	<cmd name="Gambler's Luck" priority="6"
+	<cmd name="Gambler's Fortune" priority="6"
 		groupverifier="data/subai/research_verify.vs"
 		key="l"
 		method="research"
@@ -541,7 +541,7 @@
 		rollover="Gambler's Luck"
 		description="Gives every warrior a 33% chance to completely restore the health when below 33% every time that he kills an enemy"
 		researchcommand="yes"
-		param="ReqSet, Gambling, default, NamePlr, Gambler's Luck, default">
+		param="ReqSet, Gambling, default, NamePlr, Gambler's Fortune, default">
 		<src obj="BTavern" />
 	</cmd>
 	<cmd name="Gambler's All-in" priority="7"

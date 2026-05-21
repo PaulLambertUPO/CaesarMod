@@ -27,11 +27,11 @@ else if (nRaceAvail == ImperialRome) {//Greece
 }
 else if (nRaceAvail == Carthage) {
 	if (IsResearched(aiPlayer, "Dark Rituals"))
-		if (!IsResearched(aiPlayer, "Ferocity"))
+		if (!IsResearched(aiPlayer, "FerocityResearch"))
 			if (rand(5) == 0)
-				strTech = "Ferocity";
+				strTech = "FerocityResearch";
 			else if (set.gold >= 3500)
-				strTech = "Ferocity";
+				strTech = "FerocityResearch";
 }
 else if (nRaceAvail == Egypt) {
 	if (IsResearched(set, "Cult of Osiris"))

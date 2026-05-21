@@ -23,19 +23,19 @@ if (.IsValid)
 					}
 
 				if (.Stop(2000)) {
-					if (.AI) {
-						if (rand(6) == 0)
-							if (.IsEnemyInSquadSight) {
-								set = GetGAIKA(this).settlement;
-								if (set.IsValid)
-									if (set.IsStronghold)
-										if (set.IsEnemy(.player))
-											if (.DistTo(set.GetCentralBuilding()) < 700) {
-												.AddCommand(true, "capture", set.GetCentralBuilding());
-												break;
-											}
-							}
-						if (.hero.IsDead)
+					if (.AI)
+						if (.hero.IsDead) {
+							if (rand(6) == 0)
+								if (.IsEnemyInSquadSight) {
+									set = GetGAIKA(this).settlement;
+									if (set.IsValid)
+										if (set.IsStronghold)
+											if (set.IsEnemy(.player))
+												if (.DistTo(set.GetCentralBuilding()) < 700) {
+													.AddCommand(true, "capture", set.GetCentralBuilding());
+													break;
+												}
+								}
 							if (IsWaterLsa(GetGAIKA(this).LSA)) {//leave the coast
 								pt = .pos + RandomOffset(500);
 								if (pt.InRect(GetMapRect()))
@@ -45,7 +45,7 @@ if (.IsValid)
 											break;
 										}
 							}
-					}
+						}
 
 					.Idle(2000);
 					if (rand(10) == 0) {

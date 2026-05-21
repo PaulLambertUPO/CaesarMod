@@ -231,7 +231,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 
 		if (strTech3 != "")
 			if (IsResearched(aiPlayer, strTech3)) {
-				strTech3 = "Ferocity";
+				strTech3 = "FerocityResearch";
 				if (IsResearched(aiPlayer, strTech3))
 					strTech3 = "";
 			}
@@ -285,7 +285,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 			}
 	}
 	else if (nRace == Britain) {
-		//challenges -> nobility -> nobility_offence_defence -> gambler_day_luck_test -> steel_weapons | parallel gambler_day_luck_test after challenges | parallel steel_weapons after challenges
+		//challenges -> nobility -> nobility_offence_defence -> gambler_day_fortune_test -> steel_weapons | parallel gambler_day_fortune_test after challenges | parallel steel_weapons after challenges
 		strTech1 = "Challenges";
 		if (IsResearched(set, strTech1)) {
 			strTech1 = "BNobility";
@@ -311,7 +311,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 			if (IsResearched(set, strTech2)) {
 				strTech2 = "Gambler's Day";
 				if (IsResearched(aiPlayer, strTech2)) {
-					strTech2 = "Gambler's Luck";
+					strTech2 = "Gambler's Fortune";
 					if (IsResearched(aiPlayer, strTech2)) {
 						strTech2 = "Gambler's Test";
 						if (IsResearched(aiPlayer, strTech2))

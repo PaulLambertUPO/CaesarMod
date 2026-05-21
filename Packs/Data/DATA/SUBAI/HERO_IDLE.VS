@@ -62,6 +62,8 @@ if (.IsValid)
 								go_back = true;
 						}
 						if (go_back) {
+							if (.AI)
+								break;
 							o.Clear();
 							while (!.Goto(pt_start, 0, 1500, false, 2500))
 								if (.IsVisible) {

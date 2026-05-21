@@ -16,7 +16,7 @@ difficulty = GetDifficulty();
 	b.Research("Mahout Mastery");
 	b.Research("Spoils of war");
 	b.Research("Mercenary pact");
-	b.Research("Ferocity");
+	b.Research("FerocityResearch");
 }
 
 set2 = GetSettlement("S_Town2");

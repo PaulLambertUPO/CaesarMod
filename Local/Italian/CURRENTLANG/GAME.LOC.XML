@@ -1498,7 +1498,7 @@
 <translationtableentry text="Offensive tactics" result="Attacco esperto" />
 <translationtableentry text="The unit adds the level to damage" result="L'unità aggiunge il livello al valore di attacco" />
 <translationtableentry text="Parry" result="Contenimento" />
-<translationtableentry text="If used, the unit can neither deal nor receive damage as long as it has stamina available.\nEvery hit received costs 1 stamina and every hit inflicted restores 1" result="Se si utilizza, l'unità non può né infliggere né ricevere danni fintanto che ha energia disponibile.\nOgni colpo ricevuto consuma 1 punto di energia e ogni colpo inflitto ne fornisce 1" />
+<translationtableentry text="If used, the unit can neither deal nor receive damage as long as it has stamina available. Every hit received costs 1 stamina and every hit inflicted restores 1" result="Se si utilizza, l'unità non può né infliggere né ricevere danni fintanto che ha energia disponibile. Ogni colpo ricevuto consuma 1 punto di energia e ogni colpo inflitto ne fornisce 1" />
 <translationtableentry text="Penetration" result="Perforazione" />
 <translationtableentry text="The unit ignores enemy armor and 'Defense skill', 'Deflection' and 'Defensive tactics' specials (it does not affect heroes)" result="L'unità ignora la difesa nemica e le caratteristiche speciali 'Difesa speciale', 'Immunità' e 'Tattiche difensive' (non ha effetto sugli eroi)" />
 <translationtableentry text="Power strike" result="Attacco letale" />

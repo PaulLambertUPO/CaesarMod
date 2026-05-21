@@ -6,7 +6,7 @@ set = GetSettlement("S_GreenTown");
 
 researches[0] = "Gambler's Day";
 researches[1] = "Gambler's Test";
-researches[2] = "Gambler's Luck";
+researches[2] = "Gambler's Fortune";
 researches[3] = "BNobility";
 researches[4] = "Noble Offence";
 researches[5] = "Noble Defence";

@@ -73,7 +73,7 @@
 		sclass="CNoble">
 		<src obj="CTemple" />
 	</cmd>
-	<cmd name="Ferocity" priority="7"
+	<cmd name="FerocityResearch" priority="7"
 		queueicon="gameres/icons/upgrades/ferocity.bmp"
 		key="f"
 		button="research/ferocity.bmp"
@@ -84,7 +84,7 @@
 		rollover="Ferocity"
 		description="Makes all units restore 3 stamina at every kill and Nobles also give 10 gold to their commanding hero"
 		method="research"
-		param="ReqPlr, Dark Rituals, default, NamePlr, Ferocity, default">
+		param="ReqPlr, Dark Rituals, default, NamePlr, FerocityResearch, default">
 		<src obj="CTemple" />
 	</cmd>
 </commands>
