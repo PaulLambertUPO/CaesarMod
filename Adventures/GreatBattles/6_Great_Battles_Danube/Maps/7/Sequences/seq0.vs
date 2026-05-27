@@ -1,12 +1,12 @@
 ObjList valkyries;
 int i;
 
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
+
 DiplCeaseFire(1, 2, true);
 DiplCeaseFire(2, 1, true);
-DiplCeaseFire(1, 3, true);
-DiplCeaseFire(3, 1, true);
-DiplCeaseFire(2, 3, true);
-DiplCeaseFire(3, 2, true);
+DiplCeaseFire(4, 5, true);
+DiplCeaseFire(5, 4, true);
 
 EnvWriteInt("/En_LocalResistenceSpotted", 0);
 EnvWriteInt("/En_ArchersAlone", 0);

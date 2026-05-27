@@ -24327,8 +24327,8 @@
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="449"
-	y="12727"
+	x="460"
+	y="12738"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24352,8 +24352,8 @@
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="348"
-	y="13359"
+	x="433"
+	y="13341"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24364,8 +24364,8 @@
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="1027"
-	y="13548"
+	x="1031"
+	y="13538"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24390,8 +24390,8 @@
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="4844"
-	y="7883"
+	x="291"
+	y="8936"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24402,50 +24402,14 @@
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="5540"
-	y="7748"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse03"
-		num="1803"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="5005"
-	y="8630"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse05"
-		num="1804"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="271"
-	y="8944"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse05"
-		num="1805"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="967"
-	y="8809"
+	x="977"
+	y="8834"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="1806"
+		num="1803"
 	data="-1"
 	player="5"
 	healthperc="100"
@@ -24458,85 +24422,13 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="1807"
+		num="1804"
 	player="5"
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="433"
-	y="9693"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse05"
-		num="1808"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="5829"
-	y="9754"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse05"
-		num="1809"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="5388"
-	y="10296"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse03"
-		num="1810"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="6113"
-	y="10825"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse05"
-		num="1811"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="5616"
-	y="13540"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse05"
-		num="1812"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="5299"
-	y="13736"
-	flags="0x80800010"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Rhouse03"
-		num="1813"
-	player="5"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="6035"
-	y="14277"
+	x="436"
+	y="9670"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24556,7 +24448,7 @@
 			name="S_BritVillage1">
 	<scriptobj
 		class="BHouse01"
-		num="1814"
+		num="1805"
 	player="1"
 	healthperc="100"
 	stamina="20"
@@ -24568,7 +24460,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="BHouse02"
-		num="1815"
+		num="1806"
 	player="1"
 	healthperc="100"
 	stamina="20"
@@ -24580,7 +24472,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="BHouse01"
-		num="1816"
+		num="1807"
 	player="1"
 	healthperc="100"
 	stamina="20"
@@ -24592,7 +24484,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="BVillage"
-		num="1817"
+		num="1808"
 	data="-1"
 	player="1"
 	healthperc="100"
@@ -24619,7 +24511,7 @@
 			name="S_BritonOutpost1">
 	<scriptobj
 		class="BOutpost"
-		num="1818"
+		num="1809"
 	player="3"
 	healthperc="100"
 	stamina="20"
@@ -24645,7 +24537,7 @@
 			name="S_BritonOutpost2">
 	<scriptobj
 		class="BOutpost"
-		num="1819"
+		num="1810"
 	player="3"
 	healthperc="100"
 	stamina="20"
@@ -24671,7 +24563,7 @@
 			name="S_BritonOutpost3">
 	<scriptobj
 		class="BOutpost"
-		num="1820"
+		num="1811"
 	player="3"
 	healthperc="100"
 	stamina="20"
@@ -24697,7 +24589,7 @@
 			name="S_RomanOutpost3">
 	<scriptobj
 		class="ROutpost"
-		num="1821"
+		num="1812"
 	player="5"
 	healthperc="100"
 	stamina="20"
@@ -24723,7 +24615,7 @@
 			name="S_RomanOutpost4">
 	<scriptobj
 		class="ROutpost"
-		num="1822"
+		num="1813"
 	player="5"
 	healthperc="100"
 	stamina="20"
@@ -24749,7 +24641,7 @@
 			name="S_RomanOutpost5">
 	<scriptobj
 		class="ROutpost"
-		num="1823"
+		num="1814"
 	player="5"
 	healthperc="100"
 	stamina="20"
@@ -24775,7 +24667,7 @@
 			name="S_RomanOutpost6">
 	<scriptobj
 		class="ROutpost"
-		num="1824"
+		num="1815"
 	player="5"
 	healthperc="100"
 	stamina="20"
@@ -24801,7 +24693,7 @@
 			name="S_RomanOutpost1">
 	<scriptobj
 		class="ROutpost"
-		num="1825"
+		num="1816"
 	player="5"
 	healthperc="100"
 	stamina="20"
@@ -24827,7 +24719,7 @@
 			name="S_RomanOutpost2">
 	<scriptobj
 		class="ROutpost"
-		num="1826"
+		num="1817"
 	player="5"
 	healthperc="100"
 	stamina="20"
@@ -24852,8 +24744,32 @@
 			icon=""
 			name="S_RomeVillage3">
 	<scriptobj
+		class="Rhouse05"
+		num="1818"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="4860"
+	y="7847"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rhouse05"
+		num="1819"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="5514"
+	y="7746"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
 		class="RVillage"
-		num="1827"
+		num="1820"
 	data="-1"
 	player="5"
 	healthperc="100"
@@ -24861,6 +24777,18 @@
 	inventorysize="0"
 	x="5359"
 	y="8313"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rhouse03"
+		num="1821"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="4989"
+	y="8603"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24879,8 +24807,32 @@
 			icon=""
 			name="S_RomeVillage4">
 	<scriptobj
+		class="Rhouse05"
+		num="1822"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="5826"
+	y="9760"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rhouse05"
+		num="1823"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="5379"
+	y="10294"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
 		class="RVillage"
-		num="1828"
+		num="1824"
 	data="-1"
 	player="5"
 	healthperc="100"
@@ -24888,6 +24840,18 @@
 	inventorysize="0"
 	x="6197"
 	y="10257"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rhouse03"
+		num="1825"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="6121"
+	y="10829"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -24906,8 +24870,20 @@
 			icon=""
 			name="S_RomeVillage5">
 	<scriptobj
+		class="Rhouse05"
+		num="1826"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="5647"
+	y="13537"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
 		class="RVillage"
-		num="1829"
+		num="1827"
 	data="-1"
 	player="5"
 	healthperc="100"
@@ -24915,6 +24891,30 @@
 	inventorysize="0"
 	x="6199"
 	y="13482"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rhouse05"
+		num="1828"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="5345"
+	y="13702"
+	flags="0x80800010"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rhouse03"
+		num="1829"
+	player="5"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="6021"
+	y="14288"
 	flags="0x80800010"
 	dir.x="0"
 	dir.y="1"/>
@@ -25120,10 +25120,10 @@
 			maxpopulation="0"
 			extrasentries="0"
 			maxgold="0"
-			maxfood="0"
+			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -27282,11 +27282,11 @@
 			<obj
 				num="1787"/>
 			<obj
-				num="1818"/>
+				num="1809"/>
 			<obj
-				num="1819"/>
+				num="1810"/>
 			<obj
-				num="1820"/>
+				num="1811"/>
 			<obj
 				num="1682"/>
 			<obj
@@ -30800,7 +30800,7 @@
 			name="BritVillage1"
 			type="0">
 			<obj
-				num="1817"/>
+				num="1808"/>
 		</group>
 		<group
 			name="BritVillage2"
@@ -30824,19 +30824,19 @@
 			name="BritonOutpost1"
 			type="0">
 			<obj
-				num="1818"/>
+				num="1809"/>
 		</group>
 		<group
 			name="BritonOutpost2"
 			type="0">
 			<obj
-				num="1819"/>
+				num="1810"/>
 		</group>
 		<group
 			name="BritonOutpost3"
 			type="0">
 			<obj
-				num="1820"/>
+				num="1811"/>
 		</group>
 		<group
 			name="BrutalRomeHero"
@@ -31028,37 +31028,37 @@
 			name="RomanOutpost1"
 			type="0">
 			<obj
-				num="1825"/>
+				num="1816"/>
 		</group>
 		<group
 			name="RomanOutpost2"
 			type="0">
 			<obj
-				num="1826"/>
+				num="1817"/>
 		</group>
 		<group
 			name="RomanOutpost3"
 			type="0">
 			<obj
-				num="1821"/>
+				num="1812"/>
 		</group>
 		<group
 			name="RomanOutpost4"
 			type="0">
 			<obj
-				num="1822"/>
+				num="1813"/>
 		</group>
 		<group
 			name="RomanOutpost5"
 			type="0">
 			<obj
-				num="1823"/>
+				num="1814"/>
 		</group>
 		<group
 			name="RomanOutpost6"
 			type="0">
 			<obj
-				num="1824"/>
+				num="1815"/>
 		</group>
 		<group
 			name="RomeTown"
@@ -31076,25 +31076,25 @@
 			name="RomeVillage2"
 			type="0">
 			<obj
-				num="1806"/>
+				num="1803"/>
 		</group>
 		<group
 			name="RomeVillage3"
 			type="0">
 			<obj
-				num="1827"/>
+				num="1820"/>
 		</group>
 		<group
 			name="RomeVillage4"
 			type="0">
 			<obj
-				num="1828"/>
+				num="1824"/>
 		</group>
 		<group
 			name="RomeVillage5"
 			type="0">
 			<obj
-				num="1829"/>
+				num="1827"/>
 		</group>
 		<group
 			name="RuinDruid1"

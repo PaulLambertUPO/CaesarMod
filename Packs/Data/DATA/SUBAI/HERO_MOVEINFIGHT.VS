@@ -32,8 +32,8 @@ if (.IsValid)
 					else
 						while (.Attack(o))
 							;
-
-				Sleep(500);
+				else
+					Sleep(500);
 
 				if (GetTime() > start_time + 10000)
 					break;

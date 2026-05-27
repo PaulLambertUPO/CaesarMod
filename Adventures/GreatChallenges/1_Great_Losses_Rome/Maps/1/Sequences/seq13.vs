@@ -9,8 +9,11 @@ while (true) {
 			if (NO_Ostia.obj.player != 4) {
 				RemoveNote("Capture Ostia.");
 				SpawnGroup("Q_OstiaReinforcementRome");
+				Q_OstiaReinforcementRome.SetPlayer(4);
 				RunAIHelper("RetakeOstia", "siege", "Q_OstiaReinforcementRome", "S_Ostia");
 				retake = true;
+				Sleep(30000);
+				break;
 			}
 		Sleep(6000);
 		timer += 1;
@@ -20,7 +23,7 @@ while (true) {
 		Sleep(120000 - difficulty * 60000);
 		SpawnGroup("Q_ReinforcementBoat");
 		Q_ReinforcementBoat.SetCommand("move", AreaCenter("A_BoatDest"));
-		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_ShipArrival"), 1, 1000, 15000);
+		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_ShipArrival"), 1, -1, 15000);
 		Sleep(5000);
 		SpawnGroup("Q_OstiaReinforcementRome");
 		Q_OstiaReinforcementRome.SetPlayer(4);
@@ -46,23 +49,23 @@ while (true) {
 		}
 		Sleep(5000);
 		Q_ReinforcementBoat.SetCommand("move", AreaCenter("A_BoatFinalRun"));
-		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_BoatFinalRun"), 1, 1000, 15000);
+		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_BoatFinalRun"), 1, -1, 15000);
 		Q_ReinforcementBoat.Erase();
 	}
 	else {
 		Sleep(difficulty * 60000);
 		SpawnGroup("Q_ReinforcementBoat");
 		Q_ReinforcementBoat.SetCommand("move", AreaCenter("A_BoatDest"));
-		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_ShipArrival"), 1, 1000, 20000);
+		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_ShipArrival"), 1, -1, 15000);
 		Sleep(5000);
 		r = rand(100);
-		if (r < 50) {
+		if (r < 40) {
 			SpawnGroup("Q_OstiaReinforcementCarthage1");
 			Q_OstiaReinforcementCarthage1.SetPlayer(1);
 			Q_OstiaReinforcementCarthage1.SetCommand("enter", NO_Ostia);
 			Q_OstiaReinforcementCarthage1.RemoveFromGroup("Q_OstiaReinforcementCarthage1");
 		}
-		else if (r < 85) {
+		else if (r < 75) {
 			SpawnGroup("Q_OstiaReinforcementCarthage2");
 			Q_OstiaReinforcementCarthage2.SetPlayer(1);
 			Q_OstiaReinforcementCarthage2.SetCommand("enter", NO_Ostia);
@@ -76,7 +79,7 @@ while (true) {
 		}
 		Sleep(5000);
 		Q_ReinforcementBoat.SetCommand("move", AreaCenter("A_BoatFinalRun"));
-		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_BoatFinalRun"), 1, 1000, 15000);
+		WaitQueryCountBetween(ClassPlayerAreaObjs(cShipL, 7, "A_BoatFinalRun"), 1, -1, 15000);
 		Q_ReinforcementBoat.Erase();
 	}
 }

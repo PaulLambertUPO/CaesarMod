@@ -1,5 +1,7 @@
 int i;
 
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
+
 DiplCeaseFire(1, 2, true);
 DiplCeaseFire(2, 1, true);
 DiplCeaseFire(1, 3, true);

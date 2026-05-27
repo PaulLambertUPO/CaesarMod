@@ -10,6 +10,8 @@ SpawnGroup("Q_InvisibleMessengers");
 ol = Q_InvisibleMessengers.GetObjList();
 for (i = 0; i < ol.count; i += 1)
 	if (ol[i].DistTo(NO_hero.obj.posRH) < dist) {
+		if (messenger.IsValid)
+			messenger.Erase();
 		dist = ol[i].DistTo(NO_hero.obj.posRH);
 		messenger = ol[i];
 	}

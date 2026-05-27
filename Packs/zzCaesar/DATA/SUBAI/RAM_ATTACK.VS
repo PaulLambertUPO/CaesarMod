@@ -19,7 +19,7 @@ if (.IsValid)
 					rng = .radius + 10;
 					target_pos = target.pos;
 
-					if (target.AsGate().IsValid) {
+					if (target.IsGate) {
 						point pt_0, pt_1;
 
 						pt_0 = target.GetPoint(17, 0);

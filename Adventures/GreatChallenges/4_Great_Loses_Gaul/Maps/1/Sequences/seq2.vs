@@ -29,12 +29,12 @@ Sleep(500);
 AttackArea(R_Invaders, "A_FinalWave");
 for (i = 0; i < 10 && !R_Invaders.IsEmpty(); i += 1)
 	Sleep(18000);
-AttackArea(R_Invaders, "A_GergoviaEntrance");
+AttackArea(R_Invaders, "A_FinalSiege");
 for (i = 0; i < 10 && !R_Invaders.IsEmpty(); i += 1)
-	Sleep(3000);
+	Sleep(6000);
 
 while (!R_Invaders.IsEmpty()) {
-	AttackArea(Subtract(R_Invaders, Group("R_Siegers")), "A_GergoviaEntrance");
+	AttackArea(Subtract(R_Invaders, Group("R_Siegers")), "A_FinalSiege");
 	ClassPlayerAreaObjs(cMilitary, 4, "A_FinalSiege").AddToGroup("R_Siegers");
 	if (!IsAIHelperRunning("FinalSiege"))
 		RunAIHelper("FinalSiege", "siege", "R_Siegers", "S_Gergovia");

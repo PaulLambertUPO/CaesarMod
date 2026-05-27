@@ -25,7 +25,7 @@ while (true) {
 		for (i = 0; i < ships.count; i += 1) {
 			sh = ships[i].AsShip();
 			if (sh.IsValid)
-				if (sh.GetUnitsOnBoard().count <= 0)
+				if (sh.UnitsCount <= 0)
 					sh.Damage(sh.maxhealth);
 				else if (sh.command != "unboardall")
 					sh.SetCommand("unboardall", GetRandomPointInArea("A_DropPelusio"));

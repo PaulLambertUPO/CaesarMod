@@ -1,7 +1,7 @@
 int move_all_to, move_1_to, move_2_to;
 
 while (true) {
-	Sleep(10000);
+	Sleep(15000);
 	if (Attackers.IsEmpty()) {
 		move_all_to = 0;
 		move_1_to = 0;

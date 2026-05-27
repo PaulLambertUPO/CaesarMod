@@ -14375,7 +14375,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1078"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14389,7 +14389,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1079"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14403,7 +14403,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1080"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14417,7 +14417,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1081"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14431,7 +14431,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1082"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14445,7 +14445,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1083"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14459,7 +14459,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1084"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14473,7 +14473,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1085"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14487,7 +14487,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1086"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"
@@ -14501,7 +14501,7 @@
 	<scriptobj
 		class="IMountaineer"
 		num="1087"
-	Level="0"
+	Level="13"
 	UnitFlags="0"
 	player="4"
 	healthperc="100"

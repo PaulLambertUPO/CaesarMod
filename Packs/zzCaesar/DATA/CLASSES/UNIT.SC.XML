@@ -40,7 +40,7 @@
 	<method sig="enter_alone" vs="data/subai/unit_enter.vs" />
 	<method sig="advance_enter" vs="data/subai/unit_advance_enter.vs" />
 	<method sig="patrol" vs="data/subai/unit_patrol.vs" />
-	<method sig="approach" vs="data/subai/unit_approach.vs" verify="data/subai/unit_approach_verify.vs" />
+	<method sig="approach" vs="data/subai/unit_approach.vs" />
 	<method sig="follow" vs="data/subai/unit_follow.vs" verify="data/subai/unit_follow_verify.vs" />
 	<method sig="getitems" vs="data/subai/unit_getitems.vs" />
 	<method sig="getitem" vs="data/subai/unit_getitem.vs" />

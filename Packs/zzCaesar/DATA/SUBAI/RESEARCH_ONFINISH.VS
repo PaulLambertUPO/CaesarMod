@@ -267,7 +267,7 @@ while (dest != "") {
 						if (!o.AsBuilding().IsBroken)
 							o.SetHealth(o.maxhealth);
 					}
-					else if (o.AsGate().IsValid) {
+					else if (o.IsGate) {
 						o.SetMaxHealth(o.maxhealth + o.maxhealth / 2);
 						if (!o.AsBuilding().IsBroken)
 							o.SetHealth(o.maxhealth);

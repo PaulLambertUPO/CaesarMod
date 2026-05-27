@@ -1,6 +1,8 @@
 ObjList ol;
 int i;
 
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
+
 DiplCeaseFire(1, 2, true);
 DiplCeaseFire(2, 1, true);
 
@@ -8,10 +10,6 @@ DiplShareSupport(1, 2, true);
 DiplShareSupport(2, 1, true);
 
 ExploreArea(1, "A_RomanTown");
-
-GiveNote("CaptureRomans");
-GiveNote("LoseTown");
-GiveNote("LoseViriato");
 
 EnvWriteInt("/En_DruidFound", 0);
 EnvWriteInt("/En_LaraxFound", 0);
@@ -26,6 +24,10 @@ for (i = 0; i < ol.count; i += 1)
 ol.SetCommand("attach", NO_Viriato);
 
 RunConv("Start");
+
+GiveNote("CaptureRomans");
+GiveNote("LoseTown");
+GiveNote("LoseViriato");
 
 for (i = 1; i <= 2; i += 1)
 	GetNamedObj("Village" + i).SetCommand("tribute", NO_RomanTown);

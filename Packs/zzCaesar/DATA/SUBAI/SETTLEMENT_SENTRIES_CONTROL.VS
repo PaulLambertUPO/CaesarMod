@@ -19,7 +19,7 @@ if (GetConst("NoSentries") == 0)
 
 			for (i = ol.count - 1; i >= 0; i -= 1) {
 				o = ol[i];
-				if (o.AsGate().IsValid) {
+				if (o.IsGate) {
 					no_sentries = false;
 					break;
 				}

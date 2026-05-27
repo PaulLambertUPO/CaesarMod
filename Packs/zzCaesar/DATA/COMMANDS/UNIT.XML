@@ -168,7 +168,6 @@
 		voidgroupdispatch="1"
 		rollover="Take nearby items">
 		<src obj="Unit" />
-		<nsrc obj="ShipBattle" />
 		<nsrc obj="Sentry" />
 		<nsrc obj="RamUnit" />
 		<nsrc obj="Wagon" />

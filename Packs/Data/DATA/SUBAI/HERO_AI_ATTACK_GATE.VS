@@ -1,6 +1,6 @@
 //void, Obj h, Obj g
 
-if (g.AsGate().IsValid) {
+if (g.IsGate) {
 	Hero this;
 
 	this = h.AsHero();

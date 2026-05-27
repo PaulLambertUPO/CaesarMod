@@ -1,3 +1,5 @@
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
+
 DiplCeaseFire(1, 2, true);
 DiplCeaseFire(2, 1, true);
 DiplShareSupport(1, 2, true);
@@ -34,11 +36,11 @@ GiveNote("LoseCondition2");
 GiveNote("SenatorArmy");
 GiveNote("B_Chieftains");
 
-Sleep(500);
-
 Senator.SetCommand("standstill");
 SetShortcutSel(1, 1, Agricola.GetObjList());
 T_S_Sett1.SetCommand("attach", Agricola);
 T_S_Sett1.RemoveFromAllGroups();
+
+Sleep(500);
 
 RunSequence("SpawnGroups");

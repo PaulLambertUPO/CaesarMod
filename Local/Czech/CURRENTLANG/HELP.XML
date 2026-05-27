@@ -1810,7 +1810,7 @@ The enchantress sacrifices herself to restore the stamina of 5 nearby allies.
 			<topic id="CBerberAssassin">
 				<entry hcenter="1" font="large">Berber assassin</entry>
 				<entry image="UI/Icons/CBerberAssassin.bmp">The Berber assassin has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 280</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 320</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 22</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>

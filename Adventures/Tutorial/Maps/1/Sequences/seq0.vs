@@ -3,6 +3,8 @@ Settlement settle_town;
 int time_1, time_2, time_3, i;
 bool first_time = true;
 
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
+
 Instructor.SetCommand("standstill");
 
 settle_town = GetSettlement("Lindum");
