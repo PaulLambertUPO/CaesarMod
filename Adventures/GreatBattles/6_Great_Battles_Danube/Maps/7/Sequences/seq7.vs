@@ -1,4 +1,4 @@
-WaitEnvIntBetween("/En_TotalWaves", (8 + 2 * GetDifficulty()), 100, -1);
+WaitEnvIntBetween("/En_TotalWaves", 8 + 2 * GetDifficulty(), -1, -1);
 
 Sleep(10000);
 

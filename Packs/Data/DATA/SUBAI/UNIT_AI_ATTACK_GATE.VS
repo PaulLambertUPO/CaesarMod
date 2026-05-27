@@ -1,6 +1,6 @@
 //void, Obj u, Obj g
 
-if (g.AsGate().IsValid) {
+if (g.IsGate) {
 	Unit this;
 
 	this = u.AsUnit();

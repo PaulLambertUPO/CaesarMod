@@ -127,6 +127,10 @@
 		- 3 = gsDivineSacrifice
 		- 4 = gsBloodlust
 		- 5 = gsTribute
+	- "Conquest" game mode territory status values change the colour in the world map:
+		- 0 = tsEnemy
+		- 1 = tsOwned
+		- 2 = tsDisabled
 	- MaxGAIKAPriority = 100
 	- classes are str values referenced by prepending "c" before the class id (e.g. cCNoble, cTTownhall, ...), replacing spacing with underscores does not work properly
 -->
@@ -167,12 +171,12 @@
 	<param type="int" ptr="1" /><!-- variable to modify -->
 	<param type="int" /><!-- value to modify by -->
 </func>
-<!-- Performs the 'bitwise AND' operation and returns the result (useful for checking multiple flags stored in a single integer) -->
+<!-- Performs the "bitwise AND" operation and returns the result (useful for checking multiple flags stored in a single integer) -->
 <func name="\a" returns="int">
 	<param type="int" /><!-- first operand -->
 	<param type="int" /><!-- second operand -->
 </func>
-<!-- Performs the 'bitwise OR' operation and returns the result (useful for checking multiple flags stored in a single integer) -->
+<!-- Performs the "bitwise OR" operation and returns the result (useful for checking multiple flags stored in a single integer) -->
 <func name="|" returns="int">
 	<param type="int" /><!-- first operand -->
 	<param type="int" /><!-- second operand -->
@@ -332,17 +336,17 @@
 <func name="!" returns="bool">
 	<param type="bool" /><!-- value to invert -->
 </func>
-<!-- Checks if two booleans are both true (logical AND) | WARNING: with complex expressions, it is better to use multiple 'if' clauses since the script language has no short-circuit evaluation -->
+<!-- Checks if two booleans are both true (logical AND) | WARNING: with complex expressions, it is better to use multiple "if" clauses since the script language has no short-circuit evaluation -->
 <func name="\a\a" returns="bool">
 	<param type="bool" /><!-- first value -->
 	<param type="bool" /><!-- second value -->
 </func>
-<!-- Checks if at least one of two booleans is true (logical OR) | WARNING: with complex expressions, it is better to use an 'else-if' clause since the script language has no short-circuit evaluation -->
+<!-- Checks if at least one of two booleans is true (logical OR) | WARNING: with complex expressions, it is better to use an "else-if" clause since the script language has no short-circuit evaluation -->
 <func name="||" returns="bool">
 	<param type="bool" /><!-- first value -->
 	<param type="bool" /><!-- second value -->
 </func>
-<!-- Checks if two booleans are different (logical XOR) | WARNING: with complex expressions, it is better to use multiple 'if' clauses since the script language has no short-circuit evaluation -->
+<!-- Checks if two booleans are different (logical XOR) | WARNING: with complex expressions, it is better to use multiple "if" clauses since the script language has no short-circuit evaluation -->
 <func name="^" returns="bool">
 	<param type="bool" /><!-- first value -->
 	<param type="bool" /><!-- second value -->
@@ -410,21 +414,21 @@
 	<param type="str" />
 	<param type="str" />
 </func>
-<!-- Searches the string for the first occurrence of the character corresponding to the ASCII integer value (e.g. 'A' = 65, 'a' = 97) and returns the index, -1 if not found | WARNING: non-ASCII characters (e.g. 'à') are not supported well and make the function return seemingly random values -->
+<!-- Searches the string for the first occurrence of the character corresponding to the ASCII integer value (e.g. "A" = 65, "a" = 97) and returns the index, -1 if not found | WARNING: non-ASCII characters (e.g. "à") are not supported well and make the function return seemingly random values -->
 <func name="FindChrPos" returns="int">
 	<param type="str" /><!-- string to search in -->
 	<param type="int" /><!-- ASCII integer value of the character to search for -->
 </func>
-<!-- Searches the string for the character found at the index of the integer value and returns the corresponding ASCII integer value (e.g. 'A' = 65, 'a' = 97) | WARNING: non-ASCII characters (e.g. 'à') or indexes outside the string make the funtion return random values -->
+<!-- Searches the string for the character found at the index of the integer value and returns the corresponding ASCII integer value (e.g. "A" = 65, "a" = 97) | WARNING: non-ASCII characters (e.g. "à") or indexes outside the string make the funtion return random values -->
 <func name="GetChr" returns="int">
 	<param type="str" /><!-- string to search in -->
 	<param type="int" /><!-- index of the character to get -->
 </func>
-<!-- WARNING: this function always returns false, even if the string is empty ("") -->
+<!-- WARNING: this function always returns false, even if the string is uninitialized/empty ("") -->
 <func name="IsNull" returns="bool">
 	<param type="str" /><!-- string to check -->
 </func>
-<!-- Returns the length of a string (number of bytes) | WARNING: non-ASCII characters (e.g. 'à') occupy more than one byte -->
+<!-- Returns the length of a string (number of bytes) | WARNING: non-ASCII characters (e.g. "à") occupy more than one byte -->
 <func name="StrLen" returns="int">
 	<param type="str" /><!-- string to get the length of (in bytes) -->
 </func>
@@ -438,10 +442,10 @@
 <func name="Str2Int" returns="int">
 	<param type="str" /><!-- string to convert -->
 </func>
-<!-- Checks if the 'bitwise AND' operation performed between two integers returns a value different from 0, ignoring the leading bits in excess of the second integer if it is greater than the first (e.g. IsFlagSet(2, 5) = false (10 & 101 -> 10 & 01 = 0) -->
+<!-- Checks if the "bitwise AND" operation performed between two integers returns a value different from 0, ignoring the leading bits in excess of the second integer if it is greater than the first (e.g. IsFlagSet(2, 5) = false (10 & 101 -> 10 & 01 = 0) -->
 <func name="IsFlagSet" returns="bool">
 	<param type="int" /><!-- first operand -->
-	<param type="int" /><!-- second operand ('cut' to the first) -->
+	<param type="int" /><!-- second operand ("cut" to the first) -->
 </func>
 <!-- Updates the value of an integer variable by using the boolean value to either set (true) or unset (false) the bit mask corresponding to the second integer, considering the leading bits in excess of the latter if it is greater than the former (e.g. x = 6 -> SetFlag(x, 12, true) -> x = 14 (110 + 1100 -> 0110 + 1100 = 14|1110)) (e.g. x = 14 -> SetFlag(x, 5, false) -> x = 10 (1110 - 101 -> 1110 - 0101 = 10|1010))-->
 <func name="SetFlag" returns="int">
@@ -720,10 +724,6 @@
 <!-- Returns a Flying reference/handle from the object; the validity depends on the cpp_class value of the object itself -->
 <func name="Obj::AsFlying" returns="Flying">
 </func>
-<!-- Returns the race value of the class id -->
-<func name="GetClassRace" returns="int">
-	<param type="str" /><!-- class id -->
-</func>
 <!-- Returns the race integer value of the object -->
 <func name="Obj::race" returns="int">
 </func>
@@ -748,10 +748,18 @@
 <func name="GetRaceStrPrefLow" returns="str">
 	<param type="int" /><!-- value to convert -->
 </func>
+<!-- Returns the race value of the class id -->
+<func name="GetClassRace" returns="int">
+	<param type="str" /><!-- class id -->
+</func>
+<!-- Returns the race integer value of the specified player (from 1 to 16) | WARNING: using invalid players can cause a crash -->
+<func name="GetPlayerRace" returns="int">
+	<param type="int" /><!-- player id -->
+</func>
 <!-- Returns the slash armor value of the object (resistance against damage_type 1) -->
 <func name="Obj::armor_slash" returns="int">
 </func>
-<!-- Returns the slash armor value of the object (resistance against damage_type 2) -->
+<!-- Returns the pierce armor value of the object (resistance against damage_type 2) -->
 <func name="Obj::armor_pierce" returns="int">
 </func>
 <!-- Returns the current health value of the object (when it drops to 0, units and catapults die, while buildings enter the broken status when below ~25% of the maximum health) -->
@@ -827,6 +835,9 @@
 <!-- Checks if the object class is a "decorative" peasant, that is a descendant of the class hierarchy starting from the "PeasantAmbient" class id -->
 <func name="Obj::IsPeasantAmbient" returns="bool">
 </func>
+<!-- Checks if the object is a water unit, that is if the "water_unit" property value of the object class (CVXUnit) is set to "1" -->
+<func name="Obj::IsWaterUnit" returns="bool">
+</func>
 <!-- Sets the current health value of the object | WARNING: using values that are not between 1 and the maximum health can lead to strange behaviours (e.g. fragmented healthbar on moving units, dead units still selectable, health reset at the first use of the Heal function, ...) -->
 <func name="Obj::SetHealth" returns="void">
 	<param type="int" /><!-- health to set -->
@@ -847,116 +858,148 @@
 <func name="Obj::SetSight" returns="void">
 	<param type="int" /><!-- sight to set -->
 </func>
-<!-- Returns the "stamina_dec_time" property value of the object class, that is how many milliseconds it takes for its stamina to drop by 1 (0 means that stamina does not decay over time) | WARNING: using this function on an invalid object causes a crash -->
+<!-- Returns the "stamina_dec_time" property value of the object class, that is how many milliseconds it takes for its stamina to drop by 1 (0 means that stamina does not decay over time) | WARNING: calling the function on an invalid object causes a crash -->
 <func name="Obj::GetStaminaDecTime" returns="int">
 </func>
+<!-- Returns the number of commands the object has in its queue, also counting the current one; dead/invalid objects return 0 | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::CmdCount" returns="int">
 </func>
+<!-- Returns the number of commands equal to the specified string that the object has in its queue | WARNING: for this function, the commands are not the class methods but those defined by the dedicated command files, that is those issued by right-click (ExecDefaultCmd) or lower interface buttons (ExecCmd) -->
 <func name="Obj::CmdCount" returns="int">
-	<param type="str" />
+	<param type="str" /><!-- commands to count -->
 </func>
+<!-- Cancels all commands in the object queue except the current one -->
 <func name="Obj::ClearCommands" returns="void">
 </func>
+<!-- Cancels the first/current command in the object queue | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::KillCommand" returns="void">
 </func>
+<!-- Adds the specified "void command" (e.g. "engage") to the object queue, using the boolean value to place it at the head (true) or at the tail (false) | WARNING: using true does not interrupt the current command | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::AddCommand" returns="void">
-	<param type="bool" />
-	<param type="str" />
+	<param type="bool" /><!-- priority in the queue (true = head/first, false = tail/last) -->
+	<param type="str" /><!-- command to add -->
 </func>
+<!-- Adds the specified "point command" (e.g. "advance") to the object queue, using the boolean value to place it at the head (true) or at the tail (false) | WARNING: using true does not interrupt the current command | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::AddCommand" returns="void">
-	<param type="bool" />
-	<param type="str" />
-	<param type="point" />
+	<param type="bool" /><!-- priority in the queue (true = head/first, false = tail/last) -->
+	<param type="str" /><!-- command to add -->
+	<param type="point" /><!-- point used by the command -->
 </func>
+<!-- Adds the specified "object command" (e.g. "attack") to the object queue, using the boolean value to place it at the head (true) or at the tail (false) | WARNING: using true does not interrupt the current command | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::AddCommand" returns="void">
-	<param type="bool" />
-	<param type="str" />
-	<param type="Obj" />
+	<param type="bool" /><!-- priority in the queue (true = head/first, false = tail/last) -->
+	<param type="str" /><!-- command to add -->
+	<param type="Obj" /><!-- object used by the command -->
 </func>
+<!-- Adds the specified "void command" (e.g. "engage") to the head of the object queue, restarting the current command when the inserted one ends (it is similar to writing "o.AddCommand(true, o.command, ...); obj.AddCommand(true, str); o.KillCommand();") | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::SneakCommand" returns="void">
-	<param type="str" />
+	<param type="str" /><!-- command name -->
 </func>
+<!-- Clears all commands in the object queue and sets the specified "void command" (e.g. "engage") as the current one | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::SetCommand" returns="void">
-	<param type="str" />
+	<param type="str" /><!-- command name -->
 </func>
+<!-- Clears all commands in the object queue and sets the specified "point command" (e.g. "advance") as the current one | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::SetCommand" returns="void">
-	<param type="str" />
-	<param type="point" />
+	<param type="str" /><!-- command name -->
+	<param type="point" /><!-- point used by the command -->
 </func>
+<!-- Clears all commands in the object queue and sets the specified "object command" (e.g. "attack") as the current one | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::SetCommand" returns="void">
-	<param type="str" />
-	<param type="Obj" />
+	<param type="str" /><!-- command name -->
+	<param type="Obj" /><!-- object used by the command -->
 </func>
+<!-- Makes the object execute the default command defined/inherited by its class based on the validity/type of the specified point and object, replacing the entire command queue if the first boolean is true (as with SetCommand(...)) or executing it as the last command if false (as with AddCommand(false, ...)) and using the modified version of the command ("CTRL + right-click") if the second boolean is true or the standard one if false | WARNING: for this function, the commands are not the class methods but those defined by the dedicated command files -->
 <func name="Obj::ExecDefaultCmd" returns="void">
-	<param type="point" />
-	<param type="Obj" />
-	<param type="bool" />
-	<param type="bool" />
+	<param type="point" /><!-- point used by the command -->
+	<param type="Obj" /><!-- object used by the command -->
+	<param type="bool" /><!-- command queue flag (true = replace, false = append) -->
+	<param type="bool" /><!-- "CTRL" modifier flag (true = set, false = unset) -->
 </func>
+<!-- Makes the object execute the specified command using the specified point and/or object, replacing the entire command queue if the boolean is true (as with SetCommand(...)) or executing it as the last command if false (as with AddCommand(false, ...)) | WARNING: for this function, the commands are not the class methods but those defined by the dedicated command files -->
 <func name="Obj::ExecCmd" returns="void">
-	<param type="str" />
-	<param type="point" />
-	<param type="Obj" />
-	<param type="bool" />
+	<param type="str" /><!-- command name -->
+	<param type="point" /><!-- point used by the command -->
+	<param type="Obj" /><!-- object used by the command -->
+	<param type="bool" /><!-- command queue flag (true = replace, false = append) -->
 </func>
+<!-- Disables the specified command for the object and removes the corresponding button from its selection interface | WARNING: for this function, the commands are not the class methods but those defined by the dedicated command files -->
 <func name="Obj::CmdDisable" returns="void">
-	<param type="str" />
+	<param type="str" /><!-- command name -->
 </func>
+<!-- Enables the specified command for the object and adds the corresponding button to its selection interface if its class is defined in the "src" attribute of the command -->
 <func name="Obj::CmdEnable" returns="void">
-	<param type="str" />
+	<param type="str" /><!-- command name -->
 </func>
+<!-- Checks if the object has a valid reference/handle, that is if it exists in the game (alive or dead) | WARNING: when an object dies and its death animation ends, it will become invalid, so be careful with Obj variables -->
 <func name="Obj::IsValid" returns="bool">
 </func>
-<func name="Item::IsValid" returns="bool">
-</func>
-<func name="Obj::DistTo" returns="int">
-	<param type="point" />
-</func>
-<func name="Obj::DistTo" returns="int">
-	<param type="Obj" />
-</func>
-<func name="Obj::IsEnemy" returns="bool">
-	<param type="Obj" />
-</func>
+<!-- Checks if the object has a valid reference/handle and is alive, that is if it exists in the game and has at least 1 health -->
 <func name="Obj::IsAlive" returns="bool">
 </func>
+<!-- Checks if the object has an invalid reference/handle or is dead, that is if it does not exist in the game or has 0 health -->
 <func name="Obj::IsDead" returns="bool">
 </func>
+<!-- Returns the distance from the object to the specified point, that is from the space occupied considering its radius (equivalent to obj.pos.Dist(pt) - obj.radius) | WARNING: the object position has -1 x-y coordinates if it is in a holder (building/ship) -->
+<func name="Obj::DistTo" returns="int">
+	<param type="point" /><!-- target point -->
+</func>
+<!-- Returns the distance from the object to the specified object, that is from the space occupied considering their radiuses (equivalent to obj1.pos.Dist(obj2.pos) - obj1.radius - obj2.radius) | WARNING: the object positions have -1 x-y coordinates if they are in a holder (building/ship)-->
+<func name="Obj::DistTo" returns="int">
+	<param type="Obj" /><!-- target object -->
+</func>
+<!-- Checks if the object is hostile towards the specified object, that is if the player of the first has no ceasefire diplomacy towards the player of the second | WARNING: the function is monodirectional and diplomacy relationships can be asymmetric, so using obj1.IsEnemy(obj2) is not the same of using obj2.IsEnemy(obj1) -->
+<func name="Obj::IsEnemy" returns="bool">
+	<param type="Obj" /><!-- target object -->
+</func>
+<!-- Checks if the object is able to attack the specified object, considering health, type of objects (e.g. melee units cannot attack sentries or buildings but they can attack catapults), diplomacy and messenger status | WARNING: the function does not consider range or visibility -->
 <func name="Obj::IsValidTarget" returns="bool">
-	<param type="Obj" />
+	<param type="Obj" /><!-- target object -->
 </func>
+<!-- Checks if the object is able to capture the specified object | WARNING: if the specified object is not a building (e.g. a caravan), the function causes a crash -->
 <func name="Obj::IsValidCaptureTarget" returns="bool">
-	<param type="Obj" />
+	<param type="Obj" /><!-- target object (building) -->
 </func>
-<func name="Obj::SetVisible" returns="void">
-	<param type="bool" />
-</func>
+<!-- Checks if the object is not in a hidden status (e.g. with "sneak"), that is if it is not "transparent" for allies or completely invisible for enemies -->
 <func name="Obj::IsVisible" returns="bool">
 </func>
+<!-- Shows or hides the object -->
+<func name="Obj::SetVisible" returns="void">
+	<param type="bool" /><!-- visible status (true = set, false = unset) -->
+</func>
+<!-- Activates or deactivates the messenger status of the object (it cannot attack or be attacked/damaged, but it can be erased) -->
 <func name="Obj::SetMessengerStatus" returns="void">
-	<param type="bool" />
+	<param type="bool" /><!-- messenger status (true = set, false = unset) -->
 </func>
+<!-- Checks if the object is able to see the specified object depending on player diplomacy | WARNING: the function does not consider sight/range or holders -->
 <func name="Obj::CanSee" returns="bool">
-	<param type="Obj" />
+	<param type="Obj" /><!-- target object -->
 </func>
+<!-- Checks if the object is able to attack the specified object depending on player diplomacy, messenger status and range -->
 <func name="Obj::CanAttack" returns="bool">
-	<param type="Obj" />
+	<param type="Obj" /><!-- target object -->
 </func>
-<func name="Obj::Erase" returns="void">
-</func>
+<!-- Returns the current player value of the object (from 1 to 16, -1 if invalid) -->
 <func name="Obj::player" returns="int">
 </func>
+<!-- Sets the player property of the object to the specified integer value corresponding to the player (from 1 to 16) | WARNING: changing player clears all commands | WARNING: changing player for a building changes the player for all other buildings in the settlement -->
 <func name="Obj::SetPlayer" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- player to set -->
 </func>
-<func name="Obj::Damage" returns="bool">
-	<param type="int" />
-</func>
+<!-- Restores the health of the object by the specified amount without exceeding maxhealth (negative values are ignored) -->
 <func name="Obj::Heal" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- health to restore -->
 </func>
+<!-- Restores the stamina of the object by the specified amount without exceeding maxstamina (negative values are ignored) -->
 <func name="Obj::HealStamina" returns="void">
-	<param type="int" />
+	<param type="int" /><!-- stamina to restore -->
+</func>
+<!-- Reduces the health of the object by the specified amount unless it has the messenger status (negative values are ignored) -->
+<func name="Obj::Damage" returns="bool">
+	<param type="int" /><!-- damage to apply -->
+</func>
+<!-- Kills the object without playing the death animation, immediately making it invalid by removing it from the game | WARNING: the function triggers the "ondie" script defined in the object class | WARNING: calling the function on a building causes a crash -->
+<func name="Obj::Erase" returns="void">
 </func>
 <func name="Obj::SetPos" returns="void">
 	<param type="point" />
@@ -1072,13 +1115,17 @@
 <func name="Obj::GetItemIndex" returns="int">
 	<param type="Item" />
 </func>
-<func name="Obj::items_count" returns="int">
+<!-- Returns the inventory size of the object -->
+<func name="Obj::max_items" returns="int">
 </func>
-<func name="Obj::free_item_slots" returns="int">
-</func>
+<!-- Returns the number of items currently owned by the object (there seems to be no difference with items_count) -->
 <func name="Obj::item_count" returns="int">
 </func>
-<func name="Obj::max_items" returns="int">
+<!-- Returns the number of items currently owned by the object (there seems to be no difference with item_count) -->
+<func name="Obj::items_count" returns="int">
+</func>
+<!-- Returns the difference between max_items and items_count -->
+<func name="Obj::free_item_slots" returns="int">
 </func>
 <func name="Obj::ClipDestToMap" returns="point">
 	<param type="point" />
@@ -1097,12 +1144,15 @@
 <func name="Obj::SetDebug" returns="void">
 	<param type="bool" />
 </func>
+<!-- Returns the id of the object class -->
 <func name="Obj::class" returns="str">
 </func>
+<!-- Returns the current command of the object | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::command" returns="str">
 </func>
+<!-- Returns the command at the specified index (starting from 0) in the object queue | WARNING: for this function, the commands are actually the methods defined/inherited by the class -->
 <func name="Obj::command" returns="str">
-	<param type="int" />
+	<param type="int" /><!-- index of the command to get from the object queue -->
 </func>
 <func name="cmdparam" returns="str">
 </func>
@@ -1135,9 +1185,6 @@
 <func name="cmdcost_pop" returns="int">
 </func>
 <func name="cmdcost_stamina" returns="int">
-</func>
-<func name="GetPlayerRace" returns="int">
-	<param type="int" />
 </func>
 <func name="Obj::_LastSelectionTime" returns="int">
 </func>
@@ -1187,8 +1234,6 @@
 	<param type="int" />
 	<param type="int" />
 	<param type="int" />
-</func>
-<func name="Obj::IsWaterUnit" returns="bool">
 </func>
 <func name="Obj::SetCmdEnable" returns="void">
 	<param type="bool" />
@@ -1296,7 +1341,7 @@
 </func>
 <!-- Gets all units of the specified class hierarchy that can be controlled by the specified player, that is the owned ones and the allied ones via shared control | WARNING: it does not consider units in a holder, unless it is immediately followed by some other functions, for example "Contains" -->
 <func name="ControllableObjs" returns="Query">
-	<param type="int" /><!-- player -->
+	<param type="int" /><!-- player id -->
 	<param type="str" /><!-- class hierarchy | multiple class support: NO -->
 </func>
 <func name="AreaObjs" returns="Query">
@@ -1755,6 +1800,7 @@
 <func name="Unit::InRange" returns="bool">
 	<param type="Obj" />
 </func>
+<!-- Returns the hero the unit is currently attached to (invalid if detached) -->
 <func name="Unit::hero" returns="Hero">
 </func>
 <func name="Unit::AttachTo" returns="bool">
@@ -1806,8 +1852,6 @@
 </func>
 <func name="Unit::GetUnexploredPoint" returns="point">
 	<param type="int" />
-</func>
-<func name="Unit::HasFreedom" returns="bool">
 </func>
 <func name="Unit::GetFlags" returns="bool">
 	<param type="int" />
@@ -1877,25 +1921,32 @@
 <func name="Unit::SetBuilding" returns="void">
 	<param type="Building" />
 </func>
+<!-- Checks if the unit has the specified special -->
 <func name="Unit::HasSpecial" returns="bool">
-	<param type="int" />
+	<param type="int" /><!-- special -->
 </func>
+<!-- Checks if the unit has the "freedom" special -->
+<func name="Unit::HasFreedom" returns="bool">
+</func>
+<!-- Gives or removes the specified special for the unit -->
 <func name="Unit::SetSpecial" returns="void">
-	<param type="int" />
-	<param type="bool" />
+	<param type="int" /><!-- special -->
+	<param type="bool" /><!-- activation value (true = set, false = unset) -->
 </func>
 <func name="Unit::SpecialName" returns="str">
 	<param type="int" />
 </func>
-<!-- Returns the current status of the 'parry' special for the unit: 1 if the special is owned and active, 0 if owned and not active, -1 if not owned regardless of its activation -->
+<!-- Returns the current status of the "parry" special for the unit: 1 if the special is owned and active, 0 if owned and not active, -1 if not owned regardless of its activation -->
 <func name="Unit::GetParryMode" returns="int">
 </func>
-<!-- Activates or deactivates the 'parry' status for the unit | WARNING: it does nothing if the unit does not have the special -->
+<!-- Activates or deactivates the "parry" status for the unit | WARNING: it does nothing if the unit does not have the special -->
 <func name="Unit::SetParryMode" returns="void">
 	<param type="bool" /><!-- activation value (true = set, false = unset) -->
 </func>
+<!-- Curses the unit, giving it a malus (which uses the "Curse" feedback) that makes it miss the next attack within the seconds specified by the "CurseTimeout" constant ("const.ini" file) -->
 <func name="Unit::Curse" returns="void">
 </func>
+<!-- Blesses the unit, giving it a bonus (which uses the "Heal" feedback) that makes it deal an additional damage equal to its base damage with the next attack within 5 seconds -->
 <func name="Unit::Bless" returns="void">
 </func>
 <func name="Unit::Disease" returns="void">
@@ -1920,7 +1971,7 @@
 <func name="LevelFromExp" returns="int">
 	<param type="int" />
 </func>
-<!-- Makes the hero perform the walk animation specified for the index 1 in its entity file in order to move towards a destination point, stopping when within the distance specified by the first integer and considering collisions with other entities based on the boolean value (useful when entering buildings); this function should be used in combination with FormKeepMoving and HasPath | WARNING: this function does not consider the speed_factor -->
+<!-- Makes the hero perform the walk animation specified for the index 1 in its entity file in order to move towards a destination point, stopping when within the distance specified by the first integer and considering collisions with other entities based on the boolean value (useful when entering buildings); the function should be used in combination with FormKeepMoving and HasPath | WARNING: the function does not consider the speed_factor -->
 <func name="Hero::FormSetupAndMoveTo" returns="void" latent="1">
 	<param type="point" /><!-- destination -->
 	<param type="int" /><!-- distance from the point -->
@@ -1951,6 +2002,7 @@
 </func>
 <func name="Hero::FormPathLeft" returns="int">
 </func>
+<!-- Checks if the hero has at least 1 attached unit (quicker than using hero.army.count > 0) -->
 <func name="Hero::HasArmy" returns="bool">
 </func>
 <func name="Hero::SetFormation" returns="void">
@@ -1994,10 +2046,12 @@
 <func name="Hero::SkillInEffect" returns="bool">
 	<param type="int" />
 </func>
+<!-- Checks if the hero has the "autocast" status active, which is programmatically managed to use skills automatically -->
 <func name="Hero::autocast" returns="bool">
 </func>
+<!-- Activates or deactivates the "autocast" status for the hero, which is programmatically managed to use skills automatically -->
 <func name="Hero::SetAutocast" returns="void">
-	<param type="bool" />
+	<param type="bool" /><!-- activation value (true = set, false = unset) -->
 </func>
 <func name="Druid::FindUnitToHeal" returns="Unit">
 </func>
@@ -2111,28 +2165,40 @@
 <func name="GetSettlement" returns="Settlement">
 	<param type="str" />
 </func>
-<func name="Settlement::population" returns="int">
-</func>
-<func name="Settlement::max_population" returns="int">
-</func>
 <func name="Settlement::name" returns="str">
 </func>
-<func name="Settlement::ForceAddUnit" returns="void">
-	<param type="Unit" />
+<!-- Returns the current population of the settlement -->
+<func name="Settlement::population" returns="int">
 </func>
-<func name="Settlement::AddUnit" returns="bool">
-	<param type="Unit" />
+<!-- Returns the maximum population of the settlement (there seems to be no difference with MaxPopulation) -->
+<func name="Settlement::max_population" returns="int">
 </func>
-<func name="Settlement::IsFull" returns="bool">
+<!-- Returns the maximum population of the settlement (there seems to be no difference with max_population) -->
+<func name="Settlement::MaxPopulation" returns="int">
 </func>
-<func name="Settlement::AddUnits" returns="int">
-	<param type="ObjList" />
+<!-- Returns the maximum number of units that can be stationed simultaneously in the central building of the settlement -->
+<func name="Settlement::max_units" returns="int">
 </func>
+<!-- Returns all units currently stationed in the central building of the settlement -->
 <func name="Settlement::Units" returns="ObjList">
 </func>
+<!-- Returns the number of units currently stationed in the central building of the settlement (quicker than using settlement.Units.count) -->
 <func name="Settlement::UnitsCount" returns="int">
 </func>
-<func name="Settlement::max_units" returns="int">
+<!-- Checks if the settlement is full, that is if UnitsCount equals max_units -->
+<func name="Settlement::IsFull" returns="bool">
+</func>
+<!-- Tries to move the specified unit inside the central building of the settlement: if it is not full, the function returns true, otherwise false and the unit is not moved | WARNING: using invalid units seems to always return true -->
+<func name="Settlement::AddUnit" returns="bool">
+	<param type="Unit" /><!-- unit to add -->
+</func>
+<!-- Moves the specified unit inside the central building of the settlement, ignoring UnitsCount/max_units constraints -->
+<func name="Settlement::ForceAddUnit" returns="void">
+	<param type="Unit" /><!-- unit to add -->
+</func>
+<!-- Tries to move the specified list of objects inside the central building of the settlement, returning the number of those that have been moved depending on UnitsCount/max_units (non-unit objects are ignored) | WARNING: if the units are inside a building when the function is called and it is impossible to move them to the settlement, they disappear and can only be brought back through scripts or if they were in a group ("CTRL + 1, 2, 3...") -->
+<func name="Settlement::AddUnits" returns="int">
+	<param type="ObjList" /><!-- list of units to add -->
 </func>
 <func name="Settlement::health" returns="int">
 </func>
@@ -2863,23 +2929,23 @@
 <func name="SaveAdventure" returns="void" latent="1">
 	<param type="str" />
 </func>
-<!-- Checks if the specified player has assigned something to a group number during the current game (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
+<!-- Checks if the specified player has assigned something to a group during the current game (by using the icons on the left or "CTRL + 1, 2, 3...") -->
 <func name="WasSelectionAssigned" returns="bool">
-	<param type="int" /><!-- player -->
+	<param type="int" /><!-- player id -->
 </func>
-<!-- Checks if the specified player has assigned something to the specified group number during the current game (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
+<!-- Checks if the specified player has assigned something to the specified group during the current game (by using the icons on the left or "CTRL + 1, 2, 3...") -->
 <func name="WasSelectionAssigned" returns="bool">
-	<param type="int" /><!-- player -->
-	<param type="int" /><!-- group -->
+	<param type="int" /><!-- player id -->
+	<param type="int" /><!-- group id -->
 </func>
-<!-- Checks if the specified player currently has something assigned to a group number (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
+<!-- Checks if the specified player currently has something assigned to a group (by using the icons on the left or "CTRL + 1, 2, 3...") -->
 <func name="IsSelectionAssigned" returns="bool">
-	<param type="int" /><!-- player -->
+	<param type="int" /><!-- player id -->
 </func>
-<!-- Checks if the specified player currently has something assigned to the specified group number (by using the icons on the left or 'CTRL + 1, 2, 3...') -->
+<!-- Checks if the specified player currently has something assigned to the specified group (by using the icons on the left or "CTRL + 1, 2, 3...") -->
 <func name="IsSelectionAssigned" returns="bool">
-	<param type="int" /><!-- player -->
-	<param type="int" /><!-- group -->
+	<param type="int" /><!-- player id -->
+	<param type="int" /><!-- group id -->
 </func>
 <func name="SetGlobalBloodlust" returns="void">
 	<param type="bool" />
@@ -3114,6 +3180,8 @@
 	<param type="int" />
 </func>
 <func name="GetUseCount" returns="int">
+</func>
+<func name="Item::IsValid" returns="bool">
 </func>
 <func name="Item::use_count" returns="int">
 </func>
@@ -3616,8 +3684,6 @@
 </func>
 <func name="Settlement::GetRel" returns="int">
 	<param type="int" />
-</func>
-<func name="Settlement::MaxPopulation" returns="int">
 </func>
 <func name="Settlement::SupplyCount" returns="int">
 	<param type="str" />

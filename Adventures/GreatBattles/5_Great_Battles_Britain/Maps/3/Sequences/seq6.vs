@@ -14,8 +14,8 @@ while (true) {
 			Group(ship_name).Damage(5000);
 		else if (shipyard.health > shipyard.maxhealth / 5) {
 			ol = SpawnGroup(ship_name);
-			Group(ship_name).SetPlayer(shipyard.player);
-			for (j = 0; j < ol.count; j += 1)
+			ol.SetPlayer(shipyard.player);
+			for (j = ol.count - 1; j >= 0; j -= 1)
 				SpawnGroupInHolder("T_RGroup" + (rand(7) + 1), ol[j]).SetPlayer(shipyard.player);
 		}
 	}

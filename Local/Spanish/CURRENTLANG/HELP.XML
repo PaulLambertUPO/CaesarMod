@@ -1810,7 +1810,7 @@ La sacerdotisa se sacrifica para restablecer completamente la energía de 5 alia
 			<topic id="CBerberAssassin">
 				<entry hcenter="1" font="large">Luchador mauritano</entry>
 				<entry image="UI/Icons/CBerberAssassin.bmp">El luchador mauritano tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 280</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 320</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 22</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>

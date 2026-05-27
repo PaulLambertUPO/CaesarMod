@@ -14,7 +14,9 @@ if (.IsValid)
 					break;
 		}
 
-		while (true) {
+		Sleep(rand(151));//avoid "thundering herd" for multiple units that start the command simultaneously
+
+		while (.CmdCount <= 1) {//avoid blocking pending commands forever
 			if (.HasAiTransport)
 				if (.UnitsCount <= 0)
 					.ClearAiTransport();

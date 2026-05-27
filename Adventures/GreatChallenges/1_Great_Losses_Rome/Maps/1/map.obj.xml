@@ -34834,7 +34834,7 @@
 	<scriptobj
 		class="CWarElephant"
 		num="2908"
-	Level="4"
+	Level="9"
 	UnitFlags="393216"
 	player="7"
 	healthperc="100"
@@ -36933,8 +36933,8 @@
 	healthperc="100"
 	stamina="10"
 	inventorysize="0"
-	x="14950"
-	y="14529"
+	x="15025"
+	y="14600"
 	flags="0xA1400001"
 	dir.x="-80"
 	dir.y="-69"/>
@@ -38408,7 +38408,7 @@
 	<scriptobj
 		class="CWarElephant"
 		num="3165"
-	Level="4"
+	Level="9"
 	UnitFlags="393216"
 	player="1"
 	healthperc="100"
@@ -38422,7 +38422,7 @@
 	<scriptobj
 		class="CWarElephant"
 		num="3166"
-	Level="4"
+	Level="9"
 	UnitFlags="393216"
 	player="1"
 	healthperc="100"
@@ -38672,7 +38672,7 @@
 	<scriptobj
 		class="CWarElephant"
 		num="3184"
-	Level="4"
+	Level="9"
 	UnitFlags="393216"
 	player="1"
 	healthperc="100"
@@ -38686,7 +38686,7 @@
 	<scriptobj
 		class="CWarElephant"
 		num="3185"
-	Level="4"
+	Level="9"
 	UnitFlags="393216"
 	player="1"
 	healthperc="100"
@@ -39465,7 +39465,7 @@
 	hsConcealment="0"
 	hsEuphoria="0"
 	display_name="Hannibal Barca"
-	Level="9"
+	Level="14"
 	UnitFlags="393216"
 	Icon="gameres/icons/chanibal.bmp"
 	player="1"

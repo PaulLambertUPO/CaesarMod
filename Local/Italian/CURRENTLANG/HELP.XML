@@ -1810,7 +1810,7 @@ La sacerdotessa si sacrifica per ripristinare completamente l'energia di 5 allea
 			<topic id="CBerberAssassin">
 				<entry hcenter="1" font="large">Lottatore mauritano</entry>
 				<entry image="UI/Icons/CBerberAssassin.bmp">Il lottatore mauritano ha i seguenti parametri e caratteristiche:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salute 280</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salute 320</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 22</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 80</entry>

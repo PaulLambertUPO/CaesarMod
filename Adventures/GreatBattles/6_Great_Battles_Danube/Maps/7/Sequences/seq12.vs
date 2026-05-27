@@ -16,7 +16,7 @@ DiplShareView(2, 1, true);
 
 if (!Q_AlliesFirstBlood.IsEmpty())
 	Q_AlliesFirstBlood.SetPlayer(1);
-for (i = 1; i < 7; i += 1) {
+for (i = 1; i <= 6; i += 1) {
 	SpawnGroup("Q_VillageAllies" + i).SetCommand("attack", AreaCenter("A_Village" + i));
 	RunAIHelper("GuardVillage" + i, "guard area", "Q_VillageAllies" + i, "A_Village" + i);
 }

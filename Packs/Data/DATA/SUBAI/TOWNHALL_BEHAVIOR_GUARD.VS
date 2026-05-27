@@ -37,6 +37,7 @@ if (This.AsBuilding().IsValid) {
 			pt = ol[0].pos;
 
 			ol = .Units;
+			ol.RemoveList(ol.ObjClass("Wagon"));//for caravans with "follow" command
 
 			ol.SetCommand("advance", pt);
 			ol.AddCommand(false, "advance_enter", This);

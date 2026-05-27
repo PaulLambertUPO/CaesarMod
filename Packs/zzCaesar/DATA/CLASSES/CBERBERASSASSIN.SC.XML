@@ -1,7 +1,7 @@
 <class id="CBerberAssassin" parent="Melee" cpp_class="CVXUnit" entity="Units/CBerberAssassin/CBerberAssassin.ent.xml">
 
 	<properties race="Carthage" />
-	<properties maxhealth="280" />
+	<properties maxhealth="320" />
 	<properties damage="22" armor_slash="4" armor_pierce="4" />
 	<properties speed="80" />
 	<properties unit_specials="Attack skill, Parry, Rage" />

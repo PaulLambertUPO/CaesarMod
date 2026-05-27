@@ -48,7 +48,7 @@ while (true) {
 				for (i = 0; i < ol_ships.count; i += 1) {
 					sh = ol_ships[i].AsShip();
 					if (sh.IsValid)
-						if (sh.GetUnitsOnBoard().count == 0)
+						if (sh.UnitsCount <= 0)
 							sh.Damage(sh.maxhealth);
 						else
 							sh.SetCommand("unboardall", GetRandomPointInArea("EDrop2"));

@@ -1,6 +1,6 @@
 point p_View;
 
-WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Village1"), 15, 1000, -1);
+WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Village1"), 15, -1, -1);
 _PlaceEx("WatchEye", 13250, 6700, 1);
 _PlaceEx("WatchEye", 13250, 7000, 1);
 Sleep(10000);

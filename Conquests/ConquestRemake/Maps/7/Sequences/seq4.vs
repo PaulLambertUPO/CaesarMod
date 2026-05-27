@@ -9,11 +9,11 @@ while (true) {
 	if (timer <= 0) {
 		timer = 900000;
 		if (shipyard.player == 2) {
-			SpawnNamed("H_Ship");
+			SpawnNamed("H_Ship").AsUnit().SetSpeedFactor(140);
 			SpawnGroupInHolder("H_Reinforcements", H_Ship);
 		}
 		else if (shipyard.player == 3) {
-			SpawnNamed("H_Ship");
+			SpawnNamed("H_Ship").AsUnit().SetSpeedFactor(140);
 			SpawnGroupInHolder("H_Reinforcements", H_Ship);
 		}
 	}
@@ -21,7 +21,7 @@ while (true) {
 		Ship sh;
 		sh = H_Ship.obj.AsShip();
 		if (sh.IsValid)
-			if (sh.GetUnitsOnBoard().count <= 0)
+			if (sh.UnitsCount <= 0)
 				sh.Damage(sh.maxhealth);
 			else if (sh.command != "unboardall")
 				sh.SetCommand("unboardall", GetRandomPointInArea("A_Unboard"));

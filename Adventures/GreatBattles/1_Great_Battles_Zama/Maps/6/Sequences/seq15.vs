@@ -14,8 +14,6 @@ View(AreaCenter("A_ViewShipyard"), true);
 SetFog(false);
 SpawnGroup("Q_Hannibal").SetCommand("attack", AreaCenter("A_ViewShipyard"));
 NO_Hannibal.obj.AsHero().SetAutocast(true);
-NO_Hannibal.AddCommand(false, "attack", AreaCenter("A_HannibalMoves1"));
-NO_Hannibal.AddCommand(false, "attack", AreaCenter("A_HannibalMoves2"));
 Sleep(500);
 Q_HarborGuards.SetCommand("attach", NO_Hannibal);
 Sleep(1000);
@@ -25,7 +23,10 @@ SpawnGroup("Q_HannibalLine2").SetCommandOffset("attack", AreaCenter("A_HannibalM
 Sleep(1000);
 SpawnGroup("Q_HannibalLine3").SetCommandOffset("attack", AreaCenter("A_HannibalMoves1") - Point(700, 0));
 Q_HannibalPersonalEscort.SetCommand("attach", NO_Hannibal);
-Sleep(5000);
+Sleep(6000);
+NO_Hannibal.SetCommand("attack", AreaCenter("A_HannibalMoves1"));
+NO_Hannibal.AddCommand(false, "attack", AreaCenter("A_HannibalMoves2"));
+Sleep(1000);
 View(p_view, false);
 SetFog(true);
 
@@ -39,6 +40,7 @@ if (!Q_Masinissa.IsEmpty()) {
 	ClassPlayerObjs(cCNumidianRider, 2).SetCommand("attach", NO_Masinissa);
 	NO_Masinissa.Heal(2000);
 	NO_Masinissa.SetCommand("attack", AreaCenter("A_Masinissa"));
+	NO_Masinissa.AddCommand(false, "attack", AreaCenter("A_Masinissa") + Point(-300, 0));
 	if (!Q_SyphaxHeroes.IsEmpty()) {
 		Q_SyphaxHeroes.SetCommand("leavearmy");
 		Sleep(500);
@@ -46,9 +48,9 @@ if (!Q_Masinissa.IsEmpty()) {
 	}
 	Sleep(1000);
 	SpawnGroup("Q_FinalCamels").SetCommand("attach", NO_Masinissa);
-	ClassPlayerObjs(cCLibyanFootman, 2).SetCommand("attack", AreaCenter("A_Footmen"));
-	ClassPlayerObjs(cCBerberAssassin, 2).SetCommand("attack", AreaCenter("A_Assassins"));
-	Union(ClassPlayerObjs(cCJavelinThrower, 2), ClassPlayerObjs(cCHorseman, 2)).SetCommand("attack", AreaCenter("A_Masinissa"));
+	AttackArea(ClassPlayerObjs(cCLibyanFootman, 2), "A_Footmen");
+	AttackArea(ClassPlayerObjs(cCBerberAssassin, 2), "A_Assassins");
+	AttackArea(Union(ClassPlayerObjs(cCJavelinThrower, 2), ClassPlayerObjs(cCHorseman, 2)), "A_Masinissa");
 }
 else
 	ClassPlayerObjs(cMilitary, 2).AddToGroup("Q_NumidiansLeave");

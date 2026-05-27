@@ -1,7 +1,7 @@
 int move_1_to, move_2_to;
 
 while (true) {
-	Sleep(10000);
+	Sleep(15000);
 	if (!TempSiege.IsEmpty())
 		if (Union(UnitsInSettlement("S_Town", cMilitary), ClassPlayerAreaObjs(cMilitary, 1, "A_Annihilate")).count < TempSiege.count / 2)
 			if (!IsAIHelperRunning("CaptureTown"))

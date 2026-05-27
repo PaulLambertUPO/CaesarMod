@@ -1,6 +1,8 @@
 ObjList ol;
 int i;
 
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
+
 IceniTown.obj.AsBuilding().Research("Britain Swords");
 IceniTown.obj.AsBuilding().Research("Challenges");
 IceniTown.obj.AsBuilding().Research("Britain chamber");

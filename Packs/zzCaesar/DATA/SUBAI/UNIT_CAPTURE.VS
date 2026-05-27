@@ -63,14 +63,18 @@ if (target.IsValid) {
 												break;
 											if (!.IsValidCaptureTarget(target))
 												break;
-											if (!target.IsEnemy(this)) {//non-hostile players immediately give the target
-												set.SetPlayer(plr);
+											if (!target.IsEnemy(this)) {//non-hostile players immediately give the target (if enough time has passed)
+												if (GetTime() > EnvReadInt(set, "JustCapturedSecurityThreshold")) {
+													set.SetPlayer(plr);
+													EnvWriteInt(set, "JustCapturedSecurityThreshold", GetTime() + 3000);
+												}
 												break;
 											}
 											while (target.IsEnemy(this)) {
 												if (set.loyalty <= 0) {
 													set.SetPlayer(plr);
 													set.SetLoyalty(11);
+													EnvWriteInt(set, "JustCapturedSecurityThreshold", GetTime() + 3000);
 													break;
 												}
 												UserNotification("building attacked", "", pt_pos, target.player);
@@ -89,7 +93,10 @@ if (target.IsValid) {
 												if (target.IsEnemy(this))
 													set.DecreaseLoyalty(1);
 												else {
-													set.SetPlayer(plr);
+													if (GetTime() > EnvReadInt(set, "JustCapturedSecurityThreshold")) {
+														set.SetPlayer(plr);
+														EnvWriteInt(set, "JustCapturedSecurityThreshold", GetTime() + 3000);
+													}
 													break;
 												}
 											}

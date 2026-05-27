@@ -3,7 +3,7 @@
 int i, n, score_limit, near_score_percent, score_delta, sudden_death_timeout, elimination_timeout, team_score, top_score_1, top_score_2, time_to_survive, max_enemy_timer, enemy_timer;
 bool enemies_losing, sudden_death_started = false;
 
-SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit is stopped before the ritual ends
+SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual ends
 
 if (Strongholds(player) > 0) {
 	ObjList player_villages;
