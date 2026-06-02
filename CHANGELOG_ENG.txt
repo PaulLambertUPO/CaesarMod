@@ -16,6 +16,165 @@ My passion for Imperivm is so great that it's almost impossible to express in wo
 If another person decides to use the Caesar Mod as a starting point for a new project, they are more than welcome to do so: the only courtesy I ask is that they do as I did and keep all the original names, specifying that they started from my mod and releasing the new project under the same CC BY-SA license, whose details can be found in the LICENSE.txt file included in the package.
 ______________________________________
 
+[1.1.0] - 2 June 2025
+
+This new version of the Caesar Mod includes a huge amount of changes and carries important symbolic value because it marks the completion of the revision process of all game scripts exactly one year after the official release of the 1.0.0 version: the main changes consist of the resolution of many (and serious) issues/exploits, a significant improvement to unit command behaviours and the addition of several very convenient features.
+Among the many issues fixed, the most important one is undoubtedly the exploit that could be used against enemy units (compromising any form of multiplayer game validity or the correct execution of adventure sequences) through the hero formation deployment command: while the arrow was still existing (by holding down the right mouse button), it was possible to left-click an enemy and "transfer" the command to it, interrupting any action it was performing. The Steam HD version introduced an initial form of fix that prevents interrupting enemy hero movements, however it permanently blocks them if they are fighting; the only compromise of the actual solution implemented in this version of the Caesar Mod is the inability to queue the command with "shift", but it is certainly preferable to leaving the exploit still possible.
+The other major exploit fixed involved the possibility of using the pause to recruit infinite Iberian scouts: not only is this no longer possible, but the recruitment itself is no longer instantaneous. Among the other noteworthy issues, there was one that allowed players to completely freeze the game by selecting many units and holding down the stand ground command key: a 2-second cooldown has therefore been added, which is enough to let players give the order frequently without freezing everything.
+As for units, the main improvements include the revamped attack command for targeting a specific type of enemy through "ctrl + right click" (extremely useful when going to capture a Numidian tent), a better hero behaviour when they have to collect or drop items, the extension of the exploration command to all units and heroes with attached units, the return to the original position for idle units that move out to attack enemies (useful when leaving someone guarding a village), the standardization of the learn command for sages (without requiring "ritual chamber" for Gaul, Britain and Germany) and the ability to use skills with multiple heroes simultaneously.
+Although AI is not the main target of this version, there are still some small but important improvements, especially regarding the interaction with neutral units, the use of rams during sieges and the positioning efficiency of "cover of mercy".
+To conclude the summary of the changes, the effect of "gambler's luck" has been changed from resurrection upon death to full healing upon a kill in order to avoid further issues related to "trample": since the new effect became redundant with "statue of Zeus", the latter has been redesigned using a completely new blessing mechanic that allows units to deal significant bonus damage (especially with "epic attack"), which is thematically more in line with the Greek deity.
+
+
+UNITS
+
+- fixed the issue where the death during travel of at least one of the units ordered to unboard from a ship made the game crash
+- fixed the issue where ordering a ship to board a flying unit made the game crash
+- fixed the issue/exploit where giving orders to units aboard a ship without shared control made it move
+- fixed the issue where units stationed in a townhall did not exit if nearby enemies were present and they were attached to a hero outside of it
+- fixed the issue where units automatically exiting a townhall due to nearby enemies ignored new threats while going back in
+- fixed the issue where it was possible to give items to "decorative" peasants, uncontrollable hens and fish
+- fixed the issue where supply units could follow enemy units
+- fixed the issue where units kept following a hero obstructing their movement even when the army was already full
+- fixed the issue where units did not attach to the hero after unboarding from a ship
+- fixed the issue where fishermen and land animals could not enter caves or use inns
+- fixed the issue where the command button to stand ground disappeared if sentries, eagles or crows were among the selected units
+- fixed the issue where using the inn transport command with units opened the travel interface for each one of them if the whole group was close enough
+- fixed the issue where Roman/Gaul peasants created with the editor had heavily reduced movement speed
+- fixed the issue where recruited units remained idle if the settlement was a village
+- stand ground command: added a 2-second cooldown (to reduce the risk of freezing the game by holding down the key with many units selected)
+- exploration command: extended to all units (except sentries, rams and flying units)
+- idle units: are no longer automatically "attracted" to the hero they are attached to if the latter is inside a building
+- supply units: follow units aboard a ship if it is within a 1200 radius
+- land animals: added ability to enter buildings, board ships and get items
+- summoned and flying animals: inventory reduced to 0
+- dangerous animals: further reduced flee chance if injured
+- eagle: removed "hover (tight)" command
+- uncontrollable peasants/hens: removed from all settlements in multiplayer games
+- fisherman and old man: added "freedom"
+
+
+MILITARY UNITS
+
+- fixed the issue where the game could freeze at the placing of a siege machine if more units than intended tried to enter and build it
+- fixed the issue where warriors using the attack command remained stuck ignoring other enemies if the target entered and stayed inside a building
+- fixed the issue where a ship could remain in a permanent waiting state if the boarding order of a nearby unit was cancelled
+- fixed the issue where invisible warriors became visible for a fraction of a second before going to hit the target
+- fixed the issue where militiamen could be dismissed inside siege machines
+- fixed the issue where units sent to increase the construction/attack speed of an already existing catapult detached from the hero (now they do so only after entering)
+- fixed the issue where detached units and heroes without attached units ignored enemies when exiting a cave
+- fixed the issue where idle units ignored ghouls
+- fixed the issue where guard units of an outpost/camp that moved outside ignored dangerous animals and ghouls
+- fixed the issue where sentries did not stop attacking enemy buildings that became allied
+- fixed the issue where sentries on walls interrupted the attack command if the target was not an actual enemy (e.g. peaceful animals)
+- fixed the issue where the level of sentries was reduced upon completion of blacksmith upgrades
+- fixed the issue/exploit where sentries on gates could be moved through console usage
+- fixed the issue where sentries did not spawn if the settlement was a village
+- fixed the issue where special units could not detach from the hero if they lost "freedom"
+- greatly improved the behaviour of the attack command targeting units of a specific type ("ctrl + right click")
+- capture command: added a 3-second threshold after the capture that prevents those made by allies (to avoid "burst" player changes)
+- training command: added an indicator for the maximum reachable level
+- sentries: killed also when gates/walls are not too heavily damaged (to reduce the risk of crashes)
+- idle units: return to the starting position after finishing attacking enemies in sight
+- Iberian scout: recruitment time increased to 15 seconds
+- Berber assassin: health increased to 320
+- hypaspist: damage reduced to 38, armor reduced to 10
+- ram: added ability to use "ctrl + right click" to advance towards a position attacking all possible buildings along the way
+- ship: changed the health bar by hiding stamina
+
+
+HEROES
+
+- fixed the issue/exploit where the formation deployment command (the arrow) could be used to interrupt the actions of other players' units without having control over them
+- fixed the issue where using the attack command made them remain stuck doing nothing if the target was nearby and part of the army was inside a building
+- fixed the issue where the leave army command did not work aboard ships and interrupted any other ongoing action
+- fixed the issue where the exploration command did not work if they had units attached
+- fixed the issue where they were recruited at a lower level than the one of settlement upgrades (e.g. "military academy") if the one provided by "mummification" was lower
+- added multiple selection by double click
+- added reveal and parry mode commands for armies
+- added ability to change formation and use skills for all selected heroes
+- added ability to right-click buildings or sentries if at least 1 attached unit can attack them (avoiding the need to always use the dedicated button/key)
+- added a block to the leave army command when there are no attached units
+- improved movement command when enemies are nearby (the hero stays still for 10 seconds but now fights)
+- improved approach command (it does not require to be far from the target for the movement to occur)
+- improved all commands related to collecting/removing items (to avoid useless movements for the army over short distances)
+
+
+SAGES
+
+- fixed the issue where they performed the defense animation to damage static siege machines
+- fixed the issue where they were considered for the capture of neutral outposts and tents
+- fixed the issue where "wrath of Jupiter" caused a progressive increase in memory usage during gameplay (memory leak) and could also be cast on the priests themselves
+- fixed the issue where many commands were not managed when clicking on the ground (they generated error messages in the logs)
+- mass heal and restoration: cannot be used inside buildings
+- summoned units: level increased to the current one of the sage (with hero bonuses)
+- Gaul/British druid and German enchantress: removed the requirement to research "ritual chamber" to unlock the learn command
+- ritual chamber: accumulates double energy for stonehenges from Gaul/British druids and German enchantresses
+- added/improved tooltips based on the mouse pointer for all commands
+
+
+ARTIFICIAL INTELLIGENCE
+
+- fixed the issue where armies moved ignoring neutral units who attacked them freely
+- fixed the issue where units involved in a siege with a ram kept re-entering the construction site blocking its completion
+- fixed the issue where "cover of mercy" was cast by multiple enchantresses simultaneously on the same spot
+- fixed the issue where it was not able to give valid orders to fishermen (if recruited through shared control)
+- slightly reduced the risk of not capturing an undefended enemy townhall
+- slightly improved naval transport of units (the command is interrupted after units remain stuck for some time)
+- added 20% chance of not using the initial tactic
+- increased the chance of using "call to arms"
+- increased the chance of building additional ships
+- reduced the chance of prioritizing the recruitment of special units
+- reduced the chance of removing the specialization of Carthaginian units more advanced than Numidian footmen
+
+
+ITEMS
+
+- battle drums of rage: effect duration increased to 10 seconds, uses reduced to 1 (to avoid permanent bonus issues/exploits if the user died during the effect)
+- charm of Athena: movement/attack speed bonus provided only during combat (to avoid army slowdown issues with attached units)
+- god's gift: removed movement/attack speed bonus (to avoid army slowdown issues with attached units)
+- stamina diamond: effect frequency time increased to 15 seconds
+- gem of wisdom: effect removed when the owner is in a building/ship
+- scroll of death/life: added healing effect also when the holder is in a building/ship
+- amulet of courage and silver ankh: added visual effect to units when they receive the bonus
+- added visual effect to the combination of 3 snake skins, eagle feathers and boar teeth
+
+
+BUILDINGS
+
+- fixed the issue/exploit where it was possible to recruit infinite Iberian scouts with the pause
+- fixed the issue/exploit where the upgrade level of special units (e.g. "tribute to Heracles") was provided to other players if they recruited them after capturing the settlement
+- fixed the issue/exploit where units generated after capturing a tent did not consume food
+- fixed the issue where only one timer was shown if the same ritual was cast from multiple stonehenges
+- fixed the issue where "launch sortie" and right-clicking to make units exit a townhall caused supply units to stop following the designated unit
+- fixed the issue where the Roman winter gold outpost did not generate gold despite having 2000
+- fixed the issue where "store food" increased reserves faster if multiple agoras were in the settlement
+- fixed the issue where certain upgrades (e.g. "religious feat") did not work if the settlement was a village
+- gambler's luck: removed the "resurrection" (due to issues with "trample"), 33% chance to fully restore health if below 33% at every kill
+- statue of Zeus: removed healing (redundant with "divine fortune"), blesses units at every kill causing the next attack within 5 seconds to deal bonus damage equal to base damage
+- upgrades related to the level of special units: added indicator of the maximum level of the last recruited/dead unit
+- townhall commands: disabled when the conditions for the effect are not satisfied
+- outposts: no longer reduce food below 100 through supply routes if units are stationed inside them (thanks to Eaglescream42 for the suggestion)
+- shipyards and outposts: standardized the supply command in the same way as villages
+- tents: experience gain frequency interval reduced to 1 minute starting from 5 game minutes
+- launch sortie and call fisherman: added command description
+- shared strength/triumph: effect extended to warriors of all peoples and not only Carthage
+- inn: added warning to transport attempt if it is too damaged
+- house: removed the increase of 10 settlement maximum population by editor creation
+
+
+GENERAL - MISCELLANEOUS
+
+- fixed the issue where "bloodlust" remained active between games if the player exited before the effect ended
+- fixed the issue where "trample" activated the effect of the "ferocity" upgrade from already dead units
+- Boudicca's rebellion: fixed the issue where ghouls did not spawn in the cursed stronghold
+- Hannibal at the gates of Rome: Hannibal level increased to 15, elephants level increased to 10, Ostia reinforcements power chance changed to weak 40%, normal 35% and strong 25%
+- landing in Africa: improved the dynamics of the opening scene, improved the deployment of the Numidian allies before the final battle
+- Augustus on the Nile: removed all items from superpowered ships, Augustus's fleet level increased to 10
+- the conquest of Britain: removed Agricola's pre-assigned skill points
+- Rhombus: experience bonus of the "???" item reduced to 100, removed secondary items from the neutral hero
+______________________________________
+
 [1.0.5] - 31 January 2026
 
 This new version of the Caesar Mod fixes several issues, making the gameplay experience more enjoyable and improving various general aspects.
@@ -47,7 +206,7 @@ CHANGES
 - guard post: stationable units increased to 10000 (to avoid game freezes), respawn time of each sentinel fixed to 12 seconds, repair aligned with the other outposts
 - neutral outposts and tents: assignment changed from fully random among players of nearby units to random among those with the highest number of nearby units (100% if the maximum is unique)
 - outposts: added "launch sortie" command to send units inside towards the selected point attacking all enemies in sight
-- tents: added the ability to right-click to give orders to the units inside (just like with the townhall)
+- tents: added ability to right-click to give orders to the units inside (just like with the townhall)
 - stonehenge: energy generation time increased to 2–16 seconds (2s + 14s / sages)
 - invoke the protection of Apollo: effect extended to all buildings (broken too) in all owned fortresses, research time 15 seconds, can only be used once per game
 - store food: made usable also when researching other upgrades
@@ -100,7 +259,7 @@ ARTIFICIAL INTELLIGENCE
 - added research of blacksmith upgrades to unlock advanced units after completing all others and not only when resources are in excess
 - increased priority for recruiting legendary heroes without waiting to reach the maximum limit of special units
 - removed ranged units limit relative to the total number of military units
-- Iberia: reduced use of "desperate defence" to increase the chance of using "call to arms"
+- Iberia: reduced use of "desperate defense" to increase the chance of using "call to arms"
 - tributes: optimized use to avoid them at all when there are no outposts and to gain the highest possible profit based on game time and owned outposts
 - added use of "stop storing food" once at least 1000 food has been stored (to prevent certain exploits)
 
@@ -134,9 +293,9 @@ GENERAL - MISCELLANEOUS
 - mercenary pact gold: can be removed by double click if equal to 0
 - blood stone: cooldown increased to 30 seconds, the use puts all blood stones in the inventory on cooldown
 - ram: can no longer attack allied buildings (same behaviour of the Roman tower)
-- peaceful animals: added tooltip for the approach command toward units/buildings
+- peaceful animals: added tooltip for the approach command towards units/buildings
 - crow: can now perch on buildings
-- uncontrollable peasants/chickens: stamina reduced to 0
+- uncontrollable peasants/hens: stamina reduced to 0
 - greatly increased aggressiveness of guard units in adventures (they also attack peasants and supply units)
 ______________________________________
 
@@ -280,7 +439,7 @@ All the changes listed below use the Greek Mod 1.9 as a reference for comparison
 GENERAL - MISCELLANEOUS
 
 Here are listed gameplay changes common to all peoples and the resolution of many bugs.
-The changes to specials and skills may seem strange at first, but everything will be clearer once you read the changes to individual units in the following sections; generally speaking, it can be said that overly strong abilities have been weakened, and those that were too weak have been improved. For example, "bleeding attack" now costs 3 stamina, no longer allowing weak units to eliminate any non-hero unit in a 1v1 situation, but providing a good boost that is still lethal if used in groups, while "learning" now costs 0 stamina, becoming a truly useful ability instead of a handicap.
+The changes to specials and skills may seem strange at first, but everything will be clearer once you read the changes to individual units in the following sections; generally speaking, it can be said that overly strong abilities have been weakened, and those that were too weak have been improved. For example, "bleeding attack" now costs 3 stamina, no longer allowing weak units to eliminate any non-hero unit in a 1v1 situation, but providing a good boost that is still lethal if used in groups, while "learning" now costs 0 stamina, becoming a truly useful special instead of a handicap.
 The resolved bugs bring a revolutionary turn for certain units and peoples (especially for Carthage) and prevent certain types of exploits that could have turned into unfair play in multiplayer.
 The updated help guide allows for a comprehensive consultation of almost all aspects of the game: in the original version of Imperivm there were inconsistencies and errors, making it almost meaningless to read; besides, in the main menu there is the tips box again, also updated to stay in line with the mod.
 
@@ -291,7 +450,7 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - death blow: cost increased to 5
 - cripple: cost increased to 3
 - rage: cost increased to 5
-- assault cry: base duration increased to 2 seconds, duration per level reduced to 0.6 seconds
+- assault: base duration increased to 2 seconds, duration per level reduced to 0.6 seconds
 - learning: cost reduced to 0
 - curse: cost increased to 3, duration reduced to 5 seconds
 - concealment: probability reduced to 1%
@@ -313,7 +472,7 @@ The updated help guide allows for a comprehensive consultation of almost all asp
 - training: probability of gaining experience increased to 95%
 - water sources: healing reduced to 100, waiting time reduced to 1 second, radius increased to 400, excludes all animals for healing, added description to the interface
 - hero grave: level threshold changed to 4/5, all nearby heroes gain levels (same player only), level waiting time increased to 4 seconds, level threshold for charms removed, added remaining time
-- fixed the issue where "trample" activated "spike armor" and "revenge" from dead units
+- fixed the issue where "trample" activated "spike armor" and "revenge" from already dead units
 - fixed the issue where "trample" did not work against siege machines
 - fixed the issue where hiring a hero from a non-Roman arena from a Roman stronghold spawned a Roman hero instead of the correct people's hero
 - fixed the issue where gold and spoils of war disappeared when entering a cave, as well as the failure to deposit gold if "Mercenary Pact" had not been researched
@@ -485,9 +644,9 @@ As it can be seen in the following sections, summoned animals can play a signifi
 BRITAIN
 
 The goal of these changes is to diversify and improve Britain's gameplay style by enhancing the intermediate barracks units, Viking lords and druids.
-Previously, the only truly effective unit was the highlander, possibly supported by javelineers or masses of archers with "assault cry" and "gambler's test", while all the other units were too weak or almost useless, being very easy to counter. Furthermore, the luck component has also been revised: in addition to the initial bet, Britain can now use another (repeatable) much more powerful and risky one, both allowing the player to still gain something even in case of loss, while the other upgrades in the tavern have been weakened to compensate for the new strength of the units ("gambler's test" has received a huge reduction in the chance of killing in one blow, but in return it can now provide a damage bonus to invisible units, which has been done on purpose to encourage the use of druids).
-Now, Britain's main army combination consists of either spermen and javelineers or shield bearers and archers with "assault cry", but highlanders are still the best unit for the late game: initially, they are weaker than before because their base health has been reduced, but since they have "toughness" they are meant to become stronger as they level up, especially when they obtain the noble offence and defence, which now provide 8 as a bonus to their stats.
-Recruiting new heroes has also been simplified thanks to the "wisdom" ability and to the fact that "fights" allows to hire them at level 6, while for units of the barracks (which, by the way, now finally has the "fastest warrior equipment" upgrade like all other peoples) a new blacksmith upgrade must be researched to train them at level 6 (to simplify the acquisition of "nobility"). The increase in damage and range for the hero (intended to balance the fact that he can miss the target) is compensated by the armor reduction, because, being a ranged unit, he cannot afford to get too close to the enemy.
+Previously, the only truly effective unit was the highlander, possibly supported by javelineers or masses of archers with "assault" and "gambler's test", while all the other units were too weak or almost useless, being very easy to counter. Furthermore, the luck component has also been revised: in addition to the initial bet, Britain can now use another (repeatable) much more powerful and risky one, both allowing the player to still gain something even in case of loss, while the other upgrades in the tavern have been weakened to compensate for the new strength of the units ("gambler's test" has received a huge reduction in the chance of killing in one blow, but in return it can now provide a damage bonus to invisible units, which has been done on purpose to encourage the use of druids).
+Now, Britain's main army combination consists of either spermen and javelineers or shield bearers and archers with "assault", but highlanders are still the best unit for the late game: initially, they are weaker than before because their base health has been reduced, but since they have "toughness" they are meant to become stronger as they level up, especially when they obtain the noble offence and defence, which now provide 8 as a bonus to their stats.
+Recruiting new heroes has also been simplified thanks to the "wisdom" skill and to the fact that "fights" allows to hire them at level 6, while for units of the barracks (which, by the way, now finally has the "fastest warrior equipment" upgrade like all other peoples) a new blacksmith upgrade must be researched to train them at level 6 (to simplify the acquisition of "nobility"). The increase in damage and range for the hero (intended to balance the fact that he can miss the target) is compensated by the armor reduction, because, being a ranged unit, he cannot afford to get too close to the enemy.
 
 - swordsman: health increased to 180, damage increased to 16, armor increased to 8, added "learning"
 - bowman: health increased to 200, damage increased to 12, recruitment time increased to 6 seconds
@@ -523,7 +682,7 @@ Recruiting new heroes has also been simplified thanks to the "wisdom" ability an
 IBERIA
 
 The goal of these changes is to further emphasize the Iberia's identity as a late game defensive people: in the early game, in fact, it is weaker than probably any other people, but as the game progresses it becomes nearly unstoppable thanks to the level reached by the heroes, who make their armies almost indestructible with the combination of "vigor", "healing", and "team defense".
-The biggest changes for the units include a drastic increase to the recruitment speed of mountaineers, the removal of "expertise" for slingers (an ability that was too unbalanced because it was too powerful and often unpredictable since it wasn't very clear when it would take effect), and the increased cost of "bleeding attack" for elite guards. Mountaineers can now truly become an integral part of the Iberian army and no longer be the old "gold-and-time-eating trap" they were before. Slingers will now maintain their role as ranged anti-hero units to be kept away from the enemy thanks to "attack skill" and "defensive tactics", which works well due to their high level but removes stamina that would be useful for dealing more damage. Elite guards can still continue to use "bleeding attack" with relative ease thanks to "vigor", "ferocity" or "restoration"; without support they will not be as effective as before, but this is intentional to push the player to diversify their army composition.
+The biggest changes for the units include a drastic increase to the recruitment speed of mountaineers, the removal of "expertise" for slingers (a special that was too unbalanced because it was too powerful and often unpredictable since it wasn't very clear when it would take effect), and the increased cost of "bleeding attack" for elite guards. Mountaineers can now truly become an integral part of the Iberian army and no longer be the old "gold-and-time-eating trap" they were before. Slingers will now maintain their role as ranged anti-hero units to be kept away from the enemy thanks to "attack skill" and "defensive tactics", which works well due to their high level but removes stamina that would be useful for dealing more damage. Elite guards can still continue to use "bleeding attack" with relative ease thanks to "vigor", "ferocity" or "restoration"; without support they will not be as effective as before, but this is intentional to push the player to diversify their army composition.
 Defenders are now worthy of their name and, in general, the two most effective combinations are defenders and slingers or elite guards and archers, with additional support from cavalry, priestesses, and muntaineers. The scout can now collect an item, which can be extremely useful for stealing poison mushrooms directly under the enemy's nose.
 The biggest changes for Iberia overall include a significant increase in experience gain over time (rightly compensated with a higher cost), the reintroduction of the "veterans guild", the double level of "housing" to have an unmatched economy and the radius reduction for "cover of mercy" (it was really exaggerated, as a single cloud covered nearly an entire stronghold).
 
@@ -560,7 +719,7 @@ The biggest changes for Iberia overall include a significant increase in experie
 
 GERMANY
 
-The goal of these changes is to make Germany the perfect definition of "high risk, high reward", that is a people solely and exclusively focused on causing as much damage as possible. Previously, Germany's playstyle was quite inconsistent and/or restrictive: on one hand, the food costs to recover the population were high and a single "starvation" was enough to bring it to its knees; on the other hand, it had both "assault cry" and "defensive cry", a combination nearly impossible to counter for some peoples, further exacerbated by the great speed of "quick march" and/or the potential immunity to damage given by "concealment". This combination was terribly wrong when used with macemen because of the already mentioned "expertise" special which, combined with "attack focus", could turn it into a weapon that instantly wiped out armies clearly superior in both level and equipment within seconds.
+The goal of these changes is to make Germany the perfect definition of "high risk, high reward", that is a people solely and exclusively focused on causing as much damage as possible. Previously, Germany's playstyle was quite inconsistent and/or restrictive: on one hand, the food costs to recover the population were high and a single "starvation" was enough to bring it to its knees; on the other hand, it had both "assault" and "defensive cry", a combination nearly impossible to counter for some peoples, further exacerbated by the great speed of "quick march" and/or the potential immunity to damage given by "concealment". This combination was terribly wrong when used with macemen because of the already mentioned "expertise" special which, combined with "attack focus", could turn it into a weapon that instantly wiped out armies clearly superior in both level and equipment within seconds.
 That said, now the German hero almost exclusively has damage skills, while the units have been reworked accordingly, with a lower initial attack but potentially higher than before due to "team attack". The already mentioned maceman has become much healthier than before through "death blow" (much more manageable than "expertise") and "regeneration", deliberately added to compensate for the low armor and to give the impression of a "furious barbarian who does not know pain".
 Another revolutionary aspect is the stamina cost for the "learning" special being eliminated, allowing the eponymous upgrade to actually be useful instead of a disadvantage. It is also possible to transform Teuton archers into Teuton wolves (the idea is to start by attacking at range as archers, then charge as wolves, and finally fight at close range as riders, then retreat and start again).
 One last important aspect is that the valkyrie is now the fastest anti-archer unit in the game: a group of valkyries can easily decimate ranged units now by using "combat skill".
@@ -1000,7 +1159,7 @@ Duration rating with tests at hard after the changes: medium
 - Numantia patrols: horsemen per group increased to 20, level increased to 30, improved covered paths
 - Numantia garrison: removed heroes, added more units, level increased to 30, removed stand ground command, moves to defend the townhall when the player approaches it
 - Caraunio's army: size increased to 30 elite guards, 25 defenders and 25 slingers, level increased to 40, added veteran medal, added no food needs
-- Caraunio: level increased to 50, replaced "euphoria", "ceasefire" and "assault cry" with "administration", "epic endurance" and "vigor" (10 points), added stamina diamond, dark harp and scroll of life, updated icon
+- Caraunio: level increased to 50, replaced "euphoria", "ceasefire" and "assault" with "administration", "epic endurance" and "vigor" (10 points), added stamina diamond, dark harp and scroll of life, updated icon
 - stonehenge: disabled "divine sacrifice" and "Teuton horde"
 - oak stump: replaced with well, added ash of druid heart
 - added some witch huts along the path
@@ -1054,7 +1213,7 @@ Duration rating with tests at hard after the changes: long
 - fixed the issue where enemy ships stayed still (with the exploit of running away and attacking them calmly one at a time)
 - AI: starts playing only after the capture of a city
 - Pelusio and Alexandria: completed the walls on the sea
-- Flavius Publius: color changed to light blue
+- Flavius Publius: colour changed to light blue
 - added a gold outpost with 2000 initial gold near Alexandria protected by 60 level 20 units
 - outposts bonus gold: frequency time reduced to 1 minute, amount changed to 300, 400 or 500 for the enemies and to 500, 400 or 300 for the player based on difficulty
 - Egyptian naval reinforcements: removed attack limit, spawn frequency time reduced to 7, 6 or 5 minutes based on difficulty, units changed with 20 axe throwers and 20 guardians, level increased to 20
@@ -1068,7 +1227,7 @@ Duration rating with tests at hard after the changes: long
 - Alexandria garrison: added more units, hero replaced with Cleopatra and Mark Antony, level increased to 30, removed stand ground command, added Egyptian charms to all units
 - Alexandria shipyard: added 2 level 30 ships with 120 units aboard and with concentration stone, fur gloves of health, elephant tusk and charm of Athena
 - Cleopatra: placed to defend Alexandria with 40 Horus warriors and 40 Anubis warriors, level 40, with "administration", "concealment", "team defense" and "healing" (10 points), with golden ankh and silver ankh
-- Mark Antony: placed to defend Alexandria with 50 praetorians, level 40, with "vigor", "epic attack", "team attack" and "assault cry" (10 points), with scroll of life and scroll of death
+- Mark Antony: placed to defend Alexandria with 50 praetorians, level 40, with "vigor", "epic attack", "team attack" and "assault" (10 points), with scroll of life and scroll of death
 - Octavian Augustus: removed pre-assigned skill points, replaced "discipline" with "healing", replaced items with 2 rye spikes
 - Dioges: level increased to 10, replaced "battle cry" with "quick march", removed no food needs, added 2 rye spikes
 - Sabucius: level increased to 10, replaces "discipline" and "administration" with "healing" and "survival", removed no food needs, added 2 rye spikes
@@ -1109,7 +1268,7 @@ Duration rating with tests at hard after the changes: long
 - Calgacus's army: fully regenerates between stops, waiting time before each move reduced to 1 minute, added 2 stops for the townhall and the outpost just north of Londinium
 - Calgacus's heroes: removed 1 hero, replaced with British heroes, level increased to 30, replaced skills with combinations of 3 skills (10 points) to maximize the potential of attached units, updated icons
 - Calgacus's units: level increased to 20 (21 for highlanders), changed to be of a single type per hero, added 20 Viking lords
-- Calgacus: level increased to 50, replaced king's belt with elephant tusk, added dark harp and silver ankh, replaced 4 skills with "administration", "leadership", "vigor" and "assault cry" (10 points), updated icon
+- Calgacus: level increased to 50, replaced king's belt with elephant tusk, added dark harp and silver ankh, replaced 4 skills with "administration", "leadership", "vigor" and "assault" (10 points), updated icon
 - Londinium: initial gold increased to 7000, initial population reduced to 20, maximum population increased to 120, added 2 wooden walls to the north and 1 to the south, added more camp decorations
 - Dumnorium, Mancunium and Lindum: initial gold increased to 5000, maximum population increased to 100, added Morrigan's monument to Dumnorium, drastically changed Lindum walls (due to issues with the siege made by Calgacus)
 - Dumnorium and Lindum: when occupied by the enemies they gain 10, 20 or 30 gold every 2 seconds based on difficulty
@@ -1185,7 +1344,7 @@ Duration rating with tests at hard after the changes: long
 - Allifae: removed recruitment outpost, added a group of 50, 40, or 30 level 6 hoplites based on difficulty once the stronghold is obtained
 - advisor noble: level reduced to 5, removed golden ankh and ring of power
 - Hanno and Mago: replaced "discipline" with "wisdom", updated icons
-- Maharbal: replaced "battle cry" with "assault cry"
+- Maharbal: replaced "battle cry" with "assault"
 - Hannibal: replaced "ceasefire" and "recovery" with "frenzy" and "euphoria", added golden ankh and ring of power
 
 
@@ -1286,7 +1445,7 @@ Duration rating with tests at hard after the changes: short
 - allied troops: level increased to 30 for trident warriors and to 20 for the rest, improved defended areas, added some hidden units to some villages, added food sharing with the player
 - tribal chieftains and Gergovia defenders: added bear teeth amulet, belt of might and herb amulet of luck
 - Damasus: added 10 points to "vigor", updated icon
-- Vercingetorix: level increased to 15, replaced "discipline" and "frenzy" with "defensive cry" and "assault cry"
+- Vercingetorix: level increased to 15, replaced "discipline" and "frenzy" with "defensive cry" and "assault"
 - Ercenbehrt: renamed to "Luthal", level increased to 10, replaced "battle cry" with "defensive cry", updated icon
 - Luthal's army: added 5 horsemen and 5 woman warriors
 - villages: initial population increased to 30, maximum population increased to 80, added supply routes towards Gergovia
@@ -1439,7 +1598,7 @@ Since a complete revision of almost all the scripts has been made, the changes a
 - managed construction of common, Roman or Egyptian ship based on the played people
 - added transport of resources stored in shipyards and Teuton/Numidian tents towards strongholds
 - added use of the nearest trade outpost to sell food for gold (disabled for easy AI)
-- added desperate defence system: the AI ​​recruits as many basic units as possible (Numidian footmen or javelin throwers for Carthage depending on specialization) to defend the stronghold from enemies who have entered
+- added desperate defense system: the AI ​​recruits as many basic units as possible (Numidian footmen or javelin throwers for Carthage depending on specialization) to defend the stronghold from enemies who have entered
 - added decision system for the best barracks for Greece (less commands in queue, although without considering their actual duration, change intended for scenarios/adventures where there are more identical buildings)
 
 
@@ -1521,8 +1680,7 @@ KNOWN BUGS
 Here are listed some bugs that may be fixed in future versions of the mod. Unfortunately, not all of them are fixable, as they require access to the game's source code.
 
 FIXABLE
-- the Egyptian hero with the "bobbed" hair changes the color of his clothes when he fights, always becoming red even when it shouldn't be
-- the golden elite guard (level 18+) goes back to "metallic" when he fights
+- the Egyptian hero with the "bobbed" hair changes the colour of his clothes when he fights, always becoming red even when it should not be
 - the toxotes movements are not in sync with his own shadow
 
 TO BE INVESTIGATED FURTHER
@@ -1532,10 +1690,12 @@ TO BE INVESTIGATED FURTHER
 
 NOT FIXABLE
 - the "Erase" function triggers the effects related to the death of units (such as "warrior tales") and increases the lost units counter (sentries returning to towers are the main cause)
+- the "Disease" function generates memory leaks if the poisoned unit enters a building and is still alive and poisoned when the game is closed
 - the German townhall produces gold in the same amount of food if the owner's nation at the start of the game is not Germany
-- the speed factor change for a hero only works in fight phase and not in movement phase
+- the speed factor change for a hero only works in fight phase and not in movement phase (problem of the "FormSetupAndMoveTo" and "FormKeepMoving" functions)
 - units with modified speed factor slow down the entire army when they are attached to a hero
 - dead units with "gambler's luck" that are hit by "trample" can generate the same "resurrection" bug that occurred with "wrath of Jupiter"
+- in the map editor, it is possible to associate secondary structures to caves: setting the "is_single_building" property of the "Teleport" class to 1 solves the problem, but then the message about deleting both entrances no longer appears and, if one is still present at game start, the game crashes
 - in the map editor, when placing a random stronghold or village with buildings that are not on the map, the game crashes at game start
 - in the map editor, when creating a group by selecting objects from the appropriate button in the window, if among these there is something that is not a unit (for example the camp tents), the game crashes
 - in the map editor, when an item is assigned to multiple units and then many of them are selected together, at least one of them will have the object removed
