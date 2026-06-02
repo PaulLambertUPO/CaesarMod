@@ -16,13 +16,172 @@ Mi pasión por Imperivm es tan grande que es casi imposible de expresar con pala
 Si otra persona decide usar el Caesar Mod como punto de partida para un nuevo proyecto, es más que libre de hacerlo: lo único que pido es que haga como yo y mantenga todos los nombres originales, especificando que ha comenzado desde mi mod y publicando el nuevo proyecto bajo la misma licencia CC BY-SA, cuyos detalles están indicados en el archivo LICENSE.txt incluido el paquete.
 ______________________________________
 
+[1.1.0] - 2 junio 2025
+
+Esta nueva versión del Caesar Mod incluye una cantidad inmensa de cambios y tiene un importante valor simbólico porque cierra el proceso de revisión de todos los scripts del juego exactamente un año después del lanzamiento oficial de la versión 1.0.0: los principales cambios consisten en la resolución de muchos (y graves) problemas/exploits, una notable mejora en el comportamiento de las órdenes de las unidades y en la incorporación de algunas funciones muy útiles.
+Entre los múltiples problemas resueltos, el más importante es sin duda el exploit que podía utilizarse contra unidades enemigas (comprometiendo cualquier forma de validez en partidas multijugador o la correcta ejecución de secuencias de aventuras) a través de la orden de despliegue de formación para los héroes: mientras la flecha existía (manteniendo pulsado el botón derecho del ratón), era posible hacer clic (izquierdo) en un enemigo y "transferirle" la orden, interrumpiendo cualquier acción que estuviera realizando. La versión HD de Steam introdujo una primera forma de solución que no interrumpe el movimiento de los héroes enemigos, sin embargo los bloquea permanentemente si están combatiendo; el único compromiso de la solución real implementada en esta versión del Caesar Mod es la imposibilidad de poner la orden en cola con "shift", pero sin duda es preferible a seguir permitiendo el exploit.
+El otro gran exploit resuelto consistía en la posibilidad de usar la pausa para reclutar infinitos exploradores iberos: ahora no solo ya no es posible, sino que además el reclutamiento ha dejado de ser instantáneo. Entre los demás problemas destacables, existía uno que permitía bloquear completamente el juego seleccionando muchas unidades y manteniendo pulsada la tecla de mantener posición: por ello se ha añadido un tiempo de recarga de 2 segundos, suficiente para permitir al jugador dar la orden con frecuencia sin bloquear todo el juego.
+En cuanto a las unidades, entre las principales mejoras destacan la renovada orden de ataque a un tipo específico de enemigo mediante "ctrl + clic derecho" (muy útil al ir a conquistar un campamento numida), un mejor comportamiento de los héroes al recoger o dejar objetos, la ampliación de la orden de exploración a todas las unidades y a los héroes con unidades vinculadas, el regreso a la posición inicial de las unidades inactivas que se mueven para atacar enemigos (útil para dejar guardias defendiendo una aldea), la unificación del comando de aprendizaje para las unidades espirituales (sin necesidad de "cámara de los rituales" para Galia, Britania y Germania) y la posibilidad de usar las habilidades con más héroes simultáneamente.
+Aunque la IA no es el punto central de esta versión, aún hay algunas mejoras pequeñas pero importantes, especialmente en lo relacionado con la interacción con las unidades neutrales, el uso del ariete durante los asedios y la eficiencia de posicionamiento de "manto de la misericordia".
+Para concluir el resumen de los cambios, el efecto de "fortuna de los dioses" ha sido modificado desde resurrección al morir hasta curación completa al matar para evitar más problemas relacionados con "daño expansivo": dado que el nuevo efecto se volvía redundante con "estatua de Zeus", esta última ha sido rediseñada utilizando una mecánica completamente nueva de bendición para infligir un daño notable (especialmente con "ataque heroico"), algo temáticamente más acorde con la divinidad griega.
+
+
+UNIDADES
+
+- resuelto el problema por el cual la muerte durante el viaje de al menos una de las unidades ordenadas a desembarcar de un navío crasheaba el juego
+- resuelto el problema por el cual ordenar a un navío embarcar una unidad voladora crasheaba el juego
+- resuelto el problema/exploit por el cual dar órdenes a unidades a bordo de un navío sin control compartido lo hacía mover
+- resuelto el problema por el cual las unidades estacionadas en un foro no salían si había enemigos cerca y estaban vinculadas a un héroe fuera de ello
+- resuelto el problema por el cual las unidades salidas automáticamente de un foro debido a enemigos cercanos ignoraban nuevas amenazas al regresar
+- resuelto el problema por el cual era posible dar objetos a campesinos "decorativos", gallinas no controlables y peces
+- resuelto el problema por el cual las unidades de suministro podían seguir unidades enemigas
+- resuelto el problema por el cual las unidades seguían a un héroe obstaculizando sus movimientos si el ejército ya estaba completo
+- resuelto el problema por el cual las unidades no se vinculaban al héroe después de desembarcar de un navío
+- resuelto el problema por el cual el pescador y los animales de tierra no podían entrar en cuevas o usar posadas
+- resuelto el problema por el cual el botón de la orden de mantener posición desaparecía si entre las unidades seleccionadas había centinelas, águilas o cuervos
+- resuelto el problema por el cual la orden de transporte con la posada realizada con unidades abría la interfaz de viaje para cada una de ellas si todo el grupo estaba lo suficientemente cerca
+- resuelto el problema por el cual los campesinos romanos/galos creados con el editor tenían una velocidad de movimiento muy reducida
+- resuelto el problema por el cual las unidades reclutadas se quedaban quietas si el asentamiento era una aldea
+- orden de mantener posición: añadida recarga de 2 segundos (para reducir el riesgo de bloquear el juego manteniendo pulsada la tecla con muchas unidades seleccionadas)
+- orden de exploración: extendida a todas las unidades (excepto centinelas, arietes y unidades voladoras)
+- unidades inactivas: ya no son "atraídas" automáticamente por el héroe al que están vinculadas si está en una estructura
+- unidades de suministro: siguen a las unidades a bordo de un navío si está dentro de un radio de 1200
+- animales de tierra: añadida posibilidad de entrar en estructuras, subir a navíos y recoger objetos
+- animales invocados y voladores: inventario reducido a 0
+- animales peligrosos: reducida aún más la probabilidad de escapar si heridos
+- águila: removida la orden "sobrevolar (cerca)"
+- campesinos/gallinas no controlables: eliminado de cualquier asentamiento en partidas multijugador
+- pescador y anciano: añadida "libertad"
+
+
+UNIDADES MILITARES
+
+- resuelto el problema por el cual el juego podía bloquearse al colocar una máquina de asedio si más unidades de lo necesario intentaban entrar para construirla
+- resuelto el problema por el cual con la orden de ataque los guerreros se quedaban bloqueados ignorando otros enemigos si el objetivo entraba y permanecía dentro de una estructura
+- resuelto el problema por el cual el navío podía quedarse en un estado de espera permanente si se cancelaba la orden de embarque de una unidad cercana
+- resuelto el problema por el cual los guerreros invisibles se mostraban durante una fracción de segundo antes de ir a golpear al objetivo
+- resuelto el problema por el cual los milicianos podían ser licenciados dentro de máquinas de asedio
+- resuelto el problema por el cual las unidades enviadas para aumentar la velocidad de construcción/ataque de una catapulta ya existente se desvinculaban del héroe (ahora solo lo hacen una vez dentro)
+- resuelto el problema por el cual las unidades no vinculadas y los héroes sin unidades vinculadas ignoraban a los enemigos al salir de una cueva
+- resuelto el problema por el cual las unidades inactivas ignoraban a los espíritus
+- resuelto el problema por el cual las unidades de guardia de un fortín/campamento que salían al exterior ignoraban animales peligrosos y espíritus
+- resuelto el problema por el cual los centinelas no dejaban de atacar estructuras enemigas que pasaban a ser aliadas
+- resuelto el problema por el cual los centinelas sobre murallas interrumpían la orden de ataque si el objetivo no era un enemigo real (ej. animales pacíficos)
+- resuelto el problema por el cual el nivel de los centinelas se reducía al finalizar las mejoras de la herrería
+- resuelto el problema/exploit por el cual los centinelas sobre puertas podían ser movidas mediante el uso de la consola
+- resuelto el problema por el cual los centinelas no aparecían si el asentamiento era una aldea
+- resuelto el problema por el cual las unidades especiales no podían ser desvinculadas del héroe si perdían "libertad"
+- mejorado enormemente el comportamiento de la orden de ataque contra unidades de un tipo específico ("ctrl + clic derecho")
+- orden de conquista: añadido un umbral de 3 segundos después de la conquistas que impide las hechas por aliados (para evitar cambios de jugadores "en ráfagas")
+- orden de adiestramiento: añadido indicador del nivel máximo alcanzable
+- centinelas: eliminados también cuando las puertas/murallas están dañadas de forma no demasiado grave (para reducir el riesgo de crash)
+- unidades inactivas: regresan a la posición inicial después de terminar de atacar a los enemigos a la vista
+- explorador ibero: tiempo de reclutamiento aumentado a 15 segundos
+- luchador mauritano: salud aumentada a 320
+- hipaspista: ataque reducido a 38, defensa reducida a 10
+- ariete: añadida posibilidad de usar "ctrl + clic derecho" para avanzar hacia una posición atacando todas las estructuras posibles en el camino
+- navío de guerra: cambiada la barra de salud ocultando la energía
+
+
+HÉROES
+
+- resuelto el problema/exploit por el cual la orden de despliegue de formación (la flecha) podía ser usada para interrumpir las acciones de unidades de otros sin tener control sobre ellas
+- resuelto el problema por el cual con la orden de ataque se quedaban bloqueados sin hacer nada si el objetivo estaba cerca y parte del ejército estaba en una estructura
+- resuelto el problema por el cual la orden de disolver ejército no funcionaba a bordo de un navío e interrumpía cualquier otra acción en curso
+- resuelto el problema por el cual la orden de exploración no funcionaba si tenían unidades vinculadas
+- resuelto el problema por el cual eran reclutados con un nivel inferior al de las mejoras de asentamiento (ej. "academia militar") si el proporcionado por "culto a los muertos" era menor
+- añadida selección múltiple haciendo doble clic
+- añadidas órdenes de revelación y modo contención para el ejército
+- añadida posibilidad de cambiar formación y usar habilidades para todos los héroes seleccionados
+- añadida posibilidad de hacer clic derecho en estructuras o centinelas si al menos 1 de las unidades vinculadas puede atacarlos (evitando así tener que usar el botón/tecla específico/a)
+- añadido bloqueo a la orden de disolver ejército en ausencia de unidades vinculadas
+- mejorado el comportamiento de la orden de movimiento cuando hay enemigos cerca (el héroe permanece quieto durante 10 segundos pero ahora lucha)
+- mejorada la orden de aproximación (no requiere estar lejos del objetivo para que ocurra el movimiento)
+- mejoradas todas las órdenes relacionadas con recoger/quitar objetos (para evitar movimientos inútiles del ejército en distancias cortas)
+
+
+UNIDADES ESPIRITUALES
+
+- resuelto el problema por el cual usaban la animación de defensa para dañar las máquinas de asedio estáticas
+- resuelto el problema por el cual eran consideradas para la conquista de fortines neutrales y campamentos
+- resuelto el problema por el cual "ritual de la ira de Júpiter" causaba un aumento progresivo del uso de memoria durante el juego (memory leak) y también podía ser lanzado sobre los sacerdotes mismos
+- resuelto el problema por el cual muchas órdenes no eran gestionadas al hacer clic en el terreno (generaban mensajes de error en los logs)
+- curación masiva y sacrificio revitalizador: no pueden ser usados dentro de estructuras
+- unidades invocadas: nivel aumentado al actual de la unidad espiritual (con bonificaciones por parte del héroe)
+- druida galo/britano y hechicera: removida la necesidad de investigar "cámara de los rituales" para desbloquear la orden de aprendizaje
+- cámara de los rituales: hace generar doble energía para los altares de sacrificios por parte de druidas galos/britanos y hechiceras
+- añadidos/mejorados los tooltips basados en el puntero del ratón para todas las órdenes
+
+
+INTELIGENCIA ARTIFICIAL
+
+- resuelto el problema por el cual los ejércitos se desplazaban ignorando a las unidades neutrales que los atacaban impunemente
+- resuelto el problema por el cual las unidades involucradas en un asedio con ariete seguían regresando al sitio de construcción bloqueando su terminación
+- resuelto el problema por el cual "manto de la misericordia" era lanzado por más sacerdotisas simultáneamente sobre el mismo punto
+- resuelto el problema por el cual no lograba dar órdenes válidas a los pescadores (si reclutados mediante control compartido)
+- reducido ligeramente el riesgo de no conquistar un foro enemigo indefenso
+- mejorado ligeramente el transporte de unidades por navío (la orden es interrumpida después de que las unidades permanecen bloqueadas durante un poco)
+- añadida probabilidad 20% de no usar la táctica inicial
+- aumentada la probabilidad de usar "llamada a las armas"
+- aumentada la probabilidad de construir navíos adicionales
+- reducida la probabilidad de priorizar el reclutamiento de unidades especiales
+- reducida la probabilidad de remover la especialización de unidades cartaginesas más avanzadas de los infantes numidas
+
+
+OBJETOS
+
+- tambores de batalla de la furia: duración efecto aumentada a 10 segundos, número de usos reducido a 1 (para evitar problemas/exploits de bonificación permanente si el usuario moría durante el efecto)
+- amuleto de Atenea: bonificación de velocidad de movimiento/ataque proporcionada solo durante el combate (para evitar problemas de ralentización del ejército con unidades vinculadas)
+- regalo de los dioses: removida bonificación de velocidad de movimiento/ataque (para evitar problemas de ralentización del ejército con unidades vinculadas)
+- diamante energético: tiempo de frecuencia efecto aumentado a 15 segundos
+- gema de la sabiduría: efecto removido cuando el poseedor está en una estructura/navío
+- pergamino de muerte/vida: añadido el efecto de curación también cuando el poseedor está en una estructura/navío
+- amuleto del coraje y ankh de plata: añadido efecto visual a las unidades cuando obtienen la bonificación
+- añadido efecto visual a la combinación de 3 pieles de serpiente, plumas de águila y dientes de jabalí
+
+
+ESTRUCTURAS
+
+- resuelto el problema/exploit por el cual era posible reclutar infinitos exploradores iberos con la pausa
+- resuelto el problema/exploit por el cual el nivel de las mejoras de las unidades especiales (ej. "tributo a Heracles") era proporcionado a otros jugadores si las reclutaban tras conquistar el asentamiento
+- resuelto el problema/exploit por el cual las unidades generadas tras conquistar un campamento no consumían víveres
+- resuelto el problema por el cual solo aparecía un temporizador si el mismo ritual era lanzado desde varios altares de sacrificios
+- resuelto el problema por el cual "lanzar salida" y el clic derecho para hacer salir las unidades de un foro hacían que las unidades de suministro dejaran de seguir a la unidad designada
+- resuelto el problema por el cual el fortín del oro romano invernal no generaba oro a pesar de tener 2000
+- resuelto el problema por el cual "almacenar víveres" aumentaba las reservas más rápidamente si había más ágoras en el asentamiento
+- resuelto el problema por el cual ciertas mejoras (ej. "bendición") no funcionaban si el asentamiento era una aldea
+- fortuna de los dioses: removida la "resurrección" (por problemas con "daño expansivo"), probabilidad 33% de restablecer toda la salud si cae por debajo del 33% con cada asesinato
+- estatua de Zeus: removida la curación (redundante con "fortuna de los dioses"), bendice a las unidades con cada asesinato haciendo que el siguiente ataque dentro de 5 segundos inflija daño adicional igual al ataque base
+- mejoras relacionadas con nivel de las unidades especiales: añadido indicador del nivel máximo de la última unidad reclutada/muerta
+- órdenes del foro: deshabilitados cuando las condiciones para el efecto no se cumplen
+- fortines: no reducen los víveres por debajo de 100 con las rutas de suministro si hay unidades estacionadas en su interior (gracias a Eaglescream42 por la sugerencia)
+- puertos y fortines: uniformada la orden de establecimiento de la ruta de suministro de la misma forma que en las aldeas
+- campamentos: tiempo de frecuencia ganancia experiencia reducido a 1 minuto a partir de 5 minutos de juego
+- lanzar salida y alistar pescador: añadidas descripciones a la orden
+- fuerza/triunfo compartida/o: efecto extendido a los guerreros de todos los pueblos y no solo de Cartago
+- posada: añadido aviso al intento de transporte si está demasiado dañada
+- casa: removido el aumento de 10 población máxima del asentamiento mediante creación con el editor
+
+
+GENERAL - VARIOS
+
+- resuelto el problema por el cual "sed de sangre" permanecía activa entre una partida y otra si se salía antes de que terminara el efecto
+- resuelto el problema por el cual "daño expansivo" activaba el efecto de la mejora "ferocidad" por parte de unidades ya muertas
+- la rebelión de Boadicea: resuelto el problema por el cual no aparecían los espíritus en la fortaleza maldita
+- Aníbal a las puertas de Roma: nivel Aníbal aumentado a 15, nivel elefantes aumentado a 10, porcentaje potencia refuerzos de Ostia cambiada a débil 40%, normal 35%, fuerte 25%
+- desembarco en África: mejorada la dinámica de la escena inicial, mejorado el despliegue de los aliados numidas antes de la batalla final
+- Augusto en el Nilo: removidos todos los objetos de los navíos superpotenciadas, nivel flota de Augusto aumentado a 10
+- la conquista de Britania: removidos los puntos de habilidad preasignados de Agrícola
+- Rombo: bonificación experiencia objeto "???" reducida a 100, removidos los objetos secundarios del héroe neutral
+______________________________________
+
 [1.0.5] - 31 enero 2026
 
 Esta nueva versión del Caesar Mod resuelve numerosos problemas, haciendo más agradable la experiencia de juego y mejorando varios aspectos generales.
 Uno de los cambios más importantes es el nuevo sistema de asignación de los fortines neutrales tras la derrota de la guarnición: anteriormente, el resultado era completamente aleatorio y una sola unidad de paso podía conquistar el fortín sin esfuerzo, generando frustración en quienes habían luchado para eliminar a los guardias. Ahora el comportamiento es determinista y el fortín es asignado al jugador con el mayor número de unidades cercanas; solo en caso de empate la elección es aleatoria, per es algo poco frecuente.
 También se ha resuelto una fuente de frustración en las partidas por equipos, donde la interacción con estructuras aliadas mediante control compartido podía modificar la interfaz de selección del aliado, comprometiendo potencialmente el resultado de una batalla.
 La conquista "Mare Nostrum" ahora puede ser jugada sin bloqueos causados por los límites de unidades del puesto de guardia y los centinelas atacan correctamente a los enemigos sin interrupciones.
-Los fortines disponen de una nueva orden para enviar unidades al exterior: no ha sido asignada a un simple clic derecho para evitar errores accidentales con el comando ya existente de ataque mediante las torres.
+Los fortines disponen de una nueva orden para enviar unidades al exterior: no ha sido asignada a un simple clic derecho para evitar errores accidentales con la orden ya existente de ataque mediante las torres.
 Se ha realizado una revisión importante de las animaciones de todos los héroes para uniformar la velocidad de ataque entre los del mismo pueblo (en el caso de Cartago, las diferencias eran realmente evidentes).
 La Protección de Apolo ha sido completamente revisada: ahora solo puede ser usada una vez por partida (al igual que los tributos), pero hace inviolables todas las fortalezas poseídas (reparando incluso las estructuras dañadas) y requiere un breve tiempo de activación, lo que permite cancelarla en caso de activación accidental (antes era imposible y generaba aún más frustración) y da tiempo al enemigo para salir de la fortaleza antes de quedar encerrado.
 También se han mejorado los colores de los jugadores para una mayor distinción visual y se ha intentado actuar sobre el audio para reducir sonidos y frases duplicadas: debido a limitaciones técnicas relacionadas con el código fuente y la obsolescencia de DirectSound y DirectMusic, no es posible eliminar completamente el problema, pero puede ser atenuada mediante el archivo "Config.ini".
@@ -127,7 +286,7 @@ GENERAL - VARIOS
 - resuelto el problema por el cual solo los elefantes de guerra podían dañar las máquinas de asedio mediante "daño expansivo"
 - resuelto el problema por el cual "cura de los mercenarios", "sacrificio revitalizador" y "curación masiva" ya no funcionaban
 - resuelto el problema por el cual la tumba del héroe intentaba dar talismanes a unidades que ya los tenían o con el inventario lleno
-- resuelto el problema por el cual la orden de despliegue de formación (la flecha) no era gestionada con había unidades diferentes de héroes en la selección (generaba un mensaje de error en los logs)
+- resuelto el problema por el cual la orden de despliegue de formación (la flecha) no era gestionada con unidades diferentes de héroes en la selección (generaba un mensaje de error en los logs)
 - resuelto el problema por el cual la orden de patrulla para unidades no vinculadas no registraba correctamente los puntos de inicio/destino
 - la rebelión de Boadicea: resuelto el problema por el cual los cuervos invocados activaban el diálogo de los druidas en la entrada de la cueva y la emboscada al esqueleto escondido
 - editor: añadido pozo decorativo (sección "Estructuras -> Otras -> Europa") y estructuras romanas invernales de la aldea
@@ -313,7 +472,7 @@ La guía de ayuda actualizada permite una consulta completa de casi todos los as
 - adiestramiento: probabilidad de ganar experiencia aumentada a 95%
 - fuentes de agua: curación reducida a 100, tiempo de espera reducido a 1 segundo, radio aumentado a 400, excluidos todos los animales para la curación, añadida descripción a la interfaz
 - tumba del héroe: umbral nivel cambiado a 4/5, todos los héroes cercanos ganan niveles (solo mismo jugador), tiempo de espera niveles aumentado a 4 segundos, removido umbral nivel para los talismanes, añadido tiempo residual
-- resuelto el problema por el cual "daño expansivo" activaba "daño reflejado" y "venganza" por parte de las unidades muertas
+- resuelto el problema por el cual "daño expansivo" activaba "daño reflejado" y "venganza" por parte de unidades ya muertas
 - resuelto el problema por el cual "daño expansivo" no funcionaba contra las máquinas de asedio
 - resuelto el problema por el cual reclutar un héroe en un coliseo no romano de una fortaleza romana hacía aparecer un héroe de Roma en lugar del pueblo correcto
 - resuelto el problema por el cual el oro y los botines de guerra desaparecían al entrar en una cueva, así como la imposibilidad de almacenar oro si aún no se había investigado el "pacto de los mercenarios"
@@ -342,9 +501,9 @@ La guía de ayuda actualizada permite una consulta completa de casi todos los as
 - formación de escaramuza: bonus alcance reducido a 50%, sustituido bonus nivel con bonus ataque 2
 - formación en columna: aumentada ligeramente la anchura del ejército, bonus defenso aumentada a 0, bonus alcance reducido a 50%, añadido bonus nivel 2
 - espíritu: el del editor ya no es el invocado y por tanto no morirá automáticamente si la energía baja a 0
-- campesino/a: corregido el icono de campesinos griegos múltiples, añadida orden para desvincularse de un héroe (útil cuando se desarman milicianos vinculados), mejorados los tooltips basados en el puntero del mouse
-- pescador: coste reducido a 100 víveres, tiempo de reclutamiento reducido a 5 segundos, mejorados los tooltips basados en el puntero del mouse, añadido tooltip dedicado al apuntar sobre un puerto
-- navío de guerra: vista aumentada a 720, añadidas "penetración" y "reanimación", añadida toda la información (excepto las habilidades) y objetos a la interfaz, mejorados los tooltips basados en el puntero del mouse
+- campesino/a: corregido el icono de campesinos griegos múltiples, añadida orden para desvincularse de un héroe (útil cuando se desarman milicianos vinculados), mejorados los tooltips basados en el puntero del ratón
+- pescador: coste reducido a 100 víveres, tiempo de reclutamiento reducido a 5 segundos, mejorados los tooltips basados en el puntero del ratón, añadido tooltip dedicado al apuntar sobre un puerto
+- navío de guerra: vista aumentada a 720, añadidas "penetración" y "reanimación", añadida toda la información (excepto las habilidades) y objetos a la interfaz, mejorados los tooltips basados en el puntero del ratón
 - Keltill: salud aumentada a 1300, ataque aumentado a 60, defensa reducida a 18, vista aumentada a 650, velocidad aumentada a 130, "llamada a la defensa"-"ataque heroico"-"resistencia heroica"-"curación"-"marcha forzada"
 - Lárax: salud aumentada a 1400, ataque aumentado a 70, vista aumentada a 700, velocidad aumentada a 140, inventario aumentado a 6, "llamada a la defensa"-"ataque heroico"-"resistencia heroica"-"defensa heroica"-"exploración"
 - Julio César: salud aumentada a 1250, ataque aumentado a 42, vista aumentada a 675, velocidad aumentada a 125, "liderazgo"-"proeza"-"marcha forzada"-"superioridad defensiva"-"superioridad ofensiva"-"vigor"
@@ -1043,7 +1202,7 @@ AUGUSTO EN EL NILO
 Augusto en el Nilo ha recibido una enorme cantidad de cambios y era un milagro que la versión original funcionara ya que las secuencias y los scripts eran un completo caos, incluso faltaban algunas traducciones y/o eran incorrectas.
 El objetivo de las modificaciones es hacer el escenario mucho más interesante y dinámico: esto ha sido posible gracias tanto a diversos retoques en el mapa como a los cambios en la IA (ver sección correspondiente).
 Este escenario puede verse como una partida de estrategia enriquecida con mecánicas especiales, como una mayor utilidad de los fortines de reclutamiento, la presencia de un fortín del oro, los asaltos de las tropas sudanesas y los constantes ataques marítimos a Pelusio desde la ciudad de Alejandría.
-Esta última ciudad ahora es imposible de conquistar con las tropas iniciales (que han sido mejoradas y hechas consistentes, antes eran aleatorias) ya que los defensores son mucho más fuertes, hay 2 naves superpotenciadas protegiendo el puerto (para dificultar la interrupción de los ataques marítimos) y sobre todo porque se han introducido Cleopatra y Marco Antonio con ejércitos extremadamente poderosos, pensados para ser enfrentados solo al final de la partida, cuando el jugador ya haya alcanzado un enorme nivel de poder.
+Esta última ciudad ahora es imposible de conquistar con las tropas iniciales (que han sido mejoradas y hechas consistentes, antes eran aleatorias) ya que los defensores son mucho más fuertes, hay 2 navíos superpotenciados protegiendo el puerto (para dificultar la interrupción de los ataques marítimos) y sobre todo porque se han introducido Cleopatra y Marco Antonio con ejércitos extremadamente poderosos, pensados para ser enfrentados solo al final de la partida, cuando el jugador ya haya alcanzado un enorme nivel de poder.
 Mientras tanto, los constantes asaltos de las tribus sudanesas a Memphis no dejan de generarse, ni siquiera tras la conquista de la fortaleza, convirtiéndose en enormes grupos de refuerzo si llegan a derrotar a los defensores (antes dejaban de aparecer tras conquistar el foro).
 La ciudad de Pelusio ha sido potenciada para ayudar al jugador tras las mejoras a los enemigos: hay más recursos y gracias a la adición del templo de Horus y Anubis se pueden reclutar héroes adicionales e investigar las mejoras de las estatuas; también hay algunas fuentes de agua para curar rápidamente las tropas.
 Se ha solucionado una gran cantidad de bugs y exploits, por ejemplo completando las murallas de Alejandría y Pelusio o impidiendo que el jugador desembarque las unidades iniciales antes de completar la batalla naval; si aun así lo consigue, la población de las aldeas permanecerá al mínimo para evitar que pueda convertir a los campesinos en mercenarios antes de continuar correctamente con el escenario.
@@ -1522,7 +1681,6 @@ Aquí se enumeran algunos errores que podrían ser resolvidos en futuras version
 
 RESOLVIBLES
 - el héroe egipcio con el pelo "tipo bob" cambia el color de su ropa durante el combate, volviéndose siempre rojo aunque no debería
-- el guardia de élite dorado (nivel 18+) vuelve a tener un aspecto "metálico" durante el combate
 - los movimientos del toxotes no están sincronizados con su sombra
 
 NECESITAN INVESTIGACIÓN MÁS PROFUNDA
@@ -1532,10 +1690,12 @@ NECESITAN INVESTIGACIÓN MÁS PROFUNDA
 
 NO RESOLVIBLES
 - la función "Erase" activa los efectos relacionados con la muerte de las unidades (como los "poemas épicos") y aumenta el contador de unidades perdidas (los centinelas que regresan a las torres son la causa principal)
+- la función "Disease" genera memory leaks si la unidad envenenada entra en una estructura y todavía está viva y envenenada al cerrar el juego
 - el foro germano produce oro en la misma cantidad de víveres si el pueblo del propietario al comienzo de la partida no es Germania
-- el cambio de factor velocidad para un héroe solo se aplica durante el combate y no durante el movimiento
+- el cambio de factor velocidad para un héroe solo se aplica durante el combate y no durante el movimiento (problema de las funciones "FormSetupAndMoveTo" y "FormKeepMoving")
 - las unidades con factor velocidad modificado ralentizan a todo el ejército cuando están vinculadas a un héroe
 - las unidades muertas en posesión de "fortuna de los dioses" que son golpeadas por "daño expansivo" pueden generar el mismo bug de "resurrección" que ocurría con "ira de Júpiter"
+- en el editor de mapas, es posible asociar estructuras secundarias a las cuevas: establecer en 1 la propiedad "is_single_building" de la clase "Teleport" resuelve el problema, pero entonces ya no aparece el mensaje de eliminación de ambas entradas y, si al iniciar la partida sigue habiendo una, el juego crashea
 - en el editor de mapas, cuando se coloca una fortaleza o aldea aleatoria con estructuras que no están en el mapa, el juego crashea al iniciar la partida
 - en el editor de mapas, cuando se crea un grupo mediante selección de objetos usando el botón dedicado en la ventana, si hay alguno que no es una unidad (como las tiendas del campamento), el juego crashea
 - en el editor de mapas, cuando se asigna un objeto a más unidades y luego se seleccionan muchas a la vez, al menos una de ellas pierde el objeto
