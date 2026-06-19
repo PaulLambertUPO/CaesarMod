@@ -444,14 +444,14 @@ if (nRace == Carthage)
 if (nRace == Iberia) {
 	if (strTech == "")
 		if (set.population >= set.max_population * 4 / 5)
-			if (!IsResearched(set, "More Housing"))
-				if (!IsResearching(set, "More Housing"))
-					if (!IsResearching(set, "Housing")) {
+			if (!IsResearched(set, "Housing II"))
+				if (!IsResearching(set, "Housing II"))
+					if (!IsResearching(set, "Housing I")) {
 						Building b;
-						b = set.FindResearchLab("More Housing");
+						b = set.FindResearchLab("Housing II");
 						if (b.IsValid)
 							if (!b.IsBroken) {
-								strTech = "More Housing";
+								strTech = "Housing II";
 								if (set.population >= set.max_population)
 									bForceResearch = true;
 							}

@@ -26,7 +26,9 @@
 </layers>
 <states>
 <state idx="1" name="idle" image_idx="0" image_row="1" offsetx="-95" offsety="-126" anim_idx="13" anim_frame="1"/>
-<state idx="2" name="attack" image_idx="0" image_row="1" offsetx="-842150451" offsety="-842150451" anim_idx="5" anim_frame="1"/>
+<state idx="2" name="defend" image_idx="0" image_row="1" offsetx="95" offsety="-126" anim_idx="5" anim_frame="1"/>
+<state idx="3" name="carryjugidle" image_idx="0" image_row="1" offsetx="-95" offsety="-126" anim_idx="17" anim_frame="1"/>
+<state idx="4" name="carryjug2idle" image_idx="0" image_row="1" offsetx="-95" offsety="-126" anim_idx="18" anim_frame="1"/>
 </states>
 <anims>
 <anim idx="1" name="Walk" startstate="1" endstate="1" frames="15" duration="858" default_duration="0" action_time="0" step="38">
@@ -48,7 +50,7 @@
 <frame idx="14" duration="66"/>
 <frame idx="15" duration="0"/>
 </anim>
-<anim idx="5" name="Defence" startstate="1" endstate="1" frames="11" duration="594" default_duration="0" action_time="0" step="0">
+<anim idx="5" name="Defence" startstate="2" endstate="2" frames="11" duration="594" default_duration="0" action_time="264" step="0">
 <replace layer="1" image="5" offsetx="-95" offsety="-126"/>
 <replace layer="2" image="6" offsetx="-95" offsety="-126"/>
 <frame idx="1" duration="0"/>
@@ -101,7 +103,7 @@
 <frame idx="8" duration="66"/>
 <frame idx="9" duration="0"/>
 </anim>
-<anim idx="17" name="CarryJug" startstate="1" endstate="1" frames="15" duration="858" default_duration="0" action_time="0" step="38">
+<anim idx="17" name="CarryJug" startstate="3" endstate="3" frames="15" duration="858" default_duration="0" action_time="0" step="38">
 <replace layer="1" image="1" offsetx="-95" offsety="-126"/>
 <replace layer="2" image="2" offsetx="-95" offsety="-126"/>
 <frame idx="1" duration="0"/>
@@ -120,7 +122,7 @@
 <frame idx="14" duration="66"/>
 <frame idx="15" duration="0"/>
 </anim>
-<anim idx="18" name="CarryJug2" startstate="1" endstate="1" frames="13" duration="726" default_duration="0" action_time="0" step="38">
+<anim idx="18" name="CarryJug2" startstate="4" endstate="4" frames="13" duration="726" default_duration="0" action_time="0" step="38">
 <replace layer="1" image="3" offsetx="-95" offsety="-126"/>
 <replace layer="2" image="4" offsetx="-95" offsety="-126"/>
 <frame idx="1" duration="0"/>
@@ -137,7 +139,7 @@
 <frame idx="12" duration="66"/>
 <frame idx="13" duration="0"/>
 </anim>
-<anim idx="24" name="Talk" startstate="1" endstate="1" frames="23" duration="1386" default_duration="0" action_time="0" step="0">
+<anim idx="22" name="Talk" startstate="1" endstate="1" frames="23" duration="1386" default_duration="0" action_time="0" step="0">
 <replace layer="1" image="11" offsetx="-95" offsety="-126"/>
 <replace layer="2" image="12" offsetx="-95" offsety="-126"/>
 <frame idx="1" duration="0"/>

@@ -10,7 +10,11 @@
 	<method sig="enter_alone" vs="data/subai/wildhorse_enter.vs" />
 	<method sig="advance_enter" vs="data/subai/wildhorse_enter.vs" />
 
-	<value0 icon="gameres/infobar/common/Loyality.bmp" />
+	<value0 icon="gameres/infobar/common/Loyality.bmp"
+		script="return 1;"
+		help="contents/capturing"
+		rollover="Loyalty"
+	/>
 
 	<defaultcmd target="IVillage">
 		<cmd name="enterwildhorse" />

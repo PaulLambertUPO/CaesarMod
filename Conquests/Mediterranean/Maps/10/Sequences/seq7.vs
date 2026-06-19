@@ -14,8 +14,8 @@ difficulty = GetDifficulty();
 	b.Research("Heroes' Wisdom");
 	b.Research("Warriors' Wisdom");
 	b.Research("Nobility");
-	b.Research("Housing");
-	b.Research("More Housing");
+	b.Research("Housing I");
+	b.Research("Housing II");
 }
 
 set = GetSettlement("S_Town2");

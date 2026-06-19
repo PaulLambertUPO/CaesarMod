@@ -265,4 +265,25 @@
 		sclass="IScout">
 		<src obj="IVillage" />
 	</cmd>
+	<cmd name="autotrainpeasant_yes" priority="12"
+		button="actions/autotrainpeasant yes.bmp"
+		immediate="yes"
+		method="autotrainpeasant"
+		param="yes"
+		groupverifier="data/subai/village_autotrainpeasant_yes_verify.vs"
+		key="a"
+		rollover="Start calling peasants automatically"
+		description="Calls peasants automatically if the population reaches the maximum and the supply route is set">
+		<src obj="BaseVillage" />
+	</cmd>
+	<cmd name="autotrainpeasant_no" priority="12"
+		button="actions/autotrainpeasant no.bmp"
+		immediate="yes"
+		method="autotrainpeasant"
+		param="no"
+		groupverifier="data/subai/village_autotrainpeasant_no_verify.vs"
+		key="a"
+		rollover="Stop calling peasants automatically">
+		<src obj="BaseVillage" />
+	</cmd>
 </commands>

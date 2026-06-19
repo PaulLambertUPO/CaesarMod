@@ -270,7 +270,7 @@ if (!bDesperateDefence) {
 
 								if (nRaceIsImperialRome)
 									if (nBuildType == 5)
-										if (IsResearched(set, "Improve Praetorian Equipment"))
+										if (IsResearched(set, "Spiked armor II"))
 											cmd = "trainRPraetorianDiscounted";
 										else
 											cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
@@ -303,7 +303,7 @@ if (!bDesperateDefence) {
 										if (IsResearching(aiPlayer, "Flexibility"))
 											nCount = 0;
 										else if (nBuildType == 5)
-											if (IsResearching(set, "Improve Praetorian Equipment"))
+											if (IsResearching(set, "Spiked armor II"))
 												nCount = 0;
 									}
 									else if (nRace == Britain) {

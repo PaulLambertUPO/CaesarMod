@@ -15,7 +15,7 @@ while (true) {
 		o = player_heroes[i];
 		if (o.IsAlive)
 			if (o.AsHero().AvailableSkillPoints() > 0) {
-				ShowHint(
+				ShowTutorial(
 					Translate("Hero advancement"),
 					Translate("Every time that a hero levels up, a skill point can be used to improve one of his skills (a '+' appears in the upper part of the screen when the hero is selected)."),
 					o

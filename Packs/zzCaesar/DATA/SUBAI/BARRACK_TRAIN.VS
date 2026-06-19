@@ -22,18 +22,24 @@ set = .settlement;
 	exit_point = .GetExitPoint(hall.pos, false);
 	if (exit_point.x == -1) {
 		u = Place(u_class, Point(0, 0), plr).AsUnit();
-		set.AddUnit(u);
+		if (set.IsStronghold)
+			set.ForceAddUnit(u);
+		else
+			u.SetCommand("advance", hall.pos);
 	}
 	else if (exit_point.y == -1) {
 		u = Place(u_class, Point(0, 0), plr).AsUnit();
-		set.AddUnit(u);
+		if (set.IsStronghold)
+			set.ForceAddUnit(u);
+		else
+			u.SetCommand("advance", hall.pos);
 	}
 	else {
 		u = Place(u_class, exit_point, plr).AsUnit();
-		if (set.IsVillage)
-			u.SetCommand("advance", hall.GetEnterPoint(u));
-		else
+		if (set.IsStronghold)
 			u.SetCommand("advance_enter", hall);
+		else
+			u.SetCommand("advance", hall.GetEnterPoint(u));
 	}
 
 	if (!u.IsHeirOf("BaseMage")) {

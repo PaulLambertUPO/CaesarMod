@@ -58,9 +58,6 @@
 		.CmdEnable("trainRPrinciple");
 		.CmdEnable("trainRScout");
 		.CmdEnable("trainRPraetorianBase");
-		while (!IsResearched(set, "Improve Praetorian Equipment"))
-			Sleep(250);
-		.CmdDisable("trainRPraetorianBase");
 		.CmdEnable("trainRPraetorianDiscounted");
 	}
 	else if (IsResearched(set, "ChoosePunicRome")) {

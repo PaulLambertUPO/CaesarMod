@@ -31,8 +31,8 @@ if (j > 0)
 				else
 					enemy_gates_status[i] = 0;
 			if (enemy_gates_status[i] > 1) {//show hint only from the second time an enemy gate is detected with health not decreasing
-				ShowHint(
-					Translate("siege machines"),
+				ShowTutorial(
+					Translate("Siege machines"),
 					Translate("In order to break an enemy gate you need to attack it with ranged units or with a siege machine (catapult, ram, tower). In order to create a siege machine, select up to 10 warriors and order them to build it from the menu, then select the area by clicking on the appropriate place (make sure to build it in effective range). The more units are used to build a siege machine, the faster the construction process and the attack speed will be."),
 					o
 				);

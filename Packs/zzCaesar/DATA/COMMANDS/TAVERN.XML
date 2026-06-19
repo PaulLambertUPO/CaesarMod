@@ -23,7 +23,7 @@
 		costfood="800"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="RTavern" />
 	</cmd>
@@ -37,7 +37,7 @@
 		researchcommand="yes"
 		method="research"
 		param="NameSet, Free Wine, default"
-		description="Explores a large area around the stronghold"
+		description="Explores a large area around the settlement"
 		rollover="Free wine">
 		<src obj="RTavern" />
 	</cmd>
@@ -79,7 +79,7 @@
 		method="research"
 		key="m"
 		rollover="Buy map"
-		description="Explores a huge area around the stronghold"
+		description="Explores a huge area around the settlement"
 		param="ReqSet, Free Wine, default, NameSet, Buy map, default">
 		<src obj="RTavern"/>
 	</cmd>
@@ -122,7 +122,7 @@
 		costfood="600"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="GTavern" />
 	</cmd>
@@ -136,7 +136,7 @@
 		researchcommand="yes"
 		method="research"
 		param="NameSet, Free Beer, default"
-		description="Increases the stronghold population by 20"
+		description="Increases the settlement population by 20"
 		rollover="Free beer">
 		<src obj="GTavern" />
 	</cmd>
@@ -146,7 +146,7 @@
 		button="upgrades/Food Tax.bmp"
 		key="t"
 		rollover="Food Tax"
-		description="Imposes the stronghold population to produce food over time"
+		description="Imposes the settlement population to produce food over time"
 		costgold="2000"
 		execdelay="20000"
 		researchcommand="yes"
@@ -241,7 +241,7 @@
 		costfood="600"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="ITavern" />
 	</cmd>
@@ -255,7 +255,7 @@
 		researchcommand="yes"
 		method="research"
 		param="NameSet, Free Drinks, default"
-		description="Increases the stronghold population by 10 and gathers 800 food"
+		description="Increases the settlement population by 10 and gathers 800 food"
 		rollover="Free Drinks">
 		<src obj="ITavern" />
 	</cmd>
@@ -287,32 +287,32 @@
 		param="ReqSet, Free Drinks, default, NamePlr, Tame horses, default">
 		<src obj="ITavern" />
 	</cmd>
-	<cmd name="Housing" priority="6"
-		queueicon="gameres/icons/upgrades/Housing.bmp"
+	<cmd name="Housing I" priority="6"
+		queueicon="gameres/icons/upgrades/Housing1.bmp"
 		groupverifier="data/subai/research_verify.vs"
-		button="research/Housing.bmp"
+		button="research/Housing1.bmp"
 		key="h"
 		researchcommand="yes"
 		costgold="750"
-		rollover="Housing"
+		rollover="Housing I"
 		execdelay="30000"
-		description="Increases the maximum population of the stronghold by 15 and the current one by 5"
+		description="Increases the maximum population of the settlement by 15 and the current one by 5"
 		method="research"
-		param="ReqSet, Free Drinks, default, NameSet, Housing">
+		param="ReqSet, Free Drinks, default, NameSet, Housing I">
 		<src obj="ITavern" />
 	</cmd>
-	<cmd name="More Housing" priority="6"
-		queueicon="gameres/icons/upgrades/More Housing.bmp"
+	<cmd name="Housing II" priority="6"
+		queueicon="gameres/icons/upgrades/Housing2.bmp"
 		groupverifier="data/subai/research_verify.vs"
-		button="research/More Housing.bmp"
+		button="research/Housing2.bmp"
 		key="h"
 		researchcommand="yes"
 		costgold="750"
-		rollover="More housing"
+		rollover="Housing II"
 		execdelay="30000"
-		description="Increases the maximum population of the stronghold by 15 and the current one by 5"
+		description="Increases the maximum population of the settlement by 15 and the current one by 5"
 		method="research"
-		param="ReqSet, Free Drinks, , ReqSet, Housing, , NameSet, More Housing, default">
+		param="ReqSet, Free Drinks, , ReqSet, Housing I, , NameSet, Housing II, default">
 		<src obj="ITavern" />
 	</cmd>
 	<cmd name="Call to arms" priority="7"
@@ -355,7 +355,7 @@
 		costfood="1000"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="CTavern" />
 	</cmd>
@@ -382,7 +382,7 @@
 		researchcommand="yes"
 		method="research"
 		param="NameSet, Free Trade, default"
-		description="Increases the population of the stronghold to maximum"
+		description="Increases the population of the settlement to maximum"
 		rollover="Free trade">
 		<src obj="CTavern" />
 	</cmd>
@@ -395,7 +395,7 @@
 		execdelay="20000"
 		queueicon="gameres/icons/upgrades/Expedition.bmp"
 		rollover="Expedition"
-		description="Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per stronghold)"
+		description="Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per settlement)"
 		cursor="do_something"
 		researchcommand="yes"
 		param="ReqSet, Free Trade, default, NameSet, Expedition, default">
@@ -484,7 +484,7 @@
 		costfood="600"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="BTavern" />
 	</cmd>
@@ -498,7 +498,7 @@
 		researchcommand="yes"
 		method="research"
 		param="NameSet, Gambling, default"
-		description="Explores a medium area around the stronghold and gives you a 40% chance to win 5000 gold or 400 food if you lose"
+		description="Explores a medium area around the settlement and gives you a 40% chance to win 5000 gold or 400 food if you lose"
 		rollover="Gambling">
 		<src obj="BTavern" />
 	</cmd>
@@ -554,7 +554,7 @@
 		researchcommand="yes"
 		method="research"
 		rollover="Gambler's All-in"
-		description="Increases the stronghold population by 40 and gives you a 35% chance to win 10000 gold"
+		description="Increases the settlement population by 40 and gives you a 35% chance to win 10000 gold"
 		param="ReqSet, Gambling, default, NameSet, Gambler's All-in, default">
 		<src obj="BTavern" />
 	</cmd>
@@ -583,7 +583,7 @@
 		costgold="400"
 		execdelay="15000"
 		method="buywarslaves"
-		description="Increases the stronghold population by 20"
+		description="Increases the settlement population by 20"
 		rollover="Buy Slaves">
 		<src obj="EMarket" />
 	</cmd>
@@ -597,7 +597,7 @@
 		researchcommand="yes"
 		method="research"
 		param="NameSet, Grain Trade, default"
-		description="Slowly exchanges the food in the stronghold for gold"
+		description="Slowly exchanges the food in the settlement for gold"
 		rollover="Grain Trade">
 		<src obj="EMarket" />
 	</cmd>
@@ -611,7 +611,7 @@
 		execdelay="30000"
 		method="research"
 		param="ReqSet, Grain Trade, default, NameSet, Religious Feast, default, NameSet, TReligiousFeast, , NameSet, HReligiousFeast"
-		description="Heals 5 warriors around the townhall by 30 every 2 seconds"
+		description="Heals 5 warriors around the settlement by 30 every 2 seconds"
 		rollover="Religious Feast">
 		<src obj="EMarket" />
 	</cmd>
@@ -639,7 +639,7 @@
 		execdelay="30000"
 		method="buyslaves"
 		param="ReqSet, Grain Trade, default"
-		description="Increases the population of the stronghold to maximum"
+		description="Increases the population of the settlement to maximum"
 		rollover="Hecatomb">
 		<src obj="EMarket" />
 	</cmd>
@@ -682,7 +682,7 @@
 		costfood="400"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="TTavern" />
 	</cmd>
@@ -710,7 +710,7 @@
 		researchcommand="yes"
 		method="research"
 		param="ReqSet, Food sale, default, NameSet, TFoodTax, default, NameSet, Food Tax"
-		description="Imposes the stronghold population to produce food over time"
+		description="Imposes the settlement population to produce food over time"
 		rollover="Food Tax">
 		<src obj="TTavern" />
 	</cmd>
@@ -724,7 +724,7 @@
 		execdelay="30000"
 		method="research"
 		param="ReqSet, Food sale, default, NameSet, TReligiousFeast, default, NameSet, Religious Feast, , NameSet, HReligiousFeast"
-		description="Heals 5 warriors around the townhall by 30 every 2 seconds"
+		description="Heals 5 warriors around the settlement by 30 every 2 seconds"
 		rollover="Religious Feast">
 		<src obj="TTavern" />
 	</cmd>

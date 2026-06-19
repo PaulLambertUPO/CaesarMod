@@ -8,8 +8,5 @@
 		<key id="Tab" script="if (!IsViewLocked()) ShowLastNotificationPos();" />
 		<key id="Mul" script="if (!IsMultiplayer()) if (GetSpeed() != 10000) SetSpeed(10000); else SetSpeed(1000);" />
 		<!--<key id="Backspace" script="if (!IsMultiplayer()) {int i; for (i = _GetSelection().count() - 1; i >= 0; i = i - 1) _GetSelection()[i].Damage(1000000);}"/> -->
-
-		<watch class="Unit" slot="0" script=".AsUnit.level" />
-		<watch class="Wagon" slot="0" script=".AsWagon.loyalty;" />
 	</keys>
 </scdebug>

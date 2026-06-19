@@ -7,7 +7,7 @@ ObjList ol;
 str u_class;
 int i, j, plr, build_number, u_level;
 point exit_point;
-bool is_village, valid_exit_point = true;
+bool is_stronghold, valid_exit_point = true;
 
 Sleep(500 + rand(501));
 
@@ -15,7 +15,7 @@ this = This.AsBuilding();
 
 set = .settlement;
 hall = set.GetCentralBuilding();
-is_village = set.IsVillage;
+is_stronghold = set.IsStronghold;
 plr = .player;
 
 exit_point = .GetExitPoint(hall.pos, false);
@@ -129,12 +129,14 @@ while (true) {
 
 		u = Place(u_class, exit_point, plr).AsUnit();
 		if (valid_exit_point)
-			if (is_village)
-				u.SetCommand("advance", hall.GetEnterPoint(u));
-			else
+			if (is_stronghold)
 				u.SetCommand("advance_enter", hall);
+			else
+				u.SetCommand("advance", hall.GetEnterPoint(u));
+		else if (is_stronghold)
+			set.ForceAddUnit(u);
 		else
-			set.AddUnit(u);
+			u.SetCommand("advance", hall.pos);
 
 		if (u_level < 12)
 			if (IsResearched(set, "Shared Triumph")) {

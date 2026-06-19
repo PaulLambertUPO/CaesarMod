@@ -43,7 +43,7 @@
 		execdelay="14000"
 		rollover="Equip Defender"
 		method="train"
-		param="IDefender, Spears"
+		param="IDefender, Spears, Blacksmith"
 		sclass="IDefender">
 		<src obj="IBarracks" />
 	</cmd>
@@ -59,7 +59,7 @@
 		execdelay="20000"
 		rollover="Equip Horseman"
 		method="train"
-		param="ICavalry, Horseshoes"
+		param="ICavalry, Horseshoes, Blacksmith"
 		sclass="ICavalry">
 		<src obj="IBarracks" />
 	</cmd>
@@ -75,7 +75,7 @@
 		execdelay="16000"
 		rollover="Equip Slinger"
 		method="train"
-		param="ISlinger, Slings"
+		param="ISlinger, Slings, Blacksmith"
 		sclass="ISlinger">
 		<src obj="IBarracks" />
 	</cmd>
@@ -91,7 +91,7 @@
 		execdelay="22000"
 		rollover="Equip Elite Guard"
 		method="train"
-		param="IEliteGuard, Battle Axes"
+		param="IEliteGuard, Battle Axes, Blacksmith"
 		sclass="IEliteGuard">
 		<src obj="IBarracks" />
 	</cmd>

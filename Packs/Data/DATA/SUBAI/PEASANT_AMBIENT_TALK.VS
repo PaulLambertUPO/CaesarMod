@@ -16,10 +16,15 @@ if (other.AsUnit().IsValid) {
 
 					while (other.IsAlive)
 						if (.GotoEnter(other.pos, 80, 2000, false, 0)) {
-							if (other.IsAlive) {
-								.Face(other.pos);
-								.Idle(2000 + rand(1001));
-							}
+							if (other.IsAlive)
+								if (rand(2) == 0) {
+									.PlayAnim(22, other.pos);//talk
+									Sleep(rand(501));
+								}
+								else {
+									.Face(other.pos);
+									.Idle(1000 + rand(1001));
+								}
 							break;
 						}
 				}

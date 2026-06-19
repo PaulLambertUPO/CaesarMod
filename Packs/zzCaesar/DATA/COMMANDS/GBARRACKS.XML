@@ -43,7 +43,7 @@
 		execdelay="14000"
 		rollover="Equip Axeman"
 		method="train"
-		param="GAxeman, Axes"
+		param="GAxeman, Axes, Blacksmith"
 		sclass="GAxeman">
 		<src obj="GBarracks" />
 	</cmd>
@@ -59,7 +59,7 @@
 		execdelay="12000"
 		rollover="Equip Spearman"
 		method="train"
-		param="GSpearman, Spears"
+		param="GSpearman, Spears, Blacksmith"
 		sclass="GSpearman">
 		<src obj="GBarracks" />
 	</cmd>
@@ -75,7 +75,7 @@
 		execdelay="16000"
 		rollover="Equip Horseman"
 		method="train"
-		param="GHorseman, Horseshoes"
+		param="GHorseman, Horseshoes, Blacksmith"
 		sclass="GHorseman">
 		<src obj="GBarracks" />
 	</cmd>
@@ -91,7 +91,7 @@
 		execdelay="18000"
 		rollover="Equip Woman Warrior"
 		method="train"
-		param="GWomanWarrior, Woman Armor"
+		param="GWomanWarrior, Woman Armor, Blacksmith"
 		sclass="GWomanWarrior">
 		<src obj="GBarracks" />
 	</cmd>

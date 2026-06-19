@@ -32,6 +32,8 @@
 	<method sig="creategoldmulebig" vs="data/subai/do_nothing_void.vs" />
 	<method sig="autotrain_start" vs="data/subai/townhall_autotrain_start.vs" />
 	<method sig="autotrain_stop" vs="data/subai/townhall_autotrain_stop.vs" />
+	<method sig="send_resources" vs="data/subai/townhall_send_resources.vs" />
+	<method sig="autoattach" vs="data/subai/townhall_autoattach.vs" />
 
 	<defaultcmd target="">
 		<cmd name="unitsout" />

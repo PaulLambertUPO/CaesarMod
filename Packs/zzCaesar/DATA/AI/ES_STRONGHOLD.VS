@@ -16,6 +16,7 @@ EnvWriteInt(set, "nArmyBuilds", 0);//the amount of times ESH_BuildArmy has been 
 EnvWriteInt(set, "ResearchTechTime", GetTime());//time of the next allowed research for ESH_NeedTech
 EnvWriteInt(set, "ResearchTrainingComplete", 0);//flag used by ESH_ResearchTraining to research upgrades (reset here to prevent a new owner from ignoring player upgrades)
 EnvWriteInt(set, "ArenaHireCmdAi", 0);//flag used by ESH_ArenaUnits to avoid many checks on the commands in ESH_NeedTech (reset here to stay safe when the owner changes)
+EnvWriteInt(set, "ESH_SquanderGoldTechs_Cooldown", GetTime() + 300000);//time of the next allowed use of ESH_SquanderGoldTechs
 
 //store these values because they are constant and it is not good to retrieve them from AI variables every time
 nSquanderGoldAmount = AIVar(aiPlayer, AIV_SquanderGoldAmount);
@@ -144,7 +145,10 @@ while (set.player == aiPlayer) {
 
 	//research something when there is a lot of gold in the stronghold
 	if (set.gold >= nSquanderGoldAmount)
-		set.AIRun("ESH_SquanderGoldTechs.vs");
+		if (GetTime() >= EnvReadInt(set, "ESH_SquanderGoldTechs_Cooldown")) {
+			set.AIRun("ESH_SquanderGoldTechs.vs");
+			EnvWriteInt(set, "ESH_SquanderGoldTechs_Cooldown", GetTime() + 300000);
+		}
 
 	//improve stronghold defences/walls and hire sentries (Greece)
 	if (bCanResearchSentryUpgrades) {

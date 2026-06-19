@@ -311,18 +311,30 @@ while (dest != "") {
 			}
 			else if (name == "Organize tournament") {
 				Unit u;
-				point pt_pos;
+				point pt_place;
 				int i, u_level;
 				bool god_gift;
-				pt_pos = .pos;
 				u_level = MAX(1, EnvReadInt(plr, "standard_spawn_level"));
 				god_gift = EnvReadInt(set, "items/God's Gift") != 0;
-				for (i = 0; i < 20; i += 1) {
-					u = Place("RGladiator", pt_pos, plr).AsUnit();
-					u.SetLevel(u_level);
-					if (god_gift)
-						u.AddItem("God's Gift");
-					set.ForceAddUnit(u);
+				if (set.IsStronghold) {
+					pt_place = .pos;
+					for (i = 0; i < 20; i += 1) {
+						u = Place("RGladiator", pt_place, plr).AsUnit();
+						u.SetLevel(u_level);
+						if (god_gift)
+							u.AddItem("God's Gift");
+						set.ForceAddUnit(u);
+					}
+				}
+				else {
+					pt_place = set.GetCentralBuilding().GetExitPoint(.pos, false);
+					for (i = 0; i < 20; i += 1) {
+						u = Place("RGladiator", pt_place, plr).AsUnit();
+						u.SetLevel(u_level);
+						if (god_gift)
+							u.AddItem("God's Gift");
+						u.SetCommand("advance", RandomPointInCircle(pt_place, 450));
+					}
 				}
 				set.SetGold(set.gold + 2000);
 				set.GoldConverted(2000);
@@ -337,11 +349,11 @@ while (dest != "") {
 				EnvWriteInt(set, "LastAllIn", GetTime());//cooldown
 				EnvWriteString(set, name, "");//re-enable research
 			}
-			else if (name == "Housing") {
+			else if (name == "Housing I") {
 				set.AddToMaxPopulation(15);
 				set.AddToPopulation(5);
 			}
-			else if (name == "More Housing") {
+			else if (name == "Housing II") {
 				set.AddToMaxPopulation(15);
 				set.AddToPopulation(5);
 			}

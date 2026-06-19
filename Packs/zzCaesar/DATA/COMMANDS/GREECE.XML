@@ -28,7 +28,7 @@
 		execdelay="10000"
 		rollover="Equip Toxotes"
 		method="train"
-		param="HToxotes, Arrows"
+		param="HToxotes, Arrows, Blacksmith"
 		sclass="HToxotes">
 		<src obj="HBarracks" />
 	</cmd>
@@ -44,7 +44,7 @@
 		execdelay="14000"
 		rollover="Equip Hoplite"
 		method="train"
-		param="HHoplite, Spears"
+		param="HHoplite, Spears, Blacksmith"
 		sclass="HHoplite">
 		<src obj="HBarracks" />
 	</cmd>
@@ -60,7 +60,7 @@
 		execdelay="16000"
 		rollover="Equip Hetairos"
 		method="train"
-		param="HCataphract, Horse Armor"
+		param="HCataphract, Horse Armor, Blacksmith"
 		sclass="HCataphract">
 		<src obj="HBarracks" />
 	</cmd>
@@ -76,7 +76,7 @@
 		execdelay="20000"
 		rollover="Equip Hypaspist"
 		method="train"
-		param="HHypaspista, Royal Armor"
+		param="HHypaspista, Royal Armor, Blacksmith"
 		sclass="HHypaspista">
 		<src obj="HBarracks" />
 	</cmd>
@@ -92,7 +92,7 @@
 		execdelay="30000"
 		rollover="Equip Chariot"
 		method="train"
-		param="HChariot, Scythed Chariot Wheels"
+		param="HChariot, Scythed Chariot Wheels, Blacksmith"
 		sclass="HChariot">
 		<src obj="HBarracks" />
 	</cmd>
@@ -347,7 +347,7 @@
 		costfood="800"
 		execdelay="10000"
 		method="addpop"
-		description="Increases the stronghold population by 10"
+		description="Increases the settlement population by 10"
 		rollover="Increase population">
 		<src obj="HAgora" />
 	</cmd>
@@ -374,7 +374,7 @@
 		costgold="400"
 		execdelay="15000"
 		method="buywarslaves"
-		description="Increases the stronghold population by 20"
+		description="Increases the settlement population by 20"
 		rollover="Buy war slaves"
 		param="ReqSet, Trade Routes, default">
 		<src obj="HAgora" />
@@ -439,7 +439,7 @@
 		execdelay="30000"
 		method="research"
 		param="ReqSet, Trade Routes, default, NameSet, HReligiousFeast, default, NameSet, Religious Feast, , NameSet, TReligiousFeast"
-		description="Heals 5 warriors around the townhall by 30 every 2 seconds"
+		description="Heals 5 warriors around the settlement by 30 every 2 seconds"
 		rollover="Religious Feast">
 		<src obj="HAgora"/>
 	</cmd>

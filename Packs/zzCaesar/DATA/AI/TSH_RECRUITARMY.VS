@@ -7,7 +7,7 @@ ObjList ol1;
 int nRace, nBuildType, i;
 str cmd, tech;
 bool nRaceIsImperialRome = false, nRaceIsPunicRome = false;
-StrArray imperialOrPunicOrGreekClasses, imperialOrPunicOrGreekTrainCmds, imperialOrPunicOrGreekTechs;
+StrArray imperialOrPunicOrGreekClasses, imperialOrPunicOrGreekTrainCmds, imperialOrPunicOrGreekOrGaulTechs;
 
 nRace = set.GetCentralBuilding().race;
 
@@ -24,23 +24,22 @@ if (nRaceIsImperialRome) {
 	imperialOrPunicOrGreekClasses[3] = "RPrinciple";
 	imperialOrPunicOrGreekClasses[4] = "RScout";
 	imperialOrPunicOrGreekClasses[5] = "RPraetorian";
-	imperialOrPunicOrGreekClasses[6] = "RPraetorian";
 
 	imperialOrPunicOrGreekTrainCmds[0] = "trainRHastatus";
 	imperialOrPunicOrGreekTrainCmds[1] = "trainRArcher";
 	imperialOrPunicOrGreekTrainCmds[2] = "trainRVelit";
 	imperialOrPunicOrGreekTrainCmds[3] = "trainRPrinciple";
 	imperialOrPunicOrGreekTrainCmds[4] = "trainRScout";
-	imperialOrPunicOrGreekTrainCmds[5] = "trainRPraetorianBase";
-	imperialOrPunicOrGreekTrainCmds[6] = "trainRPraetorianDiscounted";
+	imperialOrPunicOrGreekTrainCmds[5] = "trainRPraetorianDiscounted";
+	imperialOrPunicOrGreekTrainCmds[6] = "trainRPraetorianBase";
 
-	imperialOrPunicOrGreekTechs[0] = "";
-	imperialOrPunicOrGreekTechs[1] = "Roman Archers";
-	imperialOrPunicOrGreekTechs[2] = "Roman Velit";
-	imperialOrPunicOrGreekTechs[3] = "Roman Principle";
-	imperialOrPunicOrGreekTechs[4] = "Roman Scout";
-	imperialOrPunicOrGreekTechs[5] = "Roman Praetorian";
-	imperialOrPunicOrGreekTechs[6] = "Improve Praetorian Equipment";
+	imperialOrPunicOrGreekOrGaulTechs[0] = "";
+	imperialOrPunicOrGreekOrGaulTechs[1] = "Roman Archers";
+	imperialOrPunicOrGreekOrGaulTechs[2] = "Roman Velit";
+	imperialOrPunicOrGreekOrGaulTechs[3] = "Roman Principle";
+	imperialOrPunicOrGreekOrGaulTechs[4] = "Roman Scout";
+	imperialOrPunicOrGreekOrGaulTechs[5] = "Spiked armor II";
+	imperialOrPunicOrGreekOrGaulTechs[6] = "Spiked armor I";
 }
 else if (nRaceIsPunicRome) {
 	imperialOrPunicOrGreekClasses[0] = "RHastatusPunic";
@@ -57,12 +56,12 @@ else if (nRaceIsPunicRome) {
 	imperialOrPunicOrGreekTrainCmds[4] = "trainRScoutPunic";
 	imperialOrPunicOrGreekTrainCmds[5] = "trainRPraetorianPunic";
 
-	imperialOrPunicOrGreekTechs[0] = "";
-	imperialOrPunicOrGreekTechs[1] = "Roman Archers";
-	imperialOrPunicOrGreekTechs[2] = "Gladiator Shows";
-	imperialOrPunicOrGreekTechs[3] = "Roman Principle";
-	imperialOrPunicOrGreekTechs[4] = "Roman Scout";
-	imperialOrPunicOrGreekTechs[5] = "Roman Praetorian";
+	imperialOrPunicOrGreekOrGaulTechs[0] = "";
+	imperialOrPunicOrGreekOrGaulTechs[1] = "Roman Archers";
+	imperialOrPunicOrGreekOrGaulTechs[2] = "Gladiator Shows";
+	imperialOrPunicOrGreekOrGaulTechs[3] = "Roman Principle";
+	imperialOrPunicOrGreekOrGaulTechs[4] = "Roman Scout";
+	imperialOrPunicOrGreekOrGaulTechs[5] = "Spiked armor";
 }
 else if (nRace == ImperialRome) {//Greece
 	imperialOrPunicOrGreekClasses[0] = "HPeltast";
@@ -79,16 +78,28 @@ else if (nRace == ImperialRome) {//Greece
 	imperialOrPunicOrGreekTrainCmds[4] = "trainHHypaspista";
 	imperialOrPunicOrGreekTrainCmds[5] = "trainHChariot";
 
-	imperialOrPunicOrGreekTechs[0] = "";
-	imperialOrPunicOrGreekTechs[1] = "Greek Archers";
-	imperialOrPunicOrGreekTechs[2] = "Greek Spears";
-	imperialOrPunicOrGreekTechs[3] = "Greek Horse Armor";
-	imperialOrPunicOrGreekTechs[4] = "Greek Royal Armor";
-	imperialOrPunicOrGreekTechs[5] = "Greek Chariot Wheels";
+	imperialOrPunicOrGreekOrGaulTechs[0] = "";
+	imperialOrPunicOrGreekOrGaulTechs[1] = "Greek Archers";
+	imperialOrPunicOrGreekOrGaulTechs[2] = "Greek Spears";
+	imperialOrPunicOrGreekOrGaulTechs[3] = "Greek Horse Armor";
+	imperialOrPunicOrGreekOrGaulTechs[4] = "Greek Royal Armor";
+	imperialOrPunicOrGreekOrGaulTechs[5] = "Greek Chariot Wheels";
+}
+else if (nRace == Gaul) {
+	imperialOrPunicOrGreekOrGaulTechs[0] = "";
+	imperialOrPunicOrGreekOrGaulTechs[1] = "";
+	imperialOrPunicOrGreekOrGaulTechs[2] = "Gaul Iron Axes";
+	imperialOrPunicOrGreekOrGaulTechs[3] = "Gaul Iron Spearheads";
+	imperialOrPunicOrGreekOrGaulTechs[4] = "Gaul Exceptional Horseshoes";
+	imperialOrPunicOrGreekOrGaulTechs[5] = "Gaul Fine Armor";
+	imperialOrPunicOrGreekOrGaulTechs[6] = "Gaul Axeman";
+	imperialOrPunicOrGreekOrGaulTechs[7] = "Gaul Spearman";
+	imperialOrPunicOrGreekOrGaulTechs[8] = "Gaul Horseman";
+	imperialOrPunicOrGreekOrGaulTechs[9] = "Gaul Woman Warrior";
 }
 
 if (nRaceIsImperialRome)
-	for (i = 0; i < 7; i += 1) {
+	for (i = 0; i < 6; i += 1) {
 		if (imperialOrPunicOrGreekClasses[i] == class) {
 			nBuildType = i;
 			break;
@@ -112,16 +123,26 @@ else
 	nBuildType = RUType(class, nRace);
 
 if (nRaceIsImperialRome) {
+	if (nBuildType == 5)//RPraetorian
+		if (!IsResearched(set, imperialOrPunicOrGreekOrGaulTechs[nBuildType]))
+			nBuildType += 1;
 	cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
-	tech = imperialOrPunicOrGreekTechs[nBuildType];
+	tech = imperialOrPunicOrGreekOrGaulTechs[nBuildType];
 }
 else if (nRaceIsPunicRome) {
 	cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
-	tech = imperialOrPunicOrGreekTechs[nBuildType];
+	tech = imperialOrPunicOrGreekOrGaulTechs[nBuildType];
 }
 else if (nRace == ImperialRome) {//Greece
 	cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
-	tech = imperialOrPunicOrGreekTechs[nBuildType];
+	tech = imperialOrPunicOrGreekOrGaulTechs[nBuildType];
+}
+else if (nRace == Gaul) {
+	cmd = UTrainCmd(nBuildType, nRace);
+	if (nBuildType >= 2)//GAxeman
+		if (!IsResearched(set, imperialOrPunicOrGreekOrGaulTechs[nBuildType]))
+			nBuildType += 4;
+	tech = imperialOrPunicOrGreekOrGaulTechs[nBuildType];
 }
 else {
 	cmd = UTrainCmd(nBuildType, nRace);
