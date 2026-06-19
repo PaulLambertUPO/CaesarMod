@@ -24,6 +24,7 @@
 </layers>
 <states>
 <state idx="1" name="idle" image_idx="0" image_row="1" offsetx="-79" offsety="-103" anim_idx="13" anim_frame="1"/>
+<state idx="2" name="defend" image_idx="0" image_row="1" offsetx="-79" offsety="-103" anim_idx="5" anim_frame="1"/>
 </states>
 <anims>
 <anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="924" default_duration="0" action_time="0" step="54">
@@ -45,6 +46,19 @@
 <frame idx="14" duration="66"/>
 <frame idx="15" duration="66"/>
 <frame idx="16" duration="0"/>
+</anim>
+<anim idx="5" name="Defence" startstate="2" endstate="2" frames="9" duration="462" default_duration="0" action_time="264" step="0">
+<replace layer="1" image="1" offsetx="-79" offsety="-103"/>
+<replace layer="2" image="2" offsetx="-79" offsety="-103"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="66"/>
+<frame idx="3" duration="66"/>
+<frame idx="4" duration="66"/>
+<frame idx="5" duration="66"/>
+<frame idx="6" duration="66"/>
+<frame idx="7" duration="66"/>
+<frame idx="8" duration="66"/>
+<frame idx="9" duration="0"/>
 </anim>
 <anim idx="9" name="Die" startstate="1" endstate="1" frames="22" duration="16424" default_duration="0" action_time="0" step="0">
 <replace layer="1" image="3" offsetx="-79" offsety="-103"/>
@@ -85,22 +99,9 @@
 <frame idx="8" duration="66"/>
 <frame idx="9" duration="0"/>
 </anim>
-<anim idx="21" name="Defence" startstate="1" endstate="1" frames="9" duration="462" default_duration="0" action_time="0" step="0">
-<replace layer="1" image="1" offsetx="-79" offsety="-103"/>
-<replace layer="2" image="2" offsetx="-79" offsety="-103"/>
-<frame idx="1" duration="0"/>
-<frame idx="2" duration="66"/>
-<frame idx="3" duration="66"/>
-<frame idx="4" duration="66"/>
-<frame idx="5" duration="66"/>
-<frame idx="6" duration="66"/>
-<frame idx="7" duration="66"/>
-<frame idx="8" duration="66"/>
-<frame idx="9" duration="0"/>
-</anim>
-<anim idx="22" name="siting" startstate="1" endstate="1" frames="22" duration="1320" default_duration="0" action_time="0" step="0">
-<replace layer="1" image="7" offsetx="-79" offsety="-103"/>
-<replace layer="2" image="8" offsetx="-79" offsety="-103"/>
+<anim idx="22" name="Talk" startstate="1" endstate="1" frames="22" duration="1320" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="9" offsetx="-79" offsety="-103"/>
+<replace layer="2" image="10" offsetx="-79" offsety="-103"/>
 <frame idx="1" duration="0"/>
 <frame idx="2" duration="66"/>
 <frame idx="3" duration="66"/>
@@ -124,9 +125,9 @@
 <frame idx="21" duration="66"/>
 <frame idx="22" duration="0"/>
 </anim>
-<anim idx="23" name="Talk" startstate="1" endstate="1" frames="22" duration="1320" default_duration="0" action_time="0" step="0">
-<replace layer="1" image="9" offsetx="-79" offsety="-103"/>
-<replace layer="2" image="10" offsetx="-79" offsety="-103"/>
+<anim idx="23" name="siting" startstate="1" endstate="1" frames="22" duration="1320" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="7" offsetx="-79" offsety="-103"/>
+<replace layer="2" image="8" offsetx="-79" offsety="-103"/>
 <frame idx="1" duration="0"/>
 <frame idx="2" duration="66"/>
 <frame idx="3" duration="66"/>

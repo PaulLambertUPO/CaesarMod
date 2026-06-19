@@ -27,7 +27,7 @@
 		execdelay="8000"
 		rollover="Equip Archer"
 		method="train"
-		param="RArcher, Arrows"
+		param="RArcher, Arrows, Blacksmith"
 		sclass="RArcher">
 		<src obj="RBarracks" />
 	</cmd>
@@ -43,7 +43,7 @@
 		execdelay="12000"
 		rollover="Equip Gladiator"
 		method="train"
-		param="RGladiator, Gladiator Shows"
+		param="RGladiator, Gladiator Shows, Arena"
 		sclass="RGladiator">
 		<src obj="RBarracks" />
 	</cmd>
@@ -59,7 +59,7 @@
 		execdelay="12000"
 		rollover="Equip Velit"
 		method="train"
-		param="RVelit, Throwing Spears"
+		param="RVelit, Throwing Spears, Blacksmith"
 		sclass="RVelit">
 		<src obj="RBarracks" />
 	</cmd>
@@ -75,7 +75,7 @@
 		execdelay="16000"
 		rollover="Equip Principle"
 		method="train"
-		param="RPrinciple, Pikes"
+		param="RPrinciple, Pikes, Blacksmith"
 		sclass="RPrinciple">
 		<src obj="RBarracks" />
 	</cmd>
@@ -91,7 +91,7 @@
 		execdelay="12000"
 		rollover="Equip Scout"
 		method="train"
-		param="RScout, Horseshoes"
+		param="RScout, Horseshoes, Blacksmith"
 		sclass="RScout">
 		<src obj="RBarracks" />
 	</cmd>
@@ -107,7 +107,7 @@
 		execdelay="20000"
 		rollover="Equip Tribune"
 		method="train"
-		param="RTribune, Full Armor"
+		param="RTribune, Full Armor, Blacksmith"
 		sclass="RTribune">
 		<src obj="RBarracks" />
 	</cmd>
@@ -116,14 +116,14 @@
 		queueicon="gameres/icons/RPraetorian.bmp"
 		transpicon="1"
 		traincommand="yes"
-		groupverifier="data/subai/barrack_train_verify.vs"
+		groupverifier="data/subai/train_base_discounted_verify.vs"
 		key="d"
 		costgold="480"
 		costpop="1"
 		execdelay="24000"
 		rollover="Equip Praetorian"
 		method="train"
-		param="RPraetorian, Spike Armor"
+		param="RPraetorian, base, Spiked armor II, Spiked armor I, Blacksmith"
 		sclass="RPraetorian">
 		<src obj="RBarracks" />
 	</cmd>
@@ -132,14 +132,14 @@
 		queueicon="gameres/icons/RPraetorian.bmp"
 		transpicon="1"
 		traincommand="yes"
-		groupverifier="data/subai/barrack_train_verify.vs"
+		groupverifier="data/subai/train_base_discounted_verify.vs"
 		key="d"
 		costgold="380"
 		costpop="1"
 		execdelay="24000"
 		rollover="Equip Praetorian"
 		method="train"
-		param="RPraetorian, Improve Praetorian Equipment"
+		param="RPraetorian, discounted, Spiked armor II, Spiked armor I, Blacksmith"
 		sclass="RPraetorian">
 		<src obj="RBarracks" />
 	</cmd>
@@ -188,7 +188,7 @@
 		execdelay="8000"
 		rollover="Equip Archer"
 		method="train"
-		param="RArcherPunic, Arrows"
+		param="RArcherPunic, Arrows, Blacksmith"
 		sclass="RArcherPunic">
 		<src obj="RBarracks" />
 	</cmd>
@@ -204,7 +204,7 @@
 		execdelay="12000"
 		rollover="Equip Gladiator"
 		method="train"
-		param="RGladiatorPunic, Gladiator Shows"
+		param="RGladiatorPunic, Gladiator Shows, Arena"
 		sclass="RGladiatorPunic">
 		<src obj="RBarracks" />
 	</cmd>
@@ -220,7 +220,7 @@
 		execdelay="16000"
 		rollover="Equip Principle"
 		method="train"
-		param="RPrinciplePunic, Pikes"
+		param="RPrinciplePunic, Pikes, Blacksmith"
 		sclass="RPrinciplePunic">
 		<src obj="RBarracks" />
 	</cmd>
@@ -236,7 +236,7 @@
 		execdelay="12000"
 		rollover="Equip Scout"
 		method="train"
-		param="RScoutPunic, Horseshoes"
+		param="RScoutPunic, Horseshoes, Blacksmith"
 		sclass="RScoutPunic">
 		<src obj="RBarracks" />
 	</cmd>
@@ -252,7 +252,7 @@
 		execdelay="24000"
 		rollover="Equip Praetorian"
 		method="train"
-		param="RPraetorianPunic, Spike Armor"
+		param="RPraetorianPunic, Spiked armor, Blacksmith"
 		sclass="RPraetorianPunic">
 		<src obj="RBarracks" />
 	</cmd>

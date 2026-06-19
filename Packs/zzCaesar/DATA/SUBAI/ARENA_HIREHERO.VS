@@ -34,18 +34,24 @@ this = This.AsBuilding();
 	exit_point = .GetExitPoint(hall.pos, false);
 	if (exit_point.x == -1) {
 		h = Place(GetRandomHeroClass(cmdparam, plr), Point(0, 0), plr).AsHero();
-		set.AddUnit(h);
+		if (set.IsStronghold)
+			set.ForceAddUnit(h);
+		else
+			h.SetCommand("advance", hall.pos);
 	}
 	else if (exit_point.y == -1) {
 		h = Place(GetRandomHeroClass(cmdparam, plr), Point(0, 0), plr).AsHero();
-		set.AddUnit(h);
+		if (set.IsStronghold)
+			set.ForceAddUnit(h);
+		else
+			h.SetCommand("advance", hall.pos);
 	}
 	else {
 		h = Place(GetRandomHeroClass(cmdparam, plr), exit_point, plr).AsHero();
-		if (set.IsVillage)
-			h.SetCommand("advance", hall.GetEnterPoint(h));
-		else
+		if (set.IsStronghold)
 			h.SetCommand("advance_enter", hall);
+		else
+			h.SetCommand("advance", hall.GetEnterPoint(h));
 	}
 
 	h.SetLevel(MAX(h_level, EnvReadInt(set, "levels/Hero")));

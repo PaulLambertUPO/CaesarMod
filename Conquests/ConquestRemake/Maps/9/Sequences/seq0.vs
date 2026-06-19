@@ -37,7 +37,7 @@ set5.Research("ChooseImperialRome");
 	b.Research("RNobility");
 
 	b = NO_Town5.obj.AsBuilding();
-	b.Research("Roman Praetorian");
+	b.Research("Spiked armor I");
 	b.Research("God's Gift");
 	b.Research("Military Academy");
 

@@ -19,9 +19,9 @@ if (strTech != "") {
 			if (!IsResearched(aiPlayer, "Dark Rituals"))
 				strTech = "Dark Rituals";
 		}
-		else if (strTech == "More Housing") {
-			if (!IsResearched(set, "Housing"))
-				strTech = "Housing";
+		else if (strTech == "Housing II") {
+			if (!IsResearched(set, "Housing I"))
+				strTech = "Housing I";
 		}
 		else if (strTech == "Strengthen Stronghold Defences II") {
 			if (!IsResearched(set, "Strengthen Stronghold Defences I"))
@@ -43,9 +43,9 @@ if (strTech != "") {
 			if (!IsResearched(set, "Gaul Woman Warrior"))
 				strTech = "Gaul Woman Warrior";
 		}
-		else if (strTech == "Improve Praetorian Equipment")
-			if (!IsResearched(set, "Roman Praetorian"))
-				strTech = "Roman Praetorian";
+		else if (strTech == "Spiked armor II")
+			if (!IsResearched(set, "Spiked armor I"))
+				strTech = "Spiked armor I";
 
 		if (IsResearched(set, strTech))
 			bPossibleDiscard = true;

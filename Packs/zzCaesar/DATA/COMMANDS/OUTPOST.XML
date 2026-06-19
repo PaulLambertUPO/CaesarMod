@@ -23,7 +23,7 @@
 		immediate="yes"
 		method="goutpost_sellfood"
 		param="yes"
-		groupverifier="data/subai/group_goutpost_sell_food_verify.vs"
+		groupverifier="data/subai/goutpost_sellfood_verify.vs"
 		key="s"
 		rollover="Sell food"
 		description="Slowly exchanges stored food for gold">
@@ -35,7 +35,7 @@
 		immediate="yes"
 		method="goutpost_sellfood"
 		param="no"
-		groupverifier="data/subai/group_goutpost_no_sell_food_verify.vs"
+		groupverifier="data/subai/goutpost_no_sellfood_verify.vs"
 		key="s"
 		rollover="Stop selling food">
 		<src obj="GOutpost" />
@@ -46,7 +46,7 @@
 		immediate="yes"
 		method="goutpost_sellgold"
 		param="yes"
-		groupverifier="data/subai/group_goutpost_sell_gold_verify.vs"
+		groupverifier="data/subai/goutpost_sellgold_verify.vs"
 		key="l"
 		rollover="Sell gold"
 		description="Slowly exchanges stored gold for food">
@@ -58,7 +58,7 @@
 		immediate="yes"
 		method="goutpost_sellgold"
 		param="no"
-		groupverifier="data/subai/group_goutpost_no_sell_gold_verify.vs"
+		groupverifier="data/subai/goutpost_no_sellgold_verify.vs"
 		key="l"
 		rollover="Stop selling gold">
 		<src obj="GOutpost" />

@@ -625,9 +625,9 @@
 <translationtableentry text="Lead Punic Rome" result="Guida Roma punica" />
 <translationtableentry text="Take the lead of Rome from the previous Imperivm games" result="Prendi il comando di Roma dei precedenti giochi di Imperivm" />
 <translationtableentry text="Automatic training" result="Addestramento automatico" />
-<translationtableentry text="Starts the automatic training of warriors in the stronghold" result="Inizia l'addestramento automatico dei guerrieri alloggiati nella fortezza" />
+<translationtableentry text="Starts the automatic training of warriors in the townhall" result="Inizia l'addestramento automatico dei guerrieri alloggiati nel foro" />
 <translationtableentry text="Stop automatic training" result="Ferma addestramento automatico" />
-<translationtableentry text="Stops the automatic training of warriors in the stronghold" result="Ferma l'addestramento automatico dei guerrieri alloggiati nella fortezza" />
+<translationtableentry text="Stops the automatic training of warriors in the townhall" result="Ferma l'addestramento automatico dei guerrieri alloggiati nel foro" />
 <translationtableentry text="Load a caravan with 250 food" result="Carica unità rifornimento con 250 viveri" />
 <translationtableentry text="Load a caravan with 250 gold" result="Carica unità rifornimento con 250 oro" />
 <translationtableentry text="Load a caravan with 1000 food" result="Carica unità rifornimento con 1000 viveri" />
@@ -644,6 +644,14 @@
 <translationtableentry text="Hire Sentries" result="Assolda sentinelle" />
 <translationtableentry text="Hires up to 10 sentries to help protect the stronghold" result="Assolda fino a 10 sentinelle per aiutare a difendere la fortezza" />
 <translationtableentry text="No additional sentries can be hired" result="Impossibile assoldare sentinelle aggiuntive" />
+<translationtableentry text="Send resources" result="Invia risorse" />
+<translationtableentry text="Sends up to 1000 gold and 1000 food to each of your allies' strongholds" result="Invia fino a 1000 oro e 1000 viveri a ognuna delle fortezze dei tuoi alleati" />
+<translationtableentry text="There are no allied strongholds" result="Non ci sono fortezze alleate" />
+<translationtableentry text="At least 2 minutes must pass between each sending" result="Devono passare almeno 2 minuti tra ogni invio" />
+<translationtableentry text="Attach free warriors" result="Vincola guerrieri liberi" />
+<translationtableentry text="Orders your free warriors to attach to your available heroes in the townhall" result="Ordina ai tuoi guerrieri liberi di vincolarsi ai tuoi eroi disponibili nel foro" />
+<translationtableentry text="There are no available heroes in the townhall" result="Non ci sono eroi disponibili nel foro" />
+<translationtableentry text="There are no attachable warriors in the townhall" result="Non ci sono guerrieri vincolabili nel foro" />
 <!-- end townhall commands -->
 <!-- start barracks commands -->
 <translationtableentry text="Fast warrior equipment" result="Equipaggiamento rapido dei guerrieri I" />
@@ -655,7 +663,6 @@
 <translationtableentry text="Equip Hastatus" result="Equipaggia legionario" />
 <translationtableentry text="Equip Archer" result="Equipaggia arciere" />
 <translationtableentry text="Equip Gladiator" result="Equipaggia gladiatore" />
-<translationtableentry text="Requires %s1 from Arena" result="Richiede %s1 (Colosseo)" />
 <translationtableentry text="Equip Velit" result="Equipaggia velite" />
 <translationtableentry text="Equip Principle" result="Equipaggia princep" />
 <translationtableentry text="Equip Scout" result="Equipaggia equite" />
@@ -690,7 +697,6 @@
 <translationtableentry text="Equip Axe thrower" result="Equipaggia lanciatore d'asce" />
 <translationtableentry text="Equip Anubis Warrior" result="Equipaggia guerriero di Anubis" />
 <translationtableentry text="Equip Horus Warrior" result="Equipaggia guerriero di Horus" />
-<translationtableentry text="Requires %s1 from Temple of Horus and Anubis" result="Richiede %s1 (Tempio di Horus e Anubis)" />
 <translationtableentry text="Equip Guardian" result="Equipaggia guardiano del Nilo" />
 <translationtableentry text="Equip Huntress" result="Equipaggia cacciatrice" />
 <translationtableentry text="Equip Teuton Rider" result="Equipaggia cavaliere teutonico" />
@@ -700,17 +706,16 @@
 <translationtableentry text="Equip Hoplite" result="Equipaggia oplita" />
 <translationtableentry text="Equip Hetairos" result="Equipaggia hetairos" />
 <translationtableentry text="Equip Hypaspist" result="Equipaggia ipaspista" />
-<translationtableentry text="Requires %s1 from Blacksmith" result="Richiede %s1 (Fucina)" />
 <translationtableentry text="You cannot have more than %s1" result="Impossibile avere oltre %s1" />
 <translationtableentry text="You cannot have more than %s1 (currently %s2)" result="Impossibile avere oltre %s1 (al momento %s2)" />
 <translationtableentry text="(you cannot have more than %s1, currently %s2)" result="(non ne puoi avere più di %s1, al momento %s2)" />
 <translationtableentry text="The current population is under the minimum of %s1 people" result="L'attuale popolazione è sotto il minimo di %s1 unità" />
 <!-- end barracks commands -->
 <!-- start blacksmith commands -->
-<translationtableentry text="Strengthen Stronghold Defenses I" result="Potenzia le difese della fortezza I" />
-<translationtableentry text="Makes the defenders at the stronghold walls level 12" result="Rende i difensori delle mura di livello 12" />
-<translationtableentry text="Strengthen Stronghold Defenses II" result="Potenzia le difese della fortezza II" />
-<translationtableentry text="Makes the defenders at the stronghold walls level 24" result="Rende i difensori delle mura di livello 24" />
+<translationtableentry text="Strengthen settlement defenses I" result="Potenzia le difese dell'insediamento I" />
+<translationtableentry text="Makes the wall defenders level 12" result="Rende i difensori delle mura di livello 12" />
+<translationtableentry text="Strengthen settlement defenses II" result="Potenzia le difese dell'insediamento II" />
+<translationtableentry text="Makes the wall defenders level 24" result="Rende i difensori delle mura di livello 24" />
 <translationtableentry text="Arrows" result="Produci equipaggiamento da arcieri" />
 <translationtableentry text="Allows Archers to be equipped in the Barracks" result="Consente di equipaggiare gli arcieri nella caserma" />
 <translationtableentry text="Throwing Spears" result="Produci giavellotti" />
@@ -721,9 +726,10 @@
 <translationtableentry text="Allows Scouts to be equipped in the Barracks" result="Consente di equipaggiare gli equites nella caserma" />
 <translationtableentry text="Full Armor" result="Forgia corazze" />
 <translationtableentry text="Allows Tribunes to be equipped in the Barracks" result="Consente di equipaggiare i tribuni nella caserma" />
-<translationtableentry text="Spike Armor" result="Forgia armature per pretoriani" />
+<translationtableentry text="Spiked armor" result="Forgia armature per pretoriani" />
+<translationtableentry text="Spiked armor I" result="Forgia armature per pretoriani I" />
 <translationtableentry text="Allows Praetorians to be equipped in the Barracks" result="Consente di equipaggiare i pretoriani nella caserma" />
-<translationtableentry text="Improve Praetorian Equipment" result="Migliora equipaggiamento per pretoriani" />
+<translationtableentry text="Spiked armor II" result="Forgia armature per pretoriani II" />
 <translationtableentry text="Reduces new Praetorians cost to 380 gold" result="Riduce il costo dei nuovi pretoriani a 380 oro" />
 <translationtableentry text="Chariot Wheels" result="Produci ruote" />
 <translationtableentry text="Allows Chariots to be equipped in the Barracks" result="Consente di equipaggiare i carri da guerra nella caserma" />
@@ -775,14 +781,14 @@
 <translationtableentry text="Steel Weapons" result="Forgia armi d'acciaio" />
 <translationtableentry text="Makes new warriors level 6" result="Rende tutti i nuovi guerrieri di livello 6" />
 <translationtableentry text="Charm of Seth" result="Talismano di Seth" />
-<translationtableentry text="Gives a Damage charm (+4 damage) to up to 65 warriors around the townhall" result="Fornisce a un massimo di 65 guerrieri vicini al foro un talismano che aumenta l'attacco di 4 punti" />
+<translationtableentry text="Gives a Damage charm (+4 damage) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta l'attacco di 4 punti" />
 <translationtableentry text="Charm of Thoth" result="Talismano di Thoth" />
-<translationtableentry text="Gives an Armor charm (+4 armor) to up to 65 warriors around the townhall" result="Fornisce a un massimo di 65 guerrieri vicini al foro un talismano che aumenta la difesa di 4 punti" />
+<translationtableentry text="Gives an Armor charm (+4 armor) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la difesa di 4 punti" />
 <translationtableentry text="Charm of Ra" result="Talismano di Ra" />
-<translationtableentry text="Gives a Health charm (+40 health) to up to 65 warriors around the townhall" result="Fornisce a un massimo di 65 guerrieri vicini al foro un talismano che aumenta la salute di 40 punti" />
+<translationtableentry text="Gives a Health charm (+40 health) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la salute di 40 punti" />
 <translationtableentry text="Charm of Isis" result="Talismano di Isis" />
-<translationtableentry text="Gives a Knowledge charm (+4 levels) to up to 65 warriors around the townhall" result="Fornisce a un massimo di 65 guerrieri vicini al foro un talismano che aumenta il livello di 4 punti" />
-<translationtableentry text="Requires at least 5 warriors without that charm around the Townhall" result="Richiede che almeno 5 guerrieri vicini al foro non abbiano il talismano" />
+<translationtableentry text="Gives a Knowledge charm (+4 levels) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta il livello di 4 punti" />
+<translationtableentry text="Requires at least 5 warriors without the charm around the settlement" result="Richiede che almeno 5 guerrieri vicini all'insediamento non abbiano il talismano" />
 <translationtableentry text="Increase Axe production" result="Incrementa la produzione di asce" />
 <translationtableentry text="Increases the number of Axemen you can have by 10" result="Aumenta di 10 il numero massimo di guerrieri con ascia disponibili contemporaneamente" />
 <translationtableentry text="Increase Javelin production" result="Incrementa la produzione di giavellotti" />
@@ -875,7 +881,7 @@
 <translationtableentry text="Veterans guild" result="Corporazione dei veterani" />
 <translationtableentry text="Equips new warriors with a Veteran ring, which becomes Veteran medal at the first kill, adding 6 and 10% damage" result="Equipaggia i nuovi guerrieri con l'Anello del veterano, che si trasforma in Insegna del veterano alla prima uccisione, aumentando l'attacco di 6 punti e del 10%" />
 <translationtableentry text="People's Assembly" result="Assemblea del popolo" />
-<translationtableentry text="Increases the stronghold population by 15" result="Aumenta la popolazione della fortezza di 15 unità" />
+<translationtableentry text="Increases the settlement population by 15" result="Aumenta la popolazione dell'insediamento di 15 unità" />
 <translationtableentry text="Shared Strength" result="Forza condivisa" />
 <translationtableentry text="Makes new warriors of a type level 6 if you have at least 10 of the same type" result="Rende i nuovi guerrieri di un tipo di livello 6 se ne hai almeno 10 dello stesso tipo" />
 <translationtableentry text="Shared Triumph" result="Trionfo condiviso" />
@@ -950,17 +956,17 @@
 <!-- end arena commands -->
 <!-- start tavern commands -->
 <translationtableentry text="Increase population" result="Aumenta popolazione" />
-<translationtableentry text="Increases the stronghold population by 10" result="Aumenta la popolazione della fortezza di 10 unità" />
+<translationtableentry text="Increases the settlement population by 10" result="Aumenta la popolazione dell'insediamento di 10 unità" />
 <translationtableentry text="Buy food" result="Compra viveri" />
 <translationtableentry text="Buys 800 food at the market for 400 gold" result="Compra 800 viveri al mercato per 400 oro" />
 <translationtableentry text="Free wine" result="Celebra festa di Bacco" />
-<translationtableentry text="Explores a large area around the stronghold" result="Esplora una grande area intorno alla fortezza" />
+<translationtableentry text="Explores a large area around the settlement" result="Esplora una grande area intorno all'insediamento" />
 <translationtableentry text="Import horses" result="Importa cavalli" />
 <translationtableentry text="Makes new Scouts level 10" result="Rende i nuovi equites di livello 10" />
 <translationtableentry text="Scout area" result="Esplora area" />
 <translationtableentry text="Temporarily removes the fog of war around the chosen point" result="Rimuove temporaneamente la nebbia di guerra intorno al punto selezionato" />
 <translationtableentry text="Buy map" result="Compra mappa" />
-<translationtableentry text="Explores a huge area around the stronghold" result="Esplora un'immensa area intorno alla fortezza" />
+<translationtableentry text="Explores a huge area around the settlement" result="Esplora un'immensa area intorno all'insediamento" />
 <translationtableentry text="Investment" result="Investimento" />
 <translationtableentry text="Gathers 6000 gold" result="Riscuote 6000 oro" />
 <translationtableentry text="Tribute" result="Tributi" />
@@ -968,9 +974,9 @@
 <translationtableentry text="Gathers %s1 gold in each outpost you own (the amount increases by 500 every 10 minutes, up to 2000)" result="Riscuote %s1 oro in ogni tuo forte (la quantità aumenta di 500 ogni 10 minuti, fino a 2000)" />
 <translationtableentry text="Already collected" result="Già riscossi" />
 <translationtableentry text="Free beer" result="Imbandisci banchetto gallico" />
-<translationtableentry text="Increases the stronghold population by 20" result="Aumenta la popolazione della fortezza di 20 unità" />
+<translationtableentry text="Increases the settlement population by 20" result="Aumenta la popolazione dell'insediamento di 20 unità" />
 <translationtableentry text="Food Tax" result="Imposta in viveri" />
-<translationtableentry text="Imposes the stronghold population to produce food over time" result="Impone alla popolazione della fortezza di produrre viveri nel corso del tempo" />
+<translationtableentry text="Imposes the settlement population to produce food over time" result="Impone alla popolazione dell'insediamento di produrre viveri nel corso del tempo" />
 <translationtableentry text="Nordic trade routes" result="Rotte commerciali nordiche" />
 <translationtableentry text="Equips new warriors with a Bear teeth amulet (+4 damage)" result="Equipaggia tutti i nuovi guerrieri con i Denti d'orso, che aumentano l'attacco di 4 punti" />
 <translationtableentry text="Equips new warriors with a Belt of might (+4 armor)" result="Equipaggia tutti i nuovi guerrieri con la Cintura di forza, che aumenta la difesa di 4 punti" />
@@ -981,20 +987,20 @@
 <translationtableentry text="Gives all available gold to repay the loan (without interest)" result="Consegna tutto l'oro disponibile per ripagare il prestito (senza interesse)" />
 <translationtableentry text="Debt" result="Debito" />
 <translationtableentry text="Free Drinks" result="Celebra festa iberica" />
-<translationtableentry text="Increases the stronghold population by 10 and gathers 800 food" result="Aumenta la popolazione della fortezza di 10 unità e riscuote 800 viveri" />
+<translationtableentry text="Increases the settlement population by 10 and gathers 800 food" result="Aumenta la popolazione dell'insediamento di 10 unità e riscuote 800 viveri" />
 <translationtableentry text="Sell food" result="Vendi viveri" />
 <translationtableentry text="Sells 1000 food at the market for 500 gold" result="Vende 1000 viveri al mercato per 500 oro" />
 <translationtableentry text="Tame horses" result="Doma cavalli" />
 <translationtableentry text="Allows you to tame horses that can be used to train Scouts in Iberian villages and makes all new Horsemen level 6" result="Consente di domare cavalli che possono essere usati per reclutare esploratori nei villaggi iberici e rende tutti i nuovi cavalieri di livello 6" />
-<translationtableentry text="Housing" result="Costruisci alloggi" />
-<translationtableentry text="More housing" result="Costruisci più alloggi" />
-<translationtableentry text="Increases the maximum population of the stronghold by 15 and the current one by 5" result="Aumenta la popolazione massima della fortezza di 15 unità e quella attuale di 5" />
+<translationtableentry text="Housing I" result="Costruisci alloggi I" />
+<translationtableentry text="Housing II" result="Costruisci alloggi II" />
+<translationtableentry text="Increases the maximum population of the settlement by 15 and the current one by 5" result="Aumenta la popolazione massima dell'insediamento di 15 unità e quella attuale di 5" />
 <translationtableentry text="Call to arms" result="Chiamata alle armi" />
 <translationtableentry text="Drafts 50 peasants, making them level 4 Militiamen (8 after 10 game minutes)" result="Arruola 50 contadini, trasformandoli in miliziani di livello 4 (8 dopo 10 minuti di gioco)" />
 <translationtableentry text="Free trade" result="Attira la popolazione" />
-<translationtableentry text="Increases the population of the stronghold to maximum" result="Aumenta al massimo la popolazione della fortezza" />
+<translationtableentry text="Increases the population of the settlement to maximum" result="Aumenta al massimo la popolazione dell'insediamento" />
 <translationtableentry text="Expedition" result="Spedizione" />
-<translationtableentry text="Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per stronghold)" result="Rimuove la nebbia di guerra intorno al punto selezionato e rivela tutti i nemici invisibili lì presenti (non puoi avere più di un'area di spedizione contemporaneamente per fortezza)" />
+<translationtableentry text="Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per settlement)" result="Rimuove la nebbia di guerra intorno al punto selezionato e rivela tutti i nemici invisibili lì presenti (non puoi avere più di un'area di spedizione contemporaneamente per insediamento)" />
 <translationtableentry text="Slavery" result="Servitù" />
 <translationtableentry text="Sells 40 population for 1600 gold" result="Vende 40 unità di popolazione per 1600 oro" />
 <translationtableentry text="Mercenary pact" result="Patto dei mercenari" />
@@ -1004,7 +1010,7 @@
 <translationtableentry text="Hire foreign mercenaries" result="Assolda mercenari stranieri" />
 <translationtableentry text="Hires a mercenary group of 10 Gaul Horsemen, 20 Hoplites and 20 Slingers" result="Assolda un gruppo di mercenari composto da 10 cavalieri gallici, 20 opliti e 20 frombolieri" />
 <translationtableentry text="Gambling" result="Intercessione divina" />
-<translationtableentry text="Explores a medium area around the stronghold and gives you a 40% chance to win 5000 gold or 400 food if you lose" result="Esplora una media area intorno alla fortezza e ti fornisce una probabilità del 40% di vincere 5000 oro o 400 viveri se perdi" />
+<translationtableentry text="Explores a medium area around the settlement and gives you a 40% chance to win 5000 gold or 400 food if you lose" result="Esplora una media area intorno all'insediamento e ti fornisce una probabilità del 40% di vincere 5000 oro o 400 viveri se perdi" />
 <translationtableentry text="Gambler's Day" result="Esperienza divina" />
 <translationtableentry text="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one (100% in the case of non-summoned animals)" result="Fornisce a ogni guerriero una probabilità del 45% di raggiungere il livello del nemico ogni volta che ne uccide uno più esperto (100% nel caso di animali non invocati)" />
 <translationtableentry text="Gambler's Test" result="Destrezza divina" />
@@ -1012,13 +1018,13 @@
 <translationtableentry text="Gambler's Luck" result="Fortuna divina" />
 <translationtableentry text="Gives every warrior a 33% chance to completely restore the health when below 33% every time that he kills an enemy" result="Fornisce a ogni guerriero una probabilità del 33% di ripristinare completamente la salute quando è inferiore al 33% ogni volta che uccide un nemico" />
 <translationtableentry text="Gambler's All-in" result="Tutto per tutto" />
-<translationtableentry text="Increases the stronghold population by 40 and gives you a 35% chance to win 10000 gold" result="Aumenta la popolazione della fortezza di 40 unità e ti fornisce una probabilità del 35% di vincere 10000 oro" />
+<translationtableentry text="Increases the settlement population by 40 and gives you a 35% chance to win 10000 gold" result="Aumenta la popolazione dell'insediamento di 40 unità e ti fornisce una probabilità del 35% di vincere 10000 oro" />
 <translationtableentry text="At least 3 minutes must pass between each attempt" result="Devono passare almeno 3 minuti tra ogni tentativo" />
 <translationtableentry text="Buy Slaves" result="Servitù" />
 <translationtableentry text="Grain Trade" result="Commercio di viveri" />
-<translationtableentry text="Slowly exchanges the food in the stronghold for gold" result="Scambia lentamente i viveri nella fortezza con oro" />
+<translationtableentry text="Slowly exchanges the food in the settlement for gold" result="Scambia lentamente i viveri nell'insediamento con oro" />
 <translationtableentry text="Religious Feast" result="Benedizione" />
-<translationtableentry text="Heals 5 warriors around the townhall by 30 every 2 seconds" result="Cura 5 guerrieri vicini al foro di 30 punti di salute ogni 2 secondi" />
+<translationtableentry text="Heals 5 warriors around the settlement by 30 every 2 seconds" result="Cura 5 guerrieri vicini all'insediamento di 30 punti di salute ogni 2 secondi" />
 <translationtableentry text="Gossip" result="Cronache di viaggio" />
 <translationtableentry text="Temporarily removes the fog of war around the chosen point and reveals any hidden enemies there" result="Rimuove temporaneamente la nebbia di guerra attorno al punto selezionato e rivela tutti i nemici invisibili lì presenti" />
 <translationtableentry text="Hecatomb" result="Rituale della fertilità" />
@@ -1118,6 +1124,9 @@
 <!-- start village commands -->
 <translationtableentry text="Repopulate" result="Ripopola" />
 <translationtableentry text="Repairs the village hall and/or restores its minimum population" result="Ripara il centro del villaggio e/o ne ripristina la popolazione minima" />
+<translationtableentry text="Start calling peasants automatically" result="Inizia a convocare contadini automaticamente" />
+<translationtableentry text="Calls peasants automatically if the population reaches the maximum and the supply route is set" result="Convoca contadini automaticamente se la popolazione raggiunge il massimo e la rotta di rifornimento è impostata" />
+<translationtableentry text="Stop calling peasants automatically" result="Smetti di convocare contadini automaticamente" />
 <translationtableentry text="Supply" result="Stabilisci rotta di rifornimento" />
 <translationtableentry text="Constantly sends resources to another settlement" result="Invia costantemente risorse a un altro insediamento" />
 <translationtableentry text="Click on an allied townhall, village, outpost or shipyard to start sending resources" result="Clicca su un foro, villaggio, forte o porto alleato per iniziare a inviare risorse" />
@@ -1202,7 +1211,7 @@
 <translationtableentry text="Starvation" result="Carestia" />
 <translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nIt lasts 2 minutes" result="Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 2% e di 20 (1% e 10 per quelli del lanciatore).\nDura 2 minuti" />
 <translationtableentry text="Earthquake" result="Terremoto" />
-<translationtableentry text="Every second deals 300 damage to all strongholds (225 to the caster's).\nIt lasts 10 seconds" result="Ogni secondo infligge 300 punti di danno a tutte le fortezze (225 a quelle del lanciatore).\nDura 10 secondi" />
+<translationtableentry text="Every second deals 300 damage to all strongholds, outposts and shipyards (225 to the caster's).\nIt lasts 10 seconds" result="Ogni secondo infligge 300 punti di danno a tutte le fortezze, forti e porti (225 a quelli del lanciatore).\nDura 10 secondi" />
 <translationtableentry text="Teuton horde" result="Orda teutonica" />
 <translationtableentry text="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes" result="Raduna un'orda di 100 teutoni (40 cavalieri, 40 arcieri e 20 incursori) di livello 12 (18 per quelli del lanciatore) in tutte le fortezze, svuotandone la popolazione.\nRichiede 3 minuti" />
 <translationtableentry text="Player %s1 - Foraging - %s2:0%s3" result="Giocatore %s1 - Nutrizione - %s2:0%s3" />
@@ -2135,7 +2144,7 @@
 <translationtableentry text="Building is too far away from any existing settlement" result="La struttura è troppo lontana da qualsiasi insediamento" />
 <translationtableentry text="Place the other side of the cave" result="Colloca l'uscita dalla grotta" />
 <translationtableentry text="Do you really want to delete both sides of this cave?" result="Sei sicuro di voler rimuovere l'entrata e l'uscita di questa grotta?" />
-<translationtableentry text="Do you really want to delete this townhall and the whole settlement?" result="Sei sicuro di voler rimuovere questo foro e il resto dell'insediamento?" />
+<translationtableentry text="Do you really want to delete this townhall and the whole settlement?" result="Sei sicuro di voler rimuovere questa struttura e il resto dell'insediamento?" />
 <translationtableentry text="Do you want to save the changes?" result="Vuoi salvare le modifiche?" />
 <translationtableentry text="Do you want to replace the existing file '%s1'?" result="Vuoi sostituire il file esistente '%s1'?" />
 <translationtableentry text="You have made changes which are not saved. Do you want to save the map?" result="Ci sono state modifiche che non sono state salvate. Vuoi salvare la mappa?" />
@@ -2724,6 +2733,7 @@
 <translationtableentry text="Stamina|Speed" result="Energia|Velocità" />
 <translationtableentry text="Damage|Range" result="Attacco|Gittata" />
 <translationtableentry text="Armor|Sight" result="Difesa|Vista" />
+<translationtableentry text="Current|Actual level" result="Livello attuale|effettivo" />
 <translationtableentry text="Level" result="Livello" />
 <translationtableentry text="level" result="livello" />
 <translationtableentry text="Experience" result="Esperienza" />
@@ -2990,7 +3000,7 @@
 <translationtableentry text="When your forces are near an enemy building you can order them to capture it by selecting your warriors and right-clicking on it. To successfully perform the capturing process, however, it is necessary that your troops are more than the defenders of the building. As time passes, the loyalty of the building will slowly decrease and when it falls to 0 the building will be yours to control. You can also instantly capture allied buildings by ordering one single warrior to do so." result="Quando le tue forze sono vicine a una struttura nemica puoi ordinare loro di conquistarla selezionando i tuoi guerrieri e cliccando col tasto destro su di essa. Per completare con successo il processo di conquista, tuttavia, è necessario che le tue truppe siano più numerose dei difensori della struttura. Man mano che il tempo passa, la lealtà della struttura diminuirà lentamente e quando arriva a zero la struttura diventa tua. Puoi anche conquistare istantaneamente le strutture alleate ordinando a un singolo guerriero di farlo." />
 <translationtableentry text="Supply routes" result="Rotte di rifornimento" />
 <translationtableentry text="You can order your settlements (villages, outposts and shipyards) to automatically send the resources that they produce to another settlement by selecting the main building and right-clicking on the chosen destination. After that, a caravan begins transporting resources from one place to another if the amount of said resources is at least 100. Remember to protect your caravans to avoid losing precious resources!" result="Puoi ordinare ai tuoi insediamenti (villaggi, forti e porti) ti inviare automaticamente le risorse che producono a un altro insediamento selezionando la struttura principale e cliccando col tasto destro sulla destinazione desiderata. Dopodiché, un'unità di rifornimento inizierà a trasportare risorse da un luogo all'altro se la quantità di tali risorse è almeno 100. Ricordati di proteggere le tue unità di rifornimento per evitare di perdere risorse preziose!" />
-<translationtableentry text="siege machines" result="Macchine d'assedio" />
+<translationtableentry text="Siege machines" result="Macchine d'assedio" />
 <translationtableentry text="In order to break an enemy gate you need to attack it with ranged units or with a siege machine (catapult, ram, tower). In order to create a siege machine, select up to 10 warriors and order them to build it from the menu, then select the area by clicking on the appropriate place (make sure to build it in effective range). The more units are used to build a siege machine, the faster the construction process and the attack speed will be." result="Per rompere una porta nemica dovrai attaccarla con unità a distanza o con una macchina d'assedio (catapulta, ariete, torre). Per costruire una macchina d'assedio, seleziona fino a 10 guerrieri e ordina loro di costruirla dal menù, poi seleziona l'area cliccando sul luogo appropriato (assicurati di costruirla in gittata utile). Maggiore è il numero di unità usate per costruire una macchina d'assedio, maggiori saranno il processo di costruzione e la velocità d'attacco." />
 <translationtableentry text="Building ships" result="Costruire navi" />
 <translationtableentry text="Use your shipyards to build ships that can transport resources and units. There are two types of vessels: boats and ships. Boats are used solely for transporting resources and work like land caravans. Ships are used for naval combat and to transport up to 120 units over water. The higher the amount of units aboard is, the higher the attack speed and repairs will be." result="Usa i tuoi porti per costruire imbarcazioni che possano trasportare risorse e unità. Ci sono due tipi di vascelli: barche e navi da guerra. Le barche sono usate esclusivamente per trasportare risorse e funzionano come le unità di rifornimento su terra. Le navi da guerra sono usate per il combattimento in mare e per trasportare fino a 120 unità sull'acqua. Maggiore è il numero di unità a bordo, maggiori saranno la velocità di attacco e le riparazioni." />

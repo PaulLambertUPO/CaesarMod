@@ -128,6 +128,15 @@
 		activetime="4000"
 		duration="4000"
 	/>
+	<notification id="investment completed"
+		title="Investment completed"
+		category="stronghold"
+		anim="UI/Icons/Notifications/message.rle"
+		icon="gameres/infobar/common/stronghold.bmp"
+		sound="Sounds/Notifications/upgrade complete.wav"
+		activetime="4000"
+		duration="4000"
+	/>
 	<notification id="note added"
 		title="Note: "
 		category="note"

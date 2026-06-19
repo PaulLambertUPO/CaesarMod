@@ -5,7 +5,7 @@
 	<properties damage="40" armor_slash="0" armor_pierce="0" />
 	<properties attack_delay="400" />
 	<properties damage_type="pierce" />
-	<properties projectile_class="Arrow" />
+	<properties projectile_class="Arrow" building_projectile_class="Fire_Arrow" />
 	<properties target_priority="150" />
 	<properties radius="45" />
 

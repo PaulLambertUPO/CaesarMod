@@ -15,6 +15,7 @@
 <!-- end buildings (in game and in editor tree) -->
 <!-- start editor settings (all sections) -->
 <translationtableentry text="Do you really want to lose your current map and replace it with a randomly generated one" result="Do you really want to lose your current map and replace it with a randomly generated one?" />
+<translationtableentry text="Do you really want to delete this townhall and the whole settlement?" result="Do you really want to delete this building and the whole settlement?" />
 <!-- end editor settings (all sections) -->
 <!-- start common player names (for editor translations) -->
 <translationtableentry text="Giocatore" result="Player"/>

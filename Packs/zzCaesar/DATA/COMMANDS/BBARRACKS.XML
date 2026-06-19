@@ -43,7 +43,7 @@
 		execdelay="12000"
 		rollover="Equip Spearman"
 		method="train"
-		param="BBronzeSpearman, Spears"
+		param="BBronzeSpearman, Spears, Blacksmith"
 		sclass="BBronzeSpearman">
 		<src obj="BBarracks" />
 	</cmd>
@@ -59,7 +59,7 @@
 		execdelay="12000"
 		rollover="Equip Shield Bearer"
 		method="train"
-		param="BShieldBearer, Large Shields"
+		param="BShieldBearer, Large Shields, Blacksmith"
 		sclass="BShieldBearer">
 		<src obj="BBarracks" />
 	</cmd>
@@ -75,7 +75,7 @@
 		execdelay="14000"
 		rollover="Equip Javelineer"
 		method="train"
-		param="BJavelineer, Javelins"
+		param="BJavelineer, Javelins, Blacksmith"
 		sclass="BJavelineer">
 		<src obj="BBarracks" />
 	</cmd>
@@ -91,7 +91,7 @@
 		execdelay="22000"
 		rollover="Equip Highlander"
 		method="train"
-		param="BHighlander, Swords"
+		param="BHighlander, Swords, Blacksmith"
 		sclass="BHighlander">
 		<src obj="BBarracks" />
 	</cmd>

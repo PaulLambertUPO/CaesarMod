@@ -14,15 +14,6 @@ if (EnvReadString(.settlement, research) == "researched") {//do not use IsResear
 	return true;
 }
 
-if (unit_class == "RGladiator")
-	reasonText = rollover(this, unit_class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Arena", research);
-else if (unit_class == "RGladiatorPunic")
-	reasonText = rollover(this, unit_class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Arena", research);
-else if (unit_class == "EAnubisWarrior")
-	reasonText = rollover(this, unit_class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Temple of Horus and Anubis", research);
-else if (unit_class == "EHorusWarrior")
-	reasonText = rollover(this, unit_class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Temple of Horus and Anubis", research);
-else
-	reasonText = rollover(this, unit_class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from Blacksmith", research);
+reasonText = rollover(this, unit_class, false) + "\n<color 255 0 0>" + Translatef("Requires %s1 from %s2", research, ParseStr(dest, dest));
 
 return false;

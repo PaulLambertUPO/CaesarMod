@@ -25,13 +25,14 @@
 <layer idx="2" name="shadow" image="9" z="800" offsetx="-81" offsety="-110" sortoffsetx="0" sortoffsety="0"/>
 </layers>
 <states>
-<state idx="1" name="idle" image_idx="0" image_row="0" offsetx="0" offsety="0"/>
-<state idx="2" name="idlenosi" anim_idx="17" anim_frame="1" offsetx="-84" offsety="-110"/>
+<state idx="1" name="idle" image_idx="0" image_row="1" offsetx="-81" offsety="-110" anim_idx="13" anim_frame="1"/>
+<state idx="2" name="defend" image_idx="0" image_row="1" offsetx="-81" offsety="-110" anim_idx="5" anim_frame="1"/>
+<state idx="3" name="nosiidle" image_idx="0" image_row="1" offsetx="-81" offsety="-110" anim_idx="17" anim_frame="1"/>
 </states>
 <anims>
 <anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="1008" default_duration="72" action_time="0" step="50">
-<replace layer="1" image="8" offsetx="-84" offsety="-110"/>
-<replace layer="2" image="15" offsetx="-84" offsety="-110"/>
+<replace layer="1" image="8" offsetx="-81" offsety="-110"/>
+<replace layer="2" image="15" offsetx="-81" offsety="-110"/>
 <frame idx="1" duration="0"/>
 <frame idx="2" duration="72"/>
 <frame idx="3" duration="72"/>
@@ -49,7 +50,7 @@
 <frame idx="15" duration="72"/>
 <frame idx="16" duration="0"/>
 </anim>
-<anim idx="5" name="Defence" startstate="1" endstate="1" frames="21" duration="665" default_duration="35" action_time="280" step="0">
+<anim idx="5" name="Defence" startstate="2" endstate="2" frames="21" duration="665" default_duration="35" action_time="280" step="0">
 <replace layer="1" image="7" offsetx="-81" offsety="-110"/>
 <replace layer="2" image="14" offsetx="-81" offsety="-110"/>
 <frame idx="1" duration="0"/>
@@ -113,7 +114,7 @@
 <frame idx="8" duration="55"/>
 <frame idx="9" duration="0"/>
 </anim>
-<anim idx="17" name="Nosi" startstate="1" endstate="2" frames="16" duration="1008" default_duration="72" action_time="0" step="40">
+<anim idx="17" name="Nosi" startstate="3" endstate="3" frames="16" duration="1008" default_duration="72" action_time="0" step="40">
 <replace layer="1" image="3" offsetx="-81" offsety="-110"/>
 <replace layer="2" image="10" offsetx="-81" offsety="-110"/>
 <frame idx="1" duration="0"/>
@@ -132,24 +133,6 @@
 <frame idx="14" duration="72"/>
 <frame idx="15" duration="72"/>
 <frame idx="16" duration="0"/>
-</anim>
-<anim idx="18" name="Hammer" startstate="1" endstate="1" frames="14" duration="1950" default_duration="150" action_time="1200" step="0">
-<replace layer="1" image="4" offsetx="-81" offsety="-110"/>
-<replace layer="2" image="11" offsetx="-81" offsety="-110"/>
-<frame idx="1" duration="0"/>
-<frame idx="2" duration="150"/>
-<frame idx="3" duration="150"/>
-<frame idx="4" duration="150"/>
-<frame idx="5" duration="150"/>
-<frame idx="6" duration="150"/>
-<frame idx="7" duration="150"/>
-<frame idx="8" duration="150"/>
-<frame idx="9" duration="150"/>
-<frame idx="10" duration="150"/>
-<frame idx="11" duration="150"/>
-<frame idx="12" duration="150"/>
-<frame idx="13" duration="150"/>
-<frame idx="14" duration="150"/>
 </anim>
 <anim idx="20" name="Work" startstate="1" endstate="1" frames="16" duration="1008" default_duration="72" action_time="0" step="0">
 <replace layer="1" image="6" offsetx="-81" offsety="-110"/>
@@ -170,6 +153,37 @@
 <frame idx="14" duration="72"/>
 <frame idx="15" duration="72"/>
 <frame idx="16" duration="0"/>
+</anim>
+<anim idx="21" name="Hammer" startstate="1" endstate="1" frames="14" duration="1950" default_duration="150" action_time="1200" step="0">
+<replace layer="1" image="4" offsetx="-81" offsety="-110"/>
+<replace layer="2" image="11" offsetx="-81" offsety="-110"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="150"/>
+<frame idx="3" duration="150"/>
+<frame idx="4" duration="150"/>
+<frame idx="5" duration="150"/>
+<frame idx="6" duration="150"/>
+<frame idx="7" duration="150"/>
+<frame idx="8" duration="150"/>
+<frame idx="9" duration="150"/>
+<frame idx="10" duration="150"/>
+<frame idx="11" duration="150"/>
+<frame idx="12" duration="150"/>
+<frame idx="13" duration="150"/>
+<frame idx="14" duration="150"/>
+</anim>
+<anim idx="22" name="Talk" startstate="1" endstate="1" frames="9" duration="385" default_duration="55" action_time="0" step="0">
+<replace layer="1" image="2" offsetx="-81" offsety="-110"/>
+<replace layer="2" image="9" offsetx="-81" offsety="-110"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="55"/>
+<frame idx="3" duration="55"/>
+<frame idx="4" duration="55"/>
+<frame idx="5" duration="55"/>
+<frame idx="6" duration="55"/>
+<frame idx="7" duration="55"/>
+<frame idx="8" duration="55"/>
+<frame idx="9" duration="0"/>
 </anim>
 </anims>
 </entity>

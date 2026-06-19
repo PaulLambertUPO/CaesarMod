@@ -16,6 +16,8 @@ Obj flag;
 	.CmdDisable("autotrain_start");
 	.CmdDisable("autotrain_stop");
 	.CmdDisable("military_training");
+	.CmdDisable("send_resources");
+	.CmdDisable("autoattach");
 
 	set = .settlement;
 
@@ -33,6 +35,8 @@ Obj flag;
 	.CmdEnable("autotrain_start");
 	.CmdEnable("autotrain_stop");
 	.CmdEnable("military_training");
+	.CmdEnable("send_resources");
+	.CmdEnable("autoattach");
 
 	if (IsResearched(set, "ChooseRepublicanRome"))
 		flag = Place("RepublicanRomeFlag", .pos + Point(65, -450), .player);

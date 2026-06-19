@@ -6,7 +6,7 @@ this = This.AsBuilding();
 
 if (.IsValid) {
 	ObjList strongholds, buildings;
-	Building b;
+	Obj o;
 	str announcement;
 	int i, owning_player, duration = 10;
 
@@ -16,6 +16,8 @@ if (.IsValid) {
 	strongholds = GetSettlements("BaseTownhall", 0);
 	for (i = strongholds.count - 1; i >= 0; i -= 1)
 		buildings.AddList(strongholds[i].AsBuilding().settlement.Buildings);
+	buildings.AddList(GetSettlements("BaseShipyard", 0));
+	buildings.AddList(GetSettlements("Outpost", 0));
 
 	PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 
@@ -27,12 +29,12 @@ if (.IsValid) {
 			ShowAnnouncement(announcement, Translatef("Player %s1 - Earthquake - %s2:%s3", owning_player, duration / 60, i));
 
 		for (i = buildings.count - 1; i >= 0; i -= 1) {
-			b = buildings[i].AsBuilding();
-			if (b.health > 0)
-				if (b.player == owning_player)
-					b.Damage(225);
+			o = buildings[i];
+			if (o.health > 0)
+				if (o.player == owning_player)
+					o.Damage(225);
 				else
-					b.Damage(300);
+					o.Damage(300);
 		}
 
 		duration -= 1;

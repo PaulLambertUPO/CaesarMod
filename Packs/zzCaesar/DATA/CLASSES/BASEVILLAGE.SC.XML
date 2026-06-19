@@ -36,6 +36,7 @@
 	<method sig="createfoodmulebig" vs="data/subai/do_nothing_void.vs" />
 	<method sig="creategoldmulesmall" vs="data/subai/do_nothing_void.vs" />
 	<method sig="creategoldmulebig" vs="data/subai/do_nothing_void.vs" />
+	<method sig="autotrainpeasant" vs="data/subai/village_autotrainpeasant.vs" />
 	<method sig="trainpeasant" vs="data/subai/village_trainpeasant.vs" />
 	<method sig="trainfisherman" vs="data/subai/village_trainfisherman.vs" />
 

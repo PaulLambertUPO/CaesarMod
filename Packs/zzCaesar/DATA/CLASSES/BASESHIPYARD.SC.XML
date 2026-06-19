@@ -44,22 +44,24 @@
 		help="contents/resources"
 		rollover="Fishermen"
 	/>
-	<value1 icon="gameres/infobar/common/gold ico.bmp"
-		script="return .AsBuilding().settlement.gold;"
-		help="contents/resources"
-		rollover="Gold"
-	/>
-	<value2 icon="gameres/infobar/common/fish.bmp"
-		script="return .AsBuilding().settlement.food;"
-		help="contents/resources"
-		rollover="Fish"
-	/>
-	<value3 icon="gameres/infobar/common/Loyality.bmp"
+	<value1 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
 		help="contents/capturing"
 		rollover="Loyalty"
 	/>
-	<value4 icon="gameres/infobar/common/health ico.bmp"
+	<value2 icon="gameres/infobar/common/fish.bmp"
+		script="return .AsBuilding().settlement.food;"
+		flags="5"
+		help="contents/resources"
+		rollover="Fish"
+	/>
+	<value3 icon="gameres/infobar/common/gold ico.bmp"
+		script="return .AsBuilding().settlement.gold;"
+		flags="5"
+		help="contents/resources"
+		rollover="Gold"
+	/>
+	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"

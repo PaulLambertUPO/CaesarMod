@@ -19,7 +19,7 @@
 		key="a"
 		groupverifier="data/subai/townhall_autotrain_start_verify.vs"
 		button="actions/autotrainingStart.bmp"
-		description="Starts the automatic training of warriors in the stronghold"
+		description="Starts the automatic training of warriors in the townhall"
 		rollover="Automatic training">
 		<src obj="BaseTownhall" />
 	</cmd>
@@ -28,7 +28,7 @@
 		key="a"
 		groupverifier="data/subai/townhall_autotrain_stop_verify.vs"
 		button="actions/autotrainingStop.bmp"
-		description="Stops the automatic training of warriors in the stronghold"
+		description="Stops the automatic training of warriors in the townhall"
 		rollover="Stop automatic training">
 		<src obj="BaseTownhall" />
 	</cmd>
@@ -79,5 +79,25 @@
 		rollover="Hire Sentries"
 		description="Hires up to 10 sentries to help protect the stronghold">
 		<src obj="HTownhall" />
+	</cmd>
+	<cmd name="send_resources" priority="12"
+		key="u"
+		immediate="yes"
+		researchcommand="yes"
+		groupverifier="data/subai/townhall_send_resources_verify.vs"
+		button="states/trade.bmp"
+		rollover="Send resources"
+		description="Sends up to 1000 gold and 1000 food to each of your allies' strongholds">
+		<src obj="BaseTownhall" />
+	</cmd>
+	<cmd name="autoattach" priority="13"
+		key="w"
+		immediate="yes"
+		researchcommand="yes"
+		groupverifier="data/subai/townhall_autoattach_verify.vs"
+		button="actions/autoattach.bmp"
+		rollover="Attach free warriors"
+		description="Orders your free warriors to attach to your available heroes in the townhall">
+		<src obj="BaseTownhall" />
 	</cmd>
 </commands>

@@ -43,7 +43,7 @@ if (j > 0)
 					else
 						visible_enemy_buildings[i] = 0;
 				if (visible_enemy_buildings[i] > 1) {//show hint only from the second time an enemy building is detected with loyalty not decreasing
-					ShowHint(
+					ShowTutorial(
 						Translate("Capturing buildings"),
 						Translate("When your forces are near an enemy building you can order them to capture it by selecting your warriors and right-clicking on it. To successfully perform the capturing process, however, it is necessary that your troops are more than the defenders of the building. As time passes, the loyalty of the building will slowly decrease and when it falls to 0 the building will be yours to control. You can also instantly capture allied buildings by ordering one single warrior to do so."),
 						o

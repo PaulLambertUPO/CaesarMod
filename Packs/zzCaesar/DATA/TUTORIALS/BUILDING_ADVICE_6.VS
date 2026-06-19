@@ -12,7 +12,7 @@ Sleep(60000);
 
 if (Count(playerid, cBuilding) <= player_buildings) {
 	Obj o;
-	ShowTutorial(
+	ShowHint(
 		Translate("Exploration"),
 		Translate("Send out troops to explore the area outside your stronghold (the command 'Explore' is very useful to do so while you concentrate on something else)."),
 		o

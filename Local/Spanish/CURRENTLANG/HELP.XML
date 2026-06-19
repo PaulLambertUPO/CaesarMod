@@ -1152,7 +1152,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/RBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/RBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="RGladiator">
 				<entry hcenter="1" font="large">Gladiador</entry>
@@ -1278,8 +1278,8 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry vcenter="1" image="UI/Icons/RBarracks.bmp" link="/contents/buildings/RBarracks">Se equipa en el Cuartel</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Imperial.bmp" link="/contents/buildings/RTownhall">Requiere Liderar Roma imperial</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/OldRome.bmp" link="/contents/buildings/RTownhall">Requiere Liderar Roma púnica</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Spike Armor.bmp" link="/contents/buildings/RBlacksmith">Requiere Forjar armaduras de pretoriano</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Improve Praetorian Equipment.bmp" link="/contents/buildings/RBlacksmith">Depende de Mejorar equipos de pretoriano</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Spiked Armor 1.bmp" link="/contents/buildings/RBlacksmith">Requiere Forjar armaduras de pretoriano I</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Spiked Armor 2.bmp" link="/contents/buildings/RBlacksmith">Depende de Forjar armaduras de pretoriano II</entry>
 			</topic>
 			<topic id="RChariot">
 				<entry hcenter="1" font="large">Carro de guerra romano</entry>
@@ -1412,7 +1412,7 @@ El sacerdote se sacrifica para hacer caer un rayo no letal sobre la unidad selec
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/GBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/GBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="GAxeman">
 				<entry hcenter="1" font="large">Guerrero con hacha galo</entry>
@@ -1605,7 +1605,7 @@ El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/IBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/IBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="IDefender">
 				<entry hcenter="1" font="large">Defensor</entry>
@@ -1805,7 +1805,7 @@ La sacerdotisa se sacrifica para restablecer completamente la energía de 5 alia
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Penetración</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/CBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/CBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="CBerberAssassin">
 				<entry hcenter="1" font="large">Luchador mauritano</entry>
@@ -1997,7 +1997,7 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Golpe triple</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/BBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/BBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="BBronzeSpearman">
 				<entry hcenter="1" font="large">Lancero britano</entry>
@@ -2178,7 +2178,7 @@ El druida se sacrifica para distribuir hasta 1000 puntos de salud entre los alia
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/EBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/EBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="EAxeThrower">
 				<entry hcenter="1" font="large">Lanzador de hachas</entry>
@@ -2354,7 +2354,7 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/TBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/TBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 			</topic>
 			<topic id="TAxeman">
 				<entry hcenter="1" font="large">Guerrero con hacha germano</entry>
@@ -2588,7 +2588,7 @@ La hechicera se sacrifica para distribuir hasta 1000 puntos de salud entre los a
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/HBlacksmith">Depende de Reforzar defensas de la fortaleza I y II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/HBlacksmith">Depende de Reforzar defensas del asentamiento I y II</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Hire Sentries.bmp" link="/contents/buildings/HTownhall">Generable con Contratar centinelas</entry>
 			</topic>
 			<topic id="HHoplite">
@@ -3151,6 +3151,14 @@ Aumenta el nivel de todos los aliados cercanos en 1 punto (hasta el nivel 10).
 Coste: 800 oro
 Tiempo: instantáneo
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
@@ -3178,6 +3186,14 @@ Descanso del guerrero
 Restablece completamente la energía de todos los aliados cercanos.
 Coste: 600 oro
 Tiempo: instantáneo
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
@@ -3207,6 +3223,14 @@ Distribuye hasta 2000 puntos de salud entre los aliados cercanos.
 Coste: 1000 oro
 Tiempo: instantáneo
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
@@ -3234,6 +3258,14 @@ Adiestramiento forzoso
 Aumenta el nivel de todos los aliados cercanos en 1 punto (hasta el nivel 10).
 Coste: 800 oro
 Tiempo: instantáneo
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
@@ -3263,6 +3295,14 @@ Restablece completamente la energía de todos los aliados cercanos.
 Coste: 600 oro
 Tiempo: instantáneo
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
@@ -3290,6 +3330,14 @@ Curación
 Distribuye hasta 2000 puntos de salud entre los aliados cercanos.
 Coste: 1000 oro
 Tiempo: instantáneo
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
@@ -3319,6 +3367,14 @@ Aumenta el nivel de todos los aliados cercanos en 1 punto (hasta el nivel 10).
 Coste: 800 oro
 Tiempo: instantáneo
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
@@ -3346,6 +3402,14 @@ Contratar centinelas
 Contrata hasta 10 centinelas para ayudar a defender la fortaleza.
 Coste: 1000 oro
 Tiempo: instantáneo
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Enviar recursos
+Envía hasta 1000 oro y 1000 víveres a cada una de las fortalezas de tus aliados.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Vincular guerreros libres
+Ordena a los guerreros libres que se vinculen a los héroes disponibles en el foro (solo para el jugador propietario).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
@@ -3907,14 +3971,14 @@ Permite equipar a los tribunos en el cuartel.
 Coste: 3000 oro
 Tiempo: 30 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Spike Armor.bmp" link="/contents/units/RPraetorian">
-Forjar armaduras de pretoriano (solo Roma imperial y púnica)
+				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Spiked Armor 1.bmp" link="/contents/units/RPraetorian">
+Forjar armaduras de pretoriano I (solo Roma imperial y púnica)
 Permite equipar a los pretorianos en el cuartel.
 Coste: 4000 oro
 Tiempo: 30 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Improve Praetorian Equipment.bmp">
-Mejorar equipos de pretoriano (solo Roma imperial)
+				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Spiked Armor 2.bmp">
+Forjar armaduras de pretoriano II (solo Roma imperial)
 Reduce el coste de los nuevos pretorianos a 380 oro.
 Coste: 3000 oro
 Tiempo: 30 segundos
@@ -3926,13 +3990,13 @@ Coste: 3500 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/RArcher">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4000,13 +4064,13 @@ Coste: 800 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/GArcher">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4050,13 +4114,13 @@ Coste: 2400 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/IArcher">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4117,13 +4181,13 @@ Interrumpir producción
 Interrumpe la producción de un tipo de arma para empezar otra.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/CJavelinThrower">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4173,13 +4237,13 @@ Coste: 2000 oro
 Tiempo: 40 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/BBowman">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4197,36 +4261,36 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Seth.bmp">
 Talismán de Seth
-Proporciona a un máximo de 65 guerreros cercanos al foro un talismán que aumenta el ataque en 4 puntos.
+Proporciona a un máximo de 65 guerreros cercanos un talismán que aumenta el ataque en 4 puntos.
 Coste: 500 oro
 Tiempo: 5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Thoth.bmp">
 Talismán de Thoth
-Proporciona a un máximo de 65 guerreros cercanos al foro un talismán que aumenta la defensa en 4 puntos.
+Proporciona a un máximo de 65 guerreros cercanos un talismán que aumenta la defensa en 4 puntos.
 Coste: 500 oro
 Tiempo: 5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Ra.bmp">
 Talismán de Ra
-Proporciona a un máximo de 65 guerreros cercanos al foro un talismán que aumenta la salud en 40 puntos.
+Proporciona a un máximo de 65 guerreros cercanos un talismán que aumenta la salud en 40 puntos.
 Coste: 500 oro
 Tiempo: 5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Isis.bmp">
 Talismán de Isis
-Proporciona a un máximo de 65 guerreros cercanos al foro un talismán que aumenta el nivel en 4 puntos.
+Proporciona a un máximo de 65 guerreros cercanos un talismán que aumenta el nivel en 4 puntos.
 Coste: 500 oro
 Tiempo: 5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/EArcher">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4270,13 +4334,13 @@ Coste: 1000 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/TArcher">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4331,13 +4395,13 @@ Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/HToxotes">
-Reforzar defensas de la fortaleza I
+Reforzar defensas del asentamiento I
 Hace a los defensores de las murallas de nivel 12.
 Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Reforzar defensas de la fortaleza II
+Reforzar defensas del asentamiento II
 Hace a los defensores de las murallas de nivel 24.
 Coste: 2000 oro
 Tiempo: 30 segundos
@@ -4712,7 +4776,7 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/Peoples Assembly.bmp">
 Asamblea del pueblo
-Aumenta la población de la fortaleza en 15 unidades.
+Aumenta la población del asentamiento en 15 unidades.
 Coste: 2000 oro
 Tiempo: 25 segundos
 				</entry>
@@ -5044,7 +5108,7 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 800 víveres
 Tiempo: 10 segundos
 				</entry>
@@ -5056,7 +5120,7 @@ Tiempo: 10 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Free Wine.bmp">
 Celebrar festival de Baco
-Explora una gran área alrededor de la fortaleza.
+Explora una gran área alrededor del asentamiento.
 Coste: 1500 oro
 Tiempo: 20 segundos
 				</entry>
@@ -5074,7 +5138,7 @@ Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Buy Maps.bmp">
 Comprar mapa (solo Roma púnica)
-Explora una enorme área alrededor de la fortaleza.
+Explora una enorme área alrededor del asentamiento.
 Coste: 2000 oro
 Tiempo: 90 segundos
 				</entry>
@@ -5103,19 +5167,19 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 600 víveres
 Tiempo: 10 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Free Beer.bmp">
 Celebrar banquete galo
-Aumenta la población de la fortaleza en 20 unidades.
+Aumenta la población del asentamiento en 20 unidades.
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Food Tax.bmp">
 Impuesto en víveres
-Obliga a la población de la fortaleza a producir víveres con el tiempo.
+Obliga a la población del asentamiento a producir víveres con el tiempo.
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
@@ -5168,13 +5232,13 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 600 víveres
 Tiempo: 10 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Free Beer.bmp">
 Celebrar fiesta ibera
-Aumenta la población de la fortaleza en 10 unità y recauda 800 víveres.
+Aumenta la población del asentamiento en 10 unità y recauda 800 víveres.
 Coste: 1500 oro
 Tiempo: 20 segundos
 				</entry>
@@ -5190,15 +5254,15 @@ Permite domar caballos que se pueden utilizar para reclutar exploradores en las 
 Coste: 1000 oro
 Tiempo: 20 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Housing.bmp">
-Construir alojamientos
-Aumenta la población máxima de la fortaleza en 15 unidades y la actual en 5.
+				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Housing1.bmp">
+Construir alojamientos I
+Aumenta la población máxima del asentamiento en 15 unidades y la actual en 5.
 Coste: 750 oro
 Tiempo: 30 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/ICmdBar/Research/More Housing.bmp">
-Construir más alojamientos
-Aumenta la población máxima de la fortaleza en 15 unidades y la actual en 5.
+				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Housing2.bmp">
+Construir alojamientos II
+Aumenta la población máxima del asentamiento en 15 unidades y la actual en 5.
 Coste: 750 oro
 Tiempo: 30 segundos
 				</entry>
@@ -5227,7 +5291,7 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 1000 víveres
 Tiempo: 10 segundos
 				</entry>
@@ -5245,13 +5309,13 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Research/Free Trade.bmp">
 Atraer población
-Aumenta hasta el máximo la población de la fortaleza.
+Aumenta hasta el máximo la población del asentamiento.
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Expedition.bmp">
 Expedición
-Retira la niebla de guerra alrededor del punto seleccionado y revela a todos los enemigos invisibles presentes allí (no puedes tener más de un área de expedición contemporáneamente por fortaleza).
+Retira la niebla de guerra alrededor del punto seleccionado y revela a todos los enemigos invisibles presentes allí (no puedes tener más de un área de expedición contemporáneamente por asentamiento).
 Coste: 1000 oro
 Tiempo: 20 segundos
 				</entry>
@@ -5298,13 +5362,13 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 600 víveres
 Tiempo: 10 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gambling.bmp">
 Favor de los dioses
-Explora una media área alrededor de la fortaleza y te proporciona una probabilidad del 40% de ganar 5000 oro o 400 víveres si pierdes.
+Explora una media área alrededor del asentamiento y te proporciona una probabilidad del 40% de ganar 5000 oro o 400 víveres si pierdes.
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
@@ -5328,7 +5392,7 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/All-In.bmp">
 Todo por todo
-Aumenta la población de la fortaleza en 40 unidades y te proporciona una probabilidad del 35% de ganar 10000 oro.
+Aumenta la población del asentamiento en 40 unidades y te proporciona una probabilidad del 35% de ganar 10000 oro.
 Coste: 4000 oro
 Tiempo: 5 segundos
 				</entry>
@@ -5351,19 +5415,19 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Buy War Slaves.bmp">
 Servidumbre
-Aumenta la población de la fortaleza en 20 unidades.
+Aumenta la población del asentamiento en 20 unidades.
 Coste: 400 oro
 Tiempo: 15 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Grain Trade.bmp">
 Comerciar con víveres
-Intercambia lentamente los víveres en la fortaleza por oro.
+Intercambia lentamente los víveres en el asentamiento por oro.
 Coste: 1500 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Religious Feast.bmp">
 Bendición
-Cura a 5 guerreros cercanos del foro por 30 puntos de salud cada 2 segundos.
+Cura a 5 guerreros cercanos del asentamiento por 30 puntos de salud cada 2 segundos.
 Coste: 1500 víveres
 Tiempo: 30 segundos
 				</entry>
@@ -5375,7 +5439,7 @@ Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Hecatomb.bmp">
 Ritual de la fertilidad
-Aumenta hasta el máximo la población de la fortaleza.
+Aumenta hasta el máximo la población del asentamiento.
 Coste: 2000 víveres
 Tiempo: 30 segundos
 				</entry>
@@ -5404,7 +5468,7 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 400 víveres
 Tiempo: 10 segundos
 				</entry>
@@ -5422,13 +5486,13 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Food Tax.bmp">
 Impuesto en víveres
-Obliga a la población de la fortaleza a producir víveres con el tiempo.
+Obliga a la población del asentamiento a producir víveres con el tiempo.
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Religious Feast.bmp">
 Bendición
-Cura a 5 guerreros cercanos del foro por 30 puntos de salud cada 2 segundos.
+Cura a 5 guerreros cercanos del asentamiento por 30 puntos de salud cada 2 segundos.
 Coste: 1500 oro
 Tiempo: 30 segundos
 				</entry>
@@ -5451,7 +5515,7 @@ Tiempo: 60 segundos
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Aumentar población
-Aumenta la población de la fortaleza en 10 unidades.
+Aumenta la población del asentamiento en 10 unidades.
 Coste: 800 víveres
 Tiempo: 10 segundos
 				</entry>
@@ -5463,7 +5527,7 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Buy War Slaves.bmp">
 Comprar esclavos de guerra
-Aumenta la población de la fortaleza en 20 unidades.
+Aumenta la población del asentamiento en 20 unidades.
 Coste: 400 oro
 Tiempo: 15 segundos
 				</entry>
@@ -5493,7 +5557,7 @@ Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Religious Feast.bmp">
 Bendición
-Cura a 5 guerreros cercanos del foro por 30 puntos de salud cada 2 segundos.
+Cura a 5 guerreros cercanos del asentamiento por 30 puntos de salud cada 2 segundos.
 Coste: 1000 oro y 1000 víveres
 Tiempo: 30 segundos
 				</entry>
@@ -5937,6 +6001,10 @@ Equipar explorador (solo aldea ibera)
 Coste: 1 población
 Tiempo: 15 segundos
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainPeasant.bmp" link="/contents/units/Villagers">
+Convocar campesinos automáticamente
+Convoca campesinos automáticamente si la población alcanza el máximo y la ruta de suministro está establecida.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repoblar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada y/o restablece la población mínima de la aldea si no hay suficientes habitantes para producir víveres.
@@ -6244,7 +6312,7 @@ Coste: 80 energía
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Earthquake.bmp">
 Terremoto
-Cada segundo inflige 300 puntos de daño a todas la fortalezas (225 a las del lanzador). Dura 10 segundos.
+Cada segundo inflige 300 puntos de daño a todas las fortalezas, fortines y puertos (225 a los del lanzador). Dura 10 segundos.
 Coste: 90 energía
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/T Invasion.bmp">

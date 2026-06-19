@@ -31,7 +31,7 @@ if (set.population > GetConst("MinPopulation")) {
 		imperialOrPunicOrGreekOrGaulTechs[2] = "Roman Velit";
 		imperialOrPunicOrGreekOrGaulTechs[3] = "Roman Principle";
 		imperialOrPunicOrGreekOrGaulTechs[4] = "Roman Scout";
-		imperialOrPunicOrGreekOrGaulTechs[5] = "Roman Praetorian";
+		imperialOrPunicOrGreekOrGaulTechs[5] = "Spiked armor I";
 	}
 	else if (nRaceIsPunicRome) {
 		imperialOrPunicOrGreekOrGaulTechs[0] = "";
@@ -39,7 +39,7 @@ if (set.population > GetConst("MinPopulation")) {
 		imperialOrPunicOrGreekOrGaulTechs[2] = "Gladiator Shows";
 		imperialOrPunicOrGreekOrGaulTechs[3] = "Roman Principle";
 		imperialOrPunicOrGreekOrGaulTechs[4] = "Roman Scout";
-		imperialOrPunicOrGreekOrGaulTechs[5] = "Roman Praetorian";
+		imperialOrPunicOrGreekOrGaulTechs[5] = "Spiked armor";
 	}
 	else if (nRace == ImperialRome) {//Greece
 		imperialOrPunicOrGreekOrGaulTechs[0] = "";
@@ -75,7 +75,7 @@ if (set.population > GetConst("MinPopulation")) {
 			strTech = imperialOrPunicOrGreekOrGaulTechs[nType];
 			if (nType == 5)//RPraetorian
 				if (IsResearched(set, strTech))
-					strTech = "Improve Praetorian Equipment";
+					strTech = "Spiked armor II";
 		}
 		else if (nRaceIsPunicRome)
 			strTech = imperialOrPunicOrGreekOrGaulTechs[nType];
@@ -154,7 +154,7 @@ if (set.population > GetConst("MinPopulation")) {
 				if (nType == 5)//RPraetorian
 					if (rand(3) > 0)
 						if (IsResearched(set, strTech))
-							strTech = "Improve Praetorian Equipment";
+							strTech = "Spiked armor II";
 			}
 			else if (nRaceIsPunicRome)
 				strTech = imperialOrPunicOrGreekOrGaulTechs[nType];
@@ -221,7 +221,7 @@ if (set.population > GetConst("MinPopulation")) {
 							strTech = imperialOrPunicOrGreekOrGaulTechs[j];
 							if (j == 5)
 								if (rand(3) > 0)
-									strTech = "Improve Praetorian Equipment";
+									strTech = "Spiked armor II";
 						}
 						else if (nRaceIsPunicRome)
 							strTech = imperialOrPunicOrGreekOrGaulTechs[j];

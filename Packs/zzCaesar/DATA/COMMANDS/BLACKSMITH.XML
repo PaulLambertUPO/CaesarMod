@@ -7,8 +7,8 @@
 		groupverifier="data/subai/research_verify.vs"
 		costgold="1000"
 		execdelay="30000"
-		rollover="Strengthen Stronghold Defenses I"
-		description="Makes the defenders at the stronghold walls level 12"
+		rollover="Strengthen settlement defenses I"
+		description="Makes the wall defenders level 12"
 		method="research"
 		param="NameSet, Strengthen Stronghold Defences I, , SetsSet, SentriesLevel, 12">
 		<src obj="BaseBlacksmith" />
@@ -21,8 +21,8 @@
 		groupverifier="data/subai/research_verify.vs"
 		costgold="2000"
 		execdelay="30000"
-		rollover="Strengthen Stronghold Defenses II"
-		description="Makes the defenders at the stronghold walls level 24"
+		rollover="Strengthen settlement defenses II"
+		description="Makes the wall defenders level 24"
 		method="research"
 		param="ReqSet, Strengthen Stronghold Defences I, , NameSet, Strengthen Stronghold Defences II, default, SetsSet, SentriesLevel, 24">
 		<src obj="BaseBlacksmith" />
@@ -98,32 +98,46 @@
 		param="NameSet, Roman Full Armor, default, NameSet, Full Armor">
 		<src obj="RBlacksmith" />
 	</cmd>
-	<cmd name="Roman Praetorian" priority="7"
-		queueicon="gameres/icons/upgrades/spike armor.bmp"
-		button="upgrades/spike armor.bmp"
+	<cmd name="Spiked armor I" priority="7"
+		queueicon="gameres/icons/upgrades/spiked armor 1.bmp"
+		button="upgrades/spiked armor 1.bmp"
 		key="s"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
 		costgold="4000"
 		execdelay="30000"
-		rollover="Spike Armor"
+		rollover="Spiked armor I"
 		description="Allows Praetorians to be equipped in the Barracks"
 		method="research"
-		param="NameSet, Roman Praetorian, default, NameSet, Spike Armor">
+		param="NameSet, Spiked armor I">
 		<src obj="RBlacksmith" />
 	</cmd>
-	<cmd name="Improve Praetorian Equipment" priority="7"
-		queueicon="gameres/icons/upgrades/Improve Praetorian Equipment.bmp"
-		button="upgrades/Improve Praetorian Equipment.bmp"
+	<cmd name="Spiked armor II" priority="7"
+		queueicon="gameres/icons/upgrades/spiked armor 2.bmp"
+		button="upgrades/spiked armor 2.bmp"
 		key="s"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
 		costgold="3000"
 		execdelay="30000"
-		rollover="Improve Praetorian Equipment"
+		rollover="Spiked armor II"
 		description="Reduces new Praetorians cost to 380 gold"
 		method="research"
-		param="ReqSet, Spike Armor, , NameSet, Improve Praetorian Equipment, default">
+		param="ReqSet, Spiked armor I, , NameSet, Spiked armor II, default">
+		<src obj="RBlacksmith" />
+	</cmd>
+	<cmd name="Spiked armor" priority="7"
+		queueicon="gameres/icons/upgrades/spiked armor 1.bmp"
+		button="upgrades/spiked armor 1.bmp"
+		key="s"
+		researchcommand="yes"
+		groupverifier="data/subai/research_verify.vs"
+		costgold="4000"
+		execdelay="30000"
+		rollover="Spiked armor"
+		description="Allows Praetorians to be equipped in the Barracks"
+		method="research"
+		param="NameSet, Spiked armor, default">
 		<src obj="RBlacksmith" />
 	</cmd>
 	<cmd name="Roman Chariot Wheels" priority="8"
@@ -555,7 +569,7 @@
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Seth"
-		description="Gives a Damage charm (+4 damage) to up to 65 warriors around the townhall"
+		description="Gives a Damage charm (+4 damage) to up to 65 nearby warriors"
 		method="getcharm"
 		param="Damage charm">
 		<src obj="EBlacksmith" />
@@ -569,7 +583,7 @@
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Thoth"
-		description="Gives an Armor charm (+4 armor) to up to 65 warriors around the townhall"
+		description="Gives an Armor charm (+4 armor) to up to 65 nearby warriors"
 		method="getcharm"
 		param="Armor charm">
 		<src obj="EBlacksmith" />
@@ -583,7 +597,7 @@
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Ra"
-		description="Gives a Health charm (+40 health) to up to 65 warriors around the townhall"
+		description="Gives a Health charm (+40 health) to up to 65 nearby warriors"
 		method="getcharm"
 		param="Health charm">
 		<src obj="EBlacksmith" />
@@ -597,7 +611,7 @@
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Isis"
-		description="Gives a Knowledge charm (+4 levels) to up to 65 warriors around the townhall"
+		description="Gives a Knowledge charm (+4 levels) to up to 65 nearby warriors"
 		method="getcharm"
 		param="Knowledge charm">
 		<src obj="EBlacksmith" />

@@ -1152,7 +1152,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/RBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/RBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="RGladiator">
 				<entry hcenter="1" font="large">Gladiator</entry>
@@ -1278,8 +1278,8 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry vcenter="1" image="UI/Icons/RBarracks.bmp" link="/contents/buildings/RBarracks">Equipped in the Barracks</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Imperial.bmp" link="/contents/buildings/RTownhall">Requires Lead Imperial Rome</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/OldRome.bmp" link="/contents/buildings/RTownhall">Requires Lead Punic Rome</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Spike Armor.bmp" link="/contents/buildings/RBlacksmith">Requires Spike armor</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Improve Praetorian Equipment.bmp" link="/contents/buildings/RBlacksmith">Depends on Improve praetorian equipment</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Spiked Armor 1.bmp" link="/contents/buildings/RBlacksmith">Requires Spiked armor I</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Spiked Armor 2.bmp" link="/contents/buildings/RBlacksmith">Depends on Spiked armor II</entry>
 			</topic>
 			<topic id="RChariot">
 				<entry hcenter="1" font="large">Roman chariot</entry>
@@ -1412,7 +1412,7 @@ The priest sacrifices himself to strike the chosen unit with a non-lethal lightn
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/GBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/GBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="GAxeman">
 				<entry hcenter="1" font="large">Gaul axeman</entry>
@@ -1605,7 +1605,7 @@ The militiaman leaves his weapons and becomes a peasant (only in buildings and s
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/IBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/IBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="IDefender">
 				<entry hcenter="1" font="large">Defender</entry>
@@ -1805,7 +1805,7 @@ The enchantress sacrifices herself to restore the stamina of 5 nearby allies.
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Penetration</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/CBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/CBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="CBerberAssassin">
 				<entry hcenter="1" font="large">Berber assassin</entry>
@@ -1997,7 +1997,7 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Triple strike</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/BBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/BBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="BBronzeSpearman">
 				<entry hcenter="1" font="large">British spearman</entry>
@@ -2178,7 +2178,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/EBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/EBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="EAxeThrower">
 				<entry hcenter="1" font="large">Axe thrower</entry>
@@ -2354,7 +2354,7 @@ The priest transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/TBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/TBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 			</topic>
 			<topic id="TAxeman">
 				<entry hcenter="1" font="large">German axeman</entry>
@@ -2588,7 +2588,7 @@ The enchantress sacrifices herself to distribute up to 1000 health among nearby 
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry />
 				<entry font="large">See also</entry>
-				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/HBlacksmith">Depends on Strengthen Stronghold Defenses I and II</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Stronghold Defense2.bmp" link="/contents/buildings/HBlacksmith">Depends on Strengthen settlement defenses I and II</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Hire Sentries.bmp" link="/contents/buildings/HTownhall">Generable with Hire sentries</entry>
 			</topic>
 			<topic id="HHoplite">
@@ -3143,13 +3143,21 @@ Unlocks the commands of Punic Rome in the stronghold buildings.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Military Training.bmp">
 Military training
 Adds 1 level to all nearby allies (up to level 10).
 Cost: 800 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3171,13 +3179,21 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Refreshment.bmp">
 Refreshment
 Completely restores the stamina of all nearby allies.
 Cost: 600 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3199,13 +3215,21 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Healing
 Distributes up to 2000 health among nearby allies.
 Cost: 1000 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3227,13 +3251,21 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Military Training.bmp">
 Military training
 Adds 1 level to all nearby allies (up to level 10).
 Cost: 800 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3255,13 +3287,21 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Refreshment.bmp">
 Refreshment
 Completely restores the stamina of all nearby allies.
 Cost: 600 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3283,13 +3323,21 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Healing
 Distributes up to 2000 health among nearby allies.
 Cost: 1000 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3311,13 +3359,21 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Military Training.bmp">
 Military training
 Adds 1 level to all nearby allies (up to level 10).
 Cost: 800 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3339,13 +3395,17 @@ Whoever owns the townhall controls the entire stronghold.
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Create Mule Gold.bmp" link="/contents/units/Mule">Load caravan (up to 1000 gold)</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainingStart.bmp">
 Automatic training
-Starts the automatic training of warriors in the stronghold.
+Starts the automatic training of warriors in the townhall.
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Hire Sentries.bmp" link="/contents/units/HToxotes">
 Hire sentries
 Hires up to 10 sentries to help protect the stronghold.
 Cost: 1000 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
+Attach free warriors
+Orders free warriors to attach to the available heroes in the townhall (only for the owner player).
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
@@ -3902,19 +3962,19 @@ Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Full Armor.bmp" link="/contents/units/RTribune">
-Full armor
+Full armor (only Republican Rome)
 Allows tribunes to be equipped in the barracks.
 Cost: 3000 gold
 Time: 30 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Spike Armor.bmp" link="/contents/units/RPraetorian">
-Spike armor (only Imperial and Punic Rome)
+				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Spiked Armor 1.bmp" link="/contents/units/RPraetorian">
+Spiked armor I (only Imperial and Punic Rome)
 Allows praetorians to be equipped in the barracks.
 Cost: 4000 gold
 Time: 30 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Improve Praetorian Equipment.bmp">
-Improve praetorian equipment (only Imperial Rome)
+				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Spiked Armor 2.bmp">
+Spiked armor II (only Imperial Rome)
 Reduces new praetorians cost to 380 gold.
 Cost: 3000 gold
 Time: 30 seconds
@@ -3926,14 +3986,14 @@ Cost: 3500 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/RArcher">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4000,14 +4060,14 @@ Cost: 800 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/GArcher">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4050,14 +4110,14 @@ Cost: 2400 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/IArcher">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4117,14 +4177,14 @@ Stop production
 Stops the production of a weapon type to start another.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/CJavelinThrower">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4173,14 +4233,14 @@ Cost: 2000 gold
 Time: 40 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/BBowman">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4197,37 +4257,37 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Seth.bmp">
 Charm of Seth
-Gives a Damage charm (+4 damage) to up to 65 warriors around the townhall.
+Gives a Damage charm (+4 damage) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Thoth.bmp">
 Charm of Thoth
-Gives an Armor charm (+4 armor) to up to 65 warriors around the townhall.
+Gives an Armor charm (+4 armor) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Ra.bmp">
 Charm of Ra
-Gives a Health charm (+40 health) to up to 65 warriors around the townhall.
+Gives a Health charm (+40 health) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Isis.bmp">
 Charm of Isis
-Gives a Knowledge charm (+4 levels) to up to 65 warriors around the townhall.
+Gives a Knowledge charm (+4 levels) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/EArcher">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4270,14 +4330,14 @@ Cost: 1000 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/TArcher">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4331,14 +4391,14 @@ Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense.bmp" link="/contents/units/HToxotes">
-Strengthen Stronghold Defenses I
-Makes the defenders at the stronghold walls level 12.
+Strengthen settlement defenses I
+Makes the wall defenders level 12.
 Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Research/Stronghold Defense2.bmp">
-Strengthen Stronghold Defenses II
-Makes the defenders at the stronghold walls level 24.
+Strengthen settlement defenses II
+Makes the wall defenders level 24.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4712,7 +4772,7 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/Peoples Assembly.bmp">
 People's assembly
-Increases the stronghold population by 15.
+Increases the settlement population by 15.
 Cost: 2000 gold
 Time: 25 seconds
 				</entry>
@@ -5044,7 +5104,7 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 800 food
 Time: 10 seconds
 				</entry>
@@ -5056,7 +5116,7 @@ Time: 10 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Free Wine.bmp">
 Free wine
-Explores a large area around the stronghold.
+Explores a large area around the settlement.
 Cost: 1500 gold
 Time: 20 seconds
 				</entry>
@@ -5074,7 +5134,7 @@ Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Buy Maps.bmp">
 Buy map (only Punic Rome)
-Explores a huge area around the stronghold.
+Explores a huge area around the settlement.
 Cost: 2000 gold
 Time: 90 seconds
 				</entry>
@@ -5103,19 +5163,19 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 600 food
 Time: 10 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Free Beer.bmp">
 Free beer
-Increases the stronghold population by 20.
+Increases the settlement population by 20.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Food Tax.bmp">
 Food tax
-Imposes the stronghold population to produce food over time.
+Imposes the settlement population to produce food over time.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
@@ -5168,13 +5228,13 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 600 food
 Time: 10 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Free Beer.bmp">
 Free drinks
-Increases the stronghold population by 10 and gathers 800 food.
+Increases the settlement population by 10 and gathers 800 food.
 Cost: 1500 gold
 Time: 20 seconds
 				</entry>
@@ -5190,15 +5250,15 @@ Allows you to tame horses that can be used to train Scouts in Iberian villages a
 Cost: 1000 gold
 Time: 20 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Housing.bmp">
-Housing
-Increases the maximum population of the stronghold by 15 and the current one by 5.
+				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Housing1.bmp">
+Housing I
+Increases the maximum population of the settlement by 15 and the current one by 5.
 Cost: 750 gold
 Time: 30 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/ICmdBar/Research/More Housing.bmp">
-More housing
-Increases the maximum population of the stronghold by 15 and the current one by 5.
+				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Housing2.bmp">
+Housing II
+Increases the maximum population of the settlement by 15 and the current one by 5.
 Cost: 750 gold
 Time: 30 seconds
 				</entry>
@@ -5227,7 +5287,7 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 1000 food
 Time: 10 seconds
 				</entry>
@@ -5245,13 +5305,13 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Research/Free Trade.bmp">
 Free trade
-Increases the population of the stronghold to maximum.
+Increases the population of the settlement to maximum.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Expedition.bmp">
 Expedition
-Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per stronghold).
+Removes the fog of war around the chosen point and reveals any hidden enemies there (you cannot have more than one expedition area at the same time per settlement).
 Cost: 1000 gold
 Time: 20 seconds
 				</entry>
@@ -5298,13 +5358,13 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 600 food
 Time: 10 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Gambling.bmp">
 Gambling
-Explores a medium area around the stronghold and gives you a 40% chance to win 5000 gold or 400 food if you lose.
+Explores a medium area around the settlement and gives you a 40% chance to win 5000 gold or 400 food if you lose.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
@@ -5328,7 +5388,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/All-In.bmp">
 Gambler's all-in
-Increases the stronghold population by 40 and gives you a 35% chance to win 10000 gold.
+Increases the settlement population by 40 and gives you a 35% chance to win 10000 gold.
 Cost: 4000 gold
 Time: 5 seconds
 				</entry>
@@ -5351,19 +5411,19 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Buy War Slaves.bmp">
 Buy slaves
-Increases the stronghold population by 20.
+Increases the settlement population by 20.
 Cost: 400 gold
 Time: 15 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Grain Trade.bmp">
 Grain trade
-Slowly exchanges the food in the stronghold for gold.
+Slowly exchanges the food in the settlement for gold.
 Cost: 1500 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Religious Feast.bmp">
 Religious feast
-Heals 5 warriors around the townhall by 30 every 2 seconds.
+Heals 5 warriors around the settlement by 30 every 2 seconds.
 Cost: 1500 food
 Time: 30 seconds
 				</entry>
@@ -5375,7 +5435,7 @@ Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Hecatomb.bmp">
 Hecatomb
-Increases the population of the stronghold to maximum.
+Increases the population of the settlement to maximum.
 Cost: 2000 food
 Time: 30 seconds
 				</entry>
@@ -5404,7 +5464,7 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 400 food
 Time: 10 seconds
 				</entry>
@@ -5422,13 +5482,13 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Upgrades/Food Tax.bmp">
 Food tax
-Imposes the stronghold population to produce food over time.
+Imposes the settlement population to produce food over time.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Religious Feast.bmp">
 Religious feast
-Heals 5 warriors around the townhall by 30 every 2 seconds.
+Heals 5 warriors around the settlement by 30 every 2 seconds.
 Cost: 1500 gold
 Time: 30 seconds
 				</entry>
@@ -5451,7 +5511,7 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Add Population.bmp">
 Increase population
-Increases the stronghold population by 10.
+Increases the settlement population by 10.
 Cost: 800 food
 Time: 10 seconds
 				</entry>
@@ -5463,7 +5523,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Buy War Slaves.bmp">
 Buy war slaves
-Increases the stronghold population by 20.
+Increases the settlement population by 20.
 Cost: 400 gold
 Time: 15 seconds
 				</entry>
@@ -5493,7 +5553,7 @@ Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Religious Feast.bmp">
 Religious feast
-Heals 5 warriors around the townhall by 30 every 2 seconds.
+Heals 5 warriors around the settlement by 30 every 2 seconds.
 Cost: 1000 gold and 1000 food
 Time: 30 seconds
 				</entry>
@@ -5937,6 +5997,10 @@ Call scout (only Iberian village)
 Cost: 1 population
 Time: 15 seconds
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoTrainPeasant.bmp" link="/contents/units/Villagers">
+Call peasants automatically
+Calls peasants automatically if the population reaches the maximum and the supply route is set.
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repopulate
 Repairs the building to make it operational again if it is too damaged and/or restores the minimum population of the village if there are not enough inhabitants to produce food.
@@ -6244,7 +6308,7 @@ Cost: 80 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Earthquake.bmp">
 Earthquake
-Every second deals 300 damage to all strongholds (225 to the caster's). It lasts 10 seconds.
+Every second deals 300 damage to all strongholds, outposts and shipyards (225 to the caster's). It lasts 10 seconds.
 Cost: 90 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/T Invasion.bmp">

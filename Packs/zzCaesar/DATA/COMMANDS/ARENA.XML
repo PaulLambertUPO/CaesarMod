@@ -733,7 +733,7 @@
 		costgold="2000"
 		execdelay="25000"
 		groupverifier="data/subai/research_verify.vs"
-		description="Increases the stronghold population by 15"
+		description="Increases the settlement population by 15"
 		rollover="People's Assembly"
 		method="research"
 		researchcommand="yes"

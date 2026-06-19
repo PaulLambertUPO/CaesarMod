@@ -15,13 +15,13 @@ difficulty = GetDifficulty();
 	b = NO_Town3.obj.AsBuilding();
 	b.Research("Spears");
 	b.Research("Nobility");
-	b.Research("Housing");
+	b.Research("Housing I");
 	b.Research("Ancestral Knowledge");
 
 	b = NO_Town4.obj.AsBuilding();
 	b.Research("Battleaxes");
 	b.Research("Veteran's guild");
-	b.Research("Housing");
+	b.Research("Housing I");
 	b.Research("IRestoration");
 
 	b = NO_Town5.obj.AsBuilding();

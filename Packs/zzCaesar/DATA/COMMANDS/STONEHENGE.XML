@@ -85,7 +85,7 @@
 		groupdispatch="data/subai/stonehenge_earthquake_dispatch.vs"
 		coststamina="90"
 		rollover="Earthquake"
-		description="Every second deals 300 damage to all strongholds (225 to the caster's).\nIt lasts 10 seconds"
+		description="Every second deals 300 damage to all strongholds, outposts and shipyards (225 to the caster's).\nIt lasts 10 seconds"
 		key="e">
 		<src obj="Stonehenge" />
 	</cmd>

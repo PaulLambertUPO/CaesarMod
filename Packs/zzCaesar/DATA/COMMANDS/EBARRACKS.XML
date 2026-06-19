@@ -59,7 +59,7 @@
 		execdelay="20000"
 		rollover="Equip Anubis Warrior"
 		method="train"
-		param="EAnubisWarrior, Cult of Anubis"
+		param="EAnubisWarrior, Cult of Anubis, Temple of Horus and Anubis"
 		sclass="EAnubisWarrior">
 		<src obj="EBarracks" />
 	</cmd>
@@ -75,7 +75,7 @@
 		execdelay="20000"
 		rollover="Equip Horus Warrior"
 		method="train"
-		param="EHorusWarrior, Cult of Horus"
+		param="EHorusWarrior, Cult of Horus, Temple of Horus and Anubis"
 		sclass="EHorusWarrior">
 		<src obj="EBarracks" />
 	</cmd>

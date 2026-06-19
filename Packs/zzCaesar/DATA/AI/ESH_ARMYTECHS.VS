@@ -43,7 +43,7 @@ else {
 		imperialOrPunicOrGreekTechs[2] = "Roman Velit";
 		imperialOrPunicOrGreekTechs[3] = "Roman Principle";
 		imperialOrPunicOrGreekTechs[4] = "Roman Scout";
-		imperialOrPunicOrGreekTechs[5] = "Improve Praetorian Equipment";//this is managed in ESH_NeedTech
+		imperialOrPunicOrGreekTechs[5] = "Spiked armor II";//this is managed in ESH_NeedTech
 	}
 	else if (nRaceIsPunicRome) {
 		imperialOrPunicOrGreekTechs[0] = "";
@@ -51,7 +51,7 @@ else {
 		imperialOrPunicOrGreekTechs[2] = "Gladiator Shows";
 		imperialOrPunicOrGreekTechs[3] = "Roman Principle";
 		imperialOrPunicOrGreekTechs[4] = "Roman Scout";
-		imperialOrPunicOrGreekTechs[5] = "Roman Praetorian";
+		imperialOrPunicOrGreekTechs[5] = "Spiked armor";
 	}
 	else if (nRace == ImperialRome) {//Greece
 		imperialOrPunicOrGreekTechs[0] = "";

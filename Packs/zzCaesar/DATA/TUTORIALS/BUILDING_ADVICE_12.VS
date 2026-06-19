@@ -15,7 +15,7 @@ while (true) {
 	for (i = teleports.count - 1; i >= 0; i -= 1) {
 		o = teleports[i];
 		if (IsExplored(o.pos, playerid)) {
-			ShowHint(
+			ShowTutorial(
 				Translate("Caves"),
 				Translate("Caves are underground passages that connect two distant places. You can use them to either surprise the enemy with a rear attack or avoid geographical obstacles."),
 				o

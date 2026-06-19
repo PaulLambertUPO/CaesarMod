@@ -14,8 +14,9 @@
 	.CmdDisable("Roman Principle");
 	.CmdDisable("Roman Scout");
 	.CmdDisable("Roman Full Armor");
-	.CmdDisable("Roman Praetorian");
-	.CmdDisable("Improve Praetorian Equipment");
+	.CmdDisable("Spiked armor I");
+	.CmdDisable("Spiked armor II");
+	.CmdDisable("Spiked armor");
 	.CmdDisable("Roman Chariot Wheels");
 	.CmdDisable("Strengthen Stronghold Defences I");
 	.CmdDisable("Strengthen Stronghold Defences II");
@@ -41,14 +42,11 @@
 	}
 	else if (IsResearched(set, "ChooseImperialRome")) {
 		.CmdEnable("Roman Velit");
-		.CmdEnable("Roman Praetorian");
-		.CmdEnable("Improve Praetorian Equipment");
-		while (!IsResearched(set, "Roman Praetorian"))
-			Sleep(250);
-		.CmdDisable("Roman Praetorian");
+		.CmdEnable("Spiked armor I");
+		.CmdEnable("Spiked armor II");
 	}
 	else if (IsResearched(set, "ChoosePunicRome"))
-		.CmdEnable("Roman Praetorian");
+		.CmdEnable("Spiked armor");
 }
 
 //without this instruction, the game crashes
