@@ -1,4 +1,4 @@
-WaitQueryCountBetween(Caesar, 1, 1, -1);
+WaitQueryCountBetween(Caesar, 1, -1, -1);
 
 WaitEmptyQuery(Caesar, -1);
 

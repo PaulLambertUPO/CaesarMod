@@ -220,6 +220,16 @@ while (dest != "") {
 			return false;
 		}
 	}
+	else if (token == "SetsSet") {//used for Carthage specialization stop commands when sentry-related upgrades are being researched
+		name = ParseStr(dest, dest);
+		value = ParseStr(dest, dest);
+		if (name == "Specialization")
+			if (value == "")
+				if (EnvReadString(this, "researching") == "yes") {
+					reasonText = rollover(this, true) + env_level;
+					return false;
+				}
+	}
 	else if (token == "break")//used only by Spartan/Special Training
 		break;
 }

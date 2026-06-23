@@ -228,7 +228,7 @@
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Archer"
 		description="Transforms the Riders into Archers (only in buildings and ships)">
-		<src obj="TTeutonRider" />
+		<src obj="TTeutonRiderMercenary" />
 	</cmd>
 	<cmd name="to_teuton_wolf" priority="16"
 		button="actions/train TTeutonWolf.bmp"
@@ -236,9 +236,9 @@
 		groupverifier="data/subai/teuton_mutate_verify.vs"
 		groupdispatch="data/subai/teuton_mutate_dispatch.vs"
 		voidgroupdispatch="1"
-		rollover="Convert to Teuton Wolf"
+		rollover="Convert to Teuton Raider"
 		description="Transforms the Archers into Wolves (only in buildings and ships)">
-		<src obj="TTeutonArcher" />
+		<src obj="TTeutonArcherMercenary" />
 	</cmd>
 	<cmd name="to_teuton_rider" priority="16"
 		button="actions/train TTeutonRider.bmp"
@@ -248,6 +248,6 @@
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Rider"
 		description="Transforms the Wolves into Riders (only in buildings and ships)">
-		<src obj="TTeutonWolf" />
+		<src obj="TTeutonWolfMercenary" />
 	</cmd>
 </commands>

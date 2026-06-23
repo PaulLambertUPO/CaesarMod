@@ -1,4 +1,4 @@
-<class id="HHypaspista" parent="Melee" cpp_class="CVXUnit" entity="Units/HHypaspista/HHypaspista.ent.xml">
+<class id="HHypaspista" parent="Footman" cpp_class="CVXUnit" entity="Units/HHypaspista/HHypaspista.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="400" />

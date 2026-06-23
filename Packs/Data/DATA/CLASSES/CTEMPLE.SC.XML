@@ -1,4 +1,4 @@
-<class id="CTemple" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/CTemple/CTemple.ent.xml">
+<class id="CTemple" parent="BaseTemple" cpp_class="CVXBarrack" entity="Buildings/CTemple/CTemple.ent.xml">
 
 	<properties race="Carthage" />
 	<properties radius="165" selection_radius="170" />
@@ -7,6 +7,4 @@
 	<properties icon="gameres/icons/CTemple.bmp" />
 	<properties help="contents/buildings/CTemple" />
 	<properties edittree_pos="Structures/Stronghold (Carthage)/Temple" />
-
-	<sounds select="TempleSelect" />
 </class>

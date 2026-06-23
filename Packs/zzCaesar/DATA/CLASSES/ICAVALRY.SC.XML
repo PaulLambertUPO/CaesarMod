@@ -6,8 +6,6 @@
 	<properties speed="160" />
 	<properties unit_specials="Charge, Triumph" />
 
-	<properties healthbar_type="3" />
-
 	<properties display_name="Horseman" display_name_plural="Horsemen" />
 	<properties icon="gameres/icons/ICavalry.bmp" />
 	<properties help="contents/units/ICavalry" />

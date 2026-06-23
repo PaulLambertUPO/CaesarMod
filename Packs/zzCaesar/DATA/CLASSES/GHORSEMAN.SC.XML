@@ -6,8 +6,6 @@
 	<properties speed="160" />
 	<properties unit_specials="Active, Charge, Defensive tactics" />
 
-	<properties healthbar_type="3" />
-
 	<properties select_class="GHorseman" />
 
 	<properties display_name="Horseman" display_name_plural="Horsemen" />

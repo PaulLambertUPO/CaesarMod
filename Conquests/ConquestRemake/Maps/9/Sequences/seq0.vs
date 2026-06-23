@@ -45,12 +45,14 @@ set5.Research("ChooseImperialRome");
 	b.Research("Olympic Games");
 	b.Research("Trade Routes");
 	b.Research("Offer to Gods");
+	b.Research("Buy map");
 
 	//keep this research order to make sure population is optimized
 	b = NO_Town7.obj.AsBuilding();
 	b.Research("People's Assembly");
 	b.Research("Dark Rituals");
 	b.Research("Free Trade");
+	b.Research("Buy map");
 }
 
 if (difficulty == 0) {

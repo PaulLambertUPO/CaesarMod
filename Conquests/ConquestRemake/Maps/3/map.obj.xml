@@ -14051,7 +14051,7 @@
 			id="82"
 			player="8"
 			classoffirstbuilding="ETownhall"
-			maxpopulation="150"
+			maxpopulation="100"
 			extrasentries="0"
 			maxgold="100000000"
 			maxfood="100000000"

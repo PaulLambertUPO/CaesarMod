@@ -25,6 +25,7 @@ difficulty = GetDifficulty();
 	b.Research("People's Assembly");
 	b.Research("Dark Rituals");
 	b.Research("Free Trade");
+	b.Research("Buy map");
 
 	b = NO_Town5.obj.AsBuilding();
 	b.Research("Path of the dead I");
@@ -35,6 +36,7 @@ difficulty = GetDifficulty();
 	b.Research("Light of Horus III");
 	b.Research("Statue of Amon-Ra");
 	b.Research("Mumification");
+	b.Research("Buy map");
 }
 
 set2 = GetSettlement("S_Town2");

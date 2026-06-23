@@ -1,0 +1,5 @@
+<class id="Footman" parent="Melee" cpp_class="CVXUnit">
+	<properties radius="10" selection_radius="15" speed="80" />
+	<properties formation_priority="1100" formation_radius="26" />
+	<sounds attack="UnitSwordFight" die="UnitDeath" />
+</class>

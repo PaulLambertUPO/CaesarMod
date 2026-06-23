@@ -67,7 +67,10 @@ Sleep(250 + rand(251));
 					if (EnvReadString(this, "AutoTrainPeasant") == "yes")
 						if (.population >= .max_population)
 							if (.population >= min_pop_cost)
-								hall.ExecCmd(cmd_train_peasant, pt_dummy, o_dummy, false);
+								if (supp.max_population > 0)
+									hall.ExecCmd(cmd_train_peasant, pt_dummy, o_dummy, false);
+								else if (supp.max_units > 0)
+									hall.ExecCmd(cmd_train_peasant, pt_dummy, o_dummy, false);
 			}
 
 		if (food_to_give > 0) {

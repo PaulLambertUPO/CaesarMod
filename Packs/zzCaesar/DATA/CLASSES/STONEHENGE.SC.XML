@@ -29,16 +29,16 @@
 
 	<method sig="idle" vs="data/subai/stonehenge_idle.vs" />
 
-	<method sig="foraging" vs="data/subai/stonehenge_foraging.vs" />
-	<method sig="wisdom" vs="data/subai/stonehenge_wisdom.vs" />
-	<method sig="soothing" vs="data/subai/stonehenge_soothing.vs" />
-	<method sig="sacrifice" vs="data/subai/stonehenge_sacrifice.vs" />
-	<method sig="gold_rain" vs="data/subai/stonehenge_gold_rain.vs" />
-	<method sig="plague" vs="data/subai/stonehenge_plague.vs" />
-	<method sig="bloodlust" vs="data/subai/stonehenge_bloodlust.vs" />
-	<method sig="starvation" vs="data/subai/stonehenge_starvation.vs" />
-	<method sig="earthquake" vs="data/subai/stonehenge_earthquake.vs" />
-	<method sig="teuton_horde" vs="data/subai/stonehenge_teuton_horde.vs" />
+	<method sig="foraging" vs="data/subai/stonehenge_foraging.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
+	<method sig="wisdom" vs="data/subai/stonehenge_wisdom.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="soothing" vs="data/subai/stonehenge_soothing.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="sacrifice" vs="data/subai/stonehenge_sacrifice.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="gold_rain" vs="data/subai/stonehenge_gold_rain.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
+	<method sig="plague" vs="data/subai/stonehenge_plague.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
+	<method sig="bloodlust" vs="data/subai/stonehenge_bloodlust.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="starvation" vs="data/subai/stonehenge_starvation.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="earthquake" vs="data/subai/stonehenge_earthquake.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
+	<method sig="teuton_horde" vs="data/subai/stonehenge_teuton_horde.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 
 	<value0 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .stamina;"

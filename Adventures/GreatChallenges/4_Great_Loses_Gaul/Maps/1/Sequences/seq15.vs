@@ -1,4 +1,4 @@
-WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Invaders7_2"), 1, 1000, -1);
+WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Invaders7_2"), 1, -1, -1);
 Sleep(16000);
 SpawnGroup("G_Spawners7");
 if (EnvReadInt("/En_FinalWave") != 1) {

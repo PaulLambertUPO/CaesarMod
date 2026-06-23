@@ -8142,7 +8142,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -8169,7 +8169,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -8196,7 +8196,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -8223,7 +8223,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -8250,7 +8250,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -8277,7 +8277,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj

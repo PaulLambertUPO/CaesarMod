@@ -261,6 +261,7 @@
 <translationtableentry text="Spearmen" result="Lancieri" />
 <translationtableentry text="Horseman" result="Cavaliere" />
 <translationtableentry text="Horsemen" result="Cavalieri" />
+<translationtableentry text="Horseman (mercenary)" result="Cavaliere (mercenario)" />
 <translationtableentry text="Woman Warrior" result="Guerriera gallica" />
 <translationtableentry text="Woman Warriors" result="Guerriere galliche" />
 <translationtableentry text="Trident Warrior" result="Guerriero di Fand" />
@@ -273,6 +274,7 @@
 <translationtableentry text="Defenders" result="Difensori" />
 <translationtableentry text="Slinger" result="Fromboliere" />
 <translationtableentry text="Slingers" result="Frombolieri" />
+<translationtableentry text="Slinger (mercenary)" result="Fromboliere (mercenario)" />
 <translationtableentry text="Elite Guard" result="Guardia d'élite" />
 <translationtableentry text="Elite Guards" result="Guardie d'élite" />
 <translationtableentry text="Mountaineer" result="Guerrigliero" />
@@ -320,20 +322,30 @@
 <translationtableentry text="Huntresses" result="Cacciatrici" />
 <translationtableentry text="Teuton Rider" result="Cavaliere teutonico" />
 <translationtableentry text="Teuton Riders" result="Cavalieri teutonici" />
+<translationtableentry text="Teuton Rider (mercenary)" result="Cavaliere teutonico (mercenario)" />
 <translationtableentry text="Teuton Archer" result="Arciere teutonico" />
 <translationtableentry text="Teuton Archers" result="Arcieri teutonici" />
-<translationtableentry text="Teuton Wolf" result="Incursore teutonico" />
-<translationtableentry text="Teuton Wolves" result="Incursori teutonici" />
+<translationtableentry text="Teuton Archer (mercenary)" result="Arciere teutonico (mercenario)" />
+<translationtableentry text="Teuton Raider" result="Incursore teutonico" />
+<translationtableentry text="Teuton Raiders" result="Incursori teutonici" />
+<translationtableentry text="Teuton Raider (mercenary)" result="Incursore teutonico (mercenario)" />
 <translationtableentry text="Valkyrie" result="Valchiria" />
 <translationtableentry text="Valkyries" result="Valchirie" />
 <translationtableentry text="Peltast" result="Peltasta" />
 <translationtableentry text="Peltasts" result="Peltasti" />
 <translationtableentry text="Hoplite" result="Oplita" />
 <translationtableentry text="Hoplites" result="Opliti" />
+<translationtableentry text="Hoplite (mercenary)" result="Oplita (mercenario)" />
 <translationtableentry text="Hypaspist" result="Ipaspista" />
 <translationtableentry text="Hypaspists" result="Ipaspisti" />
 <translationtableentry text="Myrmidon" result="Mirmidone" />
 <translationtableentry text="Myrmidons" result="Mirmidoni" />
+<translationtableentry text="Mercenary Teuton Rider" result="Cavaliere teutonico mercenario" />
+<translationtableentry text="Mercenary Teuton Riders" result="Cavalieri teutonici mercenari" />
+<translationtableentry text="Mercenary Teuton Archer" result="Arciere teutonico mercenario" />
+<translationtableentry text="Mercenary Teuton Archers" result="Arcieri teutonici mercenari" />
+<translationtableentry text="Mercenary Teuton Raider" result="Incursore teutonico mercenario" />
+<translationtableentry text="Mercenary Teuton Raiders" result="Incursori teutonici mercenari" />
 <translationtableentry text="Mercenary Horseman" result="Cavaliere mercenario" />
 <translationtableentry text="Mercenary Horsemen" result="Cavalieri mercenari" />
 <translationtableentry text="Mercenary Hoplite" result="Oplita mercenario" />
@@ -458,8 +470,6 @@
 <translationtableentry text="Raginmund" result="Ragimund" />
 <translationtableentry text="Julius Caesar" result="Giulio Cesare" />
 <translationtableentry text="Lleldoryn (Druid)" result="Lleldoryn (druido)" />
-<translationtableentry text="Zurfah (Carthaginian)" result="Zurfah (cartaginese)" />
-<translationtableentry text="Zurfah (Iberian)" result="Zurfah (iberico)" />
 <!-- end heroes (in game and in editor tree) -->
 <!-- start buildings (in game and in editor tree) -->
 <translationtableentry text="Buildings" result="Strutture" />
@@ -1169,9 +1179,9 @@
 <translationtableentry text="Train Teuton Archers" result="Equipaggia arcieri teutonici" />
 <translationtableentry text="Trains a Teuton Archer for 400 food every 15 seconds" result="Equipaggia un arciere teutonico per 400 viveri ogni 15 secondi" />
 <translationtableentry text="Stop training Teuton Archers" result="Smetti di equipaggiare arcieri teutonici" />
-<translationtableentry text="Train Teuton Wolves" result="Equipaggia incursori teutonici" />
-<translationtableentry text="Trains a Teuton Wolf for 400 food every 15 seconds" result="Equipaggia un incursore teutonico per 400 viveri ogni 15 secondi" />
-<translationtableentry text="Stop training Teuton Wolves" result="Smetti di equipaggiare incursori teutonici" />
+<translationtableentry text="Train Teuton Raiders" result="Equipaggia incursori teutonici" />
+<translationtableentry text="Trains a Teuton Raider for 400 food every 15 seconds" result="Equipaggia un incursore teutonico per 400 viveri ogni 15 secondi" />
+<translationtableentry text="Stop training Teuton Raiders" result="Smetti di equipaggiare incursori teutonici" />
 <translationtableentry text="Train Numidian Footmen" result="Equipaggia fanti numidi" />
 <translationtableentry text="Trains a Numidian Footman for 200 food every 15 seconds" result="Equipaggia un fante numida per 200 viveri ogni 15 secondi" />
 <translationtableentry text="Stop training Numidian Footmen" result="Smetti di equipaggiare fanti numidi" />
@@ -1302,7 +1312,7 @@
 <translationtableentry text="Transforms the militiamen into peasants (only in buildings and ships)" result="Trasforma i miliziani in contadini (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Archer" result="Trasforma in arciere teutonico" />
 <translationtableentry text="Transforms the Riders into Archers (only in buildings and ships)" result="Trasforma i cavalieri in arcieri (solo in strutture e navi)" />
-<translationtableentry text="Convert to Teuton Wolf" result="Trasforma in incursore teutonico" />
+<translationtableentry text="Convert to Teuton Raider" result="Trasforma in incursore teutonico" />
 <translationtableentry text="Transforms the Archers into Wolves (only in buildings and ships)" result="Trasforma gli arcieri in incursori (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Rider" result="Trasforma in cavaliere teutonico" />
 <translationtableentry text="Transforms the Wolves into Riders (only in buildings and ships)" result="Trasforma gli incursori in cavalieri (solo in strutture e navi)" />
@@ -2504,7 +2514,7 @@
 <translationtableentry text="Carthaginian Female Peasant (Punic Wars)" result="Contadina cartaginese (Guerre puniche)" />
 <translationtableentry text="Teuton Rider (Punic Wars)" result="Cavaliere teutonico (Guerre puniche)" />
 <translationtableentry text="Teuton Archer (Punic Wars)" result="Arciere teutonico (Guerre puniche)" />
-<translationtableentry text="Teuton Wolf (Punic Wars)" result="Incursore teutonico (Guerre puniche)" />
+<translationtableentry text="Teuton Raider (Punic Wars)" result="Incursore teutonico (Guerre puniche)" />
 <translationtableentry text="Julius Caesar (Punic Wars)" result="Giulio Cesare (Guerre puniche)" />
 <translationtableentry text="Vercingetorix (Punic Wars)" result="Vercingetorige (Guerre puniche)" />
 <!-- end editor combo boxes (item icons, item sounds, note icons, unit icons) -->

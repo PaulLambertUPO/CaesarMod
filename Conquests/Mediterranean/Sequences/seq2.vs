@@ -7,6 +7,8 @@ b = NO_Town1.obj.AsBuilding();
 p = b.pos;
 p.Set(p.x, p.y - 150);
 
+EnvWriteInt(1, "MaxElephants", 4);
+
 b.Research("Mahout Mastery");
 b.Research("Spoils of war");
 

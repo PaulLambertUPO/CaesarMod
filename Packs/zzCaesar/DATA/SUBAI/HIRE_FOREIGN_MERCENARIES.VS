@@ -14,20 +14,20 @@
 		pt_place = .pos;
 
 		for (i = 0; i < 10; i += 1)
-			set.ForceAddUnit(Place("MercenaryGHorseman", pt_place, plr).AsUnit());
+			set.ForceAddUnit(Place("GHorsemanMercenary", pt_place, plr).AsUnit());
 		for (i = 0; i < 20; i += 1)
-			set.ForceAddUnit(Place("MercenaryHHoplite", pt_place, plr).AsUnit());
+			set.ForceAddUnit(Place("HHopliteMercenary", pt_place, plr).AsUnit());
 		for (i = 0; i < 20; i += 1)
-			set.ForceAddUnit(Place("MercenaryISlinger", pt_place, plr).AsUnit());
+			set.ForceAddUnit(Place("ISlingerMercenary", pt_place, plr).AsUnit());
 	}
 	else {
 		pt_place = set.GetCentralBuilding().GetExitPoint(.pos, false);
 
 		for (i = 0; i < 10; i += 1)
-			Place("MercenaryGHorseman", pt_place, plr).SetCommand("advance", RandomPointInCircle(pt_place, 450));
+			Place("GHorsemanMercenary", pt_place, plr).SetCommand("advance", RandomPointInCircle(pt_place, 450));
 		for (i = 0; i < 20; i += 1)
-			Place("MercenaryHHoplite", pt_place, plr).SetCommand("advance", RandomPointInCircle(pt_place, 450));
+			Place("HHopliteMercenary", pt_place, plr).SetCommand("advance", RandomPointInCircle(pt_place, 450));
 		for (i = 0; i < 20; i += 1)
-			Place("MercenaryISlinger", pt_place, plr).SetCommand("advance", RandomPointInCircle(pt_place, 450));
+			Place("ISlingerMercenary", pt_place, plr).SetCommand("advance", RandomPointInCircle(pt_place, 450));
 	}
 }

@@ -21,7 +21,7 @@ while (.IsIndependent)
 			if (!.IsIndependent) {
 				ol = .Units.ObjClass("Peasant").ObjAlly(.player);
 				if (ol.count > 0)
-					ol[rand(ol.count)].AsUnit().Mutate("HHoplite");
+					ol[rand(ol.count)].AsUnit().Mutate("HHopliteMercenary");
 			}
 	}
 }

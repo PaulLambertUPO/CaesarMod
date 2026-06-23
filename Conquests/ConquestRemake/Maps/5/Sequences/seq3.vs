@@ -31,11 +31,13 @@ difficulty = GetDifficulty();
 	b.Research("Fights");
 	b.Research("Free Beer");
 	b.Research("Ritual Chamber");
+	b.Research("Buy map");
 
 	b = NO_Town6.obj.AsBuilding();
 	b.Research("Legendary Valkyries");
 	b.Research("TFoodTax");
 	b.Research("German Mass Heal");
+	b.Research("Buy map");
 	EnvWriteInt(8, "MaxMacemen", 20);
 	EnvWriteString(8, "Increase Mace production", "researched");
 }

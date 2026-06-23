@@ -1,4 +1,4 @@
-<class id="ETempleOfOsiris" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/ETempleOfOsiris/ETempleOfOsiris.ent.xml">
+<class id="ETempleOfOsiris" parent="BaseTemple" cpp_class="CVXBarrack" entity="Buildings/ETempleOfOsiris/ETempleOfOsiris.ent.xml">
 
 	<properties race="Egypt" />
 	<properties radius="165" selection_radius="170" />
@@ -9,6 +9,4 @@
 	<properties edittree_pos="Structures/Stronghold (Egypt)/Temple of Osiris" />
 
 	<behavior script="data/subai/ETempleofOsiris_anim.vs" />
-
-	<sounds select="TempleSelect" />
 </class>

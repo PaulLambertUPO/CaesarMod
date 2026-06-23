@@ -1,4 +1,4 @@
-<class id="BShieldBearer" parent="Melee" cpp_class="CVXUnit" entity="units/BShieldBearer/BShieldBearer.ent.xml">
+<class id="BShieldBearer" parent="Footman" cpp_class="CVXUnit" entity="units/BShieldBearer/BShieldBearer.ent.xml">
 
 	<properties race="Britain" />
 	<properties maxhealth="300" />

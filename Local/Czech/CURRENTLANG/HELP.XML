@@ -801,7 +801,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 			<entry vcenter="1" image="UI/Icons/THuntress.bmp" link="THuntress">Huntress</entry>
 			<entry vcenter="1" image="UI/Icons/TTeutonRider.bmp" link="TTeutonRider">Teuton rider</entry>
 			<entry vcenter="1" image="UI/Icons/TTeutonArcher.bmp" link="TTeutonArcher">Teuton archer</entry>
-			<entry vcenter="1" image="UI/Icons/TTeutonWolf.bmp" link="TTeutonWolf">Teuton wolf</entry>
+			<entry vcenter="1" image="UI/Icons/TTeutonWolf.bmp" link="TTeutonWolf">Teuton raider</entry>
 			<entry vcenter="1" image="UI/Icons/TMaceman.bmp" link="TMaceman">Maceman</entry>
 			<entry vcenter="1" image="UI/Icons/TValkyrie.bmp" link="TValkyrie">Valkyrie</entry>
 			<entry vcenter="1" image="UI/Icons/TEnchantress.bmp" link="TEnchantress">Enchantress</entry>
@@ -2435,8 +2435,8 @@ The Teuton rider changes equipment and transforms into a Teuton archer (only in 
 				<entry />
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonWolf.bmp" link="/contents/units/TTeutonWolf">
-Convert to Teuton wolf
-The Teuton archer changes equipment and transforms into a Teuton wolf (only in buildings and ships).
+Convert to Teuton raider
+The Teuton archer changes equipment and transforms into a Teuton raider (only in buildings and ships).
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Depends on Teuton master</entry>
@@ -2444,8 +2444,8 @@ The Teuton archer changes equipment and transforms into a Teuton wolf (only in b
 				<entry vcenter="1" image="UI/Icons/Stonehenge.bmp" link="/contents/buildings/Stonehenge">Generable with the Stonehenge</entry>
 			</topic>
 			<topic id="TTeutonWolf">
-				<entry hcenter="1" font="large">Teuton wolf</entry>
-				<entry image="UI/Icons/TTeutonWolf.bmp">The Teuton wolf has the following stats and specials:</entry>
+				<entry hcenter="1" font="large">Teuton raider</entry>
+				<entry image="UI/Icons/TTeutonWolf.bmp">The Teuton raider has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 320</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 10</entry>
@@ -2456,7 +2456,7 @@ The Teuton archer changes equipment and transforms into a Teuton wolf (only in b
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonRider.bmp" link="/contents/units/TTeutonRider">
 Convert to Teuton rider
-The Teuton wolf changes equipment and transforms into a Teuton rider (only in buildings and ships).
+The Teuton raider changes equipment and transforms into a Teuton rider (only in buildings and ships).
 				</entry>
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Teuton Master.bmp" link="/contents/buildings/TArena">Depends on Teuton master</entry>
@@ -6192,8 +6192,8 @@ Train Teuton archers
 Trains a Teuton archer for 400 food every 15 seconds.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonWolf.bmp" link="/contents/units/TTeutonWolf">
-Train Teuton wolves
-Trains a Teuton wolf for 400 food every 15 seconds.
+Train Teuton raiders
+Trains a Teuton raider for 400 food every 15 seconds.
 				</entry>
 			</topic>
 			<topic id="CTent">

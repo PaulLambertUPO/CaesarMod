@@ -6,7 +6,7 @@ Sleep(10000);
 NO_Hero3.SetCommand("stand_position");
 Sleep(2000);
 Q_IntroATTACH1.SetCommand("stand_position");
-WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_DetectAmbush1"), 1, 1000, -1);
+WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_DetectAmbush1"), 1, -1, -1);
 RunAIHelper("Ambush1", "guard area", "Q_Retreat1", "A_DetectAmbush1");
 SpawnGroup("Q_Ambush1");
 Q_Ambush1.AddToGroup("Q_Retreat1");

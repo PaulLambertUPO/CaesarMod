@@ -11,7 +11,7 @@ Q_Reinforcements1.AddToGroup("Q_Retreat2");
 while (true) {
 	if (WaitQueryCountBetween(Q_Retreat2, 0, 40, 500))
 		break;
-	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_Village1"), 1, 1000, 500))
+	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_Village1"), 1, -1, 500))
 		break;
 	Sleep(50);
 }

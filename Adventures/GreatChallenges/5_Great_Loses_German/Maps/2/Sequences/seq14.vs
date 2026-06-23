@@ -2,11 +2,11 @@ ObjList ol_ranged, ol_melee;
 int i, j;
 bool ambush_started = false;
 
-WaitQueryCountBetween(Q_FinalWave, 1, 1000, -1);
+WaitQueryCountBetween(Q_FinalWave, 1, -1, -1);
 
 while (!Q_FinalWave.IsEmpty()) {
 	if (!ambush_started)
-		if (WaitQueryCountBetween(Intersect(AreaObjs("A_FinalAmbush", cMilitary), Q_FinalWave), 1, 1000, 1000)) {
+		if (WaitQueryCountBetween(Intersect(AreaObjs("A_FinalAmbush", cMilitary), Q_FinalWave), 1, -1, 1000)) {
 			ol_ranged = Union(
 				Union(UnitsInSettlement("S_UpOutpost", cRanged), UnitsInSettlement("S_MidOutpost", cRanged)),
 				Union(UnitsInSettlement("S_DownOutpost", cRanged), UnitsInSettlement("S_MainCamp", cRanged))

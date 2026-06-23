@@ -1,0 +1,23 @@
+<class id="TTeutonArcherMercenary" parent="MediumRanged" cpp_class="CVXUnit" entity="Units/TTeutonArcher/TTeutonArcher.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="300" />
+	<properties damage="12" armor_slash="8" armor_pierce="8" />
+	<properties speed="160" />
+	<properties unit_specials="Attack skill" />
+
+	<properties healthbar_type="3" />
+
+	<properties formation_radius="35" />
+	<properties radius="30" selection_radius="32" />
+
+	<properties display_name="Mercenary Teuton Archer" display_name_plural="Mercenary Teuton Archers" />
+	<properties icon="gameres/icons/zpwTeutonArcher.bmp" />
+	<properties help="contents/units/TTeutonArcher" />
+	<properties edittree_pos="Units/Germany/Teuton Archer (mercenary)" />
+
+	<method sig="convert" vs="data/subai/unit_convert_TTeutonArcherMercenary.vs" />
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+
+	<sounds walk="HorseWalk" command="VoiceTTeutonArcher" die="HorseUnitDeath" />
+</class>

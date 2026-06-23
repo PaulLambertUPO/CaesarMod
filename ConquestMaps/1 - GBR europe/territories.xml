@@ -9,12 +9,12 @@
 	owned_sat="1360"
 	enemy_sat="1000"
 	disabled_sat="1024">
-	<territory id="Egypt" index="2" state="1" neighbours="Rome, Carthage, Greece"/>
-	<territory id="Iberia" index="3" state="1" neighbours="Gaul, Carthage"/>
+	<territory id="Egypt" index="2" state="1" neighbours="Italy, Carthage, Greece"/>
+	<territory id="Spain" index="3" state="1" neighbours="Gaul, Carthage"/>
 	<territory id="Britain" index="4" state="1" neighbours="Gaul"/>
-	<territory id="Germany" index="5" state="1" neighbours="Gaul, Rome"/>
-	<territory id="Carthage" index="6" state="1" neighbours="Rome, Iberia, Egypt, Greece"/>
-	<territory id="Rome" index="7" state="1" neighbours="Gaul, Carthage, Germany, Egypt, Greece"/>
-	<territory id="Gaul" index="8" state="1" neighbours="Britain, Iberia, Germany, Rome"/>
-	<territory id="Greece" index="9" state="1" neighbours="Egypt, Carthage, Rome, Germany"/>
+	<territory id="Germany" index="5" state="1" neighbours="Gaul, Italy"/>
+	<territory id="Carthage" index="6" state="1" neighbours="Italy, Spain, Egypt, Greece"/>
+	<territory id="Italy" index="7" state="1" neighbours="Gaul, Carthage, Germany, Egypt, Greece"/>
+	<territory id="Gaul" index="8" state="1" neighbours="Britain, Spain, Germany, Italy"/>
+	<territory id="Greece" index="9" state="1" neighbours="Egypt, Carthage, Italy, Germany"/>
 </conquestmap>

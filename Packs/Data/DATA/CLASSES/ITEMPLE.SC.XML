@@ -1,4 +1,4 @@
-<class id="ITemple" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/ITemple/ITemple.ent.xml">
+<class id="ITemple" parent="BaseTemple" cpp_class="CVXBarrack" entity="Buildings/ITemple/ITemple.ent.xml">
 
 	<properties race="Iberia" />
 	<properties radius="190" selection_radius="220" />
@@ -9,6 +9,4 @@
 	<properties edittree_pos="Structures/Stronghold (Iberia)/Sanctuary" />
 
 	<behavior script="data/subai/itemple_anim.vs" />
-
-	<sounds select="TempleSelect" />
 </class>

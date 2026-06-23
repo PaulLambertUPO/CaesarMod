@@ -1,4 +1,4 @@
-<class id="HTemple" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/HTemple/HTemple.ent.xml">
+<class id="HTemple" parent="BaseTemple" cpp_class="CVXBarrack" entity="Buildings/HTemple/HTemple.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties radius="300" selection_radius="300" />
@@ -7,6 +7,4 @@
 	<properties icon="gameres/icons/HTemple.bmp" />
 	<properties help="contents/buildings/HTemple" />
 	<properties edittree_pos="Structures/Stronghold (Imperial Rome)/Acropolis" /><!-- keep Imperial Rome otherwise the walls will not be shown in the editor -->
-
-	<sounds select="TempleSelect" />
 </class>

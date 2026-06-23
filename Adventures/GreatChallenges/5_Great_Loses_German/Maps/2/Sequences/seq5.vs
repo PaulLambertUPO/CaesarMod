@@ -4,7 +4,7 @@ int difficulty, i, j;
 difficulty = GetDifficulty();
 
 while (Q_FinalWave.IsEmpty()) {
-	if (WaitQueryCountBetween(Intersect(AreaObjs("A_DownRomanDest7", cMilitary), Q_SpawnInvaders), 1, 1000, 1000)) {
+	if (WaitQueryCountBetween(Intersect(AreaObjs("A_DownRomanDest7", cMilitary), Q_SpawnInvaders), 1, -1, 1000)) {
 		ol_ranged = UnitsInSettlement("S_DownOutpost", cRanged).GetObjList();
 		ol_melee = UnitsInSettlement("S_DownOutpost", cMelee).GetObjList();
 		if (ol_ranged.count + ol_melee.count > 0) {

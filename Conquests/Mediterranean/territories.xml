@@ -22,10 +22,10 @@
 			description="Egypt is a land of gods, pharaohs and ancestral secrets. Its defenders are able to resurrect the dead and cast a poisonous curse on the ground to wither even the mightiest of the armies.\n\nAdvance with caution and capture all towns to achieve victory, taking care because the enemies will attack very soon and without mercy.\n\nIf you conquer Egypt, your warriors will be blessed with magic charms and you will know the secret to survive without food."
 			bonus="rEgypt"
 			bonus_descr="Your units do not consume food.\nYour warriors receive all charms when inside a townhall."
-			neighbours="Rome, Carthage, Greece"
+			neighbours="Italy, Carthage, Greece"
 			interface="6"/>
 		<territory
-			id="Iberia"
+			id="Spain"
 			index="3"
 			state="1"
 			visualname="Iberia"
@@ -55,7 +55,7 @@
 			description="In Germany, war is everyday business among the brutal barbarian tribes. The unending fights draw the legendary Valkyries, who will challenge all invaders.\n\nThe Teuton tents are a constant threat, since you will not be able to control them for long.\n\nIf you conquer Germany, you will receive food periodically and your warriors will gain experience when fighting more experienced enemies."
 			bonus="rGermany"
 			bonus_descr="Your warriors receive the 'Learning' special.\nYour townhalls receive food periodically."
-			neighbours="Gaul, Rome"
+			neighbours="Gaul, Italy"
 			interface="7"/>
 		<territory
 			id="Carthage"
@@ -66,10 +66,10 @@
 			description="Founded on the enormous wealth of its merchants, Carthage is capable of supporting the largest of armies. The only chance for victory is the conquest of the enemy cities.\n\nThe desert can be a deadly trap for your units: you will need water to regain strength, so you must take control of the oases by defeating the mercenaries guarding them.\n\nIf you conquer Carthage, you will gain control over the elephants and your warriors will get spoils of war at every kill."
 			bonus="rCarthage"
 			bonus_descr="You start with 4 level 20 War elephants in the townhall.\nYour warriors receive Spoils of war worth 100 gold at every kill."
-			neighbours="Rome, Iberia, Egypt, Greece"
+			neighbours="Italy, Spain, Egypt, Greece"
 			interface="2"/>
 		<territory
-			id="Rome"
+			id="Italy"
 			index="7"
 			state="1"
 			visualname="Rome"
@@ -87,8 +87,8 @@
 			mapname="Gaul"
 			description="Region controlled by multiple tribes and wise druids, incessant battles take place in Gaul. Gaul heroes are powerful and improve their skills every minute, turning into fearsome enemies.\n\nTo conquer Gaul, you have to capture the enemy towns. The key of victory is the control of Stonehenges, firmly protected by proud guardians.\n\nIf you conquer Gaul, you will gain valuable battle experience as well as the support of the Trident warriors."
 			bonus="rGaul"
-			bonus_descr="You start with 4 level 18 Trident warriors in the townhall.\nYour warriors gain double experience in battle."
-			neighbours="Britain, Iberia, Germany, Rome"
+			bonus_descr="You start with 6 level 18 Trident warriors in the townhall.\nYour warriors gain double experience in battle."
+			neighbours="Britain, Spain, Germany, Italy"
 			interface="0"/>
 		<territory
 			id="Greece"
@@ -99,6 +99,6 @@
 			description="Symbol of culture and mythology, Greece boasts city-states ready to put aside their differences to repel any invader. You will be able to conquer it only if you take possession of all the mighty enemy strongholds.\n\nThe Athens shipyard is a key strategic economic and military point, as it allows the Greeks to obtain valuable resources and receive reinforcements from Crete.\n\nIf you conquer Greece, you will get the support of its lethal Chariots and your warriors will be rewarded by the gods with powerful charms if they prove their worth in battle."
 			bonus="rGreece"
 			bonus_descr="You start with 10 level 10 Chariots in the townhall.\nYour warriors receive divine charms at the first kill."
-			neighbours="Egypt, Carthage, Rome, Germany"
+			neighbours="Egypt, Carthage, Italy, Germany"
 			interface="4"/>
 	</conquestmap>

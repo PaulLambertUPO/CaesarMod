@@ -1,0 +1,11 @@
+<class id="BaseTemple" parent="BaseTownBuilding" cpp_class="CVXBarrack">
+
+	<properties interface="thumb,building,queue" />
+
+	<behavior script="data/subai/arena_behavior.vs" />
+
+	<method sig="train" vs="data/subai/barrack_train.vs" />
+	<method sig="trainex" vs="data/subai/barrack_trainex.vs" />
+
+	<sounds select="TempleSelect" />
+</class>

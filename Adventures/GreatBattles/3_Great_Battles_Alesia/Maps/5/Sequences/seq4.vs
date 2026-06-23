@@ -110,7 +110,7 @@ NO_Caesar.SetMessengerStatus(false);
 
 UnblockUserInput();
 
-WaitQueryCountBetween(Intersect(ClassPlayerAreaObjs(cMilitary, 5, "A_AutoSpawn1"), Q_Escapers2), 1, 100, 5000);
+WaitQueryCountBetween(Intersect(ClassPlayerAreaObjs(cMilitary, 5, "A_AutoSpawn1"), Q_Escapers2), 1, -1, 5000);
 HideZoomMap();
 View(AreaCenter("A_AutoSpawn1") + Point(0, 200), false);
 

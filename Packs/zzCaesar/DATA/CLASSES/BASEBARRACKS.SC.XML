@@ -1,4 +1,4 @@
-<class id="BaseBarracks" parent="BaseTownBuilding" cpp_class="CVXBarrack" entity="">
+<class id="BaseBarracks" parent="BaseTownBuilding" cpp_class="CVXBarrack">
 
 	<properties interface="thumb,building,queue" />
 	<properties display_name="Barracks" />

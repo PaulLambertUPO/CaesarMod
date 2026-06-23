@@ -1,4 +1,4 @@
-<class id="Building" parent="Object" cpp_class="CVXBuilding" entity="">
+<class id="Building" parent="Object" cpp_class="CVXBuilding">
 	<properties maxhealth="5000" />
 	<properties sight="600" />
 	<properties armor_slash="0" armor_pierce="0" />

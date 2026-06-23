@@ -6,8 +6,6 @@
 	<properties speed="130" />
 	<properties unit_specials="Learning, Offensive tactics" />
 
-	<properties healthbar_type="3" />
-
 	<properties display_name="Hetairos" display_name_plural="Hetairoi" />
 	<properties icon="gameres/icons/HCataphract.bmp" />
 	<properties help="contents/units/HCataphract" />

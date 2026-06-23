@@ -1,4 +1,4 @@
-<class id="HChariot" parent="Melee" cpp_class="CVXUnit" entity="units/HChariot/HChariot.ent.xml">
+<class id="HChariot" parent="Horse" cpp_class="CVXUnit" entity="units/HChariot/HChariot.ent.xml">
 
 	<properties race="ImperialRome" />
 	<properties maxhealth="700" />
@@ -6,8 +6,7 @@
 	<properties speed="120" />
 	<properties unit_specials="Determination, Freedom, Spike armor" />
 
-	<properties healthbar_type="3" />
-	<properties formation_radius="60" formation_priority="1800" />
+	<properties formation_priority="1800" formation_radius="60" />
 	<properties radius="50" selection_radius="55" />
 
 	<properties display_name="Chariot" display_name_plural="Chariots" />
@@ -15,5 +14,5 @@
 	<properties help="contents/units/HChariot" />
 	<properties edittree_pos="Units/Greece/Chariot" />
 
-	<sounds walk="HorseWalk" command="VoiceHChariot" attack="UnitSpearFight" die="HorseUnitDeath" />
+	<sounds command="VoiceHChariot" attack="UnitSpearFight" />
 </class>

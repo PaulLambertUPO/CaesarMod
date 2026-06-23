@@ -17196,8 +17196,8 @@
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="22748"
-	y="20248"
+	x="22658"
+	y="20272"
 	flags="0x80800002"
 	dir.x="0"
 	dir.y="1"/>
@@ -20355,7 +20355,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -20382,7 +20382,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -20409,7 +20409,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -20436,7 +20436,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -20490,7 +20490,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -20517,7 +20517,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj

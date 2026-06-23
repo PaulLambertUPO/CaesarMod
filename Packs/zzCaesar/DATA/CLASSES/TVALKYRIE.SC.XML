@@ -6,8 +6,6 @@
 	<properties speed="180" />
 	<properties unit_specials="Combat skill, Power strike, Toughness" />
 
-	<properties healthbar_type="3" />
-
 	<properties icon="gameres/icons/TValkyrie.bmp" />
 	<properties display_name="Valkyrie" display_name_plural="Valkyries" />
 	<properties help="contents/units/TValkyrie" />

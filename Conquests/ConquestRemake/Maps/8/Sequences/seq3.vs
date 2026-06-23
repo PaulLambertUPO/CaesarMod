@@ -28,12 +28,14 @@ difficulty = GetDifficulty();
 	b.Research("Fights");
 	b.Research("Free Beer");
 	b.Research("Ritual Chamber");
+	b.Research("Buy map");
 
 	//keep this research order to make sure population is optimized
 	b = NO_Town6.obj.AsBuilding();
 	b.Research("People's Assembly");
 	b.Research("Dark Rituals");
 	b.Research("Free Trade");
+	b.Research("Buy map");
 }
 
 set2 = GetSettlement("S_Town2");

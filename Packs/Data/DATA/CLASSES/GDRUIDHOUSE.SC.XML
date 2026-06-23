@@ -1,4 +1,4 @@
-<class id="GDruidHouse" altid="DruidHouse" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/GDruidHouse/GDruidHouse_as.ent.xml" entity_winter="Buildings/GDruidHouse/GDruidHouse_w.ent.xml">
+<class id="GDruidHouse" altid="DruidHouse" parent="BaseTemple" cpp_class="CVXBarrack" entity="Buildings/GDruidHouse/GDruidHouse_as.ent.xml" entity_winter="Buildings/GDruidHouse/GDruidHouse_w.ent.xml">
 
 	<properties race="Gaul" />
 	<properties radius="190" selection_radius="220" />
@@ -7,6 +7,4 @@
 	<properties icon="gameres/icons/GDruidHouse.bmp" />
 	<properties help="contents/buildings/GDruidHouse" />
 	<properties edittree_pos="Structures/Stronghold (Gaul)/Druid House" />
-
-	<sounds select="TempleSelect" />
 </class>

@@ -36,7 +36,6 @@
 
 	<value0 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
-		flags="-1"
 		help="contents/capturing"
 		rollover="Loyalty"
 	/>
@@ -54,7 +53,6 @@
 	/>
 	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
-		flags="-1"
 		help="contents/stats/health"
 		rollover="Health"
 	/>

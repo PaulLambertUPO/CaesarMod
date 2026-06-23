@@ -2704,11 +2704,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent5">
 	<scriptobj
@@ -3407,11 +3407,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent3">
 	<scriptobj
@@ -4221,11 +4221,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent6">
 	<scriptobj
@@ -4302,11 +4302,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent1">
 	<scriptobj
@@ -4392,11 +4392,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent0">
 	<scriptobj
@@ -4419,11 +4419,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent2">
 	<scriptobj
@@ -4703,11 +4703,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent4">
 	<scriptobj

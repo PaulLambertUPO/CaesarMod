@@ -1,7 +1,7 @@
 WaitQueryCountBetween(G_CorridorDefenders6, 0, 24, -1);
 if (EnvReadInt("/En_FinalWave") != 1)
 	RunAIHelper("DefendCorridor6", "guard area", "G_CorridorDefenders6", "A_Invaders6_1");
-WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Invaders6_2"), 1, 1000, -1);
+WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Invaders6_2"), 1, -1, -1);
 Sleep(8000);
 StopAIHelper("DefendCorridor6");
 SpawnGroup("G_Spawners6");

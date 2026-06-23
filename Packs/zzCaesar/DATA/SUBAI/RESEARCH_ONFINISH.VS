@@ -257,17 +257,7 @@ while (dest != "") {
 				buildings = set.Buildings;
 				for (i = buildings.count - 1; i >= 0; i -= 1) {
 					o = buildings[i];
-					if (o.IsHeirOf("Tower")) {
-						o.SetMaxHealth(o.maxhealth + o.maxhealth / 2);
-						if (!o.AsBuilding().IsBroken)
-							o.SetHealth(o.maxhealth);
-					}
-					else if (o.IsHeirOf("Wall")) {
-						o.SetMaxHealth(o.maxhealth + o.maxhealth / 2);
-						if (!o.AsBuilding().IsBroken)
-							o.SetHealth(o.maxhealth);
-					}
-					else if (o.IsGate) {
+					if (o.IsHeirOf("Fortification")) {
 						o.SetMaxHealth(o.maxhealth + o.maxhealth / 2);
 						if (!o.AsBuilding().IsBroken)
 							o.SetHealth(o.maxhealth);

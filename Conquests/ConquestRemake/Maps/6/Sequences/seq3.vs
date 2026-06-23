@@ -20,6 +20,7 @@ difficulty = GetDifficulty();
 	b.Research("Fights");
 	b.Research("Free Beer");
 	b.Research("Ritual Chamber");
+	b.Research("Buy map");
 }
 
 set2 = GetSettlement("S_Town2");

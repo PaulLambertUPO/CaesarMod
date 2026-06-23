@@ -7841,7 +7841,7 @@
 			maxfood="10000"
 			population="0"
 			gold="0"
-			food="0"
+			food="150"
 			icon=""
 			name="S_AthensShipyard">
 	<scriptobj
@@ -7954,11 +7954,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj
@@ -8034,11 +8034,11 @@
 			classoffirstbuilding="TTent"
 			maxpopulation="0"
 			extrasentries="0"
-			maxgold="100000000"
+			maxgold="0"
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="">
 	<scriptobj

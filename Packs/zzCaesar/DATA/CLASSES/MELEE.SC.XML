@@ -1,11 +1,4 @@
-<class id="Melee" parent="Military" cpp_class="CVXUnit" entity="">
-
+<class id="Melee" parent="Military" cpp_class="CVXUnit">
 	<properties damage_type="slash" />
 	<properties range="40" min_range="0" />
-	<properties speed="80" />
-
-	<properties radius="10" selection_radius="15" />
-	<properties formation_priority="1100" formation_radius="26" />
-
-	<sounds attack="UnitSwordFight" die="UnitDeath" />
 </class>

@@ -1,15 +1,15 @@
-bool used_rain = false, used_horde = false;
+bool not_used_rain = true, not_used_horde = true;
 
-while (!used_rain || !used_horde) {
-	if (!used_rain)
-		if (EnvReadInt("/GoldRainStonehenge") == 1) {
+while (not_used_rain || not_used_horde) {
+	if (not_used_rain)
+		if (real_stonehenge.obj.command == "gold_rain") {
 			real_stonehenge.obj.CmdDisable("gold_rain");
-			used_rain = true;
+			not_used_rain = false;
 		}
-	if (!used_horde)
-		if (EnvReadInt("/TeutonHordeStonehenge") == 1) {
+	if (not_used_horde)
+		if (real_stonehenge.obj.command == "teuton_horde") {
 			real_stonehenge.obj.CmdDisable("teuton_horde");
-			used_horde = true;
+			not_used_horde = false;
 		}
 	Sleep(5000);
 }

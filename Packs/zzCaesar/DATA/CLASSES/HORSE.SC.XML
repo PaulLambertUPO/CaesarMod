@@ -1,5 +1,6 @@
 <class id="Horse" parent="Melee" cpp_class="CVXUnit">
 	<properties radius="20" selection_radius="32" speed="160" />
 	<properties formation_priority="2000" formation_radius="35" />
+	<properties healthbar_type="3" />
 	<sounds walk="HorseWalk" attack="HorseUnitSwordFight" die="HorseUnitDeath" />
 </class>

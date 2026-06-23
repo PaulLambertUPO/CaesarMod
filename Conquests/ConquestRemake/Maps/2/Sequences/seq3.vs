@@ -32,6 +32,7 @@ NO_Blacksmith.obj.CmdDisable("Strengthen Stronghold Defences II");
 	b.Research("Mercenary pact");
 	b.Research("Mercenary heal");
 	b.Research("FerocityResearch");
+	b.Research("Buy map");
 }
 
 set2 = GetSettlement("S_Town2");

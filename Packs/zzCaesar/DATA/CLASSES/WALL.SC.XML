@@ -1,0 +1,9 @@
+<class id="Wall" parent="Fortification" cpp_class="CVXBuilding">
+
+	<properties non_selectable="1" />
+	<properties num_sentry_slots="5" />
+	<properties radius="110" selection_radius="110" />
+	<properties display_name="Wall" />
+
+	<behavior script="data/subai/wall_patrol.vs" />
+</class>

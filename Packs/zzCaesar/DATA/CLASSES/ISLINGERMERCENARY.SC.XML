@@ -1,6 +1,6 @@
-<class id="MercenaryISlinger" parent="ISlinger" cpp_class="CVXUnit" entity="Units/ISlinger/ISlinger.ent.xml">
+<class id="ISlingerMercenary" parent="ISlinger" cpp_class="CVXUnit" entity="Units/ISlinger/ISlinger.ent.xml">
 	<properties display_name="Mercenary Slinger" display_name_plural="Mercenary Slingers" />
 	<properties icon="gameres/icons/zpwISlinger.bmp" />
-	<properties edittree_pos="" />
+	<properties edittree_pos="Units/Iberia/Slinger (mercenary)" />
 	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
 </class>

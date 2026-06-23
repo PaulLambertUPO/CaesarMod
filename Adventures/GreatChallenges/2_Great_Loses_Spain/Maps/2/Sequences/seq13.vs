@@ -3,7 +3,7 @@ int i;
 NO_SecondDruid.SetCommand("standstill");
 T_CampGuards.SetCommand("stand_position");
 
-WaitQueryCountBetween(ClassPlayerAreaObjs("Unit", 1, "A_CampArea"), 1, 1000, -1);
+WaitQueryCountBetween(ClassPlayerAreaObjs("Unit", 1, "A_CampArea"), 1, -1, -1);
 
 SpawnGroup("T_CampTribunes");
 RunAIHelper("GuardCamp", "guard area", "T_CampTribunes", "A_CampArea");

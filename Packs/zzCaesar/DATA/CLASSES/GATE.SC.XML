@@ -1,10 +1,9 @@
-<class id="Gate" parent="BaseBuilding" cpp_class="CVXGate">
+<class id="Gate" parent="Fortification" cpp_class="CVXGate">
 
 	<properties target_priority="200" />
 	<properties auto_repair="no" />
 	<properties radius="170" selection_radius="170" />
 	<properties display_name="Gate" />
-	<properties help="contents/buildings/Fortification" />
 
 	<behavior script="data/subai/gate_patrol.vs" />
 

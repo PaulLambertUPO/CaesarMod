@@ -8,7 +8,7 @@
 		immediate="yes"
 		rollover="Train Teuton Riders"
 		description="Trains a Teuton Rider for 400 food every 15 seconds"
-		param="TTeutonRider">
+		param="TTeutonRiderMercenary">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
@@ -20,7 +20,7 @@
 		key="r"
 		immediate="yes"
 		rollover="Stop training Teuton Riders"
-		param="TTeutonRider">
+		param="TTeutonRiderMercenary">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
@@ -33,7 +33,7 @@
 		immediate="yes"
 		rollover="Train Teuton Archers"
 		description="Trains a Teuton Archer for 400 food every 15 seconds"
-		param="TTeutonArcher">
+		param="TTeutonArcherMercenary">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
@@ -45,7 +45,7 @@
 		key="a"
 		immediate="yes"
 		rollover="Stop training Teuton Archers"
-		param="TTeutonArcher">
+		param="TTeutonArcherMercenary">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
@@ -56,9 +56,9 @@
 		transpicon="1"
 		key="w"
 		immediate="yes"
-		rollover="Train Teuton Wolves"
-		description="Trains a Teuton Wolf for 400 food every 15 seconds"
-		param="TTeutonWolf">
+		rollover="Train Teuton Raiders"
+		description="Trains a Teuton Raider for 400 food every 15 seconds"
+		param="TTeutonWolfMercenary">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>
@@ -69,8 +69,8 @@
 		transpicon="1"
 		key="w"
 		immediate="yes"
-		rollover="Stop training Teuton Wolves"
-		param="TTeutonWolf">
+		rollover="Stop training Teuton Raiders"
+		param="TTeutonWolfMercenary">
 		<src obj="TTent" />
 		<nsrc obj="CTent" />
 	</cmd>

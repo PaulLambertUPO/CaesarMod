@@ -1,4 +1,4 @@
-<class id="CMaceman" parent="Melee" cpp_class="CVXUnit" entity="Units/CMaceman/CMaceman.ent.xml">
+<class id="CMaceman" parent="Footman" cpp_class="CVXUnit" entity="Units/CMaceman/CMaceman.ent.xml">
 
 	<properties race="Carthage" />
 	<properties maxhealth="360" />

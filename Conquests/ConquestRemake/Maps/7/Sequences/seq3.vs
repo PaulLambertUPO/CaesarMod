@@ -44,6 +44,7 @@ difficulty = GetDifficulty();
 	b.Research("Strengthen Stronghold Walls");
 	b.Research("Spartan Training");
 	b.Research("Tribute to Heracles");
+	b.Research("Buy map");
 	EnvWriteString(7, "GovernmentForm", "Oligarchy");
 	StartPlayerScript(7, "Data/Subai/Government_Form.vs");
 
@@ -52,6 +53,7 @@ difficulty = GetDifficulty();
 	b.Research("Strengthen Stronghold Walls");
 	b.Research("Supplies");
 	b.Research("Statue of Zeus");
+	b.Research("Buy map");
 	EnvWriteString(8, "GovernmentForm", "Democracy");
 	StartPlayerScript(8, "Data/Subai/Government_Form.vs");
 }

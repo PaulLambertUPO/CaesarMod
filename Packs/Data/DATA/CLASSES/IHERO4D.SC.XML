@@ -1,3 +1,3 @@
-<class id="IHero4d" parent="IHero4a" cpp_class="CVXHero" entity="Units/IHero4/IHero4.ent.xml">
+<class id="IHero4d" parent="IHero4" cpp_class="CVXHero" entity="Units/IHero4/IHero4.ent.xml">
 	<properties display_name="Mandonio" edittree_pos="" />
 </class>

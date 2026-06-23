@@ -27,11 +27,13 @@ difficulty = GetDifficulty();
 	b.Research("Tournaments");
 	b.Research("Code of Valor");
 	b.Research("Free Drinks");
+	b.Research("Buy map");
 
 	b = NO_Town6.obj.AsBuilding();
 	b.Research("Tribal fights");
 	b.Research("German chamber");
 	b.Research("Food sale");
+	b.Research("Buy map");
 }
 
 set2 = GetSettlement("S_Town2");

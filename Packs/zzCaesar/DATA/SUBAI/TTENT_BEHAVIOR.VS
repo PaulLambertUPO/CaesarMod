@@ -39,8 +39,8 @@ if (.class == "CTent") {
 	unit_class_2 = "CHorseman";
 }
 else {
-	unit_class_1 = "TTeutonRider";
-	unit_class_2 = "TTeutonArcher";
+	unit_class_1 = "TTeutonRiderMercenary";
+	unit_class_2 = "TTeutonArcherMercenary";
 }
 
 while (true) {

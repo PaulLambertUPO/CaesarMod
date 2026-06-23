@@ -1,4 +1,4 @@
-WaitQueryCountBetween(Q_Scipio, 1, 1000, -1);
+WaitQueryCountBetween(Q_Scipio, 1, -1, -1);
 WaitConvRequest(NO_Scipio, NO_Masinissa, -1);
 
 RunConv("FirstMeeting");

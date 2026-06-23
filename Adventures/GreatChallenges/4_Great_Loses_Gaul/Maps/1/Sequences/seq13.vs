@@ -1,4 +1,4 @@
-WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Invaders5_2"), 1, 1000, -1);
+WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 4, "A_Invaders5_2"), 1, -1, -1);
 if (EnvReadInt("/En_FinalWave") != 1)
 	RunAIHelper("DefendCorridor5", "guard area", "G_CorridorDefenders5", "A_Invaders5_2");
 Sleep(14000);

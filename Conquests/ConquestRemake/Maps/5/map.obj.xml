@@ -8220,7 +8220,7 @@
 			maxfood="10000"
 			population="0"
 			gold="0"
-			food="0"
+			food="150"
 			icon=""
 			name="">
 	<scriptobj
@@ -11058,7 +11058,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent15">
 	<scriptobj
@@ -11085,7 +11085,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent16">
 	<scriptobj
@@ -11193,7 +11193,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent14">
 	<scriptobj
@@ -11220,7 +11220,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent4">
 	<scriptobj
@@ -11247,7 +11247,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent9">
 	<scriptobj
@@ -11274,7 +11274,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent5">
 	<scriptobj
@@ -11301,7 +11301,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent0">
 	<scriptobj
@@ -11328,7 +11328,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent2">
 	<scriptobj
@@ -11355,7 +11355,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent11">
 	<scriptobj
@@ -11669,7 +11669,7 @@
 			maxfood="10000"
 			population="0"
 			gold="0"
-			food="0"
+			food="150"
 			icon=""
 			name="">
 	<scriptobj
@@ -11774,7 +11774,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent3">
 	<scriptobj
@@ -11801,7 +11801,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent1">
 	<scriptobj
@@ -11854,7 +11854,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent6">
 	<scriptobj
@@ -11881,7 +11881,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent13">
 	<scriptobj
@@ -11908,7 +11908,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent12">
 	<scriptobj
@@ -11935,7 +11935,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent10">
 	<scriptobj
@@ -11962,7 +11962,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent7">
 	<scriptobj
@@ -11989,7 +11989,7 @@
 			maxfood="100000000"
 			population="0"
 			gold="0"
-			food="0"
+			food="2000"
 			icon=""
 			name="S_Tent8">
 	<scriptobj

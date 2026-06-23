@@ -1,0 +1,18 @@
+<class id="TTeutonRiderMercenary" parent="Horse" cpp_class="CVXUnit" entity="Units/TTeutonRider/TTeutonRider.ent.xml">
+
+	<properties race="Germany" />
+	<properties maxhealth="340" />
+	<properties damage="26" armor_slash="10" armor_pierce="10" />
+	<properties speed="160" />
+	<properties unit_specials="Attack skill" />
+
+	<properties display_name="Mercenary Teuton Rider" display_name_plural="Mercenary Teuton Riders" />
+	<properties icon="gameres/icons/zpwTeutonMetal.bmp" />
+	<properties help="contents/units/TTeutonRider" />
+	<properties edittree_pos="Units/Germany/Teuton Rider (mercenary)" />
+
+	<method sig="convert" vs="data/subai/unit_convert_TTeutonRiderMercenary.vs" />
+	<method sig="ondie" vs="data/subai/cmercenary_ondie.vs" />
+
+	<sounds command="VoiceTTeutonRider" attack="UnitMaceFight" />
+</class>

@@ -1,4 +1,4 @@
-<class id="EHorusWarrior" parent="Melee" cpp_class="CVXUnit" entity="units/EHorusWarrior/EHorusWarrior.ent.xml">
+<class id="EHorusWarrior" parent="Footman" cpp_class="CVXUnit" entity="units/EHorusWarrior/EHorusWarrior.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="340" />

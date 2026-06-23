@@ -1,4 +1,4 @@
-WaitQueryCountBetween(Intersect(EnemyObjs(4, cUnit), AreaObjs("A_AlexandriaDefence", cUnit)), 1, 1000, -1);
+WaitQueryCountBetween(Intersect(EnemyObjs(4, cUnit), AreaObjs("A_AlexandriaDefence", cUnit)), 1, -1, -1);
 
 E_AlexandriaDefence.SetCommand("advance_enter", NO_Alexandria);
 Sleep(5000);

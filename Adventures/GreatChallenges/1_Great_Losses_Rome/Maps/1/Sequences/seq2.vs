@@ -4,11 +4,11 @@ ObjList ol;
 Sleep(10000);
 
 while (true) {
-	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome1"), 1, 1000, 1000))
+	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome1"), 1, -1, 1000))
 		break;
-	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome2"), 1, 1000, 1000))
+	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome2"), 1, -1, 1000))
 		break;
-	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome3"), 1, 1000, 1000))
+	if (WaitQueryCountBetween(ClassPlayerAreaObjs(cMilitary, 1, "A_NearingRome3"), 1, -1, 1000))
 		break;
 	Sleep(50);
 }

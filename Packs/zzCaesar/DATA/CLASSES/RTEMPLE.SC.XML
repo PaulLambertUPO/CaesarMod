@@ -1,4 +1,4 @@
-<class id="RTemple" parent="BaseBarracks" cpp_class="CVXBarrack" entity="Buildings/RTemple/RTemple_as.ent.xml" entity_winter="Buildings/RTemple/RTemple_w.ent.xml">
+<class id="RTemple" parent="BaseTemple" cpp_class="CVXBarrack" entity="Buildings/RTemple/RTemple_as.ent.xml" entity_winter="Buildings/RTemple/RTemple_w.ent.xml">
 
 	<properties race="RepublicanRome" />
 	<properties radius="165" selection_radius="170" />
@@ -9,6 +9,4 @@
 	<properties edittree_pos="Structures/Stronghold (Republican Rome)/Temple" />
 
 	<behavior script="data/subai/RTemple_Enable_Or_Disable_Cmd.vs" />
-
-	<sounds select="TempleSelect" />
 </class>

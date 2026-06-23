@@ -1,19 +1,9 @@
-<class id="TTeutonWolf" parent="Horse" cpp_class="CVXUnit" entity="Units/TTeutonWolf/TTeutonWolf.ent.xml">
+<class id="TTeutonWolf" parent="TTeutonWolfMercenary" cpp_class="CVXUnit" entity="Units/TTeutonWolf/TTeutonWolf.ent.xml">
 
-	<properties race="Germany" />
-	<properties maxhealth="320" />
-	<properties damage="24" armor_slash="10" armor_pierce="10" />
-	<properties speed="160" />
-	<properties unit_specials="Charge" />
-
-	<properties healthbar_type="3" />
-
-	<properties display_name="Teuton Wolf" display_name_plural="Teuton Wolves" />
+	<properties display_name="Teuton Raider" display_name_plural="Teuton Raiders" />
 	<properties icon="gameres/icons/TTeutonWolf.bmp" />
-	<properties help="contents/units/TTeutonWolf" />
-	<properties edittree_pos="Units/Germany/Teuton Wolf" />
+	<properties edittree_pos="Units/Germany/Teuton Raider" />
 
-	<method sig="convert" vs="data/subai/unit_convert_tteutonwolf.vs" />
-
-	<sounds command="VoiceTTeutonWolf" />
+	<method sig="convert" vs="data/subai/unit_convert_TTeutonWolf.vs" />
+	<method sig="ondie" vs="data/subai/military_ondie.vs" />
 </class>

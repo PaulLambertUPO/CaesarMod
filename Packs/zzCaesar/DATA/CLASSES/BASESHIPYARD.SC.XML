@@ -13,7 +13,7 @@
 		produces_gold="0"
 		produces_food="0"
 		is_single_building="1"
-		settlement_food="0"
+		settlement_food="150"
 		settlement_gold="0"
 		settlement_maxfood="10000"
 		settlement_maxgold="10000"

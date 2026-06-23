@@ -1,13 +1,11 @@
-<class id="BaseBuilding" parent="Building" cpp_class="CVXBuilding" entity="">
+<class id="BaseBuilding" parent="Building" cpp_class="CVXBuilding">
 	<value0 icon="gameres/infobar/common/pop ico.bmp"
 		script="Settlement set; set = .AsBuilding().settlement; return set.population + '/' + set.max_population;"
-		flags="-1"
 		help="contents/resources"
 		rollover="Population"
 	/>
 	<value1 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
-		flags="-1"
 		help="contents/capturing"
 		rollover="Loyalty"
 	/>
@@ -26,7 +24,6 @@
 	<value4 />
 	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
-		flags="-1"
 		help="contents/stats/health"
 		rollover="Health"
 	/>

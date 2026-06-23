@@ -1,4 +1,4 @@
-<class id="BBronzeSpearman" parent="Melee" cpp_class="CVXUnit" entity="Units/BBronzeSpearman/BBronzeSpearman.ent.xml">
+<class id="BBronzeSpearman" parent="Footman" cpp_class="CVXUnit" entity="Units/BBronzeSpearman/BBronzeSpearman.ent.xml">
 
 	<properties race="Britain" />
 	<properties maxhealth="240" />

@@ -8,9 +8,11 @@ while (surprises < 10) {
 				ObjList ol;
 				int j;
 				ol = SpawnGroup("T_Surprise" + i);
-				for (j = 0; j < ol.count; j += 1)
-					if (ol[j].AsHero().IsValid)
+				for (j = ol.count - 1; j >= 0; j -= 1)
+					if (ol[j].AsHero().IsValid) {
+						ol[j].AsHero().SetSkill(hsEpicAttack, 10);
 						ol[j].AsHero().SetAutocast(true);
+					}
 				RunAIHelper("Surprise" + i, "guard area", "T_Surprise" + i, "A_Surprise" + i);
 				surprise_areas[i] = 1;
 				surprises += 1;

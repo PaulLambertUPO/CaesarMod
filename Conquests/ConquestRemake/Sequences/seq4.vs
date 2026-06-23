@@ -9,7 +9,7 @@ p.Set(p.x, p.y - 150);
 
 b.Research("Battle tactics");
 
-for (i = 0; i < 4; i += 1) {
+for (i = 0; i < 6; i += 1) {
 	u = Place("GTridentWarrior", p, 1).AsUnit();
 	u.SetLevel(18);
 	u.SetFeeding(false);

@@ -1,0 +1,3 @@
+<class id="Fortification" parent="BaseBuilding" cpp_class="CVXBuilding">
+	<properties help="contents/buildings/Fortification" />
+</class>

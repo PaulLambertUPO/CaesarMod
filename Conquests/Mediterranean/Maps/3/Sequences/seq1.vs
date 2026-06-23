@@ -11,23 +11,20 @@ while (true) {
 			if (StoneDruids.IsEmpty())
 				SpawnGroup("StoneDruids").SetCommand("stand_position");
 			power = rand(200);
-			EnvWriteInt(spell_stone, "OwningPlayer", player);
+			EnvWriteInt(spell_stone, "CasterPlayer", player);
 			if (power < 30) {
 				spell_stone.SetCommand("foraging");
 				Sleep(40000);
 			}
 			else if (power < 60) {
-				spell_stone.GlobalSpellStart(gsWindOfWisdom, player);
 				spell_stone.SetCommand("wisdom");
 				Sleep(20000);
 			}
 			else if (power < 90) {
-				spell_stone.GlobalSpellStart(gsSoothingRain, player);
 				spell_stone.SetCommand("soothing");
 				Sleep(30000);
 			}
 			else if (power < 120) {
-				spell_stone.GlobalSpellStart(gsDivineSacrifice, player);
 				spell_stone.SetCommand("sacrifice");
 				Sleep(60000);
 			}
@@ -36,12 +33,10 @@ while (true) {
 				Sleep(120000);
 			}
 			else if (power < 160) {
-				spell_stone.GlobalSpellStart(gsStarvation, player);
 				spell_stone.SetCommand("starvation");
 				Sleep(120000);
 			}
 			else if (power < 180) {
-				spell_stone.GlobalSpellStart(gsBloodlust, player);
 				spell_stone.SetCommand("bloodlust");
 				Sleep(90000);
 			}
