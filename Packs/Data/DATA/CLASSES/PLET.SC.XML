@@ -1,3 +1,4 @@
 <class id="plet" parent="Object" cpp_class="CVXDecor" entity="Buildings/Village/Well/Well.ent.xml">
+	<properties display_name="Well" />
 	<properties edittree_pos="Structures/Others/Europe/Well" />
 </class>

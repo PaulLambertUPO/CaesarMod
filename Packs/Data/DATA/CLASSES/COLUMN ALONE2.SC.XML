@@ -1,3 +1,4 @@
 <class id="COLUMN ALONE2" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Egypt/COLUMN ALONE2/COLUMN ALONE2.ent.xml">
+	<properties display_name="Column Alone 2" />
 	<properties edittree_pos="Structures/Others/Egypt/Column Alone 2" />
 </class>

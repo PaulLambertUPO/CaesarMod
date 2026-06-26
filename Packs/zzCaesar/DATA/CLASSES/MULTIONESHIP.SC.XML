@@ -1,4 +1,4 @@
-<class id="MultiOneShip" parent="MultiOne" cpp_class="CVXScriptObj" entity="">
+<class id="MultiOneShip" parent="MultiOne" cpp_class="CVXScriptObj">
 
 	<properties interface="thumb,unit,holder" />
 

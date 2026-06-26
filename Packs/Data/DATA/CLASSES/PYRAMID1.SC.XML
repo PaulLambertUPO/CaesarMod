@@ -1,3 +1,4 @@
 <class id="Pyramid1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Egypt/Pyramid1/Pyramid1.ent.xml">
+	<properties display_name="Pyramid1" />
 	<properties edittree_pos="Structures/Others/Egypt/Pyramid1" />
 </class>

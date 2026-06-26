@@ -1,4 +1,4 @@
-<class id="Stonehenge" cpp_class="CVXTownHall" parent="Building" entity="">
+<class id="Stonehenge" cpp_class="CVXTownHall" parent="Building">
 
 	<properties maxhealth="15000" sight="400" />
 	<properties

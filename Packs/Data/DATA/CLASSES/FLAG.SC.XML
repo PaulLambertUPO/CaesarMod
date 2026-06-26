@@ -1,3 +1,4 @@
 <class id="Flag" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/Flag/Flag.ent.xml">
+	<properties display_name="Flag" />
 	<properties edittree_pos="Structures/Others/Europe/Flag" />
 </class>

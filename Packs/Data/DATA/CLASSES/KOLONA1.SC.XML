@@ -1,3 +1,4 @@
 <class id="kolona1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/statues/kolona1.ent.xml">
+	<properties display_name="Roman pillar" />
 	<properties edittree_pos="Structures/Others/Ruins/Roman pillar" />
 </class>

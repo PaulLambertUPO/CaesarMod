@@ -1,4 +1,4 @@
-<class id="WagonFood" parent="Object" cpp_class="CVXWagon" entity="">
+<class id="WagonFood" parent="Object" cpp_class="CVXWagon">
 	<properties icon="gameres/icons/Wagon.bmp" />
 	<value0 icon="gameres/infobar/common/Loyality.bmp"
 		script="return .AsWagon().loyalty;"

@@ -1,4 +1,4 @@
-<class id="Multi" parent="Object" cpp_class="CVXScriptObj" entity="">
+<class id="Multi" parent="Object" cpp_class="CVXScriptObj">
 
 	<properties icon="gameres/icons/multi.bmp" />
 	<properties help="contents/units" />

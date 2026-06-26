@@ -1,3 +1,4 @@
 <class id="Rock Medium 07" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Rock Medium 07/Rock Medium 07.ent.xml">
+	<properties display_name="Rock Medium 7" />
 	<properties edittree_pos="Structures/Others/Rocks/Rock Medium 7" />
 </class>

@@ -1,3 +1,4 @@
 <class id="Ritual Stone 01" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Ritual Stone1/Ritual Stone1.ent.xml">
+	<properties display_name="Ritual Stone 1" />
 	<properties edittree_pos="Structures/Others/Sacred/Ritual Stone 1" />
 </class>

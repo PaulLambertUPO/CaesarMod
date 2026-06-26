@@ -3,5 +3,6 @@
 	entity_autumn="MapObjects/Decors/nivi/niva_05_a.ent.xml"
 	entity_winter="MapObjects/Decors/nivi/niva_05_w.ent.xml"
 >
+	<properties display_name="Field 4" />
 	<properties edittree_pos="Structures/Others/Fields/Field 4" />
 </class>

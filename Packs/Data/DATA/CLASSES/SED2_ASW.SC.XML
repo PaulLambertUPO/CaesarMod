@@ -1,4 +1,5 @@
 <class id="Sed2" parent="Object" cpp_class="CVXScriptObj" entity="MapObjects/Sed2/Sed2_asw.ent.xml">
 	<properties health="100" maxhealth="100" />
+	<properties display_name="Statue 1" />
 	<properties edittree_pos="Structures/Others/Sacred/Statue 1" />
 </class>

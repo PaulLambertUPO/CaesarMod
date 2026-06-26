@@ -1,4 +1,4 @@
-<class id="Wagons" parent="Object" cpp_class="CVXWagon" entity="">
+<class id="Wagons" parent="Object" cpp_class="CVXWagon">
 
 	<properties icon="gameres/icons/Wagon.bmp" />
 

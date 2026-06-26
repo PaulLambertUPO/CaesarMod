@@ -1,5 +1,5 @@
 <class id="Tent03" parent="Object" cpp_class="CVXScriptObj" entity="Buildings/Tent03/Tent03_as.ent.xml" entity_winter="Buildings/Tent03/Tent03_w.ent.xml">
 	<properties radius="90" selection_radius="92" />
-	<properties display_name="Teuton tent" />
+	<properties display_name="Tent 3" />
 	<properties edittree_pos="Structures/Others/Tents/Tent 3" />
 </class>

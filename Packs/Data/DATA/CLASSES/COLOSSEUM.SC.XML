@@ -1,3 +1,4 @@
 <class id="Colosseum" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/Colosseum/Colosseum.ent.xml">
+	<properties display_name="Colosseum" />
 	<properties edittree_pos="Structures/Others/Europe/Colosseum" />
 </class>

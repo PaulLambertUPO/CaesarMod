@@ -1,3 +1,4 @@
 <class id="Column Lion 01" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Column Lion 01/Column Lion 01.ent.xml">
+	<properties display_name="Column Lion 1" />
 	<properties edittree_pos="Structures/Others/Ruins/Column Lion 1" />
 </class>

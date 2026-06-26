@@ -1,3 +1,4 @@
 <class id="Cross" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/Cross/Cross.ent.xml">
+	<properties display_name="Cross" />
 	<properties edittree_pos="Structures/Others/Europe/Cross" />
 </class>

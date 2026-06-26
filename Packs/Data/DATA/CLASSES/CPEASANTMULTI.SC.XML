@@ -1,4 +1,4 @@
-<class id="CPeasantMulti" parent="Object" cpp_class="CVXScriptObj" entity="">
+<class id="CPeasantMulti" parent="Object" cpp_class="CVXScriptObj">
 
 	<properties interface="thumb,unit,holder" />
 	<properties icon="gameres/icons/CPeasants.bmp" />

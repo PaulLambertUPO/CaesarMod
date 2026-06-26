@@ -1,0 +1,4 @@
+<class id="DefaultStrongholdR2" parent="MutableStronghold" cpp_class="CVXTownHall" entity="Buildings/MutableStronghold/MutableStronghold.ent.xml">
+	<properties edittree_pos="Structures/Default strongholds/Rome 2" />
+	<properties importsettlement="Republican Roman Town 2" />
+</class>

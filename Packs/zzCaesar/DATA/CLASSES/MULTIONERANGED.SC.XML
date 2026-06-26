@@ -1,4 +1,4 @@
-<class id="MultiOneRanged" parent="MultiOne" cpp_class="CVXScriptObj" entity="">
+<class id="MultiOneRanged" parent="MultiOne" cpp_class="CVXScriptObj">
 	<value1 icon="gameres/infobar/common/piercing ico.bmp"
 		script="return SelAvgDamage();"
 		help="contents/stats/attack"

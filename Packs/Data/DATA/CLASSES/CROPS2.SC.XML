@@ -1,3 +1,4 @@
 <class id="Crops2" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Decors/CornBig/Corn_Big_s1.ent.xml">
+	<properties display_name="Crops 2" />
 	<properties edittree_pos="Structures/Others/Fields/Crops 2" />
 </class>

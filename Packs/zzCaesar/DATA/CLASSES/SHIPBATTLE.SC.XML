@@ -1,4 +1,4 @@
-<class id="ShipBattle" parent="Ranged" cpp_class="CVXShip" entity="">
+<class id="ShipBattle" parent="Ranged" cpp_class="CVXShip">
 
 	<properties maxhealth="3000" />
 	<properties damage="100" armor_slash="20" armor_pierce="20" />

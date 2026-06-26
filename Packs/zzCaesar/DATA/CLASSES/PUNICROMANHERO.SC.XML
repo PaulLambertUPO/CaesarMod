@@ -1,4 +1,4 @@
-<class id="PunicRomanHero" parent="HeroMounted" cpp_class="CVXHero" entity="">
+<class id="PunicRomanHero" parent="HeroMounted" cpp_class="CVXHero">
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="1200" />

@@ -1,3 +1,4 @@
 <class id="COLUMN CONNECTION1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Egypt/COLUMN CONNECTION1/COLUMN CONNECTION1.ent.xml">
+	<properties display_name="Column Connection 1" />
 	<properties edittree_pos="Structures/Others/Egypt/Column Connection 1" />
 </class>

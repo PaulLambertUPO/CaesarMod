@@ -1,3 +1,4 @@
 <class id="SphinxSmall1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Egypt/SphinxSmall1/SphinxSmall1.ent.xml">
+	<properties display_name="Sphynx Small 1" />
 	<properties edittree_pos="Structures/Others/Egypt/Sphynx Small 1" />
 </class>

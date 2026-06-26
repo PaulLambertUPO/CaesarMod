@@ -1,0 +1,3 @@
+<class id="tent01Winter" parent="tent01" cpp_class="CVXScriptObj" entity="Buildings/tent01/tent01_w.ent.xml">
+	<properties edittree_pos="Structures/Others/Tents/Winter/Tent 1" />
+</class>

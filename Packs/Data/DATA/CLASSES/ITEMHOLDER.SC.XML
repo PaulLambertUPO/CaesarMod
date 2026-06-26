@@ -1,4 +1,4 @@
-<class id="ItemHolder" parent="Object" cpp_class="CVXItemHolder" entity="" >
+<class id="ItemHolder" parent="Object" cpp_class="CVXItemHolder" >
 	<properties interface="thumb,items" />
 	<properties sight="0" />
 	<properties can_be_captured="0" />

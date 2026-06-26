@@ -1,4 +1,4 @@
-<class id="Object" parent="" cpp_class="CVXDecor" entity="">
+<class id="Object" cpp_class="CVXDecor">
 
 	<properties race="None" />
 	<properties maxhealth="100" />

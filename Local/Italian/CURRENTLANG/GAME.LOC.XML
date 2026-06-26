@@ -487,6 +487,21 @@
 <translationtableentry text="Stronghold (Egypt)" result="Fortezza egizia" />
 <translationtableentry text="Stronghold (Germany)" result="Fortezza germanica" />
 <translationtableentry text="Any Race Stronghold" result="Fortezza per qualsiasi popolo" />
+<translationtableentry text="Default strongholds" result="Fortezze predefinite" />
+<translationtableentry text="Britain 1" result="Britannia 1" />
+<translationtableentry text="Britain 2" result="Britannia 2" />
+<translationtableentry text="Carthage 1" result="Cartagine 1" />
+<translationtableentry text="Carthage 2" result="Cartagine 2" />
+<translationtableentry text="Egypt 1" result="Egitto 1" />
+<translationtableentry text="Egypt 2" result="Egitto 2" />
+<translationtableentry text="Gaul 1" result="Gallia 1" />
+<translationtableentry text="Gaul 2" result="Gallia 2" />
+<translationtableentry text="Greece 1" result="Grecia 1" />
+<translationtableentry text="Greece 2" result="Grecia 2" />
+<translationtableentry text="Rome 1" result="Roma 1" />
+<translationtableentry text="Rome 2" result="Roma 2" />
+<translationtableentry text="Germany 1" result="Germania 1" />
+<translationtableentry text="Germany 2" result="Germania 2" />
 <translationtableentry text="Townhall" result="Foro" />
 <translationtableentry text="Townhall (alternative)" result="Foro (alternativo)" />
 <translationtableentry text="Roman Townhall" result="Foro romano" />
@@ -546,6 +561,7 @@
 <translationtableentry text="Village (Germany)" result="Villaggio germanico" />
 <translationtableentry text="Village (Greece)" result="Villaggio greco" />
 <translationtableentry text="Any Race Village" result="Villaggio per qualsiasi popolo" />
+<translationtableentry text="Default villages" result="Villaggi predefiniti" />
 <translationtableentry text="Village Hall" result="Centro del villaggio" />
 <translationtableentry text="Village hall" result="Centro del villaggio" />
 <translationtableentry text="House" result="Casa" />
@@ -1617,8 +1633,6 @@
 <translationtableentry text="Tree 4" result="Albero 4" />
 <translationtableentry text="Tree 5" result="Albero 5" />
 <translationtableentry text="Tree 6" result="Albero 6" />
-<translationtableentry text="Holms Oak" result="Leccio" />
-<translationtableentry text="Peach Tree" result="Pesco" />
 <translationtableentry text="Pine trees" result="Conifere" />
 <translationtableentry text="Pine tree 1" result="Conifera 1" />
 <translationtableentry text="Pine tree 2" result="Conifera 2" />
@@ -1628,9 +1642,6 @@
 <translationtableentry text="Pine tree 6" result="Conifera 6" />
 <translationtableentry text="Pine tree 7" result="Conifera 7" />
 <translationtableentry text="Pine tree 8" result="Conifera 8" />
-<translationtableentry text="Big Greek Cypress" result="Cipresso greco grande" />
-<translationtableentry text="Small Greek Cypress" result="Cipresso greco piccolo" />
-<translationtableentry text="Mediterranean Pine" result="Pino mediterraneo" />
 <translationtableentry text="Dead trees" result="Alberi secchi" />
 <translationtableentry text="Dead tree 1" result="Albero secco 1" />
 <translationtableentry text="Dead tree 2" result="Albero secco 2" />
@@ -1649,7 +1660,12 @@
 <translationtableentry text="Palm 5" result="Palma 5" />
 <translationtableentry text="Palm 6" result="Palma 6" />
 <translationtableentry text="Others" result="Altre" />
+<translationtableentry text="Holms Oak" result="Leccio" />
+<translationtableentry text="Big Greek Cypress" result="Cipresso greco grande" />
+<translationtableentry text="Small Greek Cypress" result="Cipresso greco piccolo" />
 <translationtableentry text="Olive" result="Olivo" />
+<translationtableentry text="Peach Tree" result="Pesco" />
+<translationtableentry text="Mediterranean Pine" result="Pino mediterraneo" />
 <translationtableentry text="Bushes" result="Arbusti" />
 <translationtableentry text="Green bushes" result="Arbusti verdi" />
 <translationtableentry text="Bush 1" result="Arbusto 1" />
@@ -1666,10 +1682,10 @@
 <translationtableentry text="Dead bushes" result="Arbusti secchi" />
 <translationtableentry text="Dead bush 1" result="Arbusto secco 1" />
 <translationtableentry text="Dead bush 2" result="Arbusto secco 2" />
-<translationtableentry text="Desert Bushes" result="Arbusti del deserto" />
-<translationtableentry text="Desert Bush 1" result="Arbusto del deserto 1" />
-<translationtableentry text="Desert Bush 2" result="Arbusto del deserto 2" />
-<translationtableentry text="Desert Bush 3" result="Arbusto del deserto 3" />
+<translationtableentry text="Desert bushes" result="Arbusti del deserto" />
+<translationtableentry text="Desert bush 1" result="Arbusto del deserto 1" />
+<translationtableentry text="Desert bush 2" result="Arbusto del deserto 2" />
+<translationtableentry text="Desert bush 3" result="Arbusto del deserto 3" />
 <translationtableentry text="Rock 1" result="Roccia 1" />
 <translationtableentry text="Rock 2" result="Roccia 2" />
 <translationtableentry text="Rock 3" result="Roccia 3" />

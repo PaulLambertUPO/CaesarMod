@@ -1,3 +1,4 @@
 <class id="dolmen4" parent="Object" cpp_class="CVXDecor" entity="MapObjects/dolmens/dolmen4/dolmen4.ent.xml">
+	<properties display_name="Dolmen 4" />
 	<properties edittree_pos="Structures/Others/Sacred/Dolmen 4" />
 </class>

@@ -1,3 +1,4 @@
 <class id="DRuins7" parent="Object" cpp_class="CVXDecor" entity="MapObjects/DRuins7/DRuins7.ent.xml">
+	<properties display_name="Ruins 7" />
 	<properties edittree_pos="Structures/Others/Desert/Ruins 7" />
 </class>

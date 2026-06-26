@@ -1,4 +1,4 @@
-<class id="CarthaginianHero" parent="HeroMounted" cpp_class="CVXHero" entity="">
+<class id="CarthaginianHero" parent="HeroMounted" cpp_class="CVXHero">
 	<properties race="Carthage" />
 	<properties maxhealth="1200" />
 	<properties damage="50" armor_slash="12" armor_pierce="12" />

@@ -1,4 +1,4 @@
-<class id="SummoningObj" parent="Object" cpp_class="CVXScriptObj" entity="">
+<class id="SummoningObj" parent="Object" cpp_class="CVXScriptObj">
 	<properties stamina_dec_time="1000" />
 	<behavior script="data/subai/summoning_behavior.vs" />
 </class>

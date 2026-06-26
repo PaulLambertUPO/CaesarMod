@@ -1,4 +1,4 @@
-<class id="BaseArena" parent="BaseTownBuilding" cpp_class="CVXBuilding" entity="">
+<class id="BaseArena" parent="BaseTownBuilding" cpp_class="CVXBuilding">
 
 	<properties interface="thumb,building,queue" />
 	<properties display_name="Arena" />

@@ -1,3 +1,4 @@
 <class id="DStatue" parent="Object" cpp_class="CVXDecor" entity="MapObjects/DStatue/DStatue.ent.xml">
+	<properties display_name="Statue" />
 	<properties edittree_pos="Structures/Others/Desert/Statue" />
 </class>

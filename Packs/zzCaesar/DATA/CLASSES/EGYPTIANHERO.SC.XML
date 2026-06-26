@@ -1,4 +1,4 @@
-<class id="EgyptianHero" parent="HeroMounted" cpp_class="CVXHero" entity="">
+<class id="EgyptianHero" parent="HeroMounted" cpp_class="CVXHero">
 
 	<properties maxhealth="1200" />
 	<properties damage="40" armor_slash="18" armor_pierce="18" />

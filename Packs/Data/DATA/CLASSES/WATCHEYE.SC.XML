@@ -1,4 +1,4 @@
-<class id="WatchEye" parent="Object" cpp_class="CVXScriptObj" entity="">
+<class id="WatchEye" parent="Object" cpp_class="CVXScriptObj">
 	<properties sight="550" />
 	<method sig="spy" vs="data/subai/watch_eye_spy.vs" />
 	<method sig="no_reveal" vs="data/subai/watch_eye_no_reveal.vs" />

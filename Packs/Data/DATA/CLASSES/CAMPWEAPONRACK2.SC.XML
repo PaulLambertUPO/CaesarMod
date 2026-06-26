@@ -1,3 +1,4 @@
 <class id="CampWeaponRack2" parent="Object" cpp_class="CVXDecor" entity="MapObjects/CampWeaponRack2/CampWeaponRack2.ent.xml">
+	<properties display_name="Weapon rack 2" />
 	<properties edittree_pos="Structures/Others/Camp/Weapon rack 2" />
 </class>

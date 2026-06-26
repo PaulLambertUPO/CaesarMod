@@ -1,3 +1,4 @@
 <class id="Haystack Big" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Haystack Big/Haystack Big.ent.xml">
+	<properties display_name="Haystack Big" />
 	<properties edittree_pos="Structures/Others/Fields/Haystack Big" />
 </class>

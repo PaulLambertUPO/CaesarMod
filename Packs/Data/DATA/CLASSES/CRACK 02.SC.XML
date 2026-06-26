@@ -1,3 +1,4 @@
 <class id="Crack 02" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Crack 02/Crack 02.ent.xml">
+	<properties display_name="Crack 2" />
 	<properties edittree_pos="Structures/Others/Cracks/Crack 2" />
 </class>

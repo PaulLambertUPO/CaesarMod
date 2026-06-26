@@ -421,6 +421,7 @@
 			<GameObj class="TOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
 			<GameObj class="BOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
 			<GameObj class="HOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
+			<GameObj class="GGuardPost" min="1" max="2" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
 		</ifdef>
 		<ifdef id="stonehenge">
 			<GameObj class="Stonehenge2" min="1" max="2" inf-max="13" inf="30" mindist="4000" fade="2">
@@ -836,6 +837,7 @@
 			<GameObj class="TOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
 			<GameObj class="BOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
 			<GameObj class="HOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
+			<GameObj class="GGuardPost" min="3" max="5" inf-max="12" inf="30" benefit="20" mindist="3000" />
 		</ifdef>
 		<ifdef id="teutontents">
 			<GameObj class="CTent" maxperplayer="3" inf-max="13" inf="30" benefit="30" mindist="4000" />

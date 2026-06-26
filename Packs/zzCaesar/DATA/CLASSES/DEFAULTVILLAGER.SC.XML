@@ -1,0 +1,4 @@
+<class id="DefaultVillageR" parent="MutableVillage" cpp_class="CVXTownHall" entity="Buildings/MutableVillage/MutableVillage.ent.xml">
+	<properties edittree_pos="Structures/Default villages/Rome" />
+	<properties importsettlement="Republican Roman Village 1" />
+</class>

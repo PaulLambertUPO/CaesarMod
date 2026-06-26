@@ -1,4 +1,4 @@
-<class id="catapult_placing" parent="Object" cpp_class="CVXMapObj" entity="">
+<class id="catapult_placing" parent="Object" cpp_class="CVXMapObj">
 	<properties desync_hash="0"/>
 	<properties radius="50" selection_radius="750"/>
 	<properties sight="95"/>

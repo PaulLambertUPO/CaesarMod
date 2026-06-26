@@ -1,4 +1,4 @@
-<class id="IberianHero" parent="HeroMounted" cpp_class="CVXHero" entity="">
+<class id="IberianHero" parent="HeroMounted" cpp_class="CVXHero">
 
 	<properties race="Iberia" />
 	<properties maxhealth="1400" />

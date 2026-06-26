@@ -3,5 +3,6 @@
 	entity_autumn="MapObjects/Decors/blatosmall02/blatosmall02_a.ent.xml"
 	entity_winter="MapObjects/Decors/blatosmall02/blatosmall02_w.ent.xml"
 >
+	<properties display_name="Swamp 2" />
 	<properties edittree_pos="Structures/Others/Swamps/Swamp 2" />
 </class>
