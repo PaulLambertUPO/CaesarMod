@@ -1,5 +1,5 @@
 <class id="GShipyard2" altid="Shipyard 2" parent="GaulShipyard" cpp_class="CVXTownHall" entity="Buildings/GShipyard2/GShipyard2_as.ent.xml" entity_winter="Buildings/GShipyard2/GShipyard2_w.ent.xml">
-	<properties edittree_pos="Structures/Shipyards/Wooden SE" />
+	<properties edittree_pos="Structures/Shipyards/Timber SE" />
 	<properties importsettlement="Shipyard 2" /><!-- without this property, the game crashes because the value is taken from RandomMapSettlements.bfhp -->
 	<properties exit_vector_x="120" exit_vector_y="100" />
 	<properties build_ship_variation="3" />

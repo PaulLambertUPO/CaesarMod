@@ -16,8 +16,11 @@ else if (set.IsOutpost) {
 	int nRace;
 	nRace = set.GetCentralBuilding().race;
 	if (set.supplied.IsValid) {
-		if (nRace == Gaul)
+		if (nRace == Gaul) {
+			if (set.GetCentralBuilding().IsHeirOf("GGuardPost"))
+				return ES_OutpostSendGold;
 			return ES_OutpostSellFood;
+		}
 		if (nRace == Germany)
 			return ES_OutpostSellFood;
 	}

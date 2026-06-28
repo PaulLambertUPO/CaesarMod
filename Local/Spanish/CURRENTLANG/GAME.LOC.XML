@@ -595,10 +595,10 @@
 <translationtableentry text="Stone NW" result="De piedra NO" />
 <translationtableentry text="Stone SE" result="De piedra SE" />
 <translationtableentry text="Stone NE" result="De piedra NE" />
-<translationtableentry text="Wooden SW" result="De madera SO" />
-<translationtableentry text="Wooden NW" result="De madera NO" />
-<translationtableentry text="Wooden SE" result="De madera SE" />
-<translationtableentry text="Wooden NE" result="De madera NE" />
+<translationtableentry text="Timber SW" result="De madera SO" />
+<translationtableentry text="Timber NW" result="De madera NO" />
+<translationtableentry text="Timber SE" result="De madera SE" />
+<translationtableentry text="Timber NE" result="De madera NE" />
 <translationtableentry text="Stonehenge" result="Altar de sacrificios" />
 <translationtableentry text="Stonehenge 1" result="Altar de sacrificios 1" />
 <translationtableentry text="Stonehenge 2" result="Altar de sacrificios 2" />

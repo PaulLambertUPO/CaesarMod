@@ -32,23 +32,24 @@ if (gSellFood == 0) {//find best place to sell food
 		if (sSell.IsOwn(aiPlayer))
 			if (sSell.IsOutpost) {
 				b = sSell.GetCentralBuilding();
-				if (b.LSA == nLsa) {
-					nRace = b.race;
-					if (nRace != Gaul)
-						if (nRace != Germany)
-							continue;
-					if (!sSell.supplied.IsValid) {
-						g = sSell.GetGaika();
-						g.GetDistToPlayers(aiPlayer, nOwnDist, nAllyDist, nEnemyDist);
-						if (nEnemyDist < 0)
-							nEnemyDist = 32000;
-						nEval = nEnemyDist - g.Center.Dist(gCenter);
-						if (nEval > best) {
-							gSellFood = g;
-							best = nEval;
+				if (b.LSA == nLsa)
+					if (!b.IsHeirOf("GGuardPost")) {
+						nRace = b.race;
+						if (nRace != Gaul)
+							if (nRace != Germany)
+								continue;
+						if (!sSell.supplied.IsValid) {
+							g = sSell.GetGaika();
+							g.GetDistToPlayers(aiPlayer, nOwnDist, nAllyDist, nEnemyDist);
+							if (nEnemyDist < 0)
+								nEnemyDist = 32000;
+							nEval = nEnemyDist - g.Center.Dist(gCenter);
+							if (nEval > best) {
+								gSellFood = g;
+								best = nEval;
+							}
 						}
 					}
-				}
 			}
 	}
 	if (gSellFood != 0) {//new place to sell food

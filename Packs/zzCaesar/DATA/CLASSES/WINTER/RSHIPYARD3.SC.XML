@@ -1,0 +1,4 @@
+<class id="RShipyard3Winter" parent="RShipyard3" cpp_class="CVXTownHall" entity="Buildings/RShipyard3/RShipyard3_w.ent.xml">
+	<properties edittree_pos="Structures/Shipyards/Winter/Stone SE" />
+	<properties importsettlement="Winter RShipyard 3" /><!-- without this property, the game crashes because the value is taken from RandomMapSettlements.bfhp -->
+</class>

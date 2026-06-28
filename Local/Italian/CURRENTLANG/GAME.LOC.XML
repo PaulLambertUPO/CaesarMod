@@ -598,10 +598,10 @@
 <translationtableentry text="Stone NW" result="Di pietra NO" />
 <translationtableentry text="Stone SE" result="Di pietra SE" />
 <translationtableentry text="Stone NE" result="Di pietra NE" />
-<translationtableentry text="Wooden SW" result="Di legno SO" />
-<translationtableentry text="Wooden NW" result="Di legno NO" />
-<translationtableentry text="Wooden SE" result="Di legno SE" />
-<translationtableentry text="Wooden NE" result="Di legno NE" />
+<translationtableentry text="Timber SW" result="Di legno SO" />
+<translationtableentry text="Timber NW" result="Di legno NO" />
+<translationtableentry text="Timber SE" result="Di legno SE" />
+<translationtableentry text="Timber NE" result="Di legno NE" />
 <translationtableentry text="Stonehenge" result="Altare dei sacrifici" />
 <translationtableentry text="Stonehenge 1" result="Altare dei sacrifici 1" />
 <translationtableentry text="Stonehenge 2" result="Altare dei sacrifici 2" />
