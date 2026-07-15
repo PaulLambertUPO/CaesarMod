@@ -18,7 +18,7 @@ while (Q_FinalWave.IsEmpty()) {
 			ol_melee.ClearDead();
 			j = 1;
 			for (i = 0; i < ol_ranged.count; i += 1) {
-				ol_ranged[i].AsUnit().SetLevel(ol_ranged[i].AsUnit().level + 26);
+				ol_ranged[i].AsUnit().SetLevel(ol_ranged[i].AsUnit().inherentlevel + 26);
 				ol_ranged[i].SetPos(AreaCenter("A_AmbushUpAPos" + j));
 				j += 1;
 				if (j > 25)
@@ -26,7 +26,7 @@ while (Q_FinalWave.IsEmpty()) {
 			}
 			j = 1;
 			for (i = 0; i < ol_melee.count; i += 1) {
-				ol_melee[i].AsUnit().SetLevel(ol_melee[i].AsUnit().level + 26);
+				ol_melee[i].AsUnit().SetLevel(ol_melee[i].AsUnit().inherentlevel + 26);
 				ol_melee[i].SetPos(AreaCenter("A_AmbushUpIPos" + j));
 				j += 1;
 				if (j > 15)
@@ -49,7 +49,7 @@ while (Q_FinalWave.IsEmpty()) {
 				ol_temp = Q_UpTemp.GetObjList();
 				ol_temp.SetPlayer(1);
 				for (i = 0; i < ol_temp.count; i += 1)
-					ol_temp[i].AsUnit().SetLevel(ol_temp[i].AsUnit().level - (24 + difficulty));
+					ol_temp[i].AsUnit().SetLevel(ol_temp[i].AsUnit().inherentlevel - (24 + difficulty));
 				ol_temp.SetCommand("enter", NO_UpOutpost);
 				Q_UpTemp.RemoveFromAllGroups();
 			}

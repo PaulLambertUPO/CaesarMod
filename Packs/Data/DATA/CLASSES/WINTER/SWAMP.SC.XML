@@ -1,3 +1,3 @@
 <class id="SwampWinter" parent="Swamp" cpp_class="CVXDecor" entity="MapObjects/Decors/blatobig/blatoBig_w.ent.xml">
-	<properties edittree_pos="Structures/Others/Swamps/Winter/Swamp (large)" />
+	<properties edittree_pos="Structures/Others/Swamps/Variant - Winter/Swamp (large)" />
 </class>

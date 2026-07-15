@@ -1,3 +1,3 @@
 <class id="Swamp1Winter" parent="Swamp1" cpp_class="CVXDecor" entity="MapObjects/Decors/blatosmall01/blatosmall01_w.ent.xml">
-	<properties edittree_pos="Structures/Others/Swamps/Winter/Swamp 1" />
+	<properties edittree_pos="Structures/Others/Swamps/Variant - Winter/Swamp 1" />
 </class>

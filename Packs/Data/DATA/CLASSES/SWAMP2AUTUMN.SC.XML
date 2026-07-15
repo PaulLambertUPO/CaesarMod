@@ -1,0 +1,3 @@
+<class id="Swamp2Autumn" parent="Swamp2" cpp_class="CVXDecor" entity="MapObjects/Decors/blatosmall02/blatosmall02_a.ent.xml">
+	<properties edittree_pos="Structures/Others/Swamps/Variant - Autumn/Swamp 2" />
+</class>

@@ -1850,11 +1850,11 @@
 <translationtableentry text="Roman statue" result="Estatua romana" />
 <translationtableentry text="Ruin Door 1" result="Puerta en las ruinas 1" />
 <translationtableentry text="Ruin Door 2" result="Puerta en las ruinas 2" />
+<translationtableentry text="Ruined wall" result="Muralla arruinada" />
 <translationtableentry text="Ruins1" result="Ruinas 1" />
 <translationtableentry text="Ruins2" result="Ruinas 2" />
-<translationtableentry text="Silo (Ruined)" result="Silo (arruinado)" />
+<translationtableentry text="Silo (ruined)" result="Silo (arruinado)" />
 <translationtableentry text="Tilted column" result="Columna inclinada" />
-<translationtableentry text="Wall (Ruined)" result="Muralla (arruinada)" />
 <translationtableentry text="Sacred" result="Sagrado" />
 <translationtableentry text="Dolmen 1" result="Menhir 1" />
 <translationtableentry text="Dolmen 2" result="Menhir 2" />
@@ -2603,6 +2603,9 @@
 <translationtableentry text="Spring" result="Primavera" />
 <translationtableentry text="Autumn" result="Otoño" />
 <translationtableentry text="Winter" result="Invierno" />
+<translationtableentry text="Variant - Spring" result="Variante - Primavera" />
+<translationtableentry text="Variant - Autumn" result="Variante - Otoño" />
+<translationtableentry text="Variant - Winter" result="Variante - Invierno" />
 <translationtableentry text="Slow" result="Lenta" />
 <translationtableentry text="Fast" result="Rápida" />
 <translationtableentry text="Fastest" result="Muy rápida" />

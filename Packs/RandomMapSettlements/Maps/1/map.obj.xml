@@ -34,7 +34,7 @@
 	<scriptobj
 		class="Fountain2"
 		num="4"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12632"
@@ -93,7 +93,7 @@
 	<scriptobj
 		class="Sed2"
 		num="11"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22075"
@@ -144,7 +144,7 @@
 	<scriptobj
 		class="DeadTree"
 		num="17"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="8714"
@@ -155,7 +155,7 @@
 	<scriptobj
 		class="well1"
 		num="18"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="10665"
@@ -182,7 +182,7 @@
 	<scriptobj
 		class="Flame"
 		num="21"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15798"
@@ -193,7 +193,7 @@
 	<scriptobj
 		class="Flame"
 		num="22"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15809"
@@ -204,7 +204,7 @@
 	<scriptobj
 		class="Flame"
 		num="23"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15821"
@@ -215,7 +215,7 @@
 	<scriptobj
 		class="Flame"
 		num="24"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15813"
@@ -226,7 +226,7 @@
 	<scriptobj
 		class="Flame"
 		num="25"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15820"
@@ -237,7 +237,7 @@
 	<scriptobj
 		class="Flame"
 		num="26"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15802"
@@ -432,7 +432,7 @@
 	<scriptobj
 		class="DeadTree"
 		num="45"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20279"
@@ -589,7 +589,7 @@
 	<scriptobj
 		class="Obelisk2"
 		num="63"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="5841"
@@ -608,7 +608,7 @@
 	<scriptobj
 		class="fountain"
 		num="65"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="7314"
@@ -813,7 +813,7 @@
 	<scriptobj
 		class="Flame"
 		num="89"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15938"
@@ -824,7 +824,7 @@
 	<scriptobj
 		class="Flame"
 		num="90"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15947"
@@ -835,7 +835,7 @@
 	<scriptobj
 		class="Flame"
 		num="91"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15957"
@@ -846,7 +846,7 @@
 	<scriptobj
 		class="Flame"
 		num="92"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15950"
@@ -857,7 +857,7 @@
 	<scriptobj
 		class="Flame"
 		num="93"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15941"
@@ -868,7 +868,7 @@
 	<scriptobj
 		class="Flame"
 		num="94"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15955"
@@ -945,7 +945,7 @@
 	<scriptobj
 		class="Obelisk2"
 		num="102"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20207"
@@ -1629,7 +1629,7 @@
 	<scriptobj
 		class="Tent02"
 		num="183"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22621"
@@ -1640,7 +1640,7 @@
 	<scriptobj
 		class="tent01"
 		num="184"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22883"
@@ -1730,7 +1730,7 @@
 	<scriptobj
 		class="Tent02"
 		num="192"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18314"
@@ -1833,7 +1833,7 @@
 	<scriptobj
 		class="Flame"
 		num="202"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21236"
@@ -1844,7 +1844,7 @@
 	<scriptobj
 		class="Flame"
 		num="203"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21290"
@@ -1873,7 +1873,7 @@
 	<scriptobj
 		class="Tent03"
 		num="205"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22535"
@@ -1892,7 +1892,7 @@
 	<scriptobj
 		class="Flame"
 		num="207"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22747"
@@ -1903,7 +1903,7 @@
 	<scriptobj
 		class="Flame"
 		num="208"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22738"
@@ -1914,7 +1914,7 @@
 	<scriptobj
 		class="Flame"
 		num="209"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22722"
@@ -1925,7 +1925,7 @@
 	<scriptobj
 		class="Flame"
 		num="210"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22724"
@@ -1936,7 +1936,7 @@
 	<scriptobj
 		class="Flame"
 		num="211"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22736"
@@ -1947,7 +1947,7 @@
 	<scriptobj
 		class="Flame"
 		num="212"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22730"
@@ -1958,7 +1958,7 @@
 	<scriptobj
 		class="Flame"
 		num="213"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22740"
@@ -1969,7 +1969,7 @@
 	<scriptobj
 		class="tent01"
 		num="214"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22976"
@@ -1996,7 +1996,7 @@
 	<scriptobj
 		class="Flame"
 		num="217"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18151"
@@ -2007,7 +2007,7 @@
 	<scriptobj
 		class="Flame"
 		num="218"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18158"
@@ -2018,7 +2018,7 @@
 	<scriptobj
 		class="Flame"
 		num="219"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18161"
@@ -2037,7 +2037,7 @@
 	<scriptobj
 		class="Flame"
 		num="221"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18168"
@@ -2048,7 +2048,7 @@
 	<scriptobj
 		class="Flame"
 		num="222"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18172"
@@ -2059,7 +2059,7 @@
 	<scriptobj
 		class="Flame"
 		num="223"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18181"
@@ -2070,7 +2070,7 @@
 	<scriptobj
 		class="Flame"
 		num="224"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18176"
@@ -2089,7 +2089,7 @@
 	<scriptobj
 		class="Tent03"
 		num="226"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22641"
@@ -2140,7 +2140,7 @@
 	<scriptobj
 		class="fountain"
 		num="232"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="7554"
@@ -2167,7 +2167,7 @@
 	<scriptobj
 		class="Ruin_Door02"
 		num="235"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15934"
@@ -2530,7 +2530,7 @@
 	<scriptobj
 		class="Ruin_Door02"
 		num="280"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15794"
@@ -2541,7 +2541,7 @@
 	<scriptobj
 		class="Ruin_Door02"
 		num="281"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15860"
@@ -2570,7 +2570,7 @@
 	<scriptobj
 		class="Ruin_Door01"
 		num="283"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15937"
@@ -2700,7 +2700,7 @@
 	<scriptobj
 		class="Obelisk2"
 		num="296"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18522"
@@ -2735,7 +2735,7 @@
 	<scriptobj
 		class="Flame"
 		num="300"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19961"
@@ -2746,7 +2746,7 @@
 	<scriptobj
 		class="Flame"
 		num="301"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19965"
@@ -2791,7 +2791,7 @@
 	<scriptobj
 		class="Flame"
 		num="305"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19981"
@@ -2802,7 +2802,7 @@
 	<scriptobj
 		class="Flame"
 		num="306"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19976"
@@ -2813,7 +2813,7 @@
 	<scriptobj
 		class="Flame"
 		num="307"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19979"
@@ -2922,7 +2922,7 @@
 	<scriptobj
 		class="Boulder"
 		num="319"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="8746"
@@ -2981,7 +2981,7 @@
 	<scriptobj
 		class="well1"
 		num="326"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12417"
@@ -3490,7 +3490,7 @@
 	<scriptobj
 		class="tent01"
 		num="388"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21526"
@@ -3585,7 +3585,7 @@
 	<scriptobj
 		class="Boulder"
 		num="397"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15863"
@@ -3614,7 +3614,7 @@
 	<scriptobj
 		class="Boulder"
 		num="399"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="16775"
@@ -3641,7 +3641,7 @@
 	<scriptobj
 		class="Chest"
 		num="402"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="17627"
@@ -3686,7 +3686,7 @@
 	<scriptobj
 		class="Chest"
 		num="406"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18394"
@@ -3715,7 +3715,7 @@
 	<scriptobj
 		class="DeadTree"
 		num="408"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19255"
@@ -3744,7 +3744,7 @@
 	<scriptobj
 		class="DeadTree"
 		num="410"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20113"
@@ -3797,7 +3797,7 @@
 	<scriptobj
 		class="FacePillar"
 		num="415"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21330"
@@ -3808,7 +3808,7 @@
 	<scriptobj
 		class="FacePillar"
 		num="416"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22345"
@@ -3843,7 +3843,7 @@
 	<scriptobj
 		class="fountain"
 		num="420"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15803"
@@ -3890,7 +3890,7 @@
 	<scriptobj
 		class="Fountain2"
 		num="423"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="17832"
@@ -3919,7 +3919,7 @@
 	<scriptobj
 		class="Fountain2"
 		num="425"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18915"
@@ -3930,7 +3930,7 @@
 	<scriptobj
 		class="Tombstone"
 		num="426"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19989"
@@ -3975,7 +3975,7 @@
 	<scriptobj
 		class="Tombstone"
 		num="430"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20873"
@@ -3994,7 +3994,7 @@
 	<scriptobj
 		class="well2"
 		num="432"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21986"
@@ -4005,7 +4005,7 @@
 	<scriptobj
 		class="well2"
 		num="433"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="23412"
@@ -4098,7 +4098,7 @@
 	<scriptobj
 		class="fountain"
 		num="443"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="16827"
@@ -4195,7 +4195,7 @@
 	<scriptobj
 		class="Obelisk1"
 		num="451"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="6202"
@@ -4318,7 +4318,7 @@
 	<scriptobj
 		class="Flame"
 		num="466"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="7494"
@@ -4363,7 +4363,7 @@
 	<scriptobj
 		class="LionThrone"
 		num="470"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="17800"
@@ -4392,7 +4392,7 @@
 	<scriptobj
 		class="LionThrone"
 		num="472"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18958"
@@ -4421,7 +4421,7 @@
 	<scriptobj
 		class="OakStump"
 		num="474"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21154"
@@ -4498,7 +4498,7 @@
 	<scriptobj
 		class="OakStump"
 		num="482"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20032"
@@ -4543,7 +4543,7 @@
 	<scriptobj
 		class="Obelisk1"
 		num="486"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22294"
@@ -4572,7 +4572,7 @@
 	<scriptobj
 		class="Obelisk1"
 		num="488"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="23339"
@@ -4676,7 +4676,7 @@
 	<scriptobj
 		class="Witch hut"
 		num="499"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15792"
@@ -4713,7 +4713,7 @@
 	<scriptobj
 		class="Witch hut"
 		num="502"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="16779"
@@ -4742,7 +4742,7 @@
 	<scriptobj
 		class="Obelisk2"
 		num="504"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="17892"
@@ -4803,7 +4803,7 @@
 	<scriptobj
 		class="Obelisk2"
 		num="510"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18976"
@@ -4848,7 +4848,7 @@
 	<scriptobj
 		class="RibCage"
 		num="514"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20072"
@@ -5007,7 +5007,7 @@
 	<scriptobj
 		class="RibCage"
 		num="529"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21005"
@@ -5177,7 +5177,7 @@
 	<scriptobj
 		class="ScullTree"
 		num="547"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21882"
@@ -5206,7 +5206,7 @@
 	<scriptobj
 		class="ScullTree"
 		num="549"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22861"
@@ -5389,7 +5389,7 @@
 	<scriptobj
 		class="Flame"
 		num="570"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21247"
@@ -5408,7 +5408,7 @@
 	<scriptobj
 		class="Flame"
 		num="572"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21248"
@@ -5419,7 +5419,7 @@
 	<scriptobj
 		class="Flame"
 		num="573"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21259"
@@ -5430,7 +5430,7 @@
 	<scriptobj
 		class="Flame"
 		num="574"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21270"
@@ -5441,7 +5441,7 @@
 	<scriptobj
 		class="Flame"
 		num="575"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21266"
@@ -5452,7 +5452,7 @@
 	<scriptobj
 		class="Flame"
 		num="576"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21259"
@@ -5463,7 +5463,7 @@
 	<scriptobj
 		class="Flame"
 		num="577"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21256"
@@ -5498,7 +5498,7 @@
 	<scriptobj
 		class="Flame"
 		num="581"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22143"
@@ -5535,7 +5535,7 @@
 	<scriptobj
 		class="well1"
 		num="584"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="15753"
@@ -5564,7 +5564,7 @@
 	<scriptobj
 		class="well1"
 		num="586"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="16853"
@@ -5601,7 +5601,7 @@
 	<scriptobj
 		class="WELL"
 		num="589"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18037"
@@ -5646,7 +5646,7 @@
 	<scriptobj
 		class="WELL"
 		num="593"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19112"
@@ -5675,7 +5675,7 @@
 	<scriptobj
 		class="StonePile"
 		num="595"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20031"
@@ -5712,7 +5712,7 @@
 	<scriptobj
 		class="StonePile"
 		num="598"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="21056"
@@ -5757,7 +5757,7 @@
 	<scriptobj
 		class="Flame"
 		num="602"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22048"
@@ -5768,7 +5768,7 @@
 	<scriptobj
 		class="TreeTrunk"
 		num="603"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22223"
@@ -5805,7 +5805,7 @@
 	<scriptobj
 		class="TreeTrunk"
 		num="606"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="23091"
@@ -5848,7 +5848,7 @@
 	<scriptobj
 		class="fountain"
 		num="611"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12496"
@@ -6310,7 +6310,7 @@
 	<scriptobj
 		class="well1"
 		num="668"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12097"
@@ -6449,7 +6449,7 @@
 	<scriptobj
 		class="Obelisk2"
 		num="685"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="6198"
@@ -18497,6 +18497,599 @@
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
+	<scriptobj
+		class="AdvArea"
+		num="1604"
+	nextmap=""
+	targetarea=""
+	type="0"
+	top="418"
+	bottom="1472"
+	right="23984"
+	left="22942"
+	player="1"
+	healthperc="100"
+	inventorysize="0"
+	x="23141"
+	y="617"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="AdvArea"
+		num="1605"
+	nextmap=""
+	targetarea=""
+	type="0"
+	top="1611"
+	bottom="2688"
+	right="24400"
+	left="23275"
+	player="1"
+	healthperc="100"
+	inventorysize="0"
+	x="23494"
+	y="1753"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="AdvArea"
+		num="1606"
+	nextmap=""
+	targetarea=""
+	type="0"
+	top="3245"
+	bottom="4421"
+	right="24852"
+	left="23595"
+	player="1"
+	healthperc="100"
+	inventorysize="0"
+	x="23773"
+	y="3432"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="AdvArea"
+		num="1607"
+	nextmap=""
+	targetarea=""
+	type="0"
+	top="4656"
+	bottom="5779"
+	right="23833"
+	left="22639"
+	player="1"
+	healthperc="100"
+	inventorysize="0"
+	x="22817"
+	y="4847"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="AdvArea"
+		num="1608"
+	nextmap=""
+	targetarea=""
+	type="0"
+	top="4777"
+	bottom="5690"
+	right="24801"
+	left="23991"
+	player="1"
+	healthperc="100"
+	inventorysize="0"
+	x="24190"
+	y="4976"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="AdvArea"
+		num="1609"
+	nextmap=""
+	targetarea=""
+	type="0"
+	top="5881"
+	bottom="6903"
+	right="24352"
+	left="23026"
+	player="1"
+	healthperc="100"
+	inventorysize="0"
+	x="23215"
+	y="6034"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DElephantSkeleton3"
+		num="1610"
+	x="23154"
+	y="1019"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DeadTree"
+		num="1611"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="23500"
+	y="945"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DSkeleton1"
+		num="1612"
+	x="23346"
+	y="1170"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Crops1"
+		num="1613"
+	x="23791"
+	y="1947"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Flag"
+		num="1614"
+	x="24019"
+	y="1922"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="tent01"
+		num="1615"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="24173"
+	y="1886"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Obelisk2"
+		num="1616"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="24076"
+	y="2016"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Swamp2"
+		num="1617"
+	x="23790"
+	y="2283"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Swamp1"
+		num="1618"
+	x="23709"
+	y="2048"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Crops1"
+		num="1619"
+	x="23758"
+	y="2240"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Cross"
+		num="1620"
+	x="23801"
+	y="2052"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Rock Small 02"
+		num="1621"
+	x="23954"
+	y="2048"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Cross"
+		num="1622"
+	x="23983"
+	y="2062"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Crops1"
+		num="1623"
+	x="23745"
+	y="2333"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Cross"
+		num="1624"
+	x="23666"
+	y="2345"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruins 06"
+		num="1625"
+	x="24115"
+	y="3675"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="dolmen4"
+		num="1626"
+	x="24247"
+	y="3744"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruins 04"
+		num="1627"
+	x="24356"
+	y="3834"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruins 05"
+		num="1628"
+	x="23993"
+	y="3869"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Obelisk1"
+		num="1629"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="24200"
+	y="3866"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="ruins_alt"
+		num="1630"
+	x="24156"
+	y="3995"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruins 03"
+		num="1631"
+	x="24453"
+	y="3908"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="dolmen1"
+		num="1632"
+	x="24365"
+	y="4083"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DCube2"
+		num="1633"
+	x="23224"
+	y="5000"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DColumn"
+		num="1634"
+	x="23049"
+	y="5061"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DRuins6"
+		num="1635"
+	x="23340"
+	y="5074"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampFence4"
+		num="1636"
+	x="24362"
+	y="5113"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampWeaponRack3"
+		num="1637"
+	x="24380"
+	y="5117"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampTower2"
+		num="1638"
+	x="24474"
+	y="5029"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DLion"
+		num="1639"
+	x="22992"
+	y="5143"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DRuins10"
+		num="1640"
+	x="22961"
+	y="5310"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="WELL"
+		num="1641"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="23208"
+	y="5229"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DLion"
+		num="1642"
+	x="23451"
+	y="5246"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DColumn"
+		num="1643"
+	x="23509"
+	y="5168"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampTent3"
+		num="1644"
+	x="24541"
+	y="5146"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="WELL"
+		num="1645"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="24377"
+	y="5303"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampWeaponRack1"
+		num="1646"
+	x="24646"
+	y="5189"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DSkeleton2"
+		num="1647"
+	x="22965"
+	y="5476"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DRuins3"
+		num="1648"
+	x="23164"
+	y="5463"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DElephantSkeleton2"
+		num="1649"
+	x="23511"
+	y="5399"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="WallRuined"
+		num="1650"
+	x="24240"
+	y="5403"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampTower1"
+		num="1651"
+	x="24571"
+	y="5377"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="CampWeaponRack2"
+		num="1652"
+	x="24602"
+	y="5405"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="STAT02"
+		num="1653"
+	x="23443"
+	y="6130"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="SphinxSmall2"
+		num="1654"
+	x="23651"
+	y="6088"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="DSkeleton2"
+		num="1655"
+	x="23237"
+	y="6358"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="COLUMN ALONE2"
+		num="1656"
+	x="23511"
+	y="6240"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="STAT02"
+		num="1657"
+	x="23406"
+	y="6170"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="STAT02"
+		num="1658"
+	x="23366"
+	y="6203"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="STAT02"
+		num="1659"
+	x="23327"
+	y="6238"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Pyramide2"
+		num="1660"
+	x="23881"
+	y="6237"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="ERUINS"
+		num="1661"
+	x="23347"
+	y="6518"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="STHEAD"
+		num="1662"
+	x="23421"
+	y="6562"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="WELL"
+		num="1663"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="23569"
+	y="6498"
+	flags="0x80000001"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="STAT01"
+		num="1664"
+	x="23791"
+	y="6574"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="SphinxSmall2"
+		num="1665"
+	x="23992"
+	y="6438"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="COLUMN ALONE2"
+		num="1666"
+	x="23859"
+	y="6597"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="ERuins1"
+		num="1667"
+	x="23551"
+	y="6708"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
 		<group
 			name="HolderBoulderGrass"
 			type="0">
@@ -18552,13 +19145,13 @@
 				num="481"/>
 		</group>
 		<group
-			name="HolderObelisk1Grass"
+			name="HolderObelisk3Grass"
 			type="0">
 			<obj
 				num="485"/>
 		</group>
 		<group
-			name="HolderObelisk2Grass"
+			name="HolderObelisk4Grass"
 			type="0">
 			<obj
 				num="503"/>
@@ -18624,7 +19217,7 @@
 				num="404"/>
 		</group>
 		<group
-			name="HolderDeadTreeSand"
+			name="HolderDeadTree2Sand"
 			type="0">
 			<obj
 				num="409"/>
@@ -18708,13 +19301,13 @@
 				num="604"/>
 		</group>
 		<group
-			name="HolderWell1Sand"
+			name="HolderWell4Sand"
 			type="0">
 			<obj
 				num="585"/>
 		</group>
 		<group
-			name="HolderWell2Sand"
+			name="HolderWell5Sand"
 			type="0">
 			<obj
 				num="592"/>
@@ -18844,5 +19437,41 @@
 			type="0">
 			<obj
 				num="204"/>
+		</group>
+		<group
+			name="HolderDeadTree1Sand"
+			type="0">
+			<obj
+				num="1604"/>
+		</group>
+		<group
+			name="HolderObelisk1Grass"
+			type="0">
+			<obj
+				num="1605"/>
+		</group>
+		<group
+			name="HolderObelisk2Grass"
+			type="0">
+			<obj
+				num="1606"/>
+		</group>
+		<group
+			name="HolderWell1Sand"
+			type="0">
+			<obj
+				num="1607"/>
+		</group>
+		<group
+			name="HolderWell2Sand"
+			type="0">
+			<obj
+				num="1608"/>
+		</group>
+		<group
+			name="HolderWell3Sand"
+			type="0">
+			<obj
+				num="1609"/>
 		</group>
 	</mapobject>

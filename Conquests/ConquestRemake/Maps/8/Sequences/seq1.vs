@@ -13,6 +13,6 @@ while (true) {
 	Sleep(10000);
 }
 
-SetTerritoryState("Iberia", tsOwned);
+SetTerritoryState("Spain", tsOwned);
 Sleep(1000);
 EndGame(1, false, Translate("You have conquered Iberia!"));

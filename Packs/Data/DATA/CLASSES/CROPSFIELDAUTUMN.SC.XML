@@ -1,0 +1,3 @@
+<class id="CropsFieldAutumn" parent="CropsField" cpp_class="CVXDecor" entity="MapObjects/Decors/niva1_a/niva1_a.ent.xml">
+	<properties edittree_pos="Structures/Others/Fields/Variant - Autumn/Crops field" />
+</class>

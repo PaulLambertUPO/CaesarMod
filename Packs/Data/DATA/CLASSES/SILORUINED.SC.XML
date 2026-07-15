@@ -1,4 +1,4 @@
 <class id="SiloRuined" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Silo Ruined/Silo Ruined.ent.xml">
-	<properties display_name="Silo (Ruined)" />
-	<properties edittree_pos="Structures/Others/Ruins/Silo (Ruined)" />
+	<properties display_name="Silo (ruined)" />
+	<properties edittree_pos="Structures/Others/Ruins/Silo (ruined)" />
 </class>

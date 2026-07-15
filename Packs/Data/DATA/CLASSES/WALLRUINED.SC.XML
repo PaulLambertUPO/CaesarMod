@@ -1,4 +1,4 @@
 <class id="WallRuined" parent="Object" cpp_class="CVXDecor" entity="MapObjects/WallRuin/WallRuin.ent.xml">
-	<properties display_name="Wall (Ruined)" />
-	<properties edittree_pos="Structures/Others/Ruins/Wall (Ruined)" />
+	<properties display_name="Ruined wall" />
+	<properties edittree_pos="Structures/Others/Ruins/Ruined wall" />
 </class>

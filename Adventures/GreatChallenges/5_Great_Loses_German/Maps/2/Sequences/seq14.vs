@@ -31,7 +31,7 @@ while (!Q_FinalWave.IsEmpty()) {
 				ol_melee.ClearDead();
 				j = 1;
 				for (i = 0; i < ol_ranged.count; i += 1) {
-					ol_ranged[i].AsUnit().SetLevel(ol_ranged[i].AsUnit().level + 26);
+					ol_ranged[i].AsUnit().SetLevel(ol_ranged[i].AsUnit().inherentlevel + 26);
 					ol_ranged[i].SetPos(AreaCenter("A_FinalAAmbush" + j));
 					j += 1;
 					if (j > 29)
@@ -39,7 +39,7 @@ while (!Q_FinalWave.IsEmpty()) {
 				}
 				j = 1;
 				for (i = 0; i < ol_melee.count; i += 1) {
-					ol_melee[i].AsUnit().SetLevel(ol_melee[i].AsUnit().level + 26);
+					ol_melee[i].AsUnit().SetLevel(ol_melee[i].AsUnit().inherentlevel + 26);
 					ol_melee[i].SetPos(AreaCenter("A_FinalIAmbush" + j));
 					j += 1;
 					if (j > 32)
