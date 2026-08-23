@@ -26,12 +26,12 @@
 	<scriptobj
 		class="WELL"
 		num="3"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="3719"
-	y="638"
-	flags="0x80000001"
+	x="3803"
+	y="690"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -45,12 +45,12 @@
 	<scriptobj
 		class="Fountain2"
 		num="5"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="6560"
 	y="569"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -88,12 +88,12 @@
 	<scriptobj
 		class="WELL"
 		num="10"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="779"
 	y="1382"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -112,7 +112,7 @@
 	inventorysize="0"
 	x="14197"
 	y="1896"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -134,7 +134,7 @@
 	inventorysize="0"
 	x="14154"
 	y="2206"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -145,7 +145,7 @@
 	inventorysize="0"
 	x="16346"
 	y="2543"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -247,12 +247,12 @@
 	<scriptobj
 		class="WELL"
 		num="28"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="4969"
 	y="3808"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -301,24 +301,24 @@
 	<scriptobj
 		class="WELL"
 		num="34"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="1161"
 	y="4477"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Boulder"
 		num="35"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="1"
 	slot0="Ash of druid heart"
 	x="728"
 	y="4630"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -368,7 +368,7 @@
 	slot0="Finger of death"
 	x="18620"
 	y="5668"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -422,18 +422,18 @@
 	inventorysize="0"
 	x="12846"
 	y="6340"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Fountain2"
 		num="47"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="11909"
 	y="6500"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -444,18 +444,18 @@
 	inventorysize="0"
 	x="18076"
 	y="7008"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="OakStump"
 		num="49"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="14504"
 	y="7314"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -466,7 +466,7 @@
 	inventorysize="0"
 	x="12516"
 	y="8154"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -477,7 +477,7 @@
 	inventorysize="0"
 	x="8784"
 	y="8324"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -520,7 +520,7 @@
 	inventorysize="0"
 	x="12173"
 	y="8595"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -542,12 +542,12 @@
 	<scriptobj
 		class="ScullTree"
 		num="59"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="11872"
 	y="10012"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -558,7 +558,7 @@
 	inventorysize="0"
 	x="17555"
 	y="10919"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -569,7 +569,7 @@
 	inventorysize="0"
 	x="9583"
 	y="11079"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -710,23 +710,23 @@
 	<scriptobj
 		class="fountain"
 		num="77"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18921"
 	y="12736"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="fountain"
 		num="78"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19144"
 	y="12774"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -759,23 +759,23 @@
 	<scriptobj
 		class="fountain"
 		num="82"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="18828"
 	y="12941"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Boulder"
 		num="83"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="23285"
 	y="12835"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -792,12 +792,12 @@
 	<scriptobj
 		class="OakStump"
 		num="85"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="10625"
 	y="13131"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -819,12 +819,12 @@
 	<scriptobj
 		class="fountain"
 		num="88"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="17468"
 	y="13349"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -838,12 +838,12 @@
 	<scriptobj
 		class="fountain"
 		num="90"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20062"
 	y="13689"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -865,12 +865,12 @@
 	<scriptobj
 		class="Fountain2"
 		num="93"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="27971"
 	y="14566"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -882,8 +882,19 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="dolmen2"
+		class="Sed2"
 		num="95"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="8317"
+	y="14839"
+	flags="0x80004000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="dolmen2"
+		num="96"
 	x="8289"
 	y="15088"
 	flags="0x80000000"
@@ -891,21 +902,10 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Crack 03"
-		num="96"
+		num="97"
 	x="8344"
 	y="14946"
 	flags="0x80000000"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Sed2"
-		num="97"
-	player="1"
-	healthperc="100"
-	inventorysize="0"
-	x="8329"
-	y="14861"
-	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -927,61 +927,61 @@
 	<scriptobj
 		class="Fountain2"
 		num="100"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="1"
 	slot0="Fur gloves of health"
 	x="17732"
 	y="15570"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="fountain"
 		num="101"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19242"
 	y="15538"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="fountain"
 		num="102"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="10584"
 	y="15788"
-	flags="0x80000001"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Ruin_Door01"
-		num="103"
-	player="1"
-	healthperc="100"
-	inventorysize="0"
-	x="13169"
-	y="15655"
-	flags="0x80000001"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
-		class="Ruins 03"
-		num="104"
-	x="13300"
-	y="15750"
-	flags="0x80000000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Ruins 01"
-		num="105"
+		num="103"
 	x="13309"
 	y="15646"
+	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruin_Door01"
+		num="104"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="13169"
+	y="15655"
+	flags="0x80004000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruins 03"
+		num="105"
+	x="13300"
+	y="15750"
 	flags="0x80000000"
 	dir.x="0"
 	dir.y="1"/>
@@ -1036,12 +1036,12 @@
 	<scriptobj
 		class="fountain"
 		num="112"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20925"
 	y="16220"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1184,12 +1184,12 @@
 	<scriptobj
 		class="Ruin_Door01"
 		num="129"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2712"
 	y="16894"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1217,12 +1217,12 @@
 	<scriptobj
 		class="fountain"
 		num="132"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20251"
 	y="16779"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1252,12 +1252,12 @@
 	<scriptobj
 		class="OakStump"
 		num="136"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="27456"
 	y="16838"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1295,12 +1295,12 @@
 	<scriptobj
 		class="Ruin_Door02"
 		num="141"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2646"
 	y="17123"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1314,12 +1314,12 @@
 	<scriptobj
 		class="DeadTree"
 		num="143"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="5543"
 	y="16974"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1333,14 +1333,14 @@
 	<scriptobj
 		class="Ruin_Door01"
 		num="145"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="27392"
-	y="17024"
-	flags="0x80000001"
-	dir.x="0"
-	dir.y="1"/>
+	x="27389"
+	y="17018"
+	flags="0x80004000"
+	dir.x="4"
+	dir.y="-6"/>
 	<scriptobj
 		class="Ruins 01"
 		num="146"
@@ -1368,12 +1368,12 @@
 	<scriptobj
 		class="LionThrone"
 		num="149"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2567"
 	y="17323"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1387,12 +1387,12 @@
 	<scriptobj
 		class="Ruin_Door01"
 		num="151"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2957"
 	y="17396"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1406,34 +1406,34 @@
 	<scriptobj
 		class="Fountain2"
 		num="153"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="4187"
 	y="17223"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Obelisk1"
 		num="154"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19538"
 	y="17352"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Ruin_Door01"
 		num="155"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2151"
 	y="17573"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1471,12 +1471,12 @@
 	<scriptobj
 		class="fountain"
 		num="160"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20874"
 	y="17463"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1488,19 +1488,8 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="Ruin_Door01"
-		num="162"
-	player="1"
-	healthperc="100"
-	inventorysize="0"
-	x="2496"
-	y="17850"
-	flags="0x80000001"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
 		class="Ruins 01"
-		num="163"
+		num="162"
 	x="2344"
 	y="17734"
 	flags="0x80000000"
@@ -1508,10 +1497,21 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Ruins 06"
-		num="164"
+		num="163"
 	x="2525"
 	y="17711"
 	flags="0x80000000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="Ruin_Door01"
+		num="164"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="2496"
+	y="17850"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1533,12 +1533,12 @@
 	<scriptobj
 		class="Ruin_Door02"
 		num="167"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2934"
 	y="17696"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1560,12 +1560,12 @@
 	<scriptobj
 		class="Ruin_Door02"
 		num="170"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2665"
 	y="17921"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1603,24 +1603,24 @@
 	<scriptobj
 		class="DeadTree"
 		num="175"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="1"
 	slot0="Elephant Tusk"
 	x="13563"
 	y="18224"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Obelisk1"
 		num="176"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="20186"
 	y="18178"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1650,12 +1650,12 @@
 	<scriptobj
 		class="fountain"
 		num="180"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="23062"
 	y="18181"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1691,12 +1691,12 @@
 	<scriptobj
 		class="Fountain2"
 		num="184"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12546"
 	y="18900"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1713,12 +1713,12 @@
 	<scriptobj
 		class="Obelisk2"
 		num="186"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12056"
 	y="18949"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1807,12 +1807,12 @@
 	<scriptobj
 		class="Boulder"
 		num="197"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="5868"
 	y="19648"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1840,12 +1840,12 @@
 	<scriptobj
 		class="fountain"
 		num="200"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="25380"
 	y="19641"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1894,12 +1894,12 @@
 	<scriptobj
 		class="fountain"
 		num="206"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22734"
 	y="19763"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1972,13 +1972,13 @@
 	<scriptobj
 		class="DefItemHolder"
 		num="212"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="1"
 	slot0="Concentration stone"
 	x="10742"
 	y="20017"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2076,12 +2076,12 @@
 	<scriptobj
 		class="fountain"
 		num="223"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="29221"
 	y="20638"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2226,12 +2226,12 @@
 	<scriptobj
 		class="fountain"
 		num="238"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="23823"
 	y="21821"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2279,12 +2279,12 @@
 	<scriptobj
 		class="fountain"
 		num="242"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="22907"
 	y="22108"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2508,12 +2508,12 @@
 	<scriptobj
 		class="fountain"
 		num="268"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="19998"
 	y="23066"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2645,19 +2645,8 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="Ruin_Door02"
-		num="285"
-	player="1"
-	healthperc="100"
-	inventorysize="0"
-	x="2404"
-	y="25515"
-	flags="0x80000001"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
 		class="Ruins 01"
-		num="286"
+		num="285"
 	x="2376"
 	y="25467"
 	flags="0x80000000"
@@ -2665,32 +2654,43 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Ruins 06"
-		num="287"
+		num="286"
 	x="2343"
 	y="25505"
 	flags="0x80000000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
+		class="Ruin_Door02"
+		num="287"
+	player="15"
+	healthperc="100"
+	inventorysize="0"
+	x="2404"
+	y="25515"
+	flags="0x80004000"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
 		class="WELL"
 		num="288"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="32456"
 	y="25762"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="WELL"
 		num="289"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="31983"
 	y="26120"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2712,12 +2712,12 @@
 	<scriptobj
 		class="DeadTree"
 		num="292"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="1919"
 	y="26644"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2779,24 +2779,24 @@
 	<scriptobj
 		class="Obelisk2"
 		num="300"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="1"
 	slot0="Scroll of Death"
 	x="18902"
 	y="26720"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="WELL"
 		num="301"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="30825"
 	y="26730"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2922,12 +2922,12 @@
 	<scriptobj
 		class="WELL"
 		num="317"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="32502"
 	y="27076"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2965,23 +2965,23 @@
 	<scriptobj
 		class="fountain"
 		num="322"
-	player="8"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="14945"
 	y="27192"
-	flags="0x80000080"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="fountain"
 		num="323"
-	player="8"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="14894"
 	y="27242"
-	flags="0x80000080"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3123,12 +3123,12 @@
 	<scriptobj
 		class="DeadTree"
 		num="341"
-	player="8"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="16211"
 	y="27559"
-	flags="0x80000080"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3150,23 +3150,23 @@
 	<scriptobj
 		class="WELL"
 		num="344"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="31110"
 	y="27520"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="WELL"
 		num="345"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="31819"
 	y="27545"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3188,12 +3188,12 @@
 	<scriptobj
 		class="Chest"
 		num="348"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="32323"
 	y="27538"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3447,12 +3447,12 @@
 	<scriptobj
 		class="WELL"
 		num="380"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="31834"
 	y="28212"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3540,12 +3540,12 @@
 	<scriptobj
 		class="DeadTree"
 		num="389"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="12336"
 	y="28648"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3663,12 +3663,12 @@
 	<scriptobj
 		class="WELL"
 		num="404"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="32139"
 	y="28461"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3814,12 +3814,12 @@
 	<scriptobj
 		class="Obelisk2"
 		num="418"
-	player="8"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="14704"
 	y="28848"
-	flags="0x80000080"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3921,12 +3921,12 @@
 	<scriptobj
 		class="well1"
 		num="431"
-	player="3"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="2857"
 	y="29499"
-	flags="0x80000004"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3960,12 +3960,12 @@
 	<scriptobj
 		class="Fountain2"
 		num="434"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="13245"
 	y="29501"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -3976,7 +3976,7 @@
 	inventorysize="0"
 	x="15681"
 	y="29637"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -4011,7 +4011,7 @@
 	inventorysize="0"
 	x="14804"
 	y="29925"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -4249,12 +4249,12 @@
 	<scriptobj
 		class="Obelisk2"
 		num="469"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="28913"
 	y="30238"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -4577,23 +4577,23 @@
 	<scriptobj
 		class="OakStump"
 		num="507"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="28944"
 	y="31138"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="Fountain2"
 		num="508"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="29292"
 	y="31150"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -4607,12 +4607,12 @@
 	<scriptobj
 		class="DeadTree"
 		num="510"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="31308"
 	y="30984"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -4946,7 +4946,7 @@
 	inventorysize="0"
 	x="22540"
 	y="31696"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -4957,7 +4957,7 @@
 	inventorysize="0"
 	x="25774"
 	y="31540"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -5049,12 +5049,12 @@
 	<scriptobj
 		class="OakStump"
 		num="560"
-	player="1"
+	player="15"
 	healthperc="100"
 	inventorysize="0"
 	x="13201"
 	y="31984"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -5065,7 +5065,7 @@
 	inventorysize="0"
 	x="25364"
 	y="31778"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -5188,7 +5188,7 @@
 	inventorysize="0"
 	x="22303"
 	y="32013"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -7474,7 +7474,7 @@
 	inventorysize="0"
 	x="2178"
 	y="25978"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -7579,7 +7579,7 @@
 	inventorysize="0"
 	x="3464"
 	y="1984"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -7606,7 +7606,7 @@
 	inventorysize="0"
 	x="4104"
 	y="25696"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -8433,7 +8433,7 @@
 	inventorysize="0"
 	x="342"
 	y="496"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -8682,7 +8682,7 @@
 	inventorysize="0"
 	x="3617"
 	y="32306"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -9613,7 +9613,7 @@
 	inventorysize="0"
 	x="9674"
 	y="30721"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -9640,7 +9640,7 @@
 	inventorysize="0"
 	x="7114"
 	y="22074"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10225,7 +10225,7 @@
 	inventorysize="0"
 	x="12681"
 	y="29721"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10252,7 +10252,7 @@
 	inventorysize="0"
 	x="15077"
 	y="19540"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10279,7 +10279,7 @@
 	inventorysize="0"
 	x="10053"
 	y="3859"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10306,7 +10306,7 @@
 	inventorysize="0"
 	x="12061"
 	y="403"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10332,7 +10332,7 @@
 	stamina="20"
 	inventorysize="0"
 	x="22613"
-	y="23698"
+	y="23697"
 	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
@@ -10452,7 +10452,7 @@
 	inventorysize="0"
 	x="21300"
 	y="22592"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10479,7 +10479,7 @@
 	inventorysize="0"
 	x="21826"
 	y="18490"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -10504,7 +10504,7 @@
 	stamina="20"
 	inventorysize="0"
 	x="30123"
-	y="22327"
+	y="22324"
 	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
@@ -12221,7 +12221,7 @@
 	stamina="20"
 	inventorysize="0"
 	x="32403"
-	y="13030"
+	y="13028"
 	flags="0x80800080"
 	dir.x="0"
 	dir.y="1"/>
@@ -12379,7 +12379,7 @@
 	stamina="20"
 	inventorysize="0"
 	x="28799"
-	y="16444"
+	y="16441"
 	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
@@ -12546,7 +12546,7 @@
 	stamina="20"
 	inventorysize="0"
 	x="30768"
-	y="19770"
+	y="19766"
 	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
@@ -12572,7 +12572,7 @@
 	stamina="20"
 	inventorysize="0"
 	x="29546"
-	y="10492"
+	y="10487"
 	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>

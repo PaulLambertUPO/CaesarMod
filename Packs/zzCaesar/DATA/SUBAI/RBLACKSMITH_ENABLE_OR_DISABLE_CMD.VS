@@ -1,6 +1,8 @@
 //void, Obj This
 
-;//this empty instruction avoids problems due to starting the script with a scope
+Sleep(1 + rand(10));
+
+Place("ChimneySmoke", This.pos + Point(122, -267), This.player);
 
 //use a scope to remove variables when the final loop is reached
 {

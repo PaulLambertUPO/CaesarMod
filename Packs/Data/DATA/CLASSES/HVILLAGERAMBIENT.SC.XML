@@ -1,3 +1,0 @@
-<class id="HVillagerAmbient" parent="PeasantAmbient" cpp_class="CVXUnit" entity="Units/RVillager/RVillager.ent.xml">
-	<properties race="ImperialRome" />
-</class>

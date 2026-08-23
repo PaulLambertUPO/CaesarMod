@@ -23,14 +23,8 @@ if (This.AsBuilding().IsValid)
 			plr = .player;
 			prev_pop = .population;
 
-			if (bld_1.race == ImperialRome) {
-				villager_classes[0] = "HVillagerAmbient";
-				villager_classes[1] = "HWVillagerAmbient";
-			}
-			else {
-				villager_classes[0] = bld_1.raceStrPref + "VillagerAmbient";
-				villager_classes[1] = bld_1.raceStrPref + "WVillagerAmbient";
-			}
+			villager_classes[0] = bld_1.raceStrPref + "VillagerAmbient";
+			villager_classes[1] = bld_1.raceStrPref + "WVillagerAmbient";
 
 			if (.IsVillage) {
 				if (bld_1.race == Carthage)

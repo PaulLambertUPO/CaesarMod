@@ -6,4 +6,6 @@
 	<properties icon="gameres/icons/GBlacksmith.bmp" />
 	<properties help="contents/buildings/GBlacksmith" />
 	<properties edittree_pos="Structures/Stronghold (Gaul)/Blacksmith" />
+
+	<behavior script="data/subai/GBlacksmith_anim.vs" />
 </class>

@@ -7,6 +7,8 @@
 	<properties help="contents/buildings/GTavern" />
 	<properties edittree_pos="Structures/Stronghold (Gaul)/Tavern" />
 
+	<behavior script="data/subai/GTavern_anim.vs" />
+
 	<method sig="getloan" vs="data/subai/tavern_getloan.vs" />
 	<method sig="repayloan" vs="data/subai/tavern_repayloan.vs" />
 </class>

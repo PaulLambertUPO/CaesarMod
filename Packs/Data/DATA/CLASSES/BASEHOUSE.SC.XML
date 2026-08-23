@@ -1,5 +1,6 @@
 <class id="BaseHouse" parent="BaseBuilding" cpp_class="CVXBuilding">
-	<properties maxhealth="1000" />
+	<properties maxhealth="2500" />
+	<properties house_pop_bonus="10" /><!-- this value also determines how much population is lost by damage (0% health = 2 * value) and even affects neutral villages -->
 	<properties auto_repair="yes" />
 	<properties interface="thumb,building" />
 	<properties display_name="House" />

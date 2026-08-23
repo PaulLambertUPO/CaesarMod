@@ -2785,8 +2785,8 @@
 <translationtableentry text="Army and items" result="Esercito e oggetti" />
 <translationtableentry text="Hero skills" result="Caratteristiche speciali dell'eroe" />
 <translationtableentry text="Click here to increase hero skill" result="Clicca qui per migliorare l'abilità dell'eroe" />
-<translationtableentry text="Click to assign the selection to this icon" result="Clicca per assegnare la selezione a questa icona" />
-<translationtableentry text="Click to select, right-click to perform default action" result="Clicca per selezionare, clicca col tasto destro per eseguire l'azione predefinita" />
+<translationtableentry text="Click to assign the selection to this icon" result="Clicca per assegnare la selezione attuale a questa icona" />
+<translationtableentry text="Click to select, right-click to perform default action" result="Clicca per selezionare, fai doppio click per visualizzare, clicca col tasto destro per eseguire l'azione predefinita con la selezione attuale" />
 <!-- end unit/building stats and interface -->
 <!-- start game/network buttons and messages -->
 <translationtableentry text="Minimap (Space)" result="Mappa strategica (barra spaziatrice)" />
@@ -3100,6 +3100,7 @@
 <translationtableentry text="Inn found" result="Locanda trovata" />
 <translationtableentry text="Location message" result="Posizione del messaggio" />
 <translationtableentry text="Training completed" result="Reclutamento completato" />
+<translationtableentry text="Investment completed" result="Investimento completato" />
 <translationtableentry text="Note: %s1" result="Obiettivo: %s1" />
 <translationtableentry text="Diplomacy relations changed" result="Cambiamento nelle relazioni diplomatiche" />
 <!-- end notifications -->

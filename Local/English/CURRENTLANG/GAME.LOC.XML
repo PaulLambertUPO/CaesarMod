@@ -60,6 +60,10 @@
 <translationtableentry text="Non usato" result="Unused"/>
 <translationtableentry text="No usado" result="Unused"/>
 <!-- end common player names (for editor translations) -->
+<!-- start unit/building stats and interface -->
+<translationtableentry text="Click to assign the selection to this icon" result="Click to assign the current selection to this icon" />
+<translationtableentry text="Click to select, right-click to perform default action" result="Click to select, double-click to view, right-click to perform default action with the current selection" />
+<!-- end unit/building stats and interface -->
 <!-- start online battle and GameSpy -->
 <translationtableentry text="Connecting to Imperivmchat server..." result="Connecting to Imperivm chat..." />
 <translationtableentry text="Connecting to Imperivm.." result="Connecting to Imperivm" />
