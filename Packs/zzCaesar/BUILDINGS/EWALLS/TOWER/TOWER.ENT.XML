@@ -8,6 +8,7 @@
 	</images>
 	<points>
 		<point idx="1" type="4" x="8" y="-165" />
+		<point idx="2" type="16" x="-27" y="-158" />
 	</points>
 	<layers>
 		<layer idx="1" name="shadow" image="1" z="800" offsetx="-261" offsety="-309" sortoffsetx="0" sortoffsety="0" xray="0" />

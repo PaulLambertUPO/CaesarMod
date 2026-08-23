@@ -3,10 +3,10 @@
 
 <entity name="MTemple" type="vx/building" variations="1" pass_file="MTemple.pass">
 	<images>
-		<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="1" columns="1" />
-		<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1" />
-		<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1" />
-		<image idx="4" file="layer3.rle" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="1" file="shadow" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="layer1" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="3" file="layer2" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="4" file="layer3" drawmode="player_color" remaping="none" rows="4" columns="1" />
 	</images>
 	<points>
 		<point idx="1" type="1" x="-4" y="-37" />

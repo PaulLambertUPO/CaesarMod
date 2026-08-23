@@ -3,9 +3,9 @@
 
 <entity name="MTownhall" type="vx/building" variations="1" pass_file="MTownhall.pass">
 	<images>
-		<image idx="1" file="shadow.rle" drawmode="player_color" remaping="none" rows="4" columns="1" />
-		<image idx="2" file="layer1.rle" drawmode="player_color" remaping="none" rows="4" columns="1" />
-		<image idx="3" file="layer2.rle" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="1" file="shadow" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="2" file="layer1" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="3" file="layer2" drawmode="player_color" remaping="none" rows="4" columns="1" />
 	</images>
 	<points>
 		<point idx="1" type="1" x="27" y="7" />
@@ -24,14 +24,14 @@
 		<point idx="14" type="2" x="-109" y="-66" />
 		<point idx="15" type="2" x="-51" y="-20" />
 		<point idx="16" type="2" x="-27" y="-2" />
-		<point idx="17" type="6" x="2" y="114" />
-		<point idx="18" type="6" x="153" y="-9" />
-		<point idx="19" type="6" x="0" y="-125" />
-		<point idx="20" type="6" x="-161" y="-16" />
-		<point idx="21" type="4" x="19" y="-228" />
-		<point idx="22" type="4" x="52" y="-170" />
-		<point idx="23" type="4" x="93" y="-219" />
-		<point idx="24" type="4" x="-29" y="-267" />
+		<point idx="17" type="4" x="19" y="-228" />
+		<point idx="18" type="4" x="52" y="-170" />
+		<point idx="19" type="4" x="93" y="-219" />
+		<point idx="20" type="4" x="-29" y="-267" />
+		<point idx="21" type="6" x="2" y="114" />
+		<point idx="22" type="6" x="153" y="-9" />
+		<point idx="23" type="6" x="0" y="-125" />
+		<point idx="24" type="6" x="-161" y="-16" />
 		<point idx="25" type="11" x="-87" y="40" />
 		<point idx="26" type="11" x="0" y="-13" />
 		<point idx="27" type="11" x="78" y="36" />
@@ -40,10 +40,10 @@
 		<point idx="30" type="11" x="4" y="-196" />
 		<point idx="31" type="12" x="-56" y="14" />
 		<point idx="32" type="12" x="58" y="-2" />
-		<point idx="33" type="13" x="-64" y="8" />
-		<point idx="34" type="13" x="98" y="-78" />
-		<point idx="35" type="14" x="70" y="10" />
-		<point idx="36" type="12" x="-80" y="-70" />
+		<point idx="33" type="12" x="-80" y="-70" />
+		<point idx="34" type="13" x="-64" y="8" />
+		<point idx="35" type="13" x="98" y="-78" />
+		<point idx="36" type="14" x="70" y="10" />
 		<point idx="37" type="14" x="110" y="-68" />
 	</points>
 	<layers>
