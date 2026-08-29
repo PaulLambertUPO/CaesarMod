@@ -42,7 +42,7 @@ if (.IsValid)
 								.SetWalkAnim(13);
 							}
 
-							while (!.Goto(pt_move, 0, 2000, false, 0)) {
+							while (!.Goto(pt_move, 0, 2000, false, 1500)) {
 								dangers = VisibleObjsInSight(this, "Building,Unit").GetObjList();
 								if (dangers.count > 0) {//find the centre among all dangers and flee in the opposite direction
 									pt_move.Set(0, 0);

@@ -142,7 +142,7 @@ if (.IsValid)
 										pt_start = pt;
 						}
 
-					if (.Goto(pt_start, 0, 2000, false, 1000))
+					if (.Goto(pt_start, 0, 2000, false, 1500))
 						if (rand(10) == 0) {
 							pt = .GetDir();
 							pt.SetLen(100);

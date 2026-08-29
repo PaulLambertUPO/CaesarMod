@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
 
-<entity name="EPriest" type="vx/unit" variations="8" pass_file="EPriest.pass">
+<entity name="EPriest" type="vx/unit" variations="8" pass_file="">
 <images>
 <image idx="1" file="Defend.rle" drawmode="player_color" remaping="none" rows="8" columns="8"/>
 <image idx="2" file="Defend_shadow.rle" drawmode="shadow" remaping="none" rows="8" columns="8"/>

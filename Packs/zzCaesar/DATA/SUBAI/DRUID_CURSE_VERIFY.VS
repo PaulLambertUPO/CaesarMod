@@ -13,7 +13,8 @@ if (.IsValid)
 						if (!target.AsUnit().IsCursed)
 							if (.IsEnemy(target))
 								if (!target.AsUnit().InHolder)
-									if (.CanSee(target))
-										return true;
+									if (!target.AsShip().IsValid)
+										if (.CanSee(target))
+											return true;
 
 return false;

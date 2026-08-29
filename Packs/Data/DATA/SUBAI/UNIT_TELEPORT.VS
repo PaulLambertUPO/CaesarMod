@@ -38,7 +38,8 @@ if (.IsValid)
 
 			telep_exit.settlement.ForceAddUnit(this);
 
-			.AddCommand(true, "advance", pt_exit);
+			if (.CmdCount <= 1)//avoid delaying pending commands like attach (with the risk of dying)
+				.AddCommand(true, "advance", pt_exit);
 		}
 	}
 

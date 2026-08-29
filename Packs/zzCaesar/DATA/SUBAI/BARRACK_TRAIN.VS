@@ -37,7 +37,10 @@ set = .settlement;
 	else {
 		u = Place(u_class, exit_point, plr).AsUnit();
 		if (set.IsStronghold)
-			u.SetCommand("advance_enter", hall);
+			if (EnvReadInt(set, "EnemiesAlert") != 0)
+				u.SetCommand("advance_enter", hall);
+			else
+				u.SetCommand("enter", hall);
 		else
 			u.SetCommand("advance", hall.GetEnterPoint(u));
 	}

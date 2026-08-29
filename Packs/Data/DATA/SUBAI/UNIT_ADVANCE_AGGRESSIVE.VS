@@ -15,7 +15,7 @@ if (.IsValid)
 				.AddCommand(true, "engage");
 				break;
 			}
-			if (.Goto(pt, 0, 2000, false, 0))//do not use this condition for the loop and keep it here otherwise there are problems with "unit_idle.vs"
+			if (.Goto(pt, 0, 2000, false, 1500))
 				break;
 		}
 	}

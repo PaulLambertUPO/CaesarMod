@@ -15,17 +15,17 @@ if (mule.IsValid) {
 
 	if (.IsHeirOf("RomanShipyard")) {
 		pt_exit = .GetExitVector();
-		pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of boats getting stuck in the building (they can be moved manually, but it's not nice to look at)
+		pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of mules getting stuck in the building (they can be moved manually, but it's not nice to look at)
 		mule.SetCommand("move", .pos + pt_exit * -5);//go opposite the shipyard direction
 	}
 	else if (.IsHeirOf("GaulShipyard")) {
 		pt_exit = .GetExitVector();
-		pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of boats getting stuck in the building (they can be moved manually, but it's not nice to look at)
+		pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of mules getting stuck in the building (they can be moved manually, but it's not nice to look at)
 		mule.SetCommand("move", .pos + pt_exit * -2);//go opposite the shipyard direction
 	}
 	else {
-		pt_exit.SetLen(.radius);
-		pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of boats getting stuck in the building (they can be moved manually, but it's not nice to look at)
+		pt_exit.SetLen(.radius + 140 + rand(61));
+		pt_exit.Rot(45 - rand(91));//randomly rotate the destination to reduce the risk of mules getting stuck in the building (they can be moved manually, but it's not nice to look at)
 		mule.SetCommand("move", .pos + pt_exit);
 	}
 }

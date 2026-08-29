@@ -49,17 +49,18 @@ if (.IsValid)
 							for (i = ol.count - 1; i >= 0; i -= 1) {
 								u_ol = ol[i].AsUnit();
 								if (u_ol.IsAlive)
-									if (!u_ol.IsCursed) {
-										d = .DistTo(u_ol);
-										if (u.IsDead) {
-											u = u_ol;
-											best_dist = d;
+									if (!u_ol.AsShip().IsValid)
+										if (!u_ol.IsCursed) {
+											d = .DistTo(u_ol);
+											if (u.IsDead) {
+												u = u_ol;
+												best_dist = d;
+											}
+											else if (d < best_dist) {
+												u = u_ol;
+												best_dist = d;
+											}
 										}
-										else if (d < best_dist) {
-											u = u_ol;
-											best_dist = d;
-										}
-									}
 							}
 						}
 					}
@@ -161,7 +162,7 @@ if (.IsValid)
 										pt_start = pt;
 						}
 
-					if (.Goto(pt_start, 0, 2000, false, 1000))
+					if (.Goto(pt_start, 0, 2000, false, 1500))
 						if (rand(10) == 0) {
 							pt = .GetDir();
 							pt.SetLen(100);

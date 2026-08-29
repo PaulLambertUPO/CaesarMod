@@ -12,47 +12,48 @@ if (.IsValid)
 
 				u = target.AsUnit();
 
-				if (u.IsValid) {
-					int stamina_cost;
+				if (u.IsValid)
+					if (!u.AsShip().IsValid) {
+						int stamina_cost;
 
-					stamina_cost = GetCmdStaminaCost("curse");
+						stamina_cost = GetCmdStaminaCost("curse");
 
-					while (u.IsAlive) {
-						if (!u.IsCursed)
-							if (.IsEnemy(u))
-								if (!u.InHolder)
-									if (.CanSee(u)) {
-										if (.InRange(u))
-											if (.stamina >= stamina_cost) {
-												.StartAnim(17, u.pos);
+						while (u.IsAlive) {
+							if (!u.IsCursed)
+								if (.IsEnemy(u))
+									if (!u.InHolder)
+										if (.CanSee(u)) {
+											if (.InRange(u))
+												if (.stamina >= stamina_cost) {
+													.StartAnim(17, u.pos);
 
-												Sleep(.TimeToActionMoment);
+													Sleep(.TimeToActionMoment);
 
-												if (u.IsAlive)
-													if (!u.IsCursed)
-														if (.IsEnemy(u))
-															if (!u.InHolder)
-																if (.CanSee(u))
-																	if (.stamina >= stamina_cost) {
-																		.SetLastAttackTime();
-																		if (!.IsVisible)
-																			.SetVisible(true);
-																		.SetStamina(.stamina - stamina_cost);
-																		u.Curse();
-																	}
+													if (u.IsAlive)
+														if (!u.IsCursed)
+															if (.IsEnemy(u))
+																if (!u.InHolder)
+																	if (.CanSee(u))
+																		if (.stamina >= stamina_cost) {
+																			.SetLastAttackTime();
+																			if (!.IsVisible)
+																				.SetVisible(true);
+																			.SetStamina(.stamina - stamina_cost);
+																			u.Curse();
+																		}
 
-												Sleep(.TimeToAnimFinish);
-											}
+													Sleep(.TimeToAnimFinish);
+												}
+												else
+													Sleep(500);
 											else
-												Sleep(500);
-										else
-											.GotoAttack(u, 2000, false, 2500);
+												.GotoAttack(u, 2000, false, 2500);
 
-										continue;
-									}
-						break;
+											continue;
+										}
+							break;
+						}
 					}
-				}
 			}
 
 Sleep(30);//prevent possible loops with other commands

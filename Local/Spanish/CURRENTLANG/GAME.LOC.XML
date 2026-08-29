@@ -1342,6 +1342,8 @@
 <translationtableentry text="Select Block formation" result="Seleccionar formación en cuadro" />
 <translationtableentry text="Cavalry core" result="con caballería en el centro" />
 <translationtableentry text="Select Cavalry core formation" result="Seleccionar formación con caballería en el centro" />
+<translationtableentry text="Ranged wings" result="con unidades a distancia en los flancos" />
+<translationtableentry text="Select Ranged wings formation" result="Seleccionar formación con unidades a distancia en los flancos" />
 <translationtableentry text="Skirmish" result="de escaramuza" />
 <translationtableentry text="Select Skirmish formation" result="Seleccionar formación de escaramuza" />
 <translationtableentry text="Column" result="en columna" />

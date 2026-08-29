@@ -65,7 +65,7 @@ if (.IsValid)
 							if (.AI)
 								break;
 							o.Clear();
-							while (!.Goto(pt_start, 0, 1500, false, 2500))
+							while (!.Goto(pt_start, 0, 1500, false, 3000))
 								if (.IsVisible) {
 									o = .BestTargetInSquadSightMisZeroDamage;
 									if (.IsValidTarget(o))

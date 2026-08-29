@@ -39,7 +39,7 @@ if (.IsValid)
 
 							flee = false;
 
-							while (!.Goto(pt_move, 0, 2000, false, 0))
+							while (!.Goto(pt_move, 0, 2000, false, 1500))
 								if (!flee) {
 									enemy = .BestTargetInSquadSight;
 									if (enemy.IsAlive)

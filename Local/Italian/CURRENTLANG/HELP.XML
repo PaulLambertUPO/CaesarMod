@@ -184,9 +184,10 @@ Gli eroi possono ordinare che le loro truppe si dispongano secondo diversi tipi 
 			</entry>
 			<entry>Formazioni:</entry>
 			<entry image="UI/Help/CmdBar/States/Front Form.bmp">In blocco - le unità si posizionano davanti all'eroe in formazione compatta; aumenta il livello di 4 punti.</entry>
-			<entry image="UI/Help/CmdBar/States/Line Form.bmp">In linea - le unità formano una o più larghe linee davanti all'eroe; aumenta l'attacco e la difesa di 2 punti e la gittata del 30%.</entry>
+			<entry image="UI/Help/CmdBar/States/Line Form.bmp">In linea - le unità formano una o più larghe linee davanti all'eroe; aumenta l'attacco e la difesa di 2 punti e la gittata del 25%.</entry>
 			<entry image="UI/Help/CmdBar/States/Block Form.bmp">In quadrato - le unità si dispongono attorno all'eroe; aumenta la difesa di 8 punti e la gittata del 20%.</entry>
-			<entry image="UI/Help/CmdBar/States/Horse Wing Form.bmp">Con cavalleria al centro - tutte le unità di cavalleria si dispongono al centro dell'esercito; aumenta l'attacco di 4 punti e la gittata del 30%.</entry>
+			<entry image="UI/Help/CmdBar/States/Horse Wing Form.bmp">Con cavalleria al centro - tutte le unità di cavalleria si dispongono al centro dell'esercito; aumenta l'attacco di 4 punti e la gittata del 25%.</entry>
+			<entry image="UI/Help/CmdBar/States/Ranged Wings Form.bmp">Con unità a distanza ai fianchi - tutte le unità a distanza si dispongono ai fianchi dell'esercito; aumenta il livello, l'attacco e la difesa di 2 punti.</entry>
 			<entry image="UI/Help/CmdBar/States/Skirmish.bmp">Da schermaglia - tutte le unità a distanza si dispongono in prima linea mentre quelle di cavalleria si dispongono ai fianchi dell'esercito; aumenta l'attacco di 2 punti e la gittata del 50%.</entry>
 			<entry image="UI/Help/CmdBar/States/Column.bmp">In colonna - le unità formano una lunga colonna davanti all'eroe; aumenta il livello di 2 punti e la gittata del 50%.</entry>
 			<entry hcenter="1" font="large">Vedi anche</entry>

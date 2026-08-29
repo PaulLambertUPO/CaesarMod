@@ -56,6 +56,15 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
+	<cmd name="form-ranged-menu" priority="10"
+		method="move"
+		button="states/ranged wings form.bmp"
+		key="f"
+		param="Ranged wings"
+		groupverifier="data/subai/hero_formation_menu_verify.vs"
+		menu="1">
+		<src obj="Hero" />
+	</cmd>
 	<cmd name="form-skirmish-menu" priority="10"
 		method="move"
 		button="states/skirmish.bmp"
@@ -118,7 +127,18 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-skirmish" priority="5"
+	<cmd name="form-ranged" priority="5"
+		method="formation"
+		button="states/ranged wings form.bmp"
+		immediate="yes"
+		key="r"
+		rollover="Select Ranged wings formation"
+		param="Ranged wings"
+		groupverifier="data/subai/hero_formation_verify.vs"
+		menu="1">
+		<src obj="Hero" />
+	</cmd>
+	<cmd name="form-skirmish" priority="6"
 		method="formation"
 		button="states/skirmish.bmp"
 		immediate="yes"
@@ -129,7 +149,7 @@
 		menu="1">
 		<src obj="Hero" />
 	</cmd>
-	<cmd name="form-column" priority="6"
+	<cmd name="form-column" priority="7"
 		method="formation"
 		button="states/column.bmp"
 		immediate="yes"

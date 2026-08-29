@@ -3,18 +3,18 @@
 	<FormationClass Name="Front"
 		Width="2"
 		Height="1"
-		BonusLevel="4"
-		OffsetFrontLineByY="30">
+		OffsetFrontLineByY="30"
+		BonusLevel="4">
 		<Class Name="Unit" FrontLine="1" />
 		<Class Name="Peasant" CentralBlock="1" />
 	</FormationClass>
 	<FormationClass Name="Line"
 		Width="6"
 		Height="1"
+		OffsetFrontLineByY="50"
 		BonusDamage="2"
 		BonusArmor="2"
-		BonusRange="30"
-		OffsetFrontLineByY="50">
+		BonusRange="25">
 		<Class Name="Unit" FrontLine="1" />
 		<Class Name="BaseMage" CentralBlock="1" />
 		<Class Name="Peasant" CentralBlock="1" />
@@ -27,24 +27,33 @@
 	<FormationClass Name="Cavalry core"
 		Width="2"
 		Height="1"
-		BonusDamage="4"
-		BonusRange="30"
 		OffsetFrontLineByY="30"
-		OffsetWingsByX="50">
+		OffsetWingsByX="50"
+		BonusDamage="4"
+		BonusRange="25">
 		<Class Name="Unit" Wings="1" />
 		<Class Name="Horse" FrontLine="1" />
 	</FormationClass>
+	<FormationClass Name="Ranged wings"
+		Width="3"
+		Height="1"
+		OffsetFrontLineByY="30"
+		OffsetWingsByX="50"
+		BonusLevel="2"
+		BonusDamage="2"
+		BonusArmor="2">
+		<Class Name="Unit" FrontLine="1"/>
+		<Class Name="Ranged" Wings="1"/>
+	</FormationClass>
 	<FormationClass Name="Skirmish"
-		Width="200"
-		Height="2"
+		Width="10"
+		Height="1"
+		OffsetFrontLineByY="30"
 		BonusDamage="2"
 		BonusRange="50">
 		<Class Name="Unit" CentralBlock="1" />
 		<Class Name="Ranged" FrontLine="1" />
-		<Class Name="Melee" CentralBlock="1" />
 		<Class Name="Horse" Wings="1" />
-		<Class Name="BaseMage" CentralBlock="1" />
-		<Class Name="Peasant" CentralBlock="1" />
 	</FormationClass>
 	<FormationClass Name="Column"
 		Width="4"

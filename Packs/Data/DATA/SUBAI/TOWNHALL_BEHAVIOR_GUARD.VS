@@ -30,7 +30,7 @@ if (This.AsBuilding().IsValid) {
 
 		if (ol.count > 0) {
 			if (write_alert != 1) {
-				EnvWriteInt(this, "EnemiesAlert", 1);//EnemiesAlert is used in "GS_KillEnemies.vs"
+				EnvWriteInt(this, "EnemiesAlert", 1);//EnemiesAlert is used in "GS_KillEnemies.vs" and recruitment scripts
 				write_alert = 1;
 			}
 

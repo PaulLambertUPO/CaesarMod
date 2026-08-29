@@ -9,13 +9,13 @@
 		<image idx="6" file="TTeutonWolf_Transition" drawmode="player_color" remaping="none" rows="5" columns="12" />
 		<image idx="7" file="TTeutonWolf_Transition" drawmode="player_color" remaping="reverse" rows="5" columns="12" />
 		<image idx="8" file="TTeutonWolf_Taunt" drawmode="player_color" remaping="none" rows="7" columns="12" />
-		<image idx="9" file="TTeutonWolf_Idle_shadow" drawmode="shadow" remaping="none" rows="7" columns="12" />
-		<image idx="10" file="TTeutonWolf_Walk_shadow" drawmode="shadow" remaping="none" rows="14" columns="12" />
-		<image idx="11" file="TTeutonWolf_Fight_shadow" drawmode="shadow" remaping="none" rows="15" columns="12" />
-		<image idx="12" file="TTeutonWolf_Death_shadow" drawmode="shadow" remaping="none" rows="20" columns="12" />
-		<image idx="13" file="TTeutonWolf_Transition_shadow" drawmode="shadow" remaping="none" rows="5" columns="12" />
-		<image idx="14" file="TTeutonWolf_Transition_shadow" drawmode="shadow" remaping="reverse" rows="5" columns="12" />
-		<image idx="15" file="TTeutonWolf_Taunt_shadow" drawmode="shadow" remaping="none" rows="7" columns="12" />
+		<image idx="9" file="TTeutonWolf_Idle_Shadow" drawmode="shadow" remaping="none" rows="7" columns="12" />
+		<image idx="10" file="TTeutonWolf_Walk_Shadow" drawmode="shadow" remaping="none" rows="14" columns="12" />
+		<image idx="11" file="TTeutonWolf_Fight_Shadow" drawmode="shadow" remaping="none" rows="15" columns="12" />
+		<image idx="12" file="TTeutonWolf_Death_Shadow" drawmode="shadow" remaping="none" rows="20" columns="12" />
+		<image idx="13" file="TTeutonWolf_Transition_Shadow" drawmode="shadow" remaping="none" rows="5" columns="12" />
+		<image idx="14" file="TTeutonWolf_Transition_Shadow" drawmode="shadow" remaping="reverse" rows="5" columns="12" />
+		<image idx="15" file="TTeutonWolf_Taunt_Shadow" drawmode="shadow" remaping="none" rows="7" columns="12" />
 	</images>
 	<points />
 	<layers>
@@ -27,7 +27,7 @@
 		<state idx="2" name="fight" image_idx="0" image_row="0" offsetx="0" offsety="0" />
 	</states>
 	<anims>
-		<anim idx="1" name="walk" startstate="1" endstate="1" frames="16" duration="715" default_duration="55" action_time="0" step="60">
+		<anim idx="1" name="Walk" startstate="1" endstate="1" frames="16" duration="715" default_duration="55" action_time="0" step="60">
 			<replace layer="1" image="3" offsetx="-104" offsety="-129" />
 			<replace layer="2" image="10" offsetx="-104" offsety="-129" />
 			<frame idx="1" duration="0" />
@@ -47,7 +47,7 @@
 			<frame idx="15" duration="55" />
 			<frame idx="16" duration="0" />
 		</anim>
-		<anim idx="5" name="attack" startstate="2" endstate="2" frames="17" duration="1065" default_duration="71" action_time="568" step="0">
+		<anim idx="5" name="Attack" startstate="2" endstate="2" frames="17" duration="1065" default_duration="71" action_time="568" step="0">
 			<replace layer="1" image="4" offsetx="-104" offsety="-129" />
 			<replace layer="2" image="11" offsetx="-104" offsety="-129" />
 			<frame idx="1" duration="0" />
@@ -68,7 +68,7 @@
 			<frame idx="16" duration="71" />
 			<frame idx="17" duration="0" />
 		</anim>
-		<anim idx="9" name="die" startstate="1" endstate="1" frames="22" duration="8800" default_duration="80" action_time="0" step="0">
+		<anim idx="9" name="Die" startstate="1" endstate="1" frames="22" duration="8800" default_duration="0" action_time="0" step="0">
 			<replace layer="1" image="5" offsetx="-120" offsety="-145" />
 			<replace layer="2" image="12" offsetx="-120" offsety="-145" />
 			<frame idx="1" duration="0" />
@@ -129,7 +129,7 @@
 			<frame idx="6" duration="72" />
 			<frame idx="7" duration="0" />
 		</anim>
-		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="9" duration="1050" default_duration="150" action_time="600" step="0">
+		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="9" duration="1050" default_duration="150" action_time="750" step="0">
 			<replace layer="1" image="8" offsetx="-104" offsety="-129" />
 			<replace layer="2" image="15" offsetx="-104" offsety="-129" />
 			<frame idx="1" duration="0" />

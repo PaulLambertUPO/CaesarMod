@@ -71,7 +71,7 @@ if (.IsValid)
 					if (pack_leader.command != "lead")
 						break;
 					else if (.DistTo(pack_leader) > 50)
-						.Goto(pack_leader.pos + RandomOffset(25), 0, 1500, false, 0);
+						.Goto(pack_leader.pos + RandomOffset(25), 0, 1500, false, 1000);
 
 					Sleep(500);
 				}

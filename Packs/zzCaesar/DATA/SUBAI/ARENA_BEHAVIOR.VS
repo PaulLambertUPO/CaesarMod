@@ -130,7 +130,10 @@ while (true) {
 		u = Place(u_class, exit_point, plr).AsUnit();
 		if (valid_exit_point)
 			if (is_stronghold)
-				u.SetCommand("advance_enter", hall);
+				if (EnvReadInt(set, "EnemiesAlert") != 0)
+					u.SetCommand("advance_enter", hall);
+				else
+					u.SetCommand("enter", hall);
 			else
 				u.SetCommand("advance", hall.GetEnterPoint(u));
 		else if (is_stronghold)

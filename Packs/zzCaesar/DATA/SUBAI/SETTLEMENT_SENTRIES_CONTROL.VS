@@ -51,7 +51,7 @@ if (GetConst("NoSentries") == 0)
 					else
 						plr = .player;
 
-					Sleep(30000);
+					Sleep(45000);
 				}
 			}
 		}

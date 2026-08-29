@@ -8,7 +8,7 @@ if (other.IsValid)
 
 		if (.IsValid)
 			if (.IsAlive) {
-				while (!.Goto(other, 300, 2500, false, 0))
+				while (!.Goto(other, 300, 2000, false, 1500))
 					;
 				other.SetCommand("transport_request");
 			}

@@ -47,7 +47,7 @@
 			<frame idx="15" duration="55" />
 			<frame idx="16" duration="0" />
 		</anim>
-		<anim idx="5" name="Attack" startstate="2" endstate="2" frames="9" duration="840" default_duration="120" action_time="240" step="0">
+		<anim idx="5" name="Attack" startstate="2" endstate="2" frames="9" duration="840" default_duration="120" action_time="360" step="0">
 			<replace layer="1" image="4" offsetx="-90" offsety="-118" />
 			<replace layer="2" image="11" offsetx="-90" offsety="-118" />
 			<frame idx="1" duration="0" />
@@ -118,16 +118,16 @@
 			<frame idx="7" duration="72" />
 			<frame idx="8" duration="0" />
 		</anim>
-		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="8" duration="792" default_duration="132" action_time="528" step="0">
+		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="8" duration="840" default_duration="140" action_time="560" step="0">
 			<replace layer="1" image="8" offsetx="-90" offsety="-118" />
 			<replace layer="2" image="15" offsetx="-90" offsety="-118" />
 			<frame idx="1" duration="0" />
-			<frame idx="2" duration="132" />
-			<frame idx="3" duration="132" />
-			<frame idx="4" duration="132" />
-			<frame idx="5" duration="132" />
-			<frame idx="6" duration="132" />
-			<frame idx="7" duration="132" />
+			<frame idx="2" duration="140" />
+			<frame idx="3" duration="140" />
+			<frame idx="4" duration="140" />
+			<frame idx="5" duration="140" />
+			<frame idx="6" duration="140" />
+			<frame idx="7" duration="140" />
 			<frame idx="8" duration="0" />
 		</anim>
 	</anims>

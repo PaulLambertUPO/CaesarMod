@@ -49,7 +49,10 @@ this = This.AsBuilding();
 	else {
 		h = Place(GetRandomHeroClass(cmdparam, plr), exit_point, plr).AsHero();
 		if (set.IsStronghold)
-			h.SetCommand("advance_enter", hall);
+			if (EnvReadInt(set, "EnemiesAlert") != 0)
+				h.SetCommand("advance_enter", hall);
+			else
+				h.SetCommand("enter", hall);
 		else
 			h.SetCommand("advance", hall.GetEnterPoint(h));
 	}

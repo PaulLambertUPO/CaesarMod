@@ -9,7 +9,7 @@ if (.IsValid)
 		.SetSpeedFactor(80);
 		.SetWalkAnim(2);
 
-		while (!.Goto(pt, 0, 2500, false, 0))
+		while (!.Goto(pt, 0, 2000, false, 1500))
 			;
 	}
 

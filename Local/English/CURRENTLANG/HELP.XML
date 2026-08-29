@@ -184,9 +184,10 @@ Heroes can order their troops to arrange into different types of formations. Hol
 			</entry>
 			<entry>Formations:</entry>
 			<entry image="UI/Help/CmdBar/States/Front Form.bmp">Front - the units position themselves in front of the hero in a compact formation; it adds 4 levels.</entry>
-			<entry image="UI/Help/CmdBar/States/Line Form.bmp">Line - the units form one or more wide lines in front of the hero; it adds 2 damage, 2 armor and 30% range.</entry>
+			<entry image="UI/Help/CmdBar/States/Line Form.bmp">Line - the units form one or more wide lines in front of the hero; it adds 2 damage, 2 armor and 25% range.</entry>
 			<entry image="UI/Help/CmdBar/States/Block Form.bmp">Block - units arrange themselves around the hero; it adds 8 armor and 20% range.</entry>
-			<entry image="UI/Help/CmdBar/States/Horse Wing Form.bmp">Cavalry core - all cavalry units arrange themselves in the center of the army; it adds 4 damage and 30% range.</entry>
+			<entry image="UI/Help/CmdBar/States/Horse Wing Form.bmp">Cavalry core - all cavalry units arrange themselves in the center of the army; it adds 4 damage and 25% range.</entry>
+			<entry image="UI/Help/CmdBar/States/Ranged Wings Form.bmp">Ranged wings - all ranged units arrange themselves on the flanks of the army; it adds 2 levels, 2 damage and 2 armor.</entry>
 			<entry image="UI/Help/CmdBar/States/Skirmish.bmp">Skirmish - all ranged units arrange themselves in the front line while cavalry units arrange themselves on the flanks of the army; it adds 2 damage and 50% range.</entry>
 			<entry image="UI/Help/CmdBar/States/Column.bmp">Column - the units form a long column in front of the hero; it adds 2 levels and 50% range.</entry>
 			<entry hcenter="1" font="large">See also</entry>

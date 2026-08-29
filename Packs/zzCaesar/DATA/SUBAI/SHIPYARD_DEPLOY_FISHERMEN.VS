@@ -15,7 +15,7 @@ this = This.AsBuilding();
 	set = .settlement;
 	pt_pos = .pos;
 	plr = .player;
-	rad = .radius + 120;
+	rad = .radius + 140;
 
 	pt_inverted_exit_vec = .GetExitVector() * -1;
 
@@ -24,7 +24,7 @@ this = This.AsBuilding();
 			return;
 
 		pt_dest = pt_inverted_exit_vec;
-		pt_dest.SetLen(rad + rand(41));
+		pt_dest.SetLen(rad + rand(61));
 		pt_dest.Rot(rand(31) - 15);
 		pt_dest = pt_dest + pt_pos;
 

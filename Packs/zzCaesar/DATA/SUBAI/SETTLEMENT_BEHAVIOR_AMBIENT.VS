@@ -141,7 +141,7 @@ if (This.AsBuilding().IsValid)
 								if (bld_1.IsValid)
 									if (pt_1.x != -1)
 										if (pt_1.y != -1) {
-											pt_2 = pt_1 * 2 - bld_1.pos + RandomOffset(50);
+											pt_2 = pt_1 * 2 - bld_1.pos + Point(350 - rand(701), 350);
 											u = Place(villager_classes[rand(c)], pt_1, plr).AsUnit();
 											if (u.IsValid) {
 												u.SetNoAIFlag(true);

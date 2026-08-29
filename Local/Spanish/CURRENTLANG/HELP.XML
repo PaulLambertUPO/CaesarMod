@@ -184,9 +184,10 @@ Los héroes pueden ordenar a sus tropas que se dispongan según distintos tipos 
 			</entry>
 			<entry>Formaciones:</entry>
 			<entry image="UI/Help/CmdBar/States/Front Form.bmp">En bloque - las unidades se posicionan delante del héroe en una formación compacta; aumenta el nivel en 4 puntos.</entry>
-			<entry image="UI/Help/CmdBar/States/Line Form.bmp">En línea - las unidades forman una o más líneas anchas delante del héroe; aumenta el ataque y la defensa en 2 puntos y el alcance en un 30%.</entry>
+			<entry image="UI/Help/CmdBar/States/Line Form.bmp">En línea - las unidades forman una o más líneas anchas delante del héroe; aumenta el ataque y la defensa en 2 puntos y el alcance en un 25%.</entry>
 			<entry image="UI/Help/CmdBar/States/Block Form.bmp">En cuadro - las unidades se disponen alrededor del héroe; aumenta la defensa en 8 puntos y el alcance en un 20%.</entry>
-			<entry image="UI/Help/CmdBar/States/Horse Wing Form.bmp">Con caballería en el centro - todas las unidades de caballería se disponen en el centro del ejército; aumenta el ataque en 4 puntos y el alcance en un 30%.</entry>
+			<entry image="UI/Help/CmdBar/States/Horse Wing Form.bmp">Con caballería en el centro - todas las unidades de caballería se disponen en el centro del ejército; aumenta el ataque en 4 puntos y el alcance en un 25%.</entry>
+			<entry image="UI/Help/CmdBar/States/Ranged Wings Form.bmp">Con unidades a distancia en los flancos - todas las unidades a distancia se disponen en los flancos del ejército; aumenta el nivel, el ataque y la defensa en 2 puntos.</entry>
 			<entry image="UI/Help/CmdBar/States/Skirmish.bmp">De escaramuza - todas las unidades a distancia se disponen en primera línea, mientras que las de caballería se disponen en los flancos del ejército; aumenta el ataque en 2 puntos y el alcance en un 50%.</entry>
 			<entry image="UI/Help/CmdBar/States/Column.bmp">En columna - las unidades forman una larga columna delante del héroe; aumenta el nivel en 2 puntos y el alcance en un 50%.</entry>
 			<entry hcenter="1" font="large">Ver también</entry>

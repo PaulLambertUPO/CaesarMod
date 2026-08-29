@@ -87,7 +87,8 @@ if (.IsValid)
 
 			set_exit.ForceAddUnit(this);
 
-			.AddCommand(true, "advance", pt_exit);
+			if (.CmdCount <= 1)//avoid delaying pending commands like move (with the risk of dying)
+				.AddCommand(true, "advance", pt_exit);
 		}
 	}
 

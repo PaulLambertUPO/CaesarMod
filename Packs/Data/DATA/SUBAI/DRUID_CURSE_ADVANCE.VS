@@ -18,26 +18,7 @@ if (.IsValid)
 				for (i = ol.count - 1; i >= 0; i -= 1) {
 					o = ol[i];
 					if (o.IsAlive)
-						if (!o.AsUnit().IsCursed) {
-							d = .DistTo(o);
-							if (target.IsDead) {
-								target = o;
-								best_dist = d;
-							}
-							else if (d < best_dist) {
-								target = o;
-								best_dist = d;
-							}
-						}
-				}
-			}
-			if (target.IsDead)
-				while (!.Goto(pt, 0, 2000, false, -1)) {
-					best_dist = 10000000;
-					ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
-					for (i = ol.count - 1; i >= 0; i -= 1) {
-						o = ol[i];
-						if (o.IsAlive)
+						if (!o.AsShip().IsValid)
 							if (!o.AsUnit().IsCursed) {
 								d = .DistTo(o);
 								if (target.IsDead) {
@@ -49,6 +30,27 @@ if (.IsValid)
 									best_dist = d;
 								}
 							}
+				}
+			}
+			if (target.IsDead)
+				while (!.Goto(pt, 0, 2000, false, -1)) {
+					best_dist = 10000000;
+					ol = Intersect(VisibleObjsInSight(this, "Military,AttackAnimal"), EnemyObjs(plr, "Unit")).GetObjList();
+					for (i = ol.count - 1; i >= 0; i -= 1) {
+						o = ol[i];
+						if (o.IsAlive)
+							if (!o.AsShip().IsValid)
+								if (!o.AsUnit().IsCursed) {
+									d = .DistTo(o);
+									if (target.IsDead) {
+										target = o;
+										best_dist = d;
+									}
+									else if (d < best_dist) {
+										target = o;
+										best_dist = d;
+									}
+								}
 					}
 					if (target.IsAlive)
 						break;

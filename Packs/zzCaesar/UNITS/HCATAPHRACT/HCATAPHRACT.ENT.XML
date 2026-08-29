@@ -133,17 +133,17 @@
 			<frame idx="7" duration="66" />
 			<frame idx="8" duration="0" />
 		</anim>
-		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="9" duration="1001" default_duration="143" action_time="572" step="20">
+		<anim idx="20" name="Taunt" startstate="1" endstate="1" frames="9" duration="994" default_duration="142" action_time="710" step="0">
 			<replace layer="1" image="7" offsetx="-100" offsety="-120" />
 			<replace layer="2" image="8" offsetx="-100" offsety="-120" />
 			<frame idx="1" duration="0" />
-			<frame idx="2" duration="143" />
-			<frame idx="3" duration="143" />
-			<frame idx="4" duration="143" />
-			<frame idx="5" duration="143" />
-			<frame idx="6" duration="143" />
-			<frame idx="7" duration="143" />
-			<frame idx="8" duration="143" />
+			<frame idx="2" duration="142" />
+			<frame idx="3" duration="142" />
+			<frame idx="4" duration="142" />
+			<frame idx="5" duration="142" />
+			<frame idx="6" duration="142" />
+			<frame idx="7" duration="142" />
+			<frame idx="8" duration="142" />
 			<frame idx="9" duration="0" />
 		</anim>
 	</anims>

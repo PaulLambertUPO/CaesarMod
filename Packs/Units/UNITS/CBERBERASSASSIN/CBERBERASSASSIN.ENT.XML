@@ -129,7 +129,7 @@
 <frame idx="6" duration="100"/>
 <frame idx="7" duration="0"/>
 </anim>
-<anim idx="20" name="taunt" startstate="1" endstate="1" frames="12" duration="980" default_duration="0" action_time="0" step="0">
+<anim idx="20" name="taunt" startstate="1" endstate="1" frames="12" duration="980" default_duration="98" action_time="686" step="0">
 <replace layer="1" image="7" offsetx="-93" offsety="-115"/>
 <replace layer="2" image="8" offsetx="-93" offsety="-115"/>
 <frame idx="1" duration="0"/>

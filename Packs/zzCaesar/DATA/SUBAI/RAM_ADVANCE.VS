@@ -18,7 +18,7 @@ if (.IsValid)
 					break;
 				}
 
-			if (.Goto(pt, 0, 2000, false, 0))
+			if (.Goto(pt, 0, 2000, false, 1500))
 				break;
 		}
 	}

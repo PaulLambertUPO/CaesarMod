@@ -105,10 +105,12 @@ while (ol.count > 0) {
 					if (u.command != "enter")
 						if (u.command != "sleep")
 							check_ruins = true;
+						else
+							continue;
 
 			if (u.command == "getitem")
 				continue;
-			if (u.items_count < u.max_items)
+			if (u.free_item_slots > 0)
 				if (u.GetSquad().TakeNearbyItems(u.sight))
 					continue;
 			if (u.command != "idle")
@@ -119,7 +121,7 @@ while (ol.count > 0) {
 			if (u.HasItem("Spoils of War")) {
 				Item item;
 				int spoils;
-				for (i = 1; i <= u.items_count; i += 1) {
+				for (i = u.items_count; i >= 1; i -= 1) {
 					item = u.GetItem(i);
 					if (item.IsValid)
 						if (item.name == "Spoils of War")
@@ -129,7 +131,7 @@ while (ol.count > 0) {
 					u.SetCommand("enter", hall);
 					continue;
 				}
-				else if (u.items_count == u.max_items) {
+				else if (u.free_item_slots <= 0) {
 					u.SetCommand("enter", hall);
 					continue;
 				}
@@ -138,7 +140,7 @@ while (ol.count > 0) {
 			//take nearby neutral villages
 			if (villages.count > 0) {
 				Obj village_to_take;
-				village_to_take = villages.ObjPlayer(16).FilterClosest(u.pos, 1)[0];
+				village_to_take = villages.ObjPlayer(16).FilterClosest(u.posRH, 1)[0];
 				if (village_to_take.IsValid) {
 					u.SetCommand("approach", village_to_take);
 					continue;
@@ -149,18 +151,18 @@ while (ol.count > 0) {
 			if (u.inherentlevel < 10)
 				if (IsResearched(u.player, "Gambler's Day"))
 					if (!slow_lvl_10_animals.IsEmpty) {
-						u.SetCommand("attack", slow_lvl_10_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
+						u.SetCommand("attack", slow_lvl_10_animals.GetObjList().FilterClosest(u.posRH, 1)[0]);
 						continue;
 					}
 					else if (!wolves.IsEmpty) {
-						u.SetCommand("attack", wolves.GetObjList().FilterClosest(u.pos, 1)[0]);
+						u.SetCommand("attack", wolves.GetObjList().FilterClosest(u.posRH, 1)[0]);
 						continue;
 					}
 
 			//farm some exp with animals near the stronghold
 			if (u.inherentlevel < 3)
 				if (!slow_animals.IsEmpty) {
-					u.SetCommand("attack", slow_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
+					u.SetCommand("attack", slow_animals.GetObjList().FilterClosest(u.posRH, 1)[0]);
 					continue;
 				}
 
@@ -169,7 +171,7 @@ while (ol.count > 0) {
 				if (u.health >= MIN(750, u.maxhealth * 3 / 4))
 					if (c_outposts.count > 0) {
 						Obj outpost_to_farm;
-						outpost_to_farm = c_outposts.ObjPlayer(15).FilterClosest(u.pos, 1)[0];
+						outpost_to_farm = c_outposts.ObjPlayer(15).FilterClosest(u.posRH, 1)[0];
 						if (outpost_to_farm.IsValid)
 							if (outpost_to_farm.AsBuilding().settlement.ObjectsAround("CMaceman").count > 0) {
 								u.SetCommand("approach", outpost_to_farm);
@@ -195,7 +197,7 @@ while (ol.count > 0) {
 						if (class_name != "BOutpost")
 							if (class_name != "IOutpost") {
 								Obj outpost_to_train;
-								outpost_to_train = training_outposts.ObjAlly(u.player).FilterClosest(u.pos, 1)[0];
+								outpost_to_train = training_outposts.ObjAlly(u.player).FilterClosest(u.posRH, 1)[0];
 								if (outpost_to_train.IsValid) {
 									u.SetCommand("enter", outpost_to_train);
 									continue;
@@ -206,11 +208,11 @@ while (ol.count > 0) {
 			//try to hunt a slow/fast animal
 			if (u.inherentlevel < 8) {
 				if (!slow_animals.IsEmpty) {
-					u.SetCommand("attack", slow_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
+					u.SetCommand("attack", slow_animals.GetObjList().FilterClosest(u.posRH, 1)[0]);
 					continue;
 				}
 				if (!fast_animals.IsEmpty) {
-					u.SetCommand("attack", fast_animals.GetObjList().FilterClosest(u.pos, 1)[0]);
+					u.SetCommand("attack", fast_animals.GetObjList().FilterClosest(u.posRH, 1)[0]);
 					continue;
 				}
 			}

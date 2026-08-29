@@ -9,7 +9,7 @@ if (.IsValid)
 		if (.GetAnim() == 17)//spawn
 			Sleep(.TimeToAnimFinish);
 
-		while (!.Goto(pt, 0, 2000, false, 0))
+		while (!.Goto(pt, 0, 2000, false, 1500))
 			;
 	}
 

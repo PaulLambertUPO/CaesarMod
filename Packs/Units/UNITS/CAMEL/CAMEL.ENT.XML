@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
 
-<entity name="Camel" type="vx/unit" variations="8" pass_file="Camel.pass">
+<entity name="Camel" type="vx/unit" variations="8" pass_file="">
 <images>
 <image idx="1" file="die.rle" drawmode="player_color" remaping="none" rows="18" columns="8"/>
 <image idx="2" file="die_shadow.rle" drawmode="shadow" remaping="none" rows="18" columns="8"/>

@@ -18,17 +18,18 @@ if (.IsValid)
 				for (i = ol.count - 1; i >= 0; i -= 1) {
 					o = ol[i];
 					if (o.IsAlive)
-						if (!o.AsUnit().IsCursed) {
-							d = .DistTo(o);
-							if (target.IsDead) {
-								target = o;
-								best_dist = d;
+						if (!o.AsShip().IsValid)
+							if (!o.AsUnit().IsCursed) {
+								d = .DistTo(o);
+								if (target.IsDead) {
+									target = o;
+									best_dist = d;
+								}
+								else if (d < best_dist) {
+									target = o;
+									best_dist = d;
+								}
 							}
-							else if (d < best_dist) {
-								target = o;
-								best_dist = d;
-							}
-						}
 				}
 			}
 			while (!.Goto(pt, 0, 2000, false, -1)) {
@@ -37,17 +38,18 @@ if (.IsValid)
 				for (i = ol.count - 1; i >= 0; i -= 1) {
 					o = ol[i];
 					if (o.IsAlive)
-						if (!o.AsUnit().IsCursed) {
-							d = .DistTo(o);
-							if (target.IsDead) {
-								target = o;
-								best_dist = d;
+						if (!o.AsShip().IsValid)
+							if (!o.AsUnit().IsCursed) {
+								d = .DistTo(o);
+								if (target.IsDead) {
+									target = o;
+									best_dist = d;
+								}
+								else if (d < best_dist) {
+									target = o;
+									best_dist = d;
+								}
 							}
-							else if (d < best_dist) {
-								target = o;
-								best_dist = d;
-							}
-						}
 				}
 				if (target.IsAlive)
 					if (.DistTo(pt) < .sight)
@@ -65,17 +67,18 @@ if (.IsValid)
 				for (i = ol.count - 1; i >= 0; i -= 1) {
 					o = ol[i];
 					if (o.IsAlive)
-						if (!o.AsUnit().IsCursed) {
-							d = .DistTo(o);
-							if (target.IsDead) {
-								target = o;
-								best_dist = d;
+						if (!o.AsShip().IsValid)
+							if (!o.AsUnit().IsCursed) {
+								d = .DistTo(o);
+								if (target.IsDead) {
+									target = o;
+									best_dist = d;
+								}
+								else if (d < best_dist) {
+									target = o;
+									best_dist = d;
+								}
 							}
-							else if (d < best_dist) {
-								target = o;
-								best_dist = d;
-							}
-						}
 				}
 				j -= 1;
 			}

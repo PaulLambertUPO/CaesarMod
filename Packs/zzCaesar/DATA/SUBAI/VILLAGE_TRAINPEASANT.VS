@@ -15,8 +15,9 @@ this = This.AsBuilding();
 
 	set = .settlement;
 	pt_pos = .pos;
+	i = .radius;
 	plr = .player;
-	rad = GetConst("VillageTrainPeasantRadius") - .radius;
+	rad = rand(GetConst("VillageTrainPeasantRadius") - i) + i;
 
 	if (.race == ImperialRome) {
 		villager_classes[0] = "HVillager";
@@ -29,7 +30,7 @@ this = This.AsBuilding();
 
 	for (i = GetConst("PopGroup"); i > 0; i -= 1) {
 		pt_dest.Set(1, 1);
-		pt_dest.SetLen(rad + rand(rad));
+		pt_dest.SetLen(rad);
 		pt_dest.Rot(rand(360));
 		pt_dest = pt_dest + pt_pos;
 

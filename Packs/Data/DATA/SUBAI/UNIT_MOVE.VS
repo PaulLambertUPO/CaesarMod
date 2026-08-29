@@ -9,7 +9,7 @@ if (.IsValid)
 		if (.AI)
 			.SetParryMode(false);
 
-		while (!.Goto(pt, 0, 2000, false, 0))
+		while (!.Goto(pt, 0, 2000, false, 1500))
 			;
 	}
 

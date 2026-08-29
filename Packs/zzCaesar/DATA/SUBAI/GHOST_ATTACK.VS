@@ -18,7 +18,7 @@ if (.IsValid)
 				if (.IsEnemy(u))
 					if (!u.InHolder)
 						if (.CanSee(u))
-							while (!.Goto(u, .range - 20, 3000, false, 0)) {
+							while (!.Goto(u, .range - 20, 2000, false, 1500)) {
 								if (u.IsDead)
 									break;
 								if (!.IsEnemy(u))

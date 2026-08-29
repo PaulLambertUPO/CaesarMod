@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
 
-<entity name="LionM" type="vx/unit" variations="8" pass_file="LionM.pass">
+<entity name="LionM" type="vx/unit" variations="8" pass_file="">
 <images>
 <image idx="1" file="Attack.rle" drawmode="player_color" remaping="none" rows="15" columns="8"/>
 <image idx="2" file="Attack_shadow.rle" drawmode="shadow" remaping="none" rows="15" columns="8"/>

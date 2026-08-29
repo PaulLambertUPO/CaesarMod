@@ -23,7 +23,7 @@ if (target.IsValid) {
 						if (!target.AsBuilding().IsCentralBuliding)
 							target = set.GetCentralBuilding();
 
-						while (!.Goto(target, 250, 1500, false, 0))
+						while (!.Goto(target, 250, 2000, false, 1500))
 							;
 
 						if (target.player != plr)

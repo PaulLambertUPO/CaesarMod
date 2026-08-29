@@ -13,7 +13,7 @@ if (.IsValid)
 			int start_time;
 			bool melee;
 
-			while (!.Goto(pt, 0, 2000, false, 0))
+			while (!.Goto(pt, 0, 2000, false, 1500))
 				;
 
 			start_time = GetTime();
