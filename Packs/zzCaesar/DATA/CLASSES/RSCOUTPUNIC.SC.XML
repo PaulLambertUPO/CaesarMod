@@ -2,4 +2,5 @@
 	<properties unit_specials="Defense skill, Keen sight, Rage, Toughness" />
 	<properties icon="gameres/icons/zpwRHorseman.bmp" />
 	<properties edittree_pos="Units/Roman/Scout (Punic)" />
+	<sounds command="VoiceRScoutPunic" />
 </class>

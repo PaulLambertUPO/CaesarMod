@@ -88,4 +88,6 @@
 	<defaultcmd target="CTent">
 		<cmd name="tribute_default" />
 	</defaultcmd>
+
+	<sounds select="Sounds/Selection/Shipyard.wav" />
 </class>

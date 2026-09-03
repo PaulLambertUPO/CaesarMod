@@ -1,0 +1,5 @@
+<entity description="Mist" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/Mist.wav" frequency="100" />
+	</files>
+</entity>

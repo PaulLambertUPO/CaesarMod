@@ -1,0 +1,17 @@
+<entity description="MageDeath" priority="UnitFight" type="UnitFight">
+	<files>
+		<sound file="Sounds/Death/Die_1.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_3.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_10.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_13.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_18.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_29.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_30.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_40.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_41.wav" frequency="4" />
+		<sound file="Sounds/Death/Die_42.wav" frequency="4" />
+		<sound file="Sounds/Death/Mage_Die_1.wav" frequency="20" />
+		<sound file="Sounds/Death/Mage_Die_2.wav" frequency="20" />
+		<sound file="Sounds/Death/Mage_Die_3.wav" frequency="20" />
+	</files>
+</entity>

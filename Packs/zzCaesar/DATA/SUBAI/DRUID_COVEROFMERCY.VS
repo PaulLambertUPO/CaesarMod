@@ -31,5 +31,7 @@ if (.IsValid)
 
 		Place("CoverOfMercy", pt, plr).SetStamina(10);
 
+		.PlaySound("Data/Sound Entities/CoverOfMercy.xml");
+
 		.Damage(.health);
 	}

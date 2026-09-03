@@ -20,5 +20,5 @@
 		<cmd name="learn" />
 	</defaultcmd>
 
-	<sounds walk="UnarmoredUnitWalk" />
+	<sounds walk="UnarmoredUnitWalk" die="MageDeath" />
 </class>

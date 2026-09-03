@@ -11,16 +11,18 @@ f = MIN(.food, 1000);
 if (g > 0 || f > 0) {
 	ObjList strongholds;
 	Settlement set;
-	int i, plr;
+	IntArray notified_players;
+	int i, this_plr, set_plr;
 
-	plr = .player;
+	this_plr = .player;
 
 	strongholds = GetSettlements("BaseTownhall", 0);
 
 	for (i = strongholds.count - 1; i >= 0; i -= 1) {
 		set = strongholds[i].AsBuilding().settlement;
-		if (set.player != plr)
-			if (set.IsAlly(plr)) {
+		set_plr = set.player;
+		if (set_plr != this_plr)
+			if (set.IsAlly(this_plr)) {
 				if (g > 0) {
 					.SetGold(.gold - g);
 					set.SetGold(set.gold + g);
@@ -30,6 +32,10 @@ if (g > 0 || f > 0) {
 					.SetFood(.food - f);
 					set.SetFood(set.food + f);
 					f = MIN(.food, 1000);
+				}
+				if (notified_players[set_plr] != 1) {
+					UserNotification("ally resources", "", This.pos, set_plr);
+					notified_players[set_plr] = 1;
 				}
 				if (g <= 0)
 					if (f <= 0)

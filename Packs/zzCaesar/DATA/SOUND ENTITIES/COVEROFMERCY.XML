@@ -1,0 +1,5 @@
+<entity description="CoverOfMercy" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/CoverOfMercy.wav" frequency="100" />
+	</files>
+</entity>

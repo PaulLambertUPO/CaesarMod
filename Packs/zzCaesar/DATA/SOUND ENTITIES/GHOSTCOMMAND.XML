@@ -1,0 +1,7 @@
+<entity description="GhostCommand" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="Sounds/Effects/Ghost_Command/Ghost_Command_1.wav" frequency="34" />
+		<sound file="Sounds/Effects/Ghost_Command/Ghost_Command_2.wav" frequency="33" />
+		<sound file="Sounds/Effects/Ghost_Command/Ghost_Command_3.wav" frequency="33" />
+	</files>
+</entity>

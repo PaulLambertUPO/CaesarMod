@@ -1,0 +1,9 @@
+<entity description="VoiceRPrinciplePunic" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RPrinciple/For the glory of Rome.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPrinciple/Nothing stops my spear.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPrinciple/Tell me O Caesar.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPrinciple/Trust in my steel.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RPrinciple/Victory will be ours.wav" frequency="20" />
+	</files>
+</entity>

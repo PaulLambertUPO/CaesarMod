@@ -27,5 +27,5 @@
 		<cmd name="unload" />
 	</defaultcmd>
 
-	<sounds walk="ShipWalk" />
+	<sounds walk="ShipWalk" die="ShipDeath" />
 </class>

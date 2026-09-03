@@ -2,4 +2,5 @@
 	<properties unit_specials="Attack skill, Defense skill, Determination, Toughness" />
 	<properties icon="gameres/icons/zpwRSpearman.bmp" />
 	<properties edittree_pos="Units/Roman/Principle (Punic)" />
+	<sounds command="VoiceRPrinciplePunic" />
 </class>

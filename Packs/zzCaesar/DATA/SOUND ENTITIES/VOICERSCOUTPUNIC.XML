@@ -1,0 +1,9 @@
+<entity description="VoiceRScoutPunic" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RScout/I will fight until death.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RScout/It_s time to advance.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RScout/May Mars guide us.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RScout/Onward.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RScout/Ready for battle.wav" frequency="20" />
+	</files>
+</entity>

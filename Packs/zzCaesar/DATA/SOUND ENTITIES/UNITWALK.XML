@@ -1,4 +1,4 @@
-<entity description="Unit Walk" priority="UnitWalk" type="UnitWalk">
+<entity description="UnitWalk" priority="UnitWalk" type="UnitWalk">
 	<files>
 		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_1.wav" frequency="7" />
 		<sound file="Sounds/Walk/Armored_Units_Walk/Armored_Unit_Walk_2.wav" frequency="7" />

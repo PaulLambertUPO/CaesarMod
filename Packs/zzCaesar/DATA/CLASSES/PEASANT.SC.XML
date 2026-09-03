@@ -23,5 +23,5 @@
 		<cmd name="transport" />
 	</defaultcmd>
 
-	<sounds walk="UnarmoredUnitWalk" />
+	<sounds walk="UnarmoredUnitWalk" die="PeasantDeath" />
 </class>

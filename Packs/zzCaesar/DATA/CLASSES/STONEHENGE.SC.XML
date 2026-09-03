@@ -45,4 +45,6 @@
 		help="contents/capturing"
 		rollover="Energy"
 	/>
+
+	<sounds select="Sounds/Selection/Stonehenge.wav" />
 </class>

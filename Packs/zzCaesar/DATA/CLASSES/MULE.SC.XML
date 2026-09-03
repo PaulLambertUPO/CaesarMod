@@ -18,4 +18,6 @@
 	<defaultcmd target="Inn">
 		<cmd name="transport" />
 	</defaultcmd>
+
+	<sounds command="VoiceGMaleVillager" walk="UnarmoredUnitWalk" die="MuleDeath" />
 </class>

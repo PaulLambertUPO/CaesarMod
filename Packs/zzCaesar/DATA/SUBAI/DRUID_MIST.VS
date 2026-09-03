@@ -13,5 +13,7 @@ if (.IsValid)
 
 		Place("Mist", pt, .player).SetStamina(10);
 
+		.PlaySound("Data/Sound Entities/Mist.xml");
+
 		.Damage(.health);
 	}

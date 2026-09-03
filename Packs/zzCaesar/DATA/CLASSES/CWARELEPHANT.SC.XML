@@ -15,5 +15,5 @@
 	<properties help="contents/units/CWarElephant" />
 	<properties edittree_pos="Units/Carthage/War Elephant" />
 
-	<sounds idle="CWarElephant Idle" command="VoiceCWarElephant" attack="CWarElephant Attack" die="CWarElephant Death" />
+	<sounds idle="CWarElephantIdle" command="VoiceCWarElephant" walk="CWarElephantWalk" attack="CWarElephantAttack" die="CWarElephantDeath" />
 </class>

@@ -1,4 +1,4 @@
-<entity description="CWarElephant Death" priority="UnitFight" type="UnitFight">
+<entity description="CWarElephantDeath" priority="UnitFight" type="UnitFight">
 	<files>
 		<sound file="Sounds/Animals/Elephant/Elephant_Die_1.wav" frequency="50" />
 		<sound file="Sounds/Animals/Elephant/Elephant_Die_2.wav" frequency="50" />

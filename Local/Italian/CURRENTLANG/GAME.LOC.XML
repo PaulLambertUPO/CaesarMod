@@ -3103,6 +3103,7 @@
 <translationtableentry text="Location message" result="Posizione del messaggio" />
 <translationtableentry text="Training completed" result="Reclutamento completato" />
 <translationtableentry text="Investment completed" result="Investimento completato" />
+<translationtableentry text="An ally sent you resources" result="Un alleato ti ha inviato risorse" />
 <translationtableentry text="Note: %s1" result="Obiettivo: %s1" />
 <translationtableentry text="Diplomacy relations changed" result="Cambiamento nelle relazioni diplomatiche" />
 <!-- end notifications -->

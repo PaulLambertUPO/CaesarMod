@@ -69,5 +69,5 @@
 		<cmd name="transport" />
 	</defaultcmd>
 
-	<sounds die="GhostDie" />
+	<sounds command="GhostCommand" die="GhostDie" />
 </class>

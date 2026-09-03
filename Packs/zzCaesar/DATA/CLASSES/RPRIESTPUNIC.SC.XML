@@ -2,4 +2,5 @@
 	<properties unit_specials="Active, Healing, Toughness" />
 	<properties icon="gameres/icons/zpwPriest.bmp" />
 	<properties edittree_pos="Units/Roman/Priest (Punic)" />
+	<sounds command="VoiceRPriestPunic" />
 </class>

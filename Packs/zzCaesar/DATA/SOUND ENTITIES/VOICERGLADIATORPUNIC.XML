@@ -1,0 +1,9 @@
+<entity description="VoiceRGladiatorPunic" priority="UnitOrder" type="UnitOrder">
+	<files>
+		<sound file="CurrentLang/Voices/RGladiator/Fight and win.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RGladiator/Hail emperor.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RGladiator/I am well trained.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RGladiator/Morituri te salutant.wav" frequency="20" />
+		<sound file="CurrentLang/Voices/RGladiator/Victory will be ours.wav" frequency="20" />
+	</files>
+</entity>

@@ -42,4 +42,6 @@
 	<defaultcmd target="">
 		<cmd name="unitsout" />
 	</defaultcmd>
+
+	<sounds select="Sounds/Selection/Teuton Tent.wav" />
 </class>

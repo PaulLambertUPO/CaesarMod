@@ -11,4 +11,6 @@
 	<properties select_class="OldMan" />
 
 	<properties display_name="Old Man" display_name_plural="Old Men" />
+
+	<sounds walk="UnarmoredUnitWalk" die="MageDeath" />
 </class>

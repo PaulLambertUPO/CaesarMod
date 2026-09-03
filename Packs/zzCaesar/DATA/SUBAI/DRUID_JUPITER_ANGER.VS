@@ -30,6 +30,7 @@ if (.IsValid)
 								if (!u.InHolder)
 									if (.CanSee(u)) {//do not kill for consistency with "unit_on_kill.vs"
 										CreateFeedback("Lightning3", u);
+										u.PlaySound("Data/Sound Entities/JupiterAnger.xml");
 										if (u.AsHero())
 											u.Damage(MIN(40, u.health - 1));
 										else

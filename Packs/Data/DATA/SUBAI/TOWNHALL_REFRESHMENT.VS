@@ -19,3 +19,5 @@ for (i = ol.count - 1; i >= 0; i -= 1) {
 				CreateFeedback("StaminaBoost", o.AsUnit());
 			}
 }
+
+.PlaySound("Data/Sound Entities/TownhallRefreshment.xml");

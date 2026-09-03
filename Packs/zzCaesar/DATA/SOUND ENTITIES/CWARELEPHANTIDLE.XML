@@ -1,0 +1,7 @@
+<entity description="CWarElephantIdle" priority="UnitIdle" type="UnitIdle">
+	<files>
+		<sound file="Sounds/Animals/Elephant/Elephant_Idle_1.wav" frequency="25" />
+		<sound file="Sounds/Animals/Elephant/Elephant_Idle_2.wav" frequency="25" />
+		<sound file="" frequency="50" />
+	</files>
+</entity>
