@@ -216,6 +216,7 @@ if (.IsValid)
 				if (vict.IsHeirOf("RPriest"))
 					if (IsResearched(vict.player, "Wrath of Jupiter")) {//do not kill to avoid the "resurrection bug" that occurs when a unit is healed upon dying
 						CreateFeedback("Lightning3", this);
+						.PlaySound("Data/Sound Entities/JupiterAnger.xml");
 						if (this_is_hero)
 							.Damage(MIN(40, .health - 1));
 						else

@@ -9,6 +9,15 @@
 			locationx="7711"
 			locationy="12887"/>
 		<note
+			id="Withstand the attacks."
+			title="Withstand the attacks"
+			text="To drive out the Roman oppressors, you will have to withstand a series of increasingly powerful attacks. Until the enemy has been weakened, you will not be able to capture the cities of Memphis and Saqqara."
+			icon="gameres/noteicons/defense.bmp"
+			map="EgyptRebels"
+			show_on_minimap="0"
+			locationx="-1"
+			locationy="-1"/>
+		<note
 			id="Support priests."
 			title="Support priests"
 			text="As longs as your priests remain next to the obelisks near the villages, peasants and food will be sent to Herakleopolis Magna."

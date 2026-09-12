@@ -35,7 +35,7 @@
 	<method sig="sacrifice" vs="data/subai/stonehenge_sacrifice.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
 	<method sig="gold_rain" vs="data/subai/stonehenge_gold_rain.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 	<method sig="plague" vs="data/subai/stonehenge_plague.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
-	<method sig="bloodlust" vs="data/subai/stonehenge_bloodlust.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="bloodlust" vs="data/subai/stonehenge_bloodlust.vs" onfinish="data/subai/stonehenge_onfinish_bloodlust.vs" />
 	<method sig="starvation" vs="data/subai/stonehenge_starvation.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
 	<method sig="earthquake" vs="data/subai/stonehenge_earthquake.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 	<method sig="teuton_horde" vs="data/subai/stonehenge_teuton_horde.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />

@@ -117,9 +117,9 @@
 <translationtableentry text="Stamina Diamond" result="Diamante energético" />
 <translationtableentry text="Restores the stamina of the owner's attached units by 1 every 15 seconds" result="Restablece la energía de las unidades vinculadas al poseedor en 1 punto cada 15 segundos" />
 <translationtableentry text="Invigorating dark harp" result="Arpa oscura vigorizante" />
-<translationtableentry text="Adds 300 health and 6 armor.\nIt restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds" result="Aumenta la salud en 300 puntos y la defensa en 6 puntos.\nRestablece la energía del poseedor y de 8 aliados cercanos en 4 puntos cada 10 segundos" />
+<translationtableentry text="Adds 400 health and 2 armor.\nIt restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds" result="Aumenta la salud en 400 puntos y la defensa en 2 puntos.\nRestablece la energía del poseedor y de 8 aliados cercanos en 4 puntos cada 10 segundos" />
 <translationtableentry text="Travel boots" result="Botas de viaje" />
-<translationtableentry text="Add 300 health and 2 levels.\nThey restore the health of the owner and all attached units by 1 every 0.5 seconds" result="Aumentan la defensa en 4 puntos y el nivel en 2 puntos.\nRestablecen la salud del poseedor y de todas las unidades vinculadas en 1 punto cada 0,5 segundos" />
+<translationtableentry text="Add 6 armor.\nThey restore the health of the owner and all attached units by 1 every 0.5 seconds" result="Aumentan la defensa en 6 puntos.\nRestablecen la salud del poseedor y de todas las unidades vinculadas en 1 punto cada 0,5 segundos" />
 <translationtableentry text="Gem of wisdom" result="Gema de la sabiduría" />
 <translationtableentry text="Gem of Wisdom" result="Gema de la sabiduría" />
 <translationtableentry text="Gives a 33% chance to gain 2 experience every time that an attached unit dies (only if the owner is not sheltered)" result="Proporciona una probabilidad del 33% de ganar 2 puntos de experiencia cada vez que una unidad vinculada muere (solo si el poseedor no está a cubierto)" />
@@ -1567,18 +1567,12 @@
 <translationtableentry text="Grass 3" result="Hierba 3" />
 <translationtableentry text="Grass 4" result="Hierba 4" />
 <translationtableentry text="Grass 5" result="Hierba 5" />
+<translationtableentry text="Marsh" result="Pantano" />
 <translationtableentry text="Ground" result="Tierra" />
 <translationtableentry text="Ground 1" result="Tierra 1" />
 <translationtableentry text="Ground 2" result="Tierra 2" />
 <translationtableentry text="Ground 3" result="Tierra 3" />
 <translationtableentry text="Ground 4" result="Tierra 4" />
-<translationtableentry text="Rocks" result="Rocas" />
-<translationtableentry text="Rocks 1" result="Rocas 1" />
-<translationtableentry text="Rocks 2" result="Rocas 2" />
-<translationtableentry text="Rocks 3" result="Rocas 3" />
-<translationtableentry text="Marsh" result="Pantano" />
-<translationtableentry text="Shore rocks" result="Rocas fragmentadas 1" />
-<translationtableentry text="Shore rocks 2" result="Rocas fragmentadas 2" />
 <translationtableentry text="Sand" result="Arena" />
 <translationtableentry text="Sands" result="Playa" />
 <translationtableentry text="Sand waves" result="Arena con ondas" />
@@ -1589,6 +1583,13 @@
 <translationtableentry text="Shallow water 2" result="Agua poco profunda 2" />
 <translationtableentry text="Deep water" result="Agua profunda" />
 <translationtableentry text="Not navigable water" result="Agua no navegable" />
+<translationtableentry text="Rocks" result="Rocas" />
+<translationtableentry text="Rocks 1" result="Rocas 1" />
+<translationtableentry text="Rocks 2" result="Rocas 2" />
+<translationtableentry text="Rocks 3" result="Rocas 3" />
+<translationtableentry text="Rocks 4" result="Rocas 4" />
+<translationtableentry text="Shore rocks 1" result="Rocas fragmentadas 1" />
+<translationtableentry text="Shore rocks 2" result="Rocas fragmentadas 2" />
 <translationtableentry text="Roads" result="Calzadas" />
 <translationtableentry text="Roman roads" result="Calzadas romanas" />
 <translationtableentry text="Carthaginian roads" result="Calzadas cartaginesas" />
@@ -1598,24 +1599,31 @@
 <translationtableentry text="Autumn grass 3" result="Hierba de otoño 3" />
 <translationtableentry text="Autumn grass 4" result="Hierba de otoño 4" />
 <translationtableentry text="Autumn grass 5" result="Hierba de otoño 5" />
+<translationtableentry text="Autumn marsh" result="Pantano de otoño" />
 <translationtableentry text="Autumn ground" result="Tierra de otoño" />
+<translationtableentry text="Autumn sand with grass" result="Arena y hierba de otoño" />
 <translationtableentry text="Autumn roads" result="Calzadas de otoño" />
 <translationtableentry text="Autumn Roman roads" result="Calzadas romanas de otoño" />
 <translationtableentry text="Autumn Carthaginian roads" result="Calzadas cartaginesas de otoño" />
 <translationtableentry text="Autumn Iberian roads" result="Calzadas iberas de otoño" />
-<translationtableentry text="Autumn sand with grass" result="Arena y hierba de otoño" />
 <translationtableentry text="Winter grass 1" result="Hierba de invierno 1" />
 <translationtableentry text="Winter grass 2" result="Hierba de invierno 2" />
 <translationtableentry text="Winter grass 3" result="Hierba de invierno 3" />
 <translationtableentry text="Winter grass 4" result="Hierba de invierno 4" />
 <translationtableentry text="Winter grass 5" result="Hierba de invierno 5" />
+<translationtableentry text="Winter marsh" result="Pantano de invierno" />
 <translationtableentry text="Winter ground 1" result="Tierra de invierno 1" />
 <translationtableentry text="Winter ground 2" result="Tierra de invierno 2" />
 <translationtableentry text="Winter ground 3" result="Tierra de invierno 3" />
+<translationtableentry text="Winter ground 4" result="Tierra de invierno 4" />
 <translationtableentry text="Winter sands" result="Playa de invierno" />
-<translationtableentry text="Winter rocks" result="Rocas de invierno" />
-<translationtableentry text="Winter shore rocks" result="Rocce fragmentadas de invierno" />
-<translationtableentry text="Winter marsh" result="Pantano de invierno" />
+<translationtableentry text="Winter sand waves" result="Arena con ondas de invierno" />
+<translationtableentry text="Winter rocks 1" result="Rocas de invierno 1" />
+<translationtableentry text="Winter rocks 2" result="Rocas de invierno 2" />
+<translationtableentry text="Winter rocks 3" result="Rocas de invierno 3" />
+<translationtableentry text="Winter rocks 4" result="Rocas de invierno 4" />
+<translationtableentry text="Winter shore rocks 1" result="Rocce fragmentadas de invierno 1" />
+<translationtableentry text="Winter shore rocks 2" result="Rocce fragmentadas de invierno 2" />
 <translationtableentry text="Winter roads" result="Calzadas de invierno" />
 <translationtableentry text="Winter Roman roads" result="Calzadas romanas de invierno" />
 <translationtableentry text="Winter Carthaginian roads" result="Calzadas cartaginesas de invierno" />

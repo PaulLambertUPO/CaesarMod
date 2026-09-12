@@ -6526,13 +6526,13 @@ Se genera en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Harp.bmp">
 Arpa oscura vigorizante
-Aumenta la salud en 300 puntos y la defensa en 6 puntos.
+Aumenta la salud en 400 puntos y la defensa en 2 puntos.
 Restablece la energía del poseedor y de 8 aliados cercanos en 4 puntos cada 10 segundos.
 Se genera en las ruinas.
 			</entry>
 			<entry image="UI/Icons/Items/Boots.bmp">
 Botas de viaje
-Aumentan la defensa en 4 puntos y el nivel en 2 puntos.
+Aumentan la defensa en 6 puntos.
 Restablecen la salud del poseedor y de todas las unidades vinculadas en 1 punto cada 0,5 segundos.
 Se generan en las ruinas.
 			</entry>

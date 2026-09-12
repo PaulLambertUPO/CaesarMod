@@ -6522,13 +6522,13 @@ It is generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Harp.bmp">
 Invigorating dark harp
-Adds 300 health and 6 armor.
+Adds 400 health and 2 armor.
 It restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds.
 It is generated in the ruins.
 			</entry>
 			<entry image="UI/Icons/Items/Boots.bmp">
 Travel boots
-Add 300 health and 2 levels.
+Add 6 armor.
 They restore the health of the owner and all attached units by 1 every 0.5 seconds.
 They are generated in the ruins.
 			</entry>

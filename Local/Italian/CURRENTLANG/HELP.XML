@@ -6526,13 +6526,13 @@ Viene generato nelle rovine.
 			</entry>
 			<entry image="UI/Icons/Items/Harp.bmp">
 Arpa oscura rinvigorente
-Aumenta la salute di 300 punti e la difesa di 6 punti.
+Aumenta la salute di 400 punti e la difesa di 2 punti.
 Ripristina l'energia del possessore e di 8 alleati vicini di 4 punti ogni 10 secondi.
 Viene generata nelle rovine.
 			</entry>
 			<entry image="UI/Icons/Items/Boots.bmp">
 Stivali da viaggio
-Aumentano la difesa di 4 punti e il livello di 2 punti.
+Aumentano la difesa di 6 punti.
 Ripristinano la salute del possessore e di tutte le unità vincolate di 1 punto ogni 0,5 secondi.
 Vengono generati nelle rovine.
 			</entry>

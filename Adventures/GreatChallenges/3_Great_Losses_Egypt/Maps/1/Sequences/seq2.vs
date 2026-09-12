@@ -1,5 +1,6 @@
 SetGlobalBloodlust(false);//bloodlust is bugged and its effect is kept active even in other games if the current one is quit before the ritual endsDiplCeaseFire(1, 2, true);
 
+DiplCeaseFire(1, 2, true);
 DiplCeaseFire(2, 1, true);
 DiplCeaseFire(1, 3, true);
 DiplCeaseFire(3, 1, true);
@@ -50,6 +51,7 @@ RunAIHelper("GuardArea_Right", "guard area", "Defenders_Right", "A_AdvanceA3");
 
 RunConv("C_Conv1");
 GiveNote("Herakleopolis Magna must not fall.");
+GiveNote("Withstand the attacks.");
 GiveNote("Support priests.");
 
 NO_HighPriest.SetCommand("enter", Town);
@@ -57,6 +59,7 @@ Sleep(3000);
 NO_HighPriest.Erase();
 Sleep(1000);
 
+NO_Pop.SetCommand("standstill");
 RunConv("C_Conv2");
 Sleep(500);
 GiveNote("Altar of the gods.");

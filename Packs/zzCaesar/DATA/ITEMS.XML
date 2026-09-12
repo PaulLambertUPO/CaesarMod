@@ -232,18 +232,18 @@
 		image="gameres/icons/items/Harp.bmp"
 		sound="ItemUse_DarkChant"
 		name="Invigorating dark harp"
-		description="Adds 300 health and 6 armor.\nIt restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds"
+		description="Adds 400 health and 2 armor.\nIt restores the stamina of the owner and 8 nearby allies by 4 every 10 seconds"
 		equip_script="file://Data/ItemScripts/invigorating dark harp.vs"
 		important="yes">
-		<bonus health="300" armor_slash="6" armor_pierce="6" />
+		<bonus health="400" armor_slash="2" armor_pierce="2" />
 	</item>
 	<item id="Travel boots"
 		image="gameres/icons/items/Boots.bmp"
 		name="Travel boots"
-		description="Add 300 health and 2 levels.\nThey restore the health of the owner and all attached units by 1 every 0.5 seconds"
+		description="Add 6 armor.\nThey restore the health of the owner and all attached units by 1 every 0.5 seconds"
 		equip_script="file://Data/ItemScripts/travel boots.vs"
 		important="yes">
-		<bonus armor_slash="4" armor_pierce="4" level="2" />
+		<bonus armor_slash="6" armor_pierce="6" />
 	</item>
 	<item id="Gem of Wisdom"
 		image="gameres/icons/items/Gem of Wisdom.bmp"

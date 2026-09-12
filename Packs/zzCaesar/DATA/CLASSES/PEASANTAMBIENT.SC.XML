@@ -8,6 +8,7 @@
 
 	<properties select_class="PeasantAmbient" />
 
+	<properties target_factor="-1" />
 	<properties healthbar_type="0" />
 	<properties no_transparent_draw="1" />
 

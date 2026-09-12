@@ -102,6 +102,7 @@ while (BadGuys1.obj.player == 4) {
 	else {
 		if (current_wave == 11) {
 			RunConv("C_Conv7");
+			RemoveNote("Withstand the attacks.");
 			GiveNote("Capture Memphis.");
 			GiveNote("Capture Saqqara.");
 			GetSettlement("S_BadGuys1").AllowCapture(true);

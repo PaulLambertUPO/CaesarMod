@@ -34,8 +34,6 @@ for (i = caster_player_units.count - 1; i >= 0; i -= 1) {
 
 Sleep(GetConst("StonehengeBloodlustTime"));
 
-SetGlobalBloodlust(false);
-
 for (i = caster_player_units.count - 1; i >= 0; i -= 1) {
 	o = caster_player_units[i];
 	if (o.IsAlive)
