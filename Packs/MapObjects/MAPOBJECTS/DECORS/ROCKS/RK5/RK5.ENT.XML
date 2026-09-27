@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="rk5" type="decor" variations="1" pass_file="rk5.pass">
+	<images>
+		<image idx="1" file="rk5" drawmode="normal" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="rock" image="1" z="1000" offsetx="-111" offsety="-68" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

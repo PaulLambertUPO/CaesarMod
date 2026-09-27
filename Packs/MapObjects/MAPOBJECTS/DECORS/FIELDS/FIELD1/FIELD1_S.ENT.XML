@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Field1_s" type="vx/building" variations="1" pass_file="Field1.pass">
+	<images>
+		<image idx="1" file="Field1_s" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="Field1_b" drawmode="player_color" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="field" image="1" z="500" offsetx="-160" offsety="-123" xray="1" />
+		<layer idx="2" name="tools" image="2" z="1000" offsetx="-160" offsety="-123" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

@@ -1,0 +1,4 @@
+<class id="Crack 04" altid="CliffDirt" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Crack 04/Crack 04.ent.xml">
+	<properties display_name="Crack 4" />
+	<properties edittree_pos="Structures/Others/Cracks/Crack 4" />
+</class>

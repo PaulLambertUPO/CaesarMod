@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="PeachTree" type="tree" variations="1" pass_file="PeachTree.pass">
+	<images>
+		<image idx="1" file="PeachTree_k" drawmode="normal" remaping="pingpong" rows="5" columns="1" />
+		<image idx="2" file="PeachTree_st" drawmode="normal" remaping="pingpong" rows="5" columns="1" />
+		<image idx="3" file="PeachTree_shadow" drawmode="shadow" remaping="pingpong" rows="5" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="korona" image="1" z="1000" offsetx="-118" offsety="-222" xray="1" />
+		<layer idx="2" name="styblo" image="2" z="1000" offsetx="-118" offsety="-222" />
+		<layer idx="3" name="shadow" image="3" z="800" offsetx="-144" offsety="-222" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="7" duration="1800" default_duration="360">
+			<replace layer="1" image="1" offsetx="-118" offsety="-222" />
+			<replace layer="2" image="2" offsetx="-118" offsety="-222" />
+			<replace layer="3" image="3" offsetx="-144" offsety="-222" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="360" />
+			<frame idx="3" duration="360" />
+			<frame idx="4" duration="360" />
+			<frame idx="5" duration="360" />
+			<frame idx="6" duration="360" />
+			<frame idx="7" duration="0" />
+		</anim>
+	</anims>
+</entity>

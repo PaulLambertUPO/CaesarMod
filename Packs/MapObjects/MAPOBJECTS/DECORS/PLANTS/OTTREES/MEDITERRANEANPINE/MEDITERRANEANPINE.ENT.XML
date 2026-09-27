@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="MediterraneanPine" type="tree" variations="1" pass_file="MediterraneanPine.pass">
+	<images>
+		<image idx="1" file="MediterraneanPine_left" drawmode="normal" remaping="none" rows="5" columns="1" />
+		<image idx="2" file="MediterraneanPine_right" drawmode="normal" remaping="none" rows="5" columns="1" />
+		<image idx="3" file="MediterraneanPine_shadow_left" drawmode="shadow" remaping="none" rows="5" columns="1" />
+		<image idx="4" file="MediterraneanPine_shadow_right" drawmode="shadow" remaping="none" rows="5" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="korona_left" image="1" z="1000" offsetx="-225" offsety="-334" xray="1" />
+		<layer idx="2" name="korona_right" image="2" z="1000" offsetx="0" offsety="-334" xray="1" />
+		<layer idx="3" name="shadow_left" image="3" z="800" offsetx="-265" offsety="-267" />
+		<layer idx="4" name="shadow_right" image="4" z="800" offsetx="-40" offsety="-267" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="7" duration="1800" default_duration="360">
+			<replace layer="1" image="1" offsetx="-225" offsety="-334" />
+			<replace layer="2" image="2" offsetx="0" offsety="-334" />
+			<replace layer="3" image="3" offsetx="-265" offsety="-267" />
+			<replace layer="4" image="4" offsetx="-40" offsety="-267" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="360" />
+			<frame idx="3" duration="360" />
+			<frame idx="4" duration="360" />
+			<frame idx="5" duration="360" />
+			<frame idx="6" duration="360" />
+			<frame idx="7" duration="0" />
+		</anim>
+	</anims>
+</entity>

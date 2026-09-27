@@ -1643,6 +1643,7 @@
 <translationtableentry text="Tree 4" result="Albero 4" />
 <translationtableentry text="Tree 5" result="Albero 5" />
 <translationtableentry text="Tree 6" result="Albero 6" />
+<translationtableentry text="Tree 7" result="Albero 7" />
 <translationtableentry text="Pine trees" result="Conifere" />
 <translationtableentry text="Pine tree 1" result="Conifera 1" />
 <translationtableentry text="Pine tree 2" result="Conifera 2" />
@@ -1670,12 +1671,12 @@
 <translationtableentry text="Palm 5" result="Palma 5" />
 <translationtableentry text="Palm 6" result="Palma 6" />
 <translationtableentry text="Others" result="Altre" />
-<translationtableentry text="Holms Oak" result="Leccio" />
-<translationtableentry text="Big Greek Cypress" result="Cipresso greco grande" />
-<translationtableentry text="Small Greek Cypress" result="Cipresso greco piccolo" />
+<translationtableentry text="Holm oak" result="Leccio" />
+<translationtableentry text="Big cypress" result="Cipresso grande" />
+<translationtableentry text="Small cypress" result="Cipresso piccolo" />
 <translationtableentry text="Olive" result="Olivo" />
-<translationtableentry text="Peach Tree" result="Pesco" />
-<translationtableentry text="Mediterranean Pine" result="Pino mediterraneo" />
+<translationtableentry text="Peach tree" result="Pesco" />
+<translationtableentry text="Mediterranean pine" result="Pino mediterraneo" />
 <translationtableentry text="Bushes" result="Arbusti" />
 <translationtableentry text="Green bushes" result="Arbusti verdi" />
 <translationtableentry text="Bush 1" result="Arbusto 1" />
@@ -1688,7 +1689,7 @@
 <translationtableentry text="Bush 8" result="Arbusto 8" />
 <translationtableentry text="Bush 9" result="Arbusto 9" />
 <translationtableentry text="Bush 10" result="Arbusto 10" />
-<translationtableentry text="Grape Vine" result="Vite" />
+<translationtableentry text="Grapevine" result="Vite" />
 <translationtableentry text="Dead bushes" result="Arbusti secchi" />
 <translationtableentry text="Dead bush 1" result="Arbusto secco 1" />
 <translationtableentry text="Dead bush 2" result="Arbusto secco 2" />
@@ -1738,7 +1739,7 @@
 <translationtableentry text="Skeleton 10" result="Scheletro 10" />
 <translationtableentry text="Skeleton 11" result="Scheletro 11" />
 <translationtableentry text="Skeleton 12" result="Scheletro 12" />
-<translationtableentry text="Skull" result="Teschio" />
+<translationtableentry text="Skeleton 13" result="Scheletro 13" />
 <translationtableentry text="Chopped trees" result="Alberi tagliati" />
 <translationtableentry text="Chopped trees 1" result="Alberi tagliati 1" />
 <translationtableentry text="Chopped trees 2" result="Alberi tagliati 2" />
@@ -1750,7 +1751,7 @@
 <translationtableentry text="Trunk heap 1" result="Mucchio di tronchi 1" />
 <translationtableentry text="Trunk heap 2" result="Mucchio di tronchi 2" />
 <translationtableentry text="Trunk heap 3" result="Mucchio di tronchi 3" />
-<translationtableentry text="Broken cart" result="Carri rotti" />
+<translationtableentry text="Broken carts" result="Carri rotti" />
 <translationtableentry text="Broken cart 1" result="Carro rotto 1" />
 <translationtableentry text="Broken cart 2" result="Carro rotto 2" />
 <translationtableentry text="Broken cart 3" result="Carro rotto 3" />
@@ -1780,6 +1781,7 @@
 <translationtableentry text="Crack 1" result="Fessura 1" />
 <translationtableentry text="Crack 2" result="Fessura 2" />
 <translationtableentry text="Crack 3" result="Fessura 3" />
+<translationtableentry text="Crack 4" result="Fessura 4" />
 <translationtableentry text="Desert" result="Deserto" />
 <translationtableentry text="Cube 1" result="Cubo 1" />
 <translationtableentry text="Cube 2" result="Cubo 2" />
@@ -1835,9 +1837,35 @@
 <translationtableentry text="Field 2" result="Campo coltivato 2" />
 <translationtableentry text="Field 3" result="Campo coltivato 3" />
 <translationtableentry text="Field 4" result="Campo coltivato 4" />
+<translationtableentry text="Field (uncultivated)" result="Campo (non coltivato)" />
 <translationtableentry text="Haystack Big" result="Mucchio di paglia grande" />
 <translationtableentry text="Haystack Small" result="Mucchio di paglia piccolo" />
 <translationtableentry text="Flame" result="Fiamma" />
+<translationtableentry text="Natural debris" result="Detriti naturali" />
+<translationtableentry text="Natural debris 01" result="Detriti naturali 1" />
+<translationtableentry text="Natural debris 02" result="Detriti naturali 2" />
+<translationtableentry text="Natural debris 03" result="Detriti naturali 3" />
+<translationtableentry text="Natural debris 04" result="Detriti naturali 4" />
+<translationtableentry text="Natural debris 05" result="Detriti naturali 5" />
+<translationtableentry text="Natural debris 06" result="Detriti naturali 6" />
+<translationtableentry text="Natural debris 07" result="Detriti naturali 7" />
+<translationtableentry text="Natural debris 08" result="Detriti naturali 8" />
+<translationtableentry text="Natural debris 09" result="Detriti naturali 9" />
+<translationtableentry text="Natural debris 10" result="Detriti naturali 10" />
+<translationtableentry text="Natural debris 11" result="Detriti naturali 11" />
+<translationtableentry text="Natural debris 12" result="Detriti naturali 12" />
+<translationtableentry text="Natural debris 13" result="Detriti naturali 13" />
+<translationtableentry text="Natural debris 14" result="Detriti naturali 14" />
+<translationtableentry text="Natural debris 15" result="Detriti naturali 15" />
+<translationtableentry text="Natural debris 16" result="Detriti naturali 16" />
+<translationtableentry text="Natural debris 17" result="Detriti naturali 17" />
+<translationtableentry text="Natural debris 18" result="Detriti naturali 18" />
+<translationtableentry text="Natural debris 19" result="Detriti naturali 19" />
+<translationtableentry text="Natural debris 20" result="Detriti naturali 20" />
+<translationtableentry text="Natural debris 21" result="Detriti naturali 21" />
+<translationtableentry text="Natural debris 22" result="Detriti naturali 22" />
+<translationtableentry text="Natural debris 23" result="Detriti naturali 23" />
+<translationtableentry text="Natural debris 24" result="Detriti naturali 24" />
 <translationtableentry text="Rock Large 1" result="Roccia grande 1" />
 <translationtableentry text="Rock Large 2" result="Roccia grande 2" />
 <translationtableentry text="Rock Large 3" result="Roccia grande 3" />

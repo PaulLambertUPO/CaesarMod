@@ -1,7 +1,7 @@
 <class id="Swamp" parent="Object" cpp_class="CVXDecor"
-	entity_spring="MapObjects/Decors/blatobig/blatoBig_s.ent.xml"
-	entity_autumn="MapObjects/Decors/blatobig/blatoBig_a.ent.xml"
-	entity_winter="MapObjects/Decors/blatobig/blatoBig_w.ent.xml"
+	entity_spring="MapObjects/Decors/Swamps/SwampBig/SwampBig_s.ent.xml"
+	entity_autumn="MapObjects/Decors/Swamps/SwampBig/SwampBig_a.ent.xml"
+	entity_winter="MapObjects/Decors/Swamps/SwampBig/SwampBig_w.ent.xml"
 >
 	<properties display_name="Swamp (large)" />
 	<properties edittree_pos="Structures/Others/Swamps/Swamp (large)" />

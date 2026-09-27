@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="ct5" type="decor" variations="1" pass_file="ct5.pass">
+	<images>
+		<image idx="1" file="ct5" drawmode="normal" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="ct5_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="trees" image="1" z="1000" offsetx="-91" offsety="-63" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-91" offsety="-63" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

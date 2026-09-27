@@ -1,0 +1,4 @@
+<class id="NaturalDebris10" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Decors/NaturalDebris/nd10/nd10.ent.xml">
+	<properties display_name="Natural debris 10" />
+	<properties edittree_pos="Structures/Others/Natural debris/Natural debris 10" />
+</class>

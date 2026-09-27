@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="tr2" type="tree" variations="1" pass_file="tr2.pass">
+	<images>
+		<image idx="1" file="tr2" drawmode="normal" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="tr2_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="styblo" image="1" z="1000" offsetx="-73" offsety="-134" xray="1" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-73" offsety="-134" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="tr5" type="tree" variations="1" pass_file="tr5.pass">
+	<images>
+		<image idx="1" file="tr5" drawmode="normal" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="styblo" image="1" z="1000" offsetx="-91" offsety="-81" xray="1" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

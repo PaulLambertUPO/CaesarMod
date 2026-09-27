@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="rk8" type="decor" variations="1" pass_file="rk8.pass">
+	<images>
+		<image idx="1" file="rk8" drawmode="normal" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="rock" image="1" z="1000" offsetx="-88" offsety="-68" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

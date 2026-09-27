@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="th1" type="decor" variations="1" pass_file="th1.pass">
+	<images>
+		<image idx="1" file="th1" drawmode="normal" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="th1_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="trunk" image="1" z="1000" offsetx="-95" offsety="-87" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-95" offsety="-87" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

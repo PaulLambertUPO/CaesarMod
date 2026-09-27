@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="bs7_w" type="tree" variations="1" pass_file="bs7.pass">
+	<images>
+		<image idx="1" file="bs7_w" drawmode="normal" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="bs7_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="styblo" image="1" z="1000" offsetx="-143" offsety="-112" xray="1" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-143" offsety="-112" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="CarissaEdulis" type="tree" variations="1" pass_file="CarissaEdulis.pass">
+	<images>
+		<image idx="1" file="CarissaEdulis" drawmode="normal" remaping="none" rows="3" columns="1" />
+		<image idx="2" file="CarissaEdulis_shadow" drawmode="shadow" remaping="none" rows="3" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="korona" image="1" z="1000" offsetx="-68" offsety="-108" xray="1" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-85" offsety="-107" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="5" duration="1800" default_duration="600">
+			<replace layer="1" image="1" offsetx="-68" offsety="-108" />
+			<replace layer="2" image="2" offsetx="-85" offsety="-107" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="600" />
+			<frame idx="3" duration="600" />
+			<frame idx="4" duration="600" />
+			<frame idx="5" duration="0" />
+		</anim>
+	</anims>
+</entity>

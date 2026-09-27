@@ -1,3 +1,3 @@
-<class id="Field4Winter" parent="Field4" cpp_class="CVXDecor" entity="MapObjects/Decors/nivi/niva_05_w.ent.xml">
+<class id="Field4Winter" parent="Field4" cpp_class="CVXDecor" entity="MapObjects/Decors/Fields/Field4/Field4_w.ent.xml">
 	<properties edittree_pos="Structures/Others/Fields/Variant - Winter/Field 4" />
 </class>

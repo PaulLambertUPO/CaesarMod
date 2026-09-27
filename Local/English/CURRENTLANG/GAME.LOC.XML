@@ -13,6 +13,17 @@
 <translationtableentry text="Republican Roman walls" result="Roman walls" />
 <translationtableentry text="Imperial Roman walls" result="Greek walls" />
 <!-- end buildings (in game and in editor tree) -->
+<!-- start editor tree -->
+<translationtableentry text="Natural debris 01" result="Natural debris 1" />
+<translationtableentry text="Natural debris 02" result="Natural debris 2" />
+<translationtableentry text="Natural debris 03" result="Natural debris 3" />
+<translationtableentry text="Natural debris 04" result="Natural debris 4" />
+<translationtableentry text="Natural debris 05" result="Natural debris 5" />
+<translationtableentry text="Natural debris 06" result="Natural debris 6" />
+<translationtableentry text="Natural debris 07" result="Natural debris 7" />
+<translationtableentry text="Natural debris 08" result="Natural debris 8" />
+<translationtableentry text="Natural debris 09" result="Natural debris 9" />
+<!-- end editor tree -->
 <!-- start editor settings (all sections) -->
 <translationtableentry text="Do you really want to lose your current map and replace it with a randomly generated one" result="Do you really want to lose your current map and replace it with a randomly generated one?" />
 <translationtableentry text="Do you really want to delete this townhall and the whole settlement?" result="Do you really want to delete this building and the whole settlement?" />

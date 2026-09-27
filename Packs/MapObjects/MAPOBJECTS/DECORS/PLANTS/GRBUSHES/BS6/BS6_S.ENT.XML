@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="bs6_s" type="tree" variations="1" pass_file="bs6.pass">
+	<images>
+		<image idx="1" file="bs6_st" drawmode="normal" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="bs6_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+		<image idx="3" file="bs6_k_s" drawmode="normal" remaping="pingpong" rows="6" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="korona" image="3" z="1000" offsetx="-156" offsety="-190" xray="1" />
+		<layer idx="2" name="styblo" image="1" z="1000" offsetx="-156" offsety="-203" xray="1" />
+		<layer idx="3" name="shadow" image="2" z="800" offsetx="-156" offsety="-213" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="8" duration="1800" default_duration="300">
+			<replace layer="1" image="3" offsetx="-156" offsety="-190" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="300" />
+			<frame idx="3" duration="300" />
+			<frame idx="4" duration="300" />
+			<frame idx="5" duration="300" />
+			<frame idx="6" duration="300" />
+			<frame idx="7" duration="300" />
+			<frame idx="8" duration="0" />
+		</anim>
+	</anims>
+</entity>

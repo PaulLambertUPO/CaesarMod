@@ -1,3 +1,4 @@
+<!-- IMPORTANT: do not change the value of the "z" property, otherwise all existing maps will be affected! -->
 <terrain>
 	<!-- main terrains (both waters are hardcoded using SHALLOW_WATER_IDX and DEEP_WATER_IDX) -->
 	<layer z="0" type="2" display="Ground 1" image="terrain/%season%/ground1.vq" minimap="%season%/ground1.bmp" />

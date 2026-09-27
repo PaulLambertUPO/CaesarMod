@@ -1,0 +1,4 @@
+<class id="FieldDirt" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Decors/Fields/FieldDirt/FieldDirt.ent.xml">
+	<properties display_name="Field (uncultivated)" />
+	<properties edittree_pos="Structures/Others/Fields/Field (uncultivated)" />
+</class>

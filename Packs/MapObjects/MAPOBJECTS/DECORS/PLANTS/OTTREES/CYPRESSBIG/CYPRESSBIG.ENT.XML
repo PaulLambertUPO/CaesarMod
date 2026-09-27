@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="CypressBig" type="tree" variations="1" pass_file="CypressBig.pass">
+	<images>
+		<image idx="1" file="CypressBig" drawmode="normal" remaping="none" rows="5" columns="1" />
+		<image idx="2" file="CypressBig_shadow" drawmode="shadow" remaping="none" rows="5" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="korona" image="1" z="1000" offsetx="-104" offsety="-232" xray="1" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-104" offsety="-207" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="7" duration="1800" default_duration="360">
+			<replace layer="1" image="1" offsetx="-104" offsety="-232" />
+			<replace layer="2" image="2" offsetx="-104" offsety="-207" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="360" />
+			<frame idx="3" duration="360" />
+			<frame idx="4" duration="360" />
+			<frame idx="5" duration="360" />
+			<frame idx="6" duration="360" />
+			<frame idx="7" duration="0" />
+		</anim>
+	</anims>
+</entity>

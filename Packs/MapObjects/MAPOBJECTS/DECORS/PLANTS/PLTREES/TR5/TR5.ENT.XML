@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="tr5" type="tree" variations="1" pass_file="tr5.pass">
+	<images>
+		<image idx="1" file="tr5" drawmode="normal" remaping="none" rows="6" columns="1" />
+		<image idx="2" file="tr5_shadow" drawmode="shadow" remaping="none" rows="6" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="korona" image="1" z="1000" offsetx="-247" offsety="-295" xray="1" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-247" offsety="-295" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="8" duration="1800" default_duration="300">
+			<replace layer="1" image="1" offsetx="-247" offsety="-295" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="300" />
+			<frame idx="3" duration="300" />
+			<frame idx="4" duration="300" />
+			<frame idx="5" duration="300" />
+			<frame idx="6" duration="300" />
+			<frame idx="7" duration="300" />
+			<frame idx="8" duration="0" />
+		</anim>
+	</anims>
+</entity>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="SwampSmall1_s" type="vx/building" variations="1" pass_file="SwampSmall1.pass">
+	<images>
+		<image idx="1" file="SwampSmall1_s" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="SwampSmall1_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="swamp" image="1" z="500" offsetx="-152" offsety="-161" />
+		<layer idx="2" name="shadow" image="2" z="500" offsetx="-152" offsety="-161" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>
