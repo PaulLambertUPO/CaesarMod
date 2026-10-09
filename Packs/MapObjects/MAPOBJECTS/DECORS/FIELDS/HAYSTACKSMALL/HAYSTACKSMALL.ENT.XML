@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Haystack Small" type="vx/building" variations="1" pass_file="HaystackSmall.pass">
+	<images>
+		<image idx="1" file="HaystackSmall" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="HaystackSmall_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="stack" image="1" z="1000" offsetx="-65" offsety="-81" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-65" offsety="-81" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

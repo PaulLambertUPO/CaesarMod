@@ -1,0 +1,4 @@
+<class id="Sed2" parent="Object" cpp_class="CVXScriptObj" entity="MapObjects/Sacred/Sed2/Sed2.ent.xml">
+	<properties display_name="Sacrificial statue" />
+	<properties edittree_pos="Structures/Others/Sacred/Sacrificial statue" />
+</class>

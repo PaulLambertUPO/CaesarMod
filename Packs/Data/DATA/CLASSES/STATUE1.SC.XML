@@ -1,4 +1,4 @@
-<class id="statue1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/statues/statue1.ent.xml">
+<class id="statue1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/statue1/statue1.ent.xml">
 	<properties display_name="Roman statue" />
-	<properties edittree_pos="Structures/Others/Ruins/Roman statue" />
+	<properties edittree_pos="Structures/Others/Europe/Roman statue" />
 </class>

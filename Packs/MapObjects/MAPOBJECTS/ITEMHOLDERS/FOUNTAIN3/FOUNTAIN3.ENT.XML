@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Fountain3" type="vx/itemholder" variations="1" pass_file="Fountain3.pass">
+	<images>
+		<image idx="1" file="Fountain3" drawmode="player_color" remaping="none" rows="8" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="holder" image="1" z="1000" offsetx="-47" offsety="-45" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" sound_id="" startstate="1" endstate="1" frames="10" duration="1600" default_duration="200">
+			<replace layer="1" image="1" offsetx="-47" offsety="-45" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="200" />
+			<frame idx="3" duration="200" />
+			<frame idx="4" duration="200" />
+			<frame idx="5" duration="200" />
+			<frame idx="6" duration="200" />
+			<frame idx="7" duration="200" />
+			<frame idx="8" duration="200" />
+			<frame idx="9" duration="200" />
+			<frame idx="10" duration="0" />
+		</anim>
+	</anims>
+</entity>

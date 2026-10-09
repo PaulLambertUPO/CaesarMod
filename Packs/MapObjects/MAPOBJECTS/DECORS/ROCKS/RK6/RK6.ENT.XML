@@ -7,7 +7,7 @@
 	</images>
 	<points />
 	<layers>
-		<layer idx="1" name="rock" image="1" z="1000" offsetx="-99" offsety="-76" />
+		<layer idx="1" name="rock" image="1" z="1000" offsetx="-99" offsety="-76" sortoffsety="-21" />
 	</layers>
 	<states>
 		<state idx="1" name="idle" />

@@ -1,4 +1,4 @@
-<class id="Column Bullhead" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Column Bullhead/Column Bullhead.ent.xml">
-	<properties display_name="Column Bullhead" />
-	<properties edittree_pos="Structures/Others/Ruins/Column Bullhead" />
+<class id="Column Bullhead" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/Column Bullhead/Column Bullhead.ent.xml">
+	<properties display_name="Column with bull head" />
+	<properties edittree_pos="Structures/Others/Europe/Column with bull head" />
 </class>

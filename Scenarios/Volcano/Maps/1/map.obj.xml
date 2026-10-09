@@ -35,7 +35,7 @@
 	inventorysize="0"
 	x="3440"
 	y="466"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -160,7 +160,7 @@
 	player="3"
 	healthperc="100"
 	inventorysize="0"
-	x="7569"
+	x="7570"
 	y="779"
 	flags="0x80000004"
 	dir.x="0"
@@ -523,7 +523,7 @@
 	inventorysize="0"
 	x="762"
 	y="3824"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -534,7 +534,7 @@
 	inventorysize="0"
 	x="7721"
 	y="3920"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -751,7 +751,7 @@
 	inventorysize="0"
 	x="3727"
 	y="7216"
-	flags="0x80000001"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj

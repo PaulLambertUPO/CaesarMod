@@ -620,8 +620,8 @@
 	healthperc="100"
 	inventorysize="0"
 	x="4774"
-	y="4544"
-	flags="0x80000001"
+	y="4545"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj

@@ -1,4 +1,4 @@
-<class id="Fountain3" parent="BaseWell" cpp_class="CVXItemHolder" entity="MapObjects/Well 5/Well 5.ent.xml">
+<class id="Fountain3" parent="BaseWell" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/Fountain3/Fountain3.ent.xml">
 	<properties radius="70" selection_radius="70" />
 	<properties display_name="Fountain" />
 	<properties icon="gameres/icons/fountain3.bmp" />

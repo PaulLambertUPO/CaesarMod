@@ -1,4 +1,4 @@
-<class id="HeroGrave" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/HeroGrave/HeroGrave.ent.xml">
+<class id="HeroGrave" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/HeroGrave/HeroGrave.ent.xml">
 
 	<properties radius="38" selection_radius="40" range="450" />
 

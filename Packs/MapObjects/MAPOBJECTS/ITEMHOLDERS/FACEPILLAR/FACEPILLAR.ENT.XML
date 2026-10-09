@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="FacePillar" type="vx/itemholder" variations="1" pass_file="FacePillar.pass">
+	<images>
+		<image idx="1" file="FacePillar" drawmode="player_color" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="holder" image="1" z="1000" offsetx="-81" offsety="-92" sortoffsety="-34" xray="1" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

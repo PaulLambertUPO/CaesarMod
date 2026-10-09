@@ -1,4 +1,4 @@
-<class id="OakStump" parent="BaseWell" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/Oak_stump.ent.xml">
+<class id="OakStump" parent="BaseWell" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/OakStump/OakStump.ent.xml">
 	<properties radius="70" selection_radius="72" />
 	<properties display_name="Oak stump" />
 	<properties icon="gameres/icons/Oak stump.bmp" />

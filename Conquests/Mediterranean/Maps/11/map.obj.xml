@@ -89,8 +89,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="2994"
-	y="752"
+	x="2991"
+	y="745"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>

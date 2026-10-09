@@ -1,4 +1,4 @@
-<class id="Thermae" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Thermae/Thermae_as.ent.xml" entity_winter="MapObjects/Thermae/Thermae_w.ent.xml">
-	<properties display_name="Roman Thermae" />
-	<properties edittree_pos="Structures/Others/Ruins/Roman Thermae" />
+<class id="Thermae" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/Thermae/Thermae.ent.xml" entity_winter="MapObjects/Europe/Thermae/Thermae_w.ent.xml">
+	<properties display_name="Roman thermae" />
+	<properties edittree_pos="Structures/Others/Europe/Roman thermae" />
 </class>

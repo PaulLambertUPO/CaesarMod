@@ -1,4 +1,4 @@
-<class id="Toro 1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Toro 1/Toro 1.ent.xml">
+<class id="Toro 1" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Europe/Toro 1/Toro 1.ent.xml">
 	<properties display_name="Bull 1" />
-	<properties edittree_pos="Structures/Others/Ruins/Bull 1" />
+	<properties edittree_pos="Structures/Others/Europe/Bull 1" />
 </class>

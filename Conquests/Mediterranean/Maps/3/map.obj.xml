@@ -1380,8 +1380,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="2596"
-	y="6493"
+	x="2598"
+	y="6490"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -2972,7 +2972,7 @@
 	healthperc="100"
 	inventorysize="0"
 	x="4260"
-	y="9949"
+	y="9946"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -3164,8 +3164,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="10856"
-	y="10788"
+	x="10853"
+	y="10784"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -3901,8 +3901,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="9448"
-	y="14500"
+	x="9440"
+	y="14493"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>

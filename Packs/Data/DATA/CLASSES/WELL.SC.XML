@@ -1,5 +1,5 @@
-<class id="WELL" parent="BaseWell" cpp_class="CVXItemHolder" entity="MapObjects/Europe/WELL/WELL.ent.xml">
-	<properties radius="20" selection_radius="30" />
+<class id="WELL" parent="BaseWell" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/well3/well3.ent.xml">
+	<properties radius="48" selection_radius="50" />
 	<properties icon="gameres/icons/stone well.bmp" />
-	<properties edittree_pos="Structures/Item holders/Stone Well" />
+	<properties edittree_pos="Structures/Item holders/Well (stone)" />
 </class>

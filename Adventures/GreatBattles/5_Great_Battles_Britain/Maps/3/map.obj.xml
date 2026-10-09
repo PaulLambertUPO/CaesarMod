@@ -10834,8 +10834,8 @@
 	healthperc="100"
 	inventorysize="1"
 	slot0="Bag of healing water"
-	x="13902"
-	y="7486"
+	x="13878"
+	y="7502"
 	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>

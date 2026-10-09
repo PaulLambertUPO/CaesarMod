@@ -204,7 +204,7 @@
 	healthperc="100"
 	inventorysize="0"
 	x="9704"
-	y="932"
+	y="930"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -930,7 +930,7 @@
 	healthperc="100"
 	inventorysize="0"
 	x="9622"
-	y="3073"
+	y="3072"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -1301,7 +1301,7 @@
 	healthperc="100"
 	inventorysize="0"
 	x="1572"
-	y="4573"
+	y="4574"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -4257,8 +4257,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="5540"
-	y="15325"
+	x="5541"
+	y="15326"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -4293,7 +4293,7 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="9508"
+	x="9507"
 	y="15197"
 	flags="0x80004000"
 	dir.x="0"

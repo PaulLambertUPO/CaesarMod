@@ -5395,8 +5395,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="9946"
-	y="21836"
+	x="9951"
+	y="21841"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -5624,8 +5624,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="1327"
-	y="22786"
+	x="1326"
+	y="22782"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -6331,7 +6331,7 @@
 	healthperc="100"
 	inventorysize="0"
 	x="22191"
-	y="25026"
+	y="25024"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>

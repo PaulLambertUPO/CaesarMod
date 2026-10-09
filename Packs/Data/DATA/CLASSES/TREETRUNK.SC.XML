@@ -1,4 +1,4 @@
-<class id="TreeTrunk" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/TreeTrunk.ent.xml">
+<class id="TreeTrunk" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/TreeTrunk/TreeTrunk.ent.xml">
 	<properties radius="30" selection_radius="40" />
 	<properties display_name="Tree trunk" />
 	<properties icon="gameres/icons/Tree trunk.bmp" />

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="well2" type="vx/itemholder" variations="1" pass_file="well2.pass">
+	<images>
+		<image idx="1" file="well2" drawmode="normal" remaping="none" rows="14" columns="1" />
+		<image idx="2" file="well2_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="holder" image="1" z="1000" offsetx="-206" offsety="-279" sortoffsety="-87" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-206" offsety="-279" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="16" duration="2800" default_duration="200">
+			<replace layer="1" image="1" offsetx="-206" offsety="-279" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="200" />
+			<frame idx="3" duration="200" />
+			<frame idx="4" duration="200" />
+			<frame idx="5" duration="200" />
+			<frame idx="6" duration="200" />
+			<frame idx="7" duration="200" />
+			<frame idx="8" duration="200" />
+			<frame idx="9" duration="200" />
+			<frame idx="10" duration="200" />
+			<frame idx="11" duration="200" />
+			<frame idx="12" duration="200" />
+			<frame idx="13" duration="200" />
+			<frame idx="14" duration="200" />
+			<frame idx="15" duration="200" />
+			<frame idx="16" duration="0" />
+		</anim>
+	</anims>
+</entity>

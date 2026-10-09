@@ -1,4 +1,4 @@
-<class id="sanctuary" parent="Object" cpp_class="CVXDecor" entity="MapObjects/sanctuary/sanctuary.ent.xml">
+<class id="sanctuary" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Sacred/sanctuary/sanctuary.ent.xml">
 	<properties display_name="Sanctuary" />
 	<properties edittree_pos="Structures/Others/Sacred/Sanctuary" />
 </class>

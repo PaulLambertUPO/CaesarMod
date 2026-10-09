@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="RibCage" type="vx/itemholder" variations="1" pass_file="RibCage.pass">
+	<images>
+		<image idx="1" file="RibCage" drawmode="player_color" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="holder" image="1" z="1000" offsetx="-31" offsety="-42" sortoffsety="-24" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

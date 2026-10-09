@@ -14,6 +14,15 @@
 <translationtableentry text="Imperial Roman walls" result="Greek walls" />
 <!-- end buildings (in game and in editor tree) -->
 <!-- start editor tree -->
+<translationtableentry text="Ruins 01" result="Ruins 1" />
+<translationtableentry text="Ruins 02" result="Ruins 2" />
+<translationtableentry text="Ruins 03" result="Ruins 3" />
+<translationtableentry text="Ruins 04" result="Ruins 4" />
+<translationtableentry text="Ruins 05" result="Ruins 5" />
+<translationtableentry text="Ruins 06" result="Ruins 6" />
+<translationtableentry text="Ruins 07" result="Ruins 7" />
+<translationtableentry text="Ruins 08" result="Ruins 8" />
+<translationtableentry text="Ruins 09" result="Ruins 9" />
 <translationtableentry text="Natural debris 01" result="Natural debris 1" />
 <translationtableentry text="Natural debris 02" result="Natural debris 2" />
 <translationtableentry text="Natural debris 03" result="Natural debris 3" />

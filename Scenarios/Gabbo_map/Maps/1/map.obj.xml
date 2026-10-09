@@ -77,7 +77,7 @@
 	inventorysize="0"
 	x="5274"
 	y="3386"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -88,7 +88,7 @@
 	inventorysize="0"
 	x="8137"
 	y="3456"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -127,7 +127,7 @@
 	inventorysize="0"
 	x="11324"
 	y="3794"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -152,7 +152,7 @@
 	inventorysize="0"
 	x="12438"
 	y="4825"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -163,7 +163,7 @@
 	inventorysize="0"
 	x="10501"
 	y="5089"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -174,7 +174,7 @@
 	inventorysize="0"
 	x="12092"
 	y="4975"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -185,7 +185,7 @@
 	inventorysize="0"
 	x="12245"
 	y="5076"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -868,7 +868,7 @@
 	inventorysize="0"
 	x="6411"
 	y="9127"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -879,7 +879,7 @@
 	inventorysize="0"
 	x="8799"
 	y="9653"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1002,7 +1002,7 @@
 	inventorysize="0"
 	x="12337"
 	y="10489"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1013,7 +1013,7 @@
 	inventorysize="0"
 	x="4021"
 	y="10537"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1032,7 +1032,7 @@
 	inventorysize="0"
 	x="6282"
 	y="11204"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1043,7 +1043,7 @@
 	inventorysize="0"
 	x="6445"
 	y="11407"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1460,7 +1460,7 @@
 	inventorysize="0"
 	x="5918"
 	y="13124"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1471,7 +1471,7 @@
 	inventorysize="0"
 	x="12196"
 	y="13510"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1482,7 +1482,7 @@
 	inventorysize="0"
 	x="8945"
 	y="14234"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj

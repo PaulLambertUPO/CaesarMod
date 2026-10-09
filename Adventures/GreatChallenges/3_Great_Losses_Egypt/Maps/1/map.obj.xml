@@ -16486,8 +16486,8 @@
 	player="1"
 	healthperc="100"
 	inventorysize="0"
-	x="2270"
-	y="13408"
+	x="2273"
+	y="13405"
 	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>
@@ -16727,8 +16727,8 @@
 	player="1"
 	healthperc="100"
 	inventorysize="0"
-	x="13656"
-	y="13871"
+	x="13657"
+	y="13861"
 	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>
@@ -16852,8 +16852,8 @@
 	player="1"
 	healthperc="100"
 	inventorysize="0"
-	x="11730"
-	y="14091"
+	x="11728"
+	y="14090"
 	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>
@@ -19446,7 +19446,7 @@
 	inventorysize="0"
 	x="7396"
 	y="7584"
-	flags="0x80800008"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -19473,7 +19473,7 @@
 	inventorysize="0"
 	x="8004"
 	y="10331"
-	flags="0x80800008"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -19500,7 +19500,7 @@
 	inventorysize="0"
 	x="2086"
 	y="7404"
-	flags="0x80800008"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -19527,7 +19527,7 @@
 	inventorysize="0"
 	x="6511"
 	y="10554"
-	flags="0x80800008"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -19554,7 +19554,7 @@
 	inventorysize="0"
 	x="14065"
 	y="7663"
-	flags="0x80800008"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -19581,7 +19581,7 @@
 	inventorysize="0"
 	x="9549"
 	y="10513"
-	flags="0x80800008"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>

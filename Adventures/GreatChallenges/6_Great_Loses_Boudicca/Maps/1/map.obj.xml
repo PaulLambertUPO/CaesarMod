@@ -10177,8 +10177,8 @@
 	player="4"
 	healthperc="100"
 	inventorysize="0"
-	x="14500"
-	y="5522"
+	x="14506"
+	y="5529"
 	flags="0x80000008"
 	dir.x="0"
 	dir.y="1"/>

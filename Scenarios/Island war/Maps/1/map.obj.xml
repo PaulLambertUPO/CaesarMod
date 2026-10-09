@@ -27,8 +27,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="808"
-	y="996"
+	x="809"
+	y="993"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -678,7 +678,7 @@
 	healthperc="100"
 	inventorysize="0"
 	x="5910"
-	y="5377"
+	y="5378"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -911,7 +911,7 @@
 	inventorysize="0"
 	x="4522"
 	y="10658"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -941,7 +941,7 @@
 	inventorysize="0"
 	x="1665"
 	y="10923"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -1029,8 +1029,8 @@
 	player="15"
 	healthperc="100"
 	inventorysize="0"
-	x="6180"
-	y="11101"
+	x="6179"
+	y="11100"
 	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
@@ -1789,7 +1789,7 @@
 	inventorysize="0"
 	x="11696"
 	y="15230"
-	flags="0x80804000"
+	flags="0x80808000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>
@@ -1869,7 +1869,7 @@
 	inventorysize="0"
 	x="5650"
 	y="6376"
-	flags="0x80804000"
+	flags="0x80808000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>

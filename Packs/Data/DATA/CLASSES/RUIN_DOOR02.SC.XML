@@ -1,0 +1,4 @@
+<class id="Ruin_Door02" parent="Object" cpp_class="CVXScriptObj" entity="MapObjects/RuinObjects/Ruin_Door02/Ruin_Door02.ent.xml">
+	<properties display_name="Ruin door 2" />
+	<properties edittree_pos="Structures/Others/Ruins/Ruin door 2" />
+</class>

@@ -1,4 +1,4 @@
 <class id="STHEAD" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Egypt/STHEAD/STHEAD.ent.xml">
-	<properties display_name="Statue Head" />
-	<properties edittree_pos="Structures/Others/Egypt/Statue Head" />
+	<properties display_name="Statue head" />
+	<properties edittree_pos="Structures/Others/Egypt/Statue head" />
 </class>

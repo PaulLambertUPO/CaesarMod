@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="statue1" type="vx/building" variations="1" pass_file="statue1.pass">
+	<images>
+		<image idx="1" file="statue1" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="statue1_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="statue" image="1" z="1000" offsetx="-148" offsety="-260" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-148" offsety="-260" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

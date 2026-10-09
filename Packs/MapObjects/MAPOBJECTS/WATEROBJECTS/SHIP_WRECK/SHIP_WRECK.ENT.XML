@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="ship_wreck" type="vx/building" variations="1" pass_file="ship_wreck.pass">
+	<images>
+		<image idx="1" file="ship_wreck" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="ship_wreck_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+		<image idx="3" file="ship_wreck_sail" drawmode="player_color" remaping="none" rows="5" columns="1" />
+		<image idx="4" file="ship_wreck_reflection" drawmode="player_color" remaping="none" rows="5" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="ship_wreck" image="1" z="1000" offsetx="-218" offsety="-192" />
+		<layer idx="2" name="ship_wreck_shadow" image="2" z="800" offsetx="-218" offsety="-192" />
+		<layer idx="3" name="ship_wreck_sail" image="3" z="1050" offsetx="-218" offsety="-192" />
+		<layer idx="4" name="ship_wreck_reflection" image="4" z="950" offsetx="-218" offsety="-192" percent="50" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="ship_wreck" startstate="1" endstate="1" frames="7" duration="1000" default_duration="200">
+			<replace layer="3" image="3" offsetx="-218" offsety="-192" />
+			<replace layer="4" image="4" offsetx="-218" offsety="-192" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="200" />
+			<frame idx="3" duration="200" />
+			<frame idx="4" duration="200" />
+			<frame idx="5" duration="200" />
+			<frame idx="6" duration="200" />
+			<frame idx="7" duration="0" />
+		</anim>
+	</anims>
+</entity>

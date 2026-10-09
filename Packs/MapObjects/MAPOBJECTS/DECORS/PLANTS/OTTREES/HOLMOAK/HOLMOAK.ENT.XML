@@ -8,7 +8,7 @@
 	</images>
 	<points />
 	<layers>
-		<layer idx="1" name="korona" image="1" z="1000" offsetx="-278" offsety="-372" xray="1" />
+		<layer idx="1" name="korona" image="1" z="1000" offsetx="-278" offsety="-372" sortoffsety="64" xray="1" />
 		<layer idx="2" name="shadow" image="2" z="800" offsetx="-278" offsety="-372" />
 	</layers>
 	<states>

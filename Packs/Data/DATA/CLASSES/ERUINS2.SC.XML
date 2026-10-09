@@ -1,4 +1,4 @@
 <class id="ERuins2" parent="Object" cpp_class="CVXDecor" entity="MapObjects/Egypt/ERuins2/ERuins2.ent.xml">
-	<properties display_name="Ruins2" />
-	<properties edittree_pos="Structures/Others/Egypt/Ruins2" />
+	<properties display_name="Ruins 03" />
+	<properties edittree_pos="Structures/Others/Egypt/Ruins 03" />
 </class>

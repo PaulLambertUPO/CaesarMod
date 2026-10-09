@@ -1,7 +1,7 @@
 <class id="ruins" parent="Object" cpp_class="CVXDecor"
-	entity_spring="MapObjects/ruins/ruins_s.ent.xml"
-	entity_autumn="MapObjects/ruins/ruins_a.ent.xml"
-	entity_winter="MapObjects/ruins/ruins_w.ent.xml"
+	entity_spring="MapObjects/RuinObjects/ruins/ruins_s.ent.xml"
+	entity_autumn="MapObjects/RuinObjects/ruins/ruins_a.ent.xml"
+	entity_winter="MapObjects/RuinObjects/ruins/ruins_w.ent.xml"
 >
 	<properties display_name="Old ruins" />
 	<properties edittree_pos="Structures/Others/Ruins/Old ruins" />

@@ -1,4 +1,4 @@
-<class id="DefItemHolder" parent="ItemHolder" cpp_class="CVXItemHolder" entity="Visuals/ItemHolder2/Bag.ent.xml">
+<class id="DefItemHolder" parent="ItemHolder" cpp_class="CVXItemHolder" entity="MapObjects/ItemHolders/Bag/Bag.ent.xml">
 	<properties delete_empty="1" />
 	<properties radius="19" selection_radius="20" />
 	<properties display_name="Leather bag" />

@@ -13651,8 +13651,8 @@
 	healthperc="100"
 	inventorysize="1"
 	slot0="Ash of druid heart"
-	x="6689"
-	y="3250"
+	x="6682"
+	y="3248"
 	flags="0x80000008"
 	dir.x="0"
 	dir.y="1"/>

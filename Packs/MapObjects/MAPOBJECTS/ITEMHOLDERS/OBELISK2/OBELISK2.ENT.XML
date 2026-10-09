@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="Obelisk2" type="vx/itemholder" variations="1" pass_file="Obelisk2.pass">
+	<images>
+		<image idx="1" file="Obelisk2" drawmode="player_color" remaping="none" rows="4" columns="1" />
+		<image idx="2" file="Obelisk2_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="holder" image="1" z="1000" offsetx="-68" offsety="-111" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-68" offsety="-111" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims>
+		<anim idx="1" name="idle" startstate="1" endstate="1" frames="6" duration="800" default_duration="200">
+			<replace layer="1" image="1" offsetx="-68" offsety="-111" />
+			<frame idx="1" duration="0" />
+			<frame idx="2" duration="200" />
+			<frame idx="3" duration="200" />
+			<frame idx="4" duration="200" />
+			<frame idx="5" duration="200" />
+			<frame idx="6" duration="0" />
+		</anim>
+	</anims>
+</entity>

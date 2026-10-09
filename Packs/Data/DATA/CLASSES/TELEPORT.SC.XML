@@ -1,5 +1,5 @@
 <class id="Teleport" parent="Building" cpp_class="CVXTeleport">
-	<properties maxhealth="100" />
+	<properties maxhealth="5000" />
 	<properties radius="200" selection_radius="210" />
 	<properties
 		is_central_building="1"

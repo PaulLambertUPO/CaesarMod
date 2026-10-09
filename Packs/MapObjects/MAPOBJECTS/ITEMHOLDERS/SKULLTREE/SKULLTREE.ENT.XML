@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="SkullTree" type="vx/itemholder" variations="1" pass_file="SkullTree.pass">
+	<images>
+		<image idx="1" file="SkullTree" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="SkullTree_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="holder" image="1" z="1000" offsetx="-51" offsety="-92" sortoffsety="-27" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-51" offsety="-92" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

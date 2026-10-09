@@ -8,7 +8,7 @@
 	</images>
 	<points />
 	<layers>
-		<layer idx="1" name="bones" image="1" z="1000" offsetx="-41" offsety="-36" />
+		<layer idx="1" name="bones" image="1" z="1000" offsetx="-41" offsety="-36" sortoffsety="-57" />
 		<layer idx="2" name="shadow" image="2" z="800" offsetx="-41" offsety="-36" />
 	</layers>
 	<states>

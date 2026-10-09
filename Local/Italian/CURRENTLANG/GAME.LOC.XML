@@ -205,13 +205,14 @@
 <translationtableentry text="Dead tree" result="Albero secco" />
 <translationtableentry text="Face pillar" result="Colonna" />
 <translationtableentry text="Fountain" result="Fonte" />
+<translationtableentry text="Fountain 1" result="Fonte 1" />
 <translationtableentry text="Fountain 2" result="Fonte 2" />
 <translationtableentry text="Fountain 3" result="Fonte 3" />
 <translationtableentry text="Oak stump" result="Ceppo" />
 <translationtableentry text="Well" result="Pozzo" />
-<translationtableentry text="Large well" result="Pozzo grande" />
-<translationtableentry text="Small well" result="Pozzo piccolo" />
-<translationtableentry text="Stone Well" result="Pozzo di pietra" />
+<translationtableentry text="Well (large)" result="Pozzo (grande)" />
+<translationtableentry text="Well (small)" result="Pozzo (piccolo)" />
+<translationtableentry text="Well (stone)" result="Pozzo (di pietra)" />
 <translationtableentry text="Lion throne" result="Trono del leone" />
 <translationtableentry text="Obelisk" result="Obelisco" />
 <translationtableentry text="Obelisk 1" result="Obelisco 1" />
@@ -219,7 +220,6 @@
 <translationtableentry text="Rib cage" result="Scheletro" />
 <translationtableentry text="Skull tree" result="Albero del teschio" />
 <translationtableentry text="Stone pile" result="Tumulo" />
-<translationtableentry text="Stone Pile" result="Tumulo" />
 <translationtableentry text="Tombstone" result="Lapide" />
 <translationtableentry text="Tree trunk" result="Tronco d'albero" />
 <translationtableentry text="Witch hut" result="Capanna delle streghe" />
@@ -1670,7 +1670,7 @@
 <translationtableentry text="Palm 4" result="Palma 4" />
 <translationtableentry text="Palm 5" result="Palma 5" />
 <translationtableentry text="Palm 6" result="Palma 6" />
-<translationtableentry text="Others" result="Altre" />
+<translationtableentry text="Other trees" result="Altri alberi" />
 <translationtableentry text="Holm oak" result="Leccio" />
 <translationtableentry text="Big cypress" result="Cipresso grande" />
 <translationtableentry text="Small cypress" result="Cipresso piccolo" />
@@ -1689,7 +1689,6 @@
 <translationtableentry text="Bush 8" result="Arbusto 8" />
 <translationtableentry text="Bush 9" result="Arbusto 9" />
 <translationtableentry text="Bush 10" result="Arbusto 10" />
-<translationtableentry text="Grapevine" result="Vite" />
 <translationtableentry text="Dead bushes" result="Arbusti secchi" />
 <translationtableentry text="Dead bush 1" result="Arbusto secco 1" />
 <translationtableentry text="Dead bush 2" result="Arbusto secco 2" />
@@ -1697,6 +1696,8 @@
 <translationtableentry text="Desert bush 1" result="Arbusto del deserto 1" />
 <translationtableentry text="Desert bush 2" result="Arbusto del deserto 2" />
 <translationtableentry text="Desert bush 3" result="Arbusto del deserto 3" />
+<translationtableentry text="Other bushes" result="Altri arbusti" />
+<translationtableentry text="Grapevine" result="Vite" />
 <translationtableentry text="Rock 1" result="Roccia 1" />
 <translationtableentry text="Rock 2" result="Roccia 2" />
 <translationtableentry text="Rock 3" result="Roccia 3" />
@@ -1759,6 +1760,7 @@
 <translationtableentry text="Trees - Autumn" result="Alberi - Autunno" />
 <translationtableentry text="Bushes - Autumn" result="Arbusti - Autunno" />
 <translationtableentry text="Interactive" result="Interattive" />
+<translationtableentry text="Others" result="Altre" />
 <translationtableentry text="Bridges" result="Ponti" />
 <translationtableentry text="Bridge 1" result="Ponte 1" />
 <translationtableentry text="Bridge 2" result="Ponte 2" />
@@ -1785,46 +1787,56 @@
 <translationtableentry text="Desert" result="Deserto" />
 <translationtableentry text="Cube 1" result="Cubo 1" />
 <translationtableentry text="Cube 2" result="Cubo 2" />
-<translationtableentry text="Elephant Skeleton 1" result="Scheletro di elefante 1" />
-<translationtableentry text="Elephant Skeleton 2" result="Scheletro di elefante 2" />
-<translationtableentry text="Elephant Skeleton 3" result="Scheletro di elefante 3" />
-<translationtableentry text="Old ruins" result="Vecchie rovine" />
-<translationtableentry text="Old ruins (alternative)" result="Vecchie rovine (alternative)" />
-<translationtableentry text="Ruins 1" result="Rovine 1" />
-<translationtableentry text="Ruins 2" result="Rovine 2" />
-<translationtableentry text="Ruins 3" result="Rovine 3" />
-<translationtableentry text="Ruins 4" result="Rovine 4" />
-<translationtableentry text="Ruins 5" result="Rovine 5" />
-<translationtableentry text="Ruins 6" result="Rovine 6" />
-<translationtableentry text="Ruins 7" result="Rovine 7" />
-<translationtableentry text="Ruins 8" result="Rovine 8" />
-<translationtableentry text="Ruins 9" result="Rovine 9" />
+<translationtableentry text="Elephant skeleton 1" result="Scheletro di elefante 1" />
+<translationtableentry text="Elephant skeleton 2" result="Scheletro di elefante 2" />
+<translationtableentry text="Elephant skeleton 3" result="Scheletro di elefante 3" />
+<translationtableentry text="Ruins 01" result="Rovine 1" />
+<translationtableentry text="Ruins 02" result="Rovine 2" />
+<translationtableentry text="Ruins 03" result="Rovine 3" />
+<translationtableentry text="Ruins 04" result="Rovine 4" />
+<translationtableentry text="Ruins 05" result="Rovine 5" />
+<translationtableentry text="Ruins 06" result="Rovine 6" />
+<translationtableentry text="Ruins 07" result="Rovine 7" />
+<translationtableentry text="Ruins 08" result="Rovine 8" />
+<translationtableentry text="Ruins 09" result="Rovine 9" />
 <translationtableentry text="Ruins 10" result="Rovine 10" />
 <translationtableentry text="Statue" result="Statua" />
-<translationtableentry text="Column Alone 1" result="Colonna isolata 1" />
-<translationtableentry text="Column Alone 2" result="Colonna isolata 2" />
-<translationtableentry text="Column Connection 1" result="Colonna di collegamento 1" />
-<translationtableentry text="Column Connection 2" result="Colonna di collegamento 2" />
-<translationtableentry text="Columns1" result="Colonne 1" />
-<translationtableentry text="Columns2" result="Colonne 2" />
-<translationtableentry text="Pyramid1" result="Piramide 1" />
-<translationtableentry text="Pyramide2" result="Piramide 2" />
-<translationtableentry text="Sphynx Big 1" result="Sfinge grande 1" />
-<translationtableentry text="Sphynx Big 2" result="Sfinge grande 2" />
-<translationtableentry text="Sphynx Big 3" result="Sfinge grande 3" />
-<translationtableentry text="Sphynx Big 4" result="Sfinge grande 4" />
-<translationtableentry text="Sphynx Small 1" result="Sfinge piccola 1" />
-<translationtableentry text="Sphynx Small 2" result="Sfinge piccola 2" />
-<translationtableentry text="Sphynx Small 3" result="Sfinge piccola 3" />
-<translationtableentry text="Sphynx Small 4" result="Sfinge piccola 4" />
-<translationtableentry text="Statue1" result="Statua 1" />
-<translationtableentry text="Statue2" result="Statua 2" />
-<translationtableentry text="Statue Head" result="Testa di statua" />
+<translationtableentry text="Column alone 1" result="Colonna isolata 1" />
+<translationtableentry text="Column alone 2" result="Colonna isolata 2" />
+<translationtableentry text="Column connection 1" result="Colonna di collegamento 1" />
+<translationtableentry text="Column connection 2" result="Colonna di collegamento 2" />
+<translationtableentry text="Columns 1" result="Colonne 1" />
+<translationtableentry text="Columns 2" result="Colonne 2" />
+<translationtableentry text="Pyramid 1" result="Piramide 1" />
+<translationtableentry text="Pyramid 2" result="Piramide 2" />
+<translationtableentry text="Sphinx (big) 1" result="Sfinge (grande) 1" />
+<translationtableentry text="Sphinx (big) 2" result="Sfinge (grande) 2" />
+<translationtableentry text="Sphinx (big) 3" result="Sfinge (grande) 3" />
+<translationtableentry text="Sphinx (big) 4" result="Sfinge (grande) 4" />
+<translationtableentry text="Sphinx (small) 1" result="Sfinge (piccola) 1" />
+<translationtableentry text="Sphinx (small) 2" result="Sfinge (piccola) 2" />
+<translationtableentry text="Sphinx (small) 3" result="Sfinge (piccola) 3" />
+<translationtableentry text="Sphinx (small) 4" result="Sfinge (piccola) 4" />
+<translationtableentry text="Statue 1" result="Statua 1" />
+<translationtableentry text="Statue 2" result="Statua 2" />
+<translationtableentry text="Statue head" result="Testa di statua" />
 <translationtableentry text="Europe" result="Europa" />
+<translationtableentry text="Bull 1" result="Toro 1" />
+<translationtableentry text="Bull 2" result="Toro 2" />
 <translationtableentry text="Colosseum" result="Colosseo" />
+<translationtableentry text="Column (small)" result="Colonna (piccola)" />
+<translationtableentry text="Column (tall)" result="Colonna (alta)" />
+<translationtableentry text="Column with bull head" result="Colonna con testa di toro" />
+<translationtableentry text="Column with lion 1" result="Colonna con leone 1" />
+<translationtableentry text="Column with lion 2" result="Colonna con leone 2" />
 <translationtableentry text="Cross" result="Croce" />
 <translationtableentry text="Flag" result="Bandiera" />
-<translationtableentry text="Ruin" result="Rovina" />
+<translationtableentry text="Poseidon statue" result="Statua di Poseidone" />
+<translationtableentry text="Roman arch" result="Arco romano" />
+<translationtableentry text="Roman pillar" result="Colonna romana" />
+<translationtableentry text="Roman statue" result="Statua romana" />
+<translationtableentry text="Roman thermae" result="Terme romane" />
+<translationtableentry text="Ruin (burned)" result="Rovina (bruciata)" />
 <translationtableentry text="Ruin 1" result="Rovina 1" />
 <translationtableentry text="Ruin 2" result="Rovina 2" />
 <translationtableentry text="Ruin 3" result="Rovina 3" />
@@ -1838,8 +1850,8 @@
 <translationtableentry text="Field 3" result="Campo coltivato 3" />
 <translationtableentry text="Field 4" result="Campo coltivato 4" />
 <translationtableentry text="Field (uncultivated)" result="Campo (non coltivato)" />
-<translationtableentry text="Haystack Big" result="Mucchio di paglia grande" />
-<translationtableentry text="Haystack Small" result="Mucchio di paglia piccolo" />
+<translationtableentry text="Haystack (big)" result="Mucchio di paglia (grande)" />
+<translationtableentry text="Haystack (small)" result="Mucchio di paglia (piccolo)" />
 <translationtableentry text="Flame" result="Fiamma" />
 <translationtableentry text="Natural debris" result="Detriti naturali" />
 <translationtableentry text="Natural debris 01" result="Detriti naturali 1" />
@@ -1866,54 +1878,38 @@
 <translationtableentry text="Natural debris 22" result="Detriti naturali 22" />
 <translationtableentry text="Natural debris 23" result="Detriti naturali 23" />
 <translationtableentry text="Natural debris 24" result="Detriti naturali 24" />
-<translationtableentry text="Rock Large 1" result="Roccia grande 1" />
-<translationtableentry text="Rock Large 2" result="Roccia grande 2" />
-<translationtableentry text="Rock Large 3" result="Roccia grande 3" />
-<translationtableentry text="Rock Medium 1" result="Roccia media 1" />
-<translationtableentry text="Rock Medium 2" result="Roccia media 2" />
-<translationtableentry text="Rock Medium 3" result="Roccia media 3" />
-<translationtableentry text="Rock Medium 4" result="Roccia media 4" />
-<translationtableentry text="Rock Medium 5" result="Roccia media 5" />
-<translationtableentry text="Rock Medium 6" result="Roccia media 6" />
-<translationtableentry text="Rock Medium 7" result="Roccia media 7" />
-<translationtableentry text="Rock Small 1" result="Roccia piccola 1" />
-<translationtableentry text="Rock Small 2" result="Roccia piccola 2" />
-<translationtableentry text="Bull 1" result="Toro 1" />
-<translationtableentry text="Bull 2" result="Toro 2" />
-<translationtableentry text="Column Bullhead" result="Testa di toro" />
-<translationtableentry text="Column Lion 1" result="Colonna con leone 1" />
-<translationtableentry text="Column Lion 2" result="Colonna con leone 2" />
-<translationtableentry text="Column Small" result="Colonna piccola" />
-<translationtableentry text="Column Tall" result="Colonna alta" />
-<translationtableentry text="Poseidon" result="Poseidone (statua)" />
-<translationtableentry text="Roman Arch" result="Arco romano" />
-<translationtableentry text="Roman Thermae" result="Terme romane" />
-<translationtableentry text="Roman pillar" result="Colonna romana" />
-<translationtableentry text="Roman statue" result="Statua romana" />
-<translationtableentry text="Ruin Door 1" result="Porta nelle rovine 1" />
-<translationtableentry text="Ruin Door 2" result="Porta nelle rovine 2" />
+<translationtableentry text="Rock (large) 1" result="Roccia (grande) 1" />
+<translationtableentry text="Rock (large) 2" result="Roccia (grande) 2" />
+<translationtableentry text="Rock (large) 3" result="Roccia (grande) 3" />
+<translationtableentry text="Rock (medium) 1" result="Roccia (media) 1" />
+<translationtableentry text="Rock (medium) 2" result="Roccia (media) 2" />
+<translationtableentry text="Rock (medium) 3" result="Roccia (media) 3" />
+<translationtableentry text="Rock (medium) 4" result="Roccia (media) 4" />
+<translationtableentry text="Rock (medium) 5" result="Roccia (media) 5" />
+<translationtableentry text="Rock (medium) 6" result="Roccia (media) 6" />
+<translationtableentry text="Rock (medium) 7" result="Roccia (media) 7" />
+<translationtableentry text="Rock (small) 1" result="Roccia (piccola) 1" />
+<translationtableentry text="Rock (small) 2" result="Roccia (piccola) 2" />
+<translationtableentry text="Old ruins" result="Vecchie rovine" />
+<translationtableentry text="Old ruins (alternative)" result="Vecchie rovine (alternative)" />
+<translationtableentry text="Ruin door 1" result="Porta nelle rovine 1" />
+<translationtableentry text="Ruin door 2" result="Porta nelle rovine 2" />
 <translationtableentry text="Ruined wall" result="Muraglia rovinata" />
-<translationtableentry text="Ruins1" result="Rovine 1" />
-<translationtableentry text="Ruins2" result="Rovine 2" />
 <translationtableentry text="Silo (ruined)" result="Silo (rovinato)" />
-<translationtableentry text="Tilted column" result="Colonna inclinata" />
 <translationtableentry text="Sacred" result="Sacro" />
-<translationtableentry text="Dolmen 1" result="Menhir 1" />
-<translationtableentry text="Dolmen 2" result="Menhir 2" />
-<translationtableentry text="Dolmen 3" result="Trono del leone" />
-<translationtableentry text="Dolmen 4" result="Volto del druido" />
-<translationtableentry text="Ritual Stone 1" result="Pietra rituale 1" />
-<translationtableentry text="Ritual Stone 2" result="Pietra rituale 2" />
-<translationtableentry text="Ritual Stone 3" result="Pietra rituale 3" />
-<translationtableentry text="Ritual Stone 4" result="Pietra rituale 4" />
-<translationtableentry text="Statue 1" result="Statua sacrificale" />
+<translationtableentry text="Druid face" result="Volto del druido" />
+<translationtableentry text="Ritual stone 1" result="Pietra rituale 1" />
+<translationtableentry text="Ritual stone 2" result="Pietra rituale 2" />
+<translationtableentry text="Ritual stone 3" result="Pietra rituale 3" />
+<translationtableentry text="Ritual stone 4" result="Pietra rituale 4" />
+<translationtableentry text="Sacrificial statue" result="Statua sacrificale" />
+<translationtableentry text="Tilted column" result="Colonna inclinata" />
 <translationtableentry text="Swamps" result="Paludi" />
 <translationtableentry text="Swamp (large)" result="Palude (grande)" />
 <translationtableentry text="Swamp 1" result="Palude 1" />
 <translationtableentry text="Swamp 2" result="Palude 2" />
 <translationtableentry text="Tents" result="Tende da campagna" />
 <translationtableentry text="Boat wreck" result="Barca rotta" />
-<translationtableentry text="Rocks 4" result="Rocce 4" />
 <translationtableentry text="Ship wreck (large)" result="Naufragio (grande)" />
 <translationtableentry text="Ship wreck (small)" result="Naufragio (piccolo)" />
 <!-- end editor tree -->

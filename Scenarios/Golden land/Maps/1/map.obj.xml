@@ -136,7 +136,7 @@
 	slot0="Rye spikes"
 	x="10915"
 	y="826"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -146,8 +146,8 @@
 	healthperc="100"
 	inventorysize="0"
 	x="15581"
-	y="776"
-	flags="0x80008000"
+	y="778"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -159,7 +159,7 @@
 	slot0="Horn of victory"
 	x="4522"
 	y="1101"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -186,7 +186,7 @@
 	inventorysize="0"
 	x="1152"
 	y="3994"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -196,8 +196,8 @@
 	healthperc="100"
 	inventorysize="0"
 	x="6901"
-	y="4347"
-	flags="0x80008000"
+	y="4349"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -209,7 +209,7 @@
 	slot0="Belt of snakes"
 	x="10850"
 	y="6914"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -220,7 +220,7 @@
 	inventorysize="0"
 	x="8251"
 	y="8730"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -239,7 +239,7 @@
 	inventorysize="0"
 	x="3686"
 	y="9172"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -327,8 +327,8 @@
 	healthperc="100"
 	inventorysize="0"
 	x="4785"
-	y="14050"
-	flags="0x80008000"
+	y="14054"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -340,7 +340,7 @@
 	slot0="Herb amulet of luck"
 	x="8379"
 	y="14145"
-	flags="0x80008000"
+	flags="0x80004000"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
@@ -2077,7 +2077,7 @@
 	inventorysize="0"
 	x="8254"
 	y="1158"
-	flags="0x80808000"
+	flags="0x80804000"
 	dir.x="0"
 	dir.y="1"/>
 		</settlement>

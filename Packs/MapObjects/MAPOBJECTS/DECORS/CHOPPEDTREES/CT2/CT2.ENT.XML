@@ -8,7 +8,7 @@
 	</images>
 	<points />
 	<layers>
-		<layer idx="1" name="trees" image="1" z="1000" offsetx="-60" offsety="-44" />
+		<layer idx="1" name="trees" image="1" z="1000" offsetx="-60" offsety="-44" sortoffsety="-90" />
 		<layer idx="2" name="shadow" image="2" z="800" offsetx="-60" offsety="-44" />
 	</layers>
 	<states>

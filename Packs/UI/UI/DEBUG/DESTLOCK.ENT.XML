@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
-<entity name="destlock" radius="0" selection_radius="0" variations="1">
+<entity name="destlock" variations="1">
 	<images>
 		<image idx="1" file="destlock" drawmode="normal" remaping="none" rows="1" columns="1" />
 	</images>

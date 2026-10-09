@@ -223,7 +223,7 @@
 	slot1="Belt of snakes"
 	slot2="Fur gloves of health"
 	x="25765"
-	y="587"
+	y="588"
 	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>
@@ -3841,7 +3841,7 @@
 	inventorysize="1"
 	slot0="Snake skin"
 	x="18544"
-	y="28608"
+	y="28609"
 	flags="0x80000001"
 	dir.x="0"
 	dir.y="1"/>

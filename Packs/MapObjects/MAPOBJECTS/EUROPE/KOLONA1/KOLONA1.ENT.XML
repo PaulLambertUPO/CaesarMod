@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
+
+<entity name="kolona1" type="vx/building" variations="1" pass_file="kolona1.pass">
+	<images>
+		<image idx="1" file="kolona1" drawmode="player_color" remaping="none" rows="1" columns="1" />
+		<image idx="2" file="kolona1_shadow" drawmode="shadow" remaping="none" rows="1" columns="1" />
+	</images>
+	<points />
+	<layers>
+		<layer idx="1" name="kolona" image="1" z="1000" offsetx="-262" offsety="-387" />
+		<layer idx="2" name="shadow" image="2" z="800" offsetx="-262" offsety="-387" />
+	</layers>
+	<states>
+		<state idx="1" name="idle" />
+	</states>
+	<anims />
+</entity>

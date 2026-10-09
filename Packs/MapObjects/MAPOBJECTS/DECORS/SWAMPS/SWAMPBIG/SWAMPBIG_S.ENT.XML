@@ -8,7 +8,7 @@
 	</images>
 	<points />
 	<layers>
-		<layer idx="1" name="swamp" image="1" z="500" offsetx="-241" offsety="-272" />
+		<layer idx="1" name="swamp" image="1" z="500" offsetx="-241" offsety="-272" sortoffsety="-124" />
 		<layer idx="2" name="shadow" image="2" z="500" offsetx="-241" offsety="-272" />
 	</layers>
 	<states>

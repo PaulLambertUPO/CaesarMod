@@ -10,7 +10,7 @@
 	<points />
 	<layers>
 		<layer idx="1" name="korona" image="1" z="1000" offsetx="-118" offsety="-222" xray="1" />
-		<layer idx="2" name="styblo" image="2" z="1000" offsetx="-118" offsety="-222" />
+		<layer idx="2" name="styblo" image="2" z="1000" offsetx="-118" offsety="-222" sortoffsety="-60" />
 		<layer idx="3" name="shadow" image="3" z="800" offsetx="-144" offsety="-222" />
 	</layers>
 	<states>
