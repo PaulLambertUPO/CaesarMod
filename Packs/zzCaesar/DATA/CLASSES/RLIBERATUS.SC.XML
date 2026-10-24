@@ -2,9 +2,9 @@
 
 	<properties race="RepublicanRome" />
 	<properties maxhealth="480" />
-	<properties damage="46" armor_slash="14" armor_pierce="14" />
+	<properties damage="42" armor_slash="14" armor_pierce="14" />
 	<properties speed="90" />
-	<properties unit_specials="Bleeding attack, Freedom, Learning" />
+	<properties unit_specials="Cripple, Freedom, Learning" />
 
 	<properties select_class="RLiberatus" />
 
@@ -12,6 +12,8 @@
 	<properties icon="gameres/icons/RLiberatus.bmp" />
 	<properties help="contents/units/RLiberatus" />
 	<properties edittree_pos="Units/Roman/Liberatus" />
+
+	<behavior script="data/subai/rliberatus_ai_swap_behavior.vs" />
 
 	<sounds command="VoiceRLiberatus" attack="AxeAttack" />
 </class>

@@ -6,7 +6,7 @@
 		transpicon="1"
 		traincommand="yes"
 		key="e"
-		costgold="200"
+		costgold="150"
 		execdelay="20000"
 		rollover="Call Enchantress"
 		method="train"

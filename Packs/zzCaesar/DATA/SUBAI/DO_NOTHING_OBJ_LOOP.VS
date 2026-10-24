@@ -1,4 +1,4 @@
 //void, Obj this, Obj other
 
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

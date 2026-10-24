@@ -14,6 +14,7 @@ if (.IsValid)
 		bool go_back, use_curse;
 
 		Sleep(rand(501));//avoid "thundering herd" for multiple units that start the command simultaneously
+		.Stop(2000);
 
 		plr = .player;
 		rng = .range;
@@ -24,7 +25,7 @@ if (.IsValid)
 		while (.CmdCount <= 1)//avoid blocking pending commands forever
 			if (.InHolder)
 				Sleep(10000);
-			else if (.Stop(2000)) {
+			else {
 				h = .hero;
 				if (h.IsValid)
 					if (h.command == "teleport") {

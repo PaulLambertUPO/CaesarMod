@@ -2,9 +2,9 @@
 
 	<properties race="Britain" />
 	<properties maxhealth="200" />
-	<properties damage="24" armor_slash="4" armor_pierce="4" />
+	<properties damage="22" armor_slash="2" armor_pierce="2" />
 	<properties speed="80" />
-	<properties unit_specials="Active, Death blow, Drain" />
+	<properties unit_specials="Death blow, Drain" />
 
 	<properties projectile_class="Javelin" building_projectile_class="Javelin" />
 

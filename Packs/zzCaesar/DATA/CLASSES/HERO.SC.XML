@@ -1,6 +1,6 @@
 <class id="Hero" parent="Military" cpp_class="CVXHero">
 
-	<properties maxhealth="1000" />
+	<properties maxhealth="1200" />
 	<properties damage="40" damage_type="slash" />
 	<properties armor_slash="20" armor_pierce="20" />
 	<properties sight="600" speed="120" />

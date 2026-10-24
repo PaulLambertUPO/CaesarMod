@@ -157,6 +157,15 @@
 		param="Deer Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
+	<cmd name="lion_summoning" priority="27"
+		button="actions/summon lion.bmp"
+		key="w"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Summon Lion"
+		description="Summons a lion that remains under your control for about 150 seconds (at the cost of life)"
+		param="Lion Summoning">
+		<src obj="HPriest" />
+	</cmd>
 	<cmd name="restoration" priority="27"
 		button="actions/restoration.bmp"
 		key="i"

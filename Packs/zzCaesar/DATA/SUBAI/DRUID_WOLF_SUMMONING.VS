@@ -8,7 +8,7 @@ if (.IsValid)
 	if (.IsAlive) {
 		Unit u;
 
-		.PlayAnim(19, .pos);
+		.PlayAnim(18, .pos);
 
 		u = Place("WolfSummoned", .posRH, .player).AsUnit();
 		u.SetLevel(.level);

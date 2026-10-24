@@ -37,4 +37,4 @@ Sleep(250 + rand(251));
 
 //without this instruction, the game crashes
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

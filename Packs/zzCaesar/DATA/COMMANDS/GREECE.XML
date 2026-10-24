@@ -411,10 +411,10 @@
 		button="Actions/Start Storing Food.bmp"
 		key="s"
 		immediate="yes"
-		costgold="800"
+		costgold="1000"
 		groupverifier="data/subai/start_storing_food_verify.vs"
 		method="startstoringfood"
-		description="Allows you to deposit reusable food stocks in a separate storage"
+		description="Stores food in a separate stock over time (with a 50% gain)"
 		rollover="Start storing food">
 		<src obj="HAgora" />
 	</cmd>
@@ -424,7 +424,7 @@
 		immediate="yes"
 		groupverifier="data/subai/stop_storing_food_verify.vs"
 		method="stopstoringfood"
-		description="Blocks the storing and gives you back all food supplies"
+		description="Stops the storing and returns all stocked food"
 		rollover="Stop storing food">
 		<src obj="HAgora" />
 	</cmd>
@@ -466,7 +466,7 @@
 		traincommand="yes"
 		transpicon="1"
 		key="p"
-		costgold="200"
+		costgold="150"
 		execdelay="20000"
 		rollover="Call Priest"
 		method="train"
@@ -488,18 +488,18 @@
 		param="NameSet, Offer to Gods, default, SetsSet, levels/HPriest, 5">
 		<src obj="HTemple" />
 	</cmd>
-	<cmd name="Protection of Apollo" priority="4"
-		button="Research/Apollo Protection.bmp"
-		queueicon="gameres/icons/upgrades/Apollo Protection.bmp"
-		groupverifier="data/subai/research_verify.vs"
-		key="a"
+	<cmd name="Lion Summoning" priority="4"
+		queueicon="gameres/icons/upgrades/summon lion.bmp"
+		button="actions/summon lion.bmp"
+		key="l"
 		researchcommand="yes"
-		costgold="2000"
-		execdelay="15000"
-		rollover="Protection of Apollo (once per game)"
-		description="Makes all your strongholds indestructible for 2 minutes"
+		groupverifier="data/subai/research_verify.vs"
+		costgold="1200"
+		execdelay="30000"
+		rollover="Lion summoning"
+		description="Allows priests to sacrifice themselves to summon a lion that remains under your control for about 150 seconds.\nThe same effect also applies every time that a priest dies, but for about 30 seconds"
 		method="research"
-		param="ReqSet, Offer to Gods, default, NamePlr, Protection of Apollo, default">
+		param="ReqSet, Offer to Gods, default, NamePlr, Lion Summoning, default">
 		<src obj="HTemple" />
 	</cmd>
 	<cmd name="HRestoration" priority="5"
@@ -528,6 +528,20 @@
 		description="Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage"
 		method="research"
 		param="ReqSet, Offer to Gods, default, NamePlr, Statue of Zeus, default">
+		<src obj="HTemple" />
+	</cmd>
+	<cmd name="Protection of Apollo" priority="7"
+		button="Research/Apollo Protection.bmp"
+		queueicon="gameres/icons/upgrades/Apollo Protection.bmp"
+		groupverifier="data/subai/research_verify.vs"
+		key="a"
+		researchcommand="yes"
+		costgold="2000"
+		execdelay="15000"
+		rollover="Protection of Apollo (once per game)"
+		description="Makes all your strongholds indestructible for 2 minutes"
+		method="research"
+		param="ReqSet, Offer to Gods, default, NamePlr, Protection of Apollo, default">
 		<src obj="HTemple" />
 	</cmd>
 </commands>

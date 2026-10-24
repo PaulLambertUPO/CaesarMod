@@ -22,7 +22,7 @@
 		transpicon="1"
 		traincommand="yes"
 		key="a"
-		costgold="60"
+		costgold="70"
 		costpop="1"
 		execdelay="8000"
 		rollover="Equip Archer"

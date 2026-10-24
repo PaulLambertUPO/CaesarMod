@@ -6,7 +6,7 @@
 		traincommand="yes"
 		transpicon="1"
 		key="p"
-		costgold="200"
+		costgold="150"
 		execdelay="20000"
 		rollover="Call Priest"
 		method="train"

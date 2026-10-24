@@ -1,0 +1,18 @@
+<class id="TTeutonWolfBase" parent="Horse" cpp_class="CVXUnit">
+	<!-- this class only exists to avoid displaying "Mercenary" in hybrid selections (which would happen by using it as the parent) -->
+	<properties race="Germany" />
+	<properties maxhealth="320" />
+	<properties damage="24" armor_slash="10" armor_pierce="10" />
+	<properties speed="160" />
+	<properties unit_specials="Charge" />
+
+	<properties select_class="TTeutonWolfBase" />
+
+	<properties display_name="Teuton Raider" display_name_plural="Teuton Raiders" />
+	<properties icon="gameres/icons/TTeutonWolf.bmp" />
+	<properties help="contents/units/TTeutonWolf" />
+
+	<method sig="convert" vs="data/subai/unit_convert_TTeutonWolf.vs" />
+
+	<sounds command="VoiceTTeutonWolf" />
+</class>

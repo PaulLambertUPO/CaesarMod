@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entity.xsl"?>
-<entity name="GDruid" type="vx/unit" variations="8" pass_file="">
+
+<entity name="GDruid" type="vx/unit" variations="8">
 	<images>
 		<image idx="2" file="GDruid_Idle" drawmode="player_color" remaping="none" rows="7" columns="8" />
 		<image idx="3" file="GDruid_Heal" drawmode="player_color" remaping="pingpong" rows="21" columns="8" />
@@ -102,31 +103,31 @@
 			<frame idx="8" duration="55" />
 			<frame idx="9" duration="0" />
 		</anim>
-		<anim idx="17" name="Heal" startstate="1" endstate="1" frames="23" duration="2184" default_duration="104" action_time="728" step="40">
+		<anim idx="17" name="Heal" startstate="1" endstate="1" frames="23" duration="1932" default_duration="92" action_time="644" step="40">
 			<replace layer="1" image="3" offsetx="-82" offsety="-104" />
 			<replace layer="2" image="10" offsetx="-82" offsety="-104" />
 			<frame idx="1" duration="0" />
-			<frame idx="2" duration="104" />
-			<frame idx="3" duration="104" />
-			<frame idx="4" duration="104" />
-			<frame idx="5" duration="104" />
-			<frame idx="6" duration="104" />
-			<frame idx="7" duration="104" />
-			<frame idx="8" duration="104" />
-			<frame idx="9" duration="104" />
-			<frame idx="10" duration="104" />
-			<frame idx="11" duration="104" />
-			<frame idx="12" duration="104" />
-			<frame idx="13" duration="104" />
-			<frame idx="14" duration="104" />
-			<frame idx="15" duration="104" />
-			<frame idx="16" duration="104" />
-			<frame idx="17" duration="104" />
-			<frame idx="18" duration="104" />
-			<frame idx="19" duration="104" />
-			<frame idx="20" duration="104" />
-			<frame idx="21" duration="104" />
-			<frame idx="22" duration="104" />
+			<frame idx="2" duration="92" />
+			<frame idx="3" duration="92" />
+			<frame idx="4" duration="92" />
+			<frame idx="5" duration="92" />
+			<frame idx="6" duration="92" />
+			<frame idx="7" duration="92" />
+			<frame idx="8" duration="92" />
+			<frame idx="9" duration="92" />
+			<frame idx="10" duration="92" />
+			<frame idx="11" duration="92" />
+			<frame idx="12" duration="92" />
+			<frame idx="13" duration="92" />
+			<frame idx="14" duration="92" />
+			<frame idx="15" duration="92" />
+			<frame idx="16" duration="92" />
+			<frame idx="17" duration="92" />
+			<frame idx="18" duration="92" />
+			<frame idx="19" duration="92" />
+			<frame idx="20" duration="92" />
+			<frame idx="21" duration="92" />
+			<frame idx="22" duration="92" />
 			<frame idx="23" duration="0" />
 		</anim>
 		<anim idx="18" name="BeforeSacrifice" startstate="1" endstate="1" frames="17" duration="2250" default_duration="150" action_time="1950" step="0">

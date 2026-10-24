@@ -48,25 +48,25 @@
 <frame idx="14" duration="66"/>
 <frame idx="15" duration="0"/>
 </anim>
-<anim idx="5" name="attack" startstate="2" endstate="2" frames="17" duration="990" default_duration="0" action_time="594" step="0">
+<anim idx="5" name="attack" startstate="2" endstate="2" frames="17" duration="805" default_duration="55" action_time="495" step="0">
 <replace layer="1" image="1" offsetx="-84" offsety="-110"/>
 <replace layer="2" image="2" offsetx="-84" offsety="-110"/>
 <frame idx="1" duration="0"/>
-<frame idx="2" duration="66"/>
-<frame idx="3" duration="66"/>
-<frame idx="4" duration="66"/>
-<frame idx="5" duration="66"/>
-<frame idx="6" duration="66"/>
-<frame idx="7" duration="66"/>
-<frame idx="8" duration="66"/>
-<frame idx="9" duration="66"/>
-<frame idx="10" duration="66"/>
-<frame idx="11" duration="66"/>
-<frame idx="12" duration="66"/>
-<frame idx="13" duration="66"/>
-<frame idx="14" duration="66"/>
-<frame idx="15" duration="66"/>
-<frame idx="16" duration="66"/>
+<frame idx="2" duration="55"/>
+<frame idx="3" duration="55"/>
+<frame idx="4" duration="55"/>
+<frame idx="5" duration="55"/>
+<frame idx="6" duration="55"/>
+<frame idx="7" duration="55"/>
+<frame idx="8" duration="55"/>
+<frame idx="9" duration="55"/>
+<frame idx="10" duration="55"/>
+<frame idx="11" duration="55"/>
+<frame idx="12" duration="55"/>
+<frame idx="13" duration="55"/>
+<frame idx="14" duration="55"/>
+<frame idx="15" duration="55"/>
+<frame idx="16" duration="55"/>
 <frame idx="17" duration="0"/>
 </anim>
 <anim idx="9" name="die" startstate="1" endstate="1" frames="33" duration="17150" default_duration="0" action_time="0" step="0">

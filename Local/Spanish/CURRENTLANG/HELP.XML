@@ -228,7 +228,7 @@ La mayoría de las características especiales consumen energía: cuando ésta d
 			<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Ataque experto (coste 1) - la unidad añade el nivel al valor de ataque.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Parry.bmp">Contención - si se utiliza, la unidad no puede infligir ni recibir daño mientras tenga energía disponible. Cada golpe recibido consume 1 punto de energía y cada golpe infligido proporciona 1.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetración (coste 1) - la unidad ignora la defensa enemiga y las características especiales "Defensa especial", "Inmunidad" y "Tácticas defensivas" (no afecta a los héroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Ataque letal (coste 4) - la unidad elimina al enemigo si éste está dañado y con una salud máxima inferior o igual a la mitad de la de la unidad (no afecta a los héroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Ataque letal (coste 5) - la unidad elimina al enemigo si éste está dañado y con una salud máxima inferior o igual a la mitad de la de la unidad (no afecta a los héroes).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Furia (coste 5) - la unidad inflige un daño adicional sacrificando sus puntos de salud, que no pueden caer por debajo del 50% de la máxima (no afecta a los héroes).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Regeneración (coste 4) - la unidad restablece 50 puntos de salud cada 5 segundos siempre que tenga víveres disponibles.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Revenge.bmp">Venganza - la unidad inflige 100 puntos de daño a su asesino (solo funciona en cuerpo a cuerpo).</entry>
@@ -317,7 +317,7 @@ La mayoría de las características especiales consumen energía: cuando ésta d
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetración (coste 1) - la unidad ignora la defensa enemiga y las características especiales "Defensa especial", "Inmunidad" e "Tácticas defensivas" (no afecta a los héroes).</entry>
 			</topic>
 			<topic id="powerstrike">
-				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Ataque letal (coste 4) - la unidad elimina al enemigo si éste está dañado y con una salud máxima inferior o igual a la mitad de la de la unidad (no afecta a los héroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Ataque letal (coste 5) - la unidad elimina al enemigo si éste está dañado y con una salud máxima inferior o igual a la mitad de la de la unidad (no afecta a los héroes).</entry>
 			</topic>
 			<topic id="rage">
 				<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Furia (coste 5) - la unidad inflige un daño adicional sacrificando sus puntos de salud, que no pueden caer por debajo del 50% de la máxima (no afecta a los héroes).</entry>
@@ -371,14 +371,14 @@ Cada vez que un héroe alcanza un nivel superior, en su interfaz de selección a
 			<entry image="UI/InfoBar/Skills/EpicEndurance.bmp">Resistencia heroica - aumenta la salud máxima del héroe en 100 puntos por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/Euphoria.bmp">Euforia - proporciona al héroe y a las unidades vinculadas la capacidad de restablecer 3 puntos de energía con cada asesinato con una probabilidad del 10% por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/Leadership.bmp">Maestría - aumenta la experiencia proporcionada por el héroe a las unidades vinculadas en un 2% por punto de habilidad.</entry>
-			<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Marcha forzada - aumenta la velocidad de movimiento del héroe y de las unidades vinculadas en un 5% por punto de habilidad.</entry>
+			<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Marcha forzada - aumenta la velocidad de movimiento del héroe y de las unidades vinculadas en un 4% por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/Recovery.bmp">Recuperación - proporciona al héroe y a las unidades vinculadas la capacidad de restablecer 5 puntos de salud adicionales mientras se alimentan con una probabilidad del 10% por punto de habilidad.</entry>
-			<entry image="UI/InfoBar/Skills/Scout.bmp">Exploración - aumenta la vista del héroe en 50 puntos por punto de habilidad.</entry>
+			<entry image="UI/InfoBar/Skills/Scout.bmp">Exploración - aumenta la vista del héroe en 30 puntos por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/Survival.bmp">Supervivencia - proporciona al héroe y a las unidades vinculadas la capacidad de alimentarse sin consumir víveres con una probabilidad del 10% por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/TeamAttack.bmp">Superioridad ofensiva - aumenta el ataque del héroe y de las unidades vinculadas en 1 punto por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/TeamDefense.bmp">Superioridad defensiva - aumenta la defensa del héroe y de las unidades vinculadas en 1 punto por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/Vigor.bmp">Vigor - proporciona al héroe y a las unidades vinculadas la capacidad de restablecer 1 punto de energía adicional con una probabilidad del 10% por punto de habilidad.</entry>
-			<entry image="UI/InfoBar/Skills/Wisdom.bmp">Sabiduría - proporciona al héroe la capacidad de ganar 1 punto de experiencia cada vez que una unidad vinculada muere con un 5% de probabilidad por punto de habilidad.</entry>
+			<entry image="UI/InfoBar/Skills/Wisdom.bmp">Sabiduría - proporciona al héroe la capacidad de ganar 1 punto de experiencia cada vez que una unidad vinculada muere con un 4% de probabilidad por punto de habilidad.</entry>
 			<entry hcenter="1" font="large">Características especiales activables</entry>
 			<entry image="UI/InfoBar/Skills/Assault.bmp">Gesta (coste 6) - si se utiliza, el héroe y las unidades vinculadas ignoran la defensa enemiga durante 2 segundos más 0,6 segundos adicionales por punto de habilidad.</entry>
 			<entry image="UI/InfoBar/Skills/BattleCry.bmp">Proeza (coste 6) - si se utiliza, aumenta el nivel de las unidades vinculadas durante 8 segundos en 1 punto por punto de habilidad.</entry>
@@ -440,7 +440,7 @@ Cada vez que un héroe alcanza un nivel superior, en su interfaz de selección a
 				<entry image="UI/InfoBar/Skills/Leadership.bmp">Maestría - aumenta la experiencia proporcionada por el héroe a las unidades vinculadas en un 2% por punto de habilidad.</entry>
 			</topic>
 			<topic id="quickmarch">
-				<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Marcha forzada - aumenta la velocidad de movimiento del héroe y de las unidades vinculadas en un 5% por punto de habilidad.</entry>
+				<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Marcha forzada - aumenta la velocidad de movimiento del héroe y de las unidades vinculadas en un 4% por punto de habilidad.</entry>
 			</topic>
 			<topic id="recovery">
 				<entry image="UI/InfoBar/Skills/Recovery.bmp">Recuperación - proporciona al héroe y a las unidades vinculadas la capacidad de restablecer 5 puntos de salud adicionales mientras se alimentan con una probabilidad del 10% por punto de habilidad.</entry>
@@ -449,7 +449,7 @@ Cada vez que un héroe alcanza un nivel superior, en su interfaz de selección a
 				<entry image="UI/InfoBar/Skills/Rush.bmp">Acometida (coste 4) - si se utiliza, restablece la energía de las unidades vinculadas en 1 punto por punto de habilidad y les inflige 5 puntos de daño por punto de habilidad.</entry>
 			</topic>
 			<topic id="scout">
-				<entry image="UI/InfoBar/Skills/Scout.bmp">Exploración - aumenta la vista del héroe en 50 puntos por punto de habilidad.</entry>
+				<entry image="UI/InfoBar/Skills/Scout.bmp">Exploración - aumenta la vista del héroe en 30 puntos por punto de habilidad.</entry>
 			</topic>
 			<topic id="survival">
 				<entry image="UI/InfoBar/Skills/Survival.bmp">Supervivencia - proporciona al héroe y a las unidades vinculadas la capacidad de alimentarse sin consumir víveres con una probabilidad del 10% por punto de habilidad.</entry>
@@ -464,7 +464,7 @@ Cada vez que un héroe alcanza un nivel superior, en su interfaz de selección a
 				<entry image="UI/InfoBar/Skills/Vigor.bmp">Vigor - proporciona al héroe y a las unidades vinculadas la capacidad de restablecer 1 punto de energía adicional con una probabilidad del 10% por punto de habilidad.</entry>
 			</topic>
 			<topic id="wisdom">
-				<entry image="UI/InfoBar/Skills/Wisdom.bmp">Sabiduría - proporciona al héroe la capacidad de ganar 1 punto de experiencia cada vez que una unidad vinculada muere con un 5% de probabilidad por punto de habilidad.</entry>
+				<entry image="UI/InfoBar/Skills/Wisdom.bmp">Sabiduría - proporciona al héroe la capacidad de ganar 1 punto de experiencia cada vez que una unidad vinculada muere con un 4% de probabilidad por punto de habilidad.</entry>
 			</topic>
 		</topic>
 		<topic id="notes">
@@ -521,7 +521,7 @@ Al inicio del juego, hay que elegir con qué tipo de Roma se quiere jugar: repub
 				<entry>
 - Costes muy altos
 
-- Vulnerable a "Penetración" y "Gesta"
+- Vulnerable a "Penetración" y "Gesta", no puede revelar enemigos invisibles
 
 - Difícil recuperación de la población mediante la taberna
 				</entry>
@@ -1009,7 +1009,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 50</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 12</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 120</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 1000 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 800 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry link="/contents/heroskills/administration">Liderazgo</entry>
@@ -1024,7 +1024,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 			<topic id="BHero">
 				<entry hcenter="1" font="large">Héroe britano</entry>
 				<entry image="UI/Help/Icons/BHero.bmp">El héroe britano tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 1000</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 1200</entry>
 				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Ataque 70</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 12</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 525</entry>
@@ -1041,6 +1041,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Se recluta en el Templo de Morrigan</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Depende de Desafíos</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Divine Reward.bmp" link="/contents/buildings/BArena">Depende de Recumpensa divina</entry>
 			</topic>
 			<topic id="EHero">
 				<entry hcenter="1" font="large">Héroe egipcio</entry>
@@ -1060,6 +1061,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry />
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/ETempleOfHorusAndAnubis.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Se recluta en el Templo de Horus y Anubis</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Light of Horus 3.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Depende de Luz de Horus I, II y III</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Mumification.bmp" link="/contents/buildings/ETempleOfOsiris">Depende de Culto a los muertos</entry>
 			</topic>
 			<topic id="THero">
@@ -1067,13 +1069,13 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry image="UI/Help/Icons/THero.bmp">El héroe germano tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 1400</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 70</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 10</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 12</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 120</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 800 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry link="/contents/heroskills/assault">Gesta</entry>
-				<entry link="/contents/heroskills/concealment">Movimiento evasivo</entry>
+				<entry link="/contents/heroskills/euphoria">Euforia</entry>
 				<entry link="/contents/heroskills/frenzy">Osadía</entry>
 				<entry link="/contents/heroskills/quickmarch">Marcha forzada</entry>
 				<entry link="/contents/heroskills/teamattack">Superioridad ofensiva</entry>
@@ -1129,7 +1131,7 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 70</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 80 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 90 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 8 segundos</entry>
 				<entry />
@@ -1230,7 +1232,6 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 12 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp" link="/contents/specials/defenseskill">Defensa especial</entry>
-				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
 				<entry image="UI/InfoBar/Unit Specials/Rage.bmp" link="/contents/specials/rage">Furia</entry>
 				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp" link="/contents/specials/toughness">Resistencia (solo Roma púnica)</entry>
 				<entry />
@@ -1308,17 +1309,24 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry hcenter="1" font="large">Liberatus</entry>
 				<entry image="UI/Icons/RLiberatus.bmp">El liberatus tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 480</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 44</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 42</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 14</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 90</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 2000 oro (10 Liberati)</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos (10 Liberati)</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Máximo 20</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp" link="/contents/specials/bleedingattack">Obstinación</entry>
+				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp" link="/contents/specials/cripple">Desvanecimiento (cambiable con Penetración)</entry>
+				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Penetración (cambiable con Desvanecimiento)</entry>
 				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Learning.bmp" link="/contents/specials/learning">Aprendizaje</entry>
 				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp" link="/contents/specials/toughness">Resistencia (solo Roma púnica)</entry>
+				<entry />
+				<entry font="large">Commands</entry>
+				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Cripple To Penetration.bmp">
+Cambiar Desvanecimiento y Penetración
+El liberatus cambia Desvanecimiento con Penetración (y viceversa).
+				</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/RArena.bmp" link="/contents/buildings/RArena">Se recluta en el Coliseo</entry>
@@ -1334,9 +1342,9 @@ Grecia puede elegir entre seguir una forma de gobierno democrática como Atenas 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 140</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
@@ -1388,7 +1396,7 @@ El sacerdote se sacrifica para hacer caer un rayo no letal sobre la unidad selec
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 50 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 60 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 8 segundos</entry>
 				<entry />
@@ -1438,7 +1446,7 @@ El sacerdote se sacrifica para hacer caer un rayo no letal sobre la unidad selec
 				<entry hcenter="1" font="large">Lancero galo</entry>
 				<entry image="UI/Icons/GSpearman.bmp">El lancero galo tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 280</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 18</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 20</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 16</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 120 oro</entry>
@@ -1477,17 +1485,16 @@ El sacerdote se sacrifica para hacer caer un rayo no letal sobre la unidad selec
 			<topic id="GWWarrior">
 				<entry hcenter="1" font="large">Guerrera gala</entry>
 				<entry image="UI/Icons/GWomanWarrior.bmp">La guerrera gala tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 215</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 250</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 14</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 240 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 230 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 18 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp" link="/contents/specials/deathblow">Golpe mortal</entry>
 				<entry image="UI/InfoBar/Unit Specials/Revenge.bmp" link="/contents/specials/revenge">Venganza</entry>
-				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp" link="/contents/specials/toughness">Resistencia</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/GBarracks.bmp" link="/contents/buildings/GBarracks">Se equipa en el Cuartel</entry>
@@ -1520,9 +1527,9 @@ El sacerdote se sacrifica para hacer caer un rayo no letal sobre la unidad selec
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 120</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 0</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Healing.bmp" link="/contents/specials/uhealing">Curación</entry>
@@ -1573,6 +1580,22 @@ El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
 				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/IBarracks.bmp" link="/contents/buildings/IBarracks">Se equipa en el Cuartel</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Tournaments.bmp" link="/contents/buildings/IArena">Depende de Torneos</entry>
+				<entry />
+				<entry hcenter="1" font="large">Miliciano desesperado</entry>
+				<entry image="UI/Icons/zpwIMilitiaman.bmp">El miliciano desesperado tiene los siguientes parámetros y características:</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 180</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 22</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
+				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
+				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp" link="/contents/specials/defenseskill">Defensa especial</entry>
+				<entry />
+				<entry font="large">Órdenes</entry>
+				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Disband.bmp" link="/contents/units/Villagers">
+Licenciar
+El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
+				</entry>
+				<entry font="large">Ver también</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Call to Arms.bmp" link="/contents/buildings/ITavern">Generable con Llamada a las armas</entry>
 			</topic>
 			<topic id="IArcher">
@@ -1583,7 +1606,7 @@ El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 60 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 70 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 8 segundos</entry>
 				<entry />
@@ -1730,9 +1753,9 @@ El miliciano deja las armas y se hace campesino (solo en estructuras y navíos).
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 120</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
@@ -1815,8 +1838,8 @@ La sacerdotisa se sacrifica para restablecer completamente la energía de 5 alia
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 22</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 280 o 140 oro</entry>
-				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 14 segundos</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 260 o 130 oro</entry>
+				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 12 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp" link="/contents/specials/attackskill">Ataque especial</entry>
 				<entry image="UI/InfoBar/Unit Specials/Parry.bmp" link="/contents/specials/parry">Contención</entry>
@@ -1833,7 +1856,7 @@ La sacerdotisa se sacrifica para restablecer completamente la energía de 5 alia
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 6</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 300 o 150 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 280 o 140 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 14 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
@@ -1904,7 +1927,7 @@ La sacerdotisa se sacrifica para restablecer completamente la energía de 5 alia
 			<topic id="CWarElephant">
 				<entry hcenter="1" font="large">Elefante de guerra</entry>
 				<entry image="UI/Icons/CWarElephant.bmp">El elefante de guerra tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 2600</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 2800</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 64</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 26</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 65</entry>
@@ -1929,9 +1952,9 @@ La sacerdotisa se sacrifica para restablecer completamente la energía de 5 alia
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 140</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Curse.bmp" link="/contents/specials/curse">Maldición</entry>
@@ -1954,7 +1977,7 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 			<topic id="BSwordsman">
 				<entry hcenter="1" font="large">Guerrero britano</entry>
 				<entry image="UI/Icons/BSwordsman.bmp">El guerrero britano tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 180</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 200</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 16</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
@@ -1976,7 +1999,7 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 60 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 80 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 6 segundos</entry>
 				<entry />
@@ -2003,9 +2026,9 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 			<topic id="BBronzeSpearman">
 				<entry hcenter="1" font="large">Lancero britano</entry>
 				<entry image="UI/Icons/BBronzeSpearman.bmp">El lancero britano tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 240</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 220</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 24</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 16</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 12</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
@@ -2024,7 +2047,7 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry image="UI/Icons/BShieldBearer.bmp">El luchador caledonio tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 300</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 26</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 14</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 16</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
@@ -2041,15 +2064,14 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry hcenter="1" font="large">Guerrero con jabalina</entry>
 				<entry image="UI/Icons/BJavelineer.bmp">El guerrero con jabalina tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 200</entry>
-				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Ataque 24</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
+				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Ataque 22</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 400</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 14 segundos</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp" link="/contents/specials/deathblow">Golpe mortal</entry>
 				<entry image="UI/InfoBar/Unit Specials/Drain.bmp" link="/contents/specials/drain">Extenuación</entry>
 				<entry />
@@ -2061,8 +2083,8 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry hcenter="1" font="large">Highlander</entry>
 				<entry image="UI/Icons/BHighlander.bmp">El highlander tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 475</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 50</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 8</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 52</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 400 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
@@ -2101,9 +2123,9 @@ El chamán se transforma en un espíritu que permanece bajo tu control durante u
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 160</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 0</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp" link="/contents/specials/invisibility">Encubrimiento</entry>
@@ -2137,7 +2159,7 @@ El druida se sacrifica para distribuir hasta 1000 puntos de salud entre los alia
 				<entry image="UI/Icons/ESwordsman.bmp">El guerrero egipcio tiene los siguientes parámetros y características:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 300</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 18</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 6</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 70 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
@@ -2157,7 +2179,7 @@ El druida se sacrifica para distribuir hasta 1000 puntos de salud entre los alia
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 60 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 80 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 10 segundos</entry>
 				<entry />
@@ -2193,7 +2215,6 @@ El druida se sacrifica para distribuir hasta 1000 puntos de salud entre los alia
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 12 segundos</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Golpe triple</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
@@ -2260,8 +2281,8 @@ El druida se sacrifica para distribuir hasta 1000 puntos de salud entre los alia
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 620</entry>
 				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Ataque 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 14</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 500</entry>
-				<entry image="UI/Help/Speed Ico.bmp">Velocidad 140</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 400</entry>
+				<entry image="UI/Help/Speed Ico.bmp">Velocidad 160</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 400 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 30 segundos</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Máximo 15</entry>
@@ -2279,9 +2300,9 @@ El druida se sacrifica para distribuir hasta 1000 puntos de salud entre los alia
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 200</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp" link="/contents/specials/cripple">Desvanecimiento</entry>
@@ -2309,7 +2330,7 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 			<topic id="TSwordsman">
 				<entry hcenter="1" font="large">Guerrero germano</entry>
 				<entry image="UI/Icons/TSwordsman.bmp">El guerrero germano tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 200</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 220</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 14</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 6</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
@@ -2335,7 +2356,6 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 10 segundos</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp" link="/contents/specials/attackskill">Ataque especial</entry>
 				<entry />
 				<entry font="large">Ver también</entry>
@@ -2349,7 +2369,6 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 				<entry image="UI/Help/Special Ico.bmp">Alcance 600</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp" link="/contents/specials/attackskill">Ataque especial</entry>
 				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince</entry>
@@ -2364,12 +2383,11 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 70</entry>
-				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Coste 280 víveres</entry>
+				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Coste 260 víveres</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 12 segundos</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Máximo 10, 20, 30... infinito</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp" link="/contents/specials/cripple">Desvanecimiento</entry>
 				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Golpe triple</entry>
 				<entry />
@@ -2404,7 +2422,7 @@ El sacerdote se transforma en un espíritu que permanece bajo tu control durante
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 26</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 160</entry>
-				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Coste 360 víveres</entry>
+				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Coste 320 víveres</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Coste 1 población</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 16 segundos</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Máximo 10, 20, 30... infinito</entry>
@@ -2467,7 +2485,7 @@ El asaltador teutón cambia equipos y se convierte en jinete teutón (solo en es
 			<topic id="TMaceman">
 				<entry hcenter="1" font="large">Guerrero con maza germano</entry>
 				<entry image="UI/Icons/TMaceman.bmp">El guerrero con maza germano tiene los siguientes parámetros y características:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 540</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 560</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 44</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 6</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
@@ -2476,7 +2494,6 @@ El asaltador teutón cambia equipos y se convierte en jinete teutón (solo en es
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 22 segundos</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Máximo 10, 20, 30... infinito</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
 				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp" link="/contents/specials/deathblow">Golpe mortal</entry>
 				<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp" link="/contents/specials/regeneration">Regeneración</entry>
 				<entry />
@@ -2511,9 +2528,9 @@ El asaltador teutón cambia equipos y se convierte en jinete teutón (solo en es
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 140</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 6</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Curse.bmp" link="/contents/specials/curse">Maldición</entry>
@@ -2697,9 +2714,9 @@ La hechicera se sacrifica para distribuir hasta 1000 puntos de salud entre los a
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 180</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 2</entry>
-				<entry image="UI/Help/Special Ico.bmp">Alcance 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Alcance 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocidad 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 200 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Coste 150 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tiempo de reclutamiento 20 segundos</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Healing.bmp" link="/contents/specials/uhealing">Curación</entry>
@@ -2709,6 +2726,10 @@ La hechicera se sacrifica para distribuir hasta 1000 puntos de salud entre los a
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Curar
 Cura al aliado seleccionado por una cantidad de puntos de salud igual a 20 más el nivel del sacerdote.
+				</entry>
+				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Summon Lion.bmp" link="/contents/units/Animals/LionM">
+Invocar león
+El sacerdote se sacrifica para invocar a un león que permanece bajo tu control durante unos 150 segundos.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Sacrificio revitalizador
@@ -2821,7 +2842,7 @@ La catapulta es un gran dispositivo de madera capaz de lanzar proyectiles explos
 No es precisa, pero puede ser muy eficaz contra unidades densamente concentradas.
 				</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 1000</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 120</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 150</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 300-750</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Construida por: Galia, Iberia, Cartago, Egipto</entry>
@@ -2831,7 +2852,7 @@ La torre es una gran estructura de madera que dispara flechas hacia el objetivo 
 Puede ser muy eficaz contra unidades prioritarias y rápidas, o como línea de defensa adicional si construida dentro de una fortaleza.
 				</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salud 1000</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 120</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Ataque 40</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Alcance 150-725</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Construida por: Roma, Grecia</entry>
@@ -2940,9 +2961,13 @@ Se invoca mediante el sacrificio de unidades espirituales o con la activación d
 					<entry image="UI/InfoBar/Common/Defense Ico.bmp">Defensa 4</entry>
 					<entry image="UI/Help/Speed Ico.bmp">Velocidad 80</entry>
 					<entry />
-					<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad</entry>
+					<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Vitalidad (solo león salvaje)</entry>
+					<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Reanimación (solo león invocado)</entry>
 					<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertad</entry>
+					<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Vista de lince (solo león invocado)</entry>
 					<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Golpe triple</entry>
+					<entry font="large">Vedi anche</entry>
+					<entry vcenter="1" image="UI/Icons/Upgrades/Summon Lion.bmp" link="/contents/buildings/HTemple">Generable con Invocar león</entry>
 				</topic>
 				<topic id="LionF">
 					<entry hcenter="1" font="large">Leona</entry>
@@ -3221,7 +3246,7 @@ Inicia el entrenamiento de las unidades alojadas en el foro.
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Curación
 Distribuye hasta 2000 puntos de salud entre los aliados cercanos.
-Coste: 1000 oro
+Coste: 800 oro
 Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
@@ -3329,7 +3354,7 @@ Inicia el entrenamiento de las unidades alojadas en el foro.
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Curación
 Distribuye hasta 2000 puntos de salud entre los aliados cercanos.
-Coste: 1000 oro
+Coste: 800 oro
 Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
@@ -3401,7 +3426,7 @@ Inicia el entrenamiento de las unidades alojadas en el foro.
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Hire Sentries.bmp" link="/contents/units/HToxotes">
 Contratar centinelas
 Contrata hasta 10 centinelas para ayudar a defender la fortaleza.
-Coste: 1000 oro
+Coste: 800 oro
 Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
@@ -3453,7 +3478,7 @@ Tiempo: 6 - 3 - 1,5 - 0,75 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Train RArcher.bmp" link="/contents/units/RArcher">
 Equipar arquero
-Coste: 80 oro y 1 población
+Coste: 90 oro y 1 población
 Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Train RGladiator.bmp" link="/contents/units/RGladiator">
@@ -3531,7 +3556,7 @@ Tiempo: 6 - 3 - 1,5 - 0,75 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GArcher.bmp" link="/contents/units/GArcher">
 Equipar arquero
-Coste: 50 oro y 1 población
+Coste: 60 oro y 1 población
 Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GAxeman.bmp" link="/contents/units/GAxeman">
@@ -3551,7 +3576,7 @@ Tiempo: 16 - 8 - 4 - 2 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GWomanWarrior.bmp" link="/contents/units/GWWarrior">
 Equipar guerrera gala
-Coste: 240 oro y 1 población
+Coste: 230 oro y 1 población
 Tiempo: 18 - 9 - 4,5 - 2,25 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
@@ -3593,7 +3618,7 @@ Tiempo: 6 - 3 - 1,5 - 0,75 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IArcher.bmp" link="/contents/units/IArcher">
 Equipar arquero
-Coste: 60 oro y 1 población
+Coste: 70 oro y 1 población
 Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IDefender.bmp" link="/contents/units/IDefender">
@@ -3660,12 +3685,12 @@ Tiempo: 10 - 5 - 2,5 - 1,25 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CBerberAssassin.bmp" link="/contents/units/CBerberAssassin">
 Contratar luchador mauritano
-Coste: 280 o 140 oro
-Tiempo: 14 - 7 - 3,5 - 1,75 segundos
+Coste: 260 o 130 oro
+Tiempo: 12 - 6 - 3 - 1,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CMaceman.bmp" link="/contents/units/CMaceman">
 Contratar guerrero con maza
-Coste: 300 o 150 oro
+Coste: 280 o 140 oro
 Tiempo: 14 - 7 - 3,5 - 1,75 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CNumidianRider.bmp" link="/contents/units/CNumidianRider">
@@ -3717,7 +3742,7 @@ Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BBowman.bmp" link="/contents/units/BBowman">
 Equipar arquero
-Coste: 60 oro y 1 población
+Coste: 80 oro y 1 población
 Tiempo: 6 - 3 - 1,5 - 0,75 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BBronzeSpearman.bmp" link="/contents/units/BBronzeSpearman">
@@ -3779,7 +3804,7 @@ Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EArcher.bmp" link="/contents/units/EArcher">
 Equipar arquero
-Coste: 60 oro y 1 población
+Coste: 80 oro y 1 población
 Tiempo: 10 - 5 - 2,5 - 1,25 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EAxeTrower.bmp" link="/contents/units/EAxeThrower">
@@ -3841,12 +3866,12 @@ Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TArcher.bmp" link="/contents/units/TArcher">
 Equipar arquera
-Coste: 200 víveres e 1 población
+Coste: 160 víveres e 1 población
 Tiempo: 10 - 5 - 2,5 - 1,25 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TAxeman.bmp" link="/contents/units/TAxeman">
 Equipar guerrero con hacha
-Coste: 300 víveres e 1 población
+Coste: 260 víveres e 1 población
 Tiempo: 12 - 6 - 3 - 1,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train THuntress.bmp" link="/contents/units/THuntress">
@@ -3856,7 +3881,7 @@ Tiempo: 16 - 8 - 4 - 2 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonRider.bmp" link="/contents/units/TTeutonRider">
 Equipar jinete teutón
-Coste: 360 víveres e 1 población
+Coste: 320 víveres e 1 población
 Tiempo: 16 - 8 - 4 - 2 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TMaceman.bmp" link="/contents/units/TMaceman">
@@ -3903,7 +3928,7 @@ Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Train HToxotes.bmp" link="/contents/units/HToxotes">
 Equipar toxotes
-Coste: 80 oro y 1 población
+Coste: 70 oro y 1 población
 Tiempo: 8 - 4 - 2 - 1 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Train HHoplite.bmp" link="/contents/units/HHoplite">
@@ -3957,7 +3982,7 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Pikes.bmp" link="/contents/units/RPrinciple">
 Producir picas
 Permite equipar a los princeps en el cuartel.
-Coste: 1800 oro
+Coste: 1400 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Horseshoes.bmp" link="/contents/units/RScout">
@@ -4156,25 +4181,25 @@ Tiempo: 30 o 7,5 segundos
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CSwords.bmp" link="/contents/units/CBerberAssassin">
 Forjar espadas
 Reduce a la mitad el coste de los luchadores mauritanos (a partir de la segunda vez el tiempo de la orden se reduce en un 75% y el coste es reembolsado).
-Coste: 1400 oro
+Coste: 1200 oro
 Tiempo: 30 o 7,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CMaces.bmp" link="/contents/units/CMaceman">
 Forjar mazas
 Reduce a la mitad el coste de los guerreros con maza (a partir de la segunda vez el tiempo de la orden se reduce en un 75% y el coste es reembolsado).
-Coste: 1600 oro
+Coste: 1400 oro
 Tiempo: 30 o 7,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CPikes.bmp" link="/contents/units/CNumidianRider">
 Forjar picas
 Reduce a la mitad el coste de los tuaregs (a partir de la segunda vez el tiempo de la orden se reduce en un 75% y el coste es reembolsado).
-Coste: 1800 oro
+Coste: 1600 oro
 Tiempo: 30 o 7,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CShields.bmp" link="/contents/units/CHorseman">
 Forjar escudos
 Reduce a la mitad el coste de los jinetes numidas (a partir de la segunda vez el tiempo de la orden se reduce en un 75% y el coste es reembolsado).
-Coste: 2000 oro
+Coste: 1800 oro
 Tiempo: 30 o 7,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/StopCSpears.bmp">
@@ -4443,7 +4468,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Advanced Training.bmp">
 Adiestramiento avanzado
 Permite aumentar el nivel de las unidades mediante el entrenamiento hasta el nivel 8.
-Coste: 1000 oro
+Coste: 750 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Veteran Offence.bmp">
@@ -4503,13 +4528,13 @@ Tiempo: 30 segundos
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Standartization 2.bmp">
 Reclutamiento avanzado
 Hace a todos los nuevos guerreros de nivel 6 pero incapaces de ganar experiencia.
-Coste: 2000 oro
+Coste: 1500 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Flexibility.bmp">
 Guerreros de élite
 Hace a todos los nuevos guerreros de nivel 8 y capaces de ganar experiencia.
-Coste: 4000 oro
+Coste: 2500 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Hire RLiberati.bmp" link="/contents/units/RLiberatus">
@@ -4564,13 +4589,13 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Advanced Training.bmp">
 Adiestramiento avanzado
 Permite aumentar el nivel de las unidades mediante el entrenamiento hasta el nivel 8.
-Coste: 1000 oro
+Coste: 750 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Maser Training.bmp">
 Adiestramiento especial
 Permite aumentar el nivel de las unidades mediante el entrenamiento hasta el nivel 12.
-Coste: 1500 oro
+Coste: 1000 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Hire RLiberati Punic.bmp" link="/contents/units/RLiberatus">
@@ -4626,13 +4651,13 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Advanced Training.bmp">
 Adiestramiento avanzado
 Permite aumentar el nivel de las unidades mediante el entrenamiento hasta el nivel 8.
-Coste: 1000 oro
+Coste: 750 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Maser Training.bmp">
 Adiestramiento especial
 Permite aumentar el nivel de las unidades mediante el entrenamiento hasta el nivel 12.
-Coste: 1500 oro
+Coste: 1000 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Hire TridentWarrior.bmp" link="/contents/units/GTridentWarrior">
@@ -4772,7 +4797,7 @@ Además de entretener al pueblo, los luchadores aprenden nuevas habilidades de c
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire HeroC.bmp" link="/contents/units/CHero">
 Reclutar héroe
-Coste: 1000 oro
+Coste: 800 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/Peoples Assembly.bmp">
@@ -4807,7 +4832,7 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/Mahout Mastery.bmp">
 Maestría de los mahouts
-Hace a los nuevos elefantes de guerra de nivel 16.
+Hace a los nuevos elefantes de guerra de nivel 20.
 Coste: 2000 oro
 Tiempo: 30 segundos
 				</entry>
@@ -4872,6 +4897,12 @@ Hace a los nuevos jefes normandos de 2 niveles más que el último reclutado (ha
 Coste: 2000 oro
 Tiempo: 20 segundos
 				</entry>
+				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Divine Reward.bmp">
+Recompensa de los dioses
+Otorga a los héroes una habilidad aleatoria al alcanzar el nivel 30.
+Coste: 2500 oro
+Tiempo: 30 segundos
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar
 Repara la estructura para que vuelva a ser operativa si está demasiado dañada.
@@ -4932,20 +4963,20 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Light of Horus 1.bmp">
 Luz de Horus I
-Hace a todos los nuevos guerreros de nivel 2 (4 para los guerreros de Horus).
-Coste: 500 oro
+Hace a todos los nuevos guerreros y héroes de nivel 2 (4 para los guerreros de Horus).
+Coste: 250 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Light of Horus 2.bmp">
 Luz de Horus II
-Hace a todos los nuevos guerreros de nivel 4 (6 para los guerreros de Horus).
-Coste: 1000 oro
+Hace a todos los nuevos guerreros y héroes de nivel 4 (6 para los guerreros de Horus).
+Coste: 500 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Light of Horus 3.bmp">
 Luz de Horus III
-Hace a todos los nuevos guerreros de nivel 6 (8 para los guerreros de Horus).
-Coste: 1500 oro
+Hace a todos los nuevos guerreros y héroes de nivel 6 (8 para los guerreros de Horus).
+Coste: 750 oro
 Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Statue of Amon-Ra.bmp">
@@ -5134,7 +5165,7 @@ Tiempo: 20 segundos
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Scout Area.bmp">
 Explorar área
 Retira temporalmente la niebla de guerra alrededor del punto seleccionado.
-Coste: 200 oro
+Coste: 400 oro
 Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Buy Maps.bmp">
@@ -5269,7 +5300,7 @@ Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Call to Arms.bmp" link="/contents/units/IMilitiaman">
 Llamada a las armas
-Alista a 50 campesinos, transformándoles en milicianos de nivel 4 (8 tras 10 minutos de juego).
+Alista a 50 campesinos, transformándoles en milicianos desesperados de nivel 8.
 Coste: 800 oro
 Tiempo: 15 segundos
 				</entry>
@@ -5546,8 +5577,8 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Start Storing Food.bmp">
 Almacenar víveres
-Permite almacenar pequeñas cantidades de víveres utilizables en el futuro.
-Coste: 800 oro
+Almacena víveres en un depósito aparte con el tiempo (con una ganancia del 50%).
+Coste: 1000 oro
 Tiempo: instantáneo
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Stop Storing Food.bmp">
@@ -5586,7 +5617,7 @@ Los sacerdotes pueden curar heridas, son capaces de aprender de otras unidades y
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Train RPriest.bmp" link="/contents/units/RPriest">
 Convocar sacerdote
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Priest Enlightment.bmp">
@@ -5629,7 +5660,7 @@ Los druidas pueden curar heridas y hacerse invisibles, sono capaces de aprender 
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GDruid.bmp" link="/contents/units/GDruid">
 Convocar druida
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
@@ -5678,7 +5709,7 @@ La sacerdotisas pueden instruir a los guerreros, son capaces de aprender de otra
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IEnchantress.bmp" link="/contents/units/IEnchantress">
 Convocar sacerdotisa
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Code of Valor.bmp">
@@ -5721,7 +5752,7 @@ Los chamanes pueden maldecir y debilitar al enemigo incluso estando muertos, son
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CShaman.bmp" link="/contents/units/CShaman">
 Convocar chamán
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Research/Dark Rituals.bmp">
@@ -5769,7 +5800,7 @@ Los druidas pueden hacer invisibles a sí mismos y a los aliados, son capaces de
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BDruid.bmp" link="/contents/units/BDruid">
 Convocar druida
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
@@ -5818,7 +5849,7 @@ Los sacerdotes pueden socavar y debilitar al enemigo incluso estando muertos, so
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EPriest.bmp" link="/contents/units/EPriest">
 Convocar sacerdote
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Cult of Osiris.bmp">
@@ -5841,8 +5872,8 @@ Tiempo: 20 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Mumification.bmp">
 Culto a los muertos
-Hace a todos los nuevos héroes de 2/3 del nivel del más experimentado tenido durante la partida.
-Coste: 3000 oro
+Hace a todos los nuevos héroes de la mitad del nivel del más experimentado tenido durante la partida.
+Coste: 2500 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Chariot of Osiris.bmp" link="/contents/units/EChariot">
@@ -5867,7 +5898,7 @@ Las hechiceras pueden maldecir al enemigo, son capaces de aprender de otras unid
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TEnchantress.bmp" link="/contents/units/TEnchantress">
 Convocar hechicera
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
@@ -5878,8 +5909,8 @@ Tiempo: 40 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Summon Wolf.bmp" link="/contents/units/Animals/Wolf">
 Invocar lobo
-Permite a las hechiceras sacrificarse para invocar a un lobo que permanece bajo tu control durante unos 200 segundos.
-Coste: 800 oro
+Permite a las hechiceras sacrificarse para invocar a un lobo que permanece bajo tu control durante unos 200 segundos. El mismo efecto también se activa cada vez que una hechicera muere, pero durante unos 30 segundos.
+Coste: 1000 oro
 Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Summon Deer.bmp" link="/contents/units/Animals/Deer">
@@ -5910,7 +5941,7 @@ Los sacerdotes pueden curar heridas y revelar a los enemigos invisibles, son cap
 				<entry font="large">Órdenes</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Train HPriest.bmp" link="/contents/units/HPriest">
 Convocar sacerdote
-Coste: 200 oro
+Coste: 150 oro
 Tiempo: 20 - 10 - 5 - 2,5 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Offer to Gods.bmp">
@@ -5919,11 +5950,11 @@ Hace a los nuevos sacerdotes de nivel 5.
 Coste: 1500 oro
 Tiempo: 30 segundos
 				</entry>
-				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
-Protección de Apolo
-Hace indestructibles todas tus fortalezas durante 2 minutos. Solo se puede ejecutar esta orden una vez en toda la partida.
-Coste: 2000 oro
-Tiempo: instantáneo
+				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Summon Lion.bmp" link="/contents/units/Animals/LionM">
+Invocar león
+Permite a los sacerdotes sacrificarse para invocar a un león que permanece bajo tu control durante unos 150 segundos. El mismo efecto también se activa cada vez que un sacerdote muere, pero durante unos 30 segundos.
+Coste: 1200 oro
+Tiempo: 30 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Sacrificio revitalizador
@@ -5936,6 +5967,12 @@ Erigir estatua de Zeus
 Bendice a los guerreros con cada asesinato, haciendo que el siguiente ataque en los próximos 5 segundos inflija un daño adicional equivalente al valor de ataque.
 Coste: 2500 oro
 Tiempo: 30 segundos
+				</entry>
+				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
+Protección de Apolo
+Hace indestructibles todas tus fortalezas durante 2 minutos. Solo se puede ejecutar esta orden una vez en toda la partida.
+Coste: 2000 oro
+Tiempo: 15 segundos
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Reparar

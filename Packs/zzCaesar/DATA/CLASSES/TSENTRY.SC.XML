@@ -3,7 +3,7 @@
 	<properties race="Germany" />
 	<properties maxhealth="180" />
 	<properties damage="16" armor_slash="4" armor_pierce="4" />
-	<properties unit_specials="Active, Attack skill, Freedom, Keen sight" />
+	<properties unit_specials="Attack skill, Freedom, Keen sight" />
 
 	<properties icon="gameres/icons/TArcher.bmp" />
 	<properties help="contents/units/TArcher"/>

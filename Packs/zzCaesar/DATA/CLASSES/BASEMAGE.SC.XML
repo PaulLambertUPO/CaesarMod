@@ -1,7 +1,7 @@
 <class id="BaseMage" parent="Peaceful" cpp_class="CVXDruid">
 
 	<properties damage="1" armor_slash="2" armor_pierce="2" />
-	<properties range="200" min_range="0" sight="400" />
+	<properties range="300" min_range="0" sight="400" />
 
 	<properties target_factor="100" />
 	<properties healthbar_type="2" />

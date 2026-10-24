@@ -107,4 +107,4 @@
 
 //without this instruction, the game crashes
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

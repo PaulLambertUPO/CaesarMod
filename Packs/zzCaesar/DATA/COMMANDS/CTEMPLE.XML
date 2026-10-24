@@ -6,7 +6,7 @@
 		traincommand="yes"
 		transpicon="1"
 		key="s"
-		costgold="200"
+		costgold="150"
 		execdelay="20000"
 		rollover="Call Shaman"
 		method="train"

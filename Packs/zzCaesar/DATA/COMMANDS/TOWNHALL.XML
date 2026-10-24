@@ -46,7 +46,7 @@
 	</cmd>
 	<cmd name="healing" priority="11"
 		key="c"
-		costgold="1000"
+		costgold="800"
 		immediate="yes"
 		researchcommand="yes"
 		groupverifier="data/subai/townhall_healing_verify.vs"
@@ -71,7 +71,7 @@
 	</cmd>
 	<cmd name="hire_sentries" priority="11"
 		key="s"
-		costgold="1000"
+		costgold="800"
 		immediate="yes"
 		researchcommand="yes"
 		groupverifier="data/subai/townhall_hire_sentries_verify.vs"

@@ -2,7 +2,7 @@
 
 	<properties race="Gaul" />
 	<properties maxhealth="280" />
-	<properties damage="18" armor_slash="16" armor_pierce="16" />
+	<properties damage="20" armor_slash="16" armor_pierce="16" />
 	<properties speed="80" />
 	<properties unit_specials="Deflection, Learning" />
 

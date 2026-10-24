@@ -400,11 +400,11 @@ while (true) {
 										bool bHeroHurt = false, bDetachArmy = false;
 										int nFlee;//2-hero_dying, 4-army_dying, 8-losing
 
-										if (sqLeader.health < sqLeader.maxhealth * 3 / 5)
+										if (sqLeader.health < MIN(750, sqLeader.maxhealth * 11 / 20))
 											if (sqLeader.BestTargetInSquadSight.IsAlive) {
 												bHeroHurt = true;
 												nFlee += 2;
-												if (sqLeader.health < sqLeader.maxhealth / 3)
+												if (sqLeader.health < MIN(350, sqLeader.maxhealth / 3))
 													bDetachArmy = true;
 											}
 

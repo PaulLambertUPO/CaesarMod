@@ -13,6 +13,7 @@
 
 	<method sig="heal" vs="data/subai/druid_heal_unit.vs" verify="data/subai/druid_heal_verify.vs" />
 	<method sig="heal" vs="data/subai/druid_heal_ground.vs" />
+	<method sig="lion_summoning" vs="data/subai/druid_lion_summoning.vs" />
 	<method sig="restoration" vs="data/subai/druid_selfdestroy.vs" />
 
 	<method sig="idle" vs="data/subai/druid_heal_idle.vs" />
@@ -24,7 +25,7 @@
 	<method sig="engage" vs="data/subai/druid_heal_engage.vs" />
 	<method sig="ai_killall" vs="data/subai/druid_heal_engage.vs" />
 
-	<method sig="ondie" vs="data/subai/ienchantress_hpriest_ondie.vs" />
+	<method sig="ondie" vs="data/subai/hpriest_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="heal" />

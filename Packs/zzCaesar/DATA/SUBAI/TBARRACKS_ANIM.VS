@@ -8,5 +8,6 @@ Sleep(1 + rand(10));
 		Place("TBarrackHorse" + i, This.pos, This.player);
 }
 
+//without this instruction, the game crashes
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

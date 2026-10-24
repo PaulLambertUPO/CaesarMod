@@ -1,0 +1,18 @@
+<class id="TTeutonRiderBase" parent="Horse" cpp_class="CVXUnit">
+	<!-- this class only exists to avoid displaying "Mercenary" in hybrid selections (which would happen by using it as the parent) -->
+	<properties race="Germany" />
+	<properties maxhealth="340" />
+	<properties damage="26" armor_slash="10" armor_pierce="10" />
+	<properties speed="160" />
+	<properties unit_specials="Attack skill" />
+
+	<properties select_class="TTeutonRiderBase" />
+
+	<properties display_name="Teuton Rider" display_name_plural="Teuton Riders" />
+	<properties icon="gameres/icons/TTeutonRider.bmp" />
+	<properties help="contents/units/TTeutonRider" />
+
+	<method sig="convert" vs="data/subai/unit_convert_TTeutonRider.vs" />
+
+	<sounds command="VoiceTTeutonRider" attack="UnitMaceFight" />
+</class>

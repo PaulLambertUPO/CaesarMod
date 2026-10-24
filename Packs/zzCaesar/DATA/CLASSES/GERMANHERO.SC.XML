@@ -2,8 +2,8 @@
 
 	<properties race="Germany" />
 	<properties maxhealth="1400" />
-	<properties damage="70" armor_slash="10" armor_pierce="10" />
-	<properties HeroSkills="Assault, Concealment, Frenzy, Quick March, Team attack" />
+	<properties damage="70" armor_slash="12" armor_pierce="12" />
+	<properties HeroSkills="Assault, Euphoria, Frenzy, Quick March, Team attack" />
 
 	<properties help="contents/units/THero" />
 

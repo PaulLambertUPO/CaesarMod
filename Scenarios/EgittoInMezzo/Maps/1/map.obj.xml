@@ -758,7 +758,7 @@
 			gold="2000"
 			food="2000"
 			icon=""
-			name="">
+			name="EgyptTown">
 	<scriptobj
 		class="EBarracks"
 		num="53"

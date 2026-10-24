@@ -1,9 +1,4 @@
-<class id="TTeutonRider" altid="TeutonMetal" parent="TTeutonRiderMercenary" cpp_class="CVXUnit" entity="Units/TTeutonRider/TTeutonRider.ent.xml">
-
-	<properties display_name="Teuton Rider" display_name_plural="Teuton Riders" />
-	<properties icon="gameres/icons/TTeutonRider.bmp" />
+<class id="TTeutonRider" altid="TeutonMetal" parent="TTeutonRiderBase" cpp_class="CVXUnit" entity="Units/TTeutonRider/TTeutonRider.ent.xml">
+	<!-- this class is almost empty due to the reason explained in the parent one (avoid displaying "Mercenary" in hybrid selections) -->
 	<properties edittree_pos="Units/Germany/Teuton Rider" />
-
-	<method sig="convert" vs="data/subai/unit_convert_TTeutonRider.vs" />
-	<method sig="ondie" vs="data/subai/military_ondie.vs" />
 </class>

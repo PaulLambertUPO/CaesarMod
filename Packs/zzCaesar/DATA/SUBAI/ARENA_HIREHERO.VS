@@ -28,7 +28,7 @@ this = This.AsBuilding();
 			if (h.inherentlevel > h_level)
 				h_level = h.inherentlevel;
 		}
-		h_level = MAX(1, h_level * 2 / 3);
+		h_level = MAX(1, h_level / 2);
 	}
 
 	exit_point = .GetExitPoint(hall.pos, false);

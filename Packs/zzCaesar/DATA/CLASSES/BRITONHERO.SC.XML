@@ -1,7 +1,7 @@
 <class id="BritonHero" parent="HeroMounted" cpp_class="CVXHero">
 
 	<properties race="Britain" />
-	<properties maxhealth="1000" />
+	<properties maxhealth="1200" />
 	<properties range="525" />
 	<properties damage="70" armor_slash="12" armor_pierce="12" />
 	<properties damage_type="pierce" />

@@ -116,26 +116,7 @@
 <frame idx="14" duration="66"/>
 <frame idx="15" duration="0"/>
 </anim>
-<anim idx="19" name="Learn" startstate="1" endstate="1" frames="15" duration="858" default_duration="0" action_time="0" step="0">
-<replace layer="1" image="7" offsetx="-97" offsety="-117"/>
-<replace layer="2" image="8" offsetx="-97" offsety="-117"/>
-<frame idx="1" duration="0"/>
-<frame idx="2" duration="66"/>
-<frame idx="3" duration="66"/>
-<frame idx="4" duration="66"/>
-<frame idx="5" duration="66"/>
-<frame idx="6" duration="66"/>
-<frame idx="7" duration="66"/>
-<frame idx="8" duration="66"/>
-<frame idx="9" duration="66"/>
-<frame idx="10" duration="66"/>
-<frame idx="11" duration="66"/>
-<frame idx="12" duration="66"/>
-<frame idx="13" duration="66"/>
-<frame idx="14" duration="66"/>
-<frame idx="15" duration="0"/>
-</anim>
-<anim idx="21" name="Hammer" startstate="1" endstate="1" frames="19" duration="1122" default_duration="0" action_time="0" step="0">
+<anim idx="18" name="Hammer" startstate="1" endstate="1" frames="19" duration="1122" default_duration="0" action_time="0" step="0">
 <replace layer="1" image="5" offsetx="-97" offsety="-117"/>
 <replace layer="2" image="6" offsetx="-97" offsety="-117"/>
 <frame idx="1" duration="0"/>
@@ -157,6 +138,25 @@
 <frame idx="17" duration="66"/>
 <frame idx="18" duration="66"/>
 <frame idx="19" duration="0"/>
+</anim>
+<anim idx="19" name="Learn" startstate="1" endstate="1" frames="15" duration="858" default_duration="0" action_time="0" step="0">
+<replace layer="1" image="7" offsetx="-97" offsety="-117"/>
+<replace layer="2" image="8" offsetx="-97" offsety="-117"/>
+<frame idx="1" duration="0"/>
+<frame idx="2" duration="66"/>
+<frame idx="3" duration="66"/>
+<frame idx="4" duration="66"/>
+<frame idx="5" duration="66"/>
+<frame idx="6" duration="66"/>
+<frame idx="7" duration="66"/>
+<frame idx="8" duration="66"/>
+<frame idx="9" duration="66"/>
+<frame idx="10" duration="66"/>
+<frame idx="11" duration="66"/>
+<frame idx="12" duration="66"/>
+<frame idx="13" duration="66"/>
+<frame idx="14" duration="66"/>
+<frame idx="15" duration="0"/>
 </anim>
 </anims>
 </entity>

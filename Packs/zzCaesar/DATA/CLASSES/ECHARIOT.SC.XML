@@ -1,9 +1,9 @@
-<class id="EChariot" parent="Ranged" cpp_class="CVXUnit" entity="units/EChariot/EChariot.ent.xml">
+<class id="EChariot" parent="MediumRanged" cpp_class="CVXUnit" entity="units/EChariot/EChariot.ent.xml">
 
 	<properties race="Egypt" />
 	<properties maxhealth="620" />
 	<properties damage="36" armor_slash="14" armor_pierce="14" />
-	<properties speed="140" />
+	<properties speed="160" />
 	<properties unit_specials="Disease attack, Freedom" />
 
 	<properties healthbar_type="3" />

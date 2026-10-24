@@ -1,0 +1,22 @@
+//void, Obj This
+
+Druid this;
+
+this = This.AsDruid();
+
+if (.IsValid)
+	if (.IsAlive) {
+		Unit u;
+
+		.PlayAnim(18, .pos);
+
+		u = Place("LionMSummoned", .posRH, .player).AsUnit();
+		u.SetLevel(.level);
+		u.SetNoAIFlag(true);
+		u.SetCommand("engage");
+
+		SwapSelectedObj(this, u);
+
+		.SetSummoningDeath(true);
+		.Damage(.health);
+	}

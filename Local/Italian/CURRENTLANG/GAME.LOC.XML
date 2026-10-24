@@ -270,6 +270,9 @@
 <translationtableentry text="Druids" result="Druidi" />
 <translationtableentry text="Militiaman" result="Miliziano" />
 <translationtableentry text="Militiamen" result="Miliziani" />
+<translationtableentry text="Militiaman (desperate)" result="Miliziano (disperato)" />
+<translationtableentry text="Desperate Militiaman" result="Miliziano disperato" />
+<translationtableentry text="Desperate Militiamen" result="Miliziani disperati" />
 <translationtableentry text="Defender" result="Difensore" />
 <translationtableentry text="Defenders" result="Difensori" />
 <translationtableentry text="Slinger" result="Fromboliere" />
@@ -673,7 +676,7 @@
 <translationtableentry text="Send resources" result="Invia risorse" />
 <translationtableentry text="Sends up to 1000 gold and 1000 food to each of your allies' strongholds" result="Invia fino a 1000 oro e 1000 viveri a ognuna delle fortezze dei tuoi alleati" />
 <translationtableentry text="There are no allied strongholds" result="Non ci sono fortezze alleate" />
-<translationtableentry text="At least 2 minutes must pass between each sending" result="Devono passare almeno 2 minuti tra ogni invio" />
+<translationtableentry text="At least 4 minutes must pass between each sending" result="Devono passare almeno 4 minuti tra ogni invio" />
 <translationtableentry text="Attach free warriors" result="Vincola guerrieri liberi" />
 <translationtableentry text="Orders your free warriors to attach to your available heroes in the townhall" result="Ordina ai tuoi guerrieri liberi di vincolarsi ai tuoi eroi disponibili nel foro" />
 <translationtableentry text="There are no available heroes in the townhall" result="Non ci sono eroi disponibili nel foro" />
@@ -916,7 +919,7 @@
 <translationtableentry text="Mahout School" result="Scuola di mahout" />
 <translationtableentry text="Increases the number of War Elephants you can have by 1" result="Aumenta di 1 il numero massimo di elefanti da guerra disponibili contemporaneamente" />
 <translationtableentry text="Mahout Mastery" result="Maestria dei mahout" />
-<translationtableentry text="Makes new War Elephants level 16" result="Rende i nuovi elefanti da guerra di livello 16" />
+<translationtableentry text="Makes new War Elephants level 20" result="Rende i nuovi elefanti da guerra di livello 20" />
 <translationtableentry text="Makes all warriors collect spoils of war worth 100 gold at every kill" result="A ogni uccisione i guerrieri ricevono un Bottino di guerra, che aggiunge 100 oro all'insediamento in cui entra il possessore, poi scompare" />
 <translationtableentry text="Challenges" result="Sfide" />
 <translationtableentry text="Makes new heroes level 6" result="Rende i nuovi eroi di livello 6" />
@@ -925,6 +928,8 @@
 <translationtableentry text="Hire Viking Lord" result="Recluta capo normanno" />
 <translationtableentry text="Shrine of Thor" result="Erigi altare di Thor" />
 <translationtableentry text="Makes new Viking Lords 2 levels higher than the last (up to level 24)" result="Rende i nuovi capi normanni di 2 livelli in più rispetto all'ultimo reclutato (fino al livello 24)" />
+<translationtableentry text="Divine reward" result="Ricompensa divina" />
+<translationtableentry text="Grants heroes a random skill when they reach level 30" result="Fornisce agli eroi un'abilità casuale quando raggiungono il livello 30" />
 <translationtableentry text="Cult of Anubis" result="Offerta ad Anubis" />
 <translationtableentry text="Allows Anubis warriors to be equipped in the Barracks" result="Consente di equipaggiare i guerrieri di Anubis nella caserma" />
 <translationtableentry text="Statue of Isis, mother of Anubis" result="Erigi statua a Isis, madre di Anubis" />
@@ -940,11 +945,11 @@
 <translationtableentry text="Statue of Osiris, father of Horus" result="Erigi statua a Osiris, padre di Horus" />
 <translationtableentry text="Makes all units restore stamina twice as fast" result="Tutte le unità ripristinano energia due volte più velocemente" />
 <translationtableentry text="Light of Horus I" result="Luce di Horus I" />
-<translationtableentry text="Makes new warriors level 2 (4 for Horus warriors)" result="Rende tutti i nuovi guerrieri di livello 2 (4 per i guerrieri di Horus)" />
+<translationtableentry text="Makes new warriors and heroes level 2 (4 for Horus warriors)" result="Rende tutti i nuovi guerrieri ed eroi di livello 2 (4 per i guerrieri di Horus)" />
 <translationtableentry text="Light of Horus II" result="Luce di Horus II" />
-<translationtableentry text="Makes new warriors level 4 (6 for Horus warriors)" result="Rende tutti i nuovi guerrieri di livello 4 (6 per i guerrieri di Horus)" />
+<translationtableentry text="Makes new warriors and heroes level 4 (6 for Horus warriors)" result="Rende tutti i nuovi guerrieri ed eroi di livello 4 (6 per i guerrieri di Horus)" />
 <translationtableentry text="Light of Horus III" result="Luce di Horus III" />
-<translationtableentry text="Makes new warriors level 6 (8 for Horus warriors)" result="Rende tutti i nuovi guerrieri di livello 6 (8 per i guerrieri di Horus)" />
+<translationtableentry text="Makes new warriors and heroes level 6 (8 for Horus warriors)" result="Rende tutti i nuovi guerrieri ed eroi di livello 6 (8 per i guerrieri di Horus)" />
 <translationtableentry text="Statue of Amon-Ra" result="Erigi statua ad Amon-Ra" />
 <translationtableentry text="Increases the maximum health of every unit by 5 for each level up" result="Aumenta la salute massima di ogni unità di 5 punti per ogni aumento di livello" />
 <translationtableentry text="Requires Cult of Anubis and Cult of Horus" result="Richiede Offerta ad Anubis e Offerta a Horus" />
@@ -1022,7 +1027,7 @@
 <translationtableentry text="Housing II" result="Costruisci alloggi II" />
 <translationtableentry text="Increases the maximum population of the settlement by 15 and the current one by 5" result="Aumenta la popolazione massima dell'insediamento di 15 unità e quella attuale di 5" />
 <translationtableentry text="Call to arms" result="Chiamata alle armi" />
-<translationtableentry text="Drafts 50 peasants, making them level 4 Militiamen (8 after 10 game minutes)" result="Arruola 50 contadini, trasformandoli in miliziani di livello 4 (8 dopo 10 minuti di gioco)" />
+<translationtableentry text="Drafts 50 peasants, making them level 8 desperate militiamen" result="Arruola 50 contadini, trasformandoli in miliziani disperati di livello 8" />
 <translationtableentry text="Free trade" result="Attira la popolazione" />
 <translationtableentry text="Increases the population of the settlement to maximum" result="Aumenta al massimo la popolazione dell'insediamento" />
 <translationtableentry text="Expedition" result="Spedizione" />
@@ -1064,11 +1069,11 @@
 <translationtableentry text="Supplies" result="Rifornimenti" />
 <translationtableentry text="All units consume half food" result="Tutte le unità consumano metà viveri" />
 <translationtableentry text="Start storing food" result="Immagazzina viveri" />
-<translationtableentry text="Allows you to deposit reusable food stocks in a separate storage" result="Consente di immagazzinare piccole quantità di viveri utilizzabili in futuro" />
+<translationtableentry text="Stores food in a separate stock over time (with a 50% gain)" result="Deposita viveri in un magazzino separato nel corso del tempo (con un guadagno del 50%)" />
 <translationtableentry text="Stop storing food" result="Ferma stoccaggio viveri" />
-<translationtableentry text="Blocks the storing and gives you back all food supplies" result="Ferma lo stoccaggio e restituisce tutti i viveri accumulati" />
-<translationtableentry text="storage" result="magazzino" />
+<translationtableentry text="Stops the storing and returns all stocked food" result="Ferma lo stoccaggio e restituisce tutti i viveri accumulati" />
 <translationtableentry text="Storage" result="Magazzino" />
+<translationtableentry text="storage" result="magazzino" />
 <!-- end tavern commands -->
 <!-- start temple commands -->
 <translationtableentry text="Call Priest" result="Convoca sacerdote" />
@@ -1118,24 +1123,26 @@
 <translationtableentry text="Makes new priests level 10" result="Rende i nuovi sacerdoti di livello 10" />
 <translationtableentry text="Allows priests to transform into a Ghoul that drains the health of all nearby enemies for about 10 seconds.\nThe same effect also applies every time that a priest dies, but for about 5 seconds" result="Consente ai sacerdoti di trasformarsi in uno spirito che prosciuga la salute di tutti i nemici vicini per circa 10 secondi.\nLo stesso effetto si attiva anche ogni volta che un sacerdote muore, ma per circa 5 secondi" />
 <translationtableentry text="Mummification" result="Culto dei defunti" />
-<translationtableentry text="Makes all new heroes 2/3 the level of the most experienced you've had" result="Rende tutti i nuovi eroi di 2/3 del livello del più esperto avuto nel corso della partita" />
+<translationtableentry text="Makes all new heroes half the level of the most experienced you have had" result="Rende tutti i nuovi eroi della metà del livello del più esperto avuto nel corso della partita" />
 <translationtableentry text="Equip Chariot of Osiris" result="Equipaggia carro di Osiris" />
 <translationtableentry text="Allows enchantresses to accumulate stonehenge energy twice as fast" result="Consente alle maghe di accumulare l'energia degli altari dei sacrifici due volte più velocemente" />
 <translationtableentry text="Wolf summoning" result="Invoca lupo" />
-<translationtableentry text="Allows enchantresses to sacrifice themselves and summon a wolf that remains under your control for about 200 seconds" result="Consente alle maghe di sacrificarsi per invocare un lupo che rimane sotto il tuo controllo per circa 200 secondi" />
+<translationtableentry text="Allows enchantresses to sacrifice themselves to summon a wolf that remains under your control for about 200 seconds.\nThe same effect also applies every time that an enchantress dies, but for about 30 seconds" result="Consente alle maghe di sacrificarsi per invocare un lupo che rimane sotto il tuo controllo per circa 200 secondi.\nLo stesso effetto si attiva anche ogni volta che una maga muore, ma per circa 30 secondi" />
 <translationtableentry text="Deer summoning" result="Invoca cervo" />
-<translationtableentry text="Allows enchantresses to sacrifice themselves and summon a deer that remains under your control for about 3 minutes" result="Consente alle maghe di sacrificarsi per invocare un cervo che rimane sotto il tuo controllo per circa 3 minuti" />
+<translationtableentry text="Allows enchantresses to sacrifice themselves to summon a deer that remains under your control for about 3 minutes" result="Consente alle maghe di sacrificarsi per invocare un cervo che rimane sotto il tuo controllo per circa 3 minuti" />
 <translationtableentry text="Allows enchantresses to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that an enchantress dies" result="Consente alle maghe di sacrificarsi per distribuire fino a 1000 punti di salute tra gli alleati vicini.\nLo stesso effetto si attiva anche ogni volta che una maga muore" />
 <translationtableentry text="Offer to Gods" result="Offerta agli Dei" />
 <translationtableentry text="Makes new priests level 5" result="Rende i nuovi sacerdoti di livello 5" />
+<translationtableentry text="Lion summoning" result="Invoca leone" />
+<translationtableentry text="Allows priests to sacrifice themselves to summon a lion that remains under your control for about 150 seconds.\nThe same effect also applies every time that a priest dies, but for about 30 seconds" result="Consente ai sacerdoti di sacrificarsi per invocare un leone che rimane sotto il tuo controllo per circa 150 secondi.\nLo stesso effetto si attiva anche ogni volta che un sacerdote muore, ma per circa 30 secondi" />
+<translationtableentry text="Allows priests to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a priest dies" result="Consente ai sacerdoti di sacrificarsi per ripristinare completamente l'energia di 5 alleati vicini.\nLo stesso effetto si attiva anche ogni volta che un sacerdote muore" />
+<translationtableentry text="Statue of Zeus" result="Erigi statua a Zeus" />
+<translationtableentry text="Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage" result="Benedice i guerrieri ad ogni uccisione, facendo sì che il prossimo attacco entro 5 secondi infligga un danno supplementare pari al valore di attacco" />
 <translationtableentry text="Protection of Apollo (once per game)" result="Protezione di Apollo (una volta a partita)" />
 <translationtableentry text="Makes all your strongholds indestructible for 2 minutes" result="Rende indistruttibili tutte le tue fortezze per 2 minuti" />
 <translationtableentry text="Player %s1 - soon protected" result="Giocatore %s1 - presto protetto" />
 <translationtableentry text="Player %s1 - protected for %s2:0%s3" result="Giocatore %s1 - protetto per %s2:0%s3" />
 <translationtableentry text="Player %s1 - protected for %s2:%s3" result="Giocatore %s1 - protetto per %s2:%s3" />
-<translationtableentry text="Allows priests to sacrifice themselves to restore the stamina of 5 nearby allies.\nThe same effect also applies every time that a priest dies" result="Consente ai sacerdoti di sacrificarsi per ripristinare completamente l'energia di 5 alleati vicini.\nLo stesso effetto si attiva anche ogni volta che un sacerdote muore" />
-<translationtableentry text="Statue of Zeus" result="Erigi statua a Zeus" />
-<translationtableentry text="Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage" result="Benedice i guerrieri ad ogni uccisione, facendo sì che il prossimo attacco entro 5 secondi infligga un danno supplementare pari al valore di attacco" />
 <!-- end temple commands -->
 <!-- start gate and siege machine commands -->
 <translationtableentry text="Open Gate" result="Apri porta" />
@@ -1181,7 +1188,7 @@
 <!-- end village commands -->
 <!-- start outpost commands -->
 <translationtableentry text="Launch sortie" result="Effettua sortita" />
-<translationtableentry text="Orders units inside the building to advance towards the specified position" result="Ordina alle unità all’interno della struttura di avanzare verso la posizione specificata" />
+<translationtableentry text="Orders units inside the building to advance towards the specified position" result="Ordina alle unità all'interno della struttura di avanzare verso la posizione specificata" />
 <translationtableentry text="Click to make all units advance to this position" result="Clicca per far avanzare tutte le unità fino a questa posizione" />
 <translationtableentry text="Slowly exchanges stored food for gold" result="Scambia lentamente i viveri immagazzinati con oro" />
 <translationtableentry text="Stop selling food" result="Smetti di vendere viveri" />
@@ -1322,8 +1329,6 @@
 <translationtableentry text="Inventory full" result="Inventario pieno" />
 <translationtableentry text="Enter parry mode" result="Attiva modalità contenimento" />
 <translationtableentry text="Leave parry mode" result="Disattiva modalità contenimento" />
-<translationtableentry text="Select special units" result="Seleziona unità speciali" />
-<translationtableentry text="Selects all special units of the currently selected types across the map (except those attached to a hero)" result="Seleziona tutte le unità speciali dei tipi attualmente selezionati in tutta la mappa (eccetto quelle vincolate a un eroe)" />
 <translationtableentry text="Demobilize" result="Congeda" />
 <translationtableentry text="Transforms the militiamen into peasants (only in buildings and ships)" result="Trasforma i miliziani in contadini (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Archer" result="Trasforma in arciere teutonico" />
@@ -1332,6 +1337,10 @@
 <translationtableentry text="Transforms the Archers into Wolves (only in buildings and ships)" result="Trasforma gli arcieri in incursori (solo in strutture e navi)" />
 <translationtableentry text="Convert to Teuton Rider" result="Trasforma in cavaliere teutonico" />
 <translationtableentry text="Transforms the Wolves into Riders (only in buildings and ships)" result="Trasforma gli incursori in cavalieri (solo in strutture e navi)" />
+<translationtableentry text="Swap Cripple with Penetration" result="Scambia Esaurimento vitale con Perforazione" />
+<translationtableentry text="Swap Penetration with Cripple" result="Scambia Perforazione con Esaurimento vitale" />
+<translationtableentry text="Select special units" result="Seleziona unità speciali" />
+<translationtableentry text="Selects all special units of the currently selected types across the map (except those attached to a hero)" result="Seleziona tutte le unità speciali dei tipi attualmente selezionati in tutta la mappa (eccetto quelle vincolate a un eroe)" />
 <!-- end generic unit commands -->
 <!-- start hero commands -->
 <translationtableentry text="Right-click to move the hero to this position" result="Clicca col tasto destro per muovere l'eroe fino a questa posizione" />
@@ -1418,6 +1427,8 @@
 <translationtableentry text="Summons a wolf that remains under your control for about 200 seconds (at the cost of life)" result="Invoca un lupo che rimane sotto il tuo controllo per circa 200 secondi (a costo della vita)" />
 <translationtableentry text="Summon Deer" result="Invoca cervo" />
 <translationtableentry text="Summons a deer that remains under your control for about 3 minutes (at the cost of life)" result="Invoca un cervo che rimane sotto il tuo controllo per circa 3 minuti (a costo della vita)" />
+<translationtableentry text="Summon Lion" result="Invoca leone" />
+<translationtableentry text="Summons a lion that remains under your control for about 150 seconds (at the cost of life)" result="Invoca un leone che rimane sotto il tuo controllo per circa 150 secondi (a costo della vita)" />
 <translationtableentry text="Restores the stamina of up to 5 nearby allies (at the cost of life)" result="Ripristina l'energia di un massimo di 5 alleati vicini (a costo della vita)" />
 <translationtableentry text="Distributes up to 1000 health among nearby allies (at the cost of life)" result="Distribuisce fino a 1000 punti di salute tra gli alleati vicini (a costo della vita)" />
 <!-- end sage commands -->
@@ -1475,13 +1486,13 @@
 <translationtableentry text="Leadership" result="Maestria" />
 <translationtableentry text="Increases the experience provided by the hero to all attached units by 2% per skill point" result="Aumenta l'esperienza fornita dall'eroe alle unità vincolate del 2% per punto abilità" />
 <translationtableentry text="Quick March" result="Marcia forzata" />
-<translationtableentry text="Increases the movement speed of the hero and all attached units by 5% per skill point" result="Aumenta la velocità di movimento dell'eroe e delle unità vincolate del 5% per punto abilità" />
+<translationtableentry text="Increases the movement speed of the hero and all attached units by 4% per skill point" result="Aumenta la velocità di movimento dell'eroe e delle unità vincolate del 4% per punto abilità" />
 <translationtableentry text="Recovery" result="Recupero" />
 <translationtableentry text="Gives the hero and all attached units the ability to restore 5 more health while eating with a 10% chance per skill point" result="Fornisce all'eroe e alle unità vincolate la capacità di ripristinare 5 punti di salute aggiuntivi mentre si alimentano con una probabilità del 10% per punto abilità" />
 <translationtableentry text="Rush" result="Aggressione" />
 <translationtableentry text="If used, it restores the stamina of all attached units by 1 per skill point and it damages them by 5 per skill point" result="Se si utilizza, ripristina l'energia delle unità vincolate di 1 punto per punto abilità e infligge loro 5 punti di danno per punto abilità" />
 <translationtableentry text="Scout" result="Esplorazione" />
-<translationtableentry text="Increases the hero's sight by 50 per skill point" result="Aumenta la vista dell'eroe di 50 punti per punto abilità" />
+<translationtableentry text="Increases the hero's sight by 30 per skill point" result="Aumenta la vista dell'eroe di 30 punti per punto abilità" />
 <translationtableentry text="Survival" result="Sopravvivenza" />
 <translationtableentry text="Gives the hero and all attached units the ability to eat without spending food with a 10% chance per skill point" result="Fornisce all'eroe e alle unità vincolate la capacità di alimentarsi senza consumare viveri con una probabilità del 10% per punto abilità" />
 <translationtableentry text="Team Attack" result="Superiorità offensiva" />
@@ -1491,7 +1502,7 @@
 <translationtableentry text="Vigor" result="Vigore" />
 <translationtableentry text="Gives the hero and all attached units the ability to restore 1 more stamina with a 10% chance per skill point" result="Fornisce all'eroe e alle unità vincolate la capacità di ripristinare 1 punto di energia aggiuntivo con una probabilità del 10% per punto abilità" />
 <translationtableentry text="Wisdom" result="Saggezza" />
-<translationtableentry text="Gives the hero the ability to gain 1 experience every time that an attached unit dies with a 10% chance per skill point" result="Fornisce all'eroe la capacità di guadagnare 1 punto esperienza ogni volta che un'unità vincolata muore con una probabilità del 5% per punto abilità" />
+<translationtableentry text="Gives the hero the ability to gain 1 experience every time that an attached unit dies with a 4% chance per skill point" result="Fornisce all'eroe la capacità di guadagnare 1 punto esperienza ogni volta che un'unità vincolata muore con una probabilità del 4% per punto abilità" />
 <!-- end hero skills (names and descriptions) -->
 <!-- start specials (names and descriptions) -->
 <translationtableentry text="Specials" result="Speciali" />
@@ -1801,8 +1812,8 @@
 <translationtableentry text="Ruins 09" result="Rovine 9" />
 <translationtableentry text="Ruins 10" result="Rovine 10" />
 <translationtableentry text="Statue" result="Statua" />
-<translationtableentry text="Column alone 1" result="Colonna isolata 1" />
-<translationtableentry text="Column alone 2" result="Colonna isolata 2" />
+<translationtableentry text="Column (alone) 1" result="Colonna (isolata) 1" />
+<translationtableentry text="Column (alone) 2" result="Colonna (isolata) 2" />
 <translationtableentry text="Column connection 1" result="Colonna di collegamento 1" />
 <translationtableentry text="Column connection 2" result="Colonna di collegamento 2" />
 <translationtableentry text="Columns 1" result="Colonne 1" />

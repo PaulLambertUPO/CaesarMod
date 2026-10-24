@@ -26,7 +26,7 @@
 	<method sig="engage" vs="data/subai/druid_curse_engage.vs" />
 	<method sig="ai_killall" vs="data/subai/druid_curse_engage.vs" />
 
-	<method sig="ondie" vs="data/subai/bdruid_tenchantress_ondie.vs" />
+	<method sig="ondie" vs="data/subai/tenchantress_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="curse" />

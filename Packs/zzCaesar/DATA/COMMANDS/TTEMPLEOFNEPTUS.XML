@@ -6,7 +6,7 @@
 		traincommand="yes"
 		transpicon="1"
 		key="s"
-		costgold="200"
+		costgold="150"
 		execdelay="20000"
 		rollover="Call Enchantress"
 		method="train"
@@ -34,10 +34,10 @@
 		key="w"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		costgold="800"
+		costgold="1000"
 		execdelay="30000"
 		rollover="Wolf summoning"
-		description="Allows enchantresses to sacrifice themselves and summon a wolf that remains under your control for about 200 seconds"
+		description="Allows enchantresses to sacrifice themselves to summon a wolf that remains under your control for about 200 seconds.\nThe same effect also applies every time that an enchantress dies, but for about 30 seconds"
 		method="research"
 		param="ReqPlr, Ritual Chamber, default, NamePlr, Wolf Summoning, default">
 		<src obj="TTempleOfNeptus" />
@@ -51,7 +51,7 @@
 		costgold="800"
 		execdelay="20000"
 		rollover="Deer summoning"
-		description="Allows enchantresses to sacrifice themselves and summon a deer that remains under your control for about 3 minutes"
+		description="Allows enchantresses to sacrifice themselves to summon a deer that remains under your control for about 3 minutes"
 		method="research"
 		param="ReqPlr, Ritual Chamber, default, NamePlr, Deer Summoning, default">
 		<src obj="TTempleOfNeptus" />

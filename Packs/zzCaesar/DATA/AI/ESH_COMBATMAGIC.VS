@@ -38,7 +38,7 @@ else if (nRaceAvail == Egypt) {
 		if (!IsResearched(aiPlayer, "Mumification"))
 			if (rand(5) == 0)
 				strTech = "Mumification";
-			if (set.gold >= 3500)
+			if (set.gold >= 3000)
 				strTech = "Mumification";
 }
 
@@ -68,8 +68,11 @@ if (strTech == "") {
 		strTech = "Offer to Gods";
 		if (IsResearched(set, strTech)) {
 			strTech = "HRestoration";
-			if (IsResearched(aiPlayer, strTech))
-				return;
+			if (IsResearched(aiPlayer, strTech)) {
+				strTech = "Lion Summoning";
+				if (IsResearched(aiPlayer, strTech))
+					return;
+			}
 		}
 		nRaceAvail = Count(aiPlayer, "HPriest");
 	}
@@ -123,8 +126,11 @@ if (strTech == "") {
 		strTech = "German chamber";
 		if (IsResearched(aiPlayer, strTech)) {
 			strTech = "German Mass Heal";
-			if (IsResearched(aiPlayer, strTech))
-				return;
+			if (IsResearched(aiPlayer, strTech)) {
+				strTech = "Wolf Summoning";
+				if (IsResearched(aiPlayer, strTech))
+					return;
+			}
 		}
 		nRaceAvail = Count(aiPlayer, "TEnchantress");
 	}

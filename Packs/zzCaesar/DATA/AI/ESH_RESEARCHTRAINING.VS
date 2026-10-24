@@ -285,7 +285,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 			}
 	}
 	else if (nRace == Britain) {
-		//challenges -> nobility -> nobility_offence_defence -> gambler_day_fortune_test -> steel_weapons | parallel gambler_day_fortune_test after challenges | parallel steel_weapons after challenges
+		//challenges -> nobility -> noble_offence_defence -> divine_reward -> gambler_day_fortune_test -> steel_weapons | parallel gambler_day_fortune_test | parallel steel_weapons after challenges
 		strTech1 = "Challenges";
 		if (IsResearched(set, strTech1)) {
 			strTech1 = "BNobility";
@@ -293,8 +293,11 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 				strTech1 = "Noble Offence";
 				if (IsResearched(aiPlayer, strTech1)) {
 					strTech1 = "Noble Defence";
-					if (IsResearched(aiPlayer, strTech1))
-						strTech1 = "";
+					if (IsResearched(aiPlayer, strTech1)) {
+						strTech1 = "Divine reward";
+						if (IsResearched(aiPlayer, strTech1))
+							strTech1 = "";
+					}
 				}
 			}
 		}
@@ -304,8 +307,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 		else if (set.gold >= AIVar(aiPlayer, AIV_ExcessGold))
 			strTech2 = "Gambling";
 		else if (rand(3) == 0)
-			if (IsResearched(set, "Challenges"))
-				strTech2 = "Gambling";
+			strTech2 = "Gambling";
 
 		if (strTech2 != "")
 			if (IsResearched(set, strTech2)) {

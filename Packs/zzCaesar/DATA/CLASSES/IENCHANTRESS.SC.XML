@@ -25,7 +25,7 @@
 	<method sig="engage" vs="data/subai/druid_teach_engage.vs" />
 	<method sig="ai_killall" vs="data/subai/druid_teach_engage.vs" />
 
-	<method sig="ondie" vs="data/subai/ienchantress_hpriest_ondie.vs" />
+	<method sig="ondie" vs="data/subai/ienchantress_ondie.vs" />
 
 	<defaultcmd target="Unit">
 		<cmd name="teach" />

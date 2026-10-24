@@ -37,18 +37,19 @@ if (.IsValid)
 
 					h = .hero;
 
-					if (h.IsAlive) {
-						Item item;
+					if (h.IsAlive)
+						if (h.player == plr) {
+							Item item;
 
-						item = h.FindItem("Gold");
-
-						if (item.IsValid)
-							item.SetUseCount(item.use_count + 10);
-						else if (h.AddItem("Gold")) {
 							item = h.FindItem("Gold");
-							item.SetUseCount(10);
+
+							if (item.IsValid)
+								item.SetUseCount(item.use_count + 10);
+							else if (h.AddItem("Gold")) {
+								item = h.FindItem("Gold");
+								item.SetUseCount(10);
+							}
 						}
-					}
 				}
 			}
 

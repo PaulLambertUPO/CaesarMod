@@ -13,7 +13,7 @@ if (.IsValid) {
 	int i, j, k, ai_skill_to_develop_id, ai_skill_to_develop_level, heal_per_level, rush_damage;
 	int fighting_units_perc, healing_weight, charge_weight, rush_weight, healing_level, charge_level, rush_level;
 	int military_units, fighting_units, army_health, army_max_health, healing_amount, army_stamina, army_max_stamina, charge_amount, rush_amount;
-	bool enemy_in_sight;
+	bool enemy_in_sight, divine_reward = true;
 
 	ai_skill_to_develop_id = -1;
 	ai_skill_to_develop_level = -1;
@@ -22,6 +22,24 @@ if (.IsValid) {
 	rush_damage = GetConst("RushDamage");
 
 	while (.IsAlive) {
+		if (divine_reward)
+			if (IsResearched(.player, "Divine reward"))
+				if (.inherentlevel >= 30) {
+					IntArray skills;
+					j = 0;
+					for (i = 0; i <= 24; i += 1)//there are a total of 25 skills in the game (0 = hsAdministration, 24 = hsEuphoria)
+						if (.GetSkill(i) < 0) {
+							skills[j] = i;
+							j += 1;
+						}
+					if (j > 0) {
+						.SetSkill(skills[rand(j)], 0);
+						.PlaySound("Data/Sound Entities/TownhallMilitaryTraining.xml");
+						CreateFeedback("Experience", this);
+					}
+					divine_reward = false;
+				}
+
 		if (.AI)
 			while (true) {
 				Sleep(250);
@@ -224,4 +242,4 @@ if (.IsValid) {
 
 //without this instruction, the game crashes
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

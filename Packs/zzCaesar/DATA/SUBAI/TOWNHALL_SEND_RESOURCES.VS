@@ -43,5 +43,5 @@ if (g > 0 || f > 0) {
 			}
 	}
 
-	EnvWriteInt(this, "LastResourceSending", GetTime());
+	EnvWriteInt(this, "SendResourcesCooldown", GetTime() + 240000);
 }

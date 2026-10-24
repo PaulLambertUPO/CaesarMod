@@ -2,7 +2,7 @@
 	<!-- the entity value is necessary otherwise catapults can be placed onto buildings even if the specific classes have their own entities and ".pass" files (Buildings pak) -->
 
 	<properties maxhealth="1000" />
-	<properties damage="120" armor_slash="0" armor_pierce="0" />
+	<properties damage="150" armor_slash="0" armor_pierce="0" />
 	<properties damage_type="siege" attack_delay="500" splash_radius="100" />
 	<properties sight="760" range="750" min_range="300" />
 	<properties radius="50" selection_radius="90" />

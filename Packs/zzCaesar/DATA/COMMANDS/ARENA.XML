@@ -45,7 +45,7 @@
 		button="research/Advanced training.bmp"
 		key="t"
 		queueicon="gameres/icons/upgrades/atrain.bmp"
-		costgold="1000"
+		costgold="750"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Advanced training"
@@ -187,7 +187,7 @@
 		button="Upgrades/standartization 2.bmp"
 		key="i"
 		queueicon="gameres/icons/upgrades/standartization 2.bmp"
-		costgold="2000"
+		costgold="1500"
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		description="Makes all new warriors level 6 but unable to gain experience"
@@ -201,7 +201,7 @@
 		button="Upgrades/flexibility.bmp"
 		key="i"
 		queueicon="gameres/icons/upgrades/Flexibility.bmp"
-		costgold="4000"
+		costgold="2500"
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		description="Makes all new warriors level 8 and able to gain experience"
@@ -330,7 +330,7 @@
 		button="research/Advanced training.bmp"
 		key="t"
 		queueicon="gameres/icons/upgrades/atrain.bmp"
-		costgold="1000"
+		costgold="750"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Advanced training"
@@ -344,7 +344,7 @@
 		button="research/maser training.bmp"
 		queueicon="gameres/icons/upgrades/mtrain.bmp"
 		key="t"
-		costgold="1500"
+		costgold="1000"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Special training"
@@ -419,7 +419,7 @@
 		button="research/Advanced training.bmp"
 		key="t"
 		queueicon="gameres/icons/upgrades/atrain.bmp"
-		costgold="1000"
+		costgold="750"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Advanced training"
@@ -434,7 +434,7 @@
 		button="research/maser training.bmp"
 		queueicon="gameres/icons/upgrades/mtrain.bmp"
 		key="t"
-		costgold="1500"
+		costgold="1000"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Special training"
@@ -719,7 +719,7 @@
 		groupverifier="data/subai/verify_cmdcost_building.vs"
 		traincommand="yes"
 		key="h"
-		costgold="1000"
+		costgold="800"
 		execdelay="20000"
 		param="CarthaginianHero"
 		method="hirehero"
@@ -804,10 +804,10 @@
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Mahout Mastery"
-		description="Makes new War Elephants level 16"
+		description="Makes new War Elephants level 20"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, People's Assembly, default, NameSet, Mahout Mastery, default, SetsSet, levels/CWarElephant, 16">
+		param="ReqSet, People's Assembly, default, NameSet, Mahout Mastery, default, SetsSet, levels/CWarElephant, 20">
 		<src obj="CArena" />
 	</cmd>
 	<cmd name="Spoils of war" priority="8"
@@ -921,6 +921,20 @@
 		description="Makes new Viking Lords 2 levels higher than the last (up to level 24)"
 		method="research"
 		param="ReqSet, Challenges, default, NameSet, Shrine of Thor, default, SetsSet, levels/BVikingLord, 4">
+		<src obj="BMorrigansMonument" />
+	</cmd>
+	<cmd name="Divine reward" priority="9"
+		queueicon="gameres/icons/upgrades/divine reward.bmp"
+		button="research/divine reward.bmp"
+		groupverifier="data/subai/research_verify.vs"
+		researchcommand="yes"
+		key="r"
+		costgold="2500"
+		execdelay="30000"
+		rollover="Divine reward"
+		description="Grants heroes a random skill when they reach level 30"
+		method="research"
+		param="ReqSet, Challenges, default, NamePlr, Divine reward, default">
 		<src obj="BMorrigansMonument" />
 	</cmd>
 	<!-- EGYPT -->
@@ -1039,42 +1053,42 @@
 		button="research/light of horus 1.bmp"
 		key="l"
 		queueicon="gameres/icons/upgrades/light of horus 1.bmp"
-		costgold="500"
+		costgold="250"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Light of Horus I"
-		description="Makes new warriors level 2 (4 for Horus warriors)"
+		description="Makes new warriors and heroes level 2 (4 for Horus warriors)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Cult of Horus, default, NameSet, Light of Horus I, , SetsSet, levels/Warrior, 2, SetsSet, levels/EHorusWarrior, 4">
+		param="ReqSet, Cult of Horus, default, NameSet, Light of Horus I, , SetsSet, levels/Warrior, 2, SetsSet, levels/Hero, 2, SetsSet, levels/EHorusWarrior, 4">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<cmd name="Light of Horus II" priority="8"
 		button="research/light of horus 2.bmp"
 		key="l"
 		queueicon="gameres/icons/upgrades/light of horus 2.bmp"
-		costgold="1000"
+		costgold="500"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Light of Horus II"
-		description="Makes new warriors level 4 (6 for Horus warriors)"
+		description="Makes new warriors and heroes level 4 (6 for Horus warriors)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus I, , NameSet, Light of Horus II, , SetsSet, levels/Warrior, 4, SetsSet, levels/EHorusWarrior, 6">
+		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus I, , NameSet, Light of Horus II, , SetsSet, levels/Warrior, 4, SetsSet, levels/Hero, 4, SetsSet, levels/EHorusWarrior, 6">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<cmd name="Light of Horus III" priority="8"
 		button="research/light of horus 3.bmp"
 		key="l"
 		queueicon="gameres/icons/upgrades/light of horus 3.bmp"
-		costgold="1500"
+		costgold="750"
 		execdelay="20000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Light of Horus III"
-		description="Makes new warriors level 6 (8 for Horus warriors)"
+		description="Makes new warriors and heroes level 6 (8 for Horus warriors)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus II, , NameSet, Light of Horus III, default, SetsSet, levels/Warrior, 6, SetsSet, levels/EHorusWarrior, 8">
+		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus II, , NameSet, Light of Horus III, default, SetsSet, levels/Warrior, 6, SetsSet, levels/Hero, 6, SetsSet, levels/EHorusWarrior, 8">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<cmd name="Statue of Amon-Ra" priority="9"

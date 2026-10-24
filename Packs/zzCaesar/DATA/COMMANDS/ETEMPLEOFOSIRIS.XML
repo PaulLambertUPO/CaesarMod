@@ -6,7 +6,7 @@
 		traincommand="yes"
 		transpicon="1"
 		key="p"
-		costgold="200"
+		costgold="150"
 		execdelay="20000"
 		rollover="Call Priest"
 		method="train"
@@ -62,10 +62,10 @@
 		button="research/mumification.bmp"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		costgold="3000"
+		costgold="2500"
 		execdelay="30000"
 		rollover="Mummification"
-		description="Makes all new heroes 2/3 the level of the most experienced you've had"
+		description="Makes all new heroes half the level of the most experienced you have had"
 		method="research"
 		param="ReqSet, Cult of Osiris, default, NamePlr, Mumification, default">
 		<src obj="ETempleOfOsiris" />

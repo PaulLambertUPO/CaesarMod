@@ -19,15 +19,10 @@
 			<GameObj class="HOutpost" min="1" max="1" inf-max="10" inf="100" benefit="20" mindist="1500" fade="7" />
 		</ifdef>
 		<ifdef id="stonehenge">
-			<GameObj class="Stonehenge2" min="0" max="1" inf-max="13" inf="30" mindist="4000" fade="2">
+			<GameObj class="Stonehenge1" min="0" max="1" inf-max="13" inf="30" mindist="3000" fade="2">
 				<RaceAlternative race="Gaul" class="Stonehenge2" />
 				<RaceAlternative race="Carthage" class="Shrine" />
-				<RaceAlternative race="RepublicanRome" class="Stonehenge1" />
-				<RaceAlternative race="Iberia" class="Stonehenge1" />
-				<RaceAlternative race="ImperialRome" class="Stonehenge1" />
-				<RaceAlternative race="Britain" class="Stonehenge1" />
 				<RaceAlternative race="Egypt" class="Shrine" />
-				<RaceAlternative race="Germany" class="Stonehenge1" />
 			</GameObj>
 		</ifdef>
 		<ifdef id="teutontents">
@@ -38,7 +33,7 @@
 			<GameObj class="Ruins1" min="1" max="1" inf-max="13" inf="30" benefit="20" mindist="3000" fade="3" />
 		</ifdef>
 		<ifdef id="teleports">
-			<GameObj class="Teleport_1" min="1" max="1" inf-max="10" inf="43" fade="3" />
+			<GameObj class="Teleport_1" min="0" max="1" inf-max="10" inf="43" fade="3" />
 			<GameObj class="Teleport_2" min="0" max="1" inf-max="10" inf="43" fade="3" />
 		</ifdef>
 		<ifdef id="wildlife">
@@ -57,8 +52,8 @@
 			<GameObj class="Eagle" min="1" max="3" mindist="1500" inf-max="20" inf="0" mingroup="1" maxgroup="2" groupdist="300" />
 			<GameObj class="Crow" min="1" max="2" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
 			<GameObj class="Deer" min="3" max="5" mindist="1500" inf-max="20" inf="0" mingroup="2" maxgroup="4" groupdist="100" />
-			<GameObj class="WildHorse" min="1" max="5" mindist="2500" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100" />
-			<GameObj class="Fish" min="5" max="10" mindist="500" inf-max="20" inf="0" mingroup="1" maxgroup="3" groupdist="100" />
+			<GameObj class="WildHorse" min="3" max="5" mindist="2000" inf-max="20" inf="0" mingroup="2" maxgroup="4" groupdist="100" />
+			<GameObj class="Fish" min="5" max="10" mindist="500" inf-max="20" inf="0" mingroup="1" maxgroup="2" groupdist="100" />
 		</ifdef>
 		<ifdef id="itemholders">
 			<GameObj class="Area::HolderBoulderGrass" min="0" max="1" inf-max="16" inf="33" fade="2">
@@ -461,18 +456,12 @@
 			<GameObj class="TOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
 			<GameObj class="BOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
 			<GameObj class="HOutpost" min="2" max="3" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
-			<GameObj class="GGuardPost" min="1" max="2" inf-max="9" inf="40" benefit="20" mindist="3000" fade="2" />
 		</ifdef>
 		<ifdef id="stonehenge">
-			<GameObj class="Stonehenge2" min="1" max="2" inf-max="13" inf="30" mindist="4000" fade="2">
+			<GameObj class="Stonehenge1" min="1" max="2" inf-max="13" inf="30" mindist="6000" fade="2">
 				<RaceAlternative race="Gaul" class="Stonehenge2" />
 				<RaceAlternative race="Carthage" class="Shrine" />
-				<RaceAlternative race="RepublicanRome" class="Stonehenge1" />
-				<RaceAlternative race="Iberia" class="Stonehenge1" />
-				<RaceAlternative race="ImperialRome" class="Stonehenge1" />
-				<RaceAlternative race="Britain" class="Stonehenge1" />
 				<RaceAlternative race="Egypt" class="Shrine" />
-				<RaceAlternative race="Germany" class="Stonehenge1" />
 			</GameObj>
 		</ifdef>
 		<ifdef id="teutontents">
@@ -502,8 +491,8 @@
 			<GameObj class="Eagle" min="2" max="5" mindist="1500" inf-max="16" inf="0" mingroup="1" maxgroup="2" groupdist="300" />
 			<GameObj class="Crow" min="3" max="5" mindist="3000" inf-max="16" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
 			<GameObj class="Deer" min="4" max="10" mindist="1500" inf-max="16" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
-			<GameObj class="WildHorse" min="5" max="10" mindist="2500" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100" />
-			<GameObj class="Fish" min="10" max="20" mindist="1000" inf-max="16" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+			<GameObj class="WildHorse" min="4" max="10" mindist="2000" inf-max="16" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+			<GameObj class="Fish" min="10" max="15" mindist="1000" inf-max="16" inf="0" mingroup="2" maxgroup="3" groupdist="100" />
 		</ifdef>
 		<ifdef id="itemholders">
 			<GameObj class="Area::HolderBoulderGrass" min="1" max="2" inf-max="15" inf="33" fade="2">
@@ -909,49 +898,43 @@
 			<GameObj class="TOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
 			<GameObj class="BOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
 			<GameObj class="HOutpost" min="4" max="6" inf-max="12" inf="30" benefit="20" mindist="3000" />
-			<GameObj class="GGuardPost" min="3" max="5" inf-max="12" inf="30" benefit="20" mindist="3000" />
 		</ifdef>
 		<ifdef id="teutontents">
 			<GameObj class="CTent" maxperplayer="3" inf-max="13" inf="30" benefit="30" mindist="4000" />
 			<GameObj class="TTent" maxperplayer="3" inf-max="13" inf="30" benefit="30" mindist="4000" />
 		</ifdef>
 		<ifdef id="stonehenge">
-			<GameObj class="Stonehenge2" min="2" max="3" inf-max="17" inf="30" mindist="8000">
+			<GameObj class="Stonehenge1" min="2" max="3" inf-max="17" inf="30" mindist="12000">
 				<RaceAlternative race="Gaul" class="Stonehenge2" />
 				<RaceAlternative race="Carthage" class="Shrine" />
-				<RaceAlternative race="RepublicanRome" class="Stonehenge1" />
-				<RaceAlternative race="Iberia" class="Stonehenge1" />
-				<RaceAlternative race="ImperialRome" class="Stonehenge1" />
-				<RaceAlternative race="Britain" class="Stonehenge1" />
 				<RaceAlternative race="Egypt" class="Shrine" />
-				<RaceAlternative race="Germany" class="Stonehenge1" />
 			</GameObj>
 		</ifdef>
 		<ifdef id="ruins">
 			<GameObj class="Ruins1" minperplayer="1" maxperplayer="3" inf-max="15" inf="30" benefit="20" fade="2" mindist="4000" />
 		</ifdef>
 		<ifdef id="teleports">
-			<GameObj class="Teleport_1" min="2" max="3" inf-max="18" inf="30" fade="2" />
-			<GameObj class="Teleport_2" min="2" max="3" inf-max="18" inf="30" fade="2" />
+			<GameObj class="Teleport_1" min="2" max="2" inf-max="18" inf="30" fade="2" />
+			<GameObj class="Teleport_2" min="2" max="2" inf-max="18" inf="30" fade="2" />
 		</ifdef>
 		<ifdef id="wildlife">
-			<GameObj class="Bear" min="3" max="8" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100">
+			<GameObj class="Bear" min="4" max="8" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100">
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
-			<GameObj class="Boar" min="3" max="8" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100">
+			<GameObj class="Boar" min="4" max="8" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100">
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
-			<GameObj class="Wolf" min="5" max="10" mindist="2000" inf-max="20" inf="0" mingroup="5" maxgroup="10" groupdist="100">
+			<GameObj class="Wolf" min="6" max="12" mindist="2000" inf-max="20" inf="0" mingroup="5" maxgroup="10" groupdist="100">
 				<RaceAlternative race="Carthage" class="LionM" />
 				<RaceAlternative race="Egypt" class="LionM" />
 			</GameObj>
 			<GameObj class="Eagle" min="5" max="15" mindist="1500" inf-max="20" inf="0" mingroup="1" maxgroup="2" groupdist="300" />
-			<GameObj class="Crow" min="8" max="20" mindist="3000" inf-max="19" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
+			<GameObj class="Crow" min="8" max="20" mindist="3000" inf-max="20" inf="0" mingroup="3" maxgroup="6" groupdist="50" />
 			<GameObj class="Deer" min="10" max="20" mindist="1500" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
-			<GameObj class="WildHorse" min="10" max="15" mindist="2500" inf-max="20" inf="0" mingroup="2" maxgroup="5" groupdist="100" />
-			<GameObj class="Fish" min="20" max="40" mindist="1500" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+			<GameObj class="WildHorse" min="10" max="15" mindist="2000" inf-max="20" inf="0" mingroup="3" maxgroup="5" groupdist="100" />
+			<GameObj class="Fish" min="20" max="30" mindist="1500" inf-max="20" inf="0" mingroup="3" maxgroup="4" groupdist="100" />
 		</ifdef>
 		<ifdef id="itemholders">
 			<GameObj class="Area::HolderBoulderGrass" min="3" max="9" inf-max="12" inf="33" fade="2">

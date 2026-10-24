@@ -194,23 +194,6 @@
 		rollover="Leave parry mode">
 		<src obj="Unit" />
 	</cmd>
-	<cmd name="select_special_units" priority="16"
-		button="actions/Select Special Units.bmp"
-		key="w"
-		groupdispatch="data/subai/select_special_units.vs"
-		voidgroupdispatch="1"
-		rollover="Select special units"
-		description="Selects all special units of the currently selected types across the map (except those attached to a hero)">
-		<src obj="RChariot" />
-		<src obj="RLiberatus" />
-		<src obj="GTridentWarrior" />
-		<src obj="IMountaineer" />
-		<src obj="CWarElephant" />
-		<src obj="BVikingLord" />
-		<src obj="EChariot" />
-		<src obj="TValkyrie" />
-		<src obj="HMyrmidon_Javelin" />
-	</cmd>
 	<cmd name="to_peasant" priority="16"
 		button="actions/disband.bmp"
 		key="w"
@@ -228,7 +211,7 @@
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Archer"
 		description="Transforms the Riders into Archers (only in buildings and ships)">
-		<src obj="TTeutonRiderMercenary" />
+		<src obj="TTeutonRiderBase" />
 	</cmd>
 	<cmd name="to_teuton_wolf" priority="16"
 		button="actions/train TTeutonWolf.bmp"
@@ -238,7 +221,7 @@
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Raider"
 		description="Transforms the Archers into Wolves (only in buildings and ships)">
-		<src obj="TTeutonArcherMercenary" />
+		<src obj="TTeutonArcherBase" />
 	</cmd>
 	<cmd name="to_teuton_rider" priority="16"
 		button="actions/train TTeutonRider.bmp"
@@ -248,6 +231,43 @@
 		voidgroupdispatch="1"
 		rollover="Convert to Teuton Rider"
 		description="Transforms the Wolves into Riders (only in buildings and ships)">
-		<src obj="TTeutonWolfMercenary" />
+		<src obj="TTeutonWolfBase" />
+	</cmd>
+	<cmd name="cripple_to_penetration" priority="16"
+		button="actions/Cripple to Penetration.bmp"
+		key="j"
+		groupverifier="data/subai/unit_swap_specials_verify.vs"
+		groupdispatch="data/subai/unit_swap_specials.vs"
+		voidgroupdispatch="1"
+		rollover="Swap Cripple with Penetration"
+		param="31, 12"><!-- 31 = cripple, 12 = penetration -->
+		<src obj="RLiberatus" />
+	</cmd>
+	<cmd name="penetration_to_cripple" priority="17"
+		button="actions/Penetration to Cripple.bmp"
+		key="i"
+		groupverifier="data/subai/unit_swap_specials_verify.vs"
+		groupdispatch="data/subai/unit_swap_specials.vs"
+		voidgroupdispatch="1"
+		rollover="Swap Penetration with Cripple"
+		param="12, 31"><!-- 12 = penetration, 31 = cripple -->
+		<src obj="RLiberatus" />
+	</cmd>
+	<cmd name="select_special_units" priority="18"
+		button="actions/Select Special Units.bmp"
+		key="w"
+		groupdispatch="data/subai/select_special_units.vs"
+		voidgroupdispatch="1"
+		rollover="Select special units"
+		description="Selects all special units of the currently selected types across the map (except those attached to a hero)">
+		<src obj="RChariot" />
+		<src obj="RLiberatus" />
+		<src obj="GTridentWarrior" />
+		<src obj="IMountaineer" />
+		<src obj="CWarElephant" />
+		<src obj="BVikingLord" />
+		<src obj="EChariot" />
+		<src obj="TValkyrie" />
+		<src obj="HMyrmidon_Javelin" />
 	</cmd>
 </commands>

@@ -22,7 +22,7 @@ if (This.AsBuilding().IsValid) {
 
 		if (EnvReadInt(this, "IsStoring") == 1)
 			if (.food > 0) {
-				EnvWriteInt(this, "FoodStorage", EnvReadInt(this, "FoodStorage") + CLAMP(.food, 0, 10));
+				EnvWriteInt(this, "FoodStorage", EnvReadInt(this, "FoodStorage") + CLAMP(.food, 0, 10) * 3 / 2);
 				.SetFood(MAX(0, .food - 10));
 			}
 
@@ -62,4 +62,4 @@ if (This.AsBuilding().IsValid) {
 
 //without this instruction, the game crashes
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

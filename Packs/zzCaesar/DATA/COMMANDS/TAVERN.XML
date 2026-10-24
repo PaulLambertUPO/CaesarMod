@@ -59,7 +59,7 @@
 		groupverifier="data/subai/research_verify.vs"
 		button="actions/scouts.bmp"
 		key="s"
-		costgold="200"
+		costgold="400"
 		rollover="Scout area"
 		method="scoutarea"
 		description="Temporarily removes the fog of war around the chosen point"
@@ -326,7 +326,7 @@
 		costpop="50"
 		execdelay="15000"
 		param="ReqSet, Free Drinks, default"
-		description="Drafts 50 peasants, making them level 4 Militiamen (8 after 10 game minutes)"
+		description="Drafts 50 peasants, making them level 8 desperate militiamen"
 		rollover="Call to arms">
 		<src obj="ITavern" />
 	</cmd>

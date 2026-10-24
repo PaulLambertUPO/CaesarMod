@@ -1,6 +1,7 @@
 <class id="RCatapult" parent="Catapult" cpp_class="CVXCatapult" entity="Buildings/RCatapult/RCatapult.ent.xml">
 
 	<properties race="RepublicanRome" />
+	<properties damage="40" />
 	<properties range="725" min_range="150" />
 
 	<properties display_name="Tower" />

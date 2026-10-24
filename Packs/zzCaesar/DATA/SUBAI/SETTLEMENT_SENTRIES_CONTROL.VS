@@ -15,6 +15,50 @@ if (GetConst("NoSentries") == 0)
 			int i;
 			bool no_sentries = true;
 
+			if (.IsStronghold)
+				if (.IsIndependent)
+					if (EnvReadInt(this, "no_neutral_guards") != 1) {//the flag is thought for custom map/adventure sequences
+						Hero h;
+						Unit u;
+						StrArray defenders_classes;
+						str def_class;
+						point pt_pos;
+						int plr;
+
+						pt_pos = This.pos;
+						plr = .player;
+
+						defenders_classes[Gaul] = "GaulHero";
+						defenders_classes[RepublicanRome] = "RepublicanRomanHero";
+						defenders_classes[Carthage] = "CarthaginianHero";
+						defenders_classes[Iberia] = "IberianHero";
+						defenders_classes[ImperialRome] = "GreekHero";
+						defenders_classes[Britain] = "BritonHero";
+						defenders_classes[Egypt] = "EgyptianHero";
+						defenders_classes[Germany] = "GermanHero";
+
+						h = Place(GetRandomHeroClass(defenders_classes[This.race], plr), pt_pos, plr).AsHero();
+						.ForceAddUnit(h);
+						h.SetLevel(12);
+						h.SetFeeding(false);
+						h.SetNoAIFlag(true);
+						h.SetAutocast(true);
+
+						if (This.race == ImperialRome)
+							def_class = "HPeltast";
+						else
+							def_class = UType(0, This.race);
+
+						for (i = 30; i > 0; i -= 1) {
+							u = Place(def_class, pt_pos, plr).AsUnit();
+							.ForceAddUnit(u);
+							u.SetLevel(4);
+							u.SetFeeding(false);
+							u.SetNoAIFlag(true);
+							u.AttachTo(h);
+						}
+					}
+
 			ol = .Buildings;
 
 			for (i = ol.count - 1; i >= 0; i -= 1) {
@@ -59,4 +103,4 @@ if (GetConst("NoSentries") == 0)
 
 //without this instruction, the game crashes
 while (true)
-	Sleep(3600000);
+	Sleep(86400000);

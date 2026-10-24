@@ -228,7 +228,7 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 			<entry image="UI/InfoBar/Unit Specials/Offensive Tactics.bmp">Offensive tactics (cost 1) - the unit adds the level to damage.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Parry.bmp">Parry - if used, the unit can neither deal nor receive damage as long as it has stamina available. Every hit received costs 1 stamina and every hit inflicted restores 1.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetration (cost 1) - the unit ignores enemy armor and "Defense skill", "Deflection" and "Defensive tactics" specials (it does not affect heroes).</entry>
-			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike (cost 4) - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
+			<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike (cost 5) - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Rage (cost 5) - the unit deals an additional damage by taking its own health, which cannot go below 50% of the maximum (it does not affect heroes).</entry>
 			<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp">Regeneration (cost 4) - the unit restores 50 health every 5 seconds as long as it has food available.</entry>
 			<entry image="UI/InfoBar/Unit Specials/Revenge.bmp">Revenge - the unit deals 100 damage to its killer (it works only in melee).</entry>
@@ -317,7 +317,7 @@ Most specials consume stamina: when it decreases too much, it is necessary to wa
 				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp">Penetration (cost 1) - the unit ignores enemy armor and "Defense skill", "Deflection" and "Defensive tactics" specials (it does not affect heroes).</entry>
 			</topic>
 			<topic id="powerstrike">
-				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike (cost 4) - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
+				<entry image="UI/InfoBar/Unit Specials/Power Strike.bmp">Power strike (cost 5) - the unit kills the enemy if the latter is damaged and with a maximum health lower than or equal to half that of the unit (it does not affect heroes).</entry>
 			</topic>
 			<topic id="rage">
 				<entry image="UI/InfoBar/Unit Specials/Rage.bmp">Rage (cost 5) - the unit deals an additional damage by taking its own health, which cannot go below 50% of the maximum (it does not affect heroes).</entry>
@@ -371,14 +371,14 @@ Every time that a hero levels up, an intermittent '+' symbol appears in his sele
 			<entry image="UI/InfoBar/Skills/EpicEndurance.bmp">Epic endurance - increases the hero's maximum health by 100 per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Euphoria.bmp">Euphoria - gives the hero and all attached units the ability to restore 3 stamina at every kill with a 10% chance per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Leadership.bmp">Leadership - increases the experience provided by the hero to all attached units by 2% per skill point.</entry>
-			<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Quick march - increases the movement speed of the hero and all attached units by 5% per skill point.</entry>
+			<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Quick march - increases the movement speed of the hero and all attached units by 4% per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Recovery.bmp">Recovery - gives the hero and all attached units the ability to restore 5 more health while eating with a 10% chance per skill point.</entry>
-			<entry image="UI/InfoBar/Skills/Scout.bmp">Scout - increases the hero's sight by 50 per skill point.</entry>
+			<entry image="UI/InfoBar/Skills/Scout.bmp">Scout - increases the hero's sight by 30 per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Survival.bmp">Survival - gives the hero and all attached units the ability to eat without spending food with a 10% chance per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/TeamAttack.bmp">Team attack - increases the damage of the hero and all attached units by 1 per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/TeamDefense.bmp">Team defense - increases the armor of the hero and all attached units by 1 per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/Vigor.bmp">Vigor - gives the hero and all attached units the ability to restore 1 more stamina with a 10% chance per skill point.</entry>
-			<entry image="UI/InfoBar/Skills/Wisdom.bmp">Wisdom - gives the hero the ability to gain 1 experience every time that an attached unit dies with a 10% chance per skill point.</entry>
+			<entry image="UI/InfoBar/Skills/Wisdom.bmp">Wisdom - Gives the hero the ability to gain 1 experience every time that an attached unit dies with a 4% chance per skill point.</entry>
 			<entry hcenter="1" font="large">Activable skills</entry>
 			<entry image="UI/InfoBar/Skills/Assault.bmp">Assault (cost 6) - if used, it makes the hero and all attached units ignore enemy armor for 2 seconds plus 0.6 additional seconds per skill point.</entry>
 			<entry image="UI/InfoBar/Skills/BattleCry.bmp">Battle cry (cost 6) - if used, it increases the level of all attached units for 8 seconds by 1 per skill point.</entry>
@@ -440,7 +440,7 @@ Every time that a hero levels up, an intermittent '+' symbol appears in his sele
 				<entry image="UI/InfoBar/Skills/Leadership.bmp">Leadership - increases the experience provided by the hero to all attached units by 2% per skill point.</entry>
 			</topic>
 			<topic id="quickmarch">
-				<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Quick march - increases the movement speed of the hero and all attached units by 5% per skill point.</entry>
+				<entry image="UI/InfoBar/Skills/QuickMarch.bmp">Quick march - increases the movement speed of the hero and all attached units by 4% per skill point.</entry>
 			</topic>
 			<topic id="recovery">
 				<entry image="UI/InfoBar/Skills/Recovery.bmp">Recovery - gives the hero and all attached units the ability to restore 5 more health while eating with a 10% chance per skill point.</entry>
@@ -449,7 +449,7 @@ Every time that a hero levels up, an intermittent '+' symbol appears in his sele
 				<entry image="UI/InfoBar/Skills/Rush.bmp">Rush (cost 4) - if used, it restores the stamina of all attached units by 1 per skill point and it damages them by 5 per skill point.</entry>
 			</topic>
 			<topic id="scout">
-				<entry image="UI/InfoBar/Skills/Scout.bmp">Scout - increases the hero's sight by 50 per skill point.</entry>
+				<entry image="UI/InfoBar/Skills/Scout.bmp">Scout - increases the hero's sight by 30 per skill point.</entry>
 			</topic>
 			<topic id="survival">
 				<entry image="UI/InfoBar/Skills/Survival.bmp">Survival - gives the hero and all attached units the ability to eat without spending food with a 10% chance per skill point.</entry>
@@ -464,7 +464,7 @@ Every time that a hero levels up, an intermittent '+' symbol appears in his sele
 				<entry image="UI/InfoBar/Skills/Vigor.bmp">Vigor - gives the hero and all attached units the ability to restore 1 more stamina with a 10% chance per skill point.</entry>
 			</topic>
 			<topic id="wisdom">
-				<entry image="UI/InfoBar/Skills/Wisdom.bmp">Wisdom - gives the hero the ability to gain 1 experience every time that an attached unit dies with a 10% chance per skill point.</entry>
+				<entry image="UI/InfoBar/Skills/Wisdom.bmp">Wisdom - gives the hero the ability to gain 1 experience every time that an attached unit dies with a 4% chance per skill point.</entry>
 			</topic>
 		</topic>
 		<topic id="notes">
@@ -521,7 +521,7 @@ At the start of the game, you must choose which type of Rome you want to play as
 				<entry>
 - Very high costs
 
-- Vulnerable to "Penetration" and "Assault"
+- Vulnerable to "Penetration" and "Assault", unable to reveal hidden enemies
 
 - Difficult population recovery via tavern
 				</entry>
@@ -1009,7 +1009,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 50</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 12</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 120</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 1000 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 800 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry link="/contents/heroskills/administration">Administration</entry>
@@ -1024,7 +1024,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 			<topic id="BHero">
 				<entry hcenter="1" font="large">British hero</entry>
 				<entry image="UI/Help/Icons/BHero.bmp">The British hero has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1000</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1200</entry>
 				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Damage 70</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 12</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 525</entry>
@@ -1041,6 +1041,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/BMorrigansMonument.bmp" link="/contents/buildings/BArena">Hired in Morrigan's monument</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/FightsB.bmp" link="/contents/buildings/BArena">Depends on Challenges</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Divine Reward.bmp" link="/contents/buildings/BArena">Depends on Divine reward</entry>
 			</topic>
 			<topic id="EHero">
 				<entry hcenter="1" font="large">Egyptian hero</entry>
@@ -1060,6 +1061,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/ETempleOfHorusAndAnubis.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Hired in the Temple of Horus and Anubis</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Light of Horus 3.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Depends on Light of Horus I, II and III</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Mumification.bmp" link="/contents/buildings/ETempleOfOsiris">Depends on Mummification</entry>
 			</topic>
 			<topic id="THero">
@@ -1067,13 +1069,13 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/Help/Icons/THero.bmp">The German hero has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1400</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 70</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 10</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 12</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 120</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 800 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry link="/contents/heroskills/assault">Assault</entry>
-				<entry link="/contents/heroskills/concealment">Concealment</entry>
+				<entry link="/contents/heroskills/euphoria">Euphoria</entry>
 				<entry link="/contents/heroskills/frenzy">Frenzy</entry>
 				<entry link="/contents/heroskills/quickmarch">Quick march</entry>
 				<entry link="/contents/heroskills/teamattack">Team attack</entry>
@@ -1129,7 +1131,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 70</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 80 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 90 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 8 seconds</entry>
 				<entry />
@@ -1230,7 +1232,6 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/Help/Train Ico.bmp">Training time 12 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp" link="/contents/specials/defenseskill">Defense skill</entry>
-				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
 				<entry image="UI/InfoBar/Unit Specials/Rage.bmp" link="/contents/specials/rage">Rage</entry>
 				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp" link="/contents/specials/toughness">Toughness (only Punic Rome)</entry>
 				<entry />
@@ -1308,17 +1309,24 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry hcenter="1" font="large">Liberatus</entry>
 				<entry image="UI/Icons/RLiberatus.bmp">The liberatus has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 480</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 44</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 42</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 14</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 90</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 2000 gold (10 liberati)</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds (10 liberati)</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Max 20</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Bleeding Attack.bmp" link="/contents/specials/bleedingattack">Bleeding attack</entry>
+				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp" link="/contents/specials/cripple">Cripple (swappable with Penetration)</entry>
+				<entry image="UI/InfoBar/Unit Specials/Penetration.bmp" link="/contents/specials/penetration">Penetration (swappable with Cripple)</entry>
 				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
 				<entry image="UI/InfoBar/Unit Specials/Learning.bmp" link="/contents/specials/learning">Learning</entry>
 				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp" link="/contents/specials/toughness">Toughness (only Punic Rome)</entry>
+				<entry />
+				<entry font="large">Commands</entry>
+				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Cripple To Penetration.bmp">
+Swap Cripple and Penetration
+The liberatus swaps Cripple with Penetration (and vice versa).
+				</entry>
 				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/RArena.bmp" link="/contents/buildings/RArena">Hired in the Arena</entry>
@@ -1334,9 +1342,9 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 140</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
@@ -1388,7 +1396,7 @@ The priest sacrifices himself to strike the chosen unit with a non-lethal lightn
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 50 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 60 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 8 seconds</entry>
 				<entry />
@@ -1438,7 +1446,7 @@ The priest sacrifices himself to strike the chosen unit with a non-lethal lightn
 				<entry hcenter="1" font="large">Gaul spearman</entry>
 				<entry image="UI/Icons/GSpearman.bmp">The Gaul spearman has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 280</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 18</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 20</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 16</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 120 gold</entry>
@@ -1477,17 +1485,16 @@ The priest sacrifices himself to strike the chosen unit with a non-lethal lightn
 			<topic id="GWWarrior">
 				<entry hcenter="1" font="large">Woman warrior</entry>
 				<entry image="UI/Icons/GWomanWarrior.bmp">The woman warrior has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 215</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 250</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 14</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 240 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 230 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 18 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp" link="/contents/specials/deathblow">Death blow</entry>
 				<entry image="UI/InfoBar/Unit Specials/Revenge.bmp" link="/contents/specials/revenge">Revenge</entry>
-				<entry image="UI/InfoBar/Unit Specials/Toughness.bmp" link="/contents/specials/toughness">Toughness</entry>
 				<entry />
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/GBarracks.bmp" link="/contents/buildings/GBarracks">Equipped in the Barracks</entry>
@@ -1520,9 +1527,9 @@ The priest sacrifices himself to strike the chosen unit with a non-lethal lightn
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 120</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 0</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Healing.bmp" link="/contents/specials/uhealing">Healing</entry>
@@ -1539,7 +1546,7 @@ The druid sacrifices himself to summon a ghoul that remains under your control f
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Summon Eagle.bmp" link="/contents/units/Animals/Eagle">
 Summon eagle
-The druid sacrifices himself to summon an eagle that remains under your control for about 10 seconds.
+The druid sacrifices himself to summon an eagle that remains under your control for about 2 minutes.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Restoration
@@ -1573,6 +1580,22 @@ The militiaman leaves his weapons and becomes a peasant (only in buildings and s
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/IBarracks.bmp" link="/contents/buildings/IBarracks">Equipped in the Barracks</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Tournaments.bmp" link="/contents/buildings/IArena">Depends on Tournaments</entry>
+				<entry />
+				<entry hcenter="1" font="large">Desperate militiaman</entry>
+				<entry image="UI/Icons/zpwIMilitiaman.bmp">The desperate militiaman has the following stats and specials:</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 180</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 22</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
+				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
+				<entry />
+				<entry image="UI/InfoBar/Unit Specials/Defense Skill.bmp" link="/contents/specials/defenseskill">Defense skill</entry>
+				<entry />
+				<entry font="large">Commands</entry>
+				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Disband.bmp" link="/contents/units/Villagers">
+Demobilize
+The militiaman leaves his weapons and becomes a peasant (only in buildings and ships).
+				</entry>
+				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Call to Arms.bmp" link="/contents/buildings/ITavern">Generable with Call to arms</entry>
 			</topic>
 			<topic id="IArcher">
@@ -1583,7 +1606,7 @@ The militiaman leaves his weapons and becomes a peasant (only in buildings and s
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 60 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 70 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 8 seconds</entry>
 				<entry />
@@ -1730,9 +1753,9 @@ The militiaman leaves his weapons and becomes a peasant (only in buildings and s
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 120</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
@@ -1815,8 +1838,8 @@ The enchantress sacrifices herself to restore the stamina of 5 nearby allies.
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 22</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 280 or 140 gold</entry>
-				<entry image="UI/Help/Train Ico.bmp">Training time 14 seconds</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 260 or 130 gold</entry>
+				<entry image="UI/Help/Train Ico.bmp">Training time 12 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp" link="/contents/specials/attackskill">Attack skill</entry>
 				<entry image="UI/InfoBar/Unit Specials/Parry.bmp" link="/contents/specials/parry">Parry</entry>
@@ -1833,7 +1856,7 @@ The enchantress sacrifices herself to restore the stamina of 5 nearby allies.
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 6</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 300 or 150 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 280 or 140 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 14 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
@@ -1904,7 +1927,7 @@ The enchantress sacrifices herself to restore the stamina of 5 nearby allies.
 			<topic id="CWarElephant">
 				<entry hcenter="1" font="large">War elephant</entry>
 				<entry image="UI/Icons/CWarElephant.bmp">The war elephant has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 2600</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 2800</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 64</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 26</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 65</entry>
@@ -1929,9 +1952,9 @@ The enchantress sacrifices herself to restore the stamina of 5 nearby allies.
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 140</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Curse.bmp" link="/contents/specials/curse">Curse</entry>
@@ -1954,7 +1977,7 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 			<topic id="BSwordsman">
 				<entry hcenter="1" font="large">British swordsman</entry>
 				<entry image="UI/Icons/BSwordsman.bmp">The British swordsman has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 180</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 200</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 16</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
@@ -1976,7 +1999,7 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 60 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 80 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 6 seconds</entry>
 				<entry />
@@ -2003,9 +2026,9 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 			<topic id="BBronzeSpearman">
 				<entry hcenter="1" font="large">British spearman</entry>
 				<entry image="UI/Icons/BBronzeSpearman.bmp">The British spearman has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 240</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 220</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 24</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 16</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 12</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
@@ -2024,7 +2047,7 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/Icons/BShieldBearer.bmp">The shield bearer has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 300</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 26</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 14</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 16</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
@@ -2041,15 +2064,14 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry hcenter="1" font="large">Javelineer</entry>
 				<entry image="UI/Icons/BJavelineer.bmp">The javelineer has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 200</entry>
-				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Damage 24</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
+				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Damage 22</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 400</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 14 seconds</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp" link="/contents/specials/deathblow">Death blow</entry>
 				<entry image="UI/InfoBar/Unit Specials/Drain.bmp" link="/contents/specials/drain">Drain</entry>
 				<entry />
@@ -2061,8 +2083,8 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry hcenter="1" font="large">Highlander</entry>
 				<entry image="UI/Icons/BHighlander.bmp">The highlander has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 475</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 50</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 8</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 52</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 400 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
@@ -2101,9 +2123,9 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 160</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 0</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Invisibility.bmp" link="/contents/specials/invisibility">Invisibility</entry>
@@ -2137,7 +2159,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/Icons/ESwordsman.bmp">The Egyptian swordsman has the following stats and specials:</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 300</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 18</entry>
-				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 6</entry>
+				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 70 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
@@ -2157,7 +2179,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 60 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 80 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 10 seconds</entry>
 				<entry />
@@ -2193,7 +2215,6 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 12 seconds</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Triple strike</entry>
 				<entry />
 				<entry font="large">See also</entry>
@@ -2260,8 +2281,8 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 620</entry>
 				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Damage 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 14</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
-				<entry image="UI/Help/Speed Ico.bmp">Speed 140</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 400</entry>
+				<entry image="UI/Help/Speed Ico.bmp">Speed 160</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 400 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 30 seconds</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Max 15</entry>
@@ -2279,9 +2300,9 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 200</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp" link="/contents/specials/cripple">Cripple</entry>
@@ -2309,7 +2330,7 @@ The priest transforms into a ghoul that remains under your control for about 10 
 			<topic id="TSwordsman">
 				<entry hcenter="1" font="large">German swordsman</entry>
 				<entry image="UI/Icons/TSwordsman.bmp">The German swordsman has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 200</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 220</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 14</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 6</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
@@ -2335,7 +2356,6 @@ The priest transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 10 seconds</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp" link="/contents/specials/attackskill">Attack skill</entry>
 				<entry />
 				<entry font="large">See also</entry>
@@ -2349,7 +2369,6 @@ The priest transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/Help/Special Ico.bmp">Range 600</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Attack Skill.bmp" link="/contents/specials/attackskill">Attack skill</entry>
 				<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
 				<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight</entry>
@@ -2364,12 +2383,11 @@ The priest transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 24</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 70</entry>
-				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Cost 280 food</entry>
+				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Cost 260 food</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 12 seconds</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Max 10, 20, 30... unlimited</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Cripple.bmp" link="/contents/specials/cripple">Cripple</entry>
 				<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Triple strike</entry>
 				<entry />
@@ -2404,7 +2422,7 @@ The priest transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 26</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 10</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 160</entry>
-				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Cost 360 food</entry>
+				<entry image="UI/InfoBar/Common/Food_Cost.bmp">Cost 320 food</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 16 seconds</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Max 10, 20, 30... unlimited</entry>
@@ -2467,7 +2485,7 @@ The Teuton raider changes equipment and transforms into a Teuton rider (only in 
 			<topic id="TMaceman">
 				<entry hcenter="1" font="large">German maceman</entry>
 				<entry image="UI/Icons/TMaceman.bmp">The German maceman has the following stats and specials:</entry>
-				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 540</entry>
+				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 560</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 44</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 6</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
@@ -2476,7 +2494,6 @@ The Teuton raider changes equipment and transforms into a Teuton rider (only in 
 				<entry image="UI/Help/Train Ico.bmp">Training time 22 seconds</entry>
 				<entry image="UI/Infobar/Common/Army Ico.bmp">Max 10, 20, 30... unlimited</entry>
 				<entry />
-				<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
 				<entry image="UI/InfoBar/Unit Specials/Death Blow.bmp" link="/contents/specials/deathblow">Death blow</entry>
 				<entry image="UI/InfoBar/Unit Specials/Regeneration.bmp" link="/contents/specials/regeneration">Regeneration</entry>
 				<entry />
@@ -2511,9 +2528,9 @@ The Teuton raider changes equipment and transforms into a Teuton rider (only in 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 140</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 6</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Curse.bmp" link="/contents/specials/curse">Curse</entry>
@@ -2697,9 +2714,9 @@ The enchantress sacrifices herself to distribute up to 1000 health among nearby 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 180</entry>
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage -</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 200</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 300</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 60</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 200 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
 				<entry image="UI/InfoBar/Unit Specials/Healing.bmp" link="/contents/specials/uhealing">Healing</entry>
@@ -2709,6 +2726,10 @@ The enchantress sacrifices herself to distribute up to 1000 health among nearby 
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Heal
 Heals the selected ally by 20 plus the priest's level.
+				</entry>
+				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Summon Lion.bmp" link="/contents/units/Animals/LionM">
+Summon lion
+The priest sacrifices himself to summon a lion that remains under your control for about 150 seconds.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Restoration
@@ -2821,7 +2842,7 @@ The catapult is a large wooden instrument capable of launching explosive project
 It is not accurate, but it can be very effective against densely packed units.
 				</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1000</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 120</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 150</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 300-750</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Built by: Gaul, Iberia, Carthage, Egypt</entry>
@@ -2831,7 +2852,7 @@ The tower is a large wooden structure that fires arrows at the chosen target wit
 It can be very effective against priority and fast units, or as an additional line of defense if built inside a stronghold.
 				</entry>
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1000</entry>
-				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 120</entry>
+				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 40</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 0</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 150-725</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Built by: Rome, Greece</entry>
@@ -2940,9 +2961,13 @@ It is summoned through the sacrifice of sages or with the activation of magic it
 					<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 4</entry>
 					<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
 					<entry />
-					<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active</entry>
+					<entry image="UI/InfoBar/Unit Specials/Active.bmp" link="/contents/specials/active">Active (only wild lion)</entry>
+					<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Combat skill (only summmoned lion)</entry>
 					<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
+					<entry image="UI/InfoBar/Unit Specials/Keen Sight.bmp" link="/contents/specials/keensight">Keen sight (only summmoned lion)</entry>
 					<entry image="UI/InfoBar/Unit Specials/Triple Strike.bmp" link="/contents/specials/triplestrike">Triple strike</entry>
+					<entry font="large">Vedi anche</entry>
+					<entry vcenter="1" image="UI/Icons/Upgrades/Summon Lion.bmp" link="/contents/buildings/HTemple">Generable with Lion summoning</entry>
 				</topic>
 				<topic id="LionF">
 					<entry hcenter="1" font="large">Lioness</entry>
@@ -3221,7 +3246,7 @@ Starts the automatic training of warriors in the townhall.
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Healing
 Distributes up to 2000 health among nearby allies.
-Cost: 1000 gold
+Cost: 800 gold
 Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
@@ -3329,7 +3354,7 @@ Starts the automatic training of warriors in the townhall.
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Heal.bmp">
 Healing
 Distributes up to 2000 health among nearby allies.
-Cost: 1000 gold
+Cost: 800 gold
 Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
@@ -3401,8 +3426,12 @@ Starts the automatic training of warriors in the townhall.
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Hire Sentries.bmp" link="/contents/units/HToxotes">
 Hire sentries
 Hires up to 10 sentries to help protect the stronghold.
-Cost: 1000 gold
+Cost: 800 gold
 Time: instantaneous
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/States/Trade.bmp">
+Send resources
+Sends up to 1000 gold and 1000 food to each of your allies' strongholds.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/AutoAttach.bmp">
 Attach free warriors
@@ -3449,7 +3478,7 @@ Time: 6 - 3 - 1.5 - 0.75 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Train RArcher.bmp" link="/contents/units/RArcher">
 Equip archer
-Cost: 80 gold and 1 population
+Cost: 90 gold and 1 population
 Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Train RGladiator.bmp" link="/contents/units/RGladiator">
@@ -3527,7 +3556,7 @@ Time: 6 - 3 - 1.5 - 0.75 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GArcher.bmp" link="/contents/units/GArcher">
 Equip archer
-Cost: 50 gold and 1 population
+Cost: 60 gold and 1 population
 Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GAxeman.bmp" link="/contents/units/GAxeman">
@@ -3547,7 +3576,7 @@ Time: 16 - 8 - 4 - 2 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GWomanWarrior.bmp" link="/contents/units/GWWarrior">
 Equip woman warrior
-Cost: 240 gold and 1 population
+Cost: 230 gold and 1 population
 Time: 18 - 9 - 4.5 - 2.25 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
@@ -3589,7 +3618,7 @@ Time: 6 - 3 - 1.5 - 0.75 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IArcher.bmp" link="/contents/units/IArcher">
 Equip archer
-Cost: 60 gold and 1 population
+Cost: 70 gold and 1 population
 Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IDefender.bmp" link="/contents/units/IDefender">
@@ -3656,12 +3685,12 @@ Time: 10 - 5 - 2.5 - 1.25 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CBerberAssassin.bmp" link="/contents/units/CBerberAssassin">
 Hire Berber assassin
-Cost: 280 or 140 gold
-Time: 14 - 7 - 3.5 - 1.75 seconds
+Cost: 260 or 130 gold
+Time: 12 - 6 - 3 - 1.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CMaceman.bmp" link="/contents/units/CMaceman">
 Hire maceman
-Cost: 300 or 150 gold
+Cost: 280 or 140 gold
 Time: 14 - 7 - 3.5 - 1.75 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CNumidianRider.bmp" link="/contents/units/CNumidianRider">
@@ -3713,7 +3742,7 @@ Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BBowman.bmp" link="/contents/units/BBowman">
 Equip bowman
-Cost: 60 gold and 1 population
+Cost: 80 gold and 1 population
 Time: 6 - 3 - 1.5 - 0.75 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BBronzeSpearman.bmp" link="/contents/units/BBronzeSpearman">
@@ -3775,7 +3804,7 @@ Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EArcher.bmp" link="/contents/units/EArcher">
 Equip archer
-Cost: 60 gold and 1 population
+Cost: 80 gold and 1 population
 Time: 10 - 5 - 2.5 - 1.25 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EAxeTrower.bmp" link="/contents/units/EAxeThrower">
@@ -3837,12 +3866,12 @@ Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TArcher.bmp" link="/contents/units/TArcher">
 Equip archer
-Cost: 200 food and 1 population
+Cost: 160 food and 1 population
 Time: 10 - 5 - 2.5 - 1.25 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TAxeman.bmp" link="/contents/units/TAxeman">
 Equip axeman
-Cost: 300 food and 1 population
+Cost: 260 food and 1 population
 Time: 12 - 6 - 3 - 1.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train THuntress.bmp" link="/contents/units/THuntress">
@@ -3852,7 +3881,7 @@ Time: 16 - 8 - 4 - 2 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Train TTeutonRider.bmp" link="/contents/units/TTeutonRider">
 Equip Teuton rider
-Cost: 360 food and 1 population
+Cost: 320 food and 1 population
 Time: 16 - 8 - 4 - 2 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TMaceman.bmp" link="/contents/units/TMaceman">
@@ -3899,7 +3928,7 @@ Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Train HToxotes.bmp" link="/contents/units/HToxotes">
 Equip toxotes
-Cost: 80 gold and 1 population
+Cost: 70 gold and 1 population
 Time: 8 - 4 - 2 - 1 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Train HHoplite.bmp" link="/contents/units/HHoplite">
@@ -3953,7 +3982,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Pikes.bmp" link="/contents/units/RPrinciple">
 Pikes
 Allows principles to be equipped in the barracks.
-Cost: 1800 gold
+Cost: 1400 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Horseshoes.bmp" link="/contents/units/RScout">
@@ -4152,25 +4181,25 @@ Time: 30 or 7.5 seconds
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CSwords.bmp" link="/contents/units/CBerberAssassin">
 Forge swords
 Reduces Berber assassins cost by half (the command time is reduced by 75% and the cost is paid back from the second time).
-Cost: 1400 gold
+Cost: 1200 gold
 Time: 30 or 7.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CMaces.bmp" link="/contents/units/CMaceman">
 Forge maces
 Reduces macemen cost by half (the command time is reduced by 75% and the cost is paid back from the second time).
-Cost: 1600 gold
+Cost: 1400 gold
 Time: 30 or 7.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CPikes.bmp" link="/contents/units/CNumidianRider">
 Forge pikes
 Reduces Tuaregs cost by half (the command time is reduced by 75% and the cost is paid back from the second time).
-Cost: 1800 gold
+Cost: 1600 gold
 Time: 30 or 7.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CShields.bmp" link="/contents/units/CHorseman">
 Forge shields
 Reduces Numidian horsemen cost by half (the command time is reduced by 75% and the cost is paid back from the second time).
-Cost: 2000 gold
+Cost: 1800 gold
 Time: 30 or 7.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/StopCSpears.bmp">
@@ -4439,7 +4468,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Advanced Training.bmp">
 Advanced training
 Allows warriors to train up to level 8.
-Cost: 1000 gold
+Cost: 750 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Veteran Offence.bmp">
@@ -4499,13 +4528,13 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Standartization 2.bmp">
 Standardization II
 Makes all new warriors level 6 but unable to gain experience.
-Cost: 2000 gold
+Cost: 1500 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Upgrades/Flexibility.bmp">
 Flexibility
 Makes all new warriors level 8 and able to gain experience.
-Cost: 4000 gold
+Cost: 2500 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Hire RLiberati.bmp" link="/contents/units/RLiberatus">
@@ -4560,13 +4589,13 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Advanced Training.bmp">
 Advanced training
 Allows warriors to train up to level 8.
-Cost: 1000 gold
+Cost: 750 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Maser Training.bmp">
 Special training
 Allows warriors to train up to level 12.
-Cost: 1500 gold
+Cost: 1000 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Hire RLiberati Punic.bmp" link="/contents/units/RLiberatus">
@@ -4622,13 +4651,13 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Advanced Training.bmp">
 Advanced training
 Allows warriors to train up to level 8.
-Cost: 1000 gold
+Cost: 750 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Maser Training.bmp">
 Special Training
 Allows warriors to train up to level 12.
-Cost: 1500 gold
+Cost: 1000 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Hire TridentWarrior.bmp" link="/contents/units/GTridentWarrior">
@@ -4768,7 +4797,7 @@ Besides entertaining the people, the fighters learn new fighting skills.
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire HeroC.bmp" link="/contents/units/CHero">
 Hire hero
-Cost: 1000 gold
+Cost: 800 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/Peoples Assembly.bmp">
@@ -4803,7 +4832,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/Mahout Mastery.bmp">
 Mahout mastery
-Makes new war elephants level 16.
+Makes new war elephants level 20.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -4868,6 +4897,12 @@ Makes new Viking Lords 2 levels higher than the last (up to level 24).
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
+				<entry vcenter="1" image="UI/Help/BCmdBar/Research/Divine Reward.bmp">
+Divine reward
+Grants heroes a random skill when they reach level 30.
+Cost: 2500 gold
+Time: 30 seconds
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair
 Repairs the building to make it operational again if it is too damaged.
@@ -4928,20 +4963,20 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Light of Horus 1.bmp">
 Light of Horus I
-Makes new warriors level 2 (4 for Horus warriors).
-Cost: 500 gold
+Makes new warriors and heroes level 2 (4 for Horus warriors).
+Cost: 250 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Light of Horus 2.bmp">
 Light of Horus II
-Makes new warriors level 4 (6 for Horus warriors).
-Cost: 1000 gold
+Makes new warriors and heroes level 4 (6 for Horus warriors).
+Cost: 500 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Light of Horus 3.bmp">
 Light of Horus III
-Makes new warriors level 6 (8 for Horus warriors).
-Cost: 1500 gold
+Makes new warriors and heroes level 6 (8 for Horus warriors).
+Cost: 750 gold
 Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Statue of Amon-Ra.bmp">
@@ -5130,7 +5165,7 @@ Time: 20 seconds
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Scout Area.bmp">
 Scout area
 Temporarily removes the fog of war around the chosen point.
-Cost: 200 gold
+Cost: 400 gold
 Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Buy Maps.bmp">
@@ -5265,7 +5300,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Call to Arms.bmp" link="/contents/units/IMilitiaman">
 Call to arms
-Drafts 50 peasants, making them level 4 Militiamen (8 after 10 game minutes).
+Drafts 50 peasants, making them level 8 desperate militiamen.
 Cost: 800 gold
 Time: 15 seconds
 				</entry>
@@ -5542,13 +5577,13 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Start Storing Food.bmp">
 Start storing food
-Allows you to deposit reusable food stocks in a separate storage.
-Cost: 800 gold
+Stores food in a separate stock over time (with a 50% gain).
+Cost: 1000 gold
 Time: instantaneous
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Stop Storing Food.bmp">
 Stop storing food
-Blocks the storing and gives you back all food supplies.
+Stops the storing and returns all stocked food.
 Cost: none
 Time: instantaneous
 				</entry>
@@ -5582,7 +5617,7 @@ Priests can heal wounds, are able to learn from other units and know how to cast
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Train RPriest.bmp" link="/contents/units/RPriest">
 Call priest
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Research/Priest Enlightment.bmp">
@@ -5625,7 +5660,7 @@ Druids can heal wounds and become invisible, are able to learn from other units 
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Actions/Train GDruid.bmp" link="/contents/units/GDruid">
 Call druid
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
@@ -5674,7 +5709,7 @@ Enchantresses can teach warriors, are able to learn from other units and can pro
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Actions/Train IEnchantress.bmp" link="/contents/units/IEnchantress">
 Call enchantress
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ICmdBar/Research/Code of Valor.bmp">
@@ -5717,7 +5752,7 @@ Shamans can curse and debilitate the enemy even when dead, are able to learn fro
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Hire CShaman.bmp" link="/contents/units/CShaman">
 Call shaman
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Research/Dark Rituals.bmp">
@@ -5765,7 +5800,7 @@ Druids can make themselves and allies invisible, are able to learn from other un
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BDruid.bmp" link="/contents/units/BDruid">
 Call druid
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
@@ -5814,7 +5849,7 @@ Priests can cripple and debilitate the enemy even when dead, are able to learn f
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EPriest.bmp" link="/contents/units/EPriest">
 Call priest
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Cult of Osiris.bmp">
@@ -5837,8 +5872,8 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Mumification.bmp">
 Mummification
-Makes all new heroes 2/3 the level of the most experienced you've had.
-Cost: 3000 gold
+Makes all new heroes half the level of the most experienced you have had.
+Cost: 2500 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Chariot of Osiris.bmp" link="/contents/units/EChariot">
@@ -5863,7 +5898,7 @@ Enchantresses can curse the enemy, are able to learn from other units and have a
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Train TEnchantress.bmp" link="/contents/units/TEnchantress">
 Call enchantress
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/GCmdBar/Research/Ritual Chamber.bmp">
@@ -5874,13 +5909,13 @@ Time: 40 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Summon Wolf.bmp" link="/contents/units/Animals/Wolf">
 Wolf summoning
-Allows enchantresses to sacrifice themselves and summon a wolf that remains under your control for about 200 seconds.
-Cost: 800 gold
+Allows enchantresses to sacrifice themselves to summon a wolf that remains under your control for about 200 seconds. The same effect also applies every time that an enchantress dies, but for about 30 seconds.
+Cost: 1000 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Actions/Summon Deer.bmp" link="/contents/units/Animals/Deer">
 Deer summoning
-Allows enchantresses to sacrifice themselves and summon a deer that remains under your control for about 3 minutes.
+Allows enchantresses to sacrifice themselves to summon a deer that remains under your control for about 3 minutes.
 Cost: 800 gold
 Time: 20 seconds
 				</entry>
@@ -5906,7 +5941,7 @@ Priests can heal wounds and reveal hidden enemies, are able to learn from other 
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Train HPriest.bmp" link="/contents/units/HPriest">
 Call priest
-Cost: 200 gold
+Cost: 150 gold
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Research/Offer to Gods.bmp">
@@ -5915,11 +5950,11 @@ Makes new priests level 5.
 Cost: 1500 gold
 Time: 30 seconds
 				</entry>
-				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
-Protection of Apollo
-Makes all your strongholds indestructible for 2 minutes. This command can be issued only once per game.
-Cost: 2000 gold
-Time: instantaneous
+				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Summon Lion.bmp" link="/contents/units/Animals/LionM">
+Lion summoning
+Allows priests to sacrifice themselves to summon a lion that remains under your control for about 150 seconds. The same effect also applies every time that a priest dies, but for about 30 seconds.
+Cost: 1200 gold
+Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Restoration
@@ -5932,6 +5967,12 @@ Statue of Zeus
 Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage.
 Cost: 2500 gold
 Time: 30 seconds
+				</entry>
+				<entry vcenter="1" image="UI/Help/HCmdBar/Actions/Apollo Protection.bmp">
+Protection of Apollo
+Makes all your strongholds indestructible for 2 minutes. This command can be issued only once per game.
+Cost: 2000 gold
+Time: 15 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Repair.bmp">
 Repair

@@ -19,5 +19,4 @@ if (.IsValid)
 				}
 		}
 
-while (true)
-	Sleep(3600000);
+Sleep(5000);//wait for a moment then execute the next queued command or repeat this one to attack a building that has been repaired in the meantime

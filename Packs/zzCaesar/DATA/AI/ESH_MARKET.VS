@@ -347,26 +347,41 @@ if (nRace == Britain)
 					}
 			}
 
-//useful researches/commands - supplies and stop storing food (Greece) - the latter is just to reduce the amount of possible exploits by human players
-if (nRace == ImperialRome) {
+//useful researches/commands - supplies and food storing (Greece)
+if (nRace == ImperialRome)
 	if (strTech == "")
-		if (!IsResearched(aiPlayer, "Supplies"))
-			if (!IsResearching(aiPlayer, "Supplies"))
-				if (set.food <= 400) {
-					strTech = "Supplies";
-					bForceResearch = true;
+		if (IsResearched(aiPlayer, "Supplies")) {
+			if (EnvReadInt(set, "IsStoring") != 1) {
+				if (set.CanAfford("startStoringFood")) {
+					Building b;
+					b = set.FindResearchLab("startStoringFood");
+					if (b.IsValid)
+						if (!b.IsBroken) {
+							int gold, food;
+							if (GetCmdCost("startStoringFood", gold, food)) {
+								point ptDummy;
+								Obj objDummy;
+								b.ExecCmd("startStoringFood", ptDummy, objDummy, false);
+								set.SpentGoldOnTech(gold + food / 2);
+							}
+						}
 				}
-				else if (MilUnits(aiPlayer) >= 60) {
-					strTech = "Supplies";
-					bForceResearch = true;
-				}
-				else if (rand(5) == 0)
-					strTech = "Supplies";
-	if (EnvReadInt(set, "IsStoring") == 1)
-		if (EnvReadInt(set, "FoodStorage") >= 1000)//it takes about 200 seconds to store 1000 food (up to 10 every 2 seconds)
-			if (set.CanResearch("stopStoringFood"))
-				set.Research("stopStoringFood");
-}
+			}
+			else if (EnvReadInt(set, "FoodStorage") >= 4500)//it takes at least 600 seconds to store 4500 food (up to 15 every 2 seconds)
+				if (set.CanResearch("stopStoringFood"))
+					set.Research("stopStoringFood");
+		}
+		else if (!IsResearching(aiPlayer, "Supplies"))
+			if (set.food <= 400) {
+				strTech = "Supplies";
+				bForceResearch = true;
+			}
+			else if (MilUnits(aiPlayer) >= 60) {
+				strTech = "Supplies";
+				bForceResearch = true;
+			}
+			else if (rand(5) == 0)
+				strTech = "Supplies";
 
 //useful researches/commands - foreign mercenaries and slavery (Carthage)
 if (nRace == Carthage)
