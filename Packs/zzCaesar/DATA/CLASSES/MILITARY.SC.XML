@@ -12,8 +12,6 @@
 	<method sig="guard_patrol" vs="data/subai/unit_guard_patrol.vs" />
 	<method sig="guard_engage" vs="data/subai/unit_guard_engage.vs" />
 
-	<behavior script="data/subai/sneak_bonus_attack.vs" />
-
 	<defaultcmd target="Unit">
 		<cmd name="attack" />
 		<cmd name="attack_unit_type_exclusive" ctrl="1" />

@@ -17,6 +17,6 @@
 <translationtableentry text="Aumentan la salud en 1200 puntos.\nSi se utilizan, restablecen la salud de un aliado cercano sustrayéndola del poseedor" result="Aumentano la salute di 1200 punti.\nSe si utilizzano, ripristinano la salute di un alleato vicino sottraendola al possessore"/>
 <translationtableentry text="Amulet of triumph" result="Amuleto del trionfo"/>
 <translationtableentry text="Amuleto del triunfo" result="Amuleto del trionfo"/>
-<translationtableentry text="Restores the health of the owner by 100 upon every kill, with a 50% chance to restore 50 more health" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti"/>
+<translationtableentry text="Restores the health of the owner by 100 at every kill, with a 50% chance to restore 50 more health" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti"/>
 <translationtableentry text="Restablece la salud del poseedor en 100 puntos con cada asesinato, con una probabilidad del 50% de restablecer 50 puntos adicionales" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti"/>
 </translationtable>

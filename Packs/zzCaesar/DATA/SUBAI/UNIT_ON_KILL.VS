@@ -27,6 +27,40 @@ if (.IsValid)
 						CreateFeedback("Heal", this);
 					}
 
+			if (this_is_hero) {
+				if (IsResearched(plr, "Legendary Heroes")) {
+					.AddBonus(0, 0, 0, 2, 0);//increase both health and stamina
+					.AddBonus(0, 0, 0, -2, 0);//reset values but keep a bonus of 0 in order for RemoveBonus to work
+					.RemoveBonus(0, 0, 0, -2, 0);//increase only health by trying to reduce it with a negative value (RemoveBonus does not consider stamina)
+				}
+				if (IsResearched(plr, "Roman Triumph"))
+					if (This.maxstamina < 20) {//the Unit version of maxstamina does not work (it always returns the base value), but the Obj one does
+						.AddBonus(0, 0, 0, 1, 0);//increase both health and stamina
+						.RemoveBonus(0, 0, 0, 1, 0);//RemoveBonus does not consider stamina
+					}
+			}
+			else {
+				if (.IsHeirOf("RChariot")) {
+					if (IsResearched(plr, "Roman Triumph"))
+						if (This.maxstamina < 20) {//see comments above
+						.AddBonus(0, 0, 0, 1, 0);
+						.RemoveBonus(0, 0, 0, 1, 0);
+					}
+				}
+				else if (.IsHeirOf("GTridentWarrior"))
+					if (IsResearched(plr, "Legendary Heroes")) {
+						.AddBonus(0, 0, 0, 20, 0);//see comments above
+						.AddBonus(0, 0, 0, -20, 0);
+						.RemoveBonus(0, 0, 0, -20, 0);
+					}
+				if (rand(10) == 0)
+					if (IsResearched(plr, "Gambler's Test")) {
+						.AddBonus(1, 0, 0, 0, 0);
+						CreateFeedback("Frenzy", this);
+						CreateFeedback("Frenzy2", this);
+					}
+			}
+
 			if (IsResearched(plr, "FerocityResearch")) {
 				if (.stamina < .maxstamina) {
 					.HealStamina(3);
@@ -58,6 +92,18 @@ if (.IsValid)
 
 			if (IsResearched(plr, "Statue of Isis"))
 				.SetFood(MIN(.food + 2, .maxfood));
+
+			if (IsResearched(plr, "Barbaric Tales"))
+				if (vict.IsMilitary)
+					if (.hero.IsAlive)
+						if (.hero.SkillInEffect(hsFrenzy)) {
+							if (.IsHeirOf("TValkyrie"))
+								.AddBonus(2, 0, 0, 0, 0);
+							else
+								.AddBonus(1, 0, 0, 0, 0);
+							CreateFeedback("Frenzy", this);
+							CreateFeedback("Frenzy2", this);
+						}
 
 			//removing items with their on_kill script messes up the givings below because this script is executed before
 			.RemoveItemsOfType("Damage charm");
@@ -139,26 +185,7 @@ if (.IsValid)
 				}
 
 			if (!vict.IsSentry) {
-				if (this_is_hero || .IsHeirOf("TValkyrie")) {
-					if (.inherentlevel + 3 <= vict.inherentlevel)
-						if (IsResearched(plr, "Barbaric Tales")) {
-							ObjList ol;
-							Unit u;
-							int i;
-
-							ol = ObjsInCircle(.posRH, 500, "Military").GetObjList();
-
-							for (i = ol.count - 1; i >= 0; i -= 1) {
-								u = ol[i].AsUnit();
-								if (u.IsAlive)
-									if (u.player == plr) {
-										u.SetExperience(u.experience + 15);
-										CreateFeedback("Experience", u);
-									}
-							}
-						}
-				}
-				else if (.IsHeirOf("RLiberatus")) {
+				if (.IsHeirOf("RLiberatus")) {
 					if (IsResearched(plr, "Liberati triumph")) {
 						bool vict_is_special = false;
 
@@ -203,18 +230,19 @@ if (.IsValid)
 								.SetLevel(vict.inherentlevel);
 								CreateFeedback("Experience", this);
 							}
-							else if (rand(100) < EnvReadInt(plr, "GamblersDayChance")) {
+							else if (rand(100) < 45) {
 								.SetLevel(vict.inherentlevel);
 								CreateFeedback("Experience", this);
 							}
 						}
-						else if (rand(100) < EnvReadInt(plr, "GamblersDayChance")) {
+						else if (rand(100) < 45) {
 							.SetLevel(vict.inherentlevel);
 							CreateFeedback("Experience", this);
 						}
 
+
 				//this part must be the last for the damage and it replaces the "GetJupiterAngerTarget" function because of its memory leaks
-				if (vict.IsHeirOf("RPriest"))
+				if (vict.IsHeirOf("RPriest")) {
 					if (IsResearched(vict.player, "Wrath of Jupiter")) {//do not kill to avoid the "resurrection bug" that occurs when a unit is healed upon dying
 						CreateFeedback("Lightning3", this);
 						.PlaySound("Data/Sound Entities/JupiterAnger.xml");
@@ -223,6 +251,10 @@ if (.IsValid)
 						else
 							.Damage(MIN(250, .health - 1));
 					}
+				}
+				else if (vict.IsHeirOf("EChariot"))
+					if (IsResearched(vict.player, "Venomous revenge"))
+						.Disease();
 			}
 		}
 	}

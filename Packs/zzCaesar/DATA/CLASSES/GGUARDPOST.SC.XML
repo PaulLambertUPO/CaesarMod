@@ -22,4 +22,5 @@
 		end_level_2="18"
 	/>
 	<behavior script="data/subai/GGuardPost_Sentries.vs" />
+	<value5 />
 </class>

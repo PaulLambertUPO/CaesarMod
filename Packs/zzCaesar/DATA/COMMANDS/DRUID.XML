@@ -72,7 +72,7 @@
 		key="y"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Create Cloud of Plague"
-		description="Creates a cloud of plague that deals 45 damage to all units periodically for about 12 seconds (at the cost of life)"
+		description="Creates a cloud of plague that deals 50 damage to all units periodically for about 12 seconds (at the cost of life)"
 		cursor="do_something"
 		param="Cloud of Plague">
 		<cmdtext target="" text="" /><!-- needed to change the cursor -->
@@ -90,7 +90,18 @@
 		<cmdtext target="" text="" /><!-- needed to change the cursor -->
 		<src obj="IEnchantress" sticky="yes" />
 	</cmd>
-	<cmd name="zombify" priority="24"
+	<cmd name="wrath_of_thor" priority="24"
+		button="actions/thor.bmp"
+		key="j"
+		groupverifier="data/subai/verify_isresearched.vs"
+		rollover="Wrath of Thor"
+		description="Channels the Wrath of Thor to strike the area with lightnings that deal 60 damage to all units for about 10 seconds (at the cost of life)"
+		cursor="do_something"
+		param="Wrath of Thor">
+		<cmdtext target="" text="" /><!-- needed to change the cursor -->
+		<src obj="BDruid" sticky="yes" />
+	</cmd>
+	<cmd name="zombify" priority="25"
 		button="research/Zombify.bmp"
 		key="f"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -100,7 +111,7 @@
 		<src obj="CShaman" sticky="yes" />
 		<src obj="EPriest" sticky="yes" />
 	</cmd>
-	<cmd name="ghoul_summoning" priority="25"
+	<cmd name="ghoul_summoning" priority="26"
 		button="actions/ghost.bmp"
 		key="g"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -110,7 +121,7 @@
 		<src obj="GDruid" sticky="yes" />
 		<src obj="BDruid" sticky="yes" />
 	</cmd>
-	<cmd name="wrath_of_jupiter" priority="26"
+	<cmd name="wrath_of_jupiter" priority="27"
 		button="actions/jupiter.bmp"
 		key="j"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -121,7 +132,7 @@
 		<cmdtext target="Unit" text="Click to hurt this unit" />
 		<src obj="RPriest" />
 	</cmd>
-	<cmd name="eagle_summoning" priority="26"
+	<cmd name="eagle_summoning" priority="27"
 		button="actions/summon eagle.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -130,7 +141,7 @@
 		param="Eagle Summoning">
 		<src obj="GDruid" />
 	</cmd>
-	<cmd name="crow_summoning" priority="26"
+	<cmd name="crow_summoning" priority="27"
 		button="actions/summon crow.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -139,7 +150,7 @@
 		param="Crow Summoning">
 		<src obj="BDruid" />
 	</cmd>
-	<cmd name="wolf_summoning" priority="26"
+	<cmd name="wolf_summoning" priority="27"
 		button="actions/summon wolf.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -148,7 +159,7 @@
 		param="Wolf Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
-	<cmd name="deer_summoning" priority="27"
+	<cmd name="deer_summoning" priority="28"
 		button="actions/summon deer.bmp"
 		key="j"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -157,7 +168,7 @@
 		param="Deer Summoning">
 		<src obj="TEnchantress" />
 	</cmd>
-	<cmd name="lion_summoning" priority="27"
+	<cmd name="lion_summoning" priority="28"
 		button="actions/summon lion.bmp"
 		key="w"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -166,7 +177,7 @@
 		param="Lion Summoning">
 		<src obj="HPriest" />
 	</cmd>
-	<cmd name="restoration" priority="27"
+	<cmd name="restoration" priority="29"
 		button="actions/restoration.bmp"
 		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"
@@ -177,7 +188,7 @@
 		<src obj="IEnchantress" />
 		<src obj="HPriest" />
 	</cmd>
-	<cmd name="mass_heal" priority="28"
+	<cmd name="mass_heal" priority="29"
 		button="actions/Mass Healing.bmp"
 		key="i"
 		groupverifier="data/subai/verify_isresearched.vs"

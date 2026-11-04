@@ -227,6 +227,20 @@ while (dest != "") {
 				ExploreCircle(plr, .pos, 6000);
 			else if (name == "Buy map")
 				ExploreCircle(plr, .pos, 18000);
+			else if (name == "Nordic trade routes") {
+				ObjList outposts;
+				Building b;
+				int i;
+				outposts = GetSettlements("Outpost", plr);
+				for (i = outposts.count - 1; i >= 0; i -= 1) {
+					b = outposts[i].AsBuilding();
+					if (!b.IsBroken)
+						if (b.IsHeirOf("GOutpost"))
+							b.settlement.SetFood(b.settlement.food + 2000);
+						else if (b.IsHeirOf("TOutpost"))
+							b.settlement.SetFood(b.settlement.food + 2000);
+				}
+			}
 			else if (name == "Trade Routes") {
 				ObjList villages;
 				Building b;

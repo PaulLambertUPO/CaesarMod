@@ -5,7 +5,7 @@
 			image="gameres/icons/items/amulet of triumph.bmp"
 			sound=""
 			level="0"
-			description="Restores the health of the owner by 100 upon every kill, with a 50% chance to restore 50 more health"
+			description="Restores the health of the owner by 100 at every kill, with a 50% chance to restore 50 more health"
 			usecount="0"
 			customdata="0"
 			use_script=""

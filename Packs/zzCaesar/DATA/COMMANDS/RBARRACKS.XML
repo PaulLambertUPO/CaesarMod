@@ -47,7 +47,23 @@
 		sclass="RGladiator">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="trainRVelit" priority="5"
+	<cmd name="trainRGladiatorVeteran" priority="6"
+		button="actions/train RGladiatorVeteran.bmp"
+		queueicon="gameres/icons/RGladiatorVeteran.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_veteran_verify.vs"
+		traincommand="yes"
+		key="e"
+		costgold="200"
+		costpop="1"
+		execdelay="12000"
+		rollover="Equip Veteran Gladiator"
+		method="train"
+		param="RGladiatorVeteran"
+		sclass="RGladiatorVeteran">
+		<src obj="RBarracks" />
+	</cmd>
+	<cmd name="trainRVelit" priority="7"
 		button="actions/train RVelit.bmp"
 		queueicon="gameres/icons/RVelit.bmp"
 		groupverifier="data/subai/barrack_train_verify.vs"
@@ -63,7 +79,7 @@
 		sclass="RVelit">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="trainRPrinciple" priority="6"
+	<cmd name="trainRPrinciple" priority="8"
 		button="actions/train RPrinciple.bmp"
 		queueicon="gameres/icons/RPrinciple.bmp"
 		transpicon="1"
@@ -79,7 +95,7 @@
 		sclass="RPrinciple">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="trainRScout" priority="7"
+	<cmd name="trainRScout" priority="9"
 		button="actions/train RScout.bmp"
 		queueicon="gameres/icons/RScout.bmp"
 		transpicon="1"
@@ -95,7 +111,7 @@
 		sclass="RScout">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="trainRTribune" priority="8"
+	<cmd name="trainRTribune" priority="10"
 		button="actions/train RTribune.bmp"
 		queueicon="gameres/icons/RTribune.bmp"
 		transpicon="1"
@@ -111,7 +127,7 @@
 		sclass="RTribune">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="trainRPraetorianBase" priority="8"
+	<cmd name="trainRPraetorianBase" priority="11"
 		button="actions/train RPraetorian.bmp"
 		queueicon="gameres/icons/RPraetorian.bmp"
 		transpicon="1"
@@ -127,7 +143,7 @@
 		sclass="RPraetorian">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="trainRPraetorianDiscounted" priority="8"
+	<cmd name="trainRPraetorianDiscounted" priority="11"
 		button="actions/train RPraetorian discounted.bmp"
 		queueicon="gameres/icons/RPraetorian.bmp"
 		transpicon="1"
@@ -143,7 +159,7 @@
 		sclass="RPraetorian">
 		<src obj="RBarracks" />
 	</cmd>
-	<cmd name="Equip Chariot" priority="9"
+	<cmd name="Equip Chariot" priority="12"
 		button="actions/hire RChariot.bmp"
 		queueicon="gameres/icons/RChariot.bmp"
 		transpicon="1"

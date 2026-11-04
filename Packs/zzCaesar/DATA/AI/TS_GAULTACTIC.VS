@@ -63,7 +63,7 @@ aSkillLevels[0] = 10;
 		if (!bBarrack1)
 			bBarrack1 = set.TSResearch("Barrack Level 1");
 		if (!bBearTeeth)
-			bBearTeeth = set.TSResearch("Nordic trade routes");
+			bBearTeeth = set.TSResearch("Bear Teeth");
 		Sleep(4100 + rand(15) * 100);
 	}
 }

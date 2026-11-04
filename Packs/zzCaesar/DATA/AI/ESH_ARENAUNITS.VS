@@ -140,6 +140,8 @@ else if (nRace == Egypt) {
 	if (nMaxAllowed >= 0)
 		if (nMaxAllowed < max)
 			max = nMaxAllowed;
+	nUpgradeType = 1;
+	strTech = "Venomous revenge";
 }
 else if (nRace == Germany) {
 	strHire = "Call Valkyries";
@@ -171,7 +173,7 @@ upgrade_units = AIVar(aiPlayer, AIV_ArenaUpgradeHires);//0 - easy, 1 - normal, -
 if (upgrade_units == 0)
 	nArenaResearchLevel = 2;
 else if (nArenaResearchLevel < 2)
-	if (nUpgradeType == 1) {//player upgrades (Iberia and Greece)
+	if (nUpgradeType == 1) {//player upgrades (Iberia, Egypt and Greece)
 		if (nRace == Iberia)
 			if (IsResearched(aiPlayer, strTech))
 				strTech = "Mountain Clan Legacy";
@@ -225,13 +227,20 @@ if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) + nCal
 			return;
 }
 
-//this part is executed either for Gaul/Rome (supreme heroes) or when all upgrades have been researched (unless AIV_ArenaUpgradeHires is 0) and the unit limit has been reached
+//this part is executed when all upgrades have been researched (unless AIV_ArenaUpgradeHires is 0) and the unit limit has been reached
 if (nArenaResearchLevel == 2) {
-	//upgrades to either further improve units (Imperial Rome) or increase their limit (Carthage and Greece)
+	//upgrades to either further improve units (Imperial Rome and Iberia) or increase their limit (Carthage and Greece)
 	if (upgrade_units != 0)
 		if (nRaceIsImperialRome) {
 			if (!IsResearched(aiPlayer, "Liberati triumph")) {
 				EnvWriteString(set, "strTech", "Liberati triumph");
+				set.AIRun("ESH_NeedTech.vs");
+				return;
+			}
+		}
+		else if (nRace == Iberia) {
+			if (!IsResearched(aiPlayer, "Survival techniques")) {
+				EnvWriteString(set, "strTech", "Survival techniques");
 				set.AIRun("ESH_NeedTech.vs");
 				return;
 			}
@@ -251,16 +260,16 @@ if (nArenaResearchLevel == 2) {
 					set.AIRun("ESH_NeedTech.vs");
 					return;
 				}
-	//supreme heroes (Gaul and Republican Rome)
+	//supreme heroes
 	if (AIVar(aiPlayer, AIV_SupremeHeroes) != 0) {
 		class = "";
 		if (nRace == Gaul) {
 			if (GetTime() >= 2700000)
-				if (IsResearched(aiPlayer, "Gaul Training 3"))
-					if (IsResearched(set, "Trident Warrior Exp3"))
+				if (IsResearched(set, "Trident Warrior Exp3")) {//the else cases manage the case where AIV_SupremeHeroes is 1 and AIV_ArenaUpgradeHires is 0
+					if (IsResearched(aiPlayer, "Gaul Training 3"))
 						if (IsResearched(aiPlayer, "Warrior Tales"))
 							if (IsResearched(aiPlayer, "Battle tactics"))
-								if (IsResearched(set, "Legendary Heroes")) {
+								if (IsResearched(aiPlayer, "Legendary Heroes"))
 									if (rand(2) == 0) {
 										strHire = "Hire Keltill";
 										class = "Keltill";
@@ -277,11 +286,19 @@ if (nArenaResearchLevel == 2) {
 											class = "Keltill";
 										}
 									}
-								}
-								else {
-									EnvWriteString(set, "strTech", "Legendary Heroes");
-									set.AIRun("ESH_NeedTech.vs");
-								}
+				}
+				else if (IsResearched(set, "Trident Warrior Exp2")) {
+					EnvWriteString(set, "strTech", "Trident Warrior Exp3");
+					set.AIRun("ESH_NeedTech.vs");
+				}
+				else if (IsResearched(set, "Trident Warrior Exp1")) {
+					EnvWriteString(set, "strTech", "Trident Warrior Exp2");
+					set.AIRun("ESH_NeedTech.vs");
+				}
+				else {
+					EnvWriteString(set, "strTech", "Trident Warrior Exp1");
+					set.AIRun("ESH_NeedTech.vs");
+				}
 		}
 		else if (nRaceIsRepublicanRome)
 			if (GetTime() >= 2400000)
@@ -290,13 +307,9 @@ if (nArenaResearchLevel == 2) {
 						if (IsResearched(aiPlayer, "Veteran Defence"))
 							if (IsResearched(aiPlayer, "Veteran Health"))
 								if (IsResearched(aiPlayer, "RNobility"))
-									if (IsResearched(set, "Transition to Empire")) {
+									if (IsResearched(aiPlayer, "Roman Triumph")) {
 										strHire = "Hire Caesar";
 										class = "Caesar";
-									}
-									else {
-										EnvWriteString(set, "strTech", "Transition to Empire");
-										set.AIRun("ESH_NeedTech.vs");
 									}
 		if (class != "")
 			if (Count(aiPlayer, class) + EnvReadInt(aiPlayer, "QueuedBuild/" + class) < 1)

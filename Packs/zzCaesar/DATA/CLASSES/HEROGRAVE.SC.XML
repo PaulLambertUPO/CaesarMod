@@ -19,7 +19,7 @@
 		script="return .stamina;"
 		rollover="Warriors that will receive charms when visiting the grave"
 	/>
-	<value2 icon="gameres/infobar/common/Loyality.bmp"
+	<value2 icon="gameres/infobar/common/loyality.bmp"
 		script="return .health;"
 		rollover="Seconds before the grave disappears"
 	/>

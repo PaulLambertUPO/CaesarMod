@@ -39,12 +39,12 @@
 	<method sig="build_ship" vs="data/subai/shipyard_build_ship.vs" />
 	<method sig="deploy_fishermen" vs="data/subai/shipyard_deploy_fishermen.vs" />
 
-	<value0 icon="gameres/infobar/common/Fisherman.bmp"
+	<value0 icon="gameres/infobar/common/fisherman.bmp"
 		script="return EnvReadInt(.AsBuilding().settlement, 'Fishermen') + '/50';"
 		help="contents/resources"
 		rollover="Fishermen"
 	/>
-	<value1 icon="gameres/infobar/common/Loyality.bmp"
+	<value1 icon="gameres/infobar/common/loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
 		help="contents/capturing"
 		rollover="Loyalty"
@@ -61,7 +61,7 @@
 		help="contents/resources"
 		rollover="Fish"
 	/>
-	<value5 icon="gameres/infobar/common/health ico.bmp"
+	<value4 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"

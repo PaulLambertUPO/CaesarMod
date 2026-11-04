@@ -15,6 +15,7 @@
 	<method sig="hide" vs="data/subai/druid_hide_ground.vs" />
 	<method sig="ghoul_summoning" vs="data/subai/druid_ghoul_summoning.vs" />
 	<method sig="crow_summoning" vs="data/subai/druid_crow_summoning.vs" />
+	<method sig="wrath_of_thor" vs="data/subai/druid_wrath_of_thor.vs" />
 	<method sig="mass_heal" vs="data/subai/druid_selfdestroy.vs" />
 
 	<method sig="idle" vs="data/subai/druid_hide_idle.vs" />

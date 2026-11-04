@@ -326,6 +326,16 @@ if (strTech == "") {
 			}
 }
 
+//useful researches/commands - nordic trade routes (Gaul)
+if (nRace == Gaul)
+	if (strTech == "")
+		if (nAssUnderFire <= 0)
+			if (rand(2) == 0)
+				if (!IsResearched(set, "Nordic trade routes"))
+					if (!IsResearching(set, "Nordic trade routes"))
+						if (rand(GetSettlements("GOutpost", aiPlayer).count + GetSettlements("TOutpost", aiPlayer).count) > 1)
+							strTech = "Nordic trade routes";
+
 //useful researches/commands - gambler's all-in (Britain)
 if (nRace == Britain)
 	if (strTech == "")

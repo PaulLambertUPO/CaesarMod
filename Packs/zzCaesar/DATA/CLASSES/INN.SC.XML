@@ -29,15 +29,15 @@
 
 	<method sig="transport_request" vs="data/subai/inn_transport_request.vs" />
 
-	<value0 icon="gameres/infobar/common/health ico.bmp"
+	<value0 icon="gameres/infobar/common/pop ico.bmp"
+		script="Settlement set; set = .AsBuilding().settlement; return set.population + '/' + set.max_population;"
+		help="contents/resources"
+		rollover="Population"
+	/>
+	<value4 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"
-	/>
-	<value1 icon="gameres/infobar/common/pop ico.bmp"
-		script="Settlement set; set=.AsBuilding.settlement; return set.population + '/' + set.max_population;"
-		help="contents/resources"
-		rollover="Population"
 	/>
 
 	<sounds select="HouseSelect"/>

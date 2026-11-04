@@ -47,7 +47,5 @@ Sleep(2500);
 NO_PatrolingHero5.obj.AsHero().SetFormation("Line");
 NO_PatrolingHero5.SetCommand("patrol", AreaCenter("A_InitialPatrol"));
 
-Ostia_Arena.obj.CmdDisable("Transition to Empire");
 Ostia_Arena.obj.CmdDisable("Hire Caesar");
-Traitor_Arena.obj.CmdDisable("Transition to Empire");
 Traitor_Arena.obj.CmdDisable("Hire Caesar");

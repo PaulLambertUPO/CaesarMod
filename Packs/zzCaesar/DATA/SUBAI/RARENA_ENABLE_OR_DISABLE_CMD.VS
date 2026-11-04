@@ -17,7 +17,7 @@
 	.CmdDisable("Veteran Defence");
 	.CmdDisable("Veteran Health");
 	.CmdDisable("RNobility");
-	.CmdDisable("Transition to Empire");
+	.CmdDisable("Roman Triumph");
 	.CmdDisable("Hire Caesar");
 	.CmdDisable("hireheroRImperial");
 	.CmdDisable("RGladiator Shows2");
@@ -54,7 +54,7 @@
 		.CmdEnable("Veteran Defence");
 		.CmdEnable("Veteran Health");
 		.CmdEnable("RNobility");
-		.CmdEnable("Transition to Empire");
+		.CmdEnable("Roman Triumph");
 		.CmdEnable("Hire Caesar");
 	}
 	else if (IsResearched(set, "ChooseImperialRome")) {

@@ -40,7 +40,7 @@
 	<method sig="earthquake" vs="data/subai/stonehenge_earthquake.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 	<method sig="teuton_horde" vs="data/subai/stonehenge_teuton_horde.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 
-	<value0 icon="gameres/infobar/common/Loyality.bmp"
+	<value0 icon="gameres/infobar/common/loyality.bmp"
 		script="return .stamina;"
 		help="contents/capturing"
 		rollover="Energy"

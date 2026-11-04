@@ -1,8 +1,8 @@
 <class id="TSentry" parent="Sentry" cpp_class="CVXUnit" entity="Units/TArcher/TSentry.ent.xml">
 
 	<properties race="Germany" />
-	<properties maxhealth="180" />
-	<properties damage="16" armor_slash="4" armor_pierce="4" />
+	<properties maxhealth="200" />
+	<properties damage="14" armor_slash="8" armor_pierce="8" />
 	<properties unit_specials="Attack skill, Freedom, Keen sight" />
 
 	<properties icon="gameres/icons/TArcher.bmp" />

@@ -564,56 +564,56 @@
 		queueicon="gameres/icons/upgrades/charm of seth.bmp"
 		key="s"
 		button="research/charm of seth.bmp"
-		researchcommand="yes"
+		traincommand="yes"
 		groupverifier="data/subai/eblacksmith_charms_verify.vs"
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Seth"
-		description="Gives a Damage charm (+4 damage) to up to 65 nearby warriors"
+		description="Gives a Charm of Seth (+6 damage) to up to 65 nearby warriors"
 		method="getcharm"
-		param="Damage charm">
+		param="Charm of Seth">
 		<src obj="EBlacksmith" />
 	</cmd>
 	<cmd name="Charm of Thoth" priority="3"
 		queueicon="gameres/icons/upgrades/charm of thoth.bmp"
 		key="t"
 		button="research/charm of thoth.bmp"
-		researchcommand="yes"
+		traincommand="yes"
 		groupverifier="data/subai/eblacksmith_charms_verify.vs"
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Thoth"
-		description="Gives an Armor charm (+4 armor) to up to 65 nearby warriors"
+		description="Gives a Charm of Thoth (+6 armor) to up to 65 nearby warriors"
 		method="getcharm"
-		param="Armor charm">
+		param="Charm of Thoth">
 		<src obj="EBlacksmith" />
 	</cmd>
 	<cmd name="Charm of Ra" priority="4"
 		queueicon="gameres/icons/upgrades/charm of ra.bmp"
 		key="h"
 		button="research/charm of ra.bmp"
-		researchcommand="yes"
+		traincommand="yes"
 		groupverifier="data/subai/eblacksmith_charms_verify.vs"
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Ra"
-		description="Gives a Health charm (+40 health) to up to 65 nearby warriors"
+		description="Gives a Charm of Ra (+60 health) to up to 65 nearby warriors"
 		method="getcharm"
-		param="Health charm">
+		param="Charm of Ra">
 		<src obj="EBlacksmith" />
 	</cmd>
 	<cmd name="Charm of Isis" priority="5"
 		queueicon="gameres/icons/upgrades/charm of isis.bmp"
 		key="i"
 		button="research/charm of isis.bmp"
-		researchcommand="yes"
+		traincommand="yes"
 		groupverifier="data/subai/eblacksmith_charms_verify.vs"
 		costgold="500"
 		execdelay="5000"
 		rollover="Charm of Isis"
-		description="Gives a Knowledge charm (+4 levels) to up to 65 nearby warriors"
+		description="Gives a Charm of Isis (+6 levels) to up to 65 nearby warriors"
 		method="getcharm"
-		param="Knowledge charm">
+		param="Charm of Isis">
 		<src obj="EBlacksmith" />
 	</cmd>
 	<!-- GERMANY -->

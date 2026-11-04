@@ -112,6 +112,14 @@ while (true) {
 				u.SetFeeding(false);
 				u.SetExperience(old_exp_gain);
 				all_defenders.Add(u);
+				if (class_prod != "CHorseman")
+					if (IsResearched(plr, "Teuton Master")) {
+						u = Place(class_prod, pt_pos, plr).AsUnit();
+						set.ForceAddUnit(u);
+						u.SetFeeding(false);
+						u.SetExperience(old_exp_gain);
+						all_defenders.Add(u);
+					}
 			}
 		delay = 0;
 	}
@@ -119,7 +127,7 @@ while (true) {
 		delay += 1000;
 
 	for (i = all_defenders.count - 1; i >= 0; i -= 1) {//set feeding of commanded units
-		u = all_defenders[i].AsUnit();
+		u = all_defenders[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 		if (u.IsDead)
 			all_defenders.Remove(u);
 		else if (u.GetCommanded()) {
@@ -131,7 +139,7 @@ while (true) {
 	exp_gain = GetTime() / 60000 - 4;//start gaining experience after 5 minutes
 	if (exp_gain > old_exp_gain) {
 		for (i = all_defenders.count - 1; i >= 0; i -= 1) {
-			u = all_defenders[i].AsUnit();
+			u = all_defenders[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 			if (u.IsDead)
 				all_defenders.Remove(u);
 			else
@@ -154,7 +162,7 @@ while (true) {
 	}
 	else {
 		for (i = defenders_outside.count - 1; i >= 0; i -= 1) {//do not allow units to wander too far
-			u = defenders_outside[i].AsUnit();
+			u = defenders_outside[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 			if (u.IsDead)
 				defenders_outside.Remove(u);
 			else if (.DistTo(u) > rng) {
@@ -173,7 +181,7 @@ while (true) {
 		}
 
 		for (i = all_defenders.count - 1; i >= 0; i -= 1) {//get out more units if needed
-			u = all_defenders[i].AsUnit();
+			u = all_defenders[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 			if (u.IsDead)
 				all_defenders.Remove(u);
 			else if (defenders_outside.count < active_army)

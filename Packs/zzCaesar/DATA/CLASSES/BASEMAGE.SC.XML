@@ -11,7 +11,7 @@
 	<method sig="learn" vs="data/subai/druid_learn_ground.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
-		script="return Translate('No') + '|' + .AsUnit().range;"
+		script="return Translate('No') + '|' + .range;"
 		help="contents/stats/attack"
 		rollover="Damage|Range"
 	/>

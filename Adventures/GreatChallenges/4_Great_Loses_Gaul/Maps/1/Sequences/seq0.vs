@@ -54,7 +54,6 @@ NO_Village1.SetCommand("tribute", NO_Gergovia);
 for (i = 2; i <= 5; i += 1)
 	GetNamedObj("NO_Village" + i).SetCommand("tribute", NO_Village1);
 
-NO_Arena.obj.CmdDisable("Legendary Heroes");
 NO_Arena.obj.CmdDisable("Hire Keltill");
 NO_Arena.obj.CmdDisable("Hire Larax");
 

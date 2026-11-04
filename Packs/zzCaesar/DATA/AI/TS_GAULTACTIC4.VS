@@ -59,7 +59,7 @@ aSkillLevels[0] = 10;
 		if (!bFights)
 			bFights = set.TSResearch("Fights");
 		if (!bBearTeeth)
-			bBearTeeth = set.TSResearch("Nordic trade routes");
+			bBearTeeth = set.TSResearch("Bear Teeth");
 		Sleep(4100 + rand(15) * 100);
 	}
 }

@@ -1,0 +1,5 @@
+<class id="WrathOfThor" parent="SummoningObj" cpp_class="CVXAreaEffect">
+	<properties radius="250" />
+	<properties stamina_dec_time="1000" />
+	<method sig="idle" vs="data/subai/wrathofthor_idle.vs" />
+</class>

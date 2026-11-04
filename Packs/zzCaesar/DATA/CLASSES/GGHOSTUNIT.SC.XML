@@ -51,7 +51,7 @@
 	<method sig="ai_killall" vs="data/subai/do_nothing_void.vs" />
 
 	<value1 icon="gameres/infobar/common/attack ico.bmp"
-		script="return Translate('No') + '|' + .AsUnit().range;"
+		script="return Translate('No') + '|' + .range;"
 		help="contents/stats/attack"
 		rollover="Damage|Range"
 	/>

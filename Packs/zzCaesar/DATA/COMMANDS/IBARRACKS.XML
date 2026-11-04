@@ -79,14 +79,30 @@
 		sclass="ISlinger">
 		<src obj="IBarracks" />
 	</cmd>
-	<cmd name="trainIEliteGuard" priority="8"
+	<cmd name="trainISlingerVeteran" priority="8"
+		button="actions/train ISlingerVeteran.bmp"
+		queueicon="gameres/icons/ISlingerVeteran.bmp"
+		transpicon="1"
+		groupverifier="data/subai/barrack_train_veteran_verify.vs"
+		traincommand="yes"
+		key="v"
+		costgold="180"
+		costpop="1"
+		execdelay="16000"
+		rollover="Equip Veteran Slinger"
+		method="train"
+		param="ISlingerVeteran"
+		sclass="ISlingerVeteran">
+		<src obj="IBarracks" />
+	</cmd>
+	<cmd name="trainIEliteGuard" priority="9"
 		button="actions/train IEliteGuard.bmp"
 		queueicon="gameres/icons/IEliteGuard.bmp"
 		transpicon="1"
 		traincommand="yes"
 		groupverifier="data/subai/barrack_train_verify.vs"
 		key="g"
-		costgold="300"
+		costgold="320"
 		costpop="1"
 		execdelay="22000"
 		rollover="Equip Elite Guard"

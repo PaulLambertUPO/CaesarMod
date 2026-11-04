@@ -10,7 +10,7 @@ nRace = set.GetCentralBuilding().race;
 
 if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 	if (nRace == Gaul) {
-		//fights -> battle_tactics -> warrior_tales -> training_1_2_3 -> tavern_items | parallel tavern_items after battle_tactics
+		//fights -> battle_tactics -> warrior_tales -> training_1_2_3 -> legendary_heroes -> tavern_items | parallel tavern_items after battle_tactics
 		strTech1 = "Fights";
 		if (IsResearched(set, strTech1)) {
 			strTech1 = "Battle tactics";
@@ -22,8 +22,11 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 						strTech1 = "Gaul Training 2";
 						if (IsResearched(aiPlayer, strTech1)) {
 							strTech1 = "Gaul Training 3";
-							if (IsResearched(aiPlayer, strTech1))
-								strTech1 = "";
+							if (IsResearched(aiPlayer, strTech1)) {
+								strTech1 = "Legendary Heroes";
+								if (IsResearched(aiPlayer, strTech1))
+									strTech1 = "";
+							}
 						}
 					}
 				}
@@ -40,7 +43,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 
 		if (strTech2 != "")
 			if (IsResearched(set, strTech2)) {
-				strTech2 = "Nordic trade routes";
+				strTech2 = "Bear Teeth";
 				if (IsResearched(set, strTech2)) {
 					strTech2 = "Belts of Might";
 					if (IsResearched(set, strTech2)) {
@@ -53,7 +56,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 	}
 	else if (nRace == RepublicanRome) {
 		if (IsResearched(set, "ChooseRepublicanRome")) {
-			//gladiator_shows -> training 1_2 -> nobility -> veteran_offence_health_defence -> God_gift | parallel God_gift after gladiator_shows
+			//gladiator_shows -> training_1_2 -> nobility -> veteran_offence_health_defence -> Roman_triumph -> God_gift | parallel God_gift after gladiator_shows
 			strTech1 = "RGladiator Shows";
 			if (IsResearched(set, strTech1)) {
 				strTech1 = "Rome Training 1";
@@ -67,8 +70,11 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 								strTech1 = "Veteran Health";
 								if (IsResearched(aiPlayer, strTech1)) {
 									strTech1 = "Veteran Defence";
-									if (IsResearched(aiPlayer, strTech1))
-										strTech1 = "";
+									if (IsResearched(aiPlayer, strTech1)) {
+										strTech1 = "Roman Triumph";
+										if (IsResearched(aiPlayer, strTech1))
+											strTech1 = "";
+									}
 								}
 							}
 						}
@@ -92,7 +98,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 				}
 		}
 		else if (IsResearched(set, "ChooseImperialRome")) {
-			//gladiator_shows -> military_academy -> standarditazion_1-2-3 -> God_gift -> import_horses | parallel God_gift after military_academy | parallel import_horses after military_academy
+			//gladiator_shows -> military_academy -> standarditazion_1_2_3 -> God_gift -> import_horses | parallel God_gift after military_academy | parallel import_horses after military_academy
 			strTech1 = "RGladiator Shows2";
 			if (IsResearched(set, strTech1)) {
 				strTech1 = "Military Academy";
@@ -140,7 +146,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 				}
 		}
 		else if (IsResearched(set, "ChoosePunicRome")) {
-			//gladiator shows -> military_academy -> training_1_2_3 -> God_gift -> import_horses | parallel God_gift after military_academy | parallel import_horses after military_academy
+			//gladiator_shows -> military_academy -> training_1_2_3 -> God_gift -> import_horses | parallel God_gift after military_academy | parallel import_horses after military_academy
 			strTech1 = "Gladiator Shows";
 			if (IsResearched(set, strTech1)) {
 				strTech1 = "Military Academy";
@@ -335,7 +341,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 				strTech3 = "";
 	}
 	else if (nRace == Germany) {
-		//tribal fights -> learning -> attack focus -> barbaric tales | tribal fights -> attack focus -> learning -> barbaric tales
+		//tribal_fights -> learning -> attack_focus -> barbaric_tales | tribal_fights -> attack_focus -> learning -> barbaric_tales
 		strTech1 = "Tribal fights";
 		if (IsResearched(set, strTech1)) {
 			if (rand(2) == 0) {
@@ -475,31 +481,26 @@ if (nRace == Egypt) {
 	if (set.gold >= AIVar(aiPlayer, AIV_SquanderGoldAmount))
 		getCharms = true;
 	else if (strTech1 == "")
-		if (rand(5) == 0)
+		if (rand(2) == 0)
 			if (set.gold >= 2000)
 				getCharms = true;
 	if (getCharms) {
 		Building b;
 		ObjList l;
 		Obj o;
-		StrArray items, techs;
+		StrArray charm_techs;
 		int i, j, count_units;
 		str charm;
 
-		items[0] = "Damage charm";
-		items[1] = "Armor charm";
-		items[2] = "Health charm";
-		items[3] = "Knowledge charm";
-
-		techs[0] = "Charm of Seth";
-		techs[1] = "Charm of Thoth";
-		techs[2] = "Charm of Ra";
-		techs[3] = "Charm of Isis";
+		charm_techs[0] = "Charm of Seth";
+		charm_techs[1] = "Charm of Thoth";
+		charm_techs[2] = "Charm of Ra";
+		charm_techs[3] = "Charm of Isis";
 
 		b = set.GetCentralBuilding();
 		l = set.ObjectsAround("Military");
 		j = rand(4);
-		charm = items[j];
+		charm = charm_techs[j];
 		for (i = l.count - 1; i >= 0; i -= 1) {
 			o = l[i];
 			if (o.IsAlive)
@@ -510,7 +511,7 @@ if (nRace == Egypt) {
 								if (!o.AsHero().IsValid) {
 									count_units += 1;
 									if (count_units >= 30) {
-										strTech1 = techs[j];
+										strTech1 = charm_techs[j];
 										break;
 									}
 								}
@@ -522,8 +523,8 @@ else if (nRace == RepublicanRome || nRace == Carthage || nRace == Germany) {
 	if (set.gold >= AIVar(aiPlayer, AIV_SquanderGoldAmount))
 		townTraining = true;
 	else if (strTech1 == "")
-		if (rand(5) == 0)
-			if (set.gold >= 3500)
+		if (rand(2) == 0)
+			if (set.gold >= 3000)
 				townTraining = true;
 	if (townTraining) {
 		Building b;

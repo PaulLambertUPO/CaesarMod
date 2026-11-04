@@ -118,42 +118,42 @@
 <frame idx="10" duration="66"/>
 <frame idx="11" duration="0"/>
 </anim>
-<anim idx="18" name="ToIdle" startstate="2" endstate="1" frames="15" duration="858" default_duration="0" action_time="0" step="0">
+<anim idx="18" name="ToIdle" startstate="2" endstate="1" frames="15" duration="572" default_duration="44" action_time="0" step="0">
 <replace layer="1" image="13" offsetx="-81" offsety="-103"/>
 <replace layer="2" image="14" offsetx="-81" offsety="-103"/>
 <frame idx="1" duration="0"/>
-<frame idx="2" duration="66"/>
-<frame idx="3" duration="66"/>
-<frame idx="4" duration="66"/>
-<frame idx="5" duration="66"/>
-<frame idx="6" duration="66"/>
-<frame idx="7" duration="66"/>
-<frame idx="8" duration="66"/>
-<frame idx="9" duration="66"/>
-<frame idx="10" duration="66"/>
-<frame idx="11" duration="66"/>
-<frame idx="12" duration="66"/>
-<frame idx="13" duration="66"/>
-<frame idx="14" duration="66"/>
+<frame idx="2" duration="44"/>
+<frame idx="3" duration="44"/>
+<frame idx="4" duration="44"/>
+<frame idx="5" duration="44"/>
+<frame idx="6" duration="44"/>
+<frame idx="7" duration="44"/>
+<frame idx="8" duration="44"/>
+<frame idx="9" duration="44"/>
+<frame idx="10" duration="44"/>
+<frame idx="11" duration="44"/>
+<frame idx="12" duration="44"/>
+<frame idx="13" duration="44"/>
+<frame idx="14" duration="44"/>
 <frame idx="15" duration="0"/>
 </anim>
-<anim idx="19" name="toattack" startstate="1" endstate="2" frames="15" duration="858" default_duration="0" action_time="0" step="0">
+<anim idx="19" name="toattack" startstate="1" endstate="2" frames="15" duration="572" default_duration="44" action_time="0" step="0">
 <replace layer="1" image="9" offsetx="-81" offsety="-103"/>
 <replace layer="2" image="10" offsetx="-81" offsety="-103"/>
 <frame idx="1" duration="0"/>
-<frame idx="2" duration="66"/>
-<frame idx="3" duration="66"/>
-<frame idx="4" duration="66"/>
-<frame idx="5" duration="66"/>
-<frame idx="6" duration="66"/>
-<frame idx="7" duration="66"/>
-<frame idx="8" duration="66"/>
-<frame idx="9" duration="66"/>
-<frame idx="10" duration="66"/>
-<frame idx="11" duration="66"/>
-<frame idx="12" duration="66"/>
-<frame idx="13" duration="66"/>
-<frame idx="14" duration="66"/>
+<frame idx="2" duration="44"/>
+<frame idx="3" duration="44"/>
+<frame idx="4" duration="44"/>
+<frame idx="5" duration="44"/>
+<frame idx="6" duration="44"/>
+<frame idx="7" duration="44"/>
+<frame idx="8" duration="44"/>
+<frame idx="9" duration="44"/>
+<frame idx="10" duration="44"/>
+<frame idx="11" duration="44"/>
+<frame idx="12" duration="44"/>
+<frame idx="13" duration="44"/>
+<frame idx="14" duration="44"/>
 <frame idx="15" duration="0"/>
 </anim>
 <anim idx="20" name="taunt" startstate="1" endstate="1" frames="13" duration="1056" default_duration="96" action_time="768" step="0">

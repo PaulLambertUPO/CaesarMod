@@ -46,8 +46,8 @@
 
 	<behavior script="data/subai/summoning_behavior.vs" />
 
-	<value0 flags="0" />
-	<value5 flags="0" />
+	<value0 />
+	<value5 />
 
 	<nodefcmdinherit />
 

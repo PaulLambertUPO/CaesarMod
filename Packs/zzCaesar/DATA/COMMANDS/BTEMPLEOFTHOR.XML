@@ -6,7 +6,7 @@
 		transpicon="1"
 		traincommand="yes"
 		key="d"
-		costgold="150"
+		costgold="180"
 		execdelay="20000"
 		rollover="Call Druid"
 		method="train"
@@ -48,7 +48,7 @@
 		key="w"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		costgold="800"
+		costgold="1000"
 		execdelay="30000"
 		rollover="Crow summoning"
 		description="Allows druids to sacrifice themselves to summon a crow that remains under your control for about 4 minutes"
@@ -56,7 +56,21 @@
 		param="ReqPlr, Ritual Chamber, default, NamePlr, Crow Summoning, default">
 		<src obj="BTempleOfThor" />
 	</cmd>
-	<cmd name="Mass Heal" priority="6"
+	<cmd name="Wrath of Thor" priority="6"
+		button="research/Thor.bmp"
+		queueicon="gameres/icons/upgrades/Thor.bmp"
+		key="t"
+		researchcommand="yes"
+		groupverifier="data/subai/research_verify.vs"
+		costgold="1500"
+		execdelay="20000"
+		rollover="Wrath of Thor"
+		description="Allows druids to sacrifice themselves to strike an area with lightnings that deal 60 damage to all units for about 10 seconds"
+		method="research"
+		param="ReqPlr, Ritual Chamber, default, NamePlr, Wrath of Thor, default">
+		<src obj="BTempleOfThor" />
+	</cmd>
+	<cmd name="Mass Heal" priority="7"
 		queueicon="gameres/icons/upgrades/Mass Healing.bmp"
 		button="research/Mass Healing.bmp"
 		key="h"
@@ -70,7 +84,7 @@
 		param="ReqPlr, Ritual Chamber, default, NamePlr, Mass Heal, default, NamePlr, German Mass Heal">
 		<src obj="BTempleOfThor" />
 	</cmd>
-	<cmd name="Mass Invisibility" priority="7"
+	<cmd name="Mass Invisibility" priority="8"
 		queueicon="gameres/icons/upgrades/hide.bmp"
 		button="research/hide.bmp"
 		key="i"

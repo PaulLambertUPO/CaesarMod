@@ -1,0 +1,10 @@
+<entity description="WrathOfThor" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/Thunder_1.wav" frequency="17" />
+		<sound file="Sounds/Effects/Thunder_2.wav" frequency="17" />
+		<sound file="Sounds/Effects/Thunder_3.wav" frequency="17" />
+		<sound file="Sounds/Effects/Thunder_4.wav" frequency="17" />
+		<sound file="Sounds/Effects/Thunder_5.wav" frequency="16" />
+		<sound file="Sounds/Effects/Thunder_6.wav" frequency="16" />
+	</files>
+</entity>

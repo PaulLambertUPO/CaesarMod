@@ -19,34 +19,7 @@ while (dest != "") {
 	if (token == "NameSet") {
 		name = ParseStr(dest, dest);
 		value = ParseStr(dest, dest);
-		if (name == "Transition to Empire") {
-			bool not_researchable = true;
-			if (GetTime() >= 2400000)
-				if (IsResearched(plr, "Rome Training 2"))
-					if (IsResearched(plr, "Veteran Offence"))
-						if (IsResearched(plr, "Veteran Defence"))
-							if (IsResearched(plr, "Veteran Health"))
-								if (IsResearched(plr, "Nobility"))
-									not_researchable = false;
-			if (not_researchable) {
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Requires Advanced training, Veteran offence, Veteran defence, Veteran health, Nobility and 40 game minutes");
-				return false;
-			}
-		}
-		else if (name == "Legendary Heroes") {
-			bool not_researchable = true;
-			if (GetTime() >= 2700000)
-				if (IsResearched(plr, "Gaul Training 3"))
-					if (IsResearched(set, "Trident Warrior Exp3"))
-						if (IsResearched(plr, "Warrior Tales"))
-							if (IsResearched(plr, "Battle tactics"))
-								not_researchable = false;
-			if (not_researchable) {
-				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Requires Special training, Trident Warrior Experience III, Warrior Tales, Battle tactics and 45 game minutes");
-				return false;
-			}
-		}
-		else if (name == "Gambler's All-in") {
+		if (name == "Gambler's All-in") {
 			if (GetTime() - EnvReadInt(set, "LastAllIn") < 180000) {
 				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("At least 3 minutes must pass between each attempt");
 				return false;

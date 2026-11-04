@@ -173,7 +173,7 @@ while (set.player == aiPlayer) {
 				}
 			if (bAssUnderFire)
 				if (rand(2) == 0)
-					if (GetTime() >= 300000)//avoid hiring sentries as soon as the game starts
+					if (GetTime() >= 480000)//avoid hiring sentries as soon as the game starts
 						if (set.GetNumSentries() < set.GetMaxSentries() / 3)//total max = 20 for townhall + 1 per wall + 4 per gate (usually 50-52)
 							if (set.CanResearch("hire_sentries"))
 								if (set.CanAfford("hire_sentries")) {

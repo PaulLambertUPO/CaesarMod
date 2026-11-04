@@ -24,7 +24,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, RGladiator Shows, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows2, , SetsSet, levels/Hero, 4, SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, RGladiator Shows, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows2, , SetsSet, levels/Hero, 4, SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorVeteran, 6, SetsSet, levels/RGladiatorPunic, 6, SetsSet, levels/Caesar, 35">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Rome Training 1" priority="4"
@@ -111,34 +111,34 @@
 		param="ReqSet, Gladiator Shows, default, NamePlr, RNobility, default, NamePlr, Nobility, , NamePlr, BNobility">
 		<src obj="RArena" />
 	</cmd>
-	<cmd name="Transition to Empire" priority="9"
-		button="research/Transition to Empire.bmp"
-		queueicon="gameres/icons/upgrades/Transition to Empire.bmp"
+	<cmd name="Roman Triumph" priority="9"
+		button="research/Roman Triumph.bmp"
+		queueicon="gameres/icons/upgrades/Roman Triumph.bmp"
 		key="v"
-		costgold="1000"
-		execdelay="60000"
+		costgold="2000"
+		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
-		rollover="Transition to Empire"
-		description="Allows Julius Caesar to be hired and begin the formation of the Empire thanks to his leadership"
+		rollover="Roman Triumph"
+		description="Increases the stamina of heroes and Chariots by 1 at every kill (up to a maximum of 20)"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Gladiator Shows, default, NameSet, Transition to Empire, default, ReqPlr, Advanced Training, default, ReqPlr, Veteran Offence, default, ReqPlr, Veteran Defence, default, ReqPlr, Veteran Health, default, ReqPlr, Nobility, default, SetsSet, levels/Caesar, 35">
+		param="ReqSet, Gladiator Shows, default, NamePlr, Roman Triumph, default">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Hire Caesar" priority="10"
 		button="actions/Hire Caesar.bmp"
 		queueicon="gameres/icons/Caesar.bmp"
 		transpicon="1"
-		groupverifier="data/subai/trainex_verify.vs"
-		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		groupverifier="data/subai/train_supreme_hero_verify.vs"
+		onaddremovescript="data/subai/train_supreme_hero_onaddremove.vs"
 		traincommand="yes"
 		key="c"
 		costgold="10000"
 		execdelay="30000"
 		rollover="Hire Caesar"
 		description="Hires Gaius Julius Caesar himself to lead you to victory"
-		method="trainex"
-		param="1, 1, Caesar, Transition to Empire">
+		method="train_supreme_hero"
+		param="Caesar">
 		<src obj="RArena" />
 	</cmd>
 	<!-- IMPERIAL ROME -->
@@ -166,7 +166,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, RGladiator Shows2, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows, , NameSet, GladiatorShowsFood, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, RGladiator Shows2, default, NameSet, Gladiator Shows, , NameSet, RGladiator Shows, , NameSet, GladiatorShowsFood, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorVeteran, 6, SetsSet, levels/RGladiatorPunic, 6, SetsSet, levels/Caesar, 35">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Standartization I" priority="4"
@@ -309,7 +309,7 @@
 		rollover="Gladiator shows"
 		method="research"
 		researchcommand="yes"
-		param="NameSet, Gladiator Shows, default, NameSet, RGladiator Shows, , NameSet, RGladiator Shows2, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorPunic, 6">
+		param="NameSet, Gladiator Shows, default, NameSet, RGladiator Shows, , NameSet, RGladiator Shows2, , SetsSet, levels/RGladiator, 6, SetsSet, levels/RGladiatorVeteran, 6, SetsSet, levels/RGladiatorPunic, 6, SetsSet, levels/Caesar, 35">
 		<src obj="RArena" />
 	</cmd>
 	<cmd name="Training" priority="4"
@@ -396,7 +396,7 @@
 		description="Makes new Swordsmen and Archers level 4"
 		rollover="Fights"
 		method="research"
-		param="NameSet, Fights, default, SetsSet, levels/GSwordsman, 4, SetsSet, levels/GArcher, 4">
+		param="NameSet, Fights, default, SetsSet, levels/GSwordsman, 4, SetsSet, levels/GArcher, 4, SetsSet, levels/Keltill, 30, SetsSet, levels/Larax, 40">
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -540,14 +540,14 @@
 		button="research/Tales of Heroes2.bmp"
 		queueicon="gameres/icons/upgrades/Tales of Heroes2.bmp"
 		key="s"
-		costgold="1000"
-		execdelay="60000"
+		costgold="2000"
+		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Legendary Heroes"
-		description="Allows legendary Heroes to be hired"
+		description="Increases the health of heroes by 2 and that of Trident Warriors by 20 at every kill"
 		method="research"
 		researchcommand="yes"
-		param="ReqSet, Fights, default, NameSet, Legendary Heroes, default, ReqPlr, Special training, default, ReqSet, Trident Warrior Exp3, default, ReqPlr, Warrior Tales, default, ReqPlr, Battle tactics, default, SetsSet, levels/Keltill, 30, SetsSet, levels/Larax, 40">
+		param="ReqSet, Fights, default, NamePlr, Legendary Heroes, default">
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -555,16 +555,16 @@
 		button="actions/Hire Keltill.bmp"
 		queueicon="gameres/icons/Keltil.bmp"
 		transpicon="1"
-		groupverifier="data/subai/trainex_verify.vs"
-		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		groupverifier="data/subai/train_supreme_hero_verify.vs"
+		onaddremovescript="data/subai/train_supreme_hero_onaddremove.vs"
 		traincommand="yes"
 		key="k"
 		costgold="8000"
 		execdelay="30000"
 		rollover="Hire Keltill"
 		description="Hires the powerful Keltill, great Gaul chieftain"
-		method="trainex"
-		param="1, 1, Keltill, Legendary Heroes">
+		method="train_supreme_hero"
+		param="Keltill">
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -572,16 +572,16 @@
 		button="actions/Hire Larax.bmp"
 		queueicon="gameres/icons/Larax.bmp"
 		transpicon="1"
-		groupverifier="data/subai/trainex_verify.vs"
-		onaddremovescript="data/subai/trainex_onaddremove.vs"
+		groupverifier="data/subai/train_supreme_hero_verify.vs"
+		onaddremovescript="data/subai/train_supreme_hero_onaddremove.vs"
 		traincommand="yes"
 		key="l"
 		costgold="12000"
 		execdelay="30000"
 		rollover="Hire Larax"
 		description="Hires the legendary Larax, the Chosen one"
-		method="trainex"
-		param="1, 1, Larax, Legendary Heroes">
+		method="train_supreme_hero"
+		param="Larax">
 		<src obj="GArena1" />
 		<src obj="GArena2" />
 	</cmd>
@@ -684,7 +684,21 @@
 		param="ReqSet, Tournaments, , ReqPlr, Mountain Clan, , NamePlr, Mountain Clan Legacy, default">
 		<src obj="IArena" />
 	</cmd>
-	<cmd name="Veteran's guild" priority="7"
+	<cmd name="Survival techniques" priority="7"
+		button="upgrades/survival techniques.bmp"
+		key="s"
+		queueicon="gameres/icons/upgrades/survival techniques.bmp"
+		costgold="1500"
+		execdelay="20000"
+		groupverifier="data/subai/research_verify.vs"
+		rollover="Survival techniques"
+		description="Mountaineers restores 3 health every 2 seconds while invisible"
+		method="research"
+		researchcommand="yes"
+		param="ReqSet, Tournaments, default, NamePlr, Survival techniques, default">
+		<src obj="IArena"/>
+	</cmd>
+	<cmd name="Veteran's guild" priority="8"
 		button="upgrades/veterans guild.bmp"
 		key="v"
 		queueicon="gameres/icons/upgrades/veterans guild.bmp"
@@ -692,13 +706,13 @@
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Veterans guild"
-		description="Equips new warriors with a Veteran ring, which becomes Veteran medal at the first kill, adding 6 and 10% damage"
+		description="Equips new warriors with a Veteran ring, which becomes Veteran medal at the first kill, adding 20 health and 6 damage"
 		method="research"
 		researchcommand="yes"
 		param="ReqSet, Tournaments, default, NameSet, Veteran's guild, default, SetsSet, items/Veteran Guild, 1">
 		<src obj="IArena"/>
 	</cmd>
-	<cmd name="Nobility" priority="8"
+	<cmd name="Nobility" priority="9"
 		button="upgrades/nobility.bmp"
 		key="n"
 		queueicon="gameres/icons/upgrades/nobility.bmp"
@@ -1195,11 +1209,11 @@
 		button="research/Teuton Master.bmp"
 		key="t"
 		queueicon="gameres/icons/upgrades/Teuton Master.bmp"
-		costgold="500"
+		costgold="1000"
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Teuton Master"
-		description="Allows Teuton Riders to transform into Teuton Archers, Archers into Wolves and Wolves into Riders (only in buildings and ships)"
+		description="Allows Teuton Riders to transform into Teuton Archers, Archers into Raiders and Raiders into Riders (only in buildings and ships), and allows Teuton tents to train two units for the cost of one"
 		method="research"
 		researchcommand="yes"
 		param="ReqSet, Tribal fights, default, NamePlr, Teuton Master, default">
@@ -1209,11 +1223,11 @@
 		button="research/Tales of Heroes1.bmp"
 		key="b"
 		queueicon="gameres/icons/upgrades/Tales of Heroes1.bmp"
-		costgold="1000"
+		costgold="2000"
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Barbaric Tales"
-		description="Every time that your Heroes and Valkyries kill an enemy that is at least 3 levels higher, they and all nearby allies gain 15 bonus experience"
+		description="Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries)"
 		method="research"
 		researchcommand="yes"
 		param="ReqSet, Tribal fights, default, NamePlr, Barbaric Tales, default">

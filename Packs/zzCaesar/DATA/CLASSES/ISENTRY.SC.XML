@@ -2,7 +2,7 @@
 
 	<properties race="Iberia" />
 	<properties maxhealth="220" />
-	<properties damage="22" armor_slash="6" armor_pierce="6" />
+	<properties damage="20" armor_slash="8" armor_pierce="8" />
 	<properties unit_specials="Drain, Freedom, Keen sight" />
 
 	<properties icon="gameres/icons/IArcher.bmp" />

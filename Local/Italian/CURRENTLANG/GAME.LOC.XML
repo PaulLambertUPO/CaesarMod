@@ -99,7 +99,7 @@
 <translationtableentry text="Restores the health of the owner by 25 every second" result="Ripristina la salute del possessore di 25 punti ogni secondo" />
 <translationtableentry text="Amulet of triumph" result="Amuleto del trionfo" />
 <translationtableentry text="Amulet of Triumph" result="Amuleto del trionfo" />
-<translationtableentry text="Restores the health of the owner by 100 upon every kill, with a 50% chance to restore 50 more health" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti" />
+<translationtableentry text="Restores the health of the owner by 100 at every kill, with a 50% chance to restore 50 more health" result="Ripristina la salute del possessore di 100 punti a ogni uccisione, con una probabilità del 50% di ripristinare altri 50 punti" />
 <translationtableentry text="Ring of power" result="Anello del potere" />
 <translationtableentry text="Ring of Power" result="Anello del potere" />
 <translationtableentry text="Adds 20 damage.\nIt stores up to 600 charges to restore the health of the owner by 20 every second" result="Aumenta l'attacco di 20 punti.\nImmagazzina fino a 600 cariche per ripristinare la salute del possessore di 20 punti ogni secondo" />
@@ -127,7 +127,7 @@
 <translationtableentry text="Restores the health of the owner by 5 every time that an attached unit dies.\nIt gives to every attached unit a 10% chance to spawn a ghoul upon death" result="Ripristina la salute del possessore di 5 punti ogni volta che un'unità vincolata muore.\nFornisce a ogni unità vincolata una probabilità del 10% di generare uno spirito alla morte" />
 <translationtableentry text="Scroll of life" result="Pergamena della vita" />
 <translationtableentry text="Scroll of Life" result="Pergamena della vita" />
-<translationtableentry text="Restores the health of the owner by 5 every time that an attached unit kills an enemy.\nIt gives to every attached unit a 10% chance to spawn a ghoul upon every kill" result="Ripristina la salute del possessore di 5 punti ogni volta che un'unità vincolata uccide un nemico.\nFornisce a ogni unità vincolata una probabilità del 10% di generare uno spirito a ogni uccisione" />
+<translationtableentry text="Restores the health of the owner by 5 every time that an attached unit kills an enemy.\nIt gives to every attached unit a 10% chance to spawn a ghoul at every kill" result="Ripristina la salute del possessore di 5 punti ogni volta che un'unità vincolata uccide un nemico.\nFornisce a ogni unità vincolata una probabilità del 10% di generare uno spirito a ogni uccisione" />
 <translationtableentry text="Bear teeth amulet" result="Denti d'orso" />
 <translationtableentry text="Adds 4 damage" result="Aumentano l'attacco di 4 punti" />
 <translationtableentry text="Belt of might" result="Cintura di forza" />
@@ -149,7 +149,7 @@
 <translationtableentry text="Becomes Veteran medal at the first kill" result="Si trasforma in Insegna del veterano alla prima uccisione" />
 <translationtableentry text="Veteran medal" result="Insegna del veterano" />
 <translationtableentry text="Veteran Medal" result="Insegna del veterano" />
-<translationtableentry text="Adds 6 and 10% damage" result="Aumenta l'attacco di 6 punti e del 10%" />
+<translationtableentry text="Adds 20 health and 6 damage" result="Aumenta la salute di 20 punti e l'attacco di 6 punti" />
 <translationtableentry text="Veteran offence" result="Insegna del combattimento" />
 <translationtableentry text="Veteran Offence" result="Insegna del combattimento" />
 <translationtableentry text="Adds 25% damage" result="Aumenta l'attacco del 25%" />
@@ -165,14 +165,14 @@
 <translationtableentry text="Noble defence" result="Scudo della nobiltà" />
 <translationtableentry text="Noble Defence" result="Scudo della nobiltà" />
 <translationtableentry text="Adds 8 armor" result="Aumenta la difesa di 8 punti" />
-<translationtableentry text="Damage charm" result="Talismano dell'attacco" />
-<translationtableentry text="Adds 4 damage.\nIt disappears at the first kill" result="Aumenta l'attacco di 4 punti.\nScompare alla prima uccisione" />
-<translationtableentry text="Armor charm" result="Talismano della difesa" />
-<translationtableentry text="Adds 4 armor.\nIt disappears at the first kill" result="Aumenta la difesa di 4 punti.\nScompare alla prima uccisione" />
-<translationtableentry text="Health charm" result="Talismano della salute" />
-<translationtableentry text="Adds 40 health.\nIt disappears at the first kill" result="Aumenta la salute di 40 punti.\nScompare alla prima uccisione" />
-<translationtableentry text="Knowledge charm" result="Talismano della sapienza" />
-<translationtableentry text="Adds 4 levels.\nIt disappears at the first kill" result="Aumenta il livello di 4 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Charm of Seth" result="Talismano di Seth" />
+<translationtableentry text="Adds 6 damage.\nIt disappears at the first kill" result="Aumenta l'attacco di 6 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Charm of Thoth" result="Talismano di Thoth" />
+<translationtableentry text="Adds 6 armor.\nIt disappears at the first kill" result="Aumenta la difesa di 6 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Charm of Ra" result="Talismano di Ra" />
+<translationtableentry text="Adds 60 health.\nIt disappears at the first kill" result="Aumenta la salute di 60 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Charm of Isis" result="Talismano di Isis" />
+<translationtableentry text="Adds 6 levels.\nIt disappears at the first kill" result="Aumenta il livello di 6 punti.\nScompare alla prima uccisione" />
 <translationtableentry text="Emblem of Democracy" result="Emblema di Democrazia" />
 <translationtableentry text="Adds 80 health" result="Aumenta la salute di 80 punti" />
 <translationtableentry text="Emblem of Oligarchy" result="Emblema di Oligarchia" />
@@ -181,6 +181,14 @@
 <translationtableentry text="Increases the owner's movement and attack speed by 40% in combat" result="Aumenta la velocità di movimento e d'attacco del 40% in combattimento" />
 <translationtableentry text="Charm of Aegle" result="Amuleto di Aegle" />
 <translationtableentry text="Adds 10% health.\nIt restores the health of the owner by 2 every second" result="Aumenta la salute del 10%.\nRipristina la salute del possessore di 2 punti ogni secondo" />
+<translationtableentry text="Damage charm" result="Talismano dell'attacco" />
+<translationtableentry text="Adds 4 damage.\nIt disappears at the first kill" result="Aumenta l'attacco di 4 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Armor charm" result="Talismano della difesa" />
+<translationtableentry text="Adds 4 armor.\nIt disappears at the first kill" result="Aumenta la difesa di 4 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Health charm" result="Talismano della salute" />
+<translationtableentry text="Adds 40 health.\nIt disappears at the first kill" result="Aumenta la salute di 40 punti.\nScompare alla prima uccisione" />
+<translationtableentry text="Knowledge charm" result="Talismano della sapienza" />
+<translationtableentry text="Adds 4 levels.\nIt disappears at the first kill" result="Aumenta il livello di 4 punti.\nScompare alla prima uccisione" />
 <translationtableentry text="Faded gem" result="Gemma spenta" />
 <translationtableentry text="The gem is too weak to channel the power of the Goddess Kathobodua" result="La gemma è troppo debole per canalizzare il potere della dea Kathobodua" />
 <translationtableentry text="Glowing gem" result="Gemma splendente" />
@@ -236,6 +244,9 @@
 <translationtableentry text="Gladiator" result="Gladiatore" />
 <translationtableentry text="Gladiators" result="Gladiatori" />
 <translationtableentry text="Gladiator (Punic)" result="Gladiatore (punico)" />
+<translationtableentry text="Gladiator (veteran)" result="Gladiatore (veterano)" />
+<translationtableentry text="Veteran Gladiator" result="Gladiatore veterano" />
+<translationtableentry text="Veteran Gladiators" result="Gladiatori veterani" />
 <translationtableentry text="Velit" result="Velite" />
 <translationtableentry text="Velites" result="Veliti" />
 <translationtableentry text="Principle" result="Princep" />
@@ -278,6 +289,9 @@
 <translationtableentry text="Slinger" result="Fromboliere" />
 <translationtableentry text="Slingers" result="Frombolieri" />
 <translationtableentry text="Slinger (mercenary)" result="Fromboliere (mercenario)" />
+<translationtableentry text="Slinger (veteran)" result="Fromboliere (veterano)" />
+<translationtableentry text="Veteran Slinger" result="Fromboliere veterano" />
+<translationtableentry text="Veteran Slingers" result="Frombolieri veterani" />
 <translationtableentry text="Elite Guard" result="Guardia d'élite" />
 <translationtableentry text="Elite Guards" result="Guardie d'élite" />
 <translationtableentry text="Mountaineer" result="Guerrigliero" />
@@ -583,7 +597,6 @@
 <translationtableentry text="Trade outpost" result="Forte commerciale" />
 <translationtableentry text="Trade outpost (Gaul)" result="Forte commerciale (gallico)" />
 <translationtableentry text="Trade outpost (German)" result="Forte commerciale (germanico)" />
-<translationtableentry text="Trade Outpost" result="Forte commerciale" />
 <translationtableentry text="Training outpost" result="Forte di addestramento" />
 <translationtableentry text="Training outpost (Iberian)" result="Forte di addestramento (iberico)" />
 <translationtableentry text="Training outpost (Britain)" result="Forte di addestramento (britannico)" />
@@ -692,6 +705,8 @@
 <translationtableentry text="Equip Hastatus" result="Equipaggia legionario" />
 <translationtableentry text="Equip Archer" result="Equipaggia arciere" />
 <translationtableentry text="Equip Gladiator" result="Equipaggia gladiatore" />
+<translationtableentry text="Equip Veteran Gladiator" result="Equipaggia gladiatore veterano" />
+<translationtableentry text="Requires Gladiator shows and Veteran offence from Arena" result="Richiede Giochi circensi e Insegna del combattimento (Colosseo)" />
 <translationtableentry text="Equip Velit" result="Equipaggia velite" />
 <translationtableentry text="Equip Principle" result="Equipaggia princep" />
 <translationtableentry text="Equip Scout" result="Equipaggia equite" />
@@ -706,6 +721,8 @@
 <translationtableentry text="Equip Militiaman" result="Equipaggia miliziano" />
 <translationtableentry text="Equip Defender" result="Equipaggia difensore" />
 <translationtableentry text="Equip Slinger" result="Equipaggia fromboliere" />
+<translationtableentry text="Equip Veteran Slinger" result="Equipaggia fromboliere veterano" />
+<translationtableentry text="Requires Slings from Blacksmith and Veterans guild from Arena" result="Richiede Produci fionde (Fucina) e Corporazione dei veterani (Colosseo)" />
 <translationtableentry text="Equip Elite Guard" result="Equipaggia guardia d'élite" />
 <translationtableentry text="Hire Numidian Footman" result="Assolda fante numida" />
 <translationtableentry text="Hire Numidian Footman (at double price)" result="Assolda fante numida (al doppio del prezzo)" />
@@ -809,14 +826,10 @@
 <translationtableentry text="Allows Highlanders to be equipped in the Barracks" result="Consente di reclutare gli highlander nella caserma" />
 <translationtableentry text="Steel Weapons" result="Forgia armi d'acciaio" />
 <translationtableentry text="Makes new warriors level 6" result="Rende tutti i nuovi guerrieri di livello 6" />
-<translationtableentry text="Charm of Seth" result="Talismano di Seth" />
-<translationtableentry text="Gives a Damage charm (+4 damage) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta l'attacco di 4 punti" />
-<translationtableentry text="Charm of Thoth" result="Talismano di Thoth" />
-<translationtableentry text="Gives an Armor charm (+4 armor) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la difesa di 4 punti" />
-<translationtableentry text="Charm of Ra" result="Talismano di Ra" />
-<translationtableentry text="Gives a Health charm (+40 health) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la salute di 40 punti" />
-<translationtableentry text="Charm of Isis" result="Talismano di Isis" />
-<translationtableentry text="Gives a Knowledge charm (+4 levels) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta il livello di 4 punti" />
+<translationtableentry text="Gives a Charm of Seth (+6 damage) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta l'attacco di 6 punti" />
+<translationtableentry text="Gives a Charm of Thoth (+6 armor) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la difesa di 6 punti" />
+<translationtableentry text="Gives a Charm of Ra (+60 health) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la salute di 60 punti" />
+<translationtableentry text="Gives a Charm of Isis (+6 levels) to up to 65 nearby warriors" result="Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta il livello di 6 punti" />
 <translationtableentry text="Requires at least 5 warriors without the charm around the settlement" result="Richiede che almeno 5 guerrieri vicini all'insediamento non abbiano il talismano" />
 <translationtableentry text="Increase Axe production" result="Incrementa la produzione di asce" />
 <translationtableentry text="Increases the number of Axemen you can have by 10" result="Aumenta di 10 il numero massimo di guerrieri con ascia disponibili contemporaneamente" />
@@ -850,11 +863,11 @@
 <translationtableentry text="Makes all warriors receive a Veteran health medal (+25% health) at the first kill" result="Alla prima uccisione i guerrieri ricevono l'Insegna della forza, che aumenta la salute del 25%" />
 <translationtableentry text="Nobility" result="Nobiltà" />
 <translationtableentry text="All warriors who reach level 8 become level 12" result="Tutti i guerrieri che raggiungono il livello 8 diventano di livello 12" />
-<translationtableentry text="Transition to Empire" result="Transizione verso l'Impero" />
-<translationtableentry text="Allows Julius Caesar to be hired and begin the formation of the Empire thanks to his leadership" result="Consente di convocare Giulio Cesare e iniziare la formazione dell'Impero grazie al suo comando" />
-<translationtableentry text="Requires Advanced training, Veteran offence, Veteran defence, Veteran health, Nobility and 40 game minutes" result="Richiede Addestramento avanzato, Insegna del combattimento, Insegna protettrice, Insegna della forza, Nobiltà e 40 minuti di gioco" />
+<translationtableentry text="Roman Triumph" result="Trionfo romano" />
+<translationtableentry text="Increases the stamina of heroes and Chariots by 1 at every kill (up to a maximum of 20)" result="Aumenta l'energia di eroi e carri da guerra di 1 punto a ogni uccisione (fino a un massimo di 20)" />
 <translationtableentry text="Hire Caesar" result="Convoca Cesare" />
 <translationtableentry text="Hires Gaius Julius Caesar himself to lead you to victory" result="Convoca Gaio Giulio Cesare in persona affinché ti conduca alla vittoria" />
+<translationtableentry text="Requires Gladiator shows, Advanced training, Veteran offence, Veteran defence, Veteran health, Nobility, Roman Triumph and 40 game minutes" result="Richiede Giochi circensi, Addestramento avanzato, Insegna del combattimento, Insegna protettrice, Insegna della forza, Nobiltà, Trionfo romano e 40 minuti di gioco" />
 <translationtableentry text="Gathers 800 food" result="Riscuote 800 viveri" />
 <translationtableentry text="Standardization I" result="Reclutamento basico" />
 <translationtableentry text="Makes all new warriors level 4 but unable to gain experience" result="Rende tutti i guerrieri nuovi di livello 4 ma incapaci di guadagnare esperienza" />
@@ -886,16 +899,16 @@
 <translationtableentry text="Trident Warrior Experience III" result="Guerrieri veterani di Fand III" />
 <translationtableentry text="Makes new Trident Warriors level 24" result="Rende i nuovi guerrieri di Fand di livello 24" />
 <translationtableentry text="Warrior Tales" result="Poemi epici" />
-<translationtableentry text="When a non-mercenary warrior dies, all nearby allies have a 33% chance to gain 1 experience (5 with dying Trident Warrior, 10 with dying hero, both with 100% chance)" result="Quando un guerriero non mercenario muore, tutti gli alleati vicini hanno una probabilità del 33% di guadagnare 1 punto esperienza (5 se muore un guerriero di Fand, 10 se muore un eroe, entrambi con una probabiltà del 100%)" />
+<translationtableentry text="When a non-mercenary warrior dies, all nearby allies have a 33% chance to gain 1 experience (5 with dying Trident Warrior, 10 with dying hero, both with 100% chance)" result="Quando un guerriero non mercenario muore, tutti gli alleati vicini hanno una probabilità del 33% di guadagnare 1 punto esperienza (5 se muore un guerriero di Fand, 10 se muore un eroe, entrambi con una probabilità del 100%)" />
 <translationtableentry text="Battle tactics" result="Tattiche di combattimento" />
 <translationtableentry text="Doubles the experience gained by all units at every kill" result="Raddoppia l'esperienza guadagnata da tutte le unità a ogni uccisione" />
 <translationtableentry text="Legendary Heroes" result="Eroi leggendari" />
-<translationtableentry text="Allows legendary Heroes to be hired" result="Consente di convocare eroi leggendari" />
-<translationtableentry text="Requires Special training, Trident Warrior Experience III, Warrior Tales, Battle tactics and 45 game minutes" result="Richiede Addestramento speciale, Guerrieri veterani di Fand III, Poemi epici, Tattiche di combattimento e 45 minuti di gioco" />
+<translationtableentry text="Increases the health of heroes by 2 and that of Trident Warriors by 20 at every kill" result="Aumenta la salute degli eroi di 2 punti e quella dei Guerrieri di Fand di 20 a ogni uccisione" />
 <translationtableentry text="Hire Keltill" result="Convoca Keltill" />
 <translationtableentry text="Hires the powerful Keltill, great Gaul chieftain" result="Convoca il potente Keltill, grande capitano gallico" />
 <translationtableentry text="Hire Larax" result="Convoca Eletto" />
 <translationtableentry text="Hires the legendary Larax, the Chosen one" result="Convoca il leggendario Larax, l'Eletto" />
+<translationtableentry text="Requires Fights, Special training, Trident Warrior Experience III, Warrior Tales, Battle tactics, Legendary Heroes and 45 game minutes" result="Richiede Giochi circensi, Addestramento speciale, Guerrieri veterani di Fand III, Poemi epici, Tattiche di combattimento, Eroi leggendari e 45 minuti di gioco" />
 <translationtableentry text="Tournaments" result="Tornei" />
 <translationtableentry text="Makes new Militiamen and Archers level 4" result="Rende i nuovi miliziani e arcieri di livello 4" />
 <translationtableentry text="Heroes' Wisdom" result="Saggezza degli eroi" />
@@ -907,8 +920,10 @@
 <translationtableentry text="Increases the number of Mountaineers you can have to 20" result="Aumenta a 20 il numero massimo di guerriglieri disponibili contemporaneamente" />
 <translationtableentry text="Mountain Clan Legacy" result="Lascito del clan della montagna" />
 <translationtableentry text="Makes all new Mountaineers the same level of the most experienced you've had" result="Rende tutti i nuovi guerriglieri dello stesso livello del più esperto avuto nel corso della partita" />
+<translationtableentry text="Survival techniques" result="Tecniche di sopravvivenza" />
+<translationtableentry text="Mountaineers restores 3 health every 2 seconds while invisible" result="I guerriglieri ripristinano 3 punti di salute ogni 2 secondi mentre sono invisibili" />
 <translationtableentry text="Veterans guild" result="Corporazione dei veterani" />
-<translationtableentry text="Equips new warriors with a Veteran ring, which becomes Veteran medal at the first kill, adding 6 and 10% damage" result="Equipaggia i nuovi guerrieri con l'Anello del veterano, che si trasforma in Insegna del veterano alla prima uccisione, aumentando l'attacco di 6 punti e del 10%" />
+<translationtableentry text="Equips new warriors with a Veteran ring, which becomes Veteran medal at the first kill, adding 20 health and 6 damage" result="Equipaggia i nuovi guerrieri con l'Anello del veterano, che si trasforma in Insegna del veterano alla prima uccisione, aumentando la salute di 20 punti e l'attacco di 6 punti" />
 <translationtableentry text="People's Assembly" result="Assemblea del popolo" />
 <translationtableentry text="Increases the settlement population by 15" result="Aumenta la popolazione dell'insediamento di 15 unità" />
 <translationtableentry text="Shared Strength" result="Forza condivisa" />
@@ -964,9 +979,9 @@
 <translationtableentry text="Attack focus" result="Ardimento" />
 <translationtableentry text="The warriors' damage is not reduced when fighting more experienced enemies" result="Il danno dei guerrieri non viene ridotto se si affrontano nemici con più esperienza" />
 <translationtableentry text="Teuton Master" result="Maestro teutonico" />
-<translationtableentry text="Allows Teuton Riders to transform into Teuton Archers, Archers into Wolves and Wolves into Riders (only in buildings and ships)" result="Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici, agli arcieri in incursori e agli incursori in cavalieri (solo in strutture e navi)" />
+<translationtableentry text="Allows Teuton Riders to transform into Teuton Archers, Archers into Raiders and Raiders into Riders (only in buildings and ships), and allows Teuton tents to train two units for the cost of one" result="Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici, agli arcieri in incursori e agli incursori in cavalieri (solo in strutture e navi) e consente agli accampamenti teutonici di addestrare due unità al costo di una" />
 <translationtableentry text="Barbaric Tales" result="Poemi barbarici" />
-<translationtableentry text="Every time that your Heroes and Valkyries kill an enemy that is at least 3 levels higher, they and all nearby allies gain 15 bonus experience" result="Ogni volta che i tuoi eroi e valchirie uccidono un nemico superiore di almeno 3 livelli, loro e tutti gli alleati vicini guadagnano 15 punti esperienza bonus" />
+<translationtableentry text="Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries)" result="I guerrieri che eliminano un combattente nemico mentre sono potenziati dall'abilità Audacia ottengono permanentemente 1 punto di attacco bonus (2 per le valchirire)" />
 <translationtableentry text="Olympic Games" result="Giochi olimpici" />
 <translationtableentry text="Makes new warriors level 5" result="Rende i nuovi guerrieri di livello 5" />
 <translationtableentry text="Spartan Training" result="Addestramento spartano" />
@@ -1009,6 +1024,7 @@
 <translationtableentry text="Food Tax" result="Imposta in viveri" />
 <translationtableentry text="Imposes the settlement population to produce food over time" result="Impone alla popolazione dell'insediamento di produrre viveri nel corso del tempo" />
 <translationtableentry text="Nordic trade routes" result="Rotte commerciali nordiche" />
+<translationtableentry text="Gathers 2000 food in each trade outpost you own" result="Riscuote 2000 viveri in ogni tuo forte commerciale" />
 <translationtableentry text="Equips new warriors with a Bear teeth amulet (+4 damage)" result="Equipaggia tutti i nuovi guerrieri con i Denti d'orso, che aumentano l'attacco di 4 punti" />
 <translationtableentry text="Equips new warriors with a Belt of might (+4 armor)" result="Equipaggia tutti i nuovi guerrieri con la Cintura di forza, che aumenta la difesa di 4 punti" />
 <translationtableentry text="Equips new warriors with a Herb amulet of luck (+30 health)" result="Equipaggia tutti i nuovi guerrieri con l'Amuleto di erbe, che aumenta la salute di 30 punti" />
@@ -1016,7 +1032,7 @@
 <translationtableentry text="Borrows 4000 gold at 10% interest" result="Chiede un prestito di 4000 oro al 10% d'interesse" />
 <translationtableentry text="Repay Loan" result="Restituisci prestito" />
 <translationtableentry text="Gives all available gold to repay the loan (without interest)" result="Consegna tutto l'oro disponibile per ripagare il prestito (senza interesse)" />
-<translationtableentry text="Debt" result="Debito" />
+<translationtableentry text="%s1 (Debt: %s2)" result="%s1 (Debito: %s2)" />
 <translationtableentry text="Free Drinks" result="Celebra festa iberica" />
 <translationtableentry text="Increases the settlement population by 10 and gathers 800 food" result="Aumenta la popolazione dell'insediamento di 10 unità e riscuote 800 viveri" />
 <translationtableentry text="Sell food" result="Vendi viveri" />
@@ -1043,11 +1059,11 @@
 <translationtableentry text="Gambling" result="Intercessione divina" />
 <translationtableentry text="Explores a medium area around the settlement and gives you a 40% chance to win 5000 gold or 400 food if you lose" result="Esplora una media area intorno all'insediamento e ti fornisce una probabilità del 40% di vincere 5000 oro o 400 viveri se perdi" />
 <translationtableentry text="Gambler's Day" result="Esperienza divina" />
-<translationtableentry text="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one (100% in the case of non-summoned animals)" result="Fornisce a ogni guerriero una probabilità del 45% di raggiungere il livello del nemico ogni volta che ne uccide uno più esperto (100% nel caso di animali non invocati)" />
+<translationtableentry text="Gives every warrior a 45% chance to reach the level of the enemy upon killing a more experienced one (100% in the case of non-summoned animals)" result="Fornisce a ogni guerriero una probabilità del 45% di raggiungere il livello del nemico ogni volta che ne uccide uno più esperto (100% nel caso di animali non invocati)" />
 <translationtableentry text="Gambler's Test" result="Destrezza divina" />
-<translationtableentry text="Gives every warrior a 1% chance to instantly kill a less experienced enemy and a 75% chance to gain 12 bonus damage every time that he becomes invisible" result="Fornisce a ogni guerriero una probabilità dell'1% di uccidere all'istante un nemico con meno esperienza e una probabilità del 75% di ottenere 12 punti di attacco bonus ogni volta che diventa invisibile" />
+<translationtableentry text="Gives every warrior a 1% chance to instantly kill a less experienced enemy (it does not affect heroes) and a 10% chance to permanently gain 1 bonus damage at every kill (heroes cannot gain it)" result="Fornisce a ogni guerriero una probabilità dell'1% di uccidere all'istante un nemico meno esperto (non ha effetto sugli eroi) e una probabilità del 10% di ottenere permanentemente 1 punto di attacco bonus a ogni uccisione (gli eroi non possono ottenerlo)" />
 <translationtableentry text="Gambler's Luck" result="Fortuna divina" />
-<translationtableentry text="Gives every warrior a 33% chance to completely restore the health when below 33% every time that he kills an enemy" result="Fornisce a ogni guerriero una probabilità del 33% di ripristinare completamente la salute quando è inferiore al 33% ogni volta che uccide un nemico" />
+<translationtableentry text="Gives every warrior a 33% chance to completely restore the health when below 33% at every kill" result="Fornisce a ogni guerriero una probabilità del 33% di ripristinare completamente la salute quando è inferiore al 33% a ogni uccisione" />
 <translationtableentry text="Gambler's All-in" result="Tutto per tutto" />
 <translationtableentry text="Increases the settlement population by 40 and gives you a 35% chance to win 10000 gold" result="Aumenta la popolazione dell'insediamento di 40 unità e ti fornisce una probabilità del 35% di vincere 10000 oro" />
 <translationtableentry text="At least 3 minutes must pass between each attempt" result="Devono passare almeno 3 minuti tra ogni tentativo" />
@@ -1080,7 +1096,7 @@
 <translationtableentry text="Altar of Jupiter" result="Erigi altare di Giove" />
 <translationtableentry text="Makes new priests level 4" result="Rende i nuovi sacerdoti di livello 4" />
 <translationtableentry text="Cloud of Plague" result="Flagello" />
-<translationtableentry text="Allows priests to sacrifice themselves to create a cloud of plague which deals 45 damage to all units periodically for about 12 seconds" result="Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge 45 punti di danno a tutte le unità periodicamente per circa 12 secondi" />
+<translationtableentry text="Allows priests to sacrifice themselves to create a cloud of plague which deals 50 damage to all units periodically for about 12 seconds" result="Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge 50 punti di danno a tutte le unità periodicamente per circa 12 secondi" />
 <translationtableentry text="Wrath of Jupiter" result="Ira di Giove" />
 <translationtableentry text="Allows priests to sacrifice themselves to strike the chosen unit with a non-lethal lightning, dealing up to 250 damage (40 if it is a hero).\nThe same effect also applies to the units that kill the priests" result="Consente ai sacerdoti di sacrificarsi per far cadere un fulmine non letale su un'unità a scelta, infliggendole fino a 250 punti di danno (40 se è un eroe).\nLo stesso effetto si attiva anche sulle unità che uccidono i sacerdoti" />
 <translationtableentry text="Equips new warriors with a God's gift, which heals the owner at the first kill and then disappears" result="Equipaggia i nuovi guerrieri col Dono degli dei, che guarisce il possessore alla prima uccisione e poi scompare" />
@@ -1115,6 +1131,8 @@
 <translationtableentry text="Makes all units restore 3 stamina at every kill and Nobles also give 10 gold to their commanding hero" result="Tutte le unità ripristinano 3 punti di energia a ogni uccisione e i nobili forniscono anche 10 oro all'eroe che li comanda" />
 <translationtableentry text="Crow summoning" result="Invoca corvo" />
 <translationtableentry text="Allows druids to sacrifice themselves to summon a crow that remains under your control for about 4 minutes" result="Consente ai druidi di sacrificarsi per invocare un corvo che rimane sotto il tuo controllo per circa 4 minuti" />
+<translationtableentry text="Wrath of Thor" result="Ira di Thor" />
+<translationtableentry text="Allows druids to sacrifice themselves to strike an area with lightnings that deal 60 damage to all units for about 10 seconds" result="Consente ai druidi di sacrificarsi per colpire un'area con fulmini che infliggono 60 punti di danno a tutte le unità per circa 10 secondi" />
 <translationtableentry text="Mass heal" result="Guarigione di massa" />
 <translationtableentry text="Allows druids to sacrifice themselves to distribute up to 1000 health among nearby allies.\nThe same effect also applies every time that a druid dies" result="Consente ai druidi di sacrificarsi per distribuire fino a 1000 punti di salute tra gli alleati vicini.\nLo stesso effetto si attiva anche ogni volta che un druido muore" />
 <translationtableentry text="Mass invisibility" result="Occultamento di massa" />
@@ -1125,6 +1143,8 @@
 <translationtableentry text="Mummification" result="Culto dei defunti" />
 <translationtableentry text="Makes all new heroes half the level of the most experienced you have had" result="Rende tutti i nuovi eroi della metà del livello del più esperto avuto nel corso della partita" />
 <translationtableentry text="Equip Chariot of Osiris" result="Equipaggia carro di Osiris" />
+<translationtableentry text="Venomous revenge" result="Vendetta velenosa" />
+<translationtableentry text="Allows Chariots of Osiris to poison their killer" result="Consente ai carri di Osiris di avvelenare il loro uccisore" />
 <translationtableentry text="Allows enchantresses to accumulate stonehenge energy twice as fast" result="Consente alle maghe di accumulare l'energia degli altari dei sacrifici due volte più velocemente" />
 <translationtableentry text="Wolf summoning" result="Invoca lupo" />
 <translationtableentry text="Allows enchantresses to sacrifice themselves to summon a wolf that remains under your control for about 200 seconds.\nThe same effect also applies every time that an enchantress dies, but for about 30 seconds" result="Consente alle maghe di sacrificarsi per invocare un lupo che rimane sotto il tuo controllo per circa 200 secondi.\nLo stesso effetto si attiva anche ogni volta che una maga muore, ma per circa 30 secondi" />
@@ -1410,7 +1430,7 @@
 <translationtableentry text="Right-click to cripple this enemy" result="Clicca col tasto destro per prosciugare l'energia di questo nemico" />
 <translationtableentry text="Click to cripple all enemies around this position" result="Clicca col tasto destro per prosciugare l'energia di tutti i nemici intorno a questa posizione" />
 <translationtableentry text="Create Cloud of Plague" result="Flagello" />
-<translationtableentry text="Creates a cloud of plague that deals 45 damage to all units periodically for about 12 seconds (at the cost of life)" result="Crea una nube velenosa che infligge 45 punti di danno a tutte le unità periodicamente per circa 12 secondi (a costo della vita)" />
+<translationtableentry text="Creates a cloud of plague that deals 50 damage to all units periodically for about 12 seconds (at the cost of life)" result="Crea una nube velenosa che infligge 50 punti di danno a tutte le unità periodicamente per circa 12 secondi (a costo della vita)" />
 <translationtableentry text="Create Cover of Mercy" result="Manto della misericordia" />
 <translationtableentry text="Creates a cloud that reduces all combat damage allies receive by 50% for about 25 seconds (at the cost of life)" result="Crea una nube protettrice che riduce del 50% il danno subìto dagli alleati per circa 25 secondi (a costo della vita)" />
 <translationtableentry text="Channels the Wrath of Jupiter to strike the target with a non-lethal lightning, dealing up to 40 damage to heroes and up to 250 to all other units (at the cost of life)" result="Incanala l'ira di Giove per colpire il bersaglio con un fulmine non letale, infliggendo fino a 40 punti di danno se è un eroe e fino a 250 a tutte le altre unità (a costo della vita)" />
@@ -1429,6 +1449,7 @@
 <translationtableentry text="Summons a deer that remains under your control for about 3 minutes (at the cost of life)" result="Invoca un cervo che rimane sotto il tuo controllo per circa 3 minuti (a costo della vita)" />
 <translationtableentry text="Summon Lion" result="Invoca leone" />
 <translationtableentry text="Summons a lion that remains under your control for about 150 seconds (at the cost of life)" result="Invoca un leone che rimane sotto il tuo controllo per circa 150 secondi (a costo della vita)" />
+<translationtableentry text="Channels the Wrath of Thor to strike the area with lightnings that deal 60 damage to all units for about 10 seconds (at the cost of life)" result="Incanala l'ira di Thor per colpire l'area con fulmini che infliggono 60 punti di danno a tutte le unità per circa 10 secondi (a costo della vita)" />
 <translationtableentry text="Restores the stamina of up to 5 nearby allies (at the cost of life)" result="Ripristina l'energia di un massimo di 5 alleati vicini (a costo della vita)" />
 <translationtableentry text="Distributes up to 1000 health among nearby allies (at the cost of life)" result="Distribuisce fino a 1000 punti di salute tra gli alleati vicini (a costo della vita)" />
 <!-- end sage commands -->
@@ -1479,7 +1500,7 @@
 <translationtableentry text="Euphoria" result="Euforia" />
 <translationtableentry text="Gives the hero and all attached units the ability to restore 3 stamina at every kill with a 10% chance per skill point" result="Fornisce all'eroe e alle unità vincolate la capacità di ripristinare 3 punti di energia a ogni uccisione con una probabilità del 10% per punto abilità" />
 <translationtableentry text="Frenzy" result="Audacia" />
-<translationtableentry text="If used, it halves the health and doubles the damage of all attached units for 2 seconds plus 0.6 additional seconds per skill point" result="Se si utilizza, dimezza la salute e raddoppia il danno di tutte le unità vincolate per 2 secondi più 0,6 secondi aggiuntivi per punto abilità" />
+<translationtableentry text="If used, it doubles the damage of all attached units for 2 seconds plus 0.6 seconds per skill point, at a health cost of 50% reduced by 2% per skill point" result="Se si utilizza, raddoppia l'attacco di tutte le unità vincolate per 2 secondi più 0,6 secondi aggiuntivi per punto abilità, per un costo in salute del 50% ridotto del 2% per punto abilità" />
 <translationtableentry text="Divine Grace" result="Guarigione eroica" />
 <translationtableentry text="Restores the hero's health by 100" result="Ripristina 100 punti di salute dell'eroe" />
 <translationtableentry text="If used, it restores the health of the hero and all attached units by 10 per skill point" result="Se si utilizza, ripristina la salute dell'eroe e delle unità vincolate di 10 punti per punto abilità" />

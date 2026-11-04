@@ -4,8 +4,6 @@ Building this;
 
 this = This.AsBuilding();
 
-EnvWriteString(this, "researching", "yes");
-
 .Progress();
 
 {

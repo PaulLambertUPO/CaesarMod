@@ -12,8 +12,8 @@ Sleep(250 + rand(251));
 			if (.HasSpecial(keen_sight))
 				RevealHiddenEnemyUnits(.pos, .sight, .player);
 			if (.HasSpecial(sneak))
-				if (.TimeWithoutAttack >= 20000)
-					if (.IsVisible)
+				if (.IsVisible)
+					if (.TimeWithoutAttack >= 20000)
 						.SetVisible(false);
 			if (.HasFreedom)
 				if (.hero.IsValid)//this should happen only with adventure sequences

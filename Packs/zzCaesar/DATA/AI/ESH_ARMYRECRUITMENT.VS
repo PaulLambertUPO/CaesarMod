@@ -265,80 +265,99 @@ if (!bDesperateDefence) {
 					if (nCount > 0)
 						if (barrack.IsValid)//check validity again because of Carthage case above
 							if (!barrack.IsBroken) {
-								int gold, food;
 								str cmd;
 
+								//wait for a research to finish in order to optimize useful upgrades
 								if (nRaceIsImperialRome)
 									if (nBuildType == 5)
 										if (IsResearched(set, "Spiked armor II"))
 											cmd = "trainRPraetorianDiscounted";
+										else if (IsResearching(set, "Spiked armor II"))
+											nCount = 0;
 										else
 											cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
+									else if (IsResearching(aiPlayer, "Flexibility"))
+										nCount = 0;
 									else
 										cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 								else if (nRaceIsPunicRome)
 									cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 								else if (nRace == ImperialRome)//Greece
 									cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
+								else if (nRace == RepublicanRome)
+									if (nBuildType != 2)
+										cmd = UTrainCmd(nBuildType, nRace);
+									else if (rand(2) == 0)
+										if (IsResearched(set, "Veteran Offence"))
+											cmd = UTrainCmd(nBuildType, nRace) + "Veteran";
+										else
+											cmd = UTrainCmd(nBuildType, nRace);
+									else
+										cmd = UTrainCmd(nBuildType, nRace);
+								else if (nRace == Iberia)
+									if (IsResearching(set, "Veteran's guild"))
+										nCount = 0;
+									else if (nBuildType != 4)
+										cmd = UTrainCmd(nBuildType, nRace);
+									else if (rand(2) == 0)
+										if (IsResearched(set, "Veteran's guild"))
+											cmd = UTrainCmd(nBuildType, nRace) + "Veteran";
+										else
+											cmd = UTrainCmd(nBuildType, nRace);
+									else
+										cmd = UTrainCmd(nBuildType, nRace);
 								else if (nRace == Carthage)
 									if (nBuildType == 6)
-										cmd = "trainCHorseman";
+										if (IsResearched(set, "Forge shields"))
+											cmd = "trainCHorseman";
+										else if (IsResearching(set, "Forge shields"))
+											nCount = 0;
+										else
+											cmd = "trainCHorsemanNonSpec";
+									else if (nBuildType < 5) {
+										cmd = UTech(nBuildType, nRace);
+										if (IsResearched(set, cmd))
+											cmd = UTrainCmd(nBuildType, nRace);
+										else if (IsResearching(set, cmd))
+											nCount = 0;
+										else
+											cmd = UTrainCmd(nBuildType, nRace) + "NonSpec";
+									}
+									else
+										cmd = UTrainCmd(nBuildType, nRace);
+								else if (nRace == Gaul)
+									if (IsResearching(set, "Bear Teeth"))
+										nCount = 0;
+									else if (IsResearching(set, "Belts of Might"))
+										nCount = 0;
+									else if (IsResearching(set, "Herb amulets"))
+										nCount = 0;
+									else
+										cmd = UTrainCmd(nBuildType, nRace);
+								else if (nRace == Britain)
+									if (nBuildType != 5)
+										cmd = UTrainCmd(nBuildType, nRace);
+									else if (IsResearching(set, "Steel Weapons"))
+										nCount = 0;
 									else
 										cmd = UTrainCmd(nBuildType, nRace);
 								else
 									cmd = UTrainCmd(nBuildType, nRace);
 
-								//wait for a research to finish in order to optimize useful upgrades
-								if (nCount > 0)
-									if (nRace == Carthage) {
-										if (nBuildType < 5) {
-											if (IsResearching(set, UTech(nBuildType, nRace)))
-												nCount = 0;
-										}
-										else if (nBuildType == 6)
-											if (IsResearching(set, "Forge shields"))
-												nCount = 0;
-									}
-									else if (nRaceIsImperialRome) {
-										if (IsResearching(aiPlayer, "Flexibility"))
-											nCount = 0;
-										else if (nBuildType == 5)
-											if (IsResearching(set, "Spiked armor II"))
-												nCount = 0;
-									}
-									else if (nRace == Britain) {
-										if (nBuildType == 5)
-											if (IsResearching(set, "Steel Weapons"))
-												nCount = 0;
-									}
-									else if (nRace == Gaul)
-										if (IsResearching(set, "Nordic trade routes"))
-											nCount = 0;
-										else if (IsResearching(set, "Belts of Might"))
-											nCount = 0;
-										else if (IsResearching(set, "Herb amulets"))
-											nCount = 0;
-
-								if (nRace == Carthage)
-									if (nBuildType < 5) {
-										if (!IsResearched(set, UTech(nBuildType, nRace)))
-											cmd = cmd + "NonSpec";
-									}
-									else if (nBuildType == 6)
-										if (!IsResearched(set, "Forge shields"))
-											cmd = cmd + "NonSpec";
-
-								if (GetCmdCost(cmd, gold, food)) {
-									i = MIN(10, MIN(nCount, set.MaxAffordCount(cmd)));
-									if (i > 0) {
-										point ptDummy;
-										Obj objDummy;
-										nCount -= i;
-										EnvWriteInt(set, "nBuildCount", nCount);
-										set.SpentGoldOnArmy((gold + food / 2) * i);
-										while (i > 0) {
-											barrack.ExecCmd(cmd, ptDummy, objDummy, false);
-											i -= 1;
+								if (nCount > 0) {
+									int gold, food;
+									if (GetCmdCost(cmd, gold, food)) {
+										i = MIN(10, MIN(nCount, set.MaxAffordCount(cmd)));
+										if (i > 0) {
+											point ptDummy;
+											Obj objDummy;
+											nCount -= i;
+											EnvWriteInt(set, "nBuildCount", nCount);
+											set.SpentGoldOnArmy((gold + food / 2) * i);
+											while (i > 0) {
+												barrack.ExecCmd(cmd, ptDummy, objDummy, false);
+												i -= 1;
+											}
 										}
 									}
 								}

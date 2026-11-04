@@ -1,13 +1,10 @@
 //bool, Obj This, bool bAdd
 //cmdparam: "number_to_train, max_param, unit_class, research, research_building"
 
-Building this;
 int plr, number_to_train, max_units;
 str dest, max_param, unit_class;
 
-this = This.AsBuilding();
-
-plr = .player;
+plr = This.player;
 
 dest = cmdparam;
 number_to_train = Str2Int(ParseStr(dest, dest));

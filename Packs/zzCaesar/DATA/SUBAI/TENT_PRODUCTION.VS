@@ -5,9 +5,9 @@ Settlement this;
 this = This.AsBuilding().settlement;
 
 if (!.IsIndependent) {
-	str unit_class, s;
+	str unit_class;
 
-	unit_class = ParseStr(cmdparam, s);
+	unit_class = cmdparam;
 
 	if (EnvReadString(this, "ENV_TProd") == unit_class)
 		unit_class = "";

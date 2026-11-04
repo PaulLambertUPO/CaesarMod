@@ -12,5 +12,7 @@
 	<properties help="contents/units/IMountaineer" />
 	<properties edittree_pos="Units/Iberia/Mountaineer" />
 
+	<behavior script="data/subai/imountaineer_regen_behavior.vs" />
+
 	<sounds command="VoiceIMountaineer" attack="UnitHammerFight" />
 </class>

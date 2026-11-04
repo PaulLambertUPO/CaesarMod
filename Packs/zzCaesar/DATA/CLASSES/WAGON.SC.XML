@@ -16,7 +16,7 @@
 	<method sig="form_move" vs="data/subai/unit_detach.vs" />
 	<method sig="attach" vs="data/subai/do_nothing_obj.vs" verify="data/subai/do_nothing_verify.vs" />
 
-	<value0 icon="gameres/infobar/common/Loyality.bmp"
+	<value0 icon="gameres/infobar/common/loyality.bmp"
 		script="return .AsWagon().loyalty;"
 		help="contents/capturing"
 		rollover="Loyalty"

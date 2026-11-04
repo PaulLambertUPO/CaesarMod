@@ -4,13 +4,13 @@
 		help="contents/resources"
 		rollover="Population"
 	/>
-	<value1 icon="gameres/infobar/common/Loyality.bmp"
+	<value1 icon="gameres/infobar/common/loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
 		help="contents/capturing"
 		rollover="Loyalty"
 	/>
 	<value2 icon="gameres/infobar/common/gold ico.bmp"
-		script="Settlement set; set = .AsBuilding().settlement; if (set.loan > 0) return set.gold + '(' + Translate('Debt') + ':' + set.loan +')'; return set.gold;"
+		script="Settlement set; set = .AsBuilding().settlement; if (set.loan > 0) return Translatef('%s1 (Debt: %s2)', set.gold, set.loan); return set.gold;"
 		flags="5"
 		help="contents/resources"
 		rollover="Gold"
@@ -21,8 +21,7 @@
 		help="contents/resources"
 		rollover="Food"
 	/>
-	<value4 />
-	<value5 icon="gameres/infobar/common/health ico.bmp"
+	<value4 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"

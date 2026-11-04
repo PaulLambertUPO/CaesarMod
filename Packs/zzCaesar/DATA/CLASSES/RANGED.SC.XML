@@ -8,7 +8,7 @@
 	<properties projectile_class="Arrow" building_projectile_class="Fire_Arrow" />
 
 	<value1 icon="gameres/infobar/common/piercing ico.bmp"
-		script="return .AsUnit().damage + '|' + .AsUnit().range;"
+		script="return .damage + '|' + .range;"
 		help="contents/stats/attack"
 		rollover="Damage|Range"
 	/>

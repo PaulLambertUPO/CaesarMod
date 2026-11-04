@@ -13,7 +13,7 @@
 	<method sig="startstoringfood" vs="data/subai/start_storing_food.vs" />
 	<method sig="stopstoringfood" vs="data/subai/stop_storing_food.vs" />
 
-	<value4 icon="gameres/infobar/common/food ico.bmp"
+	<value5 icon="gameres/infobar/common/food ico.bmp"
 		script="return EnvReadInt(.AsBuilding().settlement, 'FoodStorage');"
 		flags="5"
 		help="contents/resources"

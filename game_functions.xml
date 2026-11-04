@@ -850,7 +850,7 @@
 <func name="Obj::SetStamina" returns="void">
 	<param type="int" /><!-- stamina to set -->
 </func>
-<!-- Sets the maximum stamina value of the object | WARNING: using negative values can lead to strange behaviours, especially with units -->
+<!-- Sets the maximum stamina value of the object | WARNING: ferocity and the AddBonus function resets the original class value | WARNING: using negative values can lead to strange behaviours, especially with units -->
 <func name="Obj::SetMaxStamina" returns="void">
 	<param type="int" /><!-- maximum stamina to set -->
 </func>

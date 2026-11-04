@@ -16,9 +16,4 @@
 		help="contents/stats/defense"
 		rollover="Armor"
 	/>
-	<value4 icon="gameres/infobar/common/health ico.bmp"
-		script="return .health + '/' + .maxhealth;"
-		help="contents/stats/health"
-		rollover="Health"
-	/>
 </class>

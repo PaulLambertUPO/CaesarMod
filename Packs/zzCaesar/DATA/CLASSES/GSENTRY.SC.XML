@@ -1,8 +1,8 @@
 <class id="GSentry" parent="Sentry" cpp_class="CVXUnit" entity="Units/GArcher/GSentry.ent.xml">
 
 	<properties race="Gaul" />
-	<properties maxhealth="180" />
-	<properties damage="14" armor_slash="4" armor_pierce="4" />
+	<properties maxhealth="160" />
+	<properties damage="14" armor_slash="8" armor_pierce="8" />
 	<properties unit_specials="Attack skill, Determination, Freedom, Keen sight" />
 
 	<properties icon="gameres/icons/GArcher.bmp" />

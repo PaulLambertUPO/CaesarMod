@@ -1,0 +1,6 @@
+<class id="RGladiatorVeteran" parent="RGladiator" cpp_class="CVXUnit" entity="Units/RGladiator/RGladiator.ent.xml">
+	<properties unit_specials="Expertise, Learning" />
+	<properties display_name="Veteran Gladiator" display_name_plural="Veteran Gladiators" />
+	<properties icon="gameres/icons/RGladiatorVeteran.bmp" />
+	<properties edittree_pos="Units/Roman/Gladiator (veteran)" />
+</class>

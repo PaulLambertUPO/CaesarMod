@@ -6,7 +6,7 @@
 		traincommand="yes"
 		transpicon="1"
 		key="p"
-		costgold="150"
+		costgold="180"
 		execdelay="20000"
 		rollover="Call Priest"
 		method="train"
@@ -52,7 +52,7 @@
 		costgold="2000"
 		execdelay="20000"
 		rollover="Cloud of Plague"
-		description="Allows priests to sacrifice themselves to create a cloud of plague which deals 45 damage to all units periodically for about 12 seconds"
+		description="Allows priests to sacrifice themselves to create a cloud of plague which deals 50 damage to all units periodically for about 12 seconds"
 		method="research"
 		param="ReqSet, Altar of Jupiter, default, NamePlr, Cloud of Plague, default, NamePlr, ECloud of Plague">
 		<src obj="RTemple" />
@@ -63,7 +63,7 @@
 		key="j"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		costgold="2000"
+		costgold="1500"
 		execdelay="20000"
 		rollover="Wrath of Jupiter"
 		description="Allows priests to sacrifice themselves to strike the chosen unit with a non-lethal lightning, dealing up to 250 damage (40 if it is a hero).\nThe same effect also applies to the units that kill the priests"

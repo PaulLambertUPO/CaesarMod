@@ -1,9 +1,8 @@
 //bool, ObjList objs, str OUT reasonText
 
-str unit_class, dest;
+str unit_class;
 
-dest = cmdparam;
-unit_class = ParseStr(dest, dest);
+unit_class = cmdparam;
 
 if (unit_class != "")
 	reasonText = rollover(objs[0].AsBuilding(), unit_class, true);

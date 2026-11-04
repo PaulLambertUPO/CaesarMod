@@ -15,6 +15,7 @@
 	.CmdDisable("trainRHastatus");
 	.CmdDisable("trainRArcher");
 	.CmdDisable("trainRGladiator");
+	.CmdDisable("trainRGladiatorVeteran");
 	.CmdDisable("trainRVelit");
 	.CmdDisable("trainRPrinciple");
 	.CmdDisable("trainRScout");
@@ -46,6 +47,7 @@
 		.CmdEnable("trainRHastatus");
 		.CmdEnable("trainRArcher");
 		.CmdEnable("trainRGladiator");
+		.CmdEnable("trainRGladiatorVeteran");
 		.CmdEnable("trainRPrinciple");
 		.CmdEnable("trainRScout");
 		.CmdEnable("trainRTribune");

@@ -1,7 +1,7 @@
 <class id="CJavelinThrower" parent="ShortRanged" cpp_class="CVXUnit" entity="Units/CJavelinThrower/CJavelinThrower.ent.xml">
 
 	<properties race="Carthage" />
-	<properties maxhealth="160" />
+	<properties maxhealth="180" />
 	<properties damage="24" armor_slash="2" armor_pierce="2" />
 	<properties speed="80" />
 	<properties unit_specials="Penetration" />

@@ -1,0 +1,6 @@
+<class id="ISlingerVeteran" parent="ISlinger" cpp_class="CVXUnit" entity="Units/ISlinger/ISlinger.ent.xml">
+	<properties unit_specials="Expertise, Toughness" />
+	<properties icon="gameres/icons/ISlingerVeteran.bmp" />
+	<properties display_name="Veteran Slinger" display_name_plural="Veteran Slingers" />
+	<properties edittree_pos="Units/Iberia/Slinger (veteran)" />
+</class>

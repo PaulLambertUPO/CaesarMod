@@ -1,6 +1,6 @@
 <class id="WagonFood" parent="Object" cpp_class="CVXWagon">
 	<properties icon="gameres/icons/Wagon.bmp" />
-	<value0 icon="gameres/infobar/common/Loyality.bmp"
+	<value0 icon="gameres/infobar/common/loyality.bmp"
 		script="return .AsWagon().loyalty;"
 		help="contents/capturing"
 		rollover="Loyalty"
@@ -11,17 +11,17 @@
 		rollover="Food"
 	/>
 	<value2 icon="gameres/infobar/common/stamina ico.bmp"
-		script="return .AsUnit().stamina + '|' + .AsUnit().speed;"
+		script="return .stamina + '|' + .AsUnit().speed;"
 		help="contents/stats/stamina"
 		rollover="Stamina|Speed"
 	/>
 	<value3 icon="gameres/infobar/common/defence ico.bmp"
-		script="return .AsUnit().armor_slash + '|' + .AsUnit().sight;"
+		script="return .armor_slash + '|' + .sight;"
 		help="contents/stats/defense"
 		rollover="Armor|Sight"
 	/>
 	<value4 icon="gameres/infobar/common/health ico.bmp"
-		script="return .AsUnit().health + '/' + .AsUnit().maxhealth;"
+		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"
 	/>

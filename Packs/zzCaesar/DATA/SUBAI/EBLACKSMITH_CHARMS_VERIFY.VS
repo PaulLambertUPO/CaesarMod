@@ -1,16 +1,16 @@
 //bool, ObjList objs, str OUT reasonText
 
 Building this;
+str charm;
 
 this = objs[0].AsBuilding();
 
-if (EnvReadString(this, "researching") != "yes") {
+charm = cmdparam;
+
+if (.CmdCount(charm) < 1) {
 	ObjList ol;
 	Obj o;
-	str charm;
 	int i, count_units;
-
-	charm = cmdparam;
 
 	ol = .settlement.ObjectsAround("Military");
 

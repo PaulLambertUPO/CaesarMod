@@ -183,7 +183,7 @@
 	<item id="Amulet of Triumph"
 		image="gameres/icons/items/Amulet of Triumph.bmp"
 		name="Amulet of triumph"
-		description="Restores the health of the owner by 100 upon every kill, with a 50% chance to restore 50 more health"
+		description="Restores the health of the owner by 100 at every kill, with a 50% chance to restore 50 more health"
 		kill_script="file://Data/ItemScripts/amulet of triumph.vs"
 		important="yes">
 	</item>
@@ -262,7 +262,7 @@
 	<item id="Scroll of Life"
 		image="gameres/icons/items/scroll large.bmp"
 		name="Scroll of life"
-		description="Restores the health of the owner by 5 every time that an attached unit kills an enemy.\nIt gives to every attached unit a 10% chance to spawn a ghoul upon every kill"
+		description="Restores the health of the owner by 5 every time that an attached unit kills an enemy.\nIt gives to every attached unit a 10% chance to spawn a ghoul at every kill"
 		important="yes"
 		attachedkill_script="file://Data/ItemScripts/book of life.vs">
 	</item>
@@ -328,10 +328,10 @@
 	<item id="Veteran Medal"
 		image="gameres/icons/items/Veteran Medal.bmp"
 		name="Veteran medal"
-		description="Adds 6 and 10% damage"
+		description="Adds 20 health and 6 damage"
 		cursed="1"
 		important="no">
-		<bonus damage="6" damage_percent="10" />
+		<bonus health="20" damage="6" />
 	</item>
 	<item id="Veteran Offence"
 		image="gameres/icons/items/Veteran Offence.bmp"
@@ -378,41 +378,41 @@
 		description="Adds 8 armor">
 		<bonus armor_slash="8" armor_pierce="8" />
 	</item>
-	<item id="Damage charm"
-		image="gameres/icons/items/DamageCharm.bmp"
+	<item id="Charm of Seth"
+		image="gameres/icons/items/Charm of Seth.bmp"
 		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
 		cursed="1"
-		name="Damage charm"
-		description="Adds 4 damage.\nIt disappears at the first kill">
-		<bonus damage="4" />
+		name="Charm of Seth"
+		description="Adds 6 damage.\nIt disappears at the first kill">
+		<bonus damage="6" />
 	</item>
-	<item id="Armor charm"
-		image="gameres/icons/items/ArmorCharm.bmp"
+	<item id="Charm of Thoth"
+		image="gameres/icons/items/Charm of Thoth.bmp"
 		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
 		cursed="1"
-		name="Armor charm"
-		description="Adds 4 armor.\nIt disappears at the first kill">
-		<bonus armor_slash="4" armor_pierce="4" />
+		name="Charm of Thoth"
+		description="Adds 6 armor.\nIt disappears at the first kill">
+		<bonus armor_slash="6" armor_pierce="6" />
 	</item>
-	<item id="Health charm"
-		image="gameres/icons/items/HealthCharm.bmp"
+	<item id="Charm of Ra"
+		image="gameres/icons/items/Charm of Ra.bmp"
 		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
 		cursed="1"
-		name="Health charm"
-		description="Adds 40 health.\nIt disappears at the first kill">
-		<bonus health="40" />
+		name="Charm of Ra"
+		description="Adds 60 health.\nIt disappears at the first kill">
+		<bonus health="60" />
 	</item>
-	<item id="Knowledge charm"
-		image="gameres/icons/items/KnowledgeCharm.bmp"
+	<item id="Charm of Isis"
+		image="gameres/icons/items/Charm of Isis.bmp"
 		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
 		important="no"
 		cursed="1"
-		name="Knowledge charm"
-		description="Adds 4 levels.\nIt disappears at the first kill">
-		<bonus level="4" />
+		name="Charm of Isis"
+		description="Adds 6 levels.\nIt disappears at the first kill">
+		<bonus level="6" />
 	</item>
 	<item id="Emblem of Democracy"
 		image="gameres/icons/items/Emblem of Democracy.bmp"
@@ -449,6 +449,42 @@
 		description="Adds 10% health.\nIt restores the health of the owner by 2 every second"
 		equip_script="file://Data/ItemScripts/charm of aegle.vs">
 		<bonus health_percent="10" />
+	</item>
+	<item id="Damage charm"
+		image="gameres/icons/items/DamageCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Damage charm"
+		description="Adds 4 damage.\nIt disappears at the first kill">
+		<bonus damage="4" />
+	</item>
+	<item id="Armor charm"
+		image="gameres/icons/items/ArmorCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Armor charm"
+		description="Adds 4 armor.\nIt disappears at the first kill">
+		<bonus armor_slash="4" armor_pierce="4" />
+	</item>
+	<item id="Health charm"
+		image="gameres/icons/items/HealthCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Health charm"
+		description="Adds 40 health.\nIt disappears at the first kill">
+		<bonus health="40" />
+	</item>
+	<item id="Knowledge charm"
+		image="gameres/icons/items/KnowledgeCharm.bmp"
+		use_script="owner.RemoveItem(owner.GetItemIndex(GetThis()));"
+		important="no"
+		cursed="1"
+		name="Knowledge charm"
+		description="Adds 4 levels.\nIt disappears at the first kill">
+		<bonus level="4" />
 	</item>
 	<item id="Faded gem"
 		image="gameres/icons/items/Green Diamond.bmp"

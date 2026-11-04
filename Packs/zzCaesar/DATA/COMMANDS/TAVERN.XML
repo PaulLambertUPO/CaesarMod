@@ -155,20 +155,34 @@
 		<src obj="GTavern" />
 	</cmd>
 	<cmd name="Nordic trade routes" priority="5"
-		method="research"
-		queueicon="gameres/icons/upgrades/Routes.bmp"
 		button="upgrades/Routes.bmp"
+		queueicon="gameres/icons/upgrades/Routes.bmp"
 		key="n"
+		costgold="2000"
+		execdelay="30000"
 		rollover="Nordic trade routes"
+		description="Gathers 2000 food in each trade outpost you own"
+		method="research"
+		groupverifier="data/subai/research_verify.vs"
+		researchcommand="yes"
+		param="ReqSet, Free Beer, default, NameSet, Nordic trade routes, default">
+		<src obj="GTavern" />
+	</cmd>
+	<cmd name="Bear Teeth" priority="6"
+		method="research"
+		queueicon="gameres/icons/upgrades/Bear Teeth.bmp"
+		button="upgrades/Bear Teeth.bmp"
+		key="b"
+		rollover="Bear teeth amulet"
 		description="Equips new warriors with a Bear teeth amulet (+4 damage)"
 		costgold="1000"
 		execdelay="30000"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		param="ReqSet, Free Beer, default, NameSet, Nordic trade routes, , SetsSet, items/Bear teeth amulet, 1">
+		param="ReqSet, Free Beer, default, NameSet, Bear Teeth, , SetsSet, items/Bear teeth amulet, 1">
 		<src obj="GTavern" />
 	</cmd>
-	<cmd name="Belts of Might" priority="5"
+	<cmd name="Belts of Might" priority="6"
 		method="research"
 		queueicon="gameres/icons/upgrades/Belt Of Might.bmp"
 		button="upgrades/Belt Of Might.bmp"
@@ -179,10 +193,10 @@
 		execdelay="30000"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		param="ReqSet, Free Beer, , ReqSet, Nordic trade routes, , NameSet, Belts of Might, , SetsSet, items/Belt of might, 1">
+		param="ReqSet, Free Beer, , ReqSet, Bear Teeth, , NameSet, Belts of Might, , SetsSet, items/Belt of might, 1">
 		<src obj="GTavern" />
 	</cmd>
-	<cmd name="Herb amulets" priority="5"
+	<cmd name="Herb amulets" priority="6"
 		method="research"
 		queueicon="gameres/icons/upgrades/Herb Amulets of Luck.bmp"
 		button="upgrades/Herb Amulets of Luck.bmp"
@@ -196,7 +210,7 @@
 		param="ReqSet, Free Beer, , ReqSet, Belts of Might, , NameSet, Herb amulets, default, SetsSet, items/Herb amulet of luck, 1">
 		<src obj="GTavern" />
 	</cmd>
-	<cmd name="getloan" priority="6"
+	<cmd name="getloan" priority="7"
 		method="getloan"
 		button="actions/get loan.bmp"
 		key="l"
@@ -207,7 +221,7 @@
 		param="ReqSet, Free Beer, default">
 		<src obj="GTavern" />
 	</cmd>
-	<cmd name="repayloan" priority="6"
+	<cmd name="repayloan" priority="7"
 		method="repayloan"
 		button="actions/repay loan.bmp"
 		key="l"
@@ -216,7 +230,7 @@
 		immediate="yes">
 		<src obj="GTavern" />
 	</cmd>
-	<cmd name="GTribute" priority="7"
+	<cmd name="GTribute" priority="8"
 		queueicon="gameres/icons/upgrades/Tribute.bmp"
 		groupverifier="data/subai/research_verify.vs"
 		key="u"
@@ -511,9 +525,9 @@
 		execdelay="30000"
 		queueicon="gameres/icons/upgrades/gamblers day.bmp"
 		rollover="Gambler's Day"
-		description="Gives every warrior a 45% chance to reach the level of the enemy every time that he kills a more experienced one (100% in the case of non-summoned animals)"
+		description="Gives every warrior a 45% chance to reach the level of the enemy upon killing a more experienced one (100% in the case of non-summoned animals)"
 		researchcommand="yes"
-		param="ReqSet, Gambling, default, SetsPlr, GamblersDayChance, 45, NamePlr, Gambler's Day, default">
+		param="ReqSet, Gambling, default, NamePlr, Gambler's Day, default">
 		<src obj="BTavern" />
 	</cmd>
 	<cmd name="Gambler's Test" priority="5"
@@ -525,9 +539,9 @@
 		execdelay="30000"
 		queueicon="gameres/icons/upgrades/gamblers test.bmp"
 		rollover="Gambler's Test"
-		description="Gives every warrior a 1% chance to instantly kill a less experienced enemy and a 75% chance to gain 12 bonus damage every time that he becomes invisible"
+		description="Gives every warrior a 1% chance to instantly kill a less experienced enemy (it does not affect heroes) and a 10% chance to permanently gain 1 bonus damage at every kill (heroes cannot gain it)"
 		researchcommand="yes"
-		param="ReqSet, Gambling, default, SetsPlr, GamblersTestChance, 1, NamePlr, Gambler's Test, default">
+		param="ReqSet, Gambling, default, NamePlr, Gambler's Test, default, SetsPlr, GamblersTestChance, 1">
 		<src obj="BTavern" />
 	</cmd>
 	<cmd name="Gambler's Fortune" priority="6"
@@ -539,7 +553,7 @@
 		execdelay="30000"
 		queueicon="gameres/icons/upgrades/gamblers luck.bmp"
 		rollover="Gambler's Luck"
-		description="Gives every warrior a 33% chance to completely restore the health when below 33% every time that he kills an enemy"
+		description="Gives every warrior a 33% chance to completely restore the health when below 33% at every kill"
 		researchcommand="yes"
 		param="ReqSet, Gambling, default, NamePlr, Gambler's Fortune, default">
 		<src obj="BTavern" />
@@ -679,7 +693,7 @@
 		button="actions/Add population.bmp"
 		key="p"
 		traincommand="yes"
-		costfood="400"
+		costfood="600"
 		execdelay="10000"
 		method="addpop"
 		description="Increases the settlement population by 10"

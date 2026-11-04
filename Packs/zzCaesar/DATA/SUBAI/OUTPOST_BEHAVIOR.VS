@@ -106,14 +106,14 @@ if (set.IsIndependent) {
 		}
 
 		for (i = all_defenders_1.count - 1; i >= 0; i -= 1) {
-			u = all_defenders_1[i].AsUnit();
+			u = all_defenders_1[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 			if (u.IsDead)
 				all_defenders_1.Remove(u);
 			else if (u.inherentlevel < old_level_1)
 				u.SetLevel(old_level_1);
 		}
 		for (i = all_defenders_2.count - 1; i >= 0; i -= 1) {
-			u = all_defenders_2[i].AsUnit();
+			u = all_defenders_2[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 			if (u.IsDead)
 				all_defenders_2.Remove(u);
 			else if (u.inherentlevel < old_level_2)
@@ -142,7 +142,7 @@ if (set.IsIndependent) {
 		}
 		else {
 			for (i = defenders_outside_1.count - 1; i >= 0; i -= 1) {//do not allow units to wander too far
-				u = defenders_outside_1[i].AsUnit();
+				u = defenders_outside_1[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 				if (u.IsDead)
 					defenders_outside_1.Remove(u);
 				else if (.DistTo(u) > rng) {
@@ -160,7 +160,7 @@ if (set.IsIndependent) {
 				}
 			}
 			for (i = defenders_outside_2.count - 1; i >= 0; i -= 1) {//do not allow units to wander too far
-				u = defenders_outside_2[i].AsUnit();
+				u = defenders_outside_2[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 				if (u.IsDead)
 					defenders_outside_2.Remove(u);
 				else if (.DistTo(u) > rng) {
@@ -179,7 +179,7 @@ if (set.IsIndependent) {
 			}
 
 			for (i = all_defenders_1.count - 1; i >= 0; i -= 1) {//get out more units if needed
-				u = all_defenders_1[i].AsUnit();
+				u = all_defenders_1[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 				if (u.IsDead)
 					all_defenders_1.Remove(u);
 				else if (defenders_outside_1.count < max_def_out_1)
@@ -199,7 +199,7 @@ if (set.IsIndependent) {
 					}
 			}
 			for (i = all_defenders_2.count - 1; i >= 0; i -= 1) {//get out more units if needed
-				u = all_defenders_2[i].AsUnit();
+				u = all_defenders_2[i];//do not recast to unit, otherwise the list does not remove the object if it has been erased (died while inside the building)
 				if (u.IsDead)
 					all_defenders_2.Remove(u);
 				else if (defenders_outside_2.count < max_def_out_2)

@@ -12,7 +12,7 @@
 	<properties help="contents/units/BHero" />
 
 	<value1 icon="gameres/infobar/common/piercing ico.bmp"
-		script="return .AsUnit().damage + '|' + .AsUnit().range;"
+		script="return .damage + '|' + .range;"
 		help="contents/stats/attack"
 		rollover="Damage|Range"
 	/>

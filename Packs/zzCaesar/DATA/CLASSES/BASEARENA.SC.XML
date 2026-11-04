@@ -7,6 +7,7 @@
 
 	<method sig="hirehero" vs="data/subai/arena_hirehero.vs" />
 	<method sig="trainex" vs="data/subai/trainex.vs" />
+	<method sig="train_supreme_hero" vs="data/subai/train_supreme_hero.vs" />
 
 	<sounds select="ArenaSelect" />
 </class>

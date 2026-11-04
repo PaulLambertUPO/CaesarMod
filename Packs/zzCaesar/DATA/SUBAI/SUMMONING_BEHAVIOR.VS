@@ -20,8 +20,14 @@ if (This.IsAlive) {
 	if (This.IsAlive) {
 		if (This.AsGhost().IsValid)
 			This.MagicActionEnd();
-		else if (This.IsHeirOf("Mist"))
+		else if (This.IsHeirOf("Mist")) {
 			This.MagicActionEnd();
+			while (This.GetAnim() > 0)
+				Sleep(500 + This.TimeToAnimFinish);//anims 2-3 (see "mist_idle.vs")
+		}
+		else if (This.IsHeirOf("CoverOfMercy"))
+			while (This.GetAnim() > 0)
+				Sleep(500 + This.TimeToAnimFinish);//anims 2-3 (see "coverofmercy_idle.vs")
 
 		This.Damage(This.health);
 	}
