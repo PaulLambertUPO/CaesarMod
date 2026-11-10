@@ -2,5 +2,5 @@
 	<properties radius="200" selection_radius="200" />
 	<properties icon="gameres/icons/Large well.bmp" />
 	<properties edittree_pos="Structures/Item holders/Well (large)" />
-	<properties respawn_item="Bag of healing water" respawn_time="600000" />
+	<properties respawn_item="Bag of healing water" respawn_time="720000" />
 </class>

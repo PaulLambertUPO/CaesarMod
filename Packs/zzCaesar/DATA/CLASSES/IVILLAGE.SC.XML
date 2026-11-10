@@ -5,7 +5,7 @@
 
 	<method sig="trainIScout" vs="data/subai/iberian_village_trainIScout.vs" />
 
-	<value5 icon="gameres/infobar/common/horse ico.bmp"
+	<value4 icon="gameres/infobar/common/horse ico.bmp"
 		script="return EnvReadInt(.AsBuilding().settlement, 'EEE_IVillageNumberHorses');"
 		help="contents/units/Animals/Horse"
 		rollover="Horses"

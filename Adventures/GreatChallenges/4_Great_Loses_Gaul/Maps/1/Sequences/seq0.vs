@@ -61,4 +61,5 @@ gergovia_stonehenge.obj.CmdDisable("sacrifice");
 gergovia_stonehenge.obj.CmdDisable("gold_rain");
 gergovia_stonehenge.obj.CmdDisable("starvation");
 gergovia_stonehenge.obj.CmdDisable("earthquake");
+gergovia_stonehenge.obj.CmdDisable("uprising");
 gergovia_stonehenge.obj.CmdDisable("teuton_horde");

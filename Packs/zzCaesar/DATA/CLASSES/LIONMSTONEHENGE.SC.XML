@@ -1,0 +1,9 @@
+<class id="LionMStonehenge" parent="LionMUnit" cpp_class="CVXUnit" entity="Units/LionM/LionM.ent.xml">
+	<properties radius="20" />
+	<properties unit_specials="Freedom, Keen sight, Triple strike" />
+	<properties does_not_regenerate="1" />
+	<properties inventory_size="0" />
+	<properties stamina_dec_time="45000" />
+	<properties edittree_pos="" />
+	<behavior script="data/subai/selfdestroy_behavior.vs" />
+</class>

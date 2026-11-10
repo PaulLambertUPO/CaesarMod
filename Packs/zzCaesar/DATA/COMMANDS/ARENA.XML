@@ -1105,7 +1105,21 @@
 		param="ReqSet, Cult of Horus, , ReqSet, Light of Horus II, , NameSet, Light of Horus III, default, SetsSet, levels/Warrior, 6, SetsSet, levels/Hero, 6, SetsSet, levels/EHorusWarrior, 8">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
-	<cmd name="Statue of Amon-Ra" priority="9"
+	<cmd name="Divine synergy" priority="9"
+		button="upgrades/divine synergy.bmp"
+		key="s"
+		queueicon="gameres/icons/upgrades/divine synergy.bmp"
+		costgold="1500"
+		execdelay="25000"
+		groupverifier="data/subai/research_verify.vs"
+		rollover="Divine synergy"
+		description="Reduces new divine warriors cost to 230 gold"
+		method="research"
+		researchcommand="yes"
+		param="NameSet, Divine synergy, default">
+		<src obj="ETempleOfHorusAndAnubis" />
+	</cmd>
+	<cmd name="Statue of Amon-Ra" priority="10"
 		button="research/statue of amon-ra.bmp"
 		key="a"
 		queueicon="gameres/icons/upgrades/statue of amon-ra.bmp"
@@ -1116,7 +1130,7 @@
 		description="Increases the maximum health of every unit by 5 for each level up"
 		method="research"
 		researchcommand="yes"
-		param="NamePlr, Statue of Amon-Ra, default, ReqSet, Cult of Anubis, default, ReqSet, Cult of Horus, default">
+		param="NamePlr, Statue of Amon-Ra, default">
 		<src obj="ETempleOfHorusAndAnubis" />
 	</cmd>
 	<!-- GERMANY -->
@@ -1227,7 +1241,7 @@
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Barbaric Tales"
-		description="Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries)"
+		description="Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries) and gain 2 bonus experience"
 		method="research"
 		researchcommand="yes"
 		param="ReqSet, Tribal fights, default, NamePlr, Barbaric Tales, default">

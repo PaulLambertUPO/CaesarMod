@@ -3,5 +3,5 @@
 	<properties edittree_pos="Structures/Item holders/Tombstone" />
 	<properties icon="gameres/icons/Tombstone.bmp" />
 	<properties display_name="Tombstone" />
-	<properties respawn_time="120000" respawn_item="Healing water" />
+	<properties respawn_item="Healing water" respawn_time="300000" />
 </class>

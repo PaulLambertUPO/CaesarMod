@@ -8382,8 +8382,20 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="RTower01"
+		class="RTemple"
 		num="617"
+	player="8"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="8733"
+	y="12947"
+	flags="0x80800080"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
+		class="RTower01"
+		num="618"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8395,7 +8407,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsNE"
-		num="618"
+		num="619"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8407,7 +8419,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsW"
-		num="619"
+		num="620"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8419,7 +8431,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="620"
+		num="621"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8430,8 +8442,20 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
+		class="Rhouse06"
+		num="622"
+	player="8"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="7729"
+	y="13300"
+	flags="0x80800080"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
 		class="RTemple"
-		num="621"
+		num="623"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8443,7 +8467,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="622"
+		num="624"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8455,7 +8479,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="623"
+		num="625"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8467,7 +8491,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsE"
-		num="624"
+		num="626"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8479,7 +8503,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="625"
+		num="627"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8491,7 +8515,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsNW"
-		num="626"
+		num="628"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8503,7 +8527,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="627"
+		num="629"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8514,20 +8538,8 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
-		class="Rhouse06"
-		num="628"
-	player="8"
-	healthperc="100"
-	stamina="20"
-	inventorysize="0"
-	x="7772"
-	y="13428"
-	flags="0x80800080"
-	dir.x="0"
-	dir.y="1"/>
-	<scriptobj
 		class="RBarracks"
-		num="629"
+		num="630"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8539,7 +8551,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="630"
+		num="631"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8551,7 +8563,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsE"
-		num="631"
+		num="632"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8563,7 +8575,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="632"
+		num="633"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8575,7 +8587,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="633"
+		num="634"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8587,7 +8599,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsNW"
-		num="634"
+		num="635"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8599,7 +8611,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RBlacksmith"
-		num="635"
+		num="636"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8611,7 +8623,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsE"
-		num="636"
+		num="637"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8623,7 +8635,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="637"
+		num="638"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8635,7 +8647,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RGateW"
-		num="638"
+		num="639"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8646,8 +8658,20 @@
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
+		class="RBarracks"
+		num="640"
+	player="8"
+	healthperc="100"
+	stamina="20"
+	inventorysize="0"
+	x="7434"
+	y="14056"
+	flags="0x80800080"
+	dir.x="0"
+	dir.y="1"/>
+	<scriptobj
 		class="RGateE"
-		num="639"
+		num="641"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8659,7 +8683,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsSW"
-		num="640"
+		num="642"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8671,7 +8695,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="641"
+		num="643"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8683,7 +8707,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTownhall"
-		num="642"
+		num="644"
 	data="-1"
 	display_name="Dark Power Townhall"
 	player="8"
@@ -8697,7 +8721,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="643"
+		num="645"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8709,7 +8733,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsNE"
-		num="644"
+		num="646"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8721,7 +8745,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="645"
+		num="647"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8733,7 +8757,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsSW"
-		num="646"
+		num="648"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8745,19 +8769,19 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RArena"
-		num="647"
+		num="649"
 	player="8"
 	healthperc="100"
 	stamina="20"
 	inventorysize="0"
-	x="8050"
-	y="14557"
+	x="8087"
+	y="14572"
 	flags="0x80800080"
 	dir.x="0"
 	dir.y="1"/>
 	<scriptobj
 		class="RTavern"
-		num="648"
+		num="650"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8769,7 +8793,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="649"
+		num="651"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8781,7 +8805,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsE"
-		num="650"
+		num="652"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8793,7 +8817,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsW"
-		num="651"
+		num="653"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8805,7 +8829,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="652"
+		num="654"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8817,7 +8841,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="653"
+		num="655"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8829,7 +8853,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="654"
+		num="656"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8841,7 +8865,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsNE"
-		num="655"
+		num="657"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8853,7 +8877,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="656"
+		num="658"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8865,7 +8889,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="657"
+		num="659"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8877,7 +8901,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="658"
+		num="660"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8889,7 +8913,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsSW"
-		num="659"
+		num="661"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8901,7 +8925,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="660"
+		num="662"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8913,7 +8937,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RGateE"
-		num="661"
+		num="663"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8925,7 +8949,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="662"
+		num="664"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8937,7 +8961,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsSW"
-		num="663"
+		num="665"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8949,7 +8973,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="664"
+		num="666"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8961,7 +8985,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="665"
+		num="667"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8973,7 +8997,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RGateS"
-		num="666"
+		num="668"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8985,7 +9009,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsS"
-		num="667"
+		num="669"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -8997,7 +9021,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="668"
+		num="670"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9009,7 +9033,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="669"
+		num="671"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9021,7 +9045,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsS"
-		num="670"
+		num="672"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9033,7 +9057,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="671"
+		num="673"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9045,7 +9069,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="672"
+		num="674"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9057,7 +9081,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsS"
-		num="673"
+		num="675"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9069,7 +9093,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="674"
+		num="676"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9081,7 +9105,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsS"
-		num="675"
+		num="677"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9093,7 +9117,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="676"
+		num="678"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9105,7 +9129,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsS"
-		num="677"
+		num="679"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9117,7 +9141,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RGateSE"
-		num="678"
+		num="680"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9129,7 +9153,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsSW"
-		num="679"
+		num="681"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9141,7 +9165,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="680"
+		num="682"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9153,7 +9177,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsS"
-		num="681"
+		num="683"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9165,7 +9189,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RTower01"
-		num="682"
+		num="684"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9177,7 +9201,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RWallsSE"
-		num="683"
+		num="685"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9203,7 +9227,7 @@
 			name="">
 	<scriptobj
 		class="Stonehenge1"
-		num="684"
+		num="686"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -9230,7 +9254,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse06"
-		num="685"
+		num="687"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9242,7 +9266,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="686"
+		num="688"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9254,7 +9278,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="687"
+		num="689"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9266,7 +9290,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="688"
+		num="690"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -9279,7 +9303,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="689"
+		num="691"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9305,7 +9329,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse06"
-		num="690"
+		num="692"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9317,7 +9341,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="691"
+		num="693"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9329,7 +9353,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="692"
+		num="694"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -9342,7 +9366,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="693"
+		num="695"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9354,7 +9378,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="694"
+		num="696"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9380,7 +9404,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse03"
-		num="695"
+		num="697"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9392,7 +9416,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="696"
+		num="698"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9404,7 +9428,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="697"
+		num="699"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9416,7 +9440,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="698"
+		num="700"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9428,7 +9452,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="699"
+		num="701"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -9455,7 +9479,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse05"
-		num="700"
+		num="702"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9467,7 +9491,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse06"
-		num="701"
+		num="703"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9479,7 +9503,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="702"
+		num="704"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9491,7 +9515,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="703"
+		num="705"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -9504,7 +9528,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="704"
+		num="706"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -9530,7 +9554,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="705"
+		num="707"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9556,7 +9580,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="706"
+		num="708"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9582,7 +9606,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="707"
+		num="709"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9608,7 +9632,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="708"
+		num="710"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9634,7 +9658,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="709"
+		num="711"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9660,7 +9684,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="710"
+		num="712"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9686,7 +9710,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="711"
+		num="713"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9712,7 +9736,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="712"
+		num="714"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9738,7 +9762,7 @@
 			name="">
 	<scriptobj
 		class="Ruins1"
-		num="713"
+		num="715"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9764,7 +9788,7 @@
 			name="Settlement8">
 	<scriptobj
 		class="ROutpost"
-		num="714"
+		num="716"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9790,7 +9814,7 @@
 			name="Settlement9">
 	<scriptobj
 		class="ROutpost"
-		num="715"
+		num="717"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9816,7 +9840,7 @@
 			name="Settlement10">
 	<scriptobj
 		class="ROutpost"
-		num="716"
+		num="718"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9842,7 +9866,7 @@
 			name="Settlement7">
 	<scriptobj
 		class="ROutpost"
-		num="717"
+		num="719"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9868,7 +9892,7 @@
 			name="Settlement12">
 	<scriptobj
 		class="ROutpost"
-		num="718"
+		num="720"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9894,7 +9918,7 @@
 			name="Settlement11">
 	<scriptobj
 		class="ROutpost"
-		num="719"
+		num="721"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9920,7 +9944,7 @@
 			name="Settlement6">
 	<scriptobj
 		class="ROutpost"
-		num="720"
+		num="722"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -9946,7 +9970,7 @@
 			name="">
 	<scriptobj
 		class="GVillage"
-		num="721"
+		num="723"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -9959,7 +9983,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="722"
+		num="724"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -9971,7 +9995,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="723"
+		num="725"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -9983,7 +10007,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="724"
+		num="726"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -9995,7 +10019,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="725"
+		num="727"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10007,7 +10031,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="726"
+		num="728"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10033,7 +10057,7 @@
 			name="">
 	<scriptobj
 		class="GHouse1"
-		num="727"
+		num="729"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10045,7 +10069,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse2"
-		num="728"
+		num="730"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10057,7 +10081,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse2"
-		num="729"
+		num="731"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10069,7 +10093,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="730"
+		num="732"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10082,7 +10106,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="731"
+		num="733"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10094,7 +10118,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="732"
+		num="734"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10120,7 +10144,7 @@
 			name="">
 	<scriptobj
 		class="GHouse1"
-		num="733"
+		num="735"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10132,7 +10156,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="734"
+		num="736"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10144,7 +10168,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="735"
+		num="737"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10156,7 +10180,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="736"
+		num="738"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10169,7 +10193,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="737"
+		num="739"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10181,7 +10205,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse1"
-		num="738"
+		num="740"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10207,7 +10231,7 @@
 			name="">
 	<scriptobj
 		class="GHouse2"
-		num="739"
+		num="741"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10219,7 +10243,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="740"
+		num="742"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10231,7 +10255,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="741"
+		num="743"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10243,7 +10267,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="742"
+		num="744"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10255,7 +10279,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="743"
+		num="745"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10268,7 +10292,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="744"
+		num="746"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10294,7 +10318,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse05"
-		num="745"
+		num="747"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10306,7 +10330,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="746"
+		num="748"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10318,7 +10342,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="747"
+		num="749"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10331,7 +10355,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse06"
-		num="748"
+		num="750"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10343,7 +10367,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="749"
+		num="751"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10369,7 +10393,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse05"
-		num="750"
+		num="752"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10381,7 +10405,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse06"
-		num="751"
+		num="753"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10393,7 +10417,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="752"
+		num="754"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10405,7 +10429,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="753"
+		num="755"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10418,7 +10442,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="754"
+		num="756"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10430,7 +10454,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="755"
+		num="757"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10456,7 +10480,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse05"
-		num="756"
+		num="758"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10468,7 +10492,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse06"
-		num="757"
+		num="759"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10480,7 +10504,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="758"
+		num="760"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10492,7 +10516,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="759"
+		num="761"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10505,7 +10529,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse06"
-		num="760"
+		num="762"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10517,7 +10541,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="761"
+		num="763"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10543,7 +10567,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="762"
+		num="764"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10570,7 +10594,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="763"
+		num="765"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10597,7 +10621,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="764"
+		num="766"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10624,7 +10648,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="765"
+		num="767"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10651,7 +10675,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="766"
+		num="768"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10678,7 +10702,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="767"
+		num="769"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10705,7 +10729,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="768"
+		num="770"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10732,7 +10756,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="769"
+		num="771"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10759,7 +10783,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="770"
+		num="772"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10786,7 +10810,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="771"
+		num="773"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -10813,7 +10837,7 @@
 			name="">
 	<scriptobj
 		class="GHouse4"
-		num="772"
+		num="774"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10825,7 +10849,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="773"
+		num="775"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10837,7 +10861,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="774"
+		num="776"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10850,7 +10874,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse2"
-		num="775"
+		num="777"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10862,7 +10886,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse2"
-		num="776"
+		num="778"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10874,7 +10898,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse1"
-		num="777"
+		num="779"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10900,7 +10924,7 @@
 			name="">
 	<scriptobj
 		class="GHouse3"
-		num="778"
+		num="780"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10912,7 +10936,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse2"
-		num="779"
+		num="781"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10924,7 +10948,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="780"
+		num="782"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10936,7 +10960,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="781"
+		num="783"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -10949,7 +10973,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="782"
+		num="784"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -10975,7 +10999,7 @@
 			name="">
 	<scriptobj
 		class="Teleport_2"
-		num="783"
+		num="785"
 	destination_set="52"
 	player="8"
 	healthperc="100"
@@ -11002,7 +11026,7 @@
 			name="">
 	<scriptobj
 		class="Teleport_2"
-		num="784"
+		num="786"
 	destination_set="51"
 	player="8"
 	healthperc="100"
@@ -11029,7 +11053,7 @@
 			name="">
 	<scriptobj
 		class="Teleport_1"
-		num="785"
+		num="787"
 	destination_set="54"
 	player="8"
 	healthperc="100"
@@ -11056,7 +11080,7 @@
 			name="">
 	<scriptobj
 		class="Teleport_1"
-		num="786"
+		num="788"
 	destination_set="53"
 	player="8"
 	healthperc="100"
@@ -11083,7 +11107,7 @@
 			name="">
 	<scriptobj
 		class="GHouse4"
-		num="787"
+		num="789"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11095,7 +11119,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="788"
+		num="790"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11107,7 +11131,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="789"
+		num="791"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11119,7 +11143,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="790"
+		num="792"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -11132,7 +11156,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse2"
-		num="791"
+		num="793"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11144,7 +11168,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="792"
+		num="794"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11170,7 +11194,7 @@
 			name="">
 	<scriptobj
 		class="GHouse4"
-		num="793"
+		num="795"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11182,7 +11206,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="794"
+		num="796"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11194,7 +11218,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse3"
-		num="795"
+		num="797"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11206,7 +11230,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="796"
+		num="798"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -11219,7 +11243,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="797"
+		num="799"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11231,7 +11255,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="798"
+		num="800"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11243,7 +11267,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="799"
+		num="801"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11269,7 +11293,7 @@
 			name="Settlement14">
 	<scriptobj
 		class="ROutpost"
-		num="800"
+		num="802"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11295,7 +11319,7 @@
 			name="Settlement13">
 	<scriptobj
 		class="ROutpost"
-		num="801"
+		num="803"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11321,7 +11345,7 @@
 			name="Settlement15">
 	<scriptobj
 		class="ROutpost"
-		num="802"
+		num="804"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11347,7 +11371,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="803"
+		num="805"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -11374,7 +11398,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="804"
+		num="806"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -11401,7 +11425,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="805"
+		num="807"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -11428,7 +11452,7 @@
 			name="Settlement16">
 	<scriptobj
 		class="ROutpost"
-		num="806"
+		num="808"
 	player="15"
 	healthperc="100"
 	stamina="20"
@@ -11454,7 +11478,7 @@
 			name="">
 	<scriptobj
 		class="GHouse3"
-		num="807"
+		num="809"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -11466,7 +11490,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="808"
+		num="810"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -11478,7 +11502,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse4"
-		num="809"
+		num="811"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -11490,7 +11514,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="810"
+		num="812"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -11502,7 +11526,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GVillage"
-		num="811"
+		num="813"
 	data="-1"
 	player="16"
 	healthperc="100"
@@ -11515,7 +11539,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="GHouse5"
-		num="812"
+		num="814"
 	player="16"
 	healthperc="100"
 	stamina="20"
@@ -11541,7 +11565,7 @@
 			name="">
 	<scriptobj
 		class="TTent"
-		num="813"
+		num="815"
 	data="-1"
 	player="15"
 	healthperc="100"
@@ -11568,7 +11592,7 @@
 			name="">
 	<scriptobj
 		class="Rhouse06"
-		num="814"
+		num="816"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11580,7 +11604,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse03"
-		num="815"
+		num="817"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -11592,7 +11616,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="RVillage"
-		num="816"
+		num="818"
 	data="-1"
 	player="8"
 	healthperc="100"
@@ -11605,7 +11629,7 @@
 	dir.y="1"/>
 	<scriptobj
 		class="Rhouse05"
-		num="817"
+		num="819"
 	player="8"
 	healthperc="100"
 	stamina="20"
@@ -12924,13 +12948,13 @@
 			name="BlackOulderum"
 			type="0">
 			<obj
-				num="642"/>
+				num="644"/>
 		</group>
 		<group
 			name="BlackStone"
 			type="0">
 			<obj
-				num="684"/>
+				num="686"/>
 		</group>
 		<group
 			name="Guard1"

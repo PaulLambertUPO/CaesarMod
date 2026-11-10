@@ -3,5 +3,5 @@
 	<properties display_name="Face pillar" />
 	<properties icon="gameres/icons/Face pillar.bmp" />
 	<properties edittree_pos="Structures/Item holders/Face pillar" />
-	<properties respawn_item="Ash of druid heart" respawn_time="900000" />
+	<properties respawn_item="Ash of druid heart" respawn_time="1200000" />
 </class>

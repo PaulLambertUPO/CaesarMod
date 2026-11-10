@@ -1045,7 +1045,7 @@ Greece can choose whether to follow a democratic form of government like Athens 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Health 1200</entry>
 				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Damage 70</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 12</entry>
-				<entry image="UI/Help/Special Ico.bmp">Range 525</entry>
+				<entry image="UI/Help/Special Ico.bmp">Range 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 120</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 800 gold</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
@@ -1379,7 +1379,7 @@ Heals the selected ally by 20 plus the priest's level.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Cloud of plague
-The priest sacrifices himself to create a cloud of plague in the chosen point for about 12 seconds. This cloud deals 50 damage to all units periodically.
+The priest sacrifices himself to create a cloud of plague in the chosen point for about 12 seconds. This cloud deals 40 damage to all units periodically.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Jupiter.bmp">
 Wrath of Jupiter
@@ -2092,7 +2092,7 @@ The shaman transforms into a ghoul that remains under your control for about 10 
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Range 400</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 150 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 160 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 14 seconds</entry>
 				<entry />
@@ -2255,7 +2255,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 90</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 280 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 280 or 230 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
@@ -2266,6 +2266,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry vcenter="1" image="UI/Icons/EBarracks.bmp" link="/contents/buildings/EBarracks">Equipped in the Barracks</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Cult of Anubis.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Requires Cult of Anubis</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Path of the Dead 3.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Depends on Path of the dead I, II and III</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Divine Synergy.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Depends on Divine synergy</entry>
 			</topic>
 			<topic id="EHorusWarrior">
 				<entry hcenter="1" font="large">Horus warrior</entry>
@@ -2274,7 +2275,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Damage 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Armor 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Speed 90</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 280 gold</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Cost 280 or 230 gold</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Cost 1 population</entry>
 				<entry image="UI/Help/Train Ico.bmp">Training time 20 seconds</entry>
 				<entry />
@@ -2285,6 +2286,7 @@ The druid sacrifices himself to distribute up to 1000 health among nearby allies
 				<entry vcenter="1" image="UI/Icons/EBarracks.bmp" link="/contents/buildings/EBarracks">Equipped in the Barracks</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Cult of Horus.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Richiede Offerta a Horus</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Light of Horus 3.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Depends on Light of Horus I, II and III</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Divine Synergy.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Depends on Divine synergy</entry>
 			</topic>
 			<topic id="EGuardian">
 				<entry hcenter="1" font="large">Guardian</entry>
@@ -2344,7 +2346,7 @@ The priest completely depletes the chosen enemy's stamina (it does not affect he
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Cloud of plague
-The priest sacrifices himself to create a cloud of plague in the chosen point for about 12 seconds. This cloud deals 50 damage to all units periodically.
+The priest sacrifices himself to create a cloud of plague in the chosen point for about 12 seconds. This cloud deals 40 damage to all units periodically.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Zombify.bmp" link="/contents/units/Ghost">
 Zombify
@@ -2713,6 +2715,7 @@ The enchantress sacrifices herself to distribute up to 1000 health among nearby 
 				<entry font="large">See also</entry>
 				<entry vcenter="1" image="UI/Icons/HBarracks.bmp" link="/contents/buildings/HBarracks">Equipped in the Barracks</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Greek Chariot Wheels.bmp" link="/contents/buildings/HBlacksmith">Requires Scythed chariot wheels</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Military Preparation.bmp" link="/contents/buildings/HGymnasium">Depends on Military preparation</entry>
 			</topic>
 			<topic id="HMyrmidon">
 				<entry hcenter="1" font="large">Myrmidon</entry>
@@ -2975,7 +2978,6 @@ It is summoned through the sacrifice of sages or with the activation of magic it
 					<entry />
 					<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Combat skill (only summmoned wolf)</entry>
 					<entry image="UI/InfoBar/Unit Specials/Drain.bmp" link="/contents/specials/drain">Drain</entry>
-					<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp" link="/contents/specials/ferocity">Ferocity</entry>
 					<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Freedom</entry>
 					<entry />
 					<entry font="large">See also</entry>
@@ -3794,7 +3796,7 @@ Time: 12 - 6 - 3 - 1.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BJavelineer.bmp" link="/contents/units/BJavelineer">
 Equip javelineer
-Cost: 150 gold and 1 population
+Cost: 160 gold and 1 population
 Time: 14 - 7 - 3.5 - 1.75 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BHighlander.bmp" link="/contents/units/BHighlander">
@@ -3851,12 +3853,12 @@ Time: 12 - 6 - 3 - 1.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EAnubisWarrior.bmp" link="/contents/units/EAnubisWarrior">
 Equip Anubis warrior
-Cost: 280 gold and 1 population
+Cost: 280 or 230 gold and 1 population
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EHorusWarrior.bmp" link="/contents/units/EHorusWarrior">
 Equip Horus warrior
-Cost: 280 gold and 1 population
+Cost: 280 or 230 gold and 1 population
 Time: 20 - 10 - 5 - 2.5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EGuardian.bmp" link="/contents/units/EGuardian">
@@ -4284,7 +4286,7 @@ Time: 30 seconds
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CJavelins.bmp" link="/contents/units/BJavelineer">
 Javelins
 Allows javelineers to be equipped in the barracks.
-Cost: 1500 gold
+Cost: 1600 gold
 Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Upgrades/CSwords.bmp" link="/contents/units/BHighlander">
@@ -4324,25 +4326,25 @@ Time: 60 seconds
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Seth.bmp">
 Charm of Seth
-Gives a Damage charm (+4 damage) to up to 65 nearby warriors.
+Gives a Charm of Seth (+6 damage) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Thoth.bmp">
 Charm of Thoth
-Gives an Armor charm (+4 armor) to up to 65 nearby warriors.
+Gives a Charm of Thoth (+6 armor) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Ra.bmp">
 Charm of Ra
-Gives a Health charm (+40 health) to up to 65 nearby warriors.
+Gives a Charm of Ra (+60 health) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Isis.bmp">
 Charm of Isis
-Gives a Knowledge charm (+4 levels) to up to 65 nearby warriors.
+Gives a Charm of Isis (+6 levels) to up to 65 nearby warriors.
 Cost: 500 gold
 Time: 5 seconds
 				</entry>
@@ -5022,6 +5024,12 @@ Makes new warriors and heroes level 6 (8 for Horus warriors).
 Cost: 750 gold
 Time: 20 seconds
 				</entry>
+				<entry vcenter="1" image="UI/Help/ECmdBar/Upgrades/Divine Synergy.bmp">
+Divine synergy
+Reduces new divine warriors cost to 230 gold.
+Cost: 1500 gold
+Time: 25 seconds
+				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Statue of Amon-Ra.bmp">
 Statue of Amon-Ra
 Increases the maximum health of every unit by 5 for each level up.
@@ -5085,7 +5093,7 @@ Time: 30 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Tales of Heroes1.bmp">
 Barbaric tales
-Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries).
+Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries) and gain 2 bonus experience.
 Cost: 2000 gold
 Time: 30 seconds
 				</entry>
@@ -5164,7 +5172,7 @@ Time: 25 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Upgrades/Military Preparation.bmp">
 Military preparation
-Makes new heroes level 15.
+Makes new heroes and chariots level 15.
 Cost: 3500 gold
 Time: 30 seconds
 				</entry>
@@ -5219,7 +5227,7 @@ Time: 90 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Invest.bmp">
 Investment
-Gathers 6000 gold.
+Gathers 6500 gold.
 Cost: 4000 gold
 Time: 300 seconds
 				</entry>
@@ -5677,7 +5685,7 @@ Time: 15 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Cloud of plague
-Allows priests to sacrifice themselves to create a cloud of plague which deals 50 damage to all units periodically for about 12 seconds.
+Allows priests to sacrifice themselves to create a cloud of plague which deals 40 damage to all units periodically for about 12 seconds.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
@@ -5921,7 +5929,7 @@ Time: 20 seconds
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Cloud of plague
-Allows priests to sacrifice themselves to create a cloud of plague which deals 50 damage to all units periodically for about 12 seconds.
+Allows priests to sacrifice themselves to create a cloud of plague which deals 40 damage to all units periodically for about 12 seconds.
 Cost: 2000 gold
 Time: 20 seconds
 				</entry>
@@ -6368,23 +6376,29 @@ Time: 10 seconds
 				<entry image="UI/Help/Icons/StonehengesV.bmp">
 The stonehenge is a sacred magical place that allows powerful rituals to be cast and have an effect on the entire the map and for all players.
 Casting such spells requires energy that is produced by the presence of sages, provided that there are no enemies around: the greater the amount of sages is, the greater the energy generation will be.
+The arcane energy of the rituals summons a number of dangerous animals based on the cost.
 Spells have a better effect for the caster, so it is essential to fight to maintain control of the stonehenge.
 				</entry>
 				<entry font="large">Commands</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Foraging.bmp">
 Foraging
-Every 15 seconds restores the food of all units by 2 (3 for the caster's). It lasts 45 seconds.
+Restores the food of all units by 2 (3 for the caster's). It has a 1 minute cooldown.
 Cost: 10 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Wise Wind.bmp">
 Wind of wisdom
-Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 30). It takes 20 seconds.
+Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 25). It takes 20 seconds.
 Cost: 20 energy
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Exhaust.bmp">
+Exhausting rain
+Every 5 seconds reduces the stamina of all units by 10 (5 for the caster's). It lasts 30 seconds.
+Cost: 30 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Soothing rain
 Every 5 seconds restores the stamina of all units by 5 (10 for the caster's). It lasts 30 seconds.
-Cost: 30 energy
+Cost: 35 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Last Sacrifice.bmp">
 Divine sacrifice
@@ -6408,7 +6422,7 @@ Cost: 70 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Hunger.bmp">
 Starvation
-Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's). It lasts 2 minutes.
+Every 5 seconds reduces the food of all settlements and caravans by 3% and 30 (2% and 20 for the caster's). It lasts 2 minutes.
 Cost: 80 energy
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Earthquake.bmp">
@@ -6416,9 +6430,14 @@ Earthquake
 Every second deals 300 damage to all strongholds, outposts and shipyards (225 to the caster's). It lasts 10 seconds.
 Cost: 90 energy
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Uprising.bmp">
+Uprising
+Makes all outposts neutral and reduces the populations of all villages by 20 (10 for the caster's). It takes 2 minutes.
+Cost: 95 energy
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/T Invasion.bmp">
 Teuton horde
-Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population. It takes 3 minutes.
+Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 raiders) in all strongholds, depleting their population, and gathers 2000 food in all Teuton tents (4000 for the caster's). It takes 3 minutes.
 Cost: 100 energy
 				</entry>
 			</topic>
@@ -6482,12 +6501,12 @@ Each unit can carry a maximum of 4 items, while heroes 5; the only exceptions ar
 			<entry image="UI/Icons/Items/Healing Water.bmp">
 Healing water
 If used, it distributes up to 2000 health among the owner and nearby allies.
-It is generated in the oak stump every 5 minutes and in the tombstone every 2 minutes.
+It is generated in the oak stump and in the tombstone every 5 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Wine Skin 01.bmp">
 Bag of healing water
 If used, it distributes up to 4000 health among the owner and nearby allies.
-It is generated in the large well every 10 minutes.
+It is generated in the large well every 12 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Rye Spikes.bmp">
 Rye spikes
@@ -6497,18 +6516,18 @@ They are generated in the witch hut every 5 minutes.
 			<entry image="UI/Icons/Items/Healing Herbs.bmp">
 Healing herbs
 If used, they completely restore health and stamina of the owner.
-They are generated in the tree trunk every 2 minutes.
+They are generated in the tree trunk every 4 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Poison Mushrooms.bmp">
 Poison mushrooms
 If used, they permanently add 1 level to the owner.
 To use them, the owner must have at least 90% health.
-They are generated in the stone pile every 5 minutes.
+They are generated in the stone pile every 7 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Ash of Druid Hearth.bmp">
 Ash of druid heart
 If used, it completely restores the health of the owner and 8 nearby allies.
-It is generated in the face pillar every 15 minutes.
+It is generated in the face pillar every 20 minutes.
 			</entry>
 			<entry image="UI/Icons/Items/Battle Drums of Rage.bmp">
 Battle drums of rage

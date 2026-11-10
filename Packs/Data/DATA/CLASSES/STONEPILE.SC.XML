@@ -3,5 +3,5 @@
 	<properties display_name="Stone pile" />
 	<properties icon="gameres/icons/Stone pile.bmp" />
 	<properties edittree_pos="Structures/Item holders/Stone pile" />
-	<properties respawn_item="Poison Mushroom" respawn_time="300000" />
+	<properties respawn_item="Poison Mushroom" respawn_time="420000" />
 </class>

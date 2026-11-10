@@ -21,7 +21,8 @@
 		help="contents/resources"
 		rollover="Food"
 	/>
-	<value4 icon="gameres/infobar/common/health ico.bmp"
+	<value4 />
+	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"

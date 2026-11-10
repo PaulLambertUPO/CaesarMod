@@ -3,5 +3,5 @@
 	<properties display_name="Tree trunk" />
 	<properties icon="gameres/icons/Tree trunk.bmp" />
 	<properties edittree_pos="Structures/Item holders/Tree trunk" />
-	<properties respawn_item="Healing herbs" respawn_time="120000" />
+	<properties respawn_item="Healing herbs" respawn_time="240000" />
 </class>

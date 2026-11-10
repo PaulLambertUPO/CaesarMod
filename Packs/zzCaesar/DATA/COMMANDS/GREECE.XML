@@ -331,10 +331,10 @@
 		execdelay="30000"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Military preparation"
-		description="Makes new heroes level 15"
+		description="Makes new heroes and Chariots level 15"
 		method="research"
 		researchcommand="yes"
-		param="ReqPlr, Spartan Training, default, ReqSet, Olympic Games, default, NameSet, Military Preparation, default, SetsSet, levels/Hero, 15">
+		param="ReqPlr, Spartan Training, default, ReqSet, Olympic Games, default, NameSet, Military Preparation, default, SetsSet, levels/Hero, 15, SetsSet, levels/HChariot, 15">
 		<src obj="HGymnasium"/>
 	</cmd>
 	<!-- AGORA -->

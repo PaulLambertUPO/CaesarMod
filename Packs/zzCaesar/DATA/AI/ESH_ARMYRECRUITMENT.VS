@@ -285,7 +285,7 @@ if (!bDesperateDefence) {
 								else if (nRace == ImperialRome)//Greece
 									cmd = imperialOrPunicOrGreekTrainCmds[nBuildType];
 								else if (nRace == RepublicanRome)
-									if (nBuildType != 2)
+									if (nBuildType != 2)//2-RGladiator
 										cmd = UTrainCmd(nBuildType, nRace);
 									else if (rand(2) == 0)
 										if (IsResearched(set, "Veteran Offence"))
@@ -297,11 +297,21 @@ if (!bDesperateDefence) {
 								else if (nRace == Iberia)
 									if (IsResearching(set, "Veteran's guild"))
 										nCount = 0;
-									else if (nBuildType != 4)
+									else if (nBuildType != 4)//4-ISlinger
 										cmd = UTrainCmd(nBuildType, nRace);
 									else if (rand(2) == 0)
 										if (IsResearched(set, "Veteran's guild"))
 											cmd = UTrainCmd(nBuildType, nRace) + "Veteran";
+										else
+											cmd = UTrainCmd(nBuildType, nRace);
+									else
+										cmd = UTrainCmd(nBuildType, nRace);
+								else if (nRace == Egypt)
+									if (nBuildType == 3 || nBuildType == 4)//3-EAnubisWarrior/4-EHorusWarrior
+										if (IsResearched(set, "Divine synergy"))
+											cmd = UTrainCmd(nBuildType, nRace) + "Discounted";
+										else if (IsResearching(set, "Divine synergy"))
+											nCount = 0;
 										else
 											cmd = UTrainCmd(nBuildType, nRace);
 									else
@@ -335,7 +345,7 @@ if (!bDesperateDefence) {
 									else
 										cmd = UTrainCmd(nBuildType, nRace);
 								else if (nRace == Britain)
-									if (nBuildType != 5)
+									if (nBuildType != 5)//5-BHighlander
 										cmd = UTrainCmd(nBuildType, nRace);
 									else if (IsResearching(set, "Steel Weapons"))
 										nCount = 0;

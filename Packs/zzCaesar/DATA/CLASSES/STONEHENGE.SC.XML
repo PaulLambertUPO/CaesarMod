@@ -25,12 +25,13 @@
 	<properties display_name="Stonehenge" />
 	<properties icon="gameres/icons/Stonehenge.bmp" />
 	<properties help="contents/buildings/Stonehenge" />
-	<properties description="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Stonehenge, to ensure that it accumulates enough power for such rituals" />
+	<properties description="Allows the use of spells which affect the entire map. In order to cast these spells, a sage must be present near the Stonehenge to ensure that it accumulates enough power for such rituals.\nEach ritual summons a number of dangerous animals based on its cost" />
 
 	<method sig="idle" vs="data/subai/stonehenge_idle.vs" />
 
 	<method sig="foraging" vs="data/subai/stonehenge_foraging.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 	<method sig="wisdom" vs="data/subai/stonehenge_wisdom.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
+	<method sig="exhaust" vs="data/subai/stonehenge_exhaust.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 	<method sig="soothing" vs="data/subai/stonehenge_soothing.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
 	<method sig="sacrifice" vs="data/subai/stonehenge_sacrifice.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
 	<method sig="gold_rain" vs="data/subai/stonehenge_gold_rain.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
@@ -38,6 +39,7 @@
 	<method sig="bloodlust" vs="data/subai/stonehenge_bloodlust.vs" onfinish="data/subai/stonehenge_onfinish_bloodlust.vs" />
 	<method sig="starvation" vs="data/subai/stonehenge_starvation.vs" onfinish="data/subai/stonehenge_onfinish_global_spell.vs" />
 	<method sig="earthquake" vs="data/subai/stonehenge_earthquake.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
+	<method sig="uprising" vs="data/subai/stonehenge_uprising.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 	<method sig="teuton_horde" vs="data/subai/stonehenge_teuton_horde.vs" onfinish="data/subai/stonehenge_onfinish_announcement.vs" />
 
 	<value0 icon="gameres/infobar/common/loyality.bmp"

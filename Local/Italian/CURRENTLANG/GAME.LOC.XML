@@ -638,7 +638,7 @@
 <translationtableentry text="Keeps up to 40 neutral Numidians that attack any enemy in sight.\nAllows to equip Numidians by spending food" result="Contiene fino a 40 numidi neutrali che attaccano qualunque nemico in vista.\nConsente di equipaggiare numidi spendendo viveri" />
 <translationtableentry text="Allows heroes of the specified level to enter and obtain the item inside. Upon exiting, their health is always 20% of the maximum" result="Consente agli eroi del livello specificato di entrare e ottenere l'oggetto all'interno. All'uscita, la loro salute è sempre il 20% di quella massima" />
 <translationtableentry text="Heroes of the same player visiting the grave will benefit from the experience of the dead hero.\nWarriors of the same player visiting the grave will receive charms that improve their combat skills until they kill an enemy" result="Gli eroi dello stesso giocatore che visitano la tomba beneficeranno dall'esperienza dell'eroe defunto.\nI guerrieri dello stesso giocatore riceveranno talismani magici che migliorano le loro abilità di combattimento finché non uccidono un nemico" />
-<translationtableentry text="Allows spells which have an effect on the entire map. In order to cast these spells a sage must be present near the Stonehenge, to ensure that it accumulates enough power for such rituals" result="Consente di lanciare incantesimi che hanno un effetto sull'intera mappa. Per lanciare tali incantesimi, dev'esserci un'unità spirituale vicino all'altare, per assicurare che accumuli abbastanza potenza per simili rituali" />
+<translationtableentry text="Allows the use of spells which affect the entire map. In order to cast these spells, a sage must be present near the Stonehenge to ensure that it accumulates enough power for such rituals.\nEach ritual summons a number of dangerous animals based on its cost" result="Consente di lanciare incantesimi che hanno effetto sull'intera mappa. Per lanciare tali incantesimi, dev'esserci un'unità spirituale vicino all'altare per assicurare che accumuli abbastanza potenza per simili rituali.\nOgni rituale invoca un numero di animali pericolosi in base al suo costo" />
 <translationtableentry text="Allows armies to go from one cave entrance to the other instantly" result="Consente agli eserciti di andare dall'entrata di una grotta all'altra all'istante" />
 <translationtableentry text="Restores the health of any nearby injured unit (animals excluded) by 100 every 0.5 seconds" result="Ripristina la salute di qualunque unità ferita vicina (animali esclusi) di 100 punti ogni 0,5 secondi" />
 <!-- end building descriptions -->
@@ -965,9 +965,11 @@
 <translationtableentry text="Makes new warriors and heroes level 4 (6 for Horus warriors)" result="Rende tutti i nuovi guerrieri ed eroi di livello 4 (6 per i guerrieri di Horus)" />
 <translationtableentry text="Light of Horus III" result="Luce di Horus III" />
 <translationtableentry text="Makes new warriors and heroes level 6 (8 for Horus warriors)" result="Rende tutti i nuovi guerrieri ed eroi di livello 6 (8 per i guerrieri di Horus)" />
+<translationtableentry text="Divine synergy" result="Sinergia divina" />
+<translationtableentry text="Reduces new divine warriors cost to 230 gold" result="Riduce il costo dei nuovi guerrieri divini a 230 oro" />
+<translationtableentry text="Requires Cult of Anubis and Cult of Horus" result="Richiede Offerta ad Anubis e Offerta a Horus" />
 <translationtableentry text="Statue of Amon-Ra" result="Erigi statua ad Amon-Ra" />
 <translationtableentry text="Increases the maximum health of every unit by 5 for each level up" result="Aumenta la salute massima di ogni unità di 5 punti per ogni aumento di livello" />
-<translationtableentry text="Requires Cult of Anubis and Cult of Horus" result="Richiede Offerta ad Anubis e Offerta a Horus" />
 <translationtableentry text="Tribal fights" result="Combattimenti tribali" />
 <translationtableentry text="Gathers 4000 food" result="Riscuote 4000 viveri" />
 <translationtableentry text="Call Valkyries" result="Recluta valchirie" />
@@ -981,7 +983,7 @@
 <translationtableentry text="Teuton Master" result="Maestro teutonico" />
 <translationtableentry text="Allows Teuton Riders to transform into Teuton Archers, Archers into Raiders and Raiders into Riders (only in buildings and ships), and allows Teuton tents to train two units for the cost of one" result="Consente ai cavalieri teutonici di trasformarsi in arcieri teutonici, agli arcieri in incursori e agli incursori in cavalieri (solo in strutture e navi) e consente agli accampamenti teutonici di addestrare due unità al costo di una" />
 <translationtableentry text="Barbaric Tales" result="Poemi barbarici" />
-<translationtableentry text="Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries)" result="I guerrieri che eliminano un combattente nemico mentre sono potenziati dall'abilità Audacia ottengono permanentemente 1 punto di attacco bonus (2 per le valchirire)" />
+<translationtableentry text="Warriors that kill an enemy fighter while they are empowered by the Frenzy skill permanently gain 1 bonus damage (2 for Valkyries) and gain 2 bonus experience" result="I guerrieri che eliminano un combattente nemico mentre sono potenziati dall'abilità Audacia ottengono permanentemente 1 punto di attacco bonus (2 per le valchirire) e guadagnano 2 punti esperienza bonus" />
 <translationtableentry text="Olympic Games" result="Giochi olimpici" />
 <translationtableentry text="Makes new warriors level 5" result="Rende i nuovi guerrieri di livello 5" />
 <translationtableentry text="Spartan Training" result="Addestramento spartano" />
@@ -998,7 +1000,7 @@
 <translationtableentry text="Makes all warriors receive a Charm of Athena (+40% movement and attack speed in combat) at the first kill" result="Alla prima uccisione i guerrieri ricevono l'Amuleto di Atena, che aumenta la velocità di movimento e d'attacco del 40% in combattimento" />
 <translationtableentry text="Makes all warriors receive a Charm of Aegle (+10% health and +2 health regeneration per second) at the first kill" result="Alla prima uccisione i guerrieri ricevono l'Amuleto di Aegle, che aumenta la salute del 10% e ripristina 2 punti di salute ogni secondo" />
 <translationtableentry text="Military Preparation" result="Preparazione militare" />
-<translationtableentry text="Makes new heroes level 15" result="Rende i nuovi eroi di livello 15" />
+<translationtableentry text="Makes new heroes and Chariots level 15" result="Rende i nuovi eroi e carri da guerra di livello 15" />
 <!-- end arena commands -->
 <!-- start tavern commands -->
 <translationtableentry text="Increase population" result="Aumenta popolazione" />
@@ -1014,7 +1016,7 @@
 <translationtableentry text="Buy map" result="Compra mappa" />
 <translationtableentry text="Explores a huge area around the settlement" result="Esplora un'immensa area intorno all'insediamento" />
 <translationtableentry text="Investment" result="Investimento" />
-<translationtableentry text="Gathers 6000 gold" result="Riscuote 6000 oro" />
+<translationtableentry text="Gathers 6500 gold" result="Riscuote 6500 oro" />
 <translationtableentry text="Tribute" result="Tributi" />
 <translationtableentry text="Tribute (once per game)" result="Tributi (una volta a partita)" />
 <translationtableentry text="Gathers %s1 gold in each outpost you own (the amount increases by 500 every 10 minutes, up to 2000)" result="Riscuote %s1 oro in ogni tuo forte (la quantità aumenta di 500 ogni 10 minuti, fino a 2000)" />
@@ -1096,7 +1098,7 @@
 <translationtableentry text="Altar of Jupiter" result="Erigi altare di Giove" />
 <translationtableentry text="Makes new priests level 4" result="Rende i nuovi sacerdoti di livello 4" />
 <translationtableentry text="Cloud of Plague" result="Flagello" />
-<translationtableentry text="Allows priests to sacrifice themselves to create a cloud of plague which deals 50 damage to all units periodically for about 12 seconds" result="Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge 50 punti di danno a tutte le unità periodicamente per circa 12 secondi" />
+<translationtableentry text="Allows priests to sacrifice themselves to create a cloud of plague which deals 40 damage to all units periodically for about 12 seconds" result="Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge 40 punti di danno a tutte le unità periodicamente per circa 12 secondi" />
 <translationtableentry text="Wrath of Jupiter" result="Ira di Giove" />
 <translationtableentry text="Allows priests to sacrifice themselves to strike the chosen unit with a non-lethal lightning, dealing up to 250 damage (40 if it is a hero).\nThe same effect also applies to the units that kill the priests" result="Consente ai sacerdoti di sacrificarsi per far cadere un fulmine non letale su un'unità a scelta, infliggendole fino a 250 punti di danno (40 se è un eroe).\nLo stesso effetto si attiva anche sulle unità che uccidono i sacerdoti" />
 <translationtableentry text="Equips new warriors with a God's gift, which heals the owner at the first kill and then disappears" result="Equipaggia i nuovi guerrieri col Dono degli dei, che guarisce il possessore alla prima uccisione e poi scompare" />
@@ -1160,9 +1162,9 @@
 <translationtableentry text="Blesses warriors at every kill, making the next attack within 5 seconds deal an additional damage equal to the base damage" result="Benedice i guerrieri ad ogni uccisione, facendo sì che il prossimo attacco entro 5 secondi infligga un danno supplementare pari al valore di attacco" />
 <translationtableentry text="Protection of Apollo (once per game)" result="Protezione di Apollo (una volta a partita)" />
 <translationtableentry text="Makes all your strongholds indestructible for 2 minutes" result="Rende indistruttibili tutte le tue fortezze per 2 minuti" />
-<translationtableentry text="Player %s1 - soon protected" result="Giocatore %s1 - presto protetto" />
-<translationtableentry text="Player %s1 - protected for %s2:0%s3" result="Giocatore %s1 - protetto per %s2:0%s3" />
-<translationtableentry text="Player %s1 - protected for %s2:%s3" result="Giocatore %s1 - protetto per %s2:%s3" />
+<translationtableentry text="P.%s1 - soon protected" result="G.%s1 - presto protetto" />
+<translationtableentry text="P.%s1 - protected for %s2:0%s3" result="G.%s1 - protetto per %s2:0%s3" />
+<translationtableentry text="P.%s1 - protected for %s2:%s3" result="G.%s1 - protetto per %s2:%s3" />
 <!-- end temple commands -->
 <!-- start gate and siege machine commands -->
 <translationtableentry text="Open Gate" result="Apri porta" />
@@ -1248,11 +1250,13 @@
 <!-- end shipyard commands -->
 <!-- start stonehenge commands and announcements -->
 <translationtableentry text="Foraging" result="Nutrizione" />
-<translationtableentry text="Every 15 seconds restores the food of all units by 2 (3 for the caster's).\nIt lasts 45 seconds" result="Ogni 15 secondi ripristina i viveri di tutte le unità di 2 punti (3 per quelle del lanciatore).\nDura 45 secondi" />
+<translationtableentry text="Restores the food of all units by 2 (3 for the caster's).\nIt has a 1 minute cooldown" result="Ripristina i viveri di tutte le unità di 2 punti (3 per quelle del lanciatore).\nHa una ricarica di 1 minuto" />
 <translationtableentry text="Wind of wisdom" result="Vento della saggezza" />
-<translationtableentry text="Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 30).\nIt takes 20 seconds" result="Aumenta il livello di tutte le unità di 1 punto e l'esperienza di altri 5 punti per quelle del lanciatore (fino al livello 30).\nRichiede 20 secondi" />
+<translationtableentry text="Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 25).\nIt takes 20 seconds" result="Aumenta il livello di tutte le unità di 1 punto e l'esperienza di altri 5 punti per quelle del lanciatore (fino al livello 25).\nRichiede 20 secondi" />
 <translationtableentry text="Soothing rain" result="Rituale della vitalità" />
 <translationtableentry text="Every 5 seconds restores the stamina of all units by 5 (10 for the caster's).\nIt lasts 30 seconds" result="Ogni 5 secondi ripristina l'energia di tutte le unità di 5 punti (10 per quelle del lanciatore).\nDura 30 secondi" />
+<translationtableentry text="Exhausting rain" result="Rituale dello sfinimento" />
+<translationtableentry text="Every 5 seconds reduces the stamina of all units by 10 (5 for the caster's).\nIt lasts 30 seconds" result="Ogni 5 secondi riduce l'energia di tutte le unità di 10 punti (5 per quelle del lanciatore).\nDura 30 secondi" />
 <translationtableentry text="Divine sacrifice" result="Castigo spirituale" />
 <translationtableentry text="Every 4 seconds deals 40 damage to all sages (20 for the caster's).\nIt lasts 1 minute" result="Ogni 4 secondi infligge 40 punti di danno a tutte le unità spirituali (20 per quelle del lanciatore).\nDura 1 minuto" />
 <translationtableentry text="Gold rain" result="Pioggia d'oro" />
@@ -1262,21 +1266,27 @@
 <translationtableentry text="Bloodlust" result="Sete di sangue" />
 <translationtableentry text="Allows all warriors to ignore enemy armor and the caster's melee units present at the time of the activation gain 6 bonus damage for the duration.\nIt lasts 30 seconds" result="Consente a tutti i guerrieri di ignorare la difesa del nemico e le unità da mischia del lanciatore presenti al momento dell'attivazione ottengono 6 punti di attacco bonus per la durata.\nDura 30 secondi" />
 <translationtableentry text="Starvation" result="Carestia" />
-<translationtableentry text="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nIt lasts 2 minutes" result="Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 2% e di 20 (1% e 10 per quelli del lanciatore).\nDura 2 minuti" />
+<translationtableentry text="Every 5 seconds reduces the food of all settlements and caravans by 3% and 30 (2% and 20 for the caster's).\nIt lasts 2 minutes" result="Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 3% e di 30 (2% e 20 per quelli del lanciatore).\nDura 2 minuti" />
 <translationtableentry text="Earthquake" result="Terremoto" />
 <translationtableentry text="Every second deals 300 damage to all strongholds, outposts and shipyards (225 to the caster's).\nIt lasts 10 seconds" result="Ogni secondo infligge 300 punti di danno a tutte le fortezze, forti e porti (225 a quelli del lanciatore).\nDura 10 secondi" />
+<translationtableentry text="Uprising" result="Rivolta" />
+<translationtableentry text="Makes all outposts neutral and reduces the populations of all villages by 20 (10 for the caster's).\nIt takes 2 minutes" result="Rende neutrali tutti i forti e riduce la popolazione di tutti i villaggi di 20 (10 per quelli del lanciatore).\nRichiede 2 minuti" />
 <translationtableentry text="Teuton horde" result="Orda teutonica" />
-<translationtableentry text="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes" result="Raduna un'orda di 100 teutoni (40 cavalieri, 40 arcieri e 20 incursori) di livello 12 (18 per quelli del lanciatore) in tutte le fortezze, svuotandone la popolazione.\nRichiede 3 minuti" />
-<translationtableentry text="Player %s1 - Foraging - %s2:0%s3" result="Giocatore %s1 - Nutrizione - %s2:0%s3" />
-<translationtableentry text="Player %s1 - Foraging - %s2:%s3" result="Giocatore %s1 - Nutrizione - %s2:%s3" />
-<translationtableentry text="Player %s1 - Gold rain - %s2:0%s3" result="Giocatore %s1 - Pioggia d'oro - %s2:0%s3" />
-<translationtableentry text="Player %s1 - Gold rain - %s2:%s3" result="Giocatore %s1 - Pioggia d'oro - %s2:%s3" />
-<translationtableentry text="Player %s1 - Plague - %s2:0%s3" result="Giocatore %s1 - Peste - %s2:0%s3" />
-<translationtableentry text="Player %s1 - Plague - %s2:%s3" result="Giocatore %s1 - Peste - %s2:%s3" />
-<translationtableentry text="Player %s1 - Earthquake - %s2:0%s3" result="Giocatore %s1 - Terremoto - %s2:0%s3" />
-<translationtableentry text="Player %s1 - Earthquake - %s2:%s3" result="Giocatore %s1 - Terremoto - %s2:%s3" />
-<translationtableentry text="Player %s1 - Teuton horde - %s2:0%s3" result="Giocatore %s1 - Orda teutonica - %s2:0%s3" />
-<translationtableentry text="Player %s1 - Teuton horde - %s2:%s3" result="Giocatore %s1 - Orda teutonica - %s2:%s3" />
+<translationtableentry text="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 raiders) in all strongholds, depleting their population, and gathers 2000 food in all Teuton tents (4000 for the caster's).\nIt takes 3 minutes" result="Raduna un'orda di 100 teutoni (40 cavalieri, 40 arcieri e 20 incursori) di livello 12 (18 per quelli del lanciatore) in tutte le fortezze, svuotandone la popolazione, e raccoglie 2000 viveri in tutti gli accampamenti teutonici (4000 per quelli del lanciatore).\nRichiede 3 minuti" />
+<translationtableentry text="P.%s1 - Foraging - %s2:0%s3" result="G.%s1 - Nutrizione - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Foraging - %s2:%s3" result="G.%s1 - Nutrizione - %s2:%s3" />
+<translationtableentry text="P.%s1 - Exhausting rain - %s2:0%s3" result="G.%s1 - Rituale dello sfinimento - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Exhausting rain - %s2:%s3" result="G.%s1 - Rituale dello sfinimento - %s2:%s3" />
+<translationtableentry text="P.%s1 - Gold rain - %s2:0%s3" result="G.%s1 - Pioggia d'oro - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Gold rain - %s2:%s3" result="G.%s1 - Pioggia d'oro - %s2:%s3" />
+<translationtableentry text="P.%s1 - Plague - %s2:0%s3" result="G.%s1 - Peste - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Plague - %s2:%s3" result="G.%s1 - Peste - %s2:%s3" />
+<translationtableentry text="P.%s1 - Earthquake - %s2:0%s3" result="G.%s1 - Terremoto - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Earthquake - %s2:%s3" result="G.%s1 - Terremoto - %s2:%s3" />
+<translationtableentry text="P.%s1 - Uprising - %s2:0%s3" result="G.%s1 - Rivolta - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Uprising - %s2:%s3" result="G.%s1 - Rivolta - %s2:%s3" />
+<translationtableentry text="P.%s1 - Teuton horde - %s2:0%s3" result="G.%s1 - Orda teutonica - %s2:0%s3" />
+<translationtableentry text="P.%s1 - Teuton horde - %s2:%s3" result="G.%s1 - Orda teutonica - %s2:%s3" />
 <translationtableentry text="You must wait for the current spell to be completed" result="Devi attendere che sia completato l'attuale incantesimo" />
 <translationtableentry text="Stonehenge isn't under your control" result="L'altare non è sotto il tuo controllo" />
 <translationtableentry text="Stonehenge is insufficiently charged" result="L'altare non è abbastanza caricato" />
@@ -1430,7 +1440,7 @@
 <translationtableentry text="Right-click to cripple this enemy" result="Clicca col tasto destro per prosciugare l'energia di questo nemico" />
 <translationtableentry text="Click to cripple all enemies around this position" result="Clicca col tasto destro per prosciugare l'energia di tutti i nemici intorno a questa posizione" />
 <translationtableentry text="Create Cloud of Plague" result="Flagello" />
-<translationtableentry text="Creates a cloud of plague that deals 50 damage to all units periodically for about 12 seconds (at the cost of life)" result="Crea una nube velenosa che infligge 50 punti di danno a tutte le unità periodicamente per circa 12 secondi (a costo della vita)" />
+<translationtableentry text="Creates a cloud of plague that deals 40 damage to all units periodically for about 12 seconds (at the cost of life)" result="Crea una nube velenosa che infligge 40 punti di danno a tutte le unità periodicamente per circa 12 secondi (a costo della vita)" />
 <translationtableentry text="Create Cover of Mercy" result="Manto della misericordia" />
 <translationtableentry text="Creates a cloud that reduces all combat damage allies receive by 50% for about 25 seconds (at the cost of life)" result="Crea una nube protettrice che riduce del 50% il danno subìto dagli alleati per circa 25 secondi (a costo della vita)" />
 <translationtableentry text="Channels the Wrath of Jupiter to strike the target with a non-lethal lightning, dealing up to 40 damage to heroes and up to 250 to all other units (at the cost of life)" result="Incanala l'ira di Giove per colpire il bersaglio con un fulmine non letale, infliggendo fino a 40 punti di danno se è un eroe e fino a 250 a tutte le altre unità (a costo della vita)" />

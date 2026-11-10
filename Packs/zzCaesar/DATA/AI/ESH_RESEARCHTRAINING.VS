@@ -405,7 +405,7 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 			}
 	}
 	else if (nRace == Egypt) {
-		//cult_Anubis -> path_dead_1_2_3 -> cult_Horus -> statue_AmonRa_Osiris_Isis -> light_Horus_1_2_3 -> mumification | parallel mumification after statue_AmonRa
+		//cult_Anubis -> path_dead_1_2_3 -> cult_Horus -> statue_AmonRa -> divine_synergy -> staute_Osiris_Isis -> light_Horus_1_2_3 -> mumification | parallel mumification after statue_AmonRa
 		strTech1 = "Cult of Anubis";
 		if (IsResearched(set, strTech1)) {
 			strTech1 = "Path of the dead I";
@@ -418,17 +418,20 @@ if (EnvReadInt(set, "ResearchTrainingComplete") != 1) {
 						if (IsResearched(set, strTech1)) {
 							strTech1 = "Statue of Amon-Ra";
 							if (IsResearched(aiPlayer, strTech1)) {
-								strTech1 = "Statue of Osiris";
-								if (IsResearched(aiPlayer, strTech1)) {
-									strTech1 = "Statue of Isis";
+								strTech1 = "Divine synergy";
+								if (IsResearched(set, strTech1)) {
+									strTech1 = "Statue of Osiris";
 									if (IsResearched(aiPlayer, strTech1)) {
-										strTech1 = "Light of Horus I";
-										if (IsResearched(set, strTech1)) {
-											strTech1 = "Light of Horus II";
+										strTech1 = "Statue of Isis";
+										if (IsResearched(aiPlayer, strTech1)) {
+											strTech1 = "Light of Horus I";
 											if (IsResearched(set, strTech1)) {
-												strTech1 = "Light of Horus III";
-												if (IsResearched(set, strTech1))
-													strTech1 = "";
+												strTech1 = "Light of Horus II";
+												if (IsResearched(set, strTech1)) {
+													strTech1 = "Light of Horus III";
+													if (IsResearched(set, strTech1))
+														strTech1 = "";
+												}
 											}
 										}
 									}

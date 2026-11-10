@@ -1,0 +1,9 @@
+<entity description="Uprising" priority="UI" type="UI">
+	<files>
+		<sound file="Sounds/Effects/Uprising/Uprising_1.wav" frequency="20" />
+		<sound file="Sounds/Effects/Uprising/Uprising_2.wav" frequency="20" />
+		<sound file="Sounds/Effects/Uprising/Uprising_3.wav" frequency="20" />
+		<sound file="Sounds/Effects/Uprising/Uprising_4.wav" frequency="20" />
+		<sound file="Sounds/Effects/Uprising/Uprising_5.wav" frequency="20" />
+	</files>
+</entity>

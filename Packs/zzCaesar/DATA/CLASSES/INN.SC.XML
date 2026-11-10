@@ -34,7 +34,7 @@
 		help="contents/resources"
 		rollover="Population"
 	/>
-	<value4 icon="gameres/infobar/common/health ico.bmp"
+	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"

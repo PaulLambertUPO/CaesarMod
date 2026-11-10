@@ -58,4 +58,5 @@ danube_stonehenge.obj.CmdDisable("sacrifice");
 danube_stonehenge.obj.CmdDisable("gold_rain");
 danube_stonehenge.obj.CmdDisable("starvation");
 danube_stonehenge.obj.CmdDisable("earthquake");
+danube_stonehenge.obj.CmdDisable("uprising");
 danube_stonehenge.obj.CmdDisable("teuton_horde");

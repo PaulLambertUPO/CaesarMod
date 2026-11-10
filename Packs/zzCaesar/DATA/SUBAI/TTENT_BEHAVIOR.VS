@@ -45,17 +45,21 @@ else {
 
 while (true) {
 	if (plr != .player) {//this lets the old units recapture the tent (it should happen only with adventure sequences)
-		defenders_1.Clear();
-		defenders_2.Clear();
-		defenders_outside.Clear();
-		if (plr != 15)//independent "non-rescue" units must not starve (16 = rescue)
+		if (plr != 15)
 			for (i = all_defenders.count - 1; i >= 0; i -= 1) {
 				u = all_defenders[i].AsUnit();
 				if (u.IsAlive)
 					u.SetFeeding(true);
 			}
-		all_defenders.Clear();
 		plr = .player;
+		if (plr == 15)
+			all_defenders.SetPlayer(plr);
+		else {
+			defenders_1.Clear();
+			defenders_2.Clear();
+			defenders_outside.Clear();
+			all_defenders.Clear();
+		}
 	}
 
 	pt_1.Set(0, rad);

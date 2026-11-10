@@ -1,41 +1,37 @@
 //void, Obj This
 
-Building this;
 ObjList player_units;
-Unit u;
+Obj o;
 str announcement;
-int i, j, d, caster_player;
+int i, j, k, caster_player;
 
-this = This.AsBuilding();
-
-caster_player = EnvReadInt(this, "CasterPlayer");
-announcement = "Ritual_" + caster_player + "_" + .pos.x + "_" + .pos.y;
+caster_player = EnvReadInt(This.AsBuilding(), "CasterPlayer");
+announcement = "Ritual_" + caster_player + "_" + This.pos.x + "_" + This.pos.y;
 
 PlaySound("Data/Sound Entities/StonehengeSpell.xml");
 
 for (i = 1; i <= 16; i += 1) {
 	if (i == caster_player)
-		d = 8;
+		k = 8;
 	else
-		d = 7;
-	player_units = GetPlayerUnits(i);//there would be too much overhead to check the real player of every unit for the divider to work correctly (GetPlayerUnits takes units from other players that are attached to player i's heroes)
+		k = 7;
+	player_units = GetPlayerUnits(i);
 	for (j = player_units.count - 1; j >= 0; j -= 1)
-		if (j % d == 0) {
-			u = player_units[j].AsUnit();
-			if (u.IsAlive)
-				if (!u.IsDiseased)
-					if (!u.IsHeirOf("BaseAnimal"))
-						u.Disease();
+		if (j % k == 0) {
+			o = player_units[j];
+			if (o.IsAlive)
+				if (!o.IsHeirOf("BaseAnimal"))
+					o.AsUnit().Disease();
 		}
 }
 
-d = 60;
-while (d > 0) {
-	i = d % 60;
+j = 60;
+while (j > 0) {
+	i = j % 60;
 	if (i < 10)
-		ShowAnnouncement(announcement, Translatef("Player %s1 - Plague - %s2:0%s3", caster_player, d / 60, i));
+		ShowAnnouncement(announcement, Translatef("P.%s1 - Plague - %s2:0%s3", caster_player, j / 60, i));
 	else
-		ShowAnnouncement(announcement, Translatef("Player %s1 - Plague - %s2:%s3", caster_player, d / 60, i));
-	d -= 1;
+		ShowAnnouncement(announcement, Translatef("P.%s1 - Plague - %s2:%s3", caster_player, j / 60, i));
+	j -= 1;
 	Sleep(1000);
 }

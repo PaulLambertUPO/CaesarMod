@@ -8,8 +8,8 @@
 	set = .AsBuilding().settlement;
 
 	set.GoldSpent(-4000);
-	set.SetGold(set.gold + 6000);
-	set.GoldConverted(2000);
+	set.SetGold(set.gold + 6500);
+	set.GoldConverted(2500);
 
 	UserNotification("investment completed", "", .pos, .player);
 }

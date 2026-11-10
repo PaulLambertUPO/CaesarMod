@@ -44,11 +44,12 @@ ol.Remove(E_MarkAntony);
 ol.Remove(E_Cleopatra);
 for (i = 0; i < ol.count; i += 1) {
 	u = ol[i].AsUnit();
-	u.AddItem("Damage charm");
-	u.AddItem("Armor charm");
-	u.AddItem("Health charm");
-	u.AddItem("Knowledge charm");
+	u.AddItem("Charm of Seth");
+	u.AddItem("Charm of Thoth");
+	u.AddItem("Charm of Ra");
+	u.AddItem("Charm of Isis");
 }
 
 egypt_shrine.obj.CmdDisable("sacrifice");
+egypt_shrine.obj.CmdDisable("uprising");
 egypt_shrine.obj.CmdDisable("teuton_horde");

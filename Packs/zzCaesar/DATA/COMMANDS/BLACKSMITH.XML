@@ -523,7 +523,7 @@
 		button="upgrades/CJavelins.bmp"
 		researchcommand="yes"
 		groupverifier="data/subai/research_verify.vs"
-		costgold="1500"
+		costgold="1600"
 		execdelay="30000"
 		rollover="Javelins"
 		description="Allows Javelineers to be equipped in the Barracks"

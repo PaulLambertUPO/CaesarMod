@@ -91,7 +91,7 @@
 		queueicon="gameres/icons/upgrades/Invest.bmp"
 		groupverifier="data/subai/research_verify.vs"
 		rollover="Investment"
-		description="Gathers 6000 gold"
+		description="Gathers 6500 gold"
 		method="invest"
 		traincommand="yes"
 		param="ReqSet, Free Wine, default">

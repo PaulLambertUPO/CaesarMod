@@ -25,6 +25,7 @@ EShrine.obj.CmdDisable("sacrifice");
 EShrine.obj.CmdDisable("gold_rain");
 EShrine.obj.CmdDisable("starvation");
 EShrine.obj.CmdDisable("earthquake");
+EShrine.obj.CmdDisable("uprising");
 EShrine.obj.CmdDisable("teuton_horde");
 
 SetShortcutSel(1, 1, GoodHero.GetObjList());

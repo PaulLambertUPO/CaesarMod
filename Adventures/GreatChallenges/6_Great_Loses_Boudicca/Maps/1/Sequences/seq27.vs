@@ -16,6 +16,7 @@ for (i = 1; i <= 11; i += 1)
 stonehenge_iceni.obj.CmdDisable("sacrifice");
 stonehenge_iceni.obj.CmdDisable("gold_rain");
 stonehenge_iceni.obj.CmdDisable("starvation");
+stonehenge_iceni.obj.CmdDisable("uprising");
 stonehenge_iceni.obj.CmdDisable("teuton_horde");
 
 BritVillage1.SetCommand("tribute", IceniTown);

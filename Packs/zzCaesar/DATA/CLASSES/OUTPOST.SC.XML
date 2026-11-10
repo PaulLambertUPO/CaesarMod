@@ -34,10 +34,16 @@
 	<method sig="creategoldmulesmall" vs="data/subai/do_nothing_void.vs" />
 	<method sig="creategoldmulebig" vs="data/subai/do_nothing_void.vs" />
 
-	<value1 icon="gameres/infobar/common/loyality.bmp"
+	<value0 icon="gameres/infobar/common/loyality.bmp"
 		script="return .AsBuilding().settlement.loyalty;"
 		help="contents/capturing"
 		rollover="Loyalty"
+	/>
+	<!-- Return FakeTower stats -->
+	<value1 icon="gameres/infobar/common/piercing ico.bmp"
+		script="return '40(x' + Int(MIN(5, sqrt(.AsBuilding().settlement.UnitsCount))) + ')|600';"
+		help="/contents/stats/attack"
+		rollover="Damage|Range"
 	/>
 	<value2 icon="gameres/infobar/common/gold ico.bmp"
 		script="Settlement set; set = .AsBuilding().settlement; if (set.loan > 0) return Translatef('%s1 (Debt: %s2)', set.gold, set.loan); return set.gold;"
@@ -51,16 +57,10 @@
 		help="contents/resources"
 		rollover="Food"
 	/>
-	<value4 icon="gameres/infobar/common/health ico.bmp"
+	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"
-	/>
-	<!-- Return FakeTower stats -->
-	<value5 icon="gameres/infobar/common/piercing ico.bmp"
-		script="return '40(x' + Int(MIN(5, sqrt(.AsBuilding().settlement.UnitsCount))) + ')|600';"
-		help="/contents/stats/attack"
-		rollover="Damage|Range"
 	/>
 
 	<defaultcmd target="Unit">

@@ -24,18 +24,18 @@ for (i = GetConst("StonehengeStarvationTime") / 5000; i > 0; i -= 1) {
 	for (j = settlements.count - 1; j >= 0; j -= 1) {
 		set = settlements[j].AsBuilding().settlement;
 		if (set.player == caster_player)
-			set.SetFood(MAX(0, set.food * 99 / 100 - 10));
-		else
 			set.SetFood(MAX(0, set.food * 98 / 100 - 20));
+		else
+			set.SetFood(MAX(0, set.food * 97 / 100 - 30));
 	}
 	for (j = 1; j <= 16; j += 1) {
 		if (j == caster_player) {
-			percent = 99;
-			additional = 10;
-		}
-		else {
 			percent = 98;
 			additional = 20;
+		}
+		else {
+			percent = 97;
+			additional = 30;
 		}
 		player_wagons = GetPlayerUnits(j, "Wagon");
 		for (k = player_wagons.count - 1; k >= 0; k -= 1) {

@@ -4,7 +4,7 @@
 	<properties damage="18" armor_slash="2" armor_pierce="2" />
 	<properties sight="600" />
 	<properties speed="140" />
-	<properties unit_specials="Drain, Ferocity, Freedom" />
+	<properties unit_specials="Drain, Freedom" />
 
 	<properties select_class="WolfUnit" />
 

@@ -11,7 +11,7 @@ rad = .radius;
 while (.stamina > 0) {
 	pt = RandomPointInCircle(pt_pos, rad);
 	CreateFeedback("Lightning3", pt);
-	ObjsInCircle(pt, 30, "Unit").Damage(60);
+	ObjsInCircle(pt, 40, "Unit").Damage(60);
 	Sleep(250 + rand(251));
 }
 

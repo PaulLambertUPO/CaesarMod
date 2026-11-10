@@ -50,7 +50,7 @@
 	<cmd name="trainEAnubisWarrior" priority="6"
 		button="actions/train EAnubisWarrior.bmp"
 		queueicon="gameres/icons/EAnubisWarrior.bmp"
-		groupverifier="data/subai/barrack_train_verify.vs"
+		groupverifier="data/subai/train_base_discounted_verify.vs"
 		transpicon="1"
 		traincommand="yes"
 		key="n"
@@ -59,14 +59,30 @@
 		execdelay="20000"
 		rollover="Equip Anubis Warrior"
 		method="train"
-		param="EAnubisWarrior, Cult of Anubis, Temple of Horus and Anubis"
+		param="EAnubisWarrior, base, Divine synergy, Cult of Anubis, Temple of Horus and Anubis"
+		sclass="EAnubisWarrior">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEAnubisWarriorDiscounted" priority="6"
+		button="actions/train EAnubisWarrior discounted.bmp"
+		queueicon="gameres/icons/EAnubisWarrior.bmp"
+		groupverifier="data/subai/train_base_discounted_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="n"
+		costgold="230"
+		costpop="1"
+		execdelay="20000"
+		rollover="Equip Anubis Warrior"
+		method="train"
+		param="EAnubisWarrior, discounted, Divine synergy, Cult of Anubis, Temple of Horus and Anubis"
 		sclass="EAnubisWarrior">
 		<src obj="EBarracks" />
 	</cmd>
 	<cmd name="trainEHorusWarrior" priority="7"
 		button="actions/train EHorusWarrior.bmp"
 		queueicon="gameres/icons/EHorusWarrior.bmp"
-		groupverifier="data/subai/barrack_train_verify.vs"
+		groupverifier="data/subai/train_base_discounted_verify.vs"
 		transpicon="1"
 		traincommand="yes"
 		key="h"
@@ -75,7 +91,23 @@
 		execdelay="20000"
 		rollover="Equip Horus Warrior"
 		method="train"
-		param="EHorusWarrior, Cult of Horus, Temple of Horus and Anubis"
+		param="EHorusWarrior, base, Divine synergy, Cult of Horus, Temple of Horus and Anubis"
+		sclass="EHorusWarrior">
+		<src obj="EBarracks" />
+	</cmd>
+	<cmd name="trainEHorusWarriorDiscounted" priority="7"
+		button="actions/train EHorusWarrior discounted.bmp"
+		queueicon="gameres/icons/EHorusWarrior.bmp"
+		groupverifier="data/subai/train_base_discounted_verify.vs"
+		transpicon="1"
+		traincommand="yes"
+		key="h"
+		costgold="230"
+		costpop="1"
+		execdelay="20000"
+		rollover="Equip Horus Warrior"
+		method="train"
+		param="EHorusWarrior, discounted, Divine synergy, Cult of Horus, Temple of Horus and Anubis"
 		sclass="EHorusWarrior">
 		<src obj="EBarracks" />
 	</cmd>

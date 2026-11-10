@@ -72,7 +72,7 @@
 		key="y"
 		groupverifier="data/subai/verify_isresearched.vs"
 		rollover="Create Cloud of Plague"
-		description="Creates a cloud of plague that deals 50 damage to all units periodically for about 12 seconds (at the cost of life)"
+		description="Creates a cloud of plague that deals 40 damage to all units periodically for about 12 seconds (at the cost of life)"
 		cursor="do_something"
 		param="Cloud of Plague">
 		<cmdtext target="" text="" /><!-- needed to change the cursor -->

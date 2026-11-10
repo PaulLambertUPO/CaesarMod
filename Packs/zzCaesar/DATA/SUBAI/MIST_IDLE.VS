@@ -6,7 +6,7 @@
 
 while (.stamina > 0) {
 	.PlayAnim(2, .pos);
-	.MistAction(50);
+	.MistAction(40);
 }
 
 .PlayAnim(3, .pos);

@@ -101,11 +101,16 @@ if (.IsValid)
 								.AddBonus(2, 0, 0, 0, 0);
 							else
 								.AddBonus(1, 0, 0, 0, 0);
+							.SetExperience(.experience + 2);
 							CreateFeedback("Frenzy", this);
 							CreateFeedback("Frenzy2", this);
 						}
 
 			//removing items with their on_kill script messes up the givings below because this script is executed before
+			.RemoveItemsOfType("Charm of Seth");
+			.RemoveItemsOfType("Charm of Thoth");
+			.RemoveItemsOfType("Charm of Ra");
+			.RemoveItemsOfType("Charm of Isis");
 			.RemoveItemsOfType("Damage charm");
 			.RemoveItemsOfType("Armor charm");
 			.RemoveItemsOfType("Health charm");

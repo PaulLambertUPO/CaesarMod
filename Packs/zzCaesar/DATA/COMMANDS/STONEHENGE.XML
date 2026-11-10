@@ -6,7 +6,7 @@
 		coststamina="10"
 		param="foraging"
 		rollover="Foraging"
-		description="Every 15 seconds restores the food of all units by 2 (3 for the caster's).\nIt lasts 45 seconds"
+		description="Restores the food of all units by 2 (3 for the caster's).\nIt has a 1 minute cooldown"
 		key="f">
 		<src obj="Stonehenge" />
 	</cmd>
@@ -17,15 +17,26 @@
 		coststamina="20"
 		param="wisdom"
 		rollover="Wind of wisdom"
-		description="Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 30).\nIt takes 20 seconds"
+		description="Increases the level of all units by 1 and the experience by another 5 for the caster's (up to level 25).\nIt takes 20 seconds"
 		key="w">
+		<src obj="Stonehenge" />
+	</cmd>
+	<cmd name="exhaust"
+		button="Actions/Exhaust.bmp"
+		groupverifier="data/subai/stonehenge_ritual_verify.vs"
+		groupdispatch="data/subai/stonehenge_ritual_dispatch.vs"
+		coststamina="30"
+		param="exhaust"
+		rollover="Exhausting rain"
+		description="Every 5 seconds reduces the stamina of all units by 10 (5 for the caster's).\nIt lasts 30 seconds"
+		key="x">
 		<src obj="Stonehenge" />
 	</cmd>
 	<cmd name="soothing"
 		button="Research/Restoration.bmp"
 		groupverifier="data/subai/stonehenge_ritual_verify.vs"
 		groupdispatch="data/subai/stonehenge_ritual_dispatch.vs"
-		coststamina="30"
+		coststamina="35"
 		param="soothing"
 		rollover="Soothing rain"
 		description="Every 5 seconds restores the stamina of all units by 5 (10 for the caster's).\nIt lasts 30 seconds"
@@ -83,7 +94,7 @@
 		coststamina="80"
 		param="starvation"
 		rollover="Starvation"
-		description="Every 5 seconds decreases the food of all settlements and caravans by 2% and 20 (1% and 10 for the caster's).\nIt lasts 2 minutes"
+		description="Every 5 seconds reduces the food of all settlements and caravans by 3% and 30 (2% and 20 for the caster's).\nIt lasts 2 minutes"
 		key="r">
 		<src obj="Stonehenge" />
 	</cmd>
@@ -98,6 +109,17 @@
 		key="e">
 		<src obj="Stonehenge" />
 	</cmd>
+	<cmd name="uprising"
+		button="Actions/Uprising.bmp"
+		groupverifier="data/subai/stonehenge_ritual_verify.vs"
+		groupdispatch="data/subai/stonehenge_ritual_dispatch.vs"
+		coststamina="95"
+		param="uprising"
+		rollover="Uprising"
+		description="Makes all outposts neutral and reduces the populations of all villages by 20 (10 for the caster's).\nIt takes 2 minutes"
+		key="u">
+		<src obj="Stonehenge" />
+	</cmd>
 	<cmd name="teuton_horde"
 		button="Actions/T Invasion.bmp"
 		groupverifier="data/subai/stonehenge_ritual_verify.vs"
@@ -105,7 +127,7 @@
 		coststamina="100"
 		param="teuton_horde"
 		rollover="Teuton horde"
-		description="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 wolves) in all strongholds, depleting their population.\nIt takes 3 minutes"
+		description="Gathers a level 12 (18 for the caster) horde of 100 Teutons (40 riders, 40 archers and 20 raiders) in all strongholds, depleting their population, and gathers 2000 food in all Teuton tents (4000 for the caster's).\nIt takes 3 minutes"
 		key="t">
 		<src obj="Stonehenge" />
 	</cmd>

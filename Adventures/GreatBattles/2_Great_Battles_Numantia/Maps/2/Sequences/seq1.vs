@@ -28,4 +28,5 @@ R_Army2.SetCommand("attach", R_Cornelius);
 R_Mule2.SetCommand("follow", R_Cornelius);
 
 iberian_stonehenge.obj.CmdDisable("sacrifice");
+iberian_stonehenge.obj.CmdDisable("uprising");
 iberian_stonehenge.obj.CmdDisable("teuton_horde");

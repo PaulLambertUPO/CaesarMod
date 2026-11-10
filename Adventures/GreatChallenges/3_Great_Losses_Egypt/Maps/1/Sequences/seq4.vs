@@ -22,10 +22,10 @@ while (true) {
 		for (i = 0; i < ol.count; i += 1) {
 			u = ol[i].AsUnit();
 			if (u.IsValid) {
-				u.AddItem("Damage charm");
-				u.AddItem("Armor charm");
-				u.AddItem("Health charm");
-				u.AddItem("Knowledge charm");
+				u.AddItem("Charm of Seth");
+				u.AddItem("Charm of Thoth");
+				u.AddItem("Charm of Ra");
+				u.AddItem("Charm of Isis");
 				u.SetLevel(50 - difficulty * 10);
 				CreateFeedback("Lightning3", u);
 			}

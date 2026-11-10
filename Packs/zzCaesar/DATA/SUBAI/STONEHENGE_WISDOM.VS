@@ -20,12 +20,12 @@ for (i = 1; i <= 16; i += 1) {
 	for (j = player_units.count - 1; j >= 0; j -= 1) {
 		u = player_units[j].AsUnit();
 		if (u.IsAlive) {
-			if (u.inherentlevel < 30) {
+			if (u.inherentlevel < 25) {
 				u.SetLevel(u.inherentlevel + 1);
 				CreateFeedback("Experience", u);
 			}
 			if (u.player == caster_player)//check unit player instead of i because GetPlayerUnits takes units from other players that are attached to player i's heroes
-				if (u.inherentlevel < 30)
+				if (u.inherentlevel < 25)
 					u.SetExperience(u.experience + 5);
 		}
 	}

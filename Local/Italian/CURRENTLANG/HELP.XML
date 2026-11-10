@@ -1045,7 +1045,7 @@ La Grecia può scegliere se seguire una forma di governo democratica come Atene 
 				<entry image="UI/InfoBar/Common/Heart Ico.bmp">Salute 1200</entry>
 				<entry image="UI/InfoBar/Common/Piercing Ico.bmp">Attacco 70</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 12</entry>
-				<entry image="UI/Help/Special Ico.bmp">Gittata 525</entry>
+				<entry image="UI/Help/Special Ico.bmp">Gittata 500</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 120</entry>
 				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 800 oro</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 20 secondi</entry>
@@ -1379,7 +1379,7 @@ Cura l'alleato selezionato per una quantità di punti di salute pari a 20 più i
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Flagello
-Il sacerdote si sacrifica per creare una nube velenosa nel punto selezionato per circa 12 secondi. Questa nube infligge periodicamente 50 punti di danno a tutte le unità.
+Il sacerdote si sacrifica per creare una nube velenosa nel punto selezionato per circa 12 secondi. Questa nube infligge periodicamente 40 punti di danno a tutte le unità.
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Jupiter.bmp">
 Ira di Giove
@@ -2092,7 +2092,7 @@ Lo sciamano si trasforma in uno spirito che rimane sotto il tuo controllo per ci
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 2</entry>
 				<entry image="UI/Help/Special Ico.bmp">Gittata 400</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 80</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 150 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 160 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Costo 1 popolazione</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 14 secondi</entry>
 				<entry />
@@ -2255,7 +2255,7 @@ Il druido si sacrifica per distribuire fino a 1000 punti di salute tra gli allea
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 90</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 280 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 280 o 230 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Costo 1 popolazione</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 20 secondi</entry>
 				<entry />
@@ -2266,6 +2266,7 @@ Il druido si sacrifica per distribuire fino a 1000 punti di salute tra gli allea
 				<entry vcenter="1" image="UI/Icons/EBarracks.bmp" link="/contents/buildings/EBarracks">Si equipaggia nella Caserma</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Cult of Anubis.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Richiede Offerta ad Anubis</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Path of the Dead 3.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Dipende da Sentiero dei defunti I, II e III</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Divine Synergy.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Dipende da Sinergia divina</entry>
 			</topic>
 			<topic id="EHorusWarrior">
 				<entry hcenter="1" font="large">Guerriero di Horus</entry>
@@ -2274,7 +2275,7 @@ Il druido si sacrifica per distribuire fino a 1000 punti di salute tra gli allea
 				<entry image="UI/InfoBar/Common/Atack Ico.bmp">Attacco 36</entry>
 				<entry image="UI/InfoBar/Common/Defense Ico.bmp">Difesa 8</entry>
 				<entry image="UI/Help/Speed Ico.bmp">Velocità 90</entry>
-				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 280 oro</entry>
+				<entry image="UI/InfoBar/Common/Gold_Cost.bmp">Costo 280 o 230 oro</entry>
 				<entry image="UI/InfoBar/Common/Pop_Cost.bmp">Costo 1 popolazione</entry>
 				<entry image="UI/Help/Train Ico.bmp">Tempo di reclutamento 20 secondi</entry>
 				<entry />
@@ -2285,6 +2286,7 @@ Il druido si sacrifica per distribuire fino a 1000 punti di salute tra gli allea
 				<entry vcenter="1" image="UI/Icons/EBarracks.bmp" link="/contents/buildings/EBarracks">Si equipaggia nella Caserma</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Cult of Horus.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Richiede Offerta a Horus</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Light of Horus 3.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Dipende da Luce di Horus I, II e III</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Divine Synergy.bmp" link="/contents/buildings/ETempleOfHorusAndAnubis">Dipende da Sinergia divina</entry>
 			</topic>
 			<topic id="EGuardian">
 				<entry hcenter="1" font="large">Guardiano del Nilo</entry>
@@ -2344,7 +2346,7 @@ Il sacerdote rimuove tutti i punti di energia del nemico selezionato (non ha eff
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Flagello
-Il sacerdote si sacrifica per creare una nube velenosa nel punto selezionato per circa 12 secondi. Questa nube infligge periodicamente 50 punti di danno a tutte le unità.
+Il sacerdote si sacrifica per creare una nube velenosa nel punto selezionato per circa 12 secondi. Questa nube infligge periodicamente 40 punti di danno a tutte le unità.
 				</entry>
 				<entry vcenter="1" image="UI/Help/CCmdBar/Actions/Zombify.bmp" link="/contents/units/Ghost">
 Resurrezione
@@ -2713,6 +2715,7 @@ La maga si sacrifica per distribuire fino a 1000 punti di salute tra gli alleati
 				<entry font="large">Vedi anche</entry>
 				<entry vcenter="1" image="UI/Icons/HBarracks.bmp" link="/contents/buildings/HBarracks">Si equipaggia nella Caserma</entry>
 				<entry vcenter="1" image="UI/Icons/Upgrades/Greek Chariot Wheels.bmp" link="/contents/buildings/HBlacksmith">Richiede Produci ruote falcate</entry>
+				<entry vcenter="1" image="UI/Icons/Upgrades/Military Preparation.bmp" link="/contents/buildings/HGymnasium">Dipende da Preparazione militare</entry>
 			</topic>
 			<topic id="HMyrmidon">
 				<entry hcenter="1" font="large">Mirmidone</entry>
@@ -2975,7 +2978,6 @@ Viene invocato tramite il sacrificio di unità spirituali o con l'attivazione di
 					<entry />
 					<entry image="UI/InfoBar/Unit Specials/Combat Skill.bmp" link="/contents/specials/combatskill">Rianimazione (solo lupo invocato)</entry>
 					<entry image="UI/InfoBar/Unit Specials/Drain.bmp" link="/contents/specials/drain">Sfinimento</entry>
-					<entry image="UI/InfoBar/Unit Specials/Ferocity.bmp" link="/contents/specials/ferocity">Ferocia</entry>
 					<entry image="UI/InfoBar/Unit Specials/Freedom.bmp" link="/contents/specials/freedom">Libertà</entry>
 					<entry />
 					<entry font="large">Vedi anche</entry>
@@ -3794,7 +3796,7 @@ Tempo: 12 - 6 - 3 - 1,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BJavelineer.bmp" link="/contents/units/BJavelineer">
 Equipaggia guerriero con giavellotto
-Costo: 150 oro e 1 popolazione
+Costo: 160 oro e 1 popolazione
 Tempo: 14 - 7 - 3,5 - 1,75 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/BCmdBar/Actions/Train BHighlander.bmp" link="/contents/units/BHighlander">
@@ -3851,12 +3853,12 @@ Tempo: 12 - 6 - 3 - 1,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EAnubisWarrior.bmp" link="/contents/units/EAnubisWarrior">
 Equipaggia guerriero di Anubis
-Costo: 280 oro e 1 popolazione
+Costo: 280 o 230 oro e 1 popolazione
 Tempo: 20 - 10 - 5 - 2,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EHorusWarrior.bmp" link="/contents/units/EHorusWarrior">
 Equipaggia guerriero di Horus
-Costo: 280 oro e 1 popolazione
+Costo: 280 o 230 oro e 1 popolazione
 Tempo: 20 - 10 - 5 - 2,5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Actions/Train EGuardian.bmp" link="/contents/units/EGuardian">
@@ -4324,25 +4326,25 @@ Tempo: 60 secondi
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Seth.bmp">
 Talismano di Seth
-Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta l'attacco di 4 punti.
+Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta l'attacco di 6 punti.
 Costo: 500 oro
 Tempo: 5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Thoth.bmp">
 Talismano di Thoth
-Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la difesa di 4 punti.
+Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la difesa di 6 punti.
 Costo: 500 oro
 Tempo: 5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Ra.bmp">
 Talismano di Ra
-Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la salute di 40 punti.
+Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta la salute di 60 punti.
 Costo: 500 oro
 Tempo: 5 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Charm of Isis.bmp">
 Talismano di Isis
-Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta il livello di 4 punti.
+Fornisce a un massimo di 65 guerrieri vicini un talismano che aumenta il livello di 6 punti.
 Costo: 500 oro
 Tempo: 5 secondi
 				</entry>
@@ -5022,6 +5024,12 @@ Rende tutti i nuovi guerrieri ed eroi di livello 6 (8 per i guerrieri di Horus).
 Costo: 750 oro
 Tempo: 20 secondi
 				</entry>
+				<entry vcenter="1" image="UI/Help/ECmdBar/Upgrades/Divine Synergy.bmp">
+Sinergia divina
+Riduce il costo dei nuovi guerrieri divini a 230 oro.
+Costo: 1500 oro
+Tempo: 25 secondi
+				</entry>
 				<entry vcenter="1" image="UI/Help/ECmdBar/Research/Statue of Amon-Ra.bmp">
 Erigi statua ad Amon-Ra
 Aumenta la salute massima di tutte le unità di 5 punti per ogni aumento di livello.
@@ -5085,7 +5093,7 @@ Tempo: 30 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/TCmdBar/Research/Tales of Heroes1.bmp">
 Poemi barbarici
-I guerrieri che eliminano un combattente nemico mentre sono potenziati dall'abilità Audacia ottengono permanentemente 1 punto di attacco bonus (2 per le valchirire).
+I guerrieri che eliminano un combattente nemico mentre sono potenziati dall'abilità Audacia ottengono permanentemente 1 punto di attacco bonus (2 per le valchirire) e guadagnano 2 punti esperienza bonus.
 Costo: 2000 oro
 Tempo: 30 secondi
 				</entry>
@@ -5164,7 +5172,7 @@ Tempo: 25 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/HCmdBar/Upgrades/Military Preparation.bmp">
 Preparazione militare
-Rende i nuovi eroi di livello 15.
+Rende i nuovi eroi e carri da guerra di livello 15.
 Costo: 3500 oro
 Tempo: 30 secondi
 				</entry>
@@ -5219,7 +5227,7 @@ Tempo: 90 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/RCmdBar/Actions/Invest.bmp">
 Investimento
-Riscuote 6000 oro.
+Riscuote 6500 oro.
 Costo: 4000 oro
 Tempo: 300 secondi
 				</entry>
@@ -5677,7 +5685,7 @@ Tempo: 15 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Flagello
-Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge periodicamente 50 punti di danno a tutte le unità per circa 12 secondi.
+Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge periodicamente 40 punti di danno a tutte le unità per circa 12 secondi.
 Costo: 2000 oro
 Tempo: 20 secondi
 				</entry>
@@ -5921,7 +5929,7 @@ Tempo: 20 secondi
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Plague.bmp">
 Flagello
-Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge periodicamente 50 punti di danno a tutte le unità per circa 12 secondi.
+Consente ai sacerdoti di sacrificarsi per creare una nube velenosa che infligge periodicamente 40 punti di danno a tutte le unità per circa 12 secondi.
 Costo: 2000 oro
 Tempo: 20 secondi
 				</entry>
@@ -6368,23 +6376,29 @@ Tempo: 10 secondi
 				<entry image="UI/Help/Icons/StonehengesV.bmp">
 L'altare dei sacrifici è un luogo magico sacro che consente di lanciare potenti rituali che hanno effetto su tutta la mappa per tutti i giocatori.
 Lanciare tali incantesimi richiede energia che viene prodotta dalla presenza di unità spirituali, a patto che non ci siano nemici nei dintorni: maggiore è il numero di unità spirituali, maggiore sarà la generazione di energia.
+L'energia arcana dei rituali invoca un numero di animali pericolosi in base al costo.
 Gli incantesimi hanno un effetto più efficace per il lanciatore, perciò è fondamentale combattere per mantenere il controllo degli altari.
 				</entry>
 				<entry font="large">Comandi</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Foraging.bmp">
 Nutrizione
-Ogni 15 secondi ripristina i viveri di tutte le unità di 2 punti (3 per quelle del lanciatore). Dura 45 secondi.
+Ripristina i viveri di tutte le unità di 2 punti (3 per quelle del lanciatore). Ha una ricarica di 1 minuto.
 Costo: 10 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Wise Wind.bmp">
 Vento della saggezza
-Aumenta il livello di tutte le unità di 1 punto e l'esperienza di altri 5 punti per quelle del lanciatore (fino al livello 30). Richiede 20 secondi.
+Aumenta il livello di tutte le unità di 1 punto e l'esperienza di altri 5 punti per quelle del lanciatore (fino al livello 25). Richiede 20 secondi.
 Costo: 20 energia
+				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Exhaust.bmp">
+Rituale dello sfinimento
+Ogni 5 secondi riduce l'energia di tutte le unità di 10 punti (5 per quelle del lanciatore). Dura 30 secondi.
+Costo: 30 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Restoration.bmp">
 Rituale della vitalità
 Ogni 5 secondi ripristina l'energia di tutte le unità di 5 punti (10 per quelle del lanciatore). Dura 30 secondi.
-Costo: 30 energia
+Costo: 35 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Last Sacrifice.bmp">
 Castigo spirituale
@@ -6408,7 +6422,7 @@ Costo: 70 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Hunger.bmp">
 Carestia
-Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 2% e di 20 (1% e 10 per quelli del lanciatore). Dura 2 minuti.
+Ogni 5 secondi riduce i viveri di tutti gli insediamenti e le unità di rifornimento del 3% e di 30 (2% e 20 per quelli del lanciatore). Dura 2 minuti.
 Costo: 80 energia
 				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Earthquake.bmp">
@@ -6416,9 +6430,14 @@ Terremoto
 Ogni secondo infligge 300 punti di danno a tutte le fortezze, forti e porti (225 a quelli del lanciatore). Dura 10 secondi.
 Costo: 90 energia
 				</entry>
+				<entry vcenter="1" image="UI/Help/CmdBar/Actions/Uprising.bmp">
+Rivolta
+Rende neutrali tutti i forti e riduce la popolazione di tutti i villaggi di 20 (10 per quelli del lanciatore). Richiede 2 minuti.
+Costo: 95 energia
+				</entry>
 				<entry vcenter="1" image="UI/Help/CmdBar/Actions/T Invasion.bmp">
 Orda teutonica
-Raduna un'orda di 100 teutoni (40 cavalieri, 40 arcieri e 20 incursori) di livello 12 (18 per quelli del lanciatore) in tutte le fortezze, svuotandone la popolazione. Richiede 3 minuti.
+Raduna un'orda di 100 teutoni (40 cavalieri, 40 arcieri e 20 incursori) di livello 12 (18 per quelli del lanciatore) in tutte le fortezze, svuotandone la popolazione, e raccoglie 2000 viveri in tutti gli accampamenti teutonici (4000 per quelli del lanciatore). Richiede 3 minuti.
 Costo: 100 energia
 				</entry>
 			</topic>
@@ -6482,12 +6501,12 @@ Ogni unità può portare al massimo 4 oggetti, mentre gli eroi 5; le uniche ecce
 			<entry image="UI/Icons/Items/Healing Water.bmp">
 Acqua curativa
 Se si utilizza, distribuisce fino a 2000 punti di salute tra il possessore e gli alleati vicini.
-Viene generata nel ceppo ogni 5 minuti e nella lapide ogni 2 minuti.
+Viene generata nel ceppo e nella lapide ogni 5 minuti.
 			</entry>
 			<entry image="UI/Icons/Items/Wine Skin 01.bmp">
 Borsa di acqua curativa
 Se si utilizza, distribuisce fino a 4000 punti di salute tra il possessore e gli alleati vicini.
-Viene generata nel pozzo grande ogni 10 minuti.
+Viene generata nel pozzo grande ogni 12 minuti.
 			</entry>
 			<entry image="UI/Icons/Items/Rye Spikes.bmp">
 Spighe di segale
@@ -6497,18 +6516,18 @@ Vengono generate nella capanna delle streghe ogni 5 minuti.
 			<entry image="UI/Icons/Items/Healing Herbs.bmp">
 Erbe medicinali
 Se si utilizzano, ripristinano completamente la salute e l'energia del possessore.
-Vengono generate nel tronco d'albero ogni 2 minuti.
+Vengono generate nel tronco d'albero ogni 4 minuti.
 			</entry>
 			<entry image="UI/Icons/Items/Poison Mushrooms.bmp">
 Funghi velenosi
 Se si utilizzano, aumentano permanentemente il livello del possessore di 1 punto.
 Per usarli, il possessore deve avere almeno il 90% di salute.
-Vengono generati nel tumulo ogni 5 minuti.
+Vengono generati nel tumulo ogni 7 minuti.
 			</entry>
 			<entry image="UI/Icons/Items/Ash of Druid Hearth.bmp">
 Ceneri di druido
 Se si utilizzano, ripristinano completamente la salute del possessore e di 8 alleati vicini.
-Vengono generate nella colonna ogni 15 minuti.
+Vengono generate nella colonna ogni 20 minuti.
 			</entry>
 			<entry image="UI/Icons/Items/Battle Drums of Rage.bmp">
 Tamburi da battaglia della furia

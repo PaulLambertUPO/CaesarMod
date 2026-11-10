@@ -2,7 +2,7 @@
 
 	<properties race="Britain" />
 	<properties maxhealth="1200" />
-	<properties range="525" />
+	<properties range="500" />
 	<properties damage="70" armor_slash="12" armor_pierce="12" />
 	<properties damage_type="pierce" />
 	<properties HeroSkills="Assault, Charge, Concealment, Euphoria, Wisdom" />

@@ -1,15 +1,11 @@
-Settlement set;
+Obj hall;
 
-set = GetSettlement("AI_Settlement");
+Sleep(600000);
 
-Sleep(300000);
+hall = BlackOulderum;
 
-while (set.player == 8) {
-	if (set.population < 165)
-		set.AddToPopulation(5);
-	if (set.food < 32000)
-		set.SetFood(set.food + 600);
-	if (set.gold < 32000)
-		set.SetGold(set.gold + 110);
-	Sleep(5200);
+while (hall.player == 8) {
+	SpawnGroupInHolder("T_NorthEast", hall);
+	SpawnGroupInHolder("T_NorthWest", hall);
+	Sleep(600000);
 }

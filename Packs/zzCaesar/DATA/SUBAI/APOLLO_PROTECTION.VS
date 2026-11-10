@@ -12,9 +12,9 @@ announcement = "ApolloProtectionP" + player;
 while (timer > 0) {
 	i = timer % 60;
 	if (i < 10)
-		ShowAnnouncement(announcement, Translatef("Player %s1 - protected for %s2:0%s3", player, timer / 60, i));
+		ShowAnnouncement(announcement, Translatef("P.%s1 - protected for %s2:0%s3", player, timer / 60, i));
 	else
-		ShowAnnouncement(announcement, Translatef("Player %s1 - protected for %s2:%s3", player, timer / 60, i));
+		ShowAnnouncement(announcement, Translatef("P.%s1 - protected for %s2:%s3", player, timer / 60, i));
 
 	for (i = strongholds.count - 1; i >= 0; i -= 1) {
 		b = strongholds[i].AsBuilding();

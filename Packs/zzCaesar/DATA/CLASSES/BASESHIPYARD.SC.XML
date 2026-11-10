@@ -50,7 +50,7 @@
 		rollover="Loyalty"
 	/>
 	<value2 icon="gameres/infobar/common/gold ico.bmp"
-		script="return .AsBuilding().settlement.gold;"
+		script="Settlement set; set = .AsBuilding().settlement; if (set.loan > 0) return Translatef('%s1 (Debt: %s2)', set.gold, set.loan); return set.gold;"
 		flags="5"
 		help="contents/resources"
 		rollover="Gold"
@@ -61,7 +61,7 @@
 		help="contents/resources"
 		rollover="Fish"
 	/>
-	<value4 icon="gameres/infobar/common/health ico.bmp"
+	<value5 icon="gameres/infobar/common/health ico.bmp"
 		script="return .health + '/' + .maxhealth;"
 		help="contents/stats/health"
 		rollover="Health"

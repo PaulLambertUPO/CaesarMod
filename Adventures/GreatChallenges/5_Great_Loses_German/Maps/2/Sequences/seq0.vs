@@ -72,6 +72,7 @@ stonehenge_arminius.obj.CmdDisable("sacrifice");
 stonehenge_arminius.obj.CmdDisable("gold_rain");
 stonehenge_arminius.obj.CmdDisable("starvation");
 stonehenge_arminius.obj.CmdDisable("earthquake");
+stonehenge_arminius.obj.CmdDisable("uprising");
 stonehenge_arminius.obj.CmdDisable("teuton_horde");
 
 Sleep(1000);

@@ -70,7 +70,7 @@
 		transpicon="1"
 		traincommand="yes"
 		key="j"
-		costgold="150"
+		costgold="160"
 		costpop="1"
 		execdelay="14000"
 		rollover="Equip Javelineer"

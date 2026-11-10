@@ -25,6 +25,16 @@ while (dest != "") {
 				return false;
 			}
 		}
+		else if (name == "Divine synergy") {
+			bool not_researchable = true;
+			if (IsResearched(set, "Cult of Anubis"))
+				if (IsResearched(set, "Cult of Horus"))
+					not_researchable = false;
+			if (not_researchable) {
+				reasonText = rollover(this, false) + "\n<color 255 0 0>" + Translate("Requires Cult of Anubis and Cult of Horus");
+				return false;
+			}
+		}
 		else if (name == "Liberati guild")
 			env_level = "\n<color 255 255 255>" + Translatef("Current best level: %s1", EnvReadInt(plr, "BestLiberatusLevel"));
 		else if (name == "Legendary Valkyries")
